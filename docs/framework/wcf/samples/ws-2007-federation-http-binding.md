@@ -2,15 +2,15 @@
 title: WS 2007 Federation HTTP Binding
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7dffe56cf5593f1cd59cccd7ea9b6b0e173e0c2c
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513060"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221282"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federation HTTP Binding
-Cet exemple montre l'utilisation de <xref:System.ServiceModel.WS2007FederationHttpBinding>, une liaison standard vous permettant de générer des scénarios fédérés qui prennent en charge la version 1.3 de la spécification WS-Trust.  
+Cet exemple montre l’utilisation de <xref:System.ServiceModel.WS2007FederationHttpBinding>, une liaison standard vous permettant de générer des scénarios fédérés qui prennent en charge la version 1.3 de la spécification WS-Trust.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Ouvrez une invite de commandes de Visual Studio avec des privilèges d'administrateur et exécutez le fichier Setup.bat pour créer les certificats requis.  
+2.  Ouvrez une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur et exécutez le fichier Setup.bat pour créer les certificats requis.  
   
  Ce fichier batch utilise Certmgr.exe et Makecert.exe, qui sont fournis avec le Kit de développement Windows SDK. Toutefois, vous devez exécuter Setup.bat à partir d'une invite de commandes de Visual Studio Tools pour permettre au script d'identifier ces outils.  
   

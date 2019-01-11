@@ -2,12 +2,12 @@
 title: Exemple Discovery Security
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9435afa7324ad9e0f2bf994b2f3ed5e54e5e2e7e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129348"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223102"
 ---
 # <a name="discovery-security-sample"></a>Exemple Discovery Security
 La spécification Discovery n'exige pas que les points de terminaison participant au processus de découverte soient sécurisés. L'ajout de la sécurité aux messages de découverte atténue divers types d'attaques (altération de messages, déni de service, relecture, usurpation). Cet exemple implémente des canaux personnalisés qui calculent et vérifient des signatures de message utilisant le format de signature compact (décrit dans la section 8.2 de la spécification WS-Discovery). L’exemple prend en charge la [spécification Discovery 2005](https://go.microsoft.com/fwlink/?LinkId=177912) et [version 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -49,7 +49,7 @@ La spécification Discovery n'exige pas que les points de terminaison participan
   
 -   **DiscoverySecurityChannels**: Une bibliothèque qui expose la liaison sécurisée. Cette bibliothèque calcule et vérifie la signature compacte des messages sortants/entrants.  
   
--   **Service**: Service exposant le contrat ICalculatorService, auto-hébergé. Ce service est marqué comme étant détectable. L'utilisateur spécifie les informations du certificat utilisé pour signer des messages en spécifiant l'emplacement et le nom du magasin, ainsi que le nom du sujet ou autre identificateur unique pour le certificat, et le magasin où se trouvent les certificats clients (certificats utilisés pour vérifier la signature des messages entrants). Sur la base de ces informations, un UdpDiscoveryEndpoint avec sécurité accrue est généré et utilisé.  
+-   **Service** : Service exposant le contrat ICalculatorService, auto-hébergé. Ce service est marqué comme étant détectable. L'utilisateur spécifie les informations du certificat utilisé pour signer des messages en spécifiant l'emplacement et le nom du magasin, ainsi que le nom du sujet ou autre identificateur unique pour le certificat, et le magasin où se trouvent les certificats clients (certificats utilisés pour vérifier la signature des messages entrants). Sur la base de ces informations, un UdpDiscoveryEndpoint avec sécurité accrue est généré et utilisé.  
   
 -   **Client**: Cette classe tente de découvrir un ICalculatorService et appeler des méthodes sur le service. Là encore, un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> avec sécurité accrue est généré et utilisé pour signer et vérifier les messages.  
   
@@ -60,7 +60,7 @@ La spécification Discovery n'exige pas que les points de terminaison participan
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1.  Exécutez le script Setup.bat à partir d'une invite de commandes de Visual Studio. L'exemple utilise des certificats pour signer et vérifier des messages. Le script crée les certificats à l'aide de Makecert.exe, puis les installe à l'aide de Certmgr.exe. Le script doit être exécuté avec des privilèges d'administrateur.  
+1.  Exécutez le script Setup.bat à partir d’une invite de commandes développeur pour Visual Studio. L'exemple utilise des certificats pour signer et vérifier des messages. Le script crée les certificats à l'aide de Makecert.exe, puis les installe à l'aide de Certmgr.exe. Le script doit être exécuté avec des privilèges d'administrateur.  
   
 2.  Pour générer et exécuter l’exemple, ouvrez le fichier Security.sln dans Visual Studio et choisissez **Rebuild All**. Mettre à jour les propriétés de solution pour démarrer plusieurs projets : sélectionnez **Démarrer** pour tous les projets à l’exception de DiscoverySecureChannels. Exécutez la solution normalement.  
   

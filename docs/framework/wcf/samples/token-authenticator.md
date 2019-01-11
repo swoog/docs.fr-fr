@@ -2,12 +2,12 @@
 title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d9eeee3e69d053fba9afb03e4e938cbe02c7a303
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582643"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222894"
 ---
 # <a name="token-authenticator"></a>Token Authenticator
 Cet exemple montre comment implémenter un authentificateur de jetons personnalisé. Un authentificateur de jetons dans Windows Communication Foundation (WCF) est utilisé pour valider le jeton utilisé avec le message, vérifier qu’il est cohérent, et l’authentification de l’identité associée au jeton.
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  Lancez client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2.  Copiez les fichiers programme du service dans le répertoire de service sur l'ordinateur de service. Copiez également les fichiers Setup.bat et Cleanup.bat sur l'ordinateur de service.  
   
-3.  Le nom de sujet de votre certificat de serveur doit contenir le nom de domaine complet de l'ordinateur. Le fichier App.config du service doit être mis à jour afin de prendre en compte ce nouveau nom de certificat. Vous pouvez en créer un en utilisant Setup.bat si vous affectez à la variable `%SERVER_NAME%` le nom d'hôte complet de l'ordinateur sur lequel le service s'exécutera. Notez que vous devez exécuter le fichier Setup.bat à partir d'une fenêtre d'invite de commandes de Visual Studio ouverte avec des privilèges d'administrateur.  
+3.  Le nom de sujet de votre certificat de serveur doit contenir le nom de domaine complet de l'ordinateur. Le fichier App.config du service doit être mis à jour afin de prendre en compte ce nouveau nom de certificat. Vous pouvez en créer un en utilisant Setup.bat si vous affectez à la variable `%SERVER_NAME%` le nom d'hôte complet de l'ordinateur sur lequel le service s'exécutera. Notez que le fichier setup.bat doit être exécuté à partir d’une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur.  
   
 4.  Copiez le certificat de serveur dans le magasin CurrentUser-TrustedPeople du client. Cette opération n'est pas nécessaire sauf lorsque le certificat de serveur est émis par un émetteur approuvé du client.  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes.  
   
-10. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

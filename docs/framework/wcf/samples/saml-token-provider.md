@@ -2,12 +2,12 @@
 title: SAML Token Provider
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: dfd693e262e7566c865d5b9faed5b9e00a8cfec9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 59bd76c99adf778f2aa2a2d891ca79657033296e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308524"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222914"
 ---
 # <a name="saml-token-provider"></a>SAML Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons SAML client personnalisé. Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. WCF est fourni avec le fournisseur de jeton de gestionnaire d’informations d’identification par défaut. WCF est également livré avec un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] fournisseur de jetons. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :
@@ -379,7 +379,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons SAML client per
   
 2.  Copiez les fichiers programme du service dans le répertoire de service sur l'ordinateur de service. Copiez également les fichiers Setup.bat et Cleanup.bat sur l'ordinateur de service.  
   
-3.  Le nom de sujet de votre certificat de serveur doit contenir le nom de domaine complet de l'ordinateur. Le fichier Service.exe.config doit être mis à jour pour refléter ce nouveau nom de certificat. Vous pouvez créer le certificat de serveur en modifiant le fichier de commandes Setup.bat. Notez que vous devez exécuter le fichier Setup.bat à partir d'une fenêtre d'invite de commandes de Visual Studio ouverte avec des privilèges d'administrateur. Vous devez affecter à la variable `%SERVER_NAME%` le nom d'hôte complet de l'ordinateur utilisé pour héberger le service.  
+3.  Le nom de sujet de votre certificat de serveur doit contenir le nom de domaine complet de l'ordinateur. Le fichier Service.exe.config doit être mis à jour pour refléter ce nouveau nom de certificat. Vous pouvez créer le certificat de serveur en modifiant le fichier de commandes Setup.bat. Notez que le fichier setup.bat doit être exécuté dans une invite de commandes développeur pour la fenêtre de Visual Studio avec des privilèges d’administrateur. Vous devez affecter à la variable `%SERVER_NAME%` le nom d'hôte complet de l'ordinateur utilisé pour héberger le service.  
   
 4.  Copiez le certificat de serveur dans le magasin CurrentUser-TrustedPeople du client. Cette étape n'est pas nécessaire lorsque le certificat de serveur est publié par un émetteur de confiance du client.  
   

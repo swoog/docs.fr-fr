@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 3b19886b11def5c15425fc27f907b10314c73e0c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 376106ff6c5c19c517c9e116112319b6e9d08c51
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181564"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222296"
 ---
 # <a name="message-security-certificate"></a>Message Security Certificate
 Cet exemple montre comment implémenter une application qui utilise WS-Security avec l'authentification de certificat X.509 v3 pour le client et requiert l'authentification de serveur à l'aide du certificat X.509 v3 du serveur. Il utilise des paramètres par défaut de sorte que tous les messages d'application entre le client et le serveur soient signés et chiffrés. Cet exemple est basé sur le [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) et se compose d’un programme de console du client et une bibliothèque de service hébergé par Internet Information Services (IIS). Le service implémente un contrat qui définit un modèle de communication demande-réponse.  
@@ -202,7 +202,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Le fichier de commandes Setup.bat inclus avec les exemples Message Security vous permet de configurer le client et le serveur avec les certificats appropriés pour exécuter une application hébergée qui requiert la sécurité basée sur le certificat. Ce fichier peut être exécuté en trois modes. Pour exécuter en mode ordinateur unique, tapez **setup.bat** dans une invite de commandes Visual Studio ; pour le type de mode de service **setup.bat service**; et pour le type de mode client **setup.bat client** . Lorsque vous exécutez l'exemple sur plusieurs ordinateurs, utilisez le mode client et serveur. Pour plus d'informations, consultez la procédure d'installation figurant en fin de rubrique. Les éléments suivants fournissent une brève vue d'ensemble des différentes sections des fichiers de commandes afin qu'ils puissent être modifiés pour s'exécuter dans la configuration appropriée :  
+ Le fichier de commandes Setup.bat inclus avec les exemples Message Security vous permet de configurer le client et le serveur avec les certificats appropriés pour exécuter une application hébergée qui requiert la sécurité basée sur le certificat. Ce fichier peut être exécuté en trois modes. Pour exécuter en mode ordinateur unique, tapez **setup.bat** dans une invite de commandes développeur pour Visual Studio ; pour le type de mode de service **setup.bat service**; et pour le type de mode client **setup.bat client**. Lorsque vous exécutez l'exemple sur plusieurs ordinateurs, utilisez le mode client et serveur. Pour plus d'informations, consultez la procédure d'installation figurant en fin de rubrique. Les éléments suivants fournissent une brève vue d'ensemble des différentes sections des fichiers de commandes afin qu'ils puissent être modifiés pour s'exécuter dans la configuration appropriée :  
   
 -   Création du certificat client  
   
@@ -269,7 +269,7 @@ Press <ENTER> to terminate client.
     >  Si vous utilisez une édition anglaise non américaine de Windows, vous devez modifier le fichier Setup.bat et remplacer le nom de compte « NT AUTHORITY\NETWORK SERVICE » par votre équivalent régional.  
   
 > [!NOTE]
->  Les outils utilisés dans ce fichier de commandes se trouvent dans C:\Program Files\Microsoft Visual Studio 8\Common7\tools ou C:\Program Files\Microsoft SDKs\Windows\v6.0\bin. L'un de ces répertoires doit se trouver dans votre chemin d'accès système. Si Visual Studio est installé, la manière la plus simple de placer ce répertoire dans votre chemin d’accès est d’ouvrir l’invite de commandes de Visual Studio. Cliquez sur **Démarrer**, puis sélectionnez **tous les programmes**, **Visual Studio 2012**, **outils**. Les chemins d’accès appropriés sont déjà configurés dans cette invite de commandes. Sinon, vous devez ajouter manuellement le répertoire approprié à votre chemin d’accès.  
+>  Les outils utilisés dans ce fichier de commandes se trouvent dans C:\Program Files\Microsoft Visual Studio 8\Common7\tools ou C:\Program Files\Microsoft SDKs\Windows\v6.0\bin. L’un de ces répertoires doit se trouver dans votre chemin d’accès système. Si vous avez installé Visual Studio, le moyen le plus simple de placer ce répertoire dans votre chemin d’accès consiste à ouvrir l’invite de commandes développeur pour Visual Studio. Cliquez sur **Démarrer**, puis sélectionnez **tous les programmes**, **Visual Studio 2012**, **outils**. Les chemins d’accès appropriés sont déjà configurés dans cette invite de commandes. Sinon, vous devez ajouter manuellement le répertoire approprié à votre chemin d’accès.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer :  
@@ -288,10 +288,10 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur  
   
-1.  Ouvrez une invite de commandes de Visual Studio avec des privilèges d'administrateur et exécutez Setup.bat à partir du dossier d'installation de l'exemple. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.  
+1.  Ouvrez une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur et exécutez Setup.bat à partir du dossier d’installation de l’exemple. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.  
   
     > [!NOTE]
-    >  Le fichier de commandes Setup.bat est conçu pour s'exécuter à partir d'une invite de commandes de Visual Studio. La variable d’environnement PATH doit pointer vers le répertoire d’installation du Kit de développement SDK. Cette variable est définie automatiquement dans une invite de commandes de Visual Studio (2010).  
+    >  Le fichier de commandes Setup.bat est conçu pour être exécuté à partir d’une invite de commandes développeur pour Visual Studio. La variable d’environnement PATH doit pointer vers le répertoire d’installation du Kit de développement SDK. Cette variable d’environnement a automatiquement la valeur dans une invite de commandes développeur pour Visual Studio (2010).  
   
 2.  Vérifier l’accès au service à l’aide d’un navigateur en entrant l’adresse `http://localhost/servicemodelsamples/service.svc`.  
   
@@ -309,21 +309,21 @@ Press <ENTER> to terminate client.
   
 4.  Copiez les fichiers programme du client dans le répertoire client de l'ordinateur client. Copiez également les fichiers Setup.bat, Cleanup.bat et ImportServiceCert.bat sur le client.  
   
-5.  Sur le serveur, exécutez **setup.bat service** dans une invite de commandes de Visual Studio avec des privilèges d’administrateur. En cours d’exécution **setup.bat** avec la **service** argument crée un certificat de service portant le nom de domaine complet de l’ordinateur et exporte le certificat de service dans un fichier nommé Service.cer.  
+5.  Sur le serveur, exécutez **setup.bat service** dans une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur. En cours d’exécution **setup.bat** avec la **service** argument crée un certificat de service portant le nom de domaine complet de l’ordinateur et exporte le certificat de service dans un fichier nommé Service.cer.  
   
 6.  Modifiez Web.config afin de refléter le nouveau nom de certificat (dans le `findValue` d’attribut dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) qui est le même que le nom de domaine complet de l’ordinateur.  
   
 7.  Copiez le fichier Service.cer du répertoire de service vers le répertoire client sur l'ordinateur client.  
   
-8.  Sur le client, exécutez **setup.bat client** dans une invite de commandes de Visual Studio avec des privilèges d’administrateur. En cours d’exécution **setup.bat** avec la **client** argument crée un certificat client appelé client.com et exporte le certificat client vers un fichier nommé Client.cer.  
+8.  Sur le client, exécutez **setup.bat client** dans une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur. En cours d’exécution **setup.bat** avec la **client** argument crée un certificat client appelé client.com et exporte le certificat client vers un fichier nommé Client.cer.  
   
 9. Dans le fichier Client.exe.config de l'ordinateur client, modifiez la valeur d'adresse du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service. Pour ce faire, remplacez localhost par le nom de domaine complet du serveur.  
   
 10. Copiez le fichier Client.cer du répertoire client dans le répertoire de service sur le serveur.  
   
-11. Sur le client, ouvrez une fenêtre d'invite de commandes de Visual Studio avec des privilèges d'administrateur et exécutez ImportServiceCert.bat. Cette opération importe le certificat de service du fichier Service.cer dans le magasin CurrentUser - TrustedPeople.  
+11. Sur le client, exécutez ImportServiceCert.bat dans une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur. Cette opération importe le certificat de service du fichier Service.cer dans le magasin CurrentUser - TrustedPeople.  
   
-12. Sur le serveur, ouvrez une fenêtre d'invite de commandes de Visual Studio avec des privilèges d'administrateur et exécutez ImportClientCert.bat. Le certificat client est ainsi importé à partir du fichier Client.cer dans le magasin LocalMachine - TrustedPeople.  
+12. Sur le serveur, exécutez ImportClientCert.bat dans une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur. Le certificat client est ainsi importé à partir du fichier Client.cer dans le magasin LocalMachine - TrustedPeople.  
   
 13. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
@@ -332,6 +332,6 @@ Press <ENTER> to terminate client.
 -   Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.  
   
     > [!NOTE]
-    >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`, par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Voir aussi

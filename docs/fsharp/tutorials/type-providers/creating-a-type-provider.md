@@ -2,12 +2,12 @@
 title: 'Tutoriel : Créer un fournisseur de Type'
 description: Découvrez comment créer votre propre F# tapez fournisseurs dans F# 3.0 en examinant plusieurs fournisseurs de type simple pour illustrer les concepts de base.
 ms.date: 05/16/2016
-ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614530"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223206"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutoriel : Créer un fournisseur de Type
 
@@ -156,7 +156,7 @@ Pour déboguer ce fournisseur à l’aide des instructions print, créer un scri
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Pour déboguer ce fournisseur à l’aide de Visual Studio, ouvrez l’invite de commandes de Visual Studio en tant qu’administrateur et exécutez la commande suivante :
+Pour déboguer ce fournisseur à l’aide de Visual Studio, ouvrez l’invite de commandes développeur pour Visual Studio en tant qu’administrateur et exécutez la commande suivante :
 
 ```fsharp
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx

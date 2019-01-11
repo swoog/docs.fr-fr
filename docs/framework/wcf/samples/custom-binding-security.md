@@ -2,12 +2,12 @@
 title: Custom Binding Security
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 56c3ed4be894a265635c747373e0b79599ce129d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192887"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221698"
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 L’exemple suivant illustre comment configurer la sécurité à l’aide d’une liaison personnalisée. Il indique également comment utiliser une liaison personnalisée afin d’activer la sécurité de niveau message à l’aide d’un transport sécurisé. Cette configuration est utile lorsqu'un transport sécurisé est requis pour la transmission des messages entre le client et le service et que ces messages doivent en même temps bénéficier d'une sécurité de niveau message. Cette configuration n’est pas prise en charge par les liaisons fournies par le système.
@@ -113,7 +113,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur
 
-1.  Ouvrez une fenêtre d’invite de commandes de Visual Studio avec des privilèges d’administrateur et exécutez Setup.bat à partir du dossier d’installation de l’exemple. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.
+1.  Ouvrez une invite de commandes développeur pour la fenêtre Visual Studio avec des privilèges d’administrateur et exécutez Setup.bat à partir du dossier d’installation de l’exemple. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.
 
     > [!NOTE]
     >  Le fichier de commandes Setup.bat est conçu pour être exécuté à partir d’un Visual Studio 2012 invite de commandes. La variable d’environnement PATH définie dans les points de l’invite de commandes de Visual Studio 2012 sur le répertoire qui contient les exécutables requis par le script Setup.bat.  
@@ -134,7 +134,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  Copiez les fichiers Setup.bat et Cleanup.bat sur l'ordinateur de service.  
   
-    4.  Exécutez la commande suivante dans une invite de commandes Visual Studio ouverte avec des privilèges d’administrateur : `Setup.bat service`. L'exécution de cette commande crée un certificat de service dont le nom du sujet correspond au nom de l'ordinateur sur lequel le fichier de commandes a été exécuté.  
+    4.  Exécutez la commande suivante dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur : `Setup.bat service`. L'exécution de cette commande crée un certificat de service dont le nom du sujet correspond au nom de l'ordinateur sur lequel le fichier de commandes a été exécuté.  
   
         > [!NOTE]
         >  Le fichier de commandes Setup.bat est conçu pour s'exécuter à partir d'une invite de commandes de Visual Studio 2010. La variable d’environnement PATH doit pointer vers le répertoire d’installation du Kit de développement SDK. Cette variable est définie automatiquement dans une invite de commandes de Visual Studio 2010.
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2.  Exécutez Cleanup.bat pour supprimer tous les anciens certificats d'exemples précédents.
 
-    3.  Exportez le certificat du service en ouvrant une invite de commandes de Visual Studio avec des privilèges d'administrateur et en exécutant la commande suivante sur l'ordinateur de service (remplacez `%SERVER_NAME%` par le nom complet de l'ordinateur où le service s'exécute) :
+    3.  Exporter le certificat du service en ouvrant une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur et en exécutant la commande suivante sur l’ordinateur de service (remplacez `%SERVER_NAME%` par le nom qualifié complet de l’ordinateur où le service est en cours d’exécution) :
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4.  Copiez le fichier % SERVER_NAME%.cer sur l'ordinateur client (remplacez %SERVER_NAME% par le nom complet de l'ordinateur où le service s'exécute).
 
-    5.  Importez le certificat du service en ouvrant une invite de commandes de Visual Studio avec des privilèges d'administrateur et en exécutant la commande suivante sur l'ordinateur client (remplacez %SERVER_NAME% par le nom complet de l'ordinateur où le service s'exécute) :
+    5.  Importer le certificat du service en ouvrant une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur, en exécutant la commande suivante sur l’ordinateur client (remplacez % SERVER_NAME % par le nom qualifié complet de l’ordinateur où le service est en cours d’exécution) :
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople

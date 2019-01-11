@@ -2,19 +2,19 @@
 title: Processus d'embauche
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520636"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223219"
 ---
 # <a name="hiring-process"></a>Processus d'embauche
 Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'activités de messagerie et de deux workflows hébergés en tant que services de workflow. Ces workflows font partie de l'infrastructure informatique d'une société fictive nommée Contoso, Inc.  
   
  Le processus de workflow `HiringRequest` (implémenté en tant que <xref:System.Activities.Statements.Flowchart>) demande l'autorisation de plusieurs responsables de la société. Pour atteindre cet objectif, le workflow utilise d’autres services existants dans l’organisation (dans notre cas, un service de boîte de réception et un service de données de l’organisation implémenté en tant que les services Windows Communication Foundation (WCF) brut).  
   
- Le workflow `ResumeRequest` (implémenté en tant que <xref:System.Activities.Statements.Sequence>) publie une offre d'emploi sur le site Web externe Careers de Contoso et gère l'acquisition de CV. Une offre d'emploi est disponible sur le site Web externe pour une durée fixe (jusqu'à son expiration) ou jusqu'à ce qu'un employé de Contoso décide de la supprimer.  
+ Le workflow `ResumeRequest` (implémenté en tant que <xref:System.Activities.Statements.Sequence>) publie une offre d’emploi sur le site web externe Careers de Contoso et gère l’acquisition de CV. Une offre d'emploi est disponible sur le site Web externe pour une durée fixe (jusqu'à son expiration) ou jusqu'à ce qu'un employé de Contoso décide de la supprimer.  
   
  Cet exemple illustre les fonctionnalités suivantes de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] :  
   
@@ -131,13 +131,13 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
 ## <a name="data-storage"></a>Stockage des données  
  Les données sont stockées dans une base de données SQL Server nommée `ContosoHR` (le script pour créer cette base de données se trouve dans le dossier `DbSetup`). Les instances de workflow sont stockées dans une base de données SQL Server nommée `InstanceStore` (les scripts pour créer le magasin d'instances font partie de la distribution [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  
   
- Les deux bases de données sont créées en exécutant le script Setup.cmd à partir d’une invite de commandes de Visual Studio.  
+ Les deux bases de données sont créées en exécutant le script Setup.cmd à partir d’une invite de commandes développeur pour Visual Studio.  
   
 ## <a name="running-the-sample"></a>Exécution de l'exemple  
   
 #### <a name="to-create-the-databases"></a>Pour créer les bases de données  
   
-1.  Ouvrez une invite de commandes de Visual Studio.  
+1.  Ouvrez une invite de commandes développeur pour Visual Studio.  
   
 2.  Naviguez jusqu’au dossier de l’exemple.  
   
