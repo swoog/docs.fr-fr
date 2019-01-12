@@ -50,7 +50,7 @@ ms.locfileid: "54030397"
   
 |Caractère d'échappement|Description|Motif|Correspondances|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Correspond à un caractère de cloche, \u0007.|`\a`|"\u0007" dans "Erreur !" + '\u0007'|  
+|`\a`|Correspond à un caractère de cloche, \u0007.|`\a`|"\u0007" dans "Erreur !" + ’\u0007’|  
 |`\b`|Dans une classe de caractères, correspond à un retour arrière, \u0008.|`[\b]{3,}`|"\b\b\b\b" dans "\b\b\b\b"|  
 |`\t`|Correspond à une tabulation, \u0009.|`(\w+)\t`|"item1\t", "item2\t" dans "item1\titem2\t"|  
 |`\r`|Correspond à un retour chariot, \u000D. (`\r` n'est pas équivalent au caractère de saut de ligne, `\n`.)|`\r\n(\w+)`|"\r\nCe" dans "\r\nCe sont\ndeux lignes."|  
@@ -110,7 +110,7 @@ ms.locfileid: "54030397"
 |Construction de regroupement|Description|Motif|Correspondances|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *sous-expression* `)`|Capture la sous-expression mise en correspondance et lui assigne un nombre ordinal de base un.|`(\w)\1`|"oo" dans "boot"|  
-|`(?<` *nom* `>` *sous-expression* `)`|Capture la sous-expression mise en correspondance dans un groupe nommé.|`(?<double>\w)\k<double>`|"oo" dans "boot"|  
+|`(?<` *name* `>` *sous-expression* `)`|Capture la sous-expression mise en correspondance dans un groupe nommé.|`(?<double>\w)\k<double>`|"oo" dans "boot"|  
 |`(?<` *nom1* `-` *nom2* `>` *sous-expression* `)`|Définit un équilibre de définition de groupe. Pour plus d’informations, consultez la section « Équilibre de définition de groupe » dans [Constructions de regroupement](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|« ((1-3)\*(3-1)) » dans « 3+2^((1-3)\*(3-1)) »|  
 |`(?:` *sous-expression* `)`|Définit un groupe sans capture.|`Write(?:Line)?`|"WriteLine" dans "Console.WriteLine()"<br /><br /> "Write" dans "Console.Write(value)"|  
 |`(?imnsx-imnsx:` *sous-expression* `)`|Active ou désactive les options spécifiées dans *sous-expression*. Pour plus d'informations, consultez [Options des expressions régulières](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" dans "A12xl A12XL a12xl"|  
@@ -145,7 +145,7 @@ ms.locfileid: "54030397"
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Constructions de référence arrière  
- Une backreference permet qu'une sous-expression précédemment mise en correspondance soit ensuite identifiée dans la même expression régulière. Le tableau suivant répertorie les constructions de backreference prises en charge par les expressions régulières dans .NET. Pour plus d'informations, consultez [Constructions de backreference](backreference-constructs-in-regular-expressions.md).  
+ Une backreference permet qu'une sous-expression précédemment mise en correspondance soit ensuite identifiée dans la même expression régulière. Le tableau suivant répertorie les constructions de backreference prises en charge par les expressions régulières dans .NET. Pour plus d'informations, consultez [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
   
 |Construction de backreference|Description|Motif|Correspondances|  
 |-----------------------------|-----------------|-------------|-------------|  
