@@ -1,39 +1,45 @@
 ---
-title: À l'intérieur d'un programme C#
+title: À l’intérieur d’un programme C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: a39a7dd3ebdbb7483f0b69169c8e00382f581788
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: dc4cb8aa63d4a63325e887e134fcda6aeb9d27fa
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252894"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221113"
 ---
-# <a name="inside-a-c-program"></a>À l'intérieur d'un programme C#
-La section traite de la structure générale d’un programme C# et inclut l’exemple standard « Hello, World! ».  
-  
-## <a name="in-this-section"></a>Dans cette section  
-  
--   [Hello World -- Votre premier programme](../../../csharp/programming-guide/inside-a-program/hello-world-your-first-program.md)  
-  
--   [Structure générale d’un programme C#](../../../csharp/programming-guide/inside-a-program/general-structure-of-a-csharp-program.md)  
-  
-## <a name="related-sections"></a>Rubriques connexes  
-  
--   [Bien démarrer avec C#](../../../csharp/getting-started/index.md)  
-  
--   [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-  
--   [Référence C#](../../../csharp/language-reference/index.md)  
-  
--   [\<paveover>Exemples d’applications C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
-  
-## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+# <a name="inside-a-c-program"></a>À l’intérieur d’un programme C#
+
+La section traite de la structure générale d’un programme C# et inclut l’exemple standard « Hello, World! ».
+
+## <a name="in-this-section"></a>Dans cette section
+
+- [Hello World -- Votre premier programme](hello-world-your-first-program.md)
+
+- [Structure générale d’un programme C#](general-structure-of-a-csharp-program.md)
+
+- [Noms d’identificateur](identifier-names.md)
+
+- [Conventions de codage C#](coding-conventions.md)
+
+## <a name="related-sections"></a>Rubriques connexes
+
+- [Bien démarrer avec C#](../../getting-started/index.md)
+
+- [Guide de programmation C#](../../programming-guide/index.md)
+
+- [Référence C#](../../language-reference/index.md)
+
+- [Exemples et tutoriels](../../../samples-and-tutorials/index.md)
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)

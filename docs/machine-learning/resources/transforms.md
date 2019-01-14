@@ -4,12 +4,12 @@ description: Explorez les composants d’ingénierie de fonctionnalité pris en 
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451090"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249123"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Transformations de données Machine Learning - ML.NET
 
@@ -103,7 +103,6 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Supprime les valeurs manquantes des colonnes. |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Crée une colonne de sortie booléenne avec le même nombre d’emplacements que la colonne d’entrée, où la valeur de sortie est true si la valeur dans la colonne d’entrée est manquante. |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Gérer les valeurs manquantes en les remplaçant par la valeur par défaut ou la valeur moyenne/min/max (pour les colonnes non textuelles uniquement). |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Crée une colonne de sortie booléenne avec le même nombre d’emplacements que la colonne d’entrée, où la valeur de sortie est true si la valeur dans la colonne d’entrée est manquante. |
 
 ## <a name="normalization"></a>Normalisation
 

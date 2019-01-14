@@ -3,12 +3,12 @@ title: Histoire du langage C# | Guide C#
 description: À quoi ressemblait le langage dans ses versions antérieures et comment a-t-il évolué depuis ?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245598"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186226"
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C# #
 
@@ -28,7 +28,7 @@ Les outils de build C# considèrent la dernière version majeure du langage comm
 
 ## <a name="c-version-10"></a>C# version 1.0
 
-Rétrospectivement, le langage C# version 1.0 ressemblait beaucoup à Java. Dans ses [objectifs de conception énoncés pour ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), il cherchait à être un « langage orienté objet simple, moderne et généraliste ».  À l’époque, ressembler à Java signifiait qu’il avait atteint ces objectifs de conception.
+Rétrospectivement, le langage C# version 1.0 ressemblait beaucoup à Java. Dans ses [objectifs de conception énoncés pour ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), il cherchait à être un « langage orienté objet simple, moderne et généraliste ».  À l’époque, ressembler à Java signifiait qu’il avait atteint ces objectifs de conception.
 
 Mais si vous repensez à C# 1.0 maintenant, cela peut vous donner le vertige. Il lui manquait des fonctionnalités asynchrones intégrées et certaines des fonctionnalités liées aux génériques qui sont aujourd’hui pour vous une évidence. En fait, il ne proposait pas du tout de génériques.  Et [LINQ](../linq/index.md) ? Pas encore disponible. Il fallait attendre encore plusieurs années.
 
@@ -142,7 +142,7 @@ Avec les versions 3.0 et 5.0, C# avait ajouté d’importantes nouvelles foncti
 - [Propagateur Null](./csharp-6.md#null-conditional-operators)
 - [Interpolation de chaîne](./csharp-6.md#string-interpolation)
 - [Opérateur nameof](./csharp-6.md#the-nameof-expression)
-- [Initialiseurs d’index](csharp-6.md#index-initializers)
+- [Initialiseurs d’index](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Quelques autres nouvelles fonctions :
 
@@ -168,7 +168,6 @@ Autres fonctionnalités disponibles :
 
 - [Éléments ignorés](./csharp-7.md#discards)
 - [Littéraux binaires et séparateurs numériques](./csharp-7.md#numeric-literal-syntax-improvements)
-- [Valeurs de retour ref et variables locales](./csharp-7.md#ref-locals-and-returns)
 - [Expressions throw](./csharp-7.md#throw-expressions)
 
 Toutes ces fonctionnalités offrent de nouvelles capacités appréciables aux développeurs ainsi que la possibilité d’écrire du code encore plus propre. Il s’agit notamment de condenser la déclaration des variables à utiliser avec le mot clé `out` et en autorisant plusieurs valeurs de retour par le biais d’un tuple.

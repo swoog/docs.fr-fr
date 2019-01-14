@@ -3,12 +3,12 @@ title: Kit SDK .NET Compiler Platform (API Roslyn)
 description: Apprenez à utiliser le Kit de développement logiciel (SDK) .NET Compiler Platform (également appelé API Roslyn) pour comprendre le code .NET, identifier les erreurs et les corriger.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: be65d8ecafc13fc699efb10dc396b0631ba70810
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925029"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249136"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Kit SDK .NET Compiler Platform
 
@@ -31,7 +31,7 @@ Il existe trois grands scénarios d’écriture d’analyseurs et de correctifs 
 
 1. [*Appliquer des normes de codage pour l’équipe*](#enforce-team-coding-standards)
 1. [*Offrir de l’aide sur les packages de bibliothèque*](#provide-guidance-with-library-packages)
-1. [*Proposer des conseils généraux de codage*](#provide-general-coding-guidance)
+1. [*Proposer des conseils généraux*](#provide-general-guidance)
 
 ## <a name="enforce-team-coding-standards"></a>Appliquer des normes de codage pour l’équipe
 
@@ -60,7 +60,7 @@ Ces analyseurs peuvent être chargés sur [Visual Studio Marketplace](https://ma
 
 Le Kit SDK .NET Compiler Platform inclut les derniers modèles objet du langage pour la génération, l’analyse et la refactorisation de code. Cette section offre une vue d’ensemble conceptuelle du Kit SDK .NET Compiler Platform. Vous trouverez plus de détails dans les sections des didacticiels, des exemples et des démarrages rapides.
 
-Pour en savoir plus sur les concepts du Kit SDK .NET Compiler Platform, consultez ces quatre rubriques :
+Pour en savoir plus sur les concepts du Kit SDK .NET Compiler Platform, consultez ces cinq rubriques :
 
  - [Explorer le code avec le visualiseur de syntaxe](syntax-visualizer.md)
  - [Comprendre le modèle de l’API du compilateur](compiler-api-model.md)

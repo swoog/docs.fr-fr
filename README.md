@@ -10,7 +10,7 @@ Le suivi des problèmes et des tâches de ces trois référentiels se trouve ici
 
 Nous portons un grand intérêt aux contributions qui nous aident à améliorer et à compléter la documentation de .NET. Pour contribuer, consultez les [Projets pour les contributeurs de la communauté .NET](https://github.com/dotnet/docs/projects/35) et partagez vos idées. Le [Guide de contribution](CONTRIBUTING.md) contient des instructions sur les procédures que nous utilisons. Vous pouvez aussi consulter la [liste des problèmes](https://github.com/dotnet/docs/issues) relatifs aux tâches qui vous intéressent.
 
-Nous prévoyons que [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) et [Unity](http://docs.unity3d.com/Manual/index.html) feront également partie de cette documentation.
+Nous prévoyons que [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) et [Unity](https://docs.unity3d.com/Manual/index.html) feront également partie de cette documentation.
 
 Ce projet a adopté le code de conduite défini dans la charte des contributeurs afin que le comportement à observer dans notre communauté soit clair.
 Pour plus d’informations, consultez le [code de conduite de .NET Foundation](https://dotnetfoundation.org/code-of-conduct).

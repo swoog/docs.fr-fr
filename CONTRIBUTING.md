@@ -140,7 +140,7 @@ La liste suivante montre quelques règles directrices que vous devez garder à l
 
 ## <a name="contributor-license-agreement"></a>Contrat de licence du contributeur
 
-Vous devez signer le [contrat de licence de contribution (CLA) .NET Foundation](https://cla.dotnetfoundation.org) avant de fusionner votre demande de tirage. Vous ne devez le faire qu’une fois pour tous les projets .NET Foundation. Vous pouvez en savoir plus sur les [contrats de licence de contribution (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) sur Wikipédia.
+Vous devez signer le [contrat de licence de contribution (CLA) .NET Foundation](https://cla.dotnetfoundation.org) avant de fusionner votre demande de tirage. Vous ne devez le faire qu’une fois pour tous les projets .NET Foundation. Vous pouvez en savoir plus sur les [contrats de licence de contribution (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) sur Wikipédia.
 
 L’accord : [net-foundation-contribution-licence-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

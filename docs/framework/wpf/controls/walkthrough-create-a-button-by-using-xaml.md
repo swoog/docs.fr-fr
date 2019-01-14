@@ -1,17 +1,17 @@
 ---
-title: 'Procédure pas à pas : créer un bouton avec XAML'
+title: 'Procédure pas à pas : Créer un bouton avec XAML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525349"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249149"
 ---
-# <a name="walkthrough-create-a-button-by-using-xaml"></a>Procédure pas à pas : créer un bouton avec XAML
+# <a name="walkthrough-create-a-button-by-using-xaml"></a>Procédure pas à pas : Créer un bouton avec XAML
 L’objectif de cette procédure pas à pas est d’apprendre à créer un bouton animé pour une utilisation dans une application Windows Presentation Foundation (WPF). Cette procédure pas à pas utilise des styles et un modèle pour créer une ressource de bouton personnalisé qui permet la réutilisation du code et la séparation de la logique de bouton de la déclaration de bouton. Cette procédure pas à pas est écrite entièrement en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
@@ -28,9 +28,9 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
 1.  Démarrez Visual Studio.  
   
-2.  **Créez un projet WPF :** sur le **fichier** menu, pointez sur **New**, puis cliquez sur **projet**. Rechercher la **Application Windows (WPF)** modèle et nommez le projet « BoutonAnimé ». Cela créera la structure pour l’application.  
+2.  **Créez un projet WPF :** Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Projet**. Rechercher la **Application Windows (WPF)** modèle et nommez le projet « BoutonAnimé ». Cela créera la structure pour l’application.  
   
-3.  **Ajouter des boutons de base par défaut :** tous les fichiers que vous avez besoin pour cette procédure pas à pas sont fournies par le modèle. Ouvrez le fichier Window1.xaml en double-cliquant dessus dans l’Explorateur de solutions. Par défaut, il existe un <xref:System.Windows.Controls.Grid> élément dans Window1.xaml. Supprimer le <xref:System.Windows.Controls.Grid> élément et ajouter quelques boutons à la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page en tapant ou copiant et collant le code en surbrillance suivant dans Window1.xaml :  
+3.  **Ajouter des boutons de base par défaut :** Tous les fichiers que vous avez besoin pour cette procédure pas à pas sont fournies par le modèle. Ouvrez le fichier Window1.xaml en double-cliquant dessus dans l’Explorateur de solutions. Par défaut, il existe un <xref:System.Windows.Controls.Grid> élément dans Window1.xaml. Supprimer le <xref:System.Windows.Controls.Grid> élément et ajouter quelques boutons à la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page en tapant ou copiant et collant le code en surbrillance suivant dans Window1.xaml :  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -74,7 +74,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Étendue de la ressource est déterminée par où vous définissez la ressource. Définition des ressources dans `Application.Resources` du fichier App.XAML fichier permet à la ressource à utiliser à partir de n’importe où dans l’application. Pour en savoir plus sur la définition de la portée de vos ressources, consultez [XAML ressources](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-2.  **Créer un style et définir des valeurs de propriété de base avec lui :** ajoutez le balisage suivant à la `Application.Resources` bloc. Ce balisage crée un <xref:System.Windows.Style> qui s’applique à tous les boutons dans le paramètre d’application, le <xref:System.Windows.FrameworkElement.Width%2A> des boutons à 90 et le <xref:System.Windows.FrameworkElement.Margin%2A> à 10 :  
+2.  **Créer un style et définir des valeurs de propriété de base avec celui-ci :** Ajoutez le balisage suivant à la `Application.Resources` bloc. Ce balisage crée un <xref:System.Windows.Style> qui s’applique à tous les boutons dans le paramètre d’application, le <xref:System.Windows.FrameworkElement.Width%2A> des boutons à 90 et le <xref:System.Windows.FrameworkElement.Margin%2A> à 10 :  
   
     ```xaml  
     <Application.Resources>  
@@ -91,7 +91,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Il est beaucoup plus, que vous pouvez effectuer avec des styles, incluant diverses méthodes permettant d’affiner quels objets sont ciblés, en spécifiant les valeurs de propriété complexes et même à l’aide de styles en tant qu’entrée pour d’autres styles. Pour plus d’informations, consultez [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-3.  **Définir une valeur de propriété de style à une ressource :** ressources activer un moyen simple de réutiliser des objets couramment définis et les valeurs. Il est particulièrement utile définir des valeurs complexes à l’aide de ressources pour rendre votre code plus modulaire. Ajoutez le balisage en surbrillance suivant à app.xaml.  
+3.  **Définissez une valeur de propriété de style à une ressource :** Ressources activer un moyen simple de réutiliser des objets couramment définis et les valeurs. Il est particulièrement utile définir des valeurs complexes à l’aide de ressources pour rendre votre code plus modulaire. Ajoutez le balisage en surbrillance suivant à app.xaml.  
   
     ```xaml  
     <Application.Resources>  
@@ -121,7 +121,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
 #### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Pour utiliser le modèle pour définir l’apparence du bouton  
   
-1.  **Définir le modèle :** , car les contrôles tels que <xref:System.Windows.Controls.Button> ont un <xref:System.Windows.Controls.Control.Template%2A> propriété, vous pouvez définir la valeur de propriété de modèle comme les autres valeurs de propriété que nous avons défini dans un <xref:System.Windows.Style> à l’aide un <xref:System.Windows.Setter>. Ajoutez le balisage en surbrillance suivant à votre style de bouton.  
+1.  **Définir le modèle :** Étant donné que les contrôles tels que <xref:System.Windows.Controls.Button> ont un <xref:System.Windows.Controls.Control.Template%2A> propriété, vous pouvez définir la valeur de propriété de modèle comme les autres valeurs de propriété que nous avons défini dans un <xref:System.Windows.Style> à l’aide un <xref:System.Windows.Setter>. Ajoutez le balisage en surbrillance suivant à votre style de bouton.  
   
     ```xaml
     <Application.Resources>  
@@ -144,7 +144,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
     </Application.Resources>  
     ```  
   
-2.  **Modifier la présentation de bouton :** à ce stade, vous devez définir le modèle. Ajoutez le balisage en surbrillance suivant. Ce balisage spécifie deux <xref:System.Windows.Shapes.Rectangle> éléments avec des bords arrondis, suivi d’un <xref:System.Windows.Controls.DockPanel>. Le <xref:System.Windows.Controls.DockPanel> est utilisé pour héberger le <xref:System.Windows.Controls.ContentPresenter> du bouton. Un <xref:System.Windows.Controls.ContentPresenter> affiche le contenu du bouton. Dans cette procédure pas à pas, le contenu est texte (« Bouton 1 », « Bouton 2 », « Bouton 3 »). Tous les composants de modèle (les rectangles et les <xref:System.Windows.Controls.DockPanel>) sont disposés à l’intérieur d’un <xref:System.Windows.Controls.Grid>.  
+2.  **Modifier la présentation de bouton :** À ce stade, vous devez définir le modèle. Ajoutez le balisage en surbrillance suivant. Ce balisage spécifie deux <xref:System.Windows.Shapes.Rectangle> éléments avec des bords arrondis, suivi d’un <xref:System.Windows.Controls.DockPanel>. Le <xref:System.Windows.Controls.DockPanel> est utilisé pour héberger le <xref:System.Windows.Controls.ContentPresenter> du bouton. Un <xref:System.Windows.Controls.ContentPresenter> affiche le contenu du bouton. Dans cette procédure pas à pas, le contenu est texte (« Bouton 1 », « Bouton 2 », « Bouton 3 »). Tous les composants de modèle (les rectangles et les <xref:System.Windows.Controls.DockPanel>) sont disposés à l’intérieur d’un <xref:System.Windows.Controls.Grid>.  
   
     ```xaml  
     <Setter.Value>  
@@ -167,7 +167,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3.  **Ajouter un effet verre au modèle :** vous allez ensuite ajouter le verre. Tout d’abord, vous créez quelques ressources qui créent un effet de dégradé de transparence. Ajoutez ces ressources dégradés n’importe où dans le `Application.Resources` bloc :  
+3.  **Ajouter un effet verre au modèle :** Ensuite, vous allez ajouter le verre. Tout d’abord, vous créez quelques ressources qui créent un effet de dégradé de transparence. Ajoutez ces ressources dégradés n’importe où dans le `Application.Resources` bloc :  
   
     ```xaml  
     <Application.Resources>  
@@ -187,7 +187,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Ces ressources sont utilisées en tant que le <xref:System.Windows.Shapes.Shape.Fill%2A> pour un rectangle que nous insérons dans le <xref:System.Windows.Controls.Grid> du modèle de bouton. Ajoutez le balisage en surbrillance suivant au modèle.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"  
@@ -249,13 +249,13 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
 ## <a name="create-button-interactivity"></a>Créer l’interactivité de bouton  
  Dans cette section, vous allez créer des déclencheurs de propriété et des déclencheurs d’événements pour modifier les valeurs de propriété et exécuter des animations en réponse aux actions utilisateur telles que le déplacement du pointeur de la souris sur le bouton et en cliquant sur.  
   
- Un moyen simple pour ajouter une interactivité (pointage avec la souris, éloignement de la souris, cliquez sur et ainsi de suite) consiste à définir des déclencheurs dans votre modèle ou style. Pour créer un <xref:System.Windows.Trigger>, vous définissez une propriété « condition » telles que : le bouton <xref:System.Windows.UIElement.IsMouseOver%2A> valeur de propriété est égale à `true`. Vous définissez alors des accesseurs Set (actions) qui ont lieu lorsque la condition de déclenchement est remplie.  
+ Un moyen simple pour ajouter une interactivité (pointage avec la souris, éloignement de la souris, cliquez sur et ainsi de suite) consiste à définir des déclencheurs dans votre modèle ou style. Pour créer un <xref:System.Windows.Trigger>, vous définissez une propriété « condition » telles que : Le bouton <xref:System.Windows.UIElement.IsMouseOver%2A> valeur de propriété est égale à `true`. Vous définissez alors des accesseurs Set (actions) qui ont lieu lorsque la condition de déclenchement est remplie.  
   
 #### <a name="to-create-button-interactivity"></a>Pour créer l’interactivité de bouton  
   
-1.  **Ajouter des déclencheurs de modèle :** ajouter le balisage en surbrillance à votre modèle.  
+1.  **Ajouter des déclencheurs de modèle :** Ajoutez le balisage en surbrillance à votre modèle.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}"   
@@ -318,9 +318,9 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
     </Setter.Value>  
     ```  
   
-2.  **Ajouter des déclencheurs de propriété :** ajouter le balisage en surbrillance à la `ControlTemplate.Triggers` bloc :  
+2.  **Ajouter des déclencheurs de propriété :** Ajoutez le balisage en surbrillance à la `ControlTemplate.Triggers` bloc :  
   
-    ```  
+    ```xaml
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->   <Trigger Property="IsMouseOver" Value="True">     <!-- Below are three property settings that occur when the           condition is met (user mouses over button).  -->     <!-- Change the color of the outer rectangle when user           mouses over it. -->     <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <!-- Sets the glass opacity to 1, therefore, the           glass "appears" when user mouses over it. -->     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />     <!-- Makes the text slightly blurry as though you           were looking at it through blurry glass. -->     <Setter Property="ContentPresenter.BitmapEffect"        TargetName="myContentPresenter">       <Setter.Value>         <BlurBitmapEffect Radius="1" />       </Setter.Value>     </Setter>   </Trigger>  
@@ -330,9 +330,9 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Appuyez sur F5 pour exécuter l’application et de voir l’effet lorsque vous exécutez le pointeur de la souris sur les boutons.  
   
-3.  **Ajouter un déclencheur de focus :** ensuite, nous allons ajouter quelques méthodes setter similaire pour gérer les cas où le bouton a le focus (par exemple, une fois que l’utilisateur clique dessus).  
+3.  **Ajouter un déclencheur de focus :** Ensuite, nous allons ajouter quelques méthodes setter similaire pour gérer les cas où le bouton a le focus (par exemple, une fois que l’utilisateur clique dessus).  
   
-    ```  
+    ```xaml  
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->  
@@ -361,9 +361,9 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Appuyez sur F5 pour exécuter l’application et cliquez sur l’un des boutons. Notez que le bouton reste en surbrillance une fois que vous cliquez dessus, car il a encore le focus. Si vous cliquez sur un autre bouton, le nouveau bouton Obtient le focus, tandis que le dernier le perd.  
   
-4.  **Ajouter des animations pour** <xref:System.Windows.UIElement.MouseEnter> **et** <xref:System.Windows.UIElement.MouseLeave> **:** nous ajoutons certaines animations aux déclencheurs. Ajoutez le balisage suivant n’importe où à l’intérieur de la `ControlTemplate.Triggers` bloc.  
+4.  **Ajouter des animations pour** <xref:System.Windows.UIElement.MouseEnter> **et** <xref:System.Windows.UIElement.MouseLeave> **:  ** Ensuite, nous ajouter certaines animations aux déclencheurs. Ajoutez le balisage suivant n’importe où à l’intérieur de la `ControlTemplate.Triggers` bloc.  
   
-    ```  
+    ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
     <EventTrigger RoutedEvent="Mouse.MouseEnter">  
       <EventTrigger.Actions>  
@@ -398,9 +398,9 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Le second déclencheur d’événement (<xref:System.Windows.UIElement.MouseLeave>) arrête simplement le premier. Lorsque vous arrêtez un <xref:System.Windows.Media.Animation.Storyboard>, toutes les propriétés animées retournent leurs valeurs par défaut. Par conséquent, lorsque l’utilisateur déplace le pointeur hors du bouton, le bouton revient à la façon dont il avait avant le pointeur de la souris est déplacé sur le bouton. Pour plus d’informations sur les animations, consultez [vue d’ensemble de l’Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
-5.  **Ajouter une animation lorsque le bouton est cliqué :** l’étape finale consiste à ajouter un déclencheur lorsque l’utilisateur clique sur le bouton. Ajoutez le balisage suivant n’importe où à l’intérieur de la `ControlTemplate.Triggers` bloc :  
+5.  **Ajouter une animation lorsque le bouton est cliqué :** L’étape finale consiste à ajouter un déclencheur pour lorsque l’utilisateur clique sur le bouton. Ajoutez le balisage suivant n’importe où à l’intérieur de la `ControlTemplate.Triggers` bloc :  
   
-    ```  
+    ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  
     <EventTrigger RoutedEvent="Button.Click">  
       <EventTrigger.Actions>  

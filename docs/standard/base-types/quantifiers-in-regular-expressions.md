@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4718dadddb2ad88ece05312b2f2b7232271d5b0e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580456"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221386"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificateurs dans les expressions régulières
 Les quantificateurs spécifient le nombre d’instances d’un caractère, groupe ou classe de caractères devant être présentes dans l’entrée pour qu’une correspondance soit trouvée.  Le tableau suivant répertorie les quantificateurs pris en charge par .NET.  
@@ -49,7 +49,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 ### <a name="match-zero-or-more-times-"></a>Mettre en correspondance zéro occurrence ou plus : *  
  Le quantificateur `*` correspond zéro fois, ou plus, à l’élément qui précède. Il équivaut au quantificateur `{0,}`. `*` est un quantificateur gourmand dont l’équivalent paresseux est `*?`.  
   
- L’exemple suivant illustre cette expression régulière. La chaîne d’entrée comporte neuf chiffres dont cinq correspondent au modèle et quatre (`95`, `929`, `9129` et `9919`) n’y correspondent pas.  
+ L’exemple suivant illustre cette expression régulière. La chaîne d’entrée comporte neuf chiffres dont cinq correspondent au modèle et quatre (`95`, `929`, `9219` et `9919`) n’y correspondent pas.  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
@@ -260,7 +260,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
   
  Pour voir la différence pratique entre un groupe de capture qui définit un nombre minimal et un nombre maximal de captures et un groupe de capture qui définit un nombre fixe de captures, examinez les modèles d’expressions régulières `(a\1|(?(1)\1)){0,2}` et `(a\1|(?(1)\1)){2}`. Les deux expressions régulières se composent d’un seul groupe de capture, qui est défini comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`(a\1`|Mettre en correspondance « a » avec la valeur du premier groupe capturé …|  
 |<code>&#124;(?(1)</code>|… ou tester si le premier groupe capturé a été défini. (Notez que la construction `(?(1)` ne définit pas un groupe de capture.)|  
