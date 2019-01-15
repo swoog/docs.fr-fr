@@ -1,5 +1,5 @@
 ---
-title: '&lt;supprimer&gt; , élément pour &lt;configSections&gt;'
+title: '&lt;supprimer&gt; élément pour &lt;configSections&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/remove
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 6555981edeb6f7f088fb12c710d0146cf58d5be1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 11a930120c375616d73faae68a6d6807c2f633cb
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752414"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307225"
 ---
 # <a name="remove-element-for-configsections"></a>\<Supprimer >, élément pour \<configSections >
 
-Supprime un groupe de sections ou une section prédéfinis.
+Supprime une section prédéfinie ou le groupe de section.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Supprimer >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,19 +42,19 @@ Supprime un groupe de sections ou une section prédéfinis.
 | --- | ----------- |
 | [**\<configSections >** élément](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contient des déclarations d’espace de noms et de la section de configuration. |
 
-# <a name="child-elements"></a>Éléments enfants
+## <a name="child-elements"></a>Éléments enfants
 
-Aucun
+Aucun.
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez utiliser la  **\<Supprimer >** élément à supprimer les sections et groupes de votre application qui ont été définis à un niveau supérieur dans la hiérarchie des fichiers de configuration.
+Vous pouvez utiliser la  **\<Supprimer >** élément à supprimer des sections et groupes de votre application qui ont été définies à un niveau supérieur dans la hiérarchie de fichiers de configuration.
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant montre comment utiliser le  **\<Supprimer >** élément dans un fichier de configuration d’application pour supprimer une section précédemment définie dans le fichier de configuration machine.
 
-Le code suivant du fichier de configuration machine déclare la section  **\<sampleSection >**:
+Le code du fichier de configuration machine suivant déclare la section  **\<sampleSection >**:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Le code suivant du fichier de configuration machine déclare la section  **\<sam
 </configuration>
 ```
 
-Le code du fichier de configuration application suivant supprime la  **\<sampleSection >** section. Après la suppression, l’application ne peut pas récupérer les paramètres de  **\<sampleSection >**.
+Le code suivant du fichier de configuration de l’application supprime le  **\<sampleSection >** section. Après la suppression, l’application ne peut pas récupérer les paramètres dans  **\<sampleSection >**.
 
 ```xml
 <!-- Application configuration file -->
@@ -82,7 +82,7 @@ Le code du fichier de configuration application suivant supprime la  **\<sampleS
 
 ## <a name="configuration-file"></a>fichier de configuration
 
-Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* les fichiers qui ne sont pas au niveau du répertoire d’application.
+Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* fichiers qui ne sont pas au niveau du répertoire d’application.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Désactivez&gt; , élément pour &lt;configSections&gt;'
+title: '&lt;Désactivez&gt; élément pour &lt;configSections&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/clear
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 42a44d66a3f70d0572484adf4c8dd946edf2297f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aa43d92270d09793d099ce34345ab82a355f90e3
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752245"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307069"
 ---
 # <a name="clear-element-for-configsections"></a>\<Désactivez >, élément pour \<configSections >
 
-Efface toutes les sections précédemment définies et des groupes.
+Efface toutes les sections précédemment définies et les groupes de sections.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Désactivez >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,19 +42,19 @@ Efface toutes les sections précédemment définies et des groupes.
 | --- | ----------- |
 | [**\<configSections >** élément](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contient des déclarations d’espace de noms et de la section de configuration. |
 
-# <a name="child-elements"></a>Éléments enfants
+## <a name="child-elements"></a>Éléments enfants
 
-Aucun
+Aucun.
 
 ## <a name="remarks"></a>Notes
 
-Le  **\<Effacer >** élément supprime toutes les sections et les groupes de votre application qui ont été définis précédemment dans le fichier de configuration actuel ou à un niveau supérieur dans la hiérarchie des fichiers de configuration.
+Le  **\<Effacer >** élément supprime toutes les sections et groupes de votre application qui ont été définis précédemment dans le fichier de configuration actuel ou à un niveau supérieur dans la hiérarchie de fichiers de configuration.
 
 ## <a name="example"></a>Exemple
 
 Cet exemple définit un fichier de configuration d’ordinateur et un fichier de configuration d’application et montre comment utiliser le  **\<Effacer >** élément dans un fichier de configuration d’application pour effacer les sections définies précédemment dans le fichier de configuration machine.
 
-Le code suivant du fichier de configuration machine déclare deux sections,  **\<sampleSection >** et  **\<anotherSampleSection >**, qui sont lues avant que l’application fichier de configuration :
+Le code du fichier de configuration machine suivant déclare deux sections,  **\<sampleSection >** et  **\<anotherSampleSection >**, qui sont lus avant que l’application fichier de configuration :
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ Le code suivant du fichier de configuration machine déclare deux sections,  **\
 </configuration>
 ```
 
-Le code suivant du fichier de configuration application efface toutes les sections déclarées précédemment. L’application ne peut pas utiliser ou récupérer des paramètres dans les sections qui ont été déclarées dans le fichier de configuration machine. Toutefois, il peut utiliser des paramètres à partir de  **\<anotherSection >** , car elle vient après le  **\<Effacer >** élément.
+Le code suivant du fichier de configuration de l’application efface toutes les sections déclarées précédemment. L’application ne peut pas utiliser ou récupérer des paramètres dans les sections qui ont été déclarées dans le fichier de configuration machine. Toutefois, il peut utiliser les paramètres à partir de  **\<anotherSection >** , car elle vient après le  **\<Effacer >** élément.
 
 ```xml
 <!-- Application configuration file -->
@@ -89,7 +89,7 @@ Le code suivant du fichier de configuration application efface toutes les sectio
 
 ## <a name="configuration-file"></a>fichier de configuration
 
-Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* les fichiers qui ne sont pas au niveau du répertoire d’application.
+Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* fichiers qui ne sont pas au niveau du répertoire d’application.
 
 ## <a name="see-also"></a>Voir aussi
 
