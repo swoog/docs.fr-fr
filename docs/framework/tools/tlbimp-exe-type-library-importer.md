@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409826"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221724"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Type Library Importer)
 L''importateur de bibliothèques de types convertit les définitions de types présentes dans une bibliothèque de types COM en définitions équivalentes dans un assembly de Common Language Runtime. Le résultat de Tlbimp.exe est un fichier binaire (un assembly) qui contient les métadonnées de runtime pour les types définis dans la bibliothèque de types d'origines. Vous pouvez examiner ce fichier à l’aide d’outils comme [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   

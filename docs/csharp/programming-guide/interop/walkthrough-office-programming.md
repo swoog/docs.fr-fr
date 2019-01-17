@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : programmation Office (C# et Visual Basic)'
+title: 'Procédure pas à pas : Programmation Office (C# et Visual Basic)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 997affa2f4cc5332339a49450d68ab3aaadffc4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 76d48b588db17a712ac698b604828520e38776a9
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084798"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223154"
 ---
-# <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procédure pas à pas : programmation Office (C# et Visual Basic)
+# <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procédure pas à pas : Programmation Office (C# et Visual Basic)
 Visual Studio offre des fonctionnalités dans C# et Visual Basic qui améliorent la programmation Microsoft Office. Les fonctionnalités utiles de C# incluent des arguments nommés et facultatifs ainsi que des valeurs de retour de type `dynamic`. Dans la programmation COM, vous pouvez omettre le mot clé `ref` et accéder aux propriétés indexées. Les fonctionnalités de Visual Basic incluent les propriétés implémentées automatiquement, les instructions dans les expressions lambda et les initialiseurs de collection.
 
-Les deux langages autorisent l'incorporation d'informations de type, qui permet de déployer des assemblys interagissant avec les composants COM sans déployer les assemblys PIA (Primary Interop Assemblies) sur l'ordinateur de l'utilisateur. Pour plus d’informations, consultez [Procédure pas à pas : incorporation de types provenant d’assemblys managés](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
+Les deux langages autorisent l'incorporation d'informations de type, qui permet de déployer des assemblys interagissant avec les composants COM sans déployer les assemblys PIA (Primary Interop Assemblies) sur l'ordinateur de l'utilisateur. Pour plus d’informations, consultez [Procédure pas à pas : Incorporation de types provenant d’assemblys managés](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
 Cette procédure pas à pas illustre ces fonctionnalités dans le contexte de la programmation Office, mais beaucoup d’entre elles sont aussi utiles en programmation générale. Dans la procédure pas à pas, vous allez utiliser une application de complément Excel pour créer un classeur Excel. Vous créerez ensuite un document Word contenant un lien vers le classeur. Enfin, vous apprendrez à activer et désactiver la dépendance d’assembly PIA.  
   
@@ -53,7 +53,7 @@ Pour effectuer cette procédure pas à pas, Microsoft Office Excel et Microsoft 
   
 1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nom de votre projet, puis cliquez sur **Ajouter une référence**. La boîte de dialogue **Ajouter une référence** s’affiche.  
   
-2.  Sous l’onglet **Assemblys**, sélectionnez **Microsoft.Office.Interop.Excel**, version `<version>.0.0.0` (pour plus d’informations sur les numéros de version des produits Office, consultez [Versions Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)),dans la liste **Nom du composant**, puis maintenez la touche CTRL enfoncée et sélectionnez **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si les assemblys n’apparaissent pas, vous devez vérifier qu’ils sont installés et s’affichent (consultez [Guide pratique pour installer les assemblys PIA (Primary Interop Assembly) d’Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  Sous l’onglet **Assemblys**, sélectionnez **Microsoft.Office.Interop.Excel**, version `<version>.0.0.0` (pour plus d’informations sur les numéros de version des produits Office, consultez [Versions Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)),dans la liste **Nom du composant**, puis maintenez la touche CTRL enfoncée et sélectionnez **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si les assemblys n'apparaissent pas, vous devez vous assurer qu'ils sont installés et s'affichent (voir [Guide pratique pour installer les assemblys PIA d’Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  Cliquez sur **OK**.  
   
@@ -107,7 +107,7 @@ Pour effectuer cette procédure pas à pas, Microsoft Office Excel et Microsoft 
   
          Vous ne pouvez pas créer vos propres propriétés indexées. La fonctionnalité prend uniquement en charge la consommation de propriétés indexées existantes.  
   
-         Pour plus d’informations, consultez [Guide pratique pour utiliser des propriétés indexées dans la programmation COM Interop](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md).  
+         Pour plus d'informations, voir [Procédure : utiliser des propriétés indexées dans la programmation COM Interop](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md).  
   
 2.  À la fin de `DisplayInExcel`, ajoutez le code suivant pour ajuster les largeurs de colonne au contenu.  
   
@@ -157,11 +157,11 @@ Pour effectuer cette procédure pas à pas, Microsoft Office Excel et Microsoft 
   
 2.  Sélectionnez le bouton **Démarrer**. Recherchez **Microsoft Visual Studio \<version>** et ouvrez une invite de commandes développeur.  
   
-3.  Tapez `ildasm` dans la fenêtre Invite de commandes de Visual Studio, puis appuyez sur Entrée. La fenêtre IL DASM s'affiche.  
+3.  Tapez `ildasm` dans la fenêtre Invite de commandes développeur pour Visual Studio, puis appuyez sur Entrée. La fenêtre IL DASM s'affiche.  
   
 4.  Dans le menu **Fichier** de la fenêtre IL DASM, sélectionnez **Fichier** > **Ouvrir**. Double-cliquez sur **Visual Studio \<version>**, puis sur **Projets**. Ouvrez le dossier de votre projet et, dans le dossier bin/Debug, recherchez *nom de votre projet*.dll. Double-cliquez sur *nom de votre projet*.dll. Une nouvelle fenêtre affiche les attributs de votre projet, en plus des références à d'autres modules et assemblys. Remarquez que les espaces de noms `Microsoft.Office.Interop.Excel` et `Microsoft.Office.Interop.Word` sont inclus dans l'assembly. Par défaut, dans Visual Studio, le compilateur importe les types dont vous avez besoin à partir d’un assembly PIA référencé dans votre assembly.  
   
-     Pour plus d’informations, consultez [Guide pratique pour afficher le contenu d’un assembly](../../../framework/app-domains/how-to-view-assembly-contents.md).  
+     Pour plus d'informations, voir [Procédure : afficher le contenu d’un assembly](../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 5.  Double-cliquez sur l’icône **MANIFESTE**. Une fenêtre affiche la liste des assemblys contenant les éléments référencés par le projet. `Microsoft.Office.Interop.Excel` et `Microsoft.Office.Interop.Word` ne sont pas inclus dans la liste. Étant donné que les types dont votre projet a besoin ont été importés dans votre assembly, les références à un assembly PIA ne sont pas requis. Le déploiement s'en trouve facilité. Les assemblys PIA ne doivent pas être présents sur l'ordinateur de l'utilisateur ; comme une application ne nécessite pas le déploiement d'une version spécifique d'un assembly PIA, les applications peuvent être conçues pour fonctionner avec plusieurs versions d'Office, sous réserve que les API nécessaires existent dans toutes les versions.  
   
@@ -204,8 +204,8 @@ Pour effectuer cette procédure pas à pas, Microsoft Office Excel et Microsoft 
 - [Utilisation du type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
 - [Expressions lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
 - [Expressions lambda (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Comment : utiliser des propriétés indexées dans la programmation COM Interop](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
-- [Procédure pas à pas : incorporation d’informations de type provenant d’assemblys Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
+- [Guide pratique pour utiliser des propriétés indexées dans la programmation COM Interop](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+- [Procédure pas à pas : incorporer des informations de type provenant d’assemblys Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
 - [Procédure pas à pas : incorporation de types provenant d’assemblys managés](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
 - [Procédure pas à pas : création de votre premier complément VSTO pour Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  

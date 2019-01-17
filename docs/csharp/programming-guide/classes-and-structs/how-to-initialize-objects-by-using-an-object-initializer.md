@@ -1,39 +1,37 @@
 ---
 title: "Procédure : Initialiser des objets à l'aide d'un initialiseur d'objet - Guide de programmation C#"
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/20/2018
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: 82efa751ad70fd2741ec2e306f56f2be06abad11
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 29987b9ba1f1f18f4e768766bd2391ebb5862f97
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244989"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084873"
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>Procédure : Initialiser des objets à l'aide d'un initialiseur d'objet (Guide de programmation C#)
+
 Vous pouvez utiliser des initialiseurs d’objets pour initialiser des objets de type de façon déclarative sans appeler explicitement un constructeur pour le type.  
   
- Les exemples suivants montrent comment utiliser des initialiseurs d’objets avec des objets nommés. Le compilateur traite les initialiseurs d’objets en accédant d’abord au constructeur d’instance par défaut, puis en traitant les initialisations des membres. Ainsi, si le constructeur par défaut est déclaré comme `private` dans la classe, les initialiseurs d’objets qui nécessitent un accès public échoueront.  
+Les exemples suivants montrent comment utiliser des initialiseurs d’objets avec des objets nommés. Le compilateur traite les initialiseurs d’objets en accédant d’abord au constructeur d’instance par défaut, puis en traitant les initialisations des membres. Ainsi, si le constructeur par défaut est déclaré comme `private` dans la classe, les initialiseurs d’objets qui nécessitent un accès public échoueront.
   
- Vous devez utiliser un initialiseur d’objet si vous définissez un type anonyme. Pour plus d'informations, voir [Procédure : Retourner des sous-ensembles de propriétés d’éléments dans une requête](../../../csharp/programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment initialiser un nouveau type `StudentName` à l’aide d’initialiseurs d’objets.  
-  
- [!code-csharp[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
+Vous devez utiliser un initialiseur d’objet si vous définissez un type anonyme. Pour plus d'informations, voir [Procédure : Retourner des sous-ensembles de propriétés d’éléments dans une requête](how-to-return-subsets-of-element-properties-in-a-query.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment initialiser une collection de types `StudentName` à l’aide d’un initialiseur de collection. Notez qu’un initialiseur de collection est une série d’initialiseurs d’objets séparés par des virgules.  
+
+L’exemple suivant montre comment initialiser un nouveau type `StudentName` à l’aide d’initialiseurs d’objets. Cet exemple définit des propriétés dans le type `StudentName` :
   
- [!code-csharp[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
-  
-## <a name="compiling-the-code"></a>Compilation du code  
- Pour exécuter ce code, copiez et collez la classe dans un projet d’application console Visual C# qui a été créé dans Visual Studio.  
-  
+[!code-csharp-interactive[InitializerObjectExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToObjectInitializers.cs#HowToObjectInitializers)]  
+
+Des initialiseurs d’objet peuvent être utilisés pour définir des indexeurs dans un objet. L’exemple suivant définit une classe `BaseballTeam` qui utilise un indexeur pour obtenir et définir des joueurs à des positions différentes. L’initialiseur peut affecter des joueurs en fonction de l’abréviation de la position ou du chiffre utilisé pour désigner la position sur les feuilles de match :
+
+[!code-csharp-interactive[InitializerIndexerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToIndexInitializer.cs#HowToIndexInitializer)]  
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Initialiseurs d’objets et de collections](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Guide de programmation C#](../index.md)  
+- [Initialiseurs d’objets et de collections](object-and-collection-initializers.md)

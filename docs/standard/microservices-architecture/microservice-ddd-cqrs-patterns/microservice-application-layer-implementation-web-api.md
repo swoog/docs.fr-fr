@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET conte
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151185"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152110"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implémenter la couche Application des microservices avec l’API web
 
@@ -19,7 +19,7 @@ Comme mentionné précédemment, la couche Application peut être implémentée 
 
 Par exemple, le code de la couche Application du microservice Ordering est directement implémenté dans le cadre du projet **Ordering.API** (un projet d’API web ASP.NET Core), comme le montre la figure 7-23.
 
-![La vue Explorateur de solutions du microservice Ordering.API, montrant les sous-dossiers sous le dossier Application : Comportements, Commandes, DomainEventHandlers, IntegrationEvents, Modèles, Requêtes et Validations.](./media/image20.png)
+![Vue de l’Explorateur de solutions du microservice Ordering.API, montrant les sous-dossiers sous le dossier Application : Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries et Validations.](./media/image20.png)
 
 **Figure 7-23**. Couche Application dans le projet d’API web ASP.NET Core Ordering.API
 
@@ -114,7 +114,7 @@ Quand vous utilisez l’injection de dépendances dans .NET Core, vous pouvez av
 - **Matthew King. Registering services with Scrutor** \
   [*https://www.mking.net/blog/registering-services-with-scrutor*](https://www.mking.net/blog/registering-services-with-scrutor)
 
-- **Kristian Hellang. Scrutor.** Dépôt GitHub \
+- **Kristian Hellang. Scrutor.** Dépôt GitHub. \
   [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
 
 #### <a name="use-autofac-as-an-ioc-container"></a>Utiliser Autofac comme conteneur IoC
@@ -183,7 +183,7 @@ Le modèle Commande est intrinsèquement lié au modèle CQRS présenté précé
 
 Comme le montre la figure 7-24, le modèle se base sur l’acceptation des commandes du côté client, leur traitement en fonction des règles du modèle de domaine et enfin, sur la persistance des états avec les transactions.
 
-![Vue générale du côté des écritures dans CQRS : l’application d’interface utilisateur envoie une commande via l’API qui arrive à un CommandHandler, lequel dépend du modèle Domaine et de l’infrastructure pour mettre à jour la base de données.](./media/image21.png)
+![Vue globale du côté des écritures dans CQRS : L’application d’interface utilisateur envoie une commande par le biais de l’API qui arrive à un CommandHandler, lequel dépend du modèle Domaine et de l’infrastructure pour mettre à jour la base de données.](./media/image21.png)
 
 **Figure 7-24**. Vue générale des commandes ou du « côté transactionnel » d’un modèle CQRS
 
@@ -397,7 +397,7 @@ Il s’agit des étapes supplémentaires que doit suivre un gestionnaire de comm
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented** \
-  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **Commands and events** \
   [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
@@ -806,7 +806,7 @@ De la même façon, vous pouvez implémenter d’autres comportements pour d’a
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
-- **MediatR.** Dépôt GitHub \
+- **MediatR.** Dépôt GitHub. \
   [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
 - **CQRS with MediatR and AutoMapper** \
@@ -832,7 +832,7 @@ De la même façon, vous pouvez implémenter d’autres comportements pour d’a
 
 ##### <a name="fluent-validation"></a>Validation fluide
 
-- **Jeremy Skinner. FluentValidation.** Dépôt GitHub \
+- **Jeremy Skinner. FluentValidation.** Dépôt GitHub. \
   [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
 >[!div class="step-by-step"]

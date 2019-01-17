@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7b3d28b7af96dde30117ec952355958ca75ae559
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122773"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223167"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
 Le Générateur de fichiers de ressources (Resgen.exe) convertit les fichiers texte (.txt ou .restext) et les fichiers de format de ressource XML (.resx) en fichiers binaires Common Language Runtime (.resources) pouvant être incorporés dans un exécutable binaire runtime ou un assembly satellite. (Consultez [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -55,7 +55,7 @@ resgen /?
   
  Si vous utilisez Resgen.exe pour générer des fichiers .resources binaires, vous pouvez utiliser un compilateur de langage pour incorporer les fichiers binaires dans des assemblys exécutables, ou vous pouvez utiliser [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) pour les compiler dans des assemblys satellites.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   

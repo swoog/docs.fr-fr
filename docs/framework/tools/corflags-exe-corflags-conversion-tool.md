@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4a5b6d490387f2da441ad95bdf369f700cf2e9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21b9881f1275c6a9343421131af478e11b826073
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400027"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222725"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (outil de conversion CorFlags)
 L’outil de conversion CorFlags vous permet de configurer la section CorFlags de l’en-tête d’une image exécutable portable.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   
@@ -41,13 +41,13 @@ CorFlags.exe assembly [options]
 |**/32BITPREF+**|Définit l'indicateur 32BITPREFERRED. L'application s'exécute comme un processus 32 bits même sur les plateformes 64 bits. Affectez cet indicateur uniquement sur les fichiers EXE. Si l'indicateur est défini sur une DLL, la DLL ne charge pas dans les processus 64 bits, et une exception <xref:System.BadImageFormatException> est levée. Un fichier EXE avec cet indicateur peut être chargé dans un processus 64 bits.<br /><br /> Nouveau dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/32BITPREF-**|Efface l'indicateur 32BITPREFERRED.<br /><br /> Nouveau dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/?**|Affiche la syntaxe et les options de commande de l'outil.|  
-|**/Force**|Force une mise à jour même si l'assembly est associé à un nom fort. **Important :** Si vous mettez à jour un assembly avec un nom fort, vous devez le resigner avant d’exécuter son code.|  
+|**/Force**|Force une mise à jour même si l'assembly est associé à un nom fort. **Important :**  Si vous mettez à jour un assembly avec nom fort, vous devez le signer à nouveau avant d'exécuter son code.|  
 |**/help**|Affiche la syntaxe et les options de commande de l'outil.|  
 |**/ILONLY+**|Définit l'indicateur ILONLY.|  
 |**/ILONLY-**|Efface l'indicateur ILONLY.|  
 |**/nologo**|Supprime l'affichage de la bannière de démarrage Microsoft.|  
 |**/RevertCLRHeader**|Rétablit l'en-tête du CLR à la version 2.0.|  
-|**/UpgradeCLRHeader**|Met à niveau l'en-tête du CLR à la version 2.5. **Remarque :** Les assemblys doivent avoir la version 2.5 ou ultérieure dans l’en-tête du CLR pour être exécutés en mode natif.|  
+|**/UpgradeCLRHeader**|Met à niveau l'en-tête du CLR à la version 2.5. **Remarque :**  Les assemblys doivent avoir la version 2.5 ou une version ultérieure de l'en-tête du CLR pour être exécutés en mode natif.|  
   
 ## <a name="remarks"></a>Notes  
  Si aucune option n'est spécifiée, l'outil de conversion CorFlags affiche les indicateurs pour l'assembly spécifié.  

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : dissocier des blocs de flux de données'
+title: 'Procédure : Dissocier des blocs de flux de données'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540604"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223115"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Comment : dissocier des blocs de flux de données
+# <a name="how-to-unlink-dataflow-blocks"></a>Procédure : Dissocier des blocs de flux de données
 Ce document explique comment dissocier un bloc de flux de données cible de sa source.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -35,7 +35,7 @@ Ce document explique comment dissocier un bloc de flux de données cible de sa s
  Pour permettre aux appels restants à `TrySolution` de se terminer dès que l’un d’eux a calculé une valeur, la méthode `TrySolution` prend un objet <xref:System.Threading.CancellationToken> qui est annulé après que l’appel à `ReceiveFromAny(T)` a produit une sortie. La méthode <xref:System.Threading.SpinWait.SpinUntil%2A> produit une sortie quand cet objet <xref:System.Threading.CancellationToken> est annulé.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` pour Visual Basic), puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
+ Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` pour Visual Basic), puis exécutez la commande suivante dans une fenêtre d’invite de commandes développeur pour Visual Studio.  
   
  Visual C#  
   

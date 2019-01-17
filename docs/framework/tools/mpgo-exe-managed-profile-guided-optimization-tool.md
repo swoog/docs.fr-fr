@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68593509e384b2acd33fad0f476b6f300f2dbd92
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3809345432b705e4b44700fd6e8231c84bdce6ad
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202176"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221620"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Outil d'optimisation guidée par profil managé)
 
@@ -25,7 +25,7 @@ L'optimisation guidée par profil améliore le temps de démarrage de l'applicat
   
 Lorsque vous rencontrez des problèmes de performance en matière de temps de démarrage et de taille de la plage de travail pour les assemblys Intermediate Language (IL), il est recommandé d'utiliser d'abord Ngen.exe pour éliminer les coûts de compilation juste-à-temps et de simplifier le partage de code. Si vous avez besoin d'autres améliorations, vous pouvez utiliser ensuite Mpgo.exe pour optimiser davantage votre application. Vous pouvez utiliser les données de performance des assemblys d'images natives non optimisés comme une référence pour évaluer les gains de performance. L'utilisation de Mpgo.exe peut entraîner des temps de démarrage à froid plus rapides et une plus petite taille de la plage de travail. Mpgo.exe ajoute des informations aux assemblys IL que Ngen.exe utilise pour créer des assemblys optimisés d'images natives. Pour plus d’informations, consultez l’entrée [Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943) dans le blog .NET.  
   
-Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7) avec les informations d'identification de l'administrateur, puis tapez la commande suivante à l'invite de commandes. Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7) avec les informations d’identification d’administrateur, puis tapez la commande suivante à l’invite de commandes. Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 Pour les applications de bureau :  
   
@@ -100,15 +100,15 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  Ce processus garantit que tous les assemblys ont des données d'optimisation. Si vous enregistrez des assemblys optimisés mis à jour (étapes 1 et 2) plus fréquemment, les nombres de performance seront plus homogènes durant le développement du produit.  
   
 ## <a name="using-mpgoexe-from-visual-studio"></a>Utiliser Mpgo.exe depuis Visual Studio  
- Vous pouvez exécuter Mpgo.exe depuis Visual Studio (consultez l’article [Guide pratique pour spécifier des événements de build (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) avec les restrictions suivantes :  
+ Vous pouvez exécuter Mpgo.exe dans Visual Studio (consultez l’article [Guide pratique pour spécifier les événements de build (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) avec les restrictions suivantes :  
   
 -   Vous ne pouvez pas utiliser les chemins d’accès entre guillemets avec des marques de barre oblique finales, car les macros Visual Studio utilisent également des marques de barre oblique finales par défaut. (Par exemple, `–OutDir "C:\Output Folder\"` n'est pas valide.) Pour contourner cette restriction, évitez la barre oblique finale. (Par exemple, utilisez `-OutDir "$(OutDir)\"` à la place.)  
   
--   Par défaut, Mpgo.exe n'est pas dans le chemin d'accès de build de Visual Studio. Vous devez soit ajouter le chemin d'accès à Visual Studio, soit spécifier le chemin d'accès complet sur la ligne de commande du Mpgo. Vous pouvez utiliser le paramètre `–Scenario` ou `–Import` dans l'événement après génération dans Visual Studio. Toutefois, le processus habituel consiste à utiliser `–Scenario` une seule fois à partir de l'invite de commandes développeur Visual Studio, puis à utiliser `–Import` pour mettre à jour les assemblys optimisés après chaque génération, par exemple : `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
+-   Par défaut, Mpgo.exe n'est pas dans le chemin d'accès de build de Visual Studio. Vous devez soit ajouter le chemin d'accès à Visual Studio, soit spécifier le chemin d'accès complet sur la ligne de commande du Mpgo. Vous pouvez utiliser le paramètre `–Scenario` ou `–Import` dans l'événement après génération dans Visual Studio. Toutefois, le processus habituel consiste à utiliser `–Scenario` une seule fois à partir de l’invite de commandes développeur pour Visual Studio, puis à utiliser `–Import` pour mettre à jour les assemblys optimisés après chaque génération, par exemple : `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>Exemples  
- La commande Mpgoe.exe suivante d'une invite de commandes développeur Visual Studio optimise une application pour les taxes :  
+ La commande Mpgoe.exe suivante d’une invite de commandes développeur pour Visual Studio optimise une application pour les taxes :  
   
 ```  
 mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9bdffe76aaf9f41bfbba99bae9d2d3fa9b329d4a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002890"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221828"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (outil de génération de code)
 L'outil en ligne de commande SqlMetal génère le code et le mappage du composant [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En appliquant les options qui apparaissent ultérieurement dans cette rubrique, vous pouvez ordonner à SqlMetal d'exécuter plusieurs actions différentes, dont les suivantes :  
@@ -30,7 +30,7 @@ L'outil en ligne de commande SqlMetal génère le code et le mappage du composan
 > [!NOTE]
 >  Les développeurs qui utilisent Visual Studio peuvent également utiliser [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] pour générer des classes d'entité. L'approche de ligne de commande est bien adaptée aux bases de données volumineuses. Puisque SqlMetal est un outil de ligne de commande, vous pouvez l'utiliser dans un processus de génération.  
   
- Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d’informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md). À l’invite de commandes, tapez ce qui suit :  
+ Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d’informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md). À l’invite de commandes, tapez ce qui suit :  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,10 +47,10 @@ sqlmetal [options] [<input file>]
 |------------|-----------------|  
 |**/server:** *\<nom>*|Spécifie le nom du serveur de base de données.|  
 |**/database:** *\<nom>*|Spécifie le catalogue de base de données sur le serveur.|  
-|**/user:** *\<nom>*|Spécifie l'ID de connexion de l'utilisateur. Valeur par défaut : utilisez l'authentification Windows.|  
-|**/password:** *\<mot_de_passe>*|Spécifie le mot de passe d'ouverture de session. Valeur par défaut : utilisez l'authentification Windows.|  
+|**/user:** *\<nom>*|Spécifie l'ID de connexion de l'utilisateur. Valeur par défaut : Utilisez l’authentification Windows.|  
+|**/password:** *\<mot_de_passe>*|Spécifie le mot de passe d'ouverture de session. Valeur par défaut : Utilisez l’authentification Windows.|  
 |**/conn:** *\<chaîne_connexion>*|Spécifie la chaîne de connexion de base de données. Ne peut pas être utilisée avec les options **/server**, **/database**, **/user**ou **/password** .<br /><br /> N'inclut pas le nom de fichier dans la chaîne de connexion. Ajoutez plutôt le nom de fichier à la ligne de commande comme fichier d'entrée. Par exemple, la ligne suivante spécifie "c:\northwnd.mdf" comme fichier d’entrée : **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.|  
-|**/timeout:** *\<secondes>*|Spécifie la valeur du délai d'attente lorsque SqlMetal accède à la base de données. Valeur par défaut : 0 (à savoir, aucune limite de temps).|  
+|**/timeout:** *\<secondes>*|Spécifie la valeur du délai d'attente lorsque SqlMetal accède à la base de données. Valeur par défaut : 0 (à savoir, aucune limite de temps).|  
   
  **Options d'extraction**  
   
@@ -72,12 +72,12 @@ sqlmetal [options] [<input file>]
   
 |Option|Description|  
 |------------|-----------------|  
-|**/language:** *\<langage>*|Spécifie le langage du code source.<br /><br /> *\<langage>* valide : vb, csharp.<br /><br /> Valeur par défaut : Dérivé de l’extension du nom du fichier de code.|  
+|**/language:** *\<langage>*|Spécifie le langage du code source.<br /><br /> *\<langage>* valide : vb, csharp.<br /><br /> Valeur par défaut : Dérivé de l’extension du nom du fichier de code.|  
 |**/namespace:** *\<nom>*|Spécifie l'espace de noms du code généré. Valeur par défaut : Aucun espace de noms.|  
-|**/context:** *\<type>*|Spécifie le nom de la classe du contexte de données. Valeur par défaut : Dérivé du nom de la base de données.|  
-|**/entitybase:** *\<type>*|Spécifie la classe de base des classes d'entité du code généré. Valeur par défaut : Les entités n'ont pas de classe de base.|  
+|**/context:** *\<type>*|Spécifie le nom de la classe du contexte de données. Valeur par défaut : Dérivé du nom de base de données.|  
+|**/entitybase:** *\<type>*|Spécifie la classe de base des classes d'entité du code généré. Valeur par défaut : Les entités n’ont pas de classe de base.|  
 |**/pluralize**|Pluralise ou singularise automatiquement des noms de membre et de classe.<br /><br /> Cette option est disponible uniquement dans la version Anglais américain.|  
-|**/serialization:** *\<option>*|Génère des classes sérialisables.<br /><br /> *\<option>* valide : None, Unidirectional. Valeur par défaut : Aucun.<br /><br /> Pour plus d’informations, consultez [Sérialisation](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/serialization:** *\<option>*|Génère des classes sérialisables.<br /><br /> *\<option>* valide : Aucun, Unidirectionnel. Valeur par défaut : Aucun.<br /><br /> Pour plus d’informations, consultez [Sérialisation](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **Fichier d'entrée**  
   

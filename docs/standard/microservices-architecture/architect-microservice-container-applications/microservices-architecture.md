@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour applications .NET conteneu
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: dc96c5570ea829802c94c817ebd4910a090632ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cac40c0a6e5f31087296416616c8a8b9e54b528
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145736"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145248"
 ---
 # <a name="microservices-architecture"></a>Architecture en microservices
 
@@ -41,18 +41,18 @@ Voici des aspects importants pour réussir à passer en production avec un syst�
 
 - Pratiques et infrastructure DevOps et Intégration continue/livraison continue.
 
-Parmi ces aspects, seuls les trois premiers sont couverts ou présentés dans ce guide. Les deux derniers points, qui sont liés au cycle de vie des applications, sont traités dans un autre livre électronique, [Cycle de vie des applications Docker conteneurisées avec la plateforme et les outils Microsoft](https://aka.ms/dockerlifecycleebook).
+Parmi ces aspects, seuls les trois premiers sont couverts ou présentés dans ce guide. Les deux derniers points, qui sont liés au cycle de vie des applications, sont traités dans un autre livre électronique, [Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft](https://aka.ms/dockerlifecycleebook).
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- **Mark Russinovich. Microservices: An application revolution powered by the cloud** \
+- **Mark Russinovich. Microservices : Une révolution des applications grâce au cloud** \
   [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
 - **Martin Fowler. Microservices** \
-  [*http://www.martinfowler.com/articles/microservices.html*](http://www.martinfowler.com/articles/microservices.html)
+  [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
 
 - **Martin Fowler. Microservice Prerequisites** \
-  [*http://martinfowler.com/bliki/MicroservicePrerequisites.html*](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
+  [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
 - **Jimmy Nilsson. Chunk Cloud Computing** \
   [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188610"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084717"
 ---
 # <a name="switch-c-reference"></a>switch (informations de référence sur C#)
 
@@ -59,7 +59,7 @@ Une instruction `switch` peut inclure un nombre quelconque de sections de commut
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Une seule section de commutation s’exécute dans une instruction switch. C# ne permet pas à l’exécution de passer d’une section switch à la suivante. Pour cette raison, le code suivant génère une erreur du compilateur, CS0163 : « Le contrôle ne peut pas passer d’une étiquette case (<case label>) à une autre ».
+Une seule section de commutation s’exécute dans une instruction switch. C# ne permet pas à l’exécution de passer d’une section switch à la suivante. Pour cette raison, le code suivant génère une erreur de compilation, CS0163 : « Le contrôle ne peut pas passer d’une étiquette case (<case label>) à une autre. »
 
 ```csharp
 switch (caseSwitch)
@@ -88,7 +88,7 @@ Pour plus d’informations sur l’instruction `switch` et les critères spécia
 
 Étant donné que C# 6 prend en charge uniquement le modèle de constante et n’autorise pas la répétition des valeurs constantes, les étiquettes case définissent des valeurs qui s’excluent mutuellement, et un seul modèle peut correspondre à l’expression de correspondance. Par conséquent, l’ordre dans lequel les instructions `case` apparaissent n’a pas d’importance.
 
-Dans C# 7.0, toutefois, comme d’autres modèles sont pris en charge, les étiquettes case ne sont pas tenues de définir des valeurs s’excluant mutuellement et plusieurs modèles peuvent correspondre à l’expression de correspondance. Comme seules les instructions de la section de commutation contenant le premier modèle correspondant sont exécutées, l’ordre dans lequel les instructions `case` apparaissent est désormais important. Si C# détecte une section de commutation dont la ou les instructions case sont équivalentes aux instructions précédentes, ou en sont des sous-ensembles, C# génère une erreur du compilateur, CS8120, « Le switch case a déjà été pris en charge par un case antérieur ».
+Dans C# 7.0, toutefois, comme d’autres modèles sont pris en charge, les étiquettes case ne sont pas tenues de définir des valeurs s’excluant mutuellement et plusieurs modèles peuvent correspondre à l’expression de correspondance. Comme seules les instructions de la première section de commutation contenant le modèle correspondant sont exécutées, l’ordre dans lequel les instructions `case` apparaissent est désormais important. Si C# détecte une section de commutation dont la ou les instructions case sont équivalentes aux instructions précédentes, ou en sont des sous-ensembles, C# génère une erreur du compilateur, CS8120, « Le switch case a déjà été pris en charge par un case antérieur ».
 
 L’exemple suivant illustre une instruction `switch` qui utilise divers modèles ne s’excluant pas mutuellement. Si vous déplacez la section de commutation `case 0:` pour qu’elle ne soit plus la première section dans l’instruction `switch`, C# génère une erreur du compilateur, car un entier dont la valeur est égale à zéro est un sous-ensemble de tous les entiers, ce qui est le modèle défini par l’instruction `case int val`.
 

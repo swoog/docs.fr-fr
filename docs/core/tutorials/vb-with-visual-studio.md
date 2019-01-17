@@ -28,7 +28,7 @@ Pour plus d’informations, consultez [Configuration requise pour .NET Core sur 
 
 Commencez par créer une application console « Hello World » simple. Procédez comme suit :
 
-1. Lancez Visual Studio 2017. Sélectionnez **Fichier** > **Nouveau** > **Projet** dans la barre de menus. Dans la boîte de dialogue *Nouveau projet**, sélectionnez le nœud **Visual Basic** suivi du nœud **.NET Core**. Ensuite, sélectionnez le modèle de projet **Application console (.NET Core)**. Dans la zone de texte **Nom**, tapez « HelloWorld ». Sélectionnez le bouton **OK**.
+1. Lancez Visual Studio 2017. Sélectionnez **Fichier** > **Nouveau** > **Projet** dans la barre de menus. Dans la boîte de dialogue *Nouveau projet*\*, sélectionnez le nœud **Visual Basic** suivi du nœud **.NET Core**. Ensuite, sélectionnez le modèle de projet **Application console (.NET Core)**. Dans la zone de texte **Nom**, tapez « HelloWorld ». Sélectionnez le bouton **OK**.
 
    ![Boîte de dialogue Nouveau projet avec Application console sélectionné](./media/vb-with-visual-studio/visual-studio-new-project.png)
    

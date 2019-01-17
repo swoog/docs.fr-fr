@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49400474"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222166"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Native Image Generator)
 L'outil Native Image Generator Tool (Ngen.exe) est un outil qui améliore les performances des applications managées. Ngen.exe crée des images natives, qui sont des fichiers contenant le code machine compilé spécifique au processeur, et les installe dans le cache des images natives sur l'ordinateur local. Le runtime peut utiliser des images natives du cache plutôt que le compilateur juste-à-temps (JIT) pour compiler l'assembly d'origine.  
@@ -55,7 +55,7 @@ L'outil Native Image Generator Tool (Ngen.exe) est un outil qui améliore les pe
 > [!NOTE]
 >  Vous trouverez la syntaxe de Ngen.exe pour les versions 1.0 et 1.1 du .NET Framework dans [Syntaxe héritée du générateur d’images natives (Ngen.exe)](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   
@@ -75,7 +75,7 @@ ngen /? | /help
 |Action|Description|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Générer des images natives pour un assembly et ses dépendances et installer les images dans le cache des images natives.<br /><br /> Si `/queue` est spécifié, l'action est mise en file d'attente pour le service d'images natives. La priorité par défaut est 3. Consultez le tableau [Niveaux de priorité](#PriorityTable).|  
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Supprimer les images natives d'un assembly et ses dépendances du cache des images natives.<br /><br /> Pour désinstaller une seule image et ses dépendances, utilisez les mêmes arguments de ligne de commande que ceux utilisés pour installer l’image. **Remarque :** À compter du [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], l'action `uninstall` * n'est plus prise en charge.|  
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Supprimer les images natives d'un assembly et ses dépendances du cache des images natives.<br /><br /> Pour désinstaller une seule image et ses dépendances, utilisez les mêmes arguments de ligne de commande que ceux utilisés pour installer l’image. **Remarque :**  À compter de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], l’action `uninstall` * n’est plus prise en charge.|  
 |`update` [`/queue`]|Mettre à jour des images natives qui sont devenues non valides.<br /><br /> Si `/queue` est spécifié, les mises à jour sont mises en file d'attente pour le service d'images natives. Les mises à jour sont toujours planifiées à la priorité 3, de sorte qu'elles s'exécutent lorsque l'ordinateur est inactif.|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|Afficher l'état des images natives pour un assembly et ses dépendances.<br /><br /> Si aucun argument n’est fourni, tout dans le cache des images natives est affiché.|  
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - ou -<br /><br /> `eqi` [1&#124;2&#124;3]|Exécuter les travaux de compilation en attente.<br /><br /> Si une priorité est spécifiée, les travaux de compilation présentant une priorité supérieure ou égale sont exécutés. Si aucune priorité n'est spécifiée, tous les travaux de compilation en attente sont exécutés.|  
@@ -86,7 +86,7 @@ ngen /? | /help
   
 |Argument|Description|  
 |--------------|-----------------|  
-|`assemblyName`|Nom complet de l'assembly. Par exemple, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Remarque :** Vous pouvez fournir un nom d'assembly partiel, comme `myAssembly`, pour les actions `display` et `uninstall`. <br /><br /> Un seul assembly peut être spécifié par la ligne de commande Ngen.exe.|  
+|`assemblyName`|Nom complet de l'assembly. Par exemple, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Remarque :**  Vous pouvez fournir un nom d'assembly partiel, tel que `myAssembly`, pour les actions `display` et `uninstall`. <br /><br /> Un seul assembly peut être spécifié par la ligne de commande Ngen.exe.|  
 |`assemblyPath`|Chemin d’accès explicite de l’assembly. Vous pouvez spécifier un chemin d'accès complet ou relatif.<br /><br /> Si vous spécifiez un nom de fichier sans chemin d'accès, l'assembly doit se trouver dans le répertoire actif.<br /><br /> Un seul assembly peut être spécifié par la ligne de commande Ngen.exe.|  
   
 <a name="PriorityTable"></a>   
@@ -122,7 +122,7 @@ ngen /? | /help
 |------------|-----------------|  
 |`/nologo`|Supprimer l'affichage de la bannière de démarrage Microsoft.|  
 |`/silent`|Supprimer l'affichage des messages d'opération réussie.|  
-|`/verbose`|Afficher des informations détaillées sur le débogage. **Remarque :** En raison des limitations du système d'exploitation, cette option n'affiche pas autant d'informations supplémentaires sur Windows 98 et Windows Millennium.|  
+|`/verbose`|Afficher des informations détaillées sur le débogage. **Remarque :**  En raison des limitations du système d’exploitation, cette option n’affiche pas autant d’informations supplémentaires sur Windows 98 et sur Windows Millennium.|  
 |`/help`, `/?`|Afficher la syntaxe de commande et les options de la version actuelle.|  
   
 ## <a name="remarks"></a>Notes  

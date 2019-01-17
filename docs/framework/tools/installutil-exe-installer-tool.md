@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec7e498e0f0634d4f0e104247b430fb591f702ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410145"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221945"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (outil Installer Tool)
 L'outil Installer est un utilitaire en ligne de commande qui vous permet d'installer et de désinstaller les ressources serveur en exécutant les composants du programme d'installation dans des assemblys spécifiés. Cet outil fonctionne conjointement avec les classes de l'espace de noms <xref:System.Configuration.Install>.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   

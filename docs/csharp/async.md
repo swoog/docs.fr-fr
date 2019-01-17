@@ -226,7 +226,7 @@ Il ne faut pas oublier ce point.  Si `await` n’est pas utilisé dans le corps 
 
 Cette convention de .NET aide à différencier les méthodes synchrones et asynchrones. Notez que cela n’est pas obligatoire pour certaines méthodes qui ne sont pas explicitement appelées par votre code (par exemple, les gestionnaires d’événements et les méthodes de contrôleur web). L’attribution d’un nom explicite pour ces méthodes a moins d’importance.
 
-*   `async void` ** doit être utilisé uniquement pour les gestionnaires d’événements.**
+*   `async void` **doit être utilisé uniquement pour les gestionnaires d’événements.**
 
 L’utilisation de `async void` est le seul moyen de permettre le fonctionnement des gestionnaires d’événements asynchrones, car les événements n’ont pas de types de retour (et ne peuvent donc pas utiliser les objets `Task` et `Task<T>`). Toute autre utilisation de la méthode `async void` ne suit pas le modèle TAP et peut être difficile à implémenter, comme expliqué ci-après :
 

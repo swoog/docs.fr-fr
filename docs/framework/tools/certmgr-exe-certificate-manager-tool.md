@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7e0274b1f1f0bc0ec6de7490c4602e5813e4d46f
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198482"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221607"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (outil de gestionnaire de certificats)
 L'outil Certificate Manager (Certmgr.exe) gère les certificats, les listes de certificats de confiance (CTL) et les listes de révocation de certificats (CRL).  
@@ -28,9 +28,9 @@ L'outil Certificate Manager (Certmgr.exe) gère les certificats, les listes de c
  Cet outil est installé automatiquement avec Visual Studio. Pour démarrer l’outil, utilisez des [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
->  L'outil Certificate Manager (Certmgr.exe) est un utilitaire en ligne de commande, alors que Certificats (Certmgr.msc) est un composant logiciel enfichable MMC (Microsoft Management Console). Étant donné que Certmgr.msc se trouve généralement dans le répertoire système de Windows, la saisie de `certmgr` sur la ligne de commande peut charger le composant logiciel enfichable MMC Certificats et ce, même si vous avez ouvert l'invite de commandes Visual Studio. Cela se produit parce que le chemin d’accès au composant logiciel enfichable précède le chemin d’accès à l’outil Certificate Manager dans la variable d’environnement PATH. Si vous rencontrez ce problème, vous pouvez exécuter des commandes Certmgr.exe en spécifiant le chemin d'accès au fichier exécutable.  
+>  L'outil Certificate Manager (Certmgr.exe) est un utilitaire en ligne de commande, alors que Certificats (Certmgr.msc) est un composant logiciel enfichable MMC (Microsoft Management Console). Comme Certmgr.msc se trouve généralement dans le répertoire système de Windows, quand vous entrez `certmgr` sur la ligne de commande, vous pouvez charger le composant logiciel enfichable MMC Certificats même si vous avez ouvert l'invite de commandes développeur pour Visual Studio. Cela se produit parce que le chemin d’accès au composant logiciel enfichable précède le chemin d’accès à l’outil Certificate Manager dans la variable d’environnement PATH. Si vous rencontrez ce problème, vous pouvez exécuter des commandes Certmgr.exe en spécifiant le chemin d'accès au fichier exécutable.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Pour une vue d'ensemble des certificats X.509, consultez [Utilisation des certificats](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -54,7 +54,7 @@ L'outil Certificate Manager (Certmgr.exe) gère les certificats, les listes de c
 |Option|Description|  
 |------------|-----------------|  
 |**/add**|Ajoute des certificats, listes de certificats de confiance et listes de révocation de certificats à un magasin de certificats.|  
-|**/all**|Ajoute toutes les entrées si utilisée avec **/add**. Supprime toutes les entrées si utilisée avec **/del**. Affiche toutes les entrées si utilisée sans les options /add, ni **/del**. L'option **/all** ne peut pas être utilisée avec **/put**.|  
+|**/all**|Ajoute toutes les entrées si utilisée avec **/add**. Supprime toutes les entrées si utilisée avec **/del**. Affiche toutes les entrées si utilisée sans les options **/add**, ni **/del**. L'option **/all** ne peut pas être utilisée avec **/put**.|  
 |**/c**|Ajoute des certificats si utilisée avec **/add**. Supprime des certificats si utilisée avec **/del**. Enregistre des certificats si utilisée avec **/put**. Affiche des certificats si utilisée sans les options **/add**, **/del** ou **/put**.|  
 |**/CRL**|Ajoute des listes de révocation de certificats si utilisée avec **/add**. Supprime des listes de révocation de certificats si utilisée avec **/del**. Enregistre des listes de révocation de certificats si utilisée avec **/put**. Affiche les listes de révocation des certificats si utilisée sans les options **/add**, **/del** ou **/put**.|  
 |**/CTL**|Ajoute des listes de certificats de confiance si utilisée avec **/add**. Supprime des listes de certificats de confiance si utilisée avec **/del**. Enregistre des listes de certificats de confiance si utilisée avec **/put**. Affiche des listes de certificats de confiance si utilisée sans l'option **/add**, **/del** ou **/put**.|  
@@ -83,7 +83,7 @@ L'outil Certificate Manager (Certmgr.exe) gère les certificats, les listes de c
   
 -   Enregistre dans un fichier un certificat X.509, une liste de certificats de confiance ou une liste de révocation de certificats en provenance d'un magasin de certificats.  
   
- Certmgr.exe fonctionne avec deux types de magasins de certificats : **StoreFile** et magasin système. Il n'est pas nécessaire de spécifier le type de magasin de certificats ; Certmgr.exe est capable de l'identifier et d'effectuer les opérations appropriées.  
+ Certmgr.exe fonctionne avec deux types de magasins de certificats : **StoreFile** et le magasin système. Il n'est pas nécessaire de spécifier le type de magasin de certificats ; Certmgr.exe est capable de l'identifier et d'effectuer les opérations appropriées.  
   
  L'exécution de Certmgr.exe sans aucune option lance le composant logiciel enfichable certmgr.msc, qui dispose d'une interface utilisateur graphique (GUI) qui facilite les tâches de gestion des certificats qui sont également disponibles à partir de la ligne de commande. Cette interface utilisateur graphique fournit un Assistant d'importation qui copie les certificats, les listes de certificats de confiance et les listes de révocation de certificats depuis votre disque vers un magasin de certificats.  
   

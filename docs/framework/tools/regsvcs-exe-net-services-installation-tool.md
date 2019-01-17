@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3de5b196d6ec35febe4ba30f7ac41bacacf884cd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df81293a00ad79892618c71a901cea30efe766ec
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529106"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221308"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (outil .NET Services Installation)
 L'outil .NET Services Installation (Installation des services .NET) effectue les actions suivantes :  
@@ -27,7 +27,7 @@ L'outil .NET Services Installation (Installation des services .NET) effectue les
   
 -   Il configure les services que vous avez ajoutés à votre classe par programmation.  
   
- Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   
@@ -88,5 +88,5 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils](../../../docs/framework/tools/index.md)  
- [Comment : signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Guide pratique pour signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
  [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

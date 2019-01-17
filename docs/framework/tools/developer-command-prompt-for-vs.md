@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149170"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221230"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Invite de commandes développeur pour Visual Studio
 
@@ -34,7 +34,7 @@ Vous pouvez avoir plusieurs invites de commandes, en fonction de la version de V
 
 1. Dans la zone de recherche dans la barre des tâches, commencez à taper le nom de l’outil, tel que `dev` ou `developer command prompt`. S’affiche alors une liste des applications installées qui correspondent à votre modèle de recherche. Si vous recherchez une autre invite de commandes, essayez d’entrer un autre terme de recherche, par exemple `prompt`.
 
-2. Choisissez **Invite de commandes développeur** (ou l’invite de commandes que vous voulez utiliser).
+2. Choisissez **Invite de commandes développeur pour Visual Studio** (ou l’invite de commandes que vous voulez utiliser).
 
 ### <a name="in-windows-81"></a>Dans Windows 8.1
 

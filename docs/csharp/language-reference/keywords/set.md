@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 3020badc8b7873d7feb0b8133d3a181e1c051cbd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0322f1bb94174dd3a0cdd2089c8626d25a80cc1c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243736"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147991"
 ---
 # <a name="set-c-reference"></a>set (référence C#)
 
@@ -23,7 +23,7 @@ L’exemple suivant définit un accesseur `get` et un accesseur `set` pour une p
 
 [!code-csharp[set#1](~/samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]
 
-Souvent, l’accesseur `set` se compose d’une seule instruction qui retourne une valeur, comme dans l’exemple précédent. À compter de C# 7.0, vous pouvez implémenter l’accesseur `set` comme membre expression-bodied. L’exemple suivant implémente l’accesseur `get` et l’accesseur `set` en tant que membres expression-bodied.
+Souvent, l’accesseur `set` se compose d’une seule instruction qui assigne une valeur, comme dans l’exemple précédent. À compter de C# 7.0, vous pouvez implémenter l’accesseur `set` comme membre expression-bodied. L’exemple suivant implémente l’accesseur `get` et l’accesseur `set` en tant que membres expression-bodied.
 
 [!code-csharp[set#3](~/samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]
   

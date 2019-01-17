@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 37575ff080fca1514e4fd6e4e22243227c529dd2
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836957"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084951"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Meilleures pratiques pour implémenter le modèle asynchrone basé sur des événements
 Le modèle asynchrone basé sur les événements vous permet d’exposer efficacement un comportement asynchrone dans les classes, en utilisant une sémantique d’événement et de délégué familière. Pour implémenter le modèle asynchrone basé sur les événements, vous devez respecter certaines contraintes liées au comportement. Les sections ci-après décrivent les exigences et les recommandations que vous devez prendre en compte quand vous implémentez une classe qui suit le modèle asynchrone basé sur les événements.  
@@ -28,7 +28,7 @@ Le modèle asynchrone basé sur les événements vous permet d’exposer efficac
  Si vous implémentez le modèle asynchrone basé sur les événements, vous devez fournir une série de garanties pour que votre classe se comporte correctement et que les clients de votre classe puissent s'appuyer sur ce comportement.  
   
 ### <a name="completion"></a>Achèvement  
- Appelez toujours le gestionnaire d’événements <em>MethodName</em>**Completed** quand l’opération s’est terminée correctement, ou bien en cas d’erreur ou d’annulation. Les applications ne doivent jamais rencontrer de situation dans laquelle elles demeurent inactives sans jamais terminer l'opération en cours. Une exception à cette règle est la situation dans laquelle l'opération asynchrone elle-même est conçue de manière à ne jamais se terminer.  
+ Appelez toujours le gestionnaire d’événements <em>MethodName</em>**Completed** quand l’opération s’est terminée correctement, ou bien en cas d’erreur ou d’annulation. Les applications ne doivent jamais rencontrer de situation dans laquelle elles demeurent inactives sans jamais terminer l'opération en cours. L’exception à cette règle est si l’opération asynchrone elle-même est conçue de manière à ne jamais se terminer.  
   
 ### <a name="completed-event-and-eventargs"></a>Événement Completed et classe EventArgs  
  Pour chaque méthode <em>MethodName</em>**Async** distincte, appliquez les contraintes de conception suivantes :  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Si votre classe prend en charge plusieurs appels simultanés, autorisez le développeur à effectuer le suivi de chaque appel séparément en définissant la surcharge de <em>NomMéthode</em>**Async** qui prend un paramètre d’état objet, ou un ID de tâche, appelé `userSuppliedState`. Ce paramètre doit toujours être le dernier de la signature de la méthode <em>NomMéthode</em>**Async**.  
   
--   Si votre classe définit la surcharge de <em>NomMéthode</em>**Async** qui prend un paramètre d’état objet, ou un ID de tâche, veillez à effectuer le suivi de la durée de vie de l’opération avec cet ID de tâche, et à le fournir en retour au gestionnaire d’achèvement. Vous pouvez vous aider de classes d'assistance. Pour plus d’informations sur la gestion de l’accès concurrentiel, consultez [Guide pratique pour implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+-   Si votre classe définit la surcharge de <em>NomMéthode</em>**Async** qui prend un paramètre d’état objet, ou un ID de tâche, veillez à effectuer le suivi de la durée de vie de l’opération avec cet ID de tâche, et à le fournir en retour au gestionnaire d’achèvement. Vous pouvez vous aider de classes d'assistance. Pour plus d’informations sur la gestion de la concurrence, consultez [Guide pratique pour implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 -   Si votre classe définit la méthode <em>NomMéthode</em>**Async** sans le paramètre d’état et qu’elle ne prend pas en charge plusieurs appels simultanés, veillez à ce que toute tentative d’appel de <em>NomMéthode</em>**Async** avant que soit achevé l’appel précédent de <em>NomMéthode</em>**Async** lève une <xref:System.InvalidOperationException>.  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 >  Vous pouvez contourner ces règles si vous souhaitez explicitement aller à l'encontre de la stratégie du modèle d'application, tout en tirant parti des autres avantages de l'utilisation du modèle asynchrone basé sur les événements. Par exemple, vous pouvez souhaiter qu'une classe fonctionnant dans Windows Forms soit libre de threads. Vous pouvez créer une classe libre de threads, sous réserve que les développeurs comprennent les restrictions que cela implique. Les applications console ne synchronisent pas l'exécution des appels <xref:System.ComponentModel.AsyncOperation.Post%2A>. Cela peut entraîner le déclenchement d'événements `ProgressChanged` dans le désordre. Si vous souhaitez que l'exécution des appels <xref:System.ComponentModel.AsyncOperation.Post%2A> soit sérialisée, implémentez et installez une classe <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>.  
   
- Pour plus d’informations sur <xref:System.ComponentModel.AsyncOperation> et <xref:System.ComponentModel.AsyncOperationManager> dans le cadre d’opérations asynchrones, consultez la page [Guide pratique pour implémenter un composant qui prend en charge le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Pour plus d’informations sur l’utilisation de <xref:System.ComponentModel.AsyncOperation> et <xref:System.ComponentModel.AsyncOperationManager> pour activer vos opérations asynchrones, consultez [Guide pratique pour implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="guidelines"></a>Recommandations  
   
@@ -154,5 +154,5 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - [Modèle asynchrone basé sur les événements (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
 - [Choix du moment auquel implémenter le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
 - [Meilleures pratiques pour implémenter le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
-- [Guide pratique : utiliser des composants qui prennent en charge le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+- [Guide pratique pour utiliser des composants qui prennent en charge le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
 - [Guide pratique pour implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)

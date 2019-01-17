@@ -4,12 +4,12 @@ description: La souveraineté des données par microservice est l’un des point
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 136f8d173042ab235e5fa3c8478f4aa5659a9787
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126846"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144900"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Souveraineté des données par microservice
 
@@ -27,7 +27,7 @@ D’un autre côté, l’approche traditionnelle (données monolithiques) utilis
 
 À première vue, l’approche consistant à utiliser une base de données centralisée est plus simple et prend en charge la réutilisation des entités dans différents sous-systèmes à des fins de cohérence. Mais en réalité, vous vous retrouvez avec des tables énormes qui sont au service de différents sous-systèmes, et qui incluent des attributs et des colonnes superflus dans la plupart des cas. Tout se passe comme si vous utilisiez la même carte pour faire une petite promenade à pied, faire un trajet en voiture d’une journée et apprendre la géographie.
 
-Une application monolithique, qui comprend généralement une seule base de données relationnelle, offre deux avantages importants : les [transactions ACID](https://en.wikipedia.org/wiki/ACID) et le langage SQL, ces deux éléments fonctionnant sur toutes les tables et toutes les données relatives à votre application. Cette approche vous permet d’écrire facilement une requête qui combine les données de plusieurs tables.
+Une application monolithique avec, en général, une seule base de données relationnelle présente deux avantages importants : Des [transactions ACID](https://en.wikipedia.org/wiki/ACID) et le langage SQL, les deux fonctionnant sur toutes les tables et les données relatives à votre application. Cette approche vous permet d’écrire facilement une requête qui combine les données de plusieurs tables.
 
 Cependant, l’accès aux données devient beaucoup plus complexe quand vous passez à une architecture en microservices. Même quand des transactions ACID peuvent ou doivent être utilisées dans un microservice ou un contexte délimité, les données détenues par chaque microservice sont privées et ne sont accessibles que par le biais de l’API du microservice. L’encapsulation des données garantit que les microservices sont faiblement couplés et qu’ils peuvent évoluer indépendamment les uns des autres. Si plusieurs services accèdent aux mêmes données, les mises à jour du schéma nécessitent l’application de mises à jour coordonnées à tous les services, ce qui peut compromettre l’autonomie du cycle de vie des microservices. Toutefois, les structures de données distribuées ne vous permettent pas d’effectuer une même transaction ACID sur plusieurs microservices. Vous devez donc recourir à la cohérence à terme quand un processus d’entreprise s’étend sur plusieurs microservices. Cela est beaucoup plus difficile à implémenter que de simples jointures SQL, car vous ne pouvez pas créer de contraintes d’intégrité ni utiliser de transactions distribuées entre des bases de données distinctes, comme nous l’allons l’expliquer plus tard. De même, de nombreuses autres fonctionnalités propres aux bases de données relationnelles ne sont pas disponibles à l’échelle de plusieurs microservices.
 
@@ -37,7 +37,7 @@ Une architecture partitionnée avec persistance polyglotte pour le stockage de d
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Relation entre les microservices et le modèle Contexte délimité
 
-Le concept de microservice dérive du [modèle de Contexte délimité (BC, Bounded Context)](http://martinfowler.com/bliki/BoundedContext.html) présenté dans la [conception pilotée par le domaine (DDD, Domain-Driven Design)](https://en.wikipedia.org/wiki/Domain-driven_design). La conception DDD gère les modèles volumineux en les divisant en plusieurs contextes délimités et en définissant leurs limites de manière explicite. Chaque contexte délimité doit avoir son propre modèle et sa propre base de données. De même, chaque microservice possède ses données connexes. Chaque contexte délimité a aussi généralement son propre [langage omniprésent](http://martinfowler.com/bliki/UbiquitousLanguage.html) pour faciliter la communication entre les développeurs de logiciels et les experts du domaine.
+Le concept de microservice dérive du [modèle de Contexte délimité (BC, Bounded Context)](https://martinfowler.com/bliki/BoundedContext.html) présenté dans la [conception pilotée par le domaine (DDD, Domain-Driven Design)](https://en.wikipedia.org/wiki/Domain-driven_design). La conception DDD gère les modèles volumineux en les divisant en plusieurs contextes délimités et en définissant leurs limites de manière explicite. Chaque contexte délimité doit avoir son propre modèle et sa propre base de données. De même, chaque microservice possède ses données connexes. Chaque contexte délimité a aussi généralement son propre [langage omniprésent](https://martinfowler.com/bliki/UbiquitousLanguage.html) pour faciliter la communication entre les développeurs de logiciels et les experts du domaine.
 
 Les termes du langage omniprésent (principalement des entités de domaine) peuvent avoir d’autres noms dans différents contextes délimités, même quand différentes entités de domaine partagent la même identité (c’est-à-dire l’ID unique utilisé pour lire l’entité dans le stockage). Par exemple, dans le contexte délimité d’un profil utilisateur, l’entité de domaine User peut partager l’identité avec l’entité de domaine Buyer dans le contexte délimité de la commande.
 
@@ -49,7 +49,7 @@ La conception DDD tire parti des microservices en obtenant les limites réelles 
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
-- **Chris Richardson. Pattern: Database per service** \
+- **Chris Richardson. Modèle : Base de données par service** \
   [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
 
 - **Martin Fowler. BoundedContext** \

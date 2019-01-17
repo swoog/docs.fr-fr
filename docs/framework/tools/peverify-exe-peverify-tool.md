@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57c47fab98d7def3c3548769da091951819db1b1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 50513d62ab67afe88a147de9581ae7bbbfd0a417
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50199680"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222907"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (outil PEVerify)
 L’outil PEVerify Tool permet aux développeurs générant du langage MSIL (Microsoft Intermediate Language) (tels que des développeurs de moteurs de script, writers de compilateur, etc.) de déterminer si leur code MSIL et les métadonnées qui y sont associées répondent aux exigences de sécurité de type. Certains compilateurs génèrent du code de type sécurisé vérifié uniquement si vous évitez d'utiliser certaines constructions de langage. Si, en tant que développeur, vous utilisez ce type de compilateur, vous pouvez souhaiter vérifier que vous n'avez pas compromis la sécurité de type de votre code. Vous pouvez dans ce cas exécuter l'outil PEVerify Tool sur vos fichiers pour vérifier le langage MSIL et les métadonnées.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   

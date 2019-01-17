@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 434d5dd002124033f6d7cf5104d87264ee9c0388
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121387"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222218"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (outil d'exportation de métadonnées Windows Runtime)
 L'outil Metadata Export [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforme un module .NET Framework en un fichier qui contient des métadonnées [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Bien que les assemblys .NET Framework et les fichiers de métadonnées [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilisent le même format physique, il y a des différences dans le contenu des tables de métadonnées. Autrement dit, les assemblys .NET Framework ne sont pas utilisables automatiquement comme composants [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Le processus qui transforme un module .NET Framework en composant [!INCLUDE[wrt](../../../includes/wrt-md.md)] s’appelle *exportation*. Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], le fichier de métadonnées Windows (.winmd) résultant contient à la fois les métadonnées et l'implémentation.  
   
  Quand vous utilisez le modèle **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Composant**, qui se trouve dans le **Windows Store** pour C# et Visual Basic dans Visual Studio 2013 ou Visual Studio 2012, la cible du compilateur est un fichier .winmdobj et une étape de génération appelle Winmdexp.exe pour exporter le fichier .winmdobj vers un fichier .winmd. C'est la méthode recommandée pour générer un composant [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Utilisez Winmdexp.exe directement lorsque vous voulez contrôler davantage le processus de génération que Visual Studio le permet.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   

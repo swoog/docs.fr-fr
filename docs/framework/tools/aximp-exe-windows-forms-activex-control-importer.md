@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: befc4484324fb28b0fe55ef49f038712bc81e913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71e06f8e42e4ca6da80286c9aa329ee99b02fcf4
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409591"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222140"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Control Importer)
 L'importateur de contrôles ActiveX convertit les définitions de types d'une bibliothèque de types COM associées à un contrôle ActiveX en un contrôle Windows Forms.  
@@ -24,7 +24,7 @@ L'importateur de contrôles ActiveX convertit les définitions de types d'une bi
   
  Pour héberger le contrôle ActiveX, vous devez générer un contrôle wrapper qui dérive de <xref:System.Windows.Forms.AxHost>. Ce contrôle wrapper contient une instance du contrôle ActiveX sous-jacent. Il sait comment communiquer avec le contrôle ActiveX, mais il se présente comme un contrôle Windows Forms. Le contrôle ainsi généré héberge le contrôle ActiveX dont il expose les propriétés, les méthodes et les événements comme si ces derniers lui appartenaient.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   

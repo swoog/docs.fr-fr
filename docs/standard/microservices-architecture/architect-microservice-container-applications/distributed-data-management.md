@@ -4,16 +4,16 @@ description: Découvrez les défis et les solutions spécifiques à la gestion d
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: adfb3c0be33d18a991ee552a99a2d02cc3ec7bb3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151029"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145989"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problématiques et solutions pour la gestion des données distribuées
 
-## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Problématique \#1 : Comment définir les limites de chaque microservice
+## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Défi \#1 : Comment définir les limites de chaque microservice
 
 Définir les limites d’un microservice est sans doute la première problématique à laquelle tout le monde est confronté. Chaque microservice doit être un composant de votre application et chaque microservice doit être autonome, avec tous les avantages et les défis induits. Mais comment identifier ces limites ?
 
@@ -21,7 +21,7 @@ Vous devez d’abord vous concentrer sur les modèles de domaine logique de l’
 
 La façon dont vous identifiez les limites entre plusieurs contextes d’application avec un domaine différent pour chaque contexte correspond exactement à la façon dont vous pouvez identifier les limites pour chaque microservice métier, et son modèle de domaine et ses données associés. Vous essayez toujours de minimiser le couplage entre ces microservices. Ce guide présente plus en détails cette identification et cette conception du modèle de domaine plus loin dans la section [Identification des limites du modèle de domaine pour chaque microservice](identify-microservice-domain-model-boundaries.md).
 
-## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Problématique \#2 : Comment créer des requêtes qui extraient des données de plusieurs microservices
+## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Défi \#2 : Comment créer des requêtes qui récupèrent des données de plusieurs microservices
 
 Une deuxième problématique est la façon d’implémenter des requêtes qui extraient des données de plusieurs microservices, tout en évitant des communication intensives entre les microservices et les applications clientes distantes. Par exemple, un écran d’une application mobile a besoin d’afficher les informations utilisateur détenues par des microservices distincts gérant respectivement le panier d’achat, le catalogue et l’identité des utilisateurs. Un autre exemple est un rapport complexe impliquant plusieurs tables qui se trouvent dans plusieurs microservices. La bonne solution dépend de la complexité des requêtes. Dans tous les cas, il vous faut un moyen d’agréger les informations pour améliorer l’efficacité des communications de votre système. Les solutions les plus répandues sont les suivantes :
 
@@ -39,7 +39,7 @@ Gardez à l’esprit que cette base de données centralisée doit être utilisé
 
 Toutefois, si la conception de votre application implique d’agréger constamment les informations provenant de plusieurs microservices pour des requêtes complexes, cela peut être le symptôme d’une mauvaise conception : un microservice doit être aussi isolé que possible des autres microservices. (Ceci exclut les rapports/analyses qui doivent toujours utiliser des bases de données centrales contenant des données froides.) Le fait que ce problème se pose souvent peut être une raison pour fusionner des microservices. Vous devez équilibrer l’autonomie de l’évolution et du déploiement de chaque microservice avec des dépendances fortes, la cohésion et l’agrégation des données.
 
-## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Problématique \#3 : Comment garantir la cohérence entre plusieurs microservices
+## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Défi \#3 : Comment garantir la cohérence entre plusieurs microservices
 
 Comme indiqué précédemment, les données détenues par chaque microservice sont privées pour ce microservice et sont accessibles seulement via son API de microservice. Ainsi, le problème est de savoir comment implémenter des processus métier de bout en bout tout en conservant la cohérence entre plusieurs microservices.
 
@@ -53,7 +53,7 @@ Toutefois, dans une application basée sur les microservices, les tables Order (
 
 **Figure 4-9**. Un microservice ne peut pas accéder directement à une table dans un autre microservice
 
-Le microservice Catalog ne doit pas mettre à jour directement la table Basket, car elle est détenue par le microservice Basket. Pour permettre une mise à jour du microservice Basket, le microservice Catalog doit utiliser une cohérence à terme probablement basée sur une communication asynchrone, par exemple celle des événements d’intégration (communication basée sur des messages et des événements). Voici comment l’application de référence [eShopOnContainers](http://aka.ms/eshoponcontainers) effectue ce type de cohérence parmi plusieurs microservices.
+Le microservice Catalog ne doit pas mettre à jour directement la table Basket, car elle est détenue par le microservice Basket. Pour permettre une mise à jour du microservice Basket, le microservice Catalog doit utiliser une cohérence à terme probablement basée sur une communication asynchrone, par exemple celle des événements d’intégration (communication basée sur des messages et des événements). Voici comment l’application de référence [eShopOnContainers](https://aka.ms/eshoponcontainers) effectue ce type de cohérence parmi plusieurs microservices.
 
 Comme le montre le [théorème CAP](https://en.wikipedia.org/wiki/CAP_theorem), vous devez choisir entre la disponibilité et la cohérence forte d’ACID. La plupart des scénarios basés sur des microservices demandent la disponibilité et une haute scalabilité, plutôt qu’une cohérence forte. Les applications critiques doivent rester opérationnelles, et les développeurs peuvent contourner les problèmes liés à la cohérence forte en utilisant des techniques permettant de travailler avec une cohérence faible ou à terme. Il s’agit de l’approche adoptée par la plupart des architectures basée sur les microservices.
 
@@ -61,7 +61,7 @@ De plus, les transactions de style ACID ou avec validation en deux phases ne son
 
 Une bonne solution pour résoudre ce problème est d’utiliser la cohérence à terme entre les microservices, articulée autour d’une communication pilotée par les événements et d’un système de publication-abonnement. Ces rubriques sont traitées dans la section [Communication asynchrone pilotée par les événements](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) plus loin dans ce guide.
 
-## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Problématique \#4 : Comment concevoir la communication entre les limites des microservices
+## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Défi \#4 : Comment concevoir la communication entre les limites des microservices
 
 La communication entre les limites des microservices est une vraie problématique. Dans ce contexte, la communication ne fait pas référence au protocole à utiliser (HTTP et REST, AMQP, messagerie, etc.). Au lieu de cela, elle concerne le style de communication que vous devez utiliser, et en particulier comment vos microservices doivent être couplés. Selon le niveau de couplage, l’impact d’une défaillance sur votre système varie considérablement.
 
@@ -101,7 +101,7 @@ L’utilisation d’une communication asynchrone est détaillée plus loin dans 
   [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
 - **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing** \
-  [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **Transaction de compensation** \
   [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)

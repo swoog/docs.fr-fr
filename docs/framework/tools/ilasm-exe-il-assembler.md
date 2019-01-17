@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b149f21a2cb51740f0027f6b01984c628723939
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409787"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221755"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembleur IL)
 
 L'Assembleur IL génère un fichier PE (Portable Executable) en langage IL (Intermediate Language). (Pour plus d’informations sur le langage IL, consultez [Processus d’exécution managée](../../../docs/standard/managed-execution-process.md).) Vous pouvez exécuter le fichier exécutable obtenu, qui comporte le langage IL et les métadonnées nécessaires, pour déterminer si le langage IL fonctionne comme prévu.
 
-Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 À l'invite de commandes, tapez le texte suivant :
 
@@ -47,7 +47,7 @@ ilasm [options] filename [[options]filename...]
 |**/appcontainer**|Produit un fichier *.dll* ou *.exe* qui s'exécute dans le conteneur d’application Windows comme sortie.|
 |**/arm**|Spécifie l'ordinateur (ARM) Advanced RISC comme processeur cible.<br /><br /> Si aucune largeur de bits d'image n'est spécifiée, la valeur par défaut est **/32bitpreferred**.|
 |**/base:** `integer`|Assigne à ImageBase la valeur spécifiée par `integer` dans l'en-tête Optional NT. Lorsque la directive IL .imagebase est spécifiée dans le fichier, cette option se substitue à elle.|
-|**/clock**|Calcule et indique la durée des compilations suivantes, en millisecondes, pour le fichier source .il :<br /><br /> **Total Run**: Durée totale de l'exécution de toutes les opérations spécifiques qui suivent.<br /><br /> **Startup**: Chargement et ouverture du fichier.<br /><br /> **Emitting MD**: Émission de métadonnées.<br /><br /> **Ref to Def Resolution**: Résolution des références aux définitions dans le fichier.<br /><br /> **CEE File Generation**: Génération de l'image du fichier en mémoire.<br /><br /> **PE File Writing**: Écriture de l'image dans un fichier PE.|
+|**/clock**|Calcule et indique la durée des compilations suivantes, en millisecondes, pour le fichier source .il :<br /><br /> **Total Run** : Durée totale d’exécution de toutes les opérations spécifiques qui suivent.<br /><br /> **Startup** : Chargement et ouverture du fichier.<br /><br /> **Emitting MD** : Envoi des métadonnées.<br /><br /> **Ref to Def Resolution** : Résolution des références aux définitions dans le fichier.<br /><br /> **CEE File Generation** : Génération de l’image du fichier en mémoire.<br /><br /> **Écriture du fichier PE** : Écriture de l’image dans un fichier PE.|
 |**/debug**[:**IMPL**&#124;**OPT**]|Inclut des informations de débogage (noms des variables locales et des arguments et numéros de ligne). Crée un fichier PDB.<br /><br /> **/debug** sans valeur supplémentaire désactive l'optimisation JIT et utilise des points de séquence du fichier PDB.<br /><br /> **IMPL** désactive l'optimisation JIT et utilise des points de séquence implicites.<br /><br /> **OPT** active l'optimisation JIT et utilise des points de séquence implicites.|
 |**/dll**|Génère un fichier *.dll* en tant que sortie.|
 |**/enc:** `file`|Crée des deltas Modifier && Continuer à partir du fichier source spécifié.<br /><br /> Cet argument est utilisé uniquement à titre d'information et n'est pas pris en charge pour une utilisation commerciale.|
@@ -65,7 +65,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|Désactive l'héritage par défaut de <xref:System.Object> lorsque aucune classe de base n'est spécifiée.|
 |**/nocorstub**|Supprime la génération du stub CORExeMain.|
 |**/nologo**|Supprime l'affichage de la bannière de démarrage Microsoft.|
-|**/output:** `file.ext`|Spécifie le nom du fichier de sortie et son extension. Le nom du fichier de sortie est, par défaut, le même que le nom du premier fichier source. L’extension par défaut est *.exe*. Si vous spécifiez l'option **/dll**, l'extension par défaut est *.dll*. **Remarque :** La spécification de **/output:** myfile.dll ne définit pas l’option **/dll**. Si vous ne spécifiez pas l’option **/dll**, il en résultera un fichier exécutable nommé *myfile.dll*.|
+|**/output:** `file.ext`|Spécifie le nom du fichier de sortie et son extension. Le nom du fichier de sortie est, par défaut, le même que le nom du premier fichier source. L’extension par défaut est *.exe*. Si vous spécifiez l'option **/dll**, l'extension par défaut est *.dll*. **Remarque :** La spécification de **/output**:myfile.dll ne définit pas l’option **/dll**. Si vous ne spécifiez pas l’option **/dll**, il en résultera un fichier exécutable nommé *myfile.dll*.|
 |**/optimize**|Optimise les instructions allongées en instructions abrégées. Par exemple, `br` en `br.s`.|
 |**/pe64**|Crée une image 64 bits (PE32+).<br /><br /> Si aucun processeur cible n'est spécifié, la valeur par défaut est `/itanium`.|
 |**/pdb**|Crée un fichier PDB sans activer le suivi des informations de débogage.|

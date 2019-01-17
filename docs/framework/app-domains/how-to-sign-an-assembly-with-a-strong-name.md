@@ -1,5 +1,5 @@
 ---
-title: 'Comment : signer un assembly avec un nom fort'
+title: 'Procédure : signer un assembly avec un nom fort'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191062"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221256"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Comment : signer un assembly avec un nom fort
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procédure : signer un assembly avec un nom fort
 Il existe plusieurs façons de signer un assembly avec un nom fort :  
   
 -   À l'aide de l'onglet **Signature** dans la boîte de dialogue **Propriétés** d'un projet dans Visual Studio. Il s'agit de la façon la plus facile et la plus pratique de signer un assembly avec un nom fort.  
@@ -31,7 +31,7 @@ Il existe plusieurs façons de signer un assembly avec un nom fort :
   
 -   À l'aide des options du compilateur.  
   
- Pour signer un assembly avec un nom fort, vous devez avoir une paire de clés de chiffrement. Pour plus d’informations sur la création d’une paire de clés, consultez [Comment : créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
+ Pour signer un assembly avec un nom fort, vous devez avoir une paire de clés de chiffrement. Pour plus d’informations sur la création d’une paire de clés, consultez [Guide pratique pour créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Pour créer et signer un assembly avec un nom fort à l'aide de Visual Studio  
   
@@ -45,7 +45,7 @@ Il existe plusieurs façons de signer un assembly avec un nom fort :
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Pour créer et signer un assembly avec un nom fort à l'aide de l'utilitaire Assembly Linker  
   
--   À l’[invite de commandes Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), tapez la commande suivante :  
+-   À l’[Invite de commandes développeur pour Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), tapez la commande suivante :  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   

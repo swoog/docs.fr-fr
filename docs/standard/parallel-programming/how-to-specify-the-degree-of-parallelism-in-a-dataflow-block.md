@@ -1,5 +1,5 @@
 ---
-title: 'Comment : spécifier le degré de parallélisme dans un bloc de flux de données'
+title: 'Procédure : Spécifier le degré de parallélisme dans un bloc de flux de données'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e4088541-ee05-40db-95f5-147cfe62fde7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b597cf93cdf249936a34b2c07b38d000c96333f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 78459e6cc2b40c9f3b821e4c4b53aec0c2f543db
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999203"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222756"
 ---
-# <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>Comment : spécifier le degré de parallélisme dans un bloc de flux de données
+# <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>Procédure : Spécifier le degré de parallélisme dans un bloc de flux de données
 Ce document décrit comment définir la propriété <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> pour permettre à un bloc de flux de données d'exécution de traiter plusieurs messages à la fois. Cela est utile quand vous avez un bloc de flux de données qui effectue un calcul de longue durée et qui peut tirer parti du traitement des messages en parallèle. Cet exemple utilise la classe <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType> pour effectuer plusieurs opérations de flux de données simultanément ; toutefois, vous pouvez spécifier le degré maximum de parallélisme dans les types de bloc d'exécution prédéfinis fournis par la bibliothèque de flux de données TPL, <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -31,7 +31,7 @@ Ce document décrit comment définir la propriété <xref:System.Threading.Tasks
  [!code-vb[TPLDataflow_DegreeOfParallelism#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `DataflowDegreeOfParallelism.cs` (`DataflowDegreeOfParallelism.vb` pour Visual Basic), puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
+ Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `DataflowDegreeOfParallelism.cs` (`DataflowDegreeOfParallelism.vb` pour Visual Basic), puis exécutez la commande suivante dans une fenêtre d’invite de commandes développeur pour Visual Studio.  
   
  Visual C#  
   

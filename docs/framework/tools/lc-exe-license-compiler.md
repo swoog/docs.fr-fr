@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: c5a8b38e819c323a06faad2edba586cb18d26edc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6daa696ecd7b91c6d53edaa447f2d64bca0fd7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409076"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221204"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (License Compiler)
 L'outil License Compiler lit les fichiers texte comportant des informations sur les licences et génère un fichier binaire pouvant être incorporé dans un exécutable du Common Language Runtime en tant que ressource.  
@@ -26,7 +26,7 @@ L'outil License Compiler lit les fichiers texte comportant des informations sur 
   
  La compilation croisée entre 32 bits et 64 bits n'est pas prise en charge lorsque vous utilisez l'outil License Compiler lors de la génération de votre projet. Cela est dû au fait que l'outil License Compiler doit charger des assemblys et que le chargement d'assemblys 64 bits depuis une application 32 bits n'est pas autorisé, et vice versa. Dans ce cas, utilisez l'outil License Compiler à partir de la ligne de commande pour compiler la licence manuellement et spécifiez l'architecture correspondante.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73fa08f92a4572a501be65f05e8141c349cc003e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17e8e00afd759a3408ca54930c15d0b8797ff947
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400209"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222335"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visionneuse du journal de liaison d’assembly)
 La Visionneuse du journal de liaison d’assembly affiche des détails sur les liaisons d’assemblys. Ces informations vous permettent d'identifier les raisons pour lesquelles le .NET Framework ne parvient pas à trouver un assembly au moment de l'exécution. Ces échecs résultent généralement d'un assembly déployé au mauvais emplacement, d'une image native qui n'est plus valide ou d'une incompatibilité entre les numéros de version ou les cultures. L'échec de la localisation d'un assembly par le Common Language Runtime s'affiche d'ordinaire sous la forme de <xref:System.TypeLoadException> dans votre application.  
@@ -24,7 +24,7 @@ La Visionneuse du journal de liaison d’assembly affiche des détails sur les l
 > [!IMPORTANT]
 >  Vous devez exécuter fuslogvw.exe avec les droits d'administrateur.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7) avec les informations d'identification d'administrateur. Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7) avec des informations d’identification d’administrateur. Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   

@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 998ebb76b536b04d617bafdb74a3014c68cf509d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc01cf53b4af08973009027d124c50d0733a005a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405562"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221048"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (outil CLR Version)
 L'outil de version CLR (Clrver.exe) rapporte toutes les versions installées du CLR (Common Runtime Language) sur l'ordinateur.  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l’outil, utilisez l’invite de commandes développeur pour Visual Studio (ou l’invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   
