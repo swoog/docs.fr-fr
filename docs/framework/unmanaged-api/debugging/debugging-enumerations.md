@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b81e7c2ffabdee78af34d00c48fb29c7525dea08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410466"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415947"
 ---
 # <a name="debugging-enumerations"></a>Énumérations de débogage
 Cette section décrit les énumérations non managées utilisées par l'API de débogage.  
@@ -23,7 +23,7 @@ Cette section décrit les énumérations non managées utilisées par l'API de d
  Fournit des valeurs qui sont utilisées par le [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) (méthode).  
   
  [CLRDataEnumMemoryFlags, énumération](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- Indique les régions de mémoire qu’un appel à la [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) méthode doit inclure.  
+ Indique les régions de mémoire un appel à la [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) méthode doit inclure.  
   
  [COR_PUB_ENUMPROCESS, énumération](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
  Identifie le type de processus à énumérer.  
@@ -137,8 +137,10 @@ Cette section décrit les énumérations non managées utilisées par l'API de d
  Indique le type d’emplacement native d’une variable.  
   
  [WriteableMetadataUpdateMode, énumération](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- Fournit des valeurs qui spécifient si les mises à jour en mémoire apportées aux métadonnées sont visibles par un débogueur.  
-  
+ Fournit des valeurs qui spécifient si les mises à jour en mémoire apportées aux métadonnées sont visibles par un débogueur. 
+
+ [Énumération de ClrDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) fournit des valeurs qui sont utilisées par la structure CLRDATA_IL_ADDRESS_MAP.
+
 ## <a name="related-sections"></a>Rubriques connexes  
  [Coclasses de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "Comment : spécifier un nom d'élément différent pour un flux XML"
+title: 'Procédure : Spécifiez un nom d’élément différent pour un Stream XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,18 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f2dd56111bbc0ace76c2b71d208f1b753a2119b8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582370"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415089"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Comment : spécifier un nom d'élément différent pour un flux XML
-[Exemple de code](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procédure : Spécifiez un nom d’élément différent pour un Stream XML
   
- Grâce à [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), vous pouvez générer plusieurs flux XML avec un même ensemble de classes. Vous pouvez procéder ainsi car deux services Web XML différents nécessitent les mêmes informations de base, avec seulement de légères différences. Par exemple, imaginez deux services Web XML qui traitent des commandes de livres. Ils nécessitent donc tous les deux des numéros ISBN. Un service utilise la balise \<ISBN> tandis que l’autre utilise la balise \<BookID>. Vous disposez d'une classe nommée `Book` qui contient un champ nommé `ISBN`. Lorsqu'une instance de la classe `Book` est sérialisée, elle utilise par défaut le nom de membre (ISBN) comme nom d'élément de balise. Pour le premier service Web XML, c'est ce qui est prévu. Toutefois, pour envoyer le flux de données XML au deuxième service Web XML, vous devez substituer la sérialisation afin que le nom d'élément de la balise soit `BookID`.  
+Grâce à [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), vous pouvez générer plusieurs flux XML avec un même ensemble de classes. Vous pouvez procéder ainsi car deux services Web XML différents nécessitent les mêmes informations de base, avec seulement de légères différences. Par exemple, imaginez deux services Web XML qui traitent des commandes de livres. Ils nécessitent donc tous les deux des numéros ISBN. Un service utilise la balise \<ISBN> tandis que l’autre utilise la balise \<BookID>. Vous disposez d'une classe nommée `Book` qui contient un champ nommé `ISBN`. Lorsqu'une instance de la classe `Book` est sérialisée, elle utilise par défaut le nom de membre (ISBN) comme nom d'élément de balise. Pour le premier service Web XML, c'est ce qui est prévu. Toutefois, pour envoyer le flux de données XML au deuxième service Web XML, vous devez substituer la sérialisation afin que le nom d'élément de la balise soit `BookID`.  
   
-### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Pour créer un flux de données XML avec un nom d'élément différent  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Pour créer un flux de données XML avec un nom d'élément différent  
   
 1.  Créez une instance de la classe <xref:System.Xml.Serialization.XmlElementAttribute>.  
   
@@ -99,6 +98,6 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>  
 - [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
 - [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
-- [Guide pratique pour sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Guide pratique pour désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [Guide pratique pour désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Guide pratique pour Sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [Guide pratique pour Désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [Guide pratique pour Désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

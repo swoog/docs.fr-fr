@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 991e333c53101a2be2a8a19d3960c3d0879619be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b6d00d17615769a5d03d58e0eda5af62ca58368
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409930"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415960"
 ---
 # <a name="debugging-interfaces"></a>Interfaces de débogage
 Cette section décrit les interfaces non managées qui gèrent le débogage d'un programme s'exécutant dans le Common Language Runtime (CLR).  
@@ -32,13 +32,13 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Sous-classe de `ICLRDataTarget` qui est utilisée par la couche des services d'accès aux données pour manipuler les régions de la mémoire virtuelle dans le processus cible.  
   
  [ICLRDataTarget3, interface](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- Une sous-classe de [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) qui fournit l’accès aux informations sur l’exception.  
+ Une sous-classe de [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) qui fournit l’accès aux informations sur les exceptions.  
   
  [ICLRDebugging, interface](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)  
  Fournit des méthodes qui gèrent le chargement et le déchargement des modules pour le débogage.  
   
  [ICLRDebuggingLibraryProvider, interface](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)  
- Inclut le [ProvideLibrary, méthode](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) méthode, qui obtient un fournisseur de bibliothèque interface de rappel qui permet de common language runtime des bibliothèques de débogage spécifiques à la version à la demande et le chargement.  
+ Inclut le [ProvideLibrary, méthode](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) (méthode), qui obtient un fournisseur de bibliothèque interface de rappel qui permet de common language runtime des bibliothèques de débogage spécifiques à la version être à la demande et le chargement.  
   
  [ICLRMetadataLocator, interface](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)  
  Interface utilisée par la couche des services d'accès aux données pour localiser les métadonnées des assemblys dans un processus cible.  
@@ -50,13 +50,13 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Fournit des méthodes pour le débogage de domaines d'application.  
   
  [ICorDebugAppDomain2, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-interface.md)  
- Fournit des méthodes destinées au travail avec les tableaux, les pointeurs, les pointeurs fonction et les types ByRef. Cette interface est une extension de l'interface `ICorDebugAppDomain`.  
+ Fournit des méthodes destinées au travail avec les tableaux, les pointeurs, les pointeurs fonction et les types ByRef. Cette interface est une extension de l’interface `ICorDebugAppDomain`.  
   
  [ICorDebugAppDomain3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)  
  Fournit des méthodes pour utiliser [!INCLUDE[wrt](../../../../includes/wrt-md.md)] dans un domaine d'application. Cette interface est une extension des interfaces `ICorDebugAppDomain` et `ICorDebugAppDomain2`.  
   
  [ICorDebugAppDomain4, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)  
- Étend logiquement le [ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md) interface à obtenir un objet managé à partir d’un wrapper CCW.  
+ Étend logiquement le [ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md) interface permettant d’obtenir un objet managé à partir d’un wrapper CCW.  
   
  [ICorDebugAppDomainEnum, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)  
  Fournit une méthode qui retourne un nombre spécifié de valeurs `ICorDebugAppDomain` qui démarrent à l'emplacement suivant dans l'énumération.  
@@ -68,10 +68,10 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Représente un assembly.  
   
  [ICorDebugAssembly2, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-interface.md)  
- Représente un assembly. Cette interface est une extension de l'interface `ICorDebugAssembly`.  
+ Représente un assembly. Cette interface est une extension de l’interface `ICorDebugAssembly`.  
   
  [ICorDebugAssembly3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)  
- Étend logiquement le [ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md) interface afin de fournir la prise en charge pour les assemblys conteneurs et les assemblys. **Disponible sur .NET Native uniquement.**  
+ Étend logiquement le [ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md) interface pour fournir la prise en charge pour les assemblys conteneurs et leurs assemblys de relation contenant-contenus. **Disponible sur .NET Native uniquement.**  
   
  [ICorDebugAssemblyEnum, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-interface.md)  
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugAssembly`.  
@@ -107,7 +107,7 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Fournit des méthodes qui étendent les fonctions de `ICorDebugCode`.  
   
  [ICorDebugCode3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
- Fournit une méthode qui étend [ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md) et [ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md) pour fournir des informations sur une valeur de retournée managée.  
+ Fournit une méthode qui étend [ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md) et [ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md) pour fournir des informations sur une valeur de retour managée.  
   
  [ICorDebugCode4, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)  
  Fournit une méthode qui permet à un débogueur énumérer les variables locales et les arguments dans une fonction.  
@@ -134,7 +134,7 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Étend logiquement le [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interface pour fournir des informations sur les modules chargés. **Disponible sur .NET Native uniquement.**  
   
  [ICorDebugDebugEvent, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)  
- Définit l'interface de base de laquelle dérivent tous les événements de débogage `ICorDebug`. **Disponible sur .NET Native uniquement.**  
+ Définit l’interface de base de laquelle dérivent tous les événements de débogage `ICorDebug`. **Disponible sur .NET Native uniquement.**  
   
  [ICorDebugEditAndContinueErrorInfo, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinueerrorinfo-interface.md)  
  Obsolète. N'utilisez pas cette interface.  
@@ -161,7 +161,7 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Fournit un énumérateur pour les informations de la pile des appels qui sont incorporées dans un objet exception.  
   
  [ICorDebugExceptionObjectValue, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)  
- Étend la [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md) interface pour fournir des informations de trace de pile à partir d’un objet d’exception managée.  
+ Étend la [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md) interface pour fournir des informations de trace de pile à partir d’un objet d’exception géré.  
   
  [ICorDebugFrame, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)  
  Représente un frame sur la pile en cours.  
@@ -203,7 +203,7 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Sous-classe de `ICorDebugValue` qui représente un objet qui a été collecté par le garbage collector du CLR.  
   
  [ICorDebugHeapValue2, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-interface1.md)  
- Extension de `ICorDebugHeapValue` qui fournit la prise en charge des handles d'exécution.  
+ Extension de `ICorDebugHeapValue` qui fournit la prise en charge des handles d’exécution.  
   
  [ICorDebugHeapValue3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md)  
  Expose les propriétés du verrou du moniteur d'objets.  
@@ -212,7 +212,7 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Représente un segment du code en langage intermédiaire.  
   
  [ICorDebugILCode2, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
- Étend logiquement le [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface pour fournir des méthodes qui retournent le jeton de signature de variable locale d’une fonction et qui mappent le langage intermédiaire instrumenté d’un profileur (il Intermediate Language) aux offsets IL de méthode d’origine décalages.  
+ Étend logiquement le [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface pour fournir des méthodes qui retournent le jeton de signature de variable locale d’une fonction, et qui correspondent le langage intermédiaire instrumenté (IL) d’un profileur aux offsets intermédiaire de la méthode d’origine décalages.  
   
  [ICorDebugILFrame, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-interface.md)  
  Représente un frame de pile de code MSIL.  
@@ -263,7 +263,7 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Représente un module CLR qui est un fichier exécutable ou une bibliothèque de liens dynamiques (DLL).  
   
  [ICorDebugModule2, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-interface.md)  
- Sert d'extension logique de `ICorDebugModule`.  
+ Sert d’extension logique de `ICorDebugModule`.  
   
  [ICorDebugModule3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-interface.md)  
  Crée un lecteur de symboles pour un module dynamique.  
@@ -305,10 +305,10 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Contrôle les notifications de débogueur personnalisées.  
   
  [ICorDebugProcess5, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- Étend la [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) local de l’interface pour prendre en charge l’accès au tas managé, pour fournir des informations sur le garbage collection d’objets gérés et pour déterminer si un débogueur charge des images à partir de l’application cache des images natives.  
+ Étend la [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) local de l’interface pour prendre en charge d’accès pour le tas managé, pour fournir des informations sur le garbage collection d’objets gérés et pour déterminer si un débogueur charge des images à partir de l’application cache des images natives.  
   
  [ICorDebugProcess6, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  
- Étend logiquement le [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) interface pour activer des fonctionnalités telles que le décodage des événements de débogage managés qui sont codés dans les événements de débogage d’exception native et fractionnement de module virtuel. **Disponible sur .NET Native uniquement.**  
+ Étend logiquement le [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) interface pour activer des fonctionnalités telles que le décodage des événements de débogage managés qui sont encodés dans les événements de débogage d’exception native et fractionnement de module virtuel. **Disponible sur .NET Native uniquement.**  
   
  [ICorDebugProcess7, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-interface.md)  
  Fournit une méthode qui configure le débogueur afin de gérer les mises à jour des métadonnées en mémoire dans le processus cible.  
@@ -359,13 +359,13 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Fournit des méthodes pouvant être utilisées pour récupérer des informations sur les symboles de débogage. **Disponible sur .NET Native uniquement.**  
   
  [ICorDebugSymbolProvider2, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- Étend logiquement le [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) interface pour récupérer des informations sur les symboles de débogage supplémentaires. **Disponible sur .NET Native uniquement.**  
+ Étend logiquement le [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) interface pour récupérer des informations symboliques de débogage supplémentaires. **Disponible sur .NET Native uniquement.**  
   
  [ICorDebugThread, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-interface.md)  
  Représente un thread de processus. La durée de vie d'une instance `ICorDebugThread` est la même que la durée de vie du thread qu'elle représente.  
   
  [ICorDebugThread2, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interface.md)  
- Sert d'extension logique de `ICorDebugThread`.  
+ Sert d’extension logique de `ICorDebugThread`.  
   
  [ICorDebugThread3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)  
  Fournit le point d’entrée pour le [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) et les interfaces correspondantes.  
@@ -388,19 +388,19 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [ICorDebugUnmanagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md)  
  Fournit une notification des événements natifs qui ne sont pas mis directement en rapport avec le CLR.  
   
- « ICorDebugValue »  
+ "ICorDebugValue"  
  Représente une valeur de lecture ou d'écriture dans le processus en cours de débogage.  
   
- « ICorDebugValue2 »  
+ "ICorDebugValue2"  
  Étend `ICorDebugValue` pour prendre en charge `ICorDebugType`.  
   
  [ICorDebugValue3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)  
- Étend les interfaces « ICorDebugValue » et « ICorDebugValue2 » pour prendre en charge pour les tableaux supérieurs à 2 Go.  
+ Étend les interfaces de « ICorDebugValue » et « ICorDebugValue2 » pour prendre en charge pour les tableaux qui sont supérieures à 2 Go.  
   
- « ICorDebugValueBreakpoint »  
+ "ICorDebugValueBreakpoint"  
  Étend `ICorDebugBreakpoint` pour fournir l'accès aux valeurs spécifiques.  
   
- « ICorDebugValueEnum »  
+ "ICorDebugValueEnum"  
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugValue`.  
   
  [ICorDebugVariableHome, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
@@ -422,7 +422,7 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Représente et fournit des informations à propos d'un domaine d'application.  
   
  [ICorPublishAppDomainEnum, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
- Fournit des méthodes qui parcourent une collection d'objets `ICorPublishAppDomain` qui existent actuellement dans un processus.  
+ Fournit des méthodes qui parcourent une collection d’objets `ICorPublishAppDomain` qui existent actuellement dans un processus.  
   
  [ICorPublishEnum, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)  
  Sert comme base abstraite pour la publication des énumérateurs.  
@@ -431,7 +431,17 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  Fournit des méthodes qui permettent d'accéder aux informations sur un processus.  
   
  [ICorPublishProcessEnum, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
- Fournit des méthodes qui parcourent une collection d'objets `ICorPublishProcess`.  
+ Fournit des méthodes qui parcourent une collection d’objets `ICorPublishProcess`.  
+
+ [Interface de ISOSDacInterface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md) fournit des méthodes d’assistance pour accéder aux données à partir de `SOS`.
+
+ [Interface de IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md) fournit des méthodes pour obtenir des informations sur une définition de méthode.
+ 
+ [Interface de IXCLRDataMethodInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md) fournit des méthodes pour obtenir des informations sur une instance de méthode.
+ 
+ [Interface de IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md) fournit des méthodes pour obtenir des informations sur un module chargé.
+ 
+ [Interface de IXCLRDataProcess](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md) fournit des méthodes permettant d’interroger les informations relatives à un processus.
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Coclasses de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

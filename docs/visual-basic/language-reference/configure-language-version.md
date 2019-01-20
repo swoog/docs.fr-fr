@@ -2,12 +2,12 @@
 title: Sélectionnez la version linguistique de Visual Basic
 description: Configurer le compilateur pour effectuer une validation de syntaxe à l’aide d’une version de compilateur spécifique.
 ms.date: 05/24/2018
-ms.openlocfilehash: 7628b5a7c27f5b26171d42e44a58598ef3d5d49f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194720"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415102"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Sélectionnez la version linguistique de Visual Basic
 
@@ -60,7 +60,7 @@ Vous pouvez créer un fichier **Directory.build.props** contenant l’élément 
 </Project>
 ```
 
-Maintenant, builds dans chaque sous-répertoire du répertoire contenant ce fichier utilise la syntaxe de la version 15.5 Visual Basic. Pour plus d’informations, consultez l’article sur [Personnaliser votre build](/visualstudio/msbuild/customize-your-build.md).
+Maintenant, builds dans chaque sous-répertoire du répertoire contenant ce fichier utilise la syntaxe de la version 15.5 Visual Basic. Pour plus d’informations, consultez l’article sur [Personnaliser votre build](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="set-the-langversion-compiler-option"></a>Définir l’option de compilateur langversion
 

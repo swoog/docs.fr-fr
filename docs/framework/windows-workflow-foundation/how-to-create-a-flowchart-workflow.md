@@ -1,25 +1,25 @@
 ---
-title: "Procédure : créer un workflow d'organigramme"
+title: 'Procédure : Créer un Workflow d’organigramme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502149"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415245"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Procédure : créer un workflow d'organigramme
-Les workflows peuvent être construits aussi bien à partir d'activités intégrées que d'activités personnalisées. Cette rubrique vous guide création d’un workflow qui utilise les deux activités intégrées telles que la <xref:System.Activities.Statements.Flowchart> activité et les activités personnalisées de la précédente [Comment : créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) rubrique. Le workflow modélise un jeu d'estimation de nombre.  
+# <a name="how-to-create-a-flowchart-workflow"></a>Procédure : Créer un Workflow d’organigramme
+Les workflows peuvent être construits aussi bien à partir d'activités intégrées que d'activités personnalisées. Cette rubrique vous guide création d’un workflow qui utilise les deux activités intégrées telles que la <xref:System.Activities.Statements.Flowchart> activité et les activités personnalisées de la précédente [Comment : Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) rubrique. Le workflow modélise un jeu d'estimation de nombre.  
   
 > [!NOTE]
->  Chaque rubrique du didacticiel de mise en route dépend des rubriques précédentes. Pour effectuer cette rubrique, vous devez tout d’abord effectuer [Comment : créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Chaque rubrique du didacticiel de mise en route dépend des rubriques précédentes. Pour effectuer cette rubrique, vous devez tout d’abord effectuer [Comment : Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Pour télécharger une version terminée du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Pour télécharger une version complète du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)(Windows Workflow Foundation (WF45) - Didacticiel de mise en route).  
   
 ### <a name="to-create-the-workflow"></a>Pour créer le flux de travail  
   
@@ -67,7 +67,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
 1.  Faites glisser un **affecter** activité à partir de la **Primitives** section de la **boîte à outils** et placez-la sur le **Démarrer** nœud, qui est en haut de la diagramme de flux. Lorsque le **affecter** activité se trouve sur le **Démarrer** nœud, trois triangles apparaissent autour de la **Démarrer** nœud. Supprimer le **affecter** activité sur le triangle qui est directement sous le **Démarrer** nœud. Cela sera relier les deux éléments et désigne la **affecter** activité comme première activité dans l’organigramme.  
   
     > [!NOTE]
-    >  Les activités peuvent également être définies comme activité de départ dans le workflow en les liant manuellement au nœud de démarrage. Pour ce faire, pointez la souris sur le **Démarrer** nœud, cliquez sur un des rectangles qui apparaissent lorsque la souris est positionnée sur le **Démarrer** nœud, puis faites glisser la connexion de ligne à l’activité souhaitée et déposez-la sur l’un des les rectangles qui s’affichent. Vous pouvez également désigner et activité en tant que l’activité de départ en double-cliquant sur l’informatique et en choisissant **définir en tant que nœud début**.  
+    >  Les activités peuvent également être définies comme activité de départ dans le workflow en les liant manuellement au nœud de démarrage. Pour ce faire, pointez la souris sur le **Démarrer** nœud, cliquez sur un des rectangles qui apparaissent lorsque la souris est positionnée sur le **Démarrer** nœud, puis faites glisser la connexion de ligne à l’activité souhaitée et déposez-la sur l’un des les rectangles qui s’affichent. Vous pouvez également désigner une activité en tant que l’activité de départ en double-cliquant sur l’informatique et en choisissant **définir en tant que nœud début**.  
   
 2.  Type `Target` dans le **à** boîte et l’expression suivante dans le **entrer une Expression c#** ou **entrer une expression VB** boîte.  
   
@@ -148,7 +148,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
   
 1.  Appuyez sur Ctrl+Maj+B pour générer la solution.  
   
-     Pour obtenir des instructions sur la façon d’exécuter le flux de travail, consultez la rubrique suivante, [Comment : exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Si vous avez déjà effectué le [Comment : exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) étape avec un style différent de workflow et souhaitez l’exécuter en utilisant le workflow d’organigramme à partir de cette étape, passez à le [pour générer et exécuter l’application](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)section de [Comment : exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Pour obtenir des instructions sur la façon d’exécuter le flux de travail, consultez la rubrique suivante, [Comment : Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Si vous avez déjà effectué le [Comment : Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) étape avec un style différent de workflow et souhaitez l’exécuter en utilisant le workflow d’organigramme à partir de cette étape, passez directement à la [pour générer et exécuter l’application](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section de [Comment : Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Activities.Statements.Flowchart>  
@@ -156,5 +156,5 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
  [Programmation Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [Conception des workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  [Didacticiel Bien démarrer](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Guide pratique pour créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Guide pratique pour exécuter un workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+ [Guide pratique pour Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Guide pratique pour Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

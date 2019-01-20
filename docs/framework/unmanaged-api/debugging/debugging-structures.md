@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c7415920d34fc231bf82dd00199c7e01eec7a73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23aa619d666f2e0b9eb67ab4cf8d4f92761865d3
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408110"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415323"
 ---
 # <a name="debugging-structures"></a>Structures de débogage
 Cette section décrit les structures non managées utilisées par l'API de débogage.  
@@ -35,7 +35,7 @@ Cette section décrit les structures non managées utilisées par l'API de débo
  Représente les informations de frame de pile provenant d'un objet Exception.  
   
  [CorDebugExceptionObjectStackFrame, structure](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Mappe un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID correspondant [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) objet.  
+ Mappages une [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID correspondant [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) objet.  
   
  COR_ACTIVE_FUNCTION  
  Contient des informations sur les fonctions qui sont actuellement actives dans les trames d'un thread.  
@@ -77,7 +77,14 @@ Cette section décrit les structures non managées utilisées par l'API de débo
  Stocke le numéro de version en quatre parties du CLR (Common Language Runtime).  
   
  [StackTrace_SimpleContext, structure](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
- Fournit un contexte simple qui peut être utilisé à la place d'une structure `CONTEXT` complète.  
+ Fournit un contexte simple qui peut être utilisé à la place d'une structure `CONTEXT` complète.
+
+ [Structure de CLRDATA_ADDRESS_RANGE](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) définit une plage d’adresses.
+ 
+ [Structure de CLRDATA_IL_ADDRESS_MAP](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) définit un langage intermédiaire pour le mappage d’adresses
+ 
+ [Structure de DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) définit le conteneur pour une demande d’adresse de module.
+
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Coclasses de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

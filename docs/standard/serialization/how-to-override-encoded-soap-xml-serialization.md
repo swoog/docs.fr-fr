@@ -1,23 +1,22 @@
 ---
-title: 'Comment : substituer la sérialisation XML encodée selon le protocole SOAP'
+title: 'Procédure : Substituer la sérialisation du XML SOAP encodé'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 721a27b4bba239f0d22a24e0e159ef36b742d1b7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7deec91f605555cff94fa882c887a4adf97db58a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003774"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415063"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>Comment : substituer la sérialisation XML encodée selon le protocole SOAP
-[Exemple de code](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>Procédure : Substituer la sérialisation du XML SOAP encodé
   
- Le processus permettant de substituer la sérialisation XML d'objets en tant que messages SOAP est identique au processus permettant de substituer la sérialisation XML standard. Pour plus d’informations sur la substitution de la sérialisation XML standard, consultez [Guide pratique pour spécifier un nom d’élément différent pour un flux XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
+ Le processus permettant de substituer la sérialisation XML d'objets en tant que messages SOAP est identique au processus permettant de substituer la sérialisation XML standard. Pour plus d’informations sur la substitution de sérialisation XML standard, consultez [Comment : Spécifiez un nom d’élément différent pour un Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
   
-### <a name="to-override-serialization-of-objects-as-soap-messages"></a>Pour substituer la sérialisation d'objets en tant que messages SOAP  
+## <a name="to-override-serialization-of-objects-as-soap-messages"></a>Pour substituer la sérialisation d'objets en tant que messages SOAP  
   
 1.  Créez une instance de la classe <xref:System.Xml.Serialization.SoapAttributeOverrides>.  
   
@@ -283,6 +282,6 @@ public class Run
 - [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
 - [Attributs qui contrôlent la sérialisation encodée selon le protocole SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
 - [Sérialisation XML avec les services web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
-- [Guide pratique pour sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Guide pratique pour désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [Guide pratique pour sérialiser un objet en tant que flux XML encodé selon le protocole SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Guide pratique pour Sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [Guide pratique pour Désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [Guide pratique pour Sérialiser un objet comme un Stream XML encodés en SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

@@ -2,12 +2,12 @@
 title: Migration de .NET Remoting vers WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245676"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415973"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migration de .NET Remoting vers WCF
 Cet article décrit comment migrer une application .NET Remoting vers Windows Communication Foundation (WCF). Il compare d'abord les concepts similaires entre ces deux produits, puis explique comment transposer plusieurs scénarios Remoting courants dans WCF.  
@@ -23,7 +23,7 @@ Cet article décrit comment migrer une application .NET Remoting vers Windows Co
 |Opérations de service|Méthodes publiques sur le type de serveur|Marquer avec l'attribut [OperationContract]|  
 |Sérialisation|ISerializable ou [Serializable]|DataContractSerializer ou XmlSerializer|  
 |Objets passés|Par valeur ou par référence|Par valeur uniquement|  
-|Erreurs/exceptions|Toute exception sérialisable|FaultContract\<TDetail >|  
+|Erreurs/exceptions|Toute exception sérialisable|FaultContract\<TDetail>|  
 |Objets proxy clients|Proxys transparents fortement typés créés automatiquement à partir de MarshalByRefObjects|Proxys fortement typés sont générés à la demande à l’aide de ChannelFactory\<TChannel >|  
 |Plateforme requise|Le client et le serveur doivent utiliser un système d'exploitation Microsoft et .NET|Multiplateforme|  
 |Format de message|Privé|Normalisé (SOAP, WS-*, etc.)|  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  À l'issue de la migration d'une application Remoting vers WCF, il est toujours important de supprimer les dépendances à .NET Remoting. Cela permet de s'assurer que toutes les vulnérabilités de Remoting sont supprimées de l'application. Notamment :  
   
--   **Cesser d’utiliser MarshalByRefObject.** Le type MarshalByRefObject concerne uniquement Remoting et n’est pas utilisé par WCF. Les types d'applications qui définissent des sous-classes de MarshalByRefObject doivent être supprimés ou modifiés. Le type MarshalByRefObject concerne uniquement Remoting et n'est pas utilisé par WCF. Les types d’applications qui définissent des sous-classes de MarshalByRefObject doivent être supprimés ou modifiés.  
+-   **Cesser d’utiliser MarshalByRefObject.** Le type MarshalByRefObject concerne uniquement Remoting et n’est pas utilisé par WCF. Les types d’applications qui définissent des sous-classes de MarshalByRefObject doivent être supprimés ou modifiés.  
   
--   **Cesser d’utilisation de [Serializable] et ISerializable.** Conçus à l'origine pour sérialiser les types dans les environnements fiables, l'attribut [Serializable] et l'interface ISerializable sont utilisés par Remoting. La sérialisation WCF s'appuie sur les types marqués avec [DataContract] et [DataMember]. Les types de données utilisés par une application doivent être modifiés afin d'utiliser [DataContract] et non l'interface ISerializable ou [Serializable]. Conçus à l'origine pour sérialiser les types dans les environnements fiables, l'attribut [Serializable] et l'interface ISerializable sont utilisés par Remoting. La sérialisation WCF s'appuie sur les types marqués avec [DataContract] et [DataMember]. Les types de données utilisés par une application doivent être modifiés afin d'utiliser [DataContract] et non l'interface ISerializable ou [Serializable].  
+-   **Cesser d’utilisation de [Serializable] et ISerializable.** Conçus à l'origine pour sérialiser les types dans les environnements fiables, l'attribut [Serializable] et l'interface ISerializable sont utilisés par Remoting. La sérialisation WCF s'appuie sur les types marqués avec [DataContract] et [DataMember]. Les types de données utilisés par une application doivent être modifiés afin d'utiliser [DataContract] et non l'interface ISerializable ou [Serializable].  
   
 ### <a name="migration-scenarios"></a>Scénarios de migration  
  Nous allons à présent voir comment transposer des scénarios Remoting courants suivants dans WCF :  
