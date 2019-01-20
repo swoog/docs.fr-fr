@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144713"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415687"
 ---
 # <a name="net-core-application-deployment"></a>Déploiement d’applications .NET Core
 
@@ -94,12 +94,7 @@ Il existe également quelques inconvénients :
 
 ## <a name="step-by-step-examples"></a>Exemples étape par étape
 
-Pour obtenir des exemples étape par étape de déploiement d’applications .NET Core avec les outils de l’interface CLI, consultez [Déploiement d’applications .NET Core avec des outils CLI](deploy-with-cli.md). Pour obtenir des exemples étape par étape de déploiement d’applications .NET Core avec Visual Studio, consultez [Déploiement d’applications .NET Core avec Visual Studio](deploy-with-vs.md). Chaque article contient des exemples des déploiements suivants :
-
-- Déploiement dépendant du framework
-- Déploiement dépendant du framework avec des dépendances tierces
-- Déploiement autonome
-- Déploiement autonome avec des dépendances tierces
+Pour obtenir des exemples étape par étape de déploiement d’applications .NET Core avec les outils de l’interface CLI, consultez [Déploiement d’applications .NET Core avec des outils CLI](deploy-with-cli.md). Pour obtenir des exemples étape par étape de déploiement d’applications .NET Core avec Visual Studio, consultez [Déploiement d’applications .NET Core avec Visual Studio](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>Voir aussi
 
