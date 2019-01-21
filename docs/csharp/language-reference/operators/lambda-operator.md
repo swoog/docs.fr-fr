@@ -8,18 +8,18 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: c193a91eaffe2e56a5df2afa8d66989981123a48
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8641757d9252c88cf30595cec06d27b964e4d95c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238791"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415284"
 ---
 # <a name="gt-operator-c-reference"></a>=&gt;, opérateur (Informations de référence sur C#)
 
 L’opérateur `=>` peut être utilisé de deux façons en C# :
 
-- Comme [l’opérateur lambda](#lamba-operator) dans une [expression lambda](../../lambda-expressions.md), il sépare les variables d’entrée du corps du lambda.
+- Comme [l’opérateur lambda](#lambda-operator) dans une [expression lambda](../../lambda-expressions.md), il sépare les variables d’entrée du corps du lambda.
  
 - Dans une [définition de corps d’expression](#expression-body-definition), il sépare un nom de membre de l’implémentation du membre. 
 

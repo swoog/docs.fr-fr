@@ -4,13 +4,13 @@ description: Découvrez les pratiques recommandées pour l’architecture, la co
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.technology: dotnet
-ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.technology: dotnet-ebooks
+ms.openlocfilehash: cb96b56eb6ad76fc8809e46c86277a96fa7b85c8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404172"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415869"
 ---
 # <a name="net-architecture-guidance"></a>Conseils sur l’architecture .NET
 
@@ -30,6 +30,6 @@ Ce guide est une introduction aux processus d’architecture, de conception et d
 
 Ce guide est une introduction au développement d’applications basées sur les microservices et à la gestion de celles-ci au moyen de conteneurs. Il traite de la conception architecturale et des approches d’implémentation utilisant .NET Core et les conteneurs Docker.
 
-## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Applications serverless : Architecture, modèles et implémentation Azure](serverless-architecture/index.md)
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Applications serverless : architecture, modèles et implémentation Azure](serverless-architecture/index.md)
 
 Il s’agit d’un guide pour générer des applications serverless avec des exemples utilisant Azure. Il aborde diverses approches d’architecture et de conception, ainsi que les avantages et les défis liés au modèle serverless, et fournit des scénarios et des cas d’usage pour les applications serverless.

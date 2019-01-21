@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201016"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54416025"
 ---
 # Nouveautés du .NET Framework <a name="introduction"></a>
 
@@ -29,7 +29,7 @@ Cet article résume les principales nouvelles fonctionnalités et améliorations
 - [.NET 2015 et .NET Framework 4.6](#v46)
 - [.NET Framework 4.5.2](#v452)
 - [.NET Framework 4.5.1](#v451)
-- [.NET Framework 4.5](#v45)
+- [.NET Framework 4.5](#v45)
 
 Cet article ne fournit pas d'informations complètes sur chacune des nouvelles fonctionnalités et peut faire l'objet de modifications. Pour obtenir des informations générales sur le .NET Framework, consultez [Prise en main](../../../docs/framework/get-started/index.md). Pour connaître les plateformes prises en charge, consultez [Configuration requise](~/docs/framework/get-started/system-requirements.md). Pour obtenir des liens de téléchargement et des instructions d’installation, consultez [Guide d’installation](../../../docs/framework/install/guide-for-developers.md).
 
@@ -108,7 +108,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-Les méthodes <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> et <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> vous permettent de générer de nouvelles clés <xref:System.Security.Cryptography.DSA> ou <xref:System.Security.Cryptography.RSA> avec une taille de clé spécifique. Exemple :
+Les méthodes <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> et <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> vous permettent de générer de nouvelles clés <xref:System.Security.Cryptography.DSA> ou <xref:System.Security.Cryptography.RSA> avec une taille de clé spécifique. Par exemple :
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -242,9 +242,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 L’[injection de dépendances](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) dissocie les objets et leurs dépendances afin qu’il ne soit plus obligatoire de modifier le code d’un objet simplement parce qu’une dépendance a changé. Lors du développement d’applications ASP.NET qui ciblent .NET Framework 4.7.2, vous pouvez :
 
-- Utiliser l’injection basée sur méthode setter, sur interface et sur constructeur dans des [gestionnaires et des modules](https://msdn.microsoft.com/en-us/library/bb398986.aspx), des [instances de pages](xref:System.Web.UI.Page) et des [contrôles utilisateur](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) de projets d’applications web ASP.NET.
+- Utiliser l’injection basée sur méthode setter, sur interface et sur constructeur dans des [gestionnaires et des modules](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), des [instances de pages](xref:System.Web.UI.Page) et des [contrôles utilisateur](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de projets d’applications web ASP.NET.
 
-- Utiliser l’injection basée sur méthode setter et sur interface dans des [gestionnaires et des modules](https://msdn.microsoft.com/en-us/library/bb398986.aspx), des [instances de pages](xref:System.Web.UI.Page) et des [contrôles utilisateur](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) de projets de sites web ASP.NET.
+- Utiliser l’injection basée sur méthode setter et sur interface dans des [gestionnaires et des modules](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), des [instances de pages](xref:System.Web.UI.Page) et des [contrôles utilisateur](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de projets de sites web ASP.NET.
 
 - Raccorder différents frameworks d’injection de dépendances.
 
@@ -317,7 +317,7 @@ Pour plus d’informations et pour obtenir un exemple, consultez « SQL -- Azur
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, qui fournit les paramètres d’attestation utilisés par SQL Server afin d’obtenir les informations requises pour exécuter un protocole d’attestation spécifique.
 
-Le fichier de configuration d’application spécifie ensuite une implémentation concrète de la classe <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> abstraite qui fournit la fonctionnalité pour le fournisseur d’enclave. Exemple :
+Le fichier de configuration d’application spécifie ensuite une implémentation concrète de la classe <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> abstraite qui fournit la fonctionnalité pour le fournisseur d’enclave. Par exemple :
 
 ```xml
 <configuration>
@@ -490,7 +490,7 @@ Le .NET Framework 4.7.1 comprend une nouvelle méthode, <xref:System.Web.HttpCoo
 
 **Options de hachage SHA-2 pour les informations d’identification de l’authentification par formulaires ASP.NET**
 
-Dans le .NET Framework 4.7 et versions antérieures, ASP.NET permettait aux développeurs de stocker les informations d’identification des utilisateurs avec des mots de passe hachés dans des fichiers de configuration en utilisant MD5 ou SHA1. À compter du .NET Framework 4.7.1, ASP.NET prend en charge de nouvelles options de hachage SHA-2 sécurisées, notamment SHA256, SHA384 et SHA512. SHA1 reste la valeur par défaut, et un algorithme de hachage autre que celui par défaut peut être défini dans le fichier de configuration web. Exemple :
+Dans le .NET Framework 4.7 et versions antérieures, ASP.NET permettait aux développeurs de stocker les informations d’identification des utilisateurs avec des mots de passe hachés dans des fichiers de configuration en utilisant MD5 ou SHA1. À compter du .NET Framework 4.7.1, ASP.NET prend en charge de nouvelles options de hachage SHA-2 sécurisées, notamment SHA256, SHA384 et SHA512. SHA1 reste la valeur par défaut, et un algorithme de hachage autre que celui par défaut peut être défini dans le fichier de configuration web. Par exemple :
 
 ```xml
 <system.web>
@@ -797,7 +797,7 @@ End Function
 
  La bibliothèque de chiffrement Windows (CNG) avait ajouté la prise en charge du stockage de clés symétriques persistantes et de l’utilisation des clés symétriques stockées sur du matériel, et le [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] avait permis aux développeurs d’utiliser cette fonctionnalité.  Sachant que la notion de noms de clés et de fournisseurs de clés est spécifique à l’implémentation, cette fonctionnalité impose l’utilisation du constructeur des types d’implémentation concrets plutôt que l’approche par défaut privilégiée (comme l’appel de `Aes.Create`).
 
- La prise en charge du chiffrement symétrique des clés persistantes existe pour les algorithmes AES (<xref:System.Security.Cryptography.AesCng>) et 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Exemple :
+ La prise en charge du chiffrement symétrique des clés persistantes existe pour les algorithmes AES (<xref:System.Security.Cryptography.AesCng>) et 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Par exemple :
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1096,7 +1096,7 @@ Pour plus d’informations sur [!INCLUDE[net_v461](../../../includes/net-v461-md
 
 <a name="Crypto" />
 
-### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Chiffrement : prise en charge des certificats X509 contenant l’algorithme ECDSA
+### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Chiffrement : Prise en charge des certificats X509 contenant l’algorithme ECDSA
  .NET Framework 4.6 a ajouté la prise en charge de l’algorithme RSACng pour les certificats X509. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ajoute la prise en charge des certificats X509 ECDSA (Elliptic Curve Digital Signature Algorithm).
 
  ECDSA offre de meilleures performances et constitue un algorithme de chiffrement plus sécurisé que RSA. Il constitue un excellent choix quand les performances et la scalabilité de la sécurité de la couche de transport (TLS) constituent une préoccupation. L’implémentation du .NET Framework encapsule les appels dans les fonctionnalités Windows existantes.
@@ -1641,7 +1641,7 @@ L’API de profilage non managée a été améliorée comme suit :
 
     - Vous pouvez utiliser les API Windows Runtime dans les bibliothèques portables qui ciblent Windows 8.1, Windows Phone 8.1, et Windows Phone Silverlight 8.1.
 
-    - Vous pouvez inclure du code XAML (type Windows.UI.XAML) dans les bibliothèques portables quand vous ciblez Windows 8.1 ou Windows Phone 8.1. Les modèles XAML suivants sont pris en charge : Page vierge, Dictionnaire de ressources, Contrôle basé sur un modèle et Contrôle utilisateur.
+    - Vous pouvez inclure du code XAML (type Windows.UI.XAML) dans les bibliothèques portables quand vous ciblez Windows 8.1 ou Windows Phone 8.1. Les modèles XAML suivants sont pris en charge :  Page vierge, Dictionnaire de ressources, Contrôle basé sur un modèle et Contrôle utilisateur.
 
     - Vous pouvez créer un composant Windows Runtime portable (fichier .winmd) à utiliser dans les applications du Windows Store qui ciblent Windows 8.1 et Windows Phone 8.1.
 
@@ -1655,7 +1655,7 @@ L’API de profilage non managée a été améliorée comme suit :
 
  Les principales fonctionnalités et améliorations nouvelles dans le .NET Framework 4.5.1 sont les suivantes :
 
-- Redirection de liaison automatique des assemblys. Depuis Visual Studio 2013, lorsque vous compilez une application qui cible [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], il est possible d'ajouter des redirections de liaison au fichier de configuration de l'application, si votre application ou ses composants référencent plusieurs versions du même assembly. Vous pouvez également activer cette fonctionnalité pour les projets qui ciblent des versions antérieures du .NET Framework. Pour plus d’informations, consultez [Guide pratique pour activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Redirection de liaison automatique des assemblys. Depuis Visual Studio 2013, lorsque vous compilez une application qui cible [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], il est possible d'ajouter des redirections de liaison au fichier de configuration de l'application, si votre application ou ses composants référencent plusieurs versions du même assembly. Vous pouvez également activer cette fonctionnalité pour les projets qui ciblent des versions antérieures du .NET Framework. Pour plus d'informations, voir [Procédure : Activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Capacité à collecter des informations de diagnostic pour aider les développeurs à améliorer les performances des applications serveur et cloud. Pour plus d'informations, consultez les méthodes <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> et <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> de la classe <xref:System.Diagnostics.Tracing.EventSource>.
 

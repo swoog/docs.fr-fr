@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: ce6b23edb10733de3134b5233413de8b535c11ac
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c14b0470f7ea488fcb813b68174b5d1cb0d95786
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235291"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415583"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Délimiteurs pour les balises de documentation (Guide de programmation C#)
 L’utilisation de commentaires de documentation XML exige des délimiteurs, qui indiquent au compilateur où un commentaire de documentation commence et se termine. Vous pouvez utiliser les genres de délimiteurs ci-dessous avec les balises de documentation XML :  
@@ -38,7 +38,7 @@ L’utilisation de commentaires de documentation XML exige des délimiteurs, qui
   
 -   La seule partie du commentaire suivant qui sera traitée est la ligne qui commence par `<summary>`. Les trois formats de balise produisent les mêmes commentaires.  
   
-    ```  
+    ```csharp  
     /** <summary>text</summary> */   
   
     /**   
@@ -52,7 +52,7 @@ L’utilisation de commentaires de documentation XML exige des délimiteurs, qui
   
 -   Le compilateur identifie un modèle commun « * » au début des deuxième et troisième lignes. Le modèle n’est pas inclus dans la sortie.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
      * text </summary>*/   
@@ -60,7 +60,7 @@ L’utilisation de commentaires de documentation XML exige des délimiteurs, qui
   
 -   Le compilateur ne détecte aucun modèle commun dans le commentaire suivant, car le deuxième caractère sur la troisième ligne n’est pas un astérisque. Ainsi, tout le texte des deuxième et troisième lignes est traité comme faisant partie du commentaire.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
        text </summary>  
@@ -69,7 +69,7 @@ L’utilisation de commentaires de documentation XML exige des délimiteurs, qui
   
 -   Le compilateur ne détecte aucun modèle dans le commentaire suivant pour deux raisons. Tout d’abord, le nombre d’espaces avant l’astérisque n’est pas cohérent. Ensuite, la cinquième ligne commence par une tabulation, qui ne correspond pas à des espaces. Ainsi, tout le texte des lignes deux à cinq est traité comme faisant partie du commentaire.  
   
-    ```  
+    ```csharp  
     /**   
       * <summary>   
       * text   
