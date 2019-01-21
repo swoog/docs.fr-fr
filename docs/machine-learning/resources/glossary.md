@@ -3,12 +3,12 @@ title: Glossaire Machine Learning - ML.NET
 description: La liste suivante est une compilation des principaux termes Machine Learning, utiles lorsque vous générez vos modèles personnalisés.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53760391"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415375"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossaire Machine Learning des principaux termes
 
@@ -17,8 +17,6 @@ La liste suivante est une compilation des principaux termes Machine Learning, ut
 ## <a name="accuracy"></a>Précision
 
 Dans la [classification](#classification), la précision correspond au nombre d’éléments correctement classifiés, divisé par le nombre total d’éléments dans le jeu de test. Cette valeur est comprise entre 0 (la moins précise) et 1 (la plus précise). La précision est une des métriques d’évaluation des performances de votre modèle. Utilisez-la conjointement avec les options [précision](#precision), [rappel](#recall) et [F-score](#f-score).
-
-API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Zone sous la courbe (AUC)
 
@@ -87,8 +85,6 @@ Toutes les opérations nécessaires pour adapter un modèle à un jeu de donnée
 ## <a name="precision"></a>Précision
 
 Dans une [classification](#classification), la précision d’une classe correspond au nombre d’éléments correctement prévus comme appartenant à cette classe, divisé par le nombre total d’éléments prévus comme appartenant à la classe.
-
-API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Rappel
 

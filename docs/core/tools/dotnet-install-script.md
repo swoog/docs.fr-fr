@@ -1,13 +1,13 @@
 ---
 title: Scripts dotnet-install
 description: Découvrez les scripts dotnet-install pour installer les outils CLI .NET Core et le runtime partagé.
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148318"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362821"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Documentation sur les scripts dotnet-install
 
@@ -73,7 +73,7 @@ Vous pouvez installer une version spécifique à l’aide de l’argument `--ver
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  Architecture des fichiers binaires .NET Core à installer. Les valeurs possibles sont `auto`, `x64` et `x86`. La valeur par défaut est `auto`, qui représente l’architecture de système d’exploitation en cours d’exécution.
+  Architecture des fichiers binaires .NET Core à installer. Les valeurs possibles sont `<auto>`, `amd64`, `x64`, `x86`, `arm64` et `arm`. La valeur par défaut est `<auto>`, qui représente l’architecture de système d’exploitation en cours d’exécution.
 
 * **`-SharedRuntime`**
 

@@ -3,12 +3,12 @@ title: Déterminer l’importance des caractéristiques des modèles avec l’op
 description: Comprendre l’importance des caractéristiques des modèles avec l’option Permutation Feature Importance dans ML.NET
 ms.date: 12/04/2018
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4b93e085dbb99e7f6f5a0a839b863aad1c69c7ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebad89aaee1155d7c116b8536307756227dced31
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156567"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307108"
 ---
 # <a name="determine-the-feature-importance-of-models-with-permutation-feature-importance-in-mlnet"></a>Déterminer l’importance des caractéristiques des modèles avec l’option Permutation Feature Importance dans ML.NET
 
@@ -33,6 +33,6 @@ for (int i = 0; i < featureNames.Length; i++)
   Console.WriteLine($"{featureNames[i]}\t{permutationMetrics[i].rSquared:G4}");
 ```
 
-Pour obtenir un exemple utilisant PFI pour analyser l’importance de fonctionnalité d’un modèle, consultez [le référentiel GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/PermutationFeatureImportance.cs).
+Pour obtenir un exemple utilisant PFI pour analyser l’importance de fonctionnalité d’un modèle, consultez [le référentiel GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/samples/Microsoft.ML.Samples/Dynamic/PermutationFeatureImportance).
 
 /* Cette valeur n’est pas exactement aléatoire, mais permutée sur l’ensemble des exemples.
