@@ -1,7 +1,7 @@
 ---
 title: '[], opérateur - Référence C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243996"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333393"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="8e92e-102">[], opérateur (référence C#)</span><span class="sxs-lookup"><span data-stu-id="8e92e-102">[] Operator (C# Reference)</span></span>
-<span data-ttu-id="8e92e-103">Les crochets (`[]`) sont utilisés pour les tableaux, les indexeurs et les attributs.</span><span class="sxs-lookup"><span data-stu-id="8e92e-103">Square brackets (`[]`) are used for arrays, indexers, and attributes.</span></span> <span data-ttu-id="8e92e-104">Ils peuvent également être utilisés avec les pointeurs.</span><span class="sxs-lookup"><span data-stu-id="8e92e-104">They can also be used with pointers.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="8e92e-105">Notes</span><span class="sxs-lookup"><span data-stu-id="8e92e-105">Remarks</span></span>  
- <span data-ttu-id="8e92e-106">Un type tableau est un type suivi de `[]` :</span><span class="sxs-lookup"><span data-stu-id="8e92e-106">An array type is a type followed by `[]`:</span></span>  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- <span data-ttu-id="8e92e-107">Pour accéder à un élément d’un tableau, vous devez placer l’index de l’élément souhaité entre crochets :</span><span class="sxs-lookup"><span data-stu-id="8e92e-107">To access an element of an array, the index of the desired element is enclosed in brackets:</span></span>  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- <span data-ttu-id="8e92e-108">Une exception est levée si un index de tableau est hors portée.</span><span class="sxs-lookup"><span data-stu-id="8e92e-108">An exception is thrown if an array index is out of range.</span></span>  
-  
- <span data-ttu-id="8e92e-109">L’opérateur d’indexation de tableau ne peut pas être surchargé. Toutefois, les types peuvent définir les indexeurs qui acceptent un ou plusieurs paramètres.</span><span class="sxs-lookup"><span data-stu-id="8e92e-109">The array indexing operator cannot be overloaded; however, types can define indexers that take one or more parameters.</span></span> <span data-ttu-id="8e92e-110">Les paramètres d’indexeur sont placés entre crochets, comme les index de tableau, mais ils peuvent être déclarés comme étant de tout type, contrairement aux index de tableau, qui doivent être intégraux.</span><span class="sxs-lookup"><span data-stu-id="8e92e-110">Indexer parameters are enclosed in square brackets, just like array indexes, but indexer parameters can be declared to be of any type, unlike array indexes, which must be integral.</span></span>  
-  
- <span data-ttu-id="8e92e-111">Par exemple, le .NET Framework définit un type `Hashtable` qui associe des clés et des valeurs de type arbitraire :</span><span class="sxs-lookup"><span data-stu-id="8e92e-111">For example, the .NET Framework defines a `Hashtable` type that associates keys and values of arbitrary type:</span></span>  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- <span data-ttu-id="8e92e-112">Les crochets sont également utilisés pour spécifier des [attributs](../../../csharp/programming-guide/concepts/attributes/index.md) :</span><span class="sxs-lookup"><span data-stu-id="8e92e-112">Square brackets are also used to specify [Attributes](../../../csharp/programming-guide/concepts/attributes/index.md):</span></span>  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- <span data-ttu-id="8e92e-113">Vous pouvez utiliser des crochets pour indexer un pointeur :</span><span class="sxs-lookup"><span data-stu-id="8e92e-113">You can use square brackets to index off a pointer:</span></span>  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- <span data-ttu-id="8e92e-114">Aucune vérification des limites n’est effectuée.</span><span class="sxs-lookup"><span data-stu-id="8e92e-114">No bounds checking is performed.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="8e92e-115">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="8e92e-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="8e92e-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8e92e-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="de842-102">[], opérateur (référence C#)</span><span class="sxs-lookup"><span data-stu-id="de842-102">[] operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="8e92e-117">Référence C#</span><span class="sxs-lookup"><span data-stu-id="8e92e-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="8e92e-118">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="8e92e-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="8e92e-119">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="8e92e-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="8e92e-120">Tableaux</span><span class="sxs-lookup"><span data-stu-id="8e92e-120">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
-- [<span data-ttu-id="8e92e-121">Indexeurs</span><span class="sxs-lookup"><span data-stu-id="8e92e-121">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
-- [<span data-ttu-id="8e92e-122">unsafe</span><span class="sxs-lookup"><span data-stu-id="8e92e-122">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
-- [<span data-ttu-id="8e92e-123">fixed, instruction</span><span class="sxs-lookup"><span data-stu-id="8e92e-123">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)
+<span data-ttu-id="de842-103">Les crochets, `[]`, sont généralement utilisés pour l’accès à un élément tableau, indexeur ou pointeur.</span><span class="sxs-lookup"><span data-stu-id="de842-103">Square brackets, `[]`, are typically used for array, indexer, or pointer element access.</span></span>
+
+<span data-ttu-id="de842-104">Pour plus d’informations sur l’accès aux éléments pointeur, consultez [Guide pratique pour accéder à un élément de tableau à l’aide d’un pointeur](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).</span><span class="sxs-lookup"><span data-stu-id="de842-104">For more information about pointer element access, see [How to: access an array element with a pointer](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).</span></span>
+
+<span data-ttu-id="de842-105">Vous utilisez également des crochets pour spécifier des [attributs](../../programming-guide/concepts/attributes/index.md) :</span><span class="sxs-lookup"><span data-stu-id="de842-105">You also use square brackets to specify [attributes](../../programming-guide/concepts/attributes/index.md):</span></span>
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a><span data-ttu-id="de842-106">Accès aux tableaux</span><span class="sxs-lookup"><span data-stu-id="de842-106">Array access</span></span>
+
+<span data-ttu-id="de842-107">L’exemple suivant montre comment accéder à des éléments tableau :</span><span class="sxs-lookup"><span data-stu-id="de842-107">The following example demonstrates how to access array elements:</span></span>
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+<span data-ttu-id="de842-108">Si un index de tableau est en dehors des limites de la dimension correspondante d’un tableau, une <xref:System.IndexOutOfRangeException> est levée.</span><span class="sxs-lookup"><span data-stu-id="de842-108">If an array index is outside the bounds of the corresponding dimension of an array, an <xref:System.IndexOutOfRangeException> is thrown.</span></span>
+
+<span data-ttu-id="de842-109">Comme le montre l’exemple précédent, vous utilisez également des crochets dans la déclaration d’un type tableau et l’instanciation des instances de tableau.</span><span class="sxs-lookup"><span data-stu-id="de842-109">As the preceding example shows, you also use square brackets in declaration of an array type and instantiation of array instances.</span></span>
+
+<span data-ttu-id="de842-110">Pour plus d’informations sur les tableaux, consultez [Tableaux](../../programming-guide/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="de842-110">For more information about arrays, see [Arrays](../../programming-guide/arrays/index.md).</span></span>
+
+## <a name="indexer-access"></a><span data-ttu-id="de842-111">Accès aux indexeurs</span><span class="sxs-lookup"><span data-stu-id="de842-111">Indexer access</span></span>
+
+<span data-ttu-id="de842-112">L’exemple suivant utilise le type .NET <xref:System.Collections.Generic.Dictionary%602> afin d’illustrer l’accès aux indexeurs :</span><span class="sxs-lookup"><span data-stu-id="de842-112">The following example uses .NET <xref:System.Collections.Generic.Dictionary%602> type to demonstrate indexer access:</span></span>
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+<span data-ttu-id="de842-113">Les indexeurs vous permettent d’indexer des instances d’un type défini par l’utilisateur en procédant de la même façon que pour l’indexation de tableau.</span><span class="sxs-lookup"><span data-stu-id="de842-113">Indexers allow you to index instances of a user-defined type in the similar way as array indexing.</span></span> <span data-ttu-id="de842-114">Contrairement aux index de tableau, qui doivent être des entiers, les arguments d’indexeur peuvent être déclarés comme étant de n’importe quel type.</span><span class="sxs-lookup"><span data-stu-id="de842-114">Unlike array indices, which must be integer, the indexer arguments can be declared to be of any type.</span></span>
+
+<span data-ttu-id="de842-115">Pour plus d’informations sur les indexeurs, consultez [Indexeurs](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="de842-115">For more information about indexers, see [Indexers](../../programming-guide/indexers/index.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="de842-116">Capacité de surcharge de l’opérateur</span><span class="sxs-lookup"><span data-stu-id="de842-116">Operator overloadability</span></span>
+
+<span data-ttu-id="de842-117">L’opérateur d’accès à un élément `[]` n’est pas considéré comme un opérateur surchargeable.</span><span class="sxs-lookup"><span data-stu-id="de842-117">Element access `[]` is not considered an overloadable operator.</span></span> <span data-ttu-id="de842-118">Utilisez des [indexeurs](../../programming-guide/indexers/index.md) pour prendre en charge l’indexation avec des types définis par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="de842-118">Use [indexers](../../programming-guide/indexers/index.md) to support indexing with user-defined types.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="de842-119">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="de842-119">C# language specification</span></span>
+
+<span data-ttu-id="de842-120">Pour plus d’informations, consultez les sections [Accès à un élément](~/_csharplang/spec/expressions.md#element-access) et [Accès aux éléments de pointeur](~/_csharplang/spec/unsafe-code.md#pointer-element-access) de la [Spécification du langage C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="de842-120">For more information, see the [Element access](~/_csharplang/spec/expressions.md#element-access) and [Pointer element access](~/_csharplang/spec/unsafe-code.md#pointer-element-access) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="de842-121">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="de842-121">See also</span></span>
+
+- [<span data-ttu-id="de842-122">Référence C#</span><span class="sxs-lookup"><span data-stu-id="de842-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="de842-123">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="de842-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="de842-124">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="de842-124">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="de842-125">Tableaux</span><span class="sxs-lookup"><span data-stu-id="de842-125">Arrays</span></span>](../../programming-guide/arrays/index.md)
+- [<span data-ttu-id="de842-126">Indexeurs</span><span class="sxs-lookup"><span data-stu-id="de842-126">Indexers</span></span>](../../programming-guide/indexers/index.md)
+- [<span data-ttu-id="de842-127">Types de pointeur</span><span class="sxs-lookup"><span data-stu-id="de842-127">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [<span data-ttu-id="de842-128">Attributs</span><span class="sxs-lookup"><span data-stu-id="de842-128">Attributes</span></span>](../../programming-guide/concepts/attributes/index.md)
