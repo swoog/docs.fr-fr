@@ -2,12 +2,12 @@
 title: Sécuriser l'accès aux données
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494637"
 ---
 # <a name="secure-data-access"></a>Sécuriser l'accès aux données
 Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes de sécurité disponibles dans la base de données ou le magasin de données sous-jacent. Vous devez également prendre en compte les implications relatives à la sécurité des autres fonctionnalités ou composants que votre application peut contenir.  
@@ -87,10 +87,10 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
 |[Interopération avec du code non managé](../../../../docs/framework/interop/index.md)|Contient des rubriques qui décrivent comment exposer les composants COM au .NET Framework et comment exposer les composants .NET Framework à COM.|
 |[Interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contient des sujets avancés tels que les assemblys PIA (Primary Interop Assembly), les threads et le marshaling personnalisé.|
 
-## <a name="see-also"></a>Voir aussi  
- [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Recommandations pour les stratégies d’accès aux données](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Recommandations pour les stratégies d’accès aux données](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Guide de l'interopérabilité des protocoles de services Web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96fdf00b5d64f1ed588907fc2717388b30ae1d92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521385"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guide de l'interopérabilité des protocoles de services Web
 Windows Communication Foundation (WCF) implémente plusieurs protocoles de services Web. Un grand nombre de ces protocoles incluent plusieurs options et points d'extensibilité qui sont laissés à la discrétion de l'implémenteur. Cette rubrique fournit une liste des protocoles de services Web que WCF implémente. Des détails d'implémentation pour chaque protocole pris en charge sont fournis dans les autres rubriques de cette section.  
@@ -100,13 +100,13 @@ Windows Communication Foundation (WCF) implémente plusieurs protocoles de servi
   
 -   [Basic Security Profile 1.0 travail brouillon](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>Voir aussi  
- [Protocoles de services web pris en charge par des liaisons d’interopérabilité fournies par le système](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [Protocoles de messagerie](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [Informations de référence sur les schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL et stratégie](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
- [Protocoles de sécurité](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Protocole de messagerie fiable version 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Protocole de messagerie fiable version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [Protocoles de transaction](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [Protocole d’échange de contexte](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a>Voir aussi
+- [Protocoles de services web pris en charge par des liaisons d’interopérabilité fournies par le système](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [Protocoles de messagerie](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)
+- [Informations de référence sur les schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [WSDL et stratégie](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [Protocoles de sécurité](../../../../docs/framework/wcf/feature-details/security-protocols.md)
+- [Protocole de messagerie fiable version 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
+- [Protocole de messagerie fiable version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
+- [Protocoles de transaction](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)
+- [Protocole d’échange de contexte](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

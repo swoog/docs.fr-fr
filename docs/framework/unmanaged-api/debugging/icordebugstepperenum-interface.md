@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af99bd165386f86d2045a7f5a5a7708c7b0d0b8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d9585fc3d10f7f58c7949eaef517e545d51010e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572134"
 ---
 # <a name="icordebugstepperenum-interface1"></a>ICorDebugStepperEnum Interface1
 Implémente les méthodes ICorDebugEnum et énumère des tableaux de ICorDebugStepper.  
@@ -30,7 +30,7 @@ Implémente les méthodes ICorDebugEnum et énumère des tableaux de ICorDebugSt
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[Next, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|Obtient le nombre spécifié de `ICorDebugStepper` les instances de l’énumération, en démarrant à la position actuelle.|  
+|[Next, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|Obtient le nombre spécifié de `ICorDebugStepper` instances à partir de l’énumération, en commençant à la position actuelle.|  
   
 ## <a name="remarks"></a>Notes  
   
@@ -38,13 +38,13 @@ Implémente les méthodes ICorDebugEnum et énumère des tableaux de ICorDebugSt
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

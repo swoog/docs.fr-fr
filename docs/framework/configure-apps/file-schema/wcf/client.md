@@ -1,18 +1,18 @@
 ---
-title: '&lt;Client&gt;'
+title: '&lt;client&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 24defe7e01603f1b1be3023d07854091335d6c60
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 32fcd9792f674d4ded466f26641690c8ae4328b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540401"
 ---
-# <a name="ltclientgt"></a>&lt;Client&gt;
+# <a name="ltclientgt"></a>&lt;client&gt;
 L'élément `client` définit une liste de points de terminaison auxquels un client peut se connecter.  
   
  \<system.ServiceModel>  
@@ -42,7 +42,7 @@ L'élément `client` définit une liste de points de terminaison auxquels un cli
 |Élément|Description|  
 |-------------|-----------------|  
 |[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Contient une collection d’éléments de point de terminaison qui spécifient les points de terminaison auxquels ce client peut se connecter.|  
-|[\<métadonnées >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Contient des paramètres pour le traitement de métadonnées.|  
+|[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Contient des paramètres pour le traitement de métadonnées.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -72,8 +72,8 @@ L'élément `client` définit une liste de points de terminaison auxquels un cli
 </client>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.MetadataElement>  
- [Configuration du client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [Clients](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.MetadataElement>
+- [Configuration du client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [Clients](../../../../../docs/framework/wcf/feature-details/clients.md)

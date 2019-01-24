@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e3d138700ef06da7b40a88a768a41f3ffcb38eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d658e360fcfd3fda837c6d7ccab9458594ce9641
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522542"
 ---
 # <a name="codechunkinfo-structure1"></a>CodeChunkInfo Structure1
 Représente un bloc de code unique en mémoire.  
@@ -39,22 +39,22 @@ typedef struct _CodeChunkInfo {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`startAddr`|A `CORDB_ADDRESS` valeur qui spécifie l’adresse de départ du segment.|  
-|`length`|La taille, en octets, du segment.|  
+|`startAddr`|Un `CORDB_ADDRESS` valeur qui spécifie l’adresse de départ du segment.|  
+|`length`|La taille, en octets, du bloc.|  
   
 ## <a name="remarks"></a>Notes  
- Le segment de code unique est une région de code natif qui fait partie d’un objet de code comme une fonction.  
+ Le bloc de code unique est une région de code natif qui fait partie d’un objet de code comme une fonction.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [GetCodeChunks, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [GetCodeChunks, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

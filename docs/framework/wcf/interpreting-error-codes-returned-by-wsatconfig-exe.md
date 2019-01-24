@@ -2,11 +2,12 @@
 title: Interprétation de codes d'erreur retournés par wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510024"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interprétation de codes d'erreur retournés par wsatConfig.exe
 Cette rubrique répertorie tous les codes d'erreur générés par l'utilitaire de configuration de WS-AtomicTransaction (wsatConfig.exe), et les actions recommandées.  
@@ -15,7 +16,7 @@ Cette rubrique répertorie tous les codes d'erreur générés par l'utilitaire d
   
 |Code d'erreur|Description|Action recommandée|  
 |----------------|-----------------|------------------------------------|  
-|0|L'opération a réussi.|Aucun|  
+|0|L'opération a réussi.|Aucun.|  
 |1|Erreur inattendue|Contactez Microsoft|  
 |2|Une erreur inattendue s'est produite lors de la tentative de contact de MSDTC pour récupérer les paramètres de sécurité.|Vérifiez que le service MSDTC n'est pas désactivé et traitez tous les problèmes répertoriés dans l'exception retournée.|  
 |3|Le compte via lequel WsatConfig.exe a été exécuté ne disposait pas des autorisations suffisantes pour lire les paramètres de sécurité du réseau.|Exécutez WsatConfig.exe en utilisant un compte d'administrateur.|  
@@ -43,7 +44,7 @@ Cette rubrique répertorie tous les codes d'erreur générés par l'utilitaire d
 |28|L'option de ligne de commande `-network` est incorrecte.|Corrigez l'option de ligne de commande `-network` en spécifiant correctement "activer" ou "désactiver".|  
 |29|L'option de ligne de commande `-maxTimeout` est incorrecte.|Corrigez l'option de ligne de commande `-maxTimeout` selon les indications.|  
 |30|L'option de ligne de commande `-timeout` est incorrecte.|Corrigez l'option de ligne de commande `-timeout` selon les indications.|  
-|31|L'option de ligne de commande `-traceLevel` est incorrecte.|Corrigez l'option de ligne de commande `-traceLevel` en spécifiant une valeur valide parmi les valeurs suivantes :<br /><br /> -Désactivé<br />-Erreur<br />-   Critical<br />-Avertissement<br />-Informations<br />-Verbose<br />-Tout|  
+|31|L'option de ligne de commande `-traceLevel` est incorrecte.|Corrigez l'option de ligne de commande `-traceLevel` en spécifiant une valeur valide parmi les valeurs suivantes :<br /><br /> -   Off<br />-Erreur<br />-   Critical<br />-Avertissement<br />-Informations<br />-   Verbose<br />-Tout|  
 |32|L'option de ligne de commande `-traceActivity` est incorrecte.|Corrigez l'option de ligne de commande `-traceActivity` en spécifiant "activer" ou "désactiver".|  
 |33|L'option de ligne de commande `-traceProp` est incorrecte.|Corrigez l'option de ligne de commande `-traceProp` en spécifiant "activer" ou "désactiver".|  
 |34|L'option de ligne de commande `-tracePII` est incorrecte.|Corrigez l'option de ligne de commande `-tracePII` en spécifiant "activer" ou "désactiver".|  
@@ -53,8 +54,8 @@ Cette rubrique répertorie tous les codes d'erreur générés par l'utilitaire d
 |40|WsatConfig.exe ne parvient pas à fournir l'accès en lecture MSDTC au fichier de clé privée du certificat|Exécutez WsatConfig.exe en utilisant un compte d'administrateur.|  
 |41|Aucune installation de [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] n'a été trouvée ou la version trouvée ne correspond pas à ce que l'outil peut configurer.|Vérifiez que [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] est installé correctement et utilisez uniquement l'outil WsatConfig.exe fourni avec cette version de [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] pour configurer WS-AT.|  
 |42|Un argument a été spécifié plusieurs fois sur la ligne de commande.|Veillez à spécifier chaque argument une seule fois lors de l’exécution de WsatConfig.exe.|  
-|43|WsatConfig.exe ne parvient pas à mettre à jour les paramètres WS-AT si WS-AT n'est pas activé.|Spécifiez `-network:enable` en tant qu'argument supplémentaire de ligne de commande.|  
-|44|Un correctif logiciel requis est manquant et WS-AT ne peut pas être configuré tant que ce correctif logiciel n'est pas installé.|Consultez les notes de mise à jour de [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] pour obtenir les instructions d'installation du correctif logiciel requis.|  
+|43|WsatConfig.exe ne parvient pas à mettre à jour les paramètres WS-AT si WS-AT n'est pas activé.|Spécifiez `-network:enable` en tant qu’argument supplémentaire de ligne de commande.|  
+|44|Un correctif logiciel requis est manquant et WS-AT ne peut pas être configuré tant que ce correctif logiciel n'est pas installé.|Consultez les notes de publication de [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] pour obtenir les instructions d’installation du correctif logiciel requis.|  
 |45|L'option de ligne de commande `-virtualServer` est incorrecte.|Corrigez l'option de ligne de commande `-virtualServer` en spécifiant le nom de réseau de la ressource de cluster dans lequel la configuration doit s'effectuer.|  
 |46|Une erreur inattendue s'est produite lors de la tentative de démarrage de la session de suivi ETW|Utilisez le code d'erreur retourné pour effecteur un mappage avec l'erreur système appropriée.|  
 |47|Le processus ou l'utilisateur ne dispose pas des autorisations suffisantes pour activer la session de suivi ETW.|Exécutez WsatConfig.exe en utilisant un compte d'administrateur.|  
@@ -66,5 +67,5 @@ Cette rubrique répertorie tous les codes d'erreur générés par l'utilitaire d
 |55|Une erreur inattendue s'est produite lors de la tentative de démarrage de la session de suivi ETW|Contactez Microsoft.|  
 |56|Une erreur inattendue s'est produite lors de la tentative de démarrage de la session de suivi ETW|Contactez Microsoft.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

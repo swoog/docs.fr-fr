@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
-ms.openlocfilehash: 016a42ee7a772a3268e823e75b6239467e13b315
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562880"
 ---
 # <a name="exception-throwing"></a>Levée d'exceptions
 Levée d’exceptions des indications décrites dans cette section nécessitent une bonne définition de la signification de l’échec d’exécution. Échec d’exécution se produit chaque fois qu’un membre ne peut pas qu’il a été conçu pour faire (ce que le nom du membre indique). Par exemple, si le `OpenFile` méthode ne peut pas retourner un handle de fichier ouvert à l’appelant, il est considéré comme un échec d’exécution.  
@@ -66,5 +66,5 @@ Levée d’exceptions des indications décrites dans cette section nécessitent 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Instructions de conception pour les exceptions](../../../docs/standard/design-guidelines/exceptions.md)

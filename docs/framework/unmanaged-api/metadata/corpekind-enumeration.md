@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5869eb16bd768d58a6f27a83f2d8d51914a8aed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ab94bf7c55d4c19a4f3672ed86808575b8a2239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536913"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind, énumération
 Contient des valeurs qui décrivent un fichier exécutable portable (PE), tel que retourné par un appel à [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
@@ -46,21 +46,21 @@ typedef enum CorPEKind {
 |Membre|Description|  
 |------------|-----------------|  
 |`peNot`|Indique qu’il ne s’agit pas d’un fichier PE.|  
-|`peILOnly`|Indique que ce fichier exécutable portable contient uniquement du code managé.|  
-|`pe32BitRequired`|Indique que ce fichier exécutable portable fait des appels Win32.|  
-|`pe32Plus`|Indique que ce fichier exécutable portable s’exécute sur une plateforme 64 bits.|  
+|`peILOnly`|Indique que ce fichier PE contient uniquement du code managé.|  
+|`pe32BitRequired`|Indique que ce fichier PE effectue des appels de Win32.|  
+|`pe32Plus`|Indique que ce fichier PE s’exécute sur une plateforme 64 bits.|  
 |`pe32Unmanaged`|Indique que ce fichier exécutable portable est du code natif.|  
-|pe32BitPreferred|Indique que ce fichier PE est indépendant de la plateforme et s’il préfère qu’être chargé dans un environnement 32 bits.|  
+|pe32BitPreferred|Indique que ce fichier PE est indépendant de la plateforme et qu’il préfère être chargé dans un environnement 32 bits.|  
   
 ## <a name="remarks"></a>Notes  
  Ces valeurs peuvent être utilisées dans des combinaisons au niveau du bit.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

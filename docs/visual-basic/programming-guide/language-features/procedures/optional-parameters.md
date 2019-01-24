@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7f7910b5e19c3e1a22598c1a987aa2b02e256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552227"
 ---
 # <a name="optional-parameters-visual-basic"></a>Paramètres facultatifs (Visual Basic)
 Vous pouvez spécifier qu’un paramètre de procédure est facultatif et qu’il n’est pas nécessaire de fournir un argument lorsque la procédure est appelée. *Paramètres facultatifs* sont indiquées par le `Optional` mot clé dans la définition de procédure. Les règles suivantes s'appliquent :  
@@ -50,21 +50,21 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Détermination de la présence d’un argument facultatif  
- Une procédure ne peut pas détecter au moment de l'exécution si un argument donné a été omis ou si le code appelant a explicitement fourni la valeur par défaut. Pour établir cette distinction, vous pouvez définir une valeur improbable comme valeur par défaut. La procédure suivante définit le paramètre facultatif `office`et sa valeur par défaut, les tests `QJZ`, pour voir s’il a été omis dans l’appel :  
+ Une procédure ne peut pas détecter au moment de l'exécution si un argument donné a été omis ou si le code appelant a explicitement fourni la valeur par défaut. Pour établir cette distinction, vous pouvez définir une valeur improbable comme valeur par défaut. La procédure suivante définit le paramètre facultatif `office`et teste sa valeur par défaut, `QJZ`, pour voir s’il a été omis dans l’appel :  
   
  [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
- Si le paramètre facultatif est un type référence tel que `String`, vous pouvez utiliser `Nothing` comme valeur par défaut, à condition qu'il ne s'agisse pas d'une valeur attendue pour l'argument.  
+ Si le paramètre facultatif est un type référence tel que `String`, vous pouvez utiliser `Nothing` comme valeur par défaut, à condition qu’il ne s’agisse pas d’une valeur attendue pour l’argument.  
   
 ## <a name="optional-parameters-and-overloading"></a>Paramètres facultatifs et surcharge  
  La surcharge est une autre méthode permettant de définir une procédure à l'aide de paramètres facultatifs. Si vous disposez d'un seul paramètre facultatif, vous pouvez définir deux versions surchargées de la procédure, l'une avec le paramètre et l'autre sans. Cette approche se complique au fur et à mesure que le nombre de paramètres facultatifs augmente. Cependant, vous avez l’avantage de savoir avec certitude si le programme appelant a fourni chaque argument facultatif.  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédures](./index.md)  
- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)  
- [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)  
- [Passage des arguments par position et par nom](./passing-arguments-by-position-and-by-name.md)  
- [tableaux de paramètres](./parameter-arrays.md)  
- [Surcharge de procédure](./procedure-overloading.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédures](./index.md)
+- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
+- [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
+- [Passage des arguments par position et par nom](./passing-arguments-by-position-and-by-name.md)
+- [tableaux de paramètres](./parameter-arrays.md)
+- [Surcharge de procédure](./procedure-overloading.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

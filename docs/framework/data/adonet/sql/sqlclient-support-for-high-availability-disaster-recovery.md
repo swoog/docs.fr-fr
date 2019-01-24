@@ -2,12 +2,12 @@
 title: Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609120"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
 Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) de la haute disponibilité, récupération d'urgence -- groupes de disponibilité AlwaysOn.  Fonctionnalité de groupes de disponibilité AlwaysOn a été ajoutée à SQL Server 2012. Pour plus d’informations sur les groupes de disponibilité AlwaysOn, consultez la documentation en ligne de SQL Server.  
@@ -51,7 +51,7 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
 -   Connexion à un serveur SQL Server instance configurée avec plus de 64 adresses IP entraînera un échec de connexion.  
   
--   Comportement d’une application qui utilise le `MultiSubnetFailover` propriété de connexion n’est pas affectée selon le type d’authentification : authentification SQL Server, l’authentification Kerberos ou l’authentification Windows.  
+-   Comportement d’une application qui utilise le `MultiSubnetFailover` propriété de connexion n’est pas affectée selon le type d’authentification : L’authentification SQL Server, l’authentification Kerberos ou l’authentification Windows.  
   
 -   Augmentez la valeur de `Connect Timeout` pour permettre la prise en charge pour le temps de basculement et réduire les tentatives de nouvelle connexion d'application.  
   
@@ -96,6 +96,6 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
  Le routage en lecture seule peut prendre plus longtemps que la connexion au principal, car il se connecte d'abord au principal, puis recherche le meilleur réplica secondaire lisible disponible. De ce fait, vous devez augmenter le délai d'attente de connexion.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Fonctionnalités SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,20 +1,21 @@
 ---
-title: "Comment : publier les métadonnées d'un service à l'aide d'un fichier de configuration"
+title: 'Procédure : Publier les métadonnées d’un Service à l’aide d’un fichier de Configuration'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 94013c69bec0ea37c9260567437aeada3ebe2ae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81bf7db9ec25ae112127712dcd0443d3e045bc10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552799"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Comment : publier les métadonnées d'un service à l'aide d'un fichier de configuration
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procédure : Publier les métadonnées d’un Service à l’aide d’un fichier de Configuration
 Il s’agit d’une des deux rubriques de procédures qui illustrent la publication des métadonnées pour un service Windows Communication Foundation (WCF). Il y a deux façons de spécifier comment un service doit publier des métadonnées : à l'aide d'un fichier de configuration et à l'aide du code. Cette rubrique montre comment publier des métadonnées pour un service à l'aide d'un fichier de configuration.  
   
 > [!CAUTION]
->  Cette rubrique indique comment publier des métadonnées de manière non sécurisée. Tout client peut récupérer les métadonnées du service. Si vous avez besoin de votre service pour publier des métadonnées de manière sécurisée, consultez [point de terminaison de métadonnées sécurisé personnalisée](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+>  Cette rubrique indique comment publier des métadonnées de manière non sécurisée. Tout client peut récupérer les métadonnées du service. Si vous avez besoin de votre service doit publier les métadonnées de manière sécurisée, consultez [point de terminaison de métadonnées sécurisé personnalisé](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- Pour plus d’informations sur la publication des métadonnées dans le code, consultez [Comment : publier des métadonnées pour un Code à l’aide du Service](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). La publication des métadonnées permet aux clients de récupérer les métadonnées via une requête WS-Transfer GET ou une requête HTTP/GET à l'aide de la chaîne de requête `?wsdl`. Pour être certain que le code fonctionne, créez un service WCF de base. Pour plus de simplicité, un service auto-hébergé de base est fourni dans le code suivant.  
+ Pour plus d’informations sur la publication des métadonnées dans le code, consultez [Comment : Publier les métadonnées d’un Service à l’aide de Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). La publication des métadonnées permet aux clients de récupérer les métadonnées via une requête WS-Transfer GET ou une requête HTTP/GET à l'aide de la chaîne de requête `?wsdl`. Pour être certain que le code fonctionne, créez un service WCF de base. Pour plus de simplicité, un service auto-hébergé de base est fourni dans le code suivant.  
   
 ```csharp  
 using System;  
@@ -165,7 +166,7 @@ namespace Metadata.Samples
   
 9. Créez et exécutez l'application console.  
   
-10. Utilisez Internet Explorer pour accéder à l’adresse de base du service (http://localhost:8001/MetadataSample dans cet exemple) et vérifiez que la publication des métadonnées est activée. Dans la négative, un message s'affiche en haut de la page résultante : "La publication des métadonnées pour ce service est actuellement désactivée".  
+10. Utiliser Internet Explorer pour accéder à l’adresse de base du service (http://localhost:8001/MetadataSample dans cet exemple) et vérifiez que la publication des métadonnées est activée. Si ce n’est pas le cas, un message en haut de la page résultante s’affiche : « Publication de métadonnées pour ce service est actuellement désactivée ».  
   
 ### <a name="to-use-default-endpoints"></a>Pour utiliser les points de terminaison par défaut  
   
@@ -186,10 +187,10 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     Étant donné que le service a un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> avec le `httpGetEnabled` ayant la valeur `true`, la publication des métadonnées est activée pour le service, et comme aucun point de terminaison n'a été ajouté explicitement, le runtime ajoute les points de terminaison par défaut. Pour plus d’informations sur les points de terminaison par défaut, les liaisons et comportements, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Étant donné que le service a un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> avec le `httpGetEnabled` ayant la valeur `true`, la publication des métadonnées est activée pour le service, et comme aucun point de terminaison n'a été ajouté explicitement, le runtime ajoute les points de terminaison par défaut. Pour plus d’informations sur les points de terminaison, les liaisons et les comportements par défaut, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md) et [Configuration simplifiée pour les services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple de code suivant illustre l’implémentation d’un service WCF de base et le fichier de configuration qui publie les métadonnées pour le service.  
+ L’exemple de code suivant montre l’implémentation d’un service WCF de base et le fichier de configuration qui publie les métadonnées pour le service.  
   
 ```csharp  
 using System;  
@@ -260,10 +261,10 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- [Guide pratique pour héberger un service WCF dans une application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
- [Auto-hébergement](../../../../docs/framework/wcf/samples/self-host.md)  
- [Vue d’ensemble de l’architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Guide pratique pour publier les métadonnées d’un service à l’aide de code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- [Guide pratique pour Héberger un Service WCF dans une Application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Auto-hébergement](../../../../docs/framework/wcf/samples/self-host.md)
+- [Vue d’ensemble de l’architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Guide pratique pour Publier les métadonnées d’un Service à l’aide de Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

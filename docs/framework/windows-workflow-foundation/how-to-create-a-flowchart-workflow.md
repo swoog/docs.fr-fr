@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b8de9852a29c9cc20e2c607506ae3d804e6d406e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569977"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Procédure : Créer un Workflow d’organigramme
 Les workflows peuvent être construits aussi bien à partir d'activités intégrées que d'activités personnalisées. Cette rubrique vous guide création d’un workflow qui utilise les deux activités intégrées telles que la <xref:System.Activities.Statements.Flowchart> activité et les activités personnalisées de la précédente [Comment : Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) rubrique. Le workflow modélise un jeu d'estimation de nombre.  
@@ -150,11 +150,11 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
   
      Pour obtenir des instructions sur la façon d’exécuter le flux de travail, consultez la rubrique suivante, [Comment : Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Si vous avez déjà effectué le [Comment : Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) étape avec un style différent de workflow et souhaitez l’exécuter en utilisant le workflow d’organigramme à partir de cette étape, passez directement à la [pour générer et exécuter l’application](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section de [Comment : Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Programmation Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [Conception des workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [Didacticiel Bien démarrer](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Guide pratique pour Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Guide pratique pour Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Programmation Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [Conception des workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [Didacticiel Bien démarrer](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [Guide pratique pour Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
+- [Guide pratique pour Exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

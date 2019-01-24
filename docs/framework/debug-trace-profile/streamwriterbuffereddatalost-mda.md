@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15957ce03925d75021d88bc81d12809c3fe31c2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e20502cfd64e7e4e40bee0b815729e914c3dd4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553709"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost (MDA)
 L’Assistant Débogage managé `streamWriterBufferedDataLost` est activé lors d’une écriture dans <xref:System.IO.StreamWriter>, mais la méthode <xref:System.IO.StreamWriter.Flush%2A> ou <xref:System.IO.StreamWriter.Close%2A> n’est pas appelée par la suite avant la destruction de l’instance du <xref:System.IO.StreamWriter>. Quand cet Assistant Débogage managé est activé, le runtime détermine s’il existe encore des données mises en mémoire tampon dans <xref:System.IO.StreamWriter>. Si c’est le cas, l’Assistant Débogage managé est activé. L’appel aux méthodes <xref:System.GC.Collect%2A> et <xref:System.GC.WaitForPendingFinalizers%2A> peut forcer des finaliseurs à s’exécuter. Sinon, les finaliseurs s’exécuteront à des moments apparemment arbitraires, voire pas du tout lors de la sortie du processus. L’exécution explicite des finaliseurs avec cet Assistant Débogage managé activé aide à reproduire ce type de problème de façon plus fiable.  
@@ -104,6 +104,6 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IO.StreamWriter>  
- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IO.StreamWriter>
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
