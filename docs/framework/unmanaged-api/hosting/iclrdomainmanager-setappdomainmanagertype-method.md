@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea10f9b7d23d8ca6a94d05cac6e586b434c000d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 47545d590682236d7a19813b15a144731b64c9e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555080"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType, méthode
-Spécifie le type, dérivé de la <xref:System.AppDomainManager?displayProperty=nameWithType> classe, le Gestionnaire de domaine d’application qui servira à initialiser le domaine d’application par défaut.  
+Spécifie le type, dérivé de la <xref:System.AppDomainManager?displayProperty=nameWithType> classe, du Gestionnaire de domaine qui sera utilisé pour initialiser le domaine d’application par défaut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ HRESULT SetAppDomainManagerType(
   
 #### <a name="parameters"></a>Paramètres  
  `wszAppDomainManagerAssembly`  
- [in] Le nom complet de l’assembly qui contient le type de gestionnaire de domaine application ; par exemple : « AdMgrExample, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf150f00b3 ».  
+ [in] Le nom complet de l’assembly qui contient le type de gestionnaire de domaine application ; par exemple : "AdMgrExample, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6856bccf150f00b3".  
   
  `wszAppDomainManagerType`  
- [in] Nom du type de gestionnaire de domaine, y compris l’espace de noms.  
+ [in] Le nom de type du Gestionnaire de domaine, y compris l’espace de noms.  
   
  `dwInitializeDomainFlags`  
  [in] Une combinaison de [EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md) valeurs d’énumération qui fournissent des informations sur le Gestionnaire de domaine d’application.  
@@ -51,26 +51,26 @@ HRESULT SetAppDomainManagerType(
 |HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|La commande s'est correctement terminée.|  
-|HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
+|HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.|  
   
 ## <a name="remarks"></a>Notes  
- Actuellement, la seule valeur définie pour `dwInitializeDomainFlags` est `eInitializeNewDomainFlags_NoSecurityChanges`, qui indique le common language runtime (CLR) que le Gestionnaire de domaine d’application ne modifiera pas de paramètres de sécurité pendant l’exécution de la <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> (méthode). Cela permet au CLR optimiser le chargement des assemblys qui ont l’attribut conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribut (APTCA). Si la fermeture transitive de ce jeu d’assemblys est importante, cela peut entraîner une amélioration significative du temps de démarrage.  
+ Actuellement, la seule valeur définie pour `dwInitializeDomainFlags` est `eInitializeNewDomainFlags_NoSecurityChanges`, ce qui indique le common language runtime (CLR) que le Gestionnaire de domaine d’application ne modifiera pas de paramètres de sécurité pendant l’exécution de la <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> (méthode). Cela permet au CLR d’optimiser le chargement d’assemblys qui ont l’instruction conditionnelle <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribut (APTCA). Si la fermeture transitive de cet ensemble d’assemblys est importante, cela peut entraîner une amélioration significative du temps de démarrage.  
   
 > [!IMPORTANT]
 >  Si l’hôte spécifie `eInitializeNewDomainFlags_NoSecurityChanges` pour le Gestionnaire de domaine d’application, un <xref:System.InvalidOperationException> est levée si une tentative est faite pour modifier la sécurité du domaine d’application.  
   
- Appel de la [ICLRControl::SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)méthode équivaut à appeler la méthode `ICLRDomainManager::SetAppDomainManagerType` avec `eInitializeNewDomainFlags_None`.  
+ Appel de la [ICLRControl::SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)méthode revient à appeler `ICLRDomainManager::SetAppDomainManagerType` avec `eInitializeNewDomainFlags_None`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [ICLRDomainManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)  
- [EInitializeNewDomainFlags, énumération](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)
+## <a name="see-also"></a>Voir aussi
+- [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRDomainManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
+- [EInitializeNewDomainFlags, énumération](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)

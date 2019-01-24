@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92097cdf735630f3537296f188bd83ea8162add2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7fc0a271a9c62406d2942f387a5458e21211116
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441128"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522724"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager, interface
 Fournit des méthodes qui permettent le common language runtime (CLR) pour configurer le pool de threads et en file d’attente des éléments de travail au pool de threads.  
@@ -32,24 +32,24 @@ Fournit des méthodes qui permettent le common language runtime (CLR) pour confi
 |------------|-----------------|  
 |[GetAvailableThreads, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)|Obtient le nombre de threads du pool de threads qui ne traitent pas actuellement des éléments de travail.|  
 |[GetMaxThreads, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)|Obtient le nombre maximal de threads que l’hôte conserve simultanément dans le pool de threads.|  
-|[GetMinThreads, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)|Obtient le nombre minimal de threads inactifs que l’hôte gère en anticipation des demandes.|  
-|[QueueUserWorkItem, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)|Une fonction pour l’exécution des files d’attente et fournit un objet contenant les données à utiliser par la fonction.|  
+|[GetMinThreads, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)|Obtient le nombre minimal de threads inactifs que l’hôte conserve en prévision des demandes.|  
+|[QueueUserWorkItem, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)|Files d’attente d’une fonction pour l’exécution et fournit un objet contenant les données à utiliser par la fonction.|  
 |[SetMaxThreads, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)|Définit le nombre maximal de threads que l’hôte peut gérer dans le pool de threads.|  
-|[SetMinThreads, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)|Définit le nombre minimal de threads inactifs que l’hôte doit gérer en anticipation des demandes.|  
+|[SetMinThreads, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)|Définit le nombre minimal de threads inactifs que l’hôte doit gérer en prévision des demandes.|  
   
 ## <a name="remarks"></a>Notes  
- L’ordinateur hôte n’est pas requis pour configurer le pool de threads à l’aide des valeurs spécifiées dans les appels à la `SetMaxThreads` et `SetMinThreads` méthodes. Dans ce cas, l’hôte doit retourner une valeur HRESULT d’E_NOTIMPL à partir de ces méthodes.  
+ L’hôte n’est pas nécessaire de configurer le pool de threads en utilisant les valeurs spécifiées dans les appels à la `SetMaxThreads` et `SetMinThreads` méthodes. Dans ce cas, l’hôte doit retourner une valeur HRESULT d’E_NOTIMPL à partir de ces méthodes.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Threading>  
- <xref:System.Threading.ThreadPool>  
- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Threading>
+- <xref:System.Threading.ThreadPool>
+- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

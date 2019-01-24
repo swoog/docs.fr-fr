@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 35ab5b64b3c7e364e0dd11c002b87a0a413f4335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532433"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next (fonction)
 Récupère le qualificateur suivant dans une énumération commencée avec un appel à la fonction [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).   
@@ -50,7 +50,7 @@ HRESULT QualifierSet_Next (
 [in] Un pointeur vers un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.
 
 `lFlags`   
-[in] Réservé. Ce paramètre doit être 0.
+[in] Réservée. Ce paramètre doit être 0.
 
 `pstrName`   
 [out] Le nom du qualificateur. Si `null`, ce paramètre est ignoré ; sinon, `pstrName` ne doit pas pointer vers un valide `BSTR` ou une fuite de mémoire se produit. Si non null, la fonction alloue toujours un nouveau `BSTR` quand il renvoie `WBEM_S_NO_ERROR`.
@@ -67,7 +67,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre n’est pas valide. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | L’appelant n’a pas appelé [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible pour commencer une nouvelle énumération. |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | Aucuns plus de qualificateurs ne sont laissées dans l’énumération. |
@@ -81,12 +81,12 @@ Vous appelez le `QualifierSet_Next` fonction à plusieurs reprises pour énumér
 
 L’ordre des qualificateurs retourné lors de l’énumération n’est pas défini.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

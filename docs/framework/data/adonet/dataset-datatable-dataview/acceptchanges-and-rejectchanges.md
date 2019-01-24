@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: 30b2c303b1823430c480f0706500f8f7e7053c4c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 84381a9a71ae85baad618684ebf783039456854f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538386"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges et RejectChanges
 Après avoir vérifié l’exactitude des modifications apportées aux données dans un <xref:System.Data.DataTable>, vous pouvez accepter les modifications apportées à l’aide de la <xref:System.Data.DataRow.AcceptChanges%2A> méthode de la <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, ou <xref:System.Data.DataSet>, qui définira le **actuel** ligne valeurs à être le **d’origine** valeurs et définira le **RowState** propriété **Unchanged**. Acceptation ou rejet des modifications supprime toutes **RowError** informations et définit le **HasErrors** propriété **false**. L'acceptation ou le rejet des modifications peut également affecter la mise à jour des données dans la source de données. Pour plus d’informations, consultez [la mise à jour des Sources de données avec des DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
@@ -56,9 +56,9 @@ if (workTable.HasErrors)
 workTable.AcceptChanges();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataTable>  
- [Manipulation des données dans un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataTable>
+- [Manipulation des données dans un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

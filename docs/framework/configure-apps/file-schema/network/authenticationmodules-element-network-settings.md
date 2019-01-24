@@ -8,19 +8,19 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 074f2f0cd2c3ac6c6287db08b22ead07afa58fc5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d143f91d31951f218631519a3182f5de6c4eca60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532117"
 ---
 # <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; , élément (paramètres réseau)
 Spécifie les modules utilisés pour authentifier les demandes du réseau.  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
+\<authenticationModules>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ Spécifie les modules utilisés pour authentifier les demandes du réseau.
   
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contient des paramètres qui spécifient la manière dont .NET Framework se connecte au réseau.|  
+|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contient des paramètres qui spécifient la manière dont .NET Framework se connecte au réseau.|  
   
 ## <a name="remarks"></a>Notes  
  Le `authenticationModule` élément spécifie les modules d’authentification qui effectuent le processus d’authentification avec un serveur. Un module d’authentification doit implémenter le <xref:System.Net.IAuthenticationModule> interface.  
@@ -69,7 +69,7 @@ Spécifie les modules utilisés pour authentifier les demandes du réseau.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

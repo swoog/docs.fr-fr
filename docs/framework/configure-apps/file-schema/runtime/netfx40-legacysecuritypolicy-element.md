@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7045623872364160d76f4bc0c1522b0450a81bd2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 44120491756d467da94ce1f8557d9f71f70b306e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500325"
 ---
 # <a name="ltnetfx40legacysecuritypolicygt-element"></a>&lt;NetFx40_LegacySecurityPolicy&gt; élément
 Indique si le runtime utilise la stratégie héritée de sécurité d’accès du code (CAS).  
   
  \<configuration>  
 \<runtime>  
-< NetFx40_LegacySecurityPolicy >  
+<NetFx40_LegacySecurityPolicy>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -84,6 +84,6 @@ Indique si le runtime utilise la stratégie héritée de sécurité d’accès d
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

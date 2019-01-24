@@ -2,20 +2,20 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 3202b5055d16f0daa1bd829aa53ff6662a687b5d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 91fe14c22dce45a89b91d9d4c20e30928acd60c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630695"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Spécifie des paramètres qui activent l'audit d'événements de sécurité pendant des opérations de service.  
   
  \<system.ServiceModel>  
-\<comportements >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<comportement >  
+\<behavior>  
 \<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -78,10 +78,10 @@ Spécifie des paramètres qui activent l'audit d'événements de sécurité pend
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Audit](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Guide pratique pour Auditer les événements de sécurité](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
- [Comportement de l’audit de service](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Audit](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Guide pratique pour Auditer les événements de sécurité](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Comportement de l’audit de service](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

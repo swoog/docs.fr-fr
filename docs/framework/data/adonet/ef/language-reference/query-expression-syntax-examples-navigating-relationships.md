@@ -1,18 +1,18 @@
 ---
-title: "Exemples de syntaxe d'expression de requête : parcours des relations"
+title: 'Exemples de syntaxe d’Expression de requête : Exploration des relations'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-ms.openlocfilehash: e4297400bd7e76ca6202748d8f14d478364c1275
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ed59a25421f8347c25f80573fa127debf61b4c36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522243"
 ---
-# <a name="query-expression-syntax-examples-navigating-relationships"></a>Exemples de syntaxe d'expression de requête : parcours des relations
+# <a name="query-expression-syntax-examples-navigating-relationships"></a>Exemples de syntaxe d’Expression de requête : Exploration des relations
 Les propriétés de navigation dans [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sont des propriétés de raccourci utilisées pour rechercher les entités situées aux terminaisons d'une association. Les propriétés de navigation permettent à un utilisateur de naviguer d'une entité à une autre ou d'une entité à des entités associées par le biais d'un ensemble d'associations. Cette rubrique fournit des exemples dans une syntaxe d'expression de requête sur la façon d'explorer des relations au moyen de propriétés de navigation dans des requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
  Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
@@ -46,5 +46,5 @@ Les propriétés de navigation dans [!INCLUDE[adonet_ef](../../../../../../inclu
  [!code-csharp[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#wherenavproperty)]
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Voir aussi
+- [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

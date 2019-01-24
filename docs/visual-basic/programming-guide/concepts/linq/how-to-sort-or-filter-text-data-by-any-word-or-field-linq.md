@@ -1,20 +1,20 @@
 ---
-title: 'Comment : trier ou filtrer des données texte par mot ou par champ (LINQ) (Visual Basic)'
+title: 'Procédure : Trier ou filtrer des données texte par mot ou par champ (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 0e27a72fcb5789ac9a067091aeb150d33f646708
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 565e4497e362e82528aea850dc86d20c9983259b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632801"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Comment : trier ou filtrer des données texte par mot ou par champ (LINQ) (Visual Basic)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Procédure : Trier ou filtrer des données texte par mot ou par champ (LINQ) (Visual Basic)
 L’exemple suivant montre comment trier les lignes d’un texte structuré, telles que des valeurs séparées par des virgules, à l’aide d’un champ de la ligne. Le champ peut être spécifié de manière dynamique lors de l’exécution. Supposons que les champs du fichier scores.csv correspondent au numéro d’identification d’un étudiant, suivi d’une série de quatre notes d’examen.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Pour créer un fichier contenant des données  
   
-1.  Copier les données de scores.csv de la rubrique [Comment : joindre contenu à partir de différents fichiers (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) et l’enregistrer dans votre dossier de solution.  
+1.  Copier les données de scores.csv de la rubrique [Comment : Joindre du contenu à partir de différents fichiers (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) et enregistrez-le dans votre dossier de solution.  
   
 ## <a name="example"></a>Exemple  
   
@@ -74,5 +74,5 @@ End Class
 ## <a name="compiling-the-code"></a>Compilation du code  
  Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Voir aussi
+- [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

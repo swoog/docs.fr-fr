@@ -2,21 +2,21 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: a024ca89bd766681f25b992f1d2c66a92e3b31b7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 933d49092c392fa293468d546e521bf7ed858376
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539842"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 Contient les données de configuration correspondant au <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  \<system.ServiceModel>  
-\<comportements >  
-\<endpointBehaviors >  
-\<comportement >  
-\<dataContractSerializer >  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
+\<dataContractSerializer>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,9 +50,9 @@ Contient les données de configuration correspondant au <xref:System.Runtime.Ser
 > [!CAUTION]
 >  L'élément de comportement (si présent) `<dataContractSerializer>` doit toujours apparaître avant l'élément de comportement `<enableWebScript>` dans le fichier de configuration. Sinon, le comportement résultant n'est pas défini.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
- <xref:System.ServiceModel.Configuration.DataContractSerializerElement>  
- [Types connus de contrats de données](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Transfert de données et sérialisation](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
+- <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
+- [Types connus de contrats de données](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Transfert de données et sérialisation](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

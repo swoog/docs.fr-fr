@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 16bc9475599510a5e55f246d49aaa0be19314979
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 23b1b92c52988761aa67eb2de16a1b9141a0de30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524860"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtention d'éléments UI Automation
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "47208683"
 ## <a name="root-element"></a>Élément racine  
  Toutes les recherches d’objets <xref:System.Windows.Automation.AutomationElement> doivent avoir un point de départ. Cela peut être n’importe quel élément, y compris le bureau, une fenêtre d’application ou un contrôle.  
   
- L’élément racine pour le bureau, à partir de laquelle tous les éléments proviennent, est obtenu à partir de la méthode statique <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> propriété.  
+ L’élément racine pour le bureau, duquel tous les éléments proviennent, est obtenu à partir de la propriété <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> statique.  
   
 > [!CAUTION]
 >  En général, vous devez essayer d’obtenir uniquement les enfants directs de <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Une recherche des descendants peut itérer au sein de centaines ou de milliers d’éléments, ce qui peut provoquer un dépassement de capacité de la pile. Si vous tentez d’obtenir un élément spécifique de niveau inférieur, vous devez commencer votre recherche à partir de la fenêtre d’application ou d’un conteneur de niveau inférieur.  
@@ -98,7 +98,7 @@ ms.locfileid: "47208683"
 ### <a name="from-the-focused-control"></a>À partir du contrôle ayant le focus  
  Vous pouvez récupérer un <xref:System.Windows.Automation.AutomationElement> qui représente le contrôle ayant le focus à partir de la propriété statique <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> .  
   
-## <a name="see-also"></a>Voir aussi  
- [Rechercher un élément UI Automation basé sur une condition de propriété](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Naviguer entre les éléments UI Automation avec TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Rechercher un élément UI Automation basé sur une condition de propriété](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Naviguer entre les éléments UI Automation avec TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

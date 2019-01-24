@@ -1,5 +1,5 @@
 ---
-title: "Comment : afficher une date dans un format personnalisé à l'aide du contrôle DateTimePicker Windows Forms"
+title: 'Procédure : Afficher une Date dans un Format personnalisé à l’aide du contrôle DateTimePicker Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: 2f563b5de9b80dab2af00290e8a6b3b309410a9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 489a31474b8ae3e56ba69e59f6d613ecf892a93c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531289"
 ---
-# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Comment : afficher une date dans un format personnalisé à l'aide du contrôle DateTimePicker Windows Forms
-Windows Forms <xref:System.Windows.Forms.DateTimePicker> contrôle offre une grande souplesse dans la mise en forme l’affichage des dates et heures dans le contrôle. Le <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriété vous permet de sélectionner à partir des formats prédéfinis répertoriés dans le <xref:System.Windows.Forms.DateTimePickerFormat>. Si aucun de ces éléments est adaptée à vos besoins, vous pouvez créer votre propre style de format à l’aide de caractères de format répertoriés dans <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
+# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Procédure : Afficher une Date dans un Format personnalisé à l’aide du contrôle DateTimePicker Windows Forms
+Les formulaires Windows <xref:System.Windows.Forms.DateTimePicker> contrôle vous donne la flexibilité dans la mise en forme l’affichage des dates et heures dans le contrôle. Le <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriété vous permet de sélectionner à partir des formats prédéfinis répertoriés dans le <xref:System.Windows.Forms.DateTimePickerFormat>. Si aucune d'entre elles ne convient pas à vos besoins, vous pouvez créer votre propre style de format à l’aide de caractères de format répertoriés dans <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
   
 ### <a name="to-display-a-custom-format"></a>Pour afficher un format personnalisé  
   
@@ -46,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> contrôle offre une gra
   
 ### <a name="to-add-text-to-the-formatted-value"></a>Pour ajouter du texte à la valeur mise en forme  
   
-1.  Utilisez des guillemets simples pour encadrer tout caractère qui n’est pas un caractère de format comme « M » ou un délimiteur comme « : ». Par exemple, la chaîne de format ci-dessous affiche la date actuelle au format « aujourd'hui est : 05:30:31 vendredi 02 mars 2012 » dans l’anglais (États-Unis) de culture.  
+1.  Utilisez des guillemets simples pour encadrer tout caractère qui n’est pas un caractère de format comme « M » ou un délimiteur comme « : ». Par exemple, la chaîne de format ci-dessous affiche la date actuelle au format « aujourd'hui est : 05:30:31 Friday March 02, 2012" dans la culture anglais (États-Unis).  
   
     ```vb  
     DateTimePicker1.CustomFormat = "'Today is:' hh:mm:ss dddd MMMM dd, yyyy"  
@@ -61,8 +61,8 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> contrôle offre une gra
        "'Today is:' hh:mm:ss dddd MMMM dd, yyyy";  
     ```  
   
-     Selon le paramètre de culture, les caractères ne pas entourés de guillemets simples peuvent être modifiés. Par exemple, la chaîne de format ci-dessus affiche la date actuelle au format « aujourd'hui est : 05:30:31 vendredi 02 mars 2012 » dans l’anglais (États-Unis) de culture. Notez que le premier signe deux-points est placée entre guillemets simples, car elle n’est pas destinée à être un caractère de délimitation comme dans « hh : mm : ». Dans une autre culture, le format peut apparaître en tant que « aujourd'hui est : 05.30.31 vendredi 02 mars 2012 ».  
+     Selon le paramètre de culture, les caractères ne pas entourés de guillemets simples peuvent être modifiés. Par exemple, la chaîne de format ci-dessus affiche la date actuelle au format « aujourd'hui est : 05:30:31 Friday March 02, 2012" dans la culture anglais (États-Unis). Notez que le premier signe deux-points est placé entre guillemets simples, car il n’est pas destiné à être un caractère de délimitation comme dans « hh ». Dans une autre culture, le format peut apparaître en tant que « aujourd'hui est : 05.30.31 Friday mars 02, 2012".  
   
-## <a name="see-also"></a>Voir aussi  
- [DateTimePicker, contrôle](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- [Guide pratique pour définir et retourner des dates à l'aide du contrôle DateTimePicker Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+## <a name="see-also"></a>Voir aussi
+- [DateTimePicker, contrôle](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
+- [Guide pratique pour Dates définies et de retour à l’aide du contrôle DateTimePicker Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

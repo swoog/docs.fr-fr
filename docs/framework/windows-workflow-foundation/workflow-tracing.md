@@ -2,12 +2,12 @@
 title: Suivi de workflow
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f8b454437631b4711360ddf0c1196cafca13b5ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627172"
 ---
 # <a name="workflow-tracing"></a>Suivi de workflow
 Le suivi de workflow offre une méthode de capture des informations de diagnostic à l'aide d'écouteurs de suivi .NET Framework. Le suivi peut être activé si un problème a été détecté dans l'application, puis désactivé de nouveau une fois le problème résolu. Deux méthodes s'offrent à vous pour activer le suivi de débogage pour les flux de travail. Vous pouvez le configurer à l'aide de la visionneuse de suivi d'événements ou bien utiliser l'objet <xref:System.Diagnostics> pour envoyer des événements de suivi à un fichier.  
@@ -69,6 +69,6 @@ Le suivi de workflow offre une méthode de capture des informations de diagnosti
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Surveillance de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Surveillance des Applications avec App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Voir aussi
+- [Surveillance de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Surveillance des Applications avec App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

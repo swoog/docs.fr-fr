@@ -1,15 +1,15 @@
 ---
-title: 'Comment : créer un document avec des espaces de noms (LINQ to XML) (Visual Basic)'
+title: 'Procédure : Créer un Document avec des espaces de noms (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e0f24b509cdac86f652fb41197c2594b4c474fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631292"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Comment : créer un document avec des espaces de noms (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Procédure : Créer un Document avec des espaces de noms (LINQ to XML) (Visual Basic)
 Cette rubrique montre comment créer un document avec des espaces de noms dans Visual Basic.  
   
  Lorsque vous utilisez des littéraux XML en Visual Basic, les utilisateurs peuvent définir un espace de noms XML global par défaut. Cet espace de noms est l'espace de noms par défaut pour les littéraux XML et les propriétés XML. L'espace de noms XML par défaut peut être défini au niveau projet ou au niveau fichier. S'il est défini au niveau fichier, il remplace l'espace de noms par défaut défini au niveau projet.  
@@ -114,5 +114,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation des espaces de noms XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation des espaces de noms XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

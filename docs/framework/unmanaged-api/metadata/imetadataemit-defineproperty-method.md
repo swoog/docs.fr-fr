@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543079"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty, méthode
-Crée une définition de propriété pour le type spécifié, avec l’objet `get` et `set` accesseurs de méthode et obtient un jeton pour cette définition de propriété.  
+Crée une définition de propriété pour le type spécifié, avec la valeur `get` et `set` accesseurs de méthode et obtient un jeton pour cette définition de propriété.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,13 +48,13 @@ HRESULT DefineProperty (
   
 #### <a name="parameters"></a>Paramètres  
  `td`  
- [in] Le jeton pour la classe ou une interface sur lequel la propriété est définie.  
+ [in] Le jeton pour la classe ou interface sur lequel la propriété est définie.  
   
  `szProperty`  
  [in] Le nom de la propriété.  
   
  `dwPropFlags`  
- [in] Les indicateurs de propriété.  
+ [in] Indicateurs de propriété.  
   
  `pvSig`  
  [in] La signature de propriété.  
@@ -69,7 +69,7 @@ HRESULT DefineProperty (
  [in] La valeur par défaut pour la propriété.  
   
  `cchValue`  
- [in] Le nombre de caractères (Unicode) caractères `pValue`.  
+ [in] Le nombre de caractères (Unicode) les caractères de `pValue`.  
   
  `mdSetter`  
  [in] La méthode qui définit la valeur de propriété.  
@@ -78,20 +78,20 @@ HRESULT DefineProperty (
  [in] La méthode qui obtient la valeur de propriété.  
   
  `rmdOtherMethods[]`  
- [in] Un tableau des autres méthodes associées à la propriété. Terminez le tableau avec une `mdTokenNil`.  
+ [in] Tableau des autres méthodes associées à la propriété. Terminez le tableau avec un `mdTokenNil`.  
   
  `pmdProp`  
- [out] Le `mdProperty` jeton assigné.  
+ [out] Le `mdProperty` jeton attribué.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

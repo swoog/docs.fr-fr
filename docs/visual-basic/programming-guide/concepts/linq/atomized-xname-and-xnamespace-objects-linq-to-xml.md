@@ -1,16 +1,16 @@
 ---
-title: L’atomisation XName et XNamespace atomisés (LINQ to XML) (Visual Basic)
+title: Objets XName et XNamespace atomisés (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: e311de901a9a54bd4fc6ee56d425cc16b4978e8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adf766dcb69477fbad8581b075a7c0ee8a82f728
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623675"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>L’atomisation XName et XNamespace atomisés (LINQ to XML) (Visual Basic)
-Les objets <xref:System.Xml.Linq.XName> et <xref:System.Xml.Linq.XNamespace> sont *atomisés* ; autrement dit, s’ils contiennent le même nom qualifié, ils font référence au même objet. Ceci permet d'améliorer les performances des requêtes : lorsque vous comparez deux noms atomisés pour en vérifier l'égalité, le langage intermédiaire sous-jacent doit seulement déterminer si les deux références pointent vers le même objet. Le code sous-jacent ne doit pas effectuer de comparaisons de chaînes, ce qui prendrait beaucoup de temps.  
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Objets XName et XNamespace atomisés (LINQ to XML) (Visual Basic)
+Les objets <xref:System.Xml.Linq.XName> et <xref:System.Xml.Linq.XNamespace> sont *atomisés* ; autrement dit, s’ils contiennent le même nom qualifié, ils font référence au même objet. Cela donne à améliorer les performances des requêtes : Lorsque vous comparez deux noms atomisés pour l’égalité, le langage intermédiaire sous-jacent doit seulement déterminer si les deux références pointent vers le même objet. Le code sous-jacent ne doit pas effectuer de comparaisons de chaînes, ce qui prendrait beaucoup de temps.  
   
 ## <a name="atomization-semantics"></a>Sémantique d'atomisation  
  L'atomisation signifie que si deux objets <xref:System.Xml.Linq.XName> ont le même nom local et qu'ils soient dans le même espace de noms, ils partagent la même instance. De la même manière, si deux <xref:System.Xml.Linq.XNamespace> ont le même URI d'espace de noms, ils partagent la même instance.  
@@ -69,5 +69,5 @@ Next
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Performances (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Performances (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

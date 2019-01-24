@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: c4c3214c4998afa23032347e08007f2f1933bba8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 601f8f3a5ea86da060b2d26796b2299d87946443
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547798"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Exemples de lignes de commande de compilation (Visual Basic)
 Comme alternative à compiler les programmes Visual Basic dans Visual Studio, vous pouvez compiler à partir de la ligne de commande pour produire des fichiers exécutables (.exe) ou des fichiers de bibliothèque de liens dynamiques (.dll).  
@@ -35,6 +35,6 @@ Comme alternative à compiler les programmes Visual Basic dans Visual Studio, vo
 > [!TIP]
 >  Lorsque vous générez un projet à l’aide de l’IDE Visual Studio, vous pouvez afficher des informations sur associé **vbc** commande avec ses options du compilateur dans la fenêtre Sortie. Pour afficher ces informations, ouvrez le [boîte de dialogue Options, projets et Solutions, générer et exécuter](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), puis définissez le **niveau de détail de sortie de génération de projet MSBuild** à **Normal** ou un niveau plus élevé de commentaires.   
   
-## <a name="see-also"></a>Voir aussi  
- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Compilation conditionnelle](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>Voir aussi
+- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Compilation conditionnelle](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

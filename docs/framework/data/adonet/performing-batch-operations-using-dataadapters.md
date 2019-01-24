@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ccf730eb85024687285200db8f978291986dcc18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543459"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Exécution d'opérations en lot à l'aide des DataAdapter
 La prise en charge des lots dans ADO.NET permet à un objet <xref:System.Data.Common.DataAdapter> de grouper des opérations INSERT, UPDATE et DELETE à partir d'un objet <xref:System.Data.DataSet> ou d'un objet <xref:System.Data.DataTable> pour le serveur, au lieu d'envoyer les opérations successivement. La réduction du nombre d'allers-retours vers le serveur entraîne généralement des gains de performances importants. Les mises à jour par lots sont prises en charge pour les fournisseurs de données .NET pour SQL Server (<xref:System.Data.SqlClient>) et Oracle (<xref:System.Data.OracleClient>).  
@@ -141,8 +141,8 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  Le fournisseur de données et le serveur de base de données principal déterminent les constructions SQL prises en charge pour l'exécution par lots. Une exception peut être levée si une instruction non prise en charge est soumise pour exécution.  
   
-## <a name="see-also"></a>Voir aussi  
- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Mise à jour de sources de données avec des DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [Gestion des événements DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Mise à jour de sources de données avec des DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Gestion des événements DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

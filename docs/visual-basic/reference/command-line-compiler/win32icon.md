@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: afc35578f362f4a72a40fdb3d87406a8795cb59d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e494e4e6fcbf91a7ab90b6922bc7bb4ace236b8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498633"
 ---
 # <a name="-win32icon"></a>-win32icon
 Insère un fichier .ico dans le fichier de sortie. Ce fichier .ico représente le fichier de sortie dans **Explorateur de fichiers**.  
@@ -44,6 +44,6 @@ Insère un fichier .ico dans le fichier de sortie. Ce fichier .ico représente l
 vbc -win32icon:rf.ico in.vb  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Voir aussi
+- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

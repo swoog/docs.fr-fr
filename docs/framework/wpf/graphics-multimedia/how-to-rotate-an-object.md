@@ -1,5 +1,5 @@
 ---
-title: 'Comment : faire pivoter un objet'
+title: 'Procédure : Faire pivoter un objet'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: b5a954158388e8b85589042e9d1f3b82c1747e30
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b44ce71f91962806704eb05a9cbec53638856b3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525428"
 ---
-# <a name="how-to-rotate-an-object"></a>Comment : faire pivoter un objet
+# <a name="how-to-rotate-an-object"></a>Procédure : Faire pivoter un objet
 Cet exemple montre comment faire pivoter un objet. L’exemple crée d’abord un <xref:System.Windows.Media.RotateTransform> puis spécifie sa <xref:System.Windows.Media.RotateTransform.Angle%2A> en degrés.  
   
  L’exemple suivant fait pivoter un <xref:System.Windows.Shapes.Polyline> 45 degrés autour de son coin supérieur gauche de l’objet.  
@@ -44,7 +44,7 @@ Deux objets en rotation de 45 degrés à partir de différents centres de rotat
   
  Pour voir l’exemple complet, consultez la page [2-D Transforms Sample](https://go.microsoft.com/fwlink/?LinkID=158252) (Exemple de transformations 2D).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Media.Transform>  
- [Vue d’ensemble des transformations](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Media.Transform>
+- [Vue d’ensemble des transformations](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

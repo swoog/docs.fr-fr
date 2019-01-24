@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
-ms.openlocfilehash: f392c8d632b3c43058090afce99cba992e2bee4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6eeced2f7707ac69595cacc1c4a1301b1d2bfef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523196"
 ---
 # <a name="hosting-workflows"></a>Hébergement de workflows
 Les rubriques de cette section traitent des workflows d'hébergement.  
@@ -30,7 +30,7 @@ Les rubriques de cette section traitent des workflows d'hébergement.
  [Utilisation de WorkflowIdentity et de la gestion de versions](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)  
  Décrit comment utiliser `WorkflowIdentity` pour héberger plusieurs versions d'un workflow côte à côte.  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [Conception des workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [Modèle de données Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md)
+## <a name="see-also"></a>Voir aussi
+- [Programmation Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [Conception des workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [Modèle de données Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md)

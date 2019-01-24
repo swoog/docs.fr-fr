@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ToolTip
 - templates [WPF], ToolTip
 ms.assetid: 405fe385-4de9-49ee-a448-d8f4d1f740dd
-ms.openlocfilehash: 53b21f610ba957370fac70b79e6a827d624b6473
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 9b87c5c80533e12f5a93e4fc59cb5265a8374a33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521957"
 ---
 # <a name="tooltip-styles-and-templates"></a>Styles et modèles ToolTip
-Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.ToolTip> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.ToolTip> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="tooltip-parts"></a>Parties de l’info-bulle  
  Le <xref:System.Windows.Controls.ToolTip> contrôle n’a pas de composants nommés.  
@@ -33,7 +33,7 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |InvalidFocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.|  
 |InvalidUnfocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.|  
   
-## <a name="tooltip-controltemplate-example"></a>Info-bulle ControlTemplate, exemple  
+## <a name="tooltip-controltemplate-example"></a>Exemple de ControlTemplate info-bulle  
  L’exemple suivant montre comment définir un <xref:System.Windows.Controls.ControlTemplate> pour la <xref:System.Windows.Controls.ToolTip> contrôle.  
   
  [!code-xaml[ControlTemplateExamples#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tooltip.xaml#tooltip)]  
@@ -44,10 +44,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

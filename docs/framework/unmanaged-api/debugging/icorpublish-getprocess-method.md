@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 414bc1bbd3578d0707e35fa70fe196b504af9942
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c625aec5b4937ec232318e62a95a612b0e8a6cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624403"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess, méthode
 Obtient un [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instance qui représente le processus avec l’identificateur spécifié.  
@@ -44,16 +44,16 @@ HRESULT GetProcess(
  [out] Un pointeur vers l’adresse d’un `ICorPublishProcess` instance qui représente le processus.  
   
 ## <a name="remarks"></a>Notes  
- `GetProcess` échoue si le processus n’existe pas ou n’est pas un processus managé qui peut être débogué par l’utilisateur actuel.  
+ `GetProcess` échoue si le processus n’existe pas ou n’est pas un processus géré qui peuvent être débogué à l’utilisateur actuel.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorPub.idl, CorPub.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorPublish, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorPublish, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

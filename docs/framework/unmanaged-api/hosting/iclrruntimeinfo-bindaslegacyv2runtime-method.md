@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 690287bf54f98c19298504ee3058a59ef88a87f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c85888e9d29e7b3ae6ad76d1e534e08a4603ed2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499023"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>ICLRRuntimeInfo::BindAsLegacyV2Runtime, méthode
-Lie l’exécution actuelle pour tous les hérité common language runtime (CLR) version 2 d’activation aux décisions de stratégie.  
+Lie l’exécution actuelle pour tous les common language runtime (CLR) version 2 d’activation décisions de stratégie héritée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,23 +38,23 @@ HRESULT BindAsLegacyV2Runtime ();
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|Liaison a réussi, ou cette exécution a déjà été liée en tant que le runtime de stratégie CLR version 2 d’activation hérité.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Une exécution différente a déjà été liée à la stratégie d’activation 2 de version CLR héritée.|  
+|S_OK|Liaison a réussi, soit ce runtime était déjà lié en tant que le runtime de stratégie CLR version 2 d’activation hérité.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime différent était déjà lié à la stratégie d’activation 2 de version CLR héritée.|  
   
 ## <a name="remarks"></a>Notes  
- Si le runtime actuel est déjà lié à toutes les décisions de stratégie CLR version 2 d’activation héritées (par exemple, à l’aide de la `useLegacyV2RuntimeActivationPolicy` de l’attribut le [ \<démarrage > élément](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) dans le fichier de configuration), cette méthode ne retourne pas de résultat d’erreur ; au lieu de cela, le résultat est S_OK, tout comme il le serait si la méthode avait été liée à une stratégie d’activation héritée.  
+ Si le runtime actuel est déjà lié à toutes les décisions de stratégie CLR version 2 d’activation héritée (par exemple, en utilisant le `useLegacyV2RuntimeActivationPolicy` d’attribut sur le [ \<démarrage > élément](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) dans le fichier de configuration), cette méthode ne retourne pas un résultat d’erreur ; au lieu de cela, le résultat est S_OK, tout comme il le serait si la méthode avait été liée à une stratégie d’activation héritée.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRRuntimeInfo, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [\<startup>, élément](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRRuntimeInfo, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [\<startup>, élément](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)

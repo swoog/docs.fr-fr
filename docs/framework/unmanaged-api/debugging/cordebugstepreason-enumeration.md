@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b27bf19ec340c41cd990b7142450242ea6d6ea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404529"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552240"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason, énumération
 Indique le résultat d'une étape individuelle.  
@@ -45,7 +45,7 @@ typedef enum CorDebugStepReason {
 |Membre|Description|  
 |------------|-----------------|  
 |`STEP_NORMAL`|Exécution pas à pas s’est terminée normalement, dans la même fonction.|  
-|`STEP_RETURN`|Exécution pas à pas a continué normalement, une fois que la fonction a renvoyé.|  
+|`STEP_RETURN`|Exécution pas à pas a continué normalement, une fois que la fonction est renvoyé.|  
 |`STEP_CALL`|Exécution pas à pas a continué normalement, au début d’une fonction qui vient d’être appelée.|  
 |`STEP_EXCEPTION_FILTER`|Une exception a été générée et le contrôle a été passé à un filtre d’exception.|  
 |`STEP_EXCEPTION_HANDLER`|Une exception a été générée et le contrôle a été passé à un gestionnaire d’exceptions.|  
@@ -53,14 +53,14 @@ typedef enum CorDebugStepReason {
 |`STEP_EXIT`|Le thread est arrêté avant la fin de l’étape.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [StepComplete, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
- [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [StepComplete, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

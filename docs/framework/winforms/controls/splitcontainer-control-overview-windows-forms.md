@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 78fc56a49c92d17e6e4638573169bf43c3b77ce3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497284"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Vue d'ensemble du contrôle SplitContainer (Windows Forms)
 Le contrôle Windows Forms <xref:System.Windows.Forms.SplitContainer> peut être considéré comme un composite ; il s'agit de deux panneaux séparés par une barre mobile. Quand le pointeur de la souris est sur la barre, il change de forme pour montrer que la barre est mobile.  
@@ -46,10 +46,10 @@ Le contrôle Windows Forms <xref:System.Windows.Forms.SplitContainer> peut être
 |Propriété <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Détermine la distance en pixels en partant du bord gauche ou supérieur à la barre de fractionnement mobile.|  
 |Propriété <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Détermine la distance minimale, en pixels, que le séparateur peut être déplacé par l’utilisateur.|  
 |Propriété <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Détermine l’épaisseur, en pixels, du séparateur.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Événement|Se produit lorsque le séparateur se déplace.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Événement|Se produit lorsque le séparateur a été déplacé.|  
+|Événement<xref:System.Windows.Forms.SplitContainer.SplitterMoving> |Se produit lorsque le séparateur se déplace.|  
+|Événement<xref:System.Windows.Forms.SplitContainer.SplitterMoved> |Se produit lorsque le séparateur a été déplacé.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer, contrôle](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Exemple de contrôle SplitContainer](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer, contrôle](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [Exemple de contrôle SplitContainer](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

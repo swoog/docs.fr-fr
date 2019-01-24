@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 071466858c79fdb74d9055fed09990cdb02a88b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624341"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType, méthode
 Crée une structure `ExportedType` contenant les métadonnées pour le type exporté spécifié et retourne le jeton de métadonnées associé.  
@@ -41,39 +41,39 @@ HRESULT DefineExportedType (
   
 #### <a name="parameters"></a>Paramètres  
  `szName`  
- [in] Le nom de type doit être exporté. Pour la version 1.1 du common language runtime, le nom du type exporté doit correspondre exactement au nom donné dans le `TypeDef` pour le type.  
+ [in] Le nom du type à exporter. Pour la version 1.1 du common language runtime, le nom du type exporté doit correspondre exactement au nom donné dans le `TypeDef` pour le type.  
   
  `tkImplementation`  
- [in] Un jeton qui spécifie où le type exporté est implémenté. Les valeurs valides et leurs significations associées sont :  
+ [in] Jeton spécifiant où le type exporté est implémenté. Les valeurs valides et leurs significations associées sont :  
   
 -   `mdFile` Le type est implémenté dans un fichier différent au sein de cet assembly.  
   
--   `mdAssemblyRef` Le type est implémenté dans un assembly différent.  
+-   `mdAssemblyRef` Le type est implémenté dans un autre assembly.  
   
 -   `mdExportedTYpe` Le type est imbriqué dans un autre type.  
   
 -   `mdFileNil` Le type est dans le même fichier que le manifeste et n’est pas un type imbriqué.  
   
  `tkTypeDef`  
- [in] Un jeton de métadonnées qui spécifie le type doit être exporté. Cette valeur est entrée dans le `TypeDef` table dans le fichier qui implémente le type et ne s’applique uniquement si ce fichier se trouve dans cet assembly.  
+ [in] Un jeton de métadonnées qui spécifie le type à exporter. Cette valeur est entrée dans le `TypeDef` table dans le fichier qui implémente le type et est pertinente uniquement si ce fichier se trouve dans cet assembly.  
   
  `dwExportedTypeFlags`  
- [in] Une combinaison d’opérations de [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) des valeurs d’énumération qui définissent les paramètres de propriété pour le type exporté.  
+ [in] Une combinaison au niveau du bit de [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) des valeurs d’énumération qui définissent les paramètres de propriété pour le type exporté.  
   
  `pmdct`  
  [out] Pointeur vers le jeton de métadonnées retourné qui indique le type exporté.  
   
 ## <a name="remarks"></a>Notes  
- Un `ExportedType` structure de métadonnées doit être définie pour chaque type qui est exposé par cet assembly et qui est implémentée dans un module autre que celui contenant le manifeste.  
+ Un `ExportedType` structure des métadonnées doit être définie pour chaque type qui est exposé par cet assembly et qui est implémenté dans un module autre que celui qui contient le manifeste.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateforme :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateforme :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

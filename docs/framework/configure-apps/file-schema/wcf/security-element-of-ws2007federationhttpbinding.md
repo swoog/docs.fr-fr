@@ -2,21 +2,21 @@
 title: '&lt;security&gt;, élément de &lt;ws2007FederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: 4ddf963db10656c905220ca22606772625dd7f3c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 32dcf2995780c4a92109232bbdf8d92b3365fdd7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629576"
 ---
 # <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a>&lt;security&gt;, élément de &lt;ws2007FederationHttpBinding&gt;
 Définit les paramètres de sécurité de la [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) élément.  
   
  \<system.ServiceModel>  
-\<liaisons >  
+\<bindings>  
 \<ws2007FederationHttpBinding>  
-\<liaison >  
-\<sécurité >  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,17 +62,17 @@ Définit les paramètres de sécurité de la [ \<ws2007FederationHttpBinding >](
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison de la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison de la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.WSFederationHttpSecurity>  
- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
- [Guide pratique pour Créer une liaison WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Sélection d’un type d’informations d’identification](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<liaison >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.WSFederationHttpSecurity>
+- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
+- [Guide pratique pour Créer une liaison WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sélection d’un type d’informations d’identification](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

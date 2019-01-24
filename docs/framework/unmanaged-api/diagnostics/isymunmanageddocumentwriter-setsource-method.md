@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f25f66d7092c50247e24051280eaa7b714297c20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da19a77637e64fec676fdaac7ba56d47b5b07769
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549887"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource, méthode
-Définit la source pour un document qui est en cours d’écriture incorporée.  
+Définit la source incorporée d’un document qui est en cours d’écriture.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ HRESULT SetSource(
   
 #### <a name="parameters"></a>Paramètres  
  `sourceSize`  
- [in] A `ULONG32` qui contient la taille de la `source` mémoire tampon.  
+ [in] Un `ULONG32` qui contient la taille de la `source` mémoire tampon.  
   
  `source`  
- [in] Mémoire tampon qui stocke la source incorporée.  
+ [in] La mémoire tampon qui stocke la source incorporée.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
@@ -48,5 +48,5 @@ HRESULT SetSource(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedDocumentWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedDocumentWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

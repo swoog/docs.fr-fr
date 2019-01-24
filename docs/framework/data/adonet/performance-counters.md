@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 3e66e4f34afcf8cba03c60c92b5b69d8ca01961b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: a17d0b2382f105bb6299386e45a6746e05c39feb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539062"
 ---
 # <a name="performance-counters-in-adonet"></a>Compteurs de performance dans ADO.NET
-ADO.NET 2.0 a introduit une prise en charge étendue des compteurs de performance qui prend en charge à la fois <xref:System.Data.SqlClient> et <xref:System.Data.OracleClient>. Les compteurs de performance <xref:System.Data.SqlClient> disponibles dans les versions antérieures d'ADO.NET sont déconseillés et remplacés par les nouveaux compteurs de performance évoqués dans cette rubrique.  Vous pouvez utiliser les compteurs de performance ADO.NET pour surveiller le statut de votre application et les ressources de connexion qu'elle utilise. Vous pouvez surveiller les compteurs de performance à l'aide de l'Analyseur de performances Windows ou accéder à ces derniers par programme à l'aide de la classe <xref:System.Diagnostics.PerformanceCounter> dans l'espace de noms <xref:System.Diagnostics>.  
+ADO.NET 2.0 a introduit une prise en charge développée des compteurs de performance qui prend en charge à la fois <xref:System.Data.SqlClient> et <xref:System.Data.OracleClient>. Les compteurs de performance <xref:System.Data.SqlClient> disponibles dans les versions antérieures d'ADO.NET sont déconseillés et remplacés par les nouveaux compteurs de performance évoqués dans cette rubrique.  Vous pouvez utiliser les compteurs de performance ADO.NET pour surveiller le statut de votre application et les ressources de connexion qu'elle utilise. Vous pouvez surveiller les compteurs de performance à l'aide de l'Analyseur de performances Windows ou accéder à ces derniers par programme à l'aide de la classe <xref:System.Diagnostics.PerformanceCounter> dans l'espace de noms <xref:System.Diagnostics>.  
   
 ## <a name="available-performance-counters"></a>Compteurs de performance disponibles  
  Actuellement, il existe 14 compteurs de performance différents disponibles pour <xref:System.Data.SqlClient> et <xref:System.Data.OracleClient>, comme décrit dans le tableau ci-dessous. Notez que les noms des compteurs individuels ne sont pas localisés dans les versions régionales de Microsoft .NET Framework.  
@@ -24,16 +24,16 @@ ADO.NET 2.0 a introduit une prise en charge étendue des compteurs de performan
 |`HardDisconnectsPerSecond`|Nombre de déconnexions par seconde qui sont effectuées à un serveur de base de données.|  
 |`NumberOfActiveConnectionPoolGroups`|Nombre de groupes du pool de connexion unique qui sont actifs. Ce compteur est contrôlé par le nombre de chaînes de connexion uniques qui se trouvent dans AppDomain.|  
 |`NumberOfActiveConnectionPools`|Nombre total de regroupements de connexions.|  
-|`NumberOfActiveConnections`|Nombre de connexions actives en cours d'utilisation. **Remarque :** ce compteur de performance n’est pas activé par défaut. Pour activer ce compteur de performance, consultez [activation des compteurs désactivés par défaut](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|Nombre de connexions disponibles pour une utilisation dans les regroupements de connexions. **Remarque :** ce compteur de performance n’est pas activé par défaut. Pour activer ce compteur de performance, consultez [activation des compteurs désactivés par défaut](#ActivatingOffByDefault).|  
+|`NumberOfActiveConnections`|Nombre de connexions actives en cours d'utilisation. **Remarque :**  Ce compteur de performance n'est pas activé par défaut. Pour activer ce compteur de performance, consultez [activation des compteurs désactivés par défaut](#ActivatingOffByDefault).|  
+|`NumberOfFreeConnections`|Nombre de connexions disponibles pour une utilisation dans les regroupements de connexions. **Remarque :**  Ce compteur de performance n'est pas activé par défaut. Pour activer ce compteur de performance, consultez [activation des compteurs désactivés par défaut](#ActivatingOffByDefault).|  
 |`NumberOfInactiveConnectionPoolGroups`|Nombre de groupes du regroupement de connexions unique qui sont marqués pour le nettoyage. Ce compteur est contrôlé par le nombre de chaînes de connexion uniques qui se trouvent dans AppDomain.|  
 |`NumberOfInactiveConnectionPools`|Nombre de regroupements de connexions inactifs sans activité récente et en attente de suppression.|  
 |`NumberOfNonPooledConnections`|Nombre de connexions actives qui n'ont pas été regroupées.|  
 |`NumberOfPooledConnections`|Nombre de connexions actives qui sont gérées par l'infrastructure de regroupement de connexions.|  
 |`NumberOfReclaimedConnections`|Nombre de connexions ayant été récupérées par le biais du garbage collection dans lequel `Close` ou `Dispose` n'a pas été appelé par l'application. La fermeture ou la suppression non explicites des connexions nuit aux performances.|  
 |`NumberOfStasisConnections`|Nombre de connexions en attente de l'achèvement d'une action et par conséquent non disponibles pour une utilisation par votre application.|  
-|`SoftConnectsPerSecond`|Nombre de connexions actives en cours de tirage du regroupement de connexions. **Remarque :** ce compteur de performance n’est pas activé par défaut. Pour activer ce compteur de performance, consultez [activation des compteurs désactivés par défaut](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|Nombre de connexions actives retournées au regroupement de connexions. **Remarque :** ce compteur de performance n’est pas activé par défaut. Pour activer ce compteur de performance, consultez [activation des compteurs désactivés par défaut](#ActivatingOffByDefault).|  
+|`SoftConnectsPerSecond`|Nombre de connexions actives en cours de tirage du regroupement de connexions. **Remarque :**  Ce compteur de performance n'est pas activé par défaut. Pour activer ce compteur de performance, consultez [activation des compteurs désactivés par défaut](#ActivatingOffByDefault).|  
+|`SoftDisconnectsPerSecond`|Nombre de connexions actives retournées au regroupement de connexions. **Remarque :**  Ce compteur de performance n'est pas activé par défaut. Pour activer ce compteur de performance, consultez [activation des compteurs désactivés par défaut](#ActivatingOffByDefault).|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Groupes du regroupement de connexions et regroupements de connexions  
  Lorsque vous utilisez l'authentification Windows (sécurité intégrée), vous devez surveiller les deux compteurs de performance `NumberOfActiveConnectionPoolGroups` et `NumberOfActiveConnectionPools`. En effet, les groupes du regroupement de connexions sont mappés à des chaînes de connexion uniques. Les regroupements de connexions sont mappés aux chaînes de connexion et créent des regroupements séparés pour des identités Windows individuelles, lors de l'utilisation de la sécurité intégrée. Par exemple, si Fred et Julie, qui appartiennent au même AppDomain, utilisent tous les deux la chaîne de connexion `"Data Source=MySqlServer;Integrated Security=true"`, un groupe de regroupement de connexions est créé pour la chaîne de connexion, et deux autres regroupements sont créés, un pour Fred et un pour Julie. Si Jean et Martha utilisent une chaîne de connexion avec une connexion SQL Server identique, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, alors qu’un pool est créé pour le **lowPrivUser** identité.  
@@ -394,10 +394,10 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Connexion à une source de données](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Regroupement de connexions OLE DB, ODBC et Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [Compteurs de performance pour ASP.NET](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
- [Profilage d’exécution](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)  
- [Introduction à la surveillance des seuils de Performance](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Connexion à une source de données](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Regroupement de connexions OLE DB, ODBC et Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Compteurs de performance pour ASP.NET](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)
+- [Profilage d’exécution](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [Introduction à la surveillance des seuils de Performance](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

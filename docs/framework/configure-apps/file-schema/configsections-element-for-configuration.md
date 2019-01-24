@@ -1,5 +1,5 @@
 ---
-title: '&lt;configSections&gt; , élément pour &lt;configuration&gt;'
+title: '&lt;configSections&gt; élément pour &lt;configuration&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections
@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 33406a67389cdf857fa5030e20d8a4dec7662741
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f46c84a1674a3e9352d0a4ccda23d44e650a70ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629486"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configSections >, élément pour \<configuration >
 
 Contient des déclarations d’espace de noms et de la section de configuration.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<configSections >**
+&nbsp;&nbsp;**\<configSections>**
 
 ## <a name="attributes"></a>Attributs
 
-Aucun
+Aucun.
 
 ## <a name="parent-element"></a>Élément parent
 
@@ -37,10 +37,10 @@ Aucun
 
 |     | Description |
 | --- | ----------- |
-| [**\<section >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Contient une déclaration de section de configuration. |
-| [**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Définit un espace de noms de sections de configuration. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Supprime un groupe de sections ou une section prédéfinis. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Efface toutes les sections précédemment définies et des groupes. |
+| [**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) | Contient une déclaration de section de configuration. |
+| [**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Définit un espace de noms pour les sections de configuration. |
+| [**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Supprime une section prédéfinie ou le groupe de section. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Efface toutes les sections précédemment définies et les groupes de sections. |
 
 ## <a name="remarks"></a>Notes
 
@@ -64,8 +64,8 @@ L’exemple suivant montre comment définir une section de configuration et de d
 
 ## <a name="configuration-file"></a>fichier de configuration
 
-Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* les fichiers qui ne sont pas au niveau du répertoire d’application.
+Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* fichiers qui ne sont pas au niveau du répertoire d’application.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Schéma de fichier de configuration pour le .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schéma de fichier de configuration pour le .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

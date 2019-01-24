@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 0b504a9e368e5179d5f91faf7256445d7da47b1d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 696d14630240dce094ace7d595232e1a210ea78e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527144"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Propriété d'axe enfant XML (Visual Basic)
 Fournit un accès aux enfants de l'un des éléments suivants : un objet <xref:System.Xml.Linq.XElement>, un objet <xref:System.Xml.Linq.XDocument>, une collection d'objets <xref:System.Xml.Linq.XElement> ou une collection d'objets <xref:System.Xml.Linq.XDocument>.  
@@ -39,7 +39,7 @@ object.<child>
  Collection d'objets <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez utiliser une propriété d'axe enfant XML pour accéder aux nœuds enfants par nom, à partir d'un objet <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>, ou à partir d'une collection d'objets <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>. Utilisez la propriété XML `Value` pour accéder à la valeur du premier nœud enfant dans la collection retournée. Pour plus d’informations, consultez [propriété de valeur XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Vous pouvez utiliser une propriété d’axe enfant XML pour accéder aux nœuds enfants par nom, à partir d’un objet <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>, ou à partir d’une collection d’objets <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>. Utilisez la propriété XML `Value` pour accéder à la valeur du premier nœud enfant dans la collection retournée. Pour plus d’informations, consultez [propriété de valeur XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
  Le compilateur Visual Basic convertit des propriétés d’axes enfants en appels à la <xref:System.Xml.Linq.XContainer.Elements%2A> (méthode).  
   
@@ -56,7 +56,7 @@ object.<child>
  `Home Phone = 206-555-0144`  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant montre comment accéder aux nœuds enfants nommés `phone` à partir de la collection retournée par la propriété d'axe enfant `contact` de l'objet `contacts`.  
+ L’exemple suivant montre comment accéder aux nœuds enfants nommés `phone` à partir de la collection retournée par la propriété d’axe enfant `contact` de l’objet `contacts`.  
   
  [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_2.vb)]  
   
@@ -73,9 +73,9 @@ object.<child>
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xml.Linq.XElement>  
- [Propriétés d’axe XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Création de code XML dans Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Nom des attributs et des éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Xml.Linq.XElement>
+- [Propriétés d’axe XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Création de code XML dans Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Nom des attributs et des éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

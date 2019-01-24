@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: c1ebe2d735924c559f450f4041884dc9845e4fe0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: adf2378cead054efcef10a73bfd00ef541940949
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494118"
 ---
 # <a name="adding-data-to-a-datatable"></a>Ajout de données à un DataTable
 Après avoir créé un objet <xref:System.Data.DataTable> et défini sa structure à l'aide de colonnes et de contraintes, vous pouvez ajouter de nouvelles lignes de données à la table. Pour ajouter une nouvelle ligne, déclarez une nouvelle variable comme type <xref:System.Data.DataRow>. Un nouveau **DataRow** est retourné lorsque vous appelez le <xref:System.Data.DataTable.NewRow%2A> (méthode). Le **DataTable** crée ensuite le **DataRow** objet basé sur la structure de la table, tel que défini par le <xref:System.Data.DataColumnCollection>.  
@@ -85,10 +85,10 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataRowCollection>  
- <xref:System.Data.DataTable>  
- [Manipulation des données dans un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataRowCollection>
+- <xref:System.Data.DataTable>
+- [Manipulation des données dans un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

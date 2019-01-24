@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f705ccc3e033247e4617cfa585d8881815a021a2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d58ac91f42e07e3f556389a818d8118d846653c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518161"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle Spinner
 > [!NOTE]
 >  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Cette rubrique fournit des informations sur la prise en charge d’ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pour le type de contrôle Spinner. Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un type de contrôle est un ensemble de conditions qu’un contrôle doit réunir pour pouvoir utiliser la propriété <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Les conditions incluent des indications spécifiques pour l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , les valeurs de propriété [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] et les modèles de contrôle.  
+ Cette rubrique fournit des informations sur la prise en charge d’ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pour le type de contrôle Spinner. Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un type de contrôle est un ensemble de conditions qu’un contrôle doit respecter pour pouvoir utiliser la propriété <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Les conditions incluent des indications spécifiques pour l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , les valeurs de propriété [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] et les modèles de contrôle.  
   
  Les contrôles compteur sont utilisés pour effectuer une sélection parmi un domaine d’éléments ou une plage de nombres.  
   
@@ -33,13 +33,13 @@ ms.locfileid: "47199305"
   
 |Affichage de contrôle|Affichage de contenu|  
 |------------------|------------------|  
-|Spinner<br /><br /> -Edit (0 ou 1)<br />-Button (2)|Spinner|  
+|Spinner<br /><br /> -Edit (0 ou 1)<br />-   Button (2)|Spinner|  
   
  **Selection (modèle de contrôle)**  
   
 |Affichage de contrôle|Affichage de contenu|  
 |------------------|------------------|  
-|Spinner<br /><br /> -Edit (0 ou 1)<br />-Button (2)<br />-ListItem (0 ou plus)|Spinner<br /><br /> -ListItem (0 ou plus)|  
+|Spinner<br /><br /> -Edit (0 ou 1)<br />-   Button (2)<br />-ListItem (0 ou plus)|Spinner<br /><br /> -ListItem (0 ou plus)|  
   
  Pour vous assurer que les outils de test automatisé peuvent distinguer les deux boutons de la sous-arborescence de l’affichage de contrôle, assignez `SmallIncrement` ou `SmallDecrement``AutomationId` de manière appropriée. Pour certaines implémentations, le contrôle d’édition associé peut être un homologue du contrôle compteur.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47199305"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatoire|Aucun.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatoire|Aucun.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Automation.ControlType.Spinner>  
- [Vue d’ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Automation.ControlType.Spinner>
+- [Vue d’ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

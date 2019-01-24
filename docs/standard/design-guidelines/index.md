@@ -1,19 +1,13 @@
 ---
-title: Règles de conception de .NET Framework
+title: "Règles de conception de .NET\_Framework"
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- libraries, .NET Framework class library
-- class library design guidelines [.NET Framework], about
-- class library design guidelines [.NET Framework]
+  - 'libraries, .NET Framework class library'
+  - 'class library design guidelines [.NET Framework], about'
+  - 'class library design guidelines [.NET Framework]'
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396927"
 ---
 # <a name="framework-design-guidelines"></a>Règles de conception de .NET Framework
 Cette section fournit des instructions pour la conception de bibliothèques qui étendent et interagissent avec le .NET Framework. L’objectif est d’aider les concepteurs de bibliothèques à garantir la cohérence d’API et la facilité d’utilisation en fournissant un modèle de programmation unifié qui est indépendant du langage de programmation utilisé pour le développement. Nous vous recommandons de suivre ces instructions de conception lors du développement de classes et composants qui étendent .NET Framework. Conception de la bibliothèque incohérent avoir un impact négatif la productivité des développeurs et décourage adoption.  
@@ -50,6 +44,6 @@ Cette section fournit des instructions pour la conception de bibliothèques qui 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d’ensemble](../../../docs/framework/get-started/overview.md)  
-- [Feuille de route pour le .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+- [Vue d’ensemble](../../../docs/framework/get-started/overview.md)
+- [Feuille de route pour le .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [Guide de développement](../../../docs/framework/development-guide.md)

@@ -2,12 +2,12 @@
 title: Prise en charge de SqlClient pour LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527612"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Prise en charge de SqlClient pour LocalDB
 À compter de SQL Server, nom de code Denali, une version légère de SQL Server, appelée LocalDB, sera disponible. Cette rubrique explique comment se connecter à une base de données LocalDB.  
@@ -58,6 +58,6 @@ ms.locfileid: "47079378"
   
 -   Utilisez le mot clé de chaîne de connexion `AttachDBFilename` pour spécifier le fichier .MDF.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Fonctionnalités SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

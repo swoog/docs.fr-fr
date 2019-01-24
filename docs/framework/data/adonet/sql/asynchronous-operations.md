@@ -2,12 +2,12 @@
 title: Opérations asynchrones
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c1c99437ada9dd9e71e0e999073e8d207569c2bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538659"
 ---
 # <a name="asynchronous-operations"></a>Opérations asynchrones
 L'exécution de certaines opérations de base de données, telles que des exécutions de commande, peut prendre du temps. Dans ce cas, les applications mono-thread doivent bloquer d'autres opérations et attendre que l'exécution de la commande s'achève avant de pouvoir continuer leurs propres opérations. En revanche, la possibilité d'assigner l'opération longue à un thread d'arrière-plan permet au thread à l'avant-plan de rester actif pendant toute l'opération. Dans une application Windows, par exemple, vous pouvez déléguer l'opération de longue durée à un thread d'arrière-plan tout en autorisant le thread d'interface utilisateur à rester réactif pendant l'exécution de l'opération.  
@@ -29,7 +29,7 @@ L'exécution de certaines opérations de base de données, telles que des exécu
  [Interrogation dans les applications console](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Fournit un exemple montrant l'utilisation de l'interrogation pour attendre l'accomplissement de l'exécution d'une commande asynchrone à partir d'une application console. Cette technique est également valable dans une bibliothèque de classes ou une autre application sans interface utilisateur.  
   
-## <a name="see-also"></a>Voir aussi  
- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Appel de méthodes synchrones de façon asynchrone](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Appel de méthodes synchrones de façon asynchrone](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

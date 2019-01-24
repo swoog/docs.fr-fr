@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer des contrôles composites'
+title: 'Procédure : Créer des contrôles composites'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2dc0ca7c2514ad444904b707a2cea9d57849660
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549796"
 ---
-# <a name="how-to-author-composite-controls"></a>Comment : créer des contrôles composites
+# <a name="how-to-author-composite-controls"></a>Procédure : Créer des contrôles composites
 Les contrôles composites peuvent être utilisés de plusieurs façons. Vous pouvez les créer dans le cadre d’un projet d’application de bureau Windows et les utiliser uniquement sur les formulaires du projet. Ou vous pouvez les créer dans un projet de bibliothèque de contrôles Windows, compiler le projet dans un assembly et utiliser les contrôles dans d’autres projets. Vous pouvez même hériter d’eux et utiliser l’héritage visuel pour les personnaliser rapidement à des fins spécifiques.  
   
 > [!NOTE]
@@ -78,11 +78,11 @@ Les contrôles composites peuvent être utilisés de plusieurs façons. Vous pou
   
      Vous pouvez voir les contrôles constitutifs hérités du contrôle composite dans votre DLL, et vous pouvez modifier les propriétés des contrôles dont la propriété **Modifiers** est définie sur **Public**. Vous ne pouvez pas modifier les propriétés du contrôle dont la propriété **Modifiers** est définie sur **Private**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédure pas à pas : création d'un contrôle composite à l'aide de Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Procédure pas à pas : création d'un contrôle composite à l'aide de Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Procédure pas à pas : héritage à partir d'un contrôle Windows Forms à l'aide de Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [Procédure pas à pas : héritage d’un contrôle Windows Forms à l’aide de Visual C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- [Recommandations relatives au type de contrôle](../../../../docs/framework/winforms/controls/control-type-recommendations.md)  
- [Guide pratique pour créer des contrôles pour des Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
- [Variétés de contrôles personnalisés](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédure pas à pas : Création d’un contrôle Composite avec Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Procédure pas à pas : Création d’un contrôle Composite avec VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec VisualC#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Recommandations relatives au type de contrôle](../../../../docs/framework/winforms/controls/control-type-recommendations.md)
+- [Guide pratique pour Créer des contrôles pour les Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
+- [Variétés de contrôles personnalisés](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

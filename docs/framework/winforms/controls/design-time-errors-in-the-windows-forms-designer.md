@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 26f57b039b8e2fb3c56af926eeb63dc3c4c33b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542403"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Erreurs au moment du design dans le Concepteur Windows Forms
 Cette rubrique explique la signification et l’utilisation de la liste d’erreurs au moment du design qui apparaît dans Microsoft Visual Studio en cas d’échec du chargement du Concepteur Windows Forms. Si cette liste d’erreurs s’affiche, ne l’interprétez pas comme un bogue du concepteur, mais comme une aide vous permettant de corriger les erreurs dans votre code.  
@@ -52,8 +52,8 @@ Cette rubrique explique la signification et l’utilisation de la liste d’erre
 ### <a name="ignore-and-continue"></a>Ignorer et continuer  
  Vous pouvez choisir d’ignorer l’erreur et de continuer à charger le concepteur. Cette action peut entraîner un comportement inattendu. Par exemple, il est possible que les contrôles n’apparaissent pas sur l’aire de conception.  
   
-## <a name="see-also"></a>Voir aussi  
- [Dépannage du développement au moment du Design](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [Dépannage de la création de contrôles et de composants](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- [Développement de contrôles Windows Forms au moment du design](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Messages d’erreur du Concepteur Windows Forms](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+## <a name="see-also"></a>Voir aussi
+- [Dépannage du développement au moment du Design](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)
+- [Dépannage de la création de contrôles et de composants](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)
+- [Développement de contrôles Windows Forms au moment du design](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Messages d’erreur du Concepteur Windows Forms](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

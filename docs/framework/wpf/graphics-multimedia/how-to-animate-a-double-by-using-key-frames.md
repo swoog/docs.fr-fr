@@ -1,5 +1,5 @@
 ---
-title: "Comment : animer un double à l'aide d'images clés"
+title: "Procédure : Animer un double à l'aide d'images clés"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 67466bbb5fd7e7a46c312e14666c23048bf43d80
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 60d939e9b63767a7efef059581983e8d8e8721ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639391"
 ---
-# <a name="how-to-animate-a-double-by-using-key-frames"></a>Comment : animer un double à l'aide d'images clés
+# <a name="how-to-animate-a-double-by-using-key-frames"></a>Procédure : Animer un double à l'aide d'images clés
 Cet exemple montre comment animer la valeur d’une propriété qui accepte un <xref:System.Double> à l’aide d’images clés.  
   
 ## <a name="example"></a>Exemple  
@@ -36,11 +36,11 @@ Cet exemple montre comment animer la valeur d’une propriété qui accepte un <
   
  Par souci de cohérence avec d’autres exemples d’animation, les versions de code de cet exemple utilisent un <xref:System.Windows.Media.Animation.Storyboard> objet pour appliquer le <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Lorsque vous appliquez une seule animation dans le code, il est également plus simple d’utiliser le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode au lieu d’utiliser un <xref:System.Windows.Media.Animation.Storyboard>. Si vous voulez voir un exemple, consultez l’article [Comment : animer une propriété sans utiliser de storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
- <xref:System.Windows.Shapes.Rectangle>  
- <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>  
- <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>  
- <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>  
- [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Guides pratiques relatifs aux images clés](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
+- <xref:System.Windows.Shapes.Rectangle>
+- <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>
+- <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>
+- <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>
+- [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Guides pratiques relatifs aux images clés](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

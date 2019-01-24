@@ -2,12 +2,12 @@
 title: Two-Way Communication
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 319b63ff1eefdab4c23932294c3f1970f204601e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2160a1c190a23c9fbc3ec835d32121008c63e2a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522009"
 ---
 # <a name="two-way-communication"></a>Two-Way Communication
 Cet exemple montre comment effectuer une communication en file d'attente bidirectionnelle sur MSMQ. Cet exemple utilise la liaison `netMsmqBinding`. Dans le cas présent, le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  

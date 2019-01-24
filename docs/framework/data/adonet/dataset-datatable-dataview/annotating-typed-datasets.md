@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: c66a11e0662cd007797243c136ec0617ce5be47c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629606"
 ---
 # <a name="annotating-typed-datasets"></a>Annotation de DataSet typés
 Les annotations vous permettent de modifier le nom des éléments de votre objet <xref:System.Data.DataSet> typé sans pour autant modifier le schéma sous-jacent. Modifier les noms des éléments de votre schéma sous-jacent entraînerait typée **DataSet** pour faire référence aux objets qui n'effectuer pas exister dans la source de données, ainsi que perdrait des références aux objets qui existent dans la source de données.  
@@ -58,7 +58,7 @@ Les annotations vous permettent de modifier le nom des éléments de votre objet
 |*Valeur de remplacement*|Spécifier une valeur à retourner. La valeur retournée doit correspondre au type de l'élément. Par exemple, utilisez `nullValue="0"` pour retourner 0 pour les champs de type null integer (entier nul).|  
 |**_throw**|Levée d'une exception. Il s'agit de la valeur par défaut.|  
 |**_null**|Retourner une référence null ou lever une exception si un type primitif est rencontré.|  
-|**vid_e**|Pour les chaînes, retourner **String.Empty**, sinon retourne un objet créé à partir d’un constructeur vide. Si un type primitif est rencontré, lever une exception.|  
+|**_empty**|Pour les chaînes, retourner **String.Empty**, sinon retourne un objet créé à partir d’un constructeur vide. Si un type primitif est rencontré, lever une exception.|  
   
  Le tableau suivant présente les valeurs par défaut pour les objets dans un **DataSet** et les annotations disponibles.  
   
@@ -222,9 +222,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataSet>  
- [Datasets typés](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
- [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataSet>
+- [Datasets typés](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
+- [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

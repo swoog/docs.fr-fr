@@ -1,20 +1,20 @@
 ---
-title: '&lt;DiscoveryEndpoint&gt;'
+title: '&lt;discoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: ab00a80904cdcd2844a44c154edb2e424633427b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b3254a1c3d7fa581b4f7573d693261f5a224515d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524167"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;DiscoveryEndpoint&gt;
+# <a name="ltdiscoveryendpointgt"></a>&lt;discoveryEndpoint&gt;
 
 Cet élément de configuration définit un point de terminaison standard avec un contrat de découverte fixe. Lorsqu'il est ajouté à la configuration du service, il spécifie où écouter les messages de découverte. Lorsqu'il est ajouté à la configuration client, il spécifie où envoyer les requêtes de découverte.  
   
 \<system.serviceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ Aucun.
 
 | Élément | Description |  
 | ------- | ----------- |  
-| [\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Collection de points de terminaison standard qui sont des points de terminaison prédéfinis dont une ou plusieurs propriétés (adresse, liaison, contrat) sont fixes. |  
+| [\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Collection de points de terminaison standard qui sont des points de terminaison prédéfinis dont une ou plusieurs propriétés (adresse, liaison, contrat) sont fixes. |  
   
 ## <a name="example"></a>Exemple
 
@@ -85,4 +85,4 @@ La configuration du point de terminaison standard est définie par service et ne
   
 ## <a name="see-also"></a>Voir aussi
 
-<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524051"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduction à LINQ dans Visual Basic
 Language-Integrated Query (LINQ) ajoute des capacités de requête à Visual Basic et fournit des fonctionnalités puissantes et simples lorsque vous travaillez avec tous les types de données. Au lieu d’envoyer une requête à une base de données à traiter ou utilisation de la syntaxe de requête différente pour chaque type de données que vous recherchez, LINQ introduit des requêtes en tant que partie du langage Visual Basic. Il utilise une syntaxe unifiée indépendamment du type de données.  
@@ -48,7 +48,7 @@ Language-Integrated Query (LINQ) ajoute des capacités de requête à Visual Bas
 ## <a name="structure-of-a-linq-query"></a>Structure d’une requête LINQ  
  Une requête LINQ, souvent appelé un *expression de requête*, se compose d’une combinaison de clauses de requête qui identifient les sources de données et les variables d’itération pour la requête. Une expression de requête peut également inclure des instructions de tri, de filtrage, de regroupement et de jonction ou des calculs applicables aux données sources. La syntaxe de l'expression de requête ressemble à la syntaxe de SQL ; par conséquent, une grande partie de cette syntaxe vous semblera familière.  
   
- Une expression de requête commence par une clause `From`. Cette clause identifie les données sources d'une requête et les variables utilisées pour faire individuellement référence à chaque élément des données sources. Ces variables sont appelées *variables de plage* ou *variables d’itération*. La clause `From` est nécessaire pour une requête, à l'exception des requêtes `Aggregate`, où la clause `From` est facultative. Après avoir identifié la portée et la source de la requête dans les clauses `From` ou `Aggregate`, vous pouvez inclure toute combinaison de clauses de requête pour affiner la requête. Pour plus d’informations sur les clauses de requête, consultez les opérateurs de requête LINQ de Visual Basic plus loin dans cette rubrique. Par exemple, la requête suivante identifie une collection de sources de données client comme variable `customers` et une variable d'itération appelée `cust`.  
+ Une expression de requête commence par une clause `From`. Cette clause identifie les données sources d'une requête et les variables utilisées pour faire individuellement référence à chaque élément des données sources. Ces variables sont appelées *variables de plage* ou *variables d’itération*. La clause `From` est nécessaire pour une requête, à l'exception des requêtes `Aggregate`, où la clause `From` est facultative. Après avoir identifié la portée et la source de la requête dans les clauses `From` ou `Aggregate`, vous pouvez inclure toute combinaison de clauses de requête pour affiner la requête. Pour plus d’informations sur les clauses de requête, consultez les opérateurs de requête LINQ de Visual Basic plus loin dans cette rubrique. Par exemple, la requête suivante identifie une collection de sources de données client comme variable `customers` et une variable d’itération appelée `cust`.  
   
  [!code-vb[VbVbalrIntroToLINQ#2](codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
@@ -64,7 +64,7 @@ Language-Integrated Query (LINQ) ajoute des capacités de requête à Visual Bas
   
  [!code-vb[VbVbalrIntroToLINQ#5](codesnippet/VisualBasic/introduction-to-linq_6.vb)]  
   
- Vous pouvez utiliser la clause `Group Join` pour créer un résultat de requête hiérarchique contenant une collection d'objets customer. Chaque objet customer possède une propriété contenant une collection de toutes les commandes de ce client. L'exemple de code suivant affiche une expression de requête qui combine des données client/commande sous forme de résultat hiérarchique et retourne une collection de types anonymes. La requête retourne un type qui inclut une propriété `CustomerOrders` contenant une collection de données de commande pour le client. Il inclut également une propriété `OrderTotal` qui contient la somme des totaux pour toutes les commandes de ce client. (Cette requête est équivalente à une JOINTURE EXTERNE GAUCHE.)  
+ Vous pouvez utiliser la clause `Group Join` pour créer un résultat de requête hiérarchique contenant une collection d’objets customer. Chaque objet customer possède une propriété contenant une collection de toutes les commandes de ce client. L'exemple de code suivant affiche une expression de requête qui combine des données client/commande sous forme de résultat hiérarchique et retourne une collection de types anonymes. La requête retourne un type qui inclut une propriété `CustomerOrders` contenant une collection de données de commande pour le client. Il inclut également une propriété `OrderTotal` qui contient la somme des totaux pour toutes les commandes de ce client. (Cette requête est équivalente à une JOINTURE EXTERNE GAUCHE.)  
   
  [!code-vb[VbVbalrIntroToLINQ#6](codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
   
@@ -76,7 +76,7 @@ Les classes de l'espace de noms <xref:System.Linq> et des autres espaces de noms
 
 ### <a name="from-clause"></a>Clause From
 
-Soit un [ `From` clause](../../../../visual-basic/language-reference/queries/from-clause.md) ou `Aggregate` clause est requise pour lancer une requête. Une clause `From` spécifie une collection de sources et une variable d'itération pour une requête. Exemple :
+Soit un [ `From` clause](../../../../visual-basic/language-reference/queries/from-clause.md) ou `Aggregate` clause est requise pour lancer une requête. Une clause `From` spécifie une collection de sources et une variable d’itération pour une requête. Exemple :
 
 [!code-vb[VbVbalrIntroToLINQ#7](codesnippet/VisualBasic/introduction-to-linq_8.vb)]
 
@@ -120,7 +120,7 @@ Facultatif. Un [ `Group Join` clause](../../../../visual-basic/language-referenc
 
 ### <a name="aggregate-clause"></a>Aggregate (clause)
 
-Soit un [ `Aggregate` clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md) ou un `From` clause est requise pour lancer une requête. Une clause `Aggregate` applique une ou plusieurs fonctions d'agrégation à une collection. Par exemple, vous pouvez utiliser le `Aggregate` clause pour calculer une somme de tous les éléments retournés par une requête, comme dans l’exemple suivant.
+Soit un [ `Aggregate` clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md) ou un `From` clause est requise pour lancer une requête. Une clause `Aggregate` applique une ou plusieurs fonctions d’agrégation à une collection. Par exemple, vous pouvez utiliser le `Aggregate` clause pour calculer une somme de tous les éléments retournés par une requête, comme dans l’exemple suivant.
 
 [!code-vb[VbVbalrIntroToLINQ#14](codesnippet/VisualBasic/introduction-to-linq_15.vb)]
 
@@ -177,7 +177,7 @@ Vous pouvez utiliser des fonctionnalités de requête LINQ supplémentaires en a
   
  Lorsque vous avez une connexion valide à une base de données SQL Server, vous pouvez ajouter un **Classes LINQ to SQL** modèle d’élément à votre projet. Le Concepteur Objet Relationnel (Concepteur O/R) s'affiche alors. Le Concepteur O/R vous permet de faire glisser les éléments que vous souhaitez accéder dans votre code à partir de la **Explorateur de serveurs**/**Database Explorer** sur l’aire du concepteur. Le fichier LINQ to SQL ajoute un objet <xref:System.Data.Linq.DataContext> à votre projet. Cet objet inclut des propriétés et des collections pour les tables et vues auxquelles vous souhaitez accéder, et aux méthodes des procédures stockées que vous souhaitez appeler. Après avoir enregistré vos modifications dans le fichier LINQ to SQL (.dbml), vous pouvez accéder à ces objets dans votre code en référençant l'objet <xref:System.Data.Linq.DataContext> défini par le Concepteur O/R. L'objet <xref:System.Data.Linq.DataContext> de votre projet est nommé d'après le nom de votre fichier LINQ to SQL. Par exemple, un fichier LINQ to SQL nommé Northwind.dbml créera un objet <xref:System.Data.Linq.DataContext> nommé `NorthwindDataContext`.  
   
- Pour obtenir des exemples avec des instructions détaillées, consultez [Comment : interroger une base de données](how-to-query-a-database-by-using-linq.md) et [Comment : appeler une procédure stockée](how-to-call-a-stored-procedure-by-using-linq.md).  
+ Pour obtenir des exemples avec des instructions détaillées, consultez [Comment : Interroger une base de données](how-to-query-a-database-by-using-linq.md) et [Comment : Appeler une procédure stockée](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Fonctionnalités de Visual Basic qui prennent en charge LINQ  
  Visual Basic inclut d’autres fonctionnalités notables qui facilitent l’utilisation de LINQ et réduisent la quantité de code que vous devez écrire pour effectuer des requêtes LINQ. Notamment :  
@@ -224,21 +224,21 @@ Vous pouvez utiliser des fonctionnalités de requête LINQ supplémentaires en a
 |[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Inclut des informations générales, un guide de programmation et des exemples de LINQ to XML.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Comment et les rubriques de procédure pas à pas
- [Guide pratique : interroger une base de données](how-to-query-a-database-by-using-linq.md)  
+ [Guide pratique pour Interroger une base de données](how-to-query-a-database-by-using-linq.md)  
   
- [Guide pratique : appeler une procédure stockée](how-to-call-a-stored-procedure-by-using-linq.md)  
+ [Guide pratique pour Appeler une procédure stockée](how-to-call-a-stored-procedure-by-using-linq.md)  
   
- [Guide pratique : modifier des données dans une base de données](how-to-modify-data-in-a-database-by-using-linq.md)  
+ [Guide pratique pour Modifier des données dans une base de données](how-to-modify-data-in-a-database-by-using-linq.md)  
   
- [Guide pratique : combiner des données avec des jointures](how-to-combine-data-with-linq-by-using-joins.md)  
+ [Guide pratique pour Combiner des données avec des jointures](how-to-combine-data-with-linq-by-using-joins.md)  
   
- [Guide pratique : trier les résultats d’une requête](how-to-sort-query-results-by-using-linq.md)  
+ [Guide pratique pour Trier les résultats de requête](how-to-sort-query-results-by-using-linq.md)  
   
- [Guide pratique : filtrer les résultats d’une requête](how-to-filter-query-results-by-using-linq.md)  
+ [Guide pratique pour Filtrer les résultats de la requête](how-to-filter-query-results-by-using-linq.md)  
   
- [Guide pratique : compter, additionner ou faire la moyenne de données](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [Guide pratique pour Nombre, somme ou moyenne des données](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [Guide pratique : rechercher la valeur minimale ou maximale dans un résultat de requête](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [Guide pratique pour Rechercher la valeur minimale ou maximale dans un résultat de requête](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
  [Guide pratique pour affecter des procédures stockées pour effectuer des mises à jour, des insertions et des suppressions (Concepteur O/R)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
@@ -247,9 +247,9 @@ Vous pouvez utiliser des fonctionnalités de requête LINQ supplémentaires en a
   
 ## <a name="see-also"></a>Voir aussi
 
-- [LINQ (Language Integrated Query)](../../concepts/linq/index.md)  
-- [Vue d’ensemble de LINQ to XML en Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [Vue d’ensemble de LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [Outils LINQ to SQL dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [LINQ (Language Integrated Query)](../../concepts/linq/index.md)
+- [Vue d’ensemble de LINQ to XML en Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)
+- [Vue d’ensemble de LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [Outils LINQ to SQL dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [DataContext, méthodes (Concepteur O/R)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

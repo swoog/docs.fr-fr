@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d019c67849197cd24171ff607e60e9f08d5ff70
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2ebe6924dfe1a4aa640ef8ccd7b4047c1d137948
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640041"
 ---
 # <a name="nextmethod-function"></a>NextMethod (fonction)
 Récupère la méthode suivante dans une énumération qui commence par un appel à [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -50,7 +50,7 @@ HRESULT NextMethod (
 [in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `lFlags`  
-[in] Réservé. Ce paramètre doit être 0.
+[in] Réservée. Ce paramètre doit être 0.
 
 `pName`  
 [out] Un pointeur qui pointe vers `null` avant l’appel. Lorsque la fonction est retournée, l’adresse d’un nouveau `BSTR` qui contient le nom de méthode. 
@@ -81,12 +81,12 @@ L’appelant commence la séquence d’énumération en appelant le [BeginMethod
 
 Pour obtenir un exemple C++, consultez le [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) (méthode).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

@@ -2,23 +2,23 @@
 title: '&lt;add&gt; de &lt;claimTypeRequirements&gt;'
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 5d4f0cd71ab9bf69921704300018207c9f7af107
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7c3516736f9aa4bbfcf24c2cd58c73438e5314b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633269"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt"></a>&lt;add&gt; de &lt;claimTypeRequirements&gt;
 Spécifie les types de revendications requis et facultatifs censés apparaître dans les informations d'identification fédérées. Par exemple, les services déclarent les exigences relatives aux informations d’identification entrantes devant posséder un certain jeu de types de revendications.  
   
  \<system.serviceModel>  
-\<liaisons >  
-\<customBinding >  
-\<liaison >  
-\<sécurité >  
-\<issuedTokenParameters >  
-\<claimTypeRequirements >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<security>  
+\<issuedTokenParameters>  
+\<claimTypeRequirements>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,17 +72,17 @@ Spécifie les types de revendications requis et facultatifs censés apparaître 
 </bindings>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
+- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

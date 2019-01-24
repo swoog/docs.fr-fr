@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableCachingBindingFailures&gt; élément'
+title: '&lt;disableCachingBindingFailures&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78ca269dacc33fb441310ad00ba2548826f5403e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 20cc7e37b2ea66cae9f28367f97b69ed43f1a13e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543865"
 ---
-# <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt; élément
+# <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt; Element
 Spécifie s’il faut désactiver la mise en cache des échecs se produisent, car l’assembly est introuvable par la détection de liaison.  
   
  \<configuration > élément  
 \<runtime > élément  
-\<disableCachingBindingFailures >  
+\<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,7 +80,7 @@ Spécifie s’il faut désactiver la mise en cache des échecs se produisent, ca
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Méthode de localisation des assemblys par le runtime](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

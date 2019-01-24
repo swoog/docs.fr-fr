@@ -1,21 +1,21 @@
 ---
-title: '&lt;BackupList&gt;'
+title: '&lt;backupList&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 1a6a7ac42b379dd8fb2ba80cf6a3a38998c26a59
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c11fd38e7c40f740d4c1c36ab87c44744ed0daab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627981"
 ---
-# <a name="ltbackuplistgt"></a>&lt;BackupList&gt;
+# <a name="ltbackuplistgt"></a>&lt;backupList&gt;
 Représente une section de configuration pour définir une liste de sauvegarde qui énumère un ensemble de points de terminaison que vous souhaitez que le Service de routage à utiliser au cas où le point de terminaison principal n’est pas accessible. Si le premier point de terminaison de la liste est inactif, le service de routage bascule automatiquement sur le suivant dans la liste.  Vous disposez ainsi d’une méthode rapide pour renforcer la fiabilité de votre application sans avoir à apprendre à votre application cliente à gérer des modèles complexes ou à rechercher l’emplacement de tous vos services déployés.  
   
  \<system.serviceModel>  
-\<routage >  
-\<backupLists >  
-\<backupList >  
+\<routing>  
+\<backupLists>  
+\<backupList>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ Représente une section de configuration pour définir une liste de sauvegarde q
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<routage >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Liste de points de terminaison de sauvegarde.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Liste de points de terminaison de sauvegarde.|  
   
 ## <a name="remarks"></a>Notes  
  Cette section contient une collection ordonnée de points de terminaison auxquels un message sera transmis si une exception de communication se produit lors de l’envoi au point de terminaison primaire.  
@@ -73,5 +73,5 @@ Représente une section de configuration pour définir une liste de sauvegarde q
 </backupLists>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

@@ -2,18 +2,18 @@
 title: '&lt;certificateReference&gt; de &lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 17c64150edd7cb1763387323f8683ed68d064fb0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ff831cebc78113e1808f9fe3911717f19127c4f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626626"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;certificateReference&gt; de &lt;identity&gt;
 Spécifie les paramètres de validation du certificat X.509. Un client Windows Communication Foundation (WCF) sécurisé qui se connecte à un point de terminaison avec cette identité vérifie que les revendications présentées par le serveur contiennent la revendication d’identité utilisée pour construire cette identité.  
   
- \<identité >  
-\<certificateReference >  
+ \<identity>  
+\<certificateReference>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,9 +35,9 @@ Spécifie les paramètres de validation du certificat X.509. Un client Windows C
 |---------------|-----------------|  
 |findValue|Indique la valeur à rechercher dans le magasin de certificats X.509. Le type contenu dans cet attribut doit répondre aux spécifications de la valeur `X509FindType` spécifiée. La valeur par défaut est une chaîne vide.|  
 |isChainIncluded|Valeur booléenne indiquant si la validation est effectuée à l'aide d'une chaîne de certificats.|  
-|storeLocation|Indique l'emplacement du magasin de certificats pouvant être utilisé par le client pour valider le certificat du serveur.<br /><br /> Les valeurs valides sont les suivantes :<br /><br /> -LocalMachine : Magasin de certificats assigné à l’ordinateur local.<br />-CurrentUser : Magasin de certificats assigné à l’utilisateur actuel.<br /><br /> La valeur par défaut est LocalMachine.<br /><br /> Cet attribut est de type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|storeName|Spécifie le nom du magasin de certificats X.509 à ouvrir.<br /><br /> Les valeurs valides sont les suivantes :<br /><br /> -Carnet d’adresses : Magasin de certificats pour d’autres utilisateurs.<br />-AuthRoot : Magasin de certificats Autorités de certification tierce (CA).<br />-CertificateAuthority : Magasin de certificats Autorités de certification intermédiaires.<br />-Interdit : Magasin de certificats pour les certificats révoqués.<br />-Mon : Magasin de certificats pour les certificats personnels.<br />-Racine : Magasin de certificats Autorités de certification racines de confiance.<br />-TrustedPeople : Magasin de certificats pour les personnes et ressources directement approuvées.<br />-TrustedPublisher : Magasin de certificats pour les éditeurs directement approuvés.<br /><br /> La valeur par défaut est My.<br /><br /> Cet attribut est de type <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Indique le type de recherche X.509 à exécuter. Le type contenu dans l'attribut `findValue` doit satisfaire les spécifications du X509FindType spécifié.<br /><br /> Les valeurs valides sont les suivantes :<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> La valeur par défaut est FindBySubjectDistinguishedName.<br /><br /> Cet attribut est de type <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|storeLocation|Indique l'emplacement du magasin de certificats pouvant être utilisé par le client pour valider le certificat du serveur.<br /><br /> Les valeurs valides sont les suivantes :<br /><br /> -   LocalMachine: Magasin de certificats assigné à l’ordinateur local.<br />-CurrentUser : Magasin de certificats assigné à l’utilisateur actuel.<br /><br /> La valeur par défaut est LocalMachine.<br /><br /> Cet attribut est de type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|storeName|Spécifie le nom du magasin de certificats X.509 à ouvrir.<br /><br /> Les valeurs valides sont les suivantes :<br /><br /> -Carnet d’adresses : Magasin de certificats pour d’autres utilisateurs.<br />-   AuthRoot: Magasin de certificats Autorités de certification tierce (CA).<br />-   CertificateAuthority: Magasin de certificats Autorités de certification intermédiaires.<br />-Interdit : Magasin de certificats pour les certificats révoqués.<br />-Mon : Magasin de certificats pour les certificats personnels.<br />-Racine : Magasin de certificats Autorités de certification racines de confiance.<br />-   TrustedPeople: Magasin de certificats pour les personnes et ressources directement approuvées.<br />-TrustedPublisher : Magasin de certificats pour les éditeurs directement approuvés.<br /><br /> La valeur par défaut est My.<br /><br /> Cet attribut est de type <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
+|X509FindType|Indique le type de recherche X.509 à exécuter. Le type contenu dans l'attribut `findValue` doit satisfaire les spécifications du X509FindType spécifié.<br /><br /> Les valeurs valides sont les suivantes :<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> La valeur par défaut est FindBySubjectDistinguishedName.<br /><br /> Cet attribut est de type <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -46,10 +46,10 @@ Spécifie les paramètres de validation du certificat X.509. Un client Windows C
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<identité >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Indique les paramètres permettant l'authentification d'un point de terminaison par les autres points de terminaison qui échangent des messages avec lui.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Indique les paramètres permettant l'authentification d'un point de terminaison par les autres points de terminaison qui échangent des messages avec lui.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>

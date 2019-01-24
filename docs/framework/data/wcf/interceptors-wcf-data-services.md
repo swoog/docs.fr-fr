@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: c2086d451af72157785796052af123cd210ee036
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 14212c9993d936138df70160e4e49152cd5ff958
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47202722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626756"
 ---
 # <a name="interceptors-wcf-data-services"></a>Intercepteurs (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permet à une application d’intercepter les messages de demande afin que vous pouvez ajouter une logique personnalisée à une opération. Vous pouvez utiliser cette logique personnalisée pour valider les données dans les messages entrants. Vous pouvez également l'utiliser pour restreindre davantage l'étendue d'une requête d'interrogation, comme l'insertion d'une stratégie d'autorisation personnalisée sur la base de chaque demande.  
@@ -23,7 +23,7 @@ ms.locfileid: "47202722"
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
- Pour plus d’informations, consultez [Comment : intercepter des Messages de Service de données](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Pour plus d'informations, voir [Procédure : Intercepter les Messages de Service de données](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
  Les intercepteurs de modification, appelés lors du traitement d'opérations de non-requête, doivent retourner `void` (`Nothing` en Visual Basic). Les méthodes d'intercepteur de requête doivent accepter les deux paramètres suivants :  
   
@@ -36,17 +36,17 @@ ms.locfileid: "47202722"
  [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
- Pour plus d’informations, consultez [Comment : intercepter des Messages de Service de données](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Pour plus d'informations, voir [Procédure : Intercepter les Messages de Service de données](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
  Les attributs suivants sont pris en charge pour l'interception.  
   
- **[QueryInterceptor (** *EntitySetName* **)]**  
+ **[QueryInterceptor(** *EntitySetName* **)]**  
  Les méthodes qui appliquent l'attribut <xref:System.Data.Services.QueryInterceptorAttribute> sont appelées lorsqu'une demande HTTP GET est reçue pour la ressource de jeu d'entités ciblée. Ces méthodes doivent toujours retourner une expression lambda sous la forme `Expression<Func<T,bool>>`.  
   
- **[ChangeInterceptor (** *EntitySetName* **)]**  
+ **[ChangeInterceptor(** *EntitySetName* **)]**  
  Les méthodes qui appliquent l'attribut <xref:System.Data.Services.ChangeInterceptorAttribute> sont appelées lorsqu'une demande HTTP différente d'une demande HTTP GET est reçue pour la ressource de jeu d'entités ciblée. Ces méthodes doivent toujours retourner `void` (`Nothing` en Visual Basic).  
   
- Pour plus d’informations, consultez [Comment : intercepter des Messages de Service de données](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Pour plus d'informations, voir [Procédure : Intercepter les Messages de Service de données](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Opérations de service](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Opérations de service](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

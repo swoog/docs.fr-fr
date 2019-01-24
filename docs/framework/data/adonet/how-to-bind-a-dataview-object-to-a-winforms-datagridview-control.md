@@ -1,18 +1,18 @@
 ---
-title: 'Comment : lier un objet DataView à un contrôle DataGridView Windows Forms'
+title: 'Procédure : Lier un objet DataView à un contrôle de DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b73d60a-6049-446a-85a7-3e5a68b183e2
-ms.openlocfilehash: 98b3afcded257bc11dc3bca7d9a9310dc1a7cc89
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e2e8cad453311035332e5a397667835f047184b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548363"
 ---
-# <a name="how-to-bind-a-dataview-object-to-a-windows-forms-datagridview-control"></a>Comment : lier un objet DataView à un contrôle DataGridView Windows Forms
+# <a name="how-to-bind-a-dataview-object-to-a-windows-forms-datagridview-control"></a>Procédure : Lier un objet DataView à un contrôle de DataGridView Windows Forms
 Le contrôle <xref:System.Windows.Forms.DataGridView> offre un moyen puissant et flexible d'afficher des données sous forme de tableau. Le contrôle <xref:System.Windows.Forms.DataGridView> prend en charge le modèle de liaison de données Windows Forms standard ; il peut donc créer une liaison avec <xref:System.Data.DataView> et diverses autres sources de données. Dans la plupart des cas, toutefois, vous créerez une liaison avec un composant <xref:System.Windows.Forms.BindingSource> qui gérera les détails de l'interaction avec la source de données.  
   
  Pour plus d’informations sur la <xref:System.Windows.Forms.DataGridView> du contrôle, consultez [vue d’ensemble du contrôle DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
@@ -29,5 +29,5 @@ Le contrôle <xref:System.Windows.Forms.DataGridView> offre un moyen puissant et
      [!code-csharp[DP DataViewWinForms Sample#LDVSample1FormLoad](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/CS/Form1.cs#ldvsample1formload)]
      [!code-vb[DP DataViewWinForms Sample#LDVSample1FormLoad](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/VB/Form1.vb#ldvsample1formload)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Liaison de données et LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+## <a name="see-also"></a>Voir aussi
+- [Liaison de données et LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)

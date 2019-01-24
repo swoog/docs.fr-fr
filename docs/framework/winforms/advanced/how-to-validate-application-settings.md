@@ -1,5 +1,5 @@
 ---
-title: "Comment : valider des paramètres d'application"
+title: 'Procédure : Valider les paramètres d’Application'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: aa8877150d654bf9659dbb34b91436c0ee9ff8b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496281"
 ---
-# <a name="how-to-validate-application-settings"></a>Comment : valider des paramètres d'application
+# <a name="how-to-validate-application-settings"></a>Procédure : Valider les paramètres d’Application
 Cette rubrique illustre la validation des paramètres d’application avant qu’ils ne soient rendus persistants.  
   
- Les paramètres d’application fortement typés empêchent les utilisateurs d’affecter les données d’un type incorrect pour un paramètre donné. Toutefois, un utilisateur peut essayer d’assigner une valeur à un paramètre qui se situe en dehors des limites acceptables, par exemple en fournissant une date de naissance future. <xref:System.Configuration.ApplicationSettingsBase>, la classe parente de toutes les classes de paramètres d’application, expose quatre événements pour activer la vérification de ces limites. La gestion de ces événements place la totalité de votre code de validation dans un emplacement unique, plutôt que de le répartir dans votre projet.  
+ Les paramètres d’application fortement typés empêchent les utilisateurs d’affecter les données d’un type incorrect pour un paramètre donné. Toutefois, un utilisateur peut essayer d’assigner une valeur à un paramètre qui se situe en dehors des limites acceptables, par exemple en fournissant une date de naissance future. <xref:System.Configuration.ApplicationSettingsBase>, la classe parente de toutes les classes de paramètres d’application, expose quatre événements permettant d’activer la vérification de ces limites. La gestion de ces événements place la totalité de votre code de validation dans un emplacement unique, plutôt que de le répartir dans votre projet.  
   
  L’événement que vous utilisez dépend du moment où vous devez valider vos paramètres, comme décrit dans le tableau suivant.  
   
-|événement|Occurrence et utilisation|  
+|Événement|Occurrence et utilisation|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Se produit après le chargement initial d’un groupe de propriétés de paramètres.<br /><br /> Utilisez cet événement pour valider les valeurs initiales de l’ensemble du groupe de propriétés avant de les utiliser dans l’application.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Se produit avant la modification de la valeur d’une propriété unique de paramètres.<br /><br /> Utilisez cet événement pour valider une propriété unique avant sa modification. Il peut fournir des commentaires immédiats aux utilisateurs à propos de leurs actions et de leurs choix.|  
 |<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Se produit après la modification de la valeur d’une propriété unique de paramètres.<br /><br /> Utilisez cet événement pour valider une propriété unique après sa modification. Cet événement est rarement utilisé pour la validation, sauf si un processus de validation long et asynchrone est requis.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Se produit avant que le groupe de propriétés de paramètres ne soit stocké.<br /><br /> Utilisez cet événement pour valider les valeurs de l’ensemble du groupe de propriétés avant qu’elles ne soient rendues persistantes sur le disque.|  
   
- En règle générale, vous n’utiliserez pas tous ces événements dans la même application à des fins de validation. Par exemple, il est souvent possible de répondre à toutes les exigences de validation en gérant uniquement le <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> événement.  
+ En règle générale, vous n’utiliserez pas tous ces événements dans la même application à des fins de validation. Par exemple, il est souvent possible répondre à toutes les exigences de validation en gérant uniquement les <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> événement.  
   
  Un gestionnaire d’événements exécute généralement l’une des actions suivantes lorsqu’il détecte une valeur non valide :  
   
@@ -42,7 +42,7 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
   
  Pour plus d’informations sur la gestion des événements, consultez [Vue d’ensemble des gestionnaires d’événements](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- Les procédures suivantes indiquent comment tester une date de naissance valide à l’aide du <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ou <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> événement. Ces procédures ont été écrites en supposant que vous avez déjà créé vos paramètres d’application. Dans cet exemple, nous vérifions les limites d’un paramètre nommé `DateOfBirth`. Pour plus d’informations sur la création de paramètres, consultez [Comment : créer des paramètres d’application](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Les procédures suivantes montrent comment tester une date de naissance valide à l’aide du <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ou <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> événement. Ces procédures ont été écrites en supposant que vous avez déjà créé vos paramètres d’application. Dans cet exemple, nous vérifions les limites d’un paramètre nommé `DateOfBirth`. Pour plus d’informations sur la création de paramètres, consultez [Comment : Créer des paramètres de l’Application](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Pour obtenir l’objet des paramètres de l’application  
   
@@ -58,11 +58,11 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
         MySettings.Default   
         ```  
   
-         - ou -  
+         ou  
   
     -   Si vous êtes un développeur Visual Basic et si vous avez créé vos paramètres d’application à l’aide du Concepteur de projet, vous pouvez récupérer vos paramètres à l’aide de l’[objet My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         - ou -  
+         ou  
   
     -   Si vous avez créé vos paramètres en dérivant de <xref:System.Configuration.ApplicationSettingsBase> directement, vous devez instancier votre classe manuellement.  
   
@@ -78,9 +78,9 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Pour valider les paramètres de l’application lors de la modification d’un paramètre  
   
-1.  Si vous êtes un développeur c#, dans votre formulaire ou de contrôle `Load` événement, ajoutez un gestionnaire d’événements pour le <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> événement.  
+1.  Si vous êtes un C# developer, dans votre formulaire ou le contrôle `Load` événement, ajouter un gestionnaire d’événements pour le <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> événement.  
   
-     - ou -  
+     ou  
   
      Si vous êtes un développeur Visual Basic, vous devez déclarer la variable `Settings` à l’aide du mot clé`WithEvents`.  
   
@@ -126,7 +126,7 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>Pour valider les paramètres d’application en cas d’enregistrement  
   
-1.  Dans votre formulaire ou de contrôle `Load` événement, ajoutez un gestionnaire d’événements pour le <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> événement.  
+1.  Dans votre formulaire ou le contrôle `Load` événement, ajoutez un gestionnaire d’événements pour le <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> événement.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -160,6 +160,6 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
     End Sub  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Création de gestionnaires d’événements dans les Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Comment : créer des paramètres d’application](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a>Voir aussi
+- [Création de gestionnaires d’événements dans les Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Guide pratique pour Créer des paramètres d’Application](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

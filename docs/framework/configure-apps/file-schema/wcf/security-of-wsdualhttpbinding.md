@@ -2,21 +2,21 @@
 title: '&lt;security&gt; de &lt;wsDualHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 5759e8a3618cd959605b139577bae24c35490ea8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 56755ec62c6e2c35ecdb94e4aa58903ed1216378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555936"
 ---
 # <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a>&lt;security&gt; de &lt;wsDualHttpBinding&gt;
 Définit les fonctionnalités de sécurité de la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
   
  \<system.ServiceModel>  
-\<liaisons >  
+\<bindings>  
 \<wsDualHttpBinding>  
-\<liaison >  
-\<sécurité >  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,16 +54,16 @@ Définit les fonctionnalités de sécurité de la [ \<wsDualHttpBinding >](../..
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison de la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison de la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
   
 ## <a name="remarks"></a>Notes  
  Une liaison double expose l’adresse IP du client au service. Ce client doit utiliser un mode de sécurité qui vérifiera qu'il se connecte uniquement à des services de confiance.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.WSDualHttpSecurity>  
- <xref:System.ServiceModel.BasicHttpSecurity>  
- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<liaison >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.WSDualHttpSecurity>
+- <xref:System.ServiceModel.BasicHttpSecurity>
+- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

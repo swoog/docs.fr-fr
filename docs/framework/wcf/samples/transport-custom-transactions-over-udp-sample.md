@@ -1,16 +1,16 @@
 ---
-title: 'Transport: Custom Transactions over UDP Sample'
+title: 'Transport : Transactions personnalisées sur UDP exemple'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: b3a105194ceef9d9091dfbc9521fd47978517f89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552205"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Custom Transactions over UDP Sample
-Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple dans Windows Communication Foundation (WCF)[extensibilité du Transport](../../../../docs/framework/wcf/samples/transport-extensibility.md). Il étend l'exemple UDP Transport afin de prendre en charge le flux de transactions personnalisé et présente l'utilisation de la propriété <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
+# <a name="transport-custom-transactions-over-udp-sample"></a>Transport : Transactions personnalisées sur UDP exemple
+Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple dans Windows Communication Foundation (WCF)[extensibilité du Transport](../../../../docs/framework/wcf/samples/transport-extensibility.md). Il étend l’exemple UDP Transport afin de prendre en charge le flux de transactions personnalisé et présente l’utilisation de la propriété <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>Modifications du code dans l'exemple UDP Transport  
  Pour illustrer le flux de transactions, l'exemple modifie le contrat de service de `ICalculatorContract` afin qu'une portée de transaction soit requise pour `CalculatorService.Add()`. L'exemple ajoute également un paramètre `System.Guid` supplémentaire au contrat de l'opération `Add`. Ce paramètre permet de transmettre l’identificateur de la transaction cliente au service.  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- Le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple utilise des paquets UDP pour transmettre des messages entre un client et un service. Le [Transport : exemple de Transport personnalisé](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) utilise le même mécanisme pour transporter des messages, mais lorsqu’une transaction est transmise, elle est insérée dans le paquet UDP avec le message encodé.  
+ Le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple utilise des paquets UDP pour transmettre des messages entre un client et un service. Le [Transport : Exemple de Transport personnalisé](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) utilise le même mécanisme pour transporter des messages, mais lorsqu’une transaction est transmise, elle est insérée dans le paquet UDP avec le message encodé.  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -48,7 +48,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` est une méthode d'assistance qui contient de nouvelles fonctionnalités permettant de fusionner le jeton de propagation de la transaction actuelle avec l'entité de message, et de le placer dans une mémoire tampon.  
   
- Pour le transport de flux de transaction personnalisée, l’implémentation du client doit connaître les opérations de service nécessitent des flux de transaction et de transmettre ces informations à WCF. Un mécanisme doit également permettre de transmettre la transaction utilisateur à la couche de transport. Cet exemple utilise « Inspecteurs de message WCF » pour obtenir ces informations. L'inspecteur de message client implémenté ici et appelé `TransactionFlowInspector` effectue les tâches suivantes :  
+ Pour le transport de flux de transaction personnalisée, l’implémentation du client doit connaître les opérations de service nécessitent des flux de transaction et de transmettre ces informations à WCF. Un mécanisme doit également permettre de transmettre la transaction utilisateur à la couche de transport. Cet exemple utilise « Inspecteurs de message WCF » pour obtenir ces informations. L’inspecteur de message client implémenté ici et appelé `TransactionFlowInspector` effectue les tâches suivantes :  
   
 -   Il détermine si une transaction doit être transmise pour une action de message donnée (cette opération a lieu dans `IsTxFlowRequiredForThisOperation()`).  
   
@@ -262,5 +262,5 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a>Voir aussi  
- [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>Voir aussi
+- [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

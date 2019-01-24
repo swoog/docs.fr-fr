@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 52692bf165927ba50ab55e4c0f8bbc92b23d2272
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: ad0b30c9f628148f77761ff3af810b484c5ae583
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632918"
 ---
 # <a name="weak-event-patterns"></a>Modèles d'événement faible
 Dans les applications, il est possible que les gestionnaires qui sont attachés à des sources d’événements ne seront pas détruits en coordination avec l’objet écouteur qui joint le gestionnaire à la source. Cette situation peut entraîner des fuites de mémoire. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduit un modèle de conception qui peut être utilisé pour résoudre ce problème, en fournissant une classe de gestionnaire dédiée pour des événements particuliers et en implémentant une interface sur les écouteurs de cet événement. Ce modèle de conception est appelé le *modèle d’événement faible*.  
@@ -130,8 +130,8 @@ Dans les applications, il est possible que les gestionnaires qui sont attachés 
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.WeakEventManager>  
- <xref:System.Windows.IWeakEventListener>  
- [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.WeakEventManager>
+- <xref:System.Windows.IWeakEventListener>
+- [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)

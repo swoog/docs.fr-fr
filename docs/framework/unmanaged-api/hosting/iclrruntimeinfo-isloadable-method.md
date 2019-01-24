@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e60c3b06453e0f447249bddf5d4da5c240576577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9780020abe609212fe3c4bd65f70200467ff9c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533687"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable, méthode
-Indique si le runtime associé à cette interface peut être chargé dans le processus actuel, en tenant compte autres exécutions qui peuvent déjà être chargées dans le processus.  
+Indique si le runtime associé à cette interface peut être chargé dans le processus actuel, en tenant compte autres runtimes qui peuvent déjà être chargées dans le processus.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ HRESULT IsLoadable(
   
 #### <a name="parameters"></a>Paramètres  
  `pbLoadable`  
- [out] `true` si ce runtime a pu être chargé dans le processus actuel ; sinon, `false`.  
+ [out] `true` si ce runtime a pu être chargé dans le processus en cours ; sinon, `false`.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.  
@@ -47,20 +47,20 @@ HRESULT IsLoadable(
 |E_POINTER|`pbLoadable` a la valeur null.|  
   
 ## <a name="remarks"></a>Notes  
- Si un autre runtime est déjà chargé dans le processus et que le runtime associé à cette interface peut être chargé pour l’exécution de côte à côte in-process, `pbLoadable` retourne `true`. Si les deux runtimes ne peut pas exécuter côte à côte in-process, `pbLoadable` retourne `false`. Par exemple, le common language runtime (CLR) version 4 peut s’exécuter côte à côte dans le même processus avec le CLR version 2.0 ou CLR version 1.1. Toutefois, la version 1.1 et CLR version 2.0 ne peut pas exécuter de côte à côte in-process.  
+ Si un autre runtime est déjà chargé dans le processus et le runtime associé à cette interface peut être chargé pour l’exécution de côte à côte in-process, `pbLoadable` retourne `true`. Si les deux runtimes ne peut pas exécuter côte à côte in-process, `pbLoadable` retourne `false`. Par exemple, le common language runtime (CLR) version 4 peut s’exécuter côte à côte dans le même processus avec le CLR version 2.0 ou version 1.1 du CLR. Toutefois, les version 1.1 et CLR version 2.0 ne peut pas exécuter côte à côte in-process.  
   
  Si aucun runtime n’est chargées dans le processus, cette méthode retourne toujours `true`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRRuntimeInfo, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRRuntimeInfo, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -2,12 +2,12 @@
 title: Client Validation
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: ae322dbaebb07846fec3379b897114dac328817f
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 3a80121894ddbb753efbe047d14a14a57f8dddc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640002"
 ---
 # <a name="client-validation"></a>Client Validation
 Les services publient fréquemment des métadonnées pour activer la génération et la configuration automatiques de types de proxy clients. Lorsque le service n'est pas approuvé, les applications clientes doivent valider que les métadonnées se conforment à la stratégie de l'application cliente en ce qui concerne la sécurité, les transactions, le type de contrat de service, etc. L'exemple suivant montre comment écrire un comportement de point de terminaison client qui valide le point de terminaison de service pour garantir que ce dernier est fiable.  
@@ -63,5 +63,5 @@ Les services publient fréquemment des métadonnées pour activer la génératio
     > [!NOTE]
     >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples WCF qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le CurrentUser - TrustedPeople stocker. Pour ce faire, utilisez la ligne de commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)

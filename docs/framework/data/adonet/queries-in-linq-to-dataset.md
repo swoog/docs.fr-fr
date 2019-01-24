@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 2b2d487484f026be7637185ef759fb87db571b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8c5f94cb7f815e4aebef10d930843971219baef6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623116"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Requêtes dans LINQ to DataSet
 Une requête est une expression qui récupère des données d'une source de données. En général, les requêtes sont exprimées dans un langage de requête spécialisé, tel que SQL pour les bases de données relationnelles et Xquery pour XML. Par conséquent, les développeurs ont dû apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qu'ils interrogent. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] offre un modèle simplifié et cohérent qui permet d'utiliser des données de types de sources et de formats diversifiés. Dans une requête [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], vous travaillez toujours avec des objets de programmation.  
@@ -59,8 +59,8 @@ Une requête est une expression qui récupère des données d'une source de donn
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [Interrogation de DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [Bien démarrer avec LINQ en C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Bien démarrer avec LINQ en Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide de programmation](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [Interrogation de DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [Bien démarrer avec LINQ en C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Bien démarrer avec LINQ en Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

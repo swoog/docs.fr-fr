@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: a8767ca492a514f3ee7a2d4688858282ec706ef7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f2aff8d5d8779e3c99644238ae54d30a13f00304
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618946"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Génération de commandes avec CommandBuilders
 Lorsque la propriété `SelectCommand` est spécifiée de manière dynamique au moment de l'exécution, par l'intermédiaire d'un outil de requête qui prend une commande textuelle provenant de l'utilisateur par exemple, il est possible que vous ne puissiez pas spécifier les propriétés `InsertCommand`, `UpdateCommand` ou `DeleteCommand` appropriées au moment de la conception. Si l'objet <xref:System.Data.DataTable> est mappé à une table de base de données unique ou est généré par elle, vous pouvez tirer parti de l'objet <xref:System.Data.Common.DbCommandBuilder> pour générer automatiquement les propriétés `DeleteCommand`, `InsertCommand` et `UpdateCommand` de l'objet <xref:System.Data.Common.DbDataAdapter>.  
@@ -112,8 +112,8 @@ custDS.Tables.Remove(custDS.Tables["Customers"]);
 adapter.Fill(custDS, "Customers");  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Exécution d’une commande](../../../../docs/framework/data/adonet/executing-a-command.md)  
- [DbConnection, DbCommand et DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Exécution d’une commande](../../../../docs/framework/data/adonet/executing-a-command.md)
+- [DbConnection, DbCommand et DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

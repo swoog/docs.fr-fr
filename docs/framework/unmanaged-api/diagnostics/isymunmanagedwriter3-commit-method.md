@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e4e2cd49bdffd0a1293a5601cb44e4804e2b1ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 90ef45650b30fd57fb93d0e16eac6e34079745b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526234"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>ISymUnmanagedWriter3::Commit, méthode
-Valide les modifications écrites jusqu'à présent dans le flux de données.  
+Valide les modifications écrites jusqu'à présent dans le flux.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,5 +39,5 @@ HRESULT Commit();
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedWriter3, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedWriter3, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

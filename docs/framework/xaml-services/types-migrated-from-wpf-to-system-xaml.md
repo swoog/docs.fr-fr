@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: d59ff8657f7750db8908aac15936f12838b27eaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc895313ae89d464c4ddc16607d19b2e6160f80c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524258"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Types migrés de WPF vers System.Xaml
 Dans [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] et [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], à la fois [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] et Windows Workflow Foundation inclus une implémentation de langage XAML. La plupart des types publics qui fournissaient une extensibilité pour l'implémentation XAML WPF se trouvaient dans les assemblys WindowsBase, PresentationCore et PresentationFramework. De même, les types publics qui fournissaient une extensibilité pour Windows Workflow Foundation XAML se trouvaient dans l’assembly System.Workflow.ComponentModel. Dans [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], certains types XAML sont migrés vers l'assembly System.Xaml. Une implémentation .NET Framework courante de services de langage XAML autorise de nombreux scénarios d'extensibilité XAML initialement définis par l'implémentation XAML d'une infrastructure spécifique mais faisant désormais partie de la prise en charge globale du langage XAML [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . Cette rubrique répertorie les types qui sont migrés et traite des problèmes relatifs à la migration.  
@@ -22,10 +22,10 @@ Dans [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] et [!INCLUDE
   
  Dans [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], un nouvel espace de noms <xref:System.Xaml> et un nouvel assembly System.Xaml ont été créés. La plupart des types implémentés initialement pour XAML WPF sont maintenant fournis comme points ou services d'extensibilité pour les implémentations du langage XAML. En vue de les rendre disponibles pour des scénarios plus généraux, les types sont transférés de leur assembly WPF d'origine vers l'assembly System.Xaml. Cela permet des scénarios d’extensibilité XAML sans avoir à inclure les assemblys d’autres infrastructures (telles que WPF et Windows Workflow Foundation).  
   
- En ce qui concerne les types migrés, ils restent pour la plupart dans l'espace de noms <xref:System.Windows.Markup> . Cela permettait en partie d'éviter d'interrompre le mappage des espaces de noms CLR dans les implémentations existantes par fichier. Par conséquent, l'espace de noms <xref:System.Windows.Markup> de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] contient un mélange de types généraux de prise en charge du langage XAML (provenant de l'assembly System.Xaml) et de types spécifiques à l'implémentation XAML WPF (provenant de WindowsBase et d'autres assemblys WPF). Tous les types migrés vers System.Xaml, mais se trouvant déjà dans un assembly WPF, prennent en charge le transfert des types dans la version 4 de l'assembly WPF.  
+ En ce qui concerne les types migrés, ils restent pour la plupart dans l'espace de noms <xref:System.Windows.Markup> . Cela permettait en partie d'éviter d'interrompre le mappage des espaces de noms CLR dans les implémentations existantes par fichier. Par conséquent, l'espace de noms <xref:System.Windows.Markup> de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] contient un mélange de types généraux de prise en charge du langage XAML (provenant de l'assembly System.Xaml) et de types spécifiques à l'implémentation XAML WPF (provenant de WindowsBase et d'autres assemblys WPF). Tous les types migrés vers System.Xaml, mais se trouvant déjà dans un assembly WPF, prennent en charge le transfert des types dans la version 4 de l'assembly WPF.  
   
 ### <a name="workflow-xaml-support-types"></a>Types de prise en charge XAML du flux de travail  
- Windows Workflow Foundation fourni également les types de prise en charge XAML, et dans de nombreux cas, ils portaient les mêmes noms courts équivalent WPF. Voici une liste des types de prise en charge XAML de Windows Workflow Foundation :  
+ Windows Workflow Foundation fournis également des types de prise en charge XAML, et dans de nombreux cas, ils portaient les mêmes noms courts équivalent WPF. Voici une liste des types de prise en charge de Windows Workflow Foundation XAML :  
   
 -   <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
   
@@ -33,7 +33,7 @@ Dans [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] et [!INCLUDE
   
 -   <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
   
- Prise en charge de ces types se trouvent toujours dans les assemblys de Windows Workflow Foundation pour [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] et peut toujours être utilisé pour des applications spécifiques de Windows Workflow Foundation ; Toutefois, ils ne doivent pas être référencés par des applications ou des infrastructures n’utilisant pas Windows Workflow Foundation.  
+ Prise en charge de ces types se trouvent toujours dans les assemblys de Windows Workflow Foundation pour [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] et peut toujours être utilisé pour des applications spécifiques de Windows Workflow Foundation ; Toutefois, ils ne doivent pas être référencés par les applications ou des infrastructures qui n’utilisent pas Windows Workflow Foundation.  
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
@@ -53,7 +53,7 @@ Dans [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] et [!INCLUDE
 >  L’interface [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] est un autre service de <xref:System.Windows.Markup.IReceiveMarkupExtension> associé aux extensions de balisage. Cette inferface<xref:System.Windows.Markup.IReceiveMarkupExtension> n’a pas été migrée et est signalée comme `[Obsolete]` pour [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Les scénarios qui utilisaient l'interface <xref:System.Windows.Markup.IReceiveMarkupExtension> doivent désormais utiliser les rappels avec attribut <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> . La classe<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> est également signalée comme `[Obsolete]`.  
   
 <a name="xaml_language_features"></a>   
-## <a name="xaml-language-features"></a>Fonctionnalités du langage XAML  
+## <a name="xaml-language-features"></a>Fonctionnalités du langage XAML  
  Plusieurs fonctionnalités et composants du langage XAML pour WPF se trouvaient déjà dans l'assembly PresentationFramework. Ils ont été implémentés en tant que sous-classe <xref:System.Windows.Markup.MarkupExtension> pour exposer les utilisations des extensions de balisage en XAML dans le balisage XAML. Dans [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], ils se trouvent dans l'assembly System.Xaml afin que les projets n'incluant pas d'assemblys WPF puissent utiliser ces fonctionnalités au niveau du langage XAML. WPF utilise ces mêmes implémentations pour les applications [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . Comme avec d'autres situations répertoriées dans cette rubrique, les types de prise en charge se trouvent toujours dans l'espace de noms <xref:System.Windows.Markup> afin d'éviter d'endommager les références précédentes.  
   
  Le tableau suivant contient une liste des classes de prise en charge des fonctionnalités XAML définies dans System.Xaml.  
@@ -125,5 +125,5 @@ Dans [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] et [!INCLUDE
   
  Si vous incluez des références aux assemblys WPF et System.Xaml, et si vous utilisez également des instructions `include` pour les espaces de noms <xref:System.Windows.Markup> et <xref:System.Xaml> , vous devrez peut-être qualifier pleinement les appels à ces API afin de résoudre les types sans ambiguïté.  
   
-## <a name="see-also"></a>Voir aussi  
- [Services XAML](../../../docs/framework/xaml-services/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Services XAML](../../../docs/framework/xaml-services/index.md)

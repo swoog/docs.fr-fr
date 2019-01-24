@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4c1cbf075ef96073061679b6d062075490f5e4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aebcd2d2f2387f478c36e84dad82d90d4d70d68e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554671"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>Assistant Débogage managé exceptionSwallowedOnCallFromCom
-L'Assistant Débogage managé `exceptionSwallowedOnCallFromCOM` est activé quand une exception est levée à partir d'un code CLR (Common Language Runtime) appelé depuis COM via une méthode dépourvue de type de retour HRESULT non managé.  
+L’Assistant Débogage managé `exceptionSwallowedOnCallFromCOM` est activé quand une exception est levée à partir d’un code CLR (Common Language Runtime) appelé depuis COM via une méthode dépourvue de type de retour HRESULT non managé.  
   
 ## <a name="symptoms"></a>Symptômes  
  Un appel à un composant managé depuis COM retourne la valeur FALSE ou 0. Par ailleurs, si la méthode possède un type de retour void, la levée d'une exception pendant l'exécution de la méthode peut passer inaperçue. Dans ce cas, l'exception est interceptée discrètement et l'appelant COM reprend la main.  
@@ -46,7 +46,7 @@ L'Assistant Débogage managé `exceptionSwallowedOnCallFromCOM` est activé quan
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

@@ -2,20 +2,20 @@
 title: '&lt;add&gt; de &lt;services&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-ms.openlocfilehash: 9a86b7549e0efef10cbeb16dcc427d04065e43d3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dc68357332ebe06affd18f1539a66587b6ed1b91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549991"
 ---
 # <a name="ltaddgt-of-ltservicesgt"></a>&lt;add&gt; de &lt;services&gt;
 Spécifie les paramètres d’une instance de <xref:System.Workflow.Runtime.WorkflowRuntime> pour l’hébergement de services de Windows Communication Foundation (WCF) basés sur les flux de travail. Cet élément est de type <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
   
  \<system.ServiceModel>  
-\<comportements >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<comportement >  
+\<behavior>  
 \<services>  
 \<add>  
   
@@ -66,8 +66,8 @@ Spécifie les paramètres d’une instance de <xref:System.Workflow.Runtime.Work
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
- <xref:System.Workflow.Runtime.WorkflowRuntime>  
- [Fichiers de Configuration de flux de travail](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
+- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
+- <xref:System.Workflow.Runtime.WorkflowRuntime>
+- [Fichiers de Configuration de flux de travail](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))

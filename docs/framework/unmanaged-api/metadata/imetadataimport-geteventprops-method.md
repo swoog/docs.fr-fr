@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552357"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps, méthode
-Obtient les informations de métadonnées pour l’événement représenté par le jeton d’événement spécifié, y compris le type déclarant, l’ajouter et supprimer des méthodes pour les délégués et tous les indicateurs et autres données associées.  
+Obtient les informations de métadonnées pour l’événement représenté par le jeton d’événement spécifié, y compris le type déclarant, l’ajouter et supprimer des méthodes pour les délégués et les indicateurs et autres données associées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ HRESULT GetEventProps (
  [out] Le nom de l’événement référencé par `ev`.  
   
  `pchEvent`  
- [in] La longueur requise en caractères larges de `szEvent`.  
+ [in] La longueur demandée en caractères larges de `szEvent`.  
   
  `pdwEventFlags`  
  [out] La longueur retournée en caractères larges de `szEvent`.  
@@ -67,16 +67,16 @@ HRESULT GetEventProps (
  [out] Un pointeur vers un TypeRef ou TypeDef métadonnées jeton représentant le <xref:System.Delegate> type de l’événement.  
   
  `pmdAddOn`  
- [out] Pointeur vers le jeton de métadonnées représentant la méthode qui ajoute des gestionnaires pour l’événement.  
+ [out] Pointeur vers le jeton de métadonnées qui représente la méthode qui ajoute des gestionnaires pour l’événement.  
   
  `pmdRemoveOn`  
- [out] Pointeur vers le jeton de métadonnées représentant la méthode qui supprime les gestionnaires pour l’événement.  
+ [out] Pointeur vers le jeton de métadonnées qui représente la méthode qui supprime les gestionnaires pour l’événement.  
   
  `pmdFire`  
  [out] Pointeur vers le jeton de métadonnées représentant la méthode qui déclenche l’événement.  
   
  `rmdOtherMethod`  
- [out] Tableau de pointeurs de jetons à d’autres méthodes associées à l’événement.  
+ [out] Un tableau de pointeurs de jetons pour d’autres méthodes associées à l’événement.  
   
  `cMax`  
  [in] Taille maximale du tableau `rmdOtherMethod`.  
@@ -85,14 +85,14 @@ HRESULT GetEventProps (
  [out] Le nombre de jetons retournés dans `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

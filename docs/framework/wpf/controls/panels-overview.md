@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 77f8fc5057b8f31e684941b742f2cf696afd6b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525207"
 ---
 # <a name="panels-overview"></a>Vue d'ensemble de Panel
 <xref:System.Windows.Controls.Panel> les éléments sont des composants qui contrôlent le rendu des éléments : leur taille et dimensions, leur position et la disposition de leur contenu enfant. Le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un certain nombre de prédéfinis <xref:System.Windows.Controls.Panel> éléments, ainsi que la possibilité de construire personnalisé <xref:System.Windows.Controls.Panel> éléments.  
@@ -68,10 +68,10 @@ ms.locfileid: "47196627"
 |<xref:System.Windows.Controls.DockPanel>|Oui|Définit une zone dans laquelle vous pouvez organiser des éléments enfants horizontalement ou verticalement, les uns par rapport aux autres.|  
 |<xref:System.Windows.Controls.Grid>|Oui|Définit une zone de grille flexible composée de colonnes et de lignes. Éléments enfants d’un <xref:System.Windows.Controls.Grid> peuvent être positionnés avec précision à l’aide de la <xref:System.Windows.FrameworkElement.Margin%2A> propriété.|  
 |<xref:System.Windows.Controls.StackPanel>|Oui|Dispose des éléments enfants sur une seule ligne orientée horizontalement ou verticalement.|  
-|<xref:System.Windows.Controls.Primitives.TabPanel>|Non|Gère la disposition des boutons d’onglet dans un <xref:System.Windows.Controls.TabControl>.|  
-|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Non|Réorganise le contenu dans un <xref:System.Windows.Controls.ToolBar> contrôle.|  
-|<xref:System.Windows.Controls.Primitives.UniformGrid>|Non|<xref:System.Windows.Controls.Primitives.UniformGrid> est utilisé pour organiser les enfants dans une grille avec toutes les tailles de cellule égales.|  
-|<xref:System.Windows.Controls.VirtualizingPanel>|Non|Fournit une classe de base pour les éléments Panel qui peuvent « virtualiser » leur collection d’enfants.|  
+|<xref:System.Windows.Controls.Primitives.TabPanel>|Aucune|Gère la disposition des boutons d’onglet dans un <xref:System.Windows.Controls.TabControl>.|  
+|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Aucune|Réorganise le contenu dans un <xref:System.Windows.Controls.ToolBar> contrôle.|  
+|<xref:System.Windows.Controls.Primitives.UniformGrid>|Aucune|<xref:System.Windows.Controls.Primitives.UniformGrid> est utilisé pour organiser les enfants dans une grille avec toutes les tailles de cellule égales.|  
+|<xref:System.Windows.Controls.VirtualizingPanel>|Aucune|Fournit une classe de base pour les éléments Panel qui peuvent « virtualiser » leur collection d’enfants.|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|Oui|Organise et virtualise un contenu sur une seule ligne orientée horizontalement ou verticalement.|  
 |<xref:System.Windows.Controls.WrapPanel>|Oui|<xref:System.Windows.Controls.WrapPanel> Positionne des éléments enfants dans un ordre séquentiel de gauche à droite, en faisant passer le contenu à la ligne suivante à la périphérie de la zone conteneur. Classement continue ensuite séquentiellement de haut en bas ou de droite à gauche, selon la valeur de la <xref:System.Windows.Controls.WrapPanel.Orientation%2A> propriété.|  
   
@@ -252,13 +252,13 @@ ms.locfileid: "47196627"
   
  Pour plus d’informations sur la création d’applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] avec des interfaces utilisateur (IU) localisables [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)], consultez [Vue d’ensemble de l’utilisation de la disposition automatique](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédure pas à pas : ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Galerie de dispositions WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=160054)  
- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)  
- [Exemple de galerie de contrôles WPF](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [Vue d'ensemble de l'alignement, des marges et du remplissage](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Créer un exemple de panneau d’agencement de contenu personnalisé](https://go.microsoft.com/fwlink/?LinkID=159979)  
- [Vue d'ensemble des propriétés jointes](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Vue d’ensemble de l’utilisation de la disposition automatique](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Disposition et conception](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédure pas à pas : Ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Galerie de dispositions WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)
+- [Exemple de galerie de contrôles WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Vue d'ensemble de l'alignement, des marges et du remplissage](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Créer un exemple de panneau d’agencement de contenu personnalisé](https://go.microsoft.com/fwlink/?LinkID=159979)
+- [Vue d'ensemble des propriétés jointes](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Vue d’ensemble de l’utilisation de la disposition automatique](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [Disposition et conception](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

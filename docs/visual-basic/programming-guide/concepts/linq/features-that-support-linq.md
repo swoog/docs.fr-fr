@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519374"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Fonctionnalités Visual Basic prenant en charge LINQ
 Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence à la technologie en Visual Basic prend en charge la syntaxe de requête et les autres constructions de langage directement dans le langage. Avec [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous n’avez pas à apprendre un nouveau langage de requête sur une source de données externe. Vous pouvez interroger les données dans les bases de données relationnelles, de magasins XML ou d’objets à l’aide de Visual Basic. Cette intégration de fonctions de requête dans le langage permet la vérification au moment de la compilation pour les erreurs de syntaxe et de sécurité de type. Cette intégration garantit également que vous connaissez déjà la majeure partie de ce que vous devez savoir pour écrire des requêtes riches et variées dans Visual Basic.  
   
- Les sections suivantes décrivent les constructions de langage qui prennent en charge LINQ suffisamment détaillés pour vous permettent de lire la documentation d’introduction, les exemples de code et les exemples d’applications. Vous pouvez également cliquer sur les liens pour trouver des explications plus détaillées de la façon dont les fonctionnalités de langage sont combinent pour activer language integrated query. Un bon point de départ est [procédure pas à pas : écriture de requêtes dans Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ Les sections suivantes décrivent les constructions de langage qui prennent en charge LINQ suffisamment détaillés pour vous permettent de lire la documentation d’introduction, les exemples de code et les exemples d’applications. Vous pouvez également cliquer sur les liens pour trouver des explications plus détaillées de la façon dont les fonctionnalités de langage sont combinent pour activer language integrated query. Un bon point de départ est [procédure pas à pas : Écriture de requêtes dans Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>Expressions de requête  
  En Visual Basic, les expressions de requête peuvent être exprimées dans une syntaxe déclarative semblable à celle de SQL ou XQuery. Au moment de la compilation, la syntaxe de requête est convertie en appels de méthode à l’implémentation d’un fournisseur LINQ des méthodes d’extension de requête standard opérateur. Contrôle d’applications qui sont des opérateurs de requête standard dans la portée en spécifiant l’espace de noms approprié avec une `Imports` instruction. Syntaxe d’une expression de requête Visual Basic ressemble à ceci :  
@@ -55,7 +55,7 @@ Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence 
   
  Pour plus d’informations, consultez [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
-## <a name="extension-methods"></a>méthodes d’extension.  
+## <a name="extension-methods"></a>Méthodes d’extension  
  Méthodes d’extension permettent d’ajouter des méthodes à un type de données ou d’une interface à partir d’en dehors de la définition. Cette fonctionnalité vous permet, en effet, ajouter de nouvelles méthodes à un type existant sans modifier réellement. Les opérateurs de requête standard sont eux-mêmes un ensemble de méthodes d’extension qui fournissent des [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fonctionnalité de requête pour n’importe quel type qui implémente <xref:System.Collections.Generic.IEnumerable%601>. Autres extensions à <xref:System.Collections.Generic.IEnumerable%601> incluent <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>, et <xref:System.Linq.Enumerable.Intersect%2A>.  
   
  La méthode d’extension suivante ajoute une méthode d’impression à la <xref:System.String> classe.  
@@ -66,7 +66,7 @@ Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence 
   
  [!code-vb[VbLINQVbFeatures#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_7.vb)]  
   
- Pour plus d’informations, consultez la page [Méthodes d’extension](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Pour plus d’informations, consultez [Méthodes d’extension](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
 ## <a name="lambda-expressions"></a>Expressions lambda  
  Une expression lambda est une fonction sans nom qui calcule et retourne une valeur unique. Contrairement aux fonctions nommées, une expression lambda peut être définie et exécutée en même temps. L’exemple suivant affiche 4.  
@@ -93,9 +93,9 @@ Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence 
   
  Pour plus d’informations, consultez [Expressions lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Bien démarrer avec LINQ en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Option Infer (instruction)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict (instruction)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Voir aussi
+- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Bien démarrer avec LINQ en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Option Infer (instruction)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Strict (instruction)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

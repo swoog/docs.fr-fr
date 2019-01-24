@@ -1,15 +1,15 @@
 ---
-title: Le filtrage des données (Visual Basic)
+title: Filtrage des données (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: d3f44d0b6478103a10fb731988aeebc005cde82e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d65b9941ceffa7ea23c4ead192ec6b97b7b4ead8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527833"
 ---
-# <a name="filtering-data-visual-basic"></a>Le filtrage des données (Visual Basic)
+# <a name="filtering-data-visual-basic"></a>Filtrage des données (Visual Basic)
 Le filtrage fait référence à l’opération de restriction du jeu de résultats pour que celui-ci contienne uniquement les éléments qui répondent à une condition spécifiée. Cette opération est également appelée « sélection ».  
   
  L’illustration suivante montre les résultats du filtrage d’une séquence de caractères. Le prédicat de l’opération de filtrage spécifie que le caractère doit être « A ».  
@@ -20,7 +20,7 @@ Le filtrage fait référence à l’opération de restriction du jeu de résulta
   
 ## <a name="methods"></a>Méthodes  
   
-|Nom de la méthode|Description|Syntaxe d’Expression de requête Visual Basic|Informations complémentaires|  
+|Nom de la méthode|Description|Syntaxe d’Expression de requête de Visual Basic|Informations complémentaires|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |OfType|Sélectionne des valeurs, en fonction de leur capacité à être castées en un type spécifié.|Non applicable.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |Où|Sélectionne les valeurs qui sont basées sur une fonction de prédicat.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
@@ -49,11 +49,11 @@ MsgBox(sb.ToString())
 ' fox  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Linq>  
- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Where (clause)](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [Guide pratique : filtrer les résultats d’une requête](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
- [Comment : interroger les métadonnées d’un Assembly avec réflexion (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
- [Comment : interroger des fichiers avec un attribut spécifié ou le nom (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- [Comment : trier ou filtrer des données texte par mot ou par champ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Linq>
+- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Where (clause)](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Guide pratique pour Filtrer les résultats de la requête](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
+- [Guide pratique pour Interroger les métadonnées d’un Assembly avec réflexion (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Guide pratique pour Interroger des fichiers avec un attribut spécifié ou un nom (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Guide pratique pour Trier ou filtrer des données texte par mot ou par champ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

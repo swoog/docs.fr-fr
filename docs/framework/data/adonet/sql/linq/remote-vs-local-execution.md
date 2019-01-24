@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: 9488cb4c15c2e0646d91bdba36e7d4e2be2efbbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d72350c472ff68d8ee623d82096bdab0c88abb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547116"
 ---
 # <a name="remote-vs-local-execution"></a>Comparaison entre et exécution locale
 Vous pouvez décider d'exécuter vos requêtes à distance (autrement dit, le moteur de base de données exécute la requête sur la base de données) ou localement ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exécute la requête sur un cache local).  
@@ -42,10 +42,10 @@ Vous pouvez décider d'exécuter vos requêtes à distance (autrement dit, le mo
  [!code-vb[DLinqQueryConcepts#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#8)]  
   
 ## <a name="comparison"></a>Comparaison  
- Ces deux fonctions fournissent une combinaison puissante d'options : communication à distance pour les grandes collections et exécution locale pour les petites collections ou lorsque la collection complète est nécessaire. Implémentez la communication à distance via <xref:System.Linq.IQueryable> et l'exécution locale sur une collection <xref:System.Collections.Generic.IEnumerable%601> en mémoire. Pour forcer l’exécution locale (autrement dit, <xref:System.Collections.Generic.IEnumerable%601>), consultez [convertir un Type en IEnumerable générique](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).  
+ Ces deux fonctions fournissent une combinaison puissante d'options : communication à distance pour les grandes collections et exécution locale pour les petites collections ou lorsque la collection complète est nécessaire. Implémentez la communication à distance via <xref:System.Linq.IQueryable> et l’exécution locale sur une collection <xref:System.Collections.Generic.IEnumerable%601> en mémoire. Pour forcer l’exécution locale (autrement dit, <xref:System.Collections.Generic.IEnumerable%601>), consultez [convertir un Type en IEnumerable générique](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).  
   
 ### <a name="queries-against-unordered-sets"></a>Requêtes sur des jeux non ordonnés  
- Notez la différence importante entre une collection locale qui implémente <xref:System.Collections.Generic.List%601> et une collection qui fournit des requêtes distantes exécutées sur *désordonnés jeux* dans une base de données relationnelle. Les méthodes <xref:System.Collections.Generic.List%601> telles que celles qui utilisent des valeurs d'index requièrent des sémantiques de liste que l'on ne peut généralement pas obtenir via une requête distante sur un jeu non ordonné. Pour cette raison, de telles méthodes chargent implicitement le <xref:System.Data.Linq.EntitySet%601> pour autoriser l'exécution locale.  
+ Notez la différence importante entre une collection locale qui implémente <xref:System.Collections.Generic.List%601> et une collection qui fournit des requêtes distantes exécutées sur *désordonnées jeux* dans une base de données relationnelle. Les méthodes <xref:System.Collections.Generic.List%601> telles que celles qui utilisent des valeurs d'index requièrent des sémantiques de liste que l'on ne peut généralement pas obtenir via une requête distante sur un jeu non ordonné. Pour cette raison, de telles méthodes chargent implicitement le <xref:System.Data.Linq.EntitySet%601> pour autoriser l'exécution locale.  
   
-## <a name="see-also"></a>Voir aussi  
- [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a>Voir aussi
+- [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

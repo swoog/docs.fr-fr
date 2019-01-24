@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 9f33ae085bef2b611d1ce95bed1b26f9101a10b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6aaaa126a0b19300abc2c10b88b0e4ff39a3ad66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530430"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Mappages de DataAdapter DataTable et DataColumn
 Un **DataAdapter** contient une collection de zéro ou plusieurs <xref:System.Data.Common.DataTableMapping> objets dans son **TableMappings** propriété. Un **DataTableMapping** fournit un mappage principal entre les données retournées à partir d’une requête sur une source de données et un <xref:System.Data.DataTable>. Le **DataTableMapping** nom peut être passé à la place de la **DataTable** nom pour le **remplir** méthode de la **DataAdapter**. L’exemple suivant crée un **DataTableMapping** nommé **AuthorsMapping** pour le **auteurs** table.  
@@ -90,14 +90,14 @@ adapter.Fill(custDS, "Customers");
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- Deux tables sont créées dans le **DataSet**: **clients** et **Customers1**. Vous pouvez utiliser les mappages de table pour vous assurer que la deuxième table est nommée **commandes** au lieu de **Customers1**. Pour ce faire, mappez la table de source de **Customers1** à la **DataSet** table **commandes**, comme illustré dans l’exemple suivant.  
+ Deux tables sont créées dans le **DataSet**: **Les clients** et **Customers1**. Vous pouvez utiliser les mappages de table pour vous assurer que la deuxième table est nommée **commandes** au lieu de **Customers1**. Pour ce faire, mappez la table de source de **Customers1** à la **DataSet** table **commandes**, comme illustré dans l’exemple suivant.  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

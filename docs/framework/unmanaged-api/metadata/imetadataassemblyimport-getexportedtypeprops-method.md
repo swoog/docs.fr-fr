@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e222f1a39276b6debc348bfb25e8db65cb648ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544638"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps, méthode
-Obtient le jeu de propriétés du type exporté avec la signature de métadonnées spécifiée.  
+Obtient le jeu de propriétés du type exporté avec la signature de métadonnées spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ HRESULT GetExportedTypeProps (
  [in] La taille, en caractères larges, de `szName`.  
   
  `pchName`  
- [out] Le nombre de caractères étendus réellement retournés dans `szName`  
+ [out] Le nombre de caractères larges réellement retournés dans `szName`  
   
  `ptkImplementation`  
  [out] Un `mdFile`, `mdAssemblyRef`, ou `mdExportedType` jeton de métadonnées qui contienne ou autorise l’accès aux propriétés du type exporté.  
@@ -61,16 +61,16 @@ HRESULT GetExportedTypeProps (
  [out] Un pointeur vers un `mdTypeDef` jeton qui représente un type dans le fichier.  
   
  `pdwExportedTypeFlags`  
- [out] Pointeur vers les indicateurs qui décrivent les métadonnées appliquées au type exporté. La valeur des indicateurs peut être une ou plusieurs [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) valeurs.  
+ [out] Pointeur vers les indicateurs qui décrivent les métadonnées appliquées pour le type exporté. La valeur des indicateurs peut être une ou plusieurs [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) valeurs.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataAssemblyImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataAssemblyImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

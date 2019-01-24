@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 8d7645e8de5edee711c30bbe7edde8ba7b5b1dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497431"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Définition de valeurs par défaut avec les méthodes ShouldSerialize et Reset
 `ShouldSerialize` et `Reset` sont des méthodes facultatives que vous pouvez fournir pour une propriété, si la propriété n’a pas un ont la valeur par défaut simple. Si la propriété a une valeur par défaut simple, vous devez appliquer le <xref:System.ComponentModel.DefaultValueAttribute> et fournir la valeur par défaut pour le constructeur de classe d’attribut à la place. Ces deux mécanismes Active les fonctionnalités suivantes dans le concepteur :  
@@ -22,12 +22,12 @@ ms.locfileid: "33529790"
   
 -   L’utilisateur avec le bouton droit sur la propriété et choisissez **réinitialiser** pour restaurer la propriété à sa valeur par défaut.  
   
--   Le concepteur génère un code plus efficace.  
+-   Le concepteur génère du code plus efficace.  
   
     > [!NOTE]
     >  Appliquez le <xref:System.ComponentModel.DefaultValueAttribute> ou fournir `Reset` *PropertyName* et `ShouldSerialize` *PropertyName* méthodes. N’utilisez pas les deux.  
   
- Le `Reset` *PropertyName* méthode définit une propriété à sa valeur par défaut, comme indiqué dans le fragment de code suivant.  
+ Le `Reset` *PropertyName* méthode définit une propriété à sa valeur par défaut, comme illustré dans le fragment de code suivant.  
   
 ```vb  
 Public Sub ResetMyFont()  
@@ -44,7 +44,7 @@ public void ResetMyFont() {
 > [!NOTE]
 >  Si une propriété n’a pas un `Reset` (méthode), n’est pas marqué avec un <xref:System.ComponentModel.DefaultValueAttribute>et n’a pas de valeur par défaut fournie dans sa déclaration, le `Reset` option de cette propriété est désactivée dans le menu contextuel de la **propriétés** fenêtre du Concepteur Windows Forms dans Visual Studio.  
   
- Les concepteurs tels que Visual Studio utilisent le `ShouldSerialize` *PropertyName* méthode pour vérifier si une propriété a changé sa valeur par défaut et d’écrire du code dans le formulaire uniquement si une propriété est modifiée, ce qui permet de code plus efficace génération. Par exemple :  
+ Utilisent des concepteurs, tels que Visual Studio le `ShouldSerialize` *PropertyName* méthode pour vérifier si une propriété a changé sa valeur par défaut et d’écrire du code dans le formulaire uniquement si une propriété est modifiée, ce qui permet de code plus efficace génération. Exemple :  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -62,7 +62,7 @@ public bool ShouldSerializeMyFont() {
 }  
 ```  
   
- Un exemple de code complet suivant.  
+ Un exemple de code complet suit.  
   
 ```vb  
 Option Explicit  
@@ -141,9 +141,9 @@ public class MyControl : Control {
 }  
 ```  
   
- Dans ce cas, même lorsque la valeur de la variable privée est accessible par le `MyFont` propriété est `null`, l’Explorateur de propriétés n’affiche pas `null`; au lieu de cela, il affiche la <xref:System.Windows.Forms.Control.Font%2A> propriété du parent, si elle n’est pas `null`, ou la valeur par défaut <xref:System.Windows.Forms.Control.Font%2A> valeur définie dans <xref:System.Windows.Forms.Control>. Par conséquent, la valeur par défaut `MyFont` ne peut pas être simplement définie et un <xref:System.ComponentModel.DefaultValueAttribute> ne peut pas être appliqué à cette propriété. Au lieu de cela, le `ShouldSerialize` et `Reset` méthodes doivent être implémentées pour la `MyFont` propriété.  
+ Dans ce cas, même lorsque la valeur de la variable privée est accessible par le `MyFont` propriété est `null`, l’Explorateur de propriétés n’affiche pas `null`; au lieu de cela, il affiche le <xref:System.Windows.Forms.Control.Font%2A> propriété du parent, si elle n’est pas `null`, ou la valeur par défaut <xref:System.Windows.Forms.Control.Font%2A> valeur définie dans <xref:System.Windows.Forms.Control>. Par conséquent, la valeur par défaut `MyFont` ne peut pas être simplement définie et un <xref:System.ComponentModel.DefaultValueAttribute> ne peut pas être appliqué à cette propriété. Au lieu de cela, le `ShouldSerialize` et `Reset` méthodes doivent être implémentées pour la `MyFont` propriété.  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Définition d’une propriété](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- [Événements de modification de propriété](../../../../docs/framework/winforms/controls/property-changed-events.md)
+## <a name="see-also"></a>Voir aussi
+- [Propriétés dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Définition d’une propriété](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
+- [Événements de modification de propriété](../../../../docs/framework/winforms/controls/property-changed-events.md)

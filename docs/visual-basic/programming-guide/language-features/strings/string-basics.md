@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 2a7dd80d141ff5945bcce71fead1bb5bc24ad737
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552380"
 ---
 # <a name="string-basics-in-visual-basic"></a>Concepts de base des chaînes en Visual Basic
 Le type de données `String` représente une série de caractères (chacun représentant à son tour une instance du type de données `Char`). Cette rubrique présente les concepts de base des chaînes en Visual Basic.  
@@ -71,8 +71,8 @@ World]]></xml>.Value
   
  Contrairement à d'autres types de données intrinsèques, `String` est un type référence. Quand une variable de type référence est passée en tant qu'argument à une fonction ou à une sous-routine, une référence à l'adresse mémoire où sont stockées les données est passée à la place de la valeur réelle de la chaîne. Ainsi, dans l'exemple précédent, le nom de la variable reste le même, mais il pointe vers une instance nouvelle et différente de la classe `String`, qui contient la nouvelle valeur.  
   
-## <a name="see-also"></a>Voir aussi  
- [Introduction aux chaînes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [String (type de données)](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Char (type de données)](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Opérations de chaînes de base](../../../../standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>Voir aussi
+- [Introduction aux chaînes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [String (type de données)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Char (type de données)](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Opérations de chaînes de base](../../../../standard/base-types/basic-string-operations.md)

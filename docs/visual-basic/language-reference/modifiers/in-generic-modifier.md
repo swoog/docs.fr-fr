@@ -7,12 +7,12 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5909e6ee7436b7e4f7baa30bfe81eb8ba5441e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625746"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (modificateur générique) (Visual Basic)
 Pour les paramètres de type générique, le mot clé `In` spécifie que le paramètre de type est contravariant.  
@@ -25,11 +25,11 @@ Pour les paramètres de type générique, le mot clé `In` spécifie que le para
 ## <a name="rules"></a>Règles  
  Vous pouvez utiliser le mot clé `In` dans les interfaces et délégués génériques.  
   
- Un paramètre de type peut être déclaré contravariant dans une interface générique ou un délégué si elle est utilisée uniquement en tant que type d’arguments de méthode et pas utilisé comme type de retour de méthode. `ByRef` les paramètres ne peuvent pas être covariants ou contravariants.  
+ Un paramètre de type peut être déclaré comme étant contravariant dans une interface générique ou un délégué s’il est utilisé uniquement comme un type d’arguments de méthode et non utilisé comme type de retour de méthode. `ByRef` paramètres ne peuvent être covariants ou contravariant.  
   
- Covariance et contravariance sont pris en charge pour les types référence et non pris en charge pour les types valeur.  
+ La covariance et la contravariance sont prises en charge pour les types référence et pas pris en charge pour les types valeur.  
   
- En Visual Basic, vous ne pouvez pas déclarer des événements dans des interfaces contravariant sans spécifier le type délégué. En outre, les interfaces de contravariant ne peut pas avoir de classes, d’enums ou de structures imbriqués, mais ont des interfaces imbriquées.  
+ En Visual Basic, vous ne pouvez pas déclarer des événements dans des interfaces contravariantes sans spécifier le type de délégué. En outre, les interfaces de contravariant ne peut pas avoir de classes, des énumérations ou des structures imbriqués, mais ont des interfaces imbriquées.  
   
 ## <a name="behavior"></a>Comportement  
  Une interface qui possède un paramètre de type contravariant permet à ses méthodes d’accepter des arguments de types moins dérivés que ceux spécifiés par le paramètre de type d’interface. Par exemple, comme dans le .NET Framework 4, dans l’interface <xref:System.Collections.Generic.IComparer%601>, le type T est contravariant, vous pouvez assigner un objet du type `IComparer(Of Person)` à un objet du type `IComparer(Of Employee)` sans utiliser de méthode de conversion spéciale si `Person` hérite de `Employee`.  
@@ -46,6 +46,6 @@ Pour les paramètres de type générique, le mot clé `In` spécifie que le para
   
  [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Variance dans les interfaces génériques](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Voir aussi
+- [Variance dans les interfaces génériques](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

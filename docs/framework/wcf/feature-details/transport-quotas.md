@@ -4,11 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542767"
 ---
 # <a name="transport-quotas"></a>Quotas de transport
 Les quotas de transport sont un mécanisme stratégique permettant de déterminer lorsqu'une connexion consomme trop de ressources. Un quota est une limite imposée qui empêche l'utilisation de ressources supplémentaires une fois la valeur du quota dépassée. Les quotas de transport permettent de lutter contre les attaques par déni de service malveillantes ou non intentionnelles.  
@@ -18,11 +19,11 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 ## <a name="types-of-transport-quotas"></a>Types de quotas de transport  
  Les transports WCF possèdent trois types de quotas :  
   
--   *Délais d’attente* atténuer les attaques de déni de service qui monopolise des ressources pour une période prolongée sur.  
+-   *Délais d’expiration* atténuer par déni de service qui s’appuient sur la monopolisation des ressources pendant une période prolongée.  
   
--   *Limites d’allocation de mémoire* empêchent une connexion unique épuise la mémoire système et de refus de service à d’autres connexions.  
+-   *Limites d’allocation de mémoire* empêcher une connexion unique épuise la mémoire système et de refus de service à d’autres connexions.  
   
--   *Limites de taille de collection* limitent la consommation des ressources qui indirectement allouer de la mémoire ou sont dans une offre limitée.  
+-   *Limites de taille de collection* limitent la consommation des ressources indirectement allouer de la mémoire ou qui sont en quantité limitée.  
   
 ## <a name="transport-quota-descriptions"></a>Description des quotas de transport  
  Cette section décrit les quotas de transport disponibles pour les transports WCF standards : HTTP (S), TCP/IP et canaux nommés. Les transports personnalisés peuvent posséder des quotas configurables propres non inclus dans cette liste. Consultez la documentation relative à un transport personnalisé pour en savoir plus sur ses quotas.  
@@ -32,7 +33,7 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 |Name|Type|Valeur<br /><br /> par défaut|Par défaut<br /><br /> par défaut|Description|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 graduation|5 s|Durée maximale à attendre pour qu'une connexion envoie le préambule pendant la lecture initiale. Ces données sont reçues avant que l'authentification ait lieu. Ce paramètre est généralement bien inférieur à la valeur de quota `ReceiveTimeout`.|  
-|`CloseTimeout`|TimeSpan|0|1 minute|Durée maximale à attendre pour qu'une connexion se ferme avant que le transport ne lève une exception.|  
+|`CloseTimeout`|TimeSpan|0|1 min|Durée maximale à attendre pour qu'une connexion se ferme avant que le transport ne lève une exception.|  
 |`ConnectionBufferSize`|Entier|1|8 Ko|Taille, en octets, des mémoires tampon de réception et de transmission du transport sous-jacent. Augmenter la taille de la mémoire tampon peut améliorer le débit lors de l'envoi de messages volumineux.|  
 |`IdleTimeout`|TimeSpan|0|2 min.|Durée maximale pendant laquelle une connexion en groupe peut rester inactive avant d'être fermée.<br /><br /> Ce paramètre ne s'applique qu'aux connexions en groupe.|  
 |`LeaseTimeout`|TimeSpan|0|5 min|Durée de vie maximale d'une connexion en groupe active. Après que la durée spécifiée s'est écoulée, la connexion se ferme une fois la requête en cours prise en charge.<br /><br /> Ce paramètre ne s'applique qu'aux connexions en groupe.|  
@@ -44,9 +45,9 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 |`MaxPendingAccepts`|Entier|1|1|Nombre maximal de canaux que l'écouteur peut mettre en attente d'acceptation.<br /><br /> Il existe un intervalle entre la fin de l'acceptation en cours et le début d'une nouvelle acceptation. Augmenter la taille de cette collection peut empêcher la suppression des clients qui se connectent pendant cet intervalle.|  
 |`MaxPendingConnections`|Entier|1|10|Nombre maximal de connexions que l'écouteur peut mettre en attente d'acceptation par l'application. Lorsque cette valeur de quota est dépassée, les nouvelles connexions entrantes sont supprimées plutôt que mises en attente d’acceptation.<br /><br /> Les fonctionnalités de connexion telles que la sécurité des messages peuvent entraîner qu'un client ouvre plusieurs connexions. Les administrateurs de service doivent prendre en compte ces connexions supplémentaires lors de la définition de cette valeur de quota.|  
 |`MaxReceivedMessageSize`|Longue|1|64 Ko|Taille maximale, en octets, d'un message reçu (en-têtes compris) avant que le transport ne lève une exception.|  
-|`OpenTimeout`|TimeSpan|0|1 minute|Durée maximale à attendre pour qu'une connexion soit établie avant que le transport ne lève une exception.|  
+|`OpenTimeout`|TimeSpan|0|1 min|Durée maximale à attendre pour qu'une connexion soit établie avant que le transport ne lève une exception.|  
 |`ReceiveTimeout`|TimeSpan|0|10 minutes|Durée maximale à attendre pour qu'une opération de lecture se termine avant que le transport ne lève une exception.|  
-|`SendTimeout`|TimeSpan|0|1 minute|Durée maximale à attendre pour qu'une opération d'écriture se termine avant que le transport ne lève une exception.|  
+|`SendTimeout`|TimeSpan|0|1 min|Durée maximale à attendre pour qu'une opération d'écriture se termine avant que le transport ne lève une exception.|  
   
  Les quotas de transport `MaxPendingConnections` et `MaxOutboundConnectionsPerEndpoint` sont combinés dans un quota de transport unique appelé `MaxConnections` en cas de définition par la liaison ou la configuration. Seul l'élément de liaison autorise la définition de ces valeurs de quota une par une. Le quota de transport `MaxConnections` a les mêmes valeurs minimale et par défaut.  
   
@@ -104,12 +105,12 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 2.  Les quotas de transport `MaxPendingConnections` et `MaxOutboundConnectionsPerEndpoint` sont combinés dans un quota de transport unique appelé `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Contrôle des quotas de transport depuis la configuration  
- La configuration de l'application peut définir les mêmes quotas de transport qu'en accédant directement aux propriétés d'une liaison. Dans les fichiers de configuration, le nom d'un quota de transport commence toujours par une minuscule. Par exemple, la propriété `CloseTimeout` d'une liaison correspond au paramètre `closeTimeout` dans la configuration et la propriété `MaxConnections` d'une liaison correspond au paramètre `maxConnections` dans la configuration.  
+ La configuration de l'application peut définir les mêmes quotas de transport qu'en accédant directement aux propriétés d'une liaison. Dans les fichiers de configuration, le nom d'un quota de transport commence toujours par une minuscule. Par exemple, la propriété `CloseTimeout` d’une liaison correspond au paramètre `closeTimeout` dans la configuration et la propriété `MaxConnections` d’une liaison correspond au paramètre `maxConnections` dans la configuration.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>

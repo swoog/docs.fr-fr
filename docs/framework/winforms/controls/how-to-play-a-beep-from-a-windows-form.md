@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour émettre un signal sonore à partir d'un Windows Form
+title: 'Procédure : Émettre un signal sonore à partir d’un formulaire Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-ms.openlocfilehash: 460309d853f2b3b423d14a820771e0230358e3c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b847f2f759667eed5dfb6f9168a5c2fc50909cc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544508"
 ---
-# <a name="how-to-play-a-beep-from-a-windows-form"></a>Guide pratique pour émettre un signal sonore à partir d'un Windows Form
+# <a name="how-to-play-a-beep-from-a-windows-form"></a>Procédure : Émettre un signal sonore à partir d’un formulaire Windows
 Cet exemple émet un signal sonore à l’exécution.  
   
 ## <a name="example"></a>Exemple  
@@ -37,13 +37,13 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  Le son exécuté dans l’exemple de code c# est déterminé par le <xref:System.Media.SystemSounds.Beep%2A> paramètre de son système. Pour plus d'informations, consultez <xref:System.Media.SystemSounds>.  
+>  Le son exécuté dans le C# exemple de code est déterminé par le <xref:System.Media.SystemSounds.Beep%2A> paramètre de son système. Pour plus d'informations, consultez <xref:System.Media.SystemSounds>.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Pour c#, cet exemple requiert une référence à la <xref:System.Media?displayProperty=nameWithType> espace de noms.  
+ Pour C#, cet exemple requiert une référence à la <xref:System.Media?displayProperty=nameWithType> espace de noms.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.Interaction.Beep%2A>  
- <xref:System.Media.SoundPlayer>  
- [Guide pratique pour émettre un son système à partir d’un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
- [Guide pratique pour lire un son à partir d’un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
+- <xref:System.Media.SoundPlayer>
+- [Guide pratique pour Lire un son système à partir d’un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)
+- [Guide pratique pour Un signal sonore à partir d’un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0d1db0e3d2a423c4ba21311b6b9deb0d2565c103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523153"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Désactivez&gt; élément pour &lt;écouteurs&gt; pour &lt;source&gt;
 Efface la collection `Listeners` pour une source de trace.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<sources >  
-\<source >  
-\<écouteurs >  
-\<Désactivez >  
+\<system.diagnostics>  
+\<sources>  
+\<source>  
+\<listeners>  
+\<clear>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,8 +86,8 @@ Efface la collection `Listeners` pour une source de trace.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Écouteurs de suivi](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Écouteurs de suivi](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
-ms.openlocfilehash: 6fedd41e901035290995d7ece1b5aa23e76f345e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621758"
 ---
 # <a name="extension-methods"></a>Méthodes d’extension
 Méthodes d’extension sont une fonctionnalité de langage qui permet des méthodes statiques pour être appelée à l’aide de la syntaxe de méthode d’appel d’instance. Ces méthodes doivent disposer d’au moins un paramètre, qui représente l’instance de que la méthode consiste à utiliser.  
@@ -48,5 +48,5 @@ Méthodes d’extension sont une fonctionnalité de langage qui permet des méth
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)  
+- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)
 - [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

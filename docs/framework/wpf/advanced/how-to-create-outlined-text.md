@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer du texte avec contour'
+title: 'Procédure : Créer du texte avec contour'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 046ce6519e55e5782db0fe8adbc2a956251e12e4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: a06ef9adbd5740fee74be2e9d8d13a8a5bdc5b95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521476"
 ---
-# <a name="how-to-create-outlined-text"></a>Comment : créer du texte avec contour
+# <a name="how-to-create-outlined-text"></a>Procédure : Créer du texte avec contour
 Dans la plupart des cas, lorsque vous ajoutez ornementation élaborée pour les chaînes de texte dans votre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application, à l’aide de texte en termes d’une collection de caractères discrets, ou glyphes. Par exemple, Impossible de créer un pinceau dégradé linéaire et de l’appliquer à la <xref:System.Windows.Controls.Control.Foreground%2A> propriété d’un <xref:System.Windows.Controls.TextBox> objet. Lorsque vous affichez ou modifiez la zone de texte, le pinceau de dégradé linéaire est automatiquement appliqué à l’ensemble actuel de caractères dans la chaîne de texte.  
   
  ![Texte affiché avec un pinceau dégradé linéaire](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")  
@@ -59,5 +59,5 @@ Exemple de pinceau image appliqué au trait et surbrillance
   
   Pour la source de l’exemple d’objet d’un contrôle utilisateur personnalisé, consultez [OutlineTextControl.cs pour C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) et [OutlineTextControl.vb pour Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
   
-## <a name="see-also"></a>Voir aussi  
- [Dessin du texte mis en forme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+## <a name="see-also"></a>Voir aussi
+- [Dessin du texte mis en forme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

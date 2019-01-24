@@ -2,12 +2,12 @@
 title: Durable Instance Context
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: f5c066ae06e44f6cac4b9a7b98487aa6226b969f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527487"
 ---
 # <a name="durable-instance-context"></a>Durable Instance Context
 Cet exemple montre comment personnaliser le runtime Windows Communication Foundation (WCF) pour activer des contextes d’instance fiables. Il utilise SQL Server 2005 comme magasin de sauvegarde (SQL Server 2005 Express dans ce cas précis). Toutefois, il permet également d'accéder aux mécanismes de stockage personnalisés.  
@@ -358,7 +358,7 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
 ```  
   
- Cette instruction crée une instance de type `OperationInvoker` et l'assigne à la propriété `Invoker` du `DispatchOperation` en cours de construction. La classe `OperationInvoker` est un wrapper pour le demandeur d'opération par défaut créé pour `DispatchOperation`. Cette classe implémente l'interface `IOperationInvoker`. Dans l'implémentation de méthode `Invoke`, l'appel de méthode réel est délégué au demandeur d'opération interne. Toutefois, avant de retourner les résultats, le gestionnaire de stockage du `InstanceContext` est utilisé pour enregistrer l'instance de service.  
+ Cette instruction crée une instance de type `OperationInvoker` et l'assigne à la propriété `Invoker` du `DispatchOperation` en cours de construction. La classe `OperationInvoker` est un wrapper pour le demandeur d'opération par défaut créé pour `DispatchOperation`. Cette classe implémente l'interface `IOperationInvoker` . Dans l'implémentation de méthode `Invoke`, l'appel de méthode réel est délégué au demandeur d'opération interne. Toutefois, avant de retourner les résultats, le gestionnaire de stockage du `InstanceContext` est utilisé pour enregistrer l'instance de service.  
   
 ```  
 object result = innerOperationInvoker.Invoke(instance,  
@@ -421,7 +421,7 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
 ## <a name="conclusion"></a>Conclusion  
  Cet exemple a montré comment créer un canal de protocole personnalisé et comment personnaliser le comportement de service permettant de l'activer.  
   
- L'extension peut encore être améliorée en permettant aux utilisateurs de spécifier l'implémentation `IStorageManager` à l'aide d'une section de configuration. Cela permet de modifier le magasin de sauvegarde sans avoir à recompiler le code de service.  
+ L’extension peut encore être améliorée en permettant aux utilisateurs de spécifier l’implémentation `IStorageManager` à l’aide d’une section de configuration. Cela permet de modifier le magasin de sauvegarde sans avoir à recompiler le code de service.  
   
  En outre, vous pouvez essayer d'implémenter une classe (par exemple, `StateBag`) qui encapsule l'état de l'instance. Cette classe est chargée de rendre l'état persistant chaque fois qu'il change. De cette manière, vous pouvez éviter d'utiliser l'attribut `SaveState` et travailler de manière plus précise (par exemple, vous pouvez rendre l'état persistant lorsqu'il est réellement modifié plutôt que de l'enregistrer chaque fois qu'une méthode avec l'attribut `SaveState` est appelée).  
   

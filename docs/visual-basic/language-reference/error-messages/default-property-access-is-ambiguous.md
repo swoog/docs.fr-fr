@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518642"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Accès à la propriété par défaut est ambigu entre les membres de l’interface héritée &#39; &lt;defaultpropertyname&gt; &#39; d’interface &#39; &lt;nom_interface1&gt; &#39; et &#39; &lt;defaultpropertyname&gt; &#39; d’interface &#39; &lt;nom_interface2&gt;&#39;
 Une interface hérite de deux interfaces, chacun d’eux déclare une propriété par défaut avec le même nom. Le compilateur ne peut pas résoudre un accès à cette propriété par défaut sans qualification. L'exemple suivant illustre ce comportement.  
@@ -35,21 +35,21 @@ Public Class testClass
 End Class  
 ```  
   
- Lorsque vous spécifiez `testObj(1)`, le compilateur tente de résoudre la propriété par défaut. Toutefois, il existe deux propriétés par défaut possibles en raison des interfaces héritées, le compilateur signale cette erreur.  
+ Lorsque vous spécifiez `testObj(1)`, le compilateur tente de remédier à la propriété par défaut. Toutefois, il existe deux propriétés par défaut possibles en raison des interfaces héritées, le compilateur signale cette erreur.  
   
  **ID d’erreur :** BC30686  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Évitez d’hériter de tous les membres portant le même nom. Dans l’exemple précédent, si `testObj` n’a pas besoin des membres de, par exemple, `Iface2`, puis de le déclarer comme suit :  
+-   Évitez d’hériter de tous les membres portant le même nom. Dans l’exemple précédent, si `testObj` n’a pas besoin des membres de, disons, `Iface2`, puis de le déclarer comme suit :  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     - ou -  
+     ou  
   
--   Implémentez l’interface qui hérite dans une classe. Vous pouvez implémenter chacune des propriétés héritées avec des noms différents. Toutefois, un seul d'entre eux peut être la propriété par défaut de la classe d’implémentation. L'exemple suivant illustre ce comportement.  
+-   Implémentez l’interface qui hérite dans une classe. Vous pouvez implémenter chacune des propriétés héritées avec des noms différents. Toutefois, seule une d'entre elles peut être la propriété par défaut de la classe d’implémentation. L'exemple suivant illustre ce comportement.  
   
     ```  
     Public Class useIface3  
@@ -63,5 +63,5 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

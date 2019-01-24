@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b549c6eacad63b165d26c203817f1a2adac57bca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b53347e9f446d6340bfc5dab2d8f898ebbbf93f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527105"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes, méthode
-Énumère les jetons de définition d’attributs personnalisés associées avec le type ou membre spécifié.  
+Énumère les jetons de définition d’attributs personnalisés associés avec le type ou membre spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ HRESULT EnumCustomAttributes (
   
 #### <a name="parameters"></a>Paramètres  
  `phEnum`  
- [dans, out] Pointeur vers l’énumérateur retourné.  
+ [in, out] Pointeur vers l’énumérateur retourné.  
   
  `tk`  
  [in] Un jeton pour la portée de l’énumération, ou zéro pour tous les attributs personnalisés.  
@@ -51,13 +51,13 @@ HRESULT EnumCustomAttributes (
  [in] Un jeton pour le constructeur du type des attributs à énumérer, ou `null` pour tous les types.  
   
  `rCustomAttributes`  
- [out] Tableau de jetons d’attributs personnalisés.  
+ [out] Un tableau de jetons de l’attribut personnalisé.  
   
  `cMax`  
  [in] Taille maximale du tableau `rCustomAttributes`.  
   
  `pcCustomAttributes`  
- [out, facultatif] Le nombre réel de valeurs de jeton retourné dans `rCustomAttributes`.  
+ [out, optional] Le nombre réel de valeurs de jeton retourné dans `rCustomAttributes`.  
   
 ## <a name="return-value"></a>Valeur de retour  
   
@@ -67,14 +67,14 @@ HRESULT EnumCustomAttributes (
 |`S_FALSE`|Il n’existe pas d’attributs personnalisés à énumérer. Dans ce cas, `pcCustomAttributes` est égal à zéro.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

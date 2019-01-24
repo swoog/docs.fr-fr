@@ -1,16 +1,16 @@
 ---
-title: "Procédure : implémenter un service détectable qui s'enregistre avec le proxy de découverte."
+title: 'Procédure : Implémenter un Service détectable qui s’enregistre avec le Proxy de découverte'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30cf098b97b1e0188f264bee2ce3dbcdcdb8921b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623688"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procédure : implémenter un service détectable qui s'enregistre avec le proxy de découverte.
-Cette rubrique est la deuxième d'une série de quatre rubriques qui expliquent comment implémenter un proxy de découverte. Dans la rubrique précédente, [Comment : implémenter un Proxy de découverte](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), vous avez implémenté un proxy de découverte. Dans cette rubrique, vous créez un service WCF qui envoie des messages d’annonce (`Hello` et `Bye`) pour le proxy de découverte, à l’origine de s’inscrire et désinscrire le proxy de découverte.  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procédure : Implémenter un Service détectable qui s’enregistre avec le Proxy de découverte
+Cette rubrique est la deuxième d'une série de quatre rubriques qui expliquent comment implémenter un proxy de découverte. Dans la rubrique précédente, [Comment : Implémenter un Proxy de découverte](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), vous avez implémenté un proxy de découverte. Dans cette rubrique, vous créez un service WCF qui envoie des messages d’annonce (`Hello` et `Bye`) au proxy de découverte, ce qui provoque son inscrire et désinscrire lui-même avec le proxy de découverte.  
   
 ### <a name="to-define-the-service-contract"></a>Pour définir le contrat de service  
   
@@ -154,7 +154,7 @@ Cette rubrique est la deuxième d'une série de quatre rubriques qui expliquent 
     }  
     ```  
   
- Vous avez terminé l'implémentation d'un service détectable. Continuer à [Comment : implémenter une Application cliente qui utilise le Proxy de découverte pour rechercher un Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
+ Vous avez terminé l'implémentation d'un service détectable. Passez à [Comment : Implémenter une Application cliente qui utilise le Proxy de découverte pour rechercher un Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
   
 ## <a name="example"></a>Exemple  
  Les éléments suivants représentent l'intégralité du code utilisé dans cette rubrique.  
@@ -284,7 +284,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a>Voir aussi  
- [Découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Guide pratique pour implémenter un proxy de découverte](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Guide pratique pour implémenter une application cliente qui utilise le proxy de découverte pour rechercher un service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a>Voir aussi
+- [Découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Guide pratique pour Implémenter un Proxy de découverte](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Guide pratique pour Implémenter une Application cliente qui utilise le Proxy de découverte pour rechercher un Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

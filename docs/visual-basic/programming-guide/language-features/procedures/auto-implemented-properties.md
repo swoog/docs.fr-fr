@@ -9,15 +9,15 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: bc83163a024bd50d3e256b4eb49861669f8c02c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495459"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propriétés implémentées automatiquement (Visual Basic)
-*Propriétés implémentées automatiquement* vous permettent de spécifier rapidement une propriété d’une classe sans devoir écrire du code pour `Get` et `Set` la propriété. Quand vous écrivez du code pour une propriété implémentée automatiquement, le compilateur Visual Basic crée automatiquement un champ privé pour stocker la variable de propriété en plus de créer les procédures `Get` et `Set` associées.  
+*Propriétés implémentées automatiquement* vous permettent de spécifier rapidement une propriété d’une classe sans avoir à écrire du code pour `Get` et `Set` la propriété. Quand vous écrivez du code pour une propriété implémentée automatiquement, le compilateur Visual Basic crée automatiquement un champ privé pour stocker la variable de propriété en plus de créer les procédures `Get` et `Set` associées.  
   
  Avec les propriétés implémentées automatiquement, une propriété, y compris une valeur par défaut, peut être déclarée en une seule ligne. L'exemple suivant montre trois déclarations de propriété.  
   
@@ -48,7 +48,7 @@ End Class
  Vous pouvez assigner la propriété avec des expressions d'initialisation, comme illustré dans cet exemple, ou vous pouvez assigner les propriétés dans le constructeur du type conteneur.  Vous pouvez assigner les champs de stockage des propriétés en lecture seule à tout moment.  
   
 ## <a name="backing-field"></a>Champ de stockage  
- Lorsque vous déclarez une propriété implémentée automatiquement, Visual Basic crée automatiquement un champ privé caché appelé le *champ de stockage* pour contenir la valeur de propriété. Le nom du champ de stockage correspond au nom de la propriété implémentée automatiquement précédé d'un trait de soulignement (_). Par exemple, si vous déclarez une propriété implémentée automatiquement nommée `ID`, le champ de stockage est nommé `_ID`. Si vous incluez un membre de votre classe également nommé `_ID`, vous créez un conflit de noms et Visual Basic signale une erreur du compilateur.  
+ Lorsque vous déclarez une propriété implémentée automatiquement, Visual Basic crée automatiquement un champ privé masqué appelé le *champ de stockage* pour contenir la valeur de propriété. Le nom du champ de stockage correspond au nom de la propriété implémentée automatiquement précédé d'un trait de soulignement (_). Par exemple, si vous déclarez une propriété implémentée automatiquement nommée `ID`, le champ de stockage est nommé `_ID`. Si vous incluez un membre de votre classe également nommé `_ID`, vous créez un conflit de noms et Visual Basic signale une erreur du compilateur.  
   
  Le champ de stockage possède également les caractéristiques suivantes :  
   
@@ -91,12 +91,12 @@ End Class
 -   Fournir des commentaires XML pour le champ de stockage.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Développement d'une propriété implémentée automatiquement  
- Si vous devez convertir une propriété implémentée automatiquement en une propriété développée qui contient une procédure `Get` ou `Set`, l'éditeur de code de Visual Basic peut générer automatiquement les procédures `Get` et `Set`, et l'instruction `End Property` pour la propriété. Le code est généré si vous placez le curseur sur une ligne vierge suivant le `Property` instruction, tapez un `G` (pour `Get`) ou un `S` (pour `Set`) et appuyez sur ENTRÉE. L'éditeur de code de Visual Basic génère automatiquement la procédure `Get` ou `Set` pour les propriétés en lecture seule et en écriture seule quand vous appuyez sur Entrée à la fin d'une instruction `Property`.  
+ Si vous devez convertir une propriété implémentée automatiquement en une propriété développée qui contient une procédure `Get` ou `Set`, l’éditeur de code de Visual Basic peut générer automatiquement les procédures `Get` et `Set`, et l’instruction `End Property` pour la propriété. Le code est généré si vous placez le curseur sur une ligne vierge suivant le `Property` instruction, tapez un `G` (pour `Get`) ou un `S` (pour `Set`) et appuyez sur ENTRÉE. L'éditeur de code de Visual Basic génère automatiquement la procédure `Get` ou `Set` pour les propriétés en lecture seule et en écriture seule quand vous appuyez sur Entrée à la fin d'une instruction `Property`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Comment : déclarer et appeler une propriété par défaut en Visual Basic](./how-to-declare-and-call-a-default-property.md)  
- [Guide pratique : déclarer une propriété avec des niveaux d’accès mixtes](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)  
- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)  
- [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Déclarer et appeler une propriété par défaut en Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Guide pratique pour Déclarer une propriété avec des niveaux d’accès mixtes](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
+- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

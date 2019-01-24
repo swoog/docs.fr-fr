@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : assignation du contenu WPF sur les Windows Forms au moment du design'
+title: 'Procédure pas à pas : Assignation du contenu WPF dans les Windows Forms au moment du Design'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 554153335c08c9c8911a5d4fda3696db1e0abf2a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 49421fc6c673ffe090e58d733ff0a309464edbb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527742"
 ---
-# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : assignation du contenu WPF sur les Windows Forms au moment du design
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : Assignation du contenu WPF dans les Windows Forms au moment du Design
 Cette procédure pas à pas montre comment sélectionner les types de contrôle WPF (Windows Presentation Foundation) que vous souhaitez afficher sur votre formulaire. Vous pouvez sélectionner tout type de contrôle WPF inclus dans votre projet.
 
  Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :
@@ -49,9 +49,9 @@ Cette procédure pas à pas montre comment sélectionner les types de contrôle 
   
 #### <a name="to-create-wpf-control-types"></a>Pour créer des types de contrôles WPF  
   
-1.  Ajoutez un nouveau projet <xref:System.Windows.Controls.UserControl> WPF à la solution. Utilisez le nom par défaut pour le type de contrôle, `UserControl1.xaml`. Pour plus d’informations, consultez [procédure pas à pas : création de nouveau contenu WPF sur les formulaires Windows au moment du Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Ajoutez un nouveau projet <xref:System.Windows.Controls.UserControl> WPF à la solution. Utilisez le nom par défaut pour le type de contrôle, `UserControl1.xaml`. Pour plus d’informations, consultez [Procédure pas à pas : Création de contenu WPF dans les Windows Forms au moment du Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  En mode Design, assurez-vous que `UserControl1` est sélectionné. Pour plus d’informations, consultez [Comment : sélectionner et déplacer des éléments sur l’aire de conception](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+2.  En mode Design, assurez-vous que `UserControl1` est sélectionné. Pour plus d'informations, voir [Procédure : Sélectionner et déplacer des éléments sur l’aire de conception](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
   
 3.  Dans le **propriétés** fenêtre, définissez la valeur de la <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> propriétés à `200`.  
   
@@ -96,9 +96,9 @@ Cette procédure pas à pas montre comment sélectionner les types de contrôle 
   
 9. Le contrôle `elementHost2` héberge maintenant une instance du type `UserControl1`.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Migration et interopérabilité](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [Utilisation de contrôles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Migration et interopérabilité](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Utilisation de contrôles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

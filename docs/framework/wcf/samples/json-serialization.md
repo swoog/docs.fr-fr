@@ -2,12 +2,12 @@
 title: Sérialisation JSON
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: 02e81fe8d75ae7b752641d1f9a650fcfe5873141
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e46ef640215aee48bdebe892f161d403d1a3e73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523309"
 ---
 # <a name="json-serialization"></a>Sérialisation JSON
 Cet exemple montre comment utiliser le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> pour sérialiser et désérialiser des données au format JSON (JavaScript Objet Notation). Ce moteur de sérialisation convertit des données JSON en instances de types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et à nouveau en données JSON. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> prend en charge les mêmes types que <xref:System.Runtime.Serialization.DataContractSerializer>. Le format de données JSON est particulièrement utile lors de l'écriture d'applications Web de style JavaScript et XML (AJAX) asynchrones. Prise en charge AJAX dans Windows Communication Foundation (WCF) est optimisé pour une utilisation avec ASP.NET AJAX via le contrôle ScriptManager. Pour obtenir des exemples montrant comment utiliser Windows Communication Foundation (WCF) avec ASP.NET AJAX, consultez le [exemples AJAX](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
@@ -15,7 +15,7 @@ Cet exemple montre comment utiliser le <xref:System.Runtime.Serialization.Json.D
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération correspondant à cet exemple figurent en fin de rubrique.  
   
- L'exemple utilise un contrat de données `Person` pour illustrer la sérialisation et la désérialisation.  
+ L’exemple utilise un contrat de données `Person` pour illustrer la sérialisation et la désérialisation.  
 
 ```csharp
 [DataContract]

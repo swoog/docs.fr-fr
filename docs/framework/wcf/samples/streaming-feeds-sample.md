@@ -2,19 +2,19 @@
 title: Streaming Feeds, exemple
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 17639273ece804dc531cbbc3ab9135c814ea632d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a2bbc51593b4f1c3655d2e1d0df7f14d0005d68c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631357"
 ---
 # <a name="streaming-feeds-sample"></a>Streaming Feeds, exemple
 Cet exemple indique comment gérer des flux de syndication qui contiennent de grandes quantités d'éléments. Sur le serveur, l'exemple décrit comment différer la création d'objets <xref:System.ServiceModel.Syndication.SyndicationItem> individuels dans le flux jusqu'au moment précédant immédiatement l'écriture de l'élément dans le flux de données réseau.  
   
  Sur le client, l'exemple décrit comment un module de formatage de flux de syndication personnalisé peut être utilisé pour lire des éléments du flux de réseau, afin que le flux qui est lu ne soit jamais complètement mis en mémoire tampon.  
   
- Pour mieux illustrer la fonction de diffusion en continu de l'API de syndication, cet exemple utilise un scénario quelque peu improbable dans lequel le serveur expose un flux qui contient un nombre infini d'éléments. Dans ce cas, le serveur continue à générer de nouveaux éléments dans le flux jusqu'à ce qu'il détermine que le client a lu un nombre spécifié d'éléments du flux (10 par défaut). Pour plus de simplicité, le client et le serveur sont tous deux implémentés dans le même processus et utilisent un objet `ItemCounter` partagé pour assurer le suivi du nombre d'éléments que le client a générés. Le type `ItemCounter` existe uniquement pour permettre à l'exemple de scénario de se terminer convenablement et n'est pas un élément essentiel du modèle qui est illustré.  
+ Pour mieux illustrer la fonction de diffusion en continu de l'API de syndication, cet exemple utilise un scénario quelque peu improbable dans lequel le serveur expose un flux qui contient un nombre infini d'éléments. Dans ce cas, le serveur continue à générer de nouveaux éléments dans le flux jusqu'à ce qu'il détermine que le client a lu un nombre spécifié d'éléments du flux (10 par défaut). Pour plus de simplicité, le client et le serveur sont tous deux implémentés dans le même processus et utilisent un objet `ItemCounter` partagé pour assurer le suivi du nombre d'éléments que le client a générés. Le type `ItemCounter` existe uniquement pour permettre à l’exemple de scénario de se terminer convenablement et n’est pas un élément essentiel du modèle qui est illustré.  
   
  La démonstration se sert de Visual c# itérateurs (à l’aide de la `yield return` mot clé). Pour plus d’informations sur les itérateurs, consultez la rubrique « Utilisation d’itérateurs » sur MSDN.  
   
@@ -49,7 +49,7 @@ class ItemGenerator
 }  
 ```  
   
- Lorsque l'implémentation de service crée le flux, la sortie de `ItemGenerator.GenerateItems()` est utilisée à la place d'une collection d'éléments mise en mémoire tampon.  
+ Lorsque l’implémentation de service crée le flux, la sortie de `ItemGenerator.GenerateItems()` est utilisée à la place d’une collection d’éléments mise en mémoire tampon.  
   
 ```  
 public Atom10FeedFormatter StreamedFeed()  
@@ -77,7 +77,7 @@ StreamedAtom10FeedFormatter formatter = new StreamedAtom10FeedFormatter(counter)
 SyndicationFeed feed = formatter.ReadFrom(reader);  
 ```  
   
- Normalement, un appel à <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> ne retourne rien jusqu'à ce que le contenu entier du flux ait été lu depuis le réseau et mis en mémoire tampon. Toutefois, l'objet `StreamedAtom10FeedFormatter` substitue <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> pour retourner un itérateur au lieu d'une collection mise en mémoire tampon, comme l'illustre le code suivant.  
+ Normalement, un appel à <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> ne retourne rien jusqu'à ce que le contenu entier du flux ait été lu depuis le réseau et mis en mémoire tampon. Toutefois, l’objet `StreamedAtom10FeedFormatter` substitue <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> pour retourner un itérateur au lieu d’une collection mise en mémoire tampon, comme l’illustre le code suivant.  
   
 ```  
 protected override IEnumerable<SyndicationItem> ReadItems(XmlReader reader, SyndicationFeed feed, out bool areAllItemsRead)  
@@ -118,5 +118,5 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
-## <a name="see-also"></a>Voir aussi  
- [Flux de diagnostics autonome](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)
+## <a name="see-also"></a>Voir aussi
+- [Flux de diagnostics autonome](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

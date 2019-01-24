@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 62e2d05ec724b633de42c4b8e7183676d411791d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c11fe4176ee770e39abcab612e26e496aa2a1457
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543511"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Appel des opérations de service (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] définit les opérations de service d'un service de données. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de définir ces opérations sous forme de méthodes dans le service de données. Comme les autres ressources du service de données, ces opérations de service sont adressées via les URI. Une opération de service peut retourner des collections de types d'entité, des instances uniques de type d'entité et des types primitifs, comme des entiers et des chaînes. Une opération de service peut également retourner `null` (`Nothing` en Visual Basic). La bibliothèque cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] peut être utilisée pour accéder aux opérations de service qui prennent en charge les requêtes HTTP GET. Ces types d'opérations de service sont définis en tant que méthodes ayant <xref:System.ServiceModel.Web.WebGetAttribute> appliqué. Pour plus d’informations, consultez [opérations de Service](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "43513589"
   
 -   Lors de l’accès au service de données de façon asynchrone, vous devez utiliser les équivalents asynchrones <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> méthodes sur <xref:System.Data.Services.Client.DataServiceContext> ou <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> méthodes sur <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
--   La bibliothèque cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ne peut pas matérialiser les résultats d'une opération de service qui retourne une collection de types primitifs.  
+-   La bibliothèque cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ne peut pas matérialiser les résultats d’une opération de service qui retourne une collection de types primitifs.  
   
 -   La bibliothèque cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ne prend pas en charge les opérations de service POST appelantes. Les opérations de service qui sont appelées par une demande HTTP POST sont définies à l'aide du <xref:System.ServiceModel.Web.WebInvokeAttribute> avec le paramètre `Method="POST"`. Pour appeler une opération de service à l'aide d'une requête HTTP POST, vous devez plutôt utiliser <xref:System.Net.HttpWebRequest>.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "43513589"
  [!code-csharp[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationiqueryable)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationiqueryable)]  
   
- Dans cet exemple, l'opération de service retourne une collection d'objets `Order` avec les objets `Order_Detail` associés.  
+ Dans cet exemple, l’opération de service retourne une collection d’objets `Order` avec les objets `Order_Detail` associés.  
   
 <a name="CreateQueryIQueryable"></a>   
 ### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>Utilisation de CreateQuery\<T > pour retourner une Collection d’entités  
@@ -124,5 +124,5 @@ ms.locfileid: "43513589"
  [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#onasyncqueryexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>Voir aussi
+- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

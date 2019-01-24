@@ -2,12 +2,12 @@
 title: Filtrage
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 49813ac0f493d628a941b3060be93ef19bb1e802
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 735fd4252bb1740c149659f6c6fe81f18285914a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626106"
 ---
 # <a name="filtering"></a>Filtrage
 Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des filtres déclaratifs pour faire correspondre des messages et de prendre des décisions opérationnelles. Vous pouvez utiliser des filtres pour déterminer ce qu'il faut faire d'un message en examinant une partie du message. Par exemple, un processus de mise en file d’attente peut utiliser une requête XPath 1.0 pour vérifier l’élément prioritaire d’un en-tête connu afin de déterminer s’il faut déplacer un message au début de la file d’attente.  
@@ -34,18 +34,18 @@ Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des 
  Le <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> contient une liste de chaînes d'action. Si l'une des actions dans la liste du filtre correspond à l'en-tête Action dans le message ou le tampon de messages, la méthode `Match` retourne la valeur `true`. Si la liste est vide, le filtre est considéré un filtre de correspondance totale et tous les messages ou tampons de messages correspondent, et `Match` retourne la valeur `true`. Si aucune des actions dans la liste du filtre ne correspond à l'en-tête Action dans le message ou le tampon de messages, la méthode `Match` retourne la valeur `false`. S'il n'y a aucune action dans le message et si la liste du filtre n'est pas vide, alors `Match` retourne la valeur `false`.  
   
 ### <a name="endpoint-address-filters"></a>Filtres de l'adresse du point de terminaison  
- Le <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtre les messages et les tampons de messages en fonction d'une adresse de point de terminaison, telle que représentée dans leur collection d'en-têtes. Pour qu'un message passe un tel filtre, les conditions suivantes doivent être remplies :  
+ Le <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtre les messages et les tampons de messages en fonction d’une adresse de point de terminaison, telle que représentée dans leur collection d’en-têtes. Pour qu'un message passe un tel filtre, les conditions suivantes doivent être remplies :  
   
 -   L'URI de l'adresse du filtre doit être le même que celui de l'en-tête To du message.  
   
--   Chaque paramètre de point de terminaison dans l'adresse du filtre (collection `address.Headers` ) doit trouver un en-tête dans le message à mapper. Des en-tête supplémentaires dans le message ou le tampon de messages sont acceptables pour que la correspondance reste `true`.  
+-   Chaque paramètre de point de terminaison dans l’adresse du filtre (collection `address.Headers` ) doit trouver un en-tête dans le message à mapper. Des en-tête supplémentaires dans le message ou le tampon de messages sont acceptables pour que la correspondance reste `true`.  
   
 ### <a name="prefix-endpoint-address-filters"></a>Filtres du préfixe de l'adresse du point de terminaison  
   
 1.  Le <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> fonctionne comme le filtre <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, mais la correspondance peut se faire avec le préfixe de l'URI du message. Par exemple, un filtre en spécifiant l’adresse `http://www.adatum.com` correspond aux messages adressés à `http://www.adatum.com/userA`.  
   
 ### <a name="xpath-message-filters"></a>Filtres de message XPath  
- Un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> utilise une expression XPath pour déterminer si un document XML contient des éléments, des attributs, du texte ou d'autre constructions syntaxiques XML spécifiques. Le filtre se révèle extrêmement efficace pour les sous-ensembles stricts de XPath. XML Path Language est décrit dans la [W3C XML Path Language 1.0 specification](https://go.microsoft.com/fwlink/?LinkId=94779).  
+ Un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> utilise une expression XPath pour déterminer si un document XML contient des éléments, des attributs, du texte ou d’autre constructions syntaxiques XML spécifiques. Le filtre se révèle extrêmement efficace pour les sous-ensembles stricts de XPath. XML Path Language est décrit dans la [W3C XML Path Language 1.0 specification](https://go.microsoft.com/fwlink/?LinkId=94779).  
   
  En général, une application utilise un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> à un point de terminaison pour interroger le contenu d'un message SOAP puis prend la mesure appropriée en fonction des résultats de cette requête. Par exemple, un processus de mise en file d’attente peut utiliser une requête XPath pour inspecter l’élément de priorité d’un en-tête connu afin de décider s’il faut déplacer un message en haut de la file d’attente.  
   
@@ -83,5 +83,5 @@ Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des 
   
 -   Le reste des paramètres de point de terminaison dans l'`EndpointAddress` comme spécifié dans le <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Transfert de données et sérialisation](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+## <a name="see-also"></a>Voir aussi
+- [Transfert de données et sérialisation](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

@@ -2,12 +2,12 @@
 title: Validateur de nom d'utilisateur et de mot de passe
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 44292315e5cd3790b2ba9505747f3e8258106f0a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 08ecebb98df5d4a5d6dcda3e974d6e1a4c104fa5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544008"
 ---
 # <a name="user-name-password-validator"></a>Validateur de nom d'utilisateur et de mot de passe
 Cet exemple montre comment implémenter un validateur UserNamePassword personnalisé. Cela s’avère utile dans les cas où aucun des modes de validation UserNamePassword intégrés ne convient aux spécifications de l’application ; par exemple, lorsque les paires nom d’utilisateur/mot de passe sont stockées dans quelque magasin externe, tel qu’une base de données. Cet exemple illustre un service qui comprend un validateur personnalisé qui vérifie pour deux paires nom d'utilisateur/mot de passe particulières. Le client utilise une paire nom d'utilisateur/mot de passe pour s'authentifier auprès du service.
@@ -293,7 +293,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 3.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-machines"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -315,7 +315,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 9. Sur l'ordinateur du client, lancez Client.exe à partir d'une fenêtre d'invite de commandes.  
   
-10. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

@@ -1,15 +1,15 @@
 ---
-title: 'Comment : importer des métadonnées dans des points de terminaison de service'
+title: 'Procédure : Importer des métadonnées dans les points de terminaison de Service'
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 88b48b95a62c000d88b302589ebc489089e77602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a6375f0a0b0f657401a1ac2254be942d4e618aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548675"
 ---
-# <a name="how-to-import-metadata-into-service-endpoints"></a>Comment : importer des métadonnées dans des points de terminaison de service
+# <a name="how-to-import-metadata-into-service-endpoints"></a>Procédure : Importer des métadonnées dans les points de terminaison de Service
 Cette rubrique explique comment importer des métadonnées dans une collection de points de terminaison de service et d’utiliser le service défini dans le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Cette rubrique montre comment créer une application cliente qui importe les métadonnées à partir du service, puis appelle la méthode `Add` sur le service.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>Pour importer des métadonnées dans des points de terminaison de service  
@@ -27,7 +27,7 @@ Cette rubrique explique comment importer des métadonnées dans une collection d
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  Après avoir importé les métadonnées, vous ne pourrez pas créer un canal client ou exporter les métadonnées. En effet, aucune information de type n'est disponible à ce stade. Les informations de type sont requises pour interagir concrètement avec le service ou exporter les métadonnées. Pour générer les informations de type, vous devez générer le code (comme indiqué aux étapes 4 et 5). Vous pouvez également utiliser la classe d'assistance <xref:System.ServiceModel.Description.MetadataResolver>. Pour plus d’informations, consultez [Comment : utiliser des MetadataResolver pour obtenir les métadonnées de liaison dynamique](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
+    >  Après avoir importé les métadonnées, vous ne pourrez pas créer un canal client ou exporter les métadonnées. En effet, aucune information de type n'est disponible à ce stade. Les informations de type sont requises pour interagir concrètement avec le service ou exporter les métadonnées. Pour générer les informations de type, vous devez générer le code (comme indiqué aux étapes 4 et 5). Vous pouvez également utiliser la classe d'assistance <xref:System.ServiceModel.Description.MetadataResolver>. Pour plus d'informations, voir [Procédure : Utiliser MetadataResolver pour obtenir les métadonnées de liaison dynamiquement](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
   
 4.  Générez des informations de type pour chaque contrat.  
   
@@ -37,6 +37,6 @@ Cette rubrique explique comment importer des métadonnées dans une collection d
   
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Métadonnées](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Prise en main](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+## <a name="see-also"></a>Voir aussi
+- [Métadonnées](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Prise en main](../../../../docs/framework/wcf/samples/getting-started-sample.md)

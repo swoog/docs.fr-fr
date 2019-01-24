@@ -2,19 +2,19 @@
 title: '&lt;add&gt; de &lt;namespaceTable&gt;'
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: ef4f1c46a0ee3b94e5548b752e4e0a6a759fd45b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1d3b61fa6653b3910e65b95fa96fd0657e72bf7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632906"
 ---
 # <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;add&gt; de &lt;namespaceTable&gt;
 Représente un élément de configuration qui contient un mappage espace de noms-préfixe à utiliser dans des filtres XPath pour le routage.  
   
  \<system.serviceModel>  
-\<routage >  
-\<namespaceTable >  
+\<routing>  
+\<namespaceTable>  
 \<add>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -48,7 +48,7 @@ Représente un élément de configuration qui contient un mappage espace de noms
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<namespaceTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|Représente une section de configuration qui permet de définir un ensemble d’éléments contenant des mappages espace de noms-préfixe qui peuvent ensuite être utilisés dans des filtres XPath pour le routage.|  
+|[\<namespaceTable>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|Représente une section de configuration qui permet de définir un ensemble d’éléments contenant des mappages espace de noms-préfixe qui peuvent ensuite être utilisés dans des filtres XPath pour le routage.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>

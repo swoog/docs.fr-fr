@@ -2,17 +2,17 @@
 title: Introduction aux littéraux XML dans Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: bac0a4a297dcecce5465e5a1a1c02e4cbc9848a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624026"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introduction aux littéraux XML en Visual Basic
 Cette section fournit des informations sur la création d’arborescences XML en Visual Basic.  
   
- Pour plus d’informations sur les résultats des requêtes LINQ en tant que le contenu pour une arborescence XML, consultez [Construction fonctionnelle (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Pour plus d’informations sur l’utilisation des résultats de requêtes LINQ comme contenu pour une arborescence XML, consultez [Construction fonctionnelle (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
  Pour plus d’informations sur les littéraux XML en Visual Basic, consultez [vue d’ensemble de LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
@@ -195,5 +195,5 @@ Child1 was cloned
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Création d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>Voir aussi
+- [Création d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

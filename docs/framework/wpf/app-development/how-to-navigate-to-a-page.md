@@ -1,5 +1,5 @@
 ---
-title: 'Comment : accéder à une Page'
+title: 'Procédure : Accédez à une Page'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: 896287376979d40816e3937fff77b38bf71a62f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b76a12cbe6e1622e5624f5416abf24a4ca292a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536907"
 ---
-# <a name="how-to-navigate-to-a-page"></a>Comment : accéder à une Page
-Cet exemple illustre plusieurs méthodes dans lequel une page peut être accède à un <xref:System.Windows.Navigation.NavigationWindow>.  
+# <a name="how-to-navigate-to-a-page"></a>Procédure : Accédez à une Page
+Cet exemple illustre plusieurs méthodes dans lequel une page sont accessibles à partir d’un <xref:System.Windows.Navigation.NavigationWindow>.  
   
 ## <a name="example"></a>Exemple  
  Il est possible pour un <xref:System.Windows.Navigation.NavigationWindow> pour accéder à une page à l’aide d’une des opérations suivantes :  
@@ -31,7 +31,7 @@ Cet exemple illustre plusieurs méthodes dans lequel une page peut être accède
 > [!NOTE]
 >  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)] peut être relatif ou absolu. Pour plus d’informations, consultez [URI à en-tête pack dans WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Controls.Frame>  
- <xref:System.Windows.Controls.Page>  
- <xref:System.Windows.Navigation.NavigationService>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Controls.Frame>
+- <xref:System.Windows.Controls.Page>
+- <xref:System.Windows.Navigation.NavigationService>

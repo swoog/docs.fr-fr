@@ -2,22 +2,22 @@
 title: '&lt;certificate&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: f17cb5817b2a6912eebf1d4175665c09514de15e
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d1449cc6c40ae16190bacf378df3bd60c49d060c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538321"
 ---
 # <a name="ltcertificategt-element"></a>&lt;certificate&gt;, élément
 Spécifie un certificat X.509 à utiliser pour signer et chiffrer des messages pour les clients de réseau pair à pair.  
   
  \<system.ServiceModel>  
-\<comportements >  
-\<endpointBehaviors >  
-\<comportement >  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
 \<clientCredentials>  
-\<homologue >  
+\<peer>  
 \<certificate>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -38,8 +38,8 @@ Spécifie un certificat X.509 à utiliser pour signer et chiffrer des messages 
 |---------------|-----------------|  
 |`findValue`|Chaîne qui contient la valeur à rechercher dans le magasin de certificats X.509. Le type contenu dans l'attribut doit répondre aux spécifications du `x509FindType` spécifié. La valeur par défaut est une chaîne vide.|  
 |`storeLocation`|Indique l'emplacement du magasin de certificats X.509 utilisé par le client pour valider le certificat de l'homologue. Les valeurs valides sont les suivantes :<br /><br /> -LocalMachine : magasin de certificats assigné à l’ordinateur local.<br />-CurrentUser : magasin de certificats assigné à l’utilisateur actuel.<br /><br /> La valeur par défaut est LocalMachine.|  
-|`storeName`|Spécifie le nom du magasin de certificats X.509 à ouvrir. Les valeurs valides sont les suivantes :<br /><br /> -Carnet d’adresses : Magasin de certificats pour d’autres utilisateurs.<br />-AuthRoot : Magasin de certificats Autorités de certification tierce (CA).<br />-CertificateAuthority : Magasin de certificats Autorités de certification intermédiaires (CA).<br />-Interdit : Magasin de certificats pour les certificats révoqués.<br />-Mon : Magasin de certificats pour les certificats personnels.<br />-Racine : Magasin de certificats Autorités de certification racine approuvée (CA).<br />-TrustedPeople : Magasin de certificats pour les personnes directement approuvés et des ressources.<br />-TrustedPublisher : Magasin de certificats pour les éditeurs directement approuvés.<br /><br /> La valeur par défaut est My.|  
-|`X509FindType`|Définit le type de recherche X.509 à exécuter. Les valeurs valides sont les suivantes :<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Le type contenu dans l’attribut `findValue` doit répondre aux exigences du `X509FindType` spécifié.<br /><br /> La valeur par défaut est FindBySubjectDistinguishedName.|  
+|`storeName`|Spécifie le nom du magasin de certificats X.509 à ouvrir. Les valeurs valides sont les suivantes :<br /><br /> -Carnet d’adresses : Magasin de certificats pour d’autres utilisateurs.<br />-   AuthRoot: Magasin de certificats Autorités de certification tierce (CA).<br />-   CertificateAuthority: Magasin de certificats Autorités de certification intermédiaires (CA).<br />-Interdit : Magasin de certificats pour les certificats révoqués.<br />-Mon : Magasin de certificats pour les certificats personnels.<br />-Racine : Magasin de certificats Autorités de certification racine approuvée (CA).<br />-   TrustedPeople: Magasin de certificats pour les personnes directement approuvés et des ressources.<br />-TrustedPublisher : Magasin de certificats pour les éditeurs directement approuvés.<br /><br /> La valeur par défaut est My.|  
+|`X509FindType`|Définit le type de recherche X.509 à exécuter. Les valeurs valides sont les suivantes :<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> Le type contenu dans l’attribut `findValue` doit répondre aux exigences du `X509FindType` spécifié.<br /><br /> La valeur par défaut est FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -74,13 +74,13 @@ Spécifie un certificat X.509 à utiliser pour signer et chiffrer des messages 
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>  
- <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>  
- <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>  
- [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Réseaux homologues](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Authentification de Message de canal homologue](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Authentification personnalisée de canal homologue](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [Sécurisation des applications de canal homologue](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement>
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>
+- <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>
+- <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
+- [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Réseaux homologues](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [Authentification de Message de canal homologue](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
+- [Authentification personnalisée de canal homologue](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [Sécurisation des applications de canal homologue](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

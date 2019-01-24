@@ -1,15 +1,15 @@
 ---
-title: 'Comment : écrire une extension pour le ServiceContractGenerator'
+title: 'Procédure : Écrire une Extension pour le ServiceContractGenerator'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 43105553739e104ab862b3be3cf2082fbf6d499f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd0566f358b313ea96f1c9b2d5fd7fc447f4d2ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629700"
 ---
-# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Comment : écrire une extension pour le ServiceContractGenerator
+# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Procédure : Écrire une Extension pour le ServiceContractGenerator
 Cette rubrique décrit comment écrire une extension pour le <xref:System.ServiceModel.Description.ServiceContractGenerator>. Cela peut être fait en implémentant l'interface <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> sur un comportement d'opération ou en implémentant l'interface <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> sur un comportement de contrat. Cette rubrique indique comment implémenter l'interface <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> sur un comportement du contrat.  
   
  Le <xref:System.ServiceModel.Description.ServiceContractGenerator> génère des contrats de service, des types de clients et des configurations clientes à partir d'instances <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> et <xref:System.ServiceModel.Channels.Binding>. En général, vous importez des instances <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> et <xref:System.ServiceModel.Channels.Binding> à partir de métadonnées de service, puis vous utilisez ces instances pour générer du code pour appeler le service. Dans cet exemple, une implémentation <xref:System.ServiceModel.Description.IWsdlImportExtension> est utilisée pour traiter les annotations WSDL puis ajouter des extensions de génération de code aux contrats importés afin de produire des commentaires sur le code généré.  
@@ -98,6 +98,6 @@ Cette rubrique décrit comment écrire une extension pour le <xref:System.Servic
   
 7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> est appelée automatiquement pour chaque comportement de contrat sur un contrat donné qui implémente <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Cette méthode peut ensuite modifier le <xref:System.ServiceModel.Description.ServiceContractGenerationContext> passé. Dans cet exemple les commentaires sont ajoutés.  
   
-## <a name="see-also"></a>Voir aussi  
- [Métadonnées](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Guide pratique pour importer un WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>Voir aussi
+- [Métadonnées](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Guide pratique pour Importer le fichier WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

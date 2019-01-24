@@ -3,19 +3,19 @@ title: '&lt;wsFederation&gt;'
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 66596bbc7171a33318b835a552b7fb364d6833f7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fced46560263a030430c04bd550c9ad66f2e1972
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521895"
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 Fournit une configuration pour le <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
   
-\<system.identityModel.services >  
-\<federationConfiguration >  
-\<wsFederation >  
+\<system.identityModel.services>  
+\<federationConfiguration>  
+\<wsFederation>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,8 +50,8 @@ Fournit une configuration pour le <xref:System.IdentityModel.Services.WSFederati
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|AuthenticationType|URI qui spécifie le type d’authentification. Définit le paramètre wauth de demande de connexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, qui spécifie que le paramètre wauth n’est pas inclus dans la demande.|  
-|actualisation|L’âge maximal souhaité des demandes d’authentification, en quelques minutes. Définit le paramètre wfresh de demande de connexion WS-Federation. Facultatif. La valeur par défaut est zéro. Facultatif. **Avertissement :** dans la prochaine version de .NET Framework 4.5, le `freshness` attribut sera de type `xs:string` et sa valeur par défaut sera `null`.|  
+|authenticationType|URI qui spécifie le type d’authentification. Définit le paramètre wauth de demande de connexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, qui spécifie que le paramètre wauth n’est pas inclus dans la demande.|  
+|actualisation|L’âge maximal souhaité des demandes d’authentification, en quelques minutes. Définit le paramètre wfresh de demande de connexion WS-Federation. Facultatif. La valeur par défaut est zéro. Facultatif. **Avertissement :**  Dans la prochaine version de .NET Framework 4.5, le `freshness` attribut sera de type `xs:string` et sa valeur par défaut sera `null`.|  
 |homeRealm|Le domaine d’accueil du fournisseur d’identité (IP) à utiliser pour l’authentification. Définit le paramètre whr de demande de connexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, qui spécifie que le paramètre whr n’est pas inclus dans la demande.|  
 |issuer|L’URI de l’émetteur de jeton attendu. Définit les demandes de connexion URL WS-Federation base et les demandes de déconnexion requis.|  
 |persistentCookiesOnPassiveRedirects|Spécifie si les cookies persistants sont émis sur l’authentification. Facultatif. La valeur par défaut est « false », les cookies ne sont pas émis.|  
@@ -63,8 +63,8 @@ Fournit une configuration pour le <xref:System.IdentityModel.Services.WSFederati
 |requestPtr|Une URL qui spécifie l’emplacement de la demande d’émission de jeton. Définit le paramètre wreqptr de demande. Facultatif. La valeur par défaut est une chaîne vide, qui spécifie que le paramètre wreqptr n’est pas inclus dans la demande. Ne pas inclure le wreq ou le paramètre wreqptr dans la demande implique que le service STS sache quel type de jeton à émettre.|  
 |requireHttps|Spécifie si la communication avec le service de jeton de sécurité (STS) doit utiliser le protocole HTTPS. Facultatif. La valeur par défaut est « true », vous devez utiliser HTTPS.|  
 |ressource|Un URI qui identifie la ressource sollicitée, la partie de confiance (RP), à la pour le service de jeton de sécurité (STS). Facultatif. Définit le paramètre wres de demande de connexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, qui spécifie que le paramètre wres n’est pas inclus dans la demande. **Remarque :** wres est un paramètre hérité. Spécifiez le `realm` attribut à utiliser le paramètre wtrealm à la place.|  
-|signInQueryString|Fournit un point d’extensibilité pour spécifier les paramètres de requête définis par l’application dans l’URL de demande de connexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, ce qui indique que des paramètres supplémentaires doivent être inclus dans la demande. Les paramètres sont spécifiés comme un fragment de chaîne de requête à l’aide de la forme suivante : `"param1=value1&param2=value2&param3=value3"` et ainsi de suite. **Remarque :** dans un fichier de configuration le » & « caractère de la chaîne de requête doit être spécifié à l’aide de sa référence d’entité, `&`.|  
-|signOutQueryString|Fournit un point d’extensibilité pour spécifier les paramètres de requête définis par l’application dans l’URL de demande de connexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, ce qui indique que des paramètres supplémentaires doivent être inclus dans la demande. Les paramètres sont spécifiés comme un fragment de chaîne de requête à l’aide de la forme suivante : `"param1=value1&param2=value2&param3=value3"` et ainsi de suite. **Remarque :** dans un fichier de configuration le » & « caractère de la chaîne de requête doit être spécifié à l’aide de sa référence d’entité, `&`.|  
+|signInQueryString|Fournit un point d’extensibilité pour spécifier les paramètres de requête définis par l’application dans l’URL de demande de connexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, ce qui indique que des paramètres supplémentaires doivent être inclus dans la demande. Les paramètres sont spécifiés comme un fragment de chaîne de requête à l’aide de la forme suivante : `"param1=value1&param2=value2&param3=value3"` et ainsi de suite. **Remarque :**  Dans un fichier de configuration le » & « caractère de la chaîne de requête doit être spécifié à l’aide de sa référence d’entité, `&`.|  
+|signOutQueryString|Fournit un point d’extensibilité pour spécifier les paramètres de requête définis par l’application dans l’URL de demande de connexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, ce qui indique que des paramètres supplémentaires doivent être inclus dans la demande. Les paramètres sont spécifiés comme un fragment de chaîne de requête à l’aide de la forme suivante : `"param1=value1&param2=value2&param3=value3"` et ainsi de suite. **Remarque :**  Dans un fichier de configuration le » & « caractère de la chaîne de requête doit être spécifié à l’aide de sa référence d’entité, `&`.|  
 |signOutReply|Spécifie l’URL à laquelle le client doit être redirigé par le service de jeton de sécurité (STS) pendant la déconnexion passive via le protocole WS-Federation. Définit le paramètre wreply sur une demande de déconnexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, ce qui indique que des paramètres supplémentaires doivent être inclus dans la demande.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -98,6 +98,6 @@ Fournit une configuration pour le <xref:System.IdentityModel.Services.WSFederati
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

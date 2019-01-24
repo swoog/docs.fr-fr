@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a4c29db3f84570d4d5e99a1deaf8beb3145c8ea1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626938"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; élément
 Mappe un nom de classe à un nom d’algorithme convivial, ce qui permet à une classe d’avoir plusieurs noms conviviaux.  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<nameEntry >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<nameEntry>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,8 +77,8 @@ Mappe un nom de classe à un nom d’algorithme convivial, ce qui permet à une 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Schéma des paramètres de chiffrement](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schéma des paramètres de chiffrement](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configuration des classes de chiffrement](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

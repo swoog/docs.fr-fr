@@ -1,5 +1,5 @@
 ---
-title: Namespace ou le type spécifié dans les Imports au niveau du projet &#39; &lt;nom_élément_qualifié&gt; &#39; ne&#39;t contient aucun membre public ou est introuvable
+title: Namespace ou type spécifié dans les Imports au niveau du projet &#39; &lt;nom_qualifié_élément&gt; &#39; ne&#39;t contient aucun membre public ou est introuvable
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40057
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: d6d0c931262d892ec3e65888a76f25218b23d868
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 215d8d301317f711aecb88167030e70ed01408aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552461"
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace ou le type spécifié dans les Imports au niveau du projet &#39; &lt;nom_élément_qualifié&gt; &#39; ne&#39;t contient aucun membre public ou est introuvable
-Namespace ou le type spécifié dans les Imports' au niveau du projet\<nom_élément_qualifié >' ne contient aucun membre public ou est introuvable. Assurez-vous que l’espace de noms ou le type est défini et qu’il contient au moins un membre public. Assurez-vous que le nom d’alias ne contient d’autres alias.  
+# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace ou type spécifié dans les Imports au niveau du projet &#39; &lt;nom_qualifié_élément&gt; &#39; ne&#39;t contient aucun membre public ou est introuvable
+Namespace ou type spécifié dans les Imports' au niveau du projet\<nom_qualifié_élément >' ne contient aucun membre public ou est introuvable. Assurez-vous que l’espace de noms ou le type est défini et contient au moins un membre public. Assurez-vous que le nom d’alias ne contient pas d’autres alias.  
   
  Une propriété de l’importation d’un projet spécifie un élément conteneur qui ne peut pas être trouvé ou ne définit pas `Public` membres.  
   
- A *contenant l’élément* peut être un espace de noms, une classe, une structure, un module, une interface ou une énumération. L’élément conteneur contient des membres, tels que des variables, des procédures ou d’autres éléments qui le contient.  
+ Un *contenant l’élément* peut être un espace de noms, une classe, une structure, un module, une interface ou une énumération. L’élément conteneur contient des membres, tels que des variables, procédures ou d’autres éléments qui le contient.  
   
- L’objectif de l’importation est pour permettre à votre code pour accéder aux membres de type ou espace de noms sans avoir à les inclure. Votre projet devrez peut-être également ajouter une référence à l’espace de noms ou type. Pour plus d’informations, consultez « Importation d’éléments conteneurs » dans [références aux éléments de déclaré](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ L’objectif de l’importation consiste à autoriser votre code pour accéder aux membres de type ou espace de noms sans devoir les qualifier. Votre projet devrez peut-être également ajouter une référence à l’espace de noms ou type. Pour plus d’informations, consultez « Importation d’éléments conteneurs » dans [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
  Si le compilateur ne peut pas trouver l’élément conteneur spécifié, il ne peut pas résoudre les références qui l’utilisent. Si elle recherche l’élément, mais l’élément n’expose pas `Public` membres, aucune référence peut être réussie. Dans les deux cas, il est sans signification pour importer l’élément.  
   
- Vous utilisez la **Concepteur de projets** pour spécifier les éléments à importer. Utilisez le **espaces de noms importés** section de la **références** page. Vous pouvez accéder à la **Concepteur de projets** en double-cliquant sur le **mon projet** icône dans **l’Explorateur de solutions**.  
+ Vous utilisez le **Concepteur de projet** pour spécifier les éléments à importer. Utilisez le **espaces de noms importés** section de la **références** page. Vous pouvez accéder à la **Concepteur de projets** en double-cliquant sur le **mon projet** icône dans **l’Explorateur de solutions**.  
   
  **ID d’erreur :** BC40057  
   
@@ -37,9 +37,9 @@ Namespace ou le type spécifié dans les Imports' au niveau du projet\<nom_élé
   
 3.  Vérifiez que l’élément conteneur expose au moins un `Public` membre.  
   
-## <a name="see-also"></a>Voir aussi  
- [Page Références, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)  
- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Références aux éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>Voir aussi
+- [Page Références, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
+- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Références aux éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

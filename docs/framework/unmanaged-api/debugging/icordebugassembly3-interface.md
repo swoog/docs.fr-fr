@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5042f59b3716d077cc441585004e075b765c0cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 66d3024c0bb2c0014cbec2b24deb7b0d5845fe88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627523"
 ---
 # <a name="icordebugassembly3-interface"></a>ICorDebugAssembly3, interface
-Étend logiquement l’interface ICorDebugAssembly pour prendre en charge pour les assemblys conteneurs et les assemblys.  
+Étend logiquement l’interface ICorDebugAssembly pour prendre en charge pour les assemblys conteneurs et leurs assemblys de relation contenant-contenus.  
   
 ## <a name="methods"></a>Méthodes  
   
@@ -27,14 +27,14 @@ ms.locfileid: "33407853"
 >  L'interface est uniquement disponible avec .NET Native. Une tentative d'appel à `QueryInterface` pour récupérer un pointeur d'interface retourne `E_NOINTERFACE` pour les scénarios ICorDebug en dehors de .NET Native.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

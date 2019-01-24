@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f31dad53f42fdd8f7ac3a0cb995b507ecc3590d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96ad0e34bf638c378f37e317f790696c2ac7cb25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519695"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine, méthode
-Retourne la ligne la plus proche qui est un point de séquence, en fonction d’une ligne dans ce document, qui peut être ou non un point de séquence.  
+Retourne la ligne la plus proche constituant un point de séquence, la fonction d’une ligne dans ce document qui peut être ou non un point de séquence.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,5 +45,5 @@ HRESULT FindClosestLine(
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, un code d’erreur.  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedDocument, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedDocument, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

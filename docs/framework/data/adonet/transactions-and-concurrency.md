@@ -2,12 +2,12 @@
 title: Transactions et accès simultané
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494052"
 ---
 # <a name="transactions-and-concurrency"></a>Transactions et accès simultané
 Une transaction est composée d’une seule commande ou d’un groupe de commandes qui s’exécutent sous forme de package. Les transactions vous permettent de combiner plusieurs opérations en une seule unité de travail. Si une panne se produit pendant la transaction, toutes les mises à jour sont ramenées dans l'état qui était le leur avant le début de la transaction.  
@@ -34,10 +34,10 @@ Une transaction est composée d’une seule commande ou d’un groupe de command
  [Accès concurrentiel optimiste](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Décrit les accès concurrentiels optimiste et pessimiste et la manière de tester les violations d'accès concurrentiel.  
   
-## <a name="see-also"></a>Voir aussi  
- [Notions de base des transactions](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
- [Connexion à une source de données](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Notions de base des transactions](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
+- [Connexion à une source de données](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

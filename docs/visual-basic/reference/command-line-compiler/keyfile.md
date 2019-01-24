@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: 12895e4a18203a0d6c409a3b2117abbc59fab7a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b113c2b0311f1f108e36b7a81e60818fe1c2c3df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529072"
 ---
 # <a name="-keyfile"></a>-keyfile
 Spécifie un fichier contenant une clé ou une paire de clés afin d'attribuer un nom fort à un assembly.  
@@ -24,10 +24,10 @@ Spécifie un fichier contenant une clé ou une paire de clés afin d'attribuer u
   
 ## <a name="arguments"></a>Arguments  
  `file`  
- Obligatoire. Fichier qui contient la clé. Si le nom de fichier contient un espace, placez-le entre guillemets (« »).  
+ Obligatoire. Fichier qui contient la clé. Si le nom de fichier contient un espace, placez le nom entre guillemets ( » «).  
   
 ## <a name="remarks"></a>Notes  
- Le compilateur insère la clé publique dans le manifeste d’assembly et puis signe l’assembly final avec la clé privée. Pour générer un fichier de clé, tapez `sn -k file` à la ligne de commande. Pour plus d’informations, consultez [Sn.exe (outil Strong Name)][Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
+ Le compilateur insère la clé publique dans le manifeste d’assembly et puis signe l’assembly final avec la clé privée. Pour générer un fichier de clé, tapez `sn -k file` à la ligne de commande. Pour plus d’informations, consultez [Sn.exe (Strong Name Tool)][Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  Si vous compilez avec `-target:module`, le nom du fichier de clé est conservé dans le module et incorporé dans l’assembly qui est créé lorsque vous compilez un assembly avec [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
@@ -35,7 +35,7 @@ Spécifie un fichier contenant une clé ou une paire de clés afin d'attribuer u
   
  Vous pouvez également spécifier cette option comme attribut personnalisé (<xref:System.Reflection.AssemblyKeyFileAttribute>) dans le code source de n’importe quel module Microsoft intermediate language.  
   
- Tous deux `-keyfile` et [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) sont spécifiés (par option de ligne de commande ou par attribut personnalisé) dans la même compilation, le compilateur essaie d’abord le conteneur de clé. Si cette tentative réussit, l'assembly est signé avec les informations figurant dans le conteneur de clé. Si le compilateur ne trouve pas le conteneur de clé, il essaie le fichier spécifié avec `-keyfile`. Si cette opération réussit, l’assembly est signé avec les informations contenues dans le fichier de clé et les informations de clé sont installées dans le conteneur de clé (semblable à `sn -i`) afin que lors de la compilation suivante, le conteneur de clé sera valide.  
+ Tous deux `-keyfile` et [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) sont spécifiés (par option de ligne de commande ou par attribut personnalisé) dans la même compilation, le compilateur essaie d’abord le conteneur de clé. Si cette tentative réussit, l'assembly est signé avec les informations figurant dans le conteneur de clé. Si le compilateur ne trouve pas le conteneur de clé, il essaie le fichier spécifié avec `-keyfile`. Si cette opération réussit, l’assembly est signé avec les informations contenues dans le fichier de clé et les informations de clé sont installées dans le conteneur de clé (semblable à `sn -i`) afin que lors de la prochaine compilation, le conteneur de clé sera valide.  
   
  Notez qu’un fichier de clé peut contenir uniquement la clé publique.  
   
@@ -51,8 +51,8 @@ Spécifie un fichier contenant une clé ou une paire de clés afin d'attribuer u
 vbc -keyfile:myfile.sn input.vb  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Assemblys et le Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-référence (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Voir aussi
+- [Assemblys et le Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-référence (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

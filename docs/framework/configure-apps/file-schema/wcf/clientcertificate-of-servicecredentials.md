@@ -2,23 +2,23 @@
 title: '&lt;clientCertificate&gt; de &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: 7f777fd0e09a1bb9491f346a8e9806627aa63441
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e1334e42149de29c4fc7534863f02ede93c638ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536826"
 ---
 # <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;clientCertificate&gt; de &lt;serviceCredentials&gt;
 Définit un certificat X.509 permettant de signer et de chiffrer des messages destinés à un client et envoyés à partir d’un service selon un modèle de communication duplex.  
   
  \<system.ServiceModel>  
-\<comportements >  
+\<behaviors>  
 \<serviceBehaviors>  
 \<serviceBehaviors>  
-\<comportement >  
+\<behavior>  
 \<serviceCredentials>  
-\<clientCertificate >  
+\<clientCertificate>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,12 +53,12 @@ Définit un certificat X.509 permettant de signer et de chiffrer des messages de
   
  Le certificat défini dans cet élément est utilisé pour chiffrer les messages au client uniquement pour les liaisons configurées avec le mode d’authentification de sécurité des messages `MutualCertificateDuplex`.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>  
- [Guide pratique pour Créer un contrat Duplex](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
+- [Guide pratique pour Créer un contrat Duplex](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

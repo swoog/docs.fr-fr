@@ -2,12 +2,12 @@
 title: LINQ to XML, différences par rapport à DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 4feb0df2e4d3ffe5c79ce61d7b94142833a312c7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 07c54c9e2097a328ba09b16dab5b6c8b71c90934
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494845"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML, différences par rapport à DOM (Visual Basic)
 Cette section décrit certaines des principales différences entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] et l’API de programmation XML actuellement prédominante, le modèle DOM (Document Object Model) W3C.  
@@ -104,7 +104,7 @@ doc.AppendChild(name)
  L'un des autres problèmes associés au modèle DOM est qu'il ne vous permet pas de modifier le nom d'un nœud. Au lieu de cela, vous devez créer un nouveau nœud et y copier tous les nœuds enfants, perdant ainsi l'identité de nœud d'origine. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] évite ce problème en vous permettant de définir la propriété <xref:System.Xml.Linq.XName> sur un nœud.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Prise en charge des méthodes statiques pour le chargement de données XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] vous permet de charger du code XML en utilisant des méthodes statiques au lieu de méthodes d’instance. Cela simplifie le chargement et l'analyse. Pour plus d’informations, consultez [Comment : charger du code XML à partir d’un fichier (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] vous permet de charger du code XML en utilisant des méthodes statiques au lieu de méthodes d’instance. Cela simplifie le chargement et l'analyse. Pour plus d'informations, voir [Procédure : Charger XML à partir d’un fichier (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Suppression de la prise en charge des constructions de DTD  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifie la programmation XML en supprimant la prise en charge des entités et des références d'entités. La gestion des entités est complexe et rarement utilisée. La suppression de leur prise en charge augmente les performances et simplifie l'interface de programmation. Quand une arborescence [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] est remplie, toutes les entités DTD sont développées.  
@@ -128,7 +128,7 @@ doc.AppendChild(name)
  Les éléments [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] prennent en charge un ensemble extensible d'annotations. Cela est utile pour assurer le suivi de diverses informations relatives à un élément, telles que des informations de schéma, le fait que l'élément soit lié à une interface utilisateur ou tout autre type d'informations spécifiques aux applications. Pour plus d’informations, consultez [Annotations LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Prise en charge des informations de schéma  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fournit une prise en charge de la validation XSD via les méthodes d’extension de l’espace de noms <xref:System.Xml.Schema?displayProperty=nameWithType>. Vous pouvez valider la conformité d’une arborescence XML à un schéma XSD. Vous pouvez remplir l’arborescence XML avec le PSVI (Post-Schema-Validation Infoset). Pour plus d’informations, consultez [Guide pratique pour valider à l’aide de XSD](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) et <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fournit une prise en charge de la validation XSD via les méthodes d’extension de l’espace de noms <xref:System.Xml.Schema?displayProperty=nameWithType>. Vous pouvez valider la conformité d’une arborescence XML à un schéma XSD. Vous pouvez remplir l’arborescence XML avec le PSVI (Post-Schema-Validation Infoset). Pour plus d'informations, voir [Procédure : Valider à l’aide de XSD](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) et <xref:System.Xml.Schema.Extensions>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Bien démarrer (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Bien démarrer (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

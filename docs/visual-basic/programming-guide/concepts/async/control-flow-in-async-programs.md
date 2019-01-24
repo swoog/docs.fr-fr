@@ -2,12 +2,12 @@
 title: Flux de contrôle dans les programmes Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 368422338f6452bf5dbe968d4798bc0d5e937c92
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 24a3ece8393fd739ff76fbe759a5572414ce5748
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532524"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Flux de contrôle dans les programmes Async (Visual Basic)
 Vous pouvez écrire et tenir à jour des programmes asynchrones plus facilement à l’aide des mots clés `Async` et `Await`. Toutefois, les résultats peuvent vous étonner si vous ne comprenez pas le fonctionnement de votre programme. Cette rubrique suit le flux de contrôle par le biais d’un programme asynchrone simple pour vous montrer quand le contrôle se déplace d’une méthode à une autre et quelles informations sont transférées à chaque fois.  
@@ -98,7 +98,7 @@ Length of the downloaded string: 33946.
 >  Pour exécuter l’exemple, vous devez disposer de Visual Studio 2012 ou version ultérieure et le .NET Framework 4.5 ou ultérieure installés sur votre ordinateur.  
   
 ### <a name="download-the-program"></a>Télécharger le programme  
- Vous pouvez télécharger l’application utilisée dans cette rubrique à partir de l’[exemple Async : Flux de contrôle dans les programmes Async](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Les étapes suivantes ouvrent et exécutent le programme.  
+ Vous pouvez télécharger l’application de cette rubrique à partir [exemple Async : Flux de contrôle dans les programmes Async](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Les étapes suivantes ouvrent et exécutent le programme.  
   
 1.  Décompressez le fichier téléchargé, puis démarrez Visual Studio.  
   
@@ -358,8 +358,8 @@ Dim contentLength As Integer = Await getLengthTask
   
  ![Étape SIX](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Types de retour Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [Procédure pas à pas : accès au web avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Exemple Async : Flux de contrôle dans les programmes Async (C# et Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+## <a name="see-also"></a>Voir aussi
+- [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Types de retour Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Exemple Async : Flux de contrôle dans les programmes Async (C# et Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

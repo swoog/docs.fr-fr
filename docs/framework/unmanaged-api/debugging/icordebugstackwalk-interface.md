@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 612e0f84302d5bee6479264ef2dbba4c7152657e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb58040394d99ae0c5a10672946fa5a6ead5e751
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533414"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk, interface
 Fournit des méthodes pour obtenir les méthodes managées, ou frames, sur la pile d'un thread.  
@@ -32,7 +32,7 @@ Fournit des méthodes pour obtenir les méthodes managées, ou frames, sur la pi
 |------------|-----------------|  
 |[GetContext, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Retourne le contexte pour le frame actuel dans le `ICorDebugStackWalk` objet.|  
 |[SetContext, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Définit le `ICorDebugStackWalk` contexte actuel de l’objet à un contexte valid pour le thread.|  
-|[Next, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Déplace le `ICorDebugStackWalk` objet à l’image suivante.|  
+|[Next, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Déplace le `ICorDebugStackWalk` objet vers le frame suivant.|  
 |[GetFrame, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Obtient le frame actuel le `ICorDebugStackWalk` objet.|  
   
 ## <a name="remarks"></a>Notes  
@@ -41,14 +41,14 @@ Fournit des méthodes pour obtenir les méthodes managées, ou frames, sur la pi
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -2,12 +2,12 @@
 title: Gestion des autorisations avec les procédures stockées dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: e6161195682964ac9063cbee65d26ade601ef66c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 92752df75390c4f672f4a0cc1dd48ec7c07f6265
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546502"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestion des autorisations avec les procédures stockées dans SQL Server
 Une méthode pour créer plusieurs lignes de défense autour de votre base de données consiste à implémenter tous les accès aux données à l'aide de procédures stockées ou de fonctions définies par l'utilisateur. Vous révoquez ou refusez toutes les autorisations sur les objets sous-jacents, tels que les tables, et accordez les autorisations EXECUTE sur les procédures stockées De cette manière, vous créez un périmètre de sécurité autour vos objets de données et de base de données.  
@@ -56,12 +56,12 @@ Une méthode pour créer plusieurs lignes de défense autour de votre base de do
 |--------------|-----------------|  
 |[Procédures stockées](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) et [Injection SQL](https://go.microsoft.com/fwlink/?LinkId=98234) dans la documentation en ligne de SQL Server|Ces rubriques expliquent comment créer des procédures stockées et comment fonctionne l'injection SQL.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Vue d’ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Écriture de code SQL dynamique sécurisé dans SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [Personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [Modification des données avec les procédures stockées](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Vue d’ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Écriture de code SQL dynamique sécurisé dans SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
+- [Personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
+- [Modification des données avec les procédures stockées](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

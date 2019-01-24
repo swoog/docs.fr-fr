@@ -2,12 +2,12 @@
 title: Ce que&#39;nouveauté d’ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: a94833a513fa6ceef02b5ec64f0a7995779d323a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cfb1546ccddc6a4f6f3668210832db3d7a88f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501593"
 ---
 # <a name="what39s-new-in-adonet"></a>Ce que&#39;nouveauté d’ADO.NET
 Les fonctionnalités suivantes sont nouvelles dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] dans le [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -48,11 +48,11 @@ Les fonctionnalités suivantes sont nouvelles dans [!INCLUDE[vstecado](../../../
 -   L'assembly Microsoft.SqlServer.Types.dll, contenant les types de données spatiales, a été mis à niveau de la version 10.0 vers la version 11.0. Les applications qui référencent cet assembly peuvent échouer. Pour plus d’informations, consultez [modifications avec rupture des fonctionnalités du moteur de base de données](https://go.microsoft.com/fwlink/?LinkId=224367).  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] ajoute des API qui permettent d'ajouter de nouveaux scénarios lorsque vous utilisez Entity Framework 5.0. Pour plus d’informations sur les améliorations et fonctionnalités qui ont été ajoutées à Entity Framework 5.0, consultez les rubriques suivantes : [What ' s New](https://go.microsoft.com/fwlink/?LinkID=251106) et [versions et Entity Framework le contrôle de version](https://go.microsoft.com/fwlink/?LinkId=234899).  
+ [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] ajoute des API qui permettent d'ajouter de nouveaux scénarios lorsque vous utilisez Entity Framework 5.0. Pour plus d’informations sur les améliorations et fonctionnalités qui ont été ajoutées à Entity Framework 5.0, consultez les rubriques suivantes : [Quelles sont les nouveautés](https://go.microsoft.com/fwlink/?LinkID=251106) et [versions et Entity Framework le contrôle de version](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
-## <a name="see-also"></a>Voir aussi  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [SQL Server et ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [Nouveautés de WCF Data Services](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server et ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [Nouveautés de WCF Data Services](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

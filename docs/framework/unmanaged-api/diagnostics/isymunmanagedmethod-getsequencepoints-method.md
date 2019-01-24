@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf6528e8fe6a979db26ae44819bf34a36592ed6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623623"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints, méthode
 Obtient tous les points de séquence au sein de cette méthode.  
@@ -43,7 +43,7 @@ HRESULT GetSequencePoints(
   
 #### <a name="parameters"></a>Paramètres  
  `cPoints`  
- [in] A `ULONG32` qui reçoit la taille de la `offsets`, `documents`, `lines`, `columns`, `endLines`, et `endColumns` tableaux.  
+ [in] Un `ULONG32` qui reçoit la taille de la `offsets`, `documents`, `lines`, `columns`, `endLines`, et `endColumns` tableaux.  
   
  `pcPoints`  
  [out] Un pointeur vers un `ULONG32` qui reçoit la longueur de la mémoire tampon requise pour contenir les points de séquence.  
@@ -61,10 +61,10 @@ HRESULT GetSequencePoints(
  [in] Tableau dans lequel stocker les colonnes des documents auxquelles figurent les points de séquence.  
   
  `endLines`  
- [in] Tableau de lignes des documents auxquelles la séquence de points de terminaison.  
+ [in] Tableau de lignes des documents auxquelles la séquence de points de fin.  
   
  `endColumns`  
- [in] Tableau de colonnes des documents auxquelles la séquence de points de terminaison.  
+ [in] Tableau de colonnes des documents auxquelles la séquence de points de fin.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
@@ -72,5 +72,5 @@ HRESULT GetSequencePoints(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

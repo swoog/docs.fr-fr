@@ -2,12 +2,12 @@
 title: ASP.NET Compatibility
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1128183e990567d15b133bf8aa4ff5d32f10c663
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541090"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET Compatibility
 Cet exemple montre comment activer le mode de compatibilité ASP.NET dans Windows Communication Foundation (WCF). Utilisent des services qui s’exécutent dans la compatibilité ASP.NET participent pleinement le pipeline d’application ASP.NET de mode et peut rendre des fonctionnalités ASP.NET telles que l’autorisation de fichier/URL, l’état de session et le <xref:System.Web.HttpContext> classe. Le <xref:System.Web.HttpContext> classe permet d’accéder aux cookies, les sessions et les autres fonctionnalités ASP.NET. Dans ce mode, les liaisons doivent utiliser le transport HTTP et le service lui-même doit être hébergé dans les services IIS.  
@@ -64,7 +64,7 @@ public interface ICalculatorSession
 > [!NOTE]
 > État de session ASP.NET et des sessions WCF sont des aspects très différents. Consultez [Session](../../../../docs/framework/wcf/samples/session.md) pour plus d’informations sur les sessions de WCF.
   
- Le service a une dépendance approfondie sur l’état de session ASP.NET et nécessite le mode de compatibilité ASP.NET pour fonctionner correctement. Ces spécifications sont définies de manière déclarative en appliquant l'attribut `AspNetCompatibilityRequirements`.  
+ Le service a une dépendance approfondie sur l’état de session ASP.NET et nécessite le mode de compatibilité ASP.NET pour fonctionner correctement. Ces exigences sont définies de manière déclarative en appliquant l’attribut `AspNetCompatibilityRequirements`.  
   
 ```csharp  
 [AspNetCompatibilityRequirements(RequirementsMode =  
@@ -127,5 +127,5 @@ Press <ENTER> to terminate client.
   
 4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Voir aussi
+- [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

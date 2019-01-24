@@ -1,19 +1,19 @@
 ---
-title: 'Comment : dessiner une ligne'
+title: 'Procédure : Dessiner une ligne'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], lines
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: bee343676175098493df347823a3bdbdf17b205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 54152b6b68dd453c565afa2ffb23edfe8132a441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629018"
 ---
-# <a name="how-to-draw-a-line"></a>Comment : dessiner une ligne
+# <a name="how-to-draw-a-line"></a>Procédure : Dessiner une ligne
 Cet exemple vous montre comment dessiner des lignes à l’aide de la <xref:System.Windows.Shapes.Line> élément.  
   
  Pour dessiner une ligne, créez un <xref:System.Windows.Shapes.Line> élément. Utiliser son <xref:System.Windows.Shapes.Line.X1%2A> et <xref:System.Windows.Shapes.Line.Y1%2A> propriétés pour définir son point de départ ; et sa <xref:System.Windows.Shapes.Line.X2%2A> et <xref:System.Windows.Shapes.Line.Y2%2A> propriétés à définir son point de terminaison. Enfin, définissez son <xref:System.Windows.Shapes.Shape.Stroke%2A> et <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> , car une ligne sans trait est invisible.  
@@ -27,6 +27,6 @@ Cet exemple vous montre comment dessiner des lignes à l’aide de la <xref:Syst
   
  Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Shapes.Line>  
- [Exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Shapes.Line>
+- [Exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037)

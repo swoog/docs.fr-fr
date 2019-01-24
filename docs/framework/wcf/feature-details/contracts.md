@@ -6,12 +6,12 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: 1960a9c547892119d1bc0fb7efb51dfa5498a9c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ce9b03b1eae2a88a9e09449719b3a8e522409418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499299"
 ---
 # <a name="contracts"></a>Contrats
 Cette section vous montre comment définir et implémenter des contrats de Windows Communication Foundation (WCF). Un contrat de service spécifie ce qu'un point de terminaison communique au monde extérieur. À un niveau plus concret, il s'agit d'une instruction à propos d'un ensemble de messages spécifiques organisé en modèles d'échange de messages de base, tels que les messages demande/réponse, unidirectionnels et duplex. Si un contrat de service est un ensemble d'échanges de messages liés de manière logique, une opération de service est un échange de messages unique. Par exemple, une opération `Hello` doit évidemment accepter un message (de sorte que l'appelant puisse annoncer la salutation) et peut ou non retourner un message (en fonction du niveau de courtoisie de l'opération).  
@@ -65,7 +65,7 @@ Cette section vous montre comment définir et implémenter des contrats de Windo
   
  Ce processus d’exigence additif est important à prendre en compte lors de la conception, l’implémentation, configuration et hébergement de votre application de service Windows Communication Foundation (WCF). Par exemple, le contrat peut spécifier qu'il doit prendre en charge une session. Dans ce cas, vous devez configurer la liaison de façon à prendre en charge cette spécification contractuelle, sinon l'implémentation de service ne fonctionnera pas. Si votre service requiert l'authentification intégrée de Windows et qu'il est hébergé par les services IIS, l'option Authentification intégrée de Windows de l'application Web dans laquelle se trouve le service doit être activée et l'option de prise en charge anonyme doit être désactivée. Pour plus d’informations sur les fonctionnalités et l’impact des types d’application hôte service différent, consultez [hébergement](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Points de terminaison : adresses, liaisons et contrats](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Conception de contrats de service](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [Implémentation de contrats de service](../../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>Voir aussi
+- [Points de terminaison : Adresses, liaisons et contrats](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Conception de contrats de service](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [Implémentation de contrats de service](../../../../docs/framework/wcf/implementing-service-contracts.md)

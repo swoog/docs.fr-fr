@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 726a4ed8ee3d451687e0af671d948eb7648f7f58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 112c42f15b39c72ba8519877e5ee6a8700953ba5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625855"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly, méthode
 Installe l’assembly spécifié dans le global assembly cache.  
@@ -41,22 +41,22 @@ HRESULT InstallAssembly (
  `dwFlags`  
  [in] Indicateurs définis dans Fusion.idl. Les valeurs suivantes sont prises en charge :  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0 X 00000001)  
+-   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0 X 00000002)  
+-   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pszManifestFilePath`  
  [in] Le chemin d’accès au manifeste de l’assembly à installer.  
   
  `pRefData`  
- [in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure qui contient les données pour l’installation.  
+ [in] Un [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure qui contient les données pour l’installation.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IAssemblyCache, interface](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IAssemblyCache, interface](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

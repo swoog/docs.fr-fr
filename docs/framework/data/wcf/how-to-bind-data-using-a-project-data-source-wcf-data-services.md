@@ -1,5 +1,5 @@
 ---
-title: "Procédure : lier des données à l'aide d'une source de données projet (WCF Data Services)"
+title: 'Procédure : Lier des données à l’aide d’une Source de données de projet (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540752"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procédure : lier des données à l'aide d'une source de données projet (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procédure : Lier des données à l’aide d’une Source de données de projet (WCF Data Services)
 
 Vous pouvez créer des sources de données qui sont basées sur les objets de données générés dans une application de client WCF Data Services. Lorsque vous ajoutez une référence à un service de données à l’aide de la **ajouter une référence de Service** boîte de dialogue, une source de données de projet est créée, ainsi que les classes de données clientes générées. Une source de données est créée pour chaque jeu d'entités exposé par le service de données. Vous pouvez créer des formulaires qui affichent des données à partir du service en faisant glisser ces éléments de source de données à partir de la **des Sources de données** fenêtre sur le concepteur. Ces éléments deviennent des contrôles liés à la source de données. Pendant l’exécution, cette source de données est liée à une instance de la <xref:System.Data.Services.Client.DataServiceCollection%601> (classe), qui est remplie avec des objets qui sont retournées par une requête au service de données. Pour plus d’informations, consultez [liaison de données aux contrôles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
 
@@ -23,7 +23,7 @@ Vous pouvez créer des sources de données qui sont basées sur les objets de do
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Utiliser une source de données de projet dans une fenêtre WPF
 
-1.  Dans Visual Studio, dans un projet WPF, ajoutez une référence au service de données Northwind. Pour plus d’informations, consultez [Comment : ajouter une référence de Service de données](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1.  Dans Visual Studio, dans un projet WPF, ajoutez une référence au service de données Northwind. Pour plus d'informations, voir [Procédure : Ajouter une référence de Service de données](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
 2.  Dans le **des Sources de données** fenêtre, développez le `Customers` nœud dans le **NorthwindEntities** source de données de projet.
 
@@ -120,4 +120,4 @@ Vous pouvez créer des sources de données qui sont basées sur les objets de do
 ## <a name="see-also"></a>Voir aussi
 
 - [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Comment : lier les données aux éléments Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Guide pratique pour Lier des données aux éléments Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

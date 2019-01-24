@@ -1,5 +1,5 @@
 ---
-title: "Comment : afficher en gras certains jours à l'aide du contrôle MonthCalendar Windows Forms"
+title: 'Procédure : Afficher en gras certains jours avec les Windows Forms du contrôle MonthCalendar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: 0ee89fb4cfb6ddbf975eb0e85e7dd1bab30f08d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f310d5e30acffdd358bc5108f39102387289562e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528529"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547785"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Comment : afficher en gras certains jours à l'aide du contrôle MonthCalendar Windows Forms
-Windows Forms <xref:System.Windows.Forms.MonthCalendar> contrôle peut afficher les jours en gras, en tant que dates au singulier ou répétitive. Vous pouvez procéder pour attirer l’attention sur des dates spéciaux, tels que les week-ends et jours fériés.  
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procédure : Afficher en gras certains jours avec les Windows Forms du contrôle MonthCalendar
+Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle peut afficher les jours en gras, en tant que dates au singulier ou répétitive. Vous pouvez procéder ainsi pour attirer l’attention sur des dates particulières, telles que les week-ends et jours fériés.  
   
- Trois propriétés de contrôler cette fonctionnalité. Le <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> propriété contient des dates uniques. Le <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> propriété contient des dates qui apparaissent en gras chaque année. Le <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> propriété contient des dates qui apparaissent en gras chaque mois. Chacune de ces propriétés contient un tableau de <xref:System.DateTime> objets. Pour ajouter ou supprimer une date à partir d’une de ces listes, vous devez ajouter ou supprimer un <xref:System.DateTime> objet.  
+ Trois propriétés contrôlent cette fonctionnalité. Le <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> propriété contient des dates uniques. Le <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> propriété contient des dates qui apparaissent en gras chaque année. Le <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> propriété contient des dates qui apparaissent en gras chaque mois. Chacune de ces propriétés contient un tableau de <xref:System.DateTime> objets. Pour ajouter ou supprimer une date à partir d’une de ces listes, vous devez ajouter ou supprimer un <xref:System.DateTime> objet.  
   
 ### <a name="to-make-a-date-appear-in-bold-type"></a>Pour afficher une date en gras  
   
@@ -61,7 +61,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> contrôle peut afficher 
   
      – ou –  
   
-     Afficher un ensemble de dates en gras à la fois en créant un tableau de <xref:System.DateTime> objets et assignez-le à l’une des propriétés.  
+     Afficher un ensemble de dates en gras à la fois en créant un tableau de <xref:System.DateTime> objets et l’affecter à une des propriétés.  
   
     ```vb  
     Dim VacationDates As DateTime() = {myVacation1, myVacation2}  
@@ -127,8 +127,8 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> contrôle peut afficher 
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [MonthCalendar, contrôle](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- [Guide pratique pour sélectionner une plage de dates dans le contrôle MonthCalendar Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
- [Guide pratique pour modifier l'apparence du contrôle MonthCalendar Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
- [Guide pratique pour afficher plusieurs mois dans le contrôle MonthCalendar Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a>Voir aussi
+- [MonthCalendar, contrôle](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
+- [Guide pratique pour Sélectionnez une plage de Dates dans le contrôle MonthCalendar Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Guide pratique pour Modifier l’apparence du contrôle de MonthCalendar de formulaires Windows](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)
+- [Guide pratique pour Afficher plusieurs mois dans le contrôle MonthCalendar Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

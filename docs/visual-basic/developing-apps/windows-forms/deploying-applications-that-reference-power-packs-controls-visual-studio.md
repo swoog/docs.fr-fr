@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Power Packs, deploying
 ms.assetid: f2230f53-a745-4731-89e6-033943faa209
-ms.openlocfilehash: bd235bc0b4a7f9978333931ae1dce012c0950374
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 3fd46a6e8aad61d2f8ce5a230c856470f913d0bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551772"
 ---
 # <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a>Déploiement d’applications faisant référence aux contrôles Power Packs (Visual Studio)
 Si vous souhaitez déployer une application qui référence les contrôles Power Packs (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>, <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>, <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>, ou <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>), les contrôles doivent être installés sur l’ordinateur de destination.  
@@ -28,6 +28,6 @@ Si vous souhaitez déployer une application qui référence les contrôles Power
   
  Comme alternative à l’amorçage, vous pouvez prédéployer les contrôles Power Packs à l’aide d’un système de distribution électronique de logiciels tel que Microsoft Systems Management Server.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour installer des composants prérequis avec une application ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [Contrôles Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour installer des prérequis avec une application ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [Contrôles Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)

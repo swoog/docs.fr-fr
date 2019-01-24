@@ -1,17 +1,17 @@
 ---
-title: '&lt;Liaison&gt;'
+title: '&lt;binding&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 666183d6-4d1f-45c7-ac64-bdf93ee8f36f
-ms.openlocfilehash: d72b3a34e0696df944b2338c89f167c8bfa06400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb4fafda31205e2ce5efd01ab265fcacfa70bdf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539192"
 ---
-# <a name="ltbindinggt"></a>&lt;Liaison&gt;
-Vous pouvez utiliser l'élément de `binding` pour configurer différents types de liaisons prédéfinies fournis par Windows Communication Foundation (WCF).  
+# <a name="ltbindinggt"></a>&lt;binding&gt;
+Vous pouvez utiliser l’élément de `binding` pour configurer différents types de liaisons prédéfinies fournis par Windows Communication Foundation (WCF).  
   
 ## <a name="system-provided-binding"></a>Liaison fournie par le système  
  Les liaisons fournies par le système masquent la complexité de la pile de la messagerie du WCF. Les applications qui utilisent des liaisons fournies par le système ne requièrent pas de contrôle total sur la pile. Les attributs exposés sur chaque liaison fournie par le système sont les plus appropriés pour le scénario d'utilisation des adresses de liaison.  
@@ -37,10 +37,10 @@ Vous pouvez utiliser l'élément de `binding` pour configurer différents types 
   
  Les liaisons personnalisées sont identifiées par leur attribut `name`.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [Liaisons](../../../docs/framework/wcf/bindings.md)  
- [Liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [Liaisons](../../../docs/framework/wcf/bindings.md)
+- [Liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

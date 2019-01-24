@@ -1,5 +1,5 @@
 ---
-title: "Comment : s'assurer que la ligne sélectionnée dans une table enfant reste au bon emplacement"
+title: 'Procédure : S’assurer que la ligne sélectionnée dans une Table enfant reste au bon emplacement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ef2c72fb941aa40eff85af4a83f6c76843dc2d6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547629"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Comment : s'assurer que la ligne sélectionnée dans une table enfant reste au bon emplacement
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procédure : S’assurer que la ligne sélectionnée dans une Table enfant reste au bon emplacement
 Souvent, lors de l’utilisation de la liaison de données dans des Windows Forms, vous affichez des données dans ce que l’on appelle une vue parent/enfant ou maître/détails. Cela fait référence à un scénario de liaison de données où les données de la même source sont affichées dans deux contrôles. La modification de la sélection dans un contrôle entraîne la modification des données affichées dans le deuxième contrôle. Par exemple, le premier contrôle peut contenir une liste de clients et le second une liste de commandes associées au client sélectionné dans le premier contrôle.  
   
  À compter de .NET Framework version 2.0, quand vous affichez des données dans une vue parent/enfant, vous devrez peut-être effectuer des étapes supplémentaires pour vous assurer que la ligne actuellement sélectionnée dans la table enfant n'est pas réinitialisée à la première ligne de la table. Pour cela, vous devez mettre en cache la position de la table enfant et la réinitialiser une fois que la table parente a changé. En général, la réinitialisation de l'enfant se produit la première fois qu'un champ sur une ligne de la table parente change.  
@@ -35,7 +35,7 @@ Souvent, lors de l’utilisation de la liaison de données dans des Windows Form
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  Gérez l'événement <xref:System.Windows.Forms.CurrencyManager.ListChanged> pour le <xref:System.Windows.Forms.CurrencyManager> de la liaison et vérifiez s'il y a un <xref:System.ComponentModel.ListChangedType> égal à <xref:System.ComponentModel.ListChangedType.Reset>.  
+2.  Gérez l’événement <xref:System.Windows.Forms.CurrencyManager.ListChanged> pour le <xref:System.Windows.Forms.CurrencyManager> de la liaison et vérifiez s’il y a un <xref:System.ComponentModel.ListChangedType> égal à <xref:System.ComponentModel.ListChangedType.Reset>.  
   
 3.  Vérifiez la position actuelle du <xref:System.Windows.Forms.CurrencyManager>. Si elle est supérieure à la première entrée de la liste (en général 0), enregistrez-la dans une variable.  
   
@@ -81,9 +81,9 @@ Souvent, lors de l’utilisation de la liaison de données dans des Windows Form
   
 -   Références aux assemblys System, System.Data, System.Drawing, System.Windows.Forms et System.Xml.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Voir également [Guide pratique pour Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour s’assurer que plusieurs contrôles liés à la même source de données restent synchronisés](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- [BindingSource, composant](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour S’assurer que plusieurs contrôles liés à la même Source de données restent synchronisés](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)
+- [BindingSource, composant](../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

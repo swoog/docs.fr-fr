@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 343cedcf26112f0f2bcc7943ea5ee9f302329a15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60a9ba78211cd02300cccc7d150bb08fa68b0604
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556179"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs, méthode
-Obtient le `FunctionID` d’une fonction à l’aide du jeton de métadonnées spécifié contenant la classe, et `ClassID` valeurs des arguments de type.  
+Obtient le `FunctionID` d’une fonction en utilisant le jeton de métadonnées spécifié, contenant la classe, et `ClassID` des valeurs des arguments de type.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,27 +53,27 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  [in] Le nombre de paramètres de type pour la fonction donnée. Cette valeur doit être zéro pour les fonctions non génériques.  
   
  `typeArgs`  
- [in] Un tableau de `ClassID` valeurs, chacune d’elles est un argument de la fonction. La valeur de `typeArgs` peut être NULL si `cTypeArgs` est défini à zéro.  
+ [in] Un tableau de `ClassID` valeurs, chacun d’eux est un argument de la fonction. La valeur de `typeArgs` peut être NULL si `cTypeArgs` est défini à zéro.  
   
  `pFunctionID`  
  [out] Un pointeur vers le `FunctionID` de la fonction spécifiée.  
   
 ## <a name="remarks"></a>Notes  
- Appel de la `GetFunctionFromTokenAndTypeArgs` méthode avec un `mdMethodRef` métadonnées au lieu d’un `mdMethodDef` jeton de métadonnées peut avoir des résultats imprévisibles. Les appelants doivent résoudre le `mdMethodRef` à un `mdMethodDef` lors de son passage.  
+ Appelant le `GetFunctionFromTokenAndTypeArgs` méthode avec un `mdMethodRef` métadonnées au lieu d’un `mdMethodDef` jeton de métadonnées peut avoir des résultats imprévisibles. Les appelants doivent résoudre le `mdMethodRef` à un `mdMethodDef` lors de son passage.  
   
- Si la fonction n’est pas déjà chargée, l’appel `GetFunctionFromTokenAndTypeArgs` provoquera le chargement, qui est une opération dangereuse dans de nombreux contextes. Par exemple, l’appel de cette méthode pendant le chargement de modules ou de types peut entraîner une boucle infinie, que le runtime tente de charger des éléments.  
+ Si la fonction n’est pas déjà chargée, l’appel `GetFunctionFromTokenAndTypeArgs` provoquera le chargement, qui est une opération dangereuse dans de nombreux contextes. Par exemple, l’appel de cette méthode pendant le chargement de modules ou de types peut provoquer une boucle infinie, car le runtime tente de charger des éléments.  
   
- En règle générale, utilisez des `GetFunctionFromTokenAndTypeArgs` est déconseillée. Si les profileurs sont intéressés par les événements pour une fonction particulière, ils doivent stocker le `ModuleID` et `mdMethodDef` de cette fonction et utilisez [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) pour vérifier si une donnée `FunctionID` est celui de la fonction de votre choix.  
+ En règle générale, utilisez des `GetFunctionFromTokenAndTypeArgs` est déconseillée. Si les profileurs sont intéressés par les événements pour une fonction particulière, ils doivent stocker le `ModuleID` et `mdMethodDef` de cette fonction et utilisez [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) pour vérifier si une donnée `FunctionID` est celle de la fonction souhaitée.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

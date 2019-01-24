@@ -2,12 +2,12 @@
 title: Spécification d'un algorithme de chiffrement personnalisé
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537684"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Spécification d'un algorithme de chiffrement personnalisé
 WCF vous permet de spécifier un algorithme de chiffrement personnalité pour le chiffrement des données ou le calcul de signatures numériques. Voici les étapes qui permettent d'effectuer cette opération :  
@@ -116,7 +116,7 @@ CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.
 ```  
   
 ## <a name="configure-the-binding"></a>Configurer la liaison  
- Vous pouvez configurer la liaison en spécifiant la classe personnalisée dérivée de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> dans les paramètres de liaison, comme indiqué dans l'extrait de code suivant :  
+ Vous pouvez configurer la liaison en spécifiant la classe personnalisée dérivée de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> dans les paramètres de liaison, comme indiqué dans l’extrait de code suivant :  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
@@ -125,8 +125,8 @@ WSHttpBinding binding = new WSHttpBinding();
   
  Pour obtenir un exemple de code complet, consultez la [agilité de chiffrement dans sécurité WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) exemple.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Sécurisation de services](../../../../docs/framework/wcf/securing-services.md)  
- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a>Voir aussi
+- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sécurisation de services](../../../../docs/framework/wcf/securing-services.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)

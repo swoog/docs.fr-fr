@@ -1,15 +1,15 @@
 ---
-title: Informations sur l’appelant (Visual Basic)
+title: Informations de l’appelant (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619011"
 ---
-# <a name="caller-information-visual-basic"></a>Informations sur l’appelant (Visual Basic)
+# <a name="caller-information-visual-basic"></a>Informations de l’appelant (Visual Basic)
 À l'aide des attributs d'informations de l'appelant, vous pouvez obtenir des informations sur l'appelant d'une méthode. Vous pouvez obtenir le chemin d'accès du fichier de code source, le numéro de ligne dans le code source, puis le nom du membre de l'appelant. Ces informations sont utiles pour suivre, déboguer, et créer des outils de diagnostic.  
   
  Pour obtenir ces informations, vous utilisez les attributs qui sont appliqués aux paramètres facultatifs, qui a une valeur par défaut. Le tableau suivant répertorie les attributs d'informations de l'appelant définis dans l'espace de noms <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> :  
@@ -74,8 +74,8 @@ End Sub
 |Constructeur d'attribut|Le nom du membre auquel l'attribut est appliqué. Si l'attribut est un élément dans un membre (tel qu'un paramètre, une valeur de retour, ou un paramètre de type générique), le résultat est le nom du membre qui est associé à cet élément.|  
 |Aucun membre contenant (par exemple, niveau assembly ou attributs qui sont appliqués aux types)|Valeur par défaut du paramètre optionnel.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Attributs (Visual Basic)](../../../visual-basic/language-reference/attributes.md)  
- [Attributs courants (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
- [Paramètres facultatifs](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Concepts de programmation (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Attributs (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [Attributs courants (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [Paramètres facultatifs](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Concepts de programmation (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

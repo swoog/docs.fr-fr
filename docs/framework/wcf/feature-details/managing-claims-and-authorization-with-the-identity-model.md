@@ -8,29 +8,29 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540560"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestion des revendications et autorisation avec le modèle d'identité
-Une autorisation correspond au processus permettant d'identifier les entités autorisées à changer ou à consulter des ressources informatiques ou à y accéder d'une manière ou d'une autre. Par exemple, dans une entreprise, seuls les responsables peuvent avoir accès aux fichiers des employés. Windows Communication Foundation (WCF) prend en charge deux mécanismes pour effectuer le traitement des autorisations. Le premier mécanisme vous permet de contrôler les processus d'autorisation à l'aide des constructions CLR (Common Language Runtime) existantes. Le deuxième est un modèle basé sur les revendications appelé le *modèle d’identité*. WCF utilise le modèle d’identité pour créer des revendications à partir de messages entrants. Classes de modèle d’identité peuvent être étendus pour prendre en charge de nouveaux types de revendication pour les schémas d’autorisation personnalisée. Cette rubrique présente les principaux concepts de programmation de la fonctionnalité modèle d’identité et répertorie les principales classes utilisées par cette fonctionnalité.  
+Une autorisation correspond au processus permettant d'identifier les entités autorisées à changer ou à consulter des ressources informatiques ou à y accéder d'une manière ou d'une autre. Par exemple, dans une entreprise, seuls les responsables peuvent avoir accès aux fichiers des employés. Windows Communication Foundation (WCF) prend en charge deux mécanismes pour traiter les autorisations. Le premier mécanisme vous permet de contrôler les processus d'autorisation à l'aide des constructions CLR (Common Language Runtime) existantes. Le second est un modèle basé sur les revendications appelé le *modèle d’identité*. WCF utilise le modèle d’identité pour créer des revendications à partir de messages entrants. Classes de modèle d’identité peuvent être étendues pour prendre en charge de nouveaux types de revendication pour les schémas d’autorisation personnalisés. Cette rubrique présente les principaux concepts de programmation de la fonctionnalité modèle d’identité et répertorie les principales classes utilisées par cette fonctionnalité.  
   
 ## <a name="identity-model-scenarios"></a>Scénarios d'utilisation du modèle d'identité  
  Les scénarios suivants présentent différents cas d'utilisation de la fonctionnalité Modèle d'identité.  
   
-### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>Scénario 1 : Prise en charge des revendications de groupe, de rôle et d'identité  
+### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>Scénario 1 : Prise en charge d’identité, le rôle et les revendications de groupe  
  Les utilisateurs envoient des messages à un service Web. Les exigences de contrôle d’accès du service Web utilisent les groupes, les rôles et l’identité. L'expéditeur du message est mappé à un ensemble de rôles ou de groupes. Les informations concernant les rôles et les groupe sont utilisées pour effectuer les vérifications requises en matière d'accès.  
   
-### <a name="scenario-2-supporting-rich-claims"></a>Scénario 2 : prise en charge des revendications enrichies  
+### <a name="scenario-2-supporting-rich-claims"></a>Scénario 2 : Prise en charge des revendications enrichies  
  Les utilisateurs envoient des messages à un service Web. Les exigences de contrôle d’accès du service Web nécessitent le recours à un modèle enrichi, l’identité, les rôles ou les groupes étant insuffisants. Le service Web détermine si un utilisateur donné est autorisé à accéder à une ressource protégée particulière en utilisant le modèle basé sur les revendications enrichies. Par exemple, un utilisateur peut être autorisé à consulter des informations particulières, telles que les informations concernant les salaires, auxquelles les autres utilisateurs ne sont pas autorisés à accéder.  
   
-### <a name="scenario-3-mapping-disparate-claims"></a>Scénario 3 : mappage de revendications distinctes  
- Un utilisateur envoie un message à un service Web. L'utilisateur peut spécifier ses informations d'identification de différentes façons : Certificat X.509, jeton de nom d'utilisateur ou jeton Kerberos. Le service Web doit effectuer les contrôles d'accès de la même façon, quel que soit le type utilisé pour définir les informations d'identification de l'utilisateur. Si, au fil du temps, de nouveaux types d'informations d'identification sont pris en charge, le système devra évoluer en conséquence.  
+### <a name="scenario-3-mapping-disparate-claims"></a>Scénario 3 : Mappage de revendications distinctes  
+ Un utilisateur envoie un message à un service Web. L’utilisateur peut spécifier ses informations d’identification dans un nombre de différentes façons : Certificat X.509, jeton de nom d’utilisateur ou jeton Kerberos. Le service Web doit effectuer les contrôles d'accès de la même façon, quel que soit le type utilisé pour définir les informations d'identification de l'utilisateur. Si, au fil du temps, de nouveaux types d'informations d'identification sont pris en charge, le système devra évoluer en conséquence.  
   
-### <a name="scenario-4-determining-access-to-multiple-resources"></a>Scénario 4 : contrôle de l'accès à plusieurs ressources  
+### <a name="scenario-4-determining-access-to-multiple-resources"></a>Scénario 4 : Détermination de l’accès à plusieurs ressources  
  Un service Web essaie d'accéder à plusieurs ressources. Le service identifie les ressources protégées auxquelles un utilisateur donné est autorisé à accéder en comparant ses revendications avec celles requises pour accéder à ces ressources.  
   
 ## <a name="identity-model-terms"></a>Termes utilisés dans le cadre du modèle d'identité  
@@ -60,7 +60,7 @@ Une autorisation correspond au processus permettant d'identifier les entités au
  Émetteur  
  Il s'agit d'un ensemble de revendications contenant au moins une revendication d'identité et considéré comme ayant émis un autre ensemble de revendications.  
   
- Propriétés  
+ Properties  
  Il s'agit de l'ensemble des informations associées à un contexte d'évaluation ou d'autorisation.  
   
  Ressources protégées  
@@ -83,7 +83,7 @@ Une autorisation correspond au processus permettant d'identifier les entités au
  L'identité correspond à un droit particulier. Les revendications disposant de ce droit contiennent une instruction par rapport à l'identité des entités auxquelles elles se rapportent. Par exemple, une revendication de type « nom d’utilisateur principal » (UPN) avec la valeur «someone@example.com» et un droit d’identité indique une identité particulière dans un domaine particulier.  
   
 #### <a name="system-identity-claim"></a>Revendication d'identité système  
- Le modèle d'identité définit une seule revendication d'identité, la revendication d'identité système. Cette revendication d'identité indique que l'entité correspond en fait à l'application ou au système en cours.  
+ Le modèle d’identité définit une revendication d’identité : Système. Cette revendication d'identité indique que l'entité correspond en fait à l'application ou au système en cours.  
   
 ### <a name="sets-of-claims"></a>Ensembles de revendications  
  Le modèle des revendications représentant l'identité joue un rôle important, les revendications étant toujours émises par une entité du système, même si cette entité correspond en définitive à une sorte d'auto-concept.  Les revendications sont regroupées dans des ensembles, chaque ensemble correspondant à un émetteur. Un émetteur est en fait un ensemble de revendications. Une telle relation récursive doit prendre fin pour permettre à chaque ensemble de revendications d'être son propre émetteur.  
@@ -125,7 +125,7 @@ Une autorisation correspond au processus permettant d'identifier les entités au
  ![Gestion des revendications et autorisation](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF et modèle d'identité  
- WCF utilise l’infrastructure de modèle d’identité comme base pour l’autorisation. Dans WCF, le <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe vous permet de spécifier *autorisation* stratégies en tant que partie d’un service. Ces stratégies d’autorisation sont appelées *stratégies d’autorisation externes*, et ils peuvent effectuer le traitement des revendications basé sur la stratégie locale ou en interagissant avec un service distant. Le Gestionnaire d’autorisations, représenté par le <xref:System.ServiceModel.ServiceAuthorizationManager> classe évalue les stratégies d’autorisation externes ainsi que des stratégies d’autorisation reconnaissant divers types (jetons) des informations d’identification et remplit ce que l'on appelle un  *contexte d’autorisation* des revendications associées à un message entrant. Le contexte d'autorisation est représenté par la classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+ WCF utilise l’infrastructure de modèle d’identité comme base pour l’autorisation. Dans WCF, le <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe vous permet de spécifier *autorisation* stratégies en tant que partie d’un service. Ces stratégies d’autorisation sont appelés *stratégies d’autorisation externes*, et ils peuvent effectuer le traitement des revendications basé sur la stratégie locale ou en interagissant avec un service distant. Le Gestionnaire d’autorisation, représenté par le <xref:System.ServiceModel.ServiceAuthorizationManager> classe évalue les stratégies d’autorisation externes ainsi que des stratégies d’autorisation qui reconnaissent les différents types (jetons) des informations d’identification et remplit ce que l'on appelle un  *contexte d’autorisation* avec les revendications appropriées à un message entrant. Le contexte d'autorisation est représenté par la classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 ## <a name="identity-model-programming"></a>Programmation du modèle d'identité  
  La table suivante décrit le modèle d’objet utilisé pour programmer les extensions du modèle d’identité. Toutes ces classes existent dans <xref:System.IdentityModel.Policy> ou dans les espaces de noms <xref:System.IdentityModel.Claims>.  
@@ -133,10 +133,10 @@ Une autorisation correspond au processus permettant d'identifier les entités au
 |Classe|Description|  
 |-----------|-----------------|  
 |Composant d'autorisation|Classe du modèle d'identité qui implémente l'interface <xref:System.IdentityModel.Policy.IAuthorizationComponent>.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Interface qui fournit une propriété de chaîne en lecture seule unique : Id. La valeur de cette propriété est unique pour chaque instance dans le système qui implémente cette interface.|  
-|<xref:System.IdentityModel.Policy.AuthorizationContext>|Un *composant d’autorisation* qui contient un ensemble de `ClaimSet` instances avec zéro, une ou plusieurs propriétés ; le résultat de l’évaluation d’une ou plusieurs stratégies d’autorisation.|  
+|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Interface qui fournit une propriété de chaîne en lecture seule : ID. Id. La valeur de cette propriété est unique pour chaque instance dans le système qui implémente cette interface.|  
+|<xref:System.IdentityModel.Policy.AuthorizationContext>|Un *composant d’autorisation* qui contient un ensemble de `ClaimSet` instances avec zéro ou plusieurs propriétés ; le résultat de l’évaluation d’une ou plusieurs stratégies d’autorisation.|  
 |<xref:System.IdentityModel.Claims.Claim>|Association de trois composants : type, droits et valeur. Les droits et la valeur sont limités par le type de la revendication.|  
-|<xref:System.IdentityModel.Claims.ClaimSet>|Classe de base abstraite. Collection d'instances `Claim`.|  
+|<xref:System.IdentityModel.Claims.ClaimSet>|Classe de base abstraite. Collection d’instances `Claim`.|  
 |<xref:System.IdentityModel.Claims.DefaultClaimSet>|Classe sealed. Implémentation de la classe `ClaimSet`.|  
 |<xref:System.IdentityModel.Policy.EvaluationContext>|Classe de base abstraite. Passée à une stratégie d'autorisation pendant son évaluation.|  
 |<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|Une interface dérivée de `IAuthorizationComponent` et implémentée par les classes de stratégie d’autorisation.|  
@@ -155,27 +155,27 @@ Une autorisation correspond au processus permettant d'identifier les entités au
   
 |Membre|Description|  
 |------------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Les classes dérivées implémentent cette méthode pour effectuer des contrôles d'accès basés sur les revendications avant d'exécuter les opérations des services. Toutes les informations figurant dans le contexte <xref:System.ServiceModel.OperationContext> fourni ou ailleurs peuvent être examinées lors de la prise de décision d'accorder ou non l'accès. Si la méthode <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> retourne la valeur `true`, l'accès est accordé et l'opération est autorisée à s'exécuter. Si la méthode `CheckAccessCore` retourne la valeur `false`, l'accès est refusé et l'opération ne s'exécute pas. Pour obtenir un exemple, consultez [Comment : créer un gestionnaire d’autorisation personnalisé pour un Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Les classes dérivées implémentent cette méthode pour effectuer des contrôles d'accès basés sur les revendications avant d'exécuter les opérations des services. Toutes les informations figurant dans le contexte <xref:System.ServiceModel.OperationContext> fourni ou ailleurs peuvent être examinées lors de la prise de décision d'accorder ou non l'accès. Si la méthode <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> retourne la valeur `true`, l'accès est accordé et l'opération est autorisée à s'exécuter. Si la méthode `CheckAccessCore` retourne la valeur `false`, l'accès est refusé et l'opération ne s'exécute pas. Pour voir un exemple, consultez [Comment : Créer un gestionnaire d’autorisation personnalisé pour un Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Retourne le gestionnaire <xref:System.ServiceModel.ServiceAuthorizationManager> du service. Le gestionnaire <xref:System.ServiceModel.ServiceAuthorizationManager> est chargé de prendre les décisions concernant les autorisations.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|Collection de stratégies d’autorisation personnalisées spécifiées pour le service. Ces stratégies sont évaluées en plus des stratégies associées aux informations d'identification présentes dans les messages entrants.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IdentityModel.Policy.AuthorizationContext>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Policy.EvaluationContext>  
- <xref:System.IdentityModel.Policy.IAuthorizationComponent>  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims>  
- <xref:System.IdentityModel.Policy>  
- <xref:System.IdentityModel.Tokens>  
- <xref:System.IdentityModel.Selectors>  
- [Revendications et jetons](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Revendications et refus de l’accès aux ressources](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
- [Création de revendications et valeurs de ressource](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Guide pratique pour créer une revendication personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [Guide pratique pour comparer des revendications](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Guide pratique pour créer une stratégie d’autorisation personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [Guide pratique pour créer un gestionnaire d’autorisations personnalisé pour un service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IdentityModel.Policy.AuthorizationContext>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Policy.EvaluationContext>
+- <xref:System.IdentityModel.Policy.IAuthorizationComponent>
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims>
+- <xref:System.IdentityModel.Policy>
+- <xref:System.IdentityModel.Tokens>
+- <xref:System.IdentityModel.Selectors>
+- [Revendications et jetons](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+- [Revendications et refus de l’accès aux ressources](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
+- [Création de revendications et valeurs de ressource](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
+- [Guide pratique pour Créer une revendication personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Guide pratique pour Comparer des revendications](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Guide pratique pour Créer une stratégie d’autorisation personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Guide pratique pour Créer un gestionnaire d’autorisation personnalisé pour un Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

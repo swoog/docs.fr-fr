@@ -1,5 +1,5 @@
 ---
-title: '&lt;TimeSpan_LegacyFormatMode&gt; élément'
+title: '&lt;TimeSpan_LegacyFormatMode&gt; Element'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e371f45286c88c9136b869e750009dadeb261877
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d167af6c9e4bbd919a4cfeb279a6d68a14139c33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535032"
 ---
-# <a name="lttimespanlegacyformatmodegt-element"></a>&lt;TimeSpan_LegacyFormatMode&gt; élément
+# <a name="lttimespanlegacyformatmodegt-element"></a>&lt;TimeSpan_LegacyFormatMode&gt; Element
 Détermine si le runtime conserve le comportement hérité dans les opérations avec la mise en forme <xref:System.TimeSpan?displayProperty=nameWithType> valeurs.  
   
  \<configuration>  
 \<runtime>  
-< TimeSpan_LegacyFormatMode >  
+<TimeSpan_LegacyFormatMode>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -93,6 +93,6 @@ Invalid Format
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

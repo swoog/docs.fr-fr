@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548792"
 ---
 # <a name="creating-user-defined-bindings"></a>Création de liaisons définies par l’utilisateur
 Il existe plusieurs méthodes pour créer des liaisons non fournies par le système :  
@@ -21,9 +21,9 @@ Il existe plusieurs méthodes pour créer des liaisons non fournies par le syst�
 -   Vous pouvez créer un nouveau type <xref:System.ServiceModel.Channels.Binding> pour contrôler complètement l'ensemble de l'implémentation de la liaison.  
   
 ## <a name="the-order-of-binding-elements"></a>Ordre des éléments de liaison  
- Chaque élément de liaison représente une étape de traitement lors de l'envoi ou de la réception des messages. Pendant l'exécution, les éléments de liaison créent les canaux et les écouteurs nécessaires pour générer des piles de canaux entrants et sortants.  
+ Chaque élément de liaison représente une étape de traitement lors de l'envoi ou de la réception des messages. Pendant l’exécution, les éléments de liaison créent les canaux et les écouteurs nécessaires pour générer des piles de canaux entrants et sortants.  
   
- Il y a trois types principaux d'éléments de liaison : les éléments de liaison de protocole, les éléments de liaison d'encodage et les éléments de liaison de transport.  
+ Il existe trois principaux types d’éléments de liaison : Protocole de liaison des éléments, encodage des éléments de liaison et des éléments de liaison de Transport.  
   
  Éléments de liaison de protocole – Ces éléments représentent des étapes de traitement de niveau supérieur qui agissent sur les messages. Les canaux et les écouteurs créés par ces éléments de liaison peuvent ajouter, supprimer ou modifier le contenu du message. Une liaison donnée peut avoir un nombre arbitraire d’éléments de liaison de protocole, chacun héritant d’un objet <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) inclut plusieurs éléments de liaison de protocole, y compris le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> et <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>Dérivation à partir d'une liaison standard  
  Au lieu de créer une classe de liaison totalement nouvelle, il est possible d'étendre l'une des liaisons fournies par le système existantes. Comme dans le cas précédent, vous devez substituer la méthode <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> et la propriété <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Channels.Binding>  
- [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Channels.Binding>
+- [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md)

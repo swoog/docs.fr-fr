@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: f435136bb08876b759087b9cdd258f6ae7881be5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a027577f5118f9a5b2f3eeaa29ddfde20851a8f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530851"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Sécurité de message avec un client de certificat
 Le scénario suivant montre un client Windows Communication Foundation (WCF) et un service sécurisé à l’aide du mode de sécurité de message. Le client et le service sont tous les deux authentifiés à l'aide de certificats. Pour plus d’informations, consultez [sécurité des applications distribuées](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
@@ -143,8 +143,8 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

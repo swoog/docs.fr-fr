@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: ea079a0b55dde8df7b3442f3d604b2b6467ba785
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493896"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modification de données de valeurs élevées (max) dans ADO.NET
 Les types de données LOB sont ceux dont la taille maximale de ligne dépasse 8 kilo-octets (Ko). SQL Server fournit un spécificateur `max` pour les types de données `varchar`, `nvarchar` et `varbinary` pour permettre le stockage de valeurs pouvant atteindre 2^32 octets. Les colonnes de table et les variables Transact-SQL peuvent spécifier des types de données `varchar(max)`, `nvarchar(max)` ou `varbinary(max)`. Dans ADO.NET, les types de données `max` peuvent être extraits par un `DataReader` et spécifiés comme valeurs de paramètre d'entrée ou de sortie sans que cela nécessite une manipulation particulière. Pour les types de données `varchar` volumineux, il est possible d'extraire et de mettre à jour les données de façon incrémentielle.  
@@ -57,11 +57,11 @@ FROM OPENROWSET
   
  UPDATE  
   
- {  *\<objet >* }  
+ { *\<object>* }  
   
  SET  
   
- { *column_name* = {. ÉCRIRE ( *expression* , @Offset , @Length )}  
+ { *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
   
  La méthode WRITE Spécifie qu’une section de la valeur de la *column_name* sera modifiée. L’expression est la valeur qui sera copiée dans le *column_name*, le `@Offset` est le point à partir duquel l’expression sera écrite et le `@Length` argument est la longueur de la section dans la colonne.  
   
@@ -249,8 +249,8 @@ WHERE   DocumentID=@DocumentID
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Données binaires et de valeur élevée SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Mappages de types de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Opérations sur les données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Données binaires et de valeur élevée SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Mappages de types de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Opérations sur les données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

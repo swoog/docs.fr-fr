@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 0e77b26bdc7eaa038c69a6fb706ee066aa223a2e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 96107c287003cc5fca2eb0eaa86f0f1f32b7d65e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523695"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>UI Automation d'un contrôle personnalisé WPF
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] fournit une interface unique et généralisée que les clients Automation peuvent utiliser pour examiner ou utiliser les interfaces utilisateur de diverses plateformes et infrastructures. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] active à la fois le code d’assurance qualité (test) et les applications d’accessibilité, par exemple les lecteurs d’écran, pour examiner les éléments de l’interface utilisateur et simuler la manière dont les utilisateurs interagissent avec ces éléments à partir d’un autre code. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] pour toutes les plateformes, consultez la rubrique d’accessibilité.  
@@ -154,7 +154,7 @@ End Class
  [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble d’UI Automation](../../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [Contrôle personnalisé NumericUpDown avec thème et prise en charge d’UI Automation, exemple](https://go.microsoft.com/fwlink/?LinkID=160025)  
- [Implémentation de fournisseur UI Automation côté serveur](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble d’UI Automation](../../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Contrôle personnalisé NumericUpDown avec thème et prise en charge d’UI Automation, exemple](https://go.microsoft.com/fwlink/?LinkID=160025)
+- [Implémentation de fournisseur UI Automation côté serveur](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

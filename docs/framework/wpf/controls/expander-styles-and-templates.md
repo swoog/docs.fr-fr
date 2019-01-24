@@ -9,15 +9,15 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: f2c06918752de55941671c860055295d55cac5cb
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 99d11b599d79c9f0d998f49cc0f12fee9c83c39a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551967"
 ---
 # <a name="expander-styles-and-templates"></a>Styles et modèles Expander
-Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.Expander> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.Expander> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="expander-parts"></a>Composants d’Expander  
  Le <xref:System.Windows.Controls.Expander> contrôle n’a pas de composants nommés.  
@@ -37,12 +37,12 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |ExpandDown|ExpandDirectionStates|Le contrôle se développe vers le bas.|  
 |ExpandUp|ExpandDirectionStates|Le contrôle se développe des.|  
 |ExpandLeft|ExpandDirectionStates|Le contrôle se développe de gauche.|  
-|ExpandRight|ExpandDirectionStates|Le contrôle s’étend à droite.|  
+|ExpandRight|ExpandDirectionStates|Le contrôle s’étend vers la droite.|  
 |Valide|ValidationStates|Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.|  
 |InvalidFocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.|  
 |InvalidUnfocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.|  
   
-## <a name="expander-controltemplate-example"></a>Exemple d’Expander ControlTemplate  
+## <a name="expander-controltemplate-example"></a>Exemple de ControlTemplate Expander  
  L’exemple suivant montre comment définir un <xref:System.Windows.Controls.ControlTemplate> pour la <xref:System.Windows.Controls.Expander> contrôle.  
   
  [!code-xaml[ControlTemplateExamples#Expander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/expander.xaml#expander)]  
@@ -53,10 +53,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

@@ -2,14 +2,15 @@
 title: Gestion des erreurs HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c331d70a69740a9830cafb5cafdfcf1de14b541b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499244"
 ---
 # <a name="wcf-web-http-error-handling"></a>Gestion des erreurs HTTP Web WCF
-Gérer les erreurs HTTP Web Windows Communication Foundation (WCF) vous permet de retourner les erreurs à partir des services HTTP Web WCF qui spécifient un code d’état HTTP et de retournent les détails de l’erreur utilisent le même format que l’opération (par exemple, XML ou JSON).  
+Gestion d’erreurs HTTP Web Windows Communication Foundation (WCF) vous permet de retourner des erreurs à partir des services HTTP Web WCF qui spécifient un code d’état HTTP et de retournent les détails de l’erreur utilisent le même format que l’opération (par exemple, XML ou JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Gestion des erreurs HTTP Web WCF  
  La classe <xref:System.ServiceModel.Web.WebFaultException> définit un constructeur qui vous permet de spécifier un code d'état HTTP. Ce code d'état est alors retourné au client. Une version générique de la classe <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601>, vous permet de retourner un type défini par l'utilisateur contenant des informations sur l'erreur qui s'est produite. Cet objet personnalisé est sérialisé à l'aide du format spécifié par l'opération et retourné au client. L'exemple suivant indique comment retourner un code d'état HTTP.  
@@ -48,9 +49,9 @@ Public string Operation2()
   
  <xref:System.ServiceModel.Web.WebFaultException> est un <xref:System.ServiceModel.FaultException> et par conséquent peut être utilisé comme le modèle de programmation d'exception d'erreur pour les services qui exposent des points de terminaison SOAP, ainsi que des points de terminaison HTTP Web.  
   
-## <a name="see-also"></a>Voir aussi  
- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Mise en forme HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
- [Définition et spécification des erreurs](../../../../docs/framework/wcf/defining-and-specifying-faults.md)  
- [Gestion des exceptions et des erreurs](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [Envoi et réception des erreurs](../../../../docs/framework/wcf/sending-and-receiving-faults.md)
+## <a name="see-also"></a>Voir aussi
+- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Mise en forme HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
+- [Définition et spécification des erreurs](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
+- [Gestion des exceptions et des erreurs](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [Envoi et réception des erreurs](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

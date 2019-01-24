@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f6b363e94b0247bc77f57c6a8ea1607f8600af2e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 6235d4eb0d5996666097b486efe0ff0b75b68af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498318"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle Calendar
 > [!NOTE]
 >  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Cette rubrique fournit des informations sur la prise en charge d’ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pour le type de contrôle Calendar. Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un type de contrôle est un ensemble de conditions qu’un contrôle doit réunir pour pouvoir utiliser la propriété <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Ces conditions incluent des recommandations spécifiques pour l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , les valeurs de propriété [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , les modèles de contrôle et les événements [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
+ Cette rubrique fournit des informations sur la prise en charge d’ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pour le type de contrôle Calendar. Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un type de contrôle est un ensemble de conditions qu’un contrôle doit respecter pour pouvoir utiliser la propriété <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Ces conditions incluent des recommandations spécifiques pour l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , les valeurs de propriété [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , les modèles de contrôle et les événements [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
  Les contrôles Calendar permettent à un utilisateur de déterminer facilement la date et de sélectionner d’autres dates.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47170124"
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Consultez les notes.|La valeur de cette propriété doit être unique dans tous les contrôles d’une application.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Consultez les notes.|Rectangle externe qui contient l’ensemble du contrôle.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Consultez les notes.|Pris en charge s’il existe un rectangle englobant. Si les points du rectangle englobant ne sont pas tous interactifs et que vous effectuez un test de positionnement spécialisé, vous devez substituer et fournir une zone interactive.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Consultez les notes.|Pris en charge s’il existe un rectangle englobant. Si les points du rectangle englobant ne sont pas tous interactifs et que vous effectuez un test de positionnement spécialisé, vous devez remplacer et fournir un point interactif.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Calendrier|Cette valeur est la même pour toutes les infrastructures [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Le contrôle calendar est toujours inclus dans l’affichage de contenu de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Le contrôle calendar est toujours inclus dans l’affichage de contrôle de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
@@ -62,7 +62,7 @@ ms.locfileid: "47170124"
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Selon le cas|La plupart des contrôles calendar prennent en charge le retournement de l’affichage par page. Le modèle Scroll est recommandé pour prendre en charge la navigation de pagination.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Selon le cas|La plupart des contrôles calendar conservent un jour, un mois ou une année spécifique en tant que sélection du sous-élément. Certains calendriers peuvent être sélectionnés plusieurs fois et d’autres ne peuvent être sélectionnés qu’une seule fois.|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|Oui|Le contrôle calendar dispose toujours d’un en-tête dans sa sous-arborescence pour les jours de la semaine ; le modèle Table doit donc être pris en charge.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Non|Le modèle de contrôle Value n’est pas nécessaire pour les contrôles calendar car vous ne pouvez pas définir directement la valeur sur le contrôle. Si une date spécifique est associée au contrôle, les informations doivent être fournies par le modèle de contrôle Selection.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Aucune|Le modèle de contrôle Value n’est pas nécessaire pour les contrôles calendar car vous ne pouvez pas définir directement la valeur sur le contrôle. Si une date spécifique est associée au contrôle, les informations doivent être fournies par le modèle de contrôle Selection.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Événements UI Automation requis  
@@ -85,7 +85,7 @@ ms.locfileid: "47170124"
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|Selon le cas|Si le contrôle prend en charge le modèle de contrôle Scroll, il doit prendre en charge cet événement.|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Obligatoire|Aucun.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Automation.ControlType.Calendar>  
- [Vue d’ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Automation.ControlType.Calendar>
+- [Vue d’ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

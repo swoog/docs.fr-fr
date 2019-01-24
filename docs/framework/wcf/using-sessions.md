@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533135"
 ---
 # <a name="using-sessions"></a>Utilisation de sessions
 Dans les applications Windows Communication Foundation (WCF), un *session* met en corrélation d’un groupe de messages dans une conversation. Sessions WCF diffèrent de celles disponibles dans l’objet de session [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications prennent en charge des comportements différents et sont contrôlées de différentes façons. Cette rubrique décrit les fonctionnalités qui permettent de sessions dans WCF des applications et comment les utiliser.  
@@ -73,7 +73,7 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
  La définition de la propriété <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> ne spécifie pas le type de session que le contrat requiert mais uniquement qu'il requiert un type de session.  
   
 ## <a name="creating-a-contract-that-requires-a-session"></a>Création d'un contrat qui requiert une session  
- La création d'un contrat qui requiert une session déclare que le groupe d'opérations que le contrat de service déclare doit entièrement être exécuté dans la même session et que les messages doivent être remis dans l'ordre. Pour déterminer le niveau de support de session qu'un contrat de service requiert, attribuez la valeur de l'énumération <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> à la propriété <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> sur votre interface de contrat de service ou classe, afin de spécifier si le contrat :  
+ La création d'un contrat qui requiert une session déclare que le groupe d'opérations que le contrat de service déclare doit entièrement être exécuté dans la même session et que les messages doivent être remis dans l'ordre. Pour déterminer le niveau de support de session qu'un contrat de service requiert, attribuez la valeur de l'énumération <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> à la propriété <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> sur votre interface de contrat de service ou classe, afin de spécifier si le contrat :  
   
 -   Requiert une session.  
   
@@ -106,7 +106,7 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
  Les*opérations de fin*, inversement, doivent être appelées comme dernier message dans une session existante. Par défaut, WCF recycle l'objet du service et son contexte après la fermeture de la session à laquelle le service a été associé. Vous pouvez, par conséquent, créer un type de destructeur en déclarant les opérations de fin conçues pour exécuter une fonction appropriée à la fin de l'instance de service.  
   
 > [!NOTE]
->  Bien que le comportement par défaut présente une ressemblance avec les constructeurs et les destructeurs locaux, il ne s'agit que d'une ressemblance. Toute opération de service WCF peut être une initialisation ou opération de fin ou les deux en même temps. De plus, par défaut, les opérations d'initialisation peuvent être appelées un nombre illimité de fois, dans tout ordre, après l'appel de la première ; aucune session supplémentaire n'est créée une fois que la session est établie et associée à une instance, à moins que vous ne contrôliez explicitement la durée de vie de l'instance de service (en manipulant l'objet <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>). Enfin, l'état est associé à la session et pas l'objet de service.  
+>  Bien que le comportement par défaut présente une ressemblance avec les constructeurs et les destructeurs locaux, il ne s'agit que d'une ressemblance. Toute opération de service WCF peut être une initialisation ou opération de fin ou les deux en même temps. De plus, par défaut, les opérations d'initialisation peuvent être appelées un nombre illimité de fois, dans tout ordre, après l'appel de la première ; aucune session supplémentaire n'est créée une fois que la session est établie et associée à une instance, à moins que vous ne contrôliez explicitement la durée de vie de l'instance de service (en manipulant l'objet <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> ). Enfin, l'état est associé à la session et pas l'objet de service.  
   
  Par exemple, le `ICalculatorSession` contrat utilisé dans l’exemple précédent requiert que le client WCF objet premier appel le `Clear` opération avant toute autre opération et que la session avec cet objet de client WCF doit s’arrêter lorsqu’il appelle le `Equals` opération. L'exemple de code suivant montre un contrat qui applique ces spécifications. `Clear` doit être appelé en premier pour initialiser une session, et cette session se termine lorsque `Equals` est appelé.  
   
@@ -129,7 +129,7 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
   
 -   Une opération de fin sur un type d’objet client WCF (par défaut, aucune opération ne termine ; le contrat doit spécifier explicitement une opération de fin). Lorsque la première opération est appelée, l’objet de client WCF ouvre le canal automatiquement et lance une session.  
   
- Pour obtenir des exemples, consultez [Guide pratique pour créer un service qui requiert des sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) ainsi que [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) et [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
+ Pour obtenir des exemples, consultez [Guide pratique pour Créer un Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) ainsi que le [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) et [Instancing](../../../docs/framework/wcf/samples/instancing.md) exemples.  
   
  Pour plus d’informations sur les clients et les sessions, consultez [Services d’accès à l’aide d’un Client WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
@@ -145,6 +145,6 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
 > [!NOTE]
 >  MaxConcurrentSessions n'a aucun effet dans ce cas car une seule « session » est disponible.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>  
- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
+- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

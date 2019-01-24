@@ -1,5 +1,5 @@
 ---
-title: 'Comment : ajouter un écran de démarrage dans une application WPF'
+title: 'Procédure : Ajouter un écran de démarrage dans une application WPF'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 46efa041736870c5c0f08baa321ef0dc53cacc0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 545fce07d0fab3dca8116f2cacfc068b62cbbde2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537541"
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Comment : ajouter un écran de démarrage dans une application WPF
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Procédure : Ajouter un écran de démarrage dans une application WPF
 
 Cette rubrique montre comment ajouter une fenêtre de démarrage, ou *écran de démarrage*, à une application Windows Presentation Foundation (WPF).
 
@@ -47,4 +47,4 @@ Dans **l’Explorateur de solutions**, supprimez l’image d’écran de démarr
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.SplashScreen>
-- [Comment : ajouter des éléments existants à un projet](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))
+- [Guide pratique pour Ajouter des éléments existants à un projet](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

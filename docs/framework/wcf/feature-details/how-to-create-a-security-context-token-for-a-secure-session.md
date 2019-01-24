@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : créer un jeton de contexte de sécurité pour une session sécurisée'
+title: 'Procédure : Créer un contexte de sécurité jeton pour une Session sécurisée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: ec065854e049e333252003e0ce6e6efad4c6ce6c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3d37d3894f7e6a1146cc4f04f53512ef06911ac7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620069"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procédure : créer un jeton de contexte de sécurité pour une session sécurisée
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procédure : Créer un contexte de sécurité jeton pour une Session sécurisée
 En utilisant un jeton de contexte de sécurité avec état (SCT) dans une session sécurisée, la session peut résister au service qui est recyclé. Par exemple, lorsqu'un SCT sans état est utilisé dans une session sécurisée et que les services IIS (Internet Information Services) sont réinitialisés, les données de session associées au service sont perdues. Ces données de session incluent un cache du jeton SCT. Ainsi, la prochaine fois qu'un client enverra au service un SCT sans état, une erreur sera retournée, parce que la clé associée au SCT ne peut pas être récupérée. Toutefois, si un SCT avec état est utilisé, la clé associée au SCT est contenue dans le SCT. Étant donné que la clé est contenue dans le SCT et donc contenue dans le message, la session sécurisée n'est pas affectée par le service qui est recyclé. Par défaut, Windows Communication Foundation (WCF) utilise des SCT sans état dans une session sécurisée. Cette rubrique détaille la manière d’utiliser des SCT avec état dans une session sécurisée.  
   
 > [!NOTE]
@@ -109,5 +109,5 @@ En utilisant un jeton de contexte de sécurité avec état (SCT) dans une sessio
 </customBinding>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Voir aussi
+- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

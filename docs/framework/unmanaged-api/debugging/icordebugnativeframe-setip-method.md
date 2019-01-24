@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8b6bf60790c10b9869dcc41678be050b8979dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e2d0628d3c8bf5912c811ddf4b2a00b9dfca4687
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639206"
 ---
 # <a name="icordebugnativeframesetip-method"></a>ICorDebugNativeFrame::SetIP, méthode
 Définit le pointeur d’instruction à l’emplacement de décalage spécifié dans le code natif.  
@@ -37,23 +37,23 @@ HRESULT SetIP (
   
 #### <a name="parameters"></a>Paramètres  
  `nOffset`  
- [in] L’emplacement de décalage dans le code natif.  
+ [in] Emplacement de décalage dans le code natif.  
   
 ## <a name="remarks"></a>Notes  
- Les appels à `SetIP` invalident immédiatement tous les frames et des chaînes pour le thread actuel. Si le débogueur a besoin d’informations de frames après un appel à `SetIP`, il doit effectuer une nouvelle trace de pile.  
+ Les appels à `SetIP` invalider immédiatement tous les frames et des chaînes pour le thread actuel. Si le débogueur a besoin des informations de frame après un appel à `SetIP`, il doit effectuer une nouvelle trace de pile.  
   
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) essaiera de conserver le frame de pile dans un état valide. Toutefois, même si le frame est dans un état valide, en ce qui concerne l’exécution, il reste peut-être des problèmes, tels que des variables locales non initialisées et ainsi de suite. L’appelant est responsable de la cohérence du programme en cours d’exécution.  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) essaiera de conserver le frame de pile dans un état valide. Toutefois, même si le frame est dans un état valide, autant que le runtime est concerné, il reste peut-être des problèmes, tels que des variables locales non initialisées et ainsi de suite. L’appelant est responsable de la cohérence du programme en cours d’exécution.  
   
  Sur les plateformes 64 bits, le pointeur d’instruction ne peut pas être déplacé hors d’un `catch` ou `finally` bloc. Si `SetIP` est appelée pour effectuer ce déplacement sur une plateforme 64 bits, il retourne un HRESULT indiquant un échec.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- 
+## <a name="see-also"></a>Voir aussi
+

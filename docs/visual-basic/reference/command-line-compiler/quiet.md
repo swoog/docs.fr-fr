@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: e67fe05507c8cb3edd7f46cad19211ba11e3b054
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfa85141e791cfcb28cfc6d216781f0cf14c2e4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624152"
 ---
 # <a name="-quiet"></a>-quiet
 Empêche le compilateur d'afficher le code pour les erreurs et les avertissements liés à la syntaxe.  
@@ -26,7 +26,7 @@ Empêche le compilateur d'afficher le code pour les erreurs et les avertissement
 ```  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, l'option `-quiet` n'est pas activée. Lorsque le compilateur signale une erreur de syntaxe ou un avertissement, il génère également la ligne de code source. Pour les applications qui analysent la sortie du compilateur, il peut être plus pratique pour la sortie du compilateur est uniquement le texte de diagnostic.  
+ Par défaut, l'option `-quiet` n'est pas activée. Lorsque le compilateur signale une erreur de syntaxe ou un avertissement, il génère également la ligne de code source. Pour les applications qui analysent la sortie du compilateur, il peut être plus pratique, le compilateur doit générer uniquement le texte de diagnostic.  
   
  Dans l’exemple suivant, `Module1` génère une erreur qui inclut le code source compilé sans `-quiet`.  
   
@@ -60,6 +60,6 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
 vbc -quiet t2.vb  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Voir aussi
+- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

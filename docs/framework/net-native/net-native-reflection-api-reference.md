@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13dfdfd89bf91510146ce388620d3e51c2aa1f02
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 38894f57ec93fd44610b5c612326b399d477b723
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531182"
 ---
 # <a name="net-native-reflection-api-reference"></a>Guide de référence de l'API de réflexion .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] inclut trois nouveaux types d'exception : [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)et [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Notez les éléments suivants concernant ces trois types d'exception :  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] inclut trois nouveaux types d’exception : [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), et [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Notez les éléments suivants concernant ces trois types d'exception :  
   
  Ces types sont destinés à une utilisation interne uniquement.  
  Ces trois types d'exception sont destinés à être utilisés par la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)] uniquement. Les exceptions sont levées quand la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)] détecte des données manquantes qui empêchent la poursuite de l'exécution du programme.  
@@ -38,7 +38,7 @@ ms.locfileid: "49347507"
  Pour plus d'informations sur les autres types de cet espace de noms, consultez les pages de référence de <xref:System.Reflection> dans l'ensemble de la documentation du .NET Framework.  
   
 ## <a name="systemruntimecompilerservices-namespace"></a>Espace de noms System.Runtime.CompilerServices  
- L'espace de noms <xref:System.Runtime.CompilerServices> comprend des types qui ont été conçus pour être utilisés par des compilateurs de langage. Pour [!INCLUDE[net_native](../../../includes/net-native-md.md)], il inclut également un nouveau type d'exception :  
+ L'espace de noms <xref:System.Runtime.CompilerServices> comprend des types qui ont été conçus pour être utilisés par des compilateurs de langage. Pour [!INCLUDE[net_native](../../../includes/net-native-md.md)], il inclut également un nouveau type d'exception :  
   
 |Classe|Description|  
 |-----------|-----------------|  
@@ -46,8 +46,8 @@ ms.locfileid: "49347507"
   
  Pour plus d'informations sur les autres types de cet espace de noms, consultez les pages de référence de <xref:System.Runtime.CompilerServices> dans l'ensemble de la documentation du .NET Framework.  
   
-## <a name="see-also"></a>Voir aussi  
- [MissingInteropDataException, classe](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
- [MissingMetadataException, classe](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
- [MissingRuntimeArtifactException, classe](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
- [Prise en main](../../../docs/framework/net-native/getting-started-with-net-native.md)
+## <a name="see-also"></a>Voir aussi
+- [MissingInteropDataException, classe](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
+- [MissingMetadataException, classe](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
+- [MissingRuntimeArtifactException, classe](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
+- [Prise en main](../../../docs/framework/net-native/getting-started-with-net-native.md)

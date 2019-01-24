@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24b01fecc7947d14e36b4411a58d200667b0f2a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8abe1b63aad7b73b3260553550112ded75b77bb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537736"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>ICorDebugManagedCallback::ExitThread, méthode
-Notifie le débogueur qu’un thread en cours d’exécution du code managé s’est arrêté.  
+Notifie le débogueur qu’un thread qui exécutait le code managé s’est arrêté.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ HRESULT ExitThread (
  [in] Pointeur vers un objet ICorDebugThread qui représente le thread managé.  
   
 ## <a name="remarks"></a>Notes  
- Une fois la `ExitThread` rappel est déclenché, le thread n’apparaît plus dans les énumérations de thread.  
+ Une fois le `ExitThread` rappel est déclenché, le thread n’apparaît plus dans les énumérations de thread.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugManagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugManagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

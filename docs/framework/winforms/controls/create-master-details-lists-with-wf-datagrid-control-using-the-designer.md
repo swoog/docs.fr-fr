@@ -1,19 +1,19 @@
 ---
-title: "Comment : créer des listes maître/détails avec le contrôle DataGrid Windows Forms à l'aide du concepteur"
+title: 'Procédure : Créer des listes maître / détails avec le contrôle de DataGrid Windows Forms à l’aide du Concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - master-details lists
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: aec02e38fbe80302108397543144b1cc9c3ea346
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5773c52a1cedfe373d25d42ff78720368ecb7a5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632775"
 ---
-# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Comment : créer des listes maître/détails avec le contrôle DataGrid Windows Forms à l'aide du concepteur
+# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procédure : Créer des listes maître / détails avec le contrôle de DataGrid Windows Forms à l’aide du Concepteur
 
 > [!NOTE]
 >  Le contrôle <xref:System.Windows.Forms.DataGridView> remplace le contrôle <xref:System.Windows.Forms.DataGrid> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.DataGrid> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix. Pour plus d’informations, consultez [Différences entre les contrôles DataGridView et DataGrid Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -27,16 +27,16 @@ ms.locfileid: "48837139"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Pour créer une liste maître / détails dans le Concepteur  
   
-1.  Ajoutez deux <xref:System.Windows.Forms.DataGrid> contrôles au formulaire. Pour plus d’informations, consultez [Comment : ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Dans Visual Studio 2005, le <xref:System.Windows.Forms.DataGrid> contrôle n’est pas dans le **boîte à outils** par défaut. Pour plus d’informations, consultez [Comment : ajouter des éléments à la boîte à outils](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+1.  Ajoutez deux <xref:System.Windows.Forms.DataGrid> contrôles au formulaire. Pour plus d'informations, voir [Procédure : Ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Dans Visual Studio 2005, le <xref:System.Windows.Forms.DataGrid> contrôle n’est pas dans le **boîte à outils** par défaut. Pour plus d'informations, voir [Procédure : Ajouter des éléments à la boîte à outils](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
     > [!NOTE]
-    >  Les étapes suivantes ne sont pas applicables à Visual Studio 2005, qui utilise le **des Sources de données** fenêtre pour la liaison de données au moment du design. Pour plus d’informations, consultez [lier des contrôles aux données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) et [Comment : afficher des données connexes dans une Application de formulaires Windows](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
+    >  Les étapes suivantes ne sont pas applicables à Visual Studio 2005, qui utilise le **des Sources de données** fenêtre pour la liaison de données au moment du design. Pour plus d’informations, consultez [lier des contrôles aux données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) et [Comment : Affichage liées à des données dans un Windows Forms Application](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
   
 2.  Faites glisser deux ou plusieurs tables à partir de **Explorateur de serveurs** au formulaire.  
   
 3.  À partir de la **données** menu, sélectionnez **générer le DataSet**.  
   
-4.  Définir les relations entre les tables à l’aide du Concepteur XML. Pour plus d’informations, consultez « Comment : créer un-à-plusieurs relations dans les schémas XML et des jeux de données » sur MSDN.  
+4.  Définir les relations entre les tables à l’aide du Concepteur XML. Pour plus d’informations, consultez « Comment : Créer des relations un-à-plusieurs dans les schémas XML et des jeux de données » sur MSDN.  
   
 5.  Enregistrez les relations en sélectionnant **Enregistrer tout** à partir de la **fichier** menu.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "48837139"
   
     2.  Sélectionnez la relation (par exemple, « Customers.CustOrd ») entre les tables maître / détail dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété. Pour voir la relation, développez le nœud en cliquant sur le signe plus (**+**) en regard de la table principale dans la liste déroulante.  
   
-## <a name="see-also"></a>Voir aussi  
- [DataGrid, contrôle](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Vue d’ensemble du contrôle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
- [Guide pratique pour lier le contrôle DataGrid Windows Forms à une source de données](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- [Lier des contrôles à des données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>Voir aussi
+- [DataGrid, contrôle](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Vue d’ensemble du contrôle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
+- [Guide pratique pour Lier le contrôle DataGrid Windows Forms à une Source de données](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Lier des contrôles à des données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

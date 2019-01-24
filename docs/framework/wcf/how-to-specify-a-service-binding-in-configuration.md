@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 1d9a6d0a556613576a14c600aa72d3f4524cdc3e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 2152398cecccdf1f949baf30217b7f5ac19ae22f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527131"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Procédure : Spécifier une liaison de Service dans la Configuration
 Dans cet exemple, un contrat `ICalculator` est défini pour un service de calculatrice de base, le service est implémenté dans la classe `CalculatorService`, puis son point de terminaison est configuré dans le fichier Web.config, où il est spécifié que le service utilise <xref:System.ServiceModel.BasicHttpBinding>. Pour obtenir une description de la configuration de ce service à l’aide de code au lieu d’une configuration, consultez [Comment : Spécifier une liaison de Service dans le Code](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
@@ -92,6 +92,6 @@ Dans cet exemple, un contrat `ICalculator` est défini pour un service de calcul
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
