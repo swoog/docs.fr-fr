@@ -2,12 +2,12 @@
 title: Sécurité de transport HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 043154095d4600bd824457750effe9ea5494dcf5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bda749366b452a41a925fa36c90b3a2caa6bca32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602990"
 ---
 # <a name="http-transport-security"></a>Sécurité de transport HTTP
 Lors de l'utilisation du protocole HTTP comme transport, la sécurité est fournie par une implémentation SSL (Secure Sockets Layer). SSL est largement utilisé sur Internet pour authentifier un service auprès d'un client, puis pour fournir la confidentialité (chiffrement) au canal. Cette rubrique explique comment SSL fonctionne et comment il est implémenté dans Windows Communication Foundation (WCF).  
@@ -15,7 +15,7 @@ Lors de l'utilisation du protocole HTTP comme transport, la sécurité est fourn
 ## <a name="basic-ssl"></a>Protocole SSL de base  
  On peut expliquer le fonctionnement du protocole SSL en prenant comme exemple un scénario typique, à savoir le site Web d'une banque. Le site autorise un client à se connecter avec un nom d'utilisateur et un mot de passe. Après avoir été authentifié, l’utilisateur peut effectuer des transactions, par exemple afficher les soldes de ses comptes, régler des factures et transférer de l’argent d’un compte à un autre.  
   
- Lorsqu’un utilisateur visite tout d’abord le site, le mécanisme SSL commence une série de négociations, appelée un *négociation*, avec le client de l’utilisateur (dans ce cas, Internet Explorer). SSL authentifie tout d'abord le site de la banque auprès du client. Il s'agit d'une étape essentielle car les clients doivent d'abord s'assurer qu'ils communiquent avec le site réel, et non avec un site malveillant qui tente de les inciter à taper leur nom d'utilisateur et leur mot de passe. SSL effectue cette authentification en utilisant un certificat SSL fourni par une autorité approuvée, telle que VeriSign. La logique est la suivante : VeriSign se tient garant de l'identité du site de la banque. Étant donné qu'Internet Explorer approuve VeriSign, le site est approuvé. Si vous souhaitez contacter VeriSign, vous pouvez cliquer sur le logo VeriSign. Une déclaration d'authenticité s'affiche alors, avec la date d'expiration du certificat et l'entité à laquelle il a été délivré (le site de la banque).  
+ Lorsqu’un utilisateur visite tout d’abord le site, le mécanisme SSL commence une série de négociations, appelée un *négociation*, avec le client de l’utilisateur (dans ce cas, Internet Explorer). SSL authentifie tout d'abord le site de la banque auprès du client. Il s'agit d'une étape essentielle car les clients doivent d'abord s'assurer qu'ils communiquent avec le site réel, et non avec un site malveillant qui tente de les inciter à taper leur nom d'utilisateur et leur mot de passe. SSL effectue cette authentification en utilisant un certificat SSL fourni par une autorité approuvée, telle que VeriSign. La logique se déroule comme suit : VeriSign se porte garante de l’identité du site bancaire. Étant donné qu'Internet Explorer approuve VeriSign, le site est approuvé. Si vous souhaitez contacter VeriSign, vous pouvez cliquer sur le logo VeriSign. Une déclaration d'authenticité s'affiche alors, avec la date d'expiration du certificat et l'entité à laquelle il a été délivré (le site de la banque).  
   
  Pour initier une session sécurisée, le client envoie l'équivalent d'un « bonjour » au serveur avec une liste d'algorithmes de chiffrement qu'il peut utiliser pour signer, générer des hachages et chiffrer et déchiffrer. En réponse, le site envoie un accusé de réception et son choix de l'une des suites d'algorithmes. Durant ce protocole de transfert initial, les deux correspondants envoient et reçoivent des valeurs à usage unique. Un *nonce* est un élément généré de manière aléatoire de données qui sont utilisés en association avec la clé publique du site, pour créer un hachage. Un *hachage* est un nouveau numéro est dérivé de deux nombres à l’aide d’un algorithme standard, tel que SHA1. (Le client et le site échangent également des messages pour convenir de l'algorithme de hachage à utiliser.) Le hachage est unique et n'est utilisé que pour la session entre le client et le site afin de chiffrer et déchiffrer des messages. Le client et le service possèdent la valeur à usage unique d'origine et la clé publique du certificat ; ils peuvent donc tous deux générer le même hachage. Par conséquent, le client valide le hachage envoyé par le service en (a) utilisant l'algorithme convenu pour calculer le hachage à partir des données, et (b) en le comparant au hachage envoyé par le service ; si les deux correspondent, le client a l'assurance que le hachage n'a pas été falsifié. Le client peut ensuite utiliser ce hachage comme clé pour chiffrer un message qui contient un autre nouveau hachage. Le service peut déchiffrer le message à l'aide du hachage et récupérer cet avant-dernier hachage. Les informations accumulées (valeurs à usage unique, clé publique et autres données) sont maintenant connues des deux parties, et un hachage définitif (ou clé principale) peut être créé. Cette dernière clé est envoyée chiffrée à l'aide de l'avant-dernier hachage. La clé principale est ensuite utilisée pour chiffrer et déchiffrer des messages pour le reste de la session. Étant donné que le client et le service utilisent la même clé, elle est également appelée un *clé de session*.  
   
@@ -38,9 +38,9 @@ Lors de l'utilisation du protocole HTTP comme transport, la sécurité est fourn
 ### <a name="using-iis-for-transport-security"></a>Utilisation des services Internet (IIS) pour la sécurité de transport  
   
 #### <a name="iis-70"></a>IIS 7,0  
- Comment configurer la [!INCLUDE[iisver](../../../../includes/iisver-md.md)] comme hôte sécurisé (à l’aide de SSL), consultez [IIS 7.0 Beta : configuration du protocole SSL dans IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Comment configurer la [!INCLUDE[iisver](../../../../includes/iisver-md.md)] comme hôte sécurisé (à l’aide de SSL), consultez [IIS 7.0 Beta : Configuration sécurisée du protocole SSL dans IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
   
- Pour configurer des certificats pour une utilisation avec [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consultez [IIS 7.0 Beta : configuration des certificats de serveur dans IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
+ Pour configurer des certificats pour une utilisation avec [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consultez [IIS 7.0 Beta : Configuration des certificats de serveur dans IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
 #### <a name="iis-60"></a>IIS 6.0  
  Comment configurer la [!INCLUDE[iis601](../../../../includes/iis601-md.md)] comme hôte sécurisé (à l’aide de SSL), consultez [configuration du protocole SSL](https://go.microsoft.com/fwlink/?LinkId=88601).  
@@ -50,8 +50,8 @@ Lors de l'utilisation du protocole HTTP comme transport, la sécurité est fourn
 ### <a name="using-httpcfg-for-ssl"></a>Utilisation de HttpCfg pour SSL  
  Si vous créez une application WCF auto-hébergée, téléchargez l’outil HttpCfg.exe, disponible sur le [site des outils de Support de Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=29002).  
   
- Pour plus d’informations sur l’utilisation de l’outil HttpCfg.exe pour configurer un port avec un certificat X.509, consultez [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Pour plus d’informations sur l’utilisation de l’outil HttpCfg.exe pour configurer un port avec un certificat X.509, consultez [Comment : Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité de transport](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Sécurité de message](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+## <a name="see-also"></a>Voir aussi
+- [Sécurité de transport](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Sécurité de message](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

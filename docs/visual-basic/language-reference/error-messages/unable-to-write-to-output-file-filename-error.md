@@ -1,5 +1,5 @@
 ---
-title: 'Impossible d’écrire dans le fichier de sortie &#39; &lt;nom de fichier&gt;&#39;: &lt;erreur&gt;'
+title: 'Impossible d’écrire dans le fichier de sortie &#39; &lt;filename&gt;&#39;: &lt;erreur&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e8fbfd54782e601595712035827ea346d1dbf500
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572693"
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Impossible d’écrire dans le fichier de sortie &#39; &lt;nom de fichier&gt;&#39;: &lt;erreur&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Impossible d’écrire dans le fichier de sortie &#39; &lt;filename&gt;&#39;: &lt;erreur&gt;
 Un problème s'est produit pendant la création du fichier.  
   
  Vous ne pouvez pas ouvrir un fichier de sortie pour écriture. Le fichier (ou le dossier qui le contient) est peut être ouvert pour un usage exclusif par un autre processus, ou a son attribut de lecture seule défini.  
@@ -37,7 +37,7 @@ Un problème s'est produit pendant la création du fichier.
   
 3.  Si l'erreur continue, redémarrez l'ordinateur.  
   
-4.  Si l’erreur persiste, réinstallez Visual Basic.  
+4.  Si l’erreur se reproduit, réinstallez Visual Basic.  
   
 5.  Si l'erreur persiste après la réinstallation, avertissez les services de support technique Microsoft.  
   
@@ -51,11 +51,11 @@ Un problème s'est produit pendant la création du fichier.
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Pour modifier les attributs d’un fichier ou d’un dossier  
   
-1.  Dans **l’Explorateur de fichiers**, cliquez sur le fichier ou dossier et choisissez **propriétés**.  
+1.  Dans **Explorateur de fichiers**, cliquez sur le fichier ou dossier et choisissez **propriétés**.  
   
 2.  Dans le **attributs** section de la **général** onglet, désactivez le **en lecture seule** boîte.  
   
-3.  Press **OK**.  
+3.  Appuyez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Nous contacter](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Voir aussi
+- [Nous contacter](/visualstudio/ide/talk-to-us)

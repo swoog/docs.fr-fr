@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43453049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566981"
 ---
-# <a name="execnotificationquerywmi-function"></a>Execnotificationquerywmi, fonction
+# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi function
 Exécute une requête pour recevoir des événements. L’appel retourne immédiatement, et l’appelant peut interroger l’énumérateur retourné pour les événements dès leur arrivée. Libération de l’énumérateur retourné annule la requête.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -60,7 +60,7 @@ HRESULT ExecNotificationQueryWmi (
 | Constante | Value  | Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | L’indicateur provoque un appel semi-synchrone. Si cet indicateur n’est pas défini, l’appel échoue. Il s’agit, car les événements sont reçus en continu, ce qui signifie que l’utilisateur doit interroger l’énumérateur retourné. Cet appel de blocage indéfiniment rend qui est impossible. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | La fonction retourne un énumérateur avant uniquement. En règle générale, les énumérateurs avant uniquement sont plus rapides et utilisent moins de mémoire que les énumérateurs classiques, mais ils ne permettent pas d’appels à [Clone](clone.md). |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La fonction retourne un énumérateur avant uniquement. En règle générale, les énumérateurs avant uniquement sont plus rapides et utilisent moins de mémoire que les énumérateurs classiques, mais ils ne permettent pas d’appels à [Clone](clone.md). |
 
 `pCtx`  
 [in] En règle générale, cette valeur est `null`. Sinon, il est un pointeur vers un [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instance qui peut être utilisé par le fournisseur qui fournit les événements demandés. 
@@ -91,12 +91,12 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0 x 80041003 | L’utilisateur n’a pas l’autorisation d’afficher un ou plusieurs des classes qui la fonction peut retourner. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Une erreur non spécifiée s’est produite. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
-| `WBEM_E_INVALID_CLASS` | 0 x 80041010 | La requête spécifie une classe qui n’existe pas. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | L’utilisateur n’a pas l’autorisation d’afficher un ou plusieurs des classes qui la fonction peut retourner. |
+| `WBEM_E_FAILED` | 0x80041001 | Une erreur non spécifiée s’est produite. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre n’est pas valide. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | La requête spécifie une classe qui n’existe pas. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Trop de précision dans la livraison d’événements a été demandée. Une plus grande tolérance d’interrogation doit être spécifiée. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0 x 80042001 | La requête requess plus d’informations que la gestion de Windows peut fournir. Cela `HRESULT` est retournée lorsqu’une requête d’événement entraîne une demande d’interrogation de tous les objets dans un espace de noms. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | La requête requess plus d’informations que la gestion de Windows peut fournir. Cela `HRESULT` est retournée lorsqu’une requête d’événement entraîne une demande d’interrogation de tous les objets dans un espace de noms. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | La requête a dû à une erreur de syntaxe. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Le langage de requête demandé n’est pas pris en charge. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | La requête est trop complexe. |
@@ -116,12 +116,12 @@ Il existe des limites au nombre de `AND` et `OR` mots clés qui peuvent être ut
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

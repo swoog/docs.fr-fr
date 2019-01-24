@@ -1,16 +1,16 @@
 ---
-title: 'Procédure : créer un service de workflow avec les activités de messagerie'
+title: 'Procédure : Créer un Service de flux de travail avec les activités de messagerie'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584975"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procédure : créer un service de workflow avec les activités de messagerie
-Cette rubrique décrit comment créer un service de workflow simple, à l'aide d'activités de messagerie. Elle est consacrée à la mécanique de création d'un service de workflow, simplement constitué d'activités de messagerie. Dans un service réel, le workflow contient de nombreuses autres activités. Le service implémente une opération nommée Echo, qui prend une chaîne et la retourne à l'appelant. Cette rubrique est la première d'une série de deux. La rubrique suivante [Comment : accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) explique comment créer une application de flux de travail qui peut appeler le service créé dans cette rubrique.  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procédure : Créer un Service de flux de travail avec les activités de messagerie
+Cette rubrique décrit comment créer un service de workflow simple, à l'aide d'activités de messagerie. Elle est consacrée à la mécanique de création d'un service de workflow, simplement constitué d'activités de messagerie. Dans un service réel, le workflow contient de nombreuses autres activités. Le service implémente une opération nommée Echo, qui prend une chaîne et la retourne à l'appelant. Cette rubrique est la première d'une série de deux. La rubrique suivante [How To : Accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) explique comment créer une application de flux de travail qui peut appeler le service créé dans cette rubrique.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Pour créer un projet de service de workflow  
   
@@ -87,9 +87,9 @@ Cette rubrique décrit comment créer un service de workflow simple, à l'aide d
   
      ![Page d’aide WCF](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
   
-4.  Passez à la [Comment : accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) rubrique pour créer un client de workflow qui appelle ce service.  
+4.  Passez à la [Comment : Accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) rubrique pour créer un client de workflow qui appelle ce service.  
   
-## <a name="see-also"></a>Voir aussi  
- [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Vue d’ensemble de l’hébergement de services de workflow](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [Activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a>Voir aussi
+- [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Vue d’ensemble de l’hébergement de services de workflow](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

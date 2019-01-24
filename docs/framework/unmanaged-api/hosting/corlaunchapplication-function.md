@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5f2a05009caed7bef6da9edee57a4a54b876b18f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580991"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication, fonction
 Démarre l’application sur le chemin d’accès réseau spécifié, à l’aide des manifestes spécifiés et autres données d’application.  
   
- Cette fonction est déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Cette fonction a été déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,28 +51,28 @@ HRESULT CorLaunchApplication (
  [in] Le nom complet de l’application qui est lancée.  
   
  `dwManifestPaths`  
- [in] Le nombre de chemins d’accès de manifestes de l’application.  
+ [in] Le nombre de chemins d’accès de manifestes pour l’application.  
   
  `ppwzManifestPaths`  
- [in] Un tableau de chaînes, dont chacun spécifie un chemin d’accès à un manifeste d’application qui est lancée.  
+ [in] Tableau de chaînes, dont chacun spécifie un chemin d’accès à un manifeste d’application qui est lancée.  
   
  `dwActivationData`  
- [in] Nombre d’éléments de données d’activation pour l’application qui est lancée.  
+ [in] Le nombre d’éléments de données d’activation pour l’application qui est lancée.  
   
  `ppwzActivationData`  
- [in] Un tableau de chaînes, chacune d’elles est un élément de données d’activation pour l’application qui est lancée.  
+ [in] Tableau de chaînes, chacune d’elles étant un élément de données d’activation pour l’application qui est lancée.  
   
  `lpProcessInformation`  
  [out] Pointeur vers les informations sur le processus dans lequel l’application a été chargée.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions d’hébergement CLR dépréciées](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions d’hébergement CLR dépréciées](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

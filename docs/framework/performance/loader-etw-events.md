@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579002"
 ---
 # <a name="loader-etw-events"></a>Événements ETW de chargeur
 <a name="top"></a> Ces événements collectent des informations relatives au chargement et déchargement des domaines d'application, des assemblys et des modules.  
@@ -35,7 +35,7 @@ ms.locfileid: "33397427"
 ## <a name="application-domain-events"></a>Événements de domaine d'application  
  Le tableau suivant montre les mots clés et les niveaux.  
   
-|Mot clé pour déclencher l'événement|événement|Niveau|  
+|Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` et `AppDomainUnLoad_V1`|Informatif (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informatif (4)|  
@@ -55,7 +55,7 @@ ms.locfileid: "33397427"
 |Nom du champ|Type de données|Description|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|Identificateur unique d’un domaine d'application.|  
-|AppDomainFlags|win:UInt32|0x1 : domaine par défaut.<br /><br /> 0x2 : exécutable.<br /><br /> 0x4 : domaine d'application, bit 28-31 : partage de la stratégie de ce domaine.<br /><br /> 0 : domaine partagé.|  
+|AppDomainFlags|win:UInt32|0 x 1 : Domaine par défaut.<br /><br /> 0 x 2 : Fichier exécutable.<br /><br /> 0 x 4 : Domaine d’application, bit 28-31 : Stratégie de ce domaine de partage.<br /><br /> 0: Un domaine partagé.|  
 |AppDomainName|win:UnicodeString|Nom convivial du domaine d'application. Peut changer pendant la durée de vie du processus.|  
 |AppDomainIndex|win:UInt32|Index de ce domaine d'application.|  
 |ClrInstanceID|win:UInt16|ID unique de l'instance de CLR ou CoreCLR.|  
@@ -66,7 +66,7 @@ ms.locfileid: "33397427"
 ## <a name="clr-loader-assembly-events"></a>Événements d'assembly de chargeur du CLR  
  Le tableau suivant montre les mots clés et les niveaux.  
   
-|Mot clé pour déclencher l'événement|événement|Niveau|  
+|Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` et `AssemblyUnload`|Informatif (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informatif (4)|  
@@ -88,7 +88,7 @@ ms.locfileid: "33397427"
 |AssemblyID|win:UInt64|ID unique de l'assembly.|  
 |AppDomainID|win:UInt64|ID du domaine de cet assembly.|  
 |BindingID|win:UInt64|ID qui identifie de façon unique la liaison d'assembly.|  
-|AssemblyFlags|win:UInt32|0x1 : assembly indépendant du domaine.<br /><br /> 0x2 : assembly dynamique.<br /><br /> 0x4 : l’assembly possède une image native.<br /><br /> 0x8 : assembly pouvant être collecté.|  
+|AssemblyFlags|win:UInt32|0 x 1 : Assembly indépendant du domaine.<br /><br /> 0 x 2 : Assembly dynamique.<br /><br /> 0 x 4 : Assembly possède une image native.<br /><br /> 0 x 8 : Assembly pouvant être collecté.|  
 |AssemblyName|win:UnicodeString|Nom qualifié complet de l'assembly.|  
 |ClrInstanceID|win:UInt16|ID unique de l'instance de CLR ou CoreCLR.|  
   
@@ -98,7 +98,7 @@ ms.locfileid: "33397427"
 ## <a name="module-events"></a>Événements de module  
  Le tableau suivant montre les mots clés et les niveaux.  
   
-|Mot clé pour déclencher l'événement|événement|Niveau|  
+|Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` et `ModuleUnload_V2`|Informatif (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informatif (4)|  
@@ -120,7 +120,7 @@ ms.locfileid: "33397427"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|ID unique du module.|  
 |AssemblyID|win:UInt64|ID de l'assembly dans lequel ce module réside.|  
-|ModuleFlags|win:UInt32|0x1 : module indépendant du domaine.<br /><br /> 0x2 : le module possède une image native.<br /><br /> 0x4 : module dynamique.<br /><br /> 0x8 : module de manifeste.|  
+|ModuleFlags|win:UInt32|0 x 1 : Module indépendant du domaine.<br /><br /> 0 x 2 : Module possède une image native.<br /><br /> 0 x 4 : Module dynamique.<br /><br /> 0 x 8 : Module de manifeste.|  
 |Reserved1|win:UInt32|Champ réservé.|  
 |ModuleILPath|win:UnicodeString|Chemin d'accès de l'image MSIL (Microsoft Intermediate Language) du module ou nom du module dynamique s'il s'agit d'un assembly dynamique (se terminant par null).|  
 |ModuleNativePath|win:UnicodeString|Chemin d'accès de l'image native du module, si elle est présente (se terminant par null).|  
@@ -146,7 +146,7 @@ ms.locfileid: "33397427"
 ## <a name="clr-domain-module-events"></a>Événements de module de domaine du CLR  
  Le tableau suivant montre les mots clés et les niveaux.  
   
-|Mot clé pour déclencher l'événement|événement|Niveau|  
+|Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Informatif (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informatif (4)|  
@@ -167,7 +167,7 @@ ms.locfileid: "33397427"
 |ModuleID|win:UInt64|Identifie l'assembly auquel ce module appartient.|  
 |AssemblyID|win:UInt64|ID de l'assembly dans lequel ce module réside.|  
 |AppDomainID|win:UInt64|ID du domaine d'application dans lequel ce module est utilisé.|  
-|ModuleFlags|win:UInt32|0x1 : module indépendant du domaine.<br /><br /> 0x2 : le module possède une image native.<br /><br /> 0x4 : module dynamique.<br /><br /> 0x8 : module de manifeste.|  
+|ModuleFlags|win:UInt32|0 x 1 : Module indépendant du domaine.<br /><br /> 0 x 2 : Module possède une image native.<br /><br /> 0 x 4 : Module dynamique.<br /><br /> 0 x 8 : Module de manifeste.|  
 |Reserved1|win:UInt32|Champ réservé.|  
 |ModuleILPath|win:UnicodeString|Chemin d'accès de l'image MSIL pour le module, ou nom du module dynamique s'il s'agit d'un assembly dynamique (se terminant par null).|  
 |ModuleNativePath|win:UnicodeString|Chemin d'accès de l'image native du module, si elle est présente (se terminant par null).|  
@@ -179,7 +179,7 @@ ms.locfileid: "33397427"
 ## <a name="module-range-events"></a>Événements de plage de module  
  Le tableau suivant montre les mots clés et les niveaux.  
   
-|Mot clé pour déclencher l'événement|événement|Niveau|  
+|Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|Informatif (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|Informatif (4)|  
@@ -212,5 +212,5 @@ ms.locfileid: "33397427"
   
  Les événements de plage de module sont déclenchés sous n'importe quel niveau ETW supérieur ou égal à 4 et sont classés en tant qu'événements d'information.  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Voir aussi
+- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

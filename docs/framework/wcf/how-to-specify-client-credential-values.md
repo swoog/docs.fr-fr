@@ -1,19 +1,19 @@
 ---
-title: "Comment : spécifier des valeurs d'informations d'identification du client"
+title: 'Procédure : Renseignez les informations d’identification Client'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 9625400b855492ead12a5a2f1fa74f10164f6cdd
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617185"
 ---
-# <a name="how-to-specify-client-credential-values"></a>Comment : spécifier des valeurs d'informations d'identification du client
-À l’aide de Windows Communication Foundation (WCF), le service peut spécifier la manière dont un client est authentifié auprès du service. Par exemple, un service peut stipuler que le client soit authentifié avec un certificat.  
+# <a name="how-to-specify-client-credential-values"></a>Procédure : Renseignez les informations d’identification Client
+À l’aide de Windows Communication Foundation (WCF), le service peut spécifier comment un client est authentifié auprès du service. Par exemple, un service peut stipuler que le client soit authentifié avec un certificat.  
   
 ### <a name="to-determine-the-client-credential-type"></a>Pour déterminer le type d'informations d'identification du client  
   
@@ -21,7 +21,7 @@ ms.locfileid: "33806642"
   
 2.  Ouvrez le fichier de configuration XML. Si vous utilisez l'outil Svcutil.exe, le nom par défaut du fichier est Output.config.  
   
-3.  Rechercher les  **\<sécurité >** élément avec la **mode** attribut (**< mode de sécurité =** `MessageOrTransport` **>** où `MessageOrTransport` est défini sur l’un des modes de sécurité.  
+3.  Rechercher la  **\<sécurité >** élément avec la **mode** attribut (**< mode de sécurité =** `MessageOrTransport` **>** où `MessageOrTransport` est défini sur l’un des modes de sécurité.  
   
 4.  Recherchez l'élément enfant qui correspond à la valeur de mode. Par exemple, si le mode est défini sur **Message**, recherchez le  **\<message >** élément contenu dans le  **\<sécurité >** élément.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "33806642"
 </security>  
 ```  
   
-## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>Exemple : mode de transport TCP avec certificat comme informations d'identification du client  
- Cet exemple définit le mode de sécurité sur le mode Transport et définit la valeur d'informations d'identification du client sur un certificat X.509. Les procédures suivantes montrent comment définir la valeur d'information d'identification du client sur le client dans le code et dans la configuration. Cela suppose que vous avez utilisé le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour retourner les métadonnées (code et configuration) à partir du service. Pour plus d’informations, consultez [Comment : créer un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>Exemple : Mode de Transport TCP avec certificat comme informations d’identification du Client  
+ Cet exemple définit le mode de sécurité sur le mode Transport et définit la valeur d'informations d'identification du client sur un certificat X.509. Les procédures suivantes montrent comment définir la valeur d'information d'identification du client sur le client dans le code et dans la configuration. Cela suppose que vous avez utilisé le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour retourner les métadonnées (code et configuration) à partir du service. Pour plus d'informations, voir [Procédure : Créer un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>Pour spécifier la valeur d'information d'identification du client sur le client dans le code  
   
-1.  Utilisez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le code et la configuration du service.  
+1.  Utilisez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le code et la configuration à partir du service.  
   
 2.  Créez une instance du client WCF à l’aide du code généré.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "33806642"
     </behaviors>  
     ```  
   
-5.  Lorsque vous configurez le client, spécifiez le comportement en définissant l'attribut `behaviorConfiguration` de l'élément `<endpoint>`, comme illustré dans le code suivant. L’élément de point de terminaison est un enfant de la [ \<client >](../../../docs/framework/configure-apps/file-schema/wcf/client.md) élément. Spécifiez également le nom de la configuration de liaison en affectant à l'attribut `bindingConfiguration` la liaison pour le client. Si vous utilisez un fichier de configuration généré, le nom de la liaison est généré automatiquement. Dans cet exemple, le nom est `"tcpBindingWithCredential"`.  
+5.  Lorsque vous configurez le client, spécifiez le comportement en définissant l'attribut `behaviorConfiguration` de l'élément `<endpoint>`, comme illustré dans le code suivant. L’élément de point de terminaison est un enfant de la [ \<client >](../../../docs/framework/configure-apps/file-schema/wcf/client.md) élément. Spécifiez également le nom de la configuration de liaison en affectant à l’attribut `bindingConfiguration` la liaison pour le client. Si vous utilisez un fichier de configuration généré, le nom de la liaison est généré automatiquement. Dans cet exemple, le nom est `"tcpBindingWithCredential"`.  
   
     ```xml  
     <client>  
@@ -91,21 +91,21 @@ ms.locfileid: "33806642"
     </client>  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>  
- [Programmation de la sécurité dans WCF](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [Sélection d’un type d’informations d’identification](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Utilisation des certificats](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Guide pratique pour créer un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [\<sécurité >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
- [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
- [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
- [\<comportements >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)  
- [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
+- [Programmation de la sécurité dans WCF](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [Sélection d’un type d’informations d’identification](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Utilisation des certificats](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Guide pratique pour Créer un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
+- [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
+- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [\<clientCertificate>](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
+- [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

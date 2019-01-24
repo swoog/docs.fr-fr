@@ -11,12 +11,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
-ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559539"
 ---
 # <a name="nested-types"></a>Types imbriqués
 Un type imbriqué est un type défini dans l’étendue d’un autre type, qui est appelé le type englobant. Un type imbriqué a accès à tous les membres de son type englobant. Par exemple, il a accès aux champs privés définis dans le type englobant et protégés des champs définis dans tous les ascendants du type englobant.  
@@ -47,5 +47,5 @@ Un type imbriqué est un type défini dans l’étendue d’un autre type, qui e
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Instructions pour la conception des types](../../../docs/standard/design-guidelines/type.md)  
+- [Instructions pour la conception des types](../../../docs/standard/design-guidelines/type.md)
 - [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

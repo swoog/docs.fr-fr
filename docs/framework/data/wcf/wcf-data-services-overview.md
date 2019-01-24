@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 0cbb3b3906ad83349f02cf6a345f2e3d5336a2e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3d5e02d092489e01975037c811fedb2727e2041f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523135"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566656"
 ---
 # <a name="wcf-data-services-overview"></a>Vue d'ensemble des services de données WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permet la création et la consommation de services de données pour le Web ou un intranet à l’aide de la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] vous permet d’exposer vos données en tant que ressources adressables par URI. Cela vous permet d'accéder et de modifier des données en utilisant la sémantique REST (Representational State Transfer), en particulier les verbes HTTP standard GET, PUT, POST et DELETE. Cette rubrique fournit une vue d'ensemble des modèles et des pratiques définies par [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], ainsi que des outils fournis par [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pour tirer parti d'[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dans les applications basées sur .NET Framework.  
@@ -55,10 +55,10 @@ ms.locfileid: "43523135"
   
  ![Diagramme d’architecture de WCF Data Services](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
   
-## <a name="see-also"></a>Voir aussi  
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
- [Prise en main](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [L’accès à un Service de données (WCF Data Services)](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)  
- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)
+## <a name="see-also"></a>Voir aussi
+- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
+- [Prise en main](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [L’accès à un Service de données (WCF Data Services)](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)
+- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)

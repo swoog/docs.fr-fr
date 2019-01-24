@@ -2,20 +2,20 @@
 title: Instructions d'installation du répertoire virtuel
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588104"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instructions d'installation du répertoire virtuel
-Les exemples Windows Communication Foundation (WCF) sont conçus pour partager un répertoire virtuel commun nommé servicemodelsamples, mappé au dossier %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
+Les exemples Windows Communication Foundation (WCF) sont destinées à partager un répertoire virtuel commun nommé servicemodelsamples est mappé au dossier %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
 > [!NOTE]
 >  %SystemDrive% correspond généralement à C: ou D:, en fonction de l'emplacement de lecteur où Internet Information Services (IIS) est installé.  
   
- Vous pouvez exécuter les fichiers Setupvroot.bat et Cleanupvroot.bat de la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) pour créer le répertoire virtuel. Si vous préférez créer le répertoire virtuel manuellement, exécutez les procédures suivantes.  
+ Vous pouvez exécuter les fichiers Setupvroot.bat et Cleanupvroot.bat à partir de la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) pour créer le répertoire virtuel. Si vous préférez créer le répertoire virtuel manuellement, exécutez les procédures suivantes.  
   
 ## <a name="procedures"></a>Procédures  
   
@@ -23,9 +23,9 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
 1.  À partir de la **Démarrer** menu, cliquez sur **exécuter**, puis tapez **inetmgr** pour ouvrir le composant logiciel enfichable MMC Internet Information Services (IIS).  
   
-2.  Dans le volet gauche, développez le nœud portant le nom d’ordinateur, puis le **Sites** nœud.  
+2.  Dans le volet gauche, développez le nœud portant le nom d’ordinateur, puis développez le **Sites** nœud.  
   
-3.  Avec le bouton droit **Site Web par défaut**, puis sélectionnez **ajouter une Application** pour ouvrir le **fenêtre Ajouter l’Application**.  
+3.  Avec le bouton droit **Site Web par défaut**, puis sélectionnez **ajouter une Application** pour ouvrir le **fenêtre d’ajouter une Application**.  
   
 4.  Dans la fenêtre, tapez `servicemodelsamples` comme alias pour le répertoire virtuel que vous créez.  
   
@@ -47,7 +47,7 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
 1.  Ouvrez une fenêtre d’invite de commandes et tapez `start inetmgr` pour ouvrir le composant logiciel enfichable MMC Internet Information Services (IIS).  
   
-2.  Dans le volet gauche, développez le nœud portant le nom d’ordinateur, puis le **Sites Web** nœud.  
+2.  Dans le volet gauche, développez le nœud portant le nom d’ordinateur, puis développez le **Sites Web** nœud.  
   
 3.  Avec le bouton droit **Site Web par défaut** et sélectionnez **nouveau, le répertoire virtuel** pour ouvrir l’Assistant Création de répertoire virtuel.  
   
@@ -59,7 +59,7 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
 7.  Les cases à cocher suivantes sont activées par défaut :  
   
-    -   **En lecture**  
+    -   **Read**  
   
     -   **Exécuter des scripts (tels que ASP)**  
   
@@ -68,7 +68,7 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
     > [!NOTE]
     >  Cette tâche doit être exécutée qu’une seule fois, car tous les exemples WCF utilisent le même répertoire virtuel servicemodelsamples.  
   
-#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Pour définir les propriétés du répertoire virtuel supplémentaire dans IIS 7.0 ou 7.5  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Pour définir les propriétés de répertoire virtuel supplémentaire dans IIS 7.0 ou 7.5  
   
 1.  Cliquez sur le nœud servicemodelsamples. Deux vues figurent au bas de la fenêtre. Sélectionnez **affichage des fonctionnalités** s’il n’est pas déjà sélectionné.  
   
@@ -84,7 +84,7 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
 2.  Les cases à cocher suivantes sont activées par défaut :  
   
-    -   **En lecture**  
+    -   **Read**  
   
     -   **Accès au journal**  
   
@@ -96,9 +96,9 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
 1.  Ouvrez le répertoire %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-2.  Cliquez sur le dossier servicemodelsamples et cliquez sur **partage** ou **partager avec**.  
+2.  Cliquez sur le dossier servicemodelsamples et cliquez sur **partage** ou **partage avec**.  
   
-3.  Cliquez sur la flèche vers le bas à gauche de la **ajouter** bouton.  
+3.  Cliquez sur la flèche bas à gauche de la **ajouter** bouton.  
   
 4.  Sélectionnez le **trouver** entrée. Le **sélectionner des utilisateurs ou groupes** fenêtre s’ouvre.  
   
@@ -106,17 +106,17 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
 6.  Cliquez sur **emplacements**. Le **emplacements** fenêtre est maintenant ouverte.  
   
-7.  Sélectionnez l'entrée correspondant à l'ordinateur en cours d'utilisation. Il est important de sélectionner l'ordinateur local et non une entrée correspondant à tous les domaines ou réseaux répertoriés. Après avoir sélectionné l’ordinateur, cliquez sur **OK**.  
+7.  Sélectionnez l'entrée correspondant à l'ordinateur en cours d'utilisation. Il est important de sélectionner l'ordinateur local et non une entrée correspondant à tous les domaines ou réseaux répertoriés. Une fois que vous avez sélectionné l’ordinateur, cliquez sur **OK**.  
   
-8.  Cliquez sur **Rechercher maintenant**. Cela permet d'inclure dans les résultats de la recherche les objets associés à l'ordinateur local.  
+8.  Cliquez sur **trouver maintenant**. Cela permet d'inclure dans les résultats de la recherche les objets associés à l'ordinateur local.  
   
-9. Rechercher les **IIS_IUSRS** entrée dans le **nom (nom unique relatif)** colonne. Sélectionnez cette entrée et cliquez sur **OK** pour la recherche de fermer la fenêtre Résultats.  
+9. Rechercher la **IIS_IUSRS** entrée dans le **nom (nom unique relatif)** colonne. Sélectionnez cette entrée et cliquez sur **OK** fenêtre des résultats pour fermer la recherche.  
   
 10. Cliquez sur **OK** pour fermer la **sélectionner des utilisateurs ou groupes** fenêtre.  
   
 11. Cliquez sur **partage** pour conserver les modifications.  
   
-12. Une fois les modifications apportées à activer le partage, cliquez sur **fait** pour fermer la **le partage de fichiers** fenêtre.  
+12. Une fois les modifications apportées à activer le partage sont terminées, cliquez sur **fait** pour fermer la **le partage de fichiers** fenêtre.  
   
 #### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>Pour définir les propriétés de sécurité de ce dossier dans IIS 5.1 ou 6.0 :  
   
@@ -130,15 +130,15 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
      Si ce n'est pas le cas :  
   
-    1.  Cliquez sur **Démarrer** puis cliquez sur **le panneau de configuration**.  
+    1.  Cliquez sur **Démarrer**, puis sur **Panneau de configuration**.  
   
-    2.  Si vous ne voyez pas le **des comptes d’utilisateur** icône, cliquez sur **basculer vers l’affichage des catégories**.  
+    2.  Si vous ne voyez pas le **comptes d’utilisateur** icône, cliquez sur **basculer vers l’affichage de la catégorie**.  
   
-    3.  Cliquez sur le **des comptes d’utilisateur** icône.  
+    3.  Cliquez sur le **comptes d’utilisateur** icône.  
   
-    4.  Sous « ou une icône du Panneau de configuration, » cliquez sur **des comptes d’utilisateur**.  
+    4.  Sous « ou une icône du Panneau de configuration, » cliquez sur **comptes d’utilisateur**.  
   
-    5.  Dans le **des comptes d’utilisateur** boîte de dialogue, cliquez sur le **avancé** onglet.  
+    5.  Dans le **comptes d’utilisateur** boîte de dialogue, cliquez sur le **avancé** onglet.  
   
     6.  Cliquez sur **Avancé**.  
   
@@ -146,17 +146,17 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
     8.  Dans le volet droit, double-cliquez sur **compte Invité Internet**.  
   
-    9. Dans le **propriétés** boîte de dialogue, copiez le nom est utilisé en tant que compte Invité Internet. Par défaut, le nom commence par « USR_ » suivi du nom de l'ordinateur.  
+    9. Dans le **propriétés** boîte de dialogue, copiez le nom utilisé en tant que compte Invité Internet. Par défaut, le nom commence par « USR_ » suivi du nom de l'ordinateur.  
   
     10. Fermez la boîte de dialogue **Propriétés** .  
   
     11. Fermer le **utilisateurs et groupes locaux** boîte de dialogue.  
   
-    12. Fermer le **des comptes d’utilisateur** boîte de dialogue.  
+    12. Fermer le **comptes d’utilisateur** boîte de dialogue.  
   
-    13. Fermez l’autre **des comptes d’utilisateur** boîte de dialogue.  
+    13. Fermez l’autre **comptes d’utilisateur** boîte de dialogue.  
   
-    14. Dans le **servicemodelsamples propriétés** boîte de dialogue le **sécurité** , cliquez sur **ajouter**.  
+    14. Dans le **propriétés de servicemodelsamples** boîte de dialogue le **sécurité** , cliquez sur **ajouter**.  
   
     15. Tapez le nom de l’ordinateur suivi d’une barre oblique inverse, puis collez le nom du compte d’utilisateur Internet, par exemple, myMachineName\\InternetGuestAccountName %  
   
@@ -180,15 +180,15 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
 6.  Si vous utilisez Windows XP SP2 avec IIS 5.1, vérifiez que le compte Invité Internet et ASPNET sont répertoriés dans le **noms d’utilisateur ou groupe** boîte.  
   
-     Notez que l’utilisateur ASPNET peut être un membre de la fonction intégrée **utilisateurs** groupe de sécurité. Dans ce cas, ensuite, si le **utilisateurs** groupe est répertorié dans la boîte de dialogue, vous n’avez pas besoin pour l’ajouter en tant qu’élément distinct à la liste des utilisateurs autorisés.  
+     Notez que l’utilisateur ASPNET peut être un membre d’intégrés **utilisateurs** groupe de sécurité. Dans ce cas, puis si le **utilisateurs** groupe est répertorié dans la boîte de dialogue, vous n’avez pas besoin pour l’ajouter en tant qu’élément distinct à la liste des utilisateurs autorisés.  
   
      Pour vérifier qu’ASPNET fait partie de la **utilisateurs** groupe de sécurité :  
   
     1.  Sur le **Démarrer** menu, cliquez sur **le panneau de configuration**.  
   
-    2.  Cliquez sur le **des comptes d’utilisateur** icône.  
+    2.  Cliquez sur le **comptes d’utilisateur** icône.  
   
     3.  Dans le **groupe** colonne, vérifiez que la valeur de **ASPNET** est « Utilisateurs ».  
   
-## <a name="see-also"></a>Voir aussi  
- [Instructions relatives à l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+## <a name="see-also"></a>Voir aussi
+- [Instructions relatives à l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

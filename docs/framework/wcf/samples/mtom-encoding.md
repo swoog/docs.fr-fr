@@ -2,12 +2,12 @@
 title: MTOM Encoding
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: f54a22b0004623c8aef8f2788ed7d59f7d777ce7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9fe278f9a85286f8067ef3a67bfbeb3cb83f984e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608785"
 ---
 # <a name="mtom-encoding"></a>MTOM Encoding
 Cet exemple montre l'utilisation de l'encodage de message MTOM (Message Transmission Optimization Mechanism) à l'aide de WSHttpBinding. MTOM est un mécanisme permettant de transmettre des pièces jointes binaires de grande taille avec des messages SOAP sous forme d'octets bruts, et d'obtenir ainsi des messages plus petits.  
@@ -21,7 +21,7 @@ Cet exemple montre l'utilisation de l'encodage de message MTOM (Message Transmis
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
   
- Par défaut, WSHttpBinding envoie et reçoit des messages sous forme de texte XML normal. Pour permettre l'envoi et la réception de messages MTOM, définissez l'attribut `messageEncoding` sur la configuration de la liaison (tel qu'indiqué dans l'exemple de code suivant), ou directement sur la liaison à l'aide de la propriété `MessageEncoding`. Le service ou le client peut maintenant envoyer et recevoir des messages MTOM.  
+ Par défaut, WSHttpBinding envoie et reçoit des messages sous forme de texte XML normal. Pour permettre l’envoi et la réception de messages MTOM, définissez l’attribut `messageEncoding` sur la configuration de la liaison (tel qu’indiqué dans l’exemple de code suivant), ou directement sur la liaison à l’aide de la propriété `MessageEncoding`. Le service ou le client peut maintenant envoyer et recevoir des messages MTOM.  
   
 ```xml  
 <wsHttpBinding>  

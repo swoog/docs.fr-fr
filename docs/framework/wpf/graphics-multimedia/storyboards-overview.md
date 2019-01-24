@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492683"
 ---
 # <a name="storyboards-overview"></a>Vue d'ensemble des storyboards
 Cette rubrique montre comment utiliser <xref:System.Windows.Media.Animation.Storyboard> objets pour organiser et appliquer des animations. Elle décrit comment manipuler de manière interactive <xref:System.Windows.Media.Animation.Storyboard> objets et décrit la syntaxe de ciblage de propriété indirect.  
@@ -62,9 +62,9 @@ Cette rubrique montre comment utiliser <xref:System.Windows.Media.Animation.Stor
 |La table de montage séquentiel démarre à l’aide de…|Par instance|Style|Modèle de contrôle|Modèle de données|Exemple|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> et une <xref:System.Windows.EventTrigger>|Oui|Oui|Oui|Oui|[Animer une propriété à l’aide d’une table de montage séquentiel](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> et une propriété <xref:System.Windows.Trigger>|Non|Oui|Oui|Oui|[Déclencher une animation en cas de modification d’une valeur de propriété](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> et un <xref:System.Windows.DataTrigger>|Non|Oui|Oui|Oui|[Comment : déclencher une animation en cas de modification de données](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|Méthode <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Oui|Non|Non|Non|[Animer une propriété à l’aide d’une table de montage séquentiel](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> et une propriété <xref:System.Windows.Trigger>|Aucune|Oui|Oui|Oui|[Déclencher une animation en cas de modification d’une valeur de propriété](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> et un <xref:System.Windows.DataTrigger>|Aucune|Oui|Oui|Oui|[Guide pratique pour Déclencher une Animation lors de la modification des données](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|Méthode <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Oui|Non|Non|Aucune|[Animer une propriété à l’aide d’une table de montage séquentiel](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  L’exemple suivant utilise un <xref:System.Windows.Media.Animation.Storyboard> pour animer la <xref:System.Windows.FrameworkElement.Width%2A> d’un <xref:System.Windows.Shapes.Rectangle> élément et le <xref:System.Windows.Media.SolidColorBrush.Color%2A> d’un <xref:System.Windows.Media.SolidColorBrush> utilisé pour peindre qui <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -261,7 +261,7 @@ Cette rubrique montre comment utiliser <xref:System.Windows.Media.Animation.Stor
   
  L’avantage d’utiliser ces méthodes est que vous n’avez pas besoin de créer <xref:System.Windows.Trigger> ou <xref:System.Windows.TriggerAction> objets ; vous devez simplement une référence à la contrôlable <xref:System.Windows.Media.Animation.Storyboard> vous voulez manipuler.  
   
- **Remarque :** toutes les actions interactives effectuées sur un <xref:System.Windows.Media.Animation.Clock>et par conséquent également sur un <xref:System.Windows.Media.Animation.Storyboard> aura lieu au prochain cycle de moteur de minutage qui aura lieu peu avant le rendu suivant. Par exemple, si vous utilisez le <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> méthode pour accéder à un autre point dans une animation, la valeur de propriété ne change pas instantanément, au lieu de cela, la valeur est modifiée au prochain cycle de minutage.  
+ **Remarque :** Toutes les actions interactives effectuées sur un <xref:System.Windows.Media.Animation.Clock>et par conséquent également sur un <xref:System.Windows.Media.Animation.Storyboard> aura lieu au prochain cycle de moteur de minutage qui aura lieu peu avant le rendu suivant. Par exemple, si vous utilisez le <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> méthode pour accéder à un autre point dans une animation, la valeur de propriété ne change pas instantanément, au lieu de cela, la valeur est modifiée au prochain cycle de minutage.  
   
  L’exemple suivant montre comment appliquer et contrôler des animations à l’aide des méthodes interactives de la <xref:System.Windows.Media.Animation.Storyboard> classe.  
   
@@ -302,7 +302,7 @@ Cette rubrique montre comment utiliser <xref:System.Windows.Media.Animation.Stor
   
  Les animations appliquées par la propriété <xref:System.Windows.Trigger> objets se comportent de façon plus complexe que <xref:System.Windows.EventTrigger> animations ou les animations démarrées à l’aide de <xref:System.Windows.Media.Animation.Storyboard> méthodes.  Elles « effectuent un transfert » avec des animations défini par d’autres <xref:System.Windows.Trigger> objets, mais composent avec <xref:System.Windows.EventTrigger> et animations déclenchées à la méthode.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Vue d’ensemble des techniques d’animation de propriétés](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Vue d’ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Vue d’ensemble des techniques d’animation de propriétés](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Vue d’ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

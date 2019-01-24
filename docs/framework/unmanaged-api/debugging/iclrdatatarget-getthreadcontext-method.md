@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4ce7b90b417e0126337283ff16790f136cb16fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5bac7e46bd499a680906e67b41175e099f96ecc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604442"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext, méthode
-Obtient le contexte d’exécution actuel pour le thread donné dans le processus cible. Cette méthode est appelée par les services d’accès aux données common language runtime.  
+Obtient le contexte d’exécution actuel pour le thread donné dans le processus cible. Cette méthode est appelée par les services d’accès de données common language runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ HRESULT GetThreadContext (
  [in] L’identificateur de système d’exploitation d’un thread dans le processus cible.  
   
  `contextFlags`  
- [in] Indicateurs qui spécifient les éléments de contexte à retourner. L’implémentation retourne au moins les parties du contexte.  
+ [in] Indicateurs qui spécifient quelles parties du contexte à retourner. L’implémentation retourne au moins ces parties du contexte.  
   
  `contextSize`  
  [in] La taille du contexte.  
@@ -58,13 +58,13 @@ HRESULT GetThreadContext (
  Cette méthode est implémentée par le writer de l'application de débogage.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** ClrData.idl, ClrData.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRDataTarget, interface](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRDataTarget, interface](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

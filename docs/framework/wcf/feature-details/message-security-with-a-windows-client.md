@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: dbfcd7ea7b8422c79274e7bc65929080da6f11af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4b94bfd92cf586088316b03222e0bbe5c1728bc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573554"
 ---
 # <a name="message-security-with-a-windows-client"></a>Sécurité de message avec un client Windows
 Ce scénario montre un client Windows Communication Foundation (WCF) et le serveur sont sécurisés par mode de sécurité de message. Le client et le service sont authentifiés à l'aide des informations d'identification Windows.  
@@ -116,6 +116,6 @@ Ce scénario montre un client Windows Communication Foundation (WCF) et le serve
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

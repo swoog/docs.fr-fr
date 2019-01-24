@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568099"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>L’expression lambda ne sera pas supprimée de ce gestionnaire d’événements
-Une expression lambda ne sera pas supprimée ce gestionnaire d’événements. Assignez l’expression lambda à une variable et utilisez la variable pour ajouter et supprimer l’événement.  
+Expression lambda ne sera pas supprimée à partir de ce gestionnaire d’événements. Assignez l’expression lambda à une variable et utilisez la variable pour ajouter et supprimer l’événement.  
   
- Lorsque les expressions lambda sont utilisées avec les gestionnaires d’événements, vous ne pouvez pas voir le comportement attendu. Le compilateur génère une nouvelle méthode pour chaque définition d’expression lambda, même si elles sont identiques. Par conséquent, le code suivant affiche `False`.  
+ Lorsque les expressions lambda sont utilisées avec les gestionnaires d’événements, vous ne verrez ne peut-être pas le comportement attendu. Le compilateur génère une nouvelle méthode pour chaque définition d’expression lambda, même si elles sont identiques. Par conséquent, le code suivant affiche `False`.  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- Lorsque les expressions lambda sont utilisées avec les gestionnaires d’événements, cela peut entraîner des résultats inattendus. Dans l’exemple suivant, l’expression lambda ajoutée par `AddHandler` n’est pas supprimée par le `RemoveHandler` instruction.  
+ Lorsque les expressions lambda sont utilisées avec les gestionnaires d’événements, cela peut entraîner des résultats inattendus. Dans l’exemple suivant, l’expression lambda ajoutée par `AddHandler` n’est pas supprimé par le `RemoveHandler` instruction.  
   
 ```vb  
 Module Module1  
@@ -54,7 +54,7 @@ Module Module1
 End Module  
 ```  
   
- Par défaut, ce message est un avertissement. Pour plus d’informations sur le masquage des avertissements ou considérer les avertissements comme des erreurs, consultez [configuration des avertissements en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Par défaut, ce message est un avertissement. Pour plus d’informations sur le masquage des avertissements ou le traitement des avertissements en tant qu’erreurs, consultez [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **ID d’erreur :** BC42326  
   
@@ -84,7 +84,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Conversion simplifiée des délégués](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Événements](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Expressions lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Conversion simplifiée des délégués](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Événements](../../../visual-basic/programming-guide/language-features/events/index.md)

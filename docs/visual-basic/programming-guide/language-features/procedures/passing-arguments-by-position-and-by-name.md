@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587461"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Passage des arguments par position et par nom (Visual Basic)
 Lorsque vous appelez un `Sub` ou `Function` procédure, vous pouvez passer des arguments *par position* , dans l’ordre dans lequel ils apparaissent dans la définition de la procédure, ou vous pouvez les transmettre *par nom*, sans vu les positionner.  
@@ -94,12 +94,12 @@ Vous ne pouvez pas passer des arguments par nom afin d’éviter d’entrer des 
   
 Vous ne pouvez pas passer un tableau de paramètres par nom. Il s’agit, car lorsque vous appelez la procédure, vous fournissez un nombre indéfini de séparées par des virgules des arguments pour le tableau de paramètres, et le compilateur ne peut pas associer plusieurs arguments à un nom unique.  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédures](./index.md)  
- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)  
- [Comment : Passer des Arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)  
- [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)  
- [Paramètres facultatifs](./optional-parameters.md)  
- [tableaux de paramètres](./parameter-arrays.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédures](./index.md)
+- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
+- [Guide pratique pour Passer des Arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)
+- [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)
+- [Paramètres facultatifs](./optional-parameters.md)
+- [tableaux de paramètres](./parameter-arrays.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

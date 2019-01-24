@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer une application Windows Forms à partir de la ligne de commande'
+title: 'Procédure : Créer une application Windows Forms à partir de la ligne de commande'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804787"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581979"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Comment : créer une application Windows Forms à partir de la ligne de commande
-Les procédures suivantes décrivent les étapes de base que vous devez effectuer pour créer et exécuter une application Windows Forms à partir de la ligne de commande. Ces procédures sont très bien prises en charge dans Visual Studio.  Consultez également [procédure pas à pas : création d’un formulaire Windows Simple](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Procédure : Créer une application Windows Forms à partir de la ligne de commande
+Les procédures suivantes décrivent les étapes de base que vous devez effectuer pour créer et exécuter une application Windows Forms à partir de la ligne de commande. Ces procédures sont très bien prises en charge dans Visual Studio.  Consultez également [procédure pas à pas : Création d’un formulaire Windows Simple](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Procédure  
   
@@ -113,9 +113,9 @@ Les procédures suivantes décrivent les étapes de base que vous devez effectue
   
 -   Pour compiler le code, suivez les instructions de la procédure précédente qui expliquent comment compiler et exécuter l'application.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Control>  
- [Modification de l'apparence des Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [Amélioration des applications Windows Forms](../../../docs/framework/winforms/advanced/index.md)  
- [Bien démarrer avec Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Control>
+- [Modification de l'apparence des Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [Amélioration des applications Windows Forms](../../../docs/framework/winforms/advanced/index.md)
+- [Bien démarrer avec Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

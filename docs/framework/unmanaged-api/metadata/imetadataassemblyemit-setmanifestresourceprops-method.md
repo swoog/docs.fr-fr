@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 755c64aa00b82bf2d8213217787f4dc1916c0898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d92129bd7c51ba2fa574f8337ba2b3727ab7b172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599047"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps, méthode
 Modifie la structure de métadonnées `ManifestResource` spécifiée.  
@@ -40,7 +40,7 @@ HRESULT SetManifestResourceProps (
   
 #### <a name="parameters"></a>Paramètres  
  `mr`  
- [in] Jeton qui spécifie la `ManifestResource` structure de métadonnées.  
+ [in] Le jeton qui spécifie la `ManifestResource` structure des métadonnées à modifier.  
   
  `tkImplementation`  
  [in] Le jeton, de type `File` ou `AssemblyRef`, qui mappe au fournisseur de ressources.  
@@ -49,19 +49,19 @@ HRESULT SetManifestResourceProps (
  [in] Offset au début de la ressource dans le fichier.  
   
  `dwResourceFlags`  
- [in] Combinaison de bits des valeurs d’indicateurs qui spécifient les attributs de la ressource.  
+ [in] Une combinaison au niveau du bit des valeurs d’indicateurs qui spécifient les attributs de la ressource.  
   
 ## <a name="remarks"></a>Notes  
  Pour créer un `ManifestResource` structure des métadonnées, utilisez le [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) (méthode).  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

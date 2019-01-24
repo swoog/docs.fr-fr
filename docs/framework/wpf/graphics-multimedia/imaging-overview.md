@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 10cdf5b8cf475c95e086b447b36a569da2173fa9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa23595359bc210edfd1d55486158a71420699c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615070"
 ---
 # <a name="imaging-overview"></a>Vue d'ensemble de la création d'images
 Cette rubrique fournit une introduction au [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permet aux développeurs d’afficher, de transformer et de mettre en forme des images.  
@@ -137,7 +137,7 @@ Cette rubrique fournit une introduction au [!INCLUDE[TLA#tla_wic](../../../../in
   
 -   <xref:System.Windows.Media.Stretch.Fill>: L’image est étirée pour s’ajuster à la zone de sortie. Étant donné que la hauteur et la largeur de l’image sont mises à l’échelle indépendamment, les proportions d’origine de l’image risquent de ne pas être conservées. Autrement dit, l’image peut être déformée pour remplir complètement le conteneur de sortie.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: L’image est étirée afin de faire tenir entièrement dans la zone de sortie. Les proportions de l’image sont conservées.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: L’image est étirée afin qu’il tienne entièrement dans la zone de sortie. Les proportions de l’image sont conservées.  
   
 -   <xref:System.Windows.Media.Stretch.UniformToFill>: L’image est étirée afin qu’il remplisse complètement la zone de sortie tout en conservant les proportions d’origine de l’image.  
   
@@ -189,10 +189,10 @@ Les pinceaux d’image peuvent remplir des formes, des contrôles, du texte, etc
 > [!NOTE]
 >  Le codec doit être signé numériquement pour pouvoir être reconnu par le système.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Media.Imaging.BitmapSource>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Controls.Image>  
- <xref:System.Windows.Media.Imaging.BitmapMetadata>  
- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Codec Win32, exemple](https://go.microsoft.com/fwlink/?LinkID=160052)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Media.Imaging.BitmapSource>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Controls.Image>
+- <xref:System.Windows.Media.Imaging.BitmapMetadata>
+- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Codec Win32, exemple](https://go.microsoft.com/fwlink/?LinkID=160052)

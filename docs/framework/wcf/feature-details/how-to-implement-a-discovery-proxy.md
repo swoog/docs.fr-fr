@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : implémenter un proxy de découverte'
+title: 'Procédure : Implémenter un Proxy de découverte'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 2d76a2df0541dfd64058d61ca687a2749d745e8a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608912"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a>Procédure : implémenter un proxy de découverte
+# <a name="how-to-implement-a-discovery-proxy"></a>Procédure : Implémenter un Proxy de découverte
 Cette rubrique explique comment implémenter un proxy de découverte. Pour plus d’informations sur la fonctionnalité de découverte dans Windows Communication Foundation (WCF), consultez [présentation de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Un proxy de découverte peut être implémenté en créant une classe qui étend la classe abstraite <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Un certain nombre d'autres classes de prise en charge sont définies et utilisées dans cet exemple. `OnResolveAsyncResult`, `OnFindAsyncResult` et `AsyncResult`. Ces classes implémentent l'interface <xref:System.IAsyncResult>. Pour plus d’informations sur <xref:System.IAsyncResult> consultez [System.IAsyncResult interface](xref:System.IAsyncResult).
 
  L'implémentation d'un proxy de découverte est divisée en trois parties principales dans cette rubrique :
@@ -225,7 +225,7 @@ Cette rubrique explique comment implémenter un proxy de découverte. Pour plus 
 
 ### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>Pour définir les méthodes qui implémentent les fonctionnalités du proxy de découverte
 
-1.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType>. Cette méthode est appelée lorsque le proxy de découverte reçoit un message d'annonce en ligne.
+1.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> . Cette méthode est appelée lorsque le proxy de découverte reçoit un message d'annonce en ligne.
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ Cette rubrique explique comment implémenter un proxy de découverte. Pour plus 
             }
     ```
 
-2.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType>. Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message d'annonce.
+2.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> . Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message d'annonce.
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ Cette rubrique explique comment implémenter un proxy de découverte. Pour plus 
             }
     ```
 
-3.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType>. Cette méthode est appelée lorsque le proxy de découverte reçoit un message d'annonce hors connexion.
+3.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> . Cette méthode est appelée lorsque le proxy de découverte reçoit un message d'annonce hors connexion.
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ Cette rubrique explique comment implémenter un proxy de découverte. Pour plus 
             }
     ```
 
-4.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType>. Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message d'annonce hors connexion.
+4.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> . Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message d'annonce hors connexion.
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ Cette rubrique explique comment implémenter un proxy de découverte. Pour plus 
             }
     ```
 
-5.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType>. Cette méthode est appelée lorsque le proxy de découverte reçoit une demande de recherche.
+5.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> . Cette méthode est appelée lorsque le proxy de découverte reçoit une demande de recherche.
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ Cette rubrique explique comment implémenter un proxy de découverte. Pour plus 
     }
     ```
 
-6.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType>. Cette méthode est appelée lorsque le proxy de découverte finit un traitement de demande de recherche.
+6.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> . Cette méthode est appelée lorsque le proxy de découverte finit un traitement de demande de recherche.
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ Cette rubrique explique comment implémenter un proxy de découverte. Pour plus 
             }
     ```
 
-7.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType>. Cette méthode est appelée lorsque le proxy de découverte reçoit un message de résolution.
+7.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> . Cette méthode est appelée lorsque le proxy de découverte reçoit un message de résolution.
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ Cette rubrique explique comment implémenter un proxy de découverte. Pour plus 
     }
     ```
 
-8.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType>. Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message de résolution.
+8.  Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> . Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message de résolution.
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -548,7 +548,7 @@ Cette rubrique explique comment implémenter un proxy de découverte. Pour plus 
               }
     ```
 
- Vous avez terminé l'implémentation du proxy de découverte. Passez à [Comment : implémenter un Service détectable qui s’enregistre avec le Proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).
+ Vous avez terminé l'implémentation du proxy de découverte. Passez à [Comment : Implémenter un Service détectable qui s’enregistre avec le Proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).
 
 ## <a name="example"></a>Exemple
  Les éléments suivants représentent l'intégralité du code utilisé dans cette rubrique.
@@ -980,6 +980,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>Voir aussi
 
 - [Vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Guide pratique pour implémenter un service détectable qui s’inscrit auprès du proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Guide pratique pour implémenter une application cliente qui utilise le proxy de découverte pour rechercher un service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Guide pratique pour tester le proxy de découverte](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [Guide pratique pour Implémenter un Service détectable qui s’enregistre avec le Proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Guide pratique pour Implémenter une Application cliente qui utilise le Proxy de découverte pour rechercher un Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Guide pratique pour Tester le Proxy de découverte](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

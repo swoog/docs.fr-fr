@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1ed2dc91d1a2ea9bade11902aac553e24c0607ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583663"
 ---
 # <a name="delegate-statement"></a>Delegate, instruction
 Utilisé pour déclarer un délégué. Un délégué est un type référence qui fait référence à un `Shared` méthode d’un type ou à une méthode d’instance d’un objet. Toute procédure ayant des types de paramètre et de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué.  
@@ -64,12 +64,12 @@ Utilisé pour déclarer un délégué. Un délégué est un type référence qui
   
  [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
- [Délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Guide pratique : utiliser une classe générique](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Covariance et contravariance](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Voir aussi
+- [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
+- [Délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Guide pratique pour utiliser une classe générique](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Covariance et contravariance](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

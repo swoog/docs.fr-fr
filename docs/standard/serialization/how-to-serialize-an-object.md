@@ -1,5 +1,5 @@
 ---
-title: 'Comment : sérialiser un objet'
+title: 'Procédure : Sérialiser un objet'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0924d8038edf70cd493b94c165edda607fc0027b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45748573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600646"
 ---
-# <a name="how-to-serialize-an-object"></a>Comment : sérialiser un objet
+# <a name="how-to-serialize-an-object"></a>Procédure : Sérialiser un objet
 Pour sérialiser un objet, créez tout d'abord l'objet à sérialiser et définissez ses propriétés et champs publics. Pour ce faire, vous devez déterminer le format de transport dans lequel le flux de données XML sera stocké, sous forme de flux de données ou de fichier. Par exemple, si le flux de données XML doit être enregistré dans un formulaire permanent, créez un objet <xref:System.IO.FileStream>.  
   
 > [!NOTE]
@@ -52,5 +52,5 @@ Pour sérialiser un objet, créez tout d'abord l'objet à sérialiser et défini
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Introduction à la sérialisation XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [Guide pratique pour désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Introduction à la sérialisation XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Guide pratique pour Désérialiser un objet](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

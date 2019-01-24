@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: f77f0a952224f79ee95a755cb848a4f8b68c9602
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 23c483daed0156dd29134b255e9da2f7922980ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492780"
 ---
 # <a name="xkey-directive"></a>x:Key, directive
 Identifie les éléments qui sont créés et référencés dans un dictionnaire défini en XAML. Ajout d’un `x:Key` valeur à un élément d’objet XAML est la méthode la plus courante pour identifier une ressource dans un dictionnaire de ressources, par exemple dans un WPF <xref:System.Windows.ResourceDictionary>.  
@@ -110,7 +110,7 @@ keyObject
 ## <a name="silverlight-usage-notes"></a>Remarques sur l’utilisation de Silverlight  
  `x:Key` pour Silverlight est documenté séparément. Pour plus d’informations, consultez [XAML Namespace (x :)) Fonctionnalités de langage (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>Voir aussi  
- [Ressources XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Ressources et code](../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [StaticResource, extension de balisage](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+## <a name="see-also"></a>Voir aussi
+- [Ressources XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [Ressources et code](../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [StaticResource, extension de balisage](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)

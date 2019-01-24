@@ -1,39 +1,39 @@
 ---
-title: "Comment : utiliser le fournisseur d'appartenances ASP.NET"
+title: 'Procédure : Utiliser le fournisseur d’appartenances ASP.NET'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: d71e3679f4bf395b240c330fc573d6f613d1be07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4653a4b4ae90f391eac559210deb611e2a83d0f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634504"
 ---
-# <a name="how-to-use-the-aspnet-membership-provider"></a>Comment : utiliser le fournisseur d'appartenances ASP.NET
-Le fournisseur d'appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est une fonctionnalité qui permet aux développeurs [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] de créer des sites Web permettant aux utilisateurs de créer des combinaisons uniques de nom d'utilisateur et de mot de passe. Grâce à cette fonctionnalité, les utilisateurs peuvent établir un compte avec le site et disposer d'un accès exclusif à celui-ci et à ses services. Cette approche diffère de la sécurité Windows, qui requiert que les utilisateurs disposent de comptes dans un domaine Windows. Au lieu de cela, l'utilisateur qui fournit ses informations d'identification (combinaison nom d'utilisateur/mot de passe) peut utiliser le site et ses services.  
+# <a name="how-to-use-the-aspnet-membership-provider"></a>Procédure : Utiliser le fournisseur d’appartenances ASP.NET
+Le fournisseur d’appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est une fonctionnalité qui permet aux développeurs [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] de créer des sites web permettant aux utilisateurs de créer des combinaisons uniques de nom d’utilisateur et de mot de passe. Grâce à cette fonctionnalité, les utilisateurs peuvent établir un compte avec le site et disposer d'un accès exclusif à celui-ci et à ses services. Cette approche diffère de la sécurité Windows, qui requiert que les utilisateurs disposent de comptes dans un domaine Windows. Au lieu de cela, l'utilisateur qui fournit ses informations d'identification (combinaison nom d'utilisateur/mot de passe) peut utiliser le site et ses services.  
   
- Pour un exemple d’application, consultez [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Pour plus d’informations sur l’utilisation de la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fonctionnalité de fournisseur de rôle, consultez [Comment : utiliser le fournisseur de rôle ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Pour un exemple d’application, consultez [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Pour plus d’informations sur l’utilisation de la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fonctionnalité du fournisseur de rôle, consultez [Comment : Utiliser le fournisseur de rôle ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
  La fonctionnalité d’appartenance requiert l’utilisation d’une base de données SQL Server pour stocker les informations utilisateur. La fonctionnalité inclut également des méthodes qui consistent à poser une question aux utilisateurs qui ont oublié leur mot de passe.  
   
- Les développeurs de Windows Communication Foundation (WCF) peuvent tirer parti de ces fonctionnalités pour des raisons de sécurité. Quand elle est intégrée dans une application WCF, les utilisateurs doivent fournir une combinaison nom/mot de passe d’utilisateur à l’application cliente WCF. Pour transférer les données vers le service WCF, utiliser une liaison qui prend en charge les informations d’identification de nom/mot de passe utilisateur, telles que la <xref:System.ServiceModel.WSHttpBinding> (dans la configuration, le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) et définir le type d’informations d’identification à client`UserName`. Authentifie l’utilisateur basé sur le nom d’utilisateur et un mot de passe sur le service, sécurité WCF et assigne également le rôle spécifié par le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rôle.  
+ Les développeurs de Windows Communication Foundation (WCF) peuvent tirer parti de ces fonctionnalités pour des raisons de sécurité. Lorsqu’ils sont intégrés dans une application WCF, les utilisateurs doivent fournir une combinaison nom/mot de passe d’utilisateur à l’application de client WCF. Pour transférer les données au service WCF, utilisez une liaison qui prend en charge les informations d’identification de nom/mot de passe utilisateur, telles que la <xref:System.ServiceModel.WSHttpBinding> (dans la configuration, le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) et définir le type d’informations d’identification à client`UserName`. Sur le service, sécurité WCF s’authentifie l’utilisateur en fonction du nom d’utilisateur et le mot de passe et assigne également le rôle spécifié par le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rôle.  
   
 > [!NOTE]
 >  WCF ne fournit pas de méthodes pour remplir la base de données avec des combinaisons nom/mot de passe d’utilisateur ou d’autres informations de l’utilisateur.  
   
 ### <a name="to-configure-the-membership-provider"></a>Pour configurer le fournisseur d'appartenances  
   
-1.  Dans le fichier Web.config, sous le <`system.web`> élément, créer une <`membership`> élément.  
+1.  Dans le fichier Web.config, sous le <`system.web`> élément, créer un <`membership`> élément.  
   
 2.  Sous l'élément `<membership>`, créez un élément `<providers>`.  
   
-3.  En tant qu’enfant à la <`providers`> élément, ajouter un `<clear />` élément vider la collection de fournisseurs.  
+3.  En tant qu’enfant à la <`providers`> élément, ajoutez un `<clear />` élément pour vider la collection de fournisseurs.  
   
-4.  Sous le `<clear />` élément, créer une <`add`> élément avec les attributs suivants ont des valeurs appropriées : `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, et `passwordFormat`. L'attribut `name` est utilisé ultérieurement comme valeur dans le fichier de configuration. L'exemple suivant lui affecte la valeur `SqlMembershipProvider`.  
+4.  Sous le `<clear />` élément, créer un <`add`> élément avec les attributs suivants définis aux valeurs appropriées : `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, et `passwordFormat`. L'attribut `name` est utilisé ultérieurement comme valeur dans le fichier de configuration. L'exemple suivant lui affecte la valeur `SqlMembershipProvider`.  
   
      L'exemple suivant présente la section de configuration.  
   
@@ -58,13 +58,13 @@ Le fournisseur d'appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp
   
 ### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Pour configurer la sécurité de service afin d'accepter la combinaison nom d'utilisateur/mot de passe  
   
-1.  Dans le fichier de configuration, sous la [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) élément, ajouter un [ \<liaisons >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) élément.  
+1.  Dans le fichier de configuration, sous le [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) élément, ajoutez un [ \<liaisons >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) élément.  
   
-2.  Ajouter un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) à la section de liaisons. Pour plus d’informations sur la création d’un élément de liaison WCF, consultez [Comment : spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Ajouter un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) à la section des liaisons. Pour plus d’informations sur la création d’un élément de liaison WCF, consultez [Comment : Spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Affectez à l'attribut `mode` de l'élément `<security>` la valeur `Message`.  
   
-4.  Définir le `clientCredentialType` attribut de la <`message`> élément `UserName`. Cela spécifie qu'une paire nom d'utilisateur/mot de passe sera utilisée comme information d'identification du client.  
+4.  Définir le `clientCredentialType` attribut de la <`message`> élément à `UserName`. Cela spécifie qu'une paire nom d'utilisateur/mot de passe sera utilisée comme information d'identification du client.  
   
      L’exemple suivant présente le code de configuration de la liaison.  
   
@@ -85,7 +85,7 @@ Le fournisseur d'appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp
   
 ### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Pour configurer un service permettant d'utiliser le fournisseur d'appartenances  
   
-1.  En tant qu’enfant à la `<system.serviceModel>` élément, ajouter un [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) élément  
+1.  En tant qu’enfant à la `<system.serviceModel>` élément, ajoutez un [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) élément  
   
 2.  Ajouter un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) à la <`behaviors`> élément.  
   
@@ -154,6 +154,6 @@ Le fournisseur d'appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour utiliser le fournisseur de rôle ASP.NET avec un service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Fournisseur d’appartenances et de rôles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Utiliser le fournisseur de rôle ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Fournisseur d’appartenances et de rôles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf73f382c1da15e0285ee95be9e8bce39575ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557358"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr, énumération
 Contient des valeurs qui décrivent le <xref:System.Type> paramètres pour les types génériques, comme utilisés lors d’appels à [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
@@ -49,22 +49,22 @@ typedef enum CorGenericParamAttr {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`gpVarianceMask`|Variance du paramètre s’applique uniquement aux paramètres génériques pour les interfaces et délégués.|  
-|`gpNonVariant`|Indique l’absence de variation.|  
+|`gpVarianceMask`|Variance de paramètre s’applique uniquement aux paramètres génériques pour les interfaces et délégués.|  
+|`gpNonVariant`|Indique l’absence de variance.|  
 |`gpCovariant`|Indique la covariance.|  
 |`gpContravariant`|Indique la contravariance.|  
 |`gpSpecialConstraintMask`|Les contraintes spéciales peuvent s’appliquer à tout <xref:System.Type> paramètre.|  
 |`gpNoSpecialConstraint`|Indique qu’aucune contrainte s’applique à la <xref:System.Type> paramètre.|  
 |`gpReferenceTypeConstraint`|Indique que le <xref:System.Type> paramètre doit être un type référence.|  
 |`gpNotNullableValueTypeConstraint`|Indique que le <xref:System.Type> paramètre doit être un type valeur qui ne peut pas être une valeur null.|  
-|`gpDefaultConstructorConstraint`|Indique que le <xref:System.Type> paramètre doit avoir un constructeur public par défaut qui ne prend aucun paramètre.|  
+|`gpDefaultConstructorConstraint`|Indique que le <xref:System.Type> paramètre doit avoir un constructeur public par défaut qui n’accepte aucun paramètre.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

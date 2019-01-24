@@ -1,17 +1,17 @@
 ---
-title: 'Exemple : résolution des problèmes de programmation dynamique'
+title: 'Exemple : Résolution des problèmes de programmation dynamique'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21a373b946c3ce9f4606e870ae10e23a63398bc9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492284"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>Exemple : résolution des problèmes de programmation dynamique
+# <a name="example-troubleshooting-dynamic-programming"></a>Exemple : Résolution des problèmes de programmation dynamique
 > [!NOTE]
 >  Cette rubrique fait référence à .NET Native Developer Preview, qui correspond à la version préliminaire du logiciel. Vous pouvez télécharger la préversion sur le [site web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (inscription nécessaire).  
   
@@ -60,6 +60,6 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="could-the-code-be-rewritten"></a>Le code peut-il être réécrit ?  
  Si l'application a utilisé `typeof(LayoutApplicationVM)` à la place de `Type.GetType("LayoutApplicationVM")`, la chaîne d'outils peut avoir conservé des métadonnées `browse`.  Toutefois, elle n’aurait pas créé de métadonnées `invoke`, ce qui aurait abouti à une exception [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) à l’occasion de l’instanciation du type. Pour empêcher cette exception, vous devriez quand même ajouter une directive runtime pour l'espace de noms ou le type qui spécifie la stratégie `dynamic`. Pour plus d’informations sur les directives runtime, consultez le [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en main](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [Exemple : gestion des exceptions pendant la liaison de données](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+## <a name="see-also"></a>Voir aussi
+- [Prise en main](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Exemple : Gestion des Exceptions lors de la liaison de données](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

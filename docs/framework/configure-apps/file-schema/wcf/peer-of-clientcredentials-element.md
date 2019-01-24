@@ -2,22 +2,22 @@
 title: '&lt;peer&gt;, élément de &lt;clientCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 9846a25a8df165f51290aa8a26f907d40b6b159f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f933e4c6719437d530e0cf90e3aa1da3a8143060
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616210"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;peer&gt;, élément de &lt;clientCredentials&gt;
 Spécifie les informations d'identification utilisées lors de l'authentification de clients de réseau pair à pair.  
   
  \<system.ServiceModel>  
-\<comportements >  
-\<endpointBehaviors >  
-\<comportement >  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
 \<clientCredentials>  
-\<homologue >  
+\<peer>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,17 +52,17 @@ Spécifie les informations d'identification utilisées lors de l'authentificatio
 ## <a name="remarks"></a>Notes  
  Cet élément de configuration spécifie les informations d'identification qu'un nœud homologue utilise pour s'authentifier sur les autres nœuds de la maille, ainsi que les paramètres d'authentification qu'un nœud homologue utilise pour authentifier les autres nœuds homologues. Pour plus d’informations, consultez [l’authentification de Message du canal homologue](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95) et [sécurisation des Applications de canal homologue](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Peer%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>  
- <xref:System.ServiceModel.Security.PeerCredential>  
- [Réseaux homologues](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)  
- [Authentification de Message de canal homologue](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Authentification personnalisée de canal homologue](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [Sécurisation des applications de canal homologue](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Peer%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>
+- <xref:System.ServiceModel.Security.PeerCredential>
+- [Réseaux homologues](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)
+- [Authentification de Message de canal homologue](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
+- [Authentification personnalisée de canal homologue](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [Sécurisation des applications de canal homologue](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Comment : interroger LINQ to XML à l’aide de XPath (Visual Basic)'
+title: 'Procédure : Requête LINQ to XML à l’aide de XPath (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
-ms.openlocfilehash: d8f23bd8417c3f59377e5e677b08e403ecc1122d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 754b3c4d1f14f2f78b5688f13ab679bc01798a6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615988"
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>Comment : interroger LINQ to XML à l’aide de XPath (Visual Basic)
+# <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>Procédure : Requête LINQ to XML à l’aide de XPath (Visual Basic)
 Cette rubrique présente les méthodes d’extension qui vous permettent d’interroger une arborescence XML à l’aide de XPath. Pour plus d'informations sur l'utilisation de ces méthodes d'extension, consultez <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
  À moins que vous n’ayez une raison spécifique pour interroger à l’aide de XPath, par exemple en cas d’utilisation intensive de code hérité, l’utilisation de XPath avec LINQ to XML n’est pas recommandée. Les requêtes XPath présentent des performances inférieures à celles des requêtes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -42,5 +42,5 @@ Next
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Requête Techniques avancées (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Requête Techniques avancées (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

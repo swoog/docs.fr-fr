@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: ec7072e7af15bdff373962f776abf0aad89361bb
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 784dcb88e92169ff8698234e59899cc4d58dd52c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563754"
 ---
 # <a name="xaml-overview-wpf"></a>Vue d’ensemble XAML (WPF)
 Cette rubrique décrit les fonctionnalités du langage XAML et montre comment utiliser XAML pour écrire des applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Cette rubrique décrit en particulier le langage XAML tel qu’il est implémenté par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le XAML lui-même est un concept de langage plus vaste que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -137,7 +137,7 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
   
 -   **Élément de propriété StackPanel.Children omis :** <xref:System.Windows.Controls.StackPanel> dérive <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel> définit <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> comme son XAML propriété de contenu.  
   
--   **Élément objet UIElementCollection omis :** le <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> propriété prend le type <xref:System.Windows.Controls.UIElementCollection>, qui implémente <xref:System.Collections.IList>. Balise d’élément de la collection peut être omise, selon les règles XAML de traitement des collections telles que <xref:System.Collections.IList>. (Dans ce cas, <xref:System.Windows.Controls.UIElementCollection> réellement ne peut pas être instancié, car elle n’expose pas un constructeur par défaut, et c’est pourquoi le <xref:System.Windows.Controls.UIElementCollection> élément objet est indiqué comme commenté).  
+-   **Élément d’objet UIElementCollection omis :** Le <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> propriété prend le type <xref:System.Windows.Controls.UIElementCollection>, qui implémente <xref:System.Collections.IList>. Balise d’élément de la collection peut être omise, selon les règles XAML de traitement des collections telles que <xref:System.Collections.IList>. (Dans ce cas, <xref:System.Windows.Controls.UIElementCollection> réellement ne peut pas être instancié, car elle n’expose pas un constructeur par défaut, et c’est pourquoi le <xref:System.Windows.Controls.UIElementCollection> élément objet est indiqué comme commenté).  
   
 ```xaml  
 <StackPanel>  
@@ -175,7 +175,7 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
   
- Pour obtenir la liste de référence de toutes les extensions de balisage XAML spécifiquement implémentées dans WPF, consultez [Extensions XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md). Pour une liste de référence des extensions de balisage définies par System.Xaml et faciles à se procurer pour les implémentations XAML .NET Framework, consultez [Fonctionnalités de langage pour les espace de noms XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Pour plus d’informations sur les concepts d’extension de balisage, consultez [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Pour obtenir la liste de référence de toutes les extensions de balisage XAML spécifiquement implémentées dans WPF, consultez [Extensions XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md). Pour une liste de référence des extensions de balisage qui sont définies par System.Xaml et qui sont largement disponible pour les implémentations de .NET Framework XAML, consultez [XAML Namespace (x :)) Fonctionnalités de langage](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Pour plus d’informations sur les concepts d’extension de balisage, consultez [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Convertisseurs de type  
@@ -212,17 +212,17 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
 ### <a name="the-x-prefix"></a>Le préfixe x:  
  Dans l’exemple d’élément racine précédent, le préfixe `x:` a été utilisé pour mapper l’espace de noms XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], qui est l’espace de noms XAML dédié prenant en charge les constructions du langage XAML. Ce préfixe `x:` est utilisé pour mapper cet espace de noms XAML dans les modèles de projets, les exemples et dans la documentation de ce [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. L’espace de noms XAML du langage XAML contient plusieurs constructions de programmation que vous allez être amené à utiliser très fréquemment dans votre XAML. Voici une liste de constructions de programmation avec le préfixe `x:` parmi les plus courantes que vous allez utiliser :  
   
--   [x : Key](../../../../docs/framework/xaml-services/x-key-directive.md): définit une clé unique pour chaque ressource dans un <xref:System.Windows.ResourceDictionary> (ou les concepts de dictionnaires semblables dans d’autres infrastructures). `x:Key` représente probablement 90 % des utilisations de `x:` que vous pouvez voir dans le balisage classique d’une application WPF.  
+-   [x : Key](../../../../docs/framework/xaml-services/x-key-directive.md): Définit une clé unique pour chaque ressource dans un <xref:System.Windows.ResourceDictionary> (ou les concepts de dictionnaires semblables dans d’autres infrastructures). `x:Key` représente probablement 90 % des utilisations de `x:` que vous pouvez voir dans le balisage classique d’une application WPF.  
   
--   [x:Class](../../../../docs/framework/xaml-services/x-class-directive.md) : spécifie l’espace de noms [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] et le nom de la classe qui fournit le code-behind pour une page XAML. Vous devez disposer d’une telle classe pour prendre en charge le code-behind selon le modèle de programmation WPF, et c’est la raison pour laquelle vous voyez presque toujours `x:` mappé, même s’il n’ y a aucune ressource.  
+-   [x : Class](../../../../docs/framework/xaml-services/x-class-directive.md): Spécifie le [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] espace de noms et le nom de la classe qui fournit le code-behind pour une page XAML. Vous devez disposer d’une telle classe pour prendre en charge le code-behind selon le modèle de programmation WPF, et c’est la raison pour laquelle vous voyez presque toujours `x:` mappé, même s’il n’ y a aucune ressource.  
   
--   [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md) : spécifie un nom d’objet d’exécution pour l’instance qui existe dans le code d’exécution après le traitement d’un élément objet. En général, vous êtes amené à utiliser fréquemment une propriété équivalente définie par WPF pour [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md). Ces propriétés mappent spécifiquement à une propriété de stockage CLR et sont donc plus pratiques pour la programmation d’applications, où vous utilisez fréquemment du code d’exécution pour rechercher les éléments nommés à partir du XAML initialisé. La plus courante de ces propriétés sont <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Vous pouvez encore utiliser [x : Name](../../../../docs/framework/xaml-services/x-name-directive.md) lors de l’équivalent niveau infrastructure WPF <xref:System.Windows.FrameworkElement.Name%2A> propriété n’est pas prise en charge dans un type particulier. Ce cas se présente dans certains scénarios d’animation.  
+-   [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md): Spécifie un nom d’objet d’exécution pour l’instance qui existe dans le code au moment de l’exécution après le traitée d’un élément objet. En général, vous êtes amené à utiliser fréquemment une propriété équivalente définie par WPF pour [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md). Ces propriétés mappent spécifiquement à une propriété de stockage CLR et sont donc plus pratiques pour la programmation d’applications, où vous utilisez fréquemment du code d’exécution pour rechercher les éléments nommés à partir du XAML initialisé. La plus courante de ces propriétés sont <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Vous pouvez encore utiliser [x : Name](../../../../docs/framework/xaml-services/x-name-directive.md) lors de l’équivalent niveau infrastructure WPF <xref:System.Windows.FrameworkElement.Name%2A> propriété n’est pas prise en charge dans un type particulier. Ce cas se présente dans certains scénarios d’animation.  
   
--   [x:Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md) : active une référence qui retourne une valeur statique qui, sinon, n’est pas une propriété compatible XAML.  
+-   [x:Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md): Active une référence qui retourne une valeur statique qui n’est pas une propriété compatible XAML.  
   
--   [x : Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md): construit une <xref:System.Type> référence basée sur un nom de type. Cela permet de spécifier des attributs qui prennent <xref:System.Type>, tel que <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, bien que la propriété a fréquemment chaîne native-à-<xref:System.Type> conversion de manière à qui le [x : Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) extension de balisage est facultatif.  
+-   [x : Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md): Construit un <xref:System.Type> référence basée sur un nom de type. Cela permet de spécifier des attributs qui prennent <xref:System.Type>, tel que <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, bien que la propriété a fréquemment chaîne native-à-<xref:System.Type> conversion de manière à qui le [x : Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) extension de balisage est facultatif.  
   
- Il existe d’autres constructions de programmation dans l’espace de noms XAML à préfixe `x:` qui ne sont pas aussi courantes. Pour plus d’informations, consultez [Fonctionnalités de langage pour les espaces de noms XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+ Il existe d’autres constructions de programmation dans l’espace de noms XAML à préfixe `x:` qui ne sont pas aussi courantes. Pour plus d’informations, consultez [XAML Namespace (x :)) Fonctionnalités de langage](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
   
 <a name="custom_prefixes_and_custom_types_in_xaml"></a>   
 ## <a name="custom-prefixes-and-custom-types-in-xaml"></a>Préfixes personnalisés et types personnalisés en XAML  
@@ -327,10 +327,10 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
   
  [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) vous renseigne davantage sur la polyvalence des propriétés dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et présente le concept des propriétés de dépendance.  
   
-## <a name="see-also"></a>Voir aussi  
- [Syntaxe XAML en détail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [XAML et classes personnalisées pour WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Fonctionnalités de langage pour les espaces de noms XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [Extensions XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Vue d’ensemble des éléments de base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Arborescences dans WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- [Syntaxe XAML en détail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [XAML et classes personnalisées pour WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [XAML Namespace (x :)) Fonctionnalités de langage](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
+- [Extensions XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
+- [Vue d’ensemble des éléments de base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Arborescences dans WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)

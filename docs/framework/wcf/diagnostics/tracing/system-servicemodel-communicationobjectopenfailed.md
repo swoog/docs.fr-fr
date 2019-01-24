@@ -2,12 +2,12 @@
 title: System.ServiceModel.CommunicationObjectOpenFailed
 ms.date: 03/30/2017
 ms.assetid: 8e188528-c4f4-499e-9ac2-a2fac4742f29
-ms.openlocfilehash: 6fdd583e21651f6849c22cb5aa4fbf0578a4b610
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46beb3c872bd7bb95447fea09f49e44988c9b8e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33480458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591862"
 ---
 # <a name="systemservicemodelcommunicationobjectopenfailed"></a>System.ServiceModel.CommunicationObjectOpenFailed
 Échec d'ouverture d'un objet de communication.  
@@ -15,7 +15,7 @@ ms.locfileid: "33480458"
 ## <a name="description"></a>Description  
  Un objet de communication n'a pas pu s'ouvrir parce qu'une exception a été levée pendant l'exécution de sa méthode Open. Un autre suivi peut contenir des détails à propos de l'exception.  
   
-## <a name="see-also"></a>Voir aussi  
- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Comment : accéder à un service WSE 3.0 avec un client WCF'
+title: 'Procédure : Accéder à un service WSE 3.0 Service avec un Client WCF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 3de4bb4546d3ee20e961ecf5a9d130e8e6c713a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d9824d4fdb7ffe78da8a8abaf3bac53d5c2e7ec2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580144"
 ---
-# <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Comment : accéder à un service WSE 3.0 avec un client WCF
+# <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Procédure : Accéder à un service WSE 3.0 Service avec un Client WCF
 Les clients Windows Communication Foundation (WCF) sont compatible au niveau câble avec Web Services Enhancements (WSE) 3.0 pour les services Microsoft .NET lorsque les clients WCF sont configurés pour utiliser la version d’août 2004 de la spécification WS-Addressing. Toutefois, les services WSE 3.0 ne pas prennent en charge le protocole d’échange (MEX) de métadonnées, par conséquent, lorsque vous utilisez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour créer une classe de client WCF, les paramètres de sécurité ne sont pas appliquées pour le texte généré Client WCF. Par conséquent, vous devez spécifier les paramètres de sécurité que le service WSE 3.0 requiert une fois le client WCF est généré.  
   
  Vous pouvez appliquer ces paramètres de sécurité à l’aide d’une liaison personnalisée pour prendre en compte les exigences du service WSE 3.0 et les exigences interopérables entre un service WSE 3.0 et un client WCF. Ces exigences d’interopérabilité incluent l’utilisation précédemment mentionnée de la version d’août 2004 de la spécification WS-Addressing et la protection des messages par défaut WSE 3.0 de <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. La protection de message par défaut pour WCF est <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Cette rubrique explique comment créer une liaison WCF qui interagit avec un service WSE 3.0. WCF fournit également un exemple qui incorpore cette liaison. Pour plus d’informations sur cet exemple, consultez [interopérabilité avec les Services Web ASMX](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
@@ -23,7 +23,7 @@ Les clients Windows Communication Foundation (WCF) sont compatible au niveau câ
   
      Pour un service Web WSE 3.0, un client WCF est créé. WSE 3.0 ne prenant pas en charge le protocole MEX, vous ne pouvez pas utiliser l’outil pour récupérer les exigences de sécurité pour le service Web. Le développeur d'applications doit ajouter les paramètres de sécurité pour le client.  
   
-     Pour plus d’informations sur la création d’un client WCF, consultez le [Comment : créer un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Pour plus d’informations sur la création d’un client WCF, consultez le [Comment : Créer un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Créez une classe qui représente une liaison pouvant communiquer avec les services Web WSE 3.0.  
   
@@ -62,6 +62,6 @@ Les clients Windows Communication Foundation (WCF) sont compatible au niveau câ
   
   
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Channels.Binding>  
- [Interopérabilité avec WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Channels.Binding>
+- [Interopérabilité avec WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

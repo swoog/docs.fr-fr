@@ -8,20 +8,20 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 28b4a64a6c79b226b1ff4b3bfcbf9a55b6d8df78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cc758760075746971dd0d397568c64e7baf8b67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590901"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Vue d'ensemble des modèles et styles d'en-tête de colonne GridView
-Cette présentation décrit l’ordre de priorité pour les propriétés qui vous permet de personnaliser un en-tête de colonne dans la <xref:System.Windows.Controls.GridView> mode d’affichage d’un <xref:System.Windows.Controls.ListView> contrôle.  
+Cette présentation traite de l’ordre de priorité des propriétés que vous utilisez pour personnaliser un en-tête de colonne dans la <xref:System.Windows.Controls.GridView> mode d’affichage d’un <xref:System.Windows.Controls.ListView> contrôle.  
   
 ## <a name="customizing-a-column-header-in-a-gridview"></a>Personnalisation d’un en-tête de colonne dans un GridView  
- Les propriétés qui définissent le contenu, la disposition et le style d’un en-tête de colonne dans un <xref:System.Windows.Controls.GridView> se trouvent dans de nombreuses classes connexes. Certaines de ces propriétés ont des fonctionnalités similaires ou identiques.  
+ Les propriétés qui définissent le contenu, la disposition et le style d’un en-tête de colonne dans un <xref:System.Windows.Controls.GridView> se trouvent dans de nombreuses classes connexes. Certaines de ces propriétés ont des fonctionnalités semblables ou identiques.  
   
- Les lignes dans le tableau suivant affichent les groupes de propriétés qui exécutent la même fonction. Vous pouvez utiliser ces propriétés pour personnaliser les en-têtes de colonne dans un <xref:System.Windows.Controls.GridView>. L’ordre de priorité des propriétés connexes est de droite à gauche où la propriété dans la colonne de droite plus lointain a la priorité la plus élevée. Par exemple, si un <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> est définie sur le <xref:System.Windows.Controls.GridViewColumnHeader> objet et la <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> est défini sur associé <xref:System.Windows.Controls.GridViewColumn>, le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> est prioritaire. Dans ce scénario, le <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> n’a aucun effet.  
+ Les lignes dans le tableau suivant affichent les groupes de propriétés qui exécutent la même fonction. Vous pouvez utiliser ces propriétés pour personnaliser les en-têtes de colonnes dans un <xref:System.Windows.Controls.GridView>. L’ordre de priorité des propriétés connexes est de droite à gauche où la propriété dans la colonne le plus à droite a la priorité la plus élevée. Par exemple, si un <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> est défini sur le <xref:System.Windows.Controls.GridViewColumnHeader> objet et le <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> est défini sur associé <xref:System.Windows.Controls.GridViewColumn>, le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> est prioritaire. Dans ce scénario, le <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> n’a aucun effet.  
   
  **Propriétés connexes pour les en-têtes de colonne dans un GridView**  
   
@@ -33,9 +33,9 @@ Cette présentation décrit l’ordre de priorité pour les propriétés qui vou
 |**Modèle d’en-tête**<br /><br /> **Propriétés**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
 |**Propriétés de style**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
- <sup>1</sup>pour **propriétés de modèle d’en-tête**, si vous définissez les propriétés du sélecteur de modèle et le modèle, la propriété de modèle est prioritaire. Par exemple, si vous définissez à la fois le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> et <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriétés, le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propriété est prioritaire.  
+ <sup>1</sup>pour **propriétés de modèle d’en-tête**, si vous affectez à la fois le modèle et les propriétés du sélecteur de modèle, la propriété de modèle est prioritaire. Par exemple, si vous définissez à la fois le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> et <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriétés, le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propriété est prioritaire.  
   
-## <a name="see-also"></a>Voir aussi  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [Vue d’ensemble de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Vue d’ensemble de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Vue d’ensemble de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [Vue d’ensemble de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

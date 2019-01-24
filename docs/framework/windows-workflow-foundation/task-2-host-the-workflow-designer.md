@@ -1,30 +1,30 @@
 ---
-title: 'Tâche 2 : héberger le Workflow Designer'
+title: 'Tâche 2 : Héberger le Concepteur de flux de travail'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 8ac6b3590d146909c1cb9fd8cf9cae2352b0155b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572771"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>Tâche 2 : héberger le Workflow Designer
+# <a name="task-2-host-the-workflow-designer"></a>Tâche 2 : Héberger le Concepteur de flux de travail
 Cette rubrique décrit la procédure pour l’hébergement d’une instance de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] dans une application Windows Presentation Foundation (WPF).  
   
- La procédure configure le **grille** contrôle qui contient le concepteur, crée par programmation une instance de la <xref:System.Activities.Presentation.WorkflowDesigner> qui contient une valeur par défaut <xref:System.Activities.Statements.Sequence> activité, inscrit pour fournir les métadonnées du Concepteur prise en charge du concepteur pour des ordinateurs hôtes et des activités intégrées tous les le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] dans le [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application.  
+ La procédure configure le **grille** contrôle qui contient le concepteur, crée par programmation une instance de la <xref:System.Activities.Presentation.WorkflowDesigner> qui contient une valeur par défaut <xref:System.Activities.Statements.Sequence> activité, enregistre les métadonnées de concepteur pour fournir prise en charge de concepteur pour des hôtes et des activités intégrées tout le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] dans le [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application.  
   
 ### <a name="to-host-the-workflow-designer"></a>Pour héberger le concepteur de workflow  
   
-1.  Ouvrez la HostingApplication de projet que vous avez créé dans [tâche 1 : créer une Application Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Ouvrez le projet hostingapplication que vous avez créé dans [tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
   
-2.  Pour faciliter l'utilisation du [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], ajustez la taille de la fenêtre. Pour ce faire, sélectionnez **MainWindow** dans le concepteur, appuyez sur F4 pour afficher la **propriétés** fenêtre, puis, dans le **disposition** section, définissez la **largeur** à une valeur de 600 et la **hauteur** à une valeur de 350.  
+2.  Pour faciliter l'utilisation du [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], ajustez la taille de la fenêtre. Pour ce faire, sélectionnez **MainWindow** dans le concepteur, appuyez sur F4 pour afficher la **propriétés** fenêtre, puis, dans le **disposition** section il, définissez le **delalargeur** à une valeur de 600 et la **hauteur** à une valeur de 350.  
   
-3.  Définir le nom de la grille en sélectionnant le **grille** Panneau de configuration dans le concepteur (cliquez sur la zone à l’intérieur de la **MainWindow**) et en définissant le **nom** propriété en haut de la  **Propriétés** fenêtre valeur « grid1 ».  
+3.  Définir le nom de la grille en sélectionnant le **grille** panneau dans le concepteur (cliquez sur la zone à l’intérieur de la **MainWindow**) et en définissant le **nom** propriété en haut de la  **Propriétés** fenêtre valeur « grid1 ».  
   
-4.  Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (**...** ) à côté du `ColumnDefinitions` propriété pour ouvrir la **éditeur de collections** boîte de dialogue.  
+4.  Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (**...** ) à côté du `ColumnDefinitions` propriété pour ouvrir le **éditeur de collections** boîte de dialogue.  
   
-5.  Dans le **éditeur de collections** boîte de dialogue, cliquez sur le **ajouter** trois fois pour insérer trois colonnes dans la disposition. La première colonne contiendra la **boîte à outils**, la deuxième colonne hébergera le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], et la troisième colonne sera utilisée pour l’inspecteur de propriété.  
+5.  Dans le **éditeur de collections** boîte de dialogue, cliquez sur le **ajouter** bouton trois fois pour insérer trois colonnes dans la disposition. La première colonne contiendra la **boîte à outils**, la deuxième colonne hébergera le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], et la troisième colonne sera utilisée pour l’inspecteur de propriété.  
   
 6.  Définir le `Width` propriété de la colonne du milieu à la valeur « 4 * ».  
   
@@ -40,7 +40,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
     </Grid>  
     ```  
   
-8.  Dans **l’Explorateur de solutions**, avec le bouton droit de MainWindow.xaml et sélectionnez **afficher le Code**. Modifiez le code en procédant comme suit :  
+8.  Dans **l’Explorateur de solutions**, cliquez sur MainWindow.xaml et sélectionnez **afficher le Code**. Modifiez le code en procédant comme suit :  
   
     1.  Ajoutez les espaces de noms suivants :  
   
@@ -97,7 +97,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
         }  
         ```  
   
-         Pour plus d’informations sur l’inscription des concepteurs d’activités, consultez [Comment : créer un concepteur d’activités personnalisé](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Pour plus d’informations sur l’inscription des concepteurs d’activités, consultez [Comment : Créer un concepteur d’activités personnalisées](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
   
     5.  Dans le constructeur de classes `MainWindow`, ajoutez des appels aux méthodes précédemment déclarées pour enregistrer les métadonnées dans le but de la prise en charge du concepteur et pour créer l'objet <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -119,9 +119,9 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
   
 9. Pour générer et exécuter la solution, appuyez sur F5.  
   
-10. Consultez [tâche 3 : créer les volets de PropertyGrid et boîte à outils](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) pour savoir comment ajouter **boîte à outils** et **PropertyGrid** prend en charge à votre Concepteur de workflow réhébergé.  
+10. Consultez [tâche 3 : Créer les volets Toolbox et PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) pour savoir comment ajouter **boîte à outils** et **PropertyGrid** prennent en charge à votre Concepteur de workflow réhébergé.  
   
-## <a name="see-also"></a>Voir aussi  
- [Réhébergement du concepteur de flux de travail](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Tâche 1 : Créer une nouvelle application Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Tâche 3 : Créer les volets Toolbox et PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+## <a name="see-also"></a>Voir aussi
+- [Réhébergement du concepteur de flux de travail](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [Tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [Tâche 3 : Créer les volets Toolbox et PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

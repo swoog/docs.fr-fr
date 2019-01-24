@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e32b9a294f81208fe85a9e1de011daef0d1d5294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdfec7ce93dd3954af03f6f4822ac00576a7e043
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562928"
 ---
 # <a name="ltmethodgt-element-net-native"></a>&lt;Method&gt;, élément (.NET Native)
 Applique une stratégie de réflexion runtime à un constructeur ou à une méthode.  
@@ -145,8 +145,8 @@ Applique une stratégie de réflexion runtime à un constructeur ou à une méth
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [\<MethodInstantiation>, élément](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<MethodInstantiation>, élément](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)

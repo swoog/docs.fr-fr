@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f15c3bc097bc034db41c95cd168104b8435aaf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567020"
 ---
 # <a name="security-transparent-code-level-2"></a>Code transparent de sécurité, niveau 2
 <a name="top"></a>
@@ -44,13 +44,13 @@ ms.locfileid: "33394138"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Exemples d’utilisation et comportements](#examples)  
+-   [Exemples d’utilisation et de comportements](#examples)  
   
 -   [Modèles de substitution](#override)  
   
 -   [Règles d’héritage](#inheritance)  
   
--   [Informations et règles supplémentaires](#additional)  
+-   [Règles et des informations supplémentaires](#additional)  
   
 <a name="examples"></a>   
 ## <a name="usage-examples-and-behaviors"></a>Exemples d'utilisation et comportements  
@@ -71,15 +71,15 @@ ms.locfileid: "33394138"
 ### <a name="assembly-wide-annotation"></a>Annotation à l'échelle de l'assembly  
  Les règles suivantes s'appliquent à l'utilisation d'attributs au niveau de l'assembly :  
   
--   Aucun attribut : si vous ne spécifiez aucun attribut, le runtime considère l'ensemble du code comme du code critique de sécurité, sauf si le fait d'être critique de sécurité va à l'encontre d'une règle d'héritage (par exemple, en cas de substitution ou d'implémentation d'une méthode d'interface ou virtuelle transparente). Dans ces cas de figure, les méthodes sont critiques sécurisées. Si vous ne spécifiez aucun attribut, le common language runtime détermine les règles de transparence à votre place.  
+-   Aucun attribut : Si vous ne spécifiez pas de tous les attributs, le runtime interprète tout le code comme critique de sécurité, à l’exception où être critique de sécurité ne respecte pas une règle d’héritage (par exemple, en cas de substitution ou de mise en œuvre un transparent virtuel ou méthode d’interface). Dans ces cas de figure, les méthodes sont critiques sécurisées. Si vous ne spécifiez aucun attribut, le common language runtime détermine les règles de transparence à votre place.  
   
--   `SecurityTransparent` : tout le code est transparent ; l'assembly dans son ensemble ne fait rien de privilégié ou de non sécurisé.  
+-   `SecurityTransparent`: Tout le code est transparent. la totalité de l’assembly ne fait rien de privilégié ou unsafe.  
   
--   `SecurityCritical` : tout le code introduit par des types dans cet assembly est critique ; le reste du code est transparent. Ce scénario équivaut à ne spécifier aucun attribut ; cependant, le common language runtime ne détermine pas automatiquement les règles de transparence. Par exemple, si vous substituez une méthode virtuelle ou abstraite ou que vous implémentez une méthode d'interface, par défaut, cette méthode est transparente. Vous devez annoter explicitement la méthode comme étant `SecurityCritical` ou `SecuritySafeCritical` ; sinon, une exception <xref:System.TypeLoadException> est levée au moment du chargement. Cette règle vaut aussi quand la classe de base et la classe dérivée se trouvent dans le même assembly.  
+-   `SecurityCritical`: Tout le code introduit par des types dans cet assembly est critique ; le reste du code est transparent. Ce scénario équivaut à ne spécifier aucun attribut ; cependant, le common language runtime ne détermine pas automatiquement les règles de transparence. Par exemple, si vous substituez une méthode virtuelle ou abstraite ou que vous implémentez une méthode d'interface, par défaut, cette méthode est transparente. Vous devez annoter explicitement la méthode comme étant `SecurityCritical` ou `SecuritySafeCritical` ; sinon, une exception <xref:System.TypeLoadException> est levée au moment du chargement. Cette règle vaut aussi quand la classe de base et la classe dérivée se trouvent dans le même assembly.  
   
--   `AllowPartiallyTrustedCallers` (niveau 2 uniquement) : tout le code est transparent par défaut. Cependant, chaque type et membre individuel peut avoir d'autres attributs.  
+-   `AllowPartiallyTrustedCallers` (niveau 2 uniquement) : Tout le code est transparent par défaut. Cependant, chaque type et membre individuel peut avoir d'autres attributs.  
   
- Le tableau suivant compare le comportement de niveau assembly pour le niveau 2 et 1.  
+ Le tableau suivant compare le comportement de niveau assembly pour le niveau 2 avec le niveau 1.  
   
 |Assembly (attribut)|Niveau 2|Niveau 1|  
 |------------------------|-------------|-------------|  
@@ -92,12 +92,12 @@ ms.locfileid: "33394138"
 ### <a name="type-and-member-annotation"></a>Annotation de type et de membre  
  Les attributs de sécurité qui s'appliquent à un type s'appliquent aussi aux membres introduits par ce type. En revanche, ils ne s'appliquent pas aux substitutions virtuelles ou abstraites des implémentations de classe ou d'interface de base. L'utilisation d'attributs au niveau du type et du membre obéit aux règles suivantes :  
   
--   `SecurityCritical` : le type ou le membre est critique et peut être appelé uniquement par du code de niveau de confiance totale. Les méthodes introduites dans un type critique de sécurité sont critiques.  
+-   `SecurityCritical`: Le type ou le membre est critique et peut être appelée uniquement par le code de confiance totale. Les méthodes introduites dans un type critique de sécurité sont critiques.  
   
     > [!IMPORTANT]
     >  Les méthodes virtuelles et abstraites introduites dans des classes ou interfaces de base et substituées ou implémentées dans une classe critique de sécurité sont transparentes par défaut. Elles doivent être identifiées comme étant `SecuritySafeCritical` ou `SecurityCritical`.  
   
--   `SecuritySafeCritical` : le type ou le membre est critique sécurisé. Cependant, le type ou le membre peut être appelé à partir d'un code transparent (de niveau de confiance partielle) et a les mêmes capacités que n'importe quel autre code critique. La sécurité du code doit faire l'objet d'un audit.  
+-   `SecuritySafeCritical`: Le type ou le membre est critique sécurisé. Cependant, le type ou le membre peut être appelé à partir d'un code transparent (de niveau de confiance partielle) et a les mêmes capacités que n'importe quel autre code critique. La sécurité du code doit faire l'objet d'un audit.  
   
  [Retour au début](#top)  
   
@@ -121,9 +121,9 @@ ms.locfileid: "33394138"
   
  `Transparent` < `SafeCritical` < `Critical`  
   
--   Règles pour les types : allant de gauche à droite, l'accès devient plus restrictif. Les types dérivés doivent être au moins aussi restrictifs que le type de base.  
+-   Règles pour les types : Allant de gauche à droite, l’accès devient plus restrictif. Les types dérivés doivent être au moins aussi restrictifs que le type de base.  
   
--   Règles pour les méthodes : les méthodes dérivées ne peuvent pas modifier l'accessibilité à partir de la méthode de base. Pour le comportement par défaut, toutes les méthodes dérivées qui ne sont pas annotées sont `Transparent`. Les dérivés des types critiques provoquent une exception si la méthode substituée n'est pas explicitement annotée comme étant `SecurityCritical`.  
+-   Règles pour les méthodes : Méthodes dérivées ne peuvent pas changer l’accessibilité depuis la méthode de base. Pour le comportement par défaut, toutes les méthodes dérivées qui ne sont pas annotées sont `Transparent`. Les dérivés des types critiques provoquent une exception si la méthode substituée n'est pas explicitement annotée comme étant `SecurityCritical`.  
   
  Le tableau suivant présente les modèles d'héritage de type autorisés.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "33394138"
  Les propriétés suivantes ont été ajoutées à l'espace de noms <xref:System.Reflection> pour déterminer si le type, la méthode ou le champ est `SecurityCritical`, `SecuritySafeCritical` ou `SecurityTransparent` : <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> et <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>. Ces propriétés permettent de déterminer la transparence par la réflexion plutôt que par la vérification de la présence de l'attribut. Compte tenu de la complexité des règles de transparence, vérifier la présence de l'attribut peut ne pas suffire.  
   
 > [!NOTE]
->  A `SafeCritical` méthode retourne `true` pour les deux <xref:System.Type.IsSecurityCritical%2A> et <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, car `SafeCritical` est réellement critique (il a les mêmes fonctionnalités que le code critique, mais elle peut être appelée à partir du code transparent).  
+>  Un `SafeCritical` retourne de la méthode `true` pour les deux <xref:System.Type.IsSecurityCritical%2A> et <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, car `SafeCritical` est réellement critique (il a les mêmes fonctionnalités que le code critique, mais elle peut être appelée à partir du code transparent).  
   
  Les méthodes dynamiques héritent de la transparence des modules auxquels elles sont attachées ; elles n'héritent pas de la transparence du type (si elles sont attachées à un type).  
   
@@ -191,6 +191,6 @@ ms.locfileid: "33394138"
   
  La valeur par défaut de la propriété <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> étant `false`, elle doit avoir la valeur `true` pour ignorer la vérification. Cela doit être fait uniquement à des fins d'optimisation. Vous devez vous assurer que le code transparent de l’assembly est vérifiable à l’aide de la `transparent` option dans le [outil PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Code Transparent de sécurité, niveau 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [Modifications de sécurité](../../../docs/framework/security/security-changes.md)
+## <a name="see-also"></a>Voir aussi
+- [Code Transparent de sécurité, niveau 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [Modifications de sécurité](../../../docs/framework/security/security-changes.md)

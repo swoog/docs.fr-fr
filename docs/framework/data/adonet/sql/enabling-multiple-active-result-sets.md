@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 70e589fcff241a664ef470dfeb746412cde6b515
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570198"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Activation de MARS (Multiple Active Result Sets)
 MARS est une fonctionnalité qui opère avec SQL Server pour permettre l’exécution de plusieurs lots sur une seule connexion. Lorsque MARS est activé pour une utilisation avec SQL Server, chaque objet de commande utilisé ajoute une session à la connexion.  
@@ -92,7 +92,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Observez par exemple le scénario suivant. Deux objets de commande sont créés, l'un pour le traitement d'un ensemble de résultats et un autre pour la mise à jour de données ; ils partagent une connexion commune via MARS. Dans ce scénario, le `Transaction`.`Commit` Échec de la mise à jour jusqu'à ce que tous les résultats ont été lus sur le premier objet de commande, en générant l’exception suivante :  
   
- Message : contexte de transaction utilisé par une autre session.  
+ Message : Contexte de transaction utilisé par une autre session.  
   
  Source : fournisseur de données .Net SqlClient  
   
@@ -111,6 +111,6 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="detecting-mars-support"></a>Détection de la prise en charge de MARS  
  Une application peut contrôler la prise en charge de MARS en lisant la valeur `SqlConnection.ServerVersion`. Le nombre majeur doit être de 9 pour SQL Server 2005 et 10 pour SQL Server 2008.  
   
-## <a name="see-also"></a>Voir aussi  
- [MARS (Multiple Active Result Sets)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [MARS (Multiple Active Result Sets)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f8398c16b27836b772e8ac56ee1f7e8494f4be0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a253503f3046c004cc7109a31b5aa8fd8e8dc195
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618049"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile, méthode
-Vous permet de spécifier ou de réinitialiser le fichier manifeste par l’éditeur de liens lorsqu’il crée l’assembly.  
+Vous permet de spécifier ou de réinitialiser le fichier manifest que l’éditeur de liens utilise lorsqu’il crée l’assembly.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +43,13 @@ HRESULT SetManifestFile(
  Retourne S_OK si la méthode réussit.  
   
 ## <a name="remarks"></a>Notes  
- Appelez cela avant de demander le Win32ResBlob. La valeur de le `pszFile` paramètre est le nom du fichier manifeste dont le contenu est lu et mis dans les ressources Win32 avec l’ID de RT_MANIFEST. Lorsqu’elle est appelée à l’aide d’un paramètre de valeur NULL, tout manifeste lu précédemment est désactivée. Cela permet de réinitialiser l’état de l’éditeur de liens à celui de la durée d’initialisation.  
+ Appelé avant de demander pour le Win32ResBlob. La valeur de la `pszFile` paramètre est le nom du fichier manifeste dont le contenu est lu et mis dans les ressources Win32 avec l’ID de RT_MANIFEST. Lorsqu’elle est appelée à l’aide d’un paramètre de valeur NULL, tout manifeste lu précédemment est effacé. Cela permet de réinitialiser l’état de l’éditeur de liens à celle du moment de l’initialisation.  
   
 ## <a name="requirements"></a>Spécifications  
- Requiert aLink.h  
+ Nécessite aLink.h  
   
-## <a name="see-also"></a>Voir aussi  
- [IALink3, interface](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Voir aussi
+- [IALink3, interface](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

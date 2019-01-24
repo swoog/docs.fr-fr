@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 00c7a7a62890aced4c480e2653084c0b7cfe7f45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59384900226fbbcfc879650402b1a5df80b69cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596421"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Trier les éléments d'une séquence
 Utilisez l'opérateur <xref:System.Linq.Enumerable.OrderBy%2A> pour trier une séquence selon une ou plusieurs clés.  
@@ -88,6 +88,6 @@ Utilisez l'opérateur <xref:System.Linq.Enumerable.OrderBy%2A> pour trier une s�
   
  `Carnarvon Tigers`  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples de requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Téléchargement d’exemples de base de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>Voir aussi
+- [Exemples de requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Téléchargement d’exemples de base de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

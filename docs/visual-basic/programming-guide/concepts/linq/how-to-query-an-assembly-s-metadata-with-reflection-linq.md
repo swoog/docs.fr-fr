@@ -1,15 +1,15 @@
 ---
-title: 'Comment : interroger un Assembly&#39;métadonnées avec la réflexion (LINQ) (Visual Basic)'
+title: 'Procédure : Interroger un Assembly&#39;métadonnées avec la réflexion (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: f465cccef2009bb9d8da1dc57c14eb09dc008f54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb46cef7eb9b4827cb5e4b7ca7366c0910fcef26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609822"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Comment : interroger un Assembly&#39;métadonnées avec la réflexion (LINQ) (Visual Basic)
+# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Procédure : Interroger un Assembly&#39;métadonnées avec la réflexion (LINQ) (Visual Basic)
 L’exemple suivant montre comment utiliser LINQ avec la réflexion pour récupérer des métadonnées spécifiques concernant des méthodes qui correspondent à un critère de recherche spécifié. Ici, la requête va rechercher les noms de toutes les méthodes dans l’assembly qui retournent des types énumérables tels que des tableaux.  
   
 ## <a name="example"></a>Exemple  
@@ -51,5 +51,5 @@ End Module
 ## <a name="compiling-the-code"></a>Compilation du code  
  Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Voir aussi
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

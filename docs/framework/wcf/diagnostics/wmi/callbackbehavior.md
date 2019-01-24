@@ -2,12 +2,12 @@
 title: CallbackBehavior
 ms.date: 03/30/2017
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
-ms.openlocfilehash: 38a38a71db2927d187ccdd93e5e364b0d4955373
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 2854671eaabb37066b57d87a7496183c9e5bba4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452610"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562846"
 ---
 # <a name="callbackbehavior"></a>CallbackBehavior
 CallbackBehavior  
@@ -36,56 +36,56 @@ class CallbackBehavior : Behavior
 ### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
  Type de données : booléen  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Lorsque sa valeur est « true », la session est fermée automatiquement lorsqu'un service ferme une session duplex.  
   
 ### <a name="concurrencymode"></a>ConcurrencyMode  
  Type de données : chaîne  
-Type d'accès : lecture seule  
+Type d’accès : Propriétés en lecture seule  
   
  Spécifie si le service prend en charge un thread, plusieurs threads ou les appels réentrants.  
   
 ### <a name="ignoreextensiondataobject"></a>IgnoreExtensionDataObject  
  Type de données : booléen  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Valeur qui spécifie s'il faut envoyer des données de sérialisation inconnues sur le câble.  
   
 ### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
  Type de données : booléen  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  En cas d'activation, des détails au sujet des exceptions levées sur le rappel sont joints aux erreurs retournées au service.  
   
 ### <a name="maxitemsinobjectgraph"></a>MaxItemsInObjectGraph  
  Type de données : booléen  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Nombre maximal d'éléments autorisés dans un objet sérialisé.  
   
 ### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
  Type de données : booléen  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Spécifie s’il faut utiliser le contexte de synchronisation actuel pour choisir le thread d’exécution.  
   
 ### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
  Type de données : booléen  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Spécifie si le système ou l'application applique le traitement d'en-tête SOAP MustUnderstand.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.CallbackBehaviorAttribute>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.CallbackBehaviorAttribute>

@@ -2,12 +2,12 @@
 title: Activités de collection dans le WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c29b81dcff943b350a0696d0d9996f8e2ce986c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590076"
 ---
 # <a name="collection-activities-in-wf"></a>Activités de collection dans le WF
 Les activités de collection sont utilisées pour utiliser les objets de collection dans un workflow. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] comprend des activités fournies par le système permettant d'ajouter des éléments à une collection et de les supprimer, de vérifier l'existence d'un élément dans une collection et d'effacer une collection. `ExistsInCollection` et `RemoveFromCollection` ont un <xref:System.Activities.OutArgument%601> de type <xref:System.Boolean>, qui indique le résultat.  
@@ -425,5 +425,5 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Création de workflows, d’activités et d’expressions à l’aide du code impératif](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>Voir aussi
+- [Création de workflows, d’activités et d’expressions à l’aide du code impératif](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

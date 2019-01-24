@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 992f35a9f7406ac161ddb5e31fdaf85756bfe31f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a93fb708ed6b1790027b1e3a2fc74ca8c5ff2024
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571687"
 ---
 # <a name="using-data-contracts"></a>Utilisation de contrats de données
 Un *contrat de données* est un accord en bonne et due forme entre un service et un client qui décrit de manière abstraite les données à échanger. Autrement dit, pour communiquer, le client et le service n'ont pas besoin de partager les mêmes types, mais uniquement les mêmes contrats de données. Un contrat de données définit précisément, pour chaque type de paramètre ou de retour, les données qui doivent être sérialisées (converties en données XML) pour être échangées.  
   
 ## <a name="data-contract-basics"></a>Principes de base des contrats de données  
- Windows Communication Foundation (WCF) utilise un moteur de sérialisation appelé le sérialiseur de contrat de données par défaut pour sérialiser et désérialiser des données (les convertir vers et à partir de XML). Tous les types primitifs du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , tels que les entiers et les chaînes, ainsi que certains types considérés comme primitifs, tels que <xref:System.DateTime> et <xref:System.Xml.XmlElement>, peuvent être sérialisés sans autre préparation et sont considérés comme ayant des contrats de données par défaut. De nombreux types du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ont également des contrats de données existants. Pour obtenir la liste complète des types sérialisables, consultez [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Windows Communication Foundation (WCF) utilise un moteur de sérialisation appelé le sérialiseur de contrat de données par défaut pour sérialiser et désérialiser des données (convertir vers et à partir de XML). Tous les types primitifs du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , tels que les entiers et les chaînes, ainsi que certains types considérés comme primitifs, tels que <xref:System.DateTime> et <xref:System.Xml.XmlElement>, peuvent être sérialisés sans autre préparation et sont considérés comme ayant des contrats de données par défaut. De nombreux types du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ont également des contrats de données existants. Pour obtenir la liste complète des types sérialisables, consultez [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  Vous devez définir un contrat de données pour les nouveaux types complexes que vous créez afin que ces derniers soient sérialisables. Par défaut, le <xref:System.Runtime.Serialization.DataContractSerializer> déduit le contrat de données et sérialise tous les types visibles publiquement. Toutes les propriétés et tous les champs publics en lecture/écriture du type sont sérialisés. Vous pouvez supprimer des membres de la sérialisation en utilisant <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. Vous pouvez également créer explicitement un contrat de données à l'aide des attributs <xref:System.Runtime.Serialization.DataContractAttribute> et <xref:System.Runtime.Serialization.DataMemberAttribute> . Pour cela, il faut normalement appliquer l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> au type. Cet attribut peut être appliqué à des classes, des structures et des énumérations. Puis, l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> doit être appliqué à chaque membre du type de contrat de données pour indiquer qu'il s'agit d'un *membre de données*, c'est-à-dire qu'il doit être sérialisé. Pour plus d’informations, consultez [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
@@ -36,7 +36,7 @@ Un *contrat de données* est un accord en bonne et due forme entre un service et
  [!code-vb[C_DataContract#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#2)]  
   
 ### <a name="notes"></a>Notes  
- Les remarques suivantes fournissent des éléments à prendre en compte lors de la création de contrats de données :  
+ Les remarques suivantes fournissent des éléments à prendre en compte lors de la création de contrats de données :  
   
 -   L'attribut <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> est honoré uniquement lorsqu'il est utilisé avec des types non marqués. Cela inclut les types qui ne sont pas marqués avec l'un des attributs <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>ou <xref:System.Runtime.Serialization.EnumMemberAttribute> , ou qui sont marqués comme sérialisables par tout autre moyen (par exemple, objet <xref:System.Xml.Serialization.IXmlSerializable>).  
   
@@ -66,17 +66,17 @@ Un *contrat de données* est un accord en bonne et due forme entre un service et
   
  Pour obtenir un exemple de code complet d’un service WCF qui définit un contrat de données, consultez l’exemple [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md) .  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
- [Noms de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Équivalence des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Classement des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [Types connus de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Contrats de données à compatibilité ascendante](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [Gestion de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Rappels de sérialisation avec tolérance de version](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [Valeurs par défaut des membres de données](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)  
- [Types pris en charge par le sérialiseur de contrat de données](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [Guide pratique pour créer un contrat de données de base destiné à une classe ou une structure](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md)
+- [Noms de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Équivalence des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Classement des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md)
+- [Types connus de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Contrats de données à compatibilité ascendante](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Gestion de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Rappels de sérialisation avec tolérance de version](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [Valeurs par défaut des membres de données](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
+- [Types pris en charge par le sérialiseur de contrat de données](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Guide pratique pour Créer un contrat de données de base pour une classe ou Structure](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

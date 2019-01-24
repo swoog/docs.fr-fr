@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
-ms.openlocfilehash: 650acf0efaa88120678819b77b03fab61107c630
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565863"
 ---
 # <a name="choosing-between-class-and-struct"></a>Choix entre classe et structure
 Une des décisions de conception de base auxquelles est confronté chaque concepteur de framework est de concevoir un type sous forme de classe (type référence) ou sous forme de struct (type valeur). Il est nécessaire de bien comprendre les différences de comportement entre les types référence et les types valeur pour faire ce choix.  
@@ -55,5 +55,5 @@ Une des décisions de conception de base auxquelles est confronté chaque concep
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Instructions pour la conception des types](../../../docs/standard/design-guidelines/type.md)  
+- [Instructions pour la conception des types](../../../docs/standard/design-guidelines/type.md)
 - [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

@@ -12,19 +12,19 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4170ca53252fef3afda026393300e34b99e9d018
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583082"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversion des tableaux (Visual Basic)
 Vous pouvez convertir un type tableau vers un autre type fournie par les conditions suivantes :  
   
 -   **Rang égal.** Les rangs des deux tableaux doivent être identiques, autrement dit, ils doivent avoir le même nombre de dimensions. Toutefois, les longueurs des dimensions respectives n’avez pas besoin être identiques.  
   
--   **Type de données d’élément.** Les types de données des éléments des deux tableaux doivent être des types de référence. Vous ne pouvez pas convertir un `Integer` de tableau à un `Long` ou même à un `Object` de tableau, car au moins un type valeur est impliqué. Pour plus d’informations, consultez [les Types valeur et Types référence](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   **Type de données d’élément.** Les types de données des éléments des deux tableaux doivent être des types de référence. Vous ne pouvez pas convertir un `Integer` de tableau à un `Long` ou même à un `Object` de tableau, car au moins un type valeur est impliqué. Pour plus d'informations, consultez [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
 -   **Convertibilité de variance.** Une conversion restrictive ou étendue doit être possible entre les types d’éléments des deux tableaux. Un exemple qui ne satisfait pas cette condition est une tentative de conversion entre un `String` tableau et un tableau d’une classe dérivée de <xref:System.Attribute?displayProperty=nameWithType>. Ces deux types n’ont rien en commun, et aucune conversion n’existe entre eux.  
   
@@ -59,12 +59,12 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Conversions de type en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Conversions implicites et explicites](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Conversion entre des chaînes et d’autres types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Comment : convertir un objet en un autre Type dans Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)  
- [Fonctions de conversion de types](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Conversions de type en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversions implicites et explicites](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Conversion entre des chaînes et d’autres types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Guide pratique pour Convertir un objet en un autre Type dans Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)
+- [Fonctions de conversion de types](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

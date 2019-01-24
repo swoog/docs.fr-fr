@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer un service qui utilise un validateur de certificat personnalisé'
+title: 'Procédure : Créer un Service qui utilise un validateur de certificat personnalisé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569321"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Comment : créer un service qui utilise un validateur de certificat personnalisé
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Procédure : Créer un Service qui utilise un validateur de certificat personnalisé
 Cette rubrique décrit comment implémenter un validateur de certificat personnalisé et comment configurer les informations d’identification du service ou du client pour remplacer la logique de validation de certificat par défaut par le validateur de certificat personnalisé.  
   
- Si le certificat X.509 est utilisé pour authentifier un client ou un service, Windows Communication Foundation (WCF) par défaut utilise le magasin de certificats Windows et les API de chiffrement pour valider le certificat et pour s’assurer qu’il est approuvé. Les fonctionnalités intégrées de validation du certificat sont parfois insuffisantes et doivent être changées. WCF fournit un moyen simple pour modifier la logique de validation en permettant aux utilisateurs d’ajouter un validateur de certificat personnalisé. Si un validateur de certificat personnalisé est spécifié, WCF n’utilise pas la logique de validation de certificat intégré, mais fait appel au validateur personnalisé à la place.  
+ Si le certificat X.509 est utilisé pour authentifier un client ou un service, Windows Communication Foundation (WCF) par défaut utilise le magasin de certificats Windows et l’API Crypto pour valider le certificat et vous assurer qu’il est approuvé. Les fonctionnalités intégrées de validation du certificat sont parfois insuffisantes et doivent être changées. WCF fournit un moyen simple de modifier la logique de validation en permettant aux utilisateurs d’ajouter un validateur de certificat personnalisé. Si un validateur de certificat personnalisé est spécifié, WCF n’utilise pas la logique de validation de certificat intégré, mais s’appuie sur le validateur personnalisé à la place.  
   
 ## <a name="procedures"></a>Procédures  
   
@@ -116,7 +116,7 @@ Cette rubrique décrit comment implémenter un validateur de certificat personna
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>Pour spécifier un validateur de certificat personnalisé à l'aide du code sur le client  
   
-1.  Spécifiez le validateur de certificat personnalisé à l'aide de la propriété <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>. Vous pouvez accéder aux informations d'identification du client à l'aide de la propriété <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>. (La classe de client générée par [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) toujours dérive la <xref:System.ServiceModel.ClientBase%601> classe.)  
+1.  Spécifiez le validateur de certificat personnalisé à l'aide de la propriété <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>. Vous pouvez accéder aux informations d'identification du client à l'aide de la propriété <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>. (La classe de client générée par [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) toujours dérive le <xref:System.ServiceModel.ClientBase%601> classe.)  
   
 2.  Affectez à la propriété <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> la valeur <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.  
   
@@ -129,5 +129,5 @@ Cette rubrique décrit comment implémenter un validateur de certificat personna
  [!code-csharp[c_CustomCertificateValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#3)]
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IdentityModel.Selectors.X509CertificateValidator>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IdentityModel.Selectors.X509CertificateValidator>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: ad0b639aec60fc1dc9b594ff774232699001db5d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589517"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Validation d'une transaction en une phase unique et en plusieurs phases
 Les ressources utilisées dans une transaction sont managées par un gestionnaire de ressources, dont les actions sont coordonnées par un gestionnaire de transactions. Le [l’inscription de ressources comme Participants à une Transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) rubrique explique comment une ressource (ou plusieurs ressources) peuvent être inscrit dans une transaction. Elle traite de la coordination de la validation d'une transaction entre les ressources inscrites.  
@@ -109,6 +109,6 @@ public void InDoubt (Enlistment enlistment)
 ## <a name="single-phase-commit-optimization"></a>Optimisation de la validation en une phase  
  Le protocole de validation en une phase est plus efficace lors de l'exécution car toutes les mises à jour sont effectuées sans coordination explicite. Pour plus d’informations sur ce protocole, consultez [optimisation à l’aide de la validation à Phase unique et la Notification de Phase unique pouvant être promue](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Optimisation à l’aide de la validation à phase unique et de la notification de phase unique pouvant être promue](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Inscription de ressources comme participants à une transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+## <a name="see-also"></a>Voir aussi
+- [Optimisation à l’aide de la validation à phase unique et de la notification de phase unique pouvant être promue](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
+- [Inscription de ressources comme participants à une transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

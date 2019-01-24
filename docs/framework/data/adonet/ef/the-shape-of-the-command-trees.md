@@ -2,12 +2,12 @@
 title: Forme des arborescences de commandes
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b859dfaa6350341b4b90753fd5dda3339e6bb584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573023"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forme des arborescences de commandes
 Le module de génération SQL est chargé de la génération d’une requête SQL spécifique principale basée sur une expression de l’arborescence de commandes de la requête d’entrée donnée. Cette section traite des caractéristiques, des propriétés et de la structure des arborescences de commandes de requête.  
@@ -69,7 +69,7 @@ Le module de génération SQL est chargé de la génération d’une requête SQ
   
 -   Fonctions définies par l'utilisateur.  
   
- Fonctions canoniques (consultez [fonctions canoniques](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) pour plus d’informations) sont spécifiés dans le cadre de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], et les fournisseurs doivent fournir des implémentations pour les fonctions canoniques basées sur ces spécifications. Les fonctions de magasin sont basées sur les spécifications présentes dans le manifeste du fournisseur correspondant. Les fonctions définies par l'utilisateur sont basées sur les spécifications présentes dans le SSDL.  
+ Fonctions canoniques (consultez [fonctions canoniques](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) pour plus d’informations) sont spécifiés dans le cadre de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], et les fournisseurs doivent fournir des implémentations pour les fonctions canoniques en fonction de ces spécifications. Les fonctions de magasin sont basées sur les spécifications présentes dans le manifeste du fournisseur correspondant. Les fonctions définies par l'utilisateur sont basées sur les spécifications présentes dans le SSDL.  
   
  De plus, les fonctions qui ont l’attribut NiladicFunction n’ont pas d’arguments et doivent être traduites sans parenthèses à la fin.  Autrement dit, en  *\<functionName >* au lieu de  *\<functionName > ()*.  
   
@@ -96,14 +96,14 @@ Le module de génération SQL est chargé de la génération d’une requête SQ
 #### <a name="dbscanexpression"></a>DbScanExpression  
  En cas d’utilisation dans les arborescences de commandes de sortie, DbScanExpression représente efficacement une analyse sur une table, une vue ou une requête de magasin, représentée par EnitySetBase::Target.  
   
- Si la propriété de métadonnées « Defining Query » de la cible est non null, elle représente une requête, le texte de requête pour laquelle est fourni dans la propriété dans la langue du fournisseur (ou le dialecte) comme spécifié dans la définition de schéma du magasin de métadonnées.  
+ Si la propriété de métadonnées « Defining Query » de la cible est non null, elle représente une requête, le texte de requête pour ce qui est fourni dans cette propriété de métadonnées dans la langue spécifique du fournisseur (ou le dialecte) tel que spécifié dans la définition de schéma du magasin.  
   
- Sinon, la cible représente une table ou une vue. Son préfixe de schéma se trouve dans la propriété de métadonnées « Schema », si ce n’est pas null, sinon est le nom de conteneur d’entités.  Le nom de la table ou la vue est soit la propriété de métadonnées « Table », si ce n’est pas null, sinon la propriété de nom de l’entité de base du jeu.  
+ Sinon, la cible représente une table ou une vue. Son préfixe de schéma se trouve dans la propriété de métadonnées « Schema », si ce n’est pas null, sinon est le nom de conteneur d’entités.  Le nom de la table ou la vue est soit la propriété de métadonnées « Table », si ce n’est pas null, sinon la propriété de nom de l’entité définie base.  
   
  Toutes ces propriétés proviennent de la définition de l'EntitySet correspondant dans le fichier de définition de schéma du magasin (SSDL).  
   
 ### <a name="using-primitive-types"></a>Utilisation de types primitifs  
  Lorsque les types primitifs sont référencés dans les arborescences de commandes de sortie, ils sont en général référencés dans les types primitifs du modèle conceptuel. Toutefois, pour certaines expressions, les fournisseurs ont besoin du type primitif du magasin correspondant. Les exemples de telles expressions sont notamment DbCastExpression et éventuellement DbNullExpression, si le fournisseur doit effectuer un cast de la valeur Null vers le type correspondant. Dans ces cas, les fournisseurs doivent effectuer le mappage au type de fournisseur selon le type du type primitif et ses facettes.  
   
-## <a name="see-also"></a>Voir aussi  
- [Génération SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Voir aussi
+- [Génération SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

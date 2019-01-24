@@ -2,21 +2,21 @@
 title: '&lt;serviceDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 2b3061274ef670ccd672c3155ca7285d567834bd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 73943f5f962a6963809e2c65ce8593f6181559f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587331"
 ---
 # <a name="ltservicediscoverygt"></a>&lt;serviceDiscovery&gt;
 Spécifie la fonctionnalité de découverte des points de terminaison de service.  
   
  \<system.ServiceModel>  
-\<comportements >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<comportement >  
-\<serviceDiscovery >  
+\<behavior>  
+\<serviceDiscovery>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,8 +49,8 @@ Spécifie la fonctionnalité de découverte des points de terminaison de service
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Collection de points de terminaison d’annonce. Cette section permet de spécifier les points de terminaison à utiliser pour l'envoi de messages d'annonce.|  
-|[\<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Collection de points de terminaison de découverte. Cette section permet de spécifier les points de terminaison sur lesquels écouter les messages de découverte.|  
+|[\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Collection de points de terminaison d’annonce. Cette section permet de spécifier les points de terminaison à utiliser pour l'envoi de messages d'annonce.|  
+|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Collection de points de terminaison de découverte. Cette section permet de spécifier les points de terminaison sur lesquels écouter les messages de découverte.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -85,5 +85,5 @@ Spécifie la fonctionnalité de découverte des points de terminaison de service
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

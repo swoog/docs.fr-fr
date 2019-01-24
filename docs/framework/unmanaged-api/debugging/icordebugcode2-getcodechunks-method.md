@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdfcd45b15ddc1491b12de0fa42901b6d3f7fe9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf8bc747f643819eb82448b4ad6b7fab696c9c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572498"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks, méthode
 Obtient les segments de code composée de cet objet de code.  
@@ -46,19 +46,19 @@ HRESULT GetCodeChunks (
  [out] Le nombre de segments retournés dans le `chunks` tableau.  
   
  `chunks`  
- [out] Un tableau de structures de « CodeChunkInfo », chacune représentant un segment de code unique. Si la valeur de `cbufSize` est 0, ce paramètre peut être null.  
+ [out] Tableau de structures de « CodeChunkInfo », chacun représentant un segment de code unique. Si la valeur de `cbufSize` est 0, ce paramètre peut être null.  
   
 ## <a name="remarks"></a>Notes  
  Les segments de code ne se chevaucheront jamais, et ils suivront l’ordre dans lequel ils auraient été concaténés par [ICorDebugCode::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md). Un objet de code Microsoft intermediate language (MSIL) dans le .NET Framework version 2.0 comprend un seul segment de code.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- 
+## <a name="see-also"></a>Voir aussi
+

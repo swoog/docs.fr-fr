@@ -2,17 +2,17 @@
 title: Fonctions d'agrégation (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 63e366f323b38a24c4d067681b47d8a8b96125b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e606d0e355bb715cfa0536ad9e33f08f5f692951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492050"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Fonctions d'agrégation (Entity SQL)
 Un agrégat est une construction de langage qui condense une collection en un scalaire dans le cadre d’une opération de groupe. Les agrégats [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se présentent sous deux formes :  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fonctions de collection qui peuvent être utilisées n’importe où dans une expression. Cela inclut l’utilisation de fonctions d’agrégation dans les projections et les prédicats qui agissent sur les collections. Dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], la spécification des agrégats s'effectue de préférence par fonctions de collection.  
+-   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fonctions de collection qui peuvent être utilisées n’importe où dans une expression. Cela inclut l’utilisation de fonctions d’agrégation dans les projections et les prédicats qui agissent sur les collections. Dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], la spécification des agrégats s’effectue de préférence par fonctions de collection.  
   
 -   Les agrégats de groupe dans les expressions de requête dotées d'une clause GROUP BY. Comme dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], les agrégats de groupe acceptent DISTINCT et ALL comme modificateurs de l'entrée de l'agrégat.  
   
@@ -42,5 +42,5 @@ Un agrégat est une construction de langage qui condense une collection en un sc
   
  Les expressions utilisées dans la clause GROUP BY sont évaluées à l’aide de la même résolution de noms de portée qui serait visible pour l’expression de la clause WHERE.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

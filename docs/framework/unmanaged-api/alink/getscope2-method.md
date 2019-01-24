@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed9645c5111e7260010df74554825ffd8d427e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc986dc27deb08f779a9654324e6832d8420554a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587132"
 ---
 # <a name="getscope2-method"></a>GetScope2, méthode
 Obtient une portée d’importation.  
@@ -48,15 +48,15 @@ HRESULT GetScope2(
  Portée de base zéro à importer.  
   
  `ppImportScope`  
- Reçoit le pointeur vers [IMetaDataImport2 (Interface)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface pour la portée indiquée.  
+ Reçoit le pointeur vers [IMetaDataImport2, Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface pour la portée indiquée.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
 ## <a name="requirements"></a>Spécifications  
- Requiert alink.h.  
+ Nécessite alink.h.  
   
-## <a name="see-also"></a>Voir aussi  
- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Voir aussi
+- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

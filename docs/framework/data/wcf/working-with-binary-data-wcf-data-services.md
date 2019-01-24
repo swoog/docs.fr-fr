@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9f7ee114a5a480d470c2c32b5b83e287b07e9537
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570588"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Utilisation de données binaires (services de données WCF)
 Le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèque cliente vous permet de récupérer et de mettre à jour des données binaires à partir d’un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux dans une des manières suivantes :  
@@ -25,7 +25,7 @@ Le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèque cli
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implémente la diffusion en continu de données binaires à l’aide de HTTP tel que défini dans le [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Dans ce mécanisme, données binaires sont traitées comme une ressource multimédia qui se distingue mais relatives à une entité, appelée entrée de lien média. Pour plus d’informations, consultez [fournisseur de diffusion en continu](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Pour obtenir un exemple pas à pas montrant comment créer une application cliente Windows Presentation Foundation (WPF) qui télécharge des fichiers image binaires depuis un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service stockant des photos, consultez le billet [données Services de diffusion en continu fournisseur série parties 2 : accéder à un Stream de ressources multimédia à partir du Client](https://go.microsoft.com/fwlink/?LinkId=201637). Pour télécharger l’exemple de code pour le service de données de photo de flux de données présenté dans le billet de blog, consultez le [exemple de diffusion en continu de Service des données de photos](https://go.microsoft.com/fwlink/?LinkId=198988) dans MSDN Code Gallery.  
+>  Pour obtenir un exemple pas à pas montrant comment créer une application cliente Windows Presentation Foundation (WPF) qui télécharge des fichiers image binaires depuis un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service stockant des photos, consultez le billet [données Services de diffusion en continu fournisseur série parties 2 : L’accès à un Stream de ressources multimédia à partir du Client](https://go.microsoft.com/fwlink/?LinkId=201637). Pour télécharger l’exemple de code pour le service de données de photo de flux de données présenté dans le billet de blog, consultez le [exemple de diffusion en continu de Service des données de photos](https://go.microsoft.com/fwlink/?LinkId=198988) dans MSDN Code Gallery.  
   
 ## <a name="entity-metadata"></a>Métadonnées d'entité  
  Une entité qui possède un flux de ressources multimédia lié est signalée dans les métadonnées du service de données par l'attribut `HasStream` appliqué à un type d'entité qui est l'entrée de lien média. Dans l’exemple suivant, le `PhotoInfo` entité est une entrée de lien média qui possède une ressource multimédia associée, indiquée par le `HasStream` attribut.  
@@ -38,7 +38,7 @@ Le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèque cli
  La bibliothèque cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] offre des méthodes pour accéder aux flux de ressources multimédia depuis un service de données basé sur [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Lors du téléchargement d'une ressource multimédia, vous pouvez utiliser l'URI de la ressource multimédia ou bien vous pouvez obtenir un flux binaire qui contient les données de la ressource multimédia elle-même. Vous pouvez également télécharger les données de la ressource multimédia sous la forme d'un flux binaire.  
   
 > [!TIP]
->  Pour obtenir un exemple pas à pas montrant comment créer une application cliente Windows Presentation Foundation (WPF) qui télécharge des fichiers image binaires depuis un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service stockant des photos, consultez le billet [données Services de diffusion en continu fournisseur série parties 2 : accéder à un Stream de ressources multimédia à partir du Client](https://go.microsoft.com/fwlink/?LinkId=201637). Pour télécharger l’exemple de code pour le service de données de photo de flux de données présenté dans le billet de blog, consultez le [exemple de diffusion en continu de Service des données de photos](https://go.microsoft.com/fwlink/?LinkId=198988) dans MSDN Code Gallery.  
+>  Pour obtenir un exemple pas à pas montrant comment créer une application cliente Windows Presentation Foundation (WPF) qui télécharge des fichiers image binaires depuis un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service stockant des photos, consultez le billet [données Services de diffusion en continu fournisseur série parties 2 : L’accès à un Stream de ressources multimédia à partir du Client](https://go.microsoft.com/fwlink/?LinkId=201637). Pour télécharger l’exemple de code pour le service de données de photo de flux de données présenté dans le billet de blog, consultez le [exemple de diffusion en continu de Service des données de photos](https://go.microsoft.com/fwlink/?LinkId=198988) dans MSDN Code Gallery.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Obtenir l'URI du flux binaire  
  Lorsque vous récupérez certains types de ressources multimédia, tels que des images et d'autres fichiers multimédia, il est souvent plus facile d'utiliser l'URI de la ressource média de votre application que le flux de données binaires lui-même. Pour obtenir l'URI d'un flux de ressources associé à une entrée de lien média donnée, vous devez appeler la méthode <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> sur l'instance <xref:System.Data.Services.Client.DataServiceContext> qui suit l'entité. L'exemple suivant illustre comment appeler la méthode <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> pour obtenir l'URI d'un flux de ressources multimédia utilisé pour créer une nouvelle image sur le client :  
@@ -66,6 +66,6 @@ Le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèque cli
 > [!NOTE]
 >  Lorsque vous appelez <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>, le flux n'est pas transmis au service de données jusqu'à ce que la méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> soit appelée.  
   
-## <a name="see-also"></a>Voir aussi  
- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Liaison de données aux contrôles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Liaison de données aux contrôles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

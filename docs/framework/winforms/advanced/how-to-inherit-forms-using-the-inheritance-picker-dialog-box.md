@@ -1,19 +1,19 @@
 ---
-title: "Comment : hériter de formulaires à l'aide de la boîte de dialogue Sélecteur d'héritage"
+title: 'Procédure : Hériter de formulaires à l’aide de la boîte de dialogue de sélecteur de l’héritage'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601829"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Comment : hériter de formulaires à l'aide de la boîte de dialogue Sélecteur d'héritage
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procédure : Hériter de formulaires à l’aide de la boîte de dialogue de sélecteur de l’héritage
 Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet consiste à utiliser la boîte de dialogue **Sélecteur d’héritage**. Avec elle, vous pouvez tirer parti du code ou des interfaces utilisateur que vous avez déjà créés dans d'autres solutions.  
   
 > [!NOTE]
@@ -54,10 +54,10 @@ Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet con
      Pour plus d’informations sur la façon de modifier l’apparence d’un formulaire de base, consultez [Conséquences de la modification de l’aspect d’un formulaire de base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Quand vous combinez des contrôles et des composants hérités avec des contrôles et des composants standard sur des Windows Forms, vous pouvez rencontrer des conflits avec l'ordre de plan. Vous pouvez corriger ce problème en modifiant l’ordre de plan. Pour cela, cliquez dans le menu **Format**, pointez sur **Ordre**, puis cliquez sur **Mettre au premier plan** ou **Mettre à l’arrière-plan**. Pour plus d’informations sur l’ordre de plan des contrôles, consultez [Comment : superposer des objets dans les Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Quand vous combinez des contrôles et des composants hérités avec des contrôles et des composants standard sur des Windows Forms, vous pouvez rencontrer des conflits avec l'ordre de plan. Vous pouvez corriger ce problème en modifiant l’ordre de plan. Pour cela, cliquez dans le menu **Format**, pointez sur **Ordre**, puis cliquez sur **Mettre au premier plan** ou **Mettre à l’arrière-plan**. Pour plus d’informations sur l’ordre de plan des contrôles, consultez [Comment : Superposer des objets dans les Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Inherits (instruction)](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [using](~/docs/csharp/language-reference/keywords/using.md)  
- [Conséquences de la modification de l’aspect d’un formulaire de base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Héritage visuel des Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>Voir aussi
+- [Inherits (instruction)](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Conséquences de la modification de l’aspect d’un formulaire de base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
+- [Héritage visuel des Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

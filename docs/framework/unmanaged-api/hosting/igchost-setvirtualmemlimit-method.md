@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1d61c8aeaf458d8cbbd2976fa83aaa0eeb0f834
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d38b174a7e959647a9c1f5287b8acbbcdaf5ca7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564277"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>IGCHost::SetVirtualMemLimit, méthode
 Définit la taille maximale de mémoire virtuelle du runtime.  
@@ -37,19 +37,19 @@ HRESULT SetVirtualMemLimit (
   
 #### <a name="parameters"></a>Paramètres  
  `sztMaxVirtualMemMB`  
- [in] La taille maximale, en mégaoctets, de la mémoire du runtime virtuel.  
+ [in] La taille maximale, en mégaoctets, de mémoire virtuelle du runtime.  
   
 ## <a name="remarks"></a>Notes  
- La taille maximale de la mémoire du runtime virtuels permettre être modifiée de manière dynamique.  
+ La taille maximale de mémoire virtuelle du runtime peut être modifiée dynamiquement.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** GCHost.idl, GCHost.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IGCHost, interface](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IGCHost, interface](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

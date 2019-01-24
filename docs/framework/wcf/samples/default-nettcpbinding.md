@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: d56c405fe9c46fcebaad8e5b217f44d709dc8db8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589928"
 ---
 # <a name="default-nettcpbinding"></a>Default NetTcpBinding
-Cet exemple illustre l'utilisation de la liaison <xref:System.ServiceModel.NetTcpBinding>. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le service est auto-hébergé. Le client et le service sont tous les deux des applications console.  
+Cet exemple illustre l’utilisation de la liaison <xref:System.ServiceModel.NetTcpBinding>. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le service est auto-hébergé. Le client et le service sont tous les deux des applications console.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -34,7 +34,7 @@ Cet exemple illustre l'utilisation de la liaison <xref:System.ServiceModel.NetTc
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- L'exemple précédent indique comment configurer un point de terminaison pour utiliser la liaison `netTcpBinding` avec les paramètres par défaut. Pour configurer la liaison `netTcpBinding` et modifier quelques-uns de ses paramètres, vous devez définir une configuration de liaison. Le point de terminaison doit référencer la configuration de liaison par nom avec un attribut `bindingConfiguration`. Dans cet exemple, la configuration de la liaison est nommée `Binding1` et est définie comme indiqué dans l'exemple de configuration suivant.  
+ L’exemple précédent indique comment configurer un point de terminaison pour utiliser la liaison `netTcpBinding` avec les paramètres par défaut. Pour configurer la liaison `netTcpBinding` et modifier quelques-uns de ses paramètres, vous devez définir une configuration de liaison. Le point de terminaison doit référencer la configuration de liaison par nom avec un attribut `bindingConfiguration`. Dans cet exemple, la configuration de la liaison est nommée `Binding1` et est définie comme indiqué dans l'exemple de configuration suivant.  
   
 ```xml  
 <services>  

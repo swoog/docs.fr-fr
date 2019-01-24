@@ -1,5 +1,5 @@
 ---
-title: 'Comment : ajouter des contrôles à des Windows Forms'
+title: 'Procédure : Ajouter des contrôles aux Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611356"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Comment : ajouter des contrôles à des Windows Forms
+# <a name="how-to-add-controls-to-windows-forms"></a>Procédure : Ajouter des contrôles aux Windows Forms
 La plupart des formulaires sont conçus en ajoutant des contrôles à la surface du formulaire pour définir une interface utilisateur (IU). Un *contrôle* est un composant d’un formulaire utilisé pour afficher des informations ou accepter l’entrée d’utilisateur. Pour plus d’informations sur les contrôles, consultez [des contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
   
 ### <a name="to-draw-a-control-on-a-form"></a>Pour dessiner un contrôle sur un formulaire  
   
-1.  Ouvrez le formulaire. Pour plus d’informations, consultez [Comment : afficher Windows Forms dans le concepteur](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Dans le **boîte à outils**, cliquez sur le contrôle que vous souhaitez ajouter à votre formulaire.  
   
@@ -37,7 +37,7 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
   
 ### <a name="to-drag-a-control-to-a-form"></a>Pour faire glisser un contrôle à un formulaire  
   
-1.  Ouvrez le formulaire. Pour plus d’informations, consultez [Comment : afficher Windows Forms dans le concepteur](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Dans le **boîte à outils**, cliquez sur le contrôle souhaité et faites-le glisser vers votre formulaire.  
   
@@ -89,9 +89,9 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
     > [!IMPORTANT]
     >  Vous pouvez exposer votre ordinateur local à un risque de sécurité via le réseau en référençant un malveillant `UserControl`. Il s’agit uniquement d’un problème dans le cas d’une personne malveillante, création d’un contrôle personnalisé causer des dommages, que vous suivi par inadvertance l’ajout à votre projet.  
   
-## <a name="see-also"></a>Voir aussi  
- [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Disposition des contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Guide pratique pour redimensionner des contrôles sur des Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- [Guide pratique pour définir le texte affiché par un contrôle Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Disposition des contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Guide pratique pour Redimensionner des contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)
+- [Guide pratique pour Définir le texte affiché par un Windows Forms de contrôle](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

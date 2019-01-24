@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: bccbbbeb79f38790a4664b0152ca3378fb55448d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d85f49ce0aed44dea12c9ba16135425e6e2e431
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565746"
 ---
 # <a name="bad-file-mode"></a>Mode de fichier incorrect
-Les instructions utilisées pour la manipulation du contenu du fichier doivent être adaptées au mode dans lequel le fichier a été ouvert. Plusieurs causes sont possibles :  
+Les instructions utilisées pour la manipulation du contenu du fichier doivent être adaptées à la mode dans lequel le fichier a été ouvert. Plusieurs causes sont possibles :  
   
--   A `FilePutObject` ou `FileGetObject` instruction spécifie un fichier séquentiel.  
+-   Un `FilePutObject` ou `FileGetObject` instruction spécifie un fichier séquentiel.  
   
--   A `Print` instruction spécifie un fichier ouvert pour un mode d’accès autre que `Output` ou `Append`.  
+-   Un `Print` instruction spécifie un fichier ouvert pour un mode d’accès autre que `Output` ou `Append`.  
   
 -   Un `Input` instruction spécifie un fichier ouvert pour un mode d’accès autre que `Input`  
   
--   Toute tentative d’écriture dans un fichier en lecture seule.  
+-   Une tentative d’écriture dans un fichier en lecture seule.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
@@ -30,10 +30,10 @@ Les instructions utilisées pour la manipulation du contenu du fichier doivent �
   
 -   Assurez-vous que `Input` spécifie un fichier ouvert pour `Input`. Si ce n’est pas le cas, utilisez une instruction différente pour placer des données dans le fichier ou rouvrez le fichier dans un mode approprié.  
   
--   Si vous écrivez dans un fichier en lecture seule, de modifier l’état de lecture/écriture du fichier ou n’essayez pas d’écrire dedans.  
+-   Si vous écrivez dans un fichier en lecture seule, modifier l’état de lecture/écriture du fichier ou n’essayez pas d’y écrire.  
   
 -   Utilisez les fonctionnalités disponibles dans l’objet `My.Computer.FileSystem` .  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.FileSystem>  
- [Dépannage : lecture et écriture dans des fichiers texte](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.FileSystem>
+- [Résolution des problèmes : Lecture et écriture dans des fichiers texte](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

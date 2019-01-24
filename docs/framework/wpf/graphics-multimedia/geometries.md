@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: f595a214e807c2657ef5affd9e52fdf49aa24837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605797"
 ---
 # <a name="geometries"></a>Géométries
-<xref:System.Windows.Media.Geometry> est une classe flexible, qui permet de restituer [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphiques, les objets de test de positionnement et définir des zones de découpage  
+<xref:System.Windows.Media.Geometry> est une classe flexible, permettant de restituer [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphiques, les objets de test de positionnement et définir des régions de découpage  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Syntaxe XAML pour les tracés](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
  [Vue d’ensemble de Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Media.Brushes>  
- <xref:System.Windows.Shapes.Shape>  
- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Vue d’ensemble des formes et dessins de base dans WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Media.Brushes>
+- <xref:System.Windows.Shapes.Shape>
+- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Vue d’ensemble des formes et dessins de base dans WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

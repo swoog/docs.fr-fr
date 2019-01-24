@@ -2,12 +2,12 @@
 title: Installation de Message Queuing (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: b54fab13d644cafda8a070280d672c60cf71b675
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2aae92ba6e373af2d8bc9cff0b4c9d317ba10136
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588023"
 ---
 # <a name="installing-message-queuing-msmq"></a>Installation de Message Queuing (MSMQ)
 Les procédures suivantes indiquent comment installer Message Queuing 4.0 et Message Queuing 3.0.  
@@ -19,13 +19,13 @@ Les procédures suivantes indiquent comment installer Message Queuing 4.0 et Me
   
 1.  Dans le Gestionnaire de serveur, cliquez sur **fonctionnalités**.  
   
-2.  Dans le volet droit sous **résumé des fonctionnalités**, cliquez sur **ajouter des fonctionnalités**.  
+2.  Dans le volet de droite sous **résumé des fonctionnalités**, cliquez sur **ajouter des fonctionnalités**.  
   
 3.  Dans la fenêtre résultante, développez **Message Queuing**.  
   
-4.  Développez **Message Queuing Services**.  
+4.  Développez **Services de file d’attente de messages**.  
   
-5.  Cliquez sur **intégration des Services Active** (pour les ordinateurs joints à un domaine), puis cliquez sur **prise en charge HTTP**.  
+5.  Cliquez sur **intégration de Services d’annuaire** (pour les ordinateurs joints à un domaine), puis cliquez sur **prise en charge HTTP**.  
   
 6.  Cliquez sur **suivant**, puis cliquez sur **installer**.  
   
@@ -51,7 +51,7 @@ Les procédures suivantes indiquent comment installer Message Queuing 4.0 et Me
   
 2.  Cliquez sur **Ajout/Suppression de programmes** puis cliquez sur **ajouter des composants Windows**.  
   
-3.  Sélectionnez Message Queuing, cliquez sur **détails**.  
+3.  Sélectionnez Message Queuing et cliquez sur **détails**.  
   
     > [!NOTE]
     >  Si vous exécutez [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], sélectionnez Serveur d'applications pour accéder à Message Queuing.  
@@ -62,5 +62,5 @@ Les procédures suivantes indiquent comment installer Message Queuing 4.0 et Me
   
 6.  Si vous êtes invité à redémarrer l’ordinateur, cliquez sur **OK** pour terminer l’installation.  
   
-## <a name="see-also"></a>Voir aussi  
- [Instructions d’installation](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>Voir aussi
+- [Instructions d’installation](../../../../docs/framework/wcf/samples/set-up-instructions.md)

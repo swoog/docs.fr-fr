@@ -7,12 +7,12 @@ helpviewer_keywords:
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: KrzysztofCwalina
-ms.openlocfilehash: 411596f342930c9387dc6523d25805bddad18687
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565811"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Classes de base pour l'implémentation d'abstractions
 À proprement parler, une classe devient une classe de base lorsqu’une autre classe est dérivée à partir de celui-ci. Pour les besoins de cette section, toutefois, une classe de base est une classe principalement conçue pour fournir une abstraction commune ou pour d’autres classes de réutiliser une partie implémentation cependant l’héritage par défaut. Classes de base se trouvent généralement au milieu des hiérarchies d’héritage entre une abstraction à la racine d’une hiérarchie et plusieurs implémentations personnalisées en bas.  
@@ -35,5 +35,5 @@ ms.locfileid: "53148667"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Conception en vue de l’extensibilité](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

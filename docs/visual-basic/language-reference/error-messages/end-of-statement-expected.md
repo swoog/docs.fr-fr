@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1e4c46088d3d89d9c2066e33def880941107575f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565018"
 ---
 # <a name="end-of-statement-expected"></a>Fin d'instruction attendue
 L’instruction est syntaxiquement complète, mais un élément de programmation supplémentaire suit l’élément qui termine l’instruction. Un terminateur de ligne est nécessaire à la fin de chaque instruction.
@@ -27,6 +27,6 @@ L’instruction est syntaxiquement complète, mais un élément de programmation
   
 2.  Insérer un terminateur de ligne après l’élément qui se termine l’instruction.
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique : diviser et combiner des instructions dans le code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- [Instructions](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour diviser et combiner des instructions dans le code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Instructions](../../../visual-basic/programming-guide/language-features/statements.md)

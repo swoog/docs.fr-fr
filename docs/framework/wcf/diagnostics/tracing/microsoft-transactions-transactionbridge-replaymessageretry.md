@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 ms.date: 03/30/2017
 ms.assetid: e5b820ae-504d-405a-926a-9effa41d2369
-ms.openlocfilehash: d000447245d973916dfe0df9af5c46b6fa822e32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb7f6fcf95d1ff253fa0e2963610bee2b65ef3c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33475128"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597110"
 ---
 # <a name="microsofttransactionstransactionbridgereplaymessageretry"></a>Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 Une nouvelle tentative de message Replay a été envoyée à un coordinateur qui ne répond pas.  
@@ -18,7 +18,7 @@ Une nouvelle tentative de message Replay a été envoyée à un coordinateur qui
 ## <a name="troubleshooting"></a>Résolution des problèmes  
  Recherchez d'éventuels problèmes liés au réseau ou au produit pouvant empêcher la réponse d'être remise à temps.  Si un nombre élevé de ces messages apparaissent, cela peut indiquer des problèmes d'infrastructure ou des délais de réponse anormalement longs. Ces deux problèmes réduiront considérablement le débit des transactions au sein du système.  
   
-## <a name="see-also"></a>Voir aussi  
- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)

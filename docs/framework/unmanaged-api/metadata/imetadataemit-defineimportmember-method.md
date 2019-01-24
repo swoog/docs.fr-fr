@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f9995fda70d1d5a3c19c30496de6c32f20015d47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 021c4819036b85e1085c639bc2d874d2843b0c64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570029"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember, méthode
 Crée une référence au membre spécifié d’un type ou un module qui est défini en dehors de la portée actuelle et définit un jeton pour cette référence.  
@@ -47,16 +47,16 @@ HRESULT DefineImportMember (
  [in] Un [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface qui représente l’assembly à partir duquel le membre cible est importé.  
   
  `pbHashValue`  
- [in] Tableau qui contient le code de hachage pour l’assembly spécifié par `pAssemImport`.  
+ [in] Un tableau qui contient le hachage pour l’assembly spécifié par `pAssemImport`.  
   
  `cbHashValue`  
  [in] Nombre d'octets dans le tableau `pbHashValue`.  
   
  `pImport`  
- [in] Un [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface qui représente la portée de métadonnées à partir de laquelle le membre cible est importé.  
+ [in] Un [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface qui représente la portée des métadonnées à partir duquel le membre cible est importé.  
   
  `mbMember`  
- [in] Le jeton de métadonnées qui spécifie le membre cible. Le jeton peut être un `mdMethodDef` (pour une méthode membre), `mdProperty` (pour une propriété de membre) ou `mdFieldDef` (pour un champ membre) jeton.  
+ [in] Le jeton de métadonnées qui spécifie le membre cible. Le jeton peut être un `mdMethodDef` (pour une méthode membre), `mdProperty` (pour une propriété de membre) ou `mdFieldDef` (pour un champ de membre) jeton.  
   
  `pAssemEmit`  
  [in] Un [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface qui représente l’assembly dans lequel le membre cible est importé.  
@@ -65,28 +65,28 @@ HRESULT DefineImportMember (
  [in] Le `mdTypeRef` ou `mdModuleRef` jeton pour le type ou le module, respectivement, qui possède le membre cible.  
   
  `pmr`  
- [out] Le `mdMemberRef` jeton qui est défini dans l’étendue actuelle pour la référence de membre.  
+ [out] Le `mdMemberRef` jeton qui est défini dans la portée actuelle pour la référence de membre.  
   
 ## <a name="remarks"></a>Notes  
  Le `DefineImportMember` méthode recherche le membre spécifié par `mbMember`, qui est défini dans une autre portée spécifiée par `pImport`et récupère ses propriétés. Il utilise ces informations pour appeler le [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) méthode dans la portée actuelle pour créer la référence de membre.  
   
- En général, avant d’utiliser le `DefineImportMember` (méthode), vous devez créer, dans la portée actuelle, une référence de type ou la référence de module pour la classe parente, interface ou module du membre cible. Le jeton de métadonnées pour cette référence est ensuite passé dans le `tkParent` argument. Vous n’avez pas besoin de créer une référence au parent du membre cible si elle doit être résolu ultérieurement par le compilateur ou l’éditeur de liens. Pour récapituler :  
+ En règle générale, avant d’utiliser le `DefineImportMember` (méthode), vous devez créer, dans la portée actuelle, une référence de type ou la référence de module pour le membre cible parent classe, interface ou le module. Le jeton de métadonnées pour cette référence est ensuite passé dans le `tkParent` argument. Vous n’avez pas besoin créer une référence au parent du membre cible si elle doit être résolu ultérieurement par le compilateur ou l’éditeur de liens. Pour récapituler :  
   
--   Si le membre cible est un champ ou une méthode, utilisez la [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) ou [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) méthode pour créer une référence de type dans la portée actuelle, pour le classe parente ou l’interface parente du membre.  
+-   Si le membre cible est un champ ou une méthode, utilisez la [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) ou [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) méthode pour créer une référence de type, dans la portée actuelle, pour le classe parente ou l’interface parente du membre.  
   
--   Si le membre cible est une fonction globale ou de variable globale (autrement dit, pas un membre d’une classe ou interface), utilisez la [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) pour créer une référence de module dans la portée actuelle, pour le parent du membre (méthode) module.  
+-   Si le membre cible est une fonction globale ou de variable globale (autrement dit, pas un membre d’une classe ou une interface), utilisez le [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) pour créer une référence de module, dans la portée actuelle, pour le parent du membre (méthode) module.  
   
--   Si le parent du membre cible doit être résolu ultérieurement par le compilateur ou l’éditeur de liens, passez `mdTokenNil` dans `tkParent`. Le seul scénario dans lequel cela s’applique est lorsqu’une fonction globale ou variable globale est en cours d’importation à partir d’un fichier .obj qui sera finalement lié dans le module actuel et les métadonnées fusionnées.  
+-   Si le parent du membre cible doit être résolu ultérieurement par le compilateur ou l’éditeur de liens, puis passer `mdTokenNil` dans `tkParent`. Le seul scénario dans lequel cela s’applique est lorsqu’une fonction globale ou variable globale est en cours d’importation à partir d’un fichier .obj qui sera finalement lié dans le module actuel, et les métadonnées fusionnées.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

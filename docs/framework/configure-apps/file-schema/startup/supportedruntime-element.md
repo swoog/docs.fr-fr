@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600516"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; élément
 
@@ -24,7 +24,7 @@ Spécifie quelles versions du Common Language Runtime sont prises en charge par 
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime >**  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
 ## <a name="syntax"></a>Syntaxe
   
@@ -77,11 +77,11 @@ Le `sku` attribut utilise un moniker du framework cible (TFM) pour indiquer la v
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0, Client Profile|".NETFramework,Version=v4.0,Profile=Client"|  
-|4.0, Platform Update 1|". NETFramework, Version = v4.0.1 »|  
+|4.0, Platform Update 1|".NETFramework,Version=v4.0.1"|  
 |4.0, Client Profile, Update 1|". NETFramework, Version = v4.0.1, profil = Client »|  
-|4.0, Platform Update 2|". NETFramework, Version = v4.0.2 »|  
+|4.0, Platform Update 2|".NETFramework,Version=v4.0.2"|  
 |4.0, Client Profile, Update 2|". NETFramework, Version = version 4.0.2, profil = Client »|  
-|4.0, Platform Update 3|". NETFramework, Version = verze 4.0.3 »|  
+|4.0, Platform Update 3|".NETFramework,Version=v4.0.3"|  
 |4.0, Client Profile, Update 3|". NETFramework, Version = verze 4.0.3, profil = Client »|  
 |4.5|".NETFramework,Version=v4.5"|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
@@ -110,6 +110,6 @@ Cet élément peut être utilisé dans le fichier de configuration de l'applicat
 
 ## <a name="see-also"></a>Voir aussi
 
- [Schéma des paramètres de démarrage](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Exécution côte à côte in-process](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [Schéma des paramètres de démarrage](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Exécution côte à côte in-process](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

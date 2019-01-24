@@ -2,19 +2,19 @@
 title: Accès au service à partir d'un navigateur Web (démarrage rapide des services de données WCF)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 01184969b7bfcc0f68351db7c8daeebe79be583c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591641"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Accès au service à partir d'un navigateur Web (démarrage rapide des services de données WCF)
 
 Il s’agit de la deuxième tâche du démarrage rapide WCF Data Services. Dans cette tâche, vous allez démarrer les Services de données WCF à partir de Visual Studio et éventuellement désactiver la lecture de flux dans le navigateur Web. Vous puis récupérez le document de définition de service mais aussi accéder aux ressources de service de données en soumettant des demandes HTTP GET via un navigateur Web aux ressources exposées.
 
 > [!NOTE]
-> Par défaut, Visual Studio affecte automatiquement un numéro de port à l'URI `localhost` sur votre ordinateur. Cette tâche utilise le numéro de port `12345` dans les exemples d'URI. Pour plus d’informations sur la définition d’un numéro de port spécifique dans votre projet Visual Studio, consultez [création du Service de données](../../../../docs/framework/data/wcf/creating-the-data-service.md).
+> Par défaut, Visual Studio affecte automatiquement un numéro de port à l'URI `localhost` sur votre ordinateur. Cette tâche utilise le numéro de port `12345` dans les exemples d’URI. Pour plus d’informations sur la définition d’un numéro de port spécifique dans votre projet Visual Studio, consultez [création du Service de données](../../../../docs/framework/data/wcf/creating-the-data-service.md).
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Pour demander le document de service par défaut à l'aide d'Internet Explorer
 

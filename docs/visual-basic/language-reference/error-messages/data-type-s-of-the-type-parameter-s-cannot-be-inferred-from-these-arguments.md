@@ -10,15 +10,15 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 6f84df5c9388220e5ca817d95362753df0920534
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68ed7541d76c1678f9f308ed2cda8afec1231a73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608717"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Impossible de déduire le ou les types de données du ou des paramètres de type à partir de ces arguments
-Les types de données des ou des paramètres de type ne peut pas être déduits à partir de ces arguments. La spécification explicite du ou des types de données peut permettre de corriger cette erreur.  
+Impossible de déduire l’ou les types de données des paramètres de type à partir de ces arguments. La spécification explicite du ou des types de données peut permettre de corriger cette erreur.  
   
  Cette erreur se produit quand la résolution de surcharge a échoué. Elle entraîne l’affichage d’un message subordonné qui indique pourquoi un candidat de surcharge particulier a été éliminé. Le message d’erreur explique que le compilateur ne peut pas utiliser l’inférence de type pour rechercher des types de données pour les paramètres de type.  
   
@@ -51,13 +51,13 @@ Interface InterfaceExample(Of T)
 End Interface  
 ```  
   
- **ID d’erreur :** BC36647 et BC36644  
+ **ID d’erreur :** BC36647 and BC36644  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
 -   Vous pourrez peut-être spécifier un type de données pour le ou les paramètres de type au lieu de compter sur l’inférence de type.  
   
-## <a name="see-also"></a>Voir aussi  
- [Conversion simplifiée des délégués](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Procédures génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Conversions de type dans Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Voir aussi
+- [Conversion simplifiée des délégués](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Conversions de type en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

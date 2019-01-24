@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread Interface1
+title: ICorDebugThread, Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 404f1bdf5865733648084e34a558b7b20a59b3ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: be30e91e017390befd26ada37daa0fc902bdaee2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617497"
 ---
-# <a name="icordebugthread-interface1"></a>ICorDebugThread Interface1
+# <a name="icordebugthread-interface1"></a>ICorDebugThread, Interface1
 Représente un thread de processus. La durée de vie d'une instance `ICorDebugThread` est la même que la durée de vie du thread qu'elle représente.  
   
 ## <a name="methods"></a>Méthodes  
@@ -36,16 +36,16 @@ Représente un thread de processus. La durée de vie d'une instance `ICorDebugTh
 |[EnumerateChains, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-enumeratechains-method.md)|Obtient un pointeur d’interface vers un énumérateur ICorDebugChainEnum qui contient toutes les chaînes de pile dans ce `ICorDebugThread`.|  
 |[GetActiveChain, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getactivechain-method.md)|Obtient un pointeur d’interface vers le ICorDebugChain actif sur ce `ICorDebugThread`.|  
 |[GetActiveFrame, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getactiveframe-method.md)|Obtient un pointeur d’interface vers le ICorDebugFrame actif sur ce `ICorDebugThread`.|  
-|[GetAppDomain, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getappdomain-method.md)|Obtient un pointeur d’interface vers le domaine d’application dans lequel ce `ICorDebugThread` est en cours d’exécution.|  
+|[GetAppDomain, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getappdomain-method.md)|Obtient un pointeur d’interface vers le domaine d’application dans lequel cet `ICorDebugThread` est en cours d’exécution.|  
 |[GetCurrentException, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md)|Obtient un pointeur d’interface vers un objet ICorDebugValue qui représente une exception levée par le code managé.|  
-|[GetDebugState, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getdebugstate-method.md)|Obtient une valeur CorDebugThreadState qui décrit l’état actuel du débogage de ce `ICorDebugThread`.|  
-|[GetHandle, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-gethandle-method.md)|Obtient le handle actuel pour la partie active de ce `ICorDebugThread`.|  
+|[GetDebugState, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getdebugstate-method.md)|Obtient une valeur CorDebugThreadState qui décrit l’état de débogage actuel de ce `ICorDebugThread`.|  
+|[GetHandle, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-gethandle-method.md)|Obtient le handle actuel pour la partie active de cette `ICorDebugThread`.|  
 |[GetID, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getid-method.md)|Obtient l’identificateur de système d’exploitation actuel de la partie active de ce `ICorDebugThread`.|  
-|[GetObject, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getobject-method.md)|Obtient un pointeur d’interface vers le thread du common language runtime (CLR).|  
-|[GetProcess, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getprocess-method.md)|Obtient un pointeur d’interface vers le processus dont `ICorDebugThread` fait partie.|  
-|[GetRegisterSet, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getregisterset-method.md)|Obtient un pointeur d’interface vers le jeu de Registre associé à ce `ICorDebugThread`.|  
-|[GetUserState, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)|Obtient une combinaison d’opérations de bits de valeurs CorDebugUserState qui décrivent l’état actuel de ce `ICorDebugThread`.|  
-|[SetDebugState, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)|Définit une combinaison d’opérations de `CorDebugThreadState` valeurs qui décrivent l’état de débogage de ce `ICorDebugThread`.|  
+|[GetObject, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getobject-method.md)|Obtient un pointeur d’interface vers le thread de common language runtime (CLR).|  
+|[GetProcess, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getprocess-method.md)|Obtient un pointeur d’interface vers le processus dont ce `ICorDebugThread` fait partie.|  
+|[GetRegisterSet, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getregisterset-method.md)|Obtient un pointeur d’interface vers le jeu de Registre associé à cet `ICorDebugThread`.|  
+|[GetUserState, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)|Obtient une combinaison au niveau du bit des valeurs CorDebugUserState qui décrivent l’état actuel de ce `ICorDebugThread`.|  
+|[SetDebugState, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)|Définit une combinaison au niveau du bit de `CorDebugThreadState` valeurs qui décrivent l’état de débogage de ce `ICorDebugThread`.|  
   
 ## <a name="remarks"></a>Notes  
   
@@ -53,13 +53,13 @@ Représente un thread de processus. La durée de vie d'une instance `ICorDebugTh
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

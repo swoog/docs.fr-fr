@@ -10,12 +10,12 @@ helpviewer_keywords:
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: KrzysztofCwalina
-ms.openlocfilehash: ae188fc7cd55dd843e93afccbe1ea05575a9c36d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ef1a0aff1ac59434d9d9a6f0371bf236f637050e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572680"
 ---
 # <a name="equality-operators"></a>Opérateurs d'égalité
 Cette section traite de surcharge les opérateurs d’égalité et fait référence à `operator==` et `operator!=` en tant que les opérateurs d’égalité.  
@@ -50,5 +50,5 @@ Cette section traite de surcharge les opérateurs d’égalité et fait référe
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Indications relatives à l’utilisation](../../../docs/standard/design-guidelines/usage-guidelines.md)

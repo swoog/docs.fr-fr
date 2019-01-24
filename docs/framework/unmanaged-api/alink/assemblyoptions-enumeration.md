@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571481"
 ---
 # <a name="assemblyoptions-enumeration"></a>Énumération AssemblyOptions
 Énumère les options de l’assembly.  
@@ -64,7 +64,7 @@ typedef enum _AssemblyOptions {
 |optAssemOS|Chaîne - encodée comme : « dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion ».|  
 |optAssemProcessor|ULONG|  
 |optAssemLocale|Chaîne - contient les paramètres régionaux d’assembly.|  
-|optAssemVersion|Chaîne - encodée comme : « Major.Minor.Build.Revision ».|  
+|optAssemVersion|Chaîne - encodée sous la forme : « Major.Minor.Build.Revision ».|  
 |optAssemCompany|Chaîne - contient la société.|  
 |optAssemProduct|Chaîne - contient le nom du produit.|  
 |optAssemProductVersion|Chaîne (également appelé InformationalVersion).|  
@@ -75,7 +75,7 @@ typedef enum _AssemblyOptions {
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
 |optAssemHalfSign|Bool (également appelé DelaySign).|  
-|optAssemFileVersion|Chaîne - encodée comme « Major.Minor.Build.Revision » - identique à ProductVersion.|  
+|optAssemFileVersion|Chaîne - codée comme « Major.Minor.Build.Revision » - identique à la version de produit.|  
 |optAssemSatelliteVer|Chaîne - encodée sous la forme « Major.Minor.Build.Revision ».|  
 |optLastAssemOption|Un compteur du nombre d’éléments.|  
   
@@ -84,5 +84,5 @@ typedef enum _AssemblyOptions {
   
  **Bibliothèque**: alink.dll  
   
-## <a name="see-also"></a>Voir aussi  
- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Voir aussi
+- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

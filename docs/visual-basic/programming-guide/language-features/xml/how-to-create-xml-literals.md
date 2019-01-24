@@ -1,17 +1,17 @@
 ---
-title: 'Comment : créer des littéraux XML (Visual Basic)'
+title: 'Procédure : Créer des littéraux XML (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: e5f8429b3ff02678bf8bf3e9e32bef6eb1a56831
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e74dccac0b3528fe73d091670a3368328baeaab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483617"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560592"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a>Comment : créer des littéraux XML (Visual Basic)
+# <a name="how-to-create-xml-literals-visual-basic"></a>Procédure : Créer des littéraux XML (Visual Basic)
 Vous pouvez créer un document, un fragment ou un élément XML directement dans le code à l’aide d’un littéral XML. Les exemples de cette rubrique montrent comment créer un élément XML qui comporte trois éléments enfants et comment créer un document XML.  
   
  Vous pouvez également utiliser le [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API pour créer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objets. Pour plus d'informations, consultez <xref:System.Xml.Linq.XElement>.  
@@ -52,8 +52,8 @@ Vous pouvez créer un document, un fragment ou un élément XML directement dans
   
      `</books>`  
   
-## <a name="see-also"></a>Voir aussi  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Création de code XML dans Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Littéral d’élément XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Littéral de document XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+## <a name="see-also"></a>Voir aussi
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Création de code XML dans Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Littéral d’élément XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Littéral de document XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

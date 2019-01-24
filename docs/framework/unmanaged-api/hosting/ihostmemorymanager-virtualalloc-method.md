@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe54aed47d240be37ab9dbc5381235c4e962f1f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd9bdd7ce0a5d9cfde91143cc5dcfdfc834abb18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588260"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc, méthode
-Sert de wrapper logique pour la fonction Win32 correspondante. L’implémentation Win32 de `VirtualAlloc` ou réserve ou valide une région de pages dans l’espace d’adressage virtuel du processus appelant.  
+Sert de wrapper logique pour la fonction Win32 correspondante. L’implémentation Win32 de `VirtualAlloc` réserve ou valide une région de pages dans l’espace d’adressage virtuel du processus appelant.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,26 +64,26 @@ HRESULT VirtualAlloc (
 |HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`VirtualAlloc` retourné avec succès.|  
-|HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
+|HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
-|HOST_E_ABANDONED|Un événement a été annulé alors qu’un thread bloqué ou une fibre l’attendait.|  
-|E_FAIL|Une défaillance grave et inconnue s’est produite. Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable dans le processus. Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.|  
+|E_FAIL|Une défaillance catastrophique inconnue s’est produite. Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus. Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Mémoire était insuffisante pour terminer la demande d’allocation|  
   
 ## <a name="remarks"></a>Notes  
- Vous réservez une région dans l’espace d’adressage de votre processus en appelant `VirtualAlloc`. Le `pAddress` paramètre contient l’adresse de début du bloc de mémoire souhaitée. Ce paramètre est généralement défini avec la valeur null. Le système d’exploitation conserve un enregistrement des plages d’adresses libres disponibles pour votre processus. A `pAddress` la valeur null indique au système de réserver la région chaque fois qu’elle juge. Vous pouvez également fournir une adresse de début spécifique pour le bloc de mémoire. Dans les deux cas, le paramètre de sortie `ppMem` est retourné comme un pointeur vers la mémoire allouée. La fonction elle-même retourne une valeur HRESULT.  
+ Vous réservez une région dans l’espace d’adressage de votre processus en appelant `VirtualAlloc`. Le `pAddress` paramètre contient l’adresse de début du bloc de mémoire souhaitée. Ce paramètre est généralement défini sur null. Le système d’exploitation conserve un enregistrement des plages d’adresses libres disponibles pour votre processus. Un `pAddress` NULL comme valeur prescrit au système de réserver la région chaque fois qu’il juge. Vous pouvez également fournir une adresse de départ spécifique pour le bloc de mémoire. Dans les deux cas, le paramètre de sortie `ppMem` est retourné comme un pointeur vers la mémoire allouée. La fonction elle-même retourne une valeur HRESULT.  
   
- Win32 `VirtualAlloc` fonction n’a pas un `ppMem` paramètre et retourne le pointeur vers la mémoire allouée à la place. Pour plus d’informations, consultez la documentation de la plateforme Windows.  
+ Win32 `VirtualAlloc` fonction n’a pas un `ppMem` paramètre et retourne le pointeur vers la mémoire allouée à la place. Pour plus d’informations, consultez la documentation de la plateforme de Windows.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IHostMemoryManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IHostMemoryManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

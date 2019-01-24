@@ -1,15 +1,15 @@
 ---
-title: 'Procédure pas à pas : manipulation de données (C#)'
+title: 'Procédure pas à pas : Manipulation de données (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: b9b19d4f9a1fb56ddabbf3584c1fb7bb29cd6d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637305"
 ---
-# <a name="walkthrough-manipulating-data-c"></a>Procédure pas à pas : manipulation de données (C#)
+# <a name="walkthrough-manipulating-data-c"></a>Procédure pas à pas : Manipulation de données (C#)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] complet essentiel pour l'ajout, la modification et la suppression de données dans une base de données. Vous utiliserez une copie de l'exemple de base de données Northwind pour ajouter un client, modifier le nom d'un client et supprimer une commande.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -53,9 +53,9 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Pour créer une solution LINQ to SQL  
   
-1.  Dans Visual Studio **fichier** menu, pointez sur **nouveau**, puis cliquez sur **projet**.  
+1.  Dans Visual Studio **fichier** menu, pointez sur **New**, puis cliquez sur **projet**.  
   
-2.  Dans le **types de projet** volet dans le **nouveau projet** boîte de dialogue, cliquez sur **Visual C#**.  
+2.  Dans le **types de projets** volet dans le **nouveau projet** boîte de dialogue, cliquez sur **Visual C#** .  
   
 3.  Dans le volet **Modèles**, cliquez sur **Application console**.  
   
@@ -102,7 +102,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 2.  Appuyez sur F5 pour tester l'application à ce stade.  
   
-     A **Console** fenêtre s’ouvre.  
+     Un **Console** fenêtre s’ouvre.  
   
      Vous pouvez fermer l’application en appuyant sur entrée dans le **Console** fenêtre, ou en cliquant sur **arrêter le débogage** sur Visual Studio **déboguer** menu.  
   
@@ -161,5 +161,5 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
 > [!NOTE]
 >  Une fois que vous avez soumis les modifications (ajouté le nouveau client), vous ne pouvez plus exécuter cette solution telle quelle. Pour l'exécuter à nouveau, modifiez le nom du client et l'ID client à ajouter.  
   
-## <a name="see-also"></a>Voir aussi  
- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Voir aussi
+- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

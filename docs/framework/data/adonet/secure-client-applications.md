@@ -2,12 +2,12 @@
 title: Applications clientes sécurisées
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599611"
 ---
 # <a name="secure-client-applications"></a>Applications clientes sécurisées
 Les applications se composent généralement de nombreuses parties qui doivent toutes être protégées face aux vulnérabilités susceptibles d'entraîner une perte de données ou compromettre d'une autre manière le système. La création d'interfaces utilisateur sécurisées peut empêcher de nombreux problèmes en bloquant les attaquants avant qu'ils puissent accéder aux données ou aux ressources système.  
@@ -36,7 +36,7 @@ Les applications se composent généralement de nombreuses parties qui doivent t
  [Sécurité de Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
  Explique comment sécuriser des applications Windows Forms et fournit des liens vers des rubriques connexes.  
   
- [Applications Windows Forms et non managées](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Explique comment interagir avec des applications non managées dans une application Windows Forms.  
   
  [Applications de déploiement ClickOnce pour les Windows Forms](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
@@ -65,9 +65,9 @@ Les applications se composent généralement de nombreuses parties qui doivent t
 |[Sécurité de communication à distance](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|Décrit l'authentification et le chiffrement, ainsi que des rubriques de sécurité supplémentaires relatives à la communication à distance.|  
 |[Sécurité et considérations relatives à la communication à distance](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Décrit les problèmes de sécurité liés aux objets protégés et au franchissement de domaine d'application.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Recommandations pour les stratégies d’accès aux données](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Sécurisation des applications](/visualstudio/ide/securing-applications)  
- [Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Recommandations pour les stratégies d’accès aux données](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Sécurisation des applications](/visualstudio/ide/securing-applications)
+- [Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

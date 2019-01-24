@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: d17ded99e08fa4fb99fd87e220045c2869a35805
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cbbb06089508538353465a35e24aa68573da7ea4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613526"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Cet exemple montre comment les processus de sérialisation et de désérialisation peuvent être personnalisés à l’aide de la classe <xref:System.Runtime.Serialization.DataContractResolver>. Cet exemple montre comment ajouter dynamiquement des types connus pendant la sérialisation et la désérialisation.  

@@ -9,27 +9,27 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-ms.openlocfilehash: 397808c055fd5ba5e8a73d47dfc7fee6c0cf2975
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d07fd4028385dac25ae7413a54f72b331ab91eb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558395"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Vue d'ensemble du contrôle RadioButton (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.RadioButton> contrôle présente un ensemble de deux ou plusieurs choix mutuellement exclusifs à l’utilisateur. Tandis que les cases à cocher et des cases d’option peut sembler fonctionner de la même façon, il existe une différence importante : lorsqu’un utilisateur sélectionne une case d’option, les autres cases d’option dans le même groupe ne peut pas être sélectionnée. En revanche, vous pouvez sélectionner autant de cases à cocher. Définition d’un groupe de cases d’option indique à l’utilisateur, « Voici un ensemble de choix à partir de laquelle vous pouvez choisir un seul et unique ».  
+Windows Forms <xref:System.Windows.Forms.RadioButton> contrôle présente un ensemble de deux ou plusieurs choix qui s’excluent mutuellement à l’utilisateur. Tandis que les cases à cocher et des boutons radio peuvent sembler fonctionner de la même façon, il existe une différence importante : lorsqu’un utilisateur sélectionne un bouton radio, les autres cases d’option dans le même groupe ne peut pas être également sélectionnée. En revanche, un nombre quelconque de cases à cocher peut être sélectionné. Définition d’un groupe de cases d’option indique à l’utilisateur, « Voici un ensemble de choix à partir de laquelle vous pouvez choisir un seul et unique. »  
   
-## <a name="using-the-control"></a>L’utilisation du contrôle  
- Lorsqu’un <xref:System.Windows.Forms.RadioButton> clic sur le contrôle, son <xref:System.Windows.Forms.RadioButton.Checked%2A> est définie sur `true` et le <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements est appelé. Le <xref:System.Windows.Forms.RadioButton.CheckedChanged> événement est déclenché lorsque la valeur de la <xref:System.Windows.Forms.RadioButton.Checked%2A> de propriété est modifiée. Si le <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> est définie sur `true` (la valeur par défaut), lorsque la case d’option est sélectionnée, tous les autres dans le groupe sont automatiquement effacés. Cette propriété est généralement uniquement la valeur `false` lorsque le code de validation est utilisé s’assurer que la case d’option sélectionnée est une option autorisée. Le texte affiché dans le contrôle est défini avec la <xref:System.Windows.Forms.Control.Text%2A> propriété, qui peut contenir des raccourcis de touches d’accès. Une clé d’accès permet à un utilisateur « sur « le contrôle en appuyant sur la touche ALT et la clé d’accès. Pour plus d’informations, consultez [Comment : créer de touches d’accès rapide pour les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) et [Comment : définir le texte affiché par un contrôle Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+## <a name="using-the-control"></a>Utilisation du contrôle  
+ Quand un <xref:System.Windows.Forms.RadioButton> clic sur le contrôle, son <xref:System.Windows.Forms.RadioButton.Checked%2A> propriété est définie sur `true` et le <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements est appelé. Le <xref:System.Windows.Forms.RadioButton.CheckedChanged> événement est déclenché lorsque la valeur de la <xref:System.Windows.Forms.RadioButton.Checked%2A> les modifications de propriété. Si le <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> propriété est définie sur `true` (la valeur par défaut), la case d’option est sélectionnée désactiver toutes les autres dans le groupe sont automatiquement. Cette propriété est généralement uniquement défini sur `false` lorsque le code de validation est utilisé s’assurer que la case d’option sélectionnée est une option autorisée. Le texte affiché dans le contrôle est défini avec la <xref:System.Windows.Forms.Control.Text%2A> propriété, qui peut contenir des raccourcis de touches d’accès. Une clé d’accès permet à un utilisateur de « click » sur le contrôle en appuyant sur la touche ALT et la clé d’accès. Pour plus d'informations, voir [Procédure : Créer des clés d’accès pour les contrôles de Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) et [Comment : Définir le texte affiché par un Windows Forms contrôle](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
- Le <xref:System.Windows.Forms.RadioButton> contrôle peut apparaître comme un bouton de commande, ce qui semble avoir été sélectionné, si le <xref:System.Windows.Forms.RadioButton.Appearance%2A> est définie sur <xref:System.Windows.Forms.Appearance.Button>. Cases d’option peuvent également afficher des images à l’aide de la <xref:System.Windows.Forms.ButtonBase.Image%2A> et <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propriétés. Pour plus d’informations, consultez [Comment : définir l’Image affichée par un contrôle Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
+ Le <xref:System.Windows.Forms.RadioButton> contrôle l’aspect d’un bouton de commande, ce qui semble avoir été sélectionné, si le <xref:System.Windows.Forms.RadioButton.Appearance%2A> propriété est définie sur <xref:System.Windows.Forms.Appearance.Button>. Cases d’option peuvent également afficher des images à l’aide de la <xref:System.Windows.Forms.ButtonBase.Image%2A> et <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propriétés. Pour plus d'informations, voir [Procédure : Définir l’Image affichée par un Windows Forms contrôle](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.RadioButton>  
- [Vue d’ensemble du contrôle Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
- [Vue d’ensemble du contrôle GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
- [Vue d'ensemble du contrôle CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- [Guide pratique pour créer des touches d'accès rapide pour des contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- [Guide pratique pour définir le texte affiché par un contrôle Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Guide pratique pour grouper des contrôles RadioButton Windows Forms en un ensemble fonctionnant indépendamment](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
- [RadioButton, contrôle](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.RadioButton>
+- [Vue d’ensemble du contrôle Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+- [Vue d’ensemble du contrôle GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)
+- [Vue d'ensemble du contrôle CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
+- [Guide pratique pour Créer des clés d’accès pour les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)
+- [Guide pratique pour Définir le texte affiché par un Windows Forms de contrôle](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Guide pratique pour Groupe Windows Forms contrôles RadioButton en tant qu’ensemble](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [RadioButton, contrôle](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)

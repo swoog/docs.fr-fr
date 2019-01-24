@@ -2,12 +2,12 @@
 title: Appel d'un service REST à partir d'un service WCF
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df57433b01df9faf49eada8189ba8864fe7a9093
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596785"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Appel d'un service REST à partir d'un service WCF
 Lors de l'appel d'un service REST à partir d'un service WCF (SOAP-) normal, le contexte d'opération sur la méthode de service (qui contient des informations sur la requête entrante) remplace le contexte qui doit être utilisé par la requête sortante. Ceci entraîne le remplacement des requêtes HTTP GET en requêtes HTTP POST. Pour forcer le service WCF à utiliser le contexte approprié pour appeler le service REST, créez un <xref:System.ServiceModel.OperationContextScope> et appelez le service REST à partir de l'étendue du contexte d'opération. Cette rubrique explique comment créer un exemple simple qui illustre cette technique.  
@@ -233,6 +233,6 @@ public class CallingRESTSample
 }
 ```
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour créer un service HTTP web WCF de base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [Modèle objet de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Créer un Service Web HTTP de WCF de base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
+- [Modèle objet de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

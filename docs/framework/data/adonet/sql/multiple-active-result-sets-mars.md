@@ -2,12 +2,12 @@
 title: MARS (Multiple Active Result Sets)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
-ms.openlocfilehash: 67df210fa48c1b72323177b627b17e537f9fb180
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: da75cee8faff667f60ca376d835fd39d117e743b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605550"
 ---
 # <a name="multiple-active-result-sets-mars"></a>MARS (Multiple Active Result Sets)
 MARS (Multiple Active Result Set) est une fonctionnalité qui permet d’exécuter plusieurs lots sur une seule connexion. Les versions précédentes ne permettaient l'exécution que d'un seul lot à la fois pour une seule connexion. L'exécution de plusieurs lots avec MARS n'implique pas l'exécution simultanée de plusieurs opérations.  
@@ -23,6 +23,6 @@ MARS (Multiple Active Result Set) est une fonctionnalité qui permet d’exécut
  [Opérations asynchrones](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  Fournit des détails sur l’utilisation des nouvelles fonctionnalités asynchrones dans ADO.NET.  
   
-## <a name="see-also"></a>Voir aussi  
- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

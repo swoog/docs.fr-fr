@@ -1,18 +1,18 @@
 ---
-title: 'Comment : configurer un service Windows Communication Foundation pour utiliser le partage de ports'
+title: 'Procédure : Configurer un Service Windows Communication Foundation pour utiliser le Port de partage'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 19f61e6e38a5eeb477833b0d5ea94c1b1a8447b4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 942dea9b745d3dd7cda366ad3e855ddaed0473db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582550"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Comment : configurer un service Windows Communication Foundation pour utiliser le partage de ports
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Procédure : Configurer un Service Windows Communication Foundation pour utiliser le Port de partage
 Le moyen le plus simple à utiliser dans votre application Windows Communication Foundation (WCF) de partage de ports net.tcp:// consiste à exposer un service à l’aide de la <xref:System.ServiceModel.NetTcpBinding>.  
   
  Cette liaison fournit une propriété <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> qui contrôle si le partage de ports net.tcp:// est activé pour le service configuré avec cette liaison.  
@@ -60,6 +60,6 @@ Le moyen le plus simple à utiliser dans votre application Windows Communication
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-* [Partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
-* [Guide pratique pour activer le service de partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+## <a name="see-also"></a>Voir aussi
+- [Partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
+- [Guide pratique pour Activer le Service de partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

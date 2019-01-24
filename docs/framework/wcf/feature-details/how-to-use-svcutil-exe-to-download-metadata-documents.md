@@ -1,18 +1,18 @@
 ---
-title: 'Comment : utiliser Svcutil.exe pour télécharger des documents de métadonnées'
+title: 'Procédure : Utiliser Svcutil.exe pour télécharger des Documents de métadonnées'
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 6643f0a5dba98afcef38870cf24d91e7d69a1440
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dc3a1d402a9f6ffb69c1f692800698609f9fa84b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603272"
 ---
-# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Comment : utiliser Svcutil.exe pour télécharger des documents de métadonnées
+# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Procédure : Utiliser Svcutil.exe pour télécharger des Documents de métadonnées
 Svcutil.exe vous permet de télécharger des métadonnées à partir de systèmes en cours d'exécution et de les enregistrer dans des fichiers locaux. Pour les schémas d’URL HTTP et HTTPS, Svcutil.exe tente de récupérer les métadonnées à l’aide de WS-MetadataExchange et [découverte de Service Web XML](https://go.microsoft.com/fwlink/?LinkId=94950). Pour tous les autres schémas d'URL, Svcutil.exe utilise uniquement WS-MetadataExchange.  
   
- Par défaut, Svcutil.exe utilise les liaisons définies dans la classe <xref:System.ServiceModel.Description.MetadataExchangeBindings>. Pour configurer la liaison utilisée pour WS-MetadataExchange, vous devez définir un point de terminaison client dans le fichier de configuration de Svcutil.exe (svcutil.exe.config) qui utilise le contrat `IMetadataExchange` et qui porte le même nom que le schéma d'URI (Uniform Resource Identifier) de l'adresse du point de terminaison des métadonnées.  
+ Par défaut, Svcutil.exe utilise les liaisons définies dans la classe <xref:System.ServiceModel.Description.MetadataExchangeBindings>. Pour configurer la liaison utilisée pour WS-MetadataExchange, vous devez définir un point de terminaison client dans le fichier de configuration de Svcutil.exe (svcutil.exe.config) qui utilise le contrat `IMetadataExchange` et qui porte le même nom que le schéma d’URI (Uniform Resource Identifier) de l’adresse du point de terminaison des métadonnées.  
   
 > [!CAUTION]
 > Lors de l’exécution de Svcutil.exe pour obtenir des métadonnées pour un service qui expose deux services différents contrats que contiennent chacune une opération du même nom, Svcutil.exe affiche un message d’erreur indiquant, « Impossible d’obtenir les métadonnées à partir de... » Par exemple, si vous avez un service qui expose un contrat de service appelé `ICarService` qui a une opération `Get(Car c)` et le même service expose un contrat de service appelé `IBookService` qui a une opération `Get(Book b)`. Pour remédier à ce problème, effectuez l'une des opérations suivantes :
@@ -46,5 +46,5 @@ Svcutil.exe vous permet de télécharger des métadonnées à partir de système
 svcutil /t:metadata http://service/metadataEndpoint  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Voir aussi
+- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1bd85e8cde2b05d5f1ba0075fb761d73907373a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 54d6878e29e340a975593f9e04aeb6d2a18adf0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557381"
 ---
 # <a name="icordebugvalueenum-interface1"></a>ICorDebugValueEnum Interface1
 Implémente les méthodes « ICorDebugEnum » et énumère des tableaux de « ICorDebugValue ».  
@@ -30,7 +30,7 @@ Implémente les méthodes « ICorDebugEnum » et énumère des tableaux de «�
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[Next, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Obtient le nombre spécifié de `ICorDebugValue` les instances de l’énumération, en démarrant à la position actuelle.|  
+|[Next, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Obtient le nombre spécifié de `ICorDebugValue` instances à partir de l’énumération, en commençant à la position actuelle.|  
   
 ## <a name="remarks"></a>Notes  
   
@@ -38,15 +38,15 @@ Implémente les méthodes « ICorDebugEnum » et énumère des tableaux de «�
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-    
-    
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+
+
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

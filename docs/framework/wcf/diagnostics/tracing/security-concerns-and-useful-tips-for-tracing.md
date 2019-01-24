@@ -2,12 +2,12 @@
 title: Problèmes de sécurité et conseils utiles pour le suivi
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 439484cf5df6311bef56be0e28e5949c79d9a8f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580393"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problèmes de sécurité et conseils utiles pour le suivi
 Cette rubrique décrit comment empêcher l'exposition des informations sensibles et fournit également des conseils utiles en cas d'utilisation de WebHost.  
@@ -90,5 +90,5 @@ Cette rubrique décrit comment empêcher l'exposition des informations sensibles
   
  De plus, l'adresse IP de l'expéditeur du message est enregistrée une fois par connexion pour les transports orientés connexion, et une fois par message envoyé par d'autres transports. Cette opération est effectuée sans le consentement de l'expéditeur. Toutefois, cet enregistrement se produit uniquement aux niveaux de suivi Information ou Verbose, qui ne sont pas les niveaux de suivi par défaut ou recommandés dans les environnements de production, hormis pour le débogage en direct.  
   
-## <a name="see-also"></a>Voir aussi  
- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

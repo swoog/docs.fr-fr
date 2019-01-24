@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ecdfff9d309a2e751d5f989760c42d6fa84fe99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47114955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562516"
 ---
 # <a name="encrypting-data"></a>Chiffrement de données
 Le chiffrement symétrique et le chiffrement asymétrique utilisent des processus différents. Le chiffrement symétrique est effectué sur des flux. Il est donc utile pour le chiffrement de grandes quantités de données. Le chiffrement asymétrique s'effectue sur un petit nombre d'octets. Il n'est donc utile que pour les petites quantités de données.  
@@ -173,7 +173,7 @@ The connection failed.
 ## <a name="asymmetric-encryption"></a>Chiffrement asymétrique  
  Les algorithmes asymétriques sont généralement utilisés pour chiffrer de petites quantités de données telles qu'une clé symétrique et un vecteur d'initialisation. En règle générale, un utilisateur effectuant un chiffrement asymétrique utilise la clé publique générée par une autre partie. La classe <xref:System.Security.Cryptography.RSACryptoServiceProvider> est fournie à cet effet par .NET Framework.  
   
- L'exemple suivant utilise les informations de clé publique pour chiffrer une clé symétrique et un vecteur d'initialisation. Deux tableaux d'octets qui représentent la clé publique d'un tiers sont initialisés. Un objet <xref:System.Security.Cryptography.RSAParameters> est initialisé vers ces valeurs. Ensuite, le **RSAParameters** objet (avec la clé publique qu’il représente) est importé dans un **RSACryptoServiceProvider** à l’aide de la <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> (méthode). Enfin, la clé privée et le vecteur d'initialisation créés par une classe <xref:System.Security.Cryptography.RijndaelManaged> sont chiffrés. Cet exemple nécessite qu'un chiffrement 128 bits soit installé sur les systèmes.  
+ L'exemple suivant utilise les informations de clé publique pour chiffrer une clé symétrique et un vecteur d'initialisation. Deux tableaux d'octets qui représentent la clé publique d'un tiers sont initialisés. Un objet <xref:System.Security.Cryptography.RSAParameters> est initialisé vers ces valeurs. Ensuite, l'objet **RSAParameters** (avec la clé publique qu'il représente) est importé dans un **RSACryptoServiceProvider** à l'aide de la méthode <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> . Enfin, la clé privée et le vecteur d'initialisation créés par une classe <xref:System.Security.Cryptography.RijndaelManaged> sont chiffrés. Cet exemple nécessite qu'un chiffrement 128 bits soit installé sur les systèmes.  
   
 ```vb  
 Imports System  
@@ -264,6 +264,6 @@ class Class1
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Génération de clés pour le chiffrement et le déchiffrement](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [Déchiffrement de données](../../../docs/standard/security/decrypting-data.md)  
+- [Génération de clés pour le chiffrement et le déchiffrement](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Déchiffrement de données](../../../docs/standard/security/decrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

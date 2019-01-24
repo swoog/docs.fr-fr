@@ -1,19 +1,20 @@
 ---
-title: 'Comment : utiliser le moniker de service Windows Communication Foundation sans inscription'
+title: 'Procédure : Utiliser le Moniker de Service Windows Communication Foundation sans inscription'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: fd61528770b16b13430be3691aef19c1cc743e9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615271"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Comment : utiliser le moniker de service Windows Communication Foundation sans inscription
-Pour vous connecter à communiquer avec un service Windows Communication Foundation (WCF), une application cliente WCF doit avoir les détails de l’adresse du service, la configuration de liaison et le contrat de service.  
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Procédure : Utiliser le Moniker de Service Windows Communication Foundation sans inscription
+Pour se connecter à communiquer avec un service Windows Communication Foundation (WCF), une application cliente WCF doit avoir les détails de l’adresse du service, la configuration de liaison et le contrat de service.  
   
- Le moniker de service WCF obtient généralement le contrat requis par l’inscription préalable des types d’attribut requis, mais il peut y avoir des cas où cela n’est pas possible. À la place de l'inscription, le moniker peut obtenir la définition du contrat sous la forme d'un document WSDL (Web Services Definition Language) en utilisant le paramètre `wsdl` ou par le biais de l'échange de métadonnées en utilisant le paramètre `mexAddress`.  
+ Le moniker de service WCF obtient généralement le contrat requis par le biais inscription préalable des types d’attribut requis, mais il peut y avoir des cas où cela n’est pas possible. À la place de l'inscription, le moniker peut obtenir la définition du contrat sous la forme d'un document WSDL (Web Services Definition Language) en utilisant le paramètre `wsdl` ou par le biais de l'échange de métadonnées en utilisant le paramètre `mexAddress`.  
   
  Cela permet de prendre en charge des scénarios comme la distribution d'une feuille de calcul Excel dans laquelle certaines valeurs de cellules sont calculées par le biais d'interactions de services Web. Dans ce scénario, il peut ne pas être possible d'inscrire l'assembly de contrat de service sur tous les clients susceptibles d'ouvrir le document. Les paramètres `wsdl` et `mexAddress` offrent une solution autonome.  
   
@@ -51,10 +52,10 @@ contract=IAffiliate, contractNamespace=http://Microsoft.ServiceModel.Demo,
 binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/  
 ```  
   
- Pendant l'exécution de l'application cliente, le client exécute un `WS-MetadataExchange` avec le paramètre `mexAddress`. Les détails de l'adresse, de la liaison et du contrat peuvent alors être retournés pour un certains nombre de services. Les paramètres `address`, `contract`, `contractNamespace`, `binding` et `bindingNamespace` sont utilisés pour identifier le service concerné. Une fois que ces paramètres ont été mis en correspondance, le moniker construit un client WCF avec la définition du contrat approprié et appels peuvent être effectués à l’aide du client WCF, comme avec le contrat typé.  
+ Pendant l'exécution de l'application cliente, le client exécute un `WS-MetadataExchange` avec le paramètre `mexAddress`. Les détails de l'adresse, de la liaison et du contrat peuvent alors être retournés pour un certains nombre de services. Les paramètres `address`, `contract`, `contractNamespace`, `binding` et `bindingNamespace` sont utilisés pour identifier le service concerné. Une fois que ces paramètres ont été mis en correspondance, le moniker construit un client WCF avec la définition de contrat approprié et appels peuvent être effectués à l’aide du client WCF, comme avec le contrat typé.  
   
 > [!NOTE]
 >  Si le moniker est incorrect ou si le service n'est pas disponible, l'appel à `GetObject` retourne une erreur indiquant que la syntaxe n'est pas valide. Si vous recevez cette erreur, assurez-vous que le moniker que vous utilisez est correct et que le service est disponible.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour inscrire et configurer un moniker de service](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Inscrire et configurer un Moniker de Service](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

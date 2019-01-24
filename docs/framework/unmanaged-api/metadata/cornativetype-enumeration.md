@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612253"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType, énumération
 Contient des valeurs qui décrivent les types non managés natifs.  
@@ -93,20 +93,20 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Obsolète.|  
 |`NATIVE_TYPE_VOID`|Obsolète.|  
-|`NATIVE_TYPE_BOOLEAN`|Une valeur booléenne de 4 octets, où la valeur TRUE est différente de zéro et la valeur FALSE est égale à zéro.|  
+|`NATIVE_TYPE_BOOLEAN`|Valeur booléenne sur 4 octets, où la valeur TRUE est différente de zéro et la valeur FALSE est égal à zéro.|  
 |`NATIVE_TYPE_I1`|Une valeur d’entier 8 bits signé.|  
-|`NATIVE_TYPE_U1`|Valeur d’entier non signé 8 bits.|  
+|`NATIVE_TYPE_U1`|Valeur d’entier 8 bits non signé.|  
 |`NATIVE_TYPE_I2`|Une valeur d’entier 16 bits signé.|  
-|`NATIVE_TYPE_U2`|Valeur d’entier non signé 16 bits.|  
+|`NATIVE_TYPE_U2`|Valeur d’entier 16 bits non signé.|  
 |`NATIVE_TYPE_I4`|Valeur d’entier 32 bits signé.|  
 |`NATIVE_TYPE_U4`|Valeur d'entier 32 bits non signé.|  
-|`NATIVE_TYPE_I8`|Une valeur d’entier signé 64 bits.|  
-|`NATIVE_TYPE_U8`|Valeur d’entier non signé 64 bits.|  
-|`NATIVE_TYPE_R4`|Une valeur numérique à virgule flottante de 4 octets.|  
+|`NATIVE_TYPE_I8`|Une valeur d’entier 64 bits signé.|  
+|`NATIVE_TYPE_U8`|Valeur d’entier 64 bits non signé.|  
+|`NATIVE_TYPE_R4`|Une valeur numérique à virgule flottante sur 4 octets.|  
 |`NATIVE_TYPE_R8`|Une valeur numérique à virgule flottante de 8 octets.|  
 |`NATIVE_TYPE_SYSCHAR`|Obsolète.|  
 |`NATIVE_TYPE_VARIANT`|Obsolète.|  
-|`NATIVE_TYPE_CURRENCY`|Type COM numérique qui correspond à la <xref:System.Decimal> type.|  
+|`NATIVE_TYPE_CURRENCY`|Un type COM numérique qui correspond à managé <xref:System.Decimal> type.|  
 |`NATIVE_TYPE_PTR`|Obsolète.|  
 |`NATIVE_TYPE_DECIMAL`|Obsolète.|  
 |`NATIVE_TYPE_DATE`|Obsolète.|  
@@ -128,24 +128,24 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
 |`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
 |`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Sélectionnez BSTR ou ANSIBSTR selon la plateforme.|  
-|`NATIVE_TYPE_VARIANTBOOL`|Valeur booléenne sur 2 octets où TRUE est -1 et FALSE est nul.|  
+|`NATIVE_TYPE_VARIANTBOOL`|Valeur booléenne sur 2 octets où TRUE est -1 et FALSE est égal à zéro.|  
 |`NATIVE_TYPE_FUNC`|Pointeur de fonction.|  
 |`NATIVE_TYPE_ASANY`|Une référence à n’importe quel type natif.|  
-|`NATIVE_TYPE_ARRAY`|Une référence à un tableau avec les membres de type non spécifié.|  
+|`NATIVE_TYPE_ARRAY`|Une référence à un tableau avec les membres d’un type non spécifié.|  
 |`NATIVE_TYPE_LPSTRUCT`|Un pointeur d’entier 32 bits vers une structure.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Un type natif de marshaleur personnalisé.<br /><br /> Cela doit être suivi d’une chaîne au format suivant : « type de marshaleur nom/0Nom de type natif/0Cookie facultatif cookie/0 » ou « {Native de type GUID} / 0Nom marshaleur type/0Cookie facultatif cookie/0 »|  
-|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> Avec ELEMENT_TYPE_I4, ce type mappe vers VT_HRESULT.|  
-|`NATIVE_TYPE_IINSPECTABLE`|Natif `IInspectable` type.|  
-|`NATIVE_TYPE_HSTRING`|Natif `HString`.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Un type natif de marshaleur personnalisé.<br /><br /> Cela doit être suivie d’une chaîne au format suivant : « Type de marshaleur de nom/0Nom de type natif/0Cookie facultatif cookie/0 » ou « {natif type GUID} / 0Nom marshaleur type cookie/0Cookie facultatif/0 »|  
+|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> Avec ELEMENT_TYPE_I4, ce type est mappé à VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|Native `IInspectable` type.|  
+|`NATIVE_TYPE_HSTRING`|Native `HString`.|  
 |`NATIVE_TYPE_MAX`|Une valeur non valide.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.InteropServices.UnmanagedType>  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.InteropServices.UnmanagedType>
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

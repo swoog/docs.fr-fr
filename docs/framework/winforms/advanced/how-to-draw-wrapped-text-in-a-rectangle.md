@@ -1,5 +1,5 @@
 ---
-title: 'Comment : écrire du texte renvoyé à la ligne dans un rectangle'
+title: 'Procédure : Dessiner du texte encapsulé dans un Rectangle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: c753be6a200f166e59e1330c7dbcf1fadc7588a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4afe3eb7c3525dac856751331117e0980063faad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602947"
 ---
-# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Comment : écrire du texte renvoyé à la ligne dans un rectangle
-Vous pouvez dessiner du texte encapsulé dans un rectangle à l’aide de la <xref:System.Drawing.Graphics.DrawString%2A> surchargées de la <xref:System.Drawing.Graphics> classe qui prend un <xref:System.Drawing.Rectangle> ou <xref:System.Drawing.RectangleF> paramètre. Vous pouvez également utiliser un <xref:System.Drawing.Brush> et un <xref:System.Drawing.Font>.  
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procédure : Dessiner du texte encapsulé dans un Rectangle
+Vous pouvez dessiner du texte encapsulé dans un rectangle à l’aide de la <xref:System.Drawing.Graphics.DrawString%2A> surchargées de la <xref:System.Drawing.Graphics> classe qui prend un <xref:System.Drawing.Rectangle> ou <xref:System.Drawing.RectangleF> paramètre. Vous utiliserez également un <xref:System.Drawing.Brush> et un <xref:System.Drawing.Font>.  
   
- Vous pouvez également dessiner du texte encapsulé dans un rectangle à l’aide de la <xref:System.Windows.Forms.TextRenderer.DrawText%2A> surchargées de la <xref:System.Windows.Forms.TextRenderer> qui accepte un <xref:System.Drawing.Rectangle> et un <xref:System.Windows.Forms.TextFormatFlags> paramètre. Vous pouvez également utiliser un <xref:System.Drawing.Color> et un <xref:System.Drawing.Font>.  
+ Vous pouvez également dessiner du texte encapsulé dans un rectangle à l’aide de la <xref:System.Windows.Forms.TextRenderer.DrawText%2A> surchargées de la <xref:System.Windows.Forms.TextRenderer> qui accepte un <xref:System.Drawing.Rectangle> et un <xref:System.Windows.Forms.TextFormatFlags> paramètre. Vous utiliserez également un <xref:System.Drawing.Color> et un <xref:System.Drawing.Font>.  
   
- L’illustration suivante montre la sortie du texte dessiné dans le rectangle lorsque vous utilisez la <xref:System.Drawing.Graphics.DrawString%2A> (méthode).  
+ L’illustration suivante montre la sortie du texte dessiné dans le rectangle lorsque vous utilisez le <xref:System.Drawing.Graphics.DrawString%2A> (méthode).  
   
  ![Polices du texte](../../../../docs/framework/winforms/advanced/media/csfontstext2.png "csfontstext2")  
   
@@ -44,8 +44,8 @@ Vous pouvez dessiner du texte encapsulé dans un rectangle à l’aide de la <xr
   
 -   <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour écrire du texte avec GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
- [Utilisation de polices et de texte](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- [Guide pratique pour construire des familles de polices et des polices](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
- [Guide pratique pour écrire du texte à un emplacement spécifié](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Dessiner du texte avec GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)
+- [Utilisation de polices et de texte](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [Guide pratique pour Construire des familles de polices et des polices](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)
+- [Guide pratique pour Dessiner du texte à un emplacement spécifié](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)

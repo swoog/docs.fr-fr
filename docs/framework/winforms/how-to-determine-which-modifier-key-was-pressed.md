@@ -1,5 +1,5 @@
 ---
-title: 'Comment : identifier la touche de modification activée'
+title: 'Procédure : Déterminer la touche a été activée.'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: bfdef668a5c766f00680c0150103a8c5267fdf68
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e2caf421e25dff3300b3d799582f4260d0aab320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49314882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586655"
 ---
-# <a name="how-to-determine-which-modifier-key-was-pressed"></a>Comment : identifier la touche de modification activée
+# <a name="how-to-determine-which-modifier-key-was-pressed"></a>Procédure : Déterminer la touche a été activée.
 Lorsque vous créez une application qui accepte des séquences de touches de l’utilisateur, vous souhaiterez également analyser les touches de modification telles que les touches MAJ, ALT et CTRL. Lorsqu’une touche de modification est enfoncée en combinaison avec d’autres clés, ou avec les clics de souris, votre application peut réagir de façon appropriée. Par exemple, si l’utilisateur appuie sur la lettre S, cela peut entraîner tout simplement d’un « s » à l’écran, mais si les touches CTRL + S sont utilisées, le document actuel peut être enregistré. Si vous gérez le <xref:System.Windows.Forms.Control.KeyDown> événement, le <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> propriété de la <xref:System.Windows.Forms.KeyEventArgs> reçu par l’événement gestionnaire spécifie les touches de modification sont enfoncées. Vous pouvez également le <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> propriété du <xref:System.Windows.Forms.KeyEventArgs> Spécifie le caractère qui a été enfoncé, ainsi que les touches de modification combinées avec une opération OR au niveau du bit. Toutefois, si vous gérez le <xref:System.Windows.Forms.Control.KeyPress> événement ou un événement de souris, le Gestionnaire d’événements ne reçoit pas ces informations. Dans ce cas, vous devez utiliser le <xref:System.Windows.Forms.Control.ModifierKeys%2A> propriété de la <xref:System.Windows.Forms.Control> classe. Dans les deux cas, vous devez effectuer une opération AND au niveau du bit d’approprié <xref:System.Windows.Forms.Keys> valeur et la valeur que vous testez. Le <xref:System.Windows.Forms.Keys> énumération offre des variations de chaque touche de modification, il est donc important d’effectuer l’opération de bits et avec la valeur correcte. Par exemple, la touche MAJ est représenté par <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> et <xref:System.Windows.Forms.Keys.LShiftKey> la valeur correcte pour tester, MAJ comme une touche de modification est <xref:System.Windows.Forms.Keys.Shift>. De même, pour tester CTRL et ALT en tant que modificateurs vous devez utiliser le <xref:System.Windows.Forms.Keys.Control> et <xref:System.Windows.Forms.Keys.Alt> des valeurs, respectivement.  
   
 > [!NOTE]
@@ -45,8 +45,8 @@ Lorsque vous créez une application qui accepte des séquences de touches de l�
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/VB/form1.vb#5)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.Keys>  
- <xref:System.Windows.Forms.Control.ModifierKeys%2A>  
- [Entrée au clavier dans une application Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Comment : déterminer si la touche VERR. MAJ. est activée dans Visual Basic](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.Keys>
+- <xref:System.Windows.Forms.Control.ModifierKeys%2A>
+- [Entrée au clavier dans une application Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
+- [Guide pratique pour Déterminer que si CapsLock est activée dans Visual Basic](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)

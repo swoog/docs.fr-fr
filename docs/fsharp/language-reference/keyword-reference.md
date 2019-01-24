@@ -2,12 +2,12 @@
 title: Référence des mots clés
 description: Trouver des liens vers des informations sur tous les F# mots clés du langage.
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579836"
 ---
 # <a name="keyword-reference"></a>Référence des mots clés
 
@@ -20,7 +20,7 @@ Le tableau suivant montre toutes les F# mots clés dans l’ordre alphabétique,
 |Mot clé|Lien|Description|
 |-------|----|-----------|
 |`abstract`|[Membres](members/index.md)<br /><br />[Classes abstraites](abstract-classes.md)|Indique une méthode qui n’a aucune implémentation dans le type dans lequel il est déclaré ou qui est virtuelle et une implémentation par défaut.|
-|`and`|[`let` liaisons](functions/let-bindings.md)<br /><br />[Membres](members/index.md)<br /><br />[Contraintes](generics/constraints.md)|Utilisé dans les liaisons mutuellement récursives, dans les déclarations de propriété et avec plusieurs contraintes sur les paramètres génériques.|
+|`and`|[`let` liaisons](functions/let-bindings.md)<br /><br />[Enregistrements](records.md)<br /><br />[Membres](members/index.md)<br /><br />[Contraintes](generics/constraints.md)|Utilisé dans mutuellement récursives liaisons et les enregistrements, dans les déclarations de propriété et avec plusieurs contraintes sur les paramètres génériques.|
 |`as`|[Classes](classes.md)<br /><br />[Critères spéciaux](Pattern-Matching.md)|Utilisé pour donner à l’objet de classe actuel à un nom d’objet. Également utilisé pour donner un nom à un modèle entier dans une correspondance de modèle.|
 |`assert`|[Assertions](assertions.md)|Permet de vérifier le code pendant le débogage.|
 |`base`|[Classes](classes.md)<br /><br />[Héritage](inheritance.md)|Utilisé comme nom de l’objet de classe de base.|

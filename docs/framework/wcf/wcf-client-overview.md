@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492596"
 ---
 # <a name="wcf-client-overview"></a>Vue d'ensemble d'un client WCF
 Cette section décrit comment les applications clientes, comment configurer, créer et utiliser un client Windows Communication Foundation (WCF) et comment sécuriser les applications clientes.  
@@ -171,6 +171,6 @@ End Interface
 ## <a name="calling-services-using-wcf-client-channels"></a>Appels des services à l'aide des canaux clients WCF  
  Étendent des types de client WCF <xref:System.ServiceModel.ClientBase%601>, elle-même dérivée de <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interface à exposer le système de canal sous-jacent. Vous pouvez appeler des services à l'aide du contrat de service cible avec la classe <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Pour plus d’informations, consultez [Architecture du Client WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

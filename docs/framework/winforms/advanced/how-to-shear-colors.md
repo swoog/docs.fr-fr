@@ -1,5 +1,5 @@
 ---
-title: 'Comment : altérer des couleurs'
+title: 'Procédure : Cisaillement des couleurs'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: 204f15ce44d5ad688be0ea9ac0fa4a90781b25dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bde3271398c6bc6a37c975476b76acb85511c1a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589830"
 ---
-# <a name="how-to-shear-colors"></a>Comment : altérer des couleurs
-Inclinaison augmente ou diminue d’un composant de couleur d’un montant proportionnel à un autre composant de couleur. Par exemple, considérez la transformation où la composante rouge est augmentée par la moitié de la valeur du composant bleu. Sous une transformation de ce type, la couleur (0,2, 0,5, 1) deviendrait (0,7, 0,5, 1). Le nouveau composant rouge est 0,2 + (1/2)(1) = 0,7.  
+# <a name="how-to-shear-colors"></a>Procédure : Cisaillement des couleurs
+L’inclinaison augmente ou diminue d’un composant de couleur d’un montant proportionnel à un autre composant de couleur. Par exemple, considérez la transformation où le composant rouge est augmenté par la moitié de la valeur du composant bleu. Sous une transformation de ce type, la couleur (0,2, 0,5, 1) deviendrait (0,7, 0,5, 1). Le nouveau composant rouge est 0,2 + (1/2)(1) = 0,7.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant construit une <xref:System.Drawing.Image> objet à partir du fichier ColorBars4.bmp. Le code applique ensuite la transformation d’inclinaison décrite dans le paragraphe précédent à chaque pixel de l’image.  
+ L’exemple suivant construit un <xref:System.Drawing.Image> objet à partir du fichier ColorBars4.bmp. Le code applique ensuite la transformation d’inclinaison décrite dans le paragraphe précédent à chaque pixel de l’image.  
   
  L’illustration suivante montre l’image d’origine sur la gauche et l’image inclinée sur la droite.  
   
- ![Cisaillement des couleurs](../../../../docs/framework/winforms/advanced/media/colortrans6.png "colortrans6")  
+ ![Altérer des couleurs](../../../../docs/framework/winforms/advanced/media/colortrans6.png "colortrans6")  
   
  Le tableau suivant répertorie les vecteurs de couleur pour les quatre barres avant et après la transformation d’inclinaison.  
   
@@ -40,8 +40,8 @@ Inclinaison augmente ou diminue d’un composant de couleur d’un montant propo
 ## <a name="compiling-the-code"></a>Compilation du code  
  L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Remplacez `ColorBars.bmp` avec un nom de l’image et le chemin d’accès valide sur votre système.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Drawing.Imaging.ColorMatrix>  
- <xref:System.Drawing.Imaging.ImageAttributes>  
- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Recoloriage des images](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Drawing.Imaging.ColorMatrix>
+- <xref:System.Drawing.Imaging.ImageAttributes>
+- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Recoloriage des images](../../../../docs/framework/winforms/advanced/recoloring-images.md)

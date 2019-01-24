@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f742d219d603488bbade091f7a8192785d3e84f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568918"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem, structure
-Décrit un élément à ajouter à un dump personnalisé dans le rapport d’erreurs.  
+Décrit un élément à ajouter à une image personnalisée dans le rapport d’erreurs.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,19 +42,19 @@ struct {
 |Membre|Description|  
 |------------|-----------------|  
 |`itemKind`|Un [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valeur qui indique le type d’élément à ajouter.|  
-|`pReserved`|Actuellement non utilisé. Les éléments ajoutés à l’union doivent être non supérieure à la taille du pointeur. Si un `struct` est nécessaire, vous devez allouer séparément et pointer sur elle.|  
+|`pReserved`|Actuellement non utilisé. Les éléments ajoutés à l’union doivent être ne dépassant pas la taille du pointeur. Si un `struct` est nécessaire, vous devez allouer séparément et pointer dessus.|  
   
 ## <a name="remarks"></a>Notes  
  [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) prend un paramètre de type `CustomDumpItem`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.idl  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>Voir aussi
+- [Structures d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

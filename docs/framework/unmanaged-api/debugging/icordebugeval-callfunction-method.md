@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86d48461c601b53d4461331a11a0e0ac7ddc6e7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 493b4850436b3724287210878992d1d8ce8fe168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589397"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction, méthode
 Définit un appel à la fonction spécifiée.  
@@ -47,10 +47,10 @@ HRESULT CallFunction (
  [in] Le nombre d’arguments pour la fonction.  
   
  `ppArgs`  
- [in] Tableau de pointeurs, chacun pointant vers un objet ICorDebugValue qui spécifie un argument à passer à la fonction.  
+ [in] Tableau de pointeurs, chacun d’eux pointe vers un objet ICorDebugValue qui spécifie un argument à passer à la fonction.  
   
 ## <a name="remarks"></a>Notes  
- Si la fonction est virtuelle, `CallFunction` exécute une répartition virtuelle. Si la fonction est dans un domaine d’application différent, une transition se produit tant que tous les arguments sont également inclus dans ce domaine d’application.  
+ Si la fonction est virtuelle, `CallFunction` effectuera dispatch virtuel. Si la fonction est dans un domaine d’application différent, une transition se produit tant que tous les arguments sont également dans ce domaine d’application.  
   
 ## <a name="requirements"></a>Spécifications  
  **Plateformes :** WindowSee [requise](../../../../docs/framework/get-started/system-requirements.md).  
@@ -61,5 +61,5 @@ HRESULT CallFunction (
   
  **Versions du .NET framework :** 1.1, 1.0  
   
-## <a name="see-also"></a>Voir aussi  
- [CallParameterizedFunction, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)
+## <a name="see-also"></a>Voir aussi
+- [CallParameterizedFunction, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)

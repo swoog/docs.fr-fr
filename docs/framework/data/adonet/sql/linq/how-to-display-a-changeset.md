@@ -1,18 +1,18 @@
 ---
-title: 'Comment : afficher un ensemble de modifications ou ChangeSet'
+title: 'Procédure : Afficher un ensemble de modifications'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: c9664c6d32f78f455aa29311f111acaecb5c7905
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 773e72d52a934bc7c6fa80fe252d62e67f87a34b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596798"
 ---
-# <a name="how-to-display-a-changeset"></a>Comment : afficher un ensemble de modifications ou ChangeSet
+# <a name="how-to-display-a-changeset"></a>Procédure : Afficher un ensemble de modifications
 Vous pouvez consulter des modifications suivies par un <xref:System.Data.Linq.DataContext> à l'aide de <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.  
   
 ## <a name="example"></a>Exemple  
@@ -75,5 +75,5 @@ Vous pouvez consulter des modifications suivies par un <xref:System.Data.Linq.Da
   
  `Total changes: {Added: 0, Removed: 0, Modified: 8}`  
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge du débogage](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>Voir aussi
+- [Prise en charge du débogage](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

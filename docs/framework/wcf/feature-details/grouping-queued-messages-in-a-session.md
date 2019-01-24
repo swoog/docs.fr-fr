@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 62aa269d138d436824d3c825de9f722490d3b5bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 260e8b38f110ffc2c2fdc5e2768db8c95fb01860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564121"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Regroupement de messages mis en file d'attente dans une session
 Windows Communication Foundation (WCF) fournit une session qui vous permet de regrouper un ensemble de messages connexes à traiter par une application réceptrice unique. Les messages qui font partie d’une session doivent faire partie de la même transaction. Étant donné que tous les messages font partie de la même transaction, si un message n’est pas traité, la session entière est restaurée. Les sessions ont des comportements semblables en ce qui concerne les files d'attente de lettres mortes et les files d'attente de messages incohérents. La propriété Durée de vie (Time to Live ou TTL) définie sur une liaison mise en file d’attente configurée pour les sessions est appliquée à la session dans son ensemble. Si seulement quelques-uns des messages de la session sont envoyés avant l'expiration de la durée de vie, la session entière est placée dans la file d'attente de lettres mortes. De même, lorsque les messages d'une session ne parviennent pas à être envoyés à une application depuis la file d'attente de l'application, la session entière est placée dans la file d'attente de messages incohérents (si disponible).  
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) fournit une session qui vous permet de re
   
 5.  Configurez un point de terminaison qui utilise la liaison `NetMsmqBinding` fournie par le système.  
   
-6.  Créez une file d'attente transactionnelle en utilisant <xref:System.Messaging>. Vous pouvez également créer la file d'attente en utilisant Message Queuing (MSMQ) ou MMC. Dans ce cas, créez une file d'attente transactionnelle.  
+6.  Créez une file d’attente transactionnelle en utilisant <xref:System.Messaging>. Vous pouvez également créer la file d'attente en utilisant Message Queuing (MSMQ) ou MMC. Dans ce cas, créez une file d'attente transactionnelle.  
   
 7.  Créez un hôte de service pour le service en utilisant <xref:System.ServiceModel.ServiceHost>.  
   
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF) fournit une session qui vous permet de re
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- L'exemple suivant fournit le code pour le service `IProcessOrder` et pour un client qui utilise ce service. Il montre comment WCF utilise les sessions en file d’attente pour fournir le comportement de regroupement.  
+ L'exemple suivant fournit le code pour le service `IProcessOrder` et pour un client qui utilise ce service. Il montre la manière dont WCF utilise les sessions en file d’attente pour fournir le comportement de regroupement.  
   
 ### <a name="code-for-the-service"></a>Code du service  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
@@ -85,6 +85,6 @@ Windows Communication Foundation (WCF) fournit une session qui vous permet de re
   
   
   
-## <a name="see-also"></a>Voir aussi  
- [Sessions et files d’attente](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Sessions et files d’attente](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)

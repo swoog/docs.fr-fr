@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a5ff52a95fd6ebaec05439cbc702d5513d0cc78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca9f3488c9fb2280d2ceb99c87a54d99c1a33b6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587724"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace, méthode
-Spécifie que le nom de l’espace de noms complet donné est utilisé dans la portée lexicale ouverte. L’espace de noms sera utilisé dans toutes les portées qui héritent de la portée actuellement ouverte. Fermeture de la portée actuelle s’arrête également l’utilisation de l’espace de noms.  
+Spécifie que le nom d’espace de noms complet donné est utilisé dans la portée lexicale actuellement ouverte. L’espace de noms sera utilisé dans toutes les portées qui héritent de la portée actuellement ouverte. Fermeture de la portée actuelle s’arrête également l’utilisation de l’espace de noms.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,5 +44,5 @@ HRESULT UsingNamespace(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

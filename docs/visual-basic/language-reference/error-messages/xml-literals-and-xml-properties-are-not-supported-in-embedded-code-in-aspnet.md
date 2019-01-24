@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: 893fdb1b9b3b5ace6b869c7b64ce7483ff523023
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7bec146f0100971d78eed69412ce27889e7a6263
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45590924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597162"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>Les littéraux XML et les propriétés XML ne sont pas pris en charge dans du code incorporé au sein d'ASP.NET
 Littéraux XML et les propriétés XML ne sont pas pris en charge dans du code incorporé au sein d’ASP.NET. Pour utiliser les fonctionnalités XML, déplacez le code au code-behind.  
@@ -25,7 +25,7 @@ Littéraux XML et les propriétés XML ne sont pas pris en charge dans du code i
   
 -   Déplacer le code qui inclut le littéral XML ou une propriété d’axe XML vers un fichier de code-behind ASP.NET.  
   
-## <a name="see-also"></a>Voir aussi  
- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Propriétés d’axe XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Propriétés d’axe XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

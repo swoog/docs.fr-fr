@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32f9a5f92ae580839ce46476de9f9c7edcd54685
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573398"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Génération de clés pour le chiffrement et le déchiffrement
 La création et la gestion des clés constituent une part importante du processus de chiffrement. Les algorithmes symétriques nécessitent la création d'une clé et d'un vecteur d'initialisation. La clé ne doit pas être divulguée aux personnes qui ne sont pas autorisées à déchiffrer vos données. Le vecteur d'initialisation peut être divulgué, mais doit être modifié à chaque session. Les algorithmes asymétriques nécessitent la création d'une clé publique et d'une clé privée. La clé publique peut être donnée à tout le monde. Toutefois, la clé privée ne doit être connue que de la partie chargée du déchiffrement des données chiffrées à l'aide de la clé publique. Cette section décrit comment générer et gérer des clés pour les algorithmes symétriques et asymétriques.  
@@ -90,7 +90,7 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Chiffrement de données](../../../docs/standard/security/encrypting-data.md)  
-- [Déchiffrement de données](../../../docs/standard/security/decrypting-data.md)  
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
-- [Comment : Store les clés asymétriques dans un conteneur de clé](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Chiffrement de données](../../../docs/standard/security/encrypting-data.md)
+- [Déchiffrement de données](../../../docs/standard/security/decrypting-data.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Guide pratique pour Store les clés asymétriques dans un conteneur de clé](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

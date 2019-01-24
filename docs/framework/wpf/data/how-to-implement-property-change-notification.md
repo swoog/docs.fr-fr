@@ -1,5 +1,5 @@
 ---
-title: 'Comment : implémenter la notification des modifications de propriétés'
+title: 'Procédure : Implémenter la notification des modifications de propriétés'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: a9c0fb433e2fa65e28db3b793e038b49f9d6353b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a8ab232019f1266095091cd4e1ce6e7fec63207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587806"
 ---
-# <a name="how-to-implement-property-change-notification"></a>Comment : implémenter la notification des modifications de propriétés
-Pour prendre en charge <xref:System.Windows.Data.BindingMode.OneWay> ou <xref:System.Windows.Data.BindingMode.TwoWay> de liaison pour activer vos propriétés de cible de liaison à reflètent automatiquement les modifications dynamiques de la source de liaison (par exemple, pour que le volet Aperçu de mises à jour automatiquement lorsque l’utilisateur modifie un formulaire), votre classe. doit fournir les notifications de modification de propriété approprié. Cet exemple montre comment créer une classe qui implémente <xref:System.ComponentModel.INotifyPropertyChanged>.  
+# <a name="how-to-implement-property-change-notification"></a>Procédure : Implémenter la notification des modifications de propriétés
+Pour prendre en charge <xref:System.Windows.Data.BindingMode.OneWay> ou <xref:System.Windows.Data.BindingMode.TwoWay> de liaison pour activer les propriétés de votre cible de liaison afin de refléter automatiquement les modifications dynamiques de la source de liaison (par exemple, pour que le volet de visualisation mis à jour automatiquement lorsque l’utilisateur modifie un formulaire), votre classe doit fournir les notifications de modification de propriété appropriées. Cet exemple montre comment créer une classe qui implémente <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
 ## <a name="example"></a>Exemple  
- Pour implémenter <xref:System.ComponentModel.INotifyPropertyChanged> vous avez besoin de déclarer le <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> événement et créer le `OnPropertyChanged` (méthode). Pour chaque propriété pour laquelle vous souhaitez modifier les notifications, vous devez ensuite appeler `OnPropertyChanged` chaque fois que la propriété est mise à jour.  
+ Pour implémenter <xref:System.ComponentModel.INotifyPropertyChanged> vous devez déclarer le <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> événement et créer le `OnPropertyChanged` (méthode). Pour chaque propriété pour laquelle vous souhaitez modifier les notifications, vous devez ensuite appeler `OnPropertyChanged` chaque fois que la propriété est mise à jour.  
   
  [!code-csharp[SimpleBinding#PersonClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Person.cs#personclass)]
  [!code-vb[SimpleBinding#PersonClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Person.vb#personclass)]  
   
- Pour voir un exemple de la façon dont `Person` classe peut être utilisée pour prendre en charge <xref:System.Windows.Data.BindingMode.TwoWay> de liaison, consultez [lorsque le texte de la zone de texte met à jour la Source de contrôle](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
+ Pour voir un exemple montrant comment les `Person` classe peut être utilisée pour prendre en charge <xref:System.Windows.Data.BindingMode.TwoWay> liaison, consultez [contrôler quand le texte TextBox met à jour la Source](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d'ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d'ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

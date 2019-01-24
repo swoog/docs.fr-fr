@@ -7,18 +7,18 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b95f865b673dda14976f671cd2b01e7dde38997c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636064"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attributs dans les contrôles Windows Forms
 .NET Framework fournit divers attributs que vous pouvez appliquer aux membres de vos composants et contrôles personnalisés. Certains de ces attributs affectent le comportement d’exécution d’une classe, et d’autres affectent le comportement au moment de la conception.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Attributs pour les propriétés de composant et de contrôle  
- Le tableau suivant décrit les attributs que vous pouvez appliquer aux propriétés ou aux autres membres de vos composants et contrôles personnalisés. Pour obtenir un exemple d’utilisation de ces attributs, consultez [Comment : appliquer des attributs dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ Le tableau suivant décrit les attributs que vous pouvez appliquer aux propriétés ou aux autres membres de vos composants et contrôles personnalisés. Pour obtenir un exemple qui utilise une grande partie de ces attributs, consultez [Comment : Appliquer des attributs dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
 |Attribut|Description|  
 |---------------|-----------------|  
@@ -60,8 +60,8 @@ ms.locfileid: "48582318"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|Représente un attribut d’un élément de boîte à outils.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Spécifie la chaîne de filtrage et le type de filtre à utiliser pour un élément de boîte à outils.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Attribute>  
- [Guide pratique pour appliquer des attributs dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [Extension de la prise en charge au moment du design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Attribute>
+- [Guide pratique pour Appliquer des attributs dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
+- [Extension de la prise en charge au moment du design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

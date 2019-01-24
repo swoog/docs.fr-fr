@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: da0c6f492b068c9caa50468ead47cdc08559bfce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576354"
 ---
 # <a name="-operator-visual-basic"></a>+, opérateur (Visual Basic)
 Ajoute deux nombres ou retourne la valeur positive d’une expression numérique. Peut également être utilisé pour concaténer deux expressions de chaîne.  
@@ -83,7 +83,7 @@ expression1 + expression2
 >  Lorsque vous utilisez le `+` opérateur, vous ne pourrez pas être en mesure de déterminer si la concaténation d’addition ou la chaîne aura lieu. Utilisez le `&` opérateur de concaténation pour éliminer toute ambiguïté et pour fournir le code auto-documenté.  
   
 ## <a name="overloading"></a>Surcharge  
- Le `+` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsqu’un opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, veillez à ce que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Le `+` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsqu’un opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, veillez à ce que vous comprenez son comportement redéfini. Pour plus d'informations, consultez [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise le `+` opérateur pour ajouter des numéros. Si les opérandes sont toutes deux numériques, Visual Basic calcule le résultat arithmétique. Le résultat arithmétique représente la somme des deux opérandes.  
@@ -108,11 +108,11 @@ expression1 + expression2
   
  Pour éliminer toute ambiguïté, vous devez utiliser le `&` opérateur au lieu de `+` pour la concaténation.  
   
-## <a name="see-also"></a>Voir aussi  
- [& (opérateur)](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
- [opérateur de concaténation](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
- [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Opérateurs arithmétiques en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Voir aussi
+- [& (opérateur)](../../../visual-basic/language-reference/operators/concatenation-operator.md)
+- [opérateur de concaténation](../../../visual-basic/language-reference/operators/concatenation-operators.md)
+- [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Opérateurs arithmétiques en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)

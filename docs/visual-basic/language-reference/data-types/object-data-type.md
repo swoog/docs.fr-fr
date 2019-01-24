@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 94d3ddcf71194eb69a2d26bcdf549aaf693e46e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5a37b571e0600927e0e50fdb1a63bcf8ef194d72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617536"
 ---
 # <a name="object-data-type"></a>Object Data Type
 Contient les adresses qui font référence aux objets. Vous pouvez affecter n’importe quel type référence (chaîne, tableau, classe ou interface) à une `Object` variable. Un `Object` variable peut également faire référence à des données de n’importe quel type valeur (numérique, `Boolean`, `Char`, `Date`, structure ou énumération).  
@@ -66,11 +66,11 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Object>  
- [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Guide pratique : déterminer si deux objets sont liés](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [Guide pratique : déterminer si deux objets sont identiques](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Object>
+- [Types de données](../../../visual-basic/language-reference/data-types/index.md)
+- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Guide pratique pour Déterminer si deux objets sont liés](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Guide pratique pour Déterminer si deux objets sont identiques](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

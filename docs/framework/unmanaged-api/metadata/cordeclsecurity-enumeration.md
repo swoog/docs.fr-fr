@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 47819740207ae94b814b3009708c2fd247688661
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564003"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity, énumération
 Spécifie les actions de sécurité qui peuvent être effectuées à l’aide de la sécurité déclarative.  
@@ -65,13 +65,13 @@ typedef enum CorDeclSecurity {
 |`dclRequest`|Réservé.|  
 |`dclDemand`|Tous les appelants figurant plus haut dans la pile des appels doivent disposer de l’autorisation spécifiée par l’objet d’autorisation actuel.|  
 |`dclAssert`|Le code appelant peut accéder à la ressource identifiée par l’objet d’autorisation actuel, même si les appelants plus hauts dans la pile n’ont pas reçus l’autorisation d’accéder à la ressource|  
-|`dclDeny`|La possibilité d’accéder à la ressource spécifiée par l’objet d’autorisation en cours est refusée aux appelants, même si elles ont reçu l’autorisation d’y accéder.|  
+|`dclDeny`|La possibilité d’accéder à la ressource spécifiée par l’objet d’autorisation actuel est refusée aux appelants, même s’ils ont reçu l’autorisation d’y accéder.|  
 |`dclPermitOnly`|Seules les ressources spécifiées par l’objet d’autorisation sont accessibles, même si le code a reçu l’autorisation d’accéder à d’autres ressources.|  
-|`dclLinktimeCheck`|L’appelant immédiat est nécessaire pour ont reçu l’autorisation spécifiée pour une période donnée.|  
-|`dclInheritanceCheck`|La classe dérivée hérite d’une autre classe ou la substitution d’une méthode est nécessaire de disposer de l’autorisation spécifiée.|  
-|`dclRequestMinimum`|L’appelant peut demander des autorisations minimales requises pour l’exécution de code. Cette action ne peut être utilisée que dans la portée de l’assembly.|  
+|`dclLinktimeCheck`|L’appelant immédiat est nécessaire pour bénéficier de l’autorisation spécifiée pour une période donnée.|  
+|`dclInheritanceCheck`|La classe dérivée hérite d’une autre classe ou de remplacement d’une méthode est nécessaire pour bénéficier de l’autorisation spécifiée.|  
+|`dclRequestMinimum`|L’appelant puisse demander des autorisations minimales requises pour l’exécution de code. Cette action ne peut être utilisée que dans la portée de l’assembly.|  
 |`dclRequestOptional`|L’appelant peut demander des autorisations supplémentaires qui sont facultatives (non requis pour exécuter). Cette requête refuse implicitement toutes les autres autorisations qui ne sont pas spécifiquement demandées. Cette action ne peut être utilisée que dans la portée de l’assembly.|  
-|`dclRequestRefuse`|Peut demander l’appelant des autorisations qui peuvent être utilisées abusivement ne soient pas accordée. Cette action ne peut être utilisée que dans la portée de l’assembly.|  
+|`dclRequestRefuse`|Peut demander l’appelant des autorisations qui peuvent être utilisées abusivement ne sera pas accordée. Cette action ne peut être utilisée que dans la portée de l’assembly.|  
 |`dclPrejitGrant`|Réservé.|  
 |`dclPrejitDenied`|Réservé.|  
 |`dclNonCasDemand`|Réservé.|  
@@ -83,11 +83,11 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Réservé.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
