@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ea53e02cc20964a43bc4784b4354d429e238295
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4f6f5dd757fde9d49fe8b5a1709d6d5876ce5b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450854"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592206"
 ---
-# <a name="icorprofilercallbackexceptioncatcherleave-method"></a><span data-ttu-id="2c202-102">ICorProfilerCallback::ExceptionCatcherLeave, méthode</span><span class="sxs-lookup"><span data-stu-id="2c202-102">ICorProfilerCallback::ExceptionCatcherLeave Method</span></span>
-<span data-ttu-id="2c202-103">Notifie le profileur que le contrôle est passé hors approprié `catch` bloc.</span><span class="sxs-lookup"><span data-stu-id="2c202-103">Notifies the profiler that control is being passed out of the appropriate `catch` block.</span></span>  
+# <a name="icorprofilercallbackexceptioncatcherleave-method"></a><span data-ttu-id="4b186-102">ICorProfilerCallback::ExceptionCatcherLeave, méthode</span><span class="sxs-lookup"><span data-stu-id="4b186-102">ICorProfilerCallback::ExceptionCatcherLeave Method</span></span>
+<span data-ttu-id="4b186-103">Notifie le profileur que le contrôle est passé hors approprié `catch` bloc.</span><span class="sxs-lookup"><span data-stu-id="4b186-103">Notifies the profiler that control is being passed out of the appropriate `catch` block.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2c202-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2c202-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4b186-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4b186-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionCatcherLeave();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="2c202-105">Notes</span><span class="sxs-lookup"><span data-stu-id="2c202-105">Remarks</span></span>  
- <span data-ttu-id="2c202-106">Le profileur ne doit pas bloquer dans son implémentation de cette méthode, car la pile ne peut pas être dans un état qui autorise le garbage collection, et par conséquent, le garbage collection préemptif ne peut pas être activé.</span><span class="sxs-lookup"><span data-stu-id="2c202-106">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="2c202-107">Si le profileur bloque ici et le garbage collection est tenté, le runtime bloque jusqu'à ce que ce rappel retourne.</span><span class="sxs-lookup"><span data-stu-id="2c202-107">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4b186-105">Notes</span><span class="sxs-lookup"><span data-stu-id="4b186-105">Remarks</span></span>  
+ <span data-ttu-id="4b186-106">Le profileur ne doit pas bloquer dans son implémentation de cette méthode, car la pile ne peut pas être dans un état qui autorise le garbage collection, et par conséquent, le garbage collection préemptif ne peut pas être activé.</span><span class="sxs-lookup"><span data-stu-id="4b186-106">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="4b186-107">Si le profileur bloque ici et le garbage collection est tenté, le runtime bloque jusqu'à ce que ce rappel renvoie.</span><span class="sxs-lookup"><span data-stu-id="4b186-107">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="2c202-108">L’implémentation du profileur de cette méthode ne doit pas appeler dans du code managé ou de quelque manière qu’une allocation de mémoire managée.</span><span class="sxs-lookup"><span data-stu-id="2c202-108">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="4b186-108">L’implémentation du profileur de cette méthode ne doit pas appeler dans du code managé ou de quelque manière qu’une allocation de mémoire managée.</span><span class="sxs-lookup"><span data-stu-id="4b186-108">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2c202-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="2c202-109">Requirements</span></span>  
- <span data-ttu-id="2c202-110">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2c202-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4b186-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4b186-109">Requirements</span></span>  
+ <span data-ttu-id="4b186-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4b186-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2c202-111">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2c202-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4b186-111">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4b186-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2c202-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c202-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4b186-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4b186-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2c202-113">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c202-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4b186-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4b186-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c202-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2c202-114">See Also</span></span>  
- [<span data-ttu-id="2c202-115">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="2c202-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="2c202-116">ExceptionCatcherEnter, méthode</span><span class="sxs-lookup"><span data-stu-id="2c202-116">ExceptionCatcherEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)
+## <a name="see-also"></a><span data-ttu-id="4b186-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4b186-114">See also</span></span>
+- [<span data-ttu-id="4b186-115">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="4b186-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="4b186-116">ExceptionCatcherEnter, méthode</span><span class="sxs-lookup"><span data-stu-id="4b186-116">ExceptionCatcherEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)

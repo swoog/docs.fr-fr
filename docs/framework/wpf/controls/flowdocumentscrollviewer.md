@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentScrollViewer
 - FlowDocumentScrollViewer control [WPF]
 ms.assetid: 727b0a0a-b845-4aa9-9fd4-98f42ed738b4
-ms.openlocfilehash: 6ed1cc33b8b9a694669bb506c81a2c3b4d87fe61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa504c1269d6c57607204ea78919517c7d07f3eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593990"
 ---
-# <a name="flowdocumentscrollviewer"></a><span data-ttu-id="99a82-102">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="99a82-102">FlowDocumentScrollViewer</span></span>
-<span data-ttu-id="99a82-103">Le <xref:System.Windows.Controls.FlowDocumentScrollViewer> contrôle permet d’afficher <xref:System.Windows.Documents.FlowDocument> contenu dans un conteneur de défilement.</span><span class="sxs-lookup"><span data-stu-id="99a82-103">The <xref:System.Windows.Controls.FlowDocumentScrollViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content in a scrolling container.</span></span> <span data-ttu-id="99a82-104">Par contraste <xref:System.Windows.Controls.FlowDocumentPageViewer>, qui affiche le contenu sur une base par page.</span><span class="sxs-lookup"><span data-stu-id="99a82-104">Contrast with <xref:System.Windows.Controls.FlowDocumentPageViewer>, which views content on a per page basis.</span></span>  
+# <a name="flowdocumentscrollviewer"></a><span data-ttu-id="a92ef-102">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="a92ef-102">FlowDocumentScrollViewer</span></span>
+<span data-ttu-id="a92ef-103">Le <xref:System.Windows.Controls.FlowDocumentScrollViewer> contrôle sert à afficher <xref:System.Windows.Documents.FlowDocument> contenu dans un conteneur de défilement.</span><span class="sxs-lookup"><span data-stu-id="a92ef-103">The <xref:System.Windows.Controls.FlowDocumentScrollViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content in a scrolling container.</span></span> <span data-ttu-id="a92ef-104">Comparez avec <xref:System.Windows.Controls.FlowDocumentPageViewer>, dont le contenu des vues sur une base par page.</span><span class="sxs-lookup"><span data-stu-id="a92ef-104">Contrast with <xref:System.Windows.Controls.FlowDocumentPageViewer>, which views content on a per page basis.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99a82-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="99a82-105">See Also</span></span>  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- <xref:System.Windows.Documents.FlowDocument>  
- [<span data-ttu-id="99a82-106">Documents dans WPF</span><span class="sxs-lookup"><span data-stu-id="99a82-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="99a82-107">Vue d’ensemble des documents dynamiques</span><span class="sxs-lookup"><span data-stu-id="99a82-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a><span data-ttu-id="a92ef-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a92ef-105">See also</span></span>
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- <xref:System.Windows.Documents.FlowDocument>
+- [<span data-ttu-id="a92ef-106">Documents dans WPF</span><span class="sxs-lookup"><span data-stu-id="a92ef-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="a92ef-107">Vue d’ensemble des documents dynamiques</span><span class="sxs-lookup"><span data-stu-id="a92ef-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
