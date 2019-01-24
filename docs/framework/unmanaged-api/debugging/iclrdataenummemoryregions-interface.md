@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3db8124f32a03180ef640194534b587f0152f778
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2561307a5d0f38f66700c2455634e757efde2a09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745964"
 ---
-# <a name="iclrdataenummemoryregions-interface"></a><span data-ttu-id="0423e-102">ICLRDataEnumMemoryRegions, interface</span><span class="sxs-lookup"><span data-stu-id="0423e-102">ICLRDataEnumMemoryRegions Interface</span></span>
-<span data-ttu-id="0423e-103">Fournit une méthode pour énumérer les régions de mémoire qui sont spécifiées par les appelants.</span><span class="sxs-lookup"><span data-stu-id="0423e-103">Provides a method to enumerate regions of memory that are specified by callers.</span></span>  
+# <a name="iclrdataenummemoryregions-interface"></a><span data-ttu-id="2c8ca-102">ICLRDataEnumMemoryRegions, interface</span><span class="sxs-lookup"><span data-stu-id="2c8ca-102">ICLRDataEnumMemoryRegions Interface</span></span>
+<span data-ttu-id="2c8ca-103">Fournit une méthode pour énumérer les régions de mémoire qui sont spécifiées par les appelants.</span><span class="sxs-lookup"><span data-stu-id="2c8ca-103">Provides a method to enumerate regions of memory that are specified by callers.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0423e-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="0423e-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2c8ca-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="2c8ca-104">Methods</span></span>  
   
-|<span data-ttu-id="0423e-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="0423e-105">Method</span></span>|<span data-ttu-id="0423e-106">Description</span><span class="sxs-lookup"><span data-stu-id="0423e-106">Description</span></span>|  
+|<span data-ttu-id="2c8ca-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="2c8ca-105">Method</span></span>|<span data-ttu-id="2c8ca-106">Description</span><span class="sxs-lookup"><span data-stu-id="2c8ca-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0423e-107">EnumMemoryRegions, méthode</span><span class="sxs-lookup"><span data-stu-id="0423e-107">EnumMemoryRegions Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|<span data-ttu-id="0423e-108">Énumère les zones de mémoire spécifiées.</span><span class="sxs-lookup"><span data-stu-id="0423e-108">Enumerates specified areas of memory.</span></span>|  
+|[<span data-ttu-id="2c8ca-107">EnumMemoryRegions, méthode</span><span class="sxs-lookup"><span data-stu-id="2c8ca-107">EnumMemoryRegions Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|<span data-ttu-id="2c8ca-108">Énumère les zones de mémoire spécifiées.</span><span class="sxs-lookup"><span data-stu-id="2c8ca-108">Enumerates specified areas of memory.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0423e-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="0423e-109">Requirements</span></span>  
- <span data-ttu-id="0423e-110">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0423e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c8ca-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="2c8ca-109">Requirements</span></span>  
+ <span data-ttu-id="2c8ca-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2c8ca-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0423e-111">**En-tête :** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="0423e-111">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="2c8ca-111">**En-tête :** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="2c8ca-111">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="0423e-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0423e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2c8ca-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c8ca-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0423e-113">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0423e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2c8ca-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c8ca-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0423e-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0423e-114">See Also</span></span>  
- [<span data-ttu-id="0423e-115">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="0423e-115">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="2c8ca-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2c8ca-114">See also</span></span>
+- [<span data-ttu-id="2c8ca-115">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="2c8ca-115">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
