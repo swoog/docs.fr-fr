@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617314"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim, instruction (Visual Basic)
 Réalloue l'espace de stockage d'une variable tableau.  
@@ -47,7 +47,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |Terme|Définition|  
 |----------|----------------|  
 |`Preserve`|Facultatif. Modificateur utilisé pour conserver les données du tableau existant quand vous modifiez la taille de la dernière dimension uniquement.|  
-|`name`|Obligatoire. Nom de la variable de tableau. Consultez [noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Obligatoire. Nom de la variable de tableau. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`boundlist`|Obligatoire. Liste des limites de chaque dimension du tableau redéfini.|  
   
 ## <a name="remarks"></a>Notes  
@@ -61,13 +61,13 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Plusieurs Variables.** Vous pouvez redimensionner plusieurs variables tableau dans la même instruction de déclaration et spécifier les parties `name` et `boundlist` pour chaque variable. Les variables multiples sont séparées par des virgules.  
   
--   **Limites de tableau.** Chaque entrée dans `boundlist` peut spécifier les limites inférieures et supérieures de cette dimension. La limite inférieure est toujours 0 (zéro). La limite supérieure est la valeur d'index la plus élevée possible pour cette dimension, pas la longueur de la dimension (qui est la limite supérieure plus un). L'index pour chaque dimension varie de 0 à sa valeur liée supérieure.  
+-   **Limites du tableau.** Chaque entrée dans `boundlist` peut spécifier les limites inférieures et supérieures de cette dimension. La limite inférieure est toujours 0 (zéro). La limite supérieure est la valeur d'index la plus élevée possible pour cette dimension, pas la longueur de la dimension (qui est la limite supérieure plus un). L'index pour chaque dimension varie de 0 à sa valeur liée supérieure.  
   
      Le nombre de dimensions dans `boundlist` doit correspondre au nombre de dimensions (rang) d'origine du tableau.  
   
 -   **Types de données.** L'instruction `ReDim` ne peut pas modifier le type de données d'une variable tableau ou de ses éléments.  
   
--   **initialisation.** L'instruction `ReDim` ne peut pas fournir de nouvelles valeurs d'initialisation pour les éléments du tableau.  
+-   **Initialisation.** L'instruction `ReDim` ne peut pas fournir de nouvelles valeurs d'initialisation pour les éléments du tableau.  
   
 -   **Rang.** L'instruction `ReDim` ne peut pas modifier le rang (nombre de dimensions) du tableau.  
   
@@ -100,10 +100,10 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  Pour obtenir des exemples supplémentaires, consultez [tableaux](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IndexOutOfRangeException>  
- [Const (instruction)](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Erase (instruction)](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [Tableaux](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IndexOutOfRangeException>
+- [Const (instruction)](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Erase (instruction)](../../../visual-basic/language-reference/statements/erase-statement.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Tableaux](../../../visual-basic/programming-guide/language-features/arrays/index.md)

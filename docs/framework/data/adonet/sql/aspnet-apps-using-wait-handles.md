@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d089b27158a36d03245e6312dff0e0dc71d12f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599599"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Applications ASP.NET utilisant les handles d'attente
 Les modèles de rappel et d'interrogation pour le traitement d'opérations asynchrones sont utiles lorsque votre application ne traite qu'une opération asynchrone à la fois. Les modèles d'attente offrent un traitement plus souple des multiples opérations asynchrones. Il existe deux modèles d'attente nommés pour les méthodes <xref:System.Threading.WaitHandle> utilisées pour leur implémentation : le modèle d'attente (un) et le modèle d'attente (tout).  
@@ -21,10 +21,10 @@ Les modèles de rappel et d'interrogation pour le traitement d'opérations async
   
  Les avantages des modèles d'attente sont plus évidents lorsque vous avez besoin d'exécuter plusieurs opérations de même longueur sur différents serveurs ou lorsque votre serveur est suffisamment puissant pour traiter toutes les requêtes à la fois. Dans les exemples présentés ici, trois requêtes émulent de longs processus en ajoutant des commandes WAITFOR de longueurs variées à des requêtes SELECT important peu.  
   
-## <a name="example-wait-any-model"></a>Exemple : modèle d'attente (un)  
+## <a name="example-wait-any-model"></a>Exemple : modèle d'attente (un)  
  L'exemple suivant illustre le modèle d'attente (un). Une fois les trois processus asynchrones démarrés, la méthode <xref:System.Threading.WaitHandle.WaitAny%2A> est appelée pour attendre l'achèvement de l'un d'eux. À chaque achèvement de processus, la méthode <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> est appelée et l'objet <xref:System.Data.SqlClient.SqlDataReader> résultant est lu. À ce stade, une application réelle utiliserait plus volontiers le <xref:System.Data.SqlClient.SqlDataReader> pour remplir une portion de la page. Dans cet exemple simple, l'heure d'achèvement du processus est ajoutée à une zone de texte correspondant au processus. Prises ensemble, ces heures dans les zones de texte illustrent le point suivant : le code est exécuté chaque fois qu'un processus s'achève.  
   
- Pour configurer cet exemple, créez un projet de site Web ASP.NET. Placez un contrôle <xref:System.Web.UI.WebControls.Button> et quatre contrôles <xref:System.Web.UI.WebControls.TextBox> sur la page (en acceptant le nom par défaut pour chaque contrôle).  
+ Pour configurer cet exemple, créez un projet de site web ASP.NET. Placez un contrôle <xref:System.Web.UI.WebControls.Button> et quatre contrôles <xref:System.Web.UI.WebControls.TextBox> sur la page (en acceptant le nom par défaut pour chaque contrôle).  
   
  Ajoutez le code suivant à la classe du formulaire, en modifiant la chaîne de connexion de façon appropriée pour votre environnement.  
   
@@ -312,12 +312,12 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>Exemple : modèle d'attente (tout)  
+## <a name="example-wait-all-model"></a>Exemple : modèle d'attente (tout)  
  L'exemple suivant illustre le modèle d'attente (tout). Une fois les trois processus asynchrones démarrés, la méthode <xref:System.Threading.WaitHandle.WaitAll%2A> est appelée pour attendre l'achèvement ou l'expiration des processus.  
   
  À l'instar de l'exemple du modèle d'attente (un), l'heure d'achèvement du processus est ajoutée à une zone de texte correspondant au processus. Là encore, ces heures dans les zones de texte illustrent le point suivant : d'après la méthode <xref:System.Threading.WaitHandle.WaitAny%2A>, le code est exécuté uniquement après l'achèvement de tous les processus.  
   
- Pour configurer cet exemple, créez un projet de site Web ASP.NET. Placez un contrôle <xref:System.Web.UI.WebControls.Button> et quatre contrôles <xref:System.Web.UI.WebControls.TextBox> sur la page (en acceptant le nom par défaut pour chaque contrôle).  
+ Pour configurer cet exemple, créez un projet de site web ASP.NET. Placez un contrôle <xref:System.Web.UI.WebControls.Button> et quatre contrôles <xref:System.Web.UI.WebControls.TextBox> sur la page (en acceptant le nom par défaut pour chaque contrôle).  
   
  Ajoutez le code suivant à la classe du formulaire, en modifiant la chaîne de connexion de façon appropriée pour votre environnement.  
   
@@ -579,6 +579,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Opérations asynchrones](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Opérations asynchrones](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
