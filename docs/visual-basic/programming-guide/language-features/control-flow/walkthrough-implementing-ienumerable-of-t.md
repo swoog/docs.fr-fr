@@ -7,14 +7,14 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499750"
 ---
-# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Procédure pas à pas : implémentation d'IEnumerable(Of T) en Visual Basic
+# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Procédure pas à pas : Implémentation IEnumerable(Of T) en Visual Basic
 Le <xref:System.Collections.Generic.IEnumerable%601> interface est implémentée par les classes qui peuvent retourner une séquence de valeurs élément par élément à la fois. L’avantage de retourner des données d’un élément à la fois est que vous n’êtes pas obligé de charger l’ensemble complet des données en mémoire pour l’utiliser. Vous devez uniquement utiliser une mémoire suffisante pour charger un élément unique à partir des données. Classes qui implémentent le `IEnumerable(T)` interface peut être utilisée avec `For Each` boucles ou des requêtes LINQ.  
   
  Par exemple, considérez une application qui doit lire un fichier texte volumineux et retourner chaque ligne du fichier qui correspond aux critères de recherche spécifique. L’application utilise une requête LINQ pour retourner des lignes à partir du fichier qui correspondent aux critères spécifiés. Pour interroger le contenu du fichier à l’aide d’une requête LINQ, l’application pourrait charger le contenu du fichier dans un tableau ou une collection. Toutefois, le chargement de la totalité du fichier dans un tableau ou une collection consommerait beaucoup plus de mémoire que nécessaire. La requête LINQ pourrait à la place interroger le contenu du fichier en utilisant une classe enumerable, en retournant uniquement les valeurs qui correspondent aux critères de recherche. Requêtes qui retournent uniquement quelques valeurs correspondantes consomme beaucoup moins de mémoire.  
@@ -93,8 +93,8 @@ Le <xref:System.Collections.Generic.IEnumerable%601> interface est implémentée
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Flux de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Structures de boucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [For Each...Next (instruction)](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Voir aussi
+- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Flux de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Structures de boucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [For Each...Next (instruction)](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

@@ -2,12 +2,12 @@
 title: Intégration CLR SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 5f6c1dcccaddeadb65e6fc949960b0232d00ed81
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7d291e5ab715638217c024302c36188d63b20239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493961"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Intégration CLR SQL Server
 SQL Server 2005 a introduit l'intégration du composant Common Language Runtime (CLR) de .NET Framework pour Microsoft Windows. Cela signifie que vous pouvez écrire des procédures stockées, des déclencheurs, des types définis par l'utilisateur, des fonctions définies par l'utilisateur, des agrégats définis par l'utilisateur et des fonctions de flux évaluées par une table, en utilisant tout langage .NET Framework, notamment Microsoft Visual Basic .NET et Microsoft Visual C#. L'espace de noms <xref:Microsoft.SqlServer.Server> contient un ensemble de nouvelles API permettant au code managé d'interagir avec l'environnement Microsoft SQL Server.  
@@ -42,7 +42,7 @@ SQL Server 2005 a introduit l'intégration du composant Common Language Runtime
  [Comportement SQL Server spécifique au processus d’ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
  Décrit les extensions spécifiques au mode in-process SQL Server pour ADO.NET et la connexion de contexte. Fournit des liens vers d'autres rubriques.  
   
-## <a name="see-also"></a>Voir aussi  
- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Création d’objets SQL Server 2005 dans le Code managé](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Création d’objets SQL Server 2005 dans le Code managé](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

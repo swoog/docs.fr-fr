@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491283"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl, énumération
 Contient des valeurs qui décrivent les fonctionnalités d’implémentation d’une méthode.  
@@ -63,7 +63,7 @@ typedef enum CorMethodImpl {
 |`miNative`|Spécifie que l’implémentation de la méthode est native.|  
 |`miOPTIL`|Spécifie que l’implémentation de méthode est OPTIL.|  
 |`miRuntime`|Spécifie que l’implémentation de méthode est fournie par le common language runtime.|  
-|`miManagedMask`|Indicateurs qui indiquent si le code est managé ou non managé.|  
+|`miManagedMask`|Indicateurs qui indiquent si le code est géré ou non géré.|  
 |`miUnmanaged`|Spécifie que l’implémentation de méthode n’est pas gérée.|  
 |`miManaged`|Spécifie que l’implémentation de méthode est gérée.|  
 |`miForwardRef`|Spécifie que la méthode est définie. Cet indicateur est utilisé principalement dans les scénarios de fusion.|  
@@ -76,11 +76,11 @@ typedef enum CorMethodImpl {
 |`miMaxMethodImplVal`|La valeur valide maximale pour un `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

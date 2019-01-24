@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : création de contenu WPF sur les Windows Forms au moment du design'
+title: 'Procédure pas à pas : Création de contenu WPF dans les Windows Forms au moment du Design'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500497"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : création de contenu WPF sur les Windows Forms au moment du design
+# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : Création de contenu WPF dans les Windows Forms au moment du Design
 
 Cette rubrique montre comment créer un contrôle Windows Presentation Foundation (WPF) pour une utilisation dans vos applications Windows Forms.
 
@@ -61,7 +61,7 @@ La création d'un contrôle WPF et son ajout à votre projet sont des tâches au
 
     - Le fichier UserControl1.xaml s'ouvre dans le [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. En mode Design, assurez-vous que `UserControl1` est sélectionné. Pour plus d’informations, consultez [Comment : sélectionner et déplacer des éléments sur l’aire de conception](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+2. En mode Design, assurez-vous que `UserControl1` est sélectionné. Pour plus d'informations, voir [Procédure : Sélectionner et déplacer des éléments sur l’aire de conception](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
 
 3. Dans le **propriétés** fenêtre, définissez la valeur de la <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> propriétés à **200**.
 
@@ -92,7 +92,7 @@ Votre nouveau contrôle WPF est prêt à être utilisé sur le formulaire. Windo
 
     - des références aux assemblys WPF sont ajoutées au projet.
 
-    - Le contrôle `elementHost1` a un panneau de Smart Tags qui affiche les options d'hébergement disponibles.
+    - Le contrôle `elementHost1` a un panneau de Smart Tags qui affiche les options d’hébergement disponibles.
 
 4. Dans le **tâches ElementHost** panneau des balises actives, sélectionnez **ancrer dans le conteneur parent**.
 
@@ -102,11 +102,11 @@ Votre nouveau contrôle WPF est prêt à être utilisé sur le formulaire. Windo
 
 Windows Forms et WPF sont des technologies différentes, mais elles sont conçues pour interagir étroitement. Pour fournir l’apparence et le comportement dans vos applications plus riches, essayez ce qui suit :
 
-- Hébergez un contrôle Windows Forms dans une page WPF. Pour plus d’informations, consultez [procédure pas à pas : hébergement d’un contrôle de formulaires Windows dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Hébergez un contrôle Windows Forms dans une page WPF. Pour plus d’informations, consultez [Procédure pas à pas : Hébergement d’un Windows contrôle Forms dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Appliquez des styles visuels Windows Forms à votre contenu WPF. Pour plus d’informations, consultez [Guide pratique pour activer des styles visuels dans une application hybride](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+- Appliquez des styles visuels Windows Forms à votre contenu WPF. Pour plus d'informations, voir [Procédure : Activer des Styles visuels dans une Application hybride](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Modifiez le style de votre contenu WPF. Pour plus d’informations, consultez [procédure pas à pas : appliquer un style de contenu WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
+- Modifiez le style de votre contenu WPF. Pour plus d’informations, consultez [Procédure pas à pas : Contenu WPF de style](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,18 +1,18 @@
 ---
-title: 'Comment : créer un point de terminaison de service dans le code'
+title: 'Procédure : Créer un point de terminaison de Service dans le Code'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 38a7083662ce5ae50cc3ed7f03a224efa65622ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 143a43545646e180bcfdedb60c64bbbb7c83ac2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517472"
 ---
-# <a name="how-to-create-a-service-endpoint-in-code"></a>Comment : créer un point de terminaison de service dans le code
+# <a name="how-to-create-a-service-endpoint-in-code"></a>Procédure : Créer un point de terminaison de Service dans le Code
 Dans cet exemple, un contrat `ICalculator` est défini pour un service de calculatrice, le service est implémenté dans la classe `CalculatorService`, puis son point de terminaison est défini dans du code, où il est spécifié que le service doit utiliser la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Il est généralement conseillé de spécifier de façon déclarative les informations de liaison et d'adresse dans la configuration plutôt que de manière impérative dans le code. La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service. Plus généralement, le fait de laisser les informations de liaison et d’adresse hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application.  
@@ -39,12 +39,12 @@ Dans cet exemple, un contrat `ICalculator` est défini pour un service de calcul
      [!code-csharp[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#6)]
      [!code-vb[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#6)]  
   
-     Pour spécifier la liaison dans le code, mais utiliser les points de terminaison par défaut fournis par le runtime, transmettez l'adresse de base au constructeur lors de la création de <xref:System.ServiceModel.ServiceHost> et n'appelez pas <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+     Pour spécifier la liaison dans le code, mais utiliser les points de terminaison par défaut fournis par le runtime, transmettez l’adresse de base au constructeur lors de la création de <xref:System.ServiceModel.ServiceHost> et n’appelez pas <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  
   
-     Pour plus d’informations sur les points de terminaison par défaut, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Pour plus d’informations sur les points de terminaison par défaut, consultez [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour spécifier une liaison de service dans le code](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Spécifier une liaison de Service dans le Code](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

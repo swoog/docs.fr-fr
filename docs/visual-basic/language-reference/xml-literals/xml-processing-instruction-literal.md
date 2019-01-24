@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: e6d4c200822f58c7dbe5bf423282740d4aa86ac3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb9ad1d687203dff497e4cd451933a8bbbdf4bf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491231"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>Littéral d'instruction de traitement XML (Visual Basic)
 Littéral représentant un <xref:System.Xml.Linq.XProcessingInstruction> objet.  
@@ -32,7 +32,7 @@ Littéral représentant un <xref:System.Xml.Linq.XProcessingInstruction> objet.
  Obligatoire. Nom indiquant l’application les cibles d’instruction de traitement. Ne peut pas commencer par « xml » ou « XML ».  
   
  `piData`  
- Facultatif. Chaîne indiquant la manière dont l’application ciblée par `piName` doit traiter le document XML.  
+ Facultatif. Chaîne indiquant la façon dont l’application ciblée par `piName` doit traiter le document XML.  
   
  `?>`  
  Obligatoire. Indique la fin de l’instruction de traitement.  
@@ -41,27 +41,27 @@ Littéral représentant un <xref:System.Xml.Linq.XProcessingInstruction> objet.
  Objet <xref:System.Xml.Linq.XProcessingInstruction>.  
   
 ## <a name="remarks"></a>Notes  
- Littéraux d’instruction de traitement XML indiquent la manière dont les applications doivent traiter un document XML. Lorsqu’une application charge un document XML, l’application peut vérifier les instructions de traitement XML pour déterminer comment traiter le document. L’application interprète la signification de `piName` et `piData`.  
+ Littéraux d’instruction de traitement XML indiquent la façon dont les applications doivent traiter un document XML. Lorsqu’une application charge un document XML, l’application peut vérifier les instructions de traitement XML pour déterminer comment traiter le document. L’application interprète la signification de `piName` et `piData`.  
   
- Le littéral de document XML utilise la syntaxe est semblable à celle de l’instruction de traitement XML. Pour plus d’informations, consultez [littéral de Document XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
+ Le littéral de document XML utilise la syntaxe qui est similaire à celle de l’instruction de traitement XML. Pour plus d’informations, consultez [littéral de Document XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
 > [!NOTE]
->  Le `piName` élément ne peut pas commencer par les chaînes « xml » ou « XML », parce que la spécification XML 1.0 réserve ces identificateurs.  
+>  Le `piName` élément ne peut pas commencer par les chaînes « xml » ou « XML », car la spécification XML 1.0 réserve ces identificateurs.  
   
  Vous pouvez assigner un littéral d’instruction de traitement XML à une variable ou l’inclure dans un littéral de document XML.  
   
 > [!NOTE]
->  Un littéral XML peut couvrir plusieurs lignes sans avoir besoin de caractères de continuation de ligne. Cela vous permet de copier le contenu d’un document XML et le coller directement dans un programme Visual Basic.  
+>  Un littéral XML peut couvrir plusieurs lignes sans avoir besoin de caractères de continuation de ligne. Cela vous permet de copier le contenu d’un document XML et la coller directement dans un programme Visual Basic.  
   
- Le compilateur Visual Basic convertit le littéral d’instruction de traitement XML à un appel à la <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructeur.  
+ Le compilateur Visual Basic convertit le littéral d’instruction de traitement XML en un appel à la <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructeur.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant crée une instruction de traitement identifiant une feuille de style pour un document XML.  
   
  [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-processing-instruction-literal_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xml.Linq.XProcessingInstruction>  
- [Littéral de document XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Création de code XML dans Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Xml.Linq.XProcessingInstruction>
+- [Littéral de document XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Création de code XML dans Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

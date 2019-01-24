@@ -1,5 +1,5 @@
 ---
-title: 'Comment : surcharger une procédure qui accepte un nombre indéfini de paramètres (Visual Basic)'
+title: 'Procédure : Surcharger une procédure qui accepte un nombre indéfini de paramètres (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -10,57 +10,57 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 026dd59db135e8b195ae014aaff5e3a6a7846fc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54a8a65db6e1f532cd21e36eeb5b98670efd4289
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506392"
 ---
-# <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Comment : surcharger une procédure qui accepte un nombre indéfini de paramètres (Visual Basic)
-Si une procédure a un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) paramètre, vous ne pouvez pas définir une version surchargée acceptant un tableau unidimensionnel pour le tableau de paramètres. Pour plus d’informations, consultez « Implicite surcharges pour un paramètre ParamArray » dans [considérations relatives à la surcharge de procédures](./considerations-in-overloading-procedures.md).  
+# <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Procédure : Surcharger une procédure qui accepte un nombre indéfini de paramètres (Visual Basic)
+Si une procédure possède un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) paramètre, vous ne pouvez pas définir une version surchargée acceptant un tableau unidimensionnel pour le tableau de paramètres. Pour plus d’informations, consultez « Implicite des surcharges pour un paramètre ParamArray » dans [considérations dans les procédures de surcharge](./considerations-in-overloading-procedures.md).  
   
-### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Pour surcharger une procédure qui accepte un nombre variable de paramètres  
+### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Surcharger une procédure qui accepte un nombre variable de paramètres  
   
-1.  Vérifier que la procédure et les avantages de la logique de code à partir de l’appel surchargé versions plus que d’un `ParamArray` paramètre. Consultez « Surcharges et ParamArrays » dans [considérations sur les surcharges de procédures](./considerations-in-overloading-procedures.md).  
+1.  S’assurer que la procédure et les avantages de logique de code à partir de l’appel surchargées versions plus d’à partir d’un `ParamArray` paramètre. Consultez « Surcharges et ParamArrays » dans [considérations sur les surcharges de procédures](./considerations-in-overloading-procedures.md).  
   
-2.  Déterminer le nombre de valeurs fournies que la procédure doit accepter dans la partie variable de la liste de paramètres. Cela peut inclure le cas d’aucune valeur, et il peut inclure le cas d’un tableau unidimensionnel.  
+2.  Déterminer les numéros des valeurs fournies que la procédure doit accepter dans la partie variable de la liste de paramètres. Cela peut inclure le cas d’aucune valeur, et il peut inclure le cas d’un tableau unidimensionnel unique.  
   
-3.  Pour chaque nombre acceptable de valeurs fournies, écrivez une `Sub` ou `Function` instruction de déclaration qui définit la liste de paramètres correspondants. N’utilisez pas le `Optional` ou `ParamArray` mot clé dans la version surchargée.  
+3.  Pour chaque nombre acceptable de valeurs fournies, écrivez un `Sub` ou `Function` instruction de déclaration qui définit la liste des paramètres correspondants. N’utilisez pas le `Optional` ou `ParamArray` mot clé dans la version surchargée.  
   
-4.  Dans chaque déclaration, faites précéder le `Sub` ou `Function` mot clé avec la [surcharges](../../../../visual-basic/language-reference/modifiers/overloads.md) (mot clé).  
+4.  Dans chaque déclaration, faites précéder le `Sub` ou `Function` mot clé avec le [surcharges](../../../../visual-basic/language-reference/modifiers/overloads.md) mot clé.  
   
-5.  Après chaque déclaration, écrivez le code de procédure qui doit s’exécuter lorsque le code appelant fournit des valeurs correspondant à la liste de paramètres de cette déclaration.  
+5.  Après chaque déclaration, écrivez le code de procédure qui doit s’exécuter lorsque le code appelant fournit des valeurs correspondant à la liste des paramètres de cette déclaration.  
   
 6.  Terminez chaque procédure par le `End Sub` ou `End Function` instruction comme il convient.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre une procédure définie avec un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) paramètre, puis un jeu équivalent de procédures surchargées.  
+ L’exemple suivant montre une procédure définie avec un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) paramètre, puis sur un ensemble de procédures surchargées équivalent.  
   
  [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
   
  [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
   
- Vous ne pouvez pas surcharger une procédure avec une liste de paramètres qui prend un tableau unidimensionnel pour le tableau de paramètres. Toutefois, vous pouvez utiliser les signatures des autres surcharges implicites. Les déclarations suivantes illustrent ce principe.  
+ Vous ne pouvez pas surcharger une procédure avec une liste de paramètres qui accepte un tableau unidimensionnel pour le tableau de paramètres. Toutefois, vous pouvez utiliser les signatures des autres surcharges implicites. Les déclarations suivantes illustrent ce principe.  
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- Le code dans les versions surchargées n’a pas vérifier si le code appelant a fourni une ou plusieurs valeurs pour le `ParamArray` paramètre, ou si c’est le cas, combien. Visual Basic passe le contrôle à la version correspondant à la liste d’arguments appelante.  
+ Le code dans les versions surchargées n’a pas tester si le code appelant a fourni une ou plusieurs valeurs pour le `ParamArray` paramètre, ou si c’est le cas, combien. Visual Basic passe le contrôle à la version correspondant à la liste d’arguments appelante.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Car une procédure avec un `ParamArray` paramètre équivaut à un ensemble de versions surchargées, vous ne pouvez pas surcharger une procédure avec une liste de paramètres correspondant à chacune de ces surcharges implicites. Pour plus d’informations, consultez [considérations relatives à la surcharge de procédures](./considerations-in-overloading-procedures.md).  
+ Car une procédure avec un `ParamArray` paramètre équivaut à un ensemble de versions surchargées, vous ne pouvez pas surcharger une procédure avec une liste de paramètres correspondant à chacune de ces surcharges implicites. Pour plus d’informations, consultez [considérations dans les procédures de surcharge](./considerations-in-overloading-procedures.md).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
- Si vous travaillez dans un tableau qui peut être indéfiniment volumineux, il existe un risque de saturer la capacité interne de votre application. Si vous acceptez un tableau de paramètres, vous devez tester la longueur du tableau passé le code appelant et prenez les mesures appropriées si elle est trop grande pour votre application.  
+ Chaque fois que vous avez affaire à un tableau qui peut s’avérer indéfiniment volumineux, il existe un risque de saturer la capacité interne de votre application. Si vous acceptez un tableau de paramètres, vous devez tester la longueur du tableau passé par le code appelant à celui-ci et prendre les mesures appropriées si elle est trop grande pour votre application.  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédures](./index.md)  
- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)  
- [Paramètres facultatifs](./optional-parameters.md)  
- [tableaux de paramètres](./parameter-arrays.md)  
- [Surcharge de procédure](./procedure-overloading.md)  
- [Procédures de dépannage](./troubleshooting-procedures.md)  
- [Guide pratique : définir plusieurs versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Guide pratique : appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)  
- [Guide pratique : surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Résolution de surcharge](./overload-resolution.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédures](./index.md)
+- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
+- [Paramètres facultatifs](./optional-parameters.md)
+- [tableaux de paramètres](./parameter-arrays.md)
+- [Surcharge de procédure](./procedure-overloading.md)
+- [Procédures de dépannage](./troubleshooting-procedures.md)
+- [Guide pratique pour Définir plusieurs Versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Guide pratique pour Appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)
+- [Guide pratique pour Surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Résolution de surcharge](./overload-resolution.md)
