@@ -1,22 +1,22 @@
 ---
-title: 'Comment : déterminer si deux objets sont identiques (Visual Basic)'
+title: 'Procédure : Déterminer si deux objets sont identiques (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: bbcac2fc51e57427b125ec2f5e68f017a60186d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62d73b6c3d706d9990be7783f0f3461fc0783d9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512968"
 ---
-# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Comment : déterminer si deux objets sont identiques (Visual Basic)
+# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Procédure : Déterminer si deux objets sont identiques (Visual Basic)
 En Visual Basic, deux références de variable sont considérés comme identiques si leurs pointeurs sont les mêmes, autrement dit, si les deux variables pointent vers la même instance de classe en mémoire. Par exemple, dans une application Windows Forms, vous souhaiterez effectuer une comparaison pour déterminer si l’instance actuelle (`Me`) est identique à une instance particulière, tel que `Form2`.  
   
- Visual Basic fournit deux opérateurs pour comparer des pointeurs. Le [est un opérateur](../../../../visual-basic/language-reference/operators/is-operator.md) retourne `True` si les objets sont identiques et le [opérateur IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) retourne `True` si elles ne sont pas.  
+ Visual Basic fournit deux opérateurs pour comparer des pointeurs. Le [opérateur Is](../../../../visual-basic/language-reference/operators/is-operator.md) retourne `True` si les objets sont identiques et le [opérateur IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) retourne `True` si elles ne sont pas.  
   
 ## <a name="determining-if-two-objects-are-identical"></a>Comment déterminer si deux objets sont identiques  
   
@@ -24,18 +24,18 @@ En Visual Basic, deux références de variable sont considérés comme identique
   
 1.  Configurer un `Boolean` expression pour tester les deux objets.  
   
-2.  Dans votre expression de test, utilisez le `Is` (opérateur) avec les deux objets comme opérandes.  
+2.  Dans votre expression de test, utilisez le `Is` opérateur avec les deux objets en tant qu’opérandes.  
   
      `Is` Retourne `True` si les objets pointent vers la même instance de classe.  
   
 ## <a name="determining-if-two-objects-are-not-identical"></a>Déterminer si deux objets ne sont pas identiques  
- Vous souhaitez parfois exécuter une action si les deux objets ne sont pas identiques, et il peut s’avérer difficile de combiner `Not` et `Is`, par exemple `If Not obj1 Is obj2`. Dans ce cas, vous pouvez utiliser la `IsNot` opérateur.  
+ Parfois, vous souhaitez effectuer une action si les deux objets ne sont pas identiques, et il peut être délicat de combiner `Not` et `Is`, par exemple `If Not obj1 Is obj2`. Dans ce cas, vous pouvez utiliser le `IsNot` opérateur.  
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>Pour déterminer si deux objets ne sont pas identiques  
   
 1.  Configurer un `Boolean` expression pour tester les deux objets.  
   
-2.  Dans votre expression de test, utilisez le `IsNot` (opérateur) avec les deux objets comme opérandes.  
+2.  Dans votre expression de test, utilisez le `IsNot` opérateur avec les deux objets en tant qu’opérandes.  
   
      `IsNot` Retourne `True` si les objets ne pointent pas vers la même instance de classe.  
   
@@ -50,11 +50,11 @@ En Visual Basic, deux références de variable sont considérés comme identique
   
  `objA identical to objC? True`  
   
-## <a name="see-also"></a>Voir aussi  
- [Object (type de données)](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Valeurs des variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Is (opérateur)](../../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot (opérateur)](../../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Guide pratique : déterminer si deux objets sont liés](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [Me, My, MyBase et MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Voir aussi
+- [Object (type de données)](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Valeurs des variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Is (opérateur)](../../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot (opérateur)](../../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Guide pratique pour Déterminer si deux objets sont liés](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Me, My, MyBase et MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

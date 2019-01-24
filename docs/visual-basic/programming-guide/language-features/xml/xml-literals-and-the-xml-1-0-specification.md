@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: b871a7edd8285c26148cf1393c53f537dfd40c56
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 5f40eb8c3fd1a90a285dfb660a48819d3d38c4f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560566"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Littéraux XML et spécification XML 1.0 (Visual Basic)
-La syntaxe de littéral XML en Visual Basic prend en charge la plupart de la spécification Extensible Markup Language (XML) 1.0. Pour plus d’informations sur la spécification XML 1.0, consultez [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) sur le site Web de W3C.  
+La syntaxe des littéraux XML en Visual Basic prend en charge la plupart de la spécification Extensible Markup Language (XML) 1.0. Pour plus d’informations sur la spécification XML 1.0, consultez [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) sur le site Web de W3C.  
   
 ## <a name="what-visual-basic-does-not-support"></a>Ce que Visual Basic ne prend pas en charge  
   
@@ -22,13 +22,13 @@ La syntaxe de littéral XML en Visual Basic prend en charge la plupart de la sp�
   
 -   Un littéral XML ne peut pas contenir plus de 65 535 caractères sur une seule ligne.  
   
--   Les préfixes d’espace de noms XML, les noms d’éléments et les noms d’attribut ne peut pas contenir plus de 1 024 caractères.  
+-   Préfixes d’espace de noms XML, les noms d’éléments et les noms d’attribut ne peut pas contenir plus de 1 024 caractères.  
   
 ## <a name="extra-features-that-visual-basic-supports"></a>Fonctionnalités supplémentaires qui prend en charge de Visual Basic  
   
--   La syntaxe d’expression incorporée autorisée dans les littéraux de document et l’élément n’est pas un XML valide.  
+-   La syntaxe d’expression incorporée autorisée dans les littéraux de document et élément n’est pas un XML valide.  
   
-## <a name="see-also"></a>Voir aussi  
- [Création de code XML dans Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Littéral de document XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [Littéral d’élément XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+## <a name="see-also"></a>Voir aussi
+- [Création de code XML dans Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Littéral de document XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [Littéral d’élément XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

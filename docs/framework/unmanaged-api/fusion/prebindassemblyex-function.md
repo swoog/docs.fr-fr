@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570877"
 ---
 # <a name="prebindassemblyex-function"></a>Fonction PreBindAssemblyEx
-Obtient le nom complet de post-stratégie pour un assembly.  
+Obtient le nom complet de la stratégie après d’un assembly.  
   
  Cette fonction prend en charge l’infrastructure .NET Framework et n’est pas destinée à être utilisée directement depuis votre code.  
   
@@ -43,7 +43,7 @@ HRESULT PreBindAssemblyEx (
   
 #### <a name="parameters"></a>Paramètres  
  `pAppCtx`  
- [in] Identifie le contexte d’application.  
+ [in] Identifie le contexte de l’application.  
   
  `pName`  
  [in] Identifie le nom de l’assembly.  
@@ -55,22 +55,22 @@ HRESULT PreBindAssemblyEx (
  [in] Identifie la version du runtime.  
   
  `ppNamePostPolicy`  
- [out] Contient le nom complet de post-stratégie.  
+ [out] Contient le nom complet de la stratégie après.  
   
  `pvReserved`  
- [in] Réservé pour une future extensibilité. `pvReserved` doit être une référence null.  
+ [in] Réservé pour une extensibilité future. `pvReserved` doit être une référence null.  
   
 ## <a name="remarks"></a>Notes  
  Le `ppNamePostPolicy` paramètre de sortie est défini uniquement si la fonction retourne HRESULT FUSION_E_REF_DEF_MISMATCH. Sinon, elle a la valeur null.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions statiques globales de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions statiques globales de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

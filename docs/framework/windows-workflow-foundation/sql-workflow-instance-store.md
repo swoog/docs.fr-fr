@@ -2,12 +2,12 @@
 title: Magasin d'instances de workflow SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: d35cf6e94b010291276b5a543df1038715a0d50c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6af42fa8ae119ba8fbc08e00cd5b3800521943a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538295"
 ---
 # <a name="sql-workflow-instance-store"></a>Magasin d'instances de workflow SQL
 Le [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] est fourni avec le magasin d'instances de workflow SQL, qui permet aux workflows de rendre les informations d'état persistantes à propos des instances de workflow dans SQL Server 2005 ou dans une base de données SQL Server 2008. Cette fonctionnalité est implémentée principalement dans le formulaire de la classe <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, qui dérive de la classe <xref:System.Runtime.DurableInstancing.InstanceStore> abstraite de l'infrastructure de persistance. La fonctionnalité de magasin d'instances de workflow SQL constitue un fournisseur de persistance SQL, qui est une implémentation concrète de l'API de persistance qu'un hôte utilise pour envoyer des commandes de persistance au magasin.  
@@ -24,7 +24,7 @@ Le [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 
   
 -   [Propriétés du magasin d’instances de workflow SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
   
--   [Guide pratique pour activer la persistance SQL dans les workflows et les services de workflow](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Guide pratique pour Activer la persistance SQL pour les Workflows et les Services de Workflow](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Activation d’instance](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
   
@@ -36,5 +36,5 @@ Le [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 
   
 -   [Base de données de persistance SQL Server](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples de persistance](https://go.microsoft.com/fwlink/?LinkID=177735)
+## <a name="see-also"></a>Voir aussi
+- [Exemples de persistance](https://go.microsoft.com/fwlink/?LinkID=177735)

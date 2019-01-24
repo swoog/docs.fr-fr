@@ -2,12 +2,12 @@
 title: ASMX Client with a WCF Service
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: d526bc01d7809aa2672dcfcf194ad9c7d2e7baa5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527509"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>ASMX Client with a WCF Service
 Cet exemple montre comment créer un service à l’aide de Windows Communication Foundation (WCF) et accéder ensuite au service à partir d’un client non-WCF, tel qu’un client ASMX.  
@@ -138,7 +138,7 @@ Press <ENTER> to terminate client.
 3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Pour plus d’informations sur le passage et le retour des données complexes types, consultez : [une liaison de données dans un Client de formulaires Windows](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [une liaison de données dans un Windows Presentation Foundation Client](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), et [données Liaison dans un Client ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  Pour plus d’informations sur le passage et le retour des données complexes types, consultez : [Liaison de données dans un Windows Forms Client](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [liaison de données dans un Windows Presentation Foundation Client](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), et [liaison de données dans un Client ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

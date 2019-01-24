@@ -5,37 +5,37 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting and styling
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-ms.openlocfilehash: d38620c321fb12b9f489fd086e222b7780337ab3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 176ee23c48d8b6678cb1fd9ebbf262daa1294318
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517784"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Mises en forme et styles de base dans le contrôle DataGridView Windows Forms
-Le `DataGridView` contrôle vous permet de définir l’apparence de base des cellules et le format d’affichage des valeurs de cellule. Vous pouvez définir d’apparence et la mise en forme de styles pour les cellules individuelles, pour les cellules dans des colonnes spécifiques et des lignes ou pour toutes les cellules dans le contrôle en définissant les propriétés de la `DataGridViewCellStyle` objets accédés par divers `DataGridView` propriétés du contrôle. En outre, vous pouvez modifier ces styles de façon dynamique en fonction de facteurs tels que la valeur de cellule en gérant le `CellFormatting` événement.  
+Le `DataGridView` contrôle vous permet de définir l’apparence de base des cellules et le format d’affichage des valeurs de cellule. Vous pouvez définir d’apparence et de mise en forme de styles pour les cellules individuelles, pour les cellules des colonnes spécifiques et des lignes ou pour toutes les cellules dans le contrôle en définissant les propriétés de la `DataGridViewCellStyle` objets accédés par divers `DataGridView` propriétés du contrôle. En outre, vous pouvez modifier ces styles dynamiquement en fonction de facteurs tels que la valeur de cellule en gérant le `CellFormatting` événement.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour modifier les styles de bordures et de quadrillage dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
+ [Guide pratique pour Modifier la bordure et les Styles de quadrillage dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
  Explique comment définir `DataGridView` propriétés qui définissent l’apparence de la bordure du contrôle et les lignes de la limite entre les cellules.  
   
  [Styles de cellules dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
- Décrit la `DataGridViewCellStyle` classe et comment les propriétés de ce type interagissent pour définir comment les cellules sont affichées dans le contrôle.  
+ Décrit la `DataGridViewCellStyle` classe et la façon dont les propriétés de ce type interagissent pour définir l’affichent des cellules dans le contrôle.  
   
- [Guide pratique pour définir les styles de cellules par défaut pour le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
- Décrit comment utiliser `DataGridViewCellStyle` propriétés pour définir l’apparence par défaut des cellules dans les lignes et colonnes spécifiques et dans l’ensemble du contrôle.  
+ [Guide pratique pour Définir des Styles de cellules par défaut pour le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ Décrit comment utiliser `DataGridViewCellStyle` propriétés pour définir l’apparence par défaut des cellules dans des lignes et colonnes et dans l’ensemble du contrôle.  
   
- [Guide pratique pour mettre en forme des données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+ [Guide pratique pour Format des données dans les Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
  Décrit comment mettre en forme les valeurs d’affichage de cellule à l’aide de `DataGridViewCellStyle` propriétés.  
   
- [Guide pratique pour définir des styles de police et de couleur dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+ [Guide pratique pour Définir des Styles de police et couleur dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
  Décrit comment utiliser le `DefaultCellStyle` propriété à définir base afficher les caractéristiques pour toutes les cellules dans le contrôle.  
   
- [Guide pratique pour définir des styles de lignes en alternance pour le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
- Décrit comment créer un effet de type livre comptable dans le contrôle à l’aide de lignes en alternance qui sont affichent différemment.  
+ [Guide pratique pour Définir les Styles de ligne en alternance pour le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+ Décrit comment créer un effet de livre dans le contrôle à l’aide de lignes en alternance qui sont affichent différemment.  
   
- [Guide pratique pour utiliser le modèle de ligne pour personnaliser les lignes du contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
- Décrit comment utiliser le `RowTemplate` propriété à définir les propriétés de ligne qui seront utilisées pour toutes les lignes dans le contrôle.  
+ [Guide pratique pour Utiliser le modèle de ligne pour personnaliser les lignes dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+ Décrit comment utiliser le `RowTemplate` propriété pour définir les propriétés de ligne qui seront utilisées pour toutes les lignes dans le contrôle.  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Forms.DataGridView>  
@@ -57,5 +57,5 @@ Le `DataGridView` contrôle vous permet de définir l’apparence de base des ce
  [Fonctionnalités de base liées aux colonnes, lignes et cellules dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Fournit des rubriques qui décrivent couramment utilisé des propriétés de cellule, ligne et colonne.  
   
-## <a name="see-also"></a>Voir aussi  
- [DataGridView, contrôle](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- [DataGridView, contrôle](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

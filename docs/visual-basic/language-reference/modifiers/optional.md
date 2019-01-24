@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: f88020c7407fb9c91e06bc2ee177773171e344fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7db5f8afdfe61709aba9569bcee8c0d3aa6ee44f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527040"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Spécifie qu’un argument de procédure peut être omis lorsque la procédure est appelée.  
@@ -37,7 +37,7 @@ Spécifie qu’un argument de procédure peut être omis lorsque la procédure e
 >  Lorsque vous appelez une procédure avec ou sans paramètres facultatifs, vous pouvez passer des arguments par position ou par nom. Pour plus d’informations, consultez [en passant les Arguments par Position et par nom](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
   
 > [!NOTE]
->  Vous pouvez également définir une procédure avec des paramètres facultatifs à l’aide de la surcharge. Si vous avez un seul paramètre facultatif, vous pouvez définir deux versions surchargées de la procédure, un qui accepte le paramètre et un autre. Pour plus d’informations, consultez [surcharge de procédure](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+>  Vous pouvez également définir une procédure avec des paramètres facultatifs à l’aide de la surcharge. Si vous avez un seul paramètre facultatif, vous pouvez définir deux versions surchargées de la procédure, un autre qui accepte le paramètre et une qui ne fait pas. Pour plus d'informations, consultez [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant définit une procédure qui possède un paramètre facultatif.  
@@ -62,11 +62,11 @@ End Function
 ```  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment appeler une procédure avec des arguments passés par position et avec des arguments passés par nom. La procédure comporte deux paramètres facultatifs.  
+ L’exemple suivant montre comment appeler une procédure avec des arguments passés par position et avec les arguments passés par nom. La procédure comporte deux paramètres facultatifs.  
   
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Paramètres facultatifs](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Paramètres facultatifs](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)

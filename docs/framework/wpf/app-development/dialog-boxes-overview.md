@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 649d60a2d50237827d5f334e934103b234a42724
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79ea8c7df88a6253fb3fb44d072fbe366bcc720b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510154"
 ---
 # <a name="dialog-boxes-overview"></a>Vue d'ensemble des boîtes de dialogue
 Les applications autonomes ont en général une fenêtre principale qui affiche les données principales sur lesquelles l’application fonctionne et expose les fonctionnalités pour traiter ces données via [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] des mécanismes tels que les barres de menus, barres d’outils et barres d’état. Une application non triviale peut également afficher des fenêtres supplémentaires pour effectuer les opérations suivantes :  
@@ -344,7 +344,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 [!code-csharp[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#finddialogclosecodebehind2)]
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Exemple de boîte de dialogue](https://go.microsoft.com/fwlink/?LinkID=159984)  
- [Exemple de contrôle personnalisé ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de Popup](../../../../docs/framework/wpf/controls/popup-overview.md)
+- [Exemple de boîte de dialogue](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [Exemple de contrôle personnalisé ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : spécifier la source de liaison'
+title: 'Procédure : Spécifier la source de liaison'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 333a85bc59ded3fd42bef6aff5845c9a6ddeb49b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577124"
 ---
-# <a name="how-to-specify-the-binding-source"></a>Comment : spécifier la source de liaison
+# <a name="how-to-specify-the-binding-source"></a>Procédure : Spécifier la source de liaison
 Dans la liaison de données, l’objet de source de liaison fait référence à l’objet à partir duquel vous obtenez vos données. Cette rubrique décrit les différentes façons de spécifier la source de liaison.  
   
 ## <a name="example"></a>Exemple  
@@ -39,14 +39,14 @@ Dans la liaison de données, l’objet de source de liaison fait référence à 
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|Cette propriété vous permet de définir la source à une instance d’un objet. Si vous n’avez pas besoin de la fonctionnalité de l’établissement d’une étendue dans laquelle plusieurs propriétés héritent du même contexte de données, vous pouvez utiliser la <xref:System.Windows.Data.Binding.Source%2A> propriété au lieu du `DataContext` propriété. Pour plus d'informations, consultez <xref:System.Windows.Data.Binding.Source%2A>.|  
+|<xref:System.Windows.Data.Binding.Source%2A>|Cette propriété vous permet de définir la source à une instance d’un objet. Si vous ne devez pas les fonctionnalités de l’établissement d’une portée dans laquelle plusieurs propriétés héritent du même contexte de données, vous pouvez utiliser la <xref:System.Windows.Data.Binding.Source%2A> propriété au lieu du `DataContext` propriété. Pour plus d'informations, consultez <xref:System.Windows.Data.Binding.Source%2A>.|  
 |<xref:System.Windows.Data.Binding.RelativeSource%2A>|Cela est utile lorsque vous souhaitez spécifier la source par rapport à l’emplacement de votre cible de liaison. Vous pouvez utiliser cette propriété lorsque vous souhaitez lier une propriété de votre élément à une autre propriété du même élément ou si vous définissez une liaison dans un style ou un modèle. Pour plus d'informations, consultez <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
 |<xref:System.Windows.Data.Binding.ElementName%2A>|Vous spécifiez une chaîne qui représente l’élément que vous voulez lier. Cela est utile lorsque vous souhaitez effectuer une liaison à la propriété d’un autre élément sur votre application. Par exemple, si vous souhaitez utiliser un <xref:System.Windows.Controls.Slider> pour contrôler la hauteur d’un autre contrôle dans votre application, ou si vous souhaitez lier le <xref:System.Windows.Controls.ContentControl.Content%2A> de votre contrôle à la <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> propriété de votre <xref:System.Windows.Controls.ListBox> contrôle. Pour plus d'informations, consultez <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>  
- [Héritage de la valeur de propriété](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Vue d'ensemble des déclarations de liaison](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
+- [Héritage de la valeur de propriété](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Vue d'ensemble des déclarations de liaison](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

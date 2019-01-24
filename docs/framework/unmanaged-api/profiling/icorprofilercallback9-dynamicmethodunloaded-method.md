@@ -10,17 +10,17 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16b3334647922f845645e6eb58db3146f4c9b936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27e68c82a04b78a18f51f0a2c9ec712036521368
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513540"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::DynamicMethodUnloaded (méthode)
 [Pris en charge dans le .NET Framework 4.7.2 et versions ultérieures]  
   
-Notifie le profileur chaque fois qu’une méthode dynamique est garbage collector et déchargé par la suite.  
+Notifie le profileur chaque fois qu’une méthode dynamique est garbage collectées et déchargé par la suite.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,19 +32,19 @@ HRESULT DynamicMethodUnloaded(
   
 #### <a name="parameters"></a>Paramètres  
 [in] `functionId`  
-Identificateur de la fonction en mémoire qui a été garbage collector et de déchargement.   
+L’identificateur de la fonction en mémoire qui a été garbage collectées et déchargé.   
 
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[ICorProfilerCallback8.DynamicMethodJITCompilationStarted (méthode)](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)  
-[ICorProfilerCallback8.DynamicMethodJITCompilationFinished (méthode)](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)  
-[Interface de ICorProfilerCallback9](icorprofilercallback9-interface.md)   
-[COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS](cor-prf-high-monitor-enumeration.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerCallback8.DynamicMethodJITCompilationStarted (méthode)](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8.DynamicMethodJITCompilationFinished (méthode)](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [ICorProfilerCallback9, interface](icorprofilercallback9-interface.md)
+- [COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS](cor-prf-high-monitor-enumeration.md)

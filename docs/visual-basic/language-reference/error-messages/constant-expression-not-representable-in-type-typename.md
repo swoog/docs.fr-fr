@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: 0556697612439cf8216f6bd2a74c88a0ebb4daf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0acfb26ce75e88c5967233fb5496306deec7029
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529073"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>Expression constante n’est pas représentable dans le type &#39; &lt;typename&gt;&#39;
 Vous essayez d’évaluer une constante qui ne tient pas dans le type cible, généralement car elle dépasse la plage.  
@@ -21,8 +21,8 @@ Vous essayez d’évaluer une constante qui ne tient pas dans le type cible, gé
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Modifier le type de cible à ce que peut gérer la constante.  
+1.  Modifier le type de cible pour qu’il peut gérer la constante.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des constantes](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Constantes et énumérations](../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble des constantes](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Constantes et énumérations](../../../visual-basic/language-reference/constants-and-enumerations.md)

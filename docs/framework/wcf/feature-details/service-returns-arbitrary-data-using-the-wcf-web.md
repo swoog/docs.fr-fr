@@ -1,16 +1,16 @@
 ---
-title: "Procédure : créer un service qui retourne des données arbitraires à l'aide du modèle de programmation Web HTTP WCF"
+title: 'Procédure : Créer un Service qui retourne des données arbitraires à l’aide du modèle de programmation HTTP Web WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576393"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procédure : créer un service qui retourne des données arbitraires à l'aide du modèle de programmation Web HTTP WCF
-Les développeurs doivent parfois avoir le contrôle total de la manière dont les données sont retournées à partir d'une opération de service. C’est le cas lorsqu’une opération de service doit retourner des données dans un format non pris en charge par WCF. Cette rubrique explique à l’aide du modèle de programmation WCF WEB HTTP pour créer un tel service. Ce service a une opération qui retourne un flux de données.  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procédure : Créer un Service qui retourne des données arbitraires à l’aide du modèle de programmation HTTP Web WCF
+Les développeurs doivent parfois avoir le contrôle total de la manière dont les données sont retournées à partir d'une opération de service. C’est le cas lorsqu’une opération de service doit retourner des données dans un format non pris en charge par WCF. Cette rubrique décrit l’utilisation du modèle de programmation WCF WEB HTTP pour créer un tel service. Ce service a une opération qui retourne un flux de données.  
   
 ### <a name="to-implement-the-service-contract"></a>Pour implémenter le contrat de service  
   
@@ -25,7 +25,7 @@ Les développeurs doivent parfois avoir le contrôle total de la manière dont l
         }  
     ```  
   
-     Étant donné que la méthode retourne un <xref:System.IO.Stream>, WCF suppose que l’opération a un contrôle complet sur le nombre d’octets retournés par l’opération de service et s’applique sans mise en forme aux données qui sont retournées.  
+     Étant donné que la méthode retourne un <xref:System.IO.Stream>, WCF suppose que l’opération a un contrôle complet sur les octets qui sont retournées à partir de l’opération de service et il applique sans mise en forme aux données qui sont retournées.  
   
 2.  Implémentez le contrat de service. Le contrat a une seule opération (`GetImage`). Cette méthode génère une image bitmap, puis l'enregistre dans un <xref:System.IO.MemoryStream> au format .jpg. L'opération retourne ensuite ce flux de données à l'appelant.  
   
@@ -175,5 +175,5 @@ namespace RawImageService
   
 -   Lors de la compilation de l'exemple de code, faites référence à System.ServiceModel.dll et System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>Voir aussi  
- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Voir aussi
+- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

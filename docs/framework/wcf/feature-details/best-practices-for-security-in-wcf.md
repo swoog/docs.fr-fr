@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 25cc1a1e4c6e7e7d3f695c06eade8be546ee6c05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531965"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Meilleures pratiques pour la sécurité dans WCF
 Les sections suivantes répertorient les bonnes pratiques à prendre en compte durant la création d’applications sécurisées à l’aide de WCF (Windows Communication Foundation). Pour plus d’informations sur la sécurité, consultez [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Considérations sur la sécurité des données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) et [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -24,7 +24,7 @@ Les sections suivantes répertorient les bonnes pratiques à prendre en compte d
  WS-SecurityPolicy permet aux services de publier des informations concernant leurs propres identités dans les métadonnées. Quand elles sont récupérées via `svcutil` ou d’autres méthodes telles que <xref:System.ServiceModel.Description.WsdlImporter>, ces informations d’identité sont traduites en propriétés d’identité des adresses du point de terminaison de service WCF. Les clients qui ne vérifient pas l'exactitude et la validité de ces identités de service contournent efficacement l'authentification des services. Un service malveillant peut exploiter ces clients pour transférer des informations d'identification et exécuter d'autres attaques « de l'intercepteur » en modifiant l'identité prétendue dans son WSDL.  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>Utiliser des certificats X509 au lieu de NTLM  
- WCF propose deux mécanismes d’authentification pair à pair : les certificats X509 (utilisés par le canal homologue) et l’authentification Windows, où une négociation SSPI passe à une version antérieure, de Kerberos à NTLM.  L'authentification basée sur des certificats utilisant des tailles de clé de 1 024 bits ou plus est préférée à NTLM pour plusieurs raisons :  
+ WCF offre deux mécanismes d’authentification de peer-to-peer : X509 certificats (utilisés par le canal homologue) et l’authentification Windows où une négociation SSPI passe de Kerberos à NTLM.  L'authentification basée sur des certificats utilisant des tailles de clé de 1 024 bits ou plus est préférée à NTLM pour plusieurs raisons :  
   
 -   la disponibilité de l'authentification mutuelle ;  
   
@@ -45,7 +45,7 @@ Les sections suivantes répertorient les bonnes pratiques à prendre en compte d
  Soyez sûr de la source de vos métadonnées et vérifiez qu'elles n'ont pas été falsifiées. Les métadonnées récupérées à l'aide du protocole HTTP sont envoyées en texte clair et peuvent être falsifiées. Si le service utilise les propriétés <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> et <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, utilisez l'URL que le créateur du service vous a fournie pour télécharger les données à l'aide du protocole HTTPS.  
   
 ## <a name="publish-metadata-using-security"></a>Publier des métadonnées à l'aide de la sécurité  
- Pour empêcher la falsification des métadonnées publiées d'un service, sécurisez le point de terminaison d'échange de métadonnées avec la sécurité de transport ou au niveau du message. Pour plus d’informations, consultez [Publication de points de terminaison de métadonnées](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) et [Guide pratique pour publier les métadonnées d’un service à l’aide de code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Pour empêcher la falsification des métadonnées publiées d'un service, sécurisez le point de terminaison d'échange de métadonnées avec la sécurité de transport ou au niveau du message. Pour plus d’informations, consultez [publication points de terminaison de métadonnées](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) et [Comment : Publier les métadonnées d’un Service à l’aide de Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Utiliser un émetteur local  
  Si une liaison et une adresse d’émetteur sont spécifiées pour une liaison donnée, l’émetteur local n’est pas utilisé pour les points de terminaison qui utilisent cette liaison. Les clients qui prévoient d’utiliser systématiquement l’émetteur local doivent s’assurer de ne pas utiliser de liaison de ce type ou de modifier la liaison afin que l’adresse de l’émetteur ait la valeur null.  
@@ -56,7 +56,7 @@ Les sections suivantes répertorient les bonnes pratiques à prendre en compte d
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Affectation de la valeur True à SecurityBindingElement.IncludeTimestamp sur des liaisons personnalisées  
  Lorsque vous créez une liaison personnalisée, vous devez affecter la valeur <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> à `true`. Sinon, si <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> a la valeur `false` et que le client utilise un jeton basé sur une clé asymétrique comme un certificat X509, le message ne sera pas signé.  
   
-## <a name="see-also"></a>Voir aussi  
- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Considérations sur la sécurité des données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+## <a name="see-also"></a>Voir aussi
+- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Considérations sur la sécurité des données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

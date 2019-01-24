@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6c64b98f3b5ab0445b076b0d3bacfaa398e26f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c768091f84157ea651c018fa89cdeafcce6c02df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537671"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference, méthode
 Obtient un pointeur vers le [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure représentée par ce [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) objet.  
@@ -42,18 +42,18 @@ HRESULT GetReference (
  [out] Retourné `FUSION_INSTALL_REFERENCE` pointeur.  
   
  `dwFlags`  
- [in] Réservé pour une future extensibilité. `dwFlags` doit être 0 (zéro).  
+ [in] Réservé pour une extensibilité future. `dwFlags` doit être 0 (zéro).  
   
  `pvReserved`  
- [in] Réservé pour une future extensibilité. `pvReserved` doit être une référence null.  
+ [in] Réservé pour une extensibilité future. `pvReserved` doit être une référence null.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IInstallReferenceItem, interface](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- [FUSION_INSTALL_REFERENCE, structure](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a>Voir aussi
+- [IInstallReferenceItem, interface](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [FUSION_INSTALL_REFERENCE, structure](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

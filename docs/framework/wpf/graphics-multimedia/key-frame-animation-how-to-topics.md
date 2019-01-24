@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 4efd6ea1ee5987efcabb038152fca7f1ed90c8f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510427"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Rubriques "Comment" relatives aux animations d'images clés
 Les rubriques de cette section montrent comment utiliser des animations d’image clé pour animer plus de deux valeurs de propriété et contrôler l’interpolation.  
@@ -37,7 +37,7 @@ Les rubriques de cette section montrent comment utiliser des animations d’imag
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

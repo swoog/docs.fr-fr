@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7e24bf24785538863738fe2c006834a77f47e1ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496086"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implémentation de la logique métier (LINQ to SQL)
 Le terme "logique métier" utilisé dans cette rubrique désigne toutes les règles ou tests de validation personnalisés que vous appliquez aux données avant de les insérer, de les mettre à jour ou de les supprimer de la base de données. La logique métier est parfois également désignée par le terme "règles métier" ou "logique de domaine". Dans les applications multicouches, elle est généralement conçue comme une couche logique de manière à ce qu'elle puisse être modifiée indépendamment de la couche Présentation ou de la couche Data Access. La logique métier peut être appelée par la couche Data Access avant ou après toute mise à jour, insertion ou suppression de données dans la base de données.  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- Si vous implémentez les méthodes Insert, Update et Delete dans votre classe partielle, le runtime [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] les appelle à la place de ses propres méthodes par défaut lorsque <xref:System.Data.Linq.DataContext.SubmitChanges%2A> est appelé. Cela vous permet de substituer le comportement par défaut pour les opérations de création / lecture / mise à jour / suppression. Pour plus d’informations, consultez [procédure pas à pas : personnalisation de l’insertion, mise à jour et supprimer le comportement des classes d’entité](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
+ Si vous implémentez les méthodes Insert, Update et Delete dans votre classe partielle, le runtime [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] les appelle à la place de ses propres méthodes par défaut lorsque <xref:System.Data.Linq.DataContext.SubmitChanges%2A> est appelé. Cela vous permet de substituer le comportement par défaut pour les opérations de création / lecture / mise à jour / suppression. Pour plus d’informations, consultez [Procédure pas à pas : Personnalisation de l’insertion, mise à jour et supprimer le comportement des classes d’entité](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
   
  La méthode `OnCreated` est appelée dans le constructeur de classe.  
   
@@ -179,12 +179,12 @@ partial class Customer
   
  [Guide pratique pour ajouter une validation à des classes d’entité](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [Procédure pas à pas : personnalisation du comportement d’insertion, de mise à jour et de suppression de classes d’entité](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [Procédure pas à pas : Personnaliser l’insertion, mettre à jour et supprimer le comportement de classes d’entités](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
  [Procédure pas à pas : Ajout d’une Validation aux Classes d’entité](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
-## <a name="see-also"></a>Voir aussi  
- [Classes et méthodes partielles](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
- [Méthodes partielles](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
- [Outils LINQ to SQL dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- [SqlMetal.exe (outil de génération de code)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+## <a name="see-also"></a>Voir aussi
+- [Classes et méthodes partielles](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [Méthodes partielles](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [Outils LINQ to SQL dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [SqlMetal.exe (outil de génération de code)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
