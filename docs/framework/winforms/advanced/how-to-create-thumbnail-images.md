@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer des images miniatures'
+title: 'Procédure : Créer des Images miniatures'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,48 +8,48 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 870ea223698e48438bd4dd08597d0a6ab79cec27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd5e0b5341a712f25f9d41670f9b3ede5414dda4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497040"
 ---
-# <a name="how-to-create-thumbnail-images"></a><span data-ttu-id="790d1-102">Comment : créer des images miniatures</span><span class="sxs-lookup"><span data-stu-id="790d1-102">How to: Create Thumbnail Images</span></span>
-<span data-ttu-id="790d1-103">Une image miniature est une version réduite d’une image.</span><span class="sxs-lookup"><span data-stu-id="790d1-103">A thumbnail image is a small version of an image.</span></span> <span data-ttu-id="790d1-104">Vous pouvez créer une image miniature en appelant le <xref:System.Drawing.Image.GetThumbnailImage%2A> méthode d’un <xref:System.Drawing.Image> objet.</span><span class="sxs-lookup"><span data-stu-id="790d1-104">You can create a thumbnail image by calling the <xref:System.Drawing.Image.GetThumbnailImage%2A> method of an <xref:System.Drawing.Image> object.</span></span>  
+# <a name="how-to-create-thumbnail-images"></a><span data-ttu-id="c5c66-102">Procédure : Créer des Images miniatures</span><span class="sxs-lookup"><span data-stu-id="c5c66-102">How to: Create Thumbnail Images</span></span>
+<span data-ttu-id="c5c66-103">Une image miniature est une version réduite d’une image.</span><span class="sxs-lookup"><span data-stu-id="c5c66-103">A thumbnail image is a small version of an image.</span></span> <span data-ttu-id="c5c66-104">Vous pouvez créer une image miniature en appelant le <xref:System.Drawing.Image.GetThumbnailImage%2A> méthode d’un <xref:System.Drawing.Image> objet.</span><span class="sxs-lookup"><span data-stu-id="c5c66-104">You can create a thumbnail image by calling the <xref:System.Drawing.Image.GetThumbnailImage%2A> method of an <xref:System.Drawing.Image> object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="790d1-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="790d1-105">Example</span></span>  
- <span data-ttu-id="790d1-106">L’exemple suivant construit une <xref:System.Drawing.Image> objet à partir d’un fichier JPG.</span><span class="sxs-lookup"><span data-stu-id="790d1-106">The following example constructs an <xref:System.Drawing.Image> object from a JPG file.</span></span> <span data-ttu-id="790d1-107">L’image d’origine a une largeur de 640 pixels et une hauteur de 479 pixels.</span><span class="sxs-lookup"><span data-stu-id="790d1-107">The original image has a width of 640 pixels and a height of 479 pixels.</span></span> <span data-ttu-id="790d1-108">Le code crée une image miniature qui a une largeur de 100 pixels et une hauteur de 100 pixels.</span><span class="sxs-lookup"><span data-stu-id="790d1-108">The code creates a thumbnail image that has a width of 100 pixels and a height of 100 pixels.</span></span>  
+## <a name="example"></a><span data-ttu-id="c5c66-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="c5c66-105">Example</span></span>  
+ <span data-ttu-id="c5c66-106">L’exemple suivant construit un <xref:System.Drawing.Image> objet à partir d’un fichier JPG.</span><span class="sxs-lookup"><span data-stu-id="c5c66-106">The following example constructs an <xref:System.Drawing.Image> object from a JPG file.</span></span> <span data-ttu-id="c5c66-107">L’image d’origine a une largeur de 640 pixels et une hauteur de 479 pixels.</span><span class="sxs-lookup"><span data-stu-id="c5c66-107">The original image has a width of 640 pixels and a height of 479 pixels.</span></span> <span data-ttu-id="c5c66-108">Le code crée une image miniature qui a une largeur de 100 pixels et une hauteur de 100 pixels.</span><span class="sxs-lookup"><span data-stu-id="c5c66-108">The code creates a thumbnail image that has a width of 100 pixels and a height of 100 pixels.</span></span>  
   
- <span data-ttu-id="790d1-109">L’illustration suivante montre l’image miniature.</span><span class="sxs-lookup"><span data-stu-id="790d1-109">The following illustration shows the thumbnail image.</span></span>  
+ <span data-ttu-id="c5c66-109">L’illustration suivante montre l’image miniature.</span><span class="sxs-lookup"><span data-stu-id="c5c66-109">The following illustration shows the thumbnail image.</span></span>  
   
- <span data-ttu-id="790d1-110">![Image miniature](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")</span><span class="sxs-lookup"><span data-stu-id="790d1-110">![Thumbnail Image](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")</span></span>  
+ <span data-ttu-id="c5c66-110">![Image miniature](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")</span><span class="sxs-lookup"><span data-stu-id="c5c66-110">![Thumbnail Image](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="790d1-111">Dans cet exemple, une méthode de rappel est déclarée, mais jamais utilisée.</span><span class="sxs-lookup"><span data-stu-id="790d1-111">In this example, a callback method is declared, but never used.</span></span> <span data-ttu-id="790d1-112">Il prend en charge toutes les versions de GDI +.</span><span class="sxs-lookup"><span data-stu-id="790d1-112">This supports all versions of GDI+.</span></span>  
+>  <span data-ttu-id="c5c66-111">Dans cet exemple, une méthode de rappel est déclarée mais jamais utilisée.</span><span class="sxs-lookup"><span data-stu-id="c5c66-111">In this example, a callback method is declared, but never used.</span></span> <span data-ttu-id="c5c66-112">Cela prend en charge toutes les versions de GDI +.</span><span class="sxs-lookup"><span data-stu-id="c5c66-112">This supports all versions of GDI+.</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="790d1-113">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="790d1-113">Compiling the Code</span></span>  
- <span data-ttu-id="790d1-114">L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="790d1-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="790d1-115">Pour exécuter l’exemple, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="790d1-115">To run the example, follow these steps:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c5c66-113">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="c5c66-113">Compiling the Code</span></span>  
+ <span data-ttu-id="c5c66-114">L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="c5c66-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="c5c66-115">Pour exécuter l’exemple, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="c5c66-115">To run the example, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="790d1-116">Créez une application Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="790d1-116">Create a new Windows Forms application.</span></span>  
+1.  <span data-ttu-id="c5c66-116">Créez une application Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="c5c66-116">Create a new Windows Forms application.</span></span>  
   
-2.  <span data-ttu-id="790d1-117">Ajoutez l’exemple de code au formulaire.</span><span class="sxs-lookup"><span data-stu-id="790d1-117">Add the example code to the form.</span></span>  
+2.  <span data-ttu-id="c5c66-117">Ajoutez l’exemple de code au formulaire.</span><span class="sxs-lookup"><span data-stu-id="c5c66-117">Add the example code to the form.</span></span>  
   
-3.  <span data-ttu-id="790d1-118">Créer un gestionnaire pour du formulaire <xref:System.Windows.Forms.Control.Paint> événement</span><span class="sxs-lookup"><span data-stu-id="790d1-118">Create a handler for the form's <xref:System.Windows.Forms.Control.Paint> event</span></span>  
+3.  <span data-ttu-id="c5c66-118">Créez un gestionnaire pour le formulaire <xref:System.Windows.Forms.Control.Paint> événement</span><span class="sxs-lookup"><span data-stu-id="c5c66-118">Create a handler for the form's <xref:System.Windows.Forms.Control.Paint> event</span></span>  
   
-4.  <span data-ttu-id="790d1-119">Dans le <xref:System.Windows.Forms.Control.Paint> gestionnaire, appelez le `GetThumbnail` méthode et passe `e` pour <xref:System.Windows.Forms.PaintEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="790d1-119">In the <xref:System.Windows.Forms.Control.Paint> handler, call the `GetThumbnail` method and pass `e` for <xref:System.Windows.Forms.PaintEventArgs>.</span></span>  
+4.  <span data-ttu-id="c5c66-119">Dans le <xref:System.Windows.Forms.Control.Paint> gestionnaire, appelez le `GetThumbnail` (méthode) et passez `e` pour <xref:System.Windows.Forms.PaintEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="c5c66-119">In the <xref:System.Windows.Forms.Control.Paint> handler, call the `GetThumbnail` method and pass `e` for <xref:System.Windows.Forms.PaintEventArgs>.</span></span>  
   
-5.  <span data-ttu-id="790d1-120">Rechercher un fichier image que vous souhaitez faire une miniature.</span><span class="sxs-lookup"><span data-stu-id="790d1-120">Find an image file that you want to make a thumbnail of.</span></span>  
+5.  <span data-ttu-id="c5c66-120">Rechercher un fichier image que vous souhaitez faire une miniature.</span><span class="sxs-lookup"><span data-stu-id="c5c66-120">Find an image file that you want to make a thumbnail of.</span></span>  
   
-6.  <span data-ttu-id="790d1-121">Dans le `GetThumbnail` (méthode), spécifiez le chemin d’accès et le nom de votre image.</span><span class="sxs-lookup"><span data-stu-id="790d1-121">In the `GetThumbnail` method, specify the path and file name to your image.</span></span>  
+6.  <span data-ttu-id="c5c66-121">Dans le `GetThumbnail` (méthode), spécifiez le chemin d’accès et le nom à votre image de fichier.</span><span class="sxs-lookup"><span data-stu-id="c5c66-121">In the `GetThumbnail` method, specify the path and file name to your image.</span></span>  
   
-7.  <span data-ttu-id="790d1-122">Appuyez sur F5 pour exécuter l’exemple.</span><span class="sxs-lookup"><span data-stu-id="790d1-122">Press F5 to run the example.</span></span>  
+7.  <span data-ttu-id="c5c66-122">Appuyez sur F5 pour exécuter l’exemple.</span><span class="sxs-lookup"><span data-stu-id="c5c66-122">Press F5 to run the example.</span></span>  
   
-     <span data-ttu-id="790d1-123">Une image miniature 100 par 100 s’affiche sur le formulaire.</span><span class="sxs-lookup"><span data-stu-id="790d1-123">A 100 by 100 thumbnail image appears on the form.</span></span>  
+     <span data-ttu-id="c5c66-123">Une image miniature de 100 par 100 s’affiche sur le formulaire.</span><span class="sxs-lookup"><span data-stu-id="c5c66-123">A 100 by 100 thumbnail image appears on the form.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="790d1-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="790d1-124">See Also</span></span>  
- [<span data-ttu-id="790d1-125">Images, bitmaps et métafichiers</span><span class="sxs-lookup"><span data-stu-id="790d1-125">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [<span data-ttu-id="790d1-126">Utilisation des images, bitmaps, icônes et métafichiers</span><span class="sxs-lookup"><span data-stu-id="790d1-126">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="c5c66-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c5c66-124">See also</span></span>
+- [<span data-ttu-id="c5c66-125">Images, bitmaps et métafichiers</span><span class="sxs-lookup"><span data-stu-id="c5c66-125">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [<span data-ttu-id="c5c66-126">Utilisation des images, bitmaps, icônes et métafichiers</span><span class="sxs-lookup"><span data-stu-id="c5c66-126">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

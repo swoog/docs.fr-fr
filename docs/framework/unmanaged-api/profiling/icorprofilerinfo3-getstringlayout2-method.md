@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57a21a3e4c1324e15a8418dacb8cfe7c5163f334
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9ca40a0a172563368f971a83035c5dead66c70a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552006"
 ---
-# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="e5d36-102">ICorProfilerInfo3::GetStringLayout2, méthode</span><span class="sxs-lookup"><span data-stu-id="e5d36-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
-<span data-ttu-id="e5d36-103">Obtient des informations sur la disposition d'un objet string.</span><span class="sxs-lookup"><span data-stu-id="e5d36-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="e5d36-104">Cette méthode remplace la [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="e5d36-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
+# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="5c520-102">ICorProfilerInfo3::GetStringLayout2, méthode</span><span class="sxs-lookup"><span data-stu-id="5c520-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
+<span data-ttu-id="5c520-103">Obtient des informations sur la disposition d'un objet string.</span><span class="sxs-lookup"><span data-stu-id="5c520-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="5c520-104">Cette méthode remplace la [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="5c520-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5d36-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e5d36-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c520-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5c520-105">Syntax</span></span>  
   
 ```  
 HRESULT GetStringLayout2(  
@@ -35,25 +35,25 @@ HRESULT GetStringLayout2(
     [out] ULONG *pBufferOffset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e5d36-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e5d36-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5c520-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="5c520-106">Parameters</span></span>  
  `pStringLengthOffset`  
- <span data-ttu-id="e5d36-107">[out] Un pointeur vers l’offset de l’emplacement, relatif à la `ObjectID` pointeur, qui stocke la longueur de la chaîne.</span><span class="sxs-lookup"><span data-stu-id="e5d36-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="e5d36-108">La longueur est stockée comme un `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="e5d36-108">The length is stored as a `DWORD`.</span></span>  
+ <span data-ttu-id="5c520-107">[out] Un pointeur vers l’offset de l’emplacement, relatif à la `ObjectID` pointeur, qui stocke la longueur de la chaîne elle-même.</span><span class="sxs-lookup"><span data-stu-id="5c520-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="5c520-108">La longueur est stockée comme un `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="5c520-108">The length is stored as a `DWORD`.</span></span>  
   
  `pBufferOffset`  
- <span data-ttu-id="e5d36-109">[out] Un pointeur vers l’offset de la mémoire tampon, relative à la `ObjectID` pointeur, qui stocke la chaîne de caractères larges.</span><span class="sxs-lookup"><span data-stu-id="e5d36-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
+ <span data-ttu-id="5c520-109">[out] Un pointeur vers l’offset de la mémoire tampon, relative à la `ObjectID` pointeur, qui stocke la chaîne de caractères larges.</span><span class="sxs-lookup"><span data-stu-id="5c520-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e5d36-110">Notes</span><span class="sxs-lookup"><span data-stu-id="e5d36-110">Remarks</span></span>  
- <span data-ttu-id="e5d36-111">Les chaînes peuvent ou ne peuvent pas être terminée par null.</span><span class="sxs-lookup"><span data-stu-id="e5d36-111">Strings may or may not be null-terminated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5c520-110">Notes</span><span class="sxs-lookup"><span data-stu-id="5c520-110">Remarks</span></span>  
+ <span data-ttu-id="5c520-111">Les chaînes peuvent ou ne peuvent pas être nul.</span><span class="sxs-lookup"><span data-stu-id="5c520-111">Strings may or may not be null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5d36-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="e5d36-112">Requirements</span></span>  
- <span data-ttu-id="e5d36-113">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5d36-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c520-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="5c520-112">Requirements</span></span>  
+ <span data-ttu-id="5c520-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c520-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5d36-114">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e5d36-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5c520-114">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5c520-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e5d36-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5d36-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5c520-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c520-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e5d36-116">**Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5d36-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="5c520-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c520-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5d36-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e5d36-117">See Also</span></span>  
- [<span data-ttu-id="e5d36-118">ICorProfilerInfo3, interface</span><span class="sxs-lookup"><span data-stu-id="e5d36-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [<span data-ttu-id="e5d36-119">Interfaces de profilage</span><span class="sxs-lookup"><span data-stu-id="e5d36-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="5c520-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5c520-117">See also</span></span>
+- [<span data-ttu-id="5c520-118">ICorProfilerInfo3, interface</span><span class="sxs-lookup"><span data-stu-id="5c520-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="5c520-119">Interfaces de profilage</span><span class="sxs-lookup"><span data-stu-id="5c520-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

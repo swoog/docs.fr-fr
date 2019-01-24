@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: 9c7a656e82198568c39b9bb58f8708f563d6caa2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: db38d42e9c7dc1657e06030599ae2b8ba66ef6b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549874"
 ---
-# <a name="creating-expression-columns"></a><span data-ttu-id="46ed4-102">Création de colonnes d'expressions</span><span class="sxs-lookup"><span data-stu-id="46ed4-102">Creating Expression Columns</span></span>
-<span data-ttu-id="46ed4-103">Vous pouvez définir une expression pour une colonne lui permettant de contenir une valeur calculée à partir d'autres valeurs de colonne de la même ligne ou de valeurs de colonne de plusieurs lignes de la table.</span><span class="sxs-lookup"><span data-stu-id="46ed4-103">You can define an expression for a column, enabling it to contain a value calculated from other column values in the same row or from the column values of multiple rows in the table.</span></span> <span data-ttu-id="46ed4-104">Pour définir l'expression à évaluer, utilisez la propriété <xref:System.Data.DataColumn.Expression%2A> de la colonne cible. Utilisez la propriété <xref:System.Data.DataColumn.ColumnName%2A> pour faire référence à d'autres colonnes dans l'expression.</span><span class="sxs-lookup"><span data-stu-id="46ed4-104">To define the expression to be evaluated, use the <xref:System.Data.DataColumn.Expression%2A> property of the target column, and use the <xref:System.Data.DataColumn.ColumnName%2A> property to refer to other columns in the expression.</span></span> <span data-ttu-id="46ed4-105">La propriété <xref:System.Data.DataColumn.DataType%2A> de la colonne d'expression doit être appropriée pour la valeur que l'expression retournera.</span><span class="sxs-lookup"><span data-stu-id="46ed4-105">The <xref:System.Data.DataColumn.DataType%2A> for the expression column must be appropriate for the value that the expression returns.</span></span>  
+# <a name="creating-expression-columns"></a><span data-ttu-id="f201a-102">Création de colonnes d'expressions</span><span class="sxs-lookup"><span data-stu-id="f201a-102">Creating Expression Columns</span></span>
+<span data-ttu-id="f201a-103">Vous pouvez définir une expression pour une colonne lui permettant de contenir une valeur calculée à partir d'autres valeurs de colonne de la même ligne ou de valeurs de colonne de plusieurs lignes de la table.</span><span class="sxs-lookup"><span data-stu-id="f201a-103">You can define an expression for a column, enabling it to contain a value calculated from other column values in the same row or from the column values of multiple rows in the table.</span></span> <span data-ttu-id="f201a-104">Pour définir l'expression à évaluer, utilisez la propriété <xref:System.Data.DataColumn.Expression%2A> de la colonne cible. Utilisez la propriété <xref:System.Data.DataColumn.ColumnName%2A> pour faire référence à d'autres colonnes dans l'expression.</span><span class="sxs-lookup"><span data-stu-id="f201a-104">To define the expression to be evaluated, use the <xref:System.Data.DataColumn.Expression%2A> property of the target column, and use the <xref:System.Data.DataColumn.ColumnName%2A> property to refer to other columns in the expression.</span></span> <span data-ttu-id="f201a-105">La propriété <xref:System.Data.DataColumn.DataType%2A> de la colonne d'expression doit être appropriée pour la valeur que l'expression retournera.</span><span class="sxs-lookup"><span data-stu-id="f201a-105">The <xref:System.Data.DataColumn.DataType%2A> for the expression column must be appropriate for the value that the expression returns.</span></span>  
   
- <span data-ttu-id="46ed4-106">Le tableau suivant énumère différentes utilisations possibles des colonnes d'expression dans une table.</span><span class="sxs-lookup"><span data-stu-id="46ed4-106">The following table lists several possible uses for expression columns in a table.</span></span>  
+ <span data-ttu-id="f201a-106">Le tableau suivant énumère différentes utilisations possibles des colonnes d'expression dans une table.</span><span class="sxs-lookup"><span data-stu-id="f201a-106">The following table lists several possible uses for expression columns in a table.</span></span>  
   
-|<span data-ttu-id="46ed4-107">Type d'expression</span><span class="sxs-lookup"><span data-stu-id="46ed4-107">Expression type</span></span>|<span data-ttu-id="46ed4-108">Exemple</span><span class="sxs-lookup"><span data-stu-id="46ed4-108">Example</span></span>|  
+|<span data-ttu-id="f201a-107">Type d'expression</span><span class="sxs-lookup"><span data-stu-id="f201a-107">Expression type</span></span>|<span data-ttu-id="f201a-108">Exemple</span><span class="sxs-lookup"><span data-stu-id="f201a-108">Example</span></span>|  
 |---------------------|-------------|  
-|<span data-ttu-id="46ed4-109">Comparaison</span><span class="sxs-lookup"><span data-stu-id="46ed4-109">Comparison</span></span>|<span data-ttu-id="46ed4-110">"Total >= 500"</span><span class="sxs-lookup"><span data-stu-id="46ed4-110">"Total >= 500"</span></span>|  
-|<span data-ttu-id="46ed4-111">Calcul</span><span class="sxs-lookup"><span data-stu-id="46ed4-111">Computation</span></span>|<span data-ttu-id="46ed4-112">"UnitPrice \* Quantity"</span><span class="sxs-lookup"><span data-stu-id="46ed4-112">"UnitPrice \* Quantity"</span></span>|  
-|<span data-ttu-id="46ed4-113">Agrégation</span><span class="sxs-lookup"><span data-stu-id="46ed4-113">Aggregation</span></span>|<span data-ttu-id="46ed4-114">Sum(Price)</span><span class="sxs-lookup"><span data-stu-id="46ed4-114">Sum(Price)</span></span>|  
+|<span data-ttu-id="f201a-109">Comparaison</span><span class="sxs-lookup"><span data-stu-id="f201a-109">Comparison</span></span>|<span data-ttu-id="f201a-110">"Total >= 500"</span><span class="sxs-lookup"><span data-stu-id="f201a-110">"Total >= 500"</span></span>|  
+|<span data-ttu-id="f201a-111">Calcul</span><span class="sxs-lookup"><span data-stu-id="f201a-111">Computation</span></span>|<span data-ttu-id="f201a-112">"UnitPrice \* Quantity"</span><span class="sxs-lookup"><span data-stu-id="f201a-112">"UnitPrice \* Quantity"</span></span>|  
+|<span data-ttu-id="f201a-113">Agrégation</span><span class="sxs-lookup"><span data-stu-id="f201a-113">Aggregation</span></span>|<span data-ttu-id="f201a-114">Sum(Price)</span><span class="sxs-lookup"><span data-stu-id="f201a-114">Sum(Price)</span></span>|  
   
- <span data-ttu-id="46ed4-115">Vous pouvez définir le **Expression** propriété sur un existant **DataColumn** objet, ou vous pouvez inclure la propriété comme troisième argument passé à la <xref:System.Data.DataColumn> constructeur, comme indiqué dans l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="46ed4-115">You can set the **Expression** property on an existing **DataColumn** object, or you can include the property as the third argument passed to the <xref:System.Data.DataColumn> constructor, as shown in the following example.</span></span>  
+ <span data-ttu-id="f201a-115">Vous pouvez définir le **Expression** propriété sur un existant **DataColumn** objet, ou vous pouvez inclure la propriété comme troisième argument passé à la <xref:System.Data.DataColumn> constructeur, comme indiqué dans l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="f201a-115">You can set the **Expression** property on an existing **DataColumn** object, or you can include the property as the third argument passed to the <xref:System.Data.DataColumn> constructor, as shown in the following example.</span></span>  
   
 ```vb  
 workTable.Columns.Add("Total",Type.GetType("System.Double"))  
@@ -36,12 +36,12 @@ workTable.Columns.Add("Total", typeof(Double));
 workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");  
 ```  
   
- <span data-ttu-id="46ed4-116">Les expressions peuvent faire référence à d'autres colonnes d'expression ; cependant, une référence circulaire, dans laquelle deux expressions se référencent mutuellement, générera une exception.</span><span class="sxs-lookup"><span data-stu-id="46ed4-116">Expressions can reference other expression columns; however, a circular reference, in which two expressions reference each other, will generate an exception.</span></span> <span data-ttu-id="46ed4-117">Pour plus d’informations sur l’écriture d’expressions, consultez la <xref:System.Data.DataColumn.Expression%2A> propriété de la **DataColumn** classe.</span><span class="sxs-lookup"><span data-stu-id="46ed4-117">For rules about writing expressions, see the <xref:System.Data.DataColumn.Expression%2A> property of the **DataColumn** class.</span></span>  
+ <span data-ttu-id="f201a-116">Les expressions peuvent faire référence à d'autres colonnes d'expression ; cependant, une référence circulaire, dans laquelle deux expressions se référencent mutuellement, générera une exception.</span><span class="sxs-lookup"><span data-stu-id="f201a-116">Expressions can reference other expression columns; however, a circular reference, in which two expressions reference each other, will generate an exception.</span></span> <span data-ttu-id="f201a-117">Pour plus d’informations sur l’écriture d’expressions, consultez la <xref:System.Data.DataColumn.Expression%2A> propriété de la **DataColumn** classe.</span><span class="sxs-lookup"><span data-stu-id="f201a-117">For rules about writing expressions, see the <xref:System.Data.DataColumn.Expression%2A> property of the **DataColumn** class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46ed4-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="46ed4-118">See Also</span></span>  
- <xref:System.Data.DataColumn>  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataTable>  
- [<span data-ttu-id="46ed4-119">Définition de schéma de DataTable</span><span class="sxs-lookup"><span data-stu-id="46ed4-119">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [<span data-ttu-id="46ed4-120">DataTables</span><span class="sxs-lookup"><span data-stu-id="46ed4-120">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [<span data-ttu-id="46ed4-121">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="46ed4-121">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f201a-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f201a-118">See also</span></span>
+- <xref:System.Data.DataColumn>
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataTable>
+- [<span data-ttu-id="f201a-119">Définition de schéma de DataTable</span><span class="sxs-lookup"><span data-stu-id="f201a-119">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [<span data-ttu-id="f201a-120">DataTables</span><span class="sxs-lookup"><span data-stu-id="f201a-120">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [<span data-ttu-id="f201a-121">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="f201a-121">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

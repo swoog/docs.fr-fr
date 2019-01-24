@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidRank1
 ms.assetid: 2c931ede-9c41-4ad3-8dfd-d649617f567c
-ms.openlocfilehash: 01e7ca45a5c2a70408ce0aa0e48ad5285764f6e7
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 8f4cfbc0dc723e335860d59a1f72456da674779a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53762536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530916"
 ---
-# <a name="argument-ltargumentnamegt-is-not-valid-for-the-array"></a><span data-ttu-id="cdbde-102">Argument '&lt;nom_argument&gt;' n’est pas valide pour le tableau</span><span class="sxs-lookup"><span data-stu-id="cdbde-102">Argument '&lt;argumentname&gt;' is not valid for the array</span></span>
-<span data-ttu-id="cdbde-103">Un tableau contient un argument qui n’est pas valide.</span><span class="sxs-lookup"><span data-stu-id="cdbde-103">An array contains an argument that is not valid.</span></span>  
+# <a name="argument-ltargumentnamegt-is-not-valid-for-the-array"></a><span data-ttu-id="e99d0-102">Argument '&lt;nom_argument&gt;' n’est pas valide pour le tableau</span><span class="sxs-lookup"><span data-stu-id="e99d0-102">Argument '&lt;argumentname&gt;' is not valid for the array</span></span>
+<span data-ttu-id="e99d0-103">Un tableau contient un argument qui n’est pas valide.</span><span class="sxs-lookup"><span data-stu-id="e99d0-103">An array contains an argument that is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="cdbde-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="cdbde-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e99d0-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="e99d0-104">To correct this error</span></span>  
   
--   <span data-ttu-id="cdbde-105">Vérifiez l’orthographe des arguments dans l’expression.</span><span class="sxs-lookup"><span data-stu-id="cdbde-105">Check the spelling of arguments in the expression.</span></span> <span data-ttu-id="cdbde-106">Un nom de variable mal orthographié peut créer implicitement une variable numérique dont la valeur est zéro.</span><span class="sxs-lookup"><span data-stu-id="cdbde-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
+-   <span data-ttu-id="e99d0-105">Vérifiez l’orthographe des arguments dans l’expression.</span><span class="sxs-lookup"><span data-stu-id="e99d0-105">Check the spelling of arguments in the expression.</span></span> <span data-ttu-id="e99d0-106">Un nom de variable mal orthographié peut créer implicitement une variable numérique dont la valeur est zéro.</span><span class="sxs-lookup"><span data-stu-id="e99d0-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cdbde-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="cdbde-107">See Also</span></span>  
- [<span data-ttu-id="cdbde-108">Passage d’un argument par valeur et par référence</span><span class="sxs-lookup"><span data-stu-id="cdbde-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [<span data-ttu-id="cdbde-109">Tableaux</span><span class="sxs-lookup"><span data-stu-id="cdbde-109">Arrays</span></span>](../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="e99d0-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e99d0-107">See also</span></span>
+- [<span data-ttu-id="e99d0-108">Passage d’un argument par valeur et par référence</span><span class="sxs-lookup"><span data-stu-id="e99d0-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="e99d0-109">Tableaux</span><span class="sxs-lookup"><span data-stu-id="e99d0-109">Arrays</span></span>](../../visual-basic/programming-guide/language-features/arrays/index.md)
