@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: 3a7accd2e98423bf3ab0133a5eb36610b3ebb414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1913832bf95d0ea7188637f5456e4ff8f24695e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718908"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="df052-102">Polices (WPF)</span><span class="sxs-lookup"><span data-stu-id="df052-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="df052-103"> prend en charge les étendues de texte à l’aide de présentation [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices.</span><span class="sxs-lookup"><span data-stu-id="df052-103"> includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="df052-104">Un exemple de pack de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices est inclus dans le [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="df052-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="9d848-102">Polices (WPF)</span><span class="sxs-lookup"><span data-stu-id="9d848-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="9d848-103">prend en charge la présentation enrichie du texte à l’aide [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices.</span><span class="sxs-lookup"><span data-stu-id="9d848-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="9d848-104">Un exemple de pack de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices est inclus avec le [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9d848-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="df052-105">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="df052-105">In This Section</span></span>  
- [<span data-ttu-id="df052-106">Fonctionnalités des polices OpenType</span><span class="sxs-lookup"><span data-stu-id="df052-106">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [<span data-ttu-id="df052-107">Empaquetage de polices avec des applications</span><span class="sxs-lookup"><span data-stu-id="df052-107">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [<span data-ttu-id="df052-108">Exemple de pack de polices OpenType</span><span class="sxs-lookup"><span data-stu-id="df052-108">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [<span data-ttu-id="df052-109">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="df052-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9d848-105">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="9d848-105">In This Section</span></span>  
+ [<span data-ttu-id="9d848-106">Fonctionnalités des polices OpenType</span><span class="sxs-lookup"><span data-stu-id="9d848-106">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [<span data-ttu-id="9d848-107">Empaquetage de polices avec des applications</span><span class="sxs-lookup"><span data-stu-id="9d848-107">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="9d848-108">Exemple de pack de polices OpenType</span><span class="sxs-lookup"><span data-stu-id="9d848-108">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
+ [<span data-ttu-id="9d848-109">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="9d848-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="df052-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="df052-110">See Also</span></span>  
- <xref:System.Windows.FontStyle>  
- <xref:System.Windows.SystemFonts>  
- [<span data-ttu-id="df052-111">Documents dans WPF</span><span class="sxs-lookup"><span data-stu-id="df052-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="df052-112">Typographie dans WPF</span><span class="sxs-lookup"><span data-stu-id="df052-112">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="9d848-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9d848-110">See also</span></span>
+- <xref:System.Windows.FontStyle>
+- <xref:System.Windows.SystemFonts>
+- [<span data-ttu-id="9d848-111">Documents dans WPF</span><span class="sxs-lookup"><span data-stu-id="9d848-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="9d848-112">Typographie dans WPF</span><span class="sxs-lookup"><span data-stu-id="9d848-112">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

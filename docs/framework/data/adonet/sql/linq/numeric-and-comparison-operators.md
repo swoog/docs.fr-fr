@@ -2,52 +2,52 @@
 title: Opérateurs de comparaison et opérateurs numériques
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: 733c1e494c29f04aa06a4159c3b1dae219f01b44
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e2bdc55cd6c2203bc96d0766e5e53a57294d4d7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554710"
 ---
-# <a name="numeric-and-comparison-operators"></a><span data-ttu-id="e0110-102">Opérateurs de comparaison et opérateurs numériques</span><span class="sxs-lookup"><span data-stu-id="e0110-102">Numeric and Comparison Operators</span></span>
-<span data-ttu-id="e0110-103">Les opérateurs arithmétiques et de comparaison fonctionnent conformément aux attentes dans le Common Language Runtime (CLR), à l'exception des points suivants :</span><span class="sxs-lookup"><span data-stu-id="e0110-103">Arithmetic and comparison operators work as expected in the common language runtime (CLR) except as follows:</span></span>  
+# <a name="numeric-and-comparison-operators"></a><span data-ttu-id="7e60e-102">Opérateurs de comparaison et opérateurs numériques</span><span class="sxs-lookup"><span data-stu-id="7e60e-102">Numeric and Comparison Operators</span></span>
+<span data-ttu-id="7e60e-103">Les opérateurs arithmétiques et de comparaison fonctionnent conformément aux attentes dans le Common Language Runtime (CLR), à l'exception des points suivants :</span><span class="sxs-lookup"><span data-stu-id="7e60e-103">Arithmetic and comparison operators work as expected in the common language runtime (CLR) except as follows:</span></span>  
   
--   <span data-ttu-id="e0110-104">SQL ne prend pas en charge l'opérateur modulo sur les nombres à virgule flottante.</span><span class="sxs-lookup"><span data-stu-id="e0110-104">SQL does not support the modulus operator on floating-point numbers.</span></span>  
+-   <span data-ttu-id="7e60e-104">SQL ne prend pas en charge l'opérateur modulo sur les nombres à virgule flottante.</span><span class="sxs-lookup"><span data-stu-id="7e60e-104">SQL does not support the modulus operator on floating-point numbers.</span></span>  
   
--   <span data-ttu-id="e0110-105">SQL ne prend pas en charge l'arithmétique non contrôlée.</span><span class="sxs-lookup"><span data-stu-id="e0110-105">SQL does not support unchecked arithmetic.</span></span>  
+-   <span data-ttu-id="7e60e-105">SQL ne prend pas en charge l'arithmétique non contrôlée.</span><span class="sxs-lookup"><span data-stu-id="7e60e-105">SQL does not support unchecked arithmetic.</span></span>  
   
--   <span data-ttu-id="e0110-106">Les opérateurs d'incrémentation et de décrémentation ne sont pas pris en charge car ils présentent des effets secondaires lorsqu'ils sont utilisés dans des expressions qui ne peuvent pas être répliquées dans SQL.</span><span class="sxs-lookup"><span data-stu-id="e0110-106">Increment and decrement operators cause side-effects when you use them in expressions that cannot be replicated in SQL and are, therefore, not supported.</span></span>  
+-   <span data-ttu-id="7e60e-106">Les opérateurs d'incrémentation et de décrémentation ne sont pas pris en charge car ils présentent des effets secondaires lorsqu'ils sont utilisés dans des expressions qui ne peuvent pas être répliquées dans SQL.</span><span class="sxs-lookup"><span data-stu-id="7e60e-106">Increment and decrement operators cause side-effects when you use them in expressions that cannot be replicated in SQL and are, therefore, not supported.</span></span>  
   
-## <a name="supported-operators"></a><span data-ttu-id="e0110-107">Opérateurs pris en charge</span><span class="sxs-lookup"><span data-stu-id="e0110-107">Supported Operators</span></span>  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="e0110-108">prend en charge les opérateurs suivants.</span><span class="sxs-lookup"><span data-stu-id="e0110-108">supports the following operators.</span></span>  
+## <a name="supported-operators"></a><span data-ttu-id="7e60e-107">Opérateurs pris en charge</span><span class="sxs-lookup"><span data-stu-id="7e60e-107">Supported Operators</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="7e60e-108">prend en charge les opérateurs suivants.</span><span class="sxs-lookup"><span data-stu-id="7e60e-108">supports the following operators.</span></span>  
   
--   <span data-ttu-id="e0110-109">Opérateurs arithmétiques de base :</span><span class="sxs-lookup"><span data-stu-id="e0110-109">Basic arithmetic operators:</span></span>  
+-   <span data-ttu-id="7e60e-109">Opérateurs arithmétiques de base :</span><span class="sxs-lookup"><span data-stu-id="7e60e-109">Basic arithmetic operators:</span></span>  
   
     -   `+`  
   
-    -   <span data-ttu-id="e0110-110">`-` (soustraction)</span><span class="sxs-lookup"><span data-stu-id="e0110-110">`-` (subtraction)</span></span>  
+    -   <span data-ttu-id="7e60e-110">`-` (soustraction)</span><span class="sxs-lookup"><span data-stu-id="7e60e-110">`-` (subtraction)</span></span>  
   
     -   `*`  
   
     -   `/`  
   
-    -   <span data-ttu-id="e0110-111">Division d'entier Visual Basic (`\`)</span><span class="sxs-lookup"><span data-stu-id="e0110-111">Visual Basic integer division (`\`)</span></span>  
+    -   <span data-ttu-id="7e60e-111">Division d'entier Visual Basic (`\`)</span><span class="sxs-lookup"><span data-stu-id="7e60e-111">Visual Basic integer division (`\`)</span></span>  
   
-    -   <span data-ttu-id="e0110-112">`%` (`Mod` Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0110-112">`%` (Visual Basic `Mod`)</span></span>  
+    -   <span data-ttu-id="7e60e-112">`%` (`Mod` Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7e60e-112">`%` (Visual Basic `Mod`)</span></span>  
   
     -   `<<`  
   
     -   `>>`  
   
-    -   <span data-ttu-id="e0110-113">`-` (négation unaire)</span><span class="sxs-lookup"><span data-stu-id="e0110-113">`-` (unary negation)</span></span>  
+    -   <span data-ttu-id="7e60e-113">`-` (négation unaire)</span><span class="sxs-lookup"><span data-stu-id="7e60e-113">`-` (unary negation)</span></span>  
   
--   <span data-ttu-id="e0110-114">Opérateurs de comparaison de base :</span><span class="sxs-lookup"><span data-stu-id="e0110-114">Basic comparison operators:</span></span>  
+-   <span data-ttu-id="7e60e-114">Opérateurs de comparaison de base :</span><span class="sxs-lookup"><span data-stu-id="7e60e-114">Basic comparison operators:</span></span>  
   
-    -   <span data-ttu-id="e0110-115">`=` Visual Basic et `==` C#</span><span class="sxs-lookup"><span data-stu-id="e0110-115">Visual Basic `=` and C# `==`</span></span>  
+    -   <span data-ttu-id="7e60e-115">`=` Visual Basic et `==` C#</span><span class="sxs-lookup"><span data-stu-id="7e60e-115">Visual Basic `=` and C# `==`</span></span>  
   
-    -   <span data-ttu-id="e0110-116">`<>` Visual Basic et `!=` C#</span><span class="sxs-lookup"><span data-stu-id="e0110-116">Visual Basic `<>` and C# `!=`</span></span>  
+    -   <span data-ttu-id="7e60e-116">`<>` Visual Basic et `!=` C#</span><span class="sxs-lookup"><span data-stu-id="7e60e-116">Visual Basic `<>` and C# `!=`</span></span>  
   
-    -   <span data-ttu-id="e0110-117">Visual Basic `Is/IsNot`</span><span class="sxs-lookup"><span data-stu-id="e0110-117">Visual Basic `Is/IsNot`</span></span>  
+    -   <span data-ttu-id="7e60e-117">Visual Basic `Is/IsNot`</span><span class="sxs-lookup"><span data-stu-id="7e60e-117">Visual Basic `Is/IsNot`</span></span>  
   
     -   `<`  
   
@@ -57,7 +57,7 @@ ms.locfileid: "50180334"
   
     -   `>=`  
   
-## <a name="see-also"></a><span data-ttu-id="e0110-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e0110-118">See Also</span></span>  
- [<span data-ttu-id="e0110-119">Fonctions et types de données</span><span class="sxs-lookup"><span data-stu-id="e0110-119">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [<span data-ttu-id="e0110-120">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="e0110-120">C# Operators</span></span>](../../../../../../docs/csharp/language-reference/operators/index.md)  
- [<span data-ttu-id="e0110-121">Opérateurs</span><span class="sxs-lookup"><span data-stu-id="e0110-121">Operators</span></span>](../../../../../visual-basic/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="7e60e-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7e60e-118">See also</span></span>
+- [<span data-ttu-id="7e60e-119">Fonctions et types de données</span><span class="sxs-lookup"><span data-stu-id="7e60e-119">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [<span data-ttu-id="7e60e-120">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="7e60e-120">C# Operators</span></span>](../../../../../../docs/csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="7e60e-121">Opérateurs</span><span class="sxs-lookup"><span data-stu-id="7e60e-121">Operators</span></span>](../../../../../visual-basic/language-reference/operators/index.md)
