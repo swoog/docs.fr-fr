@@ -2,12 +2,12 @@
 title: Sécurité SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 736c450d944efe7e6a69e16e00e1c96f0a868697
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c14548f2ff8e93c4dbbc61b946b9ed01cb62ab8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664068"
 ---
 # <a name="sql-server-express-security"></a>Sécurité SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) repose sur Microsoft SQL Server et prend en charge la plupart des fonctionnalités du moteur de base de données. Il est conçu de telle manière que les fonctionnalités non essentielles et la connectivité réseau sont désactivées par défaut afin de réduire la surface d'exposition susceptible d'être attaquée par un utilisateur malveillant.  
@@ -37,7 +37,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) repose sur Microsoft 
 |[Instances d’utilisateur pour les non-administrateurs](https://msdn.microsoft.com/library/ms143684.aspx) dans la documentation en ligne de SQL Server|Décrit comment créer et déployer des instances utilisateur.|  
 |[Instances utilisateur SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Décrit les fonctionnalités des instances utilisateur dans une application ADO.NET. Fournit des informations sur l'activation d'une interface utilisateur, la connexion à une instance utilisateur à l'aide d'un <xref:System.Data.SqlClient.SqlConnection>, la durée de vie d'une instance utilisateur et des scénarios d'instance utilisateur.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Instances utilisateur SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Instances utilisateur SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

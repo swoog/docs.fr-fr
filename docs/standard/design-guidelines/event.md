@@ -11,12 +11,12 @@ helpviewer_keywords:
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
-ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632021"
 ---
 # <a name="event-design"></a>Conception d'événements
 Les événements sont le plus couramment utilisé formulaire des rappels (constructions qui permettent l’infrastructure d’appeler dans le code utilisateur). Autres mécanismes de rappel incluent les membres en prenant les délégués, les membres virtuels et basée sur l’interface de plug-ins. Données à partir des études de convivialité indiquent que la majorité des développeurs sont plus à l’aise avec les événements qu’ils sont à l’aide des autres méthodes de rappel. Les événements sont bien intégrées à Visual Studio et de nombreux langages.  
@@ -72,5 +72,5 @@ Les événements sont le plus couramment utilisé formulaire des rappels (constr
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)  
+- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)
 - [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

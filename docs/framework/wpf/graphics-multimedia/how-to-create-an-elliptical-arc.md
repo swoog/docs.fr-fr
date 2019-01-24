@@ -1,19 +1,19 @@
 ---
-title: 'Comment : créer un arc elliptique'
+title: 'Procédure : Créer un arc elliptique'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], elliptical arcs
 - elliptical arcs [WPF], creating
 - arcs [WPF], elliptical
 ms.assetid: 3dcfe502-3485-45de-99fb-d53a1367c484
-ms.openlocfilehash: 7ca7d06aa25f8dfae648d8c54c8b95cc277ffbf9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4f4461f778e2c86adb3932edf8435ca75b3b5e98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679563"
 ---
-# <a name="how-to-create-an-elliptical-arc"></a>Comment : créer un arc elliptique
+# <a name="how-to-create-an-elliptical-arc"></a>Procédure : Créer un arc elliptique
 Cet exemple montre comment dessiner un arc elliptique. Pour créer un arc elliptique, utilisez le <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, et <xref:System.Windows.Media.ArcSegment> classes.  
   
 ## <a name="example"></a>Exemple  
@@ -35,6 +35,6 @@ Cet exemple montre comment dessiner un arc elliptique. Pour créer un arc ellipt
   
  Cet exemple fait partie d’un exemple plus complet. Pour obtenir un exemple complet, consultez la [géométries, exemple](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## <a name="see-also"></a>Voir aussi  
- [Créer une courbe de Bézier quadratique](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [Créer une courbe de Bézier cubique](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a>Voir aussi
+- [Créer une courbe de Bézier quadratique](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)
+- [Créer une courbe de Bézier cubique](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

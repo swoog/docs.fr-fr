@@ -1,5 +1,5 @@
 ---
-title: 'Comment : utiliser des fuseaux horaires dans les date et heure arithmétique'
+title: 'Procédure : Utiliser des fuseaux horaires dans les date et heure arithmétique'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682691"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Comment : utiliser des fuseaux horaires dans les date et heure arithmétique
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procédure : Utiliser des fuseaux horaires dans les date et heure arithmétique
 
 En règle générale, lorsque vous effectuer la date et l’heure à l’aide d’arithmétique <xref:System.DateTime> ou <xref:System.DateTimeOffset> valeurs, le résultat ne reflète pas les règles d’ajustement de fuseau horaire. Cela est vrai même lorsque le fuseau horaire de la valeur de date et d’heure est clairement identifiable (par exemple, lors de la <xref:System.DateTime.Kind%2A> propriété est définie sur <xref:System.DateTimeKind.Local>). Cette rubrique montre comment effectuer des opérations arithmétiques sur les valeurs de date et d’heure qui appartiennent à un fuseau horaire particulier. Les résultats de ces opérations arithmétiques reflètent les règles d’ajustement du fuseau horaire.
 
@@ -60,11 +60,11 @@ Notez que si cet ajout est effectué simplement sur le <xref:System.DateTimeOffs
 
 Cet exemple nécessite :
 
-* Qu’une référence à System.Core.dll être ajoutée au projet.
+* Qu’une référence à System.Core.dll soit ajoutée au projet.
 
-* Que le <xref:System> espace de noms importés avec le `using` instruction (requise en code c#).
+* Que l'espace de noms <xref:System> soit importé avec l'instruction `using` (obligatoire en C#).
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
-* [Exécution d’opérations arithmétiques avec des dates et heures](../../../docs/standard/datetime/performing-arithmetic-operations.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Exécution d’opérations arithmétiques avec des dates et heures](../../../docs/standard/datetime/performing-arithmetic-operations.md)

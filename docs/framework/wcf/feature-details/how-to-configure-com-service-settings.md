@@ -1,17 +1,17 @@
 ---
-title: 'Comment : configurer des paramètres de service COM+'
+title: 'Procédure : Configurer les paramètres de Service COM +'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 9cbeb03e21ed3b8ec272d47815ac7e9c48d77499
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 8deb7be51cdf3273a57d6777b103123636a2d2f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637396"
 ---
-# <a name="how-to-configure-com-service-settings"></a>Comment : configurer des paramètres de service COM+
+# <a name="how-to-configure-com-service-settings"></a>Procédure : Configurer les paramètres de Service COM +
 Lorsqu'une interface d'application est ajoutée ou supprimée en utilisant l'outil de configuration de service COM+, la configuration de service Web est mise à jour dans le fichier de configuration de l'application. Dans le mode hébergé COM +, le fichier Application.config est placé dans le répertoire racine de l’Application (%PROGRAMFILES%\ComPlus Applications\\{appid} est la valeur par défaut). Dans l'un ou l'autre des modes hébergés sur le Web, le fichier Web.config est placé dans le répertoire vroot spécifié.  
   
 > [!NOTE]
@@ -96,5 +96,5 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-* [Intégration à des applications COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a>Voir aussi
+- [Intégration à des applications COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

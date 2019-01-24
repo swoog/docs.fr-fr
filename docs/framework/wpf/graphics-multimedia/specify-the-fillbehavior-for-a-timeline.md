@@ -1,18 +1,18 @@
 ---
-title: 'Comment : spécifier le FillBehavior pour une chronologie ayant atteint la fin de sa période active'
+title: 'Procédure : Spécifier le FillBehavior pour une chronologie ayant atteint la fin de sa période active'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: c88deeb679a3e8f2027d6bb2e817edc1ade5926d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6745cf5d57a341068e93784d5487f21e34f8a64a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530092"
 ---
-# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Comment : spécifier le FillBehavior pour une chronologie ayant atteint la fin de sa période active
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Procédure : Spécifier le FillBehavior pour une chronologie ayant atteint la fin de sa période active
 Cet exemple montre comment spécifier le <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> pour le texte inactif <xref:System.Windows.Media.Animation.Timeline> d’une propriété animée.  
   
 ## <a name="example"></a>Exemple  
@@ -26,13 +26,13 @@ Cet exemple montre comment spécifier le <xref:System.Windows.Media.Animation.Ti
   
  Pour obtenir un exemple complet, consultez [Galerie d’exemples d’Animation](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Media.Animation.DoubleAnimation>  
- <xref:System.Windows.FrameworkElement.Width%2A>  
- <xref:System.Windows.Media.Animation.Timeline>  
- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>  
- <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
- <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>  
- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animation et minutage](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Media.Animation.DoubleAnimation>
+- <xref:System.Windows.FrameworkElement.Width%2A>
+- <xref:System.Windows.Media.Animation.Timeline>
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>
+- <xref:System.Windows.Media.Animation.FillBehavior.Stop>
+- <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>
+- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animation et minutage](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : retourner un résultat de requête LINQ en tant que type spécifique (Visual Basic)'
+title: 'Procédure : Retourner un résultat de requête LINQ comme un Type spécifique (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 720660153cb357c11168ab45ebf8343559faf82a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7d281de2005f1ee9227b3e3496125c8af9acba35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500614"
 ---
-# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Comment : retourner un résultat de requête LINQ en tant que type spécifique (Visual Basic)
+# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Procédure : Retourner un résultat de requête LINQ comme un Type spécifique (Visual Basic)
 Language-Integrated Query (LINQ) facilite l’accès aux informations de base de données et exécuter des requêtes. Par défaut, les requêtes LINQ retournent une liste d’objets comme un type anonyme. Vous pouvez également spécifier qu’une requête retourne une liste d’un type spécifique à l’aide de la `Select` clause.  
   
  L’exemple suivant montre comment créer une application qui effectue des requêtes sur une base de données SQL Server et projette les résultats comme un type nommé spécifique. Pour plus d’informations, consultez [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) et [Clause Select](../../../../visual-basic/language-reference/queries/select-clause.md).  
@@ -75,8 +75,8 @@ Language-Integrated Query (LINQ) facilite l’accès aux informations de base de
   
 5.  Appuyez sur F5 pour exécuter votre projet et afficher les résultats.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Requêtes](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext, méthodes (Concepteur O/R)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>Voir aussi
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Requêtes](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext, méthodes (Concepteur O/R)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

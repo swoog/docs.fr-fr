@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662580"
 ---
 # <a name="data-contract-schema-reference"></a>Référence des schémas de contrats de données
 Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:System.Runtime.Serialization.DataContractSerializer> pour décrire les types CLR (Common Language Run-time) pour la sérialisation XML.  
@@ -56,7 +56,7 @@ Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:
 |--------------|------------|  
 |`include`|Prise en charge. `DataContractSerializer` prend en charge xs:include et xs:import. Toutefois, Svcutil.exe restreint le suivi des références `xs:include/@schemaLocation` et `xs:import/@location` lorsque les métadonnées sont chargées à partir d'un fichier local. La liste des fichiers de schéma doit passer par un mécanisme hors bande et non par `include` dans ce cas ; les documents de schéma `include`sont ignorés.|  
 |`redefine`|Interdit. L'utilisation de `xs:redefine` est interdite par `DataContractSerializer` pour des raisons de sécurité : `x:redefine` requiert que `schemaLocation` soit suivi. Dans certaines circonstances, Svcutil.exe restreint l'utilisation de `schemaLocation`à l'aide de DataContract.|  
-|`import`|Prise en charge. `DataContractSerializer` prend en charge `xs:include` et `xs:import`. Toutefois, Svcutil.exe restreint le suivi des références `xs:include/@schemaLocation` et `xs:import/@location` lorsque les métadonnées sont chargées à partir d'un fichier local. La liste des fichiers de schéma doit passer par un mécanisme hors bande et non par `include` dans ce cas ; les documents de schéma `include` sont ignorés.|  
+|`import`|Prise en charge. `DataContractSerializer` prend en charge `xs:include` et `xs:import`. Toutefois, Svcutil.exe restreint le suivi des références `xs:include/@schemaLocation` et `xs:import/@location` lorsque les métadonnées sont chargées à partir d'un fichier local. La liste des fichiers de schéma doit passer par un mécanisme hors bande et non par `include` dans ce cas ; les documents de schéma `include`sont ignorés.|  
 |`simpleType`|Prise en charge. Consultez la section `xs:simpleType` .|  
 |`complexType`|Pris en charge, mappe aux contrats de données. Consultez la section `xs:complexType` .|  
 |`group`|Ignoré. `DataContractSerializer` ne prend pas en charge l'utilisation de `xs:group`, `xs:attributeGroup`et `xs:attribute`. Ces déclarations sont ignorées en tant qu'enfants de `xs:schema`, mais ne peuvent pas être référencées à partir de `complexType` ou d'autres constructions prises en charge.|  
@@ -328,7 +328,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs : List >  
+### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` mappe des types énumération marqués avec `System.FlagsAttribute` à `xs:list` dérivé de `xs:string`. Aucune autre variation `xs:list` n'est prise en charge.  
   
 ### <a name="xslist-attributes"></a>\<xs : List > : attributs  
@@ -607,7 +607,7 @@ public class Employee : Person
 </xs:schema>  
 ```  
   
- Il convient de remarquer les points suivants :  
+ Il convient de remarquer les points suivants :  
   
 -   `ser:char` est introduit pour représenter des caractères Unicode de type <xref:System.Char>.  
   
@@ -674,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

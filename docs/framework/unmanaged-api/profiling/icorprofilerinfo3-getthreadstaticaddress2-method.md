@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51d88af20b3abbbe2f80134473ec1ba1b7a4b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99f9162cc01d68d25304aed5cb8102b6cc21f7a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727090"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2, méthode
 Obtient l’adresse du champ static de thread spécifié qui est dans l’étendue du thread et du domaine d’application spécifiés.  
@@ -40,7 +40,7 @@ HRESULT GetThreadStaticAddress2(
   
 #### <a name="parameters"></a>Paramètres  
  `classId`  
- [in] ID de la classe qui contient le champ statique de thread demandé.  
+ [in] ID de la classe qui contient le champ thread-static demandé.  
   
  `fieldToken`  
  [in] Le jeton de métadonnées pour le champ statique de thread demandé.  
@@ -57,24 +57,24 @@ HRESULT GetThreadStaticAddress2(
 ## <a name="remarks"></a>Notes  
  Le `GetThreadStaticAddress2` méthode peut retourner l’une des opérations suivantes :  
   
--   Un CORPROF_E_DATAINCOMPLETE HRESULT si le champ statique donné n’a pas été affecté une adresse dans le contexte spécifié.  
+-   Un HRESULT CORPROF_E_DATAINCOMPLETE si le champ statique donné n’a pas été assigné une adresse dans le contexte spécifié.  
   
 -   Les adresses des objets qui peuvent être dans le tas de garbage collection. Ces adresses peuvent devenir non valides après le garbage collection, donc après le garbage collection, les profileurs ne doivent pas supposer qu’ils sont valides.  
   
- Avant la fin de constructeur de classe d’une classe, `GetThreadStaticAddress2` retournera CORPROF_E_DATAINCOMPLETE pour tous ses champs statiques, bien que certains champs statiques peuvent déjà être initialisés et utiliser des objets de garbage collection racine.  
+ Avant la fin de constructeur de classe d’une classe, `GetThreadStaticAddress2` retournera CORPROF_E_DATAINCOMPLETE pour tous ses champs statiques, bien que certains des champs statiques peuvent déjà être initialisés et utiliser des objets de garbage collection racine.  
   
  Le [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) méthode est similaire à la `GetThreadStaticAddress2` (méthode), mais n’accepte ne pas d’argument de domaine d’application.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorProfilerInfo3, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilage](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerInfo3, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilage](../../../../docs/framework/unmanaged-api/profiling/index.md)

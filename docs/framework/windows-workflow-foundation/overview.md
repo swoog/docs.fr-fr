@@ -2,12 +2,12 @@
 title: Vue d'ensemble de Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: af5ccd47dd7b3ff35dd283f8fe659ebef912d441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665160"
 ---
 # <a name="windows-workflow-overview"></a>Vue d'ensemble de Windows Workflow
 Un flux de travail est un ensemble d’unités élémentaires appelé *activités* qui sont stockés sous la forme d’un modèle qui décrit un processus réel. Les workflows offrent un moyen de décrire l'ordre d'exécution et les relations de dépendance entre des éléments de travail de courte ou longue durée. Ce travail s'effectue à travers le modèle de démarrage à l'arrêt et les activités peuvent être exécutées par des utilisateurs ou par les fonctions système.  
@@ -39,7 +39,7 @@ Composants de workflow dans le processus hôte
   
 -   Une activité personnalisée appelée `ReadLine`. Un <xref:System.Activities.OutArgument> de l'activité `ReadLine` est retourné à la méthode  <xref:System.Activities.WorkflowInvoker.Invoke%2A> appelante.  
   
--   Une activité personnalisée qui dérive de la classe abstraite <xref:System.Activities.CodeActivity>. Le <xref:System.Activities.CodeActivity> peut accéder aux fonctionnalités d'exécution (telles que le suivi et les propriétés) à l'aide du <xref:System.Activities.CodeActivityContext> qui est disponible en tant que paramètre de la méthode <xref:System.Activities.CodeActivity.Execute%2A>. Pour plus d’informations sur ces fonctionnalités d’exécution, consultez [suivi et traçage de Workflow](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [propriétés d’exécution de flux de travail](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
+-   Une activité personnalisée qui dérive de la classe abstraite <xref:System.Activities.CodeActivity>. Le <xref:System.Activities.CodeActivity> peut accéder aux fonctionnalités d’exécution (telles que le suivi et les propriétés) à l’aide du <xref:System.Activities.CodeActivityContext> qui est disponible en tant que paramètre de la méthode <xref:System.Activities.CodeActivity.Execute%2A>. Pour plus d’informations sur ces fonctionnalités d’exécution, consultez [suivi et traçage de Workflow](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [propriétés d’exécution de flux de travail](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [BizTalk Server 2006 ou WF ? Choix de l’outil de Workflow approprié pour votre projet](https://go.microsoft.com/fwlink/?LinkId=154901)
+## <a name="see-also"></a>Voir aussi
+- [BizTalk Server 2006 ou WF ? Choix de l’outil de Workflow approprié pour votre projet](https://go.microsoft.com/fwlink/?LinkId=154901)

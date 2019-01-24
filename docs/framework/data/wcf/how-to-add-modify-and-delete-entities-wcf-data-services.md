@@ -1,5 +1,5 @@
 ---
-title: 'Comment : ajouter, modifier et supprimer des entités (services de données WCF)'
+title: 'Procédure : Ajouter, modifier et supprimer des entités (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 4475d8767226a810c7b6f7d8949e9cbe2d846cca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af087aa2107927d79a7a47080d9fff43244ef4cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708881"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Comment : ajouter, modifier et supprimer des entités (services de données WCF)
-Avec la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] les bibliothèques clientes, vous pouvez créer, mettre à jour et supprimer des données d’entité dans un service de données en effectuant des actions équivalentes sur des objets dans le <xref:System.Data.Services.Client.DataServiceContext>. Pour plus d’informations, consultez [mise à jour du Service de données](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Procédure : Ajouter, modifier et supprimer des entités (WCF Data Services)
+Avec le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèques clientes, vous pouvez créer, mettre à jour et supprimer des données d’entité dans un service de données en effectuant des actions équivalentes sur les objets dans le <xref:System.Data.Services.Client.DataServiceContext>. Pour plus d’informations, consultez [la mise à jour le Service de données](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
- L'exemple dans cette rubrique utilise l'exemple de service de données Northwind et des classes de service de données clientes générées automatiquement. Ce service et les classes de données clientes sont créés lorsque vous complétez le [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ L'exemple dans cette rubrique utilise l'exemple de service de données Northwind et des classes de service de données clientes générées automatiquement. Ce service et les classes de données client sont créés lorsque vous complétez le [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant crée une instance de l'objet puis appelle la méthode <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> sur <xref:System.Data.Services.Client.DataServiceContext> pour créer l'élément dans le contexte. Un message HTTP POST est envoyé au service de données lorsque la méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> est appelée.  
@@ -43,8 +43,8 @@ Avec la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] les biblioth
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorderauto)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderauto)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Guide pratique pour attacher une entité existante au DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)  
- [Guide pratique pour définir les relations d’entité](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)  
- [Opérations de traitement par lots](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Guide pratique pour Attacher une entité existante au DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)
+- [Guide pratique pour Définir des relations d’entité](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)
+- [Opérations de traitement par lots](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

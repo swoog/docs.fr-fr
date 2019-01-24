@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 06c9119a2b842a0efcd4af752ba72dbfda03bf13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653857"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType, énumération
 Contient des valeurs qui indiquent la cause sous-jacente d’un événement de dépassement de capacité de pile.  
@@ -40,21 +40,21 @@ typedef enum {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`SO_ClrEngine`|Le dépassement de capacité de pile a été provoquée par le moteur d’exécution.|  
-|`SO_Managed`|Le dépassement de capacité de pile a été provoquée par le code managé.|  
-|`SO_Other`|Le dépassement de capacité de pile a été provoquée par le code non managé.|  
+|`SO_ClrEngine`|Le dépassement de capacité de pile a été provoqué par le moteur d’exécution.|  
+|`SO_Managed`|Le dépassement de capacité de pile a été provoqué par le code managé.|  
+|`SO_Other`|Le dépassement de capacité de pile a été provoqué par le code non managé.|  
   
 ## <a name="remarks"></a>Notes  
  Ces informations sont passées à l’hôte via un appel à la [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) (méthode).  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

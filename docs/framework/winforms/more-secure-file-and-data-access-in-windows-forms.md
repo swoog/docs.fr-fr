@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: d5a9b08188e346fdea5b155149dee1ef8368c2a0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 55e10a929be9c76bd8b33771945cf84f6228980f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679316"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Accès plus sécurisé aux fichiers et aux données dans les Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilise des autorisations pour aider à protéger les ressources et les données. L'emplacement où votre application peut lire ou écrire des données dépend des autorisations qui lui sont accordées. Quand votre application s'exécute dans un environnement de confiance partielle, vous n'avez peut-être pas accès à vos données ou vous devrez peut-être modifier la manière dont vous accédez aux données.  
@@ -358,10 +358,10 @@ public void Write()
   
  Étant donné que vous ne pouvez pas accéder au Registre avec une confiance partielle, vous devrez peut-être trouver d'autres méthodes pour stocker vos données. Quand vous stockez des paramètres d'application, utilisez le stockage isolé plutôt que le Registre. Vous pouvez aussi utiliser le stockage isolé pour stocker d'autres fichiers spécifiques à l'application. Vous pouvez stocker des informations d'application globales relatives au serveur ou au site d'origine, car par défaut une application a le droit d'accéder au site de son origine.  
   
-## <a name="see-also"></a>Voir aussi  
- [Impression plus sécurisée dans les Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Considérations supplémentaires sur la sécurité des Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- [Vue d’ensemble de la sécurité dans les Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Sécurité de Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  
- [Mage.exe (outil Manifest Generation and Editing)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (outil Manifest Generation and Editing, client graphique)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>Voir aussi
+- [Impression plus sécurisée dans les Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
+- [Considérations supplémentaires sur la sécurité des Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)
+- [Vue d’ensemble de la sécurité dans les Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
+- [Sécurité de Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)
+- [Mage.exe (outil Manifest Generation and Editing)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (outil Manifest Generation and Editing, client graphique)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

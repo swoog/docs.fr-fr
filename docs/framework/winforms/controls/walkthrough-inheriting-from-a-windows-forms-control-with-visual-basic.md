@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : héritage à partir d'un contrôle Windows Forms à l'aide de Visual Basic"
+title: 'Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual Basic'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 6c70de1bf6a5340b6f5b2c652110ed9be5536665
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 157c323a2536f1034b7a8ceace630a9e15168552
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728133"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Procédure pas à pas : héritage à partir d'un contrôle Windows Forms à l'aide de Visual Basic
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual Basic
 Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants via *héritage*. L’héritage vous permet de créer des contrôles qui conservent toutes les fonctionnalités inhérentes des contrôles Windows Forms standard, tout en intégrant des fonctionnalités personnalisées. Dans cette procédure pas à pas, vous allez créer un contrôle hérité simple appelé `ValueButton`. Ce bouton héritera des fonctionnalités des formulaires Windows standard <xref:System.Windows.Forms.Button> contrôler et exposera une propriété personnalisée nommée `ButtonValue`.  
   
 > [!NOTE]
@@ -96,7 +96,7 @@ Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants vi
   
 2.  Sélectionnez le nœud de projets Visual Basic, puis cliquez sur **Windows Forms Application**.  
   
-3.  Dans la zone **Nom**, tapez `Test`.  
+3.  Dans la zone **Nom** , tapez `Test`.  
   
 4.  Dans l’**Explorateur de solutions**, cliquez sur le bouton **Afficher tous les fichiers**.  
   
@@ -146,9 +146,9 @@ Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants vi
   
      Le chiffre « 5 » s’affiche dans `Label1`, ce qui prouve que la propriété `ButtonValue` de votre contrôle hérité a été définie sur `Label1` via la méthode `ValueButton1_Click`. Par conséquent, votre contrôle `ValueButton` hérite de toutes les fonctionnalités du bouton Windows Forms standard, mais expose en outre une propriété personnalisée supplémentaire.  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédure pas à pas : création d'un contrôle composite à l'aide de Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Comment : afficher un contrôle dans la boîte de dialogue Choisir des éléments de boîte à outils](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Principes fondamentaux de l’héritage (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Procédures pas à pas de la création de composants](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+## <a name="see-also"></a>Voir aussi
+- [Procédure pas à pas : Création d’un contrôle Composite avec Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Guide pratique pour Afficher un contrôle dans la boîte de dialogue de boîte à outils éléments choisir](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Éléments fondamentaux de l’héritage (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Procédures pas à pas de la création de composants](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

@@ -1,29 +1,29 @@
 ---
-title: '&lt;Variable&gt;'
+title: '&lt;variable&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
-ms.openlocfilehash: c65b377d85783f29ca2a8223e97eb10b073cee0a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 185e7e7196f6679ec3d1fae8a2a256b934022ca9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647879"
 ---
-# <a name="ltvariablegt"></a>&lt;Variable&gt;
+# <a name="ltvariablegt"></a>&lt;variable&gt;
 Représente une collection de variables associées à cette requête d'activité.  
   
  Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<suivi >  
-\<profils >  
-\<trackingProfile >  
-\<flux de travail >  
-\<activityStateQueries >  
-\<activityStateQuery >  
-\<variables >  
-\<variable >  
+\<tracking>  
+\<profiles>  
+\<trackingProfile>  
+\<workflow>  
+\<activityStateQueries>  
+\<activityStateQuery>  
+\<variables>  
+\<variable>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ Représente une collection de variables associées à cette requête d'activité
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<variable >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/variable.md)|Variable associée à une requête d'état d'activité.|  
+|[\<variable>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/variable.md)|Variable associée à une requête d'état d'activité.|  
   
 ## <a name="remarks"></a>Notes  
  Une fonctionnalité propre à ActivityStateQuery est la possibilité d’extraire des données lors du suivi de l’exécution d’un flux de travail. Vous disposez ainsi d'un contexte supplémentaire lors de l'accès à une post-exécution d'enregistrements de suivi. Vous pouvez utiliser la [ \<arguments >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<États >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) et [ \<États >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) éléments à extraire une variable ou un argument à partir de toutes les activités dans un flux de travail. L’exemple suivant illustre une requête d’état d’activité qui extrait des variables et arguments lorsque l’enregistrement de suivi `Closed` de l’activité est émis. Variables et arguments peuvent être extraits uniquement avec un objet ActivityStateRecord et par conséquent, êtes abonnés au sein d’un suivi à l’aide du profil [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
@@ -77,8 +77,8 @@ Représente une collection de variables associées à cette requête d'activité
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

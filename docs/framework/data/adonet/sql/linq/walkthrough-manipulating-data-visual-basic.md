@@ -1,17 +1,17 @@
 ---
-title: 'Procédure pas à pas : manipulation de données (Visual Basic)'
+title: 'Procédure pas à pas : Manipulation de données (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: e0bf8b32595f656d3bff424610f193bd84d0f5bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0eab5fe5c9455badb7f538307cb827391b254a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626925"
 ---
-# <a name="walkthrough-manipulating-data-visual-basic"></a>Procédure pas à pas : manipulation de données (Visual Basic)
+# <a name="walkthrough-manipulating-data-visual-basic"></a>Procédure pas à pas : Manipulation de données (Visual Basic)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] complet essentiel pour l'ajout, la modification et la suppression de données dans une base de données. Vous utiliserez une copie de l'exemple de base de données Northwind pour ajouter un client, modifier le nom d'un client et supprimer une commande.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -57,7 +57,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 1.  Dans le menu **Fichier** de Visual Studio, cliquez sur **Nouveau projet**.  
   
-2.  Dans le **types de projet** volet dans le **nouveau projet** boîte de dialogue, cliquez sur **Visual Basic**.  
+2.  Dans le **types de projets** volet dans le **nouveau projet** boîte de dialogue, cliquez sur **Visual Basic**.  
   
 3.  Dans le volet **Modèles**, cliquez sur **Application console**.  
   
@@ -66,7 +66,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
 5.  Cliquez sur **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Ajout de références et de directives LINQ  
- Cette procédure pas à pas utilise des assemblys qui ne sont pas nécessairement installés par défaut dans votre projet. Si `System.Data.Linq` n’est pas répertorié comme référence dans votre projet (cliquez sur **afficher tous les fichiers** dans **l’Explorateur de solutions** et développez le **références** nœud), ajoutez-le comme expliqué dans les étapes suivantes.  
+ Cette procédure pas à pas utilise des assemblys qui ne sont pas nécessairement installés par défaut dans votre projet. Si `System.Data.Linq` n’est pas répertorié en tant que référence dans votre projet (cliquez sur **afficher tous les fichiers** dans **l’Explorateur de solutions** et développez le **références** nœud), ajoutez-le comme expliqué dans les étapes suivantes.  
   
 #### <a name="to-add-systemdatalinq"></a>Pour ajouter System.Data.Linq  
   
@@ -102,7 +102,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 2.  Appuyez sur F5 pour tester l'application à ce stade.  
   
-     A **Console** fenêtre s’ouvre.  
+     Un **Console** fenêtre s’ouvre.  
   
      Fermez l’application en appuyant sur entrée dans le **Console** fenêtre, ou en cliquant sur **arrêter le débogage** sur Visual Studio **déboguer** menu.  
   
@@ -186,5 +186,5 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
 > [!NOTE]
 >  Une fois que vous avez soumis les modifications (ajouté le nouveau client), vous ne pouvez plus exécuter cette solution telle quelle car vous ne pouvez plus ajouter le même client tel quel. Pour exécuter à nouveau la solution, modifiez la valeur de l'ID client à ajouter.  
   
-## <a name="see-also"></a>Voir aussi  
- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Voir aussi
+- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

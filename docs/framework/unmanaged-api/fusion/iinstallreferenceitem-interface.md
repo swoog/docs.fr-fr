@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd3c19bbbcb5b1a5f0e89b9df86f87beca32cd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0dfc1535338f45ac812c089203f2ae13a500ceec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689167"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem, interface
 Représente un élément installé dans le global assembly cache.  
@@ -33,12 +33,12 @@ Représente un élément installé dans le global assembly cache.
 |[GetReference, méthode](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Obtient un pointeur vers le `FUSION_INSTALL_REFERENCE` structure représentée par ce `IInstallReferenceItem`.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [FUSION_INSTALL_REFERENCE, structure](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [FUSION_INSTALL_REFERENCE, structure](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

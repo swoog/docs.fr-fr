@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17042f60eb27c41640ef5d8c927c7acc5bc73183
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712621"
 ---
 # <a name="myforms-object"></a>My.Forms, objet
 Fournit des propriétés pour accéder à une instance de chaque formulaire Windows déclaré dans le projet actuel.  
@@ -52,25 +52,25 @@ Fournit des propriétés pour accéder à une instance de chaque formulaire Wind
   
  Ce code fonctionne uniquement dans un projet d’Application de Windows.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ### <a name="availability-by-project-type"></a>Disponibilité par Type de projet  
   
 |Type de projet|Disponible|  
 |---|---|  
 |Application Windows|**Oui**|  
-|Bibliothèque de classes|Non|  
-|Application console|Non|  
-|Bibliothèque de contrôles Windows|Non|  
-|Bibliothèque de contrôles Web|Non|  
-|Service Windows|Non|  
-|Site web|Non|  
+|Bibliothèque de classes|Aucune|  
+|Application console|Aucune|  
+|Bibliothèque de contrôles Windows|Aucune|  
+|Bibliothèque de contrôles Web|Aucune|  
+|Service Windows|Aucune|  
+|Site web|Aucune|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Form.Close%2A>  
- [Objects](../../../visual-basic/language-reference/objects/index.md)  
- [Is (opérateur)](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot (opérateur)](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Accès aux formulaires de l’application](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Form.Close%2A>
+- [Objects](../../../visual-basic/language-reference/objects/index.md)
+- [Is (opérateur)](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot (opérateur)](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Accès aux formulaires de l’application](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

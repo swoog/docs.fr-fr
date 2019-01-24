@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b93dd3b1d08a939e03ccfa52f7fb2e97c97d7e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600087"
 ---
 # <a name="ialink-interface"></a>IALink, interface
-Aide à construire des assemblys .NET Framework. Entre autres choses, l’interface contient des méthodes qui aident à écrire des manifestes d’assembly pour les assemblys composés de plusieurs modules, de signer des assemblys avec noms forts et de création netmodules.  
+Aide à construire des assemblys .NET Framework. Entre autres choses, l’interface contient des méthodes qui aident à écrire des manifestes d’assembly pour les assemblys multimodule, la signature d’assemblys avec noms forts et la création netmodules.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [AddFile, method1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
@@ -75,7 +75,7 @@ Aide à construire des assemblys .NET Framework. Entre autres choses, l’interf
   
  [SetNonAssemblyFlags, méthode](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Voir aussi
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

@@ -2,12 +2,12 @@
 title: '&lt;comContracts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 26f17a331d69c38d720fcafe65c76f50c67def09
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2374155011b98822d47998cd1e4b8935db234752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731521"
 ---
 # <a name="ltcomcontractsgt"></a>&lt;comContracts&gt;
 La section de configuration `comContracts` contient des éléments qui vous permettent de spécifier différentes propriétés d'un contrat de service d'intégration COM+.  
@@ -33,12 +33,12 @@ La section de configuration `comContracts` contient des éléments qui vous perm
   
  En outre, vous pouvez utiliser la [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) élément pour spécifier les méthodes COM + exposées lorsque l’interface sur un composant COM + est exposée comme un service Web. Vous pouvez également utiliser le [ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) pour spécifier des types persistables utilisés dans l’intégration. Enfin, vous pouvez utiliser la [ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) élément à inclure défini Types utilisateur (UDT) qui doivent être incluses dans le contrat de service.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
- <xref:System.ServiceModel.Configuration.ComContractElement>  
- [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)  
- [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)  
- [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)  
- [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)  
- [Intégration à des applications COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Guide pratique pour Configurer les paramètres de Service COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.ComContractElementCollection>
+- <xref:System.ServiceModel.Configuration.ComContractElement>
+- [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
+- [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)
+- [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)
+- [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)
+- [Intégration à des applications COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Guide pratique pour Configurer les paramètres de Service COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableFusionUpdatesFromADManager&gt; élément'
+title: '&lt;disableFusionUpdatesFromADManager&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4189efbab9bfc85b6a992934604d5071a767163
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4ceaf0b51677a17a2f2a8c0d9d9316cb5b9b34cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547239"
 ---
-# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt; élément
+# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt; Element
 Indique si le comportement par défaut, qui consiste à permettre à l’hôte du runtime de remplacer les paramètres de configuration d’un domaine d’application, est désactivé.  
   
  \<configuration > élément  
 \<runtime > élément  
-\<disableFusionUpdatesFromADManager >  
+\<disableFusionUpdatesFromADManager>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,7 +75,7 @@ Indique si le comportement par défaut, qui consiste à permettre à l’hôte d
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Méthode de localisation des assemblys par le runtime](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

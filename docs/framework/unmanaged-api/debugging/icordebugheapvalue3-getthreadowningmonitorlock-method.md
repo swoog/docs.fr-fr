@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ba09991e9452a86c6b7a1cbb08a38a71ba2aeaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d3e10a3dbae0d1b790c0d80c9286affedaa4c8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709141"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock, méthode
 Retourne le thread managé qui possède le verrou du moniteur sur cet objet.  
@@ -49,7 +49,7 @@ HRESULT GetThreadOwningMonitorLock (
 |HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|La commande s'est correctement terminée.|  
-|S_FALSE|Aucun thread managé ne possède le verrou du moniteur sur cet objet.|  
+|S_FALSE|Aucun thread managé possède le verrou du moniteur sur cet objet.|  
   
 ## <a name="exceptions"></a>Exceptions  
   
@@ -58,23 +58,23 @@ HRESULT GetThreadOwningMonitorLock (
   
 -   La méthode retourne S_OK.  
   
--   L’objet thread est valide jusqu'à ce que le thread se ferme.  
+-   L’objet thread est valide jusqu'à ce que le thread se termine.  
   
- Si aucun thread managé possède le verrou du moniteur sur cet objet, `ppThread` et `pAcquisitionCount` sont identiques, et la méthode retourne S_FALSE.  
+ Si aucun thread managé ne possède le verrou du moniteur sur cet objet, `ppThread` et `pAcquisitionCount` sont identiques, et la méthode retourne S_FALSE.  
   
- Si `ppThread` ou `pAcquisitionCount` n’est pas un pointeur valid, le résultat est indéfini.  
+ Si `ppThread` ou `pAcquisitionCount` n’est pas un pointeur valide, le résultat est indéfini.  
   
- Si une erreur se produit et il ne peut pas déterminer qui, le cas échéant, le thread possède le verrou du moniteur sur cet objet, la méthode retourne un HRESULT qui indique un échec.  
+ Si une erreur se produit et il est impossible de déterminer qui, le cas échéant, le thread possède le verrou du moniteur sur cet objet, la méthode retourne un HRESULT qui indique un échec.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

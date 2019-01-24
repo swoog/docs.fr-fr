@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683964"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informations de confidentialité relatives à Windows Communication Foundation
 Microsoft s’engage à protéger la confidentialité des utilisateurs finals. Lorsque vous créez une application à l’aide de Windows Communication Foundation (WCF), version 3.0, votre application peut avoir un impact sur confidentialité de vos utilisateurs finaux. Par exemple, votre application peut recueillir des informations de contact utilisateur de manière explicite ou elle peut demander ou envoyer des informations sur Internet à votre site web. Si vous incorporez la technologie Microsoft dans votre application, cette technologie peut avoir son propre comportement qui peut affecter la confidentialité. WCF n’envoie pas toutes les informations à Microsoft à partir de votre application, si vous ou l’utilisateur final ne nous l’envoyer.  
@@ -95,7 +95,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
 ### <a name="tracing"></a>Traçage  
  La fonctionnalité de diagnostic de l’infrastructure WCF journalise les messages qui transitent via le transport et les couches de modèle de service et les activités et les événements associés à ces messages. Cette fonctionnalité est désactivée par défaut. Il est activé à l’aide du fichier de configuration de l’application et le comportement de suivi peut être modifié à l’aide du fournisseur WMI WCF au moment de l’exécution. Lorsque cette fonctionnalité est activée, l'infrastructure de suivi émet un suivi de diagnostic qui contient des messages, des activités et des événements de traitement aux écouteurs configurés. Le format et l'emplacement de la sortie sont déterminés par les choix de configuration d'écouteur de l'administrateur, mais il s'agit en général d'un fichier au format XML. L'administrateur est chargé de définir la liste de contrôle d'accès (ACL) sur les fichiers de suivi. En particulier, en cas d'hébergement par le système WAS (Windows Activation System), l'administrateur doit s'assurer que les fichiers ne sont pas servis depuis le répertoire racine virtuel public si cela n'est pas souhaité.  
   
- Il existe deux types de suivi : l'enregistrement des messages et le suivi du diagnostic de modèle de service, décrits dans la section suivante. Chaque type est configuré par le biais de sa propre source de suivi : <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> et <xref:System.ServiceModel>. Ces deux sources de suivi d'enregistrement capturent des données qui sont locales à l'application.  
+ Il existe deux types de suivi : Journalisation des messages et diagnostic de modèle de Service de suivi, décrits dans la section suivante. Chaque type est configuré par le biais de sa propre source de suivi : <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> et <xref:System.ServiceModel>. Ces deux sources de suivi d'enregistrement capturent des données qui sont locales à l'application.  
   
 ### <a name="message-logging"></a>Journalisation des messages  
  La source de suivi d'enregistrement des messages (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) permet à un administrateur d'enregistrer les messages qui sont transmis sur le système. Par le biais de la configuration, l'utilisateur peut décider d'enregistrer uniquement des messages entiers ou des en-têtes de message, s'il faut enregistrer les couches de modèle de transport et/ou de service et s'il faut inclure les messages malformés. En outre, l'utilisateur peut configurer le filtrage de façon à limiter les messages enregistrés.  
@@ -165,37 +165,37 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<Audience > [uri]\</Audience > +  
+ \<Audience>[uri]\</Audience>+  
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!--type de base abstrait  
   
- \<Condition / > *  
+ \<Condition />*  
   
  -->  
   
- \</ Conditions > ?  
+ \</Conditions>?  
   
  \<Conseils >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
  \<Assertion>[assertion]\</Assertion>*  
   
  [indifférent]*  
   
- \</ Conseils > ?  
+ \</Advice>?  
   
  <\!--Types de base abstrait  
   
  \<Instruction / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
  \<Objet >  
   
@@ -213,13 +213,13 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
- \<SubjectConfirmationData > [Tous]\</SubjectConfirmationData > ?  
+ \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
  \<DS : KeyInfo >... \</ds:KeyInfo > ?  
   
- \</ SubjectConfirmation > ?  
+ \</SubjectConfirmation>?  
   
  \</Subject>  
   
@@ -255,9 +255,9 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Objet]  
   
@@ -271,9 +271,9 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</ Attribut > +  
+ \</Attribute>+  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
@@ -285,17 +285,17 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  [Objet]  
   
- \<Action Namespace = « [uri] » > [chaîne] \< /action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
  \<Preuve >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
  \<Assertion>[assertion]\</Assertion>+  
   
  \</ Preuve > ?  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
  \</Assertion>  
   
@@ -401,6 +401,6 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  Le langage WDSL (Web Services Description Language) contient une définition du port. Chaque port a une adresse de point de terminaison et une liaison qui représente les services utilisés par l'application. L'exposition du langage WSDL peut être désactivée à l'aide de la configuration. Aucune information n'est conservée sur l'ordinateur.  
   
-## <a name="see-also"></a>Voir aussi  
- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [Sécurité](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Voir aussi
+- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Sécurité](../../../docs/framework/wcf/feature-details/security.md)

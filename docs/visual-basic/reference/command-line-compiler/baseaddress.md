@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: 6331a55bb1d20b5804605db103dcfd2997e348d9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0fecc8e890f44512fe4ac2058f26fe54db7570a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588611"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 Spécifie une adresse de base par défaut lors de la création d’une DLL.  
@@ -42,10 +42,10 @@ Spécifie une adresse de base par défaut lors de la création d’une DLL.
   
 |Pour définir - baseaddress dans l’IDE Visual Studio|  
 |---|  
-|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Compiler**.<br />3.  Cliquez sur **Avancé**.<br />4.  Modifiez la valeur dans le **adresse de base de DLL :** boîte. **Remarque :** le **adresse de base de DLL :** zone est en lecture seule, sauf si la cible est une DLL.|  
+|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Compiler**.<br />3.  Cliquez sur **Avancé**.<br />4.  Modifiez la valeur dans le **adresse de base de DLL :** boîte. **Remarque :**      Le **adresse de base de DLL :** zone est en lecture seule, sauf si la cible est une DLL.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Sn.exe (Strong Name Tool)] [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md))
+## <a name="see-also"></a>Voir aussi
+- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Sn.exe (Strong Name Tool)] [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md))

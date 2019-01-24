@@ -10,12 +10,12 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 39d4a184972036677aaa9fdb33e672521033d35f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ccb9a19d4e6d79a84123014746b659a7168b2158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607002"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Désactivez&gt; , élément de webRequestModules (paramètres réseau)
 Supprime tous les modules de demande Web inscrits de l’application.  
@@ -23,7 +23,7 @@ Supprime tous les modules de demande Web inscrits de l’application.
  \<configuration>  
 \<system.net>  
 \<webRequestModules>  
-\<Désactivez >  
+\<clear>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,6 +69,6 @@ Supprime tous les modules de demande Web inscrits de l’application.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- <xref:System.Net.WebRequest>  
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Net.WebRequest>
 - [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

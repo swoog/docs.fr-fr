@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 15ead0a99782fcb329767395a316d9287337173a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b31694e41e6e6568feb0cb32364b291657269488
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618553"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sécurité de transport avec l'authentification par certificat
 Cette rubrique décrit l'utilisation des certificats X.509 pour l'authentification du serveur et du client lorsque vous utilisez la sécurité de transport. Pour plus d’informations sur les certificats X.509, consultez [Certificats de clé publique X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Certificats doivent être émis par une autorité de certification, qui est souvent un tiers émetteur de certificats. Dans un domaine Windows Server, les services de certificats Active Directory peuvent être utilisés pour émettre des certificats pour les ordinateurs clients figurant sur le domaine. Pour plus d’informations, consultez [Services de certificats Windows 2008 R2](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). Dans ce scénario, le service est hébergé sous Internet Information Services (IIS) qui est configuré avec SSL (Secure Sockets Layer). Le service est configuré avec un certificat SSL (X.509) pour permettre aux clients de vérifier l'identité du serveur. Le client est également configuré avec un certificat X.509 qui permet au service de vérifier l'identité du client. Le certificat du serveur doit être approuvé par le client et le certificat du client doit être approuvé par le serveur. Le mécanisme réel de vérification par le service et le client de leurs identités réciproques n'est pas traité dans cette rubrique. Pour plus d’informations, consultez [Signature numérique sur Wikipedia](https://go.microsoft.com/fwlink/?LinkId=253157).  
@@ -137,6 +137,6 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

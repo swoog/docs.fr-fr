@@ -1,21 +1,21 @@
 ---
-title: '&lt;MsmqIntegrationBinding&gt;'
+title: '&lt;msmqIntegrationBinding&gt;'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 09ac3fe2ea86745b9c88ffe9ec999a4978b343fe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1517fcaf75ea24bd3bd4e6e90276753c4973d191
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744919"
 ---
-# <a name="ltmsmqintegrationbindinggt"></a>&lt;MsmqIntegrationBinding&gt;
+# <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 Définit une liaison qui prend en charge la mise en file d’attente par routage des messages via MSMQ.  
   
  \<system.ServiceModel>  
-\<liaisons >  
+\<bindings>  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -86,13 +86,13 @@ msmqIntegrationBinding
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<sécurité >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Définit les paramètres de sécurité de la liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Définit les paramètres de sécurité de la liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaisons >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
  Cet élément de liaison peut être utilisé pour permettre aux applications Windows Communication Foundation (WCF) envoyer des messages à et de recevoir des messages à partir des applications MSMQ existantes qui utilisent COM, MSMQ des API natives ou les types définis dans le <xref:System.Messaging?displayProperty=nameWithType> espace de noms vous peut utiliser cet élément de configuration pour spécifier les moyens de résoudre la file d’attente, le transfert des garanties, si les messages doivent être stockés et comment les messages doivent être protégés et authentifiés. Pour plus d'informations, voir [Procédure : Échanger des Messages avec des points de terminaison WCF et Applications Message Queuing](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
@@ -129,12 +129,12 @@ msmqIntegrationBinding
 </configuration>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
- [\<liaison >](../../../../../docs/framework/misc/binding.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

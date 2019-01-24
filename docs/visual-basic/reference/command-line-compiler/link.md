@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 833c0c017d0a9b758dc18273c1fc48fddc1c261d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a9ebb05ca3230ff5f838e56dcc004c1958f8c86a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736625"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Fait que le compilateur rend disponible pour le projet en cours de compilation les informations de type COM des assemblys spécifiés.  
@@ -36,7 +36,7 @@ Fait que le compilateur rend disponible pour le projet en cours de compilation l
 |`fileList`|Obligatoire. Liste délimitée par des virgules des noms de fichiers d’assembly. Si le nom de fichier contient un espace, placez-le entre des guillemets.|  
   
 ## <a name="remarks"></a>Notes  
- L’option `-link` vous permet de déployer une application qui a des informations de type incorporées. L’application peut ensuite utiliser des types dans un assembly de runtime qui implémentent les informations de type incorporées sans nécessiter une référence à l’assembly de runtime. Si différentes versions de l’assembly de runtime sont publiées, l’application qui contient les informations de type incorporées peut fonctionner avec les différentes versions sans devoir être recompilée. Pour un exemple, consultez [Procédure pas à pas : incorporation de types provenant d’assemblys managés](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md).  
+ L’option `-link` vous permet de déployer une application qui a des informations de type incorporées. L’application peut ensuite utiliser des types dans un assembly de runtime qui implémentent les informations de type incorporées sans nécessiter une référence à l’assembly de runtime. Si différentes versions de l’assembly de runtime sont publiées, l’application qui contient les informations de type incorporées peut fonctionner avec les différentes versions sans devoir être recompilée. Pour obtenir un exemple, consultez [procédure pas à pas : Incorporation de types provenant d’assemblys managés](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md).  
   
  L’utilisation de l’option `-link` est particulièrement utile quand vous travaillez avec COM Interop. Vous pouvez incorporer des types COM afin que votre application ne nécessite plus un assembly PIA (Primary Interop Assembly) sur l’ordinateur cible. L’option `-link` indique au compilateur d’incorporer les informations de type COM provenant de l’assembly Interop référencé dans le code compilé résultant. Le type COM est identifié par la valeur du CLSID (GUID). Par conséquent, votre application peut s’exécuter sur un ordinateur cible où les mêmes types COM ont été installés avec les mêmes valeurs de CLSID. Les applications qui automatisent Microsoft Office sont un bon exemple. Étant donné que les applications comme Office gardent habituellement la même valeur de CLSID à travers différentes versions, votre application peut utiliser les types COM référencés dès lors que le .NET Framework 4 ou ultérieur est installé sur l’ordinateur cible, et que votre application utilise les méthodes, propriétés ou événements qui sont inclus dans les types COM référencés.  
   
@@ -87,10 +87,10 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [Procédure pas à pas : incorporation de types provenant d’assemblys managés](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
-- [-référence (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
-- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)  
-- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Procédure pas à pas : incorporation de types provenant d’assemblys managés](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [-référence (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
+- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Introduction à COM Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
