@@ -1,5 +1,5 @@
 ---
-title: 'Comment : modifier les styles de bordures et de quadrillage dans le contrôle DataGridView Windows Forms'
+title: 'Procédure : Modifier la bordure et les Styles de quadrillage dans le contrôle de DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: 94e5ae11d7fb2b67e028f368183246f8d8543a08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 052538f22c1da9836a61f66e3230e5e3e3cc72cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590888"
 ---
-# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Comment : modifier les styles de bordures et de quadrillage dans le contrôle DataGridView Windows Forms
-Avec la <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez personnaliser l’apparence de bordure du contrôle et des quadrillages pour améliorer l’expérience utilisateur. Vous pouvez modifier la couleur du quadrillage principal et le style de bordure de contrôle en plus des styles de bordure des cellules dans le contrôle. Vous pouvez également appliquer des styles de bordure de cellule différentes pour les cellules ordinaires, les cellules d’en-tête de ligne et les cellules d’en-tête de colonne.  
+# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Procédure : Modifier la bordure et les Styles de quadrillage dans le contrôle de DataGridView Windows Forms
+Avec la <xref:System.Windows.Forms.DataGridView> contrôle, vous pouvez personnaliser l’apparence de bordure du contrôle et des quadrillages pour améliorer l’expérience utilisateur. Vous pouvez modifier la couleur du quadrillage et le style de bordure de contrôle en plus de styles de bordure des cellules dans le contrôle. Vous pouvez également appliquer des styles de bordure de cellule différentes pour les cellules ordinaires, les cellules d’en-tête de ligne et les cellules d’en-tête de colonne.  
   
 > [!NOTE]
->  La couleur du quadrillage est utilisée uniquement avec les <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, et <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> les valeurs de la <xref:System.Windows.Forms.DataGridViewCellBorderStyle> énumération et la <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> valeur de la <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> énumération. Les autres valeurs de ces énumérations utilisent des couleurs spécifiées par le système d’exploitation. En outre, lorsque les styles visuels sont activés sur Windows XP et la famille Windows Server 2003 via la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> (méthode), la <xref:System.Windows.Forms.DataGridView.GridColor%2A> valeur de propriété n’est pas utilisée.  
+>  La couleur du quadrillage est utilisée uniquement avec le <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, et <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> les valeurs de la <xref:System.Windows.Forms.DataGridViewCellBorderStyle> énumération et la <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> valeur de la <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> énumération. Les autres valeurs de ces énumérations utilisent des couleurs spécifiées par le système d’exploitation. En outre, lorsque les styles visuels sont activés sur Windows XP et la famille Windows Server 2003 via les <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> (méthode), le <xref:System.Windows.Forms.DataGridView.GridColor%2A> valeur de propriété n’est pas utilisée.  
   
 ### <a name="to-change-the-gridline-color-programmatically"></a>Pour modifier la couleur du quadrillage par programmation  
   
@@ -31,14 +31,14 @@ Avec la <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez person
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Pour modifier le style de bordure du contrôle DataGridView entier par programmation  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Pour modifier le style de bordure de l’ensemble du contrôle DataGridView par programmation  
   
 -   Affectez l'une des valeurs de l'énumération <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> à la propriété <xref:System.Windows.Forms.BorderStyle>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Pour modifier par programme des styles de bordure des cellules DataGridView  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Pour modifier par programmation les styles de bordure des cellules DataGridView  
   
 -   Définir le <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, et <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> propriétés.  
   
@@ -56,13 +56,13 @@ Avec la <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez person
   
 -   des références aux assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> et <xref:System.Drawing?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.BorderStyle>  
- <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewCellBorderStyle>  
- <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>  
- [Mises en forme et styles de base dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.BorderStyle>
+- <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewCellBorderStyle>
+- <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>
+- [Mises en forme et styles de base dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)

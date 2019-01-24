@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b63dbcaa54e03e5603e06545f8b4fec393d8268
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5eb01a3e354b4360bea59af1e63ffeb0576aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730111"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables, méthode
-Retourne toutes les variables définies dans une portée globale au sein de cet espace de noms.  
+Retourne toutes les variables définies avec une portée globale dans cet espace de noms.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +39,7 @@ HRESULT GetVariables(
   
 #### <a name="parameters"></a>Paramètres  
  `cVars`  
- [in] A `ULONG32` qui indique la taille de la `pVars` tableau.  
+ [in] Un `ULONG32` qui indique la taille de la `pVars` tableau.  
   
  `pcVars`  
  [out] Un pointeur vers un `ULONG32` qui reçoit la taille de la mémoire tampon requise pour contenir les espaces de noms.  
@@ -53,5 +53,5 @@ HRESULT GetVariables(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedNamespace, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedNamespace, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

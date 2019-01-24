@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06bdc3605d981acad68a97901627f361da4061c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: efc46a0128a4fb9a0edaa86ad20689fda0c2710b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521775"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx, méthode
 Lance un processus sur un ordinateur distant sous le débogueur.  
@@ -49,13 +49,13 @@ HRESULT CreateProcessEx (
   
 #### <a name="parameters"></a>Paramètres  
  `pRemoteTarget`  
- [in] Pointeur vers un [ICorDebugRemoteTarget (Interface)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Utilisé pour déterminer l’ordinateur distant sur lequel le processus est lancé.  
+ [in] Pointeur vers un [icordebugremotetarget, Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Utilisé pour déterminer l’ordinateur distant sur lequel le processus sera lancé.  
   
  `lpApplicationName`  
  [in] Pointeur vers une chaîne se terminant par null qui spécifie le module doit être exécuté par le processus lancé. Le module est exécuté dans le contexte de sécurité du processus appelant.  
   
  `lpCommandLine`  
- [in] Pointeur vers une chaîne se terminant par null qui spécifie la ligne de commande doit être exécutée par le processus lancé.  
+ [in] Pointeur vers une chaîne se terminant par null qui spécifie la ligne de commande doit être exécuté par le processus lancé.  
   
  `lpProcessAttributes`  
  [in] Non utilisé pour le débogage distant.  
@@ -73,7 +73,7 @@ HRESULT CreateProcessEx (
  [in] Pointeur vers un bloc d’environnement pour le nouveau processus.  
   
  `lpCurrentDirectory`  
- [in] Pointeur vers une chaîne se terminant par null qui spécifie le chemin d’accès complet au répertoire en cours pour le processus. Si ce paramètre est null, le nouveau processus aura le même lecteur actuel et le répertoire que le processus appelant.  
+ [in] Pointeur vers une chaîne se terminant par null qui spécifie le chemin complet vers le répertoire actif pour le processus. Si ce paramètre est null, le nouveau processus aura le même lecteur actuel et le répertoire en tant que le processus appelant.  
   
  `lpStartupInfo`  
  [in] Non utilisé pour le débogage distant.  
@@ -95,10 +95,10 @@ HRESULT CreateProcessEx (
  Impossible de lancer le processus sur l’ordinateur distant et retourner une « ICorDebugProcess Interface » pour le débogage.  
   
 ## <a name="remarks"></a>Notes  
- Débogage en mode mixte n’est pas pris en charge dans Silverlight.  
+ Le débogage en mode mixte n’est pas pris en charge dans Silverlight.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl  
   
@@ -106,8 +106,8 @@ HRESULT CreateProcessEx (
   
  **Versions du .NET framework :** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugRemote, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [ICorDebug, interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugRemote, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug, interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

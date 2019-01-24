@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 164cdc5c04a55e9c33dda51e10dfb37f38ec1b6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746542"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize, méthode
 Obtient la taille binaire estimée de l’assembly et ses métadonnées dans la portée actuelle.  
@@ -38,33 +38,33 @@ HRESULT GetSaveSize (
   
 #### <a name="parameters"></a>Paramètres  
  `fSave`  
- [in] Une valeur de la [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) énumération qui spécifie s’il faut obtenir une taille exacte ou approximative. Seuls trois valeurs sont valides : cssAccurate, cssQuick et cssDiscardTransientCAs :  
+ [in] Une valeur de la [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) énumération qui spécifie s’il faut obtenir une taille exacte ou approximative. Seuls les trois valeurs sont valides : cssAccurate, cssQuick et cssDiscardTransientCAs :  
   
--   cssAccurate retourne la taille d’enregistrement exacte, mais prend plus de temps à calculer.  
+-   cssAccurate retourne la taille d’enregistrement exact, mais prend plus de temps à calculer.  
   
 -   cssQuick retourne une taille, remplie pour la sécurité, mais prend moins de temps à calculer.  
   
--   cssDiscardTransientCAs indique à `GetSaveSize` qu’il ne peut lever immédiatement les attributs personnalisés pouvant être éliminées.  
+-   cssDiscardTransientCAs indique à `GetSaveSize` qu’il peut jeter des attributs personnalisés pouvant être éliminées.  
   
  `pdwSaveSize`  
- [out] Pointeur vers la taille qui est requis pour enregistrer le fichier.  
+ [out] Un pointeur vers la taille qui est requis pour enregistrer le fichier.  
   
 ## <a name="remarks"></a>Notes  
  `GetSaveSize` calcule l’espace requis, en octets, pour enregistrer l’assembly et toutes ses métadonnées dans la portée actuelle. (Un appel à la [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) méthode émet ce nombre d’octets.)  
   
- Si l’appelant implémente la [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (via [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) ou [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` effectue deux passes sur les métadonnées pour les optimiser et les compresser. Sinon, aucune optimisation n’est effectuées.  
+ Si l’appelant implémente le [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (via [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) ou [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` effectue deux passes sur les métadonnées pour optimiser et les compresser. Sinon, aucune des optimisations.  
   
- Si l’optimisation est effectuée, le premier passage trie simplement les structures de métadonnées pour régler les performances des recherches au moment de l’importation. Cette étape se produit généralement lors du déplacement d’enregistrements, avec comme conséquence que les jetons conservés par l’outil pour référence ultérieure sont invalidés. Les métadonnées n’informent pas l’appelant de ces modifications apportées aux jetons jusqu’après la deuxième passe, toutefois. Dans la deuxième passe, différents des optimisations destinées à réduire la taille globale des métadonnées, telles que l’optimisation (liaison anticipée) `mdTypeRef` et `mdMemberRef` jetons lors de la référence est un type ou membre qui est déclaré dans le portée de métadonnées actuelle. Dans cette étape, une autre série de mappages de jetons se produit. Après cette étape, le moteur de métadonnées informe l’appelant, via son `IMapToken` interface, de n’importe quel modifié les valeurs de jeton.  
+ Si l’optimisation est effectuée, le premier passage trie simplement les structures de métadonnées pour régler les performances des recherches au moment de l’importation. Cette étape se produit généralement dans le déplacement des enregistrements, avec comme conséquence que les jetons conservés par l’outil pour référence ultérieure sont invalidés. Les métadonnées ne pas informent l’appelant de ces modifications apportées aux jetons jusqu’après la deuxième passe, toutefois. Dans la deuxième passe, différents des optimisations qui sont destinées à réduire la taille globale des métadonnées, telles que l’optimisation (liaison anticipée) `mdTypeRef` et `mdMemberRef` jetons lors de la référence concerne un type ou membre qui est déclaré dans le portée des métadonnées actuelle. Dans cette étape, une autre série de mappages de jetons se produit. Après ce passage, le moteur de métadonnées informe l’appelant, via son `IMapToken` interface, de n’importe quel modifié les valeurs de jeton.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

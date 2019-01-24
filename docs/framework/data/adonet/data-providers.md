@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: af7b444a391de56f516d84620b4dbd2eba3497fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d96be73fc63856e317b129c1fdd8c381c9df6c07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627263"
 ---
 # <a name="net-framework-data-providers"></a>Fournisseur de données .NET Framework
 Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé pour la connexion à une base de données, l'exécution de commandes et l'extraction de résultats. Ces résultats sont traités directement, placés dans un objet <xref:System.Data.DataSet> pour pouvoir être exposés à l'utilisateur le cas échéant, combinés aux données de différentes sources ou accessibles à distance entre couches. Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont légers et créent une couche minimale entre la source des données et le code, ce qui augmente les performances sans nuire aux fonctionnalités.  
@@ -24,7 +24,7 @@ Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnsho
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Fournisseur de données pour ODBC|Pour les sources de données exposées à l'aide de ODBC. Utilise l'espace de noms <xref:System.Data.Odbc> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour Oracle|Pour les sources de données Oracle. Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle prend en charge le logiciel client Oracle version 8.1.7 et ultérieure, et utilise l'espace de noms <xref:System.Data.OracleClient> .|  
 |fournisseur EntityClient|Fournit un accès aux données pour les applications EDM (Entity Data Model). Utilise l'espace de noms <xref:System.Data.EntityClient> .|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour SQL Server Compact 4.0.|Fournit l’accès aux données pour Microsoft SQL Server Compact 4.0. Utilise le [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) espace de noms.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour SQL Server Compact 4.0.|Fournit l’accès aux données pour Microsoft SQL Server Compact 4.0. Utilise l’espace de noms [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Objets principaux des fournisseurs de données .NET Framework  
  Le tableau suivant présente les quatre principaux objets qui composent un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
@@ -123,7 +123,7 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
->  Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC requiert MDAC version 2.6 ou ultérieure et MDAC 2.8 Service Pack 1 (SP1) est recommandé. Vous pouvez télécharger MDAC 2.8 SP1 à partir de la [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?linkid=4173).  
+>  Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC requiert MDAC version 2.6 ou ultérieure et MDAC 2.8 Service Pack 1 (SP1) est recommandé. Vous pouvez télécharger MDAC 2.8 SP1 à partir du [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?linkid=4173).  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>fournisseur de données .NET Framework pour Oracle  
  Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle (OracleClient) permet l'accès aux sources de données Oracle par le biais du logiciel de connectivité client Oracle. Il prend en charge le logiciel client Oracle version 8.1.7 ou ultérieure. Le fournisseur de données prend en charge les transactions locales et distribuées. Pour plus d’informations, consultez [Transactions et la concurrence](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
@@ -155,9 +155,9 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] « Fournisseur de données pour Oracle|Recommandé pour les applications monocouches et de couche intermédiaire qui utilisent des sources de données Oracle.|  
   
 ## <a name="entityclient-provider"></a>fournisseur EntityClient  
- Le fournisseur EntityClient permet d'accéder aux données basées sur un modèle de données d'entité EDM (Entity Data Model). Contrairement aux autres fournisseurs de données .NET Framework, il n'interagit pas directement avec une source de données. Au lieu de cela, il utilise Entity SQL pour communiquer avec le fournisseur de données sous-jacent. Pour plus d’informations, consultez [EntityClient et Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ Le fournisseur EntityClient permet d'accéder aux données basées sur un modèle de données d'entité EDM (Entity Data Model). Contrairement aux autres fournisseurs de données .NET Framework, il n'interagit pas directement avec une source de données. Au lieu de cela, il utilise Entity SQL pour communiquer avec le fournisseur de données sous-jacent. Pour plus d'informations, consultez [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

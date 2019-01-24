@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edb45c9ceefb242e5a72e8602dc93ecd39b2df09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a4c1aa25f269121dc602bbeb6b864b589318be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745958"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap, énumération
 Spécifie les options pour un appel PInvoke.  
@@ -67,12 +67,12 @@ typedef enum  CorPinvokeMap {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`pmNoMangle`|Utiliser chaque nom de membre spécifié.|  
+|`pmNoMangle`|Utilisez chaque nom de membre spécifiés.|  
 |`pmCharSetMask`|Réservé.|  
 |`pmCharSetNotSpec`|Réservé.|  
-|`pmCharSetAnsi`|Marshaler des chaînes en tant que chaînes de caractères de plusieurs octets.|  
-|`pmCharSetUnicode`|Marshaler des chaînes en tant que caractères Unicode 2 octets.|  
-|`pmCharSetAuto`|Marshaler des chaînes de manière appropriée pour le système d’exploitation cible automatiquement. La valeur par défaut est Unicode sur Windows NT, Windows 2000, Windows XP et la famille Windows Server 2003. la valeur par défaut est ANSI sur Windows 98 et Windows Me.|  
+|`pmCharSetAnsi`|Les chaînes sont marshalées sous forme de chaînes de caractères multi-octets.|  
+|`pmCharSetUnicode`|Marshaler des chaînes comme des caractères Unicode sur 2 octets.|  
+|`pmCharSetAuto`|Chaînes sont automatiquement marshalées en conséquence pour le système d’exploitation cible. La valeur par défaut est Unicode sous Windows NT, Windows 2000, Windows XP et la famille Windows Server 2003 ; la valeur par défaut est ANSI sous Windows 98 et Windows Me.|  
 |`pmBestFitUseAssem`|Réservé.|  
 |`pmBestFitEnabled`|Effectuer le mappage ajusté des caractères Unicode qui ne disposent pas d’une correspondance exacte dans le jeu de caractères ANSI.|  
 |`pmBestFitDisabled`|N’effectuez pas de mappage ajusté des caractères Unicode. Dans ce cas, tous les caractères non mappables seront remplacés par un ' ?'.|  
@@ -81,21 +81,21 @@ typedef enum  CorPinvokeMap {
 |`pmThrowOnUnmappableCharEnabled`|Lève une exception lorsque le marshaleur d’interopérabilité rencontre un caractère non mappable.|  
 |`pmThrowOnUnmappableCharDisabled`|Ne levez pas d’exception lorsque le marshaleur d’interopérabilité rencontre un caractère non mappable.|  
 |`pmThrowOnUnmappableCharMask`|Réservée|  
-|`pmSupportsLastError`|Permet à l’appelé d’appeler Win32 `SetLastError` fonction avant le retour de la méthode avec attributs.|  
+|`pmSupportsLastError`|Permet à l’appelé d’appeler Win32 `SetLastError` (fonction) avant le retour de la méthode avec attributs.|  
 |`pmCallConvMask`|Réservée|  
 |`pmCallConvWinapi`|Utilisez la convention d’appel de plateforme par défaut. Par exemple, sur Windows, la valeur par défaut est `StdCall` et sur Windows CE .NET, il est `Cdecl`.|  
 |`pmCallConvCdecl`|Utilisez le `Cdecl` convention d’appel. Dans ce cas, l’appelant nettoie la pile. Cela permet d’appeler des fonctions avec `varargs` (autrement dit, les fonctions qui acceptent un nombre variable de paramètres).|  
-|`pmCallConvStdcall`|Utilisez le `StdCall` convention d’appel. Dans ce cas, l’appelé nettoie la pile. Il s’agit de la convention par défaut pour appeler des fonctions non managées dans un appel d’appel.|  
-|`pmCallConvThiscall`|Utilisez le `ThisCall` convention d’appel. Dans ce cas, le premier paramètre est le `this` pointeur et est stocké dans le Registre ECX. Autres paramètres sont insérés dans la pile. Le `ThisCall` convention d’appel est utilisée pour appeler des méthodes sur des classes exportées à partir d’une DLL non managée.|  
+|`pmCallConvStdcall`|Utilisez le `StdCall` convention d’appel. Dans ce cas, l’appelé nettoie la pile. Il s’agit de la convention par défaut pour appeler les fonctions non managées avec platform invoke.|  
+|`pmCallConvThiscall`|Utilisez le `ThisCall` convention d’appel. Dans ce cas, le premier paramètre est le `this` pointeur et est stocké dans le Registre ECX. Autres paramètres sont transmis sur la pile. Le `ThisCall` convention d’appel est utilisée pour appeler des méthodes sur des classes exportées à partir d’une DLL non managée.|  
 |`pmCallConvFastcall`|Réservé.|  
 |`pmMaxValue`|Réservé.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

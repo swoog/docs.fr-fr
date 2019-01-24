@@ -1,5 +1,5 @@
 ---
-title: "Comment : ajouter et supprimer des éléments d'un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms"
+title: 'Procédure : Ajouter et supprimer des éléments d’un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f789a0e00b1d235fe61b93190ae167250113846
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500218"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Comment : ajouter et supprimer des éléments d'un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
-Les éléments peuvent être ajoutés à une zone de liste déroulante Windows Forms, zone de liste, ou de vérifier la zone de liste de différentes façons, car ces contrôles peuvent être liés à une variété de sources de données. Toutefois, cette rubrique illustre la méthode la plus simple et ne nécessite aucune liaison de données. Les éléments affichés sont généralement des chaînes ; Toutefois, n’importe quel objet peut être utilisé. Le texte qui s’affiche dans le contrôle est la valeur retournée par l’objet `ToString` (méthode).  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : Ajouter et supprimer des éléments d’un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle
+Les éléments peuvent être ajoutés à une zone de liste déroulante Windows Forms, zone de liste, ou vérifié la zone de liste de plusieurs façons, étant donné que ces contrôles peuvent être liés à une variété de sources de données. Toutefois, cette rubrique illustre la méthode la plus simple et ne nécessite aucune liaison de données. Les éléments affichés sont généralement des chaînes ; Toutefois, n’importe quel objet peut être utilisé. Le texte qui s’affiche dans le contrôle est la valeur retournée par l’objet `ToString` (méthode).  
   
 ### <a name="to-add-items"></a>Pour ajouter des éléments  
   
@@ -136,10 +136,10 @@ Les éléments peuvent être ajoutés à une zone de liste déroulante Windows F
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [Guide pratique pour trier le contenu d'un contrôle ComboBox, CheckedListBox ou ListBox Windows Forms](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- [Utilisation d'un contrôle ComboBox Windows Forms à la place d'un contrôle ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [Guide pratique pour Trier le contenu d’un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Utilisation d'un contrôle ComboBox Windows Forms à la place d'un contrôle ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

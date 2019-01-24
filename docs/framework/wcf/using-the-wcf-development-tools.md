@@ -2,12 +2,12 @@
 title: Utilisation des outils de développement WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 3eb349fd795b2067d4d75ff138fd9b5922110bd3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e9a398ac6914582d299658e3e45d17ea5468917d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712088"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilisation des outils de développement WCF
 Cette section décrit les outils de développement Visual Studio qui peuvent vous aider à développer votre WCFservice.  
@@ -42,7 +42,7 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  Pour plus d’informations sur Netsh.exe, consultez [comment utiliser l’outil Netsh.exe et les commutateurs de ligne de commande](https://go.microsoft.com/fwlink/?LinkId=97877).  
   
-## <a name="see-also"></a>Voir aussi  
- [Modèles Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
- [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>Voir aussi
+- [Modèles Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
+- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

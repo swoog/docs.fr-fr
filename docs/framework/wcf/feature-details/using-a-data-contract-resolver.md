@@ -2,14 +2,15 @@
 title: Utilisation d'un programme de résolution de contrat de données
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 467977374e9e2b4a369be7ce467ced1b0dca1195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8859a343c5dcc3b88edf4840a759fbed52bbf984
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658830"
 ---
 # <a name="using-a-data-contract-resolver"></a>Utilisation d'un programme de résolution de contrat de données
-Un programme de résolution de contrat de données vous permet de configurer des types connus de manière dynamique. Les types connus sont nécessaires lors de la sérialisation ou de la désérialisation d'un type non attendu par un contrat de données. Pour plus d’informations sur les types connus, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Les types connus sont généralement spécifiés statiquement. Cela signifie que vous devez connaître tous les types possibles qu'une opération peut recevoir pendant son implémentation. Voici les scénarios où cela n'est pas vrai et où il est important de pouvoir spécifier les types connus de façon dynamique.  
+Un programme de résolution de contrat de données vous permet de configurer des types connus de manière dynamique. Les types connus sont nécessaires lors de la sérialisation ou de la désérialisation d'un type non attendu par un contrat de données. Pour plus d’informations sur les types connus, consultez [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Les types connus sont généralement spécifiés statiquement. Cela signifie que vous devez connaître tous les types possibles qu'une opération peut recevoir pendant son implémentation. Voici les scénarios où cela n'est pas vrai et où il est important de pouvoir spécifier les types connus de façon dynamique.  
   
 ## <a name="creating-a-data-contract-resolver"></a>Création d'un programme de résolution de contrat de données  
  La création d'un programme de résolution de contrat de données implique l'implémentation de deux méthodes, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> et <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Ces deux méthodes implémentent des rappels utilisés respectivement lors de la sérialisation et de la désérialisation. La méthode <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> est appelée lors de la sérialisation, prend un type de contrat de données et le mappe à un nom et espace de noms `xsi:type`. La méthode <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> est appelée lors de la désérialisation, prend un nom et espace de noms `xsi:type` et le résout en type de contrat de données. Ces deux méthodes ont un paramètre `knownTypeResolver` qui peut être utilisé pour utiliser le programme de résolution de type connu par défaut dans votre implémentation.  
@@ -84,9 +85,9 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- Spécifiez de façon déclarative un programme de résolution de contrat de données en implémentant un attribut qui peut être appliqué à un service.  Pour plus d’informations, consultez la [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) exemple. Cet exemple implémente un attribut appelé « KnownAssembly » qui ajoute un programme de résolution de contrat de données personnalisées pour le comportement du service.  
+ Spécifiez de façon déclarative un programme de résolution de contrat de données en implémentant un attribut qui peut être appliqué à un service.  Pour plus d’informations, consultez le [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) exemple. Cet exemple implémente un attribut appelé « KnownAssembly » qui ajoute un programme de résolution de contrat de données personnalisées pour le comportement du service.  
   
-## <a name="see-also"></a>Voir aussi  
- [Types connus de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [DataContractSerializer, exemple](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
- [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+## <a name="see-also"></a>Voir aussi
+- [Types connus de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [DataContractSerializer, exemple](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)
+- [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

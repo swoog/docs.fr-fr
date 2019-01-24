@@ -1,5 +1,5 @@
 ---
-title: 'Comment : appliquer des transformations à du texte'
+title: 'Procédure : Appliquer des transformations à du texte'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], rotated text
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: 531537013ab3bbfba278ca63e14155341eefc826
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7737a2e01ddfe2a639426bbced643d8f78961207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740542"
 ---
-# <a name="how-to-apply-transforms-to-text"></a>Comment : appliquer des transformations à du texte
-Les transformations peuvent modifier l’affichage de texte dans votre application. Les exemples suivants utilisent différents types de transformations de rendu pour affecter l’affichage du texte dans un <xref:System.Windows.Controls.TextBlock> contrôle.  
+# <a name="how-to-apply-transforms-to-text"></a>Procédure : Appliquer des transformations à du texte
+Les transformations peuvent modifier l’affichage de texte dans votre application. Les exemples suivants utilisent différents types de transformations du rendu pour changer l’affichage du texte dans un <xref:System.Windows.Controls.TextBlock> contrôle.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant présente un texte pivoté par rapport à un point spécifié dans le plan x-y à deux dimensions.  
@@ -31,16 +31,16 @@ Les transformations peuvent modifier l’affichage de texte dans votre applicati
  ![Texte pivoté à l’aide de RotateTransform](../../../../docs/framework/wpf/advanced/media/transformedtext01.jpg "TransformedText01")  
 Exemple de texte pivoté à 90 degrés  
   
- Le code suivant exemple utilise un <xref:System.Windows.Media.RotateTransform> pour faire pivoter le texte. Un <xref:System.Windows.Media.RotateTransform.Angle%2A> valeur 90 fait pivoter l’élément à 90 degrés dans le sens horaire.  
+ Le code suivant exemple utilise un <xref:System.Windows.Media.RotateTransform> pour faire pivoter le texte. Un <xref:System.Windows.Media.RotateTransform.Angle%2A> valeur de 90 fait pivoter l’élément à 90 degrés dans le sens horaire.  
   
  [!code-xaml[TextTransformSample#TextTransformSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
   
  Dans l’exemple suivant, la deuxième ligne du texte est mise à l’échelle par 150 % le long de l’axe x et la troisième ligne du texte est mise à l’échelle par 150 % le long de l’axe y.  
   
- ![Texte mis à l’échelle à l’aide de ScaleTransform](../../../../docs/framework/wpf/advanced/media/transformedtext02.jpg "TransformedText02")  
+ ![Texte mis à l’échelle avec ScaleTransform](../../../../docs/framework/wpf/advanced/media/transformedtext02.jpg "TransformedText02")  
 Exemple de texte mis à l’échelle  
   
- Le code suivant exemple utilise un <xref:System.Windows.Media.ScaleTransform> au texte de l’échelle à partir de sa taille d’origine.  
+ Le code suivant exemple utilise un <xref:System.Windows.Media.ScaleTransform> à l’échelle un texte à partir de sa taille d’origine.  
   
  [!code-xaml[TextTransformSample#TextTransformSample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
   
@@ -52,7 +52,7 @@ Exemple de texte mis à l’échelle
  ![Texte incliné à l’aide de SkewTransform](../../../../docs/framework/wpf/advanced/media/transformedtext03.jpg "TransformedText03")  
 Exemple de texte incliné  
   
- Le code suivant exemple utilise un <xref:System.Windows.Media.SkewTransform> pour incliner le texte. Une inclinaison est une transformation qui étire l’espace de coordonnées de façon non uniforme. Dans cet exemple, les deux chaînes de texte sont inclinées de -30° et 30° le long de la coordonnée x.  
+ Le code suivant exemple utilise un <xref:System.Windows.Media.SkewTransform> pour incliner du texte. Une inclinaison est une transformation qui étire l’espace de coordonnées de façon non uniforme. Dans cet exemple, les deux chaînes de texte sont inclinées de -30° et 30° le long de la coordonnée x.  
   
  [!code-xaml[TextTransformSample#TextTransformSample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
@@ -66,7 +66,7 @@ Exemple de texte traduit
  [!code-xaml[TextTransformSample#TextTransformSample4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  Le <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> fournit un riche ensemble de fonctionnalités pour fournir des effets d’ombre. Pour plus d’informations, consultez [créer un texte avec une ombre](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md).  
+>  Le <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> fournit un ensemble rich de fonctionnalités pour fournir des effets d’ombre. Pour plus d’informations, consultez [créer du texte avec une ombre](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour appliquer des animations à du texte](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour appliquer des animations à du texte](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)

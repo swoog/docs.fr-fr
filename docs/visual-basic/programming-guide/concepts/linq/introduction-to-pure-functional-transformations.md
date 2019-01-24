@@ -2,12 +2,12 @@
 title: Introduction aux Transformations fonctionnelles pures (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
-ms.openlocfilehash: 8c382363c757887802ed54b565b24422d0ac7db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4e9cdf98dfe3a54ecb9ff4316742d76b51ba782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573022"
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Introduction aux Transformations fonctionnelles pures (Visual Basic)
 Cette section présente les transformations fonctionnelles, y compris les concepts sous-jacents et les constructions de prise en charge. Elle décrit le contraste qu'il existe entre la programmation orientée objet et la programmation avec transformation fonctionnelle, et fournit des conseils pour aider les programmeurs à passer de l'une à l'autre. Bien que les transformations fonctionnelles puissent être utilisées dans de nombreux scénarios de programmation, la transformation XML est utilisée ici comme exemple concret.  
@@ -22,5 +22,5 @@ Cette section présente les transformations fonctionnelles, y compris les concep
 |[Applicabilité des transformations fonctionnelles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|Décrit des scénarios de transformation fonctionnelle courants.|  
 |[Transformation fonctionnelle de données XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Décrit les transformations fonctionnelles dans le contexte de la transformation d’arborescences XML.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Transformations fonctionnelles pures de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Transformations fonctionnelles pures de données XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

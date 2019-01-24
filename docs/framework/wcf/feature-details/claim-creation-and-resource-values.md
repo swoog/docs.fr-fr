@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
-ms.openlocfilehash: cfa697023ca9d4c0b6f43c90c382816993dccc5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca1bb8ccbc77e2b026a65a9cef56118e8b86dbb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704067"
 ---
 # <a name="claim-creation-and-resource-values"></a>Création de revendications et valeurs de ressource
 La classe <xref:System.IdentityModel.Claims.Claim> fournit plusieurs méthodes de création d'instances de types de revendications intégrés. Parmi ces méthodes, les suivantes n'effectuent pas de vérification de format ou de sémantique sur la ressource fournie :  
@@ -42,7 +42,7 @@ La classe <xref:System.IdentityModel.Claims.Claim> fournit plusieurs méthodes d
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Claims.ClaimSet>  
- [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Claims.ClaimSet>
+- [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

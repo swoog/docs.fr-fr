@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: b8e082b98870a59e8fb6f42fa7bedb86c2832d33
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6989204fac64fc18cae547e272f6d52004c3af69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728828"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Mise à jour des sources de données avec les DataAdapter
 La méthode `Update` de l'objet <xref:System.Data.Common.DataAdapter> est appelée pour répercuter les modifications d'un objet <xref:System.Data.DataSet> dans la source de données. La méthode `Update`, comme la méthode `Fill`, prend comme arguments une instance d'un `DataSet` et un objet <xref:System.Data.DataTable> optionnel ou un nom de `DataTable`. L'instance `DataSet` est le `DataSet` qui contient les modifications apportées et le `DataTable` identifie la table de laquelle les modifications doivent être récupérées. Si aucun `DataTable` n'est spécifié, le premier `DataTable` du `DataSet` est utilisé.  
@@ -368,10 +368,10 @@ class Program {
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [États des lignes et versions des lignes](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [AcceptChanges et RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
- [Fusion de contenu de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
- [Récupération de valeurs d’identité ou de numérotation automatique](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [États des lignes et versions des lignes](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [AcceptChanges et RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [Fusion de contenu de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
+- [Récupération de valeurs d’identité ou de numérotation automatique](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

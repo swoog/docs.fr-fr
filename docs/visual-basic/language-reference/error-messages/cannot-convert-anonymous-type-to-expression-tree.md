@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: 2f97a0de74428ce42a088644580a78bf8fd99945
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646943"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Impossible de convertir le type anonyme en arborescence de l’expression, car elle contient un champ qui sert à initialiser un autre champ
 Le compilateur n’accepte pas de conversion d’un anonyme en une arborescence d’expression lorsqu’une propriété du type anonyme est utilisée pour initialiser une autre propriété du type anonyme. Par exemple, dans le code suivant, `Prop1` est déclarée dans la liste d’initialisation et ensuite utilisée comme valeur initiale pour `Prop2`.  
@@ -48,6 +48,6 @@ End Module
   
 ## <a name="see-also"></a>Voir aussi
 
-[Types anonymes (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-[Arborescences d’expressions (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md)  
-[Comment : utiliser des arborescences d’Expression pour générer des requêtes dynamiques (Visual Basic)](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)  
+- [Types anonymes (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Arborescences d’expressions (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md)
+- [Guide pratique pour Utiliser des arborescences d’Expression pour générer des requêtes dynamiques (Visual Basic)](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)

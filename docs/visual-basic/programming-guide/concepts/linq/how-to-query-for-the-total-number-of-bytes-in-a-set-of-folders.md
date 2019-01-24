@@ -1,15 +1,15 @@
 ---
-title: 'Comment : rechercher le nombre Total d’octets dans un ensemble de dossiers (LINQ) (Visual Basic)'
+title: 'Procédure : Rechercher le nombre Total d’octets dans un ensemble de dossiers (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 6a6babaf019cdac2298aee6eff55581bf35b2e47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5eedd2ed0d8756f400f1ccfa1b1d71f699a42116
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506600"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Comment : rechercher le nombre Total d’octets dans un ensemble de dossiers (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Procédure : Rechercher le nombre Total d’octets dans un ensemble de dossiers (LINQ) (Visual Basic)
 Cet exemple montre comment récupérer le nombre total d’octets utilisés par tous les fichiers d’un dossier spécifié, ainsi que par tous ses sous-dossiers.  
   
 ## <a name="example"></a>Exemple  
@@ -74,6 +74,6 @@ End Module
 ## <a name="compiling-the-code"></a>Compilation du code  
  Créer un projet qui cible le .NET Framework version 3.5 ou ultérieure avec une référence à System.Core.dll et une `Imports` instruction pour l’espace de noms System.Linq.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Voir aussi
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

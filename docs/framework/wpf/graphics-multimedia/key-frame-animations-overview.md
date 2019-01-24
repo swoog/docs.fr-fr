@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: f163b71d7a33aa115a2a4600cac08b7e4b2e80e7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5891887ea0df4addc828dd617c9fce63bb9096ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661592"
 ---
 # <a name="key-frame-animations-overview"></a>Vue d'ensemble des animations d'image clé
 Cette rubrique présente les animations d’image clé. Les animations d’image clé vous permettent d’effectuer des animation en utilisant plus de deux valeurs cibles et de contrôler la méthode d’interpolation d’une animation.  
@@ -283,13 +283,13 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
   
 8.  Triez les images clés dans l’ordre de temps résolu (clé primaire) et ordre de déclaration (clé secondaire), c'est-à-dire, utilisez un tri stable basé sur l’image clé résolue <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Media.Animation.KeyTime>  
- <xref:System.Windows.Media.Animation.KeySpline>  
- <xref:System.Windows.Media.Animation.Timeline>  
- [Animation de Spline clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160011)  
- [Exemple de l’Animation d’image clé](https://go.microsoft.com/fwlink/?LinkID=160012)  
- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Vue d'ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Guides pratiques relatifs aux images clés](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
- [Vue d’ensemble des comportements de minutage](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Media.Animation.KeyTime>
+- <xref:System.Windows.Media.Animation.KeySpline>
+- <xref:System.Windows.Media.Animation.Timeline>
+- [Animation de Spline clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160011)
+- [Exemple de l’Animation d’image clé](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Vue d'ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Guides pratiques relatifs aux images clés](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Vue d’ensemble des comportements de minutage](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

@@ -2,12 +2,12 @@
 title: DataViews
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4731b0c94f9ecd03dc3d1229f27cb8ede7e0e203
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592898"
 ---
 # <a name="dataviews"></a>DataViews
 Un objet <xref:System.Data.DataView> vous permet de créer différentes vues des données stockées dans un objet <xref:System.Data.DataTable>, possibilité qui est souvent utilisée dans les applications de liaison de données. À l’aide un **DataView**, vous pouvez exposer les données dans une table avec différents ordres de tri, et vous pouvez filtrer les données par état de ligne ou en fonction d’une expression de filtre.  
@@ -59,5 +59,5 @@ Un objet <xref:System.Data.DataView> vous permet de créer différentes vues des
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  Décrit l'architecture et les composants d'ADO.NET ainsi que la façon d'utiliser ADO.NET pour accéder à des sources de données existantes et gérer des données d'application.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

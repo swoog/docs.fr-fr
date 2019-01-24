@@ -3,12 +3,12 @@ title: '&lt;customTrackingQuery&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-ms.openlocfilehash: 7ddf19ed75d50f3cd5f20de8b0e2dfcdd5ea82b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9ee5a4a25d379eafb936098597df1ec61ff09f0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725855"
 ---
 # <a name="ltcustomtrackingquerygt"></a>&lt;customTrackingQuery&gt;
 Représente une collection de requêtes permettant d’effectuer le suivi des événements que vous définissez dans vos activités de code. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des enregistrements de suivi personnalisés.  
@@ -16,11 +16,11 @@ Représente une collection de requêtes permettant d’effectuer le suivi des é
  Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<suivi >  
-\<trackingProfile >  
-\<flux de travail >  
-\<customTrackingQueries >  
-\<customTrackingQuery >  
+\<tracking>  
+\<trackingProfile>  
+\<workflow>  
+\<customTrackingQueries>  
+\<customTrackingQuery>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,10 +54,10 @@ Représente une collection de requêtes permettant d’effectuer le suivi des é
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<customTrackingQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|Requête qui permet d'effectuer le suivi des événements que vous définissez dans vos activités de code.|  
+|[\<customTrackingQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|Requête qui permet d'effectuer le suivi des événements que vous définissez dans vos activités de code.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>         
- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
+- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

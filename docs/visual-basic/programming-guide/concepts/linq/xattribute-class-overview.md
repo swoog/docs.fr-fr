@@ -2,12 +2,12 @@
 title: Vue d’ensemble de la classe XAttribute (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-ms.openlocfilehash: 08b8ebf31a39325c98023d4bb333f8e06bbdeb3f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f392d66ed31162f3ada61a8e29818402409536cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741758"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>Vue d’ensemble de la classe XAttribute (Visual Basic)
 Les attributs sont des paires nom/valeur associées à un élément. La classe <xref:System.Xml.Linq.XAttribute> représente des attributs XML.  
@@ -74,5 +74,5 @@ Console.WriteLine(c)
   
  Cette distinction ne revêt une importance que pour les développeurs qui écrivent du code qui interagit avec des arborescences XML au niveau nœud. De nombreux développeurs n'auront pas à se sourcier de cette distinction.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ à vue d’ensemble de programmation XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [LINQ à vue d’ensemble de programmation XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

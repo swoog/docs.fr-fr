@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour fournir de l'aide dans une application Windows
+title: 'Procédure : Fournir une aide dans une Application Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 98ed6d4e10d0eb80b99a36172980fcb33186c8ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738600"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>Guide pratique pour fournir de l'aide dans une application Windows
+# <a name="how-to-provide-help-in-a-windows-application"></a>Procédure : Fournir une aide dans une Application Windows
 Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant pour attacher des rubriques d’aide d’un fichier d’aide à des contrôles spécifiques sur les Windows Forms. Le fichier d’aide peut être au format HTML, ou HTMLHelp 1.x ou ultérieur.  
   
 > [!NOTE]
@@ -48,15 +48,15 @@ Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant po
   
  Au moment de l’exécution, en appuyant sur F1 lorsque le contrôle, pour lequel vous avez défini le **HelpKeyword** et **HelpNavigator** propriétés — a focus ouvre le fichier d’aide associé à ce <xref:System.Windows.Forms.HelpProvider> composant.  
   
- Actuellement, la propriété **HelpNamespace** prend en charge les fichiers d’aide dans les trois formats suivants : HTMLHelp 1.x, HTMLHelp 2.0 et HTML. Vous pouvez ainsi définir la propriété **HelpNamespace** sur une adresse http://, comme une page web. Dans ce cas, elle ouvre le navigateur par défaut à la page web avec la chaîne spécifiée dans la propriété **HelpKeyword** utilisée comme ancre. L’ancre est utilisée pour accéder à une partie spécifique d’une page HTML.  
+ Actuellement, le **HelpNamespace** propriété prend en charge les fichiers d’aide dans les trois formats suivants : HTMLHelp 1.x, HTMLHelp 2.0 et HTML. Vous pouvez ainsi définir la propriété **HelpNamespace** sur une adresse http://, comme une page web. Dans ce cas, elle ouvre le navigateur par défaut à la page web avec la chaîne spécifiée dans la propriété **HelpKeyword** utilisée comme ancre. L’ancre est utilisée pour accéder à une partie spécifique d’une page HTML.  
   
 > [!IMPORTANT]
 >  Prenez soin de vérifier toutes les informations envoyées par un client avant de les utiliser dans votre application. Des utilisateurs malveillants peuvent tenter d’envoyer ou d’injecter un script exécutable, des instructions SQL ou un autre code. Avant d’afficher une entrée utilisateur, de la stocker dans une base de données ou de l’utiliser, vérifiez qu’elle ne contient pas d’informations potentiellement dangereuses. Une façon habituelle de le vérifier est d’utiliser une expression régulière pour rechercher des mots clés comme « SCRIPT » quand vous recevez une entrée d’un utilisateur.  
   
- Vous pouvez également utiliser le <xref:System.Windows.Forms.HelpProvider> composant pour afficher l’aide contextuelle, même si vous avez configuré pour afficher les fichiers d’aide pour les contrôles sur vos formulaires Windows. Pour plus d’informations, consultez [Guide pratique pour afficher l’aide contextuelle](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ Vous pouvez également utiliser le <xref:System.Windows.Forms.HelpProvider> composant pour afficher l’aide contextuelle, même si vous avez configuré pour afficher les fichiers d’aide pour les contrôles sur vos formulaires Windows. Pour plus d'informations, voir [Procédure : Afficher l’aide contextuelle](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour afficher l’aide contextuelle](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- [Affichage sous forme d’info-bulles de l’aide relative aux contrôles](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [Intégration de l’aide d’utilisateur dans les Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Afficher l’aide contextuelle](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
+- [Affichage sous forme d’info-bulles de l’aide relative aux contrôles](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
+- [Intégration de l’aide d’utilisateur dans les Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

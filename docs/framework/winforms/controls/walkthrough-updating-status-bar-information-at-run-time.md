@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : mise à jour des informations de barre d'état au moment de l'exécution"
+title: 'Procédure pas à pas : La mise à jour des informations de barre d’état en cours d’exécution'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 49722d5dadf694e8ee3037646652b921ddda3e91
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3de554d4c8c3963948159bc6b8c2196f9ebc10ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745881"
 ---
-# <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Procédure pas à pas : mise à jour des informations de barre d'état au moment de l'exécution
+# <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Procédure pas à pas : La mise à jour des informations de barre d’état en cours d’exécution
 > [!IMPORTANT]
 >  Le <xref:System.Windows.Forms.StatusStrip> et <xref:System.Windows.Forms.ToolStripStatusLabel> contrôles remplacent et ajoutent des fonctionnalités à la <xref:System.Windows.Forms.StatusBar> et <xref:System.Windows.Forms.StatusBarPanel> contrôle ; Toutefois, le <xref:System.Windows.Forms.StatusBar> et <xref:System.Windows.Forms.StatusBarPanel> contrôles ont été conservés pour la compatibilité descendante et une utilisation ultérieure, si vous Choisissez.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "45746029"
   
 1.  Créez un nouveau Windows Form.  
   
-2.  Ajoutez un contrôle <xref:System.Windows.Forms.StatusBar> à votre formulaire. Pour plus d’informations, consultez l’article [Comment : ajouter des contrôles à des Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+2.  Ajoutez un contrôle <xref:System.Windows.Forms.StatusBar> à votre formulaire. Pour plus d’informations, consultez [Comment : Ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
-3.  Ajoutez un panneau de barre d’état à votre <xref:System.Windows.Forms.StatusBar> contrôle. Pour plus d’informations, consultez l’article [Comment : ajouter des panneaux à un contrôle StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
+3.  Ajoutez un panneau de barre d’état à votre <xref:System.Windows.Forms.StatusBar> contrôle. Pour plus d’informations, consultez [Comment : Ajouter des panneaux à un contrôle StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
   
 4.  Pour le <xref:System.Windows.Forms.StatusBar> contrôle que vous avez ajouté à votre formulaire, définissez la <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriété `true`.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "45746029"
     > [!NOTE]
     >  L’horloge apparaîtra dans la barre d’état au bout de 30 secondes environ. Cela permet d’obtenir l’heure la plus précise possible. À l’inverse, pour que l’horloge s’affiche plus vite, vous pouvez réduire la valeur de la <xref:System.Windows.Forms.Timer.Interval%2A> propriété définie à l’étape 7 de la procédure précédente.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [Guide pratique pour ajouter des panneaux à un contrôle StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
- [Guide pratique pour déterminer le panneau du contrôle StatusBar Windows Forms sur lequel l’utilisateur a cliqué](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [Vue d’ensemble du contrôle StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [Guide pratique pour Ajouter des panneaux à un contrôle StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)
+- [Guide pratique pour Déterminer l’utilisateur a cliqué sur le panneau du contrôle StatusBar Windows Forms](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Vue d’ensemble du contrôle StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

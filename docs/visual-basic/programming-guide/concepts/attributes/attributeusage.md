@@ -2,12 +2,12 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: ae162c310511db160806501af895276a4a4bba5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e88c57b2a18afb7f9f7d567f355d38a78892b2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648139"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 Détermine de quelle manière une classe d’attributs personnalisés peut être utilisée. `AttributeUsage` est un attribut qui peut être appliqué à des définitions d’attributs personnalisés pour contrôler le mode d’application du nouvel attribut. Voici le code quand les paramètres par défaut sont appliqués de manière explicite :  
@@ -64,7 +64,7 @@ End Class
   
  Dans ce cas, `MultiUseAttr` peut être appliqué à plusieurs reprises, car `AllowMultiple` est défini sur `true`. Les deux formats indiqués pour appliquer plusieurs attributs sont valides.  
   
- Si `Inherited` est défini sur `false`, l’attribut n’est pas hérité par les classes qui sont dérivées d’une classe avec attributs. Par exemple :  
+ Si `Inherited` est défini sur `false`, l’attribut n’est pas hérité par les classes qui sont dérivées d’une classe avec attributs. Exemple :  
   
 ```vb  
 Imports System  
@@ -161,12 +161,12 @@ A3
 A2  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Attribute>  
- <xref:System.Reflection>  
- [Guide de programmation Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Attributs](../../../../standard/attributes/index.md)  
- [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Attributs (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
- [Créer des attributs personnalisés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [Accéder à des attributs à l’aide de la réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Attribute>
+- <xref:System.Reflection>
+- [Guide de programmation Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Attributs](../../../../standard/attributes/index.md)
+- [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Attributs (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Créer des attributs personnalisés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Accéder à des attributs à l’aide de la réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

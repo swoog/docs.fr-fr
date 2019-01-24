@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18247a947449ea5fd19f1882031b598086332742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 883f987eb168bf5996baba66f5081875e67f2000
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698724"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW, fonction
 Exécute la commande spécifiée.  
   
- Cette fonction est déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Cette fonction a été déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +41,7 @@ HRESULT RunDll32ShimW (
   
 #### <a name="parameters"></a>Paramètres  
  `hwnd`  
- [in] Un handle de fenêtre dans lequel la sortie de la commande s’affichera.  
+ [in] Un handle de fenêtre dans lequel la sortie de commande s’affiche.  
   
  `hinst`  
  [in] Handle vers la bibliothèque qui contient la commande.  
@@ -50,16 +50,16 @@ HRESULT RunDll32ShimW (
  [in] Chaîne qui spécifie la commande à exécuter.  
   
  `nCmdShow`  
- [in] Entier qui spécifie le mode d’affichage pour la fenêtre Sortie.  
+ [in] Entier qui spécifie le mode d’affichage de la fenêtre de sortie.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions d’hébergement CLR dépréciées](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions d’hébergement CLR dépréciées](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

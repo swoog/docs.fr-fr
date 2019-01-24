@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 5e31bfafdc321bb514ecdadd49b7e2c6adf53948
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 68e750fccd988a9cf7e08b4e7169bd2385d48e1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734855"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introduction à COM Interop (Visual Basic)
 Le composant COM (Object Model) permet un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. Bien que les objets COM ont été essentiels à Windows de programmation de nombreuses années, les applications conçues pour le common language runtime (CLR) offrent de nombreux avantages.  
@@ -53,12 +53,12 @@ Le composant COM (Object Model) permet un objet d’exposer ses fonctionnalités
   
 ## <a name="see-also"></a>Voir aussi
 
-- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
-- [Procédure pas à pas : implémentation de l’héritage avec les objets COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
-- [Interopération avec du code non managé](../../../framework/interop/index.md)  
-- [Dépannage des problèmes liés à l’interopérabilité](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
-- [Assemblys et le Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
-- [Tlbimp.exe (importateur de bibliothèques de types)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
-- [Tlbexp.exe (exportateur de bibliothèques de types)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
-- [Marshaling d'interopérabilité](../../../framework/interop/interop-marshaling.md)  
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Procédure pas à pas : Implémentation de l’héritage avec les objets COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Interopération avec du code non managé](../../../framework/interop/index.md)
+- [Dépannage des problèmes liés à l’interopérabilité](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Assemblys et le Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Tlbimp.exe (importateur de bibliothèques de types)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (exportateur de bibliothèques de types)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [Marshaling d'interopérabilité](../../../framework/interop/interop-marshaling.md)
 - [COM Interop sans inscription](../../../framework/interop/registration-free-com-interop.md)

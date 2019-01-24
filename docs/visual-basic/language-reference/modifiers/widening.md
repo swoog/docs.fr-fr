@@ -10,34 +10,34 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 2323aa38c81ce4e027f256d0e29c069f7ec77c00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b9d1ec15c6c2000fb0842abe25848f853cdf986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703706"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
-Indique qu’un opérateur de conversion (`CType`) convertit une classe ou structure en un type qui peut contenir toutes les valeurs possibles de la classe ou la structure d’origine.  
+Indique qu’un opérateur de conversion (`CType`) convertit une classe ou structure à un type qui peut contenir toutes les valeurs possibles de la classe ou la structure d’origine.  
   
-## <a name="converting-with-the-widening-keyword"></a>Conversion avec le mot clé étendue  
- La procédure de conversion doit spécifier `Public Shared` à `Widening`.  
+## <a name="converting-with-the-widening-keyword"></a>Conversion avec le mot clé étendu  
+ La procédure de conversion doit spécifier `Public Shared` outre `Widening`.  
   
- Les conversions étendues réussissent toujours en cours d’exécution et sans jamais aucune perte de données. Exemples `Single` à `Double`, `Char` à `String`et un type dérivé vers son type de base. Cette dernière conversion est étendue parce que le type dérivé contient tous les membres du type de base et est donc une instance du type de base.  
+ Les conversions étendues aboutissent toujours en cours d’exécution et sans jamais aucune perte de données. Sont des exemples `Single` à `Double`, `Char` à `String`et un type dérivé à son type de base. Cette dernière conversion est étendue, car le type dérivé contient tous les membres du type de base et est donc une instance du type de base.  
   
- Le code utilisateur ne doit pas utiliser `CType` pour les conversions étendues, même si `Option Strict` est `On`.  
+ Le code de consommation n’a pas d’utiliser `CType` pour les conversions étendues, même si `Option Strict` est `On`.  
   
  Le `Widening` mot clé peut être utilisé dans ce contexte :  
   
  [Operator (instruction)](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- Par exemple des définitions d’étendues et restrictives des opérateurs de conversion, consultez [Comment : définir un opérateur de Conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Par exemple des définitions d’étendues et restrictives des opérateurs de conversion, consultez [Comment : Définir un opérateur de Conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Operator (instruction)](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Conversions étendues et restrictives](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Guide pratique : définir un opérateur](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [CType (fonction)](../../../visual-basic/language-reference/functions/ctype-function.md)  
- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Guide pratique : définir un opérateur de conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a>Voir aussi
+- [Operator (instruction)](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Conversions étendues et restrictives](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Guide pratique pour Définir un opérateur](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [CType (fonction)](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Guide pratique pour Définir un opérateur de Conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer un LineSegment dans un PathGeometry'
+title: 'Procédure : Créer un LineSegment dans un PathGeometry'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: 61425a68d83c8078b8420be01e0e59d3cba6a4e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9aa17a361e8e0ca5b43b2646c38926e0123818c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712127"
 ---
-# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Comment : créer un LineSegment dans un PathGeometry
+# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Procédure : Créer un LineSegment dans un PathGeometry
 Cet exemple indique comment créer un segment de ligne. Pour créer un segment de ligne, utilisez le <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, et <xref:System.Windows.Media.LineSegment> classes.  
   
 ## <a name="example"></a>Exemple  
@@ -101,9 +101,9 @@ Dim myPathFigure As New PathFigure()
   
  Cet exemple fait partie d’un exemple plus vaste ; pour l’exemple complet, consultez [Géométries, exemple](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Media.PathFigure>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.GeometryDrawing>  
- <xref:System.Windows.Shapes.Path>  
- [Vue d’ensemble de Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Media.PathFigure>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.GeometryDrawing>
+- <xref:System.Windows.Shapes.Path>
+- [Vue d’ensemble de Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

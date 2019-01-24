@@ -2,12 +2,12 @@
 title: Utilisation de NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b00b4ed24d15519baf91ce38678fd91056eff521
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658726"
 ---
 # <a name="using-the-nethttpbinding"></a>Utilisation de NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> est une liaison conçue pour consommer des services HTTP ou WebSocket et utilise l'encodage binaire par défaut. <xref:System.ServiceModel.NetHttpBinding> détecte si elle est utilisée avec un contrat demande-réponse ou un contrat duplex et modifie son comportement pour le faire correspondre - elle utilise HTTP pour les contrats de demande-réponse et WebSockets pour les contrats duplex. Vous pouvez substituer ce comportement au moyen du paramètre <xref:System.ServiceModel.Channels.WebSocketTransportUsage> :  
@@ -45,7 +45,7 @@ ms.locfileid: "46696740"
         </binding>  
       </netHttpBinding>  
     </bindings>  
-    <!- ... -->   
+    ...
   </system.serviceModel>  
 ```  
   
@@ -58,8 +58,8 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
         }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Configuration de liaisons pour les services](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Services duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Configuration de liaisons pour les services](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Services duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)

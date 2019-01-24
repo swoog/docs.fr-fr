@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bc1407f8444b78154981619742bd0da188c4335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 463838681ceaaeb2edab85a22dd979fb143b9248
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602882"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2::GetTypeID (méthode)
 Obtient un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) pour ce type.  
@@ -49,18 +49,18 @@ HRESULT GetTypeID(
 |`CORDBG_E_UNSUPPORTED`|Le type n’est pas pris en charge.|  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode fournit un mappage à partir de ICorDebugType, ce qui représente un type qui peut ou ont ne peut-être pas été chargé dans l’exécution, à un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), qui sert un opaque gérer qui identifie un type chargé dans le runtime.  
+ Cette méthode fournit un mappage de ICorDebugType, qui représente un type qui peut ou ont ne peut-être pas été chargé dans l’exécution, à un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), qui sert un opaque gérer qui identifie un type chargé dans le runtime.  
   
- Lorsque le type représentant le ICorDebugType n’a pas encore été chargé, cette méthode retourne `CORDBG_E_CLASS_NOT_LOADED`.  Si le type n’est pas pris en charge, elle retourne `CORDBG_E_UNSUPPORTED`.  
+ Lorsque le type qui représente le ICorDebugType n’a pas encore été chargé, cette méthode retourne `CORDBG_E_CLASS_NOT_LOADED`.  Si le type n’est pas pris en charge, elle retourne `CORDBG_E_UNSUPPORTED`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugType2, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugType2, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)

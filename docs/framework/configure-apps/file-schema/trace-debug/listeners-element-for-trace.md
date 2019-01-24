@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 20d6a0e221b7e9e1c2647098ef8bae25f7cd4d43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596824"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;écouteurs&gt; élément pour &lt;trace&gt;
 Spécifie un écouteur qui collecte, stocke et achemine les messages. Les écouteurs dirigent la sortie de traçage vers une cible appropriée.  
@@ -86,6 +86,6 @@ Spécifie un écouteur qui collecte, stocke et achemine les messages. Les écout
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Diagnostics.TraceListener>  
- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Diagnostics.TraceListener>
+- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

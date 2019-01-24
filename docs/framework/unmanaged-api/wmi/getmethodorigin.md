@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1cc754fcf7d1defa815bb0a74b7c2b4a6909478
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 76f449e52168001a2aaac6cbc3707361cf7f809a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582462"
 ---
 # <a name="getmethodorigin-function"></a>Getmethodorigin, fonction
 Détermine la classe dans laquelle une méthode est déclarée.
@@ -60,7 +60,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | La méthode spécifiée est introuvable. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un ou plusieurs paramètres ne sont pas valides. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un ou plusieurs paramètres ne sont pas valides. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
 ## <a name="remarks"></a>Notes
@@ -71,12 +71,12 @@ Car une classe peut hériter des méthodes à partir d’une ou plusieurs classe
 
 Le `pstrClassName` paramètre ne doit pas pointer vers un valide `BSTR` avant que la fonction est appelée, car il s’agit d’un `out` paramètre ; ce pointeur n’est pas libéré une fois que la fonction retourne.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

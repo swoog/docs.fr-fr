@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701909"
 ---
 # <a name="application-settings-schema"></a>Schéma des paramètres d’application
 
@@ -26,9 +26,9 @@ Paramètres de l’application définit les éléments suivants dans le cadre de
 
 | Élément                    | Description                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | Contient tous les  **\<paramètre >** balises spécifiques à l’application.                         |
-| **\<userSettings >**        | Contient tous les  **\<paramètre >** balises spécifiques à l’utilisateur actuel.                        |
-| **\<définition >**             | Définit un paramètre. Enfant de le  **\<applicationSettings >** ou  **\<userSettings >**. |
+| **\<applicationSettings>** | Contient tous les  **\<paramètre >** balises spécifiques à l’application.                         |
+| **\<userSettings>**        | Contient tous les  **\<paramètre >** balises spécifiques à l’utilisateur actuel.                        |
+| **\<setting>**             | Définit un paramètre. Enfant de le  **\<applicationSettings >** ou  **\<userSettings >**. |
 | **\<value>**               | Définit une valeur de paramètre. Enfant de  **\<paramètre >**.                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > élément
@@ -92,5 +92,5 @@ L’exemple suivant montre un fichier de paramètres d’application qui défini
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble des paramètres d’application](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[Architecture des paramètres d'application](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Vue d'ensemble des paramètres d'application](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [Architecture des paramètres d'application](~/docs/framework/winforms/advanced/application-settings-architecture.md)

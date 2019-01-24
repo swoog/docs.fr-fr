@@ -2,21 +2,21 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 58bab9aef2e20d762c303e8b698214125531a136
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4611d529c1854ee456585ad3f7aac339ff771bce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556442"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 Spécifie les différents paramètres de découverte d’un point de terminaison, tels que la fonctionnalité de découverte, les portées et toutes les extensions personnalisées de ses métadonnées.  
   
 \<system.ServiceModel>  
-\<comportements >  
-\<endpointBehaviors >  
-\<comportement >  
-\<endpointDiscovery >  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
+\<endpointDiscovery>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,9 +48,9 @@ Spécifie les différents paramètres de découverte d’un point de terminaison
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<étendues >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Collection d’URI de portée pour le point de terminaison. Plusieurs URI de portée peuvent être associés au même point de terminaison.|  
-|[\<extensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [de \<endpointDiscovery >]|Collection d’éléments XML qui vous permet de spécifier des métadonnées personnalisées à publier pour un point de terminaison.|  
-|\<types >|Collection d’interfaces à rechercher.|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Collection d’URI de portée pour le point de terminaison. Plusieurs URI de portée peuvent être associés au même point de terminaison.|  
+|[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]|Collection d’éléments XML qui vous permet de spécifier des métadonnées personnalisées à publier pour un point de terminaison.|  
+|\<types>|Collection d’interfaces à rechercher.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -104,5 +104,5 @@ Spécifie les différents paramètres de découverte d’un point de terminaison
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f8132296035e9ddcdcad76d93ed05358beb0b81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 37d91ca7935e114504864683075f4809de7270fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599112"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps, méthode
 Modifie la structure de métadonnées `Assembly` spécifiée.  
@@ -43,37 +43,37 @@ HRESULT SetAssemblyProps (
   
 #### <a name="parameters"></a>Paramètres  
  `pma`  
- [in] Le jeton de métadonnées qui spécifie le `Assembly` structure de métadonnées.  
+ [in] Le jeton de métadonnées qui spécifie le `Assembly` structure des métadonnées à modifier.  
   
  `pbPublicKey`  
- [in] Pointeur vers la clé publique de l’éditeur de l’assembly.  
+ [in] Pointeur vers la clé publique du serveur de publication de l’assembly.  
   
  `cbPublicKey`  
  [in] La taille en octets de `pbPublicKey`.  
   
  `ulHashAlgId`  
- [in] Identificateur de l’algorithme de hachage utilisé pour hacher les fichiers d’assembly.  
+ [in] L’identificateur pour l’algorithme de hachage utilisé pour hacher les fichiers d’assembly.  
   
  `szName`  
- [in] Nom de l’assembly du texte explicite.  
+ [in] Le nom lisible de l’assembly.  
   
  `pMetaData`  
- [in] Pointeur vers le ASSEMBLYMETADATA qui contient des informations de version, la plateforme et paramètres régionaux de l’assembly.  
+ [in] Pointeur vers le ASSEMBLYMETADATA qui contient des informations de version, la plateforme et aux paramètres régionaux de l’assembly.  
   
  `dwAssemblyFlags`  
- [in] Une combinaison d’opérations de [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) valeurs qui spécifient différents attributs de l’assembly.  
+ [in] Une combinaison au niveau du bit de [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) valeurs qui spécifient différents attributs de l’assembly.  
   
 ## <a name="remarks"></a>Notes  
  Pour créer un `Assembly` structure des métadonnées, utilisez le [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) (méthode).  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateforme :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateforme :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

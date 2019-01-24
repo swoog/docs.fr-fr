@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709427"
 ---
 # <a name="distributed-application-security"></a>Sécurité des applications distribuées
 Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones fonctionnelles principales : sécurité de transfert, contrôle d’accès et l’audit. La sécurité de transfert fournit l'intégrité, la confidentialité et l'authentification. La sécurité de transfert est fournie par l'un des éléments suivants : sécurité de transport, sécurité de message ou `TransportWithMessageCredential`.  
@@ -65,8 +65,8 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
 |Paramètre|Description|  
 |-------------|-----------------|  
 |None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
-|Basic|Spécifie l'authentification de base.  Pour plus d’informations, consultez RFC2617, «[HTTP Authentication : Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313). »|  
-|Digest|Spécifie l’authentification Digest.  Pour plus d’informations, consultez RFC2617, «[HTTP Authentication : Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313). »|  
+|Basic|Spécifie l'authentification de base.  Pour plus d’informations, consultez RFC2617, «[l’authentification HTTP : Base et authentification Digest](https://go.microsoft.com/fwlink/?LinkId=88313). »|  
+|Digest|Spécifie l’authentification Digest.  Pour plus d’informations, consultez RFC2617, «[l’authentification HTTP : Base et authentification Digest](https://go.microsoft.com/fwlink/?LinkId=88313). »|  
 |Ntlm|Spécifie l'authentification Windows à l'aide de la négociation SSPI sur un domaine Windows.<br /><br /> La négociation SSPI entraîne l'utilisation du protocole Kerberos ou NTLM (NT LanMan).|  
 |Windows|Spécifie l'authentification Windows à l'aide de SSPI sur un domaine Windows. SSPI sélectionne le protocole Kerberos ou NTLM comme service d'authentification.<br /><br /> SSPI tente d'abord d'utiliser le protocole Kerberos ; en cas d'échec, il utilise NTLM.|  
 |Certificat|Exécute l'authentification du client à l'aide d'un certificat, en général X.509.|  
@@ -94,8 +94,8 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
   
  Le mode de sécurité du message vous permet également d'exécuter la sécurité de transfert afin que les informations d'identification du service soient échangées avec le client dans le cadre d'une négociation initiale. Pour activer la négociation, affectez <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> à la propriété `true`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

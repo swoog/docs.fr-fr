@@ -2,12 +2,12 @@
 title: WCF et API Web ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: 9ff974ca59b5a6448a140cbb1e7d6e8114840bdf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 460c2d6d3acfd857c3f11db313a2ebb894a14cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697021"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF et API Web ASP.NET
 WCF est le modèle de programmation unifié de Microsoft permettant de générer des applications orientées service. Il permet aux développeurs de générer des solutions transactionnelles sécurisées et fiables qui s'intègrent à plusieurs plateformes et interagissent avec les investissements existants. [API Web ASP.NET](https://www.asp.net/web-api) est une infrastructure qui facilite la création de services HTTP qui atteignent une large gamme de clients, y compris les navigateurs et appareils mobiles. L'API Web ASP.NET est une plate-forme idéale pour générer des applications RESTful sur le .NET Framework. Cette rubrique vous aider à déterminer quelle technologie est la plus adaptée vos besoins.  
@@ -15,7 +15,7 @@ WCF est le modèle de programmation unifié de Microsoft permettant de générer
 ## <a name="choosing-which-technology-to-use"></a>Choix de la technologie à utiliser  
  Le tableau suivant décrit les principales fonctionnalités de chaque technologie.  
   
-|WCF|API Web ASP.NET|  
+|WCF|API web ASP.NET|  
 |---------|---------------------|  
 |Active les services de génération qui prennent en charge plusieurs fournisseurs de transport (HTTP, TCP, UDP et transports personnalisés) et permet le basculement entre eux.|HTTP uniquement. Modèle de programmation de première classe pour le protocole HTTP. Plus adapté pour l’accès à partir de différents navigateurs, etc. Activation grande portée des appareils mobiles.|  
 |Active les services de génération qui prennent en charge plusieurs encodages (texte, MTOM et binaire) du même type de message et permet la commutation entre eux.|Active les API Web de génération qui prennent en charge une large gamme de types de média y compris XML, JSON, etc.|  
@@ -26,6 +26,6 @@ WCF est le modèle de programmation unifié de Microsoft permettant de générer
   
  Utiliser WCF pour créer des services web sécurisé et fiable qui sont accessibles via une variété de transports. Utilisez l'API Web ASP.NET pour créer des services HTTP qui sont accessibles à partir d'une large gamme de clients. Utilisez l'API Web ASP.NET si vous créez et concevez de nouveaux services REST. Bien que WCF prenne en charge l’écriture de services REST, la prise en charge de REST dans l’API Web ASP.NET est plus complète et toutes les futures améliorations des fonctionnalités REST seront apportées dans l’API Web ASP.NET. Si vous disposez d'un service WCF et souhaitez exposer des points de terminaison REST supplémentaires, utilisez WCF et <xref:System.ServiceModel.WebHttpBinding>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Concepts fondamentaux de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)  
+## <a name="see-also"></a>Voir aussi
+- [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Concepts fondamentaux de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

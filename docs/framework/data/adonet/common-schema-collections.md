@@ -2,15 +2,15 @@
 title: Collections de schémas courantes
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: dfd1e28a117ca71cac6c792058c1aeb17a0c4f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700960"
 ---
 # <a name="common-schema-collections"></a>Collections de schémas courantes
-Les collections de schémas communes sont les collections de schémas implémentées par chacun des fournisseurs .NET Framework managés. Vous pouvez interroger un fournisseur .NET Framework managé afin de déterminer la liste des collections de schémas prises en charge en appelant le **GetSchema** méthode sans argument ou avec le nom de collection de schémas « MetaDataCollections ». Cette opération retourne un <xref:System.Data.DataTable> avec une liste des collections de schémas prises en charge, le nombre de restrictions qu'elles prennent en charge et le nombre d'éléments d'identification qu'elles utilisent. Ces collections décrivent toutes les colonnes requises. Les fournisseurs sont libres d'ajouter des colonnes s'ils le souhaitent. Par exemple, `SqlClient` et `OracleClient` ajoutent ParameterName à la collection de restrictions.  
+Les collections de schémas communes sont les collections de schémas implémentées par chacun des fournisseurs .NET Framework managés. Vous pouvez interroger un fournisseur .NET Framework managé afin de déterminer la liste des collections de schémas prises en charge en appelant le **GetSchema** méthode sans argument ou avec le nom de collection de schémas « MetaDataCollections ». Cette opération retourne un <xref:System.Data.DataTable> avec une liste des collections de schémas prises en charge, le nombre de restrictions qu’elles prennent en charge et le nombre d’éléments d’identification qu’elles utilisent. Ces collections décrivent toutes les colonnes requises. Les fournisseurs sont libres d'ajouter des colonnes s'ils le souhaitent. Par exemple, `SqlClient` et `OracleClient` ajoutent ParameterName à la collection de restrictions.  
   
  Si un fournisseur est incapable de déterminer la valeur d'une colonne obligatoire, il retourne la valeur null.  
   
@@ -94,7 +94,7 @@ Les collections de schémas communes sont les collections de schémas implément
 |----------------|--------------|-----------------|  
 |ReservedWord|chaîne|Mots réservés spécifiques au fournisseur.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Récupération des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [Collections GetSchema et Schema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Récupération des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Collections GetSchema et Schema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

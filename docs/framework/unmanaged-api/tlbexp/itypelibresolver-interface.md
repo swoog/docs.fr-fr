@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baff7dac7f1ddc8546bcb52627eeee992921a395
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: bbd8e15b7f708df628f75dc9812eca0f84f36434
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672992"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver, interface
 Fournit le [ResolveTypeLib, méthode](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), ce qui donne le chemin d’accès de fichier d’une bibliothèque de types.  
@@ -32,7 +32,7 @@ Fournit le [ResolveTypeLib, méthode](../../../../docs/framework/unmanaged-api/t
 |------------|-----------------|  
 |[ResolveTypeLib, méthode](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|Résout le nom simple d’une bibliothèque de types en retournant son chemin d’accès qualifié complet.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** TlbRef.idl, TlbRef.h  
@@ -41,6 +41,6 @@ Fournit le [ResolveTypeLib, méthode](../../../../docs/framework/unmanaged-api/t
   
  **Version du .NET framework :** 4, 3.5, 3.0, 2.0  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions d’assistance Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx de le dont (fonction)](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions d’assistance Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx de le dont (fonction)](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
