@@ -1,5 +1,5 @@
 ---
-title: 'Comment : déclarer et appeler une propriété par défaut en Visual Basic'
+title: 'Procédure : Déclarer et appeler une propriété par défaut en Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 7805ee4dcd4bad0d0624c97ccc25232e9bc31ba4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca282acbe6831f2189d83faa2f83d32d420d9b53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640964"
 ---
-# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Comment : déclarer et appeler une propriété par défaut en Visual Basic
-A *propriété par défaut* est une propriété de classe ou structure que votre code peut accéder sans la spécifier. Lorsque le code appelant nomme une classe ou structure, mais pas une propriété et le contexte autorise l’accès à une propriété, Visual Basic résout l’accès à cette classe ou de la propriété par défaut de la structure s’il en existe.  
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procédure : Déclarer et appeler une propriété par défaut en Visual Basic
+Un *propriété par défaut* est une propriété de classe ou structure auquel votre code peut accéder sans la spécifier. Lors de l’appel des noms de code, une classe ou structure, mais pas une propriété et le contexte autorise l’accès à une propriété, Visual Basic résout l’accès à cette classe ou propriété par défaut de la structure s’il en existe.  
   
  Une classe ou structure peut avoir au plus une propriété par défaut. Toutefois, vous pouvez surcharger une propriété par défaut et avoir plusieurs versions de celui-ci.  
   
@@ -26,7 +26,7 @@ A *propriété par défaut* est une propriété de classe ou structure que votre
   
 ### <a name="to-declare-a-default-property"></a>Pour déclarer une propriété par défaut  
   
-1.  Déclarez la propriété de façon normale. Ne spécifiez pas le `Shared` ou `Private` (mot clé).  
+1.  Déclarez la propriété de façon normale. Ne spécifiez pas le `Shared` ou `Private` mot clé.  
   
 2.  Inclure le `Default` mot clé dans la déclaration de propriété.  
   
@@ -40,7 +40,7 @@ A *propriété par défaut* est une propriété de classe ou structure que votre
   
      [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
   
-2.  Utilisez le nom de variable seul dans une expression où vous incluriez normalement le nom de propriété.  
+2.  Utilisez le nom de variable seul dans une expression où vous inclurez normalement le nom de propriété.  
   
      [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
   
@@ -73,22 +73,22 @@ A *propriété par défaut* est une propriété de classe ou structure que votre
  L’utilisation la plus courante d’une propriété par défaut est le <xref:Microsoft.VisualBasic.Collection.Item%2A> propriété sur différentes classes de collection.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
- Propriétés par défaut peuvent entraîner une légère réduction de caractères de code source, mais elles peuvent rendre votre code plus difficile à lire. Si le code appelant n’est pas familiarisé avec votre classe ou structure, lorsqu’il fait référence au nom de classe ou structure il ne peut pas être certain que cette référence accède à la classe ou structure elle-même ou une propriété par défaut. Cela peut entraîner des erreurs du compilateur ou des erreurs de logique d’exécution subtiles.  
+ Propriétés par défaut peuvent entraîner une légère réduction dans les caractères de code source, mais ils peuvent rendre votre code plus difficile à lire. Si le code appelant n’est pas familiarisé avec votre classe ou structure, lorsqu’il fait référence au nom de classe ou structure il ne peut pas être certains que cette référence accède à la classe ou structure lui-même ou une propriété par défaut. Cela peut entraîner des erreurs du compilateur ou des erreurs de logique d’exécution subtiles.  
   
- Vous pouvez légèrement réduire le risque d’erreurs de propriété par défaut en utilisant toujours le [Option Strict, instruction](../../../../visual-basic/language-reference/statements/option-strict-statement.md) pour définir le contrôle de type du compilateur `On`.  
+ Vous pouvez légèrement réduire les risques d’erreurs de propriété par défaut en utilisant toujours la [Option Strict, instruction](../../../../visual-basic/language-reference/statements/option-strict-statement.md) pour définir le contrôle de type du compilateur `On`.  
   
- Si vous envisagez d’utiliser une classe prédéfinie ou une structure dans votre code, vous devez déterminer si elle a une propriété par défaut et si tel est le cas, ce que son nom est.  
+ Si vous envisagez d’utiliser une classe prédéfinie ou une structure dans votre code, vous devez déterminer s’il possède une propriété par défaut et si c’est le cas, ce que son nom est.  
   
- En raison de ces inconvénients, vous devez envisager de ne pas définir de propriétés par défaut. Pour une meilleure lisibilité du code, vous devez également envisager de toujours faire explicitement référence à toutes les propriétés, même les propriétés par défaut.  
+ En raison de ces inconvénients, vous devez envisager de ne pas définir les propriétés par défaut. Pour la lisibilité du code, vous devez également envisager de toujours faire explicitement référence à toutes les propriétés, même les propriétés par défaut.  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédures de propriété](./property-procedures.md)  
- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)  
- [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [Default](../../../../visual-basic/language-reference/modifiers/default.md)  
- [Différences entre les propriétés et les Variables en Visual Basic](./differences-between-properties-and-variables.md)  
- [Guide pratique : créer une propriété](./how-to-create-a-property.md)  
- [Guide pratique : déclarer une propriété avec des niveaux d’accès mixtes](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Guide pratique : appeler une procédure de propriété](./how-to-call-a-property-procedure.md)  
- [Guide pratique : placer une valeur dans une propriété](./how-to-put-a-value-in-a-property.md)  
- [Guide pratique : obtenir une valeur d’une propriété](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédures de propriété](./property-procedures.md)
+- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
+- [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Différences entre les propriétés et les Variables en Visual Basic](./differences-between-properties-and-variables.md)
+- [Guide pratique pour Créer une propriété](./how-to-create-a-property.md)
+- [Guide pratique pour Déclarer une propriété avec des niveaux d’accès mixtes](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Guide pratique pour Appeler une procédure de propriété](./how-to-call-a-property-procedure.md)
+- [Guide pratique pour Placer une valeur dans une propriété](./how-to-put-a-value-in-a-property.md)
+- [Guide pratique pour Obtenir une valeur d’une propriété](./how-to-get-a-value-from-a-property.md)

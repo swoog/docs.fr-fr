@@ -2,14 +2,15 @@
 title: WSDL et stratégie
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741429"
 ---
 # <a name="wsdl-and-policy"></a>WSDL et stratégie
-Cette rubrique traite de Windows Communication Foundation (WCF), WSDL 1.1, WS-Policy et WS-PolicyAttachment les détails d’implémentation, ainsi que les assertions de WS-Policy supplémentaires et des extensions WSDL 1.1 introduites par WCF.  
+Cette rubrique traite de Windows Communication Foundation (WCF), WSDL 1.1, WS-Policy et WS-PolicyAttachment détails d’implémentation, ainsi que les assertions de WS-Policy supplémentaires et extensions WSDL 1.1 a introduit par WCF.  
   
  WCF implémente les spécifications WS-Policy et WS-PolicyAttachment soumises à W3C avec les contraintes et clarifications décrites dans ce document.  
   
@@ -27,7 +28,7 @@ Cette rubrique traite de Windows Communication Foundation (WCF), WSDL 1.1, WS-Po
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>Extensions WSDL1.1 WCF  
- WCF utilise les extensions WSDL1.1 suivantes pour décrire les spécifications de session de contrat.  
+ WCF utilise les extensions WSDL1.1 suivantes pour décrire les impératifs de session de contrat.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
  xs : Boolean, indique que cette opération lance une session WCF ; la valeur par défaut est `false`.  
@@ -49,7 +50,7 @@ Cette rubrique traite de Windows Communication Foundation (WCF), WSDL 1.1, WS-Po
 |Canaux nommés|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Assertions de stratégie implémentées par WCF  
- Outre les assertions de stratégie introduites dans les spécifications de Services Web (WS-*) et mentionnées dans d’autres sections de ce document, WCF implémente les assertions de stratégie suivantes.  
+ En plus des assertions de stratégie introduites dans les spécifications de Services Web (WS-*) et mentionnées dans d’autres sections de ce document, WCF implémente les assertions de stratégie suivantes.  
   
 |Assertion de stratégie|Sujet de stratégie|Description|  
 |----------------------|--------------------|-----------------|  
@@ -71,7 +72,7 @@ Cette rubrique traite de Windows Communication Foundation (WCF), WSDL 1.1, WS-Po
 |mssp:MustNotSendCancel|Imbriqué|Indique une spécification selon laquelle aucun message de demande de jeton de sécurité de demande (RST) [WS-Trust] à l'aide de la liaison Annulation [WS-Trust, WS-SC] ne doit être envoyé à l'émetteur d'un SecurityContextToken donné. Si cette assertion est présente, ces messages de demande ne doivent pas être envoyés à l'émetteur. Si cette assertion est absente, ces messages de demande peuvent être envoyés à l'émetteur.|  
 |mssp:RequireClientCertificate|Imbriqué|Cet élément facultatif indique une spécification selon laquelle un certificat client doit être fourni dans le cadre du protocole TLSNEGO. Si cette assertion est présente, un certificat client doit être fourni. Si cette assertion est absente, aucun certificat client ne doit être fourni. Cette assertion ne doit pas être utilisée en dehors de mssp:SslContextToken.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Publication WSDL personnalisée](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Guide pratique pour exporter un WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Guide pratique pour importer un WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>Voir aussi
+- [Publication WSDL personnalisée](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [Guide pratique pour Exporter le fichier WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Guide pratique pour Importer le fichier WSDL personnalisé](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

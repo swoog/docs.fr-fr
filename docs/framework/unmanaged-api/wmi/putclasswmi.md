@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de08662a825a84f19a40863cf73481d89364ebd0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614508"
 ---
-# <a name="putclasswmi-function"></a>PutClassWmi (fonction)
+# <a name="putclasswmi-function"></a>PutClassWmi function
 Crée une classe ou met à jour une classe existante.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -49,15 +49,15 @@ HRESULT PutClassWmi (
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0 x 20000 | Si le jeu, WMI ne stocke pas les qualificateurs avec la version modifiée. </br> Si ce n’est pas ensemble, il est supposé que cet objet n’est pas localisé, et tous les qualificateurs sont storedwith cette instance. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si le jeu, WMI ne stocke pas les qualificateurs avec la version modifiée. </br> Si ce n’est pas ensemble, il est supposé que cet objet n’est pas localisé, et tous les qualificateurs sont storedwith cette instance. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Créer la classe si elle n’existe pas, ou remplacer si elle existe déjà. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Mettre à jour de la classe. La classe doit exister pour l’appel réussisse. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Créer la classe. L’appel échoue si la classe existe déjà. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | L’indicateur provoque un appel semi-synchrone. |
-| `WBEM_FLAG_OWNER_UPDATE` | 0 x 10000 | Fournisseurs de push doivent spécifier cet indicateur lors de l’appel `PutClassWmi` pour indiquer que cette classe a changé. |
+| `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | Fournisseurs de push doivent spécifier cet indicateur lors de l’appel `PutClassWmi` pour indiquer que cette classe a changé. |
 | `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | Permet à une classe à mettre à jour s’il existe aucune classe dérivée et aucune instance de cette classe. Autorise également les mises à jour dans tous les cas si la modification consiste simplement à des qualificateurs sans importance, telles que le qualificateur de Description. Si la classe a des instances ou les modifications doivent qualificateurs importants, la mise à jour échoue. |
-| `WBEM_FLAG_UPDATE_SAFE_MODE` | 0 x 20 | Permet des mises à jour des classes même s’il existe des classes enfants tant que la modification n’entraîne pas de tous les conflits avec les classes enfants. Par exemple, cet indicateur permet une nouvelle propriété à ajouter à la classe de base qui n’a pas été précédemment mentionnée dans les classes enfants. Si la classe a des instances, la mise à jour échoue. |
-| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0 x 40 | force les mises à jour des classes lorsque les classes enfants en conflit existent. Par exemple, cet indicateur de force une mise à jour si un qualificateur de classe est défini dans une classe enfant et la classe de base essaie d’ajouter le même qualificateur qui est en conflit avec thte un existant. En mode de force, conflit de tis est résolu par la suppression du qualificateur dans la classe enfant. |
+| `WBEM_FLAG_UPDATE_SAFE_MODE` | 0x20 | Permet des mises à jour des classes même s’il existe des classes enfants tant que la modification n’entraîne pas de tous les conflits avec les classes enfants. Par exemple, cet indicateur permet une nouvelle propriété à ajouter à la classe de base qui n’a pas été précédemment mentionnée dans les classes enfants. Si la classe a des instances, la mise à jour échoue. |
+| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | force les mises à jour des classes lorsque les classes enfants en conflit existent. Par exemple, cet indicateur de force une mise à jour si un qualificateur de classe est défini dans une classe enfant et la classe de base essaie d’ajouter le même qualificateur qui est en conflit avec thte un existant. En mode de force, conflit de tis est résolu par la suppression du qualificateur dans la classe enfant. |
 
 `pCtx`  
 [in] En règle générale, cette valeur est `null`. Sinon, il est un pointeur vers un [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instance qui peut être utilisé par le fournisseur qui fournit les classes demandées. 
@@ -71,10 +71,10 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0 x 80041003 | L’utilisateur n’a pas d’autorisation pour créer ou modifier des classes. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Une erreur non spécifiée s’est produite. |
-| `WBEM_E_INVALID_CLASS` | 0 x 80041010 | La classe spécifiée n’est pas valide. En règle générale, cela indique que `pObject` spécifie un objet d’instance. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | L’utilisateur n’a pas d’autorisation pour créer ou modifier des classes. |
+| `WBEM_E_FAILED` | 0x80041001 | Une erreur non spécifiée s’est produite. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | La classe spécifiée n’est pas valide. En règle générale, cela indique que `pObject` spécifie un objet d’instance. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre n’est pas valide. |
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | Le nom de la classe spécifiée n’est pas valid. |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | Une tentative a été effectuée pour apporter une modification qui invaliderait une sous-classe. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | Le `WBEM_FLAG_CREATE_ONLY` indicateur a été spécifié, mais la classe existe déjà. |
@@ -93,12 +93,12 @@ L’utilisateur ne peut pas créer les classes dont les noms commencent ou finir
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

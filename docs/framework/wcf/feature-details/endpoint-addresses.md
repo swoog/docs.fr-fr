@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730943"
 ---
 # <a name="endpoint-addresses"></a>Adresses de point de terminaison
 Chaque point de terminaison a une adresse qui lui est associée et qui est utilisé pour localiser et identifier le point de terminaison. Cette adresse se compose à l'origine d'un URI (Uniform Resource Identifier) qui spécifie l'emplacement du point de terminaison. L’adresse de point de terminaison est représentée dans le modèle de programmation Windows Communication Foundation (WCF) par le <xref:System.ServiceModel.EndpointAddress> (classe), qui contient un texte facultatif <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété qui permet l’authentification du point de terminaison par d’autres points de terminaison qui échanger des messages avec lui et un ensemble de facultatif <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriétés qui définissent tous les autres en-têtes SOAP requis pour atteindre le service. Les en-têtes facultatifs fournissent des données d'adressage plus détaillées supplémentaires pour identifier ou interagir avec le point de terminaison de service. L'adresse d'un point de terminaison est représentée sur le câble comme une référence de point de terminaison WS-Addressing (EPR).  
@@ -44,11 +44,11 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
  Les liaisons IIS fournissent deux informations : un protocole de liaison et des informations de liaison. Le protocole de liaison définit la méthode selon laquelle la communication se produit, et les informations de liaison sont les informations utilisées pour accéder au site.  
   
- L'exemple suivant affiche les composants qui peuvent être présents dans une liaison IIS :  
+ L’exemple suivant affiche les composants qui peuvent être présents dans une liaison IIS :  
   
--   Protocole de liaison : HTTP  
+-   Le protocole de liaison : HTTP  
   
--   Informations de liaison : adresse IP, port, en-tête de l’hôte  
+-   Informations de liaison : L’adresse IP, Port, en-tête de l’hôte  
   
  IIS peut spécifier plusieurs liaisons pour chaque site, ce qui génère plusieurs adresses de base pour chaque méthode. Antérieures à [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF ne prenait pas en charge plusieurs adresses pour un schéma et, s’ils ont été spécifiés, a levé une <xref:System.ArgumentException> pendant l’activation.  
   
@@ -128,7 +128,7 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
  Vous pouvez spécifier une adresse d'écoute personnalisée à l'aide du code ou de la configuration :  
   
--   Dans le code, spécifiez une adresse d'écoute personnalisée en ajoutant une classe <xref:System.ServiceModel.Description.ClientViaBehavior> à la collection de comportements du point de terminaison.  
+-   Dans le code, spécifiez une adresse d’écoute personnalisée en ajoutant une classe <xref:System.ServiceModel.Description.ClientViaBehavior> à la collection de comportements du point de terminaison.  
   
 -   Dans la configuration, spécifiez une adresse d’écoute personnalisée avec le `ListenUri` attribut du service [ \<point de terminaison >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément.  
   
@@ -137,6 +137,6 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
  Dans certains scénarios, un point de terminaison reçoit tous les messages qui arrivent sur le transport sous-jacent, et pas seulement ceux avec l'en-tête `To` approprié. Pour activer cette fonction, l'utilisateur peut utiliser la classe <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>Voir aussi
+- [Spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

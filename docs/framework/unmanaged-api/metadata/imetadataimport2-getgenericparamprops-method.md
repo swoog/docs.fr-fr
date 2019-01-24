@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714267"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps, méthode
 Obtient les métadonnées associées au paramètre générique représenté par le jeton spécifié.  
@@ -44,7 +44,7 @@ HRESULT GetGenericParamProps (
   
 #### <a name="parameters"></a>Paramètres  
  `gp`  
- [in] Jeton qui représente le paramètre générique pour lequel retourner les métadonnées.  
+ [in] Le jeton qui représente le paramètre générique pour lequel retourner les métadonnées.  
   
  `pulParamSeq`  
  [out] La position ordinale de la `Type` paramètre dans le constructeur parent ou la méthode.  
@@ -53,10 +53,10 @@ HRESULT GetGenericParamProps (
  [out] Une valeur de la [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) énumération qui décrit le `Type` pour le paramètre générique.  
   
  `ptOwner`  
- [out] Un jeton TypeDef ou MethodDef qui représente le propriétaire du paramètre.  
+ [out] Jeton TypeDef ou MethodDef qui représente le propriétaire du paramètre.  
   
  `reserved`  
- [out] Réservé pour une future extensibilité.  
+ [out] Réservé pour une extensibilité future.  
   
  `wzName`  
  [out] Le nom du paramètre générique.  
@@ -68,14 +68,14 @@ HRESULT GetGenericParamProps (
  [out] La taille retournée du nom, en caractères larges.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

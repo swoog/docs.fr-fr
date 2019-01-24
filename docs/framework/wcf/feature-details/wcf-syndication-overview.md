@@ -2,12 +2,12 @@
 title: Vue d'ensemble de la syndication WCF
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
-ms.openlocfilehash: cba14edc5743966c53f23b3dbf965c5472ed2702
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 82e8e1192b791dde1ca0ea7e030c7cfc82476b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718245"
 ---
 # <a name="wcf-syndication-overview"></a>Vue d'ensemble de la syndication WCF
 Windows Communication Foundation (WCF) prend en charge pour l’exposition des flux de syndication à partir d’un service WCF. La syndication est un mécanisme d'intégration d'application par lequel un serveur expose des données d'application dans un format interopérable appelé « flux ». Un flux est une collection de données d’application incluant des métadonnées (titre, auteur, URL et autres métadonnées) au niveau du flux et une série d’éléments de flux. Dans le flux, les éléments de flux sont habituellement ordonnés par ordre chronologique inverse. Un élément de flux se compose d'un jeu standard de métadonnées au niveau de l'élément (titre, URL, date de création, catégorie et autres métadonnées au niveau de l'élément) et une quantité arbitraire de données d'application spécifiques. Les deux types courants de flux de syndication sont Syndication RSS (Really Simple) 2.0 et Atom 1.0, qui sont prises en charge par WCF.  
@@ -21,5 +21,5 @@ Windows Communication Foundation (WCF) prend en charge pour l’exposition des f
 ## <a name="syndication-formats"></a>Formats de syndication  
  La plate-forme de syndication WCF prend en charge RSS 2.0 et Atom 1.0.  
   
-## <a name="see-also"></a>Voir aussi  
- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Voir aussi
+- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

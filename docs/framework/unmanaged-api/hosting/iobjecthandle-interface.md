@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa16b67f11e5d4f44ef88daf27e0014ae8690769
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b9f6bf0dc0fb92d8b5bb7e3f4d017eed85d85338
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531202"
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle, interface
 Fournit une méthode pour désencapsuler les objets marshalés par valeur à partir de l’indirection.  
@@ -30,16 +30,16 @@ Fournit une méthode pour désencapsuler les objets marshalés par valeur à par
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[Unwrap, méthode](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Désencapsule un objet marshalé-par-valeur à partir de l’indirection.|  
+|[Unwrap, méthode](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Désencapsule un objet marshalé par valeur à partir de l’indirection.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

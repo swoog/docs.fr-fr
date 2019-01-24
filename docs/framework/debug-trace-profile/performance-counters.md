@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c9bf5d138be250d1dfeee012368153bac96b067
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672394"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Compteurs de performance dans le .NET Framework
 Cette rubrique fournit une liste des compteurs de performance que vous pouvez trouver dans le [Analyseur de performances Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
@@ -251,6 +251,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Épaisseur de la pile**|Affiche l'épaisseur de la pile pendant la dernière vérification de la sécurité d'accès du code à l'exécution. Les vérifications de sécurité d'accès du code à l'exécution sont effectuées en parcourant la pile. Ce compteur n'établit pas une moyenne ; il affiche uniquement la dernière valeur observée.|  
 |**Total de vérifications à l’exécution**|Affiche le nombre total de vérifications de sécurité d'accès du code à l'exécution effectuées depuis le démarrage de l'application. Les vérifications de sécurité d'accès du code à l'exécution sont effectuées quand un appelant demande une autorisation particulière. La vérification à l'exécution se produit à chaque appel par l'appelant, en examinant la pile de threads actuelle de l'appelant. Utilisé avec le compteur **Épaisseur de la pile**, ce compteur indique la diminution de performances due aux vérifications de sécurité.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Compteurs de performance](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [Profilage d’exécution](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+## <a name="see-also"></a>Voir aussi
+- [Compteurs de performance](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [Profilage d’exécution](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

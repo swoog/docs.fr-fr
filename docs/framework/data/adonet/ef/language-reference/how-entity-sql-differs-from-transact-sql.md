@@ -2,12 +2,12 @@
 title: Différences entre Entity SQL et Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: d34c6933e0f19c73b954446fdf18cea7243eae0d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f193a3f7441a8bf7efacf07d8a9eb18362d7f91d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635960"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Différences entre Entity SQL et Transact-SQL
 Cette rubrique décrit les différences entre [!INCLUDE[esql](../../../../../../includes/esql-md.md)] et [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -15,10 +15,10 @@ Cette rubrique décrit les différences entre [!INCLUDE[esql](../../../../../../
 ## <a name="inheritance-and-relationships-support"></a>Héritage et prise en charge des relations  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fonctionne directement avec les schémas d’entité conceptuels et prend en charge des fonctionnalités telles que l’héritage et les relations de modèle conceptuel.  
   
- Lors de l’utilisation de l’héritage, il est souvent utile de sélectionner des instances d’un sous-type à partir d’une collection d’instances de supertype. Le [oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) opérateur dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (semblable à `oftype` dans les séquences c#) fournit cette fonctionnalité.  
+ Lors de l’utilisation de l’héritage, il est souvent utile de sélectionner des instances d’un sous-type à partir d’une collection d’instances de supertype. Le [oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) opérateur dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (semblable à `oftype` dans C# séquences) offre cette possibilité.  
   
 ## <a name="support-for-collections"></a>Prise en charge des collections  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] traite les collections en tant qu’entités de première classe. Par exemple :  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] traite les collections en tant qu’entités de première classe. Exemple :  
   
 -   Les expressions de collection sont valides dans une clause `from`.  
   
@@ -33,7 +33,7 @@ Cette rubrique décrit les différences entre [!INCLUDE[esql](../../../../../../
 ## <a name="support-for-expressions"></a>Prise en charge des expressions  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] a des sous-requêtes (tables) et des expressions (lignes et colonnes).  
   
- Pour prendre en charge les collections et les collections imbriquées, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] transforme tout en expression. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] est plus composable que [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] – chaque expression peut être utilisée n'importe où. Les expressions de requête génèrent toujours des collections des types projetés et peuvent être utilisées partout où une expression de collection est autorisée. Pour plus d’informations sur [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] expressions qui ne sont pas pris en charge dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], consultez [non pris en charge les Expressions](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).  
+ Pour prendre en charge les collections et les collections imbriquées, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] transforme tout en expression. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] est plus composable que [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] – chaque expression peut être utilisée n'importe où. Les expressions de requête génèrent toujours des collections des types projetés et peuvent être utilisées partout où une expression de collection est autorisée. Pour plus d’informations sur [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] expressions qui ne sont pas pris en charge dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], consultez [Expressions non prises en charge](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).  
   
  Les requêtes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] suivantes sont toutes valides :  
   
@@ -47,16 +47,16 @@ set(e1)
 ```  
   
 ## <a name="uniform-treatment-of-subqueries"></a>Traitement uniforme des sous-requêtes  
- Vu l’accent porté sur les tables, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] effectue une interprétation contextuelle des sous-requêtes. Par exemple, une sous-requête dans la `from` clause est considérée comme un multiset (table). En revanche, la même sous-requête utilisée dans la clause `select` est considérée comme une sous-requête scalaire. De même, une sous-requête utilisée sur le côté gauche d’une `in` opérateur est considéré comme une sous-requête scalaire, tandis que le côté droit est supposé être une sous-requête de type multiset.  
+ Vu l’accent porté sur les tables, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] effectue une interprétation contextuelle des sous-requêtes. Par exemple, une sous-requête dans la `from` clause est considérée comme un multiset (table). En revanche, la même sous-requête utilisée dans la clause `select` est considérée comme une sous-requête scalaire. De même, une sous-requête utilisée sur le côté gauche d’un `in` opérateur est considéré comme une sous-requête scalaire, tandis que le côté droit est supposé être une sous-requête de type multiset.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] élimine ces différences. Une expression a une interprétation uniforme qui ne dépend pas du contexte dans lequel elle est utilisée. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] considère que toutes les sous-requêtes comme des sous-requêtes de type multiset. Si une valeur scalaire est souhaitée à partir de la sous-requête, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit le `anyelement` opérateur qui opère sur une collection (dans ce cas, la sous-requête) et extrait une valeur singleton de la collection.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] élimine ces différences. Une expression a une interprétation uniforme qui ne dépend pas du contexte dans lequel elle est utilisée. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en compte toutes les sous-requêtes comme des sous-requêtes de type multiset. Si une valeur scalaire est souhaitée à partir de la sous-requête, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit le `anyelement` opérateur qui opère sur une collection (dans ce cas, la sous-requête) et extrait une valeur singleton de la collection.  
   
 ### <a name="avoiding-implicit-coercions-for-subqueries"></a>Éviter des contraintes implicites pour les sous-requêtes  
  Un effet secondaire connexe du traitement uniforme des sous-requêtes est la conversion implicite des sous-requêtes en valeurs scalaires. En particulier, dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], un multiset de lignes (avec un champ unique) est converti implicitement en une valeur scalaire dont le type de données est celui du champ.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ne prend pas en charge cette contrainte implicite. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit l'opérateur ANYELEMENT pour extraire une valeur singleton d'une collection et une clause `select value` pour éviter de créer un wrapper de ligne pendant une expression de requête.  
   
-## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>Select Value : éviter le wrapper de ligne implicite  
+## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>Select value : éviter le wrapper de ligne implicite  
  La clause select dans une [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] sous-requête crée implicitement un wrapper de ligne autour des éléments dans la clause. Cela implique que nous ne pouvons pas créer de collections de scalaires ou d’objets. [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] autorise une contrainte implicite entre un rowtype avec un champ et une valeur singleton du même type de données.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit la clause `select value` pour ignorer la construction de ligne implicite. Un seul élément peut être spécifié dans une clause `select value`. Lorsqu'une telle clause est utilisée, aucun wrapper de ligne n'est construit autour des éléments de la clause `select` et une collection de la forme souhaitée peut être générée, par exemple : `select value a`.  
@@ -70,7 +70,7 @@ set(e1)
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] généralise les corrélations gauches dans la `from` clause et les traite uniformément. Les expressions dans la clause `from` peuvent référencer des définitions antérieures (définitions à gauche) dans la même clause sans nécessiter une syntaxe supplémentaire.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] impose également des restrictions supplémentaires sur les requêtes qui impliquent des clauses `group by`. Expressions dans les `select` clause et `having` clause de telles requêtes peut-être faire référence uniquement à la `group by` clés via leurs alias. La construction suivante est valide dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] mais ne sont pas dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] impose également des restrictions supplémentaires sur les requêtes qui impliquent des clauses `group by`. Expressions dans les `select` clause et `having` clause de telles requêtes peut-être faire référence uniquement à la `group by` clés par le biais de leurs alias. La construction suivante est valide dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] mais ne figurent pas dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
 ```  
 select t.x + t.y from T as t group by t.x + t.y  
@@ -83,7 +83,7 @@ select k from T as t group by (t.x + t.y) as k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>Référencement de colonnes (propriétés) de tables (collections)  
- Toutes les références de colonne dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] doivent être qualifiées avec l'alias de la table. La construction suivante (en supposant que `a` est une colonne valide de la table `T`) est valide dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] , mais pas dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+ Toutes les références de colonne dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] doivent être qualifiées avec l'alias de la table. La construction suivante (en supposant que `a` est une colonne de table valide `T`) est valide dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] , mais pas dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ```  
 select a from T  
@@ -111,7 +111,7 @@ p.Address.City
 ```  
   
 ## <a name="no-support-for-"></a>Aucune prise en charge pour *  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] prend en charge la non qualifiée * syntaxe comme alias pour la ligne entière et le texte complet \* syntaxe (t.\*) comme raccourci pour les champs de la table. En outre, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] permettant à un compte spécial (\*) agrégat, qui inclut les valeurs NULL.  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] prend en charge de la non qualifiée * syntaxe en tant qu’alias pour la ligne entière et qualifié \* syntaxe (t.\*) comme raccourci pour les champs de la table. En outre, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] permettant à un compte spécial (\*) agrégat, qui inclut les valeurs NULL.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ne prend pas en charge la construction *. Les requêtes [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] de la forme `select * from T` et `select T1.* from T1, T2...` peuvent être exprimées dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sous la forme `select value t from T as t` et `select value t1 from T1 as t1, T2 as t2...`, respectivement. En outre, ces constructions gèrent l'héritage (capacité des valeurs à être substituées), tandis que les variantes `select *` sont restreintes aux propriétés de niveau supérieur du type déclaré.  
   
@@ -174,7 +174,7 @@ SELECT C2.FirstName, C2.LastName
  Les fonctionnalités [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ci-dessous ne sont pas disponibles dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  DML  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ne fournit actuellement aucune prise en charge pour les instructions DML (insert, update, supprimer).  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ne fournit actuellement aucune prise en charge pour les instructions DML (insérer, mettre à jour, supprimer).  
   
  DDL  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ne fournit aucune prise en charge pour DDL dans la version actuelle.  
@@ -189,7 +189,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ne fournit pas (encore) de prise en charge pour les fonctions analytiques.  
   
  Fonctions et opérateurs intégrés  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge un sous-ensemble de [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]intégrés dans les fonctions et opérateurs. Ces opérateurs et ces fonctions seront vraisemblablement pris en charge par les principaux fournisseurs de stockage. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] utilise les fonctions spécifiques aux magasins déclarées dans le manifeste du fournisseur. En outre, le [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] vous permet de déclarer intégrées et définies par l’utilisateur existante fonctions de magasin [!INCLUDE[esql](../../../../../../includes/esql-md.md)] à utiliser.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge un sous-ensemble de [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]intégrés dans les fonctions et opérateurs. Ces opérateurs et ces fonctions seront vraisemblablement pris en charge par les principaux fournisseurs de stockage. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] utilise les fonctions spécifiques aux magasins déclarées dans le manifeste du fournisseur. En outre, le [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] vous permet de déclarer intégrées et fonctions définies par l’utilisateur existant de magasin pour [!INCLUDE[esql](../../../../../../includes/esql-md.md)] à utiliser.  
   
  Indicateurs  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ne fournit pas de mécanismes pour les indicateurs de requête.  
@@ -211,6 +211,6 @@ Select value c from Categories as c;
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend uniquement en charge une seule instruction de requête générant un résultat par commande.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Expressions non prises en charge](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Expressions non prises en charge](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)

@@ -2,21 +2,21 @@
 title: '&lt;transactionFlow&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: 6f0660ce94fdfbe1ab636aa4197ef31526c21348
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d8597a71a9b7afadba7565290085f491052e04d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622118"
 ---
 # <a name="lttransactionflowgt"></a>&lt;transactionFlow&gt;
 Spécifie le support du flux de la transaction pour la liaison personnalisée.  
   
  \<system.serviceModel>  
-\<liaisons >  
-\<customBinding >  
-\<liaison >  
-\<transactionFlow >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<transactionFlow>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,7 +31,7 @@ Spécifie le support du flux de la transaction pour la liaison personnalisée.
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|transactionProtocol|Spécifie le protocole de transaction à utiliser. Les valeurs valides sont les suivantes :<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> La valeur par défaut est OleTransactions.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.TransactionProtocol>.|  
+|transactionProtocol|Spécifie le protocole de transaction à utiliser. Les valeurs valides sont les suivantes :<br /><br /> -   OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> La valeur par défaut est OleTransactions.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.TransactionProtocol>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -40,7 +40,7 @@ Spécifie le support du flux de la transaction pour la liaison personnalisée.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="remarks"></a>Notes  
  Cet élément vous permet d’activer ou de désactiver le flux de transactions entrantes dans les paramètres de liaison d’un point de terminaison, ainsi que de spécifier le format de protocole souhaité pour les transactions entrantes. Pour plus d’informations sur l’utilisation de cet élément de configuration, consultez [Configuration des transactions ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md) et [l’activation de flux de Transaction](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
@@ -48,13 +48,13 @@ Spécifie le support du flux de la transaction pour la liaison personnalisée.
 > [!CAUTION]
 >  Lors de l’utilisation du protocole `OleTransactions` pour faire passer les transactions d’un point de terminaison vers un autre, le délai d’attente de transaction peut se perdre si le point de terminaison de destination tente un nouveau flux à l’aide d’un autre protocole que `OleTransactions`. Cela peut provoquer l'expiration de tous les nœuds de niveau inférieur après le tronçon OleTransactions selon un délai plus long que prévu.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.TransactionFlowElement>  
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Configuration des transactions ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
- [Activation du flux de transaction](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.TransactionFlowElement>
+- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Configuration des transactions ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)
+- [Activation du flux de transaction](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

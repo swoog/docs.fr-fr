@@ -2,12 +2,12 @@
 title: traçage analytique [WCF]
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6d4db9a8ec11e215ef18dcab6b7940526bc24927
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748140"
 ---
 # <a name="wcf-analytic-tracing"></a>traçage analytique [WCF]
 Cet exemple montre comment ajouter vos propres événements de traçage dans le flux de traces analytiques que Windows Communication Foundation (WCF) écrit dans ETW dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Les traces analytiques permettent d'obtenir facilement une visibilité de vos services sans que cela se traduise par une lourde pénalité en termes de performances. Cet exemple montre comment utiliser le <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API pour écrire des événements qui s’intègrent avec les services WCF.  
@@ -24,11 +24,11 @@ Cet exemple montre comment ajouter vos propres événements de traçage dans le 
   
 -   Si l'application ne se situe pas à la racine.  
   
-     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
 -   Si l'application se situe à la racine.  
   
-     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
  Pour les services auto-hébergés, les traces analytiques de WCF ne remplissent pas le champ « HostReference ». La classe `WCFUserEventProvider` de cet exemple se comporte de manière cohérente lorsqu'elle est utilisée par un service auto-hébergé.  
   
@@ -117,5 +117,5 @@ Cet exemple montre comment ajouter vos propres événements de traçage dans le 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Voir aussi
+- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

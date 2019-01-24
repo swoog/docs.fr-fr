@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b37c30df6467439d04e367e13b0fc4ffff0ec6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a5f21855ce83f5c1fb68637e3eeb6d3c831bce2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745152"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next, méthode
 Obtient les adresses virtuelles relatives (RVA) du nombre spécifié d’objets à partir de l’énumération, en commençant à la position actuelle.  
@@ -46,16 +46,16 @@ HRESULT Next (
  [out] Tableau de pointeurs, chacun pointant vers un objet CORDB_ADDRESS.  
   
  `pceltFetched`  
- [out] Pointeur vers le nombre d’objets retournés. Cette valeur peut être null si `celt` fait partie.  
+ [out] Pointeur vers le nombre d’objets réellement retournés. Cette valeur peut être null si `celt` fait partie.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- 
+## <a name="see-also"></a>Voir aussi
+

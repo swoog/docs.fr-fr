@@ -2,11 +2,12 @@
 title: Transfert des messages par diffusion en continu
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643817"
 ---
 # <a name="streaming-message-transfer"></a>Transfert des messages par diffusion en continu
 Les transports de Windows Communication Foundation (WCF) prennent en charge deux modes de transfert de messages :  
@@ -26,7 +27,7 @@ Les transports de Windows Communication Foundation (WCF) prennent en charge deux
   
  La décision d'utiliser des transferts mis en mémoire tampon ou diffusés en continu est une décision locale du point de terminaison. Pour les transports HTTP, le mode de transfert n'est pas propagé à la totalité de la connexion ni aux serveurs ni autres intermédiaires. La description de l'interface de service ne reflète pas le mode de transfert défini. Après création d'une classe client pour le service, vous devez modifier son fichier de configuration pour pouvoir passer du mode de transfert en flux continu au mode de transfert mis en mémoire tampon. Pour les transports TCP et les transports de canal nommé, le mode de transfert est propagé sous forme d'assertion de stratégie.  
   
- Pour obtenir des exemples de code, consultez [Comment : activer la diffusion en continu](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
+ Pour obtenir des exemples de code, consultez [Comment : Activer la diffusion en continu](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
   
 ## <a name="enabling-asynchronous-streaming"></a>Activation de la diffusion en continu asynchrone  
  Pour activer la diffusion en continu asynchrone, ajoutez le comportement de point de terminaison <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> à l'hôte de service et affectez à sa propriété <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> la valeur `true`.  
@@ -45,5 +46,5 @@ Les transports de Windows Communication Foundation (WCF) prennent en charge deux
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Différences entre les transferts mis en mémoire tampon et les transferts en flux continu  
  Modifier le mode de transfert de mis en mémoire tampon à flux continu modifie également la forme du canal natif des transports TCP et des transports de canal nommé. Pour les transferts mis en mémoire tampon, la forme du canal natif est <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Pour les transferts en flux continu, les canaux natifs correspondent à <xref:System.ServiceModel.Channels.IRequestChannel> et à <xref:System.ServiceModel.Channels.IReplyChannel>. Modifier le mode de transfert d'une application existante utilisant directement ces transports (c'est-à-dire sans passer par un contrat de service) nécessite de modifier la forme de canal escomptée des fabrications et écouteurs de canal.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour activer le streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Activer la diffusion en continu](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

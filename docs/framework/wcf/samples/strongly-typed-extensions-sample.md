@@ -2,22 +2,22 @@
 title: Strongly-Typed Extensions, exemple
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: eccb0ce240d01ab8592a44daddcfa7aa3d2023fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c5b135fb46d13ff5599e75cbd1489c0f6affbd78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691396"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Strongly-Typed Extensions, exemple
 L'exemple utilise la classe <xref:System.ServiceModel.Syndication.SyndicationFeed>. Toutefois, les modèles présentés dans cet exemple peuvent être utilisés avec toutes les classes Syndication qui prennent en charge les données d'extension.  
   
- Le modèle objet Syndication (<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem> et les classes connexes) prend en charge l'accès peu typé aux données d'extension en utilisant les propriétés <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> et <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>. Cet exemple indique comment fournir un accès fortement typé aux données d'extension en implémentant des classes dérivées personnalisées de <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem> qui rendent disponibles certaines extensions spécifiques de l'application en tant que propriétés fortement typées.  
+ Le modèle objet Syndication (<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem> et les classes connexes) prend en charge l’accès peu typé aux données d’extension en utilisant les propriétés <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> et <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>. Cet exemple indique comment fournir un accès fortement typé aux données d'extension en implémentant des classes dérivées personnalisées de <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem> qui rendent disponibles certaines extensions spécifiques de l'application en tant que propriétés fortement typées.  
   
  En particulier, cet exemple indique comment implémenter un élément d’extension défini dans la RFC proposée, Atom Threading Extensions. Cet exemple est fourni à titre de démonstration uniquement et n'est pas conçu comme une implémentation complète de la spécification proposée.  
   
 ## <a name="sample-xml"></a>Exemple XML  
- L'exemple de code XML suivant illustre une entrée Atom 1.0 avec un élément d'extension `<in-reply-to>` supplémentaire.  
+ L’exemple de code XML suivant illustre une entrée Atom 1.0 avec un élément d’extension `<in-reply-to>` supplémentaire.  
   
 ```xml  
 <entry>  
@@ -86,7 +86,7 @@ public class InReplyToElement : IXmlSerializable
 }  
 ```  
   
- La classe `InReplyToElement` implémente des propriétés pour l'attribut requis (`HRef`, `MediaType` et `Source`) ainsi que des collections pour stocker <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> et <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>.  
+ La classe `InReplyToElement` implémente des propriétés pour l’attribut requis (`HRef`, `MediaType` et `Source`) ainsi que des collections pour stocker <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> et <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>.  
   
  La classe `InReplyToElement` implémente l'interface <xref:System.Xml.Serialization.IXmlSerializable>, qui autorise le contrôle direct de la manière dont les instances d'objet sont lues et écrites en XML. La méthode `ReadXml` lit en premier les valeurs pour les propriétés `Ref`, `HRef`, `Source` et `MediaType` du <xref:System.Xml.XmlReader> qui lui est passé. Les attributs inconnus sont stockés dans la collection <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>. Lorsque tous les attributs ont été lus, <xref:System.Xml.XmlReader.ReadStartElement> est appelé pour faire avancer le lecteur à l'élément suivant. Vu que l'élément modélisé par cette classe ne contient aucun enfant requis, les éléments enfants sont mis en mémoire tampon dans des instances de `XElement` et stockés dans la collection <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>, comme illustré dans le code suivant.  
   
@@ -211,7 +211,7 @@ public class ThreadedFeed : SyndicationFeed
 }  
 ```  
   
- La classe `ThreadedItem` est héritée de `SyndicationItem` et fait de `InReplyToElement` une propriété fortement typée. Cela fournit accès par programme commode aux données d'extension `InReplyTo`. Elle implémente également `TryParseElement` et `WriteElementExtensions` pour lire et écrire ses données d'extension, comme illustré dans le code suivant.  
+ La classe `ThreadedItem` est héritée de `SyndicationItem` et fait de `InReplyToElement` une propriété fortement typée. Cela fournit accès par programme commode aux données d’extension `InReplyTo`. Elle implémente également `TryParseElement` et `WriteElementExtensions` pour lire et écrire ses données d'extension, comme illustré dans le code suivant.  
   
 ```  
 public class ThreadedItem : SyndicationItem  

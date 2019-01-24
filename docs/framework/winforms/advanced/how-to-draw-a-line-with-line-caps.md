@@ -1,5 +1,5 @@
 ---
-title: 'Comment : dessiner une ligne avec des embouts de ligne'
+title: 'Procédure : Dessiner une ligne avec des embouts de ligne'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: be492f2317d4677776cc9f89f546c935d271019b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0d4d92d7201c4ac09eadd11d8f2e38a3c80c287
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713132"
 ---
-# <a name="how-to-draw-a-line-with-line-caps"></a>Comment : dessiner une ligne avec des embouts de ligne
-Vous pouvez dessiner le début ou la fin d’une ligne dans une des différentes formes appelées des embouts de ligne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] prend en charge plusieurs embouts de ligne, telles que rond, carré, losange et pointe de flèche.  
+# <a name="how-to-draw-a-line-with-line-caps"></a>Procédure : Dessiner une ligne avec des embouts de ligne
+Vous pouvez dessiner le début ou la fin d’une ligne dans plusieurs formes appelé embouts de ligne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] prend en charge plusieurs embouts de ligne, tels que round, carré, losange et pointe de flèche.  
   
 ## <a name="example"></a>Exemple  
- Vous pouvez spécifier des embouts de ligne pour le début d’une ligne (embout de début), à la fin d’une ligne (extrémité de fin) ou les tirets d’une ligne en pointillés (embout pointillé).  
+ Vous pouvez spécifier des embouts de ligne pour le début d’une ligne (extrémité de début), la fin d’une ligne (extrémité de fin) ou les tirets d’une ligne en pointillés (cap dash).  
   
  L’exemple suivant dessine une ligne avec une pointe de flèche à une extrémité et une extrémité arrondie à l’autre extrémité. L’illustration montre la ligne résultante :  
   
@@ -32,10 +32,10 @@ Vous pouvez dessiner le début ou la fin d’une ligne dans une des différentes
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Créer un Windows Form et gérer du formulaire <xref:System.Windows.Forms.Control.Paint> événement. Collez l’exemple de code dans le <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements en passant `e` comme <xref:System.Windows.Forms.PaintEventArgs>.  
+-   Créer un formulaire Windows et de gérer le formulaire <xref:System.Windows.Forms.Control.Paint> événement. Collez l’exemple de code dans le <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements en passant `e` comme <xref:System.Windows.Forms.PaintEventArgs>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>  
- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Utilisation d'un stylet pour dessiner des lignes et des formes](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Drawing.Pen?displayProperty=nameWithType>
+- <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>
+- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Utilisation d'un stylet pour dessiner des lignes et des formes](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

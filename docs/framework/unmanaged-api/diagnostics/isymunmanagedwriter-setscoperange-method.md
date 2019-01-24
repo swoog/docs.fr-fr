@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 495089ca33df3b36656da149da45019c30b81d39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da50542d9f57e008b31ce2e6ed9698df1275d5eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618806"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange, méthode
-Définit la plage d'offsets pour la portée lexicale spécifiée. La portée devient la nouvelle portée actuelle et est placée sur une pile d’étendues. Les portées doivent former une hiérarchie. Frères ne sont pas autorisées à chevaucher.  
+Définit la plage d'offsets pour la portée lexicale spécifiée. La portée devient la nouvelle portée actuelle et est envoyée à une pile d’étendues. Les portées doivent former une hiérarchie. Frères ne sont pas autorisées à chevaucher.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +38,7 @@ HRESULT OpenScope(
   
 #### <a name="parameters"></a>Paramètres  
  `scopeId`  
- [in] Identificateur de l’étendue dans l’étendue.  
+ [in] L’identificateur de portée pour la portée.  
   
  `startOffset`  
  [in] Offset, en octets, de la première instruction dans la portée lexicale à partir du début de la méthode.  
@@ -49,10 +50,10 @@ HRESULT OpenScope(
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
   
 ## <a name="remarks"></a>Notes  
- [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) retourne un identificateur de portée opaque qui peut être utilisé avec `ISymUnmanagedWriter::SetScopeRange` pour définir une étendue de début et de fin décalage ultérieurement. Dans ce cas, les offsets passés à `ISymUnmanagedWriter::OpenScope` et [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) sont ignorés. Les identificateurs de portée sont valides uniquement dans la méthode actuelle.  
+ [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) retourne un identificateur de portée opaque qui peut être utilisé avec `ISymUnmanagedWriter::SetScopeRange` pour définir une étendue de démarrage et de fin de décalage à partir d’une date ultérieure. Dans ce cas, les offsets passés à `ISymUnmanagedWriter::OpenScope` et [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) sont ignorés. Identificateurs d’étendue sont uniquement valides dans la méthode actuelle.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

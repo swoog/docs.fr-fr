@@ -1,19 +1,19 @@
 ---
-title: 'Comment : implémenter la validation de la liaison'
+title: 'Procédure : Implémenter la validation de la liaison'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e752ad5c3160ac7b73adac55b02a06bf802190ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678354"
 ---
-# <a name="how-to-implement-binding-validation"></a>Comment : implémenter la validation de la liaison
+# <a name="how-to-implement-binding-validation"></a>Procédure : Implémenter la validation de la liaison
 Cet exemple montre comment utiliser un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> et un déclencheur de style pour fournir des commentaires visuels afin d’informer l’utilisateur lorsqu’une valeur non valide est entrée, basée sur une règle de validation personnalisée.  
   
 ## <a name="example"></a>Exemple  
@@ -37,6 +37,6 @@ Cet exemple montre comment utiliser un <xref:System.Windows.Controls.Validation.
   
  Notez que si vous ne fournissez pas un personnalisé <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> le modèle d’erreur par défaut s’affiche pour fournir des commentaires visuels à l’utilisateur lorsqu’il existe une erreur de validation. Pour plus d’informations, consultez la section relative à la validation de données de la rubrique [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md). En outre, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit une règle de validation intégrée qui capte les exceptions levées pendant la mise à jour de la propriété de source de liaison. Pour plus d'informations, consultez <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

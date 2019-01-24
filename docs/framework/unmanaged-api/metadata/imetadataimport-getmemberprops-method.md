@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93763da2afbbdb1e738c802ba172e9f16e5f7af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611408"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps, méthode
 Obtient les informations de métadonnées, y compris le nom, le signature binaire et l’adresse virtuelle relative, de la <xref:System.Type> membre référencé par le jeton de métadonnées spécifié.  
@@ -49,7 +49,7 @@ HRESULT GetMemberProps (
   
 #### <a name="parameters"></a>Paramètres  
  `mb`  
- [in] Jeton qui référence le membre pour obtenir les métadonnées associées.  
+ [in] Le jeton qui référence le membre pour obtenir les métadonnées associées.  
   
  `pClass`  
  [out] Pointeur vers le jeton de métadonnées qui représente la classe du membre.  
@@ -61,10 +61,10 @@ HRESULT GetMemberProps (
  [in] La taille en caractères larges de la `szMember` mémoire tampon.  
   
  `pchMember`  
- [out] La taille en caractères étendus du nom retourné.  
+ [out] La taille en caractères larges du nom retourné.  
   
  `pdwAttr`  
- [out] Toutes les valeurs d’indicateur appliqués au membre.  
+ [out] Les valeurs d’indicateur appliqués au membre.  
   
  `ppvSigBlob`  
  [out] Pointeur vers la signature de métadonnées binaires du membre.  
@@ -76,7 +76,7 @@ HRESULT GetMemberProps (
  [out] Pointeur vers l’adresse virtuelle relative du membre.  
   
  `pdwImplFlags`  
- [out] Toutes les indicateurs d’implémentation de méthode associées au membre.  
+ [out] Les indicateurs d’implémentation méthode associés au membre.  
   
  `pdwCPlusTypeFlag`  
  [out] Un indicateur qui marque un <xref:System.ValueType>.  
@@ -88,14 +88,14 @@ HRESULT GetMemberProps (
  [out] La taille en caractères de `ppValue`, ou zéro si `ppValue` ne contient pas de chaîne.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

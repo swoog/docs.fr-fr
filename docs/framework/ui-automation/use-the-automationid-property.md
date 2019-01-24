@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 9f2f5b157d8999cd254d6b389cdf7a2ca8ca1f8f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8d7de0ea18adf81d7bcd5b4142e1aa51d6d223ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743840"
 ---
 # <a name="use-the-automationid-property"></a>Utiliser la propriété AutomationID
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "48840514"
 > [!NOTE]
 >  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> est pris en charge par tous les éléments UI Automation dans l’affichage de contrôle, à l’exception des fenêtres d’application de niveau supérieur, des éléments UI Automation dérivés des contrôles [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] n’ayant pas d’ID ou de x:Uid, et des éléments UI Automation dérivés des contrôles [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] n’ayant pas d’ID de contrôle.  
   
-#### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Utiliser un AutomationID unique et détectable pour localiser un élément spécifique dans l’arborescence UI Automation  
+#### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Utiliser un AutomationID unique et détectable pour localiser un élément spécifique dans l’arborescence UI Automation  
   
 -   Utilisez un outil comme [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] pour signaler la propriété <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> d’un élément [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] d’intérêt. Cette valeur peut ensuite être copiée et collée dans une application cliente telle qu’un script de test en vue de tests automatisés. Cette approche réduit et simplifie le code nécessaire pour identifier et localiser un élément au moment de l’exécution.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48840514"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Utiliser un chemin persistant pour revenir à un AutomationElement déjà identifié  
   
--   Les applications clientes, qu’il s’agisse de simples scripts de test ou de véritables utilitaires d’enregistrement et de lecture, peuvent nécessiter l’accès à des éléments qui ne sont pas actuellement instanciés, comme une boîte de dialogue d’ouverture de fichier ou un élément de menu, et qui donc n’existent pas dans l’arborescence UI Automation. Ces éléments ne peuvent être instanciés qu’en reproduisant, ou en « lisant », une séquence spécifique d’actions d’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] à l’aide de propriétés [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] comme AutomationID, les modèles de contrôle et les écouteurs d’événements. Consultez [Test Script Generator Sample](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) pour obtenir un exemple qui utilise [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour générer des scripts de test basés sur l’interaction utilisateur avec le [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Les applications clientes, qu’il s’agisse de simples scripts de test ou de véritables utilitaires d’enregistrement et de lecture, peuvent nécessiter l’accès à des éléments qui ne sont pas actuellement instanciés, comme une boîte de dialogue d’ouverture de fichier ou un élément de menu, et qui donc n’existent pas dans l’arborescence UI Automation. Ces éléments ne peuvent être instanciés qu’en reproduisant, ou en « lisant », une séquence spécifique d’actions d’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] à l’aide de propriétés [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] comme AutomationID, les modèles de contrôle et les écouteurs d’événements. Consultez [Test Script Generator Sample](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) pour obtenir un exemple qui utilise [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour générer des scripts de test en fonction de l’interaction de l’utilisateur avec l’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -58,7 +58,7 @@ ms.locfileid: "48840514"
   
 -   Dans certaines circonstances, l’unicité d’AutomationID n’étant garantie que parmi ses frères, plusieurs éléments dans l’arborescence UI Automation peuvent avoir des valeurs de propriété AutomationID identiques. Dans ce cas, les éléments peuvent être identifiés de manière unique en fonction d’un parent et, si nécessaire, d’un grand-parent. Par exemple, un développeur peut fournir une barre de menus avec plusieurs éléments de menu, chacun contenant plusieurs éléments de menu enfants dans lesquels les enfants sont identifiés avec des AutomationID séquentiels tels que « Item1 », « Item2 » et ainsi de suite. Chaque élément de menu peut ensuite être identifié de manière unique par son AutomationID accompagné de l’AutomationID de son parent et, si nécessaire, de son grand-parent.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>  
- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Rechercher un élément UI Automation basé sur une condition de propriété](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
+- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Rechercher un élément UI Automation basé sur une condition de propriété](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
