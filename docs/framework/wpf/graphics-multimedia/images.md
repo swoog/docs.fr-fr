@@ -9,27 +9,27 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: dbb8b9511b05c5df228a463d82efb17b7cd6f23a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64d5ede4dcbe50beeec22ca7782d1dc8c24a27f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687217"
 ---
-# <a name="images"></a><span data-ttu-id="d445e-102">Images</span><span class="sxs-lookup"><span data-stu-id="d445e-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="d445e-103"> assure la prise en charge intégrée de plusieurs formats d’image, du rendu d’image haute fidélité et de l’extensibilité des codecs.</span><span class="sxs-lookup"><span data-stu-id="d445e-103"> provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="7e75a-102">Images</span><span class="sxs-lookup"><span data-stu-id="7e75a-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="7e75a-103">assure la prise en charge intégrée de plusieurs formats d’image, du rendu d’image haute fidélité et de l’extensibilité des codecs.</span><span class="sxs-lookup"><span data-stu-id="7e75a-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d445e-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="d445e-104">In This Section</span></span>  
- [<span data-ttu-id="d445e-105">Vue d’ensemble de la création d’images</span><span class="sxs-lookup"><span data-stu-id="d445e-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="d445e-106">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="d445e-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7e75a-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="7e75a-104">In This Section</span></span>  
+ [<span data-ttu-id="7e75a-105">Vue d’ensemble de la création d’images</span><span class="sxs-lookup"><span data-stu-id="7e75a-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="7e75a-106">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="7e75a-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d445e-107">Référence</span><span class="sxs-lookup"><span data-stu-id="d445e-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7e75a-107">Référence</span><span class="sxs-lookup"><span data-stu-id="7e75a-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="d445e-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d445e-108">See Also</span></span>  
- [<span data-ttu-id="d445e-109">Graphiques 2D et acquisition d'images</span><span class="sxs-lookup"><span data-stu-id="d445e-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="d445e-110">Graphiques et multimédia</span><span class="sxs-lookup"><span data-stu-id="d445e-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="7e75a-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7e75a-108">See also</span></span>
+- [<span data-ttu-id="7e75a-109">Graphiques 2D et acquisition d'images</span><span class="sxs-lookup"><span data-stu-id="7e75a-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="7e75a-110">Graphiques et multimédia</span><span class="sxs-lookup"><span data-stu-id="7e75a-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

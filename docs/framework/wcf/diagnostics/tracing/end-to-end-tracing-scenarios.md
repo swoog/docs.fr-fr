@@ -2,42 +2,42 @@
 title: Scénarios de suivi de bout en bout
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-ms.openlocfilehash: ee1f3f09ccd642edbde039bafeda6bbf58247744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 976c3ad6fae2fa31b180d7635ac897bdf6b9ef1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704236"
 ---
-# <a name="end-to-end-tracing-scenarios"></a><span data-ttu-id="f60e4-102">Scénarios de suivi de bout en bout</span><span class="sxs-lookup"><span data-stu-id="f60e4-102">End-To-End Tracing Scenarios</span></span>
-<span data-ttu-id="f60e4-103">Cette section contient des rubriques qui décrivent différents scénarios d'utilisation du suivi.</span><span class="sxs-lookup"><span data-stu-id="f60e4-103">This section contains topics that describe different scenarios for using tracing.</span></span>  
+# <a name="end-to-end-tracing-scenarios"></a><span data-ttu-id="f4b9f-102">Scénarios de suivi de bout en bout</span><span class="sxs-lookup"><span data-stu-id="f4b9f-102">End-To-End Tracing Scenarios</span></span>
+<span data-ttu-id="f4b9f-103">Cette section contient des rubriques qui décrivent différents scénarios d'utilisation du suivi.</span><span class="sxs-lookup"><span data-stu-id="f4b9f-103">This section contains topics that describe different scenarios for using tracing.</span></span>  
   
- <span data-ttu-id="f60e4-104">Le suivi d'activité est implémenté pour les scénarios Réponse/Réponse, OneWay et Duplex à l'aide des éléments suivants</span><span class="sxs-lookup"><span data-stu-id="f60e4-104">Activity Tracing is implemented for Reply/Response, OneWay and Duplex scenarios using the following</span></span>  
+ <span data-ttu-id="f4b9f-104">Le suivi d'activité est implémenté pour les scénarios Réponse/Réponse, OneWay et Duplex à l'aide des éléments suivants</span><span class="sxs-lookup"><span data-stu-id="f4b9f-104">Activity Tracing is implemented for Reply/Response, OneWay and Duplex scenarios using the following</span></span>  
   
--   <span data-ttu-id="f60e4-105">Synchrone ou asynchrone</span><span class="sxs-lookup"><span data-stu-id="f60e4-105">Synchronous or Asynchronous</span></span>  
+-   <span data-ttu-id="f4b9f-105">Synchrone ou asynchrone</span><span class="sxs-lookup"><span data-stu-id="f4b9f-105">Synchronous or Asynchronous</span></span>  
   
--   <span data-ttu-id="f60e4-106">BasicHttpBinding, netNamedPipeBinding, netTcpBinding, wsHttpBinding ou netMsmqBinding</span><span class="sxs-lookup"><span data-stu-id="f60e4-106">BasicHttpBinding, netNamedPipeBinding, netTcpBinding, wsHttpBinding or netMsmqBinding</span></span>  
+-   <span data-ttu-id="f4b9f-106">BasicHttpBinding, netNamedPipeBinding, netTcpBinding, wsHttpBinding ou netMsmqBinding</span><span class="sxs-lookup"><span data-stu-id="f4b9f-106">BasicHttpBinding, netNamedPipeBinding, netTcpBinding, wsHttpBinding or netMsmqBinding</span></span>  
   
--   <span data-ttu-id="f60e4-107">Service COM</span><span class="sxs-lookup"><span data-stu-id="f60e4-107">COM Service</span></span>  
+-   <span data-ttu-id="f4b9f-107">Service COM</span><span class="sxs-lookup"><span data-stu-id="f4b9f-107">COM Service</span></span>  
   
--   <span data-ttu-id="f60e4-108">Propagation de l'ID d'activité des utilisateurs</span><span class="sxs-lookup"><span data-stu-id="f60e4-108">User activity id propagation</span></span>  
+-   <span data-ttu-id="f4b9f-108">Propagation de l'ID d'activité des utilisateurs</span><span class="sxs-lookup"><span data-stu-id="f4b9f-108">User activity id propagation</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f60e4-109">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="f60e4-109">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="f4b9f-109">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="f4b9f-109">In This Section</span></span>  
   
--   [<span data-ttu-id="f60e4-110">Liste des activités</span><span class="sxs-lookup"><span data-stu-id="f60e4-110">Activity List</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
+-   [<span data-ttu-id="f4b9f-110">Liste des activités</span><span class="sxs-lookup"><span data-stu-id="f4b9f-110">Activity List</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
   
--   [<span data-ttu-id="f60e4-111">Propagation d’ID d’activité</span><span class="sxs-lookup"><span data-stu-id="f60e4-111">Activity ID Propagation</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
+-   [<span data-ttu-id="f4b9f-111">Propagation d’ID d’activité</span><span class="sxs-lookup"><span data-stu-id="f4b9f-111">Activity ID Propagation</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
   
--   [<span data-ttu-id="f60e4-112">Scénarios synchrones utilisant HTTP, TCP ou un canal nommé</span><span class="sxs-lookup"><span data-stu-id="f60e4-112">Synchronous Scenarios using HTTP, TCP or Named-Pipe</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+-   [<span data-ttu-id="f4b9f-112">Scénarios synchrones utilisant HTTP, TCP ou un canal nommé</span><span class="sxs-lookup"><span data-stu-id="f4b9f-112">Synchronous Scenarios using HTTP, TCP or Named-Pipe</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
--   [<span data-ttu-id="f60e4-113">Scénarios asynchrones utilisant HTTP, TCP ou un canal nommé</span><span class="sxs-lookup"><span data-stu-id="f60e4-113">Asynchronous Scenarios using HTTP, TCP, or Named-Pipe</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+-   [<span data-ttu-id="f4b9f-113">Scénarios asynchrones utilisant HTTP, TCP ou un canal nommé</span><span class="sxs-lookup"><span data-stu-id="f4b9f-113">Asynchronous Scenarios using HTTP, TCP, or Named-Pipe</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
--   [<span data-ttu-id="f60e4-114">Suivi d’activité dans la sécurité de message</span><span class="sxs-lookup"><span data-stu-id="f60e4-114">Activity Tracing in Message Security</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
+-   [<span data-ttu-id="f4b9f-114">Suivi d’activité dans la sécurité de message</span><span class="sxs-lookup"><span data-stu-id="f4b9f-114">Activity Tracing in Message Security</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
   
--   [<span data-ttu-id="f60e4-115">MSMQ</span><span class="sxs-lookup"><span data-stu-id="f60e4-115">MSMQ</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
+-   [<span data-ttu-id="f4b9f-115">MSMQ</span><span class="sxs-lookup"><span data-stu-id="f4b9f-115">MSMQ</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
   
--   [<span data-ttu-id="f60e4-116">COM+</span><span class="sxs-lookup"><span data-stu-id="f60e4-116">COM+</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
+-   [<span data-ttu-id="f4b9f-116">COM+</span><span class="sxs-lookup"><span data-stu-id="f4b9f-116">COM+</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f60e4-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f60e4-117">See Also</span></span>  
- [<span data-ttu-id="f60e4-118">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="f60e4-118">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f60e4-119">Suivi de bout en bout</span><span class="sxs-lookup"><span data-stu-id="f60e4-119">End-to-End Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a><span data-ttu-id="f4b9f-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f4b9f-117">See also</span></span>
+- [<span data-ttu-id="f4b9f-118">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="f4b9f-118">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="f4b9f-119">Suivi de bout en bout</span><span class="sxs-lookup"><span data-stu-id="f4b9f-119">End-to-End Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

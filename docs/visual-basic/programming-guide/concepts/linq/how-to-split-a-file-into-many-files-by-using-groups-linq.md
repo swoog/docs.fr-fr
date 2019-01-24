@@ -1,20 +1,20 @@
 ---
-title: 'Comment : fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)'
+title: 'Procédure : Fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 19b542e22aa6e987a21095025a136d7602057b2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806a1f6c5674e670402d3d612f169582df5e0155
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616977"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="362c4-102">Comment : fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="362c4-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="362c4-103">Cet exemple montre comment fusionner le contenu de deux fichiers, puis créer un ensemble de fichiers qui organisent les données d’une nouvelle façon.</span><span class="sxs-lookup"><span data-stu-id="362c4-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="ed70f-102">Procédure : Fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed70f-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="ed70f-103">Cet exemple montre comment fusionner le contenu de deux fichiers, puis créer un ensemble de fichiers qui organisent les données d’une nouvelle façon.</span><span class="sxs-lookup"><span data-stu-id="ed70f-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="362c4-104">Pour créer les fichiers de données</span><span class="sxs-lookup"><span data-stu-id="362c4-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="ed70f-104">Pour créer les fichiers de données</span><span class="sxs-lookup"><span data-stu-id="ed70f-104">To create the data files</span></span>  
   
-1.  <span data-ttu-id="362c4-105">Copiez ces noms dans un fichier texte nommé names1.txt, puis enregistrez-le dans votre dossier de projet :</span><span class="sxs-lookup"><span data-stu-id="362c4-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1.  <span data-ttu-id="ed70f-105">Copiez ces noms dans un fichier texte nommé names1.txt, puis enregistrez-le dans votre dossier de projet :</span><span class="sxs-lookup"><span data-stu-id="ed70f-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "33642150"
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="362c4-106">Copiez ces noms dans un fichier texte nommé names2.txt, puis enregistrez-le dans votre dossier de projet. Notez que les deux fichiers ont certains noms en commun.</span><span class="sxs-lookup"><span data-stu-id="362c4-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2.  <span data-ttu-id="ed70f-106">Copiez ces noms dans un fichier texte nommé names2.txt, et enregistrez-le dans votre dossier de projet : Notez que les deux fichiers ont des noms en commun.</span><span class="sxs-lookup"><span data-stu-id="ed70f-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "33642150"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="362c4-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="362c4-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ed70f-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="ed70f-107">Example</span></span>  
   
 ```vb  
 Class SplitWithGroups  
@@ -113,11 +113,11 @@ End Class
 '    Toyoshima, Tim  
 ```  
   
- <span data-ttu-id="362c4-108">Le programme écrit un fichier distinct pour chaque groupe, dans le même dossier que les fichiers de données.</span><span class="sxs-lookup"><span data-stu-id="362c4-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="ed70f-108">Le programme écrit un fichier distinct pour chaque groupe, dans le même dossier que les fichiers de données.</span><span class="sxs-lookup"><span data-stu-id="ed70f-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="362c4-109">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="362c4-109">Compiling the Code</span></span>  
- <span data-ttu-id="362c4-110">Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.</span><span class="sxs-lookup"><span data-stu-id="362c4-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ed70f-109">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="ed70f-109">Compiling the Code</span></span>  
+ <span data-ttu-id="ed70f-110">Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.</span><span class="sxs-lookup"><span data-stu-id="ed70f-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="362c4-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="362c4-111">See Also</span></span>  
- [<span data-ttu-id="362c4-112">LINQ et chaînes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="362c4-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="362c4-113">LINQ et répertoires de fichiers (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="362c4-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="ed70f-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ed70f-111">See also</span></span>
+- [<span data-ttu-id="ed70f-112">LINQ et chaînes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed70f-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="ed70f-113">LINQ et répertoires de fichiers (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed70f-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

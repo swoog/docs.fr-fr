@@ -17,35 +17,35 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: beb0e4d3e22ffc3619a6c5281ab5d72efeda921d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2fca83d952e139b0f141dcd75362f31c5235644d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678731"
 ---
-# <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a><span data-ttu-id="4bc95-102">ICorProfilerCallback::ExceptionSearchCatcherFound, méthode</span><span class="sxs-lookup"><span data-stu-id="4bc95-102">ICorProfilerCallback::ExceptionSearchCatcherFound Method</span></span>
-<span data-ttu-id="4bc95-103">Notifie le profileur que la phase de recherche de la gestion des exceptions a trouvé un gestionnaire pour l’exception qui a été levée.</span><span class="sxs-lookup"><span data-stu-id="4bc95-103">Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a><span data-ttu-id="29b5a-102">ICorProfilerCallback::ExceptionSearchCatcherFound, méthode</span><span class="sxs-lookup"><span data-stu-id="29b5a-102">ICorProfilerCallback::ExceptionSearchCatcherFound Method</span></span>
+<span data-ttu-id="29b5a-103">Notifie le profileur que la phase de recherche de gestion des exceptions a trouvé un gestionnaire pour l’exception qui a été levée.</span><span class="sxs-lookup"><span data-stu-id="29b5a-103">Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4bc95-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4bc95-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29b5a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="29b5a-104">Syntax</span></span>  
   
 ```  
 RESULT ExceptionSearchCatcherFound(  
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4bc95-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4bc95-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="29b5a-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="29b5a-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="4bc95-106">[in] L’ID de la fonction qui contient le Gestionnaire d’exceptions.</span><span class="sxs-lookup"><span data-stu-id="4bc95-106">[in] The ID of the function that contains the exception handler.</span></span>  
+ <span data-ttu-id="29b5a-106">[in] ID de la fonction qui contient le Gestionnaire d’exceptions.</span><span class="sxs-lookup"><span data-stu-id="29b5a-106">[in] The ID of the function that contains the exception handler.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4bc95-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4bc95-107">Requirements</span></span>  
- <span data-ttu-id="4bc95-108">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4bc95-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29b5a-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="29b5a-107">Requirements</span></span>  
+ <span data-ttu-id="29b5a-108">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="29b5a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4bc95-109">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4bc95-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="29b5a-109">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="29b5a-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="4bc95-110">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4bc95-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="29b5a-110">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="29b5a-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4bc95-111">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4bc95-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="29b5a-111">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29b5a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4bc95-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4bc95-112">See Also</span></span>  
- [<span data-ttu-id="4bc95-113">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="4bc95-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="29b5a-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="29b5a-112">See also</span></span>
+- [<span data-ttu-id="29b5a-113">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="29b5a-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
