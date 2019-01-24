@@ -2,12 +2,12 @@
 title: Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594808"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 Cette rubrique décrit le format des données de suivi, leur mode de consultation, et les approches qui utilisent Service Trace Viewer pour résoudre les problèmes posés par votre application.  
@@ -119,7 +119,7 @@ Cette rubrique décrit le format des données de suivi, leur mode de consultatio
   
 -   Traitement de l'action Add.  
   
--   Configuration de la session sécurisée (s'est produite à la première demande) et traitement de trois messages de réponse d'infrastructure de sécurité : RST, RSTR, SCT (traiter le message 1, 2, 3).  
+-   Configurer la Session sécurisée (s’est produite lors de la première demande) et infrastructure de sécurité traité de trois messages de réponse : RST, RSTR, SCT (traiter le message 1, 2, 3).  
   
 -   Traitement des demandes de soustraction, multiplication et division.  
   
@@ -138,7 +138,7 @@ Activités clientes WCF répertoriées selon l'heure de création (volet gauche)
  En double-cliquant sur l’action de processus ajouter une activité dans le volet gauche, nous pouvons voir une représentation graphique des activités WCF client liés à ajouter. La première activité à gauche est l'activité racine (0000), l'activité par défaut. WCF transfère hors de l’activité ambiante. Si ce n’est pas défini, WCF transfère hors de 0000. Dans ce contexte, la deuxième activité (« Traiter l'action Add ») transfère hors de 0. Elle est suivie de Configurer la session sécurisée.  
   
  ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Vue graphique des activités clientes de WCF : activité ambiante (ici 0), Traiter l'action et Configurer une session sécurisée  
+Vue du graphique d’activités de client WCF : Ambiante d’activité (ici 0), de traiter l’action et de configurer une Session sécurisée  
   
  Dans le volet supérieur droit, nous pouvons consulter tous les suivis se rapportant à l'activité Traiter l'action Add. Spécifiquement, nous avons envoyé le message de demande (« Envoi d'un message sur un canal ») et avons reçu la réponse (« Réception d'un message sur un canal ») dans la même activité. Ce cas est illustré dans le graphique suivant. À des fins de clarté, l‘activité Configurer une session sécurisée est réduite dans le graphique.  
   
@@ -198,7 +198,7 @@ Développement des activités pour localiser la cause racine d’un problème
  ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 Pour commencer la résolution des problèmes, vous pouvez aussi sélectionner un suivi de message rouge ou jaune et double-cliquer dessus pour localiser la cause racine.  
   
-## <a name="see-also"></a>Voir aussi  
- [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595316"
 ---
 # <a name="data-transfer-and-serialization"></a>Transfert de données et sérialisation
-Dans un système connecté, les services et les clients se reposent sur l’échange de données pour accomplir une tâche. En tant que développeur d’un service ou d’un client, doit également comprendre comment Windows Communication Foundation (WCF) gère les données et la sérialisation des données afin de créer des applications qui sont efficaces et faciles à gérer.  
+Dans un système connecté, les services et les clients se reposent sur l’échange de données pour accomplir une tâche. En tant que développeur d’un service ou d’un client, vous devez également comprendre comment Windows Communication Foundation (WCF) gère les données et la sérialisation de données afin de créer des applications qui sont efficaces et faciles à gérer.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Spécification du transfert de données dans des contrats de service](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -44,7 +44,7 @@ Dans un système connecté, les services et les clients se reposent sur l’éch
  Décrit des éléments à connaître lors de la programmation du transfert de données et de la sérialisation.  
   
  [Vue d’ensemble de l’architecture de transfert de données](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- Décrit une vue de la conception générale de transfert de données dans WCF.  
+ Décrit une vue de la conception globale de transfert de données dans WCF.  
   
 ## <a name="reference"></a>Référence  
  <xref:System.ServiceModel>  
@@ -60,6 +60,6 @@ Dans un système connecté, les services et les clients se reposent sur l’éch
 ## <a name="related-sections"></a>Rubriques connexes  
  [Extension des encodeurs et des sérialiseurs](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Bonnes pratiques : gestion des versions des contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Gestion des versions des services](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a>Voir aussi
+- [Meilleures pratiques : Concernant les contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Gestion des versions des services](../../../../docs/framework/wcf/service-versioning.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : enregistrer des fuseaux horaires dans une ressource incorporée'
+title: 'Procédure : Enregistrer des fuseaux horaires dans une ressource incorporée'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592872"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Comment : enregistrer des fuseaux horaires dans une ressource incorporée
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procédure : Enregistrer des fuseaux horaires dans une ressource incorporée
 
 Une application prenant en charge de fuseau horaire souvent nécessite la présence d’un fuseau horaire particulier. Toutefois, étant donné que la disponibilité de l’individu <xref:System.TimeZoneInfo> objets dépend des informations stockées dans le Registre du système local, les fuseaux horaires même habituellement disponibles peuvent être absents. En outre, les informations sur les fuseaux horaires personnalisés instancié à l’aide du <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (méthode) n’est pas stockée avec d’autres informations de fuseau horaire dans le Registre. Pour vous assurer que ces fuseaux horaires sont disponibles lorsqu’ils sont nécessaires, vous pouvez les enregistrer en les sérialisant et les restaurer ultérieurement en désérialisant les.
 
@@ -37,9 +37,9 @@ En plus d’un fichier de ressources qui est compilé avec l’application, plus
 
 1. Récupérer un fuseau horaire existant ou créer un nouveau fuseau horaire.
 
-   Pour récupérer un fuseau horaire existant, consultez [Comment : accéder aux objets de fuseau UTC et l’heure locale prédéfinis](../../../docs/standard/datetime/access-utc-and-local.md) et [Comment : instancier un objet TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Pour récupérer un fuseau horaire existant, consultez [Comment : Accéder aux objets de fuseau UTC et l’heure locale prédéfinis](../../../docs/standard/datetime/access-utc-and-local.md) et [Comment : Instancier un objet TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
-   Pour créer un nouveau fuseau horaire, appelez l’une des surcharges de la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (méthode). Pour plus d’informations, consultez [Comment : créer des fuseaux horaires sans règles d’ajustement](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) et [Comment : créer des fuseaux horaires avec des règles d’ajustement](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Pour créer un nouveau fuseau horaire, appelez l’une des surcharges de la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (méthode). Pour plus d'informations, voir [Procédure : Créer des fuseaux horaires sans règles d’ajustement](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) et [Comment : Créer des fuseaux horaires avec des règles d’ajustement](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 2. Appelez le <xref:System.TimeZoneInfo.ToSerializedString%2A> méthode pour créer une chaîne qui contient les données du fuseau horaire.
 
@@ -85,6 +85,6 @@ Cet exemple nécessite :
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
-* [Vue d’ensemble des fuseaux horaires](../../../docs/standard/datetime/time-zone-overview.md)
-* [Guide pratique pour restaurer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Vue d’ensemble des fuseaux horaires](../../../docs/standard/datetime/time-zone-overview.md)
+- [Guide pratique pour Restaurer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

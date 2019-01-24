@@ -2,23 +2,23 @@
 title: Comportements de sécurité dans WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592807"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportements de sécurité dans WCF
 Dans Windows Communication Foundation (WCF), les comportements modifient comportement au moment de l’exécution au niveau du service ou au niveau du point de terminaison. (Pour plus d’informations sur les comportements en général, consultez [spécification du comportement de Service runtime](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportements de sécurité* permettent de contrôler les informations d’identification, l’authentification, autorisation et les journaux d’audit. Vous pouvez les utiliser via la programmation ou la configuration. Cette rubrique se concentre sur la configuration des comportements relatifs aux fonctions de sécurité suivants :  
   
--   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+-   [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
--   [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+-   [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
--   [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
+-   [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
--   [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+-   [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
 -   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), ce qui vous permet également de spécifier un point de terminaison sécurisé auquel les clients peuvent accéder pour les métadonnées.  
   
@@ -117,16 +117,16 @@ Dans Windows Communication Foundation (WCF), les comportements modifient comport
 #### <a name="clientcertifictate-element"></a>\<ClientCertificate > élément  
  Définissez le certificat utilisé pour authentifier le client avec cet élément. Pour plus d'informations, voir [Procédure : Renseignez les informations d’identification Client](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
-#### <a name="httpdigest"></a>\<httpDigest >  
+#### <a name="httpdigest"></a>\<httpDigest>  
  Cette fonctionnalité doit être activée avec Active Directory sur Windows et les services IIS (Internet Information Services). Pour plus d’informations, consultez [l’authentification Digest dans IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > élément  
  Le [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) contient les éléments utilisés pour configurer un émetteur local de jetons, ou les comportements utilisés avec un service de jeton de sécurité. Pour obtenir des instructions sur la configuration d’un client à utiliser un émetteur local, consultez [Comment : Configurer un émetteur Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress >  
+#### <a name="localissueraddress"></a>\<localIssuerAddress>  
  Spécifie une adresse de service d'émission de jeton de sécurité par défaut. Il est utilisé lorsque le <xref:System.ServiceModel.WSFederationHttpBinding> ne fournit pas d’URL pour le service de jeton de sécurité, ou lorsque l’adresse de l’émetteur d’une liaison fédérée est `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ou `null`. Dans ce cas, vous devez configurer <xref:System.ServiceModel.Description.ClientCredentials> avec l’adresse de l’émetteur local et la liaison à utiliser pour communiquer avec celui-ci.  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
  Utilisez le [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) pour ajouter des comportements de client WCF utilisés lors de la communication avec un service de jeton de sécurité. Définissez des comportements de client dans le [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) section. Pour utiliser un comportement défini, ajoutez un <`add`> élément à la `<issuerChannelBehaviors>` élément avec deux attributs. Affectez l'URL du service d'émission de jeton de sécurité à `issuerAddress`, et affectez le nom du comportement de point de terminaison défini à l'attribut `behaviorConfiguration`, tel qu'indiqué dans l'exemple suivant.  
   
 ```xml  
@@ -217,6 +217,6 @@ Dans Windows Communication Foundation (WCF), les comportements modifient comport
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Voir aussi
+- [Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

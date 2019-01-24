@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595134"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Débogage d'erreurs d'authentification Windows
 Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurité, l'interface SSPI (Security Support Provider Interface) gère les processus de sécurité. En cas d’erreur de sécurité au niveau de la couche SSPI, elles sont signalées par Windows Communication Foundation (WCF). Cette rubrique fournit une infrastructure et un ensemble de questions permettant de diagnostiquer les erreurs.  
@@ -45,13 +45,13 @@ Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurit
   
  Plus précisément, les quatre types de comptes incluent :  
   
--   Utilisateur local : profil utilisateur, ordinateur uniquement. Par exemple : `MachineName\Administrator` ou `MachineName\ProfileName`.  
+-   Utilisateur local : Profil de l’utilisateur, ordinateur uniquement. Par exemple : `MachineName\Administrator` ou `MachineName\ProfileName`.  
   
--   Système local : compte intégré SYSTEM sur un ordinateur qui n'est pas joint à un domaine.  
+-   Système local : Le compte système intégré sur un ordinateur qui n’est pas joint à un domaine.  
   
--   Utilisateur de domaine : compte d'utilisateur sur un domaine Windows. Par exemple : `DomainName\ProfileName`.  
+-   Utilisateur de domaine : Un compte d’utilisateur sur un domaine Windows. Par exemple : `DomainName\ProfileName`.  
   
--   Ordinateur de domaine : processus avec identité d'ordinateur s'exécutant sur un ordinateur joint à un domaine Windows. Par exemple : `MachineName\Network Service`.  
+-   Ordinateur de domaine : Un processus avec l’identité de l’ordinateur en cours d’exécution sur un ordinateur joint à un domaine Windows. Par exemple : `MachineName\Network Service`.  
   
 > [!NOTE]
 >  Les informations d'identification du service sont capturées lorsque la méthode <xref:System.ServiceModel.ICommunicationObject.Open%2A> de la classe <xref:System.ServiceModel.ServiceHost> est appelée. Les informations d'identification du client sont lues chaque fois que le client envoie un message.  
@@ -87,7 +87,7 @@ Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurit
   
     1.  Si vous utilisez des liaisons standard, affectez `NegotiateServiceCredential` à la propriété `true`.  
   
-    2.  Si vous utilisez des liaisons personnalisées, affectez `AuthenticationMode` à l'attribut `Security` de l'élément `SspiNegotiated`.  
+    2.  Si vous utilisez des liaisons personnalisées, affectez `AuthenticationMode` à l’attribut `Security` de l’élément `SspiNegotiated`.  
   
 3.  Requérez que la négociation SSPI utilise Kerberos en interdisant l'utilisation de NTLM :  
   
@@ -144,10 +144,10 @@ Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurit
 #### <a name="developing-and-deploying-with-different-identities"></a>Développement et déploiement avec des identités différentes  
  Si vous développez votre application sur un ordinateur, la déployez sur un autre et utilisez différents types de compte pour vous authentifier sur chaque ordinateur, vous pouvez observer un comportement différent. Par exemple, supposons que vous développiez votre application sur un ordinateur Windows XP Professionnel à l'aide du mode d'authentification `SSPI Negotiated`. Si vous utilisez un compte d'utilisateur local pour vous authentifier, le protocole NTLM sera alors utilisé. Une fois que l'application est développée, vous déployez le service sur un ordinateur Windows Server 2003 où il s'exécute sous un compte de domaine. À ce stade, le client ne sera pas en mesure d'authentifier le service car il utilisera Kerberos et un contrôleur de domaine.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- [Délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- [Délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

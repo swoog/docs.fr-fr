@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595576"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Types génériques Visual Basic (Visual Basic)
 Un *type générique* est un élément de programmation unique qui s’adapte pour exécuter la même fonction sur différents types de données. Quand vous définissez une classe ou procédure générique, vous n’avez pas besoin de définir une version distincte pour chaque type de données pour lequel vous voulez exécuter la fonction.  
@@ -53,13 +53,13 @@ Tournevis configuré comme un outil générique
   
  Quand vous définissez un type générique, vous devez le paramétrer avec un ou plusieurs types de données. Cela permet au code utilisé d’adapter les types de données à ses besoins. Votre code peut déclarer plusieurs éléments de programmation différents à partir de l’élément générique, chacun d’eux agissant sur un ensemble différent de types de données. Ces éléments déclarés exécutent tous la même logique, quel que soit le type de données qu’ils utilisent.  
   
- Par exemple, vous pouvez créer et utiliser une classe « queue » qui agit sur un type de données spécifique, tel que `String`. Vous pouvez déclarer une telle classe à partir de <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, comme illustré dans l’exemple suivant.  
+ Par exemple, vous pouvez créer et utiliser une classe « queue » qui agit sur un type de données spécifique, tel que `String`. Vous pouvez déclarer cette classe à partir de <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, comme indiqué dans l’exemple suivant.  
   
  [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
  Vous pouvez maintenant utiliser `stringQ` pour agir uniquement sur des valeurs `String` . Étant donné que `stringQ` est spécifique aux valeurs `String` au lieu d’être généralisé pour les valeurs `Object` , aucune liaison tardive ou conversion de type n’est nécessaire. Cela permet de réduire le délai d’exécution et les erreurs d’exécution.  
   
- Pour plus d’informations sur l’utilisation d’un type générique, consultez [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ Pour plus d’informations sur l’utilisation d’un type générique, consultez [Comment : Utiliser une classe générique](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Exemple d’une classe générique  
  L’exemple suivant présente une définition squelette d’une classe générique.  
@@ -74,10 +74,10 @@ Tournevis configuré comme un outil générique
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- Pour obtenir un exemple plus complet, consultez [Comment : définir une classe que peut fournir des fonctionnalités identiques sur différents Types de données](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Pour obtenir un exemple plus complet, consultez [Comment : Définissez une classe qui fournisse des fonctionnalités identiques pour différents Types de données](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Éléments de programmation disponibles  
- Vous pouvez définir et utiliser des délégués, structures, interfaces, procédures et classes génériques. Notez que [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] définit plusieurs classes, structures et interfaces génériques qui représentent les éléments génériques couramment utilisés. Le <xref:System.Collections.Generic?displayProperty=nameWithType> espace de noms fournit des dictionnaires, des listes, des files d’attente et des piles. Avant de définir votre propre élément générique, vérifiez s’il est déjà disponible dans <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ Vous pouvez définir et utiliser des délégués, structures, interfaces, procédures et classes génériques. Notez que [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] définit plusieurs classes, structures et interfaces génériques qui représentent les éléments génériques couramment utilisés. L’espace de noms <xref:System.Collections.Generic?displayProperty=nameWithType> fournit des dictionnaires, des listes, des files d’attente et des piles. Avant de définir votre propre élément générique, vérifiez s’il est disponible dans <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Les procédures ne sont pas des types, mais vous pouvez définir et utiliser des procédures génériques. Consultez [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
@@ -149,14 +149,14 @@ Tournevis configuré comme un outil générique
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
-- [Caractères de type](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
-- [Types valeur et types référence](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
-- [Conversions de type en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
-- [Dépannage des types de données](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
-- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)  
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
-- [Object (type de données)](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
-- [Covariance et contravariance](../../concepts/covariance-contravariance/index.md)  
+- [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Caractères de type](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Conversions de type en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Dépannage des types de données](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
+- [Object (type de données)](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Covariance et contravariance](../../concepts/covariance-contravariance/index.md)
 - [Itérateurs](../../../../visual-basic/programming-guide/concepts/iterators.md)

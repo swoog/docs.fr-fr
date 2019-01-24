@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 7f8a8cd1d9d8524c4bfbf3a7f783a33eee972474
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 51795007b906a6eb71e5e03b4afef2fc83328b28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593340"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Sécurité de message avec certificats mutuels
 Le scénario suivant illustre un service Windows Communication Foundation (WCF) et le client sécurisé à l’aide du mode de sécurité de message. Le client et le service sont authentifiés à l'aide de certificats.  
@@ -158,7 +158,7 @@ Le scénario suivant illustre un service Windows Communication Foundation (WCF) 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [Comment : créer et installer des certificats temporaires dans WCF pour la sécurité de Transport pendant le développement](https://go.microsoft.com/fwlink/?LinkId=244264)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Guide pratique pour Créer et installer des certificats temporaires dans WCF pour la sécurité de Transport pendant le développement](https://go.microsoft.com/fwlink/?LinkId=244264)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: cb102ec9b3a7eb4673f42c2ca5ad876e049ff59c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8c5ab9ac832ebf98584273bb8c4a7de12b3b8085
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595277"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Procédure pas à pas : Création d’un contrôle de formulaire Windows qui tire parti des fonctionnalités au moment du Design de Visual Studio
 L’expérience au moment du design pour un contrôle personnalisé peut être améliorée en créant un concepteur personnalisé associé.  
@@ -583,7 +583,7 @@ private IWindowsFormsEditorService editorService;
   
 6.  Avec le bouton droit le `DemoMarqueeControl` et dans le menu contextuel, sélectionnez le **exécuter le Test** option pour démarrer l’animation. Cliquez sur **arrêter le Test** pour arrêter l’animation.  
   
-7.  Ouvrez **Form1** en mode Design.  
+7.  Ouvrez **Form1** en mode Création.  
   
 8.  Placez deux <xref:System.Windows.Forms.Button> contrôles du formulaire. Nommez-les `startButton` et `stopButton`et modifier le <xref:System.Windows.Forms.Control.Text%2A> valeurs de propriété à **Démarrer** et **arrêter**, respectivement.  
   
@@ -638,9 +638,9 @@ private void stopButton_Click(object sender, System.EventArgs e)
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>
 - <xref:System.Windows.Forms.Design.DocumentDesigner>
 - <xref:System.ComponentModel.Design.IRootDesigner>
-- <xref:System.ComponentModel.Design.DesignerVerb> 
+- <xref:System.ComponentModel.Design.DesignerVerb>
 - <xref:System.Drawing.Design.UITypeEditor>
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Guide pratique pour Créer un contrôle Windows Forms tire parti des fonctionnalités de conception](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
-- [Extension de la prise en charge au moment du design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 
+- [Extension de la prise en charge au moment du design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Concepteurs personnalisés](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

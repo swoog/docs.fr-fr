@@ -2,12 +2,12 @@
 title: Utilisation de schémas d'authentification multiples avec WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8aa593803354628354e5ed3bf02cbcea44505e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593808"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Utilisation de schémas d'authentification multiples avec WCF
 WCF vous permet maintenant de spécifier plusieurs schémas d'authentification sur un seul point de terminaison. En outre les services hébergés sur le Web peuvent hériter leurs paramètres d'authentification directement d'IIS. Les services auto-hébergés peuvent spécifier que les schémas d'authentification peuvent être utilisés. Pour plus d’informations sur la définition des paramètres d’authentification dans IIS, consultez [l’authentification IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Liaisons et sécurité](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Points de terminaison : adresses, liaisons et contrats](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Configuration des liaisons fournies par le système](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Voir aussi
+- [Liaisons et sécurité](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Points de terminaison : Adresses, liaisons et contrats](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Configuration des liaisons fournies par le système](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md)

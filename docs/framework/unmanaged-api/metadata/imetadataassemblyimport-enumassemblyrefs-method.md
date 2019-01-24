@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a56d874e5e7ef491c24b0aef2ace700087de677
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d10fb391953e924feb553ae4516fb7674345ed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592008"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs, méthode
-Énumère les `mdAssemblyRef` instances définies dans le manifeste d’assembly.  
+Énumère les `mdAssemblyRef` instances qui sont définis dans le manifeste d’assembly.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ HRESULT EnumAssemblyRefs (
   
 #### <a name="parameters"></a>Paramètres  
  `phEnum`  
- [dans, out] Pointeur vers l’énumérateur. Cela doit être une valeur null lorsque la valeur du `EnumAssemblyRefs` méthode est appelée pour la première fois.  
+ [in, out] Pointeur vers l’énumérateur. Cela doit être une valeur null valeur lorsque le `EnumAssemblyRefs` méthode est appelée pour la première fois.  
   
  `rAssemblyRefs`  
  [out] L’énumération des `mdAssemblyRef` des jetons de métadonnées.  
   
  `cMax`  
- [in] Le nombre maximal de jetons qui peuvent être placées dans le `rAssemblyRefs` tableau.  
+ [in] Le nombre maximal de jetons qui peuvent être placés dans le `rAssemblyRefs` tableau.  
   
  `pcTokens`  
  [out] Le nombre de jetons placés dans `rAssemblyRefs`.  
@@ -56,16 +56,16 @@ HRESULT EnumAssemblyRefs (
 |HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumAssemblyRefs` retourné avec succès.|  
-|`S_FALSE`|Il n’existe pas de jetons à énumérer. Dans ce cas, `pcTokens` est définie sur zéro.|  
+|`S_FALSE`|Il n’existe pas de jetons à énumérer. Dans ce cas, `pcTokens` est défini à zéro.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataAssemblyImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataAssemblyImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

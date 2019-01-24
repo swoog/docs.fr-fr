@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 970fd0483d7e0126b258afd5ac5c3607cbc6aa0a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592683"
 ---
 # <a name="security-wpf"></a>Sécurité (WPF)
 <a name="introduction"></a> Lors du développement de Windows Presentation Foundation (WPF) applications autonomes et hébergées par un navigateur, vous devez prendre en compte le modèle de sécurité. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications autonomes avec des autorisations illimitées ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** jeu d’autorisations), qu’il soit déployé à l’aide de Windows Installer (.msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Le déploiement d’applications WPF autonomes de confiance partielle avec ClickOnce n’est pas pris en charge. Toutefois, une application hôte de confiance totale peut créer un niveau de confiance partiel <xref:System.AppDomain> à l’aide du modèle de complément .NET Framework. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "44202230"
 |Ressource|Les fichiers ajoutés à un projet avec un type de build **ressources**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Contenu|Les fichiers ajoutés à un projet avec un type de build **contenu**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Site d’origine|Les fichiers ajoutés à un projet avec un type de build **aucun**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Code de l’application|Ressources XAML avec un code-behind compilé.<br /><br /> - ou -<br /><br /> Les fichiers XAML qui sont ajoutés à un projet avec un type de build **Page**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Code de l’application|Ressources XAML avec un code-behind compilé.<br /><br /> ou<br /><br /> Les fichiers XAML qui sont ajoutés à un projet avec un type de build **Page**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  Pour plus d’informations sur les fichiers de données d’application et pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], consultez [ressource d’Application WPF, de contenu et de fichiers de données](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
@@ -184,7 +184,7 @@ ms.locfileid: "44202230"
  Contrôles de fonctionnalités sont appliqués par le processus d’instanciation de l’objet WebBrowser ActiveX. Par conséquent, si vous créez une application autonome qui peut accéder à un contenu non approuvé, vous devez sérieusement envisager d’activer des contrôles de fonctionnalités supplémentaires.  
   
 > [!NOTE]
->  Cette recommandation est basée sur les recommandations générales sur la sécurité des hôtes MSHTML et SHDOCVW. Pour plus d’informations, consultez [FAQ sur la sécurité hôte de MSHTML : partie I sur II](https://go.microsoft.com/fwlink/?LinkId=179396) et [FAQ sur la sécurité hôte de MSHTML : partie II sur II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+>  Cette recommandation est basée sur les recommandations générales sur la sécurité des hôtes MSHTML et SHDOCVW. Pour plus d’informations, consultez [FAQ sur la sécurité hôte de MSHTML : Partie II](https://go.microsoft.com/fwlink/?LinkId=179396) et [la Forum aux questions sur la sécurité d’hôte MSHTML : Partie II of II](https://go.microsoft.com/fwlink/?LinkId=179415).  
   
  Pour votre fichier exécutable, envisagez d’activer les contrôles de fonctionnalités suivants en définissant la valeur de Registre sur 1.  
   
@@ -271,11 +271,11 @@ ms.locfileid: "44202230"
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Sécurité de confiance partielle de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité de confiance partielle de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [Stratégie de sécurité de WPF - sécurité de la plateforme](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [Stratégie de sécurité de WPF - ingénierie de sécurité](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
- [Index des directives, conseils et procédures de sécurité pour les applications](https://go.microsoft.com/fwlink/?LinkId=117426)  
- [Sécurité d’accès du code](../../../docs/framework/misc/code-access-security.md)  
- [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- [Sécurité de confiance partielle de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [Stratégie de sécurité de WPF - sécurité de la plateforme](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [Stratégie de sécurité de WPF - ingénierie de sécurité](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Index des directives, conseils et procédures de sécurité pour les applications](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Sécurité d’accès du code](../../../docs/framework/misc/code-access-security.md)
+- [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
