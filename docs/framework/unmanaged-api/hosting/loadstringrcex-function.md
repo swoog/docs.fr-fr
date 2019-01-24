@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597942"
 ---
-# <a name="loadstringrcex-function"></a><span data-ttu-id="56a88-102">LoadStringRCEx, fonction</span><span class="sxs-lookup"><span data-stu-id="56a88-102">LoadStringRCEx Function</span></span>
-<span data-ttu-id="56a88-103">Traduit une valeur HRESULT à un message d’erreur approprié pour la culture spécifiée.</span><span class="sxs-lookup"><span data-stu-id="56a88-103">Translates an HRESULT value to an appropriate error message for the specified culture.</span></span>  
+# <a name="loadstringrcex-function"></a><span data-ttu-id="45123-102">LoadStringRCEx, fonction</span><span class="sxs-lookup"><span data-stu-id="45123-102">LoadStringRCEx Function</span></span>
+<span data-ttu-id="45123-103">Traduit une valeur HRESULT à un message d’erreur approprié pour la culture spécifiée.</span><span class="sxs-lookup"><span data-stu-id="45123-103">Translates an HRESULT value to an appropriate error message for the specified culture.</span></span>  
   
- <span data-ttu-id="56a88-104">Cette fonction est déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="56a88-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="45123-104">Cette fonction a été déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="45123-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56a88-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="56a88-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="45123-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="45123-105">Syntax</span></span>  
   
 ```  
 HRESULT LoadStringRCEx (  
@@ -41,46 +41,46 @@ HRESULT LoadStringRCEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="56a88-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="56a88-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="45123-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="45123-106">Parameters</span></span>  
  `lcid`  
- <span data-ttu-id="56a88-107">[in] Un identificateur de culture.</span><span class="sxs-lookup"><span data-stu-id="56a88-107">[in] A culture identifier.</span></span> <span data-ttu-id="56a88-108">Passez -1 `lcid` pour utiliser la culture par défaut.</span><span class="sxs-lookup"><span data-stu-id="56a88-108">Pass -1 for `lcid` to use the default culture.</span></span>  
+ <span data-ttu-id="45123-107">[in] Identificateur de culture.</span><span class="sxs-lookup"><span data-stu-id="45123-107">[in] A culture identifier.</span></span> <span data-ttu-id="45123-108">Passez -1 `lcid` pour utiliser la culture par défaut.</span><span class="sxs-lookup"><span data-stu-id="45123-108">Pass -1 for `lcid` to use the default culture.</span></span>  
   
  `iResourceID`  
- <span data-ttu-id="56a88-109">[in] Une valeur HRESULT.</span><span class="sxs-lookup"><span data-stu-id="56a88-109">[in] An HRESULT.</span></span>  
+ <span data-ttu-id="45123-109">[in] Une valeur HRESULT.</span><span class="sxs-lookup"><span data-stu-id="45123-109">[in] An HRESULT.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="56a88-110">[out] Une mémoire tampon qui contient le message d’erreur en cas de réussite.</span><span class="sxs-lookup"><span data-stu-id="56a88-110">[out] A buffer that contains the error message upon successful completion.</span></span>  
+ <span data-ttu-id="45123-110">[out] Une mémoire tampon qui contient le message d’erreur en cas de réussite.</span><span class="sxs-lookup"><span data-stu-id="45123-110">[out] A buffer that contains the error message upon successful completion.</span></span>  
   
  `iMax`  
- <span data-ttu-id="56a88-111">[in] La taille de la mémoire tampon de message.</span><span class="sxs-lookup"><span data-stu-id="56a88-111">[in] The size of the error message buffer.</span></span>  
+ <span data-ttu-id="45123-111">[in] La taille de la mémoire tampon de message.</span><span class="sxs-lookup"><span data-stu-id="45123-111">[in] The size of the error message buffer.</span></span>  
   
  `bQuiet`  
- <span data-ttu-id="56a88-112">[in] Ignoré.</span><span class="sxs-lookup"><span data-stu-id="56a88-112">[in] Ignored.</span></span>  
+ <span data-ttu-id="45123-112">[in] Ignoré.</span><span class="sxs-lookup"><span data-stu-id="45123-112">[in] Ignored.</span></span>  
   
  `pcwchUsed`  
- <span data-ttu-id="56a88-113">[out] Pointeur vers la longueur du message d’erreur.</span><span class="sxs-lookup"><span data-stu-id="56a88-113">[out] A pointer to the length of the error message.</span></span>  
+ <span data-ttu-id="45123-113">[out] Pointeur vers la longueur du message d’erreur.</span><span class="sxs-lookup"><span data-stu-id="45123-113">[out] A pointer to the length of the error message.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="56a88-114">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="56a88-114">Return Value</span></span>  
- <span data-ttu-id="56a88-115">Cette méthode retourne des codes d’erreur COM standard, tel que défini dans WinError.h, en plus des valeurs suivantes.</span><span class="sxs-lookup"><span data-stu-id="56a88-115">This method returns standard COM error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="45123-114">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="45123-114">Return Value</span></span>  
+ <span data-ttu-id="45123-115">Cette méthode retourne des codes d’erreur COM standards, tel que défini dans WinError.h, en plus des valeurs suivantes.</span><span class="sxs-lookup"><span data-stu-id="45123-115">This method returns standard COM error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="56a88-116">Code de retour</span><span class="sxs-lookup"><span data-stu-id="56a88-116">Return code</span></span>|<span data-ttu-id="56a88-117">Description</span><span class="sxs-lookup"><span data-stu-id="56a88-117">Description</span></span>|  
+|<span data-ttu-id="45123-116">Code de retour</span><span class="sxs-lookup"><span data-stu-id="45123-116">Return code</span></span>|<span data-ttu-id="45123-117">Description</span><span class="sxs-lookup"><span data-stu-id="45123-117">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="56a88-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="56a88-118">S_OK</span></span>|<span data-ttu-id="56a88-119">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="56a88-119">The method completed successfully.</span></span>|  
-|<span data-ttu-id="56a88-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="56a88-120">E_INVALIDARG</span></span>|<span data-ttu-id="56a88-121">`szBuffer` a la valeur null ou `iMax` est zéro (0).</span><span class="sxs-lookup"><span data-stu-id="56a88-121">`szBuffer` is null, or `iMax` is zero (0).</span></span>|  
+|<span data-ttu-id="45123-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="45123-118">S_OK</span></span>|<span data-ttu-id="45123-119">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="45123-119">The method completed successfully.</span></span>|  
+|<span data-ttu-id="45123-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="45123-120">E_INVALIDARG</span></span>|<span data-ttu-id="45123-121">`szBuffer` a la valeur null, ou `iMax` est zéro (0).</span><span class="sxs-lookup"><span data-stu-id="45123-121">`szBuffer` is null, or `iMax` is zero (0).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="56a88-122">Notes</span><span class="sxs-lookup"><span data-stu-id="56a88-122">Remarks</span></span>  
- <span data-ttu-id="56a88-123">Si la méthode ne se termine pas correctement, `szBuffer` contient une chaîne vide.</span><span class="sxs-lookup"><span data-stu-id="56a88-123">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="45123-122">Notes</span><span class="sxs-lookup"><span data-stu-id="45123-122">Remarks</span></span>  
+ <span data-ttu-id="45123-123">Si la méthode ne se termine pas correctement, `szBuffer` contient une chaîne vide.</span><span class="sxs-lookup"><span data-stu-id="45123-123">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56a88-124">Spécifications</span><span class="sxs-lookup"><span data-stu-id="56a88-124">Requirements</span></span>  
- <span data-ttu-id="56a88-125">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56a88-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="45123-124">Spécifications</span><span class="sxs-lookup"><span data-stu-id="45123-124">Requirements</span></span>  
+ <span data-ttu-id="45123-125">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="45123-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56a88-126">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="56a88-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="45123-126">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="45123-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="56a88-127">**Bibliothèque :** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="56a88-127">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="45123-127">**Bibliothèque :** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="45123-127">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="56a88-128">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56a88-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="45123-128">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="45123-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56a88-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="56a88-129">See Also</span></span>  
- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="56a88-130">LoadStringRC, fonction</span><span class="sxs-lookup"><span data-stu-id="56a88-130">LoadStringRC Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
- [<span data-ttu-id="56a88-131">Fonctions d’hébergement CLR dépréciées</span><span class="sxs-lookup"><span data-stu-id="56a88-131">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="45123-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="45123-129">See also</span></span>
+- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="45123-130">LoadStringRC, fonction</span><span class="sxs-lookup"><span data-stu-id="45123-130">LoadStringRC Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [<span data-ttu-id="45123-131">Fonctions d’hébergement CLR dépréciées</span><span class="sxs-lookup"><span data-stu-id="45123-131">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

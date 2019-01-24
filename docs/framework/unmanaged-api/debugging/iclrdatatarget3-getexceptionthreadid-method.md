@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c838c994144307e9c87e3a4628fa80bfcdbeb59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d9b53bb7e34f037f3a165cc8bb59d25ff34ba7da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507146"
 ---
-# <a name="iclrdatatarget3getexceptionthreadid-method"></a><span data-ttu-id="629c1-102">ICLRDataTarget3::GetExceptionThreadID, méthode</span><span class="sxs-lookup"><span data-stu-id="629c1-102">ICLRDataTarget3::GetExceptionThreadID Method</span></span>
-<span data-ttu-id="629c1-103">Appelée par les services d'accès aux données de CLR (Common Language Runtime) pour obtenir l'ID du thread qui a levé l'exception.</span><span class="sxs-lookup"><span data-stu-id="629c1-103">Called by the common language runtime (CLR) data access services to get the ID of the thread that threw the exception.</span></span>  
+# <a name="iclrdatatarget3getexceptionthreadid-method"></a><span data-ttu-id="00550-102">ICLRDataTarget3::GetExceptionThreadID, méthode</span><span class="sxs-lookup"><span data-stu-id="00550-102">ICLRDataTarget3::GetExceptionThreadID Method</span></span>
+<span data-ttu-id="00550-103">Appelée par les services d'accès aux données de CLR (Common Language Runtime) pour obtenir l'ID du thread qui a levé l'exception.</span><span class="sxs-lookup"><span data-stu-id="00550-103">Called by the common language runtime (CLR) data access services to get the ID of the thread that threw the exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="629c1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="629c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00550-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="00550-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionThreadID(  
@@ -32,31 +32,31 @@ HRESULT GetExceptionThreadID(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="629c1-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="629c1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="00550-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="00550-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="629c1-106">[en sortie] L'ID du thread qui a levé l'exception.</span><span class="sxs-lookup"><span data-stu-id="629c1-106">[out] The ID of the thread that threw the exception.</span></span>  
+ <span data-ttu-id="00550-106">[en sortie] L'ID du thread qui a levé l'exception.</span><span class="sxs-lookup"><span data-stu-id="00550-106">[out] The ID of the thread that threw the exception.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="629c1-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="629c1-107">Return Value</span></span>  
- <span data-ttu-id="629c1-108">La valeur de retour est `S_OK` en cas de réussite ou un code d'échec `HRESULT` en cas d'échec.</span><span class="sxs-lookup"><span data-stu-id="629c1-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="629c1-109">Les codes `HRESULT` peuvent comprendre, sans y être limités, ce qui suit :</span><span class="sxs-lookup"><span data-stu-id="629c1-109">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="00550-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="00550-107">Return Value</span></span>  
+ <span data-ttu-id="00550-108">La valeur de retour est `S_OK` en cas de réussite ou un code d'échec `HRESULT` en cas d'échec.</span><span class="sxs-lookup"><span data-stu-id="00550-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="00550-109">Les codes `HRESULT` peuvent comprendre, sans y être limités, ce qui suit :</span><span class="sxs-lookup"><span data-stu-id="00550-109">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="629c1-110">Code de retour</span><span class="sxs-lookup"><span data-stu-id="629c1-110">Return code</span></span>|<span data-ttu-id="629c1-111">Description</span><span class="sxs-lookup"><span data-stu-id="629c1-111">Description</span></span>|  
+|<span data-ttu-id="00550-110">Code de retour</span><span class="sxs-lookup"><span data-stu-id="00550-110">Return code</span></span>|<span data-ttu-id="00550-111">Description</span><span class="sxs-lookup"><span data-stu-id="00550-111">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="629c1-112">La méthode a réussi.</span><span class="sxs-lookup"><span data-stu-id="629c1-112">Method succeeded.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="629c1-113">Impossible de trouver un ID de thread valide pour l'exception.</span><span class="sxs-lookup"><span data-stu-id="629c1-113">Could not find a valid thread ID for the exception.</span></span>|  
+|`S_OK`|<span data-ttu-id="00550-112">La méthode a réussi.</span><span class="sxs-lookup"><span data-stu-id="00550-112">Method succeeded.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="00550-113">Impossible de trouver un ID de thread valide pour l'exception.</span><span class="sxs-lookup"><span data-stu-id="00550-113">Could not find a valid thread ID for the exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="629c1-114">Notes</span><span class="sxs-lookup"><span data-stu-id="629c1-114">Remarks</span></span>  
- <span data-ttu-id="629c1-115">Cette méthode est implémentée par le writer de l'application de débogage.</span><span class="sxs-lookup"><span data-stu-id="629c1-115">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="00550-114">Notes</span><span class="sxs-lookup"><span data-stu-id="00550-114">Remarks</span></span>  
+ <span data-ttu-id="00550-115">Cette méthode est implémentée par le writer de l'application de débogage.</span><span class="sxs-lookup"><span data-stu-id="00550-115">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="629c1-116">Spécifications</span><span class="sxs-lookup"><span data-stu-id="629c1-116">Requirements</span></span>  
- <span data-ttu-id="629c1-117">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="629c1-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="00550-116">Spécifications</span><span class="sxs-lookup"><span data-stu-id="00550-116">Requirements</span></span>  
+ <span data-ttu-id="00550-117">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="00550-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="629c1-118">**En-tête :** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="629c1-118">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="00550-118">**En-tête :** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="00550-118">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="629c1-119">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="629c1-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="00550-119">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="00550-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="629c1-120">**Versions du .NET framework :** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="629c1-120">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
+ <span data-ttu-id="00550-120">**Versions du .NET Framework :** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="00550-120">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="629c1-121">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="629c1-121">See Also</span></span>  
- [<span data-ttu-id="629c1-122">ICLRDataTarget3, interface</span><span class="sxs-lookup"><span data-stu-id="629c1-122">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- [<span data-ttu-id="629c1-123">GetExceptionContextRecord, méthode</span><span class="sxs-lookup"><span data-stu-id="629c1-123">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)  
- [<span data-ttu-id="629c1-124">GetExceptionRecord, méthode</span><span class="sxs-lookup"><span data-stu-id="629c1-124">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
+## <a name="see-also"></a><span data-ttu-id="00550-121">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="00550-121">See also</span></span>
+- [<span data-ttu-id="00550-122">ICLRDataTarget3, interface</span><span class="sxs-lookup"><span data-stu-id="00550-122">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
+- [<span data-ttu-id="00550-123">GetExceptionContextRecord, méthode</span><span class="sxs-lookup"><span data-stu-id="00550-123">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [<span data-ttu-id="00550-124">GetExceptionRecord, méthode</span><span class="sxs-lookup"><span data-stu-id="00550-124">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)

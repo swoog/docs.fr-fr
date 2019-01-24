@@ -1,14 +1,6 @@
 ---
-title: "ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion, méthode"
-ms.custom: 
+title: ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDataEnumMemoryRegionsCallback.EnumMemoryRegion
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1a284d7277aa2f8c474ca4aab3dd6208bc3b2bb0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f87107be14554d8d826c58108446ecd245549b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603686"
 ---
-# <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a><span data-ttu-id="7c125-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion, méthode</span><span class="sxs-lookup"><span data-stu-id="7c125-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion Method</span></span>
-<span data-ttu-id="7c125-103">Appelé par [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) pour signaler au débogueur le résultat d’une tentative d’énumération d’une région spécifiée de mémoire.</span><span class="sxs-lookup"><span data-stu-id="7c125-103">Called by [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) to report to the debugger the result of an attempt to enumerate a specified region of memory.</span></span>  
+# <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a><span data-ttu-id="a8f4c-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion, méthode</span><span class="sxs-lookup"><span data-stu-id="a8f4c-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion Method</span></span>
+<span data-ttu-id="a8f4c-103">Appelé par [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) pour signaler au débogueur le résultat d’une tentative d’énumération d’une région spécifiée de mémoire.</span><span class="sxs-lookup"><span data-stu-id="a8f4c-103">Called by [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) to report to the debugger the result of an attempt to enumerate a specified region of memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c125-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7c125-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a8f4c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a8f4c-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMemoryRegion (  
@@ -47,26 +36,26 @@ HRESULT EnumMemoryRegion (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7c125-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="7c125-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a8f4c-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="a8f4c-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="7c125-106">[in] Adresse de départ de la région de mémoire qui a été à énumérer.</span><span class="sxs-lookup"><span data-stu-id="7c125-106">[in] The starting address of the memory region that was to be enumerated.</span></span>  
+ <span data-ttu-id="a8f4c-106">[in] Adresse de départ de la région de mémoire qui était à énumérer.</span><span class="sxs-lookup"><span data-stu-id="a8f4c-106">[in] The starting address of the memory region that was to be enumerated.</span></span>  
   
  `size`  
- <span data-ttu-id="7c125-107">[in] La taille, en octets, de la région de mémoire.</span><span class="sxs-lookup"><span data-stu-id="7c125-107">[in] The size, in bytes, of the memory region.</span></span>  
+ <span data-ttu-id="a8f4c-107">[in] La taille, en octets, de la région de mémoire.</span><span class="sxs-lookup"><span data-stu-id="a8f4c-107">[in] The size, in bytes, of the memory region.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7c125-108">Notes</span><span class="sxs-lookup"><span data-stu-id="7c125-108">Remarks</span></span>  
- <span data-ttu-id="7c125-109">Le `ICLRDataEnumMemoryRegions::EnumMemoryRegions` méthode appellera cette méthode de rappel après chaque tentative d’énumération d’une région de mémoire.</span><span class="sxs-lookup"><span data-stu-id="7c125-109">The `ICLRDataEnumMemoryRegions::EnumMemoryRegions` method will call this callback method after each attempt to enumerate a memory region.</span></span> <span data-ttu-id="7c125-110">L’énumération continuera même si cette méthode retourne un HRESULT indiquant un échec.</span><span class="sxs-lookup"><span data-stu-id="7c125-110">The enumeration will continue even if this method returns an HRESULT indicating failure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a8f4c-108">Notes</span><span class="sxs-lookup"><span data-stu-id="a8f4c-108">Remarks</span></span>  
+ <span data-ttu-id="a8f4c-109">Le `ICLRDataEnumMemoryRegions::EnumMemoryRegions` méthode appellera cette méthode de rappel après chaque tentative d’énumération d’une région de mémoire.</span><span class="sxs-lookup"><span data-stu-id="a8f4c-109">The `ICLRDataEnumMemoryRegions::EnumMemoryRegions` method will call this callback method after each attempt to enumerate a memory region.</span></span> <span data-ttu-id="a8f4c-110">L’énumération continuera même si cette méthode retourne un HRESULT indiquant un échec.</span><span class="sxs-lookup"><span data-stu-id="a8f4c-110">The enumeration will continue even if this method returns an HRESULT indicating failure.</span></span>  
   
- <span data-ttu-id="7c125-111">Les régions signalées par ce rappel peuvent être double ou se chevaucher.</span><span class="sxs-lookup"><span data-stu-id="7c125-111">Regions reported by this callback may be duplicates or overlapping regions.</span></span>  
+ <span data-ttu-id="a8f4c-111">Régions signalées par ce rappel peuvent être des doublons ou des régions qui se chevauchent.</span><span class="sxs-lookup"><span data-stu-id="a8f4c-111">Regions reported by this callback may be duplicates or overlapping regions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7c125-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="7c125-112">Requirements</span></span>  
- <span data-ttu-id="7c125-113">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7c125-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a8f4c-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="a8f4c-112">Requirements</span></span>  
+ <span data-ttu-id="a8f4c-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a8f4c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7c125-114">**En-tête :** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="7c125-114">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="a8f4c-114">**En-tête :** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="a8f4c-114">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="7c125-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7c125-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a8f4c-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a8f4c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7c125-116">**Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c125-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a8f4c-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8f4c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c125-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7c125-117">See Also</span></span>  
- [<span data-ttu-id="7c125-118">ICLRDataEnumMemoryRegionsCallback, interface</span><span class="sxs-lookup"><span data-stu-id="7c125-118">ICLRDataEnumMemoryRegionsCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a8f4c-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a8f4c-117">See also</span></span>
+- [<span data-ttu-id="a8f4c-118">ICLRDataEnumMemoryRegionsCallback, interface</span><span class="sxs-lookup"><span data-stu-id="a8f4c-118">ICLRDataEnumMemoryRegionsCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)
