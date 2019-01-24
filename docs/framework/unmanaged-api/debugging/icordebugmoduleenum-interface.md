@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6391c06900d5cafc1bfde23bd12c22ee0c77a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6086d0a6e915915e8df115dc8b4c4218e77da601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582329"
 ---
-# <a name="icordebugmoduleenum-interface1"></a><span data-ttu-id="b8670-102">ICorDebugModuleEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="b8670-102">ICorDebugModuleEnum Interface1</span></span>
-<span data-ttu-id="b8670-103">Implémente les méthodes ICorDebugEnum et énumère des tableaux de ICorDebugModule.</span><span class="sxs-lookup"><span data-stu-id="b8670-103">Implements ICorDebugEnum methods, and enumerates ICorDebugModule arrays.</span></span>  
+# <a name="icordebugmoduleenum-interface1"></a><span data-ttu-id="f9e0d-102">ICorDebugModuleEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="f9e0d-102">ICorDebugModuleEnum Interface1</span></span>
+<span data-ttu-id="f9e0d-103">Implémente les méthodes ICorDebugEnum et énumère des tableaux de ICorDebugModule.</span><span class="sxs-lookup"><span data-stu-id="f9e0d-103">Implements ICorDebugEnum methods, and enumerates ICorDebugModule arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b8670-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="b8670-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f9e0d-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="f9e0d-104">Methods</span></span>  
   
-|<span data-ttu-id="b8670-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="b8670-105">Method</span></span>|<span data-ttu-id="b8670-106">Description</span><span class="sxs-lookup"><span data-stu-id="b8670-106">Description</span></span>|  
+|<span data-ttu-id="f9e0d-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="f9e0d-105">Method</span></span>|<span data-ttu-id="f9e0d-106">Description</span><span class="sxs-lookup"><span data-stu-id="f9e0d-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b8670-107">Next, méthode</span><span class="sxs-lookup"><span data-stu-id="b8670-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|<span data-ttu-id="b8670-108">Obtient le nombre spécifié de `ICorDebugModule` les instances de l’énumération, en démarrant à la position actuelle.</span><span class="sxs-lookup"><span data-stu-id="b8670-108">Gets the specified number of `ICorDebugModule` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="f9e0d-107">Next, méthode</span><span class="sxs-lookup"><span data-stu-id="f9e0d-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|<span data-ttu-id="f9e0d-108">Obtient le nombre spécifié de `ICorDebugModule` instances à partir de l’énumération, en commençant à la position actuelle.</span><span class="sxs-lookup"><span data-stu-id="f9e0d-108">Gets the specified number of `ICorDebugModule` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b8670-109">Notes</span><span class="sxs-lookup"><span data-stu-id="b8670-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f9e0d-109">Notes</span><span class="sxs-lookup"><span data-stu-id="f9e0d-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b8670-110">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="b8670-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="f9e0d-110">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="f9e0d-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8670-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="b8670-111">Requirements</span></span>  
- <span data-ttu-id="b8670-112">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b8670-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9e0d-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="f9e0d-111">Requirements</span></span>  
+ <span data-ttu-id="f9e0d-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9e0d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b8670-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b8670-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f9e0d-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f9e0d-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b8670-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b8670-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f9e0d-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9e0d-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b8670-115">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8670-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f9e0d-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9e0d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8670-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b8670-116">See Also</span></span>  
- [<span data-ttu-id="b8670-117">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="b8670-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f9e0d-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f9e0d-116">See also</span></span>
+- [<span data-ttu-id="f9e0d-117">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="f9e0d-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

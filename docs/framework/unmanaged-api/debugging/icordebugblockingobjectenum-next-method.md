@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04b28dec0f016d44692665fb0ce95a7e496f103c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: def9d810917495165c7deda9e3dff158582a0e61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566253"
 ---
-# <a name="icordebugblockingobjectenumnext-method"></a><span data-ttu-id="caeba-102">ICorDebugBlockingObjectEnum::Next, méthode</span><span class="sxs-lookup"><span data-stu-id="caeba-102">ICorDebugBlockingObjectEnum::Next Method</span></span>
-<span data-ttu-id="caeba-103">Obtient le nombre spécifié de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objets à partir de l’énumération, en commençant à la position actuelle.</span><span class="sxs-lookup"><span data-stu-id="caeba-103">Gets the specified number of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objects from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugblockingobjectenumnext-method"></a><span data-ttu-id="22a8e-102">ICorDebugBlockingObjectEnum::Next, méthode</span><span class="sxs-lookup"><span data-stu-id="22a8e-102">ICorDebugBlockingObjectEnum::Next Method</span></span>
+<span data-ttu-id="22a8e-103">Obtient le nombre spécifié de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objets à partir de l’énumération, en commençant à la position actuelle.</span><span class="sxs-lookup"><span data-stu-id="22a8e-103">Gets the specified number of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objects from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="caeba-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="caeba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22a8e-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="22a8e-104">Syntax</span></span>  
   
 ```  
 HRESULT Next([in] ULONG  celt,  
@@ -36,42 +36,42 @@ HRESULT Next([in] ULONG  celt,
              [out] ULONG *pceltFetched;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="caeba-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="caeba-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="22a8e-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="22a8e-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="caeba-106">[in] Le nombre d’objets à récupérer.</span><span class="sxs-lookup"><span data-stu-id="caeba-106">[in] The number of objects to retrieve.</span></span>  
+ <span data-ttu-id="22a8e-106">[in] Le nombre d’objets à récupérer.</span><span class="sxs-lookup"><span data-stu-id="22a8e-106">[in] The number of objects to retrieve.</span></span>  
   
  `values`  
- <span data-ttu-id="caeba-107">[out] Un tableau de pointeurs vers [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objets.</span><span class="sxs-lookup"><span data-stu-id="caeba-107">[out] An array of pointers to [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objects.</span></span>  
+ <span data-ttu-id="22a8e-107">[out] Un tableau de pointeurs vers [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objets.</span><span class="sxs-lookup"><span data-stu-id="22a8e-107">[out] An array of pointers to [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objects.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="caeba-108">[out] Pointeur vers le nombre d’objets qui ont été récupérées.</span><span class="sxs-lookup"><span data-stu-id="caeba-108">[out] A pointer to the number of objects that were retrieved.</span></span>  
+ <span data-ttu-id="22a8e-108">[out] Pointeur vers le nombre d’objets qui ont été récupérées.</span><span class="sxs-lookup"><span data-stu-id="22a8e-108">[out] A pointer to the number of objects that were retrieved.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="caeba-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="caeba-109">Return Value</span></span>  
- <span data-ttu-id="caeba-110">Cette méthode retourne les HRESULT spécifiques suivants.</span><span class="sxs-lookup"><span data-stu-id="caeba-110">This method returns the following specific HRESULTs.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="22a8e-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="22a8e-109">Return Value</span></span>  
+ <span data-ttu-id="22a8e-110">Cette méthode retourne les HRESULT spécifiques suivants.</span><span class="sxs-lookup"><span data-stu-id="22a8e-110">This method returns the following specific HRESULTs.</span></span>  
   
-|<span data-ttu-id="caeba-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="caeba-111">HRESULT</span></span>|<span data-ttu-id="caeba-112">Description</span><span class="sxs-lookup"><span data-stu-id="caeba-112">Description</span></span>|  
+|<span data-ttu-id="22a8e-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="22a8e-111">HRESULT</span></span>|<span data-ttu-id="22a8e-112">Description</span><span class="sxs-lookup"><span data-stu-id="22a8e-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="caeba-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="caeba-113">S_OK</span></span>|<span data-ttu-id="caeba-114">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="caeba-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="caeba-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="caeba-115">S_FALSE</span></span>|<span data-ttu-id="caeba-116">`pceltFetched` n’est pas égal à `celt`.</span><span class="sxs-lookup"><span data-stu-id="caeba-116">`pceltFetched` does not equal `celt`.</span></span>|  
+|<span data-ttu-id="22a8e-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="22a8e-113">S_OK</span></span>|<span data-ttu-id="22a8e-114">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="22a8e-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="22a8e-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="22a8e-115">S_FALSE</span></span>|<span data-ttu-id="22a8e-116">`pceltFetched` n’est pas égal à `celt`.</span><span class="sxs-lookup"><span data-stu-id="22a8e-116">`pceltFetched` does not equal `celt`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="caeba-117">Notes</span><span class="sxs-lookup"><span data-stu-id="caeba-117">Remarks</span></span>  
- <span data-ttu-id="caeba-118">Cette méthode fonctionne comme un énumérateur COM classique.</span><span class="sxs-lookup"><span data-stu-id="caeba-118">This method functions like a typical COM enumerator.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="22a8e-117">Notes</span><span class="sxs-lookup"><span data-stu-id="22a8e-117">Remarks</span></span>  
+ <span data-ttu-id="22a8e-118">Cette méthode fonctionne comme un énumérateur COM classique.</span><span class="sxs-lookup"><span data-stu-id="22a8e-118">This method functions like a typical COM enumerator.</span></span>  
   
- <span data-ttu-id="caeba-119">Les valeurs du tableau d’entrée doivent être au moins de taille `celt`.</span><span class="sxs-lookup"><span data-stu-id="caeba-119">The input array values must be at least of size `celt`.</span></span> <span data-ttu-id="caeba-120">Le tableau est rempli avec une l’autre `celt` valeurs dans l’énumération ou avec toutes les valeurs restantes si moins de `celt` restent.</span><span class="sxs-lookup"><span data-stu-id="caeba-120">The array will be filled with either the next `celt` values in the enumeration or with all remaining values if fewer than `celt` remain.</span></span> <span data-ttu-id="caeba-121">Lorsque cette méthode est retournée, `pceltFetched` sera remplie avec le nombre de valeurs qui ont été récupérées.</span><span class="sxs-lookup"><span data-stu-id="caeba-121">When this method returns, `pceltFetched` will be filled with the number of values that were retrieved.</span></span> <span data-ttu-id="caeba-122">Si `values` contient des pointeurs non valides ou pointe vers une mémoire tampon qui est inférieure à `celt`, ou si `pceltFetched` est un pointeur non valide, le résultat est indéfini.</span><span class="sxs-lookup"><span data-stu-id="caeba-122">If `values` contains invalid pointers or points to a buffer that is smaller than `celt`, or if `pceltFetched` is an invalid pointer, the result is undefined.</span></span>  
+ <span data-ttu-id="22a8e-119">Les valeurs du tableau d’entrée doivent être au moins de taille `celt`.</span><span class="sxs-lookup"><span data-stu-id="22a8e-119">The input array values must be at least of size `celt`.</span></span> <span data-ttu-id="22a8e-120">Le tableau est rempli avec une l’autre `celt` valeurs dans l’énumération ou avec toutes les valeurs restantes si moins de `celt` restent.</span><span class="sxs-lookup"><span data-stu-id="22a8e-120">The array will be filled with either the next `celt` values in the enumeration or with all remaining values if fewer than `celt` remain.</span></span> <span data-ttu-id="22a8e-121">Lorsque cette méthode est retournée, `pceltFetched` sera remplie avec le nombre de valeurs qui ont été récupérées.</span><span class="sxs-lookup"><span data-stu-id="22a8e-121">When this method returns, `pceltFetched` will be filled with the number of values that were retrieved.</span></span> <span data-ttu-id="22a8e-122">Si `values` contient des pointeurs non valides ou pointe vers une mémoire tampon qui est inférieure à `celt`, ou si `pceltFetched` est un pointeur non valide, le résultat est indéfini.</span><span class="sxs-lookup"><span data-stu-id="22a8e-122">If `values` contains invalid pointers or points to a buffer that is smaller than `celt`, or if `pceltFetched` is an invalid pointer, the result is undefined.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="caeba-123">Bien que le [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structure n’a pas besoin être libéré, l’interface « ICorDebugValue » qu’elle n’a besoin d’être publié.</span><span class="sxs-lookup"><span data-stu-id="caeba-123">Although the [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structure does not need to be released, the "ICorDebugValue" interface inside of it does need to be released.</span></span>  
+>  <span data-ttu-id="22a8e-123">Bien que le [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structure n’a pas besoin être libéré, l’interface « ICorDebugValue » qu’elle n’a besoin d’être publié.</span><span class="sxs-lookup"><span data-stu-id="22a8e-123">Although the [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structure does not need to be released, the "ICorDebugValue" interface inside of it does need to be released.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="caeba-124">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="caeba-124">Requirements</span></span>  
- <span data-ttu-id="caeba-125">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="caeba-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22a8e-124">Spécifications</span><span class="sxs-lookup"><span data-stu-id="22a8e-124">Requirements</span></span>  
+ <span data-ttu-id="22a8e-125">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="22a8e-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="caeba-126">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="caeba-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="22a8e-126">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="22a8e-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="caeba-127">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="caeba-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="22a8e-127">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="22a8e-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="caeba-128">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="caeba-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="22a8e-128">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22a8e-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="caeba-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="caeba-129">See Also</span></span>  
- [<span data-ttu-id="caeba-130">ICorDebugDataTarget, interface</span><span class="sxs-lookup"><span data-stu-id="caeba-130">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [<span data-ttu-id="caeba-131">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="caeba-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="caeba-132">Débogage</span><span class="sxs-lookup"><span data-stu-id="caeba-132">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="22a8e-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="22a8e-129">See also</span></span>
+- [<span data-ttu-id="22a8e-130">ICorDebugDataTarget, interface</span><span class="sxs-lookup"><span data-stu-id="22a8e-130">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [<span data-ttu-id="22a8e-131">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="22a8e-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="22a8e-132">Débogage</span><span class="sxs-lookup"><span data-stu-id="22a8e-132">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

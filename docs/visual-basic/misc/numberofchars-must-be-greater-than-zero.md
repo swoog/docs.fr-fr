@@ -4,24 +4,24 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_NumberOfCharsMustBePositive
 ms.assetid: 3eea4bbf-cd49-4d19-adfb-0e2adf087065
-ms.openlocfilehash: 9aec0af684d3fde139e6bc1a031f400c739d0155
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0b2dc0b7b308877d7029c9a32047296cace9a456
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564693"
 ---
-# <a name="numberofchars-must-be-greater-than-zero"></a><span data-ttu-id="18adb-102">NumberOfChars doit être supérieur à zéro</span><span class="sxs-lookup"><span data-stu-id="18adb-102">NumberOfChars must be greater than zero</span></span>
-<span data-ttu-id="18adb-103">Quand vous utilisez la méthode `PeekChars` de l’objet `TextFieldParser` , vous devez fournir une valeur `NumberOfChars` supérieure à `0`.</span><span class="sxs-lookup"><span data-stu-id="18adb-103">When using the `PeekChars` method of the `TextFieldParser` object, you must supply a `NumberOfChars` value that is greater than `0`.</span></span>  
+# <a name="numberofchars-must-be-greater-than-zero"></a><span data-ttu-id="3e0fa-102">NumberOfChars doit être supérieur à zéro</span><span class="sxs-lookup"><span data-stu-id="3e0fa-102">NumberOfChars must be greater than zero</span></span>
+<span data-ttu-id="3e0fa-103">Quand vous utilisez la méthode `PeekChars` de l’objet `TextFieldParser` , vous devez fournir une valeur `NumberOfChars` supérieure à `0`.</span><span class="sxs-lookup"><span data-stu-id="3e0fa-103">When using the `PeekChars` method of the `TextFieldParser` object, you must supply a `NumberOfChars` value that is greater than `0`.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="18adb-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="18adb-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3e0fa-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="3e0fa-104">To correct this error</span></span>  
   
--   <span data-ttu-id="18adb-105">Remplacez `NumberOfChars` par une valeur supérieure à `0`.</span><span class="sxs-lookup"><span data-stu-id="18adb-105">Change `NumberOfChars` to a value that is greater than `0`.</span></span>  
+-   <span data-ttu-id="3e0fa-105">Remplacez `NumberOfChars` par une valeur supérieure à `0`.</span><span class="sxs-lookup"><span data-stu-id="3e0fa-105">Change `NumberOfChars` to a value that is greater than `0`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18adb-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="18adb-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e0fa-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3e0fa-106">See also</span></span>
 
-- [<span data-ttu-id="18adb-107">Guide pratique : lire des fichiers texte avec plusieurs formats</span><span class="sxs-lookup"><span data-stu-id="18adb-107">How to: Read From Text Files with Multiple Formats</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
-- [<span data-ttu-id="18adb-108">My.Computer.FileSystem.OpenTextFieldParser</span><span class="sxs-lookup"><span data-stu-id="18adb-108">My.Computer.FileSystem.OpenTextFieldParser</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
-- [<span data-ttu-id="18adb-109">TextFieldParser.PeekChars, méthode</span><span class="sxs-lookup"><span data-stu-id="18adb-109">TextFieldParser.PeekChars Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A)  
-- [<span data-ttu-id="18adb-110">Analyse des fichiers texte avec l’objet TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="18adb-110">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
-- [<span data-ttu-id="18adb-111">TextFieldParser (objet)</span><span class="sxs-lookup"><span data-stu-id="18adb-111">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+- [<span data-ttu-id="3e0fa-107">Guide pratique pour Lire des fichiers texte avec plusieurs Formats</span><span class="sxs-lookup"><span data-stu-id="3e0fa-107">How to: Read From Text Files with Multiple Formats</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [<span data-ttu-id="3e0fa-108">My.Computer.FileSystem.OpenTextFieldParser</span><span class="sxs-lookup"><span data-stu-id="3e0fa-108">My.Computer.FileSystem.OpenTextFieldParser</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)
+- [<span data-ttu-id="3e0fa-109">TextFieldParser.PeekChars, méthode</span><span class="sxs-lookup"><span data-stu-id="3e0fa-109">TextFieldParser.PeekChars Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A)
+- [<span data-ttu-id="3e0fa-110">Analyse des fichiers texte avec l’objet TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="3e0fa-110">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [<span data-ttu-id="3e0fa-111">TextFieldParser (objet)</span><span class="sxs-lookup"><span data-stu-id="3e0fa-111">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)

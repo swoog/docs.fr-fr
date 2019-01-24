@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06c98067fea9368ac8f750d9187636d2ca9a8c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d678b6f52719287a1e8bbe88d178fa47b2893ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563143"
 ---
-# <a name="icordebugvariablehomegetregister-method"></a><span data-ttu-id="947dd-102">ICorDebugVariableHome::GetRegister (méthode)</span><span class="sxs-lookup"><span data-stu-id="947dd-102">ICorDebugVariableHome::GetRegister Method</span></span>
-<span data-ttu-id="947dd-103">Obtient le Registre qui contient une variable avec un type d’emplacement de `VLT_REGISTER`et le Registre de base pour une variable avec un type d’emplacement de `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="947dd-103">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
+# <a name="icordebugvariablehomegetregister-method"></a><span data-ttu-id="58f44-102">ICorDebugVariableHome::GetRegister (méthode)</span><span class="sxs-lookup"><span data-stu-id="58f44-102">ICorDebugVariableHome::GetRegister Method</span></span>
+<span data-ttu-id="58f44-103">Obtient le Registre qui contient une variable avec un type d’emplacement de `VLT_REGISTER`, le Registre de base et d’une variable avec un type d’emplacement de `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="58f44-103">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="947dd-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="947dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58f44-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="58f44-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRegister(  
@@ -35,27 +35,27 @@ HRESULT GetRegister(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="947dd-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="947dd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="58f44-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="58f44-105">Parameters</span></span>  
  `pRegister`  
- <span data-ttu-id="947dd-106">[out] Une valeur d’énumération CorDebugRegister qui indique le Registre pour une variable avec un type d’emplacement de `VLT_REGISTER`et le Registre de base pour une variable avec un type d’emplacement de `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="947dd-106">[out] A CorDebugRegister enumeration value  that indicates the register for a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
+ <span data-ttu-id="58f44-106">[out] Une valeur d’énumération CorDebugRegister qui indique le Registre pour une variable avec un type d’emplacement de `VLT_REGISTER`, le Registre de base et d’une variable avec un type d’emplacement de `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="58f44-106">[out] A CorDebugRegister enumeration value  that indicates the register for a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="947dd-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="947dd-107">Return Value</span></span>  
- <span data-ttu-id="947dd-108">La méthode retourne les valeurs suivantes :</span><span class="sxs-lookup"><span data-stu-id="947dd-108">The method returns the following values:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="58f44-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="58f44-107">Return Value</span></span>  
+ <span data-ttu-id="58f44-108">La méthode retourne les valeurs suivantes :</span><span class="sxs-lookup"><span data-stu-id="58f44-108">The method returns the following values:</span></span>  
   
-|<span data-ttu-id="947dd-109">Value</span><span class="sxs-lookup"><span data-stu-id="947dd-109">Value</span></span>|<span data-ttu-id="947dd-110">Description</span><span class="sxs-lookup"><span data-stu-id="947dd-110">Description</span></span>|  
+|<span data-ttu-id="58f44-109">Value</span><span class="sxs-lookup"><span data-stu-id="58f44-109">Value</span></span>|<span data-ttu-id="58f44-110">Description</span><span class="sxs-lookup"><span data-stu-id="58f44-110">Description</span></span>|  
 |-----------|-----------------|  
-|`S_OK`|<span data-ttu-id="947dd-111">La variable est dans le Registre indiqué par le `pRegister` argument.</span><span class="sxs-lookup"><span data-stu-id="947dd-111">The variable is in the register indicated by the `pRegister` argument.</span></span>|  
-|`E_FAIL`|<span data-ttu-id="947dd-112">La variable n’est pas dans un Registre ou un emplacement relative au Registre.</span><span class="sxs-lookup"><span data-stu-id="947dd-112">The variable is not in a register or a register-relative location.</span></span>|  
+|`S_OK`|<span data-ttu-id="58f44-111">La variable est dans le Registre indiqué par le `pRegister` argument.</span><span class="sxs-lookup"><span data-stu-id="58f44-111">The variable is in the register indicated by the `pRegister` argument.</span></span>|  
+|`E_FAIL`|<span data-ttu-id="58f44-112">La variable n’est pas dans un Registre ou un emplacement relative au Registre.</span><span class="sxs-lookup"><span data-stu-id="58f44-112">The variable is not in a register or a register-relative location.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="947dd-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="947dd-113">Requirements</span></span>  
- <span data-ttu-id="947dd-114">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="947dd-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="58f44-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="58f44-113">Requirements</span></span>  
+ <span data-ttu-id="58f44-114">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58f44-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="947dd-115">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="947dd-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="58f44-115">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="58f44-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="947dd-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="947dd-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="58f44-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58f44-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="947dd-117">**Versions du .NET framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="947dd-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="58f44-117">**Versions du .NET Framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58f44-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="947dd-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="947dd-118">See Also</span></span>  
- [<span data-ttu-id="947dd-119">VariableLocationType, énumération</span><span class="sxs-lookup"><span data-stu-id="947dd-119">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
- [<span data-ttu-id="947dd-120">ICorDebugVariableHome, interface</span><span class="sxs-lookup"><span data-stu-id="947dd-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a><span data-ttu-id="58f44-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="58f44-118">See also</span></span>
+- [<span data-ttu-id="58f44-119">VariableLocationType, énumération</span><span class="sxs-lookup"><span data-stu-id="58f44-119">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
+- [<span data-ttu-id="58f44-120">ICorDebugVariableHome, interface</span><span class="sxs-lookup"><span data-stu-id="58f44-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

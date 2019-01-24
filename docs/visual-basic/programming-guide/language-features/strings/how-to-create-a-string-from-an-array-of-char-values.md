@@ -1,32 +1,32 @@
 ---
-title: "Comment : créer une chaîne à partir d'un tableau de valeurs Char (Visual Basic)"
+title: 'Procédure : Créer une chaîne à partir d’un tableau de valeurs Char (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: 104b329011d69e10a2926f31ce5d296759a3cce8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a067474d6b32589a34b031d5c3ea4e5a4be55834
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611460"
 ---
-# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a><span data-ttu-id="d5d4c-102">Comment : créer une chaîne à partir d'un tableau de valeurs Char (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5d4c-102">How to: Create a String from An Array of Char Values (Visual Basic)</span></span>
-<span data-ttu-id="d5d4c-103">Cet exemple crée la chaîne « abcd » à partir de différents caractères.</span><span class="sxs-lookup"><span data-stu-id="d5d4c-103">This example creates the string "abcd" from individual characters.</span></span>  
+# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a><span data-ttu-id="333c6-102">Procédure : Créer une chaîne à partir d’un tableau de valeurs Char (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="333c6-102">How to: Create a String from An Array of Char Values (Visual Basic)</span></span>
+<span data-ttu-id="333c6-103">Cet exemple crée la chaîne « abcd » à partir de différents caractères.</span><span class="sxs-lookup"><span data-stu-id="333c6-103">This example creates the string "abcd" from individual characters.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d5d4c-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="d5d4c-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="333c6-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="333c6-104">Example</span></span>  
  [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-a-string-from-an-array-of-char-values_1.vb)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d5d4c-105">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="d5d4c-105">Compiling the Code</span></span>  
- <span data-ttu-id="d5d4c-106">Cette méthode n’a pas d’exigences particulières.</span><span class="sxs-lookup"><span data-stu-id="d5d4c-106">This method has no special requirements.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="333c6-105">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="333c6-105">Compiling the Code</span></span>  
+ <span data-ttu-id="333c6-106">Cette méthode n’a aucune exigence particulière.</span><span class="sxs-lookup"><span data-stu-id="333c6-106">This method has no special requirements.</span></span>  
   
- <span data-ttu-id="d5d4c-107">La syntaxe `"a"c`, où un seul `c` suit un caractère unique entre guillemets, est utilisé pour créer un caractère littéral.</span><span class="sxs-lookup"><span data-stu-id="d5d4c-107">The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.</span></span>  
+ <span data-ttu-id="333c6-107">La syntaxe `"a"c`, où un seul `c` suit un caractère unique entre guillemets, est utilisé pour créer un caractère littéral.</span><span class="sxs-lookup"><span data-stu-id="333c6-107">The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="d5d4c-108">Programmation fiable</span><span class="sxs-lookup"><span data-stu-id="d5d4c-108">Robust Programming</span></span>  
- <span data-ttu-id="d5d4c-109">Les caractères null (équivalent à `Chr(0)`) dans la chaîne de produire des résultats inattendus lors de l’utilisation de la chaîne.</span><span class="sxs-lookup"><span data-stu-id="d5d4c-109">Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string.</span></span> <span data-ttu-id="d5d4c-110">Le caractère null sera inclus dans la chaîne, mais pas les caractères suivant le caractère null seront affichera dans certaines situations.</span><span class="sxs-lookup"><span data-stu-id="d5d4c-110">The null character will be included with the string, but characters following the null character will not be displayed in some situations.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="333c6-108">Programmation fiable</span><span class="sxs-lookup"><span data-stu-id="333c6-108">Robust Programming</span></span>  
+ <span data-ttu-id="333c6-109">Les caractères null (équivalent à `Chr(0)`) dans la chaîne de produire des résultats inattendus lors de l’utilisation de la chaîne.</span><span class="sxs-lookup"><span data-stu-id="333c6-109">Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string.</span></span> <span data-ttu-id="333c6-110">Le caractère null sera inclus dans la chaîne, mais pas les caractères qui suivent le caractère null seront affichera dans certaines situations.</span><span class="sxs-lookup"><span data-stu-id="333c6-110">The null character will be included with the string, but characters following the null character will not be displayed in some situations.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5d4c-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d5d4c-111">See Also</span></span>  
- <xref:System.String>  
- [<span data-ttu-id="d5d4c-112">Char (type de données)</span><span class="sxs-lookup"><span data-stu-id="d5d4c-112">Char Data Type</span></span>](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [<span data-ttu-id="d5d4c-113">Types de données</span><span class="sxs-lookup"><span data-stu-id="d5d4c-113">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a><span data-ttu-id="333c6-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="333c6-111">See also</span></span>
+- <xref:System.String>
+- [<span data-ttu-id="333c6-112">Char (type de données)</span><span class="sxs-lookup"><span data-stu-id="333c6-112">Char Data Type</span></span>](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [<span data-ttu-id="333c6-113">Types de données</span><span class="sxs-lookup"><span data-stu-id="333c6-113">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

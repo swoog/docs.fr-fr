@@ -1,23 +1,23 @@
 ---
-title: 'Comment : écrire des requêtes sur du code XML dans les espaces de noms (Visual Basic)'
+title: 'Procédure : Écrire des requêtes sur du code XML dans les espaces de noms (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: f4e895e560d0fb11c128248e4f42d1d5124bc124
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00dfc4e14c38357deb3efc4a32fd00a97f6010b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609927"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="0ac52-102">Comment : écrire des requêtes sur du code XML dans les espaces de noms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ac52-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
-<span data-ttu-id="0ac52-103">Pour écrire des requêtes sur du code XML qui est dans un espace de noms, vous devez utiliser des objets <xref:System.Xml.Linq.XName> qui ont l'espace de noms correct.</span><span class="sxs-lookup"><span data-stu-id="0ac52-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="ffff2-102">Procédure : Écrire des requêtes sur du code XML dans les espaces de noms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffff2-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
+<span data-ttu-id="ffff2-103">Pour écrire des requêtes sur du code XML qui est dans un espace de noms, vous devez utiliser des objets <xref:System.Xml.Linq.XName> qui ont l'espace de noms correct.</span><span class="sxs-lookup"><span data-stu-id="ffff2-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
   
- <span data-ttu-id="0ac52-104">Dans Visual Basic, l'approche la plus courante consiste à définir un espace de noms global, puis à utiliser des littéraux XML et des propriétés XML qui emploient l'espace de noms global.</span><span class="sxs-lookup"><span data-stu-id="0ac52-104">In Visual Basic, the most common approach is to define a global namespace, and then use XML literals and XML properties that use the global namespace.</span></span> <span data-ttu-id="0ac52-105">Vous pouvez définir un espace de noms par défaut global, auquel cas les éléments dans les littéraux XML seront par défaut dans l'espace de noms.</span><span class="sxs-lookup"><span data-stu-id="0ac52-105">You can define a global default namespace, in which case elements in the XML literals will be in the namespace by default.</span></span> <span data-ttu-id="0ac52-106">En guise d'alternative, vous pouvez définir un espace de noms global avec un préfixe, puis utiliser le préfixe selon les besoins dans les littéraux XML et les propriétés XML.</span><span class="sxs-lookup"><span data-stu-id="0ac52-106">Alternatively, you can define a global namespace with a prefix, and then use the prefix as required in the XML literals, and in XML properties.</span></span> <span data-ttu-id="0ac52-107">Comme avec d'autres formes de code XML, les attributs ne sont jamais dans aucun espace de noms par défaut.</span><span class="sxs-lookup"><span data-stu-id="0ac52-107">As with other forms of XML, attributes are always in no namespace by default.</span></span>  
+ <span data-ttu-id="ffff2-104">Dans Visual Basic, l'approche la plus courante consiste à définir un espace de noms global, puis à utiliser des littéraux XML et des propriétés XML qui emploient l'espace de noms global.</span><span class="sxs-lookup"><span data-stu-id="ffff2-104">In Visual Basic, the most common approach is to define a global namespace, and then use XML literals and XML properties that use the global namespace.</span></span> <span data-ttu-id="ffff2-105">Vous pouvez définir un espace de noms par défaut global, auquel cas les éléments dans les littéraux XML seront par défaut dans l'espace de noms.</span><span class="sxs-lookup"><span data-stu-id="ffff2-105">You can define a global default namespace, in which case elements in the XML literals will be in the namespace by default.</span></span> <span data-ttu-id="ffff2-106">En guise d'alternative, vous pouvez définir un espace de noms global avec un préfixe, puis utiliser le préfixe selon les besoins dans les littéraux XML et les propriétés XML.</span><span class="sxs-lookup"><span data-stu-id="ffff2-106">Alternatively, you can define a global namespace with a prefix, and then use the prefix as required in the XML literals, and in XML properties.</span></span> <span data-ttu-id="ffff2-107">Comme avec d'autres formes de code XML, les attributs ne sont jamais dans aucun espace de noms par défaut.</span><span class="sxs-lookup"><span data-stu-id="ffff2-107">As with other forms of XML, attributes are always in no namespace by default.</span></span>  
   
- <span data-ttu-id="0ac52-108">Le premier ensemble d’exemples de cette rubrique montre comment créer une arborescence XML dans un espace de noms par défaut.</span><span class="sxs-lookup"><span data-stu-id="0ac52-108">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="0ac52-109">Le second ensemble illustre la création d’une arborescence XML dans un espace de noms avec un préfixe.</span><span class="sxs-lookup"><span data-stu-id="0ac52-109">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
+ <span data-ttu-id="ffff2-108">Le premier ensemble d’exemples de cette rubrique montre comment créer une arborescence XML dans un espace de noms par défaut.</span><span class="sxs-lookup"><span data-stu-id="ffff2-108">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="ffff2-109">Le second ensemble illustre la création d’une arborescence XML dans un espace de noms avec un préfixe.</span><span class="sxs-lookup"><span data-stu-id="ffff2-109">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0ac52-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="0ac52-110">Example</span></span>  
- <span data-ttu-id="0ac52-111">L’exemple suivant crée une arborescence XML qui est dans un espace de noms par défaut.</span><span class="sxs-lookup"><span data-stu-id="0ac52-111">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="0ac52-112">Il récupère ensuite une collection d'éléments.</span><span class="sxs-lookup"><span data-stu-id="0ac52-112">It then retrieves a collection of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="ffff2-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="ffff2-110">Example</span></span>  
+ <span data-ttu-id="ffff2-111">L’exemple suivant crée une arborescence XML qui est dans un espace de noms par défaut.</span><span class="sxs-lookup"><span data-stu-id="ffff2-111">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="ffff2-112">Il récupère ensuite une collection d'éléments.</span><span class="sxs-lookup"><span data-stu-id="ffff2-112">It then retrieves a collection of elements.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -43,7 +43,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="0ac52-113">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="0ac52-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="ffff2-113">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="ffff2-113">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -51,10 +51,10 @@ End Module
 3  
 ```  
   
-## <a name="example"></a><span data-ttu-id="0ac52-114">Exemple</span><span class="sxs-lookup"><span data-stu-id="0ac52-114">Example</span></span>  
- <span data-ttu-id="0ac52-115">En Visual Basic, toutefois, l’écriture de requêtes sur sur arborescence XML qui utilise un espace de noms avec un préfixe diffère de l’écriture sur une arborescence XML dans un espace de noms par défaut.</span><span class="sxs-lookup"><span data-stu-id="0ac52-115">In Visual Basic, however, writing queries on an XML tree that uses a namespace with a prefix is quite different from querying an XML tree in a default namespace.</span></span> <span data-ttu-id="0ac52-116">En général, vous devez utiliser l'instruction `Imports` pour importer l'espace de noms avec un préfixe.</span><span class="sxs-lookup"><span data-stu-id="0ac52-116">Typically you use the `Imports` statement to import the namespace with a prefix.</span></span> <span data-ttu-id="0ac52-117">Vous utilisez ensuite le préfixe dans les noms d'éléments et d'attributs, lors de la construction de l'arborescence XML.</span><span class="sxs-lookup"><span data-stu-id="0ac52-117">You then use the prefix in the element and attribute names when you construct the XML tree.</span></span> <span data-ttu-id="0ac52-118">Vous utilisez également le préfixe lors de l'interrogation d'une arborescence XML avec des propriétés XML.</span><span class="sxs-lookup"><span data-stu-id="0ac52-118">You also use the prefix when querying an XML tree using XML properties.</span></span>  
+## <a name="example"></a><span data-ttu-id="ffff2-114">Exemple</span><span class="sxs-lookup"><span data-stu-id="ffff2-114">Example</span></span>  
+ <span data-ttu-id="ffff2-115">En Visual Basic, toutefois, l’écriture de requêtes sur sur arborescence XML qui utilise un espace de noms avec un préfixe diffère de l’écriture sur une arborescence XML dans un espace de noms par défaut.</span><span class="sxs-lookup"><span data-stu-id="ffff2-115">In Visual Basic, however, writing queries on an XML tree that uses a namespace with a prefix is quite different from querying an XML tree in a default namespace.</span></span> <span data-ttu-id="ffff2-116">En général, vous devez utiliser l'instruction `Imports` pour importer l'espace de noms avec un préfixe.</span><span class="sxs-lookup"><span data-stu-id="ffff2-116">Typically you use the `Imports` statement to import the namespace with a prefix.</span></span> <span data-ttu-id="ffff2-117">Vous utilisez ensuite le préfixe dans les noms d'éléments et d'attributs, lors de la construction de l'arborescence XML.</span><span class="sxs-lookup"><span data-stu-id="ffff2-117">You then use the prefix in the element and attribute names when you construct the XML tree.</span></span> <span data-ttu-id="ffff2-118">Vous utilisez également le préfixe lors de l'interrogation d'une arborescence XML avec des propriétés XML.</span><span class="sxs-lookup"><span data-stu-id="ffff2-118">You also use the prefix when querying an XML tree using XML properties.</span></span>  
   
- <span data-ttu-id="0ac52-119">L'exemple suivant crée une arborescence XML qui est dans un espace de noms avec un préfixe.</span><span class="sxs-lookup"><span data-stu-id="0ac52-119">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="0ac52-120">Il récupère ensuite une collection d'éléments.</span><span class="sxs-lookup"><span data-stu-id="0ac52-120">It then retrieves a collection of elements.</span></span>  
+ <span data-ttu-id="ffff2-119">L'exemple suivant crée une arborescence XML qui est dans un espace de noms avec un préfixe.</span><span class="sxs-lookup"><span data-stu-id="ffff2-119">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="ffff2-120">Il récupère ensuite une collection d'éléments.</span><span class="sxs-lookup"><span data-stu-id="ffff2-120">It then retrieves a collection of elements.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -80,7 +80,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="0ac52-121">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="0ac52-121">This example produces the following output:</span></span>  
+ <span data-ttu-id="ffff2-121">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="ffff2-121">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -88,5 +88,5 @@ End Module
 3  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0ac52-122">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0ac52-122">See Also</span></span>  
- [<span data-ttu-id="0ac52-123">Utilisation des espaces de noms XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ac52-123">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="ffff2-122">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ffff2-122">See also</span></span>
+- [<span data-ttu-id="ffff2-123">Utilisation des espaces de noms XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffff2-123">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

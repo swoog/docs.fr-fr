@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de120516655c1a0578e88ecc2890701ed9fc2f6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b31df454c49ddccc74a7e877c09efa4f45b69d9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491792"
 ---
-# <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="a7b59-102">AssemblyRefFlags, énumération</span><span class="sxs-lookup"><span data-stu-id="a7b59-102">AssemblyRefFlags Enumeration</span></span>
-<span data-ttu-id="a7b59-103">Contient des valeurs qui décrivent les fonctionnalités d’une référence d’assembly.</span><span class="sxs-lookup"><span data-stu-id="a7b59-103">Contains values that describe features of an assembly reference.</span></span>  
+# <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="38003-102">AssemblyRefFlags, énumération</span><span class="sxs-lookup"><span data-stu-id="38003-102">AssemblyRefFlags Enumeration</span></span>
+<span data-ttu-id="38003-103">Contient des valeurs qui décrivent les fonctionnalités d’une référence d’assembly.</span><span class="sxs-lookup"><span data-stu-id="38003-103">Contains values that describe features of an assembly reference.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a7b59-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a7b59-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38003-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="38003-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,20 +34,20 @@ typedef enum {
 } AssemblyRefFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a7b59-105">Membres</span><span class="sxs-lookup"><span data-stu-id="a7b59-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="38003-105">Membres</span><span class="sxs-lookup"><span data-stu-id="38003-105">Members</span></span>  
   
-|<span data-ttu-id="a7b59-106">Membre</span><span class="sxs-lookup"><span data-stu-id="a7b59-106">Member</span></span>|<span data-ttu-id="a7b59-107">Description</span><span class="sxs-lookup"><span data-stu-id="a7b59-107">Description</span></span>|  
+|<span data-ttu-id="38003-106">Membre</span><span class="sxs-lookup"><span data-stu-id="38003-106">Member</span></span>|<span data-ttu-id="38003-107">Description</span><span class="sxs-lookup"><span data-stu-id="38003-107">Description</span></span>|  
 |------------|-----------------|  
-|`arfFullOriginator`|<span data-ttu-id="a7b59-108">Spécifie que la référence d’assembly contient des informations complètes non hachées sur le serveur de publication de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="a7b59-108">Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.</span></span>|  
+|`arfFullOriginator`|<span data-ttu-id="38003-108">Spécifie que la référence d’assembly contient des informations complètes et non hachées, sur le serveur de publication de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="38003-108">Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a7b59-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="a7b59-109">Requirements</span></span>  
- <span data-ttu-id="a7b59-110">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7b59-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38003-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="38003-109">Requirements</span></span>  
+ <span data-ttu-id="38003-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38003-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a7b59-111">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a7b59-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="38003-111">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="38003-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a7b59-112">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7b59-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="38003-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38003-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7b59-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a7b59-113">See Also</span></span>  
- [<span data-ttu-id="a7b59-114">Énumérations de métadonnées</span><span class="sxs-lookup"><span data-stu-id="a7b59-114">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [<span data-ttu-id="a7b59-115">IMetaDataAssemblyEmit, interface</span><span class="sxs-lookup"><span data-stu-id="a7b59-115">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [<span data-ttu-id="a7b59-116">DefineAssemblyRef, méthode</span><span class="sxs-lookup"><span data-stu-id="a7b59-116">DefineAssemblyRef Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)
+## <a name="see-also"></a><span data-ttu-id="38003-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="38003-113">See also</span></span>
+- [<span data-ttu-id="38003-114">Énumérations de métadonnées</span><span class="sxs-lookup"><span data-stu-id="38003-114">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="38003-115">IMetaDataAssemblyEmit, interface</span><span class="sxs-lookup"><span data-stu-id="38003-115">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="38003-116">DefineAssemblyRef, méthode</span><span class="sxs-lookup"><span data-stu-id="38003-116">DefineAssemblyRef Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)
