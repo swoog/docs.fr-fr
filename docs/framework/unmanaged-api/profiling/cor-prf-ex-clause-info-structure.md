@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3cf8b8735fc10b741d13b041eedc3e96607bef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6576dc19ed092ca12846a9780236e041daa64956
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727129"
 ---
-# <a name="corprfexclauseinfo-structure"></a><span data-ttu-id="7e1e7-102">COR_PRF_EX_CLAUSE_INFO, structure</span><span class="sxs-lookup"><span data-stu-id="7e1e7-102">COR_PRF_EX_CLAUSE_INFO Structure</span></span>
-<span data-ttu-id="7e1e7-103">Stocke des informations sur une instance de clause d'exception spécifique et sa trame associée.</span><span class="sxs-lookup"><span data-stu-id="7e1e7-103">Stores information about a specific exception clause instance and its associated frame.</span></span>  
+# <a name="corprfexclauseinfo-structure"></a><span data-ttu-id="28c74-102">COR_PRF_EX_CLAUSE_INFO, structure</span><span class="sxs-lookup"><span data-stu-id="28c74-102">COR_PRF_EX_CLAUSE_INFO Structure</span></span>
+<span data-ttu-id="28c74-103">Stocke des informations sur une instance de clause d'exception spécifique et sa trame associée.</span><span class="sxs-lookup"><span data-stu-id="28c74-103">Stores information about a specific exception clause instance and its associated frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e1e7-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7e1e7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28c74-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="28c74-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_PRF_EX_CLAUSE_INFO {  
@@ -37,40 +37,40 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 } COR_PRF_EX_CLAUSE_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7e1e7-105">Membres</span><span class="sxs-lookup"><span data-stu-id="7e1e7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="28c74-105">Membres</span><span class="sxs-lookup"><span data-stu-id="28c74-105">Members</span></span>  
   
-|<span data-ttu-id="7e1e7-106">Membre</span><span class="sxs-lookup"><span data-stu-id="7e1e7-106">Member</span></span>|<span data-ttu-id="7e1e7-107">Description</span><span class="sxs-lookup"><span data-stu-id="7e1e7-107">Description</span></span>|  
+|<span data-ttu-id="28c74-106">Membre</span><span class="sxs-lookup"><span data-stu-id="28c74-106">Member</span></span>|<span data-ttu-id="28c74-107">Description</span><span class="sxs-lookup"><span data-stu-id="28c74-107">Description</span></span>|  
 |------------|-----------------|  
-|`clauseType`|<span data-ttu-id="7e1e7-108">Une valeur de la [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) énumération qui spécifie le type de clause d’exception le code entré ou à gauche.</span><span class="sxs-lookup"><span data-stu-id="7e1e7-108">A value of the [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) enumeration that specifies the type of exception clause the code just entered or left.</span></span>|  
-|`programCounter`|<span data-ttu-id="7e1e7-109">Le point d’entrée natif du Gestionnaire de clause — par exemple, le contenu du Registre X86 EIP.</span><span class="sxs-lookup"><span data-stu-id="7e1e7-109">The native entry point of the clause handler — for example, the contents of the X86 EIP register.</span></span>|  
-|`framePointer`|<span data-ttu-id="7e1e7-110">Le pointeur vers le frame logique pour le Gestionnaire de clause — par exemple, le contenu du Registre X86 EBP.</span><span class="sxs-lookup"><span data-stu-id="7e1e7-110">The pointer to the logical frame for the clause handler — for example, the contents of the X86 EBP register.</span></span>|  
-|`shadowStackPointer`|<span data-ttu-id="7e1e7-111">Pointeur vers la pile cachée.</span><span class="sxs-lookup"><span data-stu-id="7e1e7-111">The pointer to the shadow stack.</span></span> <span data-ttu-id="7e1e7-112">Cette valeur est le contenu du Registre BSP et s’applique uniquement à IA64.</span><span class="sxs-lookup"><span data-stu-id="7e1e7-112">This value is the contents of the BSP register and applies only to IA64.</span></span>|  
+|`clauseType`|<span data-ttu-id="28c74-108">Une valeur de la [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) énumération qui spécifie le type de clause d’exception le code venez d’entrer ou de gauche.</span><span class="sxs-lookup"><span data-stu-id="28c74-108">A value of the [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) enumeration that specifies the type of exception clause the code just entered or left.</span></span>|  
+|`programCounter`|<span data-ttu-id="28c74-109">Le point d’entrée natif du Gestionnaire de clause — par exemple, le contenu du Registre X86 EIP.</span><span class="sxs-lookup"><span data-stu-id="28c74-109">The native entry point of the clause handler — for example, the contents of the X86 EIP register.</span></span>|  
+|`framePointer`|<span data-ttu-id="28c74-110">Le pointeur vers le frame logique pour le Gestionnaire de clause — par exemple, le contenu du Registre X86 EBP.</span><span class="sxs-lookup"><span data-stu-id="28c74-110">The pointer to the logical frame for the clause handler — for example, the contents of the X86 EBP register.</span></span>|  
+|`shadowStackPointer`|<span data-ttu-id="28c74-111">Pointeur vers la pile cachée.</span><span class="sxs-lookup"><span data-stu-id="28c74-111">The pointer to the shadow stack.</span></span> <span data-ttu-id="28c74-112">Cette valeur est le contenu du Registre BSP et s’applique uniquement à IA64.</span><span class="sxs-lookup"><span data-stu-id="28c74-112">This value is the contents of the BSP register and applies only to IA64.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7e1e7-113">Notes</span><span class="sxs-lookup"><span data-stu-id="7e1e7-113">Remarks</span></span>  
- <span data-ttu-id="7e1e7-114">Lorsqu’une notification d’exception est reçue, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) peut être utilisé pour obtenir les informations d’adresse et d’image natives pour la clause d’exception (`catch` / `finally`/filtre) qui doit être exécutée ou vient d’être exécutée.</span><span class="sxs-lookup"><span data-stu-id="7e1e7-114">When an exception notification is received, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) can be used to get the native address and frame information for the exception clause (`catch`/`finally`/filter) that is about to be run or has just been run.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="28c74-113">Notes</span><span class="sxs-lookup"><span data-stu-id="28c74-113">Remarks</span></span>  
+ <span data-ttu-id="28c74-114">Lorsqu’une notification d’exception est reçue, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) peut être utilisé pour obtenir les informations d’adresse et d’image natives pour la clause d’exception (`catch` / `finally`/filtre) qui doit être exécutée ou vient d’être exécutée.</span><span class="sxs-lookup"><span data-stu-id="28c74-114">When an exception notification is received, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) can be used to get the native address and frame information for the exception clause (`catch`/`finally`/filter) that is about to be run or has just been run.</span></span>  
   
- <span data-ttu-id="7e1e7-115">L’exécution d’une clause d’exception implique ces rappels dans le common language runtime (CLR) :</span><span class="sxs-lookup"><span data-stu-id="7e1e7-115">Execution of an exception clause involves these callbacks from the common language runtime (CLR):</span></span>  
+ <span data-ttu-id="28c74-115">L’exécution d’une clause d’exception implique le common language runtime (CLR) les rappels suivants :</span><span class="sxs-lookup"><span data-stu-id="28c74-115">Execution of an exception clause involves these callbacks from the common language runtime (CLR):</span></span>  
   
--   [<span data-ttu-id="7e1e7-116">ICorProfilerCallback::ExceptionCatcherEnter</span><span class="sxs-lookup"><span data-stu-id="7e1e7-116">ICorProfilerCallback::ExceptionCatcherEnter</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
+-   [<span data-ttu-id="28c74-116">ICorProfilerCallback::ExceptionCatcherEnter</span><span class="sxs-lookup"><span data-stu-id="28c74-116">ICorProfilerCallback::ExceptionCatcherEnter</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
   
--   [<span data-ttu-id="7e1e7-117">ICorProfilerCallback::ExceptionUnwindFinallyEnter</span><span class="sxs-lookup"><span data-stu-id="7e1e7-117">ICorProfilerCallback::ExceptionUnwindFinallyEnter</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)  
+-   [<span data-ttu-id="28c74-117">ICorProfilerCallback::ExceptionUnwindFinallyEnter</span><span class="sxs-lookup"><span data-stu-id="28c74-117">ICorProfilerCallback::ExceptionUnwindFinallyEnter</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)  
   
--   [<span data-ttu-id="7e1e7-118">ICorProfilerCallback::ExceptionSearchFilterEnter</span><span class="sxs-lookup"><span data-stu-id="7e1e7-118">ICorProfilerCallback::ExceptionSearchFilterEnter</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)  
+-   [<span data-ttu-id="28c74-118">ICorProfilerCallback::ExceptionSearchFilterEnter</span><span class="sxs-lookup"><span data-stu-id="28c74-118">ICorProfilerCallback::ExceptionSearchFilterEnter</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)  
   
--   [<span data-ttu-id="7e1e7-119">ICorProfilerCallback::ExceptionCatcherLeave</span><span class="sxs-lookup"><span data-stu-id="7e1e7-119">ICorProfilerCallback::ExceptionCatcherLeave</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)  
+-   [<span data-ttu-id="28c74-119">ICorProfilerCallback::ExceptionCatcherLeave</span><span class="sxs-lookup"><span data-stu-id="28c74-119">ICorProfilerCallback::ExceptionCatcherLeave</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)  
   
--   [<span data-ttu-id="7e1e7-120">ICorProfilerCallback::ExceptionUnwindFinallyLeave</span><span class="sxs-lookup"><span data-stu-id="7e1e7-120">ICorProfilerCallback::ExceptionUnwindFinallyLeave</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)  
+-   [<span data-ttu-id="28c74-120">ICorProfilerCallback::ExceptionUnwindFinallyLeave</span><span class="sxs-lookup"><span data-stu-id="28c74-120">ICorProfilerCallback::ExceptionUnwindFinallyLeave</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)  
   
--   [<span data-ttu-id="7e1e7-121">ICorProfilerCallback::ExceptionSearchFilterLeave</span><span class="sxs-lookup"><span data-stu-id="7e1e7-121">ICorProfilerCallback::ExceptionSearchFilterLeave</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
+-   [<span data-ttu-id="28c74-121">ICorProfilerCallback::ExceptionSearchFilterLeave</span><span class="sxs-lookup"><span data-stu-id="28c74-121">ICorProfilerCallback::ExceptionSearchFilterLeave</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
-## <a name="requirements"></a><span data-ttu-id="7e1e7-122">Spécifications</span><span class="sxs-lookup"><span data-stu-id="7e1e7-122">Requirements</span></span>  
- <span data-ttu-id="7e1e7-123">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e1e7-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28c74-122">Spécifications</span><span class="sxs-lookup"><span data-stu-id="28c74-122">Requirements</span></span>  
+ <span data-ttu-id="28c74-123">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28c74-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e1e7-124">**En-tête :** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="7e1e7-124">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="28c74-124">**En-tête :** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="28c74-124">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="7e1e7-125">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e1e7-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="28c74-125">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="28c74-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7e1e7-126">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e1e7-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="28c74-126">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28c74-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e1e7-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7e1e7-127">See Also</span></span>  
- [<span data-ttu-id="7e1e7-128">Structures de profilage</span><span class="sxs-lookup"><span data-stu-id="7e1e7-128">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a><span data-ttu-id="28c74-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="28c74-127">See also</span></span>
+- [<span data-ttu-id="28c74-128">Structures de profilage</span><span class="sxs-lookup"><span data-stu-id="28c74-128">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

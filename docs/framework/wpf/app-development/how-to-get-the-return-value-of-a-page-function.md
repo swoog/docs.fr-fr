@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour obtenir la valeur de retour d'une fonction de page
+title: "Procédure : Obtenir la valeur de retour d'une fonction de page"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - return values of page functions [WPF]
 - getting [WPF], return values of page functions
 ms.assetid: 75470af6-256c-4c46-87e7-705080723a1c
-ms.openlocfilehash: 2994a0fd7a192716a829c8290f030788da74cec5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ac1b59330790432ac29edd63a37db44283ba542
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724211"
 ---
-# <a name="how-to-get-the-return-value-of-a-page-function"></a><span data-ttu-id="0c28d-102">Guide pratique pour obtenir la valeur de retour d'une fonction de page</span><span class="sxs-lookup"><span data-stu-id="0c28d-102">How to: Get the Return Value of a Page Function</span></span>
-<span data-ttu-id="0c28d-103">Cet exemple montre comment obtenir le résultat retourné par une fonction de page.</span><span class="sxs-lookup"><span data-stu-id="0c28d-103">This example shows how to get the result that is returned by a page function.</span></span>  
+# <a name="how-to-get-the-return-value-of-a-page-function"></a><span data-ttu-id="6c218-102">Procédure : Obtenir la valeur de retour d'une fonction de page</span><span class="sxs-lookup"><span data-stu-id="6c218-102">How to: Get the Return Value of a Page Function</span></span>
+<span data-ttu-id="6c218-103">Cet exemple montre comment obtenir le résultat retourné par une fonction de page.</span><span class="sxs-lookup"><span data-stu-id="6c218-103">This example shows how to get the result that is returned by a page function.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0c28d-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="0c28d-104">Example</span></span>  
- <span data-ttu-id="0c28d-105">Pour obtenir le résultat est retourné à partir d’une fonction de page, vous devez gérer <xref:System.Windows.Navigation.PageFunction%601.Return> de la fonction de la page que vous appelez.</span><span class="sxs-lookup"><span data-stu-id="0c28d-105">To get the result that is returned from a page function, you need to handle <xref:System.Windows.Navigation.PageFunction%601.Return> of the page function you are calling.</span></span>  
+## <a name="example"></a><span data-ttu-id="6c218-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="6c218-104">Example</span></span>  
+ <span data-ttu-id="6c218-105">Pour obtenir le résultat est retourné à partir d’une fonction de page, vous devez gérer <xref:System.Windows.Navigation.PageFunction%601.Return> de la fonction de page que vous appelez.</span><span class="sxs-lookup"><span data-stu-id="6c218-105">To get the result that is returned from a page function, you need to handle <xref:System.Windows.Navigation.PageFunction%601.Return> of the page function you are calling.</span></span>  
   
  [!code-xaml[HOWTOPageFunctionSnippets#CallAPageFunctionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml#callapagefunctionxaml)]  
   
  [!code-csharp[HOWTOPageFunctionSnippets#GetPageFunctionResultCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#getpagefunctionresultcodebehind)]
  [!code-vb[HOWTOPageFunctionSnippets#GetPageFunctionResultCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#getpagefunctionresultcodebehind)]  
   
-## <a name="see-also"></a><span data-ttu-id="0c28d-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0c28d-106">See Also</span></span>  
- <xref:System.Windows.Navigation.PageFunction%601>
+## <a name="see-also"></a><span data-ttu-id="6c218-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6c218-106">See also</span></span>
+- <xref:System.Windows.Navigation.PageFunction%601>

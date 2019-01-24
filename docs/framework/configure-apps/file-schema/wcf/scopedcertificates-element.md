@@ -2,26 +2,26 @@
 title: '&lt;scopedCertificates&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 6f2acd1078090f7680f1909d68afbcaa09d080fd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c6236093eada1b7be5244d98eabd99482017a395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556494"
 ---
-# <a name="ltscopedcertificatesgt-element"></a><span data-ttu-id="c600d-102">&lt;scopedCertificates&gt;, élément</span><span class="sxs-lookup"><span data-stu-id="c600d-102">&lt;scopedCertificates&gt; Element</span></span>
-<span data-ttu-id="c600d-103">Représente une collection de certificats X.509 fournie par les services spécifiques (étendus) à des fins d’authentification.</span><span class="sxs-lookup"><span data-stu-id="c600d-103">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="c600d-104">Cette collection est utilisée en général pour spécifier les certificats de service pour les services d’émission de jeton de sécurité dans un scénario fédéré.</span><span class="sxs-lookup"><span data-stu-id="c600d-104">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>  
+# <a name="ltscopedcertificatesgt-element"></a><span data-ttu-id="fab9b-102">&lt;scopedCertificates&gt;, élément</span><span class="sxs-lookup"><span data-stu-id="fab9b-102">&lt;scopedCertificates&gt; Element</span></span>
+<span data-ttu-id="fab9b-103">Représente une collection de certificats X.509 fournie par les services spécifiques (étendus) à des fins d’authentification.</span><span class="sxs-lookup"><span data-stu-id="fab9b-103">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="fab9b-104">Cette collection est utilisée en général pour spécifier les certificats de service pour les services d’émission de jeton de sécurité dans un scénario fédéré.</span><span class="sxs-lookup"><span data-stu-id="fab9b-104">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>  
   
- <span data-ttu-id="c600d-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="c600d-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="c600d-106">\<comportements ></span><span class="sxs-lookup"><span data-stu-id="c600d-106">\<behaviors></span></span>  
-<span data-ttu-id="c600d-107">section d’endpointBehaviors</span><span class="sxs-lookup"><span data-stu-id="c600d-107">endpointBehaviors section</span></span>  
-<span data-ttu-id="c600d-108">\<comportement ></span><span class="sxs-lookup"><span data-stu-id="c600d-108">\<behavior></span></span>  
-<span data-ttu-id="c600d-109">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="c600d-109">\<clientCredentials></span></span>  
-<span data-ttu-id="c600d-110">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="c600d-110">\<serviceCertificate></span></span>  
-<span data-ttu-id="c600d-111">\<scopedCertificates > élément</span><span class="sxs-lookup"><span data-stu-id="c600d-111">\<scopedCertificates> Element</span></span>  
-<span data-ttu-id="c600d-112">\<Ajouter > élément pour \<scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="c600d-112">\<add> element for \<scopedCertificates></span></span>  
+ <span data-ttu-id="fab9b-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="fab9b-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="fab9b-106">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="fab9b-106">\<behaviors></span></span>  
+<span data-ttu-id="fab9b-107">section d’endpointBehaviors</span><span class="sxs-lookup"><span data-stu-id="fab9b-107">endpointBehaviors section</span></span>  
+<span data-ttu-id="fab9b-108">\<behavior></span><span class="sxs-lookup"><span data-stu-id="fab9b-108">\<behavior></span></span>  
+<span data-ttu-id="fab9b-109">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="fab9b-109">\<clientCredentials></span></span>  
+<span data-ttu-id="fab9b-110">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="fab9b-110">\<serviceCertificate></span></span>  
+<span data-ttu-id="fab9b-111">\<scopedCertificates > élément</span><span class="sxs-lookup"><span data-stu-id="fab9b-111">\<scopedCertificates> Element</span></span>  
+<span data-ttu-id="fab9b-112">\<Ajouter > élément pour \<scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="fab9b-112">\<add> element for \<scopedCertificates></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c600d-113">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c600d-113">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fab9b-113">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fab9b-113">Syntax</span></span>  
   
 ```xml  
 <scopedCertificates>
@@ -33,33 +33,33 @@ ms.locfileid: "54150719"
 </scopedCertificates>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c600d-114">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="c600d-114">Attributes and Elements</span></span>  
- <span data-ttu-id="c600d-115">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="c600d-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fab9b-114">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="fab9b-114">Attributes and Elements</span></span>  
+ <span data-ttu-id="fab9b-115">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="fab9b-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c600d-116">Attributs</span><span class="sxs-lookup"><span data-stu-id="c600d-116">Attributes</span></span>  
- <span data-ttu-id="c600d-117">Aucun.</span><span class="sxs-lookup"><span data-stu-id="c600d-117">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fab9b-116">Attributs</span><span class="sxs-lookup"><span data-stu-id="fab9b-116">Attributes</span></span>  
+ <span data-ttu-id="fab9b-117">Aucun.</span><span class="sxs-lookup"><span data-stu-id="fab9b-117">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="c600d-118">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="c600d-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fab9b-118">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="fab9b-118">Child Elements</span></span>  
   
-|<span data-ttu-id="c600d-119">Élément</span><span class="sxs-lookup"><span data-stu-id="c600d-119">Element</span></span>|<span data-ttu-id="c600d-120">Description</span><span class="sxs-lookup"><span data-stu-id="c600d-120">Description</span></span>|  
+|<span data-ttu-id="fab9b-119">Élément</span><span class="sxs-lookup"><span data-stu-id="fab9b-119">Element</span></span>|<span data-ttu-id="fab9b-120">Description</span><span class="sxs-lookup"><span data-stu-id="fab9b-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c600d-121">\<add></span><span class="sxs-lookup"><span data-stu-id="c600d-121">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)|<span data-ttu-id="c600d-122">Ajoute un certificat X.509 à la collection de certificats étendus.</span><span class="sxs-lookup"><span data-stu-id="c600d-122">Adds an X.509 certificate to the collection of scoped certificates.</span></span>|  
+|[<span data-ttu-id="fab9b-121">\<add></span><span class="sxs-lookup"><span data-stu-id="fab9b-121">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)|<span data-ttu-id="fab9b-122">Ajoute un certificat X.509 à la collection de certificats étendus.</span><span class="sxs-lookup"><span data-stu-id="fab9b-122">Adds an X.509 certificate to the collection of scoped certificates.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="c600d-123">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="c600d-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fab9b-123">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="fab9b-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="c600d-124">Élément</span><span class="sxs-lookup"><span data-stu-id="c600d-124">Element</span></span>|<span data-ttu-id="c600d-125">Description</span><span class="sxs-lookup"><span data-stu-id="c600d-125">Description</span></span>|  
+|<span data-ttu-id="fab9b-124">Élément</span><span class="sxs-lookup"><span data-stu-id="fab9b-124">Element</span></span>|<span data-ttu-id="fab9b-125">Description</span><span class="sxs-lookup"><span data-stu-id="fab9b-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c600d-126">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="c600d-126">\<serviceCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|<span data-ttu-id="c600d-127">Spécifie un certificat à utiliser lors de l'authentification d'un service au client.</span><span class="sxs-lookup"><span data-stu-id="c600d-127">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
+|[<span data-ttu-id="fab9b-126">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="fab9b-126">\<serviceCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|<span data-ttu-id="fab9b-127">Spécifie un certificat à utiliser lors de l'authentification d'un service au client.</span><span class="sxs-lookup"><span data-stu-id="fab9b-127">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c600d-128">Notes</span><span class="sxs-lookup"><span data-stu-id="c600d-128">Remarks</span></span>  
- <span data-ttu-id="c600d-129">Cette collection permet au client de configurer les certificats de service à utiliser en fonction de l’URL du service avec lequel il communique.</span><span class="sxs-lookup"><span data-stu-id="c600d-129">This collection enables the client to configure the service certificates to use based on the URL of the service it communicates with.</span></span> <span data-ttu-id="c600d-130">Ceci s'avère particulièrement utile dans les scénarios de jeton émis dans lesquels un client peut communiquer avec plusieurs services (autant le service final que les services de jeton de sécurité intermédiaire).</span><span class="sxs-lookup"><span data-stu-id="c600d-130">This is especially useful in issued token scenarios where a client can be communicating to multiple services (the end service as well as intermediary security token services).</span></span> <span data-ttu-id="c600d-131">Pour les liaisons qui utilisent la sécurité de message basée sur des certificats, ce certificat est utilisé pour chiffrer les messages au service et doit être utilisé par le service pour signer les réponses au client.</span><span class="sxs-lookup"><span data-stu-id="c600d-131">For bindings that use certificate-based message security, this certificate is used to encrypt messages to the service, and is expected to be used by the service for signing replies to the client.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fab9b-128">Notes</span><span class="sxs-lookup"><span data-stu-id="fab9b-128">Remarks</span></span>  
+ <span data-ttu-id="fab9b-129">Cette collection permet au client de configurer les certificats de service à utiliser en fonction de l’URL du service avec lequel il communique.</span><span class="sxs-lookup"><span data-stu-id="fab9b-129">This collection enables the client to configure the service certificates to use based on the URL of the service it communicates with.</span></span> <span data-ttu-id="fab9b-130">Ceci s'avère particulièrement utile dans les scénarios de jeton émis dans lesquels un client peut communiquer avec plusieurs services (autant le service final que les services de jeton de sécurité intermédiaire).</span><span class="sxs-lookup"><span data-stu-id="fab9b-130">This is especially useful in issued token scenarios where a client can be communicating to multiple services (the end service as well as intermediary security token services).</span></span> <span data-ttu-id="fab9b-131">Pour les liaisons qui utilisent la sécurité de message basée sur des certificats, ce certificat est utilisé pour chiffrer les messages au service et doit être utilisé par le service pour signer les réponses au client.</span><span class="sxs-lookup"><span data-stu-id="fab9b-131">For bindings that use certificate-based message security, this certificate is used to encrypt messages to the service, and is expected to be used by the service for signing replies to the client.</span></span>  
   
- <span data-ttu-id="c600d-132">Le certificat par défaut est utilisé si une liaison requiert un certificat pour le service et qu’aucun certificat spécifique de l’URL du service n’est trouvé dans ScopedCertificates.</span><span class="sxs-lookup"><span data-stu-id="c600d-132">If a binding requires a certificate for the service and no specific certificate for the service URL is found in the ScopedCertificates, the default certificate is used.</span></span>  
+ <span data-ttu-id="fab9b-132">Le certificat par défaut est utilisé si une liaison requiert un certificat pour le service et qu’aucun certificat spécifique de l’URL du service n’est trouvé dans ScopedCertificates.</span><span class="sxs-lookup"><span data-stu-id="fab9b-132">If a binding requires a certificate for the service and no specific certificate for the service URL is found in the ScopedCertificates, the default certificate is used.</span></span>  
   
- <span data-ttu-id="c600d-133">Pour plus d’informations, consultez la section » certificats à étendue » de [Comment : Créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span><span class="sxs-lookup"><span data-stu-id="c600d-133">For more information, see the "Scoped Certificates" section of [How to: Create a Federated Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span></span>  
+ <span data-ttu-id="fab9b-133">Pour plus d’informations, consultez la section » certificats à étendue » de [Comment : Créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span><span class="sxs-lookup"><span data-stu-id="fab9b-133">For more information, see the "Scoped Certificates" section of [How to: Create a Federated Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c600d-134">Exemple</span><span class="sxs-lookup"><span data-stu-id="c600d-134">Example</span></span>  
- <span data-ttu-id="c600d-135">L’exemple suivant spécifie un certificat de service pour le client à utiliser lors de la communication avec les points de terminaison dont nom de domaine est `http://www.contoso.com` via le protocole HTTP.</span><span class="sxs-lookup"><span data-stu-id="c600d-135">The following example specifies a service certificate for the client to use when communicating with endpoints whose domain name is `http://www.contoso.com` over the HTTP protocol.</span></span>  
+## <a name="example"></a><span data-ttu-id="fab9b-134">Exemple</span><span class="sxs-lookup"><span data-stu-id="fab9b-134">Example</span></span>  
+ <span data-ttu-id="fab9b-135">L’exemple suivant spécifie un certificat de service pour le client à utiliser lors de la communication avec les points de terminaison dont nom de domaine est `http://www.contoso.com` via le protocole HTTP.</span><span class="sxs-lookup"><span data-stu-id="fab9b-135">The following example specifies a service certificate for the client to use when communicating with endpoints whose domain name is `http://www.contoso.com` over the HTTP protocol.</span></span>  
   
 ```xml  
 <serviceCertificate>
@@ -73,14 +73,14 @@ ms.locfileid: "54150719"
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c600d-136">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c600d-136">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
- [<span data-ttu-id="c600d-137">Utilisation des certificats</span><span class="sxs-lookup"><span data-stu-id="c600d-137">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [<span data-ttu-id="c600d-138">Guide pratique pour Créer un Client fédéré</span><span class="sxs-lookup"><span data-stu-id="c600d-138">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [<span data-ttu-id="c600d-139">\<add></span><span class="sxs-lookup"><span data-stu-id="c600d-139">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)  
- [<span data-ttu-id="c600d-140">Sécurisation des clients</span><span class="sxs-lookup"><span data-stu-id="c600d-140">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
- [<span data-ttu-id="c600d-141">Sécurisation des services et des clients</span><span class="sxs-lookup"><span data-stu-id="c600d-141">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="fab9b-136">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fab9b-136">See also</span></span>
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
+- [<span data-ttu-id="fab9b-137">Utilisation des certificats</span><span class="sxs-lookup"><span data-stu-id="fab9b-137">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [<span data-ttu-id="fab9b-138">Guide pratique pour Créer un Client fédéré</span><span class="sxs-lookup"><span data-stu-id="fab9b-138">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [<span data-ttu-id="fab9b-139">\<add></span><span class="sxs-lookup"><span data-stu-id="fab9b-139">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
+- [<span data-ttu-id="fab9b-140">Sécurisation des clients</span><span class="sxs-lookup"><span data-stu-id="fab9b-140">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
+- [<span data-ttu-id="fab9b-141">Sécurisation des services et des clients</span><span class="sxs-lookup"><span data-stu-id="fab9b-141">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
