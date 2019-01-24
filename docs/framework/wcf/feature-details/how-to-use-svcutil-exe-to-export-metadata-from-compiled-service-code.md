@@ -1,15 +1,15 @@
 ---
-title: 'Comment : utiliser Svcutil.exe pour exporter des métadonnées à partir de code de service compilé'
+title: 'Procédure : Utiliser Svcutil.exe pour exporter les métadonnées à partir du Code de Service compilé'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 68d651a396aa748d53f9121e9861260bdbf2dffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6af43b076f7c508fd17cac367caeed30065b0c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648099"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Comment : utiliser Svcutil.exe pour exporter des métadonnées à partir de code de service compilé
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procédure : Utiliser Svcutil.exe pour exporter les métadonnées à partir du Code de Service compilé
 Svcutil.exe peut exporter les métadonnées pour des services, des contrats et des types de données dans des assemblys compilés, comme suit :  
   
 -   Pour exporter les métadonnées pour tous les contrats de service compilés pour un ensemble d'assemblys en utilisant Svcutil.exe, spécifiez les assemblys en tant que paramètres d'entrée. Il s'agit du comportement par défaut.  
@@ -19,7 +19,7 @@ Svcutil.exe peut exporter les métadonnées pour des services, des contrats et d
 -   Pour exporter tous les types de contrats de données dans un ensemble d'assemblys, utilisez l'option `/dataContractOnly`.  
   
 > [!NOTE]
->  Utilisez l'option `/reference` pour spécifier les chemins d'accès à tous les assemblys dépendants.  
+>  Utilisez l’option `/reference` pour spécifier les chemins d’accès à tous les assemblys dépendants.  
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>Pour exporter les métadonnées pour des contrats de service compilés  
   
@@ -28,7 +28,7 @@ Svcutil.exe peut exporter les métadonnées pour des services, des contrats et d
 2.  Exécutez Svcutil.exe sur les assemblys compilés.  
   
     > [!NOTE]
-    >  Vous pouvez être amené à utiliser le commutateur `/reference` pour spécifier le chemin d'accès à tous les assemblys dépendants.  
+    >  Vous pouvez être amené à utiliser le commutateur `/reference` pour spécifier le chemin d’accès à tous les assemblys dépendants.  
   
     ```  
     svcutil.exe Contracts.dll  
@@ -56,7 +56,7 @@ Svcutil.exe peut exporter les métadonnées pour des services, des contrats et d
 3.  Exécutez Svcutil.exe sur l'exécutable du service compilé en utilisant le commutateur `/serviceName` pour spécifier le nom de configuration du service.  
   
     > [!NOTE]
-    >  Vous pouvez être amené à utiliser le commutateur `/reference` pour spécifier le chemin d'accès à tous les assemblys dépendants.  
+    >  Vous pouvez être amené à utiliser le commutateur `/reference` pour spécifier le chemin d’accès à tous les assemblys dépendants.  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
@@ -69,7 +69,7 @@ Svcutil.exe peut exporter les métadonnées pour des services, des contrats et d
 2.  Exécutez Svcutil.exe sur les assemblys compilés en utilisant le commutateur `/dataContract` pour spécifier que seules les métadonnées pour les contrats de données doivent être générées.  
   
     > [!NOTE]
-    >  Vous pouvez être amené à utiliser le commutateur `/reference` pour spécifier le chemin d'accès à tous les assemblys dépendants.  
+    >  Vous pouvez être amené à utiliser le commutateur `/reference` pour spécifier le chemin d’accès à tous les assemblys dépendants.  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  
@@ -96,7 +96,7 @@ svcutil.exe /dataContractOnly Contracts.dll
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
- `<path>` est le chemin d'accès à Contracts.dll.  
+ `<path>` est le chemin d’accès à Contracts.dll.  
   
 ```  
 // The following service contract and data contracts are compiled into   
@@ -162,6 +162,6 @@ public class MyService : IPersonFinder
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+## <a name="see-also"></a>Voir aussi
+- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

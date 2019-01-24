@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: daf2c3dcaf16e949f8770121d8324cbfe6c7d05b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b4909ae23d077ee079e062d0252dbf1ee11663c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538828"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute, méthode
-L’appel à définir les attributs de niveau assembly.  
+Appel permettant de définir les attributs personnalisés de niveau assembly.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,18 +58,18 @@ HRESULT EmitAssemblyCustomAttribute(
  Longueur des données de valeur personnalisée.  
   
  `bSecurity`  
- TRUE si l’attribut personnalisé est associée à la signature de l’assembly.  
+ TRUE si l’attribut personnalisé est associé à la signature de l’assembly.  
   
  `bAllowMulti`  
- TRUE si plusieurs attributs doivent être émises.  
+ TRUE si plusieurs attributs doivent être émis.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
 ## <a name="requirements"></a>Spécifications  
- Requiert alink.h  
+ Nécessite alink.h  
   
-## <a name="see-also"></a>Voir aussi  
- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Voir aussi
+- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

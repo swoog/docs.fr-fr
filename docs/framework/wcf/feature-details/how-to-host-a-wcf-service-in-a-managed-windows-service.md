@@ -1,18 +1,18 @@
 ---
-title: 'Comment : héberger un service WCF dans un service Windows managé'
+title: 'Procédure : Héberger un Service WCF dans un Service Windows managé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613821"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Comment : héberger un service WCF dans un service Windows managé
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procédure : Héberger un Service WCF dans un Service Windows managé
 
 Cette rubrique décrit les étapes de base requises pour créer un service Windows Communication Foundation (WCF) qui est hébergé par un Service Windows. Le scénario est activé par le service Windows managé qui héberge l’option est un service WCF de longs hébergé en dehors d’Internet Information Services (IIS) dans un environnement sécurisé qui n’est pas activé de message. La durée de vie du service est contrôlée par le système d'exploitation. Cette option d'hébergement est disponible dans toutes les versions de Windows.
 
@@ -138,4 +138,4 @@ Comme pour l'option d'auto-hébergement, l'environnement d'hébergement du servi
 - [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Hébergement dans une application managée](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [Hébergement de services](../../../../docs/framework/wcf/hosting-services.md)
-- [Fonctionnalités d’hébergement de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

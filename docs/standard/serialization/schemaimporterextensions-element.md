@@ -6,12 +6,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: b5696c593fdeaabab66ea7c286c6e1309e6e8e38
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: dbe85ea817a597db84ddad530d67b1c2b7953f75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535366"
 ---
 # <a name="ltschemaimporterextensionsgt-element"></a>Élément &lt;schemaImporterExtensions&gt;
 Contient des types utilisés par le <xref:System.Xml.Serialization.XmlSchemaImporter> pour mapper des types XSD en types .NET Framework. Pour plus d’informations sur les fichiers de configuration, consultez [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -52,9 +52,9 @@ Contient des types utilisés par le <xref:System.Xml.Serialization.XmlSchemaImpo
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Xml.Serialization.XmlSchemaImporter>  
-- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
-- [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)  
-- [\<dateTimeSerialization>, élément](../../../docs/standard/serialization/datetimeserialization-element.md)  
-- [\<Ajouter > élément pour \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
+- <xref:System.Xml.Serialization.XmlSchemaImporter>
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
+- [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<dateTimeSerialization>, élément](../../../docs/standard/serialization/datetimeserialization-element.md)
+- [\<Ajouter > élément pour \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
 - [\<system.xml.serialization>, élément](../../../docs/standard/serialization/system-xml-serialization-element.md)

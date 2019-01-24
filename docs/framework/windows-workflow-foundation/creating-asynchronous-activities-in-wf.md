@@ -2,12 +2,12 @@
 title: Création d'activités asynchrones dans WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1b7fe1c5c998660f054d2ca060c108c758e36db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650926"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Création d'activités asynchrones dans WF
 <xref:System.Activities.AsyncCodeActivity> fournit aux auteurs d'activités une classe de base qui permet aux activités dérivées d'implémenter la logique d'exécution asynchrone. Les activités personnalisées peuvent ainsi effectuer un travail asynchrone sans maintenir le thread du service de planification de workflow. Elles peuvent également bloquer toute activité qui peut s'exécuter en parallèle. Cette rubrique fournit une vue d'ensemble de la méthode de création des activités asynchrones personnalisées à l'aide de l'objet <xref:System.Activities.AsyncCodeActivity>.  
@@ -39,14 +39,14 @@ ms.locfileid: "48266557"
  Dans l'exemple précédent, l'objet <xref:System.IO.FileStream> créé dans <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> était accessible dans le <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Cela s'avère possible, car la variable `file` a été passée dans la propriété <xref:System.Activities.AsyncCodeActivityContext.UserState%2A?displayProperty=nameWithType> dans <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>. Il s'agit de la méthode correcte pour partager l'état entre <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> et <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Il est incorrect d'utiliser une variable membre dans la classe dérivée (`FileWriter` dans ce cas) pour partager l'état entre <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> et <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>, car l'objet activité peut être référencé par plusieurs instances d'activité. Toute tentative d'utilisation d'une variable membre pour partager l'état peut générer des valeurs d'un <xref:System.Activities.ActivityInstance> qui remplacent ou consomment des valeurs d'un autre <xref:System.Activities.ActivityInstance>.  
   
 ### <a name="accessing-argument-values"></a>Accès aux valeurs des arguments  
- L'environnement d'un objet <xref:System.Activities.AsyncCodeActivity> se compose d'arguments définis sur l'activité. Ces arguments sont accessibles à partir de la <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> se substitue à l’aide de le <xref:System.Activities.AsyncCodeActivityContext> paramètre. Il est impossible d’accéder aux arguments dans le délégué, mais les valeurs d’argument ou toutes autres données peuvent être passées dans celui-ci à l’aide de ses paramètres. L'exemple suivant consiste à définir une activité générant un nombre aléatoire qui obtient la limite supérieure inclusive de son argument `Max`. La valeur de l'argument est passée dans le code asynchrone lors de l'appel du délégué.  
+ L’environnement d’un objet <xref:System.Activities.AsyncCodeActivity> se compose d’arguments définis sur l’activité. Ces arguments sont accessibles à partir de la <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> se substitue à l’aide de le <xref:System.Activities.AsyncCodeActivityContext> paramètre. Il est impossible d’accéder aux arguments dans le délégué, mais les valeurs d’argument ou toutes autres données peuvent être passées dans celui-ci à l’aide de ses paramètres. L'exemple suivant consiste à définir une activité générant un nombre aléatoire qui obtient la limite supérieure inclusive de son argument `Max`. La valeur de l'argument est passée dans le code asynchrone lors de l'appel du délégué.  
   
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Planifier des actions ou des activités enfants à l'aide d'AsyncCodeActivity  
- Les activités personnalisées dérivées <xref:System.Activities.AsyncCodeActivity> fournissent une méthode pour effectuer des tâches de façon asynchrone concernant le thread de workflow, mais ne permettent pas de planifier des activités enfants ou des actions. Toutefois, le comportement asynchrone peut être incorporé à la planification des activités enfants via la composition. Une activité asynchrone peut être créée, puis être composée d'une activité dérivée <xref:System.Activities.Activity> ou <xref:System.Activities.NativeActivity> pour fournir le comportement asynchrone et planifier des activités ou actions enfants. Par exemple, une activité peut être créée qui dérive de <xref:System.Activities.Activity>, et qui a comme implémentation un <xref:System.Activities.Statements.Sequence> contenant l'activité asynchrone, ainsi que les autres activités qui implémentent la logique de l'activité. Pour plus d’exemples de composition d’activités à l’aide de <xref:System.Activities.Activity> et <xref:System.Activities.NativeActivity>, consultez [Comment : créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) et [Options de création d’activités](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
+ Les activités personnalisées dérivées <xref:System.Activities.AsyncCodeActivity> fournissent une méthode pour effectuer des tâches de façon asynchrone concernant le thread de workflow, mais ne permettent pas de planifier des activités enfants ou des actions. Toutefois, le comportement asynchrone peut être incorporé à la planification des activités enfants via la composition. Une activité asynchrone peut être créée, puis être composée d'une activité dérivée <xref:System.Activities.Activity> ou <xref:System.Activities.NativeActivity> pour fournir le comportement asynchrone et planifier des activités ou actions enfants. Par exemple, une activité peut être créée qui dérive de <xref:System.Activities.Activity>, et qui a comme implémentation un <xref:System.Activities.Statements.Sequence> contenant l'activité asynchrone, ainsi que les autres activités qui implémentent la logique de l'activité. Pour plus d’exemples de composition d’activités à l’aide de <xref:System.Activities.Activity> et <xref:System.Activities.NativeActivity>, consultez [Comment : Créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) et [Options de la création d’activités](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Action>  
-- <xref:System.Func%602>  
+- <xref:System.Action>
+- <xref:System.Func%602>

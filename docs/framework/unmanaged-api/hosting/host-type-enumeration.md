@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fce759877ad5e3c9041344647781da07ad19a45a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6a2db1aea04ae060623bc39a52ed6990f6137f82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606443"
 ---
 # <a name="hosttype-enumeration"></a>HOST_TYPE, énumération
 Contient des valeurs qui spécifient le type d’hôte qui lance une application.  
@@ -40,18 +40,18 @@ typedef enum {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Lancez l’application à partir d’AppLaunch.exe.<br /><br /> Utilisez cette valeur pour les applications de confiance partielle.|  
-|`HOST_TYPE_CORFLAG`|Lancer l’application directement. Autrement dit, lancez l’application à partir de son propre fichier .exe.<br /><br /> Utilisez cette valeur pour les applications de confiance.|  
+|`HOST_TYPE_APPLAUNCH`|Lancez l’application à partir de AppLaunch.exe.<br /><br /> Utilisez cette valeur pour les applications de confiance partielle.|  
+|`HOST_TYPE_CORFLAG`|Lancez l’application directement. Autrement dit, lancez l’application à partir de son propre fichier .exe.<br /><br /> Utilisez cette valeur pour les applications de confiance.|  
 |`HOST_TYPE_DEFAULT`|Identique à HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

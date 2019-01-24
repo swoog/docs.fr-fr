@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60145611981b53d4778e7c52c6138b6a9b58a592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 557b8a91c969a4c7e7b7a10c2117659a75ef9008
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537289"
 ---
 # <a name="ltapplicationgt-element-net-native"></a>&lt;Application&gt;, élément (.NET Native)
 Sert de conteneur pour les types à l'échelle de l'application et pour les membres de type dont les métadonnées sont disponibles pour la réflexion au moment de l'exécution, et applique la stratégie de réflexion runtime à tous les éléments de programme dans une application.  
@@ -85,8 +85,8 @@ Sert de conteneur pour les types à l'échelle de l'application et pour les memb
   
 -   En tant qu'élément qui définit la stratégie à l'échelle de l'application pour la réflexion, la sérialisation et l'interopérabilité. Les attributs de l’élément `<Application>` définissent la stratégie à l’échelle de l’application, qui peut être substituée par les éléments enfants définis par l’élément `<Application>` ou [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [\<Bibliothèque > élément](../../../docs/framework/net-native/library-element-net-native.md)  
- [\<Directives > élément](../../../docs/framework/net-native/directives-element-net-native.md)  
- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Voir aussi
+- [\<Bibliothèque > élément](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<Directives > élément](../../../docs/framework/net-native/directives-element-net-native.md)
+- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

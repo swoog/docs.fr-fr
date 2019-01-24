@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 2c707d9ab2fd2be611fe0872501b45665d0a349e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6179837a072c9e4de8e0e8c71a2723942d010899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636967"
 ---
 # <a name="application-settings-for-windows-forms"></a>Paramètres d'application pour les Windows Forms
 La fonctionnalité Paramètres d’application de Windows Forms simplifie la création, le stockage et la gestion des applications personnalisées et des préférences utilisateur sur le client. Avec les paramètres d'application, vous pouvez stocker non seulement des données d'application telles que des chaînes de connexion de base de données, mais également des données spécifiques à l'utilisateur, telles que les positions des barres d'outils et les listes des derniers éléments utilisés.  
@@ -27,20 +27,20 @@ La fonctionnalité Paramètres d’application de Windows Forms simplifie la cr�
  [Attributs des paramètres d'application](~/docs/framework/winforms/advanced/application-settings-attributes.md)  
  Répertorie et décrit les attributs qui peuvent être appliqués à une classe wrapper de paramètres d'application ou à ses propriétés de paramètres.  
   
- [Paramètres d'application pour les contrôles personnalisés](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
+ [Application Settings for Custom Controls](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
  Explique ce que vous devez faire pour permettre à vos contrôles personnalisés de conserver les paramètres d'application en cas d'hébergement dans des applications tierces.  
   
- [Comment : créer des paramètres d’application](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
+ [Guide pratique pour Créer des paramètres d’Application](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
  Illustre la création de paramètres d'application qui sont conservés d'une session d'application à une autre.  
   
- [Guide pratique pour valider des paramètres d'application](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
+ [Guide pratique pour Valider les paramètres d’Application](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
  Illustre la validation des paramètres d'application avant qu'ils soient rendus persistants.  
   
 ## <a name="related-topics"></a>Rubriques connexes
 
 [Section de Configuration de Windows Forms](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
-Documents prend en charge les paramètres pour activer la haute résolution dans l’Application Windows Forms en commençant par le 4.7 Framework .NET.
+Documents prennent en charge les paramètres pour activer la haute résolution dans Windows Forms Application en commençant par le .NET Framework 4.7.
 
-## <a name="see-also"></a>Voir aussi  
-  
-[Windows Forms](../index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Windows Forms](../index.md)

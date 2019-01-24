@@ -1,5 +1,5 @@
 ---
-title: "Comment : créer une stratégie d'éditeur"
+title: 'Procédure : Créer une stratégie d’éditeur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530523"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Comment : créer une stratégie d'éditeur
+# <a name="how-to-create-a-publisher-policy"></a>Procédure : Créer une stratégie d’éditeur
 Les fournisseurs d’assemblys peuvent indiquer que les applications doivent utiliser une version plus récente d’un assembly en incluant un fichier de stratégie de serveur de publication avec l’assembly mis à niveau. Le fichier de stratégie d’éditeur spécifie la redirection d’assembly et les paramètres de base de code et utilise le même format qu’un fichier de configuration d’application. Le fichier de stratégie d’éditeur est compilé dans un assembly et placé dans le global assembly cache.  
   
  Il existe trois étapes impliquées dans la création d’une stratégie d’éditeur :  
@@ -55,7 +55,7 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
   
 1.  Tapez la commande suivante à l’invite de commandes :  
   
-     **Al /link :** *publisherPolicyFile* **/out :** *publisherPolicyAssemblyFile* **/keyfile :**  *keyPairFile* **/platform :** *processorArchitecture*  
+     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      Dans cette commande :  
   
@@ -63,7 +63,7 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
   
     -   Le *publisherPolicyAssemblyFile* argument est le nom de l’assembly de stratégie d’éditeur qui résulte de cette commande. Le nom de fichier d’assembly doit respecter le format :  
   
-         **stratégie.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   Le *keyPairFile* argument est le nom du fichier contenant la paire de clés. Vous devez signer l’assembly et l’assembly de stratégie d’éditeur avec la même paire de clés.  
   
@@ -91,7 +91,7 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
   
 1.  Tapez la commande suivante à l’invite de commandes :  
   
-     **gacutil /i***publisherPolicyAssemblyFile*  
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      La commande suivante ajoute `policy.1.0.myAssembly.dll` dans le global assembly cache.  
   
@@ -102,11 +102,11 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
     > [!IMPORTANT]
     >  L’assembly de stratégie de serveur de publication ne peut pas être ajouté au global assembly cache, sauf si le fichier de stratégie de serveur de publication d’origine se trouve dans le même répertoire que l’assembly.  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configuration d'applications](../../../docs/framework/configure-apps/index.md)  
- [Configuration des applications .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [Schéma des paramètres d’exécution](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Redirection des versions d'assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>Voir aussi
+- [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Configuration d'applications](../../../docs/framework/configure-apps/index.md)
+- [Configuration des applications .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Schéma des paramètres d’exécution](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Redirection des versions d'assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653760"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
-Le <xref:System.Windows.Controls.FlowDocumentPageViewer> contrôle permet d’afficher <xref:System.Windows.Documents.FlowDocument> de contenu sur une base par page. Effectuez une comparaison avec le <xref:System.Windows.Controls.FlowDocumentScrollViewer>, qui présente <xref:System.Windows.Documents.FlowDocument> contenu dans une visionneuse de défilement.  
+Le <xref:System.Windows.Controls.FlowDocumentPageViewer> contrôle sert à afficher <xref:System.Windows.Documents.FlowDocument> contenu sur une base par page. Contraste avec le <xref:System.Windows.Controls.FlowDocumentScrollViewer>, qui présente <xref:System.Windows.Documents.FlowDocument> contenu dans une visionneuse de défilement.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Documents.FlowDocument>  
- [Vue d’ensemble des documents dynamiques](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Documents.FlowDocument>
+- [Vue d’ensemble des documents dynamiques](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
+- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

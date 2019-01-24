@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624912"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Spécifie qu'une propriété ou une procédure redéclare une ou plusieurs propriétés ou procédures existantes avec le même nom.  
   
 ## <a name="remarks"></a>Notes  
- *La surcharge* est la pratique consistant à fournir plusieurs définitions pour un nom de propriété ou procédure donné dans la même portée. La redéclaration d’une propriété ou une procédure avec une signature différente est parfois appelée *masquer par signature*.  
+ *La surcharge* consiste à fournir plusieurs définitions pour un nom de propriété ou procédure donné dans la même portée. La redéclaration d’une propriété ou procédure avec une signature différente est parfois appelée *masquage par signature*.  
   
 ## <a name="rules"></a>Règles  
   
 -   **Contexte de déclaration.** Vous pouvez utiliser `Overloads` uniquement dans une instruction de déclaration de propriété ou de procédure.  
   
--   **Modificateurs combinés.** Vous ne pouvez pas spécifier `Overloads` avec [ombres](../../../visual-basic/language-reference/modifiers/shadows.md) dans la même déclaration de procédure.  
+-   **Modificateurs combinés.** Vous ne pouvez pas spécifier `Overloads` avec [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) dans la même déclaration de procédure.  
   
 -   **Différences requises.** Le *signature* dans cette déclaration doit être différente de la signature de chaque propriété ou procédure qu’elle surcharge. La signature comprend le nom de la propriété ou de la procédure ainsi que les éléments suivants :  
   
@@ -73,9 +73,9 @@ Spécifie qu'une propriété ou une procédure redéclare une ou plusieurs propr
   
  [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Surcharge de procédure](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Types génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Guide pratique : définir un opérateur de conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a>Voir aussi
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Surcharge de procédure](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Guide pratique pour Définir un opérateur de Conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

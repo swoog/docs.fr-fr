@@ -1,19 +1,19 @@
 ---
-title: "Comment : fractionner une fenêtre horizontalement à l'aide du concepteur"
+title: 'Procédure : Fractionner une fenêtre horizontalement à l’aide du Concepteur'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], horizontal splitting
 - split windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-ms.openlocfilehash: c2b605a08ea29d1d0a1e92cb2b7e4dc1f2059c26
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3fab2eab07d9c632d10ceb06fbffcfeacfc10df1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535552"
 ---
-# <a name="how-to-split-a-window-horizontally-using-the-designer"></a>Comment : fractionner une fenêtre horizontalement à l'aide du concepteur
+# <a name="how-to-split-a-window-horizontally-using-the-designer"></a>Procédure : Fractionner une fenêtre horizontalement à l’aide du Concepteur
 Cet exemple montre comment le séparateur qui divise le <xref:System.Windows.Forms.SplitContainer> horizontal du contrôle.  
   
 > [!NOTE]
@@ -23,6 +23,6 @@ Cet exemple montre comment le séparateur qui divise le <xref:System.Windows.For
   
 1.  Dans le **propriétés** fenêtre, définissez la <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriété de la <xref:System.Windows.Forms.SplitContainer> le contrôle à <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer, contrôle](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer, contrôle](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

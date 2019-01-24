@@ -2,12 +2,12 @@
 title: Sélection d'un encodeur de message
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44248928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538425"
 ---
 # <a name="choosing-a-message-encoder"></a>Sélection d'un encodeur de message
 Cette rubrique traite des critères permettant de choisir parmi les encodeurs de message sont inclus dans Windows Communication Foundation (WCF) : fichier binaire, texte et Message Transmission Optimization Mechanism (MTOM).  
@@ -41,7 +41,7 @@ Cette rubrique traite des critères permettant de choisir parmi les encodeurs de
 |Prise en charge des outils tiers|La prise en charge d'un encodage inclut le développement et le diagnostic. Des développeurs tiers ont fait un investissement substantiel dans les bibliothèques et trousses à outils permettant de gérer les messages encodés au format POX.|Texte (POX)|  
 |Interopérabilité|Ce facteur fait référence à la capacité d’un encodeur de WCF pour interagir avec les services non-WCF.|Texte<br /><br /> MTOM (partiel)|  
   
-Remarque : lors de l'utilisation de l'encodeur binaire, l'utilisation du paramètre IgnoreWhitespace lors de la création d'un XMLReader n'a aucun effet.  Par exemple, si vous procédez comme suit dans une opération de service :  
+Remarque : Lorsque vous utilisez l’encodeur binaire, à l’aide du paramètre IgnoreWhitespace lors de la création d’un XMLReader aura aucun effet.  Par exemple, si vous procédez comme suit dans une opération de service :  
 
 ```csharp
 public void OperationContract(XElement input)
@@ -84,4 +84,4 @@ Le client et le service doivent accepter envoyer et recevoir des messages compre
   
 ## <a name="see-also"></a>Voir aussi
 
-[Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)

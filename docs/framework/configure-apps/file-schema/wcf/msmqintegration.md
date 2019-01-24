@@ -2,21 +2,21 @@
 title: '&lt;msmqIntegration&gt;'
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-ms.openlocfilehash: 6b1449ec385af2478ee278e9823a005c69ca8dc2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 42197706a0c3f0f1940f8815fe0e41bb609a457a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603051"
 ---
 # <a name="ltmsmqintegrationgt"></a>&lt;msmqIntegration&gt;
 Spécifie un transport MSMQ pour liaison personnalisée.  
   
  \<system.serviceModel>  
-\<liaisons >  
-\<customBinding >  
-\<liaison >  
-\<msmqIntegration >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ Spécifie un transport MSMQ pour liaison personnalisée.
 |maxRetryCycles|Entier indiquant le nombre maximal de cycles de nouvelles tentatives pour la remise de messages à l'application de réception. La valeur par défaut est <xref:System.Int32.MaxValue>.<br /><br /> Un seul cycle de nouvelle tentative tente de remettre un message à une application un certain nombre de fois. Le nombre de tentatives effectuées est défini par l'attribut `maxImmediateRetries`. Si l'application ne parvient pas à consommer le message une fois le nombre de tentatives atteint, le message est envoyé à une file d'attente de nouvelles tentatives de remise. Les cycles de nouvelles tentatives suivants consistent à renvoyer le message de la file d'attente de nouvelles tentatives de remise vers la file d'attente de l'application, afin d'effectuer une nouvelle tentative de remise à l'application après un délai spécifié par l'attribut `retryCycleDelay`. L'attribut `maxRetryCycles` spécifie le nombre de cycles de nouvelles tentatives effectués par l'application pour tenter de remettre le message.|  
 |rejectAfterLastRetry|Valeur booléenne indiquant l'action à effectuer pour un message qui n'a pas pu être remis une fois le nombre maximal de tentatives atteint.<br /><br /> `true` signifie qu'un accusé de réception négatif est renvoyé à l'expéditeur et que le message est abandonné ; `false` indique que le message est envoyé à la file d'attente de messages incohérents. La valeur par défaut est `false`.<br /><br /> Si la valeur est `false`, l'application de réception peut consulter la file d'attente de messages incohérents afin de traiter les messages incohérents (c'est-à-dire les messages qui n'ont pas pu être remis).<br /><br /> MSMQ 3.0 ne prend pas en charge le renvoi d'un accusé de réception négatif à l'expéditeur. Cet attribut ne sera donc pas pris en compte dans cette application.|  
 |retryCycleDelay|<xref:System.TimeSpan> qui indique l'intervalle entre des cycles de nouvelles tentatives de remise d'un message n'ayant pas pu être remis immédiatement. La valeur par défaut est 00:10:00.<br /><br /> Un seul cycle de nouvelle tentative tente de remettre un message à une application de réception un certain nombre de fois. Le nombre de tentatives effectuées est spécifié par la propriété `maxImmediateRetries`. Si l'application ne peut pas consommer le message après le nombre spécifié de nouvelles tentatives immédiates, le message est envoyé à une file d'attente de nouvelles tentatives. Les cycles de nouvelles tentatives suivants consistent à renvoyer le message de la file d'attente de nouvelles tentatives de remise vers la file d'attente de l'application, afin d'effectuer une nouvelle tentative de remise à l'application après un délai spécifié par l'attribut `retryCycleDelay`. Le nombre de cycles de nouvelles tentatives est spécifié par l'attribut `maxRetryCycles`.|  
-|serializationFormat|Indique le formateur utilisé pour sérialiser des objets envoyés comme partie d'un message MSMQ. Les valeurs valides sont les suivantes :<br /><br /> -ActiveX : Le formateur ActiveX est utilisé lors de la sérialisation des objets COM.<br />-Binaire :  Sérialise l’objet en un paquet binaire.<br />-ByteArray :  Sérialise l'objet en un tableau d'octets.<br />-Stream :  Sérialise l'objet en un flux de données.<br />-Xml :  Sérialise l’objet en un paquet XML. La valeur par défaut est XML.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
+|serializationFormat|Indique le formateur utilisé pour sérialiser des objets envoyés comme partie d'un message MSMQ. Les valeurs valides sont les suivantes :<br /><br /> -   ActiveX: Le formateur ActiveX est utilisé lors de la sérialisation des objets COM.<br />-Binaire :  Sérialise l’objet en un paquet binaire.<br />-   ByteArray:  Sérialise l'objet en un tableau d'octets.<br />-Stream :  Sérialise l'objet en un flux de données.<br />-Xml :  Sérialise l’objet en un paquet XML. La valeur par défaut est XML.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
 |timeToLive|<xref:System.TimeSpan> spécifiant la durée de validité des messages avant leur envoi dans la file d'attente de lettres mortes. La valeur par défaut est 1.00:00:00, soit une journée.<br /><br /> Cet attribut est configuré de façon à garantir que les messages dépendants de l'heure n'expirent pas avant d'être traités par les applications de réception. Un message dans une file d'attente qui n'est pas consommé par l'application de réception dans l'intervalle de temps spécifié est considéré comme ayant expiré. Les messages ayant expiré sont envoyés dans une file d'attente spéciale appelée file d'attente de lettres mortes. L'emplacement de cette file d'attente est défini par l'attribut `customDeadLetterQueue` ou par la valeur par défaut appropriée, en fonction des garanties utilisées.|  
 |useMsmqTracing|Valeur booléenne indiquant si les messages traités par cette liaison doivent être suivis. La valeur par défaut est `false`.<br /><br /> Lorsque le suivi est activé, des messages de rapport sont créés et envoyés à la file d'attente de rapports chaque fois que le message quitte ou atteint un ordinateur Message Queuing.|  
 |useSourceJournal|Valeur booléenne indiquant si les copies des messages traités par cette liaison doivent être stockées dans la file d'attente du journal source. La valeur par défaut est `false`.<br /><br /> Les applications en file d'attente souhaitant conserver une trace des messages qui ont quitté la file d'attente sortante de l'ordinateur peuvent copier les messages dans une file d'attente de journal. Une fois qu'un message quitte la file d'attente sortante et qu'un accusé de réception est envoyé par l'ordinateur de destination, une copie du message est conservée dans la file d'attente du journal système de l'ordinateur émetteur.|  
@@ -77,16 +77,16 @@ Spécifie un transport MSMQ pour liaison personnalisée.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Transports](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Choix d’un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Transports](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Choix d’un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

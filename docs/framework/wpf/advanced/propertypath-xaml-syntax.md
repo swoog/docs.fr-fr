@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648751"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath, syntaxe XAML
 Le <xref:System.Windows.PropertyPath> objet prend en charge un ligne de complex [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntaxe permettant de définir les propriétés qui prennent le <xref:System.Windows.PropertyPath> type comme valeur. Cette rubrique explique comment le <xref:System.Windows.PropertyPath> syntaxe comme appliquée aux syntaxes de liaison et d’animation.  
@@ -196,7 +196,7 @@ or
   
  En règle générale, <xref:System.Windows.PropertyPath> est conçu pour utiliser deux constructeurs différents, un pour les utilisations de liaison et les utilisations d’animation plus simples et un pour les utilisations des animations complexes. Utilisez le <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> signature d’une liaison, où l’objet est une chaîne. Utilisez le <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> signature pour les chemins d’animation en une seule étape, où l’objet est un <xref:System.Windows.DependencyProperty>. Utilisez le <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> signature pour les animations complexes. Ce dernier constructeur utilise une chaîne de jeton pour le premier paramètre et un tableau d’objets qui remplissent les positions de la chaîne de jeton pour définir une relation de chemin de propriété.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.PropertyPath>  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Vue d'ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.PropertyPath>
+- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Vue d'ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

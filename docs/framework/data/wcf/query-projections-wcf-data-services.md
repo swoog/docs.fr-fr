@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cd39355fec310bc33a3d02524a4d4cc060dba6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646079"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projections de requête (services de données WCF)
-Projection fournit un mécanisme dans le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] afin de réduire la quantité de données dans le flux retourné par une requête en spécifiant que seules certaines propriétés d’une entité sont retournées dans la réponse. Pour plus d’informations, consultez [OData : Select System Query Option ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
+Projection fournit un mécanisme dans le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] afin de réduire la quantité de données dans le flux retourné par une requête en spécifiant que seules certaines propriétés d’une entité sont retournées dans la réponse. Pour plus d’informations, consultez [OData : Sélectionnez System Query Option ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
   
  Cette rubrique décrit comment définir une projection de requête, quelles sont les exigences pour les types d’entité et de non-entité, la mise à jour des résultats projetés, la création des types projetés et répertorie des considérations relatives à la projection.  
   
@@ -54,7 +54,7 @@ Projection fournit un mécanisme dans le [!INCLUDE[ssODataFull](../../../../incl
   
  De même, les données de type `Customer` sont projetées dans une instance du type d'entité `CustomerAddress` au lieu d'un type anonyme. La projection dans des types anonymes est prise en charge, mais les données sont en lecture seule parce que les types anonymes sont traités comme des types de non-entité.  
   
- Les paramètres de <xref:System.Data.Services.Client.MergeOption> de <xref:System.Data.Services.Client.DataServiceContext> sont utilisés pour la résolution de l'identité pendant la projection de la requête. Cela signifie que si une instance de type `Customer` existe déjà dans <xref:System.Data.Services.Client.DataServiceContext>, une instance `CustomerAddress` avec la même identité suit les règles de résolution de l'identité définies par <xref:System.Data.Services.Client.MergeOption>  
+ Les paramètres de <xref:System.Data.Services.Client.MergeOption> de <xref:System.Data.Services.Client.DataServiceContext> sont utilisés pour la résolution de l'identité pendant la projection de la requête. Cela signifie que si une instance de type `Customer` existe déjà dans <xref:System.Data.Services.Client.DataServiceContext>, une instance `CustomerAddress` avec la même identité suit les règles de résolution de l’identité définies par <xref:System.Data.Services.Client.MergeOption>  
   
 La section suivante décrit les comportements lors de la projection des résultats dans des types d’entité et non à une entité :  
 
@@ -65,9 +65,9 @@ La section suivante décrit les comportements lors de la projection des résulta
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
 
-- Type d’entité : pris en charge
+- Type d’entité : Prise en charge
 
-- Type d’entité : pris en charge
+- Type d’entité : Prise en charge
 
 **Création d’une nouvelle instance projetée à l’aide de constructeurs**
 
@@ -76,9 +76,9 @@ La section suivante décrit les comportements lors de la projection des résulta
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
 
-- Type d’entité : un <xref:System.NotSupportedException> est déclenché.
+- Type d’entité : <xref:System.NotSupportedException> est levée.
 
-- Type d’entité : pris en charge
+- Type d’entité : Prise en charge
 
 **À l’aide de la projection pour transformer une valeur de propriété**
 
@@ -87,9 +87,9 @@ La section suivante décrit les comportements lors de la projection des résulta
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
    
-- Type d’entité : cette transformation n’est pas pris en charge pour les types d’entité, car elle peut entraîner une confusion et remplacer les données dans la source de données qui appartient à une autre entité. <xref:System.NotSupportedException> est levée.
+- Type d’entité : Cette transformation n'est pas prise en charge pour les types d'entité car cela peut engendrer une confusion et remplacer les données de la source de données qui appartient à une autre entité. <xref:System.NotSupportedException> est levée.
 
-- Type d’entité : pris en charge  
+- Type d’entité : Prise en charge  
   
 <a name="considerations"></a>   
 ## <a name="projection-considerations"></a>Considérations sur la projection  
@@ -107,7 +107,7 @@ La section suivante décrit les comportements lors de la projection des résulta
   
 -   Les requêtes de projections de requête sur le client sont traduites pour utiliser l'option de requête `$select` dans l'URI de requête. Lorsqu'une requête avec projection est exécutée sur une version précédente d'[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] qui ne prend pas en charge l'option de requête `$select`, une erreur est retournée. Cela peut également arriver lorsque <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> de <xref:System.Data.Services.DataServiceBehavior> pour le service de données est défini sur une valeur <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Pour plus d’informations, consultez [gestion des versions du Service de données](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
- Pour plus d’informations, consultez [Comment : résultats de la requête](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
+ Pour plus d'informations, voir [Procédure : Projeter des résultats de requête](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Interrogation du service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Interrogation du service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

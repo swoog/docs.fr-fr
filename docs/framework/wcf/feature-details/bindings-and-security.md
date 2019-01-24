@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 9cd180c5e1bd8afff462c380ad3389a78027eb48
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521372"
 ---
 # <a name="bindings-and-security"></a>Liaisons et sécurité
 Les liaisons fournies par le système incluses avec Windows Communication Foundation (WCF) offrent un moyen rapide de programmer des applications WCF. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
@@ -161,7 +161,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
 -   Transport simultané et sécurité des messages (Both).  
   
--   Types d'informations d'identification du client pris en charge : None, Windows, UserName, Certificate, IssuedToken.  
+-   Types d’informations d’identification de client pris en charge : None, Windows, nom d’utilisateur, certificat, IssuedToken.  
   
  L'information d'identification <xref:System.ServiceModel.MessageCredentialType.Certificate> est uniquement prise en charge lorsque le mode de sécurité a la valeur <xref:System.ServiceModel.NetMsmqSecurityMode.Both> ou <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
@@ -205,8 +205,8 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
 |Type|Description|  
 |----------|-----------------|  
 |None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
-|Basic|Authentification de base. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : authentification de base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Authentification Digest. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : authentification de base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Authentification de base. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Digest|Authentification Digest. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Authentification NTLM (NT LAN Manager).|  
 |Windows|Authentification Windows.|  
 |Certificat|Authentification effectuée à l'aide d'un certificat.|  
@@ -223,10 +223,10 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
 |Certificat|Autorise le service à exiger une authentification du client via un certificat.|  
 |IssuedToken|Autorise le service à utiliser un service d'émission de jeton de sécurité afin de fournir un jeton personnalisé.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Sélection d’un type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [Comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sélection d’un type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

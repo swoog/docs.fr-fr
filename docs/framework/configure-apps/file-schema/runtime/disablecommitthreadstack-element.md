@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableCommitThreadStack&gt; élément'
+title: '&lt;disableCommitThreadStack&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69b2c9f3bbd4fb7562272903d3ab78e3a4312298
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 3b02a5365aa2dc2292b0917820782405ba35ad92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534067"
 ---
-# <a name="ltdisablecommitthreadstackgt-element"></a>&lt;disableCommitThreadStack&gt; élément
+# <a name="ltdisablecommitthreadstackgt-element"></a>&lt;disableCommitThreadStack&gt; Element
 Spécifie si la pile des threads complète est validée quand un thread est démarré.  
   
  \<configuration>  
 \<runtime>  
-\<disableCommitThreadStack >  
+\<disableCommitThreadStack>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,6 +73,6 @@ Spécifie si la pile des threads complète est validée quand un thread est dém
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

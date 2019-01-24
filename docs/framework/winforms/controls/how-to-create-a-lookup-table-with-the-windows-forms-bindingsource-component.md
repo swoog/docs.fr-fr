@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer une table de correspondance avec le composant BindingSource Windows Forms'
+title: 'Procédure : Créer une Table de correspondance avec le composant de BindingSource Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,13 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539894"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Comment : créer une table de correspondance avec le composant BindingSource Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procédure : Créer une Table de correspondance avec le composant de BindingSource Windows Forms
 Une table de choix est une table de données ayant une colonne qui affiche les données des enregistrements situés dans une table liée. Dans les procédures suivantes, un contrôle <xref:System.Windows.Forms.ComboBox> permet d'afficher le champ avec la relation de clé étrangère entre la table parent et la table enfant.  
   
  Pour mieux visualiser ces deux tables et cette relation, voici un exemple de table parent et de table enfant :  
@@ -90,8 +91,8 @@ Une table de choix est une table de données ayant une colonne qui affiche les d
   
 8.  Liez les contrôles autres que <xref:System.Windows.Forms.ComboBox> et <xref:System.Windows.Forms.BindingNavigator> aux champs de détails du <xref:System.Windows.Forms.BindingSource> de la table enfant (par exemple `OrdersBindingSource`) à afficher.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.BindingSource>  
- [BindingSource, composant](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [ComboBox, contrôle](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- [Lier des contrôles à des données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.BindingSource>
+- [BindingSource, composant](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [ComboBox, contrôle](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Lier des contrôles à des données dans Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

@@ -2,22 +2,22 @@
 title: '&lt;httpDigest&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 2211c593090d697ae07350fcf7ac491b9d23e2d0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 146260a8f4b51ec51e749408b8351c7e71debab1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510609"
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt;, élément
 Spécifie une information d’identification de type condensat utilisée lors de l’authentification du client à un service.  
   
  \<system.ServiceModel>  
-\<comportements >  
-\<endpointBehaviors >  
-\<comportement >  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
 \<clientCredentials>  
-\<httpDigest >  
+\<httpDigest>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,7 +32,7 @@ Spécifie une information d’identification de type condensat utilisée lors de
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`impersonationLevel`|Définit la préférence d'emprunt d'identité que le client communique au serveur. Le mode d'emprunt d'identité que le client sélectionne n'est pas appliqué sur le serveur. Les valeurs valides sont les suivantes :<br /><br /> -Identification : Le serveur peut obtenir l’identité et les privilèges du client, mais ne peut pas représenter le client.<br />-L’emprunt d’identité : Le serveur peut emprunter l’identité de contexte de sécurité du client sur le système local.<br />-Délégation : Le serveur peut emprunter l’identité de contexte de sécurité du client sur des systèmes distants.<br />-Anonyme : Le serveur ne peut pas emprunter l’identité ou identifier le client.<br />-None : Un niveau d’emprunt d’identité n’est pas affecté.<br /><br /> La valeur par défaut est Identification. Cet attribut est de type <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`impersonationLevel`|Définit la préférence d'emprunt d'identité que le client communique au serveur. Le mode d'emprunt d'identité que le client sélectionne n'est pas appliqué sur le serveur. Les valeurs valides sont les suivantes :<br /><br /> -   Identification: Le serveur peut obtenir l’identité et les privilèges du client, mais ne peut pas représenter le client.<br />-L’emprunt d’identité : Le serveur peut emprunter l’identité de contexte de sécurité du client sur le système local.<br />-Délégation : Le serveur peut emprunter l’identité de contexte de sécurité du client sur des systèmes distants.<br />-Anonyme : Le serveur ne peut pas emprunter l’identité ou identifier le client.<br />-None : Un niveau d’emprunt d’identité n’est pas affecté.<br /><br /> La valeur par défaut est Identification. Cet attribut est de type <xref:System.Security.Principal.TokenImpersonationLevel>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -48,14 +48,14 @@ Spécifie une information d’identification de type condensat utilisée lors de
   
  Cette fonctionnalité doit être activée avec Active Directory sur Windows et les services IIS (Internet Information Services). Pour plus d’informations, consultez [l’authentification Digest dans IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>  
- <xref:System.ServiceModel.Configuration.HttpDigestClientElement>  
- <xref:System.ServiceModel.Security.HttpDigestClientCredential>  
- [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)  
- [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>
+- <xref:System.ServiceModel.Configuration.HttpDigestClientElement>
+- <xref:System.ServiceModel.Security.HttpDigestClientCredential>
+- [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)
+- [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

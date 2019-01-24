@@ -2,19 +2,19 @@
 title: Utilisation d'un éditeur d'expressions personnalisé
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 4eb39fbd51cf4f1914f7fdca545f9c9fd8e83240
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3959fdb5b75ae6e48c19130cf6e825455d8f7103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526910"
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilisation d'un éditeur d'expressions personnalisé
 Un éditeur d'expressions personnalisé peut être implémenté pour fournir une expérience d'édition d'expressions plus riche ou plus simple. Il existe plusieurs scénarios dans lesquels vous souhaiterez peut-être utiliser un éditeur d'expressions personnalisé :  
   
--   Pour assurer la prise en charge d’IntelliSense et d’autres fonctionnalités d’édition riches dans un concepteur de workflow réhébergé. Cette fonctionnalité doit être fournie, car l’éditeur d’expressions par défaut Visual Studio ne peut pas être utilisé dans les applications réhébergées.  
+-   Pour assurer la prise en charge d’IntelliSense et d’autres fonctionnalités d’édition riches dans un concepteur de workflow réhébergé. Cette fonctionnalité doit être fournie, car l’éditeur d’expressions de Visual Studio par défaut ne peut pas être utilisé dans les applications réhébergées.  
   
--   Pour simplifier l’expérience pour les utilisateurs analystes d’entreprise, de modification d’expressions afin qu’ils ne doivent pas, par exemple, pour découvrir Visual Basic ou de traiter les expressions Visual Basic.  
+-   Pour simplifier l’expérience pour les utilisateurs analystes d’entreprise, d’édition d’expressions afin qu’ils ne sont pas, par exemple, nécessaire pour découvrir Visual Basic ou de traiter des expressions Visual Basic.  
   
  Trois étapes de base sont nécessaires pour implémenter un éditeur d'expressions personnalisé :  
   
@@ -278,7 +278,7 @@ namespace WpfApplication1
 ### <a name="notes"></a>Notes  
  Si vous utilisez un **ExpressionTextBox** contrôle dans un concepteur d’activités personnalisées, il n’est pas nécessaire créer et détruire les éditeurs d’expressions à l’aide de la <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> et <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> méthodes de la <xref:System.Activities.Presentation.View.IExpressionEditorService> interface. La classe <xref:System.Activities.Presentation.View.ExpressionTextBox> gère cet aspect pour vous.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Activities.Presentation.View.IExpressionEditorService>  
- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
- [Utilisation d’ExpressionTextBox dans un concepteur d’activités personnalisées](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Activities.Presentation.View.IExpressionEditorService>
+- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
+- [Utilisation d’ExpressionTextBox dans un concepteur d’activités personnalisées](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

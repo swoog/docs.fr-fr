@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642566"
 ---
 # <a name="runtime-directive-policy-settings"></a>Paramètres de stratégie de directive runtime
 > [!NOTE]
@@ -127,6 +127,6 @@ ms.locfileid: "46000984"
 |`Required PublicAndInternal`|Active la stratégie pour les types ou membres publics et internes et garantit que les métadonnées pour les types et membres publics et internes sont toujours disponibles. Ce paramètre est différent de `PublicAndInternal`, qui ne garantit la disponibilité des métadonnées pour les types et membres publics et internes que si la chaîne d'outils détermine qu'elles sont nécessaires.|✓||  
 |`Required All`|Oblige la chaîne d'outils à conserver tous les types et membres, qu'ils soient utilisés ou non, et active la stratégie pour eux.|✓||  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

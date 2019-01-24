@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646917"
 ---
 # <a name="data-contract-versioning"></a>Contrôle de version des contrats de données
-À mesure que les applications évoluent, il peut s'avérer nécessaire de modifier les contrats de données utilisés par les services. Cette rubrique explique comment assigner des versions aux contrats de données. Cette rubrique décrit les mécanismes de contrôle de version des contrats de données. Pour une vue d’ensemble complète et des conseils normatifs de contrôle de version, consultez [meilleures pratiques : contrôle de version de contrat de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+À mesure que les applications évoluent, il peut s'avérer nécessaire de modifier les contrats de données utilisés par les services. Cette rubrique explique comment assigner des versions aux contrats de données. Cette rubrique décrit les mécanismes de contrôle de version des contrats de données. Pour une vue d’ensemble complète et des conseils normatifs de contrôle de version, consultez [meilleures pratiques : Le contrôle de version de contrat de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>Avec rupture et Modifications sans rupture  
  Les modifications apportées à un contrat de données peuvent être avec ou sans rupture. Lorsqu'un contrat de données est modifié sans rupture, une application utilisant l'ancienne version du contrat peut communiquer avec une application utilisant la version plus récente, et vice versa. D'autre part, une modification avec rupture empêche la communication dans une ou les deux directions.  
@@ -115,17 +115,17 @@ ms.locfileid: "43520196"
  La plupart des modifications de collection sont sans rupture car la plupart des types de collections sont interchangeables les uns avec les autres dans le modèle de contrat de données. Toutefois, la personnalisation d'une collection non personnalisée, ou vice versa, est une modification avec rupture. De plus, la modification des paramètres de personnalisation de la collection est une modification avec rupture ; en d’autres termes, la modification de l’espace de noms et du nom de contrat de données, du nom d’élément répétitif, du nom d’élément clé et du nom d’élément de valeur. Pour plus d’informations sur la personnalisation des collections, consultez [Types de collections dans les contrats de données](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Naturellement, la modification du contrat de données de contenu d’une collection (par exemple, la modification d’une liste d’entiers en une liste de chaînes) est une modification avec rupture.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.SerializationException>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- [Rappels de sérialisation avec tolérance de version](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [Bonnes pratiques : gestion des versions des contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Équivalence des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Contrats de données à compatibilité ascendante](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.SerializationException>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- [Rappels de sérialisation avec tolérance de version](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [Meilleures pratiques : Concernant les contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Équivalence des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Contrats de données à compatibilité ascendante](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

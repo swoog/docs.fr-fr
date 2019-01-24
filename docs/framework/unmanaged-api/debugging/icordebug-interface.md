@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 05c95d47d57525aa2aebe16d536b771042600000
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509725"
 ---
 # <a name="icordebug-interface"></a>ICorDebug, interface
 Fournit des méthodes qui permettent aux développeurs de déboguer des applications dans l’environnement du common language runtime (CLR).  
   
 > [!NOTE]
->  Débogage en mode mixte (code managé et natif) n’est pas pris en charge sur Windows 95, Windows 98 ou Windows Millennium Edition ou sur les plateformes non-x86 (par exemple, IA64 et AMD64).  
+>  Le débogage en mode mixte (code managé et natif) n’est pas pris en charge sur Windows 95, Windows 98 ou Windows ME, ou sur les plateformes non x86 (par exemple, IA64 et AMD64).  
   
 ## <a name="methods"></a>Méthodes  
   
@@ -44,21 +44,21 @@ Fournit des méthodes qui permettent aux développeurs de déboguer des applicat
 |[Terminate, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Met fin à la `ICorDebug` objet.|  
   
 ## <a name="remarks"></a>Notes  
- `ICorDebug` représente une boucle de traitement d’événements pour un processus du débogueur. Le débogueur doit attendre le [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) rappel de tous les processus en cours de débogage avant de libérer cette interface.  
+ `ICorDebug` représente une boucle de traitement d’événements pour un processus de débogueur. Le débogueur doit attendre le [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) rappel à partir de tous les processus en cours de débogage avant de libérer cette interface.  
   
- Le `ICorDebug` objet est l’objet initial pour contrôler tout débogage managé supplémentaire. Dans les versions 1.0 et 1.1 du .NET Framework, cet objet a été un `CoClass` objet créé à partir de COM. Dans le .NET Framework version 2.0, cet objet n’est plus un `CoClass` objet. Il doit être créé par le [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) fonction, qui est plus en charge des versions. Cette nouvelle fonction de création permet aux clients d’obtenir une implémentation spécifique de `ICorDebug`, qui émule également une version spécifique de l’API de débogage.  
+ Le `ICorDebug` objet est l’objet initial pour contrôler tout débogage managé supplémentaire. Dans les versions 1.0 et 1.1 du .NET Framework, cet objet a été un `CoClass` objet créé à partir de COM. Dans le .NET Framework version 2.0, cet objet n’est plus un `CoClass` objet. Elle doit être créée par le [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) (fonction), qui est plus version prenant en charge. Cette nouvelle fonction de création permet aux clients d’obtenir une implémentation spécifique de `ICorDebug`, qui émule également une version spécifique de l’API de débogage.  
   
 > [!NOTE]
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

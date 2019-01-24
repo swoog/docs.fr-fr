@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 2b1601bd84e92b5a39c5c4c91fdfe67537720430
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658898"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Modes d'authentification SecurityBindingElement
 Windows Communication Foundation (WCF) fournit plusieurs modes par lequel les clients et les services de s’authentifier entre eux. Vous pouvez créer des éléments de liaison de sécurité pour ces modes d’authentification à l’aide des méthodes statiques sur la classe <xref:System.ServiceModel.Channels.SecurityBindingElement> ou via la configuration. Cette rubrique décrit brièvement les 18 modes d'authentification.  
   
- Pour obtenir un exemple d’utilisation de l’élément pour l’un des modes d’authentification, consultez [Comment : créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Pour obtenir un exemple d’utilisation de l’élément pour l’un des modes d’authentification, consultez [Comment : Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="basic-configuration-programming"></a>Programmation de configuration de base  
  La procédure suivante décrit comment définir le mode d'authentification dans un fichier de configuration.  
@@ -120,6 +120,6 @@ Windows Communication Foundation (WCF) fournit plusieurs modes par lequel les cl
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  Avec ce mode d'authentification, le client s'authentifie à l'aide d'un jeton de nom d'utilisateur qui apparaît au niveau de la couche SOAP sous forme d'un jeton de prise en charge signé ; autrement dit, un jeton signé par la signature de message. Le service est authentifié à l'aide d'un certificat X.509 au niveau de la couche de transport. L’élément de liaison de sécurité est un `TransportSecurityBindingElement` retourné par la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>. Vous pouvez également affecter `authenticationMode` à l'attribut `UserNameOverTransport`.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [Guide pratique pour créer un SecurityBindingElement pour un mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- [Guide pratique pour Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

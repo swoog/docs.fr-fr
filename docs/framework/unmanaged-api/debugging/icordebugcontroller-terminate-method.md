@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7a95f09d1baebed65bae994550431d88ba0dfc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 362ae813846ab31f170ae49288735996eb1e9555
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531757"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate, méthode
-Termine le processus avec le code de sortie spécifié.  
+Met fin au processus avec le code de sortie spécifié.  
   
 > [!NOTE]
 >  Cette méthode est un wrapper pour Win32 `TerminateProcess` (fonction). Par conséquent, `Terminate` utilise le code de sortie de la même façon que Win32 `TerminateProcess` utilise la fonction.  
@@ -40,7 +40,7 @@ HRESULT Terminate (
   
 #### <a name="parameters"></a>Paramètres  
  `exitCode`  
- [in] Valeur numérique qui est le code de sortie. Les valeurs numériques valides sont définies dans Winbase.h.  
+ [in] Valeur numérique qui est le code de sortie. Les valeurs numériques valides sont définis dans Winbase.h.  
   
 ## <a name="remarks"></a>Notes  
  Si le processus est arrêté lorsque `Terminate` est appelée, le processus doit être poursuivi à l’aide de la [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) méthode afin que le débogueur reçoive confirmation de l’arrêt via le [ ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) ou [ICorDebugManagedCallback::ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) rappel.  
@@ -49,13 +49,13 @@ HRESULT Terminate (
 >  Cette méthode n’est pas implémentée par un domaine d’application. Autrement dit, il n’est pas implémentée à le <xref:System.AppDomain> niveau.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- 
+## <a name="see-also"></a>Voir aussi
+

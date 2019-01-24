@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45619173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609796"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Dans la mesure où cet appel n'est pas attendu, la méthode actuelle continue de s'exécuter avant la fin de l'appel.
 Cet appel n’étant pas attendu, l’exécution de la méthode actuelle continue avant la fin de l’appel. Envisagez d’appliquer l’opérateur « Await » au résultat de l’appel.  
@@ -25,7 +25,7 @@ Cet appel n’étant pas attendu, l’exécution de la méthode actuelle continu
   
  Par défaut, ce message est un avertissement. Pour plus d’informations sur le masquage des avertissements ou le traitement des avertissements en tant qu’erreurs, consultez [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **ID d’erreur :** BC42358  
+ **ID d’erreur :** BC42358  
   
 ### <a name="to-address-this-warning"></a>Pour traiter cet avertissement  
   
@@ -117,7 +117,7 @@ Cet appel n’étant pas attendu, l’exécution de la méthode actuelle continu
   
      Une fenêtre simple contenant un bouton et une zone de texte apparaît dans la vue **Design** de MainWindow.xaml.  
   
-     Pour plus d’informations sur le concepteur XAML, consultez [Création d’une interface utilisateur à l’aide du concepteur XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Pour plus d’informations sur la création de votre propre interface utilisateur simple, consultez les sections "Pour créer une application WPF" et "Pour concevoir une simple fenêtre MainWindow WPF" de la [Procédure pas à pas : accès au web avec Async et Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+     Pour plus d’informations sur le concepteur XAML, consultez [Création d’une interface utilisateur à l’aide du concepteur XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Pour plus d’informations sur la création de votre propre interface utilisateur simple, consultez le « pour créer une application WPF » et « pour concevoir une simple fenêtre MainWindow WPF » sections de [procédure pas à pas : Accès au web avec Async et Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 4.  Remplacez le code situé dans MainWindow.xaml.vb par le code suivant.  
   
@@ -205,5 +205,5 @@ Cet appel n’étant pas attendu, l’exécution de la méthode actuelle continu
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Await (opérateur)](../../../visual-basic/language-reference/operators/await-operator.md)  
+- [Await (opérateur)](../../../visual-basic/language-reference/operators/await-operator.md)
 - [Programmation asynchrone avec Async et Await](../../../visual-basic/programming-guide/concepts/async/index.md)

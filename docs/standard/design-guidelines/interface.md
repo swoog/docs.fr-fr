@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
 author: KrzysztofCwalina
-ms.openlocfilehash: a017b34ab410824e3ddac4365e5711840fb50031
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1f982aa37f92b7270725574d949989ca120297d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660145"
 ---
 # <a name="interface-design"></a>Conception d'interfaces
 Bien que la plupart des API sont mieux modélisées au moyen des classes et structs, il existe des cas dans lequel les interfaces sont plus appropriées ou sont la seule option.  
@@ -50,5 +50,5 @@ Bien que la plupart des API sont mieux modélisées au moyen des classes et stru
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Instructions pour la conception des types](../../../docs/standard/design-guidelines/type.md)  
+- [Instructions pour la conception des types](../../../docs/standard/design-guidelines/type.md)
 - [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

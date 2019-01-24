@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: bf81384b0cecfd1ee3d438e4463949381279a181
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 780e67cf54c0bec230d5b052b877cf97a76d3f6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641120"
 ---
 # <a name="istrue-operator-visual-basic"></a>Opérateur IsTrue (Visual Basic)
 Détermine si une expression est `True`.  
@@ -37,14 +37,14 @@ Détermine si une expression est `True`.
  Si vous n’avez pas défini de conversion en `Boolean` ou un `IsTrue` opérateur, le compilateur signale une erreur.  
   
 > [!NOTE]
->  Le `IsTrue` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsque son opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, veillez à ce que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  Le `IsTrue` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsque son opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, veillez à ce que vous comprenez son comportement redéfini. Pour plus d'informations, consultez [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant définit le contour d’une structure qui contient les définitions pour le `IsFalse` et `IsTrue` opérateurs.  
   
  [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IsFalse (opérateur)](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [Guide pratique : définir un opérateur](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [OrElse (opérateur)](../../../visual-basic/language-reference/operators/orelse-operator.md)
+## <a name="see-also"></a>Voir aussi
+- [IsFalse (opérateur)](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [Guide pratique pour Définir un opérateur](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [OrElse (opérateur)](../../../visual-basic/language-reference/operators/orelse-operator.md)

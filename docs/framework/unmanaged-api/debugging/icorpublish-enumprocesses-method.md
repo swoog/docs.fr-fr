@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2779138a0999e34ad6424d76ddfebbcfdf611d58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3af824a23d683f4d450ef6f60fd407928c41d51e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536956"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses, méthode
-Obtient un énumérateur pour les processus managés en cours d’exécution sur cet ordinateur.  
+Obtient un énumérateur pour les processus gérés en cours d’exécution sur cet ordinateur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,18 +44,18 @@ HRESULT EnumProcesses (
  Un pointeur vers l’adresse d’un [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) instance qui est l’énumérateur des processus.  
   
 ## <a name="remarks"></a>Notes  
- Collection de l’énumérateur de processus est basée sur un instantané des processus qui s’exécutent lorsque le `EnumProcesses` méthode est appelée. L’énumérateur n’inclut pas tous les processus qui se terminer avant ou démarrer après `EnumProcesses` est appelée.  
+ Collection de l’énumérateur de processus est basée sur un instantané des processus en cours d’exécution lorsque le `EnumProcesses` méthode est appelée. L’énumérateur n’inclut pas tous les processus qui termine avant ou démarrent après `EnumProcesses` est appelée.  
   
- Le `EnumProcesses` méthode peut être appelée plusieurs fois sur ce [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) instance pour créer une nouvelle collection à jour de processus. Les collections existantes ne seront pas affectées par les appels suivants de la `EnumProcesses` (méthode).  
+ Le `EnumProcesses` méthode peut être appelée plusieurs fois sur ce [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) instance pour créer une nouvelle collection à jour de processus. Les collections existantes ne seront pas affectées par les appels ultérieurs de le `EnumProcesses` (méthode).  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorPub.idl, CorPub.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorPublish, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorPublish, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

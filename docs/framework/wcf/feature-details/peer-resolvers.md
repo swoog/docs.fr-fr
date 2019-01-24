@@ -2,12 +2,12 @@
 title: Programmes de résolution d'homologue
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 01320d98953c8fdc057aeec840ace4b818fcf115
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b16358d05b9e457b4542e41297908e225885dad9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496843"
 ---
 # <a name="peer-resolvers"></a>Programmes de résolution d'homologue
 Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d'autres nœuds. Les adresses IP sont obtenues en contactant un service de résolution, qui prend l'ID de la maille et retourne une liste d'adresses correspondant aux nœuds enregistrés sous cet ID de maille particulier. Le programme de résolution conserve une liste des adresses inscrites, qu'il crée en inscrivant chaque nœud de la maille avec le service.  
@@ -15,7 +15,7 @@ Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d
  Vous pouvez spécifier le service PeerResolver à utiliser par le biais de la propriété `Resolver` du <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
 ## <a name="supported-peer-resolvers"></a>Programmes de résolution de pair pris en charge  
- Le canal homologue prend en charge deux types de programmes de résolution : le protocole PNRP (Peer Name Resolution Protocol) et les services de résolution personnalisés.  
+ Canal homologue prend en charge deux types de programmes de résolution : PNRP Peer Name Resolution Protocol () et les services de résolution personnalisés.  
   
  Par défaut, le canal homologue utilise le service de résolution de pair PNRP pour la découverte d'homologues et de voisins dans la maille. Pour les situations/plateformes où PNRP n’est pas disponible ou possible, Windows Communication Foundation (WCF) fournit un service de découverte de remplacement, basé sur le serveur - la <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Vous pouvez également définir explicitement un service de résolution personnalisé en écrivant une classe qui implémente l'interface <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
   
@@ -25,7 +25,7 @@ Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d
 ### <a name="custom-resolver-services"></a>Services de résolution personnalisés  
  Lorsque le service PNRP n'est pas disponible ou que vous souhaitez contrôler entièrement la maille, vous pouvez utiliser un service de résolution serveur personnalisé. Vous pouvez définir explicitement ce service en écrivant une classe de programme de résolution qui implémente l'interface <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>, ou en utilisant l'implémentation par défaut fournie, <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
   
- Sous l'implémentation par défaut du service, les inscriptions des clients expirent au bout d'un certain délai si les clients n'actualisent pas leur inscription explicitement. Les clients qui utilisent le service de résolution doivent connaître la limite supérieure de la latence client-serveur pour pourvoir actualiser les inscriptions en temps opportun. Cela implique de choisir un délai d'actualisation approprié (`RefreshInterval`) sur le service de résolution. (Pour plus d’informations, consultez [à l’intérieur de la CustomPeerResolverService : inscriptions des clients](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md).)  
+ Sous l'implémentation par défaut du service, les inscriptions des clients expirent au bout d'un certain délai si les clients n'actualisent pas leur inscription explicitement. Les clients qui utilisent le service de résolution doivent connaître la limite supérieure de la latence client-serveur pour pourvoir actualiser les inscriptions en temps opportun. Cela implique de choisir un délai d'actualisation approprié (`RefreshInterval`) sur le service de résolution. (Pour plus d’informations, consultez [à l’intérieur de la CustomPeerResolverService : Les enregistrements de clients](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md).)  
   
  Le writer d'applications doit également envisager de sécuriser la connexion entre les clients et le service de résolution personnalisé. Pour cela, vous pouvez spécifier les paramètres de sécurité sur <xref:System.ServiceModel.NetTcpBinding> que les clients utilisent pour contacter le service de résolution. Vous devez spécifier des informations d'identification (le cas échéant) sur la `ChannelFactory` qui permet de créer le canal homologue. Ces informations d'identification sont passées à la `ChannelFactory` qui permet de créer des canaux dans le programme de résolution personnalisé.  
   
@@ -35,9 +35,9 @@ Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d
  Pour une démonstration de la façon d’implémenter un programme de résolution personnalisé, consultez [homologue canal homologue programme de résolution personnalisé](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Dans CustomPeerResolverService : inscriptions des clients](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Dans CustomPeerResolverService : Enregistrements de clients](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Concepts de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Sécurité de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [Création d’une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Voir aussi
+- [Concepts de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Sécurité de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
+- [Création d’une application de canal homologue](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

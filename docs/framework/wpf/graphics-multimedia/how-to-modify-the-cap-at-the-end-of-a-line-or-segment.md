@@ -1,19 +1,19 @@
 ---
-title: "Comment : modifier l'embout à la fin d'une ligne ou d'un segment"
+title: "Procédure : Modifier l'embout à la fin d'une ligne ou d'un segment"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Shape elements [WPF], ends
 - Shape elements [WPF], caps
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-ms.openlocfilehash: aef85383a10629eb42f51ea86305636fd90600cb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9476fad503cf761672ae8460fcffb860ff683310
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645013"
 ---
-# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Comment : modifier l'embout à la fin d'une ligne ou d'un segment
+# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Procédure : Modifier l'embout à la fin d'une ligne ou d'un segment
 Cet exemple montre comment modifier la forme au début ou à la fin d’une ouverture <xref:System.Windows.Shapes.Shape> élément. Pour modifier l’embout au début d’une ouverture <xref:System.Windows.Shapes.Shape>, utilisez son <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> propriété. Pour modifier l’embout à la fin d’une ouverture <xref:System.Windows.Shapes.Shape>, utilisez son <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> propriété. Pour afficher les embouts de ligne disponibles, consultez le <xref:System.Windows.Media.PenLineCap> énumération.  
   
 > [!NOTE]
@@ -26,6 +26,6 @@ Cet exemple montre comment modifier la forme au début ou à la fin d’une ouve
   
  Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Shapes.Polyline>  
- <xref:System.Windows.Media.PenLineCap>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Shapes.Polyline>
+- <xref:System.Windows.Media.PenLineCap>

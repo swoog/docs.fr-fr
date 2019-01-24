@@ -1,23 +1,23 @@
 ---
-title: '&lt;UserNameAuthentication&gt;'
+title: '&lt;userNameAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 3ade257a81e218fa123a08624123af614df84956
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b8a85a3b2699aa88db24d1f7afee3de67dbf39b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656639"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
+# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
 Spécifie les informations d'identification d'un service selon le nom d'utilisateur et le mot de passe.  
   
  \<system.ServiceModel>  
-\<comportements >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<comportement >  
+\<behavior>  
 \<serviceCredentials>  
-\<userNameAuthentication >  
+\<userNameAuthentication>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ Spécifie les informations d'identification d'un service selon le nom d'utilisat
 |`includeWindowsGroups`|Valeur booléenne qui spécifie si les groupes Windows sont inclus au contexte de sécurité. La valeur par défaut est `true`.<br /><br /> L'affectation de la valeur `true` à cet attribut a un impact sur les performances du fait qu'elle provoque une expansion complète du groupe. Affectez la valeur `false` à cette propriété s'il n'est pas nécessaire d'établir la liste des groupes auxquels appartient un utilisateur.|  
 |`maxCacheLogonTokens`|Entier qui spécifie le nombre maximal de jetons d'ouverture de session à mettre en cache. Cette valeur doit être supérieure à zéro. La valeur par défaut est 128.|  
 |`membershipProviderName`|Lorsque l'attribut `clientCredentialType` d'une liaison a la valeur `username`, le nom d'utilisateur est mappé aux comptes Windows. Vous pouvez substituer ce comportement à l'aide de cet attribut, qui est une chaîne contenant le nom de la valeur <xref:System.Web.Security.MembershipProvider> qui fournit le mécanisme de validation du mot de passe pertinent.|  
-|`userNamePasswordValidationMode`|Spécifie la manière dont le mot de passe de nom d'utilisateur est validé. Les valeurs valides sont les suivantes :<br /><br /> -Windows<br />-MembershipProvider<br />-Custom<br /><br /> Le paramètre par défaut est Windows. Cet attribut est de type <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
+|`userNamePasswordValidationMode`|Spécifie la manière dont le mot de passe de nom d'utilisateur est validé. Les valeurs valides sont les suivantes :<br /><br /> -   Windows<br />-   MembershipProvider<br />-Custom<br /><br /> Le paramètre par défaut est Windows. Cet attribut est de type <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -60,8 +60,8 @@ Spécifie les informations d'identification d'un service selon le nom d'utilisat
   
  Si aucun des liaisons utilisées par un service n'est configurée pour utiliser l'authentification Windows par nom d'utilisateur/mot de passe, les paramètres en rapport avec la mise en cache des jetons d'ouverture de session sont ignorés. Il s'agit notamment de `cacheLogonTokenLifetime`, `cacheLogonTokens` et `maxCacheLogonTokens`.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.UserNameServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.UserNameServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>

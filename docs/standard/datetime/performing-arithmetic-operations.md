@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2a50823b812541786cf1bebfd6b1262ce2e9314
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503156"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Exécution d’opérations arithmétiques avec des dates et heures
 
@@ -78,7 +78,7 @@ Le <xref:System.TimeZoneInfo> classe inclut plusieurs méthodes de conversion qu
 
 Pour plus d’informations, consultez [conversion d’heures entre fuseaux horaires](../../../docs/standard/datetime/converting-between-time-zones.md).
 
-Le <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> classe ne fournit pas de méthodes qui appliquent automatiquement des règles d’ajustement lorsque vous effectuez la date et l’heure arithmétique. Toutefois, vous pouvez convertir l’heure d’un fuseau horaire en heure UTC, effectuer l’opération arithmétique, puis reconvertir l’heure UTC dans l’heure du fuseau horaire. Pour plus d’informations, consultez [Comment : utiliser des fuseaux horaires dans les date et heure arithmétique](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
+Le <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> classe ne fournit pas de méthodes qui appliquent automatiquement des règles d’ajustement lorsque vous effectuez la date et l’heure arithmétique. Toutefois, vous pouvez convertir l’heure d’un fuseau horaire en heure UTC, effectuer l’opération arithmétique, puis reconvertir l’heure UTC dans l’heure du fuseau horaire. Pour plus d’informations, consultez [Comment : Utiliser des fuseaux horaires dans les date et heure arithmétique](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
 
 Par exemple, le code suivant est semblable au code précédent qui ajoutait deux heures trente à 2:00, le 9 mars 2008. Toutefois, comme il convertit l’heure du Centre des États-Unis en heure UTC avant d’effectuer les opérations arithmétiques de date et d’heure, puis reconvertit le résultat UTC en heure du Centre, l’heure résultante reflète le passage du fuseau horaire du Centre des États-Unis à l’heure d’été.
 
@@ -87,5 +87,5 @@ Par exemple, le code suivant est semblable au code précédent qui ajoutait deux
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
-* [Guide pratique pour utiliser des fuseaux horaires dans des opérations arithmétiques de date et d’heure](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Guide pratique pour Utiliser des fuseaux horaires dans les date et heure arithmétique](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

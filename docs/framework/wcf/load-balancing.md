@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660747"
 ---
 # <a name="load-balancing"></a>Équilibrage de charge
-Un moyen d’augmenter la capacité des applications Windows Communication Foundation (WCF) est mise à l’échelle les en les déployant dans une batterie de serveurs à charge équilibrée. Les applications WCF peuvent être équilibrée à l’aide de techniques, y compris les équilibreurs de charge logicielle tels Windows Network Load Balancing d’équilibrage de charge standard, ainsi que des appareils d’équilibrage de la charge matérielle.  
+Une pour augmenter la capacité d’applications Windows Communication Foundation (WCF) consiste à les mettre à l’échelle en les déployant dans une batterie de serveurs avec équilibrage de charge. Les applications WCF peuvent être à charge équilibrée à l’aide de techniques, y compris les équilibreurs de charge logicielle tels Windows Network Load Balancing d’équilibrage de charge standard, ainsi que des appareils d’équilibrage de charge en fonction du matériel.  
   
- Les sections suivantes traitent de considérations sur les applications WCF générées à l’aide de diverses liaisons fournies par le système d’équilibrage de charge.  
+ Les sections suivantes décrivent des remarques pour les applications WCF créées à l’aide de diverses liaisons fournies par le système d’équilibrage de charge.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Équilibrage de charge avec la liaison HTTP de base  
- Du point de vue de l’équilibrage de charge, les applications WCF qui communiquent à l’aide de la <xref:System.ServiceModel.BasicHttpBinding> sont identiques à celles des autres types communs de HTTP trafic réseau (statique contenu HTML, pages ASP.NET ou Services Web ASMX). Canaux WCF qui utilisent cette liaison sont fondamentalement sans état et terminent leurs connexions lorsque le canal se ferme. C'est la raison pour laquelle <xref:System.ServiceModel.BasicHttpBinding> fonctionne bien avec les techniques d'équilibrage de charge HTTP existantes.  
+ Du point de vue de l’équilibrage de charge, les applications WCF qui communiquent à l’aide de la <xref:System.ServiceModel.BasicHttpBinding> ne diffèrent que d’autres types courants de HTTP trafic réseau (statique contenu HTML, pages ASP.NET ou Services Web ASMX). Canaux WCF qui utilisent cette liaison sont fondamentalement sans état et terminent leurs connexions lorsque le canal se ferme. C'est la raison pour laquelle <xref:System.ServiceModel.BasicHttpBinding> fonctionne bien avec les techniques d'équilibrage de charge HTTP existantes.  
   
  Par défaut, <xref:System.ServiceModel.BasicHttpBinding> envoie un en-tête HTTP de connexion dans les messages contenant une valeur `Keep-Alive`, ce qui permet aux clients d'établir des connexions persistantes aux services qui les prennent en charge. Cette configuration offre un débit supérieur car les connexions précédemment établies peuvent être réutilisées pour envoyer les messages suivants au même serveur. Toutefois, la réutilisation des connexions peut provoquer une forte association des clients à un serveur spécifique dans la batterie à charge équilibrée, ce qui réduit l'efficacité de l'équilibrage de charge tourniquet. Si vous ne souhaitez pas ce type de comportement, `Keep-Alive` HTTP peut être désactivé sur le serveur à l'aide de la propriété <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> avec <xref:System.ServiceModel.Channels.CustomBinding> ou <xref:System.ServiceModel.Channels.Binding> défini par l'utilisateur. L'exemple suivant montre comment procéder à l'aide de la configuration :  
   
@@ -77,12 +77,12 @@ Un moyen d’augmenter la capacité des applications Windows Communication Found
 </configuration>  
 ```  
   
- Pour plus d’informations sur les points de terminaison par défaut, les liaisons et comportements, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Pour plus d’informations sur les points de terminaison, les liaisons et les comportements par défaut, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [Configuration simplifiée pour les services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Équilibrage de charge avec les liaisons WSHttp et WSDualHttp  
  <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.WSDualHttpBinding> peuvent tous deux faire l'objet d'un équilibrage de charge à l'aide des techniques d'équilibrage de charge HTTP sous réserve que plusieurs modifications soient apportées à la configuration de liaison par défaut.  
   
--   Désactivez l'établissement du contexte de sécurité : pour ce faire, affectez <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> a la propriété <xref:System.ServiceModel.WSHttpBinding> de `false`. Si des sessions de sécurité sont requises, il est également possible d’utiliser des sessions de sécurité avec état, comme décrit dans la [Sessions sécurisées](../../../docs/framework/wcf/feature-details/secure-sessions.md) rubrique. Les sessions de sécurité avec état permettent au service de rester sans état car l’ensemble de l’état de la session de sécurité est transmis avec chaque demande dans le cadre du jeton de sécurité de protection. Notez que pour activer une session de sécurité avec état, il est nécessaire d'utiliser <xref:System.ServiceModel.Channels.CustomBinding> ou <xref:System.ServiceModel.Channels.Binding> défini par l'utilisateur car les paramètres de configuration requis ne sont pas exposés sur <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.WSDualHttpBinding> qui sont fournis par le système.  
+-   Désactivez l'établissement du contexte de sécurité : pour ce faire, affectez <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> a la propriété <xref:System.ServiceModel.WSHttpBinding> de `false`. Si les sessions de sécurité sont nécessaires, il est également possible d’utiliser des sessions de sécurité avec état, comme décrit dans la [Sessions sécurisées](../../../docs/framework/wcf/feature-details/secure-sessions.md) rubrique. Les sessions de sécurité avec état permettent au service de rester sans état car l’ensemble de l’état de la session de sécurité est transmis avec chaque demande dans le cadre du jeton de sécurité de protection. Notez que pour activer une session de sécurité avec état, il est nécessaire d'utiliser <xref:System.ServiceModel.Channels.CustomBinding> ou <xref:System.ServiceModel.Channels.Binding> défini par l'utilisateur car les paramètres de configuration requis ne sont pas exposés sur <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.WSDualHttpBinding> qui sont fournis par le système.  
   
 -   N'utilisez pas de session fiable. Cette fonctionnalité est désactivée par défaut.  
   
@@ -91,5 +91,5 @@ Un moyen d’augmenter la capacité des applications Windows Communication Found
   
  Pour de meilleures performances dans les scénarios à charge équilibrée, utilisez <xref:System.ServiceModel.NetTcpSecurity> (<xref:System.ServiceModel.SecurityMode.Transport> ou <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>).  
   
-## <a name="see-also"></a>Voir aussi  
- [Bonnes pratiques pour l’hébergement dans Internet Information Services](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+## <a name="see-also"></a>Voir aussi
+- [Bonnes pratiques pour l’hébergement dans Internet Information Services](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

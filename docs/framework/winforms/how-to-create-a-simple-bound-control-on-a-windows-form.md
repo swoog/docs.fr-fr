@@ -1,18 +1,18 @@
 ---
-title: 'Comment : créer un contrôle à liaison simple dans un Windows Form'
+title: 'Procédure : Créer un contrôle de liaison Simple dans un formulaire Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643570"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Comment : créer un contrôle à liaison simple dans un Windows Form
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procédure : Créer un contrôle de liaison Simple dans un formulaire Windows
 Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle qu’une valeur de colonne à partir d’une table de dataset dans un contrôle. Vous pouvez créer une liaison simple n’importe quelle propriété d’un contrôle à une valeur de données.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle
     > [!NOTE]
     >  Étant donné que les contrôles de liaison simple affichent uniquement un seul élément de données, il est très courant d’inclure une logique de navigation dans un formulaire Windows avec des contrôles de liaison simple.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.Binding>  
- [Liaison de données Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.Binding>
+- [Liaison de données Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
