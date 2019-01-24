@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0922a27dff8d7958d60b4cf225143a96f1a6c351
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d50aa8a5cc98ff966cdd42061cbead22611becfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680283"
 ---
-# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="15994-102">ICorDebugEditAndContinueErrorInfo, interface</span><span class="sxs-lookup"><span data-stu-id="15994-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
-<span data-ttu-id="15994-103">`ICorDebugEditAndContinueErrorInfo` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="15994-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="15994-104">N'utilisez pas cette interface.</span><span class="sxs-lookup"><span data-stu-id="15994-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="8aac0-102">ICorDebugEditAndContinueErrorInfo, interface</span><span class="sxs-lookup"><span data-stu-id="8aac0-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
+<span data-ttu-id="8aac0-103">`ICorDebugEditAndContinueErrorInfo` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="8aac0-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="8aac0-104">N'utilisez pas cette interface.</span><span class="sxs-lookup"><span data-stu-id="8aac0-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15994-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="15994-105">See Also</span></span>  
- [<span data-ttu-id="15994-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="15994-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="8aac0-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8aac0-105">See also</span></span>
+- [<span data-ttu-id="8aac0-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="8aac0-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

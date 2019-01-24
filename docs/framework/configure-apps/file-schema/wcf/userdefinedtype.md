@@ -2,22 +2,22 @@
 title: '&lt;userDefinedType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7c8b8e0403fe108f4e8d25dd1de274acc40c9fcc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1a4f371737e9e801f3b929f4d65ac310d5fe0e28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642946"
 ---
-# <a name="ltuserdefinedtypegt"></a><span data-ttu-id="6d2f4-102">&lt;userDefinedType&gt;</span><span class="sxs-lookup"><span data-stu-id="6d2f4-102">&lt;userDefinedType&gt;</span></span>
-<span data-ttu-id="6d2f4-103">Représente un type défini par l'utilisateur (UDT) à inclure dans le contrat de service.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-103">Represents a User Defined Type (UDT) that is to be included in the service contract.</span></span>  
+# <a name="ltuserdefinedtypegt"></a><span data-ttu-id="fc59d-102">&lt;userDefinedType&gt;</span><span class="sxs-lookup"><span data-stu-id="fc59d-102">&lt;userDefinedType&gt;</span></span>
+<span data-ttu-id="fc59d-103">Représente un type défini par l'utilisateur (UDT) à inclure dans le contrat de service.</span><span class="sxs-lookup"><span data-stu-id="fc59d-103">Represents a User Defined Type (UDT) that is to be included in the service contract.</span></span>  
   
- <span data-ttu-id="6d2f4-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="6d2f4-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="6d2f4-105">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="6d2f4-105">\<comContracts></span></span>  
-<span data-ttu-id="6d2f4-106">\<comContract ></span><span class="sxs-lookup"><span data-stu-id="6d2f4-106">\<comContract></span></span>  
-<span data-ttu-id="6d2f4-107">\<userDefinedTypes ></span><span class="sxs-lookup"><span data-stu-id="6d2f4-107">\<userDefinedTypes></span></span>  
+ <span data-ttu-id="fc59d-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="fc59d-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="fc59d-105">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="fc59d-105">\<comContracts></span></span>  
+<span data-ttu-id="fc59d-106">\<comContract></span><span class="sxs-lookup"><span data-stu-id="fc59d-106">\<comContract></span></span>  
+<span data-ttu-id="fc59d-107">\<userDefinedTypes></span><span class="sxs-lookup"><span data-stu-id="fc59d-107">\<userDefinedTypes></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d2f4-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6d2f4-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc59d-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fc59d-108">Syntax</span></span>  
   
 ```xml  
 <comContracts>
@@ -33,33 +33,33 @@ ms.locfileid: "54148732"
 </comContracts>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6d2f4-109">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="6d2f4-109">Attributes and Elements</span></span>  
- <span data-ttu-id="6d2f4-110">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fc59d-109">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="fc59d-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="fc59d-110">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="fc59d-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6d2f4-111">Attributs</span><span class="sxs-lookup"><span data-stu-id="6d2f4-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fc59d-111">Attributs</span><span class="sxs-lookup"><span data-stu-id="fc59d-111">Attributes</span></span>  
   
-|<span data-ttu-id="6d2f4-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="6d2f4-112">Attribute</span></span>|<span data-ttu-id="6d2f4-113">Description</span><span class="sxs-lookup"><span data-stu-id="6d2f4-113">Description</span></span>|  
+|<span data-ttu-id="fc59d-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="fc59d-112">Attribute</span></span>|<span data-ttu-id="fc59d-113">Description</span><span class="sxs-lookup"><span data-stu-id="fc59d-113">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="6d2f4-114">Attribut facultatif qui contient une chaîne fournissant le nom de type lisible.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-114">An optional attribute that contains a string that provides the readable type name.</span></span> <span data-ttu-id="6d2f4-115">Il n'est pas utilisé par l'exécution mais aide le lecteur à distinguer les types.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-115">This is not used by the runtime but helps a reader to distinguish the types.</span></span>|  
-|`TypeDefID`|<span data-ttu-id="6d2f4-116">Chaîne GUID qui identifie le type UDT spécifique dans la bibliothèque de types inscrite.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-116">A GUID string that identifies the specific UDT type within the registered type library.</span></span>|  
-|`TypeLibID`|<span data-ttu-id="6d2f4-117">Chaîne GUID qui identifie la bibliothèque de types inscrite définissant le type.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-117">A GUID string that identifies the registered type library that defines the type.</span></span>|  
-|`TypeLibVersion`|<span data-ttu-id="6d2f4-118">Chaîne qui identifie la version de la bibliothèque de types définissant le type.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-118">A string that identifies the type library version that defines the type.</span></span>|  
+|`name`|<span data-ttu-id="fc59d-114">Attribut facultatif qui contient une chaîne fournissant le nom de type lisible.</span><span class="sxs-lookup"><span data-stu-id="fc59d-114">An optional attribute that contains a string that provides the readable type name.</span></span> <span data-ttu-id="fc59d-115">Il n'est pas utilisé par l'exécution mais aide le lecteur à distinguer les types.</span><span class="sxs-lookup"><span data-stu-id="fc59d-115">This is not used by the runtime but helps a reader to distinguish the types.</span></span>|  
+|`TypeDefID`|<span data-ttu-id="fc59d-116">Chaîne GUID qui identifie le type UDT spécifique dans la bibliothèque de types inscrite.</span><span class="sxs-lookup"><span data-stu-id="fc59d-116">A GUID string that identifies the specific UDT type within the registered type library.</span></span>|  
+|`TypeLibID`|<span data-ttu-id="fc59d-117">Chaîne GUID qui identifie la bibliothèque de types inscrite définissant le type.</span><span class="sxs-lookup"><span data-stu-id="fc59d-117">A GUID string that identifies the registered type library that defines the type.</span></span>|  
+|`TypeLibVersion`|<span data-ttu-id="fc59d-118">Chaîne qui identifie la version de la bibliothèque de types définissant le type.</span><span class="sxs-lookup"><span data-stu-id="fc59d-118">A string that identifies the type library version that defines the type.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6d2f4-119">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="6d2f4-119">Child Elements</span></span>  
- <span data-ttu-id="6d2f4-120">Aucun.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fc59d-119">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="fc59d-119">Child Elements</span></span>  
+ <span data-ttu-id="fc59d-120">Aucun.</span><span class="sxs-lookup"><span data-stu-id="fc59d-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="6d2f4-121">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="6d2f4-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fc59d-121">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="fc59d-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="6d2f4-122">Élément</span><span class="sxs-lookup"><span data-stu-id="6d2f4-122">Element</span></span>|<span data-ttu-id="6d2f4-123">Description</span><span class="sxs-lookup"><span data-stu-id="6d2f4-123">Description</span></span>|  
+|<span data-ttu-id="fc59d-122">Élément</span><span class="sxs-lookup"><span data-stu-id="fc59d-122">Element</span></span>|<span data-ttu-id="fc59d-123">Description</span><span class="sxs-lookup"><span data-stu-id="fc59d-123">Description</span></span>|  
 |-------------|-----------------|  
-|`userDefinedTypes`|<span data-ttu-id="6d2f4-124">Collection d'éléments `userDefinedType`.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-124">A collection of `userDefinedType` elements.</span></span>|  
+|`userDefinedTypes`|<span data-ttu-id="fc59d-124">Collection d'éléments `userDefinedType`.</span><span class="sxs-lookup"><span data-stu-id="fc59d-124">A collection of `userDefinedType` elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6d2f4-125">Notes</span><span class="sxs-lookup"><span data-stu-id="6d2f4-125">Remarks</span></span>  
- <span data-ttu-id="6d2f4-126">Le runtime d'intégration COM+ crée des services en inspectant la bibliothèque de types.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-126">The COM+ integration runtime creates services by inspecting the type library.</span></span> <span data-ttu-id="6d2f4-127">Lorsqu'un composant COM+ contient des méthodes qui passent un VARIANT, le système ne peut pas déterminer les types réels à passer avant l'exécution.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-127">When a COM+ component contains methods that pass a VARIANT, the system cannot determine the actual types to be passed prior to runtime.</span></span> <span data-ttu-id="6d2f4-128">Par conséquent, le passage d'un UDT dans un VARIANT échoue car ce n'est pas un type connu pour la sérialisation.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-128">Therefore, when you attempt to pass a User Defined Type (UDT) within a VARIANT, it fails because it is not a known type for serialization.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc59d-125">Notes</span><span class="sxs-lookup"><span data-stu-id="fc59d-125">Remarks</span></span>  
+ <span data-ttu-id="fc59d-126">Le runtime d'intégration COM+ crée des services en inspectant la bibliothèque de types.</span><span class="sxs-lookup"><span data-stu-id="fc59d-126">The COM+ integration runtime creates services by inspecting the type library.</span></span> <span data-ttu-id="fc59d-127">Lorsqu'un composant COM+ contient des méthodes qui passent un VARIANT, le système ne peut pas déterminer les types réels à passer avant l'exécution.</span><span class="sxs-lookup"><span data-stu-id="fc59d-127">When a COM+ component contains methods that pass a VARIANT, the system cannot determine the actual types to be passed prior to runtime.</span></span> <span data-ttu-id="fc59d-128">Par conséquent, le passage d'un UDT dans un VARIANT échoue car ce n'est pas un type connu pour la sérialisation.</span><span class="sxs-lookup"><span data-stu-id="fc59d-128">Therefore, when you attempt to pass a User Defined Type (UDT) within a VARIANT, it fails because it is not a known type for serialization.</span></span>  
   
- <span data-ttu-id="6d2f4-129">Pour contourner ce problème, vous pouvez ajouter les UDT au fichier de configuration afin qu'ils puissent être inclus comme types connus sur le contrat de service approprié.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-129">To circumvent this problem, you can add the UDTs to the configuration file so that they can be included as known types on the appropriate service contract.</span></span> <span data-ttu-id="6d2f4-130">Pour ce faire, vous devez identifier de manière unique l'UDT et le ou les contrats, autrement dit, le ou les interfaces COM d'origine qui les utilisent.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-130">In order to do so, you have to uniquely identify the UDT and the contract(s), that is, the original COM interface(s) that uses it.</span></span>  
+ <span data-ttu-id="fc59d-129">Pour contourner ce problème, vous pouvez ajouter les UDT au fichier de configuration afin qu'ils puissent être inclus comme types connus sur le contrat de service approprié.</span><span class="sxs-lookup"><span data-stu-id="fc59d-129">To circumvent this problem, you can add the UDTs to the configuration file so that they can be included as known types on the appropriate service contract.</span></span> <span data-ttu-id="fc59d-130">Pour ce faire, vous devez identifier de manière unique l'UDT et le ou les contrats, autrement dit, le ou les interfaces COM d'origine qui les utilisent.</span><span class="sxs-lookup"><span data-stu-id="fc59d-130">In order to do so, you have to uniquely identify the UDT and the contract(s), that is, the original COM interface(s) that uses it.</span></span>  
   
- <span data-ttu-id="6d2f4-131">L'exemple suivant décrit l'ajout à cette fin de deux UDT spécifiques à la section <`userDefinedTypes`> du fichier de configuration.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-131">The following example demonstrates adding two specific UDTs to the <`userDefinedTypes`> section of the configuration file for this purpose.</span></span>  
+ <span data-ttu-id="fc59d-131">L'exemple suivant décrit l'ajout à cette fin de deux UDT spécifiques à la section <`userDefinedTypes`> du fichier de configuration.</span><span class="sxs-lookup"><span data-stu-id="fc59d-131">The following example demonstrates adding two specific UDTs to the <`userDefinedTypes`> section of the configuration file for this purpose.</span></span>  
   
 ```xml  
 <comContracts>
@@ -88,12 +88,12 @@ ms.locfileid: "54148732"
 </comContracts>
 ```  
   
- <span data-ttu-id="6d2f4-132">Lorsque le service est initialisé, le runtime d’intégration recherche les types spécifiés et les ajoute à la collection de types connus pour les contrats spécifiés.</span><span class="sxs-lookup"><span data-stu-id="6d2f4-132">When the service is initialized, the integration runtime looks up the specified types and adds them to the known types collection for the specified contracts.</span></span>  
+ <span data-ttu-id="fc59d-132">Lorsque le service est initialisé, le runtime d’intégration recherche les types spécifiés et les ajoute à la collection de types connus pour les contrats spécifiés.</span><span class="sxs-lookup"><span data-stu-id="fc59d-132">When the service is initialized, the integration runtime looks up the specified types and adds them to the known types collection for the specified contracts.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d2f4-133">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6d2f4-133">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
- <xref:System.ServiceModel.Configuration.ComUdtElement>  
- [<span data-ttu-id="6d2f4-134">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="6d2f4-134">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [<span data-ttu-id="6d2f4-135">Intégration à des applications COM+</span><span class="sxs-lookup"><span data-stu-id="6d2f4-135">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="6d2f4-136">Guide pratique pour Configurer les paramètres de Service COM +</span><span class="sxs-lookup"><span data-stu-id="6d2f4-136">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a><span data-ttu-id="fc59d-133">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fc59d-133">See also</span></span>
+- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
+- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
+- <xref:System.ServiceModel.Configuration.ComUdtElement>
+- [<span data-ttu-id="fc59d-134">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="fc59d-134">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [<span data-ttu-id="fc59d-135">Intégration à des applications COM+</span><span class="sxs-lookup"><span data-stu-id="fc59d-135">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="fc59d-136">Guide pratique pour Configurer les paramètres de Service COM +</span><span class="sxs-lookup"><span data-stu-id="fc59d-136">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
