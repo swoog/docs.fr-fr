@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8a999dc1850a41612f8896ff9a7ed96cd8c3a2fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509133"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType (fonction)
 Récupère le type de cloisonnement dans lequel l’appelant s’exécute.   
@@ -61,12 +61,12 @@ HRESULT GetCurrentApartmentType (
 
 Cette fonction encapsule un appel à la [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) (méthode).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

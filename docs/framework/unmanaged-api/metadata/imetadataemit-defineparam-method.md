@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504901"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam, méthode
 Crée une définition de paramètre avec la signature spécifiée pour la méthode référencée par le jeton spécifié et obtient un jeton pour cette définition de paramètre.  
@@ -62,23 +62,23 @@ HRESULT DefineParam (
  [in] La valeur de constante pour le paramètre.  
   
  `cchValue`  
- [in] La taille, en caractères Unicode de `pValue`.  
+ [in] La taille, en caractères Unicode, de `pValue`.  
   
  `ppd`  
- [out] Le `mdParamDef` jeton assigné.  
+ [out] Le `mdParamDef` jeton attribué.  
   
 ## <a name="remarks"></a>Notes  
- Les valeurs de séquence dans `ulParamSeq` commencent à 1 pour les paramètres. Une valeur de retour a un numéro de séquence 0.  
+ Les valeurs de séquence dans `ulParamSeq` commencent par 1 pour les paramètres. Une valeur de retour a un numéro de séquence 0.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -2,12 +2,12 @@
 title: Autorisation et permissions dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510011"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorisation et permissions dans SQL Server
 Lorsque vous créez des objets de base de données, vous devez accorder explicitement des autorisations de manière à les rendre accessibles aux utilisateurs. Chaque objet sécurisable possède des autorisations qui peuvent être accordées à une principal de sécurité à l'aide d'instructions d'autorisation.  
@@ -58,10 +58,10 @@ Lorsque vous créez des objets de base de données, vous devez accorder explicit
 |--------------|-----------------|  
 |[Autorisations](/sql/relational-databases/security/permissions-database-engine)|Contient des rubriques qui décrivent la hiérarchie des autorisations, les affichages catalogue et les autorisations des rôles serveur et de base de données fixes.|
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Authentification dans SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [Serveur et rôles de base de données dans SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- [Propriété et séparation des schémas utilisateur dans SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Authentification dans SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [Serveur et rôles de base de données dans SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
+- [Propriété et séparation des schémas utilisateur dans SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Hôte de service WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505638"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Hôte de service WCF (WcfSvcHost.exe)
 Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous permet de lancer le débogueur de Visual Studio (F5) pour héberger et tester un service que vous avez implémenté automatiquement. Vous pouvez ensuite tester le service en utilisant le Client Test WCF (WcfTestClient.exe) ou votre propre client, pour rechercher et corriger les erreurs potentielles.  
@@ -21,7 +21,7 @@ Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous pe
 >  Hôte de Service WCF ne prend pas en charge la confiance partielle. Si vous souhaitez utiliser un Service WCF en confiance partielle, n’utilisez pas le modèle de projet de bibliothèque de Service WCF dans Visual Studio pour générer votre service. Au lieu de cela, créez un nouveau site Web dans Visual Studio en choisissant le modèle de site Web de Service WCF, qui peut héberger le service dans un serveur Web sur lequel une confiance partielle WCF est pris en charge.  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>Types de projet hébergés par l'hôte de service WCF  
- Hôte de Service WCF peut héberger les types de projet de bibliothèque de service WCF suivants : bibliothèque du Service WCF, bibliothèque de Service de Workflow séquentiel, bibliothèque de Service de Workflow de Machine état et bibliothèque du Service de Syndication. Hôte de Service WCF peut également héberger les services qui peuvent être ajoutés à un projet de bibliothèque de service à l’aide du **ajouter un élément** fonctionnalité. Cela inclut le Service WCF Service ordinateur d’état WF, de Service séquentiel WF XAML Service de Machine d’état WF et de Service séquentiel WF de XAML.  
+ Hôte de Service WCF peut héberger les types de projet de bibliothèque de service WCF suivants : Bibliothèque du Service WCF, bibliothèque de Service de Workflow séquentiel, bibliothèque de Service de flux de travail de Machine d’état et bibliothèque du Service de Syndication. Hôte de Service WCF peut également héberger les services qui peuvent être ajoutés à un projet de bibliothèque de service à l’aide du **ajouter un élément** fonctionnalité. Cela inclut le Service WCF Service ordinateur d’état WF, de Service séquentiel WF XAML Service de Machine d’état WF et de Service séquentiel WF de XAML.  
   
  Toutefois, il est à noter que l'outil ne vous aidera pas à configurer un hôte. Pour cette tâche, vous devez modifier le fichier App.config manuellement. L'outil ne permet pas non plus de valider les fichiers de configuration définis par l'utilisateur.  
   
@@ -51,7 +51,7 @@ Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous pe
   
  Lorsque vous appuyez sur F5 pour démarrer le service à nouveau, hôte de Service WCF démarre automatiquement votre client personnalisé lorsque vous lancez le débogueur.  
   
- Vous pouvez également utiliser le paramètre `/clientArg:` pour spécifier une chaîne en tant qu'argument qui est passé à l'application cliente personnalisée, comme indiqué dans l'exemple suivant.  
+ Vous pouvez également utiliser le paramètre `/clientArg:` pour spécifier une chaîne en tant qu’argument qui est passé à l’application cliente personnalisée, comme indiqué dans l’exemple suivant.  
   
  `/client:"path/CustomClient.exe" /clientArg:"arguments that are passed to Client"`  
   
@@ -72,19 +72,19 @@ Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous pe
   
  Le **hôte de Service WCF** fenêtre principale contient deux menus :  
   
--   **Fichier**: contient le **fermer** et **Exit** commandes. Lorsque vous cliquez sur **fermer**, le **hôte de Service WCF** boîte de dialogue se ferme, mais les services continuent d’être hébergés. Lorsque vous cliquez sur **Exit**, hôte de Service WCF est également arrêté. Cela arrête également tous les services hébergés.  
+-   **Fichier**: Contient le **fermer** et **Exit** commandes. Lorsque vous cliquez sur **fermer**, le **hôte de Service WCF** boîte de dialogue se ferme, mais les services continuent d’être hébergés. Lorsque vous cliquez sur **Exit**, hôte de Service WCF est également arrêté. Cela arrête également tous les services hébergés.  
   
--   **Aide**: contient le **sur** commande qui contient des informations de version. Il contient également le **aide** commande capable d’ouvrir un fichier d’aide.  
+-   **Aide**: Contient le **sur** commande qui contient des informations de version. Il contient également le **aide** commande capable d’ouvrir un fichier d’aide.  
   
  La principale **hôte de Service WCF** fenêtre contient deux zones :  
   
 -   La première zone est **Service**. Elle contient une liste qui affiche des informations de base sur tous les services. Ces informations incluent :  
   
-    -   **Service**: répertorie tous les services.  
+    -   **Service** : Répertorie tous les services.  
   
-    -   **État**: répertorie l’état du service. Les valeurs valides sont « Démarré », « Arrêté » et « Erreur ».  
+    -   **état**: Répertorie l’état du service. Les valeurs valides sont « Démarré », « Arrêté » et « Erreur ».  
   
-    -   **Adresse des métadonnées**: affiche l’adresse des métadonnées des services.  
+    -   **Adresse des métadonnées**: Affiche l’adresse des métadonnées des services.  
   
 -   La deuxième zone est **des informations supplémentaires**. Il affiche une explication détaillée de l’état du service lors de la ligne de service spécifique est sélectionnée dans le **Service** zone. Si l'état est Erreur, vous pouvez consulter le message d'erreur complet qui s'affiche à l'écran.  
   
@@ -110,5 +110,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  Pour plus d’informations sur netsh.exe, consultez «[comment utiliser l’outil Netsh.exe et les commutateurs de ligne de commande](https://go.microsoft.com/fwlink/?LinkId=97877)».  
   
-## <a name="see-also"></a>Voir aussi  
- [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>Voir aussi
+- [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

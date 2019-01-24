@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : mise en cache de données d'application dans une application WPF"
+title: 'Procédure pas à pas : La mise en cache des données d’Application dans une Application WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513722"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procédure pas à pas : mise en cache de données d'application dans une application WPF
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procédure pas à pas : La mise en cache des données d’Application dans une Application WPF
 La mise en cache vous permet de stocker des données en mémoire pour y accéder rapidement. Lorsque les données sont accessibles à nouveau, les applications peuvent obtenir les données à partir du cache à la place de la récupération à partir de la source d’origine. Cela peut améliorer les performances et la scalabilité. La mise en cache rend également les données disponibles quand la source de données est temporairement indisponible.
 
  Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournit des classes qui vous permettent d’utiliser la mise en cache dans [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications. Ces classes se trouvent dans le <xref:System.Runtime.Caching> espace de noms.
@@ -71,7 +71,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
 
 5.  Dans le **nom** texte, entrez un nom pour votre projet. Par exemple, vous pouvez entrer **WPFCaching**.
 
-6.  Sélectionnez le **créer le répertoire pour la solution** case à cocher.
+6.  Cochez la case **Créer le répertoire pour la solution**.
 
 7.  Cliquez sur **OK**.
 

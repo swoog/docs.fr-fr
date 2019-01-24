@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 23c594fc57b74ea4c40a95d18b060bc6ccee46ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509244"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Spécification de valeurs XML comme paramètres
 Si une requête requiert un paramètre dont la valeur est une chaîne XML, les développeurs peuvent fournir cette valeur à l’aide d’une instance de la **SqlXml** type de données. Il n’y a pas d’astuces ; Les colonnes XML dans SQL Server acceptent les valeurs de paramètre dans exactement la même façon que les autres types de données.  
@@ -159,7 +159,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Data.SqlTypes.SqlXml>  
- [Données XML dans SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Data.SqlTypes.SqlXml>
+- [Données XML dans SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

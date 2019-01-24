@@ -2,12 +2,12 @@
 title: SAML Token Provider
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 59bd76c99adf778f2aa2a2d891ca79657033296e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 28b36b4f66d131f966c2c52e9003e48c237dc404
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513683"
 ---
 # <a name="saml-token-provider"></a>SAML Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons SAML client personnalisé. Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. WCF est fourni avec le fournisseur de jeton de gestionnaire d’informations d’identification par défaut. WCF est également livré avec un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] fournisseur de jetons. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :

@@ -2,23 +2,23 @@
 title: '&lt;add&gt;, élément de &lt;scopedCertificates&gt;'
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: a173d3b137833abfe8a69aed55b972c9b6469890
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2406c93307ed9beb5738567a473406026b09b0a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508741"
 ---
 # <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a>&lt;add&gt;, élément de &lt;scopedCertificates&gt;
 Ajoute un certificat X.509 à la collection de certificats étendus.  
   
  \<system.ServiceModel>  
-\<comportements >  
+\<behaviors>  
 section d’endpointBehaviors  
-\<comportement >  
+\<behavior>  
 \<clientCredentials>  
-\<serviceCertificate >  
-\<scopedCertificates >  
+\<serviceCertificate>  
+\<scopedCertificates>  
 \<Ajouter > élément pour \<scopedCertificates >  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -75,7 +75,7 @@ section d’endpointBehaviors
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Représente une collection de certificats X.509 fournie par les services spécifiques (étendus) à des fins d’authentification.|  
+|[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Représente une collection de certificats X.509 fournie par les services spécifiques (étendus) à des fins d’authentification.|  
   
 ## <a name="remarks"></a>Notes  
  Cet élément permet au client de configurer un certificat de service à utiliser en fonction de l'URL du service avec lequel il communique. Ceci s'avère particulièrement utile dans les scénarios de jeton émis dans lesquels un client peut communiquer avec plusieurs services (autant le service final que les services de jeton de sécurité intermédiaire). Pour les liaisons qui utilisent la sécurité de message basée sur des certificats, ce certificat est utilisé pour chiffrer les messages au service et doit être utilisé par le service pour signer les réponses au client.  
@@ -107,13 +107,13 @@ section d’endpointBehaviors
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
- [Guide pratique pour Créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)  
- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
+- [Guide pratique pour Créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)
+- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : création d’une interface de style Explorateur avec les contrôles ListView et TreeView à l’aide du concepteur'
+title: 'Procédure pas à pas : Création d’une Interface de Style Explorateur avec les contrôles TreeView à l’aide du Concepteur de ListView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 73d3a0bef1ab075aee8e06f676ef17b853773552
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e62f2a9831a4a88a67c5fea1f24432c508c66eae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517095"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Procédure pas à pas : création d’une interface de style Explorateur avec les contrôles ListView et TreeView à l’aide du concepteur
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Procédure pas à pas : Création d’une Interface de Style Explorateur avec les contrôles TreeView à l’aide du Concepteur de ListView
 Un des avantages de Visual Studio est la capacité de créer des applications Windows Forms de qualité professionnelle en un court laps de temps. Un scénario courant est création d’une interface utilisateur (IU) avec <xref:System.Windows.Forms.ListView> et <xref:System.Windows.Forms.TreeView> contrôles qui ressemble à la fonctionnalité de l’Explorateur Windows des systèmes d’exploitation de Windows. L’Explorateur Windows affiche une structure hiérarchique des fichiers et dossiers sur l’ordinateur d’un utilisateur.  
   
 > [!NOTE]
@@ -94,16 +94,16 @@ Un des avantages de Visual Studio est la capacité de créer des applications Wi
 ## <a name="next-steps"></a>Étapes suivantes  
  Cette application vous donne un exemple de la façon dont vous pouvez utiliser <xref:System.Windows.Forms.TreeView> et <xref:System.Windows.Forms.ListView> ensemble les contrôles. Pour plus d’informations sur ces contrôles, consultez les rubriques suivantes :  
   
--   [Guide pratique pour ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [Guide pratique pour Ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Guide pratique pour ajouter des fonctions de recherche à un contrôle ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [Guide pratique pour Ajouter des fonctionnalités de recherche à un contrôle ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Guide pratique pour attacher un menu contextuel à un nœud TreeView](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [Guide pratique pour Attacher un Menu contextuel à un nœud TreeView](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.TreeView>  
- [Contrôle ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Guide pratique pour ajouter et supprimer des nœuds avec le contrôle TreeView Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
- [Guide pratique pour ajouter et supprimer des éléments avec le contrôle ListView Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- [Guide pratique pour ajouter des colonnes au contrôle ListView Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.TreeView>
+- [Contrôle ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [Guide pratique pour Ajouter et supprimer des nœuds avec le contrôle TreeView Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Guide pratique pour Ajouter et supprimer des éléments avec le contrôle ListView Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Guide pratique pour Ajouter des colonnes au contrôle ListView Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)

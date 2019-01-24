@@ -1,5 +1,5 @@
 ---
-title: "Comment : tester le comportement d'un UserControl au moment de l'exécution"
+title: 'Procédure : Tester le comportement au moment de l’exécution d’un UserControl'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 40ec136a86b52dcb007d15d5a2917212745961f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506366"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Comment : tester le comportement d'un UserControl au moment de l'exécution
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procédure : Tester le comportement au moment de l’exécution d’un UserControl
 Lorsque vous développez un <xref:System.Windows.Forms.UserControl>, vous devez tester son comportement au moment de l’exécution. Vous pouvez créer un projet d’application Windows séparé et placer votre contrôle sur un formulaire de test, mais cette procédure n’est pas pratique. Un moyen plus rapide et plus facile consiste à utiliser le **conteneur de Test UserControl** fournis par Visual Studio. Ce conteneur de test démarre directement à partir de votre projet de bibliothèque de contrôles Windows.  
   
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ Lorsque vous développez un <xref:System.Windows.Forms.UserControl>, vous devez 
   
 6.  Fermez le conteneur de test.  
   
-7.  Ajoutez un autre contrôle utilisateur à la **TestContainerExample** projet. Pour plus d’informations, consultez [NIB : Comment : ajouter des éléments existants à un projet](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Ajoutez un autre contrôle utilisateur à la **TestContainerExample** projet. Pour plus d’informations, consultez [NIB : Comment : Ajouter des éléments existants à un projet](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 8.  Dans le **Windows Forms Designer**, faites glisser un <xref:System.Windows.Forms.Button> contrôle depuis la **boîte à outils** aire de conception du contrôle.  
   
@@ -66,9 +66,9 @@ Lorsque vous développez un <xref:System.Windows.Forms.UserControl>, vous devez 
   
 6.  Utilisez le **sélectionner un contrôle utilisateur** <xref:System.Windows.Forms.ComboBox> pour basculer entre les deux contrôles utilisateur à partir de la **TestContainerExample** projet.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.UserControl>  
- [Guide pratique pour créer des contrôles composites](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [Procédure pas à pas : création d'un contrôle composite à l'aide de Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Procédure pas à pas : création d'un contrôle composite à l'aide de Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Concepteur de contrôles utilisateur](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.UserControl>
+- [Guide pratique pour Créer des contrôles composites](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
+- [Procédure pas à pas : Création d’un contrôle Composite avec Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Procédure pas à pas : Création d’un contrôle Composite avec VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Concepteur de contrôles utilisateur](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

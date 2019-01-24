@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 88ef124176642137e363a36563a236d6c6029398
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 89ab623da3fc26234eaab8c6d8d087ce0df9561b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506951"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle DataGrid
 > [!NOTE]
@@ -86,9 +86,9 @@ ms.locfileid: "48030717"
 |Événement de modification de propriété<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|Selon le cas|Aucun.|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Obligatoire|Aucun.|  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48030717"
   
  *L’exemple précédent montre un DataGrid contenant plusieurs niveaux de contrôles. Le contrôle Group (« Contoso ») contient deux contrôles DataItem (« Accounts Receivable.doc » et « Accounts Payable.doc »). Une paire DataGrid/GridItem est indépendante d’une paire d’un autre niveau. Les contrôles DataItem sous un contrôle Group peuvent également être exposés en tant que type de contrôle ListItem, ce qui leur permet d’être présentés plus clairement comme des objets sélectionnables, plutôt que comme de simples éléments de données. Cet exemple n’inclut pas les sous-éléments des éléments de données groupés.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Automation.ControlType.DataGrid>  
- [Vue d’ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Automation.ControlType.DataGrid>
+- [Vue d’ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

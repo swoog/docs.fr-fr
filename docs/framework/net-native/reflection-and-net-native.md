@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 351748d0b27fa6ffc2368aacddc6c7aca290cddb
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507224"
 ---
 # <a name="reflection-and-net-native"></a>Réflexion et .NET Native
 Dans le .NET Framework, le développement managé prend en charge la métaprogrammation par le biais de l'API de réflexion. La réflexion vous permet d'inspecter les objets dans une application, d'appeler des méthodes sur les objets découverts au cours de l'inspection et de générer de nouveaux types au moment de l'exécution. Elle prend également en charge de nombreux autres scénarios de code dynamique, comme la sérialisation et la désérialisation, qui permettent de rendre persistantes les valeurs de champ d'un objet et de les restaurer ultérieurement. Ces scénarios nécessitent tous le compilateur juste-à-temps (JIT) du .NET Framework pour générer du code natif basé sur les métadonnées disponibles.  
@@ -33,6 +33,6 @@ Dans le .NET Framework, le développement managé prend en charge la métaprogra
   
 -   [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Compilation d'applications avec .NET Native](../../../docs/framework/net-native/index.md)  
- [.NET Native et compilation](../../../docs/framework/net-native/net-native-and-compilation.md)
+## <a name="see-also"></a>Voir aussi
+- [Compilation d'applications avec .NET Native](../../../docs/framework/net-native/index.md)
+- [.NET Native et compilation](../../../docs/framework/net-native/net-native-and-compilation.md)

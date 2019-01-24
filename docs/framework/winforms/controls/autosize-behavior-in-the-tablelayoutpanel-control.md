@@ -11,29 +11,29 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-ms.openlocfilehash: 497991106d151cfe1f3944977828e9c77c27e526
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdaa34ace1f5322c9296d2520d275fdf3f176048
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515730"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>Comportement du redimensionnement automatique dans le contrôle TableLayoutPanel
 ## <a name="distinct-autosize-behaviors"></a>Comportements de redimensionnement automatique distincts  
- Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle prend en charge le comportement de dimensionnement automatique des manières suivantes :  
+ Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle prend en charge le comportement de dimensionnement automatique de plusieurs manières :  
   
 -   Via le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété ;  
   
 -   Via le <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> propriété sur le <xref:System.Windows.Forms.TableLayoutPanel> les styles de ligne et de colonne du contrôle.  
   
 ### <a name="the-autosize-property-with-row-and-column-styles"></a>La propriété AutoSize avec les Styles de colonne et de ligne  
- Le tableau suivant décrit l’interaction entre le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété et la <xref:System.Windows.Forms.TableLayoutPanel> les styles de ligne et de colonne du contrôle.  
+ Le tableau suivant décrit l’interaction entre le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété et le <xref:System.Windows.Forms.TableLayoutPanel> les styles de ligne et de colonne du contrôle.  
   
 |Paramètre de redimensionnement automatique|Interaction de style|  
 |----------------------|-----------------------|  
-|`false`|Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle opère de gauche à droite et alloue de l’espace pour la colonne ou la ligne ou dans l’ordre suivant.<br /><br /> 1.  Si le <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> est définie sur <xref:System.Windows.Forms.SizeType.Absolute>, le nombre de pixels spécifié par <xref:System.Windows.Forms.ColumnStyle.Width%2A> ou <xref:System.Windows.Forms.RowStyle.Height%2A> est allouée.<br />2.  Si le <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> est définie sur <xref:System.Windows.Forms.SizeType.AutoSize>, le nombre de pixels retourné par le contrôle d’enfant <xref:System.Windows.Forms.Control.GetPreferredSize%2A> (méthode) est allouée.<br />3.  Après l’espace pour toutes les <xref:System.Windows.Forms.SizeType.Absolute> et <xref:System.Windows.Forms.SizeType.AutoSize> les colonnes ou lignes est alloué, des colonnes ou des lignes avec <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> la valeur <xref:System.Windows.Forms.SizeType.Percent> sont utilisées pour allouer l’espace libre restant proportionnellement|  
-|`true`|Semblable à l’interaction précédente, avec l’exception qui <xref:System.Windows.Forms.SizeType.Percent> les colonnes ou lignes acquièrent un aspect de dimensionnement automatique.<br /><br /> Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle développe la colonne ou ligne pour créer un espace adéquat, afin qu’aucune colonne ou ligne avec <xref:System.Windows.Forms.SizeType.Percent> style découpe son contenu. Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle alloue le nouvel espace proportionnellement en fonction de la <xref:System.Windows.Forms.ColumnStyle.Width%2A> ou <xref:System.Windows.Forms.RowStyle.Height%2A> propriété.|  
+|`false`|Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle opère de gauche à droite et alloue de l’espace pour la colonne ou ligne ou dans l’ordre suivant.<br /><br /> 1.  Si le <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> propriété est définie sur <xref:System.Windows.Forms.SizeType.Absolute>, le nombre de pixels spécifié par <xref:System.Windows.Forms.ColumnStyle.Width%2A> ou <xref:System.Windows.Forms.RowStyle.Height%2A> est allouée.<br />2.  Si le <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> propriété est définie sur <xref:System.Windows.Forms.SizeType.AutoSize>, le nombre de pixels retourné par le contrôle enfant <xref:System.Windows.Forms.Control.GetPreferredSize%2A> méthode est allouée.<br />3.  Après avoir d’espace pour tous les <xref:System.Windows.Forms.SizeType.Absolute> et <xref:System.Windows.Forms.SizeType.AutoSize> colonnes ou lignes est allouée, des colonnes ou des lignes avec <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> la valeur <xref:System.Windows.Forms.SizeType.Percent> sont utilisés pour répartir proportionnellement l’espace libre restant|  
+|`true`|Similaire à l’interaction précédente, avec l’exception qui <xref:System.Windows.Forms.SizeType.Percent> lignes ou colonnes acquièrent un aspect de dimensionnement automatique.<br /><br /> Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle s’agrandit la colonne ou ligne pour créer l’espace libre adéquat, afin qu’aucune colonne ou ligne avec <xref:System.Windows.Forms.SizeType.Percent> style fait coïncider son contenu. Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle alloue le nouvel espace proportionnellement en fonction de la <xref:System.Windows.Forms.ColumnStyle.Width%2A> ou <xref:System.Windows.Forms.RowStyle.Height%2A> propriété.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [Vue d’ensemble du contrôle TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [Vue d’ensemble du contrôle TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)

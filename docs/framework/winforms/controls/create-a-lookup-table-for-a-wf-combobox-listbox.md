@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer une table de correspondance pour un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms'
+title: 'Procédure : Créer une Table de recherche pour un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: b719f2112aac1292b668fe199d48de4b0b60ed21
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 264a50cb2f9346ea164cedfbe5ced5e231e246ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516523"
 ---
-# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Comment : créer une table de correspondance pour un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procédure : Créer une Table de recherche pour un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle
 Il est parfois utile d'afficher les données dans un format convivial dans un Windows Form, mais de les stocker dans un format plus pertinent pour votre programme. Par exemple, un formulaire de commande de produits alimentaires peut présenter les éléments de menu par leur nom dans une zone de liste. Toutefois, la table de données dans laquelle la commande est enregistrée contient alors les numéros d'ID uniques représentant les produits alimentaires. Les tableaux ci-dessous montrent un exemple de stockage et d’affichage des données du formulaire de commande des produits alimentaires.  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
@@ -70,9 +70,9 @@ Il est parfois utile d'afficher les données dans un format convivial dans un Wi
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Liaison de données et Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Vue d'ensemble du contrôle ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- [Vue d'ensemble du contrôle ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- [Vue d'ensemble du contrôle CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Voir aussi
+- [Liaison de données et Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Vue d'ensemble du contrôle ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)
+- [Vue d'ensemble du contrôle ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)
+- [Vue d'ensemble du contrôle CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)
+- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

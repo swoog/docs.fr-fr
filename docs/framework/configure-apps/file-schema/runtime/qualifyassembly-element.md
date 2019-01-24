@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbee999feba5839e66f8eb8c0faaa6e90ca85bd5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b84ebe43c55e2a32e24206d875c65984b8c946b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501549"
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt; élément
 Spécifie le nom complet de l'assembly qui doit être chargé dynamiquement quand un nom partiel est utilisé.  
   
  \<configuration>  
 \<runtime>  
-\<assemblyBinding >  
-\<qualifyAssembly >  
+\<assemblyBinding>  
+\<qualifyAssembly>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,7 +75,7 @@ Spécifie le nom complet de l'assembly qui doit être chargé dynamiquement quan
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Méthode de localisation des assemblys par le runtime](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Méthode de localisation des assemblys par le runtime](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [NIB : Références d’Assembly partielles](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

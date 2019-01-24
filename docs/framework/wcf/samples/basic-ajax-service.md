@@ -2,12 +2,12 @@
 title: Basic AJAX Service
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 2218c8e062f8fe0b799213831099a112a2df732b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a9529b79c9993e045e6bb28a7ad608f453a694e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509985"
 ---
 # <a name="basic-ajax-service"></a>Basic AJAX Service
 Cet exemple montre comment utiliser Windows Communication Foundation (WCF) pour créer un service ASP.NET Asynchronous JavaScript and XML (AJAX) base (service que vous pouvez accéder à l’aide de code JavaScript à partir d’un client de navigateur Web). L'attribut <xref:System.ServiceModel.Web.WebGetAttribute> est utilisé afin de garantir que le service répond aux requêtes HTTP GET et que ce service utilise le format de données JSON (JavaScript Object Notation) pour les réponses.  

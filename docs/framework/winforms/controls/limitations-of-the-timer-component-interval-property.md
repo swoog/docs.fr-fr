@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: 9710568c3c21878aa6aad626e3152168a2f0c2fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 86cfcce65998d19aea8592ae33c5baf58e1ff0fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516952"
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Limitations du composant Timer Windows Forms&#39;s propriété d’intervalle
 Les formulaires Windows <xref:System.Windows.Forms.Timer> composant possède un <xref:System.Windows.Forms.Timer.Interval%2A> propriété qui spécifie le nombre de millisecondes qui s’écouler entre deux événements de minuterie suivant. Sauf si le composant est désactivé, une minuterie continue à recevoir le <xref:System.Windows.Forms.Timer.Tick> événement à intervalles réguliers à peu près égales.  
@@ -28,7 +28,7 @@ Les formulaires Windows <xref:System.Windows.Forms.Timer> composant possède un 
   
 -   La précision de la <xref:System.Windows.Forms.Timer.Interval%2A> propriété est exprimée en millisecondes. Certains ordinateurs fournissent un compteur haute résolution qui a une résolution supérieure aux millisecondes. La disponibilité de ce compteur varie selon le matériel de processeur de votre ordinateur.
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.Timer>  
- [Timer, composant](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- [Vue d’ensemble du composant Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.Timer>
+- [Timer, composant](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
+- [Vue d’ensemble du composant Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

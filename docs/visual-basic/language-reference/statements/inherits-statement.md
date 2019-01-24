@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 4a98ada39a04730b46f40fe139e72d1855d9b067
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 329b4f68874d29d141001800ed326a454a878ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502896"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Provoque la classe en cours ou interface hérite des attributs, variables, propriétés, procédures et événements d’une autre classe ou ensemble d’interfaces.  
@@ -28,7 +28,7 @@ Inherits basetypenames
   
 |Terme|Définition|  
 |---|---|  
-|`basetypenames`|Obligatoire. Le nom de la classe à partir de laquelle cette classe est dérivée.<br /><br /> - ou -<br /><br /> Les noms des interfaces à partir de laquelle cette interface est dérivée. Utilisez des virgules pour séparer plusieurs noms.|  
+|`basetypenames`|Obligatoire. Le nom de la classe à partir de laquelle cette classe est dérivée.<br /><br /> ou<br /><br /> Les noms des interfaces à partir de laquelle cette interface est dérivée. Utilisez des virgules pour séparer plusieurs noms.|  
   
 ## <a name="remarks"></a>Notes  
  Si utilisé, le `Inherits` instruction doit être la première ligne non vide, sans commentaire dans une définition de classe ou interface. Elle doit suivre immédiatement le `Class` ou `Interface` instruction.  
@@ -63,9 +63,9 @@ Inherits basetypenames
   
  L’interface nommée `thisInterface` inclut désormais toutes les définitions dans le <xref:System.IComparable>, <xref:System.IDisposable>, et <xref:System.IFormattable> interfaces que les membres hérités fournissent respectivement pour comparaison spécifique au type de deux objets, libérer les ressources allouées. et l’expression de la valeur d’un objet comme un `String`. Une classe qui implémente `thisInterface` doit implémenter chaque membre de chaque interface de base.  
   
-## <a name="see-also"></a>Voir aussi  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [Objets et classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Éléments fondamentaux de l’héritage](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Voir aussi
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
+- [Objets et classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Éléments fondamentaux de l’héritage](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

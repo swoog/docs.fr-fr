@@ -1,19 +1,19 @@
 ---
-title: 'Comment : créer une interface de style Explorateur Windows sur un Windows Form'
+title: 'Procédure : Créer une Interface de Style Explorateur Windows sur un formulaire Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Explorer [Windows Forms], creating with Windows Forms
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 249210d2bcb7a9ef2c5bf1aed00bcfe138193aab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0b61961aff04a089ce12f4b96637e3f05023e929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511096"
 ---
-# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Comment : créer une interface de style Explorateur Windows sur un Windows Form
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procédure : Créer une Interface de Style Explorateur Windows sur un formulaire Windows
 L’Explorateur Windows est un choix d’interface utilisateur commune pour les applications en raison de son caractère familier.  
   
  L’Explorateur Windows est, fondamentalement, un <xref:System.Windows.Forms.TreeView> contrôle et un <xref:System.Windows.Forms.ListView> contrôle sur des panneaux séparés. Les panneaux sont rendus redimensionnables par un séparateur. Cette disposition de contrôles est très efficace pour afficher et parcourir des informations.  
@@ -40,7 +40,7 @@ L’Explorateur Windows est un choix d’interface utilisateur commune pour les 
     > [!NOTE]
     >  N’utilisez pas le **sélectionner tout** commande sur le **modifier** menu. Si vous procédez ainsi, la propriété nécessaire à l’étape suivante n’apparaîtra pas dans le **propriétés** fenêtre.  
   
-4.  Dans le **propriétés** fenêtre, définissez la <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriété <xref:System.Windows.Forms.DockStyle.Fill>.  
+4.  Dans la fenêtre **Propriétés** , définissez la propriété <xref:System.Windows.Forms.SplitContainer.Dock%2A> sur <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 5.  Appuyez sur F5 pour exécuter l'application.  
   
@@ -49,9 +49,9 @@ L’Explorateur Windows est un choix d’interface utilisateur commune pour les 
     > [!NOTE]
     >  Lorsque vous faites glisser le séparateur, les panneaux se redimensionnent.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.SplitContainer>  
- [Guide pratique pour créer une interface utilisateur à plusieurs volets à l'aide des Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
- [Guide pratique pour définir le redimensionnement et le positionnement du comportement dans une fenêtre fractionnée](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
- [Guide pratique pour fractionner une fenêtre horizontalement](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
- [SplitContainer, contrôle](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.SplitContainer>
+- [Guide pratique pour Créer une Interface utilisateur à plusieurs volets avec des Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Guide pratique pour Définir le redimensionnement et le positionnement du comportement dans une fenêtre fractionnée](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Guide pratique pour Fractionner une fenêtre horizontalement](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)
+- [SplitContainer, contrôle](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

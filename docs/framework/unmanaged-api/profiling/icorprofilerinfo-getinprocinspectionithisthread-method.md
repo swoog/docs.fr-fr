@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d603d9bc7a343a41224cf8d889a69823875d9db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 019a85d6d58c99adb7c16be5cc3b31b029b0312d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513142"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread, méthode
 Obtient un objet qui peut être interrogé pour l’interface ICorDebugThread. Cette méthode est obsolète dans le .NET Framework version 2.0.  
@@ -39,16 +39,16 @@ HRESULT GetInprocInspectionIThisThread(
  [out](/cpp/atl/iunknown) objet qui peut être interrogé pour la `ICorDebugThread` interface.  
   
 ## <a name="remarks"></a>Notes  
- Le services de débogage du common language runtime (CLR) prise en charge limitée dans le processus de débogage dans le .NET Framework version 1.0. Dans le processus de débogage activé un profileur d’utiliser les parties de l’inspection de l’API de débogage. Suite à des commentaires client, dans le processus de débogage ont été supprimé du .NET Framework version 2.0 et remplacé par un ensemble de fonctionnalités qui sont plus adaptées à l’API de profilage.  
+ Le débogage des services du common language runtime (CLR) prise en charge limitée dans le processus de débogage dans le .NET Framework version 1.0. Dans le processus de débogage activé un profileur d’utiliser les parties de l’inspection de l’API de débogage. À la suite de commentaires des clients, dans le processus de débogage a été supprimé depuis le .NET Framework version 2.0 et remplacé par un ensemble de fonctionnalités qui sont plus adaptées à l’API de profilage.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
  **Version du .NET framework :** 1.0  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

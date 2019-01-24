@@ -1,19 +1,19 @@
 ---
-title: 'Comment : créer une liaison de session fiable personnalisée à l’aide de HTTPS'
+title: 'Procédure : Créer une liaison de Session fiable personnalisée avec HTTPS'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-ms.openlocfilehash: b3699593f783fff1227ec51194956e0cc8577dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f39325829cf4b548482a6a570a5aa1fd65e61a1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516679"
 ---
-# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Comment : créer une liaison de session fiable personnalisée à l’aide de HTTPS
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Procédure : Créer une liaison de Session fiable personnalisée avec HTTPS
 
-Cette rubrique décrit l'utilisation de la sécurité de transport SSL (Secure Socket Layer) avec les sessions fiables. Pour utiliser une session fiable sur HTTPS, vous devez créer une liaison personnalisée qui utilise une session fiable et le transport HTTPS. Vous activez la session fiable soit impérativement en utilisant du code ou de façon déclarative dans le fichier de configuration. Cette procédure utilise les fichiers de configuration client et le service pour activer la session fiable et [  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) élément.
+Cette rubrique décrit l'utilisation de la sécurité de transport SSL (Secure Socket Layer) avec les sessions fiables. Pour utiliser une session fiable sur HTTPS, vous devez créer une liaison personnalisée qui utilise une session fiable et le transport HTTPS. Vous activez la session fiable soit impérativement en utilisant du code ou de façon déclarative dans le fichier de configuration. Cette procédure utilise les fichiers de configuration client et le service pour activer la session fiable et le [  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) élément.
 
-La partie clée de cette procédure est que le  **\<point de terminaison >** élément de configuration contient un `bindingConfiguration` attribut qui fait référence à une configuration de liaison personnalisée nommée `reliableSessionOverHttps`. Le [  **\<liaison >** ](../../../../docs/framework/misc/binding.md) élément de configuration fait référence à ce nom pour spécifier qu’une session fiable et le transport HTTPS sont utilisées en incluant  **\< reliableSession >** et  **\<httpsTransport >** éléments.
+La partie clé de cette procédure est que le  **\<point de terminaison >** élément de configuration contiennent un `bindingConfiguration` attribut qui fait référence à une configuration de liaison personnalisée nommée `reliableSessionOverHttps`. Le [  **\<liaison >** ](../../../../docs/framework/misc/binding.md) élément de configuration fait référence à ce nom pour spécifier qu’une session fiable et le transport HTTPS sont utilisés en incluant  **\< reliableSession >** et  **\<httpsTransport >** éléments.
 
 Pour la copie de la source de cet exemple, consultez [personnalisé de liaison de Session fiable sur HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).
 
@@ -23,7 +23,7 @@ Pour la copie de la source de cet exemple, consultez [personnalisé de liaison d
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1121)]
 
-1. Implémentez le contrat de service dans une classe de service. Notez que les informations de liaison ou d’adresse n’est pas spécifiées dans l’implémentation du service. Vous n’êtes pas obligé d’écrire du code pour récupérer les informations de liaison ou d’adresse dans le fichier de configuration.
+1. Implémentez le contrat de service dans une classe de service. Notez que les informations de liaison ou d’adresse n’est pas spécifiées dans l’implémentation du service. Vous n’êtes pas obligé d’écrire du code pour extraire les informations de liaison ou d’adresse à partir du fichier de configuration.
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
@@ -47,11 +47,11 @@ Pour la copie de la source de cet exemple, consultez [personnalisé de liaison d
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. Le client généré contient le `ICalculator` interface qui définit le contrat de service que l’implémentation du client doit satisfaire.
+1. Le client généré contient la `ICalculator` interface qui définit le contrat de service que l’implémentation du client doit satisfaire.
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
 
-1. L'application cliente générée contient également l'implémentation de `ClientCalculator`. Notez que les informations de liaison et une adresse n’est pas spécifiées dans l’implémentation du service. Vous n’êtes pas obligé d’écrire du code pour récupérer les informations de liaison et une adresse à partir du fichier de configuration.
+1. L'application cliente générée contient également l'implémentation de `ClientCalculator`. Notez que les informations d’adresse et la liaison n’est pas spécifiées dans l’implémentation du service. Vous n’êtes pas obligé d’écrire du code pour extraire les informations de liaison et l’adresse à partir du fichier de configuration.
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
 
@@ -67,8 +67,8 @@ Pour la copie de la source de cet exemple, consultez [personnalisé de liaison d
 
 ## <a name="net-framework-security"></a>sécurité du .NET Framework
 
-Étant donné que le certificat utilisé dans cet exemple est un certificat de test créé avec *Makecert.exe*, une alerte de sécurité s’affiche lorsque vous essayez d’accéder à une adresse HTTPS, tel que `https://localhost/servicemodelsamples/service.svc`, à partir de votre navigateur.
+Étant donné que le certificat utilisé dans cet exemple est un certificat de test créé avec *Makecert.exe*, une alerte de sécurité s’affiche lorsque vous essayez d’accéder à une adresse HTTPS, comme `https://localhost/servicemodelsamples/service.svc`, à partir de votre navigateur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

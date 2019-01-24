@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510115"
 ---
 # <a name="security-transparent-code"></a>Code transparent de sécurité (security-transparent)
 <a name="top"></a>
@@ -43,7 +43,7 @@ ms.locfileid: "33392887"
  La transparence a été introduite dans le .NET Framework version 2.0 pour simplifier le modèle de sécurité et faciliter l'écriture et le déploiement de bibliothèques et d'applications sécurisées. Le code transparent est aussi utilisé dans Microsoft Silverlight pour simplifier le développement d'applications de niveau de confiance partielle.  
   
 > [!NOTE]
->  Quand vous développez une application de niveau de confiance partielle, vous devez connaître les exigences d'autorisation pour vos hôtes cibles. Vous pouvez développer une application qui fasse appel à des ressources non autorisées par certains hôtes. Cette application se compilera sans erreur, mais son chargement dans l'environnement hébergé échouera. Si vous avez développé votre application l'aide de Visual Studio, vous pouvez activer le débogage en mode confiance partielle ou dans un jeu d'autorisations restreint à partir de l'environnement de développement. Pour plus d'informations, consultez [Comment : déboguer une application ClickOnce avec des autorisations restreintes](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La fonctionnalité de calcul des autorisations fournie pour les applications ClickOnce est aussi accessible à n'importe quelle application de niveau de confiance partielle.  
+>  Quand vous développez une application de niveau de confiance partielle, vous devez connaître les exigences d'autorisation pour vos hôtes cibles. Vous pouvez développer une application qui fasse appel à des ressources non autorisées par certains hôtes. Cette application se compilera sans erreur, mais son chargement dans l'environnement hébergé échouera. Si vous avez développé votre application l'aide de Visual Studio, vous pouvez activer le débogage en mode confiance partielle ou dans un jeu d'autorisations restreint à partir de l'environnement de développement. Pour plus d'informations, voir [Procédure : Déboguer une application ClickOnce avec des autorisations restreintes](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La fonctionnalité de calcul des autorisations fournie pour les applications ClickOnce est aussi accessible à n'importe quelle application de niveau de confiance partielle.  
   
  [Retour au début](#top)  
   
@@ -106,6 +106,6 @@ ms.locfileid: "33392887"
 ## <a name="transparency-enforcement"></a>Mise en application de la transparence  
  Les règles de transparence ne sont pas appliquées tant que la transparence n'est pas calculée. Dès lors, une exception <xref:System.InvalidOperationException> est levée en cas de violation d'une règle de transparence. Le moment où la transparence est calculée dépend de plusieurs facteurs et ne peut pas être prédite. Elle est calculée le plus tard possible. Dans le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], le calcul de la transparence au niveau de l'assembly intervient à un stade plus précoce que dans le .NET Framework 2.0. La seule garantie est que le calcul de la transparence se produit dès que cela est nécessaire. Cela est comparable à la façon dont le compilateur juste-à-temps (JIT) peut modifier le point au moment où une méthode est compilée et que des erreurs sont détectées dans cette méthode. Le calcul de la transparence n'est pas perceptible si votre code ne présente aucune erreur de transparence.  
   
-## <a name="see-also"></a>Voir aussi  
- [Code Transparent de sécurité, niveau 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [Code Transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+## <a name="see-also"></a>Voir aussi
+- [Code Transparent de sécurité, niveau 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [Code Transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

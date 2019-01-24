@@ -2,21 +2,21 @@
 title: '&lt;security&gt; de &lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 12477c36c2771621e5f8b88ce245746c6f5ec120
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 966dcba7c70419cfb7ca62016b4ee1d24df29827
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502024"
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;security&gt; de &lt;webHttpBinding&gt;
 Spécifie les exigences de sécurité pour un point de terminaison configuré avec un [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  \<system.ServiceModel>  
-\<liaisons >  
+\<bindings>  
 \<webHttpBinding>  
-\<liaison >  
-\<sécurité >  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,16 +65,16 @@ Spécifie les exigences de sécurité pour un point de terminaison configuré av
 |-------------|-----------------|  
 |[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un élément de liaison qui est utilisé pour configurer les points de terminaison Windows Communication Foundation (WCF) Web services qui répondent aux requêtes HTTP au lieu de messages SOAP.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- <xref:System.ServiceModel.WebHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.WebHttpSecurity>  
- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Sélection d’un type d’informations d’identification](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<liaison >](../../../../../docs/framework/misc/binding.md)  
- [Modèle de programmation HTTP web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
+- <xref:System.ServiceModel.WebHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.WebHttpSecurity>
+- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sélection d’un type d’informations d’identification](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Modèle de programmation HTTP web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

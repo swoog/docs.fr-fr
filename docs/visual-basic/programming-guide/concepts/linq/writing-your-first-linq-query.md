@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506249"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Écriture de votre première requête LINQ (Visual Basic)
 Une *requête* est une expression qui récupère des données d’une source de données. Les requêtes sont exprimées dans un langage de requête dédié. Au fil du temps, différents langages ont été développées pour différents types de sources de données, par exemple, SQL pour les bases de données relationnelles et XQuery pour XML. Cela rend nécessaire pour le développeur d’applications à apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qui est pris en charge.  
@@ -60,7 +60,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  Pour plus d’informations sur la création de types de sources de données spécifiques, consultez la documentation relative aux différents fournisseurs [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Pour obtenir la liste de ces fournisseurs, consultez [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) La règle de base est simple : un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] source de données est n’importe quel objet qui prend en charge le modèle générique <xref:System.Collections.Generic.IEnumerable%601> interface ou une interface qui hérite de celle-ci.  
   
 > [!NOTE]
->  Types tels que <xref:System.Collections.ArrayList> qui prennent en charge le non générique <xref:System.Collections.IEnumerable> interface peut également être utilisée en tant que [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] des sources de données. Pour obtenir un exemple qui utilise un <xref:System.Collections.ArrayList>, consultez [Comment : interroger un ArrayList avec LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+>  Types tels que <xref:System.Collections.ArrayList> qui prennent en charge le non générique <xref:System.Collections.IEnumerable> interface peut également être utilisée en tant que [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] des sources de données. Pour obtenir un exemple qui utilise un <xref:System.Collections.ArrayList>, consultez [Comment : Interroger un ArrayList avec LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="the-query"></a>La requête  
  Dans la requête, vous spécifiez les informations que vous souhaitez récupérer à partir de la source de données ou des sources. Vous avez également la possibilité de spécifier comment ces informations doivent être triées, regroupées ou structurées avant d’être retournée. Pour activer la création de requête, Visual Basic a incorporé nouvelle syntaxe de requête dans le langage.  
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Bien démarrer avec LINQ en Visual Basic](getting-started-with-linq.md)  
-- [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](standard-query-operators-overview.md)  
-- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Bien démarrer avec LINQ en Visual Basic](getting-started-with-linq.md)
+- [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](standard-query-operators-overview.md)
+- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Requêtes](../../../../visual-basic/language-reference/queries/index.md)

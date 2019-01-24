@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: dd5fadb9c9f248b5fb4f289bb2d24f1b085a79a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503727"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Procédure : Appeler le compilateur de ligne de commande (Visual Basic)
 Vous pouvez appeler le compilateur de ligne de commande en tapant le nom de son fichier exécutable dans la ligne de commande, également appelée invite de commande MS-DOS. Si vous compilez à partir de l’invite de commandes de Windows par défaut, vous devez taper le chemin d’accès complet au fichier exécutable. Pour remplacer ce comportement par défaut, vous pouvez utiliser l’invite de commandes développeur pour Visual Studio, ou modifier la variable d’environnement PATH. Les deux permettent de compiler à partir de n’importe quel répertoire il suffit de taper le nom du compilateur.  
@@ -57,6 +57,6 @@ Vous pouvez appeler le compilateur de ligne de commande en tapant le nom de son 
   
      Par exemple, si vous avez stocké votre code source dans un répertoire appelé `SourceFiles`, vous ouvririez l’invite de commandes et le type `cd SourceFiles` pour accéder à ce répertoire. Si le répertoire contenait un fichier source nommé `Source.vb`, vous pouvez le compiler en tapant `vbc.exe Source.vb`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Compilation conditionnelle](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>Voir aussi
+- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Compilation conditionnelle](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b3623c886a48cc938be017f955fbdac1df3f10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a5e2501a5ab62c6aaef2b3f754f9eed10e4e4b97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505019"
 ---
 # <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a>IDebuggerThreadControl::ReleaseAllRuntimeThreads, méthode
-Avertit l’hôte que les services de débogage sont sur le point de libérer tous les threads qui sont bloqués.  
+Avertit l’hôte que les services de débogage sont sur le point de mise en production de tous les threads qui sont bloqués.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,16 +34,16 @@ HRESULT ReleaseAllRuntimeThreads ( );
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le `ReleaseAllRuntimeThreads` méthode ne sera jamais appelée sur un thread d’exécution. Si l’hôte a un thread du runtime bloqué, il doit maintenant le libérer.  
+ Le `ReleaseAllRuntimeThreads` méthode ne sera jamais appelée sur un thread d’exécution. Si l’hôte a un thread du runtime bloqué, il doit le libérer maintenant.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IDebuggerThreadControl, interface](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IDebuggerThreadControl, interface](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

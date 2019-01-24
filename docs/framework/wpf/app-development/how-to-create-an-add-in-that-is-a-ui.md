@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: 848e1b2064d89607a93f5ac20fede495e0c61c43
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510805"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procédure : Créer un complément qui est une interface utilisateur
 Cet exemple montre comment créer un complément qui est un Windows Presentation Foundation (WPF) qui est hébergé par une application autonome WPF.  
@@ -104,6 +104,6 @@ Cet exemple montre comment créer un complément qui est un Windows Presentation
   
  Cette activité est complètement isolée de l’application hôte.  
   
-## <a name="see-also"></a>Voir aussi  
- [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [Vue d’ensemble des compléments WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Vue d’ensemble des compléments WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

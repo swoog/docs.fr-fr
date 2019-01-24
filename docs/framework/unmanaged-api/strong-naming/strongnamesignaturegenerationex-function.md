@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60825cb82097e6ec9c202efebe04a50b0f5a3771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508610"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx, fonction
 Génère une signature de nom fort pour l’assembly spécifié, en fonction des indicateurs spécifiés.  
   
- Cette fonction est déconseillée. Utilisez le [ICLRStrongName::StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) méthode à la place.  
+ Cette fonction a été déconseillée. Utilisez le [ICLRStrongName::StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) méthode à la place.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
  Si `pbKeyBlob` n’est pas null, la paire de clés est supposée être contenue dans l’objet binaire volumineux (BLOB) de clé.  
   
  `pbKeyBlob`  
- [in] Pointeur vers la paire de clés publique/privée. Cette paire est au format créé par Win32 `CryptExportKey` (fonction). Si `pbKeyBlob` est null, le conteneur de clé spécifié par `wszKeyContainer` est supposé pour contenir la paire de clés.  
+ [in] Pointeur vers la paire de clés publique/privée. Cette paire est au format créé par Win32 `CryptExportKey` (fonction). Si `pbKeyBlob` est null, le conteneur de clé spécifié par `wszKeyContainer` est supposée pour contenir la paire de clés.  
   
  `cbKeyBlob`  
  [in] La taille, en octets, de `pbKeyBlob`.  
@@ -72,15 +72,15 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
 -   `SN_SIGN_ALL_FILES` (0 x 00000001) - recalculez tous les hachages pour les modules liés.  
   
--   `SN_TEST_SIGN` (0 x 00000002) - signature de test de l’assembly.  
+-   `SN_TEST_SIGN` (0 x 00000002) - test-signer l’assembly.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` de réussite ; dans le cas contraire, `false`.  
+ `true` de réussite ; Sinon, `false`.  
   
 ## <a name="remarks"></a>Notes  
  Spécifiez null pour `wszFilePath` pour calculer la taille de la signature sans créer la signature.  
   
- La signature peut être soit stockée directement dans le fichier, soit retournée à l’appelant.  
+ La signature peut être stockée directement dans le fichier, ou retournée à l’appelant.  
   
  Si `SN_SIGN_ALL_FILES` est spécifié, mais une clé publique n’est pas incluse (les deux `pbKeyBlob` et `wszFilePath` ont la valeur null), les hachages pour les modules liés sont recalculés, mais l’assembly n’est pas signé de nouveau.  
   
@@ -89,15 +89,15 @@ BOOLEAN StrongNameSignatureGenerationEx (
  Si le `StrongNameSignatureGenerationEx` (fonction) ne pas aboutir, appelez le [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) fonction pour récupérer la dernière erreur générée.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** StrongName.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [StrongNameSignatureGenerationEx, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  
- [StrongNameSignatureGeneration, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  
- [ICLRStrongName, interface](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [StrongNameSignatureGenerationEx, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [StrongNameSignatureGeneration, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [ICLRStrongName, interface](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

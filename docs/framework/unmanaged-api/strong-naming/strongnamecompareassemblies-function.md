@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e92a59e42674c184209e9c912e9bb2ead07bdaa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515704"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies, fonction
-Détermine si deux assemblys diffèrent uniquement par leurs signatures de nom fort.  
+Détermine si deux assemblys diffèrent uniquement par leurs signatures avec nom fort.  
   
- Cette fonction est déconseillée. Utilisez le [ICLRStrongName::StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) méthode à la place.  
+ Cette fonction a été déconseillée. Utilisez le [ICLRStrongName::StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) méthode à la place.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,29 +48,29 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Une des valeurs suivantes :  
   
--   `SN_CMP_DIFFERENT` (0) - Spécifie que les assemblys contiennent des données différentes.  
+-   `SN_CMP_DIFFERENT` (0) : Spécifie que les assemblys contiennent des données différentes.  
   
--   `SN_CMP_IDENTICAL` (1) - Spécifie que les assemblys sont exactement les mêmes, y compris leurs signatures et la somme de contrôle.  
+-   `SN_CMP_IDENTICAL` (1) - Spécifie que les assemblys sont exactement identiques, y compris leurs signatures et la somme de contrôle.  
   
--   `SN_CMP_SIGONLY` (2) - Spécifie que les assemblys diffèrent uniquement par leur signature et de somme de contrôle.  
+-   `SN_CMP_SIGONLY` (2) : Spécifie que les assemblys diffèrent uniquement par la signature et la somme de contrôle.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` de réussite ; dans le cas contraire, `false`.  
+ `true` de réussite ; Sinon, `false`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** StrongName.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Notes  
- La signature de nom fort d’un assembly se compose du nom de l’assembly, version, culture et jeton de clé publique.  
+ La signature de nom fort d’un assembly se compose du nom de texte, version, culture et jeton de clé publique de l’assembly.  
   
  Si le `StrongNameCompareAssemblies` (fonction) ne pas aboutir, appelez le [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) fonction pour récupérer la dernière erreur générée.  
   
-## <a name="see-also"></a>Voir aussi  
- [StrongNameCompareAssemblies, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)  
- [ICLRStrongName, interface](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [StrongNameCompareAssemblies, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [ICLRStrongName, interface](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : ajouter dynamiquement des éléments ToolStrip'
+title: 'Procédure : Ajouter dynamiquement des éléments ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items dynamically
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
-ms.openlocfilehash: 9db50c1966d7a6c2baa344857b03e568dbe2a2ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2d7c2ae604100b7fc599e11acc19cbad37ff87
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504065"
 ---
-# <a name="how-to-add-toolstrip-items-dynamically"></a>Comment : ajouter dynamiquement des éléments ToolStrip
-Vous pouvez remplir dynamiquement la collection d'éléments de menu d'un contrôle <xref:System.Windows.Forms.ToolStrip> quand le menu s’ouvre.  
+# <a name="how-to-add-toolstrip-items-dynamically"></a>Procédure : Ajouter dynamiquement des éléments ToolStrip
+Vous pouvez remplir dynamiquement la collection d’éléments de menu d’un contrôle <xref:System.Windows.Forms.ToolStrip> quand le menu s’ouvre.  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant montre comment ajouter dynamiquement des éléments à un contrôle <xref:System.Windows.Forms.ContextMenuStrip>. Cet exemple montre également comment réutiliser le même contrôle <xref:System.Windows.Forms.ContextMenuStrip> pour trois contrôles différents du formulaire.  
@@ -34,13 +34,13 @@ Vous pouvez remplir dynamiquement la collection d'éléments de menu d'un contr�
   
 -   Références aux assemblys System.Drawing et System.Windows.Forms.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également générer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.ContextMenuStrip>  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.ToolStripItem>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- <xref:System.Windows.Forms.ToolStripDropDownButton>  
- [Contrôle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.ContextMenuStrip>
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.ToolStripItem>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- <xref:System.Windows.Forms.ToolStripDropDownButton>
+- [Contrôle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

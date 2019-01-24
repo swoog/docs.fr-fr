@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: ee08dc22588264b25d40b3fd818ef9ee1da90319
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 39f98d11099a778a7b3915f39588138d41214af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502037"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind et XAML dans WPF
 <a name="introduction"></a> Code-behind est un terme utilisé pour décrire le code joint avec les objets définis par le balisage, quand un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page est compilé par balisage. Cette rubrique décrit la configuration requise pour le code-behind ainsi qu’un mécanisme alternatif incorporé code pour le code dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -23,7 +23,7 @@ ms.locfileid: "44085664"
   
 -   [Code-behind, gestionnaire d’événements et spécifications de la classe partielle dans WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x : Code](#x_Code)  
+-   [x:Code](#x_Code)  
   
 -   [Limitations de Code inline](#Inline_Code_Limitations)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "44085664"
 -   Pour le langage Microsoft Visual Basic, vous pouvez utiliser spécifique au langage `Handles` mot clé à associer les gestionnaires d’instances et des événements dans la déclaration de gestionnaire, au lieu d’attacher des gestionnaires avec des attributs dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Toutefois, cette technique a certaines limitations, car le `Handles` mot clé ne peut pas prendre en charge toutes les fonctionnalités spécifiques de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] système de l’événement, comme dans certains scénarios d’événements routés ou événements attachés. Pour plus d’informations, consultez [Visual Basic et la gestion des événements de WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
-## <a name="xcode"></a>x : Code  
+## <a name="xcode"></a>x:Code  
  [x : Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) est un élément de directive défini dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Un `x:Code` la directive de l’élément peut contenir du code de programmation inline. Le code défini en ligne peut interagir avec le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sur la même page. L’exemple suivant illustre le code inline c#. Notez que le code se trouve dans le `x:Code` élément et que le code doit être entouré de `<CDATA[`... `]]>` pour échapper le contenu pour [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], de sorte qu’un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur (interprétant le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] schéma ou la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] schéma) n’essaie pas d’interpréter le contenu littéralement en tant que [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
@@ -58,8 +58,8 @@ ms.locfileid: "44085664"
 ## <a name="inline-code-limitations"></a>Limitations de Code inline  
  Vous devez envisager d’éviter ou de limiter l’utilisation de code inline. En termes d’architecture et de philosophie du codage, la séparation entre le balisage et code-behind conserve les concepteurs et les développeurs rôles bien distincts. À un niveau plus technique, le code que vous écrivez pour le code inline peut être plus difficile à écrire, étant donné que vous écrivez toujours dans la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] classe partielle générée et pouvez utiliser uniquement les mappages d’espace de noms XML par défaut. Étant donné que vous ne pouvez pas ajouter `using` instructions, vous devez qualifier entièrement la plupart de la [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] appels que vous apportez. La valeur par défaut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mappages incluent la plupart mais pas tout [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] espaces de noms qui sont présents dans le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblys ; vous devez qualifier complètement les appels aux types et membres contenus dans les autres espaces de noms CLR. Vous également ne peut pas définir n’importe quoi au-delà de la classe partielle dans le code inline, et toutes les entités de code utilisateur que vous référencez doivent exister en tant que membre ou variable dans la classe partielle générée. Autres langage spécifique fonctionnalités de programmation, tels que des macros ou `#ifdef` par rapport à des variables globales ou des variables de génération, ne sont pas disponibles. Pour plus d’informations, consultez [x : Code de Type XAML intrinsèque](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [x:Code, type XAML intrinsèque](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
- [Génération d’une application WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Syntaxe XAML en détail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Code, type XAML intrinsèque](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)
+- [Génération d’une application WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [Syntaxe XAML en détail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

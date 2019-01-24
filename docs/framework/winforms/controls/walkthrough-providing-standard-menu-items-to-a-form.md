@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : mise à disposition d'éléments de menu standard pour un formulaire"
+title: 'Procédure pas à pas : En fournissant des éléments de Menu Standard à un formulaire'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: c0275d3af0c12eb8edacc1711c8eead45eeca75e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b0f88f8c28b613b9eae580c851ee4dd1282e77e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505105"
 ---
-# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Procédure pas à pas : mise à disposition d'éléments de menu standard pour un formulaire
+# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Procédure pas à pas : En fournissant des éléments de Menu Standard à un formulaire
 Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xref:System.Windows.Forms.MenuStrip>.  
   
  Cette procédure pas à pas montre comment utiliser un <xref:System.Windows.Forms.MenuStrip> contrôle pour créer un menu standard. Le formulaire répond également lorsqu’un utilisateur sélectionne un élément de menu. Les tâches suivantes sont illustrées dans cette procédure pas à pas :  
@@ -32,7 +32,7 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
   
  Lorsque vous avez terminé, vous disposerez d’un formulaire avec un menu standard qui affiche les sélections d’élément de menu dans un <xref:System.Windows.Forms.StatusStrip> contrôle.  
   
- Pour copier le code dans cette rubrique sous forme de liste unique, consultez [Comment : fournir d’éléments de Menu Standard à un formulaire](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
+ Pour copier le code dans cette rubrique sous forme de liste unique, consultez [Comment : Fournir des éléments de Menu Standard à un formulaire](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
   
 > [!NOTE]
 >  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -82,7 +82,7 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
   
 1.  Cliquez sur le **fichier** élément de menu que vous avez créé dans la création une section de Menu Standard.  
   
-2.  Dans le **propriétés** fenêtre, cliquez sur **événements**.  
+2.  Dans la fenêtre **Propriétés**, cliquez sur **Événements**.  
   
 3.  Double-cliquez sur le <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement.  
   
@@ -115,12 +115,12 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
   
 -   Créer des menus contextuels pour vos contrôles avec <xref:System.Windows.Forms.ContextMenuStrip>. Pour plus d’informations, consultez [vue d’ensemble du composant ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
   
--   Créer un formulaire d’interface (multidocument MDI) document avec l’ancrage <xref:System.Windows.Forms.ToolStrip> contrôles. Pour plus d’informations, consultez [procédure pas à pas : création d’un formulaire MDI avec la fusion de menus et des contrôles ToolStrip](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   Créer un formulaire d’interface (multidocument MDI) document avec l’ancrage <xref:System.Windows.Forms.ToolStrip> contrôles. Pour plus d’informations, consultez [Procédure pas à pas : Création d’un formulaire MDI avec la fusion de menus et des contrôles ToolStrip](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
--   Donnez à votre <xref:System.Windows.Forms.ToolStrip> contrôle un aspect professionnel. Pour plus d’informations, consultez [Comment : définir le convertisseur ToolStrip pour une Application](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
+-   Donnez à votre <xref:System.Windows.Forms.ToolStrip> contrôle un aspect professionnel. Pour plus d'informations, voir [Procédure : Définir le convertisseur ToolStrip pour une Application](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.StatusStrip>  
- [MenuStrip, contrôle](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.StatusStrip>
+- [MenuStrip, contrôle](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

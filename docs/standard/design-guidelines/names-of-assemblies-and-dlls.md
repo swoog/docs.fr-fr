@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: KrzysztofCwalina
-ms.openlocfilehash: 8e20d77c20be8dc74723117f3b0910ecc2090ef7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1aeef9e1be6e5fe747f440a8cb7f21095cb22f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516435"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Noms d'assemblys et de DLL
 Un assembly est l’unité de déploiement et d’identité pour les programmes de code managé. Bien que les assemblys peuvent s’étendre sur un ou plusieurs fichiers, en général, un assembly effectue un mappage avec une DLL. Par conséquent, cette section décrit les conventions d’affectation de noms de seul DLL peuvent alors être mappées aux conventions d’affectation de noms d’assembly.  
@@ -37,5 +37,5 @@ Un assembly est l’unité de déploiement et d’identité pour les programmes 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Directives de nommage](../../../docs/standard/design-guidelines/naming-guidelines.md)

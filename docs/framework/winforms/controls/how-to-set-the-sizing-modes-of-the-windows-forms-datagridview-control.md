@@ -1,5 +1,5 @@
 ---
-title: 'Comment : définir les modes de redimensionnement du contrôle DataGridView Windows Forms'
+title: 'Procédure : Définir les Modes de redimensionnement du contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: d2b47a8c54b6981b911baa2b044de908cbe7a30f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 90a0ee31e01a79a71334f9c1be9ef4d41e03a81b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511158"
 ---
-# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Comment : définir les modes de redimensionnement du contrôle DataGridView Windows Forms
+# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Procédure : Définir les Modes de redimensionnement du contrôle DataGridView Windows Forms
 Les procédures suivantes montrent des scénarios courants de personnalisation et de combinaison des options de dimensionnement disponibles pour le contrôle <xref:System.Windows.Forms.DataGridView> et pour certaines colonnes des contrôles.  
   
 ### <a name="to-create-a-fixed-width-column"></a>Pour créer une colonne de largeur fixe  
@@ -56,14 +56,14 @@ Les procédures suivantes montrent des scénarios courants de personnalisation e
   
 -   des références aux assemblys System et System.Windows.Forms ;  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Voir également [Guide pratique pour Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>  
- <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>
+- <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A?displayProperty=nameWithType>
