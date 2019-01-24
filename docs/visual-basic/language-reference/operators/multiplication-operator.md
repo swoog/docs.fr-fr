@@ -10,12 +10,12 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: 4e2d1000afcf8951e8914335f7b5a278b49f6277
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e723667b6397fe758ae2f33babe27c0e41887aab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641172"
 ---
 # <a name="-operator-visual-basic"></a>*, opérateur (Visual Basic)
 Multiplie deux nombres.  
@@ -40,7 +40,7 @@ number1 * number2
  Tous les types numériques, y compris les types non signés et à virgule flottante et `Decimal`.  
   
 ## <a name="remarks"></a>Notes  
- Le type de données du résultat dépend des types des opérandes. Le tableau suivant présente la manière dont le type de données du résultat est déterminé.  
+ Le type de données du résultat dépend des types des opérandes. Le tableau suivant montre comment le type de données du résultat est déterminé.  
   
 |Types de données d’opérande|Type de données de résultat|  
 |---|---|  
@@ -49,19 +49,19 @@ number1 * number2
 |Les deux expressions sont [unique](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
 |Des expressions sont un type de données à virgule flottante (`Single` ou [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)) mais pas les deux `Single` (Remarque `Decimal` n’est pas un type de données à virgule flottante)|`Double`|  
   
- Si une expression [rien](../../../visual-basic/language-reference/nothing.md), il est traité en tant que zéro.  
+ Si une expression correspond à [rien](../../../visual-basic/language-reference/nothing.md), il est considéré comme égal à zéro.  
   
 ## <a name="overloading"></a>Surcharge  
- Le `*` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsqu’un opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, assurez-vous que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Le `*` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsqu’un opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, veillez à ce que vous comprenez son comportement redéfini. Pour plus d'informations, consultez [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise le `*` opérateur pour multiplier deux nombres. Le résultat est le produit des deux opérandes.  
+ Cet exemple utilise le `*` opérateur multiplier deux nombres. Le résultat est le produit des deux opérandes.  
   
  [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-operator_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [*= (opérateur)](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
- [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Opérateurs arithmétiques en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>Voir aussi
+- [*= (opérateur)](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
+- [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Opérateurs arithmétiques en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

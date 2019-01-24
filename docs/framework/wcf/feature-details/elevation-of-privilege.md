@@ -5,26 +5,27 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: c71936d087ef046848c75d1fa0638aaafbe43c9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf67f3c68acc4cd8838be56d7c814f9e287ce62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658044"
 ---
 # <a name="elevation-of-privilege"></a>Élévation de privilège
-*Élévation de privilège* des résultats de l’octroi à un intrus d’autorisations supérieures à celles initialement accordées. Par exemple, un intrus avec un jeu de privilèges contenant des autorisations « en lecture seule » élèvent d'une façon ou d'une autre le jeu pour inclure des autorisations « en lecture et en écriture ».  
+*Une élévation de privilèges* résulte de ce qui donne à un intrus d’autorisations supérieures à celles initialement accordées. Par exemple, un intrus avec un jeu de privilèges contenant des autorisations « en lecture seule » élèvent d'une façon ou d'une autre le jeu pour inclure des autorisations « en lecture et en écriture ».  
   
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Un STS approuvé doit signer des revendications de jeton SAML  
  Un jeton SAML (Security Assertions Markup Language) est un jeton XML générique qui est le type par défaut pour les jetons émis. Un jeton SAML peut être construit par un service de jeton de sécurité (STS, Security Token Service) que le service Web de fin approuve dans un échange standard. Les jetons SAML contiennent des revendications dans les instructions. Un intrus peut copier les revendications d'un jeton valide, créer un jeton SAML et le signer avec un émetteur différent. L'intention est de déterminer si le serveur valide des émetteurs et, si ce n'est pas le cas, d'utiliser la faille pour construire des jetons SAML qui autorisent des privilèges supérieurs à ceux prévus par un STS approuvé.  
   
- La classe <xref:System.IdentityModel.Tokens.SamlAssertion> vérifie la signature numérique contenue dans un jeton SAML, et le <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> par défaut nécessite que les jetons SAML soient signés par un certificat X.509 qui est valide lorsque le <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> de la classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> a la valeur <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. Le mode `ChainTrust` seul ne suffit pas pour déterminer si l'émetteur du jeton SAML est approuvé. Les services qui requièrent un modèle d'approbation plus précis peuvent soit faire appel aux stratégies d'autorisation et d'application pour vérifier l'émetteur des jeux de revendications produits par l'authentification de jetons émis, soit utiliser les paramètres de validation X.509 sur <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> pour restreindre le jeu de certificats de signature autorisés. Pour plus d’informations, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) et [fédération et les jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ La classe <xref:System.IdentityModel.Tokens.SamlAssertion> vérifie la signature numérique contenue dans un jeton SAML, et le <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> par défaut nécessite que les jetons SAML soient signés par un certificat X.509 qui est valide lorsque le <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> de la classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> a la valeur <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. Le mode `ChainTrust` seul ne suffit pas pour déterminer si l'émetteur du jeton SAML est approuvé. Les services qui requièrent un modèle d’approbation plus précis peuvent soit faire appel aux stratégies d’autorisation et d’application pour vérifier l’émetteur des jeux de revendications produits par l’authentification de jetons émis, soit utiliser les paramètres de validation X.509 sur <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> pour restreindre le jeu de certificats de signature autorisés. Pour plus d’informations, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) et [fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Transfert d'identité sans un contexte de sécurité  
  Les éléments suivants s'appliquent uniquement à [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
- Lorsqu’une connexion est établie entre un client et le serveur, l’identité du client ne change pas, sauf dans une situation : une fois le client WCF est ouverte, si toutes les conditions suivantes sont remplies :  
+ Lorsqu’une connexion est établie entre un client et le serveur, l’identité du client ne change pas, sauf dans une situation : une fois le client WCF est ouvert, si toutes les conditions suivantes sont remplies :  
   
--   Les procédures pour établir un contexte de sécurité (à l’aide de la sécurité de transport, session ou une session de sécurité de message) est désactivée (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> est définie sur `false` en cas de sécurité de message ou pas en mesure d’établir la sécurité de transport sessions est utilisée dans les cas de sécurité de transport. HTTPS est un exemple de ce transport).  
+-   Les procédures pour établir un contexte de sécurité (à l’aide de la sécurité de transport, session ou une session de sécurité de message) est désactivée (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propriété est définie sur `false` en cas de sécurité de message ou pas en mesure d’établir la sécurité de transport sessions est utilisé en cas de sécurité de transport. HTTPS est un exemple de ce transport).  
   
 -   Vous utilisez l'authentification Windows.  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Vous appelez le service dans le contexte de sécurité dont l'identité a été empruntée.  
   
- Si ces conditions sont remplies, l’identité utilisée pour authentifier le client auprès du service peut changer (il peut être l’identité empruntée, mais l’identité du processus à la place) une fois le client WCF est ouverte. Cela se produit parce que les informations d'identification Windows utilisées pour authentifier le client auprès du service sont transmises avec chaque message, et l'information d'identification utilisée pour l'authentification provient de l'identité Windows du thread actuel. Si l'identité Windows du thread actuel change (par exemple, en empruntant l'identité d'un appelant différent), l'information d'identification jointe au message et utilisé pour authentifier le client auprès du service peut changer également.  
+ Si ces conditions sont remplies, l’identité utilisée pour authentifier le client auprès du service peut changer (il peut être l’identité empruntée, mais l’identité du processus à la place) une fois le client WCF est ouvert. Cela se produit parce que les informations d'identification Windows utilisées pour authentifier le client auprès du service sont transmises avec chaque message, et l'information d'identification utilisée pour l'authentification provient de l'identité Windows du thread actuel. Si l'identité Windows du thread actuel change (par exemple, en empruntant l'identité d'un appelant différent), l'information d'identification jointe au message et utilisé pour authentifier le client auprès du service peut changer également.  
   
  Si vous souhaitez avoir un comportement déterministe lorsque vous utilisez l'authentification Windows avec l'emprunt d'identité, vous devez définir les informations d'identification Windows explicitement ou vous devez établir un contexte de sécurité avec le service. Pour cela, utilisez une session de sécurité de message ou une session de sécurité de transport. Par exemple, le transport net.tcp peut fournir une session de sécurité de transport. En outre, vous devez utiliser uniquement une version synchrone des opérations clientes lors de l'appel du service. Si vous établissez un contexte de sécurité de message, vous ne devez pas garder la connexion au service ouverte plus longtemps que la période de renouvellement de la session configurée, étant donné que l'identité peut également changer pendant le processus de renouvellement de la session.  
   
@@ -45,13 +46,13 @@ ms.lasthandoff: 05/04/2018
 >  Lors de l'utilisation de la méthode `BeginOpen`, il n'est pas possible de garantir que les informations d'identification capturées sont celles du processus qui appelle la méthode.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Les caches de jeton autorisent la relecture en utilisant des données obsolètes  
- WCF utilise l’autorité de sécurité locale (LSA) `LogonUser` (fonction) pour authentifier les utilisateurs par nom d’utilisateur et mot de passe. Étant donné que la fonction d’ouverture de session est une opération coûteuse, WCF permet de vous en cache des jetons qui représentent les utilisateurs authentifiés à augmenter les performances. Le mécanisme de mise en cache enregistre les résultats de `LogonUser` pour des utilisations ultérieures. Ce mécanisme est désactivé par défaut ; pour l’activer, affectez le <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propriété `true`, ou utilisez le `cacheLogonTokens` attribut de la [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ WCF utilise l’autorité de sécurité locale (LSA) `LogonUser` (fonction) pour authentifier les utilisateurs par nom d’utilisateur et mot de passe. Étant donné que la fonction d’ouverture de session est une opération coûteuse, WCF permet de vous en cache des jetons qui représentent les utilisateurs authentifiés à augmenter les performances. Le mécanisme de mise en cache enregistre les résultats de `LogonUser` pour des utilisations ultérieures. Ce mécanisme est désactivé par défaut ; Pour cela, définissez la <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propriété `true`, ou utiliser le `cacheLogonTokens` attribut de la [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
- Vous pouvez définir une durée de vie pour les jetons mis en cache en affectant à la propriété <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> la valeur <xref:System.TimeSpan> ou utilisez l'attribut `cachedLogonTokenLifetime` de l'élément `userNameAuthentication` ; la valeur par défaut est 15 minutes. Notez que lors de la mise en cache d'un jeton, tout client qui présente le même nom d'utilisateur et mot de passe peut utiliser le jeton, même si le compte d'utilisateur est supprimé de Windows ou si son mot de passe a été modifié. Jusqu'à l’expiration de la durée de vie et le jeton est supprimé du cache, WCF permet à l’utilisateur (potentiellement malveillant) pour l’authentification.  
+ Vous pouvez définir une durée de vie pour les jetons mis en cache en affectant à la propriété <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> la valeur <xref:System.TimeSpan> ou utilisez l'attribut `cachedLogonTokenLifetime` de l'élément `userNameAuthentication` ; la valeur par défaut est 15 minutes. Notez que lors de la mise en cache d'un jeton, tout client qui présente le même nom d'utilisateur et mot de passe peut utiliser le jeton, même si le compte d'utilisateur est supprimé de Windows ou si son mot de passe a été modifié. Jusqu'à ce que la durée de vie expire et que le jeton est supprimé du cache, WCF permet à l’utilisateur (et potentiellement malveillant) pour s’authentifier.  
   
- Pour atténuer ce risque : réduisez le délai d'attaque en affectant à la valeur `cachedLogonTokenLifetime` l'intervalle de temps le plus court que nécessitent vos utilisateurs.  
+ Pour atténuer ce problème : Réduire le délai d’attaque en définissant le `cachedLogonTokenLifetime` à la valeur du délai le plus court s’étendent sur vos utilisateurs ont besoin.  
   
-## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Autorisation de jeton émis : l'expiration réinitialisée à une grande valeur  
+## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Émis le jeton d’autorisation : Expiration réinitialisée à valeur élevée  
  Dans certaines conditions, la propriété <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A> du <xref:System.IdentityModel.Policy.AuthorizationContext> peut avoir une valeur supérieure inattendue (la valeur de champ <xref:System.DateTime.MaxValue> moins un jour, ou le 20 décembre 9999).  
   
  Cela se produit lors de l'utilisation du <xref:System.ServiceModel.WSFederationHttpBinding> et des liaisons fournies par le système qui ont un jeton émis comme type d'informations d'identification du client.  
@@ -77,14 +78,14 @@ ms.lasthandoff: 05/04/2018
   
 -   L'ordinateur du service contient au moins deux certificats avec la même clé publique, mais ils contiennent des informations différentes.  
   
--   Le service récupère un certificat qui correspond à l'identificateur de clé du sujet, mais ce n'est pas celui que le client a projeté d'utiliser. Lorsque WCF reçoit le message et vérifie la signature, WCF mappe les informations contenues dans le certificat X.509 non à un ensemble de revendications qui sont différentes et potentiellement élevées à partir de ce que le client est attendu.  
+-   Le service récupère un certificat qui correspond à l'identificateur de clé du sujet, mais ce n'est pas celui que le client a projeté d'utiliser. Lorsque WCF reçoit le message et vérifie la signature, WCF met en correspondance les informations contenues dans le certificat X.509 non conforme à un ensemble de revendications qui sont différents et potentiellement élevées des attentes du client.  
   
  Pour atténuer ce risquez, référencez le certificat X.509 d'une autre manière, en utilisant par exemple <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Voir aussi
+- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cd6cce73a96cf522521d7cd8d0cc8024e95b93c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b50bb5312b294a3e92ab945c3f0443a4eb81d133
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634429"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete, méthode
-Notifie le débogueur qu’une étape est terminée.  
+Notifie le débogueur qu’une étape terminée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,22 +46,22 @@ HRESULT StepComplete (
  [in] Pointeur vers un objet ICorDebugThread qui représente le thread dans lequel l’étape est terminée.  
   
  `pStepper`  
- [in] Pointeur vers un objet ICorDebugStepper qui représente l’étape d’exécution du code.  
+ [in] Pointeur vers un objet ICorDebugStepper qui représente l’étape dans l’exécution de code.  
   
  `reason`  
- [in] Valeur de l’énumération CorDebugStepReason qui indique le résultat d’une étape individuelle.  
+ [in] Une valeur de l’énumération CorDebugStepReason qui indique le résultat d’une étape individuelle.  
   
 ## <a name="remarks"></a>Notes  
- L’exécution pas à pas peut servir à se poursuivre pas à pas détaillé si vous le souhaitez, à moins que le débogage est arrêté.  
+ L’exécution pas à pas permet de continuer pas à pas détaillé si vous le souhaitez, à moins que le débogage est arrêté.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugManagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugManagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

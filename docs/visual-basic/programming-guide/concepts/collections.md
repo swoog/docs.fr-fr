@@ -2,12 +2,12 @@
 title: Collections (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 734eeba001c243fa3466ac608feb766d6d94c394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698763"
 ---
 # <a name="collections-visual-basic"></a>Collections (Visual Basic)
 Pour de nombreuses applications, vous voulez créer et gérer des groupes d’objets connexes. Il existe deux manières de grouper des objets : en créant des tableaux d’objets ou des collections d’objets.  
@@ -572,13 +572,13 @@ End Function
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Initialiseurs de collection](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
-- [Concepts de programmation (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
-- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [Collections et structures de données](../../../standard/collections/index.md)  
-- [Création et manipulation de collections](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [Sélection d’une classe de collection](../../../standard/collections/selecting-a-collection-class.md)  
-- [Comparaisons et tris dans les collections](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [Initialiseurs de collection](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [Concepts de programmation (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Collections et structures de données](../../../standard/collections/index.md)
+- [Création et manipulation de collections](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [Sélection d’une classe de collection](../../../standard/collections/selecting-a-collection-class.md)
+- [Comparaisons et tris dans les collections](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [Quand utiliser les collections génériques](../../../standard/collections/when-to-use-generic-collections.md)

@@ -2,12 +2,12 @@
 title: PII Security Lockdown
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699777"
 ---
 # <a name="pii-security-lockdown"></a>PII Security Lockdown
 Cet exemple montre comment contrôler plusieurs fonctionnalités liées à la sécurité d’un service Windows Communication Foundation (WCF) par :  
@@ -47,7 +47,7 @@ Cet exemple montre comment contrôler plusieurs fonctionnalités liées à la s�
   
 3.  Chiffrez les paramètres de configuration appSettings du dossier Web.config en publiant la commande suivante : `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Vous trouverez plus d’informations sur le chiffrement des sections des fichiers de configuration en lisant un savoir-faire sur DPAPI dans la configuration d’ASP.NET ([génération d’Applications ASP.NET sécurisées : authentification, autorisation et Communication sécurisée](https://go.microsoft.com/fwlink/?LinkId=95137)) et un savoir-faire RSA dans la configuration d’ASP.NET ([Comment : chiffrer des Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Vous trouverez plus d’informations sur le chiffrement des sections des fichiers de configuration en lisant un savoir-faire sur DPAPI dans la configuration d’ASP.NET ([Building Secure ASP.NET Applications : Authentification, autorisation et Communication sécurisée](https://go.microsoft.com/fwlink/?LinkId=95137)) et un savoir-faire RSA dans la configuration d’ASP.NET ([How To : Chiffrer les Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
 ## <a name="locking-configuration-file-elements"></a>Verrouillage des éléments de fichier de configuration  
  Dans le cadre de services hébergés par le Web, il est possible de placer ces services dans les sous-répertoires d'autres services. Dans ce genre de situation, les valeurs de configuration des services placés dans ces sous-répertoires sont calculées en examinant les valeurs du fichier Machine.config. Ces valeurs sont ensuite fusionnées avec les valeurs des éventuels fichiers Web.config figurant dans les répertoires parents en descendant la hiérarchie de l'arborescence de répertoires jusqu'au fichier Web.config du répertoire contenant les services concernés. Le comportement par défaut de la plupart des éléments de configuration permet aux fichiers de configuration des sous-répertoires de se substituer aux valeurs définies dans leurs répertoires parents. Dans certains cas, il peut s'avérer préférable d'empêcher une telle substitution.  
@@ -124,9 +124,9 @@ Cet exemple montre comment contrôler plusieurs fonctionnalités liées à la s�
   
  Les éléments de fichier de configuration peuvent également être chiffrés à l'aide de DPAPI et RSA. Pour plus d'informations, consultez les liens suivants :  
   
--   [Création d’Applications ASP.NET sécurisées : Authentification, autorisation et une Communication sécurisée](https://go.microsoft.com/fwlink/?LinkId=95137)  
+-   [Création d’Applications ASP.NET sécurisées : L’authentification, autorisation et Communication sécurisée](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Comment : Chiffrer des Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+-   [Guide pratique pour Chiffrer les Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
@@ -142,5 +142,5 @@ Cet exemple montre comment contrôler plusieurs fonctionnalités liées à la s�
   
 1.  Modifiez le fichier Machine.config pour affecter à l'attribut `enableLoggingKnownPii` la valeur `false`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Voir aussi
+- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

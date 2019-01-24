@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 14e70a07469d6bb2701884d8646d161c78e65dc0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653617"
 ---
 # <a name="event-statement"></a>Event, instruction
 Déclare un événement défini par l'utilisateur.  
@@ -91,7 +91,7 @@ End Event
   
  Vous pouvez utiliser `Event` seulement au niveau du module. Cela signifie que le *contexte de déclaration* pour un événement doit être une classe, une structure, un module ou une interface et ne peut pas être un fichier source, un espace de noms, une procédure ou un bloc. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Dans la plupart des cas, vous pouvez utiliser la première syntaxe présente dans la section Syntaxe de cette rubrique pour déclarer des événements. Toutefois, certains scénarios nécessitent un plus grand contrôle sur le comportement détaillé de l'événement. La dernière syntaxe présente dans la section Syntaxe de cette rubrique, qui utilise le mot clé `Custom`, fournit ce contrôle en vous permettant de définir des événements personnalisés. Dans un événement personnalisé, vous spécifiez exactement ce qui se passe quand le code ajoute ou supprime un gestionnaire d'événements pour l'événement, ou quand le code déclenche l'événement. Pour obtenir des exemples, consultez [Comment : Déclarer des événements personnalisés pour économiser la mémoire](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) et [Comment : Déclarer des événements personnalisés pour éviter les blocages](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
+ Dans la plupart des cas, vous pouvez utiliser la première syntaxe présente dans la section Syntaxe de cette rubrique pour déclarer des événements. Toutefois, certains scénarios nécessitent un plus grand contrôle sur le comportement détaillé de l'événement. La dernière syntaxe présente dans la section Syntaxe de cette rubrique, qui utilise le mot clé `Custom`, fournit ce contrôle en vous permettant de définir des événements personnalisés. Dans un événement personnalisé, vous spécifiez exactement ce qui se passe quand le code ajoute ou supprime un gestionnaire d'événements pour l'événement, ou quand le code déclenche l'événement. Pour obtenir des exemples, consultez [Guide pratique pour Déclarer des événements personnalisés pour économiser la mémoire](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) et [Comment : Déclarer des événements personnalisés pour éviter les blocages](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant utilise des événements pour décompter les secondes de 10 à 0. Le code illustre plusieurs méthodes, propriétés et instructions liées à des événements. Cela inclut l'instruction `RaiseEvent`.  
@@ -117,15 +117,15 @@ End Event
 > [!NOTE]
 >  La méthode `My.Application.DoEvents` ne traite pas les événements de la même manière que le formulaire. Pour permettre au formulaire de gérer les événements directement, vous pouvez utiliser le multithreading. Pour plus d’informations, consultez [Managed Threading](../../../standard/threading/index.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [RaiseEvent (instruction)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [Implements (instruction)](../../../visual-basic/language-reference/statements/implements-statement.md)  
- [Événements](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [AddHandler (instruction)](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler (instruction)](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Delegate (instruction)](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Comment : Déclarer des événements personnalisés pour économiser la mémoire](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [Comment : Déclarer des événements personnalisés pour éviter les blocages](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+## <a name="see-also"></a>Voir aussi
+- [RaiseEvent (instruction)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [Implements (instruction)](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [Événements](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [AddHandler (instruction)](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler (instruction)](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Delegate (instruction)](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Guide pratique pour Déclarer des événements personnalisés pour économiser la mémoire](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Guide pratique pour Déclarer des événements personnalisés pour éviter les blocages](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

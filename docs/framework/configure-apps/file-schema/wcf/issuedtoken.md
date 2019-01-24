@@ -1,23 +1,23 @@
 ---
-title: '&lt;IssuedToken&gt;'
+title: '&lt;issuedToken&gt;'
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: a06d59c5dfb14e5f3346ff2424339659568a369a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ca2e1db2c9894163c113541ac4366c638d0e1df0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501531"
 ---
-# <a name="ltissuedtokengt"></a>&lt;IssuedToken&gt;
+# <a name="ltissuedtokengt"></a>&lt;issuedToken&gt;
 Spécifie un jeton personnalisé utilisé pour authentifier un client auprès d'un service.  
   
  \<system.ServiceModel>  
-\<comportements >  
+\<behaviors>  
 section d’endpointBehaviors  
-\<comportement >  
+\<behavior>  
 \<clientCredentials>  
-\<issuedToken >  
+\<issuedToken>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +50,7 @@ section d’endpointBehaviors
 |Élément|Description|  
 |-------------|-----------------|  
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Spécifie l’adresse de l’émetteur local du jeton et la liaison utilisée pour communiquer avec le point de terminaison.|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Spécifie les comportements de point de terminaison à utiliser lors d'une communication avec un émetteur local.|  
+|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Spécifie les comportements de point de terminaison à utiliser lors d'une communication avec un émetteur local.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -63,17 +63,17 @@ section d’endpointBehaviors
   
  Cette section contient les éléments permettant de configurer un émetteur local de jetons ou les comportements utilisés avec un service d'émission de jeton de sécurité. Pour obtenir des instructions sur la configuration d’un client à utiliser un émetteur local, consultez [Comment : Configurer un émetteur Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>  
- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
- [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Fédération et jetons émis](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)  
- [Guide pratique pour Créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Guide pratique pour Configurer un émetteur Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [Fédération et jetons émis](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>
+- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
+- [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Fédération et jetons émis](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)
+- [Guide pratique pour Créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Guide pratique pour Configurer un émetteur Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Fédération et jetons émis](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

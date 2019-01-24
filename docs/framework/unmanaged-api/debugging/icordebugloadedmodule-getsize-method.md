@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9768fb91749158bf3193919b2106bde1c618468a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e4c4888419bb13db43a4a15d98965cc8d3cb8e77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515577"
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize (méthode)
 Obtient la taille en octets du module chargé.  
@@ -32,14 +32,14 @@ HRESULT GetSize(
 >  Cette méthode est uniquement disponible avec .NET Native.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugLoadedModule, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugLoadedModule, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

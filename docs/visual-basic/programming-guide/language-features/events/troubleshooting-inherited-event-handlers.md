@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: f6355cf7fc2e43651c1112d048220a8179968c76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7c56757d18a22a65b4ef8e81d2a05e5f4f4dffc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680195"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Dépannage des gestionnaires d'événements hérités dans Visual Basic
 Cette rubrique répertorie les problèmes courants qui surviennent avec les gestionnaires d’événements dans les composants hérités.  
@@ -26,7 +26,7 @@ Cette rubrique répertorie les problèmes courants qui surviennent avec les gest
   
      [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
   
--   Si la méthode héritée n’a pas un `Handles` (mot clé), vérifiez que votre code ne contient pas un fichier extra [AddHandler, instruction](../../../../visual-basic/language-reference/statements/addhandler-statement.md) ou d’autres méthodes qui gèrent le même événement.  
+-   Si la méthode héritée n’a pas un `Handles` mot clé, vérifiez que votre code ne contient pas un supplémentaire [AddHandler, instruction](../../../../visual-basic/language-reference/statements/addhandler-statement.md) ou d’autres méthodes qui gèrent le même événement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements](../../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Événements](../../../../visual-basic/programming-guide/language-features/events/index.md)

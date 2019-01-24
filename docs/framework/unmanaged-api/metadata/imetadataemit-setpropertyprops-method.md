@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 024ab8254f566e5386198fa1735af4c6b1972ca1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 997e43e6a8be1ac2859e7338751272f3074be11d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523128"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps, méthode
 Définit les fonctionnalités stockées dans les métadonnées pour une propriété définie par un appel antérieur à [DefineProperty, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
@@ -56,7 +56,7 @@ HRESULT SetPropertyProps (
  [in] La valeur par défaut pour la propriété.  
   
  `cchValue`  
- [in] Le nombre de caractères (Unicode) caractères `pValue`.  
+ [in] Le nombre de caractères (Unicode) les caractères de `pValue`.  
   
  `mdSetter`  
  [in] La méthode qui définit la valeur de propriété.  
@@ -65,17 +65,17 @@ HRESULT SetPropertyProps (
  [in] La méthode qui obtient la valeur de propriété.  
   
  `rmdOtherMethods[]`  
- [in] Un tableau des autres méthodes associées à la propriété. Mettre fin à ce tableau avec un `mdTokenNil` jeton.  
+ [in] Tableau des autres méthodes associées à la propriété. Mettre fin à ce tableau avec un `mdTokenNil` jeton.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

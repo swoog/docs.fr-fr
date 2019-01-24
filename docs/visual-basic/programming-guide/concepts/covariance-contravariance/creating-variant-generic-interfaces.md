@@ -2,24 +2,24 @@
 title: Création d’Interfaces génériques de type Variant (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6afddf018b4608418f82fa851d018f2c3e1d0fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663256"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Création d’Interfaces génériques de type Variant (Visual Basic)
 Vous pouvez déclarer des paramètres de type générique dans les interfaces comme covariant ou contravariant. La *covariance* permet aux méthodes d’interface d’avoir des types de retour plus dérivés que ceux définis par les paramètres de type générique. La *contravariance* permet aux méthodes d’interface d’avoir des types d’argument moins dérivés que ceux spécifiés par les paramètres génériques. Une interface générique ayant des paramètres de type générique covariant ou contravariant est appelée *variante*.  
   
 > [!NOTE]
->  .NET Framework 4 a introduit la prise en charge de la variance pour plusieurs interfaces génériques existantes. Pour obtenir la liste des variantes dans le .NET Framework, consultez [Variance dans les Interfaces génériques (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+>  .NET Framework 4 a introduit la prise en charge de la variance pour plusieurs interfaces génériques existantes. Pour la liste des interfaces de type variant dans le .NET Framework, consultez [Variance dans les Interfaces génériques (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
 ## <a name="declaring-variant-generic-interfaces"></a>Déclaration d’interfaces génériques de type variant  
  Vous pouvez déclarer des interfaces génériques de type variant à l’aide des mots clés `in` et `out` pour les paramètres de type générique.  
   
 > [!IMPORTANT]
->  `ByRef` paramètres Visual Basic ne peut pas être de type variant. Les types valeur ne prennent pas non plus en charge la variance.  
+>  `ByRef` paramètres en Visual Basic ne peut pas être de type variant. Les types valeur ne prennent pas non plus en charge la variance.  
   
  Vous pouvez déclarer un covariant de paramètre de type générique à l’aide du mot clé `out`. Le type covariant doit remplir les conditions suivantes :  
   
@@ -33,7 +33,7 @@ Vous pouvez déclarer des paramètres de type générique dans les interfaces co
     End Interface  
     ```  
   
-     Il existe une exception à cette règle. Si vous avez un délégué générique contravariant comme paramètre de méthode, vous pouvez utiliser le type comme paramètre de type générique pour le délégué. L’exemple suivant du type `R` illustre ce principe. Pour plus d’informations, consultez [Variance dans les délégués (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) et [à l’aide de la Variance pour Func et Action de délégués génériques (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+     Il existe une exception à cette règle. Si vous avez un délégué générique contravariant comme paramètre de méthode, vous pouvez utiliser le type comme paramètre de type générique pour le délégué. L’exemple suivant du type `R` illustre ce principe. Pour plus d’informations, consultez [Variance dans les délégués (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) et [à l’aide de la Variance pour les délégués Func et Action générique (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -73,7 +73,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- En Visual Basic, vous ne pouvez pas déclarer des événements dans les interfaces de type variant sans spécifier le type délégué. En outre, une interface variante ne peut pas avoir imbriqués classes, d’enums ou de structures, mais il peut inclure des interfaces imbriquées. C’est ce que montre le code suivant.  
+ En Visual Basic, vous ne pouvez pas déclarer des événements dans des interfaces variantes sans spécifier le type de délégué. En outre, une interface variant ne peut pas avoir imbriqués classes, des énumérations ou des structures, mais il peut inclure des interfaces imbriquées. C’est ce que montre le code suivant.  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -145,7 +145,7 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- Dans le `Invariant(Of T)` de l’interface, le paramètre de type générique `T` est invariant, alors que dans `IExtCovariant (Of Out T)`le paramètre de type est covariant, bien que les deux interfaces étendent la même interface. La même règle est appliquée aux paramètres de type générique contravariant.  
+ Dans le `Invariant(Of T)` interface, le paramètre de type générique `T` est invariant, alors que dans `IExtCovariant (Of Out T)`le paramètre de type est covariant, bien que les deux interfaces étendent la même interface. La même règle est appliquée aux paramètres de type générique contravariant.  
   
  Vous pouvez créer une interface qui étend à la fois l’interface dans laquelle le paramètre de type générique `T` est covariant et l’interface dans laquelle il est contravariant si, dans l’interface étendue, le paramètre de type générique `T` est invariant. En voici une illustration dans l’exemple de code suivant.  
   
@@ -225,6 +225,6 @@ End Sub
   
  Dans cet exemple, la façon dont la méthode `pets.GetEnumerator` choisit entre `Cat` et `Dog` n’est pas spécifiée. Cela peut provoquer des problèmes dans votre code.  
   
-## <a name="see-also"></a>Voir aussi  
- [Variance dans les interfaces génériques (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Utilisation de la variance pour les délégués génériques Func et Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>Voir aussi
+- [Variance dans les interfaces génériques (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Utilisation de la variance pour les délégués génériques Func et Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

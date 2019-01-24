@@ -1,5 +1,5 @@
 ---
-title: "Comment : imprimer des zones clientes et non clientes d'un formulaire (Visual Basic)"
+title: 'Procédure : Client d’impression et les zones Non clientes d’un formulaire (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - title bar [Visual Basic], printing
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - entire form
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
-ms.openlocfilehash: 5109993146a8d53d5cbeebcc52c018a6f0f57ed5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b32b5bc6cfe45f38b9eb5a0df0778eb02d827d21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685077"
 ---
-# <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>Comment : imprimer des zones clientes et non clientes d'un formulaire (Visual Basic)
+# <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>Procédure : Client d’impression et les zones Non clientes d’un formulaire (Visual Basic)
 Le composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> vous permet d’imprimer rapidement une image d’un formulaire tel qu’il apparaît à l’écran sans utiliser un composant <xref:System.Drawing.Printing.PrintDocument> . La procédure suivante montre comment imprimer un formulaire, y compris la zone cliente et la zone non cliente. La zone non cliente comprend la barre de titre, les bordures et les barres de défilement.  
   
- Les contrôles PowerPack ne sont plus inclus dans Visual Studio, mais vous pouvez les télécharger à partir de la [centre de téléchargement](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Les contrôles PowerPack ne sont plus inclus dans Visual Studio, mais vous pouvez les télécharger à partir du [Centre de téléchargement](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-both-the-client-and-the-non-client-areas-of-a-form"></a>Pour imprimer à la fois les zones clientes et les zones non clientes d’un formulaire  
   
@@ -37,8 +37,8 @@ Le composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> vous per
     > [!NOTE]
     >  Sur certains systèmes d’exploitation, le texte ou les graphiques dessinés par des méthodes <xref:System.Drawing.Graphics> peuvent ne pas s’imprimer correctement. Dans ce cas, utilisez la méthode d’impression compatible : `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption.CompatibleModeFullWindow`).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- [PrintForm, composant](../../../visual-basic/developing-apps/printing/printform-component.md)  
- [Guide pratique : imprimer un formulaire à défilement variable](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>
+- [PrintForm, composant](../../../visual-basic/developing-apps/printing/printform-component.md)
+- [Guide pratique pour imprimer un formulaire à défilement variable](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)

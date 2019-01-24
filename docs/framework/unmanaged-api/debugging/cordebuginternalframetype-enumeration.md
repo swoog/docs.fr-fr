@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b42a7fc54af56149b602b337e4a6c853c270cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736531"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType, énumération
 Identifie le type de frame de pile. Cette énumération est utilisée par le [ICorDebugInternalFrame::GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) (méthode).  
@@ -50,25 +50,25 @@ typedef enum CorDebugInternalFrameType {
 |Membre|Description|  
 |------------|-----------------|  
 |`STUBFRAME_NONE`|Valeur null. Le `ICorDebugInternalFrame::GetFrameType` méthode ne retourne jamais cette valeur.|  
-|`STUBFRAME_M2U`|Un frame de stub de-non managés.|  
-|`STUBFRAME_U2M`|Un frame de stub de managé à managé.|  
+|`STUBFRAME_M2U`|Un frame de stub non managés.|  
+|`STUBFRAME_U2M`|Un frame de stub managé à managé.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Une transition entre des domaines d’application.|  
 |`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Un appel de méthode léger.|  
 |`STUBFRAME_FUNC_EVAL`|Début de l’évaluation de fonction.|  
 |`STUBFRAME_INTERNALCALL`|Un appel interne dans le common language runtime.|  
-|`STUBFRAME_CLASS_INIT`|Début d’une initialisation de classe.|  
+|`STUBFRAME_CLASS_INIT`|Le début d’une initialisation de classe.|  
 |`STUBFRAME_EXCEPTION`|Une exception est levée.|  
 |`STUBFRAME_SECURITY`|Frame utilisé pour la sécurité d’accès du code.|  
 |`STUBFRAME_JIT_COMPILATION`|Le runtime est une méthode de compilation JIT.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

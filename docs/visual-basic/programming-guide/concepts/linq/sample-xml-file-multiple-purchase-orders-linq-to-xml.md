@@ -2,12 +2,12 @@
 title: 'Exemple de fichier XML : Plusieurs commandes fournisseur (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
-ms.openlocfilehash: 62faa39f66eb3d0f7f23e298c416a0ab14f406af
-ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
+ms.openlocfilehash: 676592b0bd77a10fa8bb5fa01bf3b3a06af1ca46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "42754073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623480"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Exemple de fichier XML : Plusieurs commandes fournisseur (LINQ to XML)
 Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Ce fichier contient plusieurs commandes fournisseur.  
@@ -109,5 +109,5 @@ Le fichier XML suivant est utilisé dans différents exemples dans la documentat
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples de documents XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Exemples de documents XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

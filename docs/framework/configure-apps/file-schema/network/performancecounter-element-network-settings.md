@@ -8,19 +8,19 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ea0eba097505741aba31bce4f23e0cc9ca1d4608
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712481"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; , élément (paramètres réseau)
 Active ou désactive les compteurs de performance réseau.  
   
  \<configuration>  
 \<system.net>  
-\<Paramètres >  
+\<settings>  
 \<performanceCounters>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -47,7 +47,7 @@ Active ou désactive les compteurs de performance réseau.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[Paramètres](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour l’espace de noms <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour l’espace de noms <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Notes  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
@@ -73,8 +73,8 @@ Active ou désactive les compteurs de performance réseau.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
-- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
+- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [Compteurs de Performance réseau](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

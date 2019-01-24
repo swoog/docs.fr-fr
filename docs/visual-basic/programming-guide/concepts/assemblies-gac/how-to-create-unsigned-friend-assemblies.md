@@ -1,15 +1,15 @@
 ---
-title: 'Comment : créer des assemblys Friend non signés (Visual Basic)'
+title: 'Procédure : Créer des assemblys Friend non signés (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ed4a818921f26fd5eb70fc4ba52929522627c096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698204"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Comment : créer des assemblys Friend non signés (Visual Basic)
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Procédure : Créer des assemblys Friend non signés (Visual Basic)
 Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui ne sont pas signés.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Pour créer un assembly et un assembly friend  
@@ -84,9 +84,9 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui 
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Il existe des similitudes entre l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> et la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. La principale différence est que <xref:System.Security.Permissions.StrongNameIdentityPermission> peut demander des autorisations de sécurité pour exécuter une section de code particulière, tandis que l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> contrôle la visibilité des membres et types `Friend`.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Assemblys et le Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Assemblys friend (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Comment : créer des assemblys Friend signés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Concepts de Guide de programmation](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Assemblys et le Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblys friend (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Guide pratique pour Créer des assemblys Friend signés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Concepts de Guide de programmation](../../../../visual-basic/programming-guide/concepts/index.md)

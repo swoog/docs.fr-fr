@@ -2,12 +2,12 @@
 title: Connexion à une source de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 20cf22e1c9b9bf18dd3109cb9589c05a6c27d4d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701740"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Connexion à une source de données dans ADO.NET
 Dans ADO.NET, vous utilisez un **connexion** objet pour se connecter à une source de données spécifique en fournissant des informations d’authentification nécessaires dans une chaîne de connexion. Le **connexion** objet que vous utilisez varie selon le type de source de données.  
@@ -21,10 +21,10 @@ Dans ADO.NET, vous utilisez un **connexion** objet pour se connecter à une sour
  [Événements de connexion](../../../../docs/framework/data/adonet/connection-events.md)  
  Décrit comment utiliser un **InfoMessage** événement afin de récupérer les messages d’information à partir d’une source de données.  
   
-## <a name="see-also"></a>Voir aussi  
- [Chaînes de connexion](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Regroupement de connexions](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Chaînes de connexion](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Regroupement de connexions](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

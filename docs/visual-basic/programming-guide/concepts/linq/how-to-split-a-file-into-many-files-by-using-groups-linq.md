@@ -1,15 +1,15 @@
 ---
-title: 'Comment : fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)'
+title: 'Procédure : Fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 19b542e22aa6e987a21095025a136d7602057b2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806a1f6c5674e670402d3d612f169582df5e0155
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616977"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Comment : fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Procédure : Fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (Visual Basic)
 Cet exemple montre comment fusionner le contenu de deux fichiers, puis créer un ensemble de fichiers qui organisent les données d’une nouvelle façon.  
   
 ### <a name="to-create-the-data-files"></a>Pour créer les fichiers de données  
@@ -29,7 +29,7 @@ Cet exemple montre comment fusionner le contenu de deux fichiers, puis créer un
     Garcia, Debra  
     ```  
   
-2.  Copiez ces noms dans un fichier texte nommé names2.txt, puis enregistrez-le dans votre dossier de projet. Notez que les deux fichiers ont certains noms en commun.  
+2.  Copiez ces noms dans un fichier texte nommé names2.txt, et enregistrez-le dans votre dossier de projet : Notez que les deux fichiers ont des noms en commun.  
   
     ```  
     Liu, Jinghao  
@@ -118,6 +118,6 @@ End Class
 ## <a name="compiling-the-code"></a>Compilation du code  
  Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Voir aussi
+- [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

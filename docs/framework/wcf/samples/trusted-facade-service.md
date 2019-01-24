@@ -2,12 +2,12 @@
 title: Trusted Facade Service
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 6acea5204ae2c05483978eb6187d1de02ae1b268
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4b18f0eb4183a9dd6d0801dd022176cd3220c62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640418"
 ---
 # <a name="trusted-facade-service"></a>Trusted Facade Service
 Cet exemple de scénario montre comment transférer les informations d’identité de l’appelant à partir d’un service à un autre à l’aide de Windows Communication Foundation (WCF) infrastructure de sécurité.  
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
   
 5.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-6.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+6.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

@@ -1,5 +1,5 @@
 ---
-title: "Comment : définir l'ordre de tabulation dans les Windows Forms"
+title: 'Procédure : Définir l’ordre de tabulation dans les Windows Forms'
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675204"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Comment : définir l'ordre de tabulation dans les Windows Forms
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Procédure : Définir l’ordre de tabulation dans les Windows Forms
 L’ordre de tabulation est l’ordre dans lequel un utilisateur déplace le focus d’un contrôle à un autre en appuyant sur la touche TAB. Chaque écran a son propre ordre de tabulation. Par défaut, l’ordre de tabulation est identique à l’ordre dans lequel vous avez créé les contrôles. Ordre de tabulation la numérotation commence à zéro.  
   
 > [!NOTE]
@@ -54,8 +54,8 @@ L’ordre de tabulation est l’ordre dans lequel un utilisateur déplace le foc
     > [!NOTE]
     >  Un groupe de cases d’option a un seul onglet arrêter au moment de l’exécution. Le bouton sélectionné (autrement dit, le bouton avec son <xref:System.Windows.Forms.RadioButton.Checked%2A> propriété définie sur `true`) a sa <xref:System.Windows.Forms.Control.TabStop%2A> propriété est automatiquement définie sur `true`, tandis que les autres boutons ont leur <xref:System.Windows.Forms.Control.TabStop%2A> propriété définie sur `false`. Pour plus d’informations sur le regroupement <xref:System.Windows.Forms.RadioButton> contrôles, consultez [regroupement Windows Forms contrôles RadioButton en tant qu’ensemble](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Disposition des contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Classement par fonction des contrôles Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>Voir aussi
+- [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Disposition des contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Classement par fonction des contrôles Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

@@ -2,12 +2,12 @@
 title: Éléments internes de l'hôte du service de workflow
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: dd03508397b77f4446a5b708c69333336d97193c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c3293fe7f835ed0d5b3b62404a1f3f2e20b73fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708491"
 ---
 # <a name="workflow-service-host-internals"></a>Éléments internes de l'hôte du service de workflow
 <xref:System.ServiceModel.WorkflowServiceHost> fournit un hôte pour les services basés sur des workflows. Elle est chargée d'écouter les messages entrants et de les router vers l'instance de service de workflow appropriée, contrôle le déchargement et la persistance des workflows inactifs, et plus encore. Cette rubrique explique comment WorkflowServiceHost traite les messages entrants.  
@@ -26,7 +26,7 @@ ms.locfileid: "48036037"
   
  ![Flux de messages du Service de workflow](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
   
- Ce diagramme présente trois points de terminaison distincts : un point de terminaison d'application, un point de terminaison de contrôle de workflow et un point de terminaison d'hébergement de workflow. Le point de terminaison d'application reçoit les messages liés à une instance de workflow spécifique. Le point de terminaison de contrôle de workflow écoute les opérations de contrôle. Le point de terminaison d'hébergement de workflow écoute les messages qui entraînent le chargement et l'exécution par <xref:System.ServiceModel.WorkflowServiceHost> de workflows sans service. Comme le montre le diagramme, tous les messages sont traités via le runtime WCF.  La limitation d'instance de service de workflow s'effectue à l'aide de la propriété <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>. Cette propriété limite le nombre d'instances de service de workflow. En cas de dépassement de cette limite, les demandes supplémentaires de nouvelle instance de service de workflow ou les demandes d'activation d'instances de workflow persistantes seront mises en file d'attente. Les demandes mises en file d'attente sont traitées dans l'ordre FIFO (premier entré, premier sorti) qu'il s'agisse de demandes de nouvelle instance ou d'une instance en cours d'exécution, persistante. Des informations de stratégie d'hôte qui déterminent le mode de traitement des exceptions non gérées et la façon dont les services de workflow inactifs sont déchargés et rendus persistants sont chargées. Pour plus d’informations sur ces sujets, consultez [Comment : configurer les flux de travail non gérée comportement d’Exception avec WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) et [Comment : configurer le comportement inactif avec WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Les instances de workflow sont rendues persistantes conformément aux stratégies d'hôte, puis rechargées selon les besoins. Pour plus d’informations sur la persistance des flux de travail, consultez : [Comment : configurer la persistance avec WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [création d’un Service de flux de travail de longue](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), et [la persistance de Workflow ](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ Ce diagramme présente trois points de terminaison distincts : un point de terminaison d'application, un point de terminaison de contrôle de workflow et un point de terminaison d'hébergement de workflow. Le point de terminaison d'application reçoit les messages liés à une instance de workflow spécifique. Le point de terminaison de contrôle de workflow écoute les opérations de contrôle. Le point de terminaison d'hébergement de workflow écoute les messages qui entraînent le chargement et l'exécution par <xref:System.ServiceModel.WorkflowServiceHost> de workflows sans service. Comme le montre le diagramme, tous les messages sont traités via le runtime WCF.  La limitation d'instance de service de workflow s'effectue à l'aide de la propriété <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>. Cette propriété limite le nombre d'instances de service de workflow. En cas de dépassement de cette limite, les demandes supplémentaires de nouvelle instance de service de workflow ou les demandes d'activation d'instances de workflow persistantes seront mises en file d'attente. Les demandes mises en file d'attente sont traitées dans l'ordre FIFO (premier entré, premier sorti) qu'il s'agisse de demandes de nouvelle instance ou d'une instance en cours d'exécution, persistante. Des informations de stratégie d'hôte qui déterminent le mode de traitement des exceptions non gérées et la façon dont les services de workflow inactifs sont déchargés et rendus persistants sont chargées. Pour plus d’informations sur ces sujets, consultez [Comment : Configurer des flux de travail non prise en charge de comportement d’Exception avec WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) et [Comment : Configurer le comportement inactif avec WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Les instances de workflow sont rendues persistantes conformément aux stratégies d'hôte, puis rechargées selon les besoins. Pour plus d’informations sur le flux de travail, consultez persistance : [Guide pratique pour Configurer la persistance avec WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [création d’un Service de flux de travail de longue](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), et [persistance de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
   
  L'illustration suivante montre ce qui se passe suite à l'appel de WorkflowServiceHost.Open.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48036037"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
-- [Hébergement de services de workflow](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
-- [Point de terminaison de contrôle de workflow](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
-- [Guide pratique pour configurer le comportement des exceptions non gérées du workflow avec WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
-- [Création d’un service de workflow de longue durée](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+- [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Hébergement de services de workflow](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)
+- [Point de terminaison de contrôle de workflow](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)
+- [Guide pratique pour Configurer des flux de travail non prise en charge de comportement d’Exception avec WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)
+- [Création d’un service de workflow de longue durée](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
 - [Persistance du workflow](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

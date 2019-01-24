@@ -3,12 +3,12 @@ title: Conventions de schéma de configuration de WIF
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: dc2e8f7070af3ef907e4987964bb5aa83f889186
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acdce1f0ae35713dd4955e1353e0a83000898408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711393"
 ---
 # <a name="wif-configuration-schema-conventions"></a>Conventions de schéma de configuration de WIF
 Cette rubrique explique les conventions employées dans les rubriques traitant de la configuration de WIF (Windows Identity Foundation). Elle décrit également certaines fonctionnalités et attributs souvent utilisés dans les sections [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) et [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  
@@ -44,6 +44,6 @@ Cette rubrique explique les conventions employées dans les rubriques traitant d
   
  Les types personnalisés doivent être dérivés du type spécifié et fournir un constructeur `public` par défaut (sans argument).  
   
-## <a name="see-also"></a>Voir aussi  
- [\<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)  
- [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+## <a name="see-also"></a>Voir aussi
+- [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
+- [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

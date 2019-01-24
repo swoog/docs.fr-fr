@@ -1,5 +1,5 @@
 ---
-title: 'Comment : spécifier une position de menu contextuel personnalisée'
+title: 'Procédure : Spécifier une position de menu contextuel personnalisée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: e6e81a6e0819ba3eb39a1c568e6872414e671544
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b61ab6ab02d65d0549941b0055f7aef480d7d644
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726791"
 ---
-# <a name="how-to-specify-a-custom-popup-position"></a>Comment : spécifier une position de menu contextuel personnalisée
+# <a name="how-to-specify-a-custom-popup-position"></a>Procédure : Spécifier une position de menu contextuel personnalisée
 Cet exemple montre comment spécifier un emplacement personnalisé pour un <xref:System.Windows.Controls.Primitives.Popup> contrôler quand le <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriété est définie sur <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
   
 ## <a name="example"></a>Exemple  
@@ -32,7 +32,7 @@ Cet exemple montre comment spécifier un emplacement personnalisé pour un <xref
   
  Pour obtenir un exemple complet, consultez [positionnement de Popup, exemple](https://go.microsoft.com/fwlink/?LinkID=160032).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Controls.Primitives.Popup>  
- [Vue d’ensemble de Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Controls.Primitives.Popup>
+- [Vue d’ensemble de Popup](../../../../docs/framework/wpf/controls/popup-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d088aaaaa80ee3513a37ea0345d720832504c005
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab729bafdd8987a7c5a03145e02f5c8e5d441a3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711614"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress, méthode
 Retourne l’adresse de la pile du frame interne.  
@@ -47,18 +47,18 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |E_INVALIDARG|`pAddress` a la valeur `null`.|  
   
 ## <a name="remarks"></a>Notes  
- La valeur retournée dans `pAddress` peut être utilisé pour déterminer l’emplacement du frame interne par rapport aux autres frames sur la pile. Même sur les ordinateurs basés sur IA-64, le frame interne vit uniquement sur la pile, et il n’existe aucun pointeur correspondant vers un magasin de stockage.  
+ La valeur retournée dans `pAddress` peut être utilisée pour déterminer l’emplacement du frame interne par rapport aux autres frames sur la pile. Même sur les ordinateurs basés sur IA-64, le frame interne se trouve uniquement sur la pile, et aucun pointeur correspondant à un magasin de stockage.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugInternalFrame2, interface](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugInternalFrame2, interface](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

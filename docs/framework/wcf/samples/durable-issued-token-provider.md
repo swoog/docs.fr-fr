@@ -2,12 +2,12 @@
 title: Durable Issued Token Provider
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 7def23a00e42e134d8c0b9bd911710917681ad31
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 911c4928a179a6595c6ebec488055dd45ae91c36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736219"
 ---
 # <a name="durable-issued-token-provider"></a>Durable Issued Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons émis client personnalisé.  
@@ -54,7 +54,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
 </bindings>  
 ```  
   
- Sur l'élément `security` de `wsFederationHttpBinding`, la valeur `mode` configure le mode de sécurité à utiliser. Dans cet exemple, la sécurité de niveau message est utilisée ; c'est pourquoi l'élément `message` de `wsFederationHttpBinding` est spécifié dans l'élément `security` de `wsFederationHttpBinding`. L'élément `issuer` de `wsFederationHttpBinding` dans l'élément `message` de `wsFederationHttpBinding` spécifie l'adresse et la liaison du STS qui publie un jeton de sécurité pour le client afin de permettre à ce dernier de s'authentifier auprès du service Calculator.  
+ Sur l'élément `security` de `wsFederationHttpBinding`, la valeur `mode` configure le mode de sécurité à utiliser. Dans cet exemple, la sécurité de niveau message est utilisée ; c'est pourquoi l'élément `message` de `wsFederationHttpBinding` est spécifié dans l'élément `security` de `wsFederationHttpBinding`. L’élément `issuer` de `wsFederationHttpBinding` dans l’élément `message` de `wsFederationHttpBinding` spécifie l’adresse et la liaison du STS qui publie un jeton de sécurité pour le client afin de permettre à ce dernier de s’authentifier auprès du service Calculator.  
   
  La configuration de cette liaison sur le service est présentée dans le code suivant.  
   
@@ -135,7 +135,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
   
 2.  Écrivez un gestionnaire de jetons de sécurité personnalisé.  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer un <xref:System.IdentityModel.Selectors.SecurityTokenProvider> pour un <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifique qui lui est passé dans la méthode `CreateSecurityTokenProvider`. Le gestionnaire de jetons de sécurité permet également de créer des authentificateurs et des sérialiseurs de jeton, mais ceux-là ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenProvider` pour retourner le fournisseur de jetons personnalisé lorsque les spécifications du jeton passé indiquent qu'un jeton émis est demandé.  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer un <xref:System.IdentityModel.Selectors.SecurityTokenProvider> pour un <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifique qui lui est passé dans la méthode `CreateSecurityTokenProvider`. Le gestionnaire de jetons de sécurité permet également de créer des authentificateurs et des sérialiseurs de jeton, mais ceux-là ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de la classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenProvider` pour retourner le fournisseur de jetons personnalisé lorsque les exigences du jeton passé indiquent qu’un jeton émis est demandé.  
   
     ```  
     class DurableIssuedTokenClientCredentialsTokenManager :  

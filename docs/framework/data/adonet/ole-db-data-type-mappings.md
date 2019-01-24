@@ -2,12 +2,12 @@
 title: Mappages de types de données OLE DB
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 203b017234a98553a053981d8f74b2c419376e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711731"
 ---
 # <a name="ole-db-data-type-mappings"></a>Mappages de types de données OLE DB
 Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] déduit pour les types de données du fournisseur de données .NET Framework pour ADO et OLE DB (<xref:System.Data.OleDb>). Les méthodes d’accesseur typées pour les <xref:System.Data.OleDb.OleDbDataReader> sont également répertoriés.  
@@ -49,6 +49,6 @@ Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../include
   
  \* Pour les types OLE DB `DBTYPE_IUNKNOWN` et `DBTYPE_IDISPATCH`, la référence d’objet est une représentation marshalée du pointeur.  
   
-## <a name="see-also"></a>Voir aussi  
- [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

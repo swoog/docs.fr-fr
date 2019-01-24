@@ -2,12 +2,12 @@
 title: Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 31b2b3cf16857bf08a4f8d09f47f80d9b34a53b8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b4c2bb2d9c81b6ab3afc783d1188de7664e01566
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741416"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)
 L'utilitaire de configuration WS-AtomicTransaction permet de configurer les paramètres de prise en charge WS-AtomicTransaction.  
@@ -44,11 +44,11 @@ wsatConfig [Options]
 |-traceActivity :\<activer&#124;désactiver >|Active ou désactive le suivi d'événements d'activité.|  
 |-traceLevel :\<hors&#124;erreur&#124;critique&#124;avertissement&#124;informations&#124; Verbose&#124;tous les >}|Spécifie le niveau de suivi.|  
 |-tracePII :\<activer&#124;désactiver >|Active ou désactive le suivi des informations d'identification personnelle.|  
-|-traceProp :\<activer&#124;désactiver >|Active ou désactive le suivi d'événements de propagation.|  
+|-traceProp:\<enable&#124;disable>|Active ou désactive le suivi d'événements de propagation.|  
 |-restart|Redémarre MSDTC pour activer immédiatement les modifications apportées. Si cette option n'est pas spécifiée, les modifications entrent en vigueur lorsque MSDTC est redémarré.|  
 |-show|Affiche les paramètres actuels du protocole WS-AtomicTransaction.|  
 |serveur virtuel- :\<serveur virtuel >|Spécifie le nom du cluster de ressource DTC.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
- [Configuration de la prise en charge WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation de WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)
+- [Configuration de la prise en charge WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

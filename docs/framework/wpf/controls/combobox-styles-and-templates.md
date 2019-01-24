@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 4dbffd2dcc0b2f798f6e75d01b58df54b09229e8
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 5cca162137b603f36dffb044d5954c3947964cf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712848"
 ---
 # <a name="combobox-styles-and-templates"></a>Styles et modèles ComboBox
-Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.ComboBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.ComboBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="combobox-parts"></a>Parties de la zone de liste déroulante  
  Le tableau suivant répertorie les composants nommés pour le <xref:System.Windows.Controls.ComboBox> contrôle.  
@@ -29,7 +29,7 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
  Lorsque vous créez un <xref:System.Windows.Controls.ControlTemplate> pour un <xref:System.Windows.Controls.ComboBox>, votre modèle peut contenir un <xref:System.Windows.Controls.ItemsPresenter> au sein d’un <xref:System.Windows.Controls.ScrollViewer>. (Le <xref:System.Windows.Controls.ItemsPresenter> affiche chaque élément dans le <xref:System.Windows.Controls.ComboBox>; le <xref:System.Windows.Controls.ScrollViewer> permet le défilement dans le contrôle).  Si le <xref:System.Windows.Controls.ItemsPresenter> n’est pas l’enfant direct de la <xref:System.Windows.Controls.ScrollViewer>, vous devez donner le <xref:System.Windows.Controls.ItemsPresenter> le nom, `ItemsPresenter`.  
   
-## <a name="combobox-states"></a>États de ComboBox  
+## <a name="combobox-states"></a>États de la zone de liste déroulante  
  Le tableau suivant répertorie les États de la <xref:System.Windows.Controls.ComboBox> contrôle.  
   
 |Nom VisualState|Nom VisualStateGroup|Description|  
@@ -39,7 +39,7 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |MouseOver|CommonStates|Le pointeur de la souris est sur le <xref:System.Windows.Controls.ComboBox> contrôle.|  
 |Avec focus|FocusStates|Le contrôle a le focus.|  
 |Sans focus|FocusStates|Le contrôle n’a pas le focus.|  
-|FocusedDropDown|FocusStates|La liste déroulante pour la <xref:System.Windows.Controls.ComboBox> a le focus.|  
+|FocusedDropDown|FocusStates|La liste déroulante pour le <xref:System.Windows.Controls.ComboBox> a le focus.|  
 |Valide|ValidationStates|Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.|  
 |InvalidFocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.|  
 |InvalidUnfocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.|  
@@ -59,14 +59,14 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |MouseOver|CommonStates|Le pointeur de la souris est sur le <xref:System.Windows.Controls.ComboBox> contrôle.|  
 |Avec focus|FocusStates|Le contrôle a le focus.|  
 |Sans focus|FocusStates|Le contrôle n’a pas le focus.|  
-|Selected|SelectionStates|L’élément est sélectionné.|  
+|Selected|SelectionStates|L’élément est actuellement sélectionné.|  
 |Non sélectionné|SelectionStates|L’élément n’est pas sélectionné.|  
 |SelectedUnfocused|SelectionStates|L’élément est sélectionné mais n’a pas le focus.|  
 |Valide|ValidationStates|Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.|  
 |InvalidFocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.|  
 |InvalidUnfocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.|  
   
-## <a name="combobox-controltemplate-example"></a>ComboBox ControlTemplate, exemple  
+## <a name="combobox-controltemplate-example"></a>Exemple de ControlTemplate de zone de liste déroulante  
  L’exemple suivant montre comment définir un <xref:System.Windows.Controls.ControlTemplate> pour la <xref:System.Windows.Controls.ComboBox> contrôle et les types associés.  
   
  [!code-xaml[ControlTemplateExamples#ComboBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
@@ -77,10 +77,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

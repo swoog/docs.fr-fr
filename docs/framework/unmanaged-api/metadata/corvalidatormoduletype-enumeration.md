@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716776"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType, énumération
 Spécifie le type d’un module.  
@@ -49,18 +49,18 @@ typedef enum
 |`ValidatorModuleTypeMin`|La valeur minimale de la `CorValidatorModuleType` enum.|  
 |`ValidatorModuleTypePE`|Le module est un fichier exécutable portable (PE).|  
 |`ValidatorModuleTypeObj`|Le module est un fichier .obj.|  
-|`ValidatorModuleTypeEnc`|Le module est une session du débogueur de modifier et continuer.|  
-|`ValidatorModuleTypeIncr`|Le module est celle qui a été généré de façon incrémentielle.|  
+|`ValidatorModuleTypeEnc`|Le module est une session de débogueur modifier et continuer.|  
+|`ValidatorModuleTypeIncr`|Le module est un qui a été générée de façon incrémentielle.|  
 |`ValidatorModuleTypeMax`|La valeur maximale de la `CorValidatorModuleType` enum.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

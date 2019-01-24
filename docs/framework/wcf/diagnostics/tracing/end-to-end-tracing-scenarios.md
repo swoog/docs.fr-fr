@@ -2,12 +2,12 @@
 title: Scénarios de suivi de bout en bout
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-ms.openlocfilehash: ee1f3f09ccd642edbde039bafeda6bbf58247744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 976c3ad6fae2fa31b180d7635ac897bdf6b9ef1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704236"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Scénarios de suivi de bout en bout
 Cette section contient des rubriques qui décrivent différents scénarios d'utilisation du suivi.  
@@ -38,6 +38,6 @@ Cette section contient des rubriques qui décrivent différents scénarios d'uti
   
 -   [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

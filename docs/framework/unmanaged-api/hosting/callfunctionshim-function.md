@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1060ca140db0304c8e5667f7fdf9624b3ac2b64a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738928"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim, fonction
-Effectue un appel à la fonction qui porte le nom spécifié et les paramètres dans la bibliothèque spécifiée.  
+Effectue un appel à la fonction qui a le nom spécifié et les paramètres dans la bibliothèque spécifiée.  
   
- Cette fonction est déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Cette fonction a été déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +43,7 @@ HRESULT CallFunctionShim (
   
 #### <a name="parameters"></a>Paramètres  
  `szDllName`  
- [in] Le nom de la bibliothèque qui contient la fonction.  
+ [in] Le nom de la bibliothèque contenant la fonction.  
   
  `szFunctionName`  
  [in] Le nom de la fonction.  
@@ -58,16 +58,16 @@ HRESULT CallFunctionShim (
  [in] La version de la bibliothèque qui contient la fonction.  
   
  `pvReserved`  
- [in] Réservé à un usage ultérieur. Passez zéro dans ce paramètre.  
+ [in] Réservé pour une utilisation ultérieure. Passer zéro dans ce paramètre.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions d’hébergement CLR dépréciées](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions d’hébergement CLR dépréciées](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

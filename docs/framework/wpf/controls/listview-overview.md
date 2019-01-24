@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 42573304d6f3d6d145887fa7289f9b5ec019f521
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701545"
 ---
 # <a name="listview-overview"></a>Vue d'ensemble de ListView
 Le <xref:System.Windows.Controls.ListView> contrôle fournit l’infrastructure pour afficher un ensemble d’éléments de données dans différentes dispositions ou différents affichages. Par exemple, un utilisateur peut souhaiter afficher des éléments de données dans un tableau et en trier les colonnes.  
@@ -81,11 +81,11 @@ Le <xref:System.Windows.Controls.ListView> contrôle fournit l’infrastructure 
 ## <a name="creating-a-custom-view-mode"></a>Créer un mode d’affichage personnalisé  
  Affichages personnalisés tels que <xref:System.Windows.Controls.GridView> sont dérivés de la <xref:System.Windows.Controls.ViewBase> classe, qui fournit les outils pour afficher les éléments de données qui sont représentées sous forme abstraite <xref:System.Windows.Controls.ListViewItem> objets.    
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Controls.GridView>  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.ListViewItem>  
- <xref:System.Windows.Data.Binding>  
- [Vue d’ensemble de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [Contrôles](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Controls.GridView>
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListViewItem>
+- <xref:System.Windows.Data.Binding>
+- [Vue d’ensemble de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Contrôles](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

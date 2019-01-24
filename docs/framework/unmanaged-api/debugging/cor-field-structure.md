@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0898936665b3b337f2fd4e4d53bcc9f6071469b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d570f9392bbd66f0d9031c776b139ee3b30541b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698217"
 ---
 # <a name="corfield-structure"></a>COR_FIELD, structure
 Fournit des informations sur un champ dans un objet.  
@@ -42,21 +42,21 @@ typedef struct COR_FIELD{
 |Membre|Description|  
 |------------|-----------------|  
 |`token`|Un `mdFieldDef` jeton qui peut être utilisé pour obtenir des informations de champ.|  
-|`offset`|Offset, en octets, pour les données du champ dans l’objet.|  
-|`id`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) valeur qui identifie le type de ce champ.|  
+|`offset`|Offset, en octets, pour les données de champ dans l’objet.|  
+|`id`|Un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) valeur qui identifie le type de ce champ.|  
 |`fieldType`|Une valeur d’énumération CorElementType qui indique le type du champ.|  
   
 ## <a name="remarks"></a>Notes  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

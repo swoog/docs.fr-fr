@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685527"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps, méthode
 Obtient les valeurs de métadonnées pour le paramètre référencé par le jeton ParamDef spécifié.  
@@ -49,7 +49,7 @@ HRESULT GetParamProps (
  [in] Jeton ParamDef qui représente le paramètre pour retourner les métadonnées.  
   
  `pmd`  
- [out] Pointeur vers le jeton MethodDef représentant la méthode qui prend le paramètre.  
+ [out] Pointeur vers un jeton MethodDef représentant la méthode qui prend le paramètre.  
   
  `pulSequence`  
  [out] La position ordinale du paramètre dans la liste d’arguments de méthode.  
@@ -64,7 +64,7 @@ HRESULT GetParamProps (
  [out] La taille retournée en caractères larges de `szName`.  
   
  `pdwAttr`  
- [out] Pointeur vers un indicateur d’attribut associé au paramètre.  
+ [out] Pointeur vers les indicateurs d’attribut associé au paramètre.  
   
  `pdwCPlusTypeFlag`  
  [out] Un pointeur vers un indicateur spécifiant que le paramètre est un <xref:System.ValueType>.  
@@ -76,14 +76,14 @@ HRESULT GetParamProps (
  [out] La taille de `ppValue` en caractères larges, ou zéro si `ppValue` ne contient pas de chaîne.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

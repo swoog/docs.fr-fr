@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e22cf8e540bfdb53ad243640dac110b5750e53e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2dc1664551683066a33fb52e16e4909506601f2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588689"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout, méthode
-Exécute la disposition des champs d’une classe qui a été défini par un appel antérieur à [DefineTypeDef, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Exécute la disposition des champs pour une classe qui a été défini par un appel antérieur à [DefineTypeDef, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ HRESULT SetClassLayout (
   
 #### <a name="parameters"></a>Paramètres  
  `td`  
- [in] Un `mdTypeDef` jeton qui spécifie la classe doivent être disposées.  
+ [in] Un `mdTypeDef` jeton qui spécifie la classe à être disposé.  
   
  `dwPackSize`  
  [in] La taille de compression : 1, 2, 4, 8 ou 16 octets. La taille de compression est le nombre d’octets entre des champs adjacents.  
@@ -52,23 +52,23 @@ HRESULT SetClassLayout (
  [in] La taille, en octets, de la classe.  
   
 ## <a name="remarks"></a>Notes  
- La classe est définie initialement en appelant le [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) (méthode) et en spécifiant une des trois dispositions pour les champs de la classe : automatique, séquentielle ou explicite. En règle générale, vous utilisez la disposition automatique et permettre au runtime de choisir la meilleure façon de disposer les champs.  
+ La classe est définie initialement en appelant le [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) (méthode) et en spécifiant une des trois dispositions pour les champs de la classe : automatique, séquentielle ni explicite. Normalement, vous utiliser la disposition automatique et laisser l’exécution de choisir la meilleure façon de disposer les champs.  
   
- Toutefois, vous pourriez les champs présentés en fonction de la disposition de code non managé. Dans ce cas, choisissez une disposition séquentielle ou explicite et appelez `SetClassLayout` pour terminer la disposition des champs :  
+ Toutefois, vous souhaiterez peut-être les champs disposés selon la disposition de code non managé. Dans ce cas, choisissez une disposition séquentielle ou explicite et appelez `SetClassLayout` pour terminer la disposition des champs :  
   
--   Une disposition séquentielle : spécifiez la taille de compression. Un champ est aligné en fonction de sa taille naturelle ou la taille de compression, selon que le résultat dans le plus petit décalage du champ. Définissez `rFieldOffsets` et `ulClassSize` à zéro.  
+-   Disposition séquentielle : Spécifiez la taille de compression. Un champ est aligné en fonction de sa taille naturelle ou la taille de compression, selon que le résultat dans le décalage plus petits du champ. Définissez `rFieldOffsets` et `ulClassSize` à zéro.  
   
--   Une disposition explicite : spécifiez le décalage de chaque champ ou spécifier la taille de la classe et la taille de compression.  
+-   Disposition explicite : Spécifier le décalage de chaque champ ou spécifier la taille de la classe et la taille de compression.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

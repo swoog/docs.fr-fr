@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46fa6ab3ea4a63583b01ffe25d22840301613100
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ede66a39de292cd259cb12742e7c6df4ab5814f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720494"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile, méthode
 Crée une structure `File` contenant les métadonnées pour l'assembly référencé par cet assembly et retourne le jeton de métadonnées associé.  
@@ -50,22 +50,22 @@ HRESULT DefineFile (
  [in] La taille en octets de `pbHashValue`.  
   
  `dwFileFlags`  
- [in] Une combinaison d’opérations de `FileFlags` valeurs qui spécifient les paramètres de propriété.  
+ [in] Une combinaison au niveau du bit de `FileFlags` valeurs qui spécifient les paramètres de propriété.  
   
  `pmdf`  
- [out] Un pointeur vers retourné `File` jeton.  
+ [out] Un pointeur vers le texte retourné `File` jeton.  
   
 ## <a name="remarks"></a>Notes  
- Un `File` structure de métadonnées doit être définie pour chaque fichier qui faisait partie de cet assembly au moment de cet assembly a été généré, à l’exclusion de fichier qui contient les métadonnées.  
+ Un seul `File` structure des métadonnées doit être définie pour chaque fichier qui faisait partie de cet assembly au moment où cet assembly a été généré, à l’exclusion du fichier qui contient les métadonnées.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateforme :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateforme :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
