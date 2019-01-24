@@ -1,5 +1,5 @@
 ---
-title: SetFakeActiveWindow (fonction) (référence des API non managées WPF)
+title: Fonction SetFakeActiveWindow (référence des API non managées WPF)
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,19 +8,19 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: a69118be-63b0-445c-9fb6-ab8cc958e531
-ms.openlocfilehash: 6eb8d4d4b04e80373b8bfe1ceed84694e2a8a469
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf2cdce9da4f10ca91df5a7e04ca207ba76db5a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507289"
 ---
-# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="c4799-102">SetFakeActiveWindow (fonction) (référence des API non managées WPF)</span><span class="sxs-lookup"><span data-stu-id="c4799-102">SetFakeActiveWindow Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="c4799-103">Cette API prend en charge l’infrastructure de Windows Presentation Foundation (WPF) et n’est pas destinée à être utilisée directement depuis votre code.</span><span class="sxs-lookup"><span data-stu-id="c4799-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="17230-102">Fonction SetFakeActiveWindow (référence des API non managées WPF)</span><span class="sxs-lookup"><span data-stu-id="17230-102">SetFakeActiveWindow Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="17230-103">Cette API prend en charge l’infrastructure Windows Presentation Foundation (WPF) et n’est pas destinée à être utilisée directement depuis votre code.</span><span class="sxs-lookup"><span data-stu-id="17230-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="c4799-104">Utilisée par l’infrastructure de Windows Presentation Foundation (WPF) pour la gestion de windows.</span><span class="sxs-lookup"><span data-stu-id="c4799-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="17230-104">Utilisé par l’infrastructure Windows Presentation Foundation (WPF) pour la gestion de windows.</span><span class="sxs-lookup"><span data-stu-id="17230-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4799-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c4799-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17230-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="17230-105">Syntax</span></span>  
   
 ```cpp  
 void __stdcall SetFakeActiveWindow(  
@@ -28,16 +28,16 @@ void __stdcall SetFakeActiveWindow(
 )  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c4799-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="c4799-106">Parameters</span></span>  
- <span data-ttu-id="c4799-107">HWND</span><span class="sxs-lookup"><span data-stu-id="c4799-107">hwnd</span></span>  
- <span data-ttu-id="c4799-108">Un handle de fenêtre.</span><span class="sxs-lookup"><span data-stu-id="c4799-108">A window handle.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="17230-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="17230-106">Parameters</span></span>  
+ <span data-ttu-id="17230-107">HWND</span><span class="sxs-lookup"><span data-stu-id="17230-107">hwnd</span></span>  
+ <span data-ttu-id="17230-108">Un handle de fenêtre.</span><span class="sxs-lookup"><span data-stu-id="17230-108">A window handle.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4799-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="c4799-109">Requirements</span></span>  
- <span data-ttu-id="c4799-110">**Plateformes :** consultez [configuration système requise du .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4799-110">**Platforms:** See [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17230-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="17230-109">Requirements</span></span>  
+ <span data-ttu-id="17230-110">**Plateformes :** Consultez [requise du .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17230-110">**Platforms:** See [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c4799-111">**DLL :** PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="c4799-111">**DLL:** PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="17230-111">**DLL :** PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="17230-111">**DLL:** PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="c4799-112">**Version du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4799-112">**.NET Framework Version:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="17230-112">**Version du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17230-112">**.NET Framework Version:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4799-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c4799-113">See Also</span></span>  
- [<span data-ttu-id="c4799-114">Référence des API non managées WPF</span><span class="sxs-lookup"><span data-stu-id="c4799-114">WPF Unmanaged API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a><span data-ttu-id="17230-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="17230-113">See also</span></span>
+- [<span data-ttu-id="17230-114">Référence des API non managées WPF</span><span class="sxs-lookup"><span data-stu-id="17230-114">WPF Unmanaged API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ea9a75ae9316c18439f6c2b728b47deacef9228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56d4255b06f1317c87685737e4ee4021c37a77f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555009"
 ---
-# <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="4c1f3-102">COR_DEBUG_IL_TO_NATIVE_MAP, structure</span><span class="sxs-lookup"><span data-stu-id="4c1f3-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
-<span data-ttu-id="4c1f3-103">Contient les décalages qui sont utilisés pour mapper du code MSIL (Microsoft Intermediate Language) à du code natif.</span><span class="sxs-lookup"><span data-stu-id="4c1f3-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
+# <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="17440-102">COR_DEBUG_IL_TO_NATIVE_MAP, structure</span><span class="sxs-lookup"><span data-stu-id="17440-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
+<span data-ttu-id="17440-103">Contient les décalages qui sont utilisés pour mapper du code MSIL (Microsoft Intermediate Language) à du code natif.</span><span class="sxs-lookup"><span data-stu-id="17440-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c1f3-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4c1f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17440-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="17440-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {  
@@ -36,25 +36,25 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 } COR_DEBUG_IL_TO_NATIVE_MAP;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4c1f3-105">Membres</span><span class="sxs-lookup"><span data-stu-id="4c1f3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="17440-105">Membres</span><span class="sxs-lookup"><span data-stu-id="17440-105">Members</span></span>  
   
-|<span data-ttu-id="4c1f3-106">Membre</span><span class="sxs-lookup"><span data-stu-id="4c1f3-106">Member</span></span>|<span data-ttu-id="4c1f3-107">Description</span><span class="sxs-lookup"><span data-stu-id="4c1f3-107">Description</span></span>|  
+|<span data-ttu-id="17440-106">Membre</span><span class="sxs-lookup"><span data-stu-id="17440-106">Member</span></span>|<span data-ttu-id="17440-107">Description</span><span class="sxs-lookup"><span data-stu-id="17440-107">Description</span></span>|  
 |------------|-----------------|  
-|`ilOffset`|<span data-ttu-id="4c1f3-108">Le décalage du code MSIL.</span><span class="sxs-lookup"><span data-stu-id="4c1f3-108">The offset of the MSIL code.</span></span>|  
-|`nativeStartOffset`|<span data-ttu-id="4c1f3-109">Le décalage du début du code natif.</span><span class="sxs-lookup"><span data-stu-id="4c1f3-109">The offset of the start of the native code.</span></span>|  
-|`nativeEndOffset`|<span data-ttu-id="4c1f3-110">Le décalage de la fin du code natif.</span><span class="sxs-lookup"><span data-stu-id="4c1f3-110">The offset of the end of the native code.</span></span>|  
+|`ilOffset`|<span data-ttu-id="17440-108">Le décalage du code MSIL.</span><span class="sxs-lookup"><span data-stu-id="17440-108">The offset of the MSIL code.</span></span>|  
+|`nativeStartOffset`|<span data-ttu-id="17440-109">Le décalage du début du code natif.</span><span class="sxs-lookup"><span data-stu-id="17440-109">The offset of the start of the native code.</span></span>|  
+|`nativeEndOffset`|<span data-ttu-id="17440-110">Le décalage de la fin du code natif.</span><span class="sxs-lookup"><span data-stu-id="17440-110">The offset of the end of the native code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4c1f3-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4c1f3-111">Requirements</span></span>  
- <span data-ttu-id="4c1f3-112">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4c1f3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17440-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="17440-111">Requirements</span></span>  
+ <span data-ttu-id="17440-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17440-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4c1f3-113">**En-tête :** CorProf.idl, CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="4c1f3-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
+ <span data-ttu-id="17440-113">**En-tête :** CorProf.idl, CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="17440-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
   
- <span data-ttu-id="4c1f3-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4c1f3-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17440-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17440-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4c1f3-115">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c1f3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="17440-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17440-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c1f3-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4c1f3-116">See Also</span></span>  
- [<span data-ttu-id="4c1f3-117">GetILToNativeMapping, méthode</span><span class="sxs-lookup"><span data-stu-id="4c1f3-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)  
- [<span data-ttu-id="4c1f3-118">GetILToNativeMapping, méthode</span><span class="sxs-lookup"><span data-stu-id="4c1f3-118">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)  
- [<span data-ttu-id="4c1f3-119">Structures de débogage</span><span class="sxs-lookup"><span data-stu-id="4c1f3-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [<span data-ttu-id="4c1f3-120">Débogage</span><span class="sxs-lookup"><span data-stu-id="4c1f3-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="17440-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="17440-116">See also</span></span>
+- [<span data-ttu-id="17440-117">GetILToNativeMapping, méthode</span><span class="sxs-lookup"><span data-stu-id="17440-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [<span data-ttu-id="17440-118">GetILToNativeMapping, méthode</span><span class="sxs-lookup"><span data-stu-id="17440-118">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
+- [<span data-ttu-id="17440-119">Structures de débogage</span><span class="sxs-lookup"><span data-stu-id="17440-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="17440-120">Débogage</span><span class="sxs-lookup"><span data-stu-id="17440-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
