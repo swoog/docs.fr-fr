@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 5744184d224fa97e57055b5a110d830e8809647f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552019"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Présentation de Windows Communication Foundation
 Windows Communication Foundation (WCF) est une infrastructure pour la création d’applications orientées service. À l’aide de WCF, vous pouvez envoyer données sous forme de messages asynchrones à partir d’un point de terminaison à un autre. Un point de terminaison de service peut faire partie d'un service disponible en continu et hébergé par IIS, ou il peut s'agir d'un service hébergé dans une application. Un point de terminaison peut être un client d'un service qui demande des données auprès d'un point de terminaison de service. Les messages peuvent être simplement constitués d'un caractère ou d'un mot unique envoyé au format XML, ou se présenter sous la forme d'un flux de données binaires plus complexe. Voici quelques exemples de scénarios :
@@ -72,7 +72,7 @@ WCF inclut l’ensemble de fonctionnalités suivant. Pour plus d’informations,
 
 -   **Transactions**
 
-     WCF prend également en charge les transactions à l'aide de trois modèles de transaction : WS-AtomicTtransactions, les interfaces API dans l'espace de noms <xref:System.Transactions> et MSDTC (Microsoft Distributed Transaction Coordinator). Pour plus d’informations sur la transaction prise en charge dans WCF consultez [Transactions](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
+     WCF prend également en charge les transactions à l’aide d’un des trois modèles de transaction : WS-AtomicTtransactions, les API dans le <xref:System.Transactions> espace de noms et Microsoft Distributed Transaction Coordinator. Pour plus d’informations sur la transaction prise en charge dans WCF consultez [Transactions](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
 
 -   **Prise en charge d'AJAX et de REST**
 

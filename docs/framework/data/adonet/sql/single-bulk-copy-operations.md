@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4b2b35d3ca3f7bea5f64188420c17d386a1afa42
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 286199a595e7b34c25fcc13d37c5c913f269304d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555191"
 ---
 # <a name="single-bulk-copy-operations"></a>Opérations uniques de copie en bloc
 L'approche la plus simple de l'exécution d'une opération de copie en bloc SQL Server consiste à exécuter une opération unique sur une base de données. Par défaut, une opération de copie en bloc s'effectue comme une opération isolée : l'opération de copie se produit de façon non traitée, sans possibilité de restauration.  
   
 > [!NOTE]
->  Si vous devez restaurer tout ou partie de la copie en bloc en cas d'erreur, vous pouvez soit utiliser une transaction <xref:System.Data.SqlClient.SqlBulkCopy> managée, soit effectuer une opération de copie en bloc à l'intérieur d'une transaction existante. **SqlBulkCopy** fonctionneront également avec <xref:System.Transactions> si la connexion est inscrite (implicitement ou explicitement) dans un **System.Transactions** transaction.  
+>  Si vous devez restaurer tout ou partie de la copie en bloc en cas d’erreur, vous pouvez soit utiliser une transaction <xref:System.Data.SqlClient.SqlBulkCopy> managée, soit effectuer une opération de copie en bloc à l’intérieur d’une transaction existante. **SqlBulkCopy** fonctionneront également avec <xref:System.Transactions> si la connexion est inscrite (implicitement ou explicitement) dans un **System.Transactions** transaction.  
 >   
 >  Pour plus d’informations, consultez [Transaction et opérations de copie en bloc](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
   
@@ -79,6 +79,6 @@ command.ExecuteNonQuery();
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Opérations de copie en bloc dans SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Opérations de copie en bloc dans SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

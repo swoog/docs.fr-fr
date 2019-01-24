@@ -1,15 +1,15 @@
 ---
-title: 'Comment : déboguer des ensembles de résultats de requête vide (Visual Basic)'
+title: 'Procédure : Déboguer des ensembles de résultats de requête vides (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 33dcfe9b0c0ad41353ca845ed4d8e21ff77292df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72233981e6e9a309c3f328041736f3fce71746cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715450"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Comment : déboguer des ensembles de résultats de requête vide (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Procédure : Déboguer des ensembles de résultats de requête vides (Visual Basic)
 L'un des problèmes les plus courants lors de l'interrogation d'une arborescence XML est que si celle-ci possède un espace de noms par défaut, le développeur écrit parfois la requête comme si le code XML n'était dans aucun espace de noms.  
   
  Le premier ensemble d'exemples dans cette rubrique illustre le chargement de code XML dans un espace de noms par défaut et son interrogation incorrecte.  
@@ -89,5 +89,5 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

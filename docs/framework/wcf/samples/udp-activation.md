@@ -2,12 +2,12 @@
 title: UDP Activation
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 09b208f88b456b6d98e45fc34db3857f8938cd6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715515"
 ---
 # <a name="udp-activation"></a>UDP Activation
 Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple. Il étend le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple pour prendre en charge l’activation de processus en utilisant le Service de l’Activation des processus Windows (WAS).  
@@ -103,13 +103,13 @@ Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/s
 ## <a name="sample-usage"></a>Utilisation de l'exemple  
  Après la compilation, quatre binaires différents sont générés :  
   
--   Client.exe : le code client. App.config est compilé dans le fichier de configuration client Client.exe.config.  
+-   Client.exe : Le code client. App.config est compilé dans le fichier de configuration client Client.exe.config.  
   
 -   UDPActivation.dll : la bibliothèque qui contient toutes les implémentations UDP majeures.  
   
--   Service.dll : le code de service. Est copié dans le répertoire \bin de l'application virtuelle ServiceModelSamples. Le fichier du service est Service.svc et le fichier de configuration est Web.config. Après compilation, ils sont copiés à l'emplacement suivant : %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+-   Service.dll : Le code de service. Est copié dans le répertoire \bin de l'application virtuelle ServiceModelSamples. Le fichier du service est Service.svc et le fichier de configuration est Web.config. Après compilation, ils sont copiés à l'emplacement suivant : %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
--   WasNetActivator : le programme de l'activateur UDP.  
+-   WasNetActivator : Le programme de l’activateur UDP.  
   
 -   Assurez-vous que tous les éléments requis sont installés correctement. Les étapes suivantes indiquent comment exécuter l'exemple :  
   
@@ -117,7 +117,7 @@ Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/s
   
     -   service d'activation des processus Windows (WAS) ;  
   
-    -   Services Internet (IIS) : W3SVC.  
+    -   Internet Information Services (IIS) : W3SVC.  
   
 2.  Puis démarrez l'activateur, WasNetActivator.exe. Sous le **Activation** onglet, le seul protocole **UDP**, est sélectionné dans la liste déroulante. Cliquez sur le **Démarrer** bouton pour démarrer l’activateur.  
   

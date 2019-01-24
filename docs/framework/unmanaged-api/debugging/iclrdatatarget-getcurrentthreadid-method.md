@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03ce49466587d3e214c32e2a5cca89cdd7a72038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb1e0aec9ce746c3082ad9cc57b572cbca0fd7e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552259"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>ICLRDataTarget::GetCurrentThreadID, méthode
 Obtient l’identificateur de système d’exploitation pour le thread actuel.  
@@ -37,19 +37,19 @@ HRESULT GetCurrentThreadID (
   
 #### <a name="parameters"></a>Paramètres  
  `threadID`  
- [out] Pointeur vers l’identificateur de système d’exploitation du thread actuel pour le processus cible.  
+ [out] Un pointeur vers l’identificateur de système d’exploitation du thread actuel pour le processus cible.  
   
 ## <a name="remarks"></a>Notes  
- S’il n’existe aucun thread actuel pour le processus cible, le `GetCurrentThreadID` méthode risque d’échouer.  
+ S’il n’existe aucun thread actuel pour le processus cible, le `GetCurrentThreadID` méthode peut échouer.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** ClrData.idl, ClrData.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRDataTarget, interface](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRDataTarget, interface](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -2,12 +2,12 @@
 title: Volatile Queued Communication
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c6b72503cb90108e3ecc9a384cb8d7ad326a7c9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548298"
 ---
 # <a name="volatile-queued-communication"></a>Volatile Queued Communication
 Cet exemple montre comment procéder à la communication de messages volatils mis en file d'attente sur le transport MSMQ (Message Queuing). Il utilise <xref:System.ServiceModel.NetMsmqBinding>. Dans le cas présent, le service est une application console auto-hébergée qui vous permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -82,7 +82,7 @@ public static void Main()
  Le nom de la file d'attente MSMQ est spécifié dans la section appSettings du fichier de configuration. Le point de terminaison pour le service est défini dans la section system.serviceModel du fichier de configuration et spécifie la liaison `netMsmqBinding`.  
   
 > [!NOTE]
->  Le nom de la file d'attente comprend un point (.) pour l'ordinateur local et des barre obliques inverses dans son chemin d'accès lors de la création d'une file d'attente à l'aide de <xref:System.Messaging>. L’adresse de point de terminaison Windows Communication Foundation (WCF) spécifie un net.msmq : schéma, utilise « localhost » pour l’ordinateur local et les barres obliques dans son chemin d’accès.  
+>  Le nom de la file d’attente comprend un point (.) pour l’ordinateur local et des barre obliques inverses dans son chemin d’accès lors de la création d’une file d’attente à l’aide de <xref:System.Messaging>. L’adresse de point de terminaison Windows Communication Foundation (WCF) spécifie un net.msmq : schéma, utilise « localhost » pour l’ordinateur local et les barres obliques dans son chemin d’accès.  
   
  Les assurances et la durabilité ou la volatilité des messages sont également spécifiées dans la configuration.  
   

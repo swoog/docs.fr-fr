@@ -1,5 +1,5 @@
 ---
-title: 'Comment : comparer des revendications'
+title: 'Procédure : Comparer des revendications'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: 1ef957efcb4cc9330c1c273a1c953afc5b7dd240
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b375251e1ff083a527249da51dfe12ae9165dd55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720247"
 ---
-# <a name="how-to-compare-claims"></a>Comment : comparer des revendications
+# <a name="how-to-compare-claims"></a>Procédure : Comparer des revendications
 L’infrastructure de modèle d’identité dans Windows Communication Foundation (WCF) est utilisé pour effectuer la vérification d’autorisation. L’une des tâches fréquentes de cette infrastructure de contrôle consiste notamment à comparer les revendications émises dans le cadre des autorisations à celles requises pour l’exécution des requêtes d’action ou des requêtes d’accès aux ressources. Cette rubrique contient des instructions qui permettent de comparer des revendications, notamment les types de revendication intégrés et personnalisés. Pour plus d’informations sur l’infrastructure de modèle d’identité, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  Comparer des revendications signifie comparer leurs trois composantes, à savoir leur type, leurs droits et leurs ressources avec les composantes d'autres revendications, et ce afin de savoir si elles sont égales. Lisez l'exemple suivant.  
@@ -30,7 +30,7 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
  [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
  [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]  
   
- le code de comparaison dans la <xref:System.IdentityModel.Claims.Claim.Equals%2A> méthode retourne `true`, en supposant que `example\someone` identifie le même utilisateur de domaine en tant que «someone@example.com».  
+ le code de comparaison dans la <xref:System.IdentityModel.Claims.Claim.Equals%2A> retourne de la méthode `true`, en supposant que `example\someone` identifie le même utilisateur de domaine en tant que «someone@example.com».  
   
  Les types de revendication personnalisés peuvent également être comparés à l'aide de la méthode <xref:System.IdentityModel.Claims.Claim.Equals%2A>. Toutefois, si le type retourné par la propriété <xref:System.IdentityModel.Claims.Claim.Resource%2A> de la revendication est un type autre que primitif, la méthode <xref:System.IdentityModel.Claims.Claim.Equals%2A> retournera uniquement la valeur `true` si les valeurs retournées par les propriétés `Resource` sont égales selon la méthode <xref:System.IdentityModel.Claims.Claim.Equals%2A>. Dans les cas où ce processus ne convient pas, le type personnalisé retourné par la propriété `Resource` doit remplacer les méthodes <xref:System.IdentityModel.Claims.Claim.Equals%2A> et <xref:System.Object.GetHashCode%2A> afin de permettre tous traitements personnalisés requis.  
   
@@ -70,6 +70,6 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
  [!code-csharp[c_CustomClaimComparison#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#0)]
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Guide pratique pour créer une revendication personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+## <a name="see-also"></a>Voir aussi
+- [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Guide pratique pour Créer une revendication personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

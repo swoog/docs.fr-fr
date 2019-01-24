@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: be2cf6c550ab8778a42f33fa2cb1b109abeea5e9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707571"
 ---
 # <a name="serialization-and-deserialization"></a>Sérialisation et désérialisation
 Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisation, le <xref:System.Runtime.Serialization.DataContractSerializer>. Le <xref:System.Runtime.Serialization.DataContractSerializer> traduit des objets [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en langage XML et inversement. Cette rubrique explique comment le sérialiseur fonctionne.  
@@ -79,7 +79,7 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
 ### <a name="round-trips"></a>Allers-retours  
  Un *aller-retour* se produit lorsqu'un objet est désérialisé et ré-sérialisé dans une opération. Ainsi, celui-ci passe du format XML à une instance d'objet, puis est reconverti en un flux de données XML.  
   
- Certaines surcharges de constructeur `DataContractSerializer` ont un paramètre `ignoreExtensionDataObject` , affecté par défaut de la valeur `false` . Dans ce mode par défaut, les données peuvent être envoyées sur un aller-retour d'une version plus récente d'un contrat de données via une version antérieure puis retournées vers la version plus récente sans perte, à condition que le contrat de données implémente l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject> . Par exemple, supposons que la version 1 du contrat de données `Person` contient les membres de données `Name` et `PhoneNumber`, et la version 2 ajoute un membre `Nickname`. Si `IExtensibleDataObject` est implémenté, lors de l'envoi d'informations de la version 2 à la version 1, les données `Nickname` sont stockées, et puis sont ré-émises lorsque les données sont encore sérialisées ; par conséquent, aucune donnée n'est perdue au cours de l'aller-retour. Pour plus d’informations, consultez [les contrats de données de compatibilité ascendante](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) et [concernant les contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
+ Certaines surcharges de constructeur `DataContractSerializer` ont un paramètre `ignoreExtensionDataObject` , affecté par défaut de la valeur `false` . Dans ce mode par défaut, les données peuvent être envoyées sur un aller-retour d'une version plus récente d'un contrat de données via une version antérieure puis retournées vers la version plus récente sans perte, à condition que le contrat de données implémente l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject> . Par exemple, supposons que la version 1 du contrat de données `Person` contient les membres de données `Name` et `PhoneNumber` , et la version 2 ajoute un membre `Nickname` . Si `IExtensibleDataObject` est implémenté, lors de l'envoi d'informations de la version 2 à la version 1, les données `Nickname` sont stockées, et puis sont ré-émises lorsque les données sont encore sérialisées ; par conséquent, aucune donnée n'est perdue au cours de l'aller-retour. Pour plus d’informations, consultez [les contrats de données de compatibilité ascendante](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) et [concernant les contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>Problèmes liés à la sécurité et à la validation de schéma avec les allers-retours  
  Les allers-retours peuvent avoir des conséquences sur la sécurité. Par exemple, la désérialisation et le stockage de grandes quantités de données superflues peuvent présenter un risque pour la sécurité. Il peut y avoir des problèmes de sécurité invérifiables pour ré-émettre ces données, surtout si les signatures numériques sont concernées. Par exemple, dans le scénario précédent, le point de terminaison version 1 peut signer une valeur `Nickname` qui contient des données malveillantes. Enfin, il peut y avoir des problèmes concernant la validité du schéma : un point de terminaison peut toujours émettre des données qui sont strictement conformes à son contrat défini et aucune valeur supplémentaire. Dans l'exemple précédent, la version 1 du contrat de point de terminaison indique qu'il émet uniquement `Name` et `PhoneNumber`, et si la validation de schéma est utilisée, l'émission de la valeur `Nickname` supplémentaire fait échouer la validation.  
@@ -203,7 +203,7 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
 >  L'utilisation de la sérialisation pas à pas peut générer du XML de schéma non valide.  
   
 ## <a name="deserialization"></a>Désérialisation  
- Les informations suivantes s'appliquent à toute classe qui hérite du <xref:System.Runtime.Serialization.XmlObjectSerializer>, y compris les classes <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.NetDataContractSerializer>.  
+ Les informations suivantes s'appliquent à toute classe qui hérite du <xref:System.Runtime.Serialization.XmlObjectSerializer>, y compris les classes <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.NetDataContractSerializer> .  
   
  La méthode la plus simple pour désérialiser un objet est d'appeler l'une des surcharges de méthode <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Il y a trois surcharges, chacune pour lire avec un <xref:System.Xml.XmlDictionaryReader>, un `XmlReader`ou un `Stream`. Notez que la surcharge `Stream` crée un <xref:System.Xml.XmlDictionaryReader> textuel qui n'est pas protégé par des quotas, et doit être utilisé uniquement pour lire des données approuvées.  
   
@@ -223,7 +223,7 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
   
  Lorsque vous utilisez une des simple `ReadObject` surcharges, le désérialiseur recherche le nom par défaut et l’espace de noms sur l’élément wrapper (voir la section précédente, « Spécifiant la valeur par défaut racine nom et Namespace ») et lève une exception s’il en trouve une inconnue élément. Dans l'exemple précédent, l'élément wrapper `<Person>` est attendu. La méthode <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> est appelée pour vérifier que le lecteur est positionné sur un élément dont le nom est attendu.  
   
- Une méthode permet de désactiver ce contrôle du nom de l'élément wrapper ; certaines surcharges de la méthode `ReadObject` acceptent le paramètre booléen `verifyObjectName` qui la valeur `true` par défaut. Lorsqu'il a la valeur `false`, le nom et l'espace de noms de l'élément wrapper sont ignorés. Ce procédé est utile pour lire le XML écrit à l'aide du mécanisme de sérialisation pas à pas décrit précédemment.  
+ Une méthode permet de désactiver ce contrôle du nom de l'élément wrapper ; certaines surcharges de la méthode `ReadObject` acceptent le paramètre booléen `verifyObjectName`qui la valeur `true` par défaut. Lorsqu'il a la valeur `false`, le nom et l'espace de noms de l'élément wrapper sont ignorés. Ce procédé est utile pour lire le XML écrit à l'aide du mécanisme de sérialisation pas à pas décrit précédemment.  
   
 ## <a name="using-the-netdatacontractserializer"></a>Utilisation de NetDataContractSerializer  
  La différence principale entre `DataContractSerializer` et <xref:System.Runtime.Serialization.NetDataContractSerializer> est que `DataContractSerializer` utilise des noms de contrat de données, alors que `NetDataContractSerializer` génère des noms de types et d'assembly [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] complets dans le XML sérialisé. Cela signifie que les mêmes types exacts doivent être partagés entre les points de terminaison de sérialisation et de désérialisation. Cela signifie que le mécanisme de types connus n'est pas requis avec `NetDataContractSerializer` parce que les types exacts à désérialiser sont toujours connus.  
@@ -260,9 +260,9 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
   
  De plus, notez que `NetDataContractSerializer` ne génère pas le nom de l'assembly et du type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] complet pour chaque nœud dans le graphique d'objets. Il génère ces informations uniquement en cas d'ambiguïté. Autrement dit, il génère au niveau de l'objet racine et pour les cas polymorphes.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.NetDataContractSerializer>  
- <xref:System.Runtime.Serialization.XmlObjectSerializer>  
- [Sérialisation binaire](../../../../docs/standard/serialization/binary-serialization.md)  
- [Types pris en charge par le sérialiseur de contrat de données](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.NetDataContractSerializer>
+- <xref:System.Runtime.Serialization.XmlObjectSerializer>
+- [Sérialisation binaire](../../../../docs/standard/serialization/binary-serialization.md)
+- [Types pris en charge par le sérialiseur de contrat de données](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

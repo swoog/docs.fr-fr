@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543446"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Comment les informations de culture affectent les chaînes dans Visual Basic
 Cette page d’aide décrit comment Visual Basic utilise les informations de culture pour effectuer des comparaisons et les conversions de chaînes.  
@@ -36,7 +36,7 @@ Cette page d’aide décrit comment Visual Basic utilise les informations de cul
  Pour plus d’informations, consultez <xref:Microsoft.VisualBasic.Conversion.Str%2A> et <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
 ## <a name="using-a-specific-culture"></a>À l’aide d’une Culture spécifique  
- Imaginez que vous développez une application qui envoie une date (sous formatée de chaîne) à un service Web. Dans ce cas, votre application doit utiliser une culture spécifique pour la conversion de chaîne. Pour illustrer pourquoi, observez le résultat de l’utilisation de la date <xref:System.DateTime.ToString> méthode : Si votre application utilise cette méthode pour mettre en forme la date du 4 juillet 2005, elle retourne « 7/4/2005 12:00:00 AM » lorsqu’il est exécuté avec la culture anglais des États-Unis (en-US), mais elle retourne » 04.07.2005 00:00:00 » lorsqu’il est exécuté avec la culture Allemand (de-DE).  
+ Imaginez que vous développez une application qui envoie une date (sous formatée de chaîne) à un service Web. Dans ce cas, votre application doit utiliser une culture spécifique pour la conversion de chaîne. Pour illustrer pourquoi, observez le résultat de l’utilisation de la date <xref:System.DateTime.ToString> méthode : Si votre application utilise cette méthode pour mettre en forme la date du 4 juillet 2005, elle retourne « 7/4/2005 12:00:00 AM » lorsqu’il est exécuté avec la culture anglais des États-Unis (en-US), mais elle retourne « 04.07.2005 00:00:00 » lorsqu’il est exécuté avec la culture Allemand (de-DE).  
   
  Lorsque vous avez besoin effectuer une conversion de chaîne dans un format de culture spécifique, vous devez utiliser le `CultureInfo` classe qui est intégrée dans le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Vous pouvez créer un nouveau `CultureInfo` objet pour une culture spécifique en passant le nom de la culture à le <xref:System.Globalization.CultureInfo.%23ctor%2A> constructeur. Les noms de culture prise en charge sont répertoriés dans le <xref:System.Globalization.CultureInfo> page d’aide de classe.  
   
@@ -78,7 +78,7 @@ Cette page d’aide décrit comment Visual Basic utilise les informations de cul
 ### <a name="security-considerations"></a>Considérations relatives à la sécurité  
  Si votre application prend des décisions de sécurité en fonction du résultat d’une comparaison ou d’une opération de changement de casse, l’opération doit utiliser le <xref:System.String.Compare%2A?displayProperty=nameWithType> (méthode), puis transmettez `Ordinal` ou `OrdinalIgnoreCase` pour le `comparisonType` argument.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Globalization.CultureInfo>  
- [Introduction aux chaînes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Fonctions de conversion de types](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Globalization.CultureInfo>
+- [Introduction aux chaînes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Fonctions de conversion de types](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

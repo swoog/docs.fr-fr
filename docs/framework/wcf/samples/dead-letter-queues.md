@@ -2,12 +2,12 @@
 title: Dead Letter Queues
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c6b3f059f1a1b11825b595346ed47f6a498078f1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 263c1fd399c8863154e0e53a1f79528d38022b78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721293"
 ---
 # <a name="dead-letter-queues"></a>Dead Letter Queues
 Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être remis. Il est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise la liaison `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.
@@ -26,11 +26,11 @@ Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être r
 
 -   La propriété <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> permet d'exprimer le type de file d'attente de lettres mortes requis par le client. L'énumération a les valeurs suivantes :
 
--   `None` : aucune file d'attente de lettres mortes n'est requise par le client.
+-   `None`: Aucune file d’attente de lettres mortes n’est requis par le client.
 
--   `System`  la file d'attente de lettres mortes du système est utilisée pour stocker les lettres mortes. La file d'attente de lettres mortes du système est partagée par toutes les applications exécutées sur l'ordinateur.
+-   `System`: La file d’attente de lettres mortes système est utilisé pour stocker les messages morts. La file d'attente de lettres mortes du système est partagée par toutes les applications exécutées sur l'ordinateur.
 
--   `Custom` : une file d'attente de lettres mortes personnalisée spécifiée à l'aide de la propriété <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> est utilisée pour stocker des messages morts. Cette fonctionnalité est disponible uniquement sur [!INCLUDE[wv](../../../../includes/wv-md.md)]. Elle est utilisée lorsque l'application doit utiliser sa propre file d'attente de lettres mortes au lieu de la partager avec d'autres applications exécutées sur le même ordinateur.
+-   `Custom`: Une file d’attente de lettres mortes personnalisée spécifiée à l’aide de la <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriété est utilisée pour stocker des messages morts. Cette fonctionnalité est disponible uniquement sur [!INCLUDE[wv](../../../../includes/wv-md.md)]. Elle est utilisée lorsque l'application doit utiliser sa propre file d'attente de lettres mortes au lieu de la partager avec d'autres applications exécutées sur le même ordinateur.
 
 -   La propriété <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> permet d'exprimer la file d'attente spécifique à utiliser comme file d'attente de lettres mortes. Elle est disponible uniquement dans [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
@@ -350,7 +350,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     >  L'affectation de `security mode` à `None` revient à affecter `MsmqAuthenticationMode` aux modes de sécurité `MsmqProtectionLevel`, `Message` et `None`.
 
 ## <a name="comments"></a>Commentaires
- Avec le transport de liaison `netMsmqBinding`, la sécurité est activée par défaut. Les propriétés `MsmqAuthenticationMode` et `MsmqProtectionLevel` déterminent toutes deux le type de sécurité du transport. Par défaut, le mode d'authentification a la valeur `Windows` et le niveau de protection a la valeur `Sign`. Pour que MSMQ fournisse la fonctionnalité d'authentification et de signature, il doit faire partie d'un domaine. Si vous exécutez cet exemple sur un ordinateur ne faisant pas partie d'un domaine, vous recevez l'erreur suivante : "Le certificat Message Queuing interne pour l'utilisateur n'existe pas."
+ Avec le transport de liaison `netMsmqBinding`, la sécurité est activée par défaut. Les propriétés `MsmqAuthenticationMode` et `MsmqProtectionLevel` déterminent toutes deux le type de sécurité du transport. Par défaut, le mode d'authentification a la valeur `Windows` et le niveau de protection a la valeur `Sign`. Pour que MSMQ fournisse la fonctionnalité d’authentification et de signature, il doit faire partie d’un domaine. Si vous exécutez cet exemple sur un ordinateur qui ne fait pas partie d’un domaine, vous recevez l’erreur suivante : « L’utilisateur interne message queuing certificat n’existe pas ».
 
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

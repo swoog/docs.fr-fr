@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 315bd78f660e093ecbf65224bd09a9b4f44300b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5d0b92dccceab48fcf0780a29d7bac38d591455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714969"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset, méthode
 Obtient un objet « ICorDebugValue » qui encapsule la valeur de retour d’une fonction.  
@@ -42,36 +42,36 @@ HRESULT GetReturnValueForILOffset(
  Pointeur vers l’adresse d’un objet d’interface « ICorDebugValue » qui fournit des informations sur la valeur de retour d’un appel de fonction.  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode est utilisée avec la [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) méthode pour obtenir la valeur de retour d’une méthode. Il est particulièrement utile dans le cas des méthodes dont les valeurs de retournés sont ignorées, comme dans les exemples de deux fichiers de code suivant. Le premier exemple appelle la <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> (méthode), mais ignore la valeur de retour de la méthode.  
+ Cette méthode est utilisée avec la [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) méthode pour obtenir la valeur de retour d’une méthode. Il est particulièrement utile dans le cas des méthodes dont les valeurs de retournés sont ignorées, comme dans les exemples de deux code suivants. Le premier exemple appelle la <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> (méthode), mais ignore la valeur de retour de la méthode.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
   
- Le deuxième exemple illustre un problème beaucoup plus courant dans le débogage. Car une méthode est utilisée en tant qu’argument dans un appel de méthode, sa valeur de retour est accessible uniquement lorsque le débogueur parcourt la méthode appelée. Dans de nombreux cas, en particulier lorsque la méthode appelée est définie dans une bibliothèque externe, qui n’est pas possible.  
+ Le deuxième exemple illustre un problème beaucoup plus courant lors du débogage. Car une méthode est utilisée en tant qu’argument dans un appel de méthode, sa valeur de retour est accessible uniquement lorsque le débogueur parcourt la méthode appelée. Dans de nombreux cas, en particulier lorsque la méthode appelée est définie dans une bibliothèque externe, qui n’est pas possible.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- Si vous passez le [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) méthode un offset à un site d’appel de fonction IL, elle retourne un ou plusieurs des offsets natifs. Le débogueur peut ensuite définir des points d’arrêt sur ces offsets natifs dans la fonction. Lorsque le débogueur atteint un des points d’arrêt, vous pouvez ensuite passer le même offset IL que vous avez passé à cette méthode pour obtenir la valeur de retour. Le débogueur doit puis désactivez tous les points d’arrêt qu’il.  
+ Si vous passez le [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) méthode un offset IL à un site d’appel de fonction, elle retourne un ou plusieurs offsets natifs. Le débogueur peut ensuite définir des points d’arrêt sur ces offsets natifs dans la fonction. Lorsque le débogueur atteint un des points d’arrêt, vous pouvez ensuite passer le même offset IL que vous avez passé à cette méthode pour obtenir la valeur de retour. Le débogueur doit ensuite effacer tous les points d’arrêt qu’il a définis.  
   
 > [!WARNING]
->  Le [icordebugcode3::getreturnvalueliveoffset, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) et `ICorDebugILFrame3::GetReturnValueForILOffset` méthodes permettent d’obtenir des informations de valeur de retour pour les types de référence uniquement. Récupération des informations de valeur de retour dans les types valeur (autrement dit, tous les types qui dérivent de <xref:System.ValueType>) n’est pas pris en charge.  
+>  Le [ICorDebugCode3::GetReturnValueLiveOffset Method](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) et `ICorDebugILFrame3::GetReturnValueForILOffset` méthodes permettent d’obtenir des informations de valeur de retour pour les types de référence uniquement. Récupération des informations de valeur de retour dans les types valeur (autrement dit, tous les types qui dérivent <xref:System.ValueType>) n’est pas pris en charge.  
   
- Offset IL spécifié par le `ILOffset` le paramètre doit être sur un site d’appel de fonction, et le programme débogué doit être arrêté à un point d’arrêt défini à l’offset natif retourné par le [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) (méthode) pour le même offset IL. Si le programme débogué n’est pas arrêté à l’emplacement correct pour l’offset IL spécifié, l’API échoue.  
+ L’offset IL spécifié par le `ILOffset` paramètre doivent être sur un site d’appel de fonction, et le programme débogué doit être arrêté par un point d’arrêt défini à l’offset natif retourné par la [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) (méthode) pour le même offset IL. Si le programme débogué n’est pas arrêté à l’emplacement correct pour l’offset IL spécifié, l’API échouera.  
   
- Si l’appel de fonction ne retourne aucune valeur, l’API échoue.  
+ Si l’appel de fonction ne retourne aucune valeur, l’API échouera.  
   
- Le `ICorDebugILFrame3::GetReturnValueForILOffset` méthode est disponible uniquement sur x86 et les systèmes AMD64.  
+ Le `ICorDebugILFrame3::GetReturnValueForILOffset` méthode n’est disponible uniquement sur x86 et les systèmes AMD64.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [GetReturnValueLiveOffset, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)  
- [ICorDebugILFrame3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [GetReturnValueLiveOffset, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
+- [ICorDebugILFrame3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)

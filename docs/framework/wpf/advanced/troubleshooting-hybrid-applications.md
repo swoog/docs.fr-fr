@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: b43143fb3f27d127f93f5e8edd55b853ad604ef5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e8b8d6f59525720def413b2d19f048d3cff329c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710116"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Dépannage des applications hybrides
 <a name="introduction"></a> Cette rubrique répertorie certains problèmes courants qui peuvent se produire lors de la création d’applications hybrides qui utilisent à la fois les technologies [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -88,7 +88,7 @@ ms.locfileid: "45972752"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Activation des styles visuels  
- Les styles visuels [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] sur un contrôle [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] peuvent ne pas être activés. Le <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> méthode est appelée dans le modèle pour un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application. Bien que cette méthode ne soit pas appelée par défaut, si vous utilisez [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] pour créer un projet, vous obtiendrez des styles visuels [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] pour les contrôles, si la version 6.0 de Comctl32.dll est disponible. Vous devez appeler la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> méthode avant que les handles soient créés sur le thread. Pour plus d’informations, consultez [Guide pratique pour activer des styles visuels dans une application hybride](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ Les styles visuels [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] sur un contrôle [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] peuvent ne pas être activés. Le <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> méthode est appelée dans le modèle pour un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application. Bien que cette méthode ne soit pas appelée par défaut, si vous utilisez [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] pour créer un projet, vous obtiendrez des styles visuels [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] pour les contrôles, si la version 6.0 de Comctl32.dll est disponible. Vous devez appeler la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> méthode avant que les handles soient créés sur le thread. Pour plus d'informations, voir [Procédure : Activer des Styles visuels dans une Application hybride](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Contrôles sous licence  
@@ -114,13 +114,13 @@ ms.locfileid: "45972752"
 ## <a name="elementhost-and-ime"></a>ElementHost et IME  
  Les contrôles WPF hébergés dans un <xref:System.Windows.Forms.Integration.ElementHost> ne gèrent pas la <xref:System.Windows.Forms.Control.ImeMode%2A> propriété. Modifications apportées à <xref:System.Windows.Forms.Control.ImeMode%2A> sera ignorée par les contrôles hébergés.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Interopérabilité dans le Concepteur WPF](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  
- [Architecture d’entrée pour l’interopérabilité entre Windows Forms et WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
- [Guide pratique pour activer des styles visuels dans une application hybride](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
- [Considérations sur la disposition de l’élément WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Mappage de propriétés Windows Forms et WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Erreurs au moment du design dans le Concepteur Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- [Migration et interopérabilité](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Interopérabilité dans le Concepteur WPF](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)
+- [Architecture d’entrée pour l’interopérabilité entre Windows Forms et WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Guide pratique pour Activer des Styles visuels dans une Application hybride](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Considérations sur la disposition de l’élément WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Mappage de propriétés Windows Forms et WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Erreurs au moment du design dans le Concepteur Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Migration et interopérabilité](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

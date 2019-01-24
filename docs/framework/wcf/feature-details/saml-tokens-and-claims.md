@@ -10,15 +10,15 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 374fde23a1bf8df704f76500b4808c16d142ddd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fbb1f520a1497ef5aa3227d038b3759b8327eda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714995"
 ---
 # <a name="saml-tokens-and-claims"></a>Jetons SAML et revendications
-Sécurité Assertions Markup Language (SAML) *jetons* sont des représentations XML de revendications. Par défaut, les jetons SAML Windows Communication Foundation (WCF) utilise dans les scénarios de sécurité fédérée sont *jetons émis*.  
+Security Assertions Markup Language (SAML) *jetons* sont des représentations XML de revendications. Par défaut, les jetons SAML Windows Communication Foundation (WCF) utilise dans les scénarios de sécurité fédérée sont *jetons émis*.  
   
  Les jetons SAML comportent des instructions qui sont des ensembles de revendications générées par une entité au sujet d'une autre entité. Par exemple, dans des scénarios de sécurité fédérée, les instructions sont générées par un service de jeton de sécurité au sujet d'un utilisateur dans le système. Le service de jeton de sécurité signe le jeton SAML pour indiquer la véracité des instructions incluses dans le jeton. De plus, le jeton SAML est associé à du matériel de clé de chiffrement dont l'utilisateur du jeton SAML prouve la connaissance. Cette preuve satisfait la partie de confiance que le jeton SAML a été émis, en fait, pour cet utilisateur. Par exemple, dans un scénario classique :  
   
@@ -26,12 +26,12 @@ Sécurité Assertions Markup Language (SAML) *jetons* sont des représentations 
   
 2.  Le service de jeton de sécurité émet un jeton SAML pour le client. Le jeton SAML est signé avec un certificat associé au service de jeton de sécurité et contient une clé de vérification chiffrée pour le service cible.  
   
-3.  Le client reçoit également une copie de la *clé de vérification*. Le client présente alors le jeton SAML au service d’application (la *confiance*) et signe le message avec cette clé de vérification.  
+3.  Le client reçoit également une copie de la *clé de vérification*. Le client présente alors le jeton SAML au service d’application (le *confiance*) et signe le message avec cette clé de vérification.  
   
 4.  La signature sur le jeton SAML indique à la partie de confiance que le service de jeton de sécurité a émis le jeton. La signature de message créée avec la clé de vérification indique à la partie de confiance que le jeton a été émis pour le client.  
   
 ## <a name="from-claims-to-samlattributes"></a>Des revendications aux éléments SamlAttributes  
- Dans WCF, les instructions dans les jetons SAML sont modelées en tant que <xref:System.IdentityModel.Tokens.SamlAttribute> objets qui peuvent être remplis directement à partir de <xref:System.IdentityModel.Claims.Claim> objets, fournis le <xref:System.IdentityModel.Claims.Claim> objet a un <xref:System.IdentityModel.Claims.Claim.Right%2A> propriété de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> et <xref:System.IdentityModel.Claims.Claim.Resource%2A> propriété est de type <xref:System.String>. Par exemple :  
+ Dans WCF, les instructions dans les jetons SAML sont modélisées en tant que <xref:System.IdentityModel.Tokens.SamlAttribute> objets qui peuvent être remplis directement à partir de <xref:System.IdentityModel.Claims.Claim> objets, fournis le <xref:System.IdentityModel.Claims.Claim> objet a un <xref:System.IdentityModel.Claims.Claim.Right%2A> propriété de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> et le <xref:System.IdentityModel.Claims.Claim.Resource%2A> propriété est de type <xref:System.String>. Exemple :  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
@@ -42,14 +42,14 @@ Sécurité Assertions Markup Language (SAML) *jetons* sont des représentations 
 ## <a name="from-samlattributes-to-claims"></a>Des éléments SamlAttributes aux revendications  
  Lorsque des jetons SAML sont reçus dans des messages, les différentes instructions incluses dans le jeton SAML sont transformées en objets <xref:System.IdentityModel.Policy.IAuthorizationPolicy> qui sont placés dans <xref:System.IdentityModel.Policy.AuthorizationContext>. Les revendications provenant de chaque instruction SAML sont retournées par la propriété <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> de <xref:System.IdentityModel.Policy.AuthorizationContext> et peuvent être examinées pour déterminer s'il convient d'authentifier et d'autoriser l'utilisateur.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IdentityModel.Policy.AuthorizationContext>  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- <xref:System.IdentityModel.Claims.ClaimSet>  
- [Fédération](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Guide pratique pour créer un client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Guide pratique pour configurer des informations d’identification sur un service FS (Federation Service)](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Revendications et jetons](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Création de revendications et valeurs de ressource](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Guide pratique pour créer une revendication personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IdentityModel.Policy.AuthorizationContext>
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
+- <xref:System.IdentityModel.Claims.ClaimSet>
+- [Fédération](../../../../docs/framework/wcf/feature-details/federation.md)
+- [Guide pratique pour Créer un Client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Guide pratique pour Configurer les informations d’identification sur un Service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Revendications et jetons](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+- [Création de revendications et valeurs de ressource](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
+- [Guide pratique pour Créer une revendication personnalisée](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

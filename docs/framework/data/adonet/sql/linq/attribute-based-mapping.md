@@ -2,19 +2,19 @@
 title: Mappage basé sur les attributs
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 81bbe8806694967d68c3e15da1d582092fb95e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713900"
 ---
 # <a name="attribute-based-mapping"></a>Mappage basé sur les attributs
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mappe une base de données SQL Server à un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modèle d’objet en appliquant des attributs ou en utilisant un fichier de mappage externe. Cette rubrique présente l'approche basée sur les attributs.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mappe une base de données SQL Server à un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modèle objet en appliquant des attributs ou en utilisant un fichier de mappage externe. Cette rubrique présente l'approche basée sur les attributs.  
   
- Dans sa forme de base, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mappe une base de données à un <xref:System.Data.Linq.DataContext>, une table à une classe, ainsi que des colonnes et des relations aux propriétés sur ces classes. Vous pouvez également utiliser des attributs pour mapper une hiérarchie d'héritage dans votre modèle objet. Pour plus d’informations, consultez [Comment : générer le modèle objet en Visual Basic ou c#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Dans sa forme de base, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mappe une base de données à un <xref:System.Data.Linq.DataContext>, une table à une classe, ainsi que des colonnes et des relations aux propriétés sur ces classes. Vous pouvez également utiliser des attributs pour mapper une hiérarchie d'héritage dans votre modèle objet. Pour plus d'informations, voir [Procédure : Générer le modèle objet en Visual Basic ou C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Les développeurs qui utilisent Visual Studio généralement effectuer un mappage basé sur un attribut à l’aide du [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Vous pouvez aussi utiliser l'outil en ligne de commande SQLMetal ou coder manuellement ces attributs. Pour plus d’informations, consultez [Comment : générer le modèle objet en Visual Basic ou c#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Les développeurs qui utilisent Visual Studio en général effectuent le mappage basé sur l’attribut à l’aide du [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Vous pouvez aussi utiliser l'outil en ligne de commande SQLMetal ou coder manuellement ces attributs. Pour plus d'informations, voir [Procédure : Générer le modèle objet en Visual Basic ou C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Vous pouvez également mapper à l'aide d'un fichier XML externe. Pour plus d’informations, consultez [mappage externe](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "33358178"
 |Propriété|Type|Par défaut|Description|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|Indique au Common Language Runtime (CLR) de récupérer la valeur après une opération d'insertion ou de mise à jour.<br /><br /> Options : Always, Never, OnUpdate, OnInsert.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|Indique qu'une colonne peut contenir des valeurs null.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Booléen|`true`|Indique qu'une colonne peut contenir des valeurs null.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|Chaîne|Type déduit de colonne de base de données|Utilise des types et des modificateurs de base de données pour spécifier le type de la colonne de base de données.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|Chaîne|Empty|Définit une colonne calculée dans une base de données.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|Indique qu'une colonne contient des valeurs générées automatiquement par la base de données.|  
@@ -61,10 +61,10 @@ ms.locfileid: "33358178"
  Pour plus d'informations, consultez <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  Les valeurs des propriétés AssociationAttribute et ColumnAttribute Storage respectent la casse. Assurez-vous, par exemple que les valeurs utilisées dans l'attribut de la propriété AssociationAttribute.Storage correspondent à la casse des noms de propriétés correspondants utilisés ailleurs dans le code. Cela s’applique à tous les langages de programmation .NET, même ceux qui ne sont pas généralement la casse, notamment Visual Basic. Pour plus d'informations sur la propriété Storage, consultez <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Les valeurs des propriétés AssociationAttribute et ColumnAttribute Storage respectent la casse. Assurez-vous, par exemple que les valeurs utilisées dans l'attribut de la propriété AssociationAttribute.Storage correspondent à la casse des noms de propriétés correspondants utilisés ailleurs dans le code. Cela s’applique à tous les langages de programmation .NET, y compris ceux qui ne sont pas généralement respecte la casse, y compris Visual Basic. Pour plus d'informations sur la propriété Storage, consultez <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>Attribut AssociationAttribute  
- Utilisez cet attribut pour désigner une propriété comment représentant une association dans la base de données, telle qu'une relation entre une clé étrangère et une clé primaire. Pour plus d’informations sur les relations, consultez [Comment : mapper les relations de base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Utilisez cet attribut pour désigner une propriété comment représentant une association dans la base de données, telle qu'une relation entre une clé étrangère et une clé primaire. Pour plus d’informations sur les relations, consultez [Comment : mapper des relations de base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
  Le tableau suivant décrit les propriétés de cet attribut.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33358178"
  Pour plus d'informations, consultez <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  Les valeurs des propriétés AssociationAttribute et ColumnAttribute Storage respectent la casse. Assurez-vous, par exemple que les valeurs utilisées dans l'attribut de la propriété AssociationAttribute.Storage correspondent à la casse des noms de propriétés correspondants utilisés ailleurs dans le code. Cela s’applique à tous les langages de programmation .NET, même ceux qui ne sont pas généralement la casse, notamment Visual Basic. Pour plus d'informations sur la propriété Storage, consultez <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Les valeurs des propriétés AssociationAttribute et ColumnAttribute Storage respectent la casse. Assurez-vous, par exemple que les valeurs utilisées dans l'attribut de la propriété AssociationAttribute.Storage correspondent à la casse des noms de propriétés correspondants utilisés ailleurs dans le code. Cela s’applique à tous les langages de programmation .NET, y compris ceux qui ne sont pas généralement respecte la casse, y compris Visual Basic. Pour plus d'informations sur la propriété Storage, consultez <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>Attribut InheritanceMappingAttribute  
  Utilisez cet attribut pour mapper une hiérarchie d'héritage.  
@@ -142,5 +142,5 @@ ms.locfileid: "33358178"
   
  Pour plus d'informations, consultez <xref:System.Data.Linq.Mapping.DataAttribute>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>Voir aussi
+- [Référence](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

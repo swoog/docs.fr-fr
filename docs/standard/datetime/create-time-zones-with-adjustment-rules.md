@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer des fuseaux horaires avec des règles d’ajustement'
+title: 'Procédure : Créer des fuseaux horaires avec des règles d’ajustement'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a5c04f7807638a4a8b114828083835f348ac08
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721173"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Comment : créer des fuseaux horaires avec des règles d’ajustement
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Procédure : Créer des fuseaux horaires avec des règles d’ajustement
 
 Les informations de fuseau horaire précises qui sont requis par une application ne peuvent pas être présentes sur un système particulier pour plusieurs raisons :
 
@@ -34,7 +34,7 @@ Dans ce cas, vous pouvez appeler la <xref:System.TimeZoneInfo.CreateCustomTimeZo
 > [!IMPORTANT]
 > Les fuseaux horaires personnalisés créés en appelant le <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> méthode ne sont pas ajoutés au Registre. Au lieu de cela, ils sont accessibles uniquement par le biais de la référence d’objet retournée par la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> appel de méthode.
 
-Cette rubrique montre comment créer un fuseau horaire avec des règles d’ajustement. Pour créer un fuseau horaire qui ne prend pas en charge les règles d’ajustement de l’heure d’été, consultez [Comment : créer des fuseaux horaires sans règles ajustement](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
+Cette rubrique montre comment créer un fuseau horaire avec des règles d’ajustement. Pour créer un fuseau horaire qui ne prend pas en charge les règles d’ajustement de l’heure d’été, consultez [Comment : Créer des fuseaux horaires sans règles d’ajustement](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>Pour créer un fuseau horaire avec des règles d’ajustement flottantes
 
@@ -86,7 +86,7 @@ L’exemple peut être testé à l’aide de code semblable au suivant :
 
 Cet exemple nécessite :
 
-* Qu’une référence à System.Core.dll être ajoutée au projet.
+* Qu’une référence à System.Core.dll soit ajoutée au projet.
 
 * Que les espaces de noms suivants soient importés :
 
@@ -95,6 +95,6 @@ Cet exemple nécessite :
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
-* [Vue d’ensemble des fuseaux horaires](../../../docs/standard/datetime/time-zone-overview.md)
-* [Guide pratique pour créer des fuseaux horaires sans règles d’ajustement](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Vue d’ensemble des fuseaux horaires](../../../docs/standard/datetime/time-zone-overview.md)
+- [Guide pratique pour Créer des fuseaux horaires sans règles d’ajustement](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

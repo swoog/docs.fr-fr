@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61014e067b2afb8b7e4be0488ed6a3c7f1bd6fc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3534160e14c46bc3f8f5da81c4c14a3191a6238b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553190"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex (méthode)
-Obtient l’index d’emplacement géré d’une variable locale.  
+Obtient l’index emplacement managé d’une variable locale.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,20 +44,20 @@ HRESULT GetSlotIndex(
   
 |Value|Description|  
 |-----------|-----------------|  
-|`S_OK`|L’appel de méthode a retourné une valeur de l’index de l’emplacement dans `pSlotIndex`.|  
-|`E_FAIL`|En cours [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance représente un argument de fonction.|  
+|`S_OK`|L’appel de méthode a retourné une valeur d’index de l’emplacement dans `pSlotIndex`.|  
+|`E_FAIL`|Actuel [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance représente un argument de fonction.|  
   
 ## <a name="remarks"></a>Notes  
- L’index d’emplacement peut être utilisé pour récupérer les métadonnées pour cette variable locale.  
+ L’index de l’emplacement peut être utilisé pour récupérer les métadonnées pour cette variable locale.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugVariableHome, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugVariableHome, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

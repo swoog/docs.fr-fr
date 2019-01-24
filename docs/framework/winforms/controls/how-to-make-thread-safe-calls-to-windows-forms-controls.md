@@ -1,5 +1,5 @@
 ---
-title: 'Comment : faire des appels thread-safe aux contrôles Windows Forms'
+title: 'Procédure : Effectuer des appels Thread-Safe aux contrôles de Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710467"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Comment : faire des appels thread-safe aux contrôles Windows Forms
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Procédure : Effectuer des appels Thread-Safe aux contrôles de Windows Forms
 
 Si vous utilisez le multithreading pour améliorer les performances de vos applications Windows Forms, vous devez vous assurer que les appels à vos contrôles sont thread-safe.
 
@@ -406,7 +406,7 @@ private:
  L'exemple de code suivant est une application Windows Forms complète constituée d'un formulaire avec trois boutons et une zone de texte. Le premier bouton montre un accès inter-threads non sécurisé, le deuxième bouton montre l'accès sécurisé à l'aide de <xref:System.Windows.Forms.Control.Invoke%2A>, et le troisième bouton montre l'accès sécurisé à l'aide de <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Pour obtenir des instructions sur la façon d’exécuter l’exemple, consultez [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Cet exemple nécessite des références aux assemblys System.Drawing et System.Windows.Forms.
+> Pour obtenir des instructions sur la façon d’exécuter l’exemple, consultez [Comment : Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Cet exemple nécessite des références aux assemblys System.Drawing et System.Windows.Forms.
 
 ```csharp
 using System;
@@ -1046,12 +1046,12 @@ Quand vous exécutez l'application et cliquez sur le bouton **Unsafe Call** , vo
 ## <a name="robust-programming"></a>Programmation fiable
 
 > [!CAUTION]
-> Quand vous utilisez un type quelconque de multithreading, vous vous exposez potentiellement à des bogues importants et complexes. Pour plus d’informations, consultez [Bonnes pratiques pour le threading managé](../../../../docs/standard/threading/managed-threading-best-practices.md) avant d’implémenter une solution qui utilise le multithreading.
+> Quand vous utilisez un type quelconque de multithreading, vous vous exposez potentiellement à des bogues importants et complexes. Pour plus d’informations, consultez [Managed Threading Best Practices](../../../../docs/standard/threading/managed-threading-best-practices.md) avant d’implémenter une solution utilisant le multithreading.
 
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Guide pratique pour exécuter une opération en arrière-plan](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Comment : implémenter un formulaire qui utilise une opération d’arrière-plan](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Guide pratique pour Exécuter une opération en arrière-plan](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Guide pratique pour Implémenter un formulaire qui utilise une opération d’arrière-plan](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Applications Windows Forms et non managées](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

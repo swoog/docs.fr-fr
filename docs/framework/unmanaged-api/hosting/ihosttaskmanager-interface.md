@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d7b85a30a5abd9186f039aa21cbe7790325e4f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545645"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager, interface
 Fournit des méthodes qui permettent le common language runtime (CLR) pour travailler avec les tâches via l’hôte au lieu d’utiliser les fonctions de threading ou fiber de système d’exploitation standard.  
@@ -30,15 +30,15 @@ Fournit des méthodes qui permettent le common language runtime (CLR) pour trava
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[BeginDelayAbort, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|Avertit l’hôte que le code managé entre dans une période dans laquelle la tâche en cours ne doit pas être abandonnée.|  
-|[BeginThreadAffinity, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|Avertit l’hôte que le code managé entre dans une période dans laquelle la tâche en cours ne doit pas être déplacée vers un autre thread de système d’exploitation.|  
+|[BeginDelayAbort, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|Avertit l’hôte que le code managé entre dans une période dans laquelle la tâche actuelle ne doit pas être abandonnée.|  
+|[BeginThreadAffinity, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|Avertit l’hôte que le code managé entre dans une période dans laquelle la tâche actuelle ne doit pas être déplacée vers un autre thread de système d’exploitation.|  
 |[CallNeedsHostHook, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|Permet à l’hôte de spécifier si le common language runtime peut inline l’appel spécifié à une fonction non managée.|  
 |[CreateTask, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)|Demande que l’hôte crée une nouvelle tâche.|  
-|[EndDelayAbort, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|Avertit l’hôte que le code managé sort de la période dans laquelle la tâche en cours ne doit pas être abandonnée, à la suite d’un appel précédent à `BeginDelayAbort`.|  
-|[EndThreadAffinity, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|Avertit l’hôte que le code managé sort de la période dans laquelle la tâche en cours ne doit pas être déplacée vers un autre thread de système d’exploitation, à la suite d’un appel précédent à `BeginThreadAffinity`.|  
+|[EndDelayAbort, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|Avertit l’hôte que le code managé sort de la période dans laquelle la tâche actuelle ne doit pas être abandonnée, à la suite d’un appel précédent à `BeginDelayAbort`.|  
+|[EndThreadAffinity, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|Avertit l’hôte que le code managé sort de la période dans laquelle la tâche actuelle ne doit pas être déplacée vers un autre thread de système d’exploitation, à la suite d’un appel précédent à `BeginThreadAffinity`.|  
 |[EnterRuntime, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|Avertit l’hôte qu’un appel à une méthode non managée, comme un appel de méthode, retourne le contrôle d’exécution au CLR.|  
 |[GetCurrentTask, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|Obtient un pointeur d’interface à la tâche en cours d’exécution sur le thread de système d’exploitation à partir de laquelle cet appel est effectué.|  
-|[GetStackGuarantee, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|Obtient la quantité d’espace de pile est assuré d’être disponible après qu’une opération de pile se termine, mais avant la fermeture d’un processus.|  
+|[GetStackGuarantee, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|Obtient la quantité d’espace de pile qui est garanti pour être disponible après qu’une opération de pile se termine, mais avant la fermeture d’un processus.|  
 |[LeaveRuntime, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|Avertit l’hôte que le code managé est sur le point d’effectuer un appel à une fonction non managée.|  
 |[ReverseEnterRuntime, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)|Avertit l’hôte qu’un appel est effectué dans le common language runtime (CLR) à partir de code non managé.|  
 |[ReverseLeaveRuntime, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|Avertit l’hôte que le contrôle est en laissant le CLR et une fonction non managée qui a été, à son tour, appelée à partir du code managé.|  
@@ -50,19 +50,19 @@ Fournit des méthodes qui permettent le common language runtime (CLR) pour trava
 |[SwitchToTask, méthode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Avertit l’hôte qu’il doit éliminer la tâche actuelle.|  
   
 ## <a name="remarks"></a>Notes  
- `IHostTaskManager` permet au CLR créer et gérer des tâches, pour fournir des connexions à l’hôte une action quand le contrôle est transféré du code managé au code non managé et vice versa et de spécifier certaines actions que l’hôte peut et ne peut pas effectuer pendant l’exécution de code.  
+ `IHostTaskManager` permet au CLR créer et gérer des tâches, pour fournir des connexions à l’hôte entrent en action lorsque le contrôle est transféré du code managé au code non managé et vice versa et de spécifier certaines actions que l’hôte peut et ne peut pas effectuer pendant l’exécution de code.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRTask, interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask, interface](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRTask, interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask, interface](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

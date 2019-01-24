@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: 3a7accd2e98423bf3ab0133a5eb36610b3ebb414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1913832bf95d0ea7188637f5456e4ff8f24695e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718908"
 ---
 # <a name="fonts-wpf"></a>Polices (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prend en charge les étendues de texte à l’aide de présentation [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices. Un exemple de pack de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices est inclus dans le [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prend en charge la présentation enrichie du texte à l’aide [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices. Un exemple de pack de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices est inclus avec le [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Fonctionnalités des polices OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
@@ -22,8 +22,8 @@ ms.locfileid: "33542608"
  [Exemple de pack de polices OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
  [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FontStyle>  
- <xref:System.Windows.SystemFonts>  
- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Typographie dans WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FontStyle>
+- <xref:System.Windows.SystemFonts>
+- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Typographie dans WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

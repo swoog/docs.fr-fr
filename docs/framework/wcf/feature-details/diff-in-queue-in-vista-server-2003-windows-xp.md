@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bbae7e54160923e973ff6a8adb655587adf1002
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708829"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP
 Cette rubrique résume les différences dans la fonctionnalité de files d’attente de Windows Communication Foundation (WCF) entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ## <a name="application-specific-dead-letter-queue"></a>File d'attente de lettres mortes spécifique à l'application  
- Les messages mis en file d'attente peuvent rester indéfiniment dans la file d'attente si l'application réceptrice ne les lit pas en temps voulu. Ce comportement n'est pas recommandé si les messages sont dépendants de l'heure. Les messages dépendants de l'heure ont une propriété `TimeToLive` affectée dans la liaison mise en file d'attente. Cette propriété indique la durée de vie possible des messages dans la file d'attente avant qu'ils n'expirent. Les messages ayant expiré sont envoyés dans une file d'attente spéciale appelée file d'attente de lettres mortes. Un message peut également finir dans une file d'attente de lettres mortes pour d'autres raisons, telles que le dépassement d'un quota de file d'attente ou un échec d'authentification.  
+ Les messages mis en file d'attente peuvent rester indéfiniment dans la file d'attente si l'application réceptrice ne les lit pas en temps voulu. Ce comportement n'est pas recommandé si les messages sont dépendants de l'heure. Les messages dépendants de l’heure ont une propriété `TimeToLive` affectée dans la liaison mise en file d’attente. Cette propriété indique la durée de vie possible des messages dans la file d'attente avant qu'ils n'expirent. Les messages ayant expiré sont envoyés dans une file d'attente spéciale appelée file d'attente de lettres mortes. Un message peut également finir dans une file d'attente de lettres mortes pour d'autres raisons, telles que le dépassement d'un quota de file d'attente ou un échec d'authentification.  
   
  En général, il existe une seule file d'attente de lettres mortes à l'échelle du système pour toutes les applications mises en file d'attente qui partagent un gestionnaire de files d'attente. Une file d'attente de lettres mortes pour chaque application permet une meilleure isolation entre les applications mises en file d'attente qui partagent un gestionnaire de files d'attente en laissant à ces applications le soin de spécifier leur propre file d'attente de lettres mortes. Une application qui partage une file d'attente de lettres mortes avec d'autres applications doit parcourir la file d'attente pour rechercher les messages qui lui sont applicables. Avec une file d'attente de lettres mortes qui lui est spécifique, l'application peut être assurée que tous les messages figurant dans sa file d'attente de lettres mortes lui sont applicables.  
   
@@ -30,11 +30,11 @@ Cette rubrique résume les différences dans la fonctionnalité de files d’att
   
 -   MSMQ prend en charge l'accusé de réception négatif dans [!INCLUDE[wv](../../../../includes/wv-md.md)], alors que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ne le prenne pas en charge. Un accusé de réception négatif provenant du gestionnaire de files d'attente de destination provoque le placement du message rejeté dans la file d'attente de lettres mortes par le gestionnaire de files d'attente source. Ainsi, `ReceiveErrorHandling.Reject` n'est pas autorisé avec [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Dans [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ prend en charge la propriété d'un message qui compte le nombre de tentatives de remise du message. Cette propriété du nombre d'abandons n'est pas disponible sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ni sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF gère le nombre d’abandons en mémoire, il est donc possible que cette propriété ne peut pas contenir une valeur exacte lorsque le même message est lu par plusieurs services WCF dans une batterie de serveurs Web.  
+-   Dans [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ prend en charge la propriété d'un message qui compte le nombre de tentatives de remise du message. Cette propriété du nombre d'abandons n'est pas disponible sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ni sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF gère le nombre d’abandons en mémoire, il est donc possible que cette propriété ne peut pas contenir une valeur exacte lorsque le même message est lu par plus d’un service WCF dans une batterie de serveurs Web.  
   
 ## <a name="remote-transactional-read"></a>Lecture transactionnelle distante  
  MSMQ sur [!INCLUDE[wv](../../../../includes/wv-md.md)] prend en charge les lectures transactionnelles distantes. Cette prise en charge permet à une application qui lit à partir d'une file d'attente d'être hébergée sur un ordinateur différent de l'ordinateur sur lequel la file d'attente est hébergée. Cela garantit la possibilité d'avoir une batterie de services qui lit à partir d'une file d'attente centrale, ce qui augmente le débit total du système. Cela garantit également que, si une défaillance se produit lors de la lecture et du traitement du message, la transaction est restaurée et le message est conservé dans la file d’attente afin d’y être traité ultérieurement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de files d’attente de lettres mortes pour gérer des défaillances de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation de files d’attente de lettres mortes pour gérer des défaillances de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

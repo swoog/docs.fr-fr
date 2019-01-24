@@ -2,12 +2,12 @@
 title: Création d'une application de canal homologue
 ms.date: 03/30/2017
 ms.assetid: a69a1b8f-8e15-45c5-87b8-bdb71e1c7ab8
-ms.openlocfilehash: ffeb973cbf82f1750fa2be90fa8362fda908322c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d330145e0a5de9e94ed5c2ec110291881012073
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718817"
 ---
 # <a name="building-a-peer-channel-application"></a>Création d'une application de canal homologue
 Les sections suivantes fournissent des indications sur le développement d'applications de canal homologue.  
@@ -25,5 +25,5 @@ Les sections suivantes fournissent des indications sur le développement d'appli
  [Sécurisation des applications de canal homologue](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  Décrit la sécurité basée sur le transport et sur les messages et présente les meilleures pratiques pour sécuriser les applications de canal homologue.  
   
-## <a name="see-also"></a>Voir aussi  
- [Concepts de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+## <a name="see-also"></a>Voir aussi
+- [Concepts de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

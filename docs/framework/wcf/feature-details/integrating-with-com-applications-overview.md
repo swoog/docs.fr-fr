@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710221"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Vue d'ensemble de l'intégration à des applications COM
 Windows Communication Foundation (WCF) fournit au développeur de code managé avec un environnement riche pour la création d’applications connectées. Toutefois, si vous avez beaucoup investi dans le code COM non managé et que vous ne souhaitez pas migrer, vous pouvez toujours intégrer les services Web WCF directement dans votre code existant à l’aide du moniker de service WCF. Le moniker de service peut être utilisé à partir d'une large gamme d'environnements de développement COM, tels qu'Office VBA, Visual Basic 6.0 ou Visual C++ 6.0.  
@@ -17,9 +17,9 @@ Windows Communication Foundation (WCF) fournit au développeur de code managé a
 > [!NOTE]
 >  Le moniker de service utilise un canal de communication WCF pour toutes les communications. Les mécanismes de sécurité et d'identification de ce canal diffèrent de ceux utilisés sur les proxys standard COM et DCOM. En outre, étant donné que le moniker de service utilise un canal de communication WCF le délai par défaut est une minute pour tous les appels.  
   
- Le moniker de service est utilisé avec le `GetObject` afin de fournir aux développeurs non managé une approche fortement typée, spécifique au COM pour appeler des services Web WCF. Cela nécessite un local, la définition visible par COM du contrat de service WCF Web et la liaison qui doit être utilisé. Comme les autres clients WCF, le moniker de service doit construire un canal typé pour le service, bien que cette construction devienne visible par le programmeur COM lors du premier appel de méthode.  
+ Le moniker de service est utilisé avec le `GetObject` afin de fournir aux développeurs non managé une approche fortement typée, spécifique au COM pour appeler des services Web WCF. Cela nécessite un local, la définition visible par COM de contrat de service Web de WCF et la liaison qui doit être utilisé. Comme les autres clients WCF, le moniker de service doit construire un canal typé pour le service, bien que cette construction devienne visible par le programmeur COM lors du premier appel de méthode.  
   
- En commun avec d’autres clients WCF, lors de l’utilisation du moniker, les applications spécifier l’adresse, la liaison et le contrat pour pouvoir communiquer avec un service. Le contrat peut être spécifié (au choix) comme suit :  
+ En commun avec d’autres clients WCF, lors de l’utilisation du moniker, les applications spécifier l’adresse, la liaison et le contrat pour communiquer avec un service. Le contrat peut être spécifié (au choix) comme suit :  
   
 -   Contrat typé : le contrat est enregistré sur l'ordinateur client sous la forme d'un type visible par COM.  
   
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) fournit au développeur de code managé a
 |`serializer`|Indiquez le type de sérialiseur utilisé : « xml » ou « contrat de données ».|  
   
 > [!NOTE]
->  Même lorsque utilisé avec les clients entièrement basés sur COM, le moniker de service requiert WCF et la prise en charge de .NET Framework 2.0 soit installé sur l’ordinateur client. Il est également essentiel que les applications clientes qui utilisent le moniker de service chargent la version appropriée de l'exécution .NET Framework. Lorsque le moniker de service est utilisé dans le cadre d'applications Office, un fichier de configuration peut s'avérer nécessaire afin d'assurer la chargement de la version d'infrastructure adéquate. Par exemple, pour Excel, vous devez insérer le texte suivant dans un fichier Excel.exe.config, puis enregistrer ce fichier dans le même répertoire que le fichier Excel.exe :  
+>  Même lorsque utilisé avec les clients entièrement basés sur COM, le moniker de service nécessite WCF et la prise en charge de .NET Framework 2.0 doit être installé sur l’ordinateur client. Il est également essentiel que les applications clientes qui utilisent le moniker de service chargent la version appropriée de l'exécution .NET Framework. Lorsque le moniker de service est utilisé dans le cadre d'applications Office, un fichier de configuration peut s'avérer nécessaire afin d'assurer la chargement de la version d'infrastructure adéquate. Par exemple, pour Excel, vous devez insérer le texte suivant dans un fichier Excel.exe.config, puis enregistrer ce fichier dans le même répertoire que le fichier Excel.exe :  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   
@@ -65,5 +65,5 @@ Windows Communication Foundation (WCF) fournit au développeur de code managé a
 >   
 >  `</configuration>`  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour inscrire et configurer un moniker de service](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Inscrire et configurer un Moniker de Service](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
