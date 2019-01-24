@@ -2,20 +2,20 @@
 title: System.ServiceModel.Security.SecurityServerSessionRenewalFaultSent
 ms.date: 03/30/2017
 ms.assetid: dc6379dd-a15d-4063-9939-a2edd08cfdcb
-ms.openlocfilehash: 211cb1c0d0c77be32e9f7489ec414cfafd029cce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c03fd5995f6b029a31fcf9567fbee19488fcc8a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692231"
 ---
-# <a name="systemservicemodelsecuritysecurityserversessionrenewalfaultsent"></a><span data-ttu-id="eb607-102">System.ServiceModel.Security.SecurityServerSessionRenewalFaultSent</span><span class="sxs-lookup"><span data-stu-id="eb607-102">System.ServiceModel.Security.SecurityServerSessionRenewalFaultSent</span></span>
-<span data-ttu-id="eb607-103">System.ServiceModel.Security.SecurityServerSessionRenewalFaultSent</span><span class="sxs-lookup"><span data-stu-id="eb607-103">System.ServiceModel.Security.SecurityServerSessionRenewalFaultSent</span></span>  
+# <a name="systemservicemodelsecuritysecurityserversessionrenewalfaultsent"></a><span data-ttu-id="562ee-102">System.ServiceModel.Security.SecurityServerSessionRenewalFaultSent</span><span class="sxs-lookup"><span data-stu-id="562ee-102">System.ServiceModel.Security.SecurityServerSessionRenewalFaultSent</span></span>
+<span data-ttu-id="562ee-103">System.ServiceModel.Security.SecurityServerSessionRenewalFaultSent</span><span class="sxs-lookup"><span data-stu-id="562ee-103">System.ServiceModel.Security.SecurityServerSessionRenewalFaultSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="eb607-104">Description</span><span class="sxs-lookup"><span data-stu-id="eb607-104">Description</span></span>  
- <span data-ttu-id="eb607-105">La session de sécurité du serveur a envoyé une erreur de renouvellement de clé au client.</span><span class="sxs-lookup"><span data-stu-id="eb607-105">The server security session sent a key renewal fault to the client.</span></span>  
+## <a name="description"></a><span data-ttu-id="562ee-104">Description</span><span class="sxs-lookup"><span data-stu-id="562ee-104">Description</span></span>  
+ <span data-ttu-id="562ee-105">La session de sécurité du serveur a envoyé une erreur de renouvellement de clé au client.</span><span class="sxs-lookup"><span data-stu-id="562ee-105">The server security session sent a key renewal fault to the client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb607-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="eb607-106">See Also</span></span>  
- [<span data-ttu-id="eb607-107">Suivi</span><span class="sxs-lookup"><span data-stu-id="eb607-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="eb607-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="eb607-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="eb607-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="eb607-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="562ee-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="562ee-106">See also</span></span>
+- [<span data-ttu-id="562ee-107">Suivi</span><span class="sxs-lookup"><span data-stu-id="562ee-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="562ee-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="562ee-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="562ee-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="562ee-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

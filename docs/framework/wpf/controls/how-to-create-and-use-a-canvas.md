@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer et utiliser une zone de dessin'
+title: 'Procédure : Créer et utiliser une zone de dessin'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Canvas control [WPF], creating
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-ms.openlocfilehash: c3ddb5171ca8ded053d56fde26ab86ebc4ae5cb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2d56851de2444ce246750688df67ed5ba9adb9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687477"
 ---
-# <a name="how-to-create-and-use-a-canvas"></a><span data-ttu-id="05e29-102">Comment : créer et utiliser une zone de dessin</span><span class="sxs-lookup"><span data-stu-id="05e29-102">How to: Create and Use a Canvas</span></span>
-<span data-ttu-id="05e29-103">Cet exemple montre comment créer et utiliser une instance de <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="05e29-103">This example shows how to create and use an instance of <xref:System.Windows.Controls.Canvas>.</span></span>  
+# <a name="how-to-create-and-use-a-canvas"></a><span data-ttu-id="fc47c-102">Procédure : Créer et utiliser une zone de dessin</span><span class="sxs-lookup"><span data-stu-id="fc47c-102">How to: Create and Use a Canvas</span></span>
+<span data-ttu-id="fc47c-103">Cet exemple montre comment créer et utiliser une instance de <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="fc47c-103">This example shows how to create and use an instance of <xref:System.Windows.Controls.Canvas>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="05e29-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="05e29-104">Example</span></span>  
- <span data-ttu-id="05e29-105">L’exemple suivant positionne explicitement deux <xref:System.Windows.Controls.TextBlock> éléments à l’aide de la <xref:System.Windows.Controls.Canvas.SetTop%2A> et <xref:System.Windows.Controls.Canvas.SetLeft%2A> méthodes de <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="05e29-105">The following example explicitly positions two <xref:System.Windows.Controls.TextBlock> elements by using the <xref:System.Windows.Controls.Canvas.SetTop%2A> and <xref:System.Windows.Controls.Canvas.SetLeft%2A> methods of <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="05e29-106">L’exemple assigne également une <xref:System.Windows.Controls.Control.Background%2A> couleur de `LightSteelBlue` à la <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="05e29-106">The example also assigns a <xref:System.Windows.Controls.Control.Background%2A> color of `LightSteelBlue` to the <xref:System.Windows.Controls.Canvas>.</span></span>  
+## <a name="example"></a><span data-ttu-id="fc47c-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="fc47c-104">Example</span></span>  
+ <span data-ttu-id="fc47c-105">L’exemple suivant positionne explicitement deux <xref:System.Windows.Controls.TextBlock> éléments à l’aide de la <xref:System.Windows.Controls.Canvas.SetTop%2A> et <xref:System.Windows.Controls.Canvas.SetLeft%2A> méthodes de <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="fc47c-105">The following example explicitly positions two <xref:System.Windows.Controls.TextBlock> elements by using the <xref:System.Windows.Controls.Canvas.SetTop%2A> and <xref:System.Windows.Controls.Canvas.SetLeft%2A> methods of <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="fc47c-106">L’exemple affecte également un <xref:System.Windows.Controls.Control.Background%2A> couleur de `LightSteelBlue` à la <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="fc47c-106">The example also assigns a <xref:System.Windows.Controls.Control.Background%2A> color of `LightSteelBlue` to the <xref:System.Windows.Controls.Canvas>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="05e29-107">Lorsque vous utilisez [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] position <xref:System.Windows.Controls.TextBlock> éléments, utilisez le <xref:System.Windows.Controls.Canvas.Top%2A> et <xref:System.Windows.Controls.Canvas.Left%2A> propriétés.</span><span class="sxs-lookup"><span data-stu-id="05e29-107">When you use [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to position <xref:System.Windows.Controls.TextBlock> elements, use the <xref:System.Windows.Controls.Canvas.Top%2A> and <xref:System.Windows.Controls.Canvas.Left%2A> properties.</span></span>  
+>  <span data-ttu-id="fc47c-107">Lorsque vous utilisez [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] à la position <xref:System.Windows.Controls.TextBlock> éléments, utilisez le <xref:System.Windows.Controls.Canvas.Top%2A> et <xref:System.Windows.Controls.Canvas.Left%2A> propriétés.</span><span class="sxs-lookup"><span data-stu-id="fc47c-107">When you use [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to position <xref:System.Windows.Controls.TextBlock> elements, use the <xref:System.Windows.Controls.Canvas.Top%2A> and <xref:System.Windows.Controls.Canvas.Left%2A> properties.</span></span>  
   
  [!code-csharp[CanvasCode#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasCode/CSharp/Canvas_Code.cs#1)]
  [!code-vb[CanvasCode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="05e29-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="05e29-108">See Also</span></span>  
- <xref:System.Windows.Controls.Canvas>  
- <xref:System.Windows.Controls.TextBlock>  
- <xref:System.Windows.Controls.Canvas.SetTop%2A>  
- <xref:System.Windows.Controls.Canvas.SetLeft%2A>  
- <xref:System.Windows.Controls.Canvas.Top%2A>  
- <xref:System.Windows.Controls.Canvas.Left%2A>  
- [<span data-ttu-id="05e29-109">Vue d’ensemble de Panel</span><span class="sxs-lookup"><span data-stu-id="05e29-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="05e29-110">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="05e29-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="fc47c-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fc47c-108">See also</span></span>
+- <xref:System.Windows.Controls.Canvas>
+- <xref:System.Windows.Controls.TextBlock>
+- <xref:System.Windows.Controls.Canvas.SetTop%2A>
+- <xref:System.Windows.Controls.Canvas.SetLeft%2A>
+- <xref:System.Windows.Controls.Canvas.Top%2A>
+- <xref:System.Windows.Controls.Canvas.Left%2A>
+- [<span data-ttu-id="fc47c-109">Vue d’ensemble de Panel</span><span class="sxs-lookup"><span data-stu-id="fc47c-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="fc47c-110">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="fc47c-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)
