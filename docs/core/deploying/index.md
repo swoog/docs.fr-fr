@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415687"
 ---
 # <a name="net-core-application-deployment"></a>Déploiement d’applications .NET Core
 
@@ -98,7 +92,7 @@ Pour obtenir des exemples étape par étape de déploiement d’applications .NE
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Déploiement d’applications .NET Core avec des outils CLI](deploy-with-cli.md)
-* [Déploiement d’applications .NET Core avec Visual Studio](deploy-with-vs.md)
-* [Packages, métapackages et frameworks](../packages.md)
-* [Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)
+- [Déploiement d’applications .NET Core avec des outils CLI](deploy-with-cli.md)
+- [Déploiement d’applications .NET Core avec Visual Studio](deploy-with-vs.md)
+- [Packages, métapackages et frameworks](../packages.md)
+- [Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)

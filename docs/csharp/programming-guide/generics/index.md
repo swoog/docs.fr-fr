@@ -1,17 +1,11 @@
 ---
-title: Génériques - Guide de programmation C#
+title: 'Génériques - Guide de programmation C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, generics
-- generics [C#]
+  - 'C# language, generics'
+  - 'generics [C#]'
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 03a5a594db86f5286979dbe22a8841f0e7d4518c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240865"
 ---
 # <a name="generics-c-programming-guide"></a>Génériques (guide de programmation C#)
 Les génériques ont été ajoutés à la version 2.0 du langage C# et du Common Language Runtime (CLR). Les génériques introduisent le concept des paramètres de type dans .NET Framework, qui permettent de concevoir des classes et des méthodes qui diffèrent la spécification d’un ou de plusieurs types jusqu’à ce que la classe ou la méthode soit déclarée et instanciée par le code client. Par exemple, à l’aide d’un paramètre de type générique T, vous pouvez écrire une seule classe qui peut être utilisée par un autre code client sans impliquer le coût ou le risque des casts ou des opérations de boxing à l’exécution, comme illustré ici :  
@@ -62,9 +56,9 @@ Les génériques ont été ajoutés à la version 2.0 du langage C# et du Common
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Collections.Generic>  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Types](../../../csharp/programming-guide/types/index.md)  
-- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
-- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
-- [Génériques en .NET](../../../standard/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Types](../../../csharp/programming-guide/types/index.md)
+- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)
+- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [Génériques en .NET](../../../standard/generics/index.md)

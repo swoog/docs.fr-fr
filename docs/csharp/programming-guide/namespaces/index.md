@@ -1,17 +1,11 @@
 ---
-title: Espaces de noms - Guide de programmation C#
+title: 'Espaces de noms - Guide de programmation C#'
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-- C# language, namespaces
-- namespaces [C#]
+  - 'C# language, namespaces'
+  - 'namespaces [C#]'
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 4abdf8a0008ce50a89eb5f3ad3512a9579dc832a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236750"
 ---
 # <a name="namespaces-c-programming-guide"></a>Espaces de noms (Guide de programmation C#)
 
@@ -51,9 +45,9 @@ Les espaces de noms ont les propriétés suivantes :
 - [Utilisation d’espaces de noms](using-namespaces.md)
 - [Guide pratique pour utiliser l’alias d’espace de noms global](how-to-use-the-global-namespace-alias.md)
 - [Guide pratique pour utiliser l’espace de noms My](how-to-use-the-my-namespace.md)
-- [Guide de programmation C#](../index.md)  
+- [Guide de programmation C#](../index.md)
 - [Noms d’identificateur](../inside-a-program/identifier-names.md)
-- [Mots clés d’espaces de noms](../../language-reference/keywords/namespace-keywords.md)  
-- [using, directive](../../language-reference/keywords/using-directive.md)  
-- [:: Opérateur](../../language-reference/operators/namespace-alias-qualifer.md)  
+- [Mots clés d’espaces de noms](../../language-reference/keywords/namespace-keywords.md)
+- [using, directive](../../language-reference/keywords/using-directive.md)
+- [:: Opérateur](../../language-reference/operators/namespace-alias-qualifer.md)
 - [. Opérateur](../../language-reference/operators/member-access-operator.md)

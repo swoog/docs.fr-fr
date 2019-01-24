@@ -1,19 +1,13 @@
 ---
-title: Interopérabilité - Guide de programmation C#
+title: 'Interopérabilité - Guide de programmation C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- COM interop
-- interoperability
-- platform invoke, accessing APIs with C#
-- C# language, interoperability
+  - COM interop
+  - interoperability
+  - 'platform invoke, accessing APIs with C#'
+  - 'C# language, interoperability'
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: f3cbfe564fb5820c9e0fa77b75f76be36dd718a4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235005"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interopérabilité (Guide de programmation C#)
 L’interopérabilité vous permet de préserver et de tirer parti d’investissements existants en code non managé. Le code qui s’exécute sous le contrôle du common language runtime (CLR) est appelé *code managé*, et le code qui s’exécute en dehors du CLR est appelé *code non managé*. COM, COM+, les composants C++, les composants ActiveX et l’API Microsoft Win32 sont des exemples de code non managé.  
@@ -45,7 +39,7 @@ Pour plus d’informations, consultez [Concepts de base](~/_csharplang/spec/unsa
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Interopération avec du code non managé](../../../../docs/framework/interop/index.md)  
+- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Interopération avec du code non managé](../../../../docs/framework/interop/index.md)
 - [Procédure pas à pas : programmation Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

@@ -1,21 +1,15 @@
 ---
-title: Instructions, expressions et opérateurs - Guide de programmation C#
+title: 'Instructions, expressions et opérateurs - Guide de programmation C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- expressions [C#]
-- operators [C#]
-- C# language, statements
-- C# language, operators
-- C# language, expressions
-- statements [C#]
+  - 'expressions [C#]'
+  - 'operators [C#]'
+  - 'C# language, statements'
+  - 'C# language, operators'
+  - 'C# language, expressions'
+  - 'statements [C#]'
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 1bb710637922e8fee09fd9424cddd1170cb495c4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237205"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instructions, expressions et opérateurs (guide de programmation C#)
 Le code C# qui comprend une application se compose d’instructions à base de mots clés, d’expressions et d’opérateurs. Cette section contient des informations concernant ces éléments fondamentaux d’un programme C#.  
@@ -47,5 +41,5 @@ Le code C# qui comprend une application se compose d’instructions à base de m
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Cast et conversions de types](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

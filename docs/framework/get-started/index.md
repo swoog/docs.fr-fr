@@ -3,18 +3,13 @@ title: Bien démarrer avec le .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
-- .NET Framework, getting started
-- getting started [.NET Framework]
+  - '.NET Framework, getting started'
+  - 'getting started [.NET Framework]'
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453133"
 ---
+
 # <a name="get-started-with-the-net-framework"></a>Bien démarrer avec le .NET Framework
 
 Le .NET Framework est un environnement d'exécution qui gère les applications ciblant le .NET Framework. Il se compose d’un Common Language Runtime qui assure la gestion de la mémoire et d’autres services système, et d’une bibliothèque de classes étendue qui permet aux programmeurs de tirer parti d’un code solide et fiable dans tous les principaux aspects du développement d'applications.
@@ -89,7 +84,7 @@ Pour plus d’informations sur le développement d’applications qui ciblent le
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide du .NET Framework](../../../docs/framework/index.md)   
-- [Nouveautés](../../../docs/framework/whats-new/index.md)   
-- [Navigateur d’API .NET](/dotnet/api/)   
+- [Guide du .NET Framework](../../../docs/framework/index.md)
+- [Nouveautés](../../../docs/framework/whats-new/index.md)
+- [Navigateur d’API .NET](/dotnet/api/)
 - [Guide de développement](../../../docs/framework/development-guide.md)

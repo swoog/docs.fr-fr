@@ -1,19 +1,13 @@
 ---
-title: Guide C#
-description: Découvrez comment le guide C# peut vous aider à approfondir vos connaissances en C#, que vous soyez développeur débutant ou expert chevronné.
+title: 'Guide C#'
+description: 'Découvrez comment le guide C# peut vous aider à approfondir vos connaissances en C#, que vous soyez développeur débutant ou expert chevronné.'
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
-- documentation [C#]
-- Help, Visual C# documentation
-- C# language
-- Visual C#
-ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145658"
+  - 'documentation [C#]'
+  - 'Help, Visual C# documentation'
+  - 'C# language'
+  - 'Visual C#'
 ---
 # <a name="c-guide"></a>Guide C#
 
@@ -66,6 +60,6 @@ Il y a plusieurs sections dans le Guide de C#. Vous pouvez les lire dans l’ord
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Mises en route de Visual Basic et Visual C#](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [Guide de .NET](../standard/index.md)  
-* [Exemples C#](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+- [Mises en route de Visual Basic et Visual C#](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Guide de .NET](../standard/index.md)
+- [Exemples C#](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

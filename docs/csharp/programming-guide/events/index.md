@@ -1,18 +1,12 @@
 ---
-title: Événements - Guide de programmation C#
+title: 'Événements - Guide de programmation C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- classes [C#], events
-- C# language, events
-- events [C#]
+  - 'classes [C#], events'
+  - 'C# language, events'
+  - 'events [C#]'
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 55fe0e8f94d9b350305b634cabb90011e173b572
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451142"
 ---
 # <a name="events-c-programming-guide"></a>Événements (Guide de programmation C#)
 Les événements permettent à une [classe](../../../csharp/language-reference/keywords/class.md) ou à un objet de notifier d’autres classes ou objets quand quelque chose de significatif se produit. La classe qui envoie (ou *déclenche*) l’événement est appelée *publieur* et les classes qui reçoivent (ou *gèrent*) l’événement sont appelées *abonnés*.  
@@ -60,7 +54,7 @@ Pour plus d’informations, consultez [Événements](~/_csharplang/spec/classes.
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.EventHandler>  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Délégués](../../../csharp/programming-guide/delegates/index.md)  
-- [Création de gestionnaires d’événements dans les Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+- <xref:System.EventHandler>
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Délégués](../../../csharp/programming-guide/delegates/index.md)
+- [Création de gestionnaires d’événements dans les Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

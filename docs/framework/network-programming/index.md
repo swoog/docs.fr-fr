@@ -2,17 +2,11 @@
 title: Programmation réseau dans le .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Networking
-- Internet
-- Internet, .NET Framework Internet services
-- Network Resources
+  - Networking
+  - Internet
+  - 'Internet, .NET Framework Internet services'
+  - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188077"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programmation réseau dans le .NET Framework
 Microsoft .NET Framework fournit une implémentation en couche, extensible et managée des services Internet que vous pouvez intégrer rapidement et facilement à vos applications. Les applications réseau peuvent générer des protocoles enfichables pour tirer parti automatiquement de nouveaux protocoles Internet, ou elles peuvent utiliser une implémentation managée de l'interface Windows Socket pour fonctionner au niveau du socket.  
@@ -90,7 +84,7 @@ Microsoft .NET Framework fournit une implémentation en couche, extensible et ma
  Constitue une interface de programmation simple pour un grand nombre des protocoles réseau employés aujourd'hui. Les classes <xref:System.Net.WebRequest?displayProperty=nameWithType> et <xref:System.Net.WebResponse?displayProperty=nameWithType> de cet espace de noms servent de base aux protocoles enfichables.  
   
  <xref:System.Net.Cache?displayProperty=nameWithType>  
- Définit les types et les énumérations utilisés pour définir des stratégies de cache applicables aux ressources et obtenus via l'utilisation des classes <xref:System.Net.WebRequest?displayProperty=nameWithType> et <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>.  
+ Définit les types et les énumérations utilisés pour définir des stratégies de cache applicables aux ressources et obtenus via l'utilisation des classes <xref:System.Net.WebRequest?displayProperty=nameWithType> et <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> .  
   
  <xref:System.Net.Configuration?displayProperty=nameWithType>  
  Classes utilisées par les applications pour accéder et mettre à jour par programmation des paramètres de configuration pour les espaces de noms System.Net.  
@@ -134,10 +128,10 @@ Microsoft .NET Framework fournit une implémentation en couche, extensible et ma
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Fournit un support pour la configuration de l'authentification à l'aide de la protection étendue pour les applications.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
- [Bonnes pratiques du protocole TLS (Transport Layer Security) avec le .NET Framework](../../../docs/framework/network-programming/tls.md)  
- [Rubriques de guide pratique sur la programmation réseau](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
- [Exemple HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Bonnes pratiques du protocole TLS (Transport Layer Security) avec le .NET Framework](../../../docs/framework/network-programming/tls.md)
+- [Rubriques de guide pratique sur la programmation réseau](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [Exemple HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)

@@ -2,23 +2,17 @@
 title: Ressources dans les applications .NET
 ms.date: 07/25/2018
 helpviewer_keywords:
-- deploying applications [.NET Framework], resources
-- deploying applications [.NET Core], resources
-- application resources
-- resource files
-- satellite assemblies
-- localization
-- packaging application resources
-- localizing resources
+  - 'deploying applications [.NET Framework], resources'
+  - 'deploying applications [.NET Core], resources'
+  - application resources
+  - resource files
+  - satellite assemblies
+  - localization
+  - packaging application resources
+  - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524727"
 ---
 # <a name="resources-in-net-apps"></a>Ressources dans les applications .NET
 Presque toutes les applications d'une qualité de niveau "production" doivent utiliser des ressources. Une ressource est une donnée non exécutable qui est déployée logiquement avec une application. Une ressource peut être affichée dans une application sous la forme de messages d'erreur ou comme faisant partie de l'interface utilisateur. Les ressources peuvent contenir des données sous plusieurs formes, telles que des chaînes, des images et des objets rendus persistants. (Pour écrire des objets persistants dans un fichier de ressources, les objets doivent être sérialisables.) Le stockage de vos données dans un fichier de ressources vous permet de changer les données sans avoir à recompiler l'intégralité de votre application. Il vous permet également de stocker des données dans un emplacement unique, et élimine la nécessité d'avoir recours à des données codées en dur stockées dans plusieurs emplacements.  
@@ -60,11 +54,11 @@ Presque toutes les applications d'une qualité de niveau "production" doivent ut
   
 -   La classe <xref:System.Resources.ResXResourceSet>, qui permet de récupérer tous les éléments dans un fichier de ressources XML en mémoire.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Globalization.CultureInfo>  
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
- [Application Essentials](../../../docs/standard/application-essentials.md)  
- [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Création d’assemblys satellites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
- [Récupération de ressources](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Globalization.CultureInfo>
+- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
+- [Application Essentials](../../../docs/standard/application-essentials.md)
+- [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Création d’assemblys satellites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Récupération de ressources](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)

@@ -1,19 +1,13 @@
 ---
-title: Indexeurs - Guide de programmation C#
+title: 'Indexeurs - Guide de programmation C#'
 ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
-- cs.indexers
+  - cs.indexers
 helpviewer_keywords:
-- indexers [C#]
-- C# language, indexers
+  - 'indexers [C#]'
+  - 'C# language, indexers'
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 1b3dd16cf4c12dca0bc155c478c187047caf4c25
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236581"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexeurs (Guide de programmation C#)
 
@@ -70,5 +64,5 @@ Pour plus d’informations, consultez [Indexeurs](~/_csharplang/spec/classes.md#
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)
