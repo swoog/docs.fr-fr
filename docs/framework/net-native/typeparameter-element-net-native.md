@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cc2faf9768b60d49f573720df8763813000a6b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79e7a61f66a29ad4eeca1c6413b87d4b9ee9632e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644337"
 ---
 # <a name="lttypeparametergt-element-net-native"></a>&lt;TypeParameter&gt;, élément (.NET Native)
 Applique la stratégie au type représenté par un argument Type passé à une méthode.  
@@ -94,8 +94,8 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
  les directives de réflexion rendent les métadonnées pour le type `StockQuote` disponibles pour le sérialiseur JSON NewtonSoft au moment de l'exécution.  
   
-## <a name="see-also"></a>Voir aussi  
- [\<Method>, élément](../../../docs/framework/net-native/method-element-net-native.md)  
- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Voir aussi
+- [\<Method>, élément](../../../docs/framework/net-native/method-element-net-native.md)
+- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

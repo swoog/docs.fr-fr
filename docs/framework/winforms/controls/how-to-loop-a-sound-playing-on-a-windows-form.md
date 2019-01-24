@@ -1,5 +1,5 @@
 ---
-title: "Comment : mettre en boucle la lecture d'un son dans un Windows Form"
+title: 'Procédure : Lecture d’un formulaire Windows d’un son en boucle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 93793fae418b33c954c9d597f020c8daf8cfedfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493402"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Comment : mettre en boucle la lecture d'un son dans un Windows Form
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Procédure : Lecture d’un formulaire Windows d’un son en boucle
 L'exemple de code suivant joue un son de manière répétitive. Quand le code du gestionnaire d'événements `stopPlayingButton_Click` est exécuté, le son s'arrête. Si aucun son n'est joué, rien ne se produit.  
   
 ## <a name="example"></a>Exemple  
@@ -31,7 +31,7 @@ L'exemple de code suivant joue un son de manière répétitive. Quand le code du
   
 -   que vous remplaciez le nom de fichier `"c:\Windows\Media\chimes.wav"` par un nom de fichier valide.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Voir également [Guide pratique pour Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Les opérations de fichiers doivent être placées dans des blocs de gestion des exceptions appropriés.  
@@ -48,12 +48,12 @@ L'exemple de code suivant joue un son de manière répétitive. Quand le code du
   
 -   Le chemin d'accès n'est pas valide (classe <xref:System.IO.DirectoryNotFoundException>).  
   
--   Le chemin d'accès n'est constitué que d'un signe deux-points (":") (classe <xref:System.NotSupportedException>).  
+-   Le chemin d’accès n’est constitué que d’un signe deux-points « : » (classe <xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Ne vous basez pas sur le nom d'un fichier pour en déterminer le contenu. Par exemple, le fichier Form1.vb peut ne pas être un fichier source Visual Basic. Vérifiez toutes les entrées avant d'utiliser les données dans votre application.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Media.SoundPlayer.PlayLooping%2A>  
- [Guide pratique pour lire un son à partir d’un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- [Vue d’ensemble de la classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Media.SoundPlayer.PlayLooping%2A>
+- [Guide pratique pour Un signal sonore à partir d’un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+- [Vue d’ensemble de la classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)

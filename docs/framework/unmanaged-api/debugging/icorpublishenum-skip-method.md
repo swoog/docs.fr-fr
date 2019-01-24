@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a691f61fcd25b7aaaae90e6adcc3c2ee0c421cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4e7d4e449624f295c4011a4ccdad46226e742a8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681155"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip, méthode
 Déplace le curseur vers l’avant dans l’énumération par le nombre spécifié d’éléments.  
@@ -37,16 +37,16 @@ HRESULT Skip (
   
 #### <a name="parameters"></a>Paramètres  
  `celt`  
- [in] Le nombre d’éléments permettant de déplacer le curseur vers le bas.  
+ [in] Le nombre d’éléments par lequel déplacer le curseur vers l’avant.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorPub.idl, CorPub.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorPublishEnum, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorPublishEnum, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

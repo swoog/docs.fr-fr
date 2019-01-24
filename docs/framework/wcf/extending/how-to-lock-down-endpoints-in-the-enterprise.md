@@ -1,15 +1,15 @@
 ---
-title: "Comment : verrouiller des points de terminaison dans l'entreprise"
+title: 'Procédure : Verrouiller des points de terminaison dans l’entreprise'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663077"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Comment : verrouiller des points de terminaison dans l'entreprise
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Procédure : Verrouiller des points de terminaison dans l’entreprise
 Les entreprises de grande taille exigent souvent que les applications soient développées conformément à leurs stratégies de sécurité. La rubrique suivante explique comment développer et installer un validateur de point de terminaison client qui peut être utilisé pour valider toutes les applications clientes de Windows Communication Foundation (WCF) installées sur les ordinateurs.  
   
  Dans ce cas, le validateur est un validateur client car ce comportement de point de terminaison est ajouté au client [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section dans le fichier machine.config. WCF charge des comportements de point de terminaison commun uniquement pour les applications clientes et des comportements de service communs uniquement pour les applications de service. Pour installer ce même validateur pour les applications de service, le validateur doit être un comportement de service. Pour plus d’informations, consultez le [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section.  
@@ -63,6 +63,6 @@ Les entreprises de grande taille exigent souvent que les applications soient dé
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Vous pouvez également chiffrer les éléments du fichier de configuration. Pour plus d'informations, consultez la section Voir aussi.  
   
-## <a name="see-also"></a>Voir aussi  
- [Chiffrement des éléments de fichier de configuration à l’aide de DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)  
- [Chiffrement des éléments de fichier de configuration à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=94955)
+## <a name="see-also"></a>Voir aussi
+- [Chiffrement des éléments de fichier de configuration à l’aide de DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Chiffrement des éléments de fichier de configuration à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

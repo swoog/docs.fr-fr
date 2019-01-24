@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664081"
 ---
 # <a name="sql-server-express-user-instances"></a>Instances utilisateur SQL Server Express
-Microsoft SQL Server Express Edition (SQL Server Express) prend en charge une nouvelle fonctionnalité, l'instance utilisateur, disponible uniquement avec le fournisseur de données .NET Framework pour SQL Server (`SqlClient`). Une instance utilisateur est une instance séparée du moteur de base de données SQL Server Express qui est générée par une instance parente. Les instances utilisateur permettent aux utilisateurs qui ne sont pas des administrateurs système sur leur ordinateur local de s'attacher et de se connecter aux bases de données SQL Server Express. Chaque instance s'exécute dans le contexte de sécurité de l'utilisateur individuel, sur la base d'une instance par utilisateur.  
+Microsoft SQL Server Express Edition (SQL Server Express) prend en charge une nouvelle fonctionnalité, l’instance utilisateur, disponible uniquement avec le fournisseur de données .NET Framework pour SQL Server (`SqlClient`). Une instance utilisateur est une instance séparée du moteur de base de données SQL Server Express qui est générée par une instance parente. Les instances utilisateur permettent aux utilisateurs qui ne sont pas des administrateurs système sur leur ordinateur local de s'attacher et de se connecter aux bases de données SQL Server Express. Chaque instance s'exécute dans le contexte de sécurité de l'utilisateur individuel, sur la base d'une instance par utilisateur.  
   
 ## <a name="user-instance-capabilities"></a>Fonctionnalités de l'instance utilisateur  
  Les instances utilisateur sont utiles aux utilisateurs qui exécutent Windows sous un compte avec les privilèges minimum (LUA) car elles leur permettent d'exécuter des privilèges (`sysadmin`) d'administrateur système SQL Server sur l'instance de leur ordinateur sans avoir à s'exécuter également en tant qu'administrateur Windows. Les logiciels qui s'exécutent sur une instance utilisateur avec des autorisations limitées ne peuvent pas effectuer de modifications au niveau du système parce que l'instance de SQL Server Express s'exécute sous le compte Windows non-administrateur de l'utilisateur, pas en tant que service. Chaque instance utilisateur est isolée de son instance parente et des autres instances utilisateur en cours d'exécution sur le même ordinateur. Les bases de données qui s'exécutent sur une instance utilisateur sont ouvertes en mode mono-utilisateur uniquement ; plusieurs utilisateurs ne peuvent pas se connecter à ces bases de données. La réplication et les requêtes distribuées sont également désactivées pour les instances utilisateur.  
@@ -125,7 +125,7 @@ private static void OpenSqlConnection()
 >  Si `Min Pool Size` est utilisé dans la chaîne de connexion avec une valeur supérieure à zéro, le dispositif de regroupement maintient toujours quelques connexions ouvertes pour ne pas que l'instance utilisateur ne se ferme automatiquement.  
   
 ## <a name="how-user-instances-work"></a>Fonctionnement des instances utilisateur  
- La première fois qu’une instance utilisateur est générée pour chaque utilisateur, le **master** et **msdb** bases de données système sont copiés à partir du dossier de données de modèle dans un chemin d’accès sous le référentiel de données d’application locale de l’utilisateur répertoire pour une utilisation exclusive par l’instance utilisateur. Ce chemin d'accès est généralement `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Lorsqu’une instance utilisateur démarre, le **tempdb**, journaux et de suivi fichiers sont également écrits dans ce répertoire. Un nom est généré pour l'instance, ce qui garantit un nom unique pour chaque utilisateur.  
+ La première fois qu’une instance utilisateur est générée pour chaque utilisateur, le **master** et **msdb** bases de données système sont copiés à partir du dossier de données de modèle dans un chemin d’accès sous le référentiel de données d’application locale de l’utilisateur répertoire pour une utilisation exclusive par l’instance utilisateur. Ce chemin d’accès est généralement `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Lorsqu’une instance utilisateur démarre, le **tempdb**, journaux et de suivi fichiers sont également écrits dans ce répertoire. Un nom est généré pour l'instance, ce qui garantit un nom unique pour chaque utilisateur.  
   
  Par défaut, tous les membres du groupe Builtin\Users de Windows reçoivent les autorisations de se connecter à l'instance locale ainsi que les autorisations en lecture et en écriture sur les binaires SQL Server. Une fois que les informations d'identification de l'utilisateur appelant qui héberge l'instance utilisateur ont été vérifiées, cet utilisateur devient `sysadmin` sur cette instance. Seule la mémoire partagée est activée pour les instances utilisateur, ce qui signifie que seules les opérations sur l'ordinateur local sont possibles.  
   
@@ -150,8 +150,8 @@ private static void OpenSqlConnection()
   
 -   Hébergement ASP.NET dédié à l'aide de l'authentification Windows. Une seule instance SQL Server Express peut être hébergée sur un intranet. L'application se connecte à l'aide du compte Windows ASPNET, et non à l'aide de l'emprunt d'identité. Les instances utilisateur ne doivent pas être utilisées dans les scénarios d'hébergement partagés ou tiers dans lesquels toutes les applications doivent partager la même instance utilisateur et ne plus être indépendantes les unes des autres.  
   
-## <a name="see-also"></a>Voir aussi  
- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Chaînes de connexion](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [Connexion à une source de données](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Chaînes de connexion](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [Connexion à une source de données](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

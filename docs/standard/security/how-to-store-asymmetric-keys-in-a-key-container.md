@@ -1,5 +1,5 @@
 ---
-title: 'Comment : stocker des clés asymétriques dans un conteneur de clé'
+title: 'Procédure : Store les clés asymétriques dans un conteneur de clé'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 42a42ee0fe5029dfe8340701595ba9dfab9a026d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680402"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Comment : stocker des clés asymétriques dans un conteneur de clé
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Procédure : Store les clés asymétriques dans un conteneur de clé
 Les clés privées asymétriques ne doivent jamais être stockées textuellement ou en texte brut sur l'ordinateur local. Si vous avez besoin de stocker une clé privée, vous devez utiliser un conteneur de clé. Pour plus d’informations sur les conteneurs de clé, consultez [Présentation des conteneurs de clé RSA ordinateur et utilisateur](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Pour créer une clé asymétrique et l'enregistrer dans un conteneur de clés  
@@ -225,7 +225,7 @@ Key deleted.
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Génération de clés pour le chiffrement et le déchiffrement](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [Chiffrement de données](../../../docs/standard/security/encrypting-data.md)  
-- [Déchiffrement de données](../../../docs/standard/security/decrypting-data.md)  
+- [Génération de clés pour le chiffrement et le déchiffrement](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Chiffrement de données](../../../docs/standard/security/encrypting-data.md)
+- [Déchiffrement de données](../../../docs/standard/security/decrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

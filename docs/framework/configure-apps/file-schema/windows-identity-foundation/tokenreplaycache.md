@@ -3,20 +3,20 @@ title: '&lt;tokenReplayCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: d21a819f789b5be4bdf7ebf57b37a072e1d213ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1e89afc5764dbdb86e87d2307425299dff57c686
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525160"
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 Inscrit un cache de relecture de jetons avec un service ou une collection de gestionnaires de jetons de sécurité.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
-\<met en cache >  
-\<tokenReplayCache >  
+\<identityConfiguration>  
+\<caches>  
+\<tokenReplayCache>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ Inscrit un cache de relecture de jetons avec un service ou une collection de ges
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<met en cache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Inscrit le met en cache utilisé par un service ou une collection de gestionnaires de jetons de sécurité.|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Inscrit le met en cache utilisé par un service ou une collection de gestionnaires de jetons de sécurité.|  
   
 ## <a name="remarks"></a>Notes  
  Le cache de relecture de jetons est utilisé pour détecter les jetons relus. Détection de relecture de jetons est activée par le [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) élément, qui spécifie également l’heure d’expiration maximal pour les jetons.  
@@ -62,6 +62,6 @@ Inscrit un cache de relecture de jetons avec un service ou une collection de ges
 </caches>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IdentityModel.Tokens.TokenReplayCache>  
- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IdentityModel.Tokens.TokenReplayCache>
+- [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)

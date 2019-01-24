@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 9377d889f56049720ab10439582300913f5cbb37
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 64ded285c74d61206618695c1d0bb6f158ce860d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704902"
 ---
 # <a name="structure-statement"></a>Structure, instruction
 Déclare le nom d’une structure et introduit la définition des variables, des propriétés, des événements et des procédures qui comprend la structure.  
@@ -38,7 +38,7 @@ End Structure
 |Terme|Définition|  
 |---|---|  
 |`attributelist`|Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protégé](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private protégé](../../language-reference/modifiers/private-protected.md) <br /><br /> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private protégé](../../language-reference/modifiers/private-protected.md) <br /><br /> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`Partial`|Facultatif. Indique une définition partielle de la structure. Consultez [partielle](../../../visual-basic/language-reference/modifiers/partial.md).|  
 |`name`|Obligatoire. Nom de cette structure. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
@@ -85,7 +85,7 @@ End Structure
   
      La portée de chaque membre de structure est la structure entière.  
   
--   **Durée de vie.** Une structure ne pas lui-même a une durée de vie. Au lieu de cela, chaque instance de cette structure a une durée de vie indépendante de toutes les autres instances.  
+-   **Lifetime.** Une structure ne pas lui-même a une durée de vie. Au lieu de cela, chaque instance de cette structure a une durée de vie indépendante de toutes les autres instances.  
   
      La durée de vie d’une instance commence lorsqu’elle est créée par un [nouvel opérateur](../../../visual-basic/language-reference/operators/new-operator.md) clause. Elle se termine lorsque la durée de vie de la variable qui contient elle se termine.  
   
@@ -104,14 +104,14 @@ End Structure
   
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Module (instruction)](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Const (instruction)](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Enum (instruction)](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Event (instruction)](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Operator (instruction)](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Structures et classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+## <a name="see-also"></a>Voir aussi
+- [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Module (instruction)](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Const (instruction)](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Enum (instruction)](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Event (instruction)](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Operator (instruction)](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Structures et classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

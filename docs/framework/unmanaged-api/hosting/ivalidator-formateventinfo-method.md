@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875052ed26e83de50807e33e9c74dcf89f7ee679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653855"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo, méthode
-Obtient le message d’erreur correspondant à l’erreur de validation spécifiée.  
+Obtient le message d’erreur correspondant à l’erreur de validation spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,10 +44,10 @@ HRESULT FormatEventInfo(
  [in] La valeur HRESULT qui a été passée au gestionnaire d’erreurs de validation.  
   
  `Context`  
- [in] A `VEContext` instance qui contient les informations de contexte de l’erreur de validation.  
+ [in] Un `VEContext` instance qui contient des informations de contexte sur l’erreur de validation.  
   
  `msg`  
- [dans, out] Chaîne qui contient le message d’erreur renvoyé.  
+ [in, out] Chaîne qui contient le message d’erreur retourné.  
   
  `ulMaxLength`  
  [in] La longueur maximale du message d’erreur.  
@@ -56,13 +56,13 @@ HRESULT FormatEventInfo(
  [in] Un tableau sécurisé qui contient des paramètres supplémentaires décrivant l’erreur.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** IValidator.idl, IValidator.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- 
+## <a name="see-also"></a>Voir aussi
+

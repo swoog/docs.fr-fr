@@ -2,12 +2,12 @@
 title: Configuration requise pour le fournisseur de données .NET Framework pour Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 60d57e30e2a1588ec6e0b9e253f371f8fbae28bc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cc3fc61c5adebf67b1203897579b2f959cbc0546
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670869"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Configuration requise pour le fournisseur de données .NET Framework pour Oracle
 Le fournisseur de données .NET Framework pour Oracle requiert l'installation de Microsoft Data Access Components (MDAC) version 2.6 ou ultérieure. MDAC 2.8 SP1 est recommandé.  
@@ -37,6 +37,6 @@ Unicode=True
 ### <a name="oraclelob-can-only-update-full-characters"></a>OracleLob ne peut mettre à jour que des caractères complets.  
  Pour des raisons de simplicité d’utilisation, le <xref:System.Data.OracleClient.OracleLob> objet hérite de la classe .NET Framework Stream, ainsi que **ReadByte** et **WriteByte** méthodes. Il implémente également des méthodes, telles que **CopyTo** et **effacer**, qui opèrent sur des sections d’Oracle **LOB** objets. En revanche, le logiciel client Oracle fournit un certain nombre d’API pour travailler avec caractère **LOB**s (**CLOB** et **NCLOB**). Toutefois, ces API n'opèrent que sur des caractères complets. En raison de cette différence, le fournisseur de données pour Oracle implémente la prise en charge de **en lecture** et **ReadByte** pour travailler avec des données UTF-16 en manipulant les octets. Toutefois, les autres méthodes de la **OracleLob** objet autoriser uniquement les opérations de caractères complets.  
   
-## <a name="see-also"></a>Voir aussi  
- [Oracle et ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Oracle et ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

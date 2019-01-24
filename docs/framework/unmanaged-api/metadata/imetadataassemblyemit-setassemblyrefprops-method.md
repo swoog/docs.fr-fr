@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6667812ab7f9acff2a66e458f68d77a0d670bc2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0a4f0fd100397fc52ca917c54f0276598d714640
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642842"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps, méthode
 Modifie la structure de métadonnées `AssemblyRef` spécifiée.  
@@ -44,19 +44,19 @@ HRESULT SetAssemblyRefProps (
   
 #### <a name="parameters"></a>Paramètres  
  `ar`  
- [in] Le jeton de métadonnées qui spécifie le `AssemblyRef` structure de métadonnées.  
+ [in] Le jeton de métadonnées qui spécifie le `AssemblyRef` structure des métadonnées à modifier.  
   
  `pbPublicKeyOrToken`  
- [in] La clé publique de l’éditeur de l’assembly référencé.  
+ [in] La clé publique du serveur de publication de l’assembly référencé.  
   
  `cbPublicKeyOrToken`  
  [in] La taille en octets de `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] Nom de l’assembly du texte explicite.  
+ [in] Le nom lisible de l’assembly.  
   
  `pMetaData`  
- [in] Un pointeur vers une instance ASSEMBLYMETADATA qui contient les informations de version, la plateforme et paramètres régionaux de l’assembly.  
+ [in] Pointeur vers une instance ASSEMBLYMETADATA qui contient les informations de version, la plateforme et aux paramètres régionaux de l’assembly.  
   
  `pbHashValue`  
  [in] Pointeur vers les données de hachage associées à l’assembly.  
@@ -65,19 +65,19 @@ HRESULT SetAssemblyRefProps (
  [in] La taille en octets de `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] Une combinaison d’opérations de [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) valeurs qui spécifient les attributs de l’assembly référencé.  
+ [in] Une combinaison au niveau du bit de [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) valeurs qui spécifient les attributs de l’assembly référencé.  
   
 ## <a name="remarks"></a>Notes  
  Pour créer un `AssemblyRef` structure des métadonnées, utilisez le [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) (méthode).  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
