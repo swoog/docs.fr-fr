@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aab35aa5580b53dda513369066ff77f55230265
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab1dab753728102fc27e39c3ed64bf776e2e5ad5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634468"
 ---
-# <a name="icordebugmanagedcallback3-interface"></a><span data-ttu-id="4c1b4-102">ICorDebugManagedCallback3, interface</span><span class="sxs-lookup"><span data-stu-id="4c1b4-102">ICorDebugManagedCallback3 Interface</span></span>
-<span data-ttu-id="4c1b4-103">Fournit une méthode de rappel indiquant qu'une notification de débogueur personnalisée active a été déclenchée.</span><span class="sxs-lookup"><span data-stu-id="4c1b4-103">Provides a callback method that indicates that an enabled custom debugger notification has been raised.</span></span>  
+# <a name="icordebugmanagedcallback3-interface"></a><span data-ttu-id="8edbc-102">ICorDebugManagedCallback3, interface</span><span class="sxs-lookup"><span data-stu-id="8edbc-102">ICorDebugManagedCallback3 Interface</span></span>
+<span data-ttu-id="8edbc-103">Fournit une méthode de rappel indiquant qu'une notification de débogueur personnalisée active a été déclenchée.</span><span class="sxs-lookup"><span data-stu-id="8edbc-103">Provides a callback method that indicates that an enabled custom debugger notification has been raised.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="4c1b4-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="4c1b4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8edbc-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="8edbc-104">Methods</span></span>  
   
-|<span data-ttu-id="4c1b4-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="4c1b4-105">Method</span></span>|<span data-ttu-id="4c1b4-106">Description</span><span class="sxs-lookup"><span data-stu-id="4c1b4-106">Description</span></span>|  
+|<span data-ttu-id="8edbc-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="8edbc-105">Method</span></span>|<span data-ttu-id="8edbc-106">Description</span><span class="sxs-lookup"><span data-stu-id="8edbc-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="4c1b4-107">CustomNotification, méthode</span><span class="sxs-lookup"><span data-stu-id="4c1b4-107">CustomNotification Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|<span data-ttu-id="4c1b4-108">Indique qu’une notification de débogueur personnalisée active a été déclenchée.</span><span class="sxs-lookup"><span data-stu-id="4c1b4-108">Indicates that an enabled custom debugger notification has been raised.</span></span>|  
+|[<span data-ttu-id="8edbc-107">CustomNotification, méthode</span><span class="sxs-lookup"><span data-stu-id="8edbc-107">CustomNotification Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|<span data-ttu-id="8edbc-108">Indique qu’une notification de débogueur personnalisée active a été déclenchée.</span><span class="sxs-lookup"><span data-stu-id="8edbc-108">Indicates that an enabled custom debugger notification has been raised.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4c1b4-109">Notes</span><span class="sxs-lookup"><span data-stu-id="4c1b4-109">Remarks</span></span>  
- <span data-ttu-id="4c1b4-110">Cette interface est une extension logique de la [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) et [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) interfaces.</span><span class="sxs-lookup"><span data-stu-id="4c1b4-110">This interface is a logical extension of the [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) and [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8edbc-109">Notes</span><span class="sxs-lookup"><span data-stu-id="8edbc-109">Remarks</span></span>  
+ <span data-ttu-id="8edbc-110">Cette interface est une extension logique de la [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) et [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) interfaces.</span><span class="sxs-lookup"><span data-stu-id="8edbc-110">This interface is a logical extension of the [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) and [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) interfaces.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4c1b4-111">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="4c1b4-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="8edbc-111">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="8edbc-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4c1b4-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4c1b4-112">Requirements</span></span>  
- <span data-ttu-id="4c1b4-113">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4c1b4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8edbc-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="8edbc-112">Requirements</span></span>  
+ <span data-ttu-id="8edbc-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8edbc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4c1b4-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4c1b4-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8edbc-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8edbc-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4c1b4-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4c1b4-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8edbc-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8edbc-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4c1b4-116">**Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c1b4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="8edbc-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8edbc-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c1b4-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4c1b4-117">See Also</span></span>  
- [<span data-ttu-id="4c1b4-118">ICorDebugManagedCallback, interface</span><span class="sxs-lookup"><span data-stu-id="4c1b4-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)  
- [<span data-ttu-id="4c1b4-119">ICorDebugManagedCallback2, interface</span><span class="sxs-lookup"><span data-stu-id="4c1b4-119">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [<span data-ttu-id="4c1b4-120">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="4c1b4-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="4c1b4-121">Débogage</span><span class="sxs-lookup"><span data-stu-id="4c1b4-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="8edbc-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8edbc-117">See also</span></span>
+- [<span data-ttu-id="8edbc-118">ICorDebugManagedCallback, interface</span><span class="sxs-lookup"><span data-stu-id="8edbc-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="8edbc-119">ICorDebugManagedCallback2, interface</span><span class="sxs-lookup"><span data-stu-id="8edbc-119">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="8edbc-120">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="8edbc-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8edbc-121">Débogage</span><span class="sxs-lookup"><span data-stu-id="8edbc-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

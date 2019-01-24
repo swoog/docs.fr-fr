@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a19c6f22ee9fbe7eb1019a0b799d63e4ee650e98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cd385c1176bea41b41a981e743c6104227d8acd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708192"
 ---
-# <a name="clrdataenummemoryflags-enumeration"></a><span data-ttu-id="54594-102">CLRDataEnumMemoryFlags, énumération</span><span class="sxs-lookup"><span data-stu-id="54594-102">CLRDataEnumMemoryFlags Enumeration</span></span>
-<span data-ttu-id="54594-103">Indique les régions de mémoire qu’un appel à la [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) méthode doit inclure.</span><span class="sxs-lookup"><span data-stu-id="54594-103">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
+# <a name="clrdataenummemoryflags-enumeration"></a><span data-ttu-id="1477f-102">CLRDataEnumMemoryFlags, énumération</span><span class="sxs-lookup"><span data-stu-id="1477f-102">CLRDataEnumMemoryFlags Enumeration</span></span>
+<span data-ttu-id="1477f-103">Indique les régions de mémoire un appel à la [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) méthode doit inclure.</span><span class="sxs-lookup"><span data-stu-id="1477f-103">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54594-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="54594-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1477f-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1477f-104">Syntax</span></span>  
   
 ```  
 typedef enum CLRDataEnumMemoryFlags {  
@@ -36,21 +36,21 @@ typedef enum CLRDataEnumMemoryFlags {
 } CLRDataEnumMemoryFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="54594-105">Membres</span><span class="sxs-lookup"><span data-stu-id="54594-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1477f-105">Membres</span><span class="sxs-lookup"><span data-stu-id="1477f-105">Members</span></span>  
   
-|<span data-ttu-id="54594-106">Membre</span><span class="sxs-lookup"><span data-stu-id="54594-106">Member</span></span>|<span data-ttu-id="54594-107">Description</span><span class="sxs-lookup"><span data-stu-id="54594-107">Description</span></span>|  
+|<span data-ttu-id="1477f-106">Membre</span><span class="sxs-lookup"><span data-stu-id="1477f-106">Member</span></span>|<span data-ttu-id="1477f-107">Description</span><span class="sxs-lookup"><span data-stu-id="1477f-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|<span data-ttu-id="54594-108">Un minidump, autrement dit, une image mémoire incomplète.</span><span class="sxs-lookup"><span data-stu-id="54594-108">A minidump, that is, a sparse memory dump.</span></span>|  
-|`CLRDATA_ENUM_MEM_HEAP`|<span data-ttu-id="54594-109">Un dump de tas complet.</span><span class="sxs-lookup"><span data-stu-id="54594-109">A full heap dump.</span></span>|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|<span data-ttu-id="1477f-108">Un minidump, autrement dit, une image mémoire incomplète.</span><span class="sxs-lookup"><span data-stu-id="1477f-108">A minidump, that is, a sparse memory dump.</span></span>|  
+|`CLRDATA_ENUM_MEM_HEAP`|<span data-ttu-id="1477f-109">Un vidage de tas complètes.</span><span class="sxs-lookup"><span data-stu-id="1477f-109">A full heap dump.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="54594-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="54594-110">Requirements</span></span>  
- <span data-ttu-id="54594-111">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54594-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1477f-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="1477f-110">Requirements</span></span>  
+ <span data-ttu-id="1477f-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1477f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54594-112">**En-tête :** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="54594-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="1477f-112">**En-tête :** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="1477f-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="54594-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54594-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1477f-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1477f-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="54594-114">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54594-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1477f-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1477f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54594-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="54594-115">See Also</span></span>  
- [<span data-ttu-id="54594-116">Énumérations de débogage</span><span class="sxs-lookup"><span data-stu-id="54594-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="1477f-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1477f-115">See also</span></span>
+- [<span data-ttu-id="1477f-116">Énumérations de débogage</span><span class="sxs-lookup"><span data-stu-id="1477f-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
