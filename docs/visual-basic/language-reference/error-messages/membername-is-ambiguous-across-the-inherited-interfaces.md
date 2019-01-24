@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 23d1a11bcee2a4faae40f2683d109d5820ee5f9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6d6a82331185060d6f08c3375dc5a628b65df1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506294"
 ---
-# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="c0e37-102">&#39;&lt;MemberName&gt; &#39; est ambigu dans les interfaces héritées &#39; &lt;nom_interface1&gt; &#39; et &#39; &lt;nom_interface2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="c0e37-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
-<span data-ttu-id="c0e37-103">L’interface hérite de deux ou plusieurs membres portant le même nom à partir de plusieurs interfaces.</span><span class="sxs-lookup"><span data-stu-id="c0e37-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="f8683-102">&#39;&lt;MemberName&gt; &#39; est ambigu dans les interfaces héritées &#39; &lt;nom_interface1&gt; &#39; et &#39; &lt;nom_interface2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="f8683-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
+<span data-ttu-id="f8683-103">L’interface hérite de deux ou plusieurs membres portant le même nom plusieurs interfaces.</span><span class="sxs-lookup"><span data-stu-id="f8683-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="c0e37-104">**ID d’erreur :** BC30685</span><span class="sxs-lookup"><span data-stu-id="c0e37-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="f8683-104">**ID d’erreur :** BC30685</span><span class="sxs-lookup"><span data-stu-id="f8683-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="c0e37-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="c0e37-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f8683-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="f8683-105">To correct this error</span></span>  
   
--   <span data-ttu-id="c0e37-106">Effectuer un cast de la valeur de l’interface de base que vous souhaitez utiliser. par exemple :</span><span class="sxs-lookup"><span data-stu-id="c0e37-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+-   <span data-ttu-id="f8683-106">Castez la valeur de l’interface de base que vous souhaitez utiliser. par exemple :</span><span class="sxs-lookup"><span data-stu-id="f8683-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -46,5 +46,5 @@ ms.locfileid: "33585299"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="c0e37-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c0e37-107">See Also</span></span>  
- [<span data-ttu-id="c0e37-108">Interfaces</span><span class="sxs-lookup"><span data-stu-id="c0e37-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="f8683-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f8683-107">See also</span></span>
+- [<span data-ttu-id="f8683-108">Interfaces</span><span class="sxs-lookup"><span data-stu-id="f8683-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504901"
 ---
-# <a name="imetadataemitdefineparam-method"></a><span data-ttu-id="82815-102">IMetaDataEmit::DefineParam, méthode</span><span class="sxs-lookup"><span data-stu-id="82815-102">IMetaDataEmit::DefineParam Method</span></span>
-<span data-ttu-id="82815-103">Crée une définition de paramètre avec la signature spécifiée pour la méthode référencée par le jeton spécifié et obtient un jeton pour cette définition de paramètre.</span><span class="sxs-lookup"><span data-stu-id="82815-103">Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.</span></span>  
+# <a name="imetadataemitdefineparam-method"></a><span data-ttu-id="e7331-102">IMetaDataEmit::DefineParam, méthode</span><span class="sxs-lookup"><span data-stu-id="e7331-102">IMetaDataEmit::DefineParam Method</span></span>
+<span data-ttu-id="e7331-103">Crée une définition de paramètre avec la signature spécifiée pour la méthode référencée par le jeton spécifié et obtient un jeton pour cette définition de paramètre.</span><span class="sxs-lookup"><span data-stu-id="e7331-103">Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82815-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="82815-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7331-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e7331-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineParam (  
@@ -42,43 +42,43 @@ HRESULT DefineParam (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="82815-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="82815-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e7331-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e7331-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="82815-106">[in] Le jeton pour la méthode dont le paramètre est défini.</span><span class="sxs-lookup"><span data-stu-id="82815-106">[in] The token for the method whose parameter is being defined.</span></span>  
+ <span data-ttu-id="e7331-106">[in] Le jeton pour la méthode dont le paramètre est défini.</span><span class="sxs-lookup"><span data-stu-id="e7331-106">[in] The token for the method whose parameter is being defined.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="82815-107">[in] Numéro de séquence du paramètre.</span><span class="sxs-lookup"><span data-stu-id="82815-107">[in] The parameter sequence number.</span></span>  
+ <span data-ttu-id="e7331-107">[in] Numéro de séquence du paramètre.</span><span class="sxs-lookup"><span data-stu-id="e7331-107">[in] The parameter sequence number.</span></span>  
   
  `szName`  
- <span data-ttu-id="82815-108">[in] Le nom du paramètre au format Unicode.</span><span class="sxs-lookup"><span data-stu-id="82815-108">[in] The name of the parameter in Unicode.</span></span>  
+ <span data-ttu-id="e7331-108">[in] Le nom du paramètre au format Unicode.</span><span class="sxs-lookup"><span data-stu-id="e7331-108">[in] The name of the parameter in Unicode.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="82815-109">[in] Indicateurs pour le paramètre.</span><span class="sxs-lookup"><span data-stu-id="82815-109">[in] Flags for the parameter.</span></span> <span data-ttu-id="82815-110">Il s’agit d’un masque de bits de `CorParamAttr` valeurs.</span><span class="sxs-lookup"><span data-stu-id="82815-110">This is a bitmask of `CorParamAttr` values.</span></span>  
+ <span data-ttu-id="e7331-109">[in] Indicateurs pour le paramètre.</span><span class="sxs-lookup"><span data-stu-id="e7331-109">[in] Flags for the parameter.</span></span> <span data-ttu-id="e7331-110">Il s’agit d’un masque de bits de `CorParamAttr` valeurs.</span><span class="sxs-lookup"><span data-stu-id="e7331-110">This is a bitmask of `CorParamAttr` values.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="82815-111">[in] `ELEMENT_TYPE_` *\** pour la valeur de constante.</span><span class="sxs-lookup"><span data-stu-id="82815-111">[in] `ELEMENT_TYPE_`*\** for the constant value.</span></span>  
+ <span data-ttu-id="e7331-111">[in] `ELEMENT_TYPE_` *\** pour la valeur de constante.</span><span class="sxs-lookup"><span data-stu-id="e7331-111">[in] `ELEMENT_TYPE_`*\** for the constant value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="82815-112">[in] La valeur de constante pour le paramètre.</span><span class="sxs-lookup"><span data-stu-id="82815-112">[in] The constant value for the parameter.</span></span>  
+ <span data-ttu-id="e7331-112">[in] La valeur de constante pour le paramètre.</span><span class="sxs-lookup"><span data-stu-id="e7331-112">[in] The constant value for the parameter.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="82815-113">[in] La taille, en caractères Unicode de `pValue`.</span><span class="sxs-lookup"><span data-stu-id="82815-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
+ <span data-ttu-id="e7331-113">[in] La taille, en caractères Unicode, de `pValue`.</span><span class="sxs-lookup"><span data-stu-id="e7331-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
   
  `ppd`  
- <span data-ttu-id="82815-114">[out] Le `mdParamDef` jeton assigné.</span><span class="sxs-lookup"><span data-stu-id="82815-114">[out] The `mdParamDef` token assigned.</span></span>  
+ <span data-ttu-id="e7331-114">[out] Le `mdParamDef` jeton attribué.</span><span class="sxs-lookup"><span data-stu-id="e7331-114">[out] The `mdParamDef` token assigned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="82815-115">Notes</span><span class="sxs-lookup"><span data-stu-id="82815-115">Remarks</span></span>  
- <span data-ttu-id="82815-116">Les valeurs de séquence dans `ulParamSeq` commencent à 1 pour les paramètres.</span><span class="sxs-lookup"><span data-stu-id="82815-116">The sequence values in `ulParamSeq` begin with 1 for parameters.</span></span> <span data-ttu-id="82815-117">Une valeur de retour a un numéro de séquence 0.</span><span class="sxs-lookup"><span data-stu-id="82815-117">A return value has a sequence number of 0.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e7331-115">Notes</span><span class="sxs-lookup"><span data-stu-id="e7331-115">Remarks</span></span>  
+ <span data-ttu-id="e7331-116">Les valeurs de séquence dans `ulParamSeq` commencent par 1 pour les paramètres.</span><span class="sxs-lookup"><span data-stu-id="e7331-116">The sequence values in `ulParamSeq` begin with 1 for parameters.</span></span> <span data-ttu-id="e7331-117">Une valeur de retour a un numéro de séquence 0.</span><span class="sxs-lookup"><span data-stu-id="e7331-117">A return value has a sequence number of 0.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82815-118">Spécifications</span><span class="sxs-lookup"><span data-stu-id="82815-118">Requirements</span></span>  
- <span data-ttu-id="82815-119">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82815-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7331-118">Spécifications</span><span class="sxs-lookup"><span data-stu-id="e7331-118">Requirements</span></span>  
+ <span data-ttu-id="e7331-119">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7331-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82815-120">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="82815-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e7331-120">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e7331-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="82815-121">**Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="82815-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e7331-121">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e7331-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="82815-122">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82815-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e7331-122">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7331-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82815-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="82815-123">See Also</span></span>  
- [<span data-ttu-id="82815-124">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="82815-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="82815-125">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="82815-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e7331-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e7331-123">See also</span></span>
+- [<span data-ttu-id="e7331-124">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="e7331-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e7331-125">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="e7331-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
