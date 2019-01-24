@@ -13,23 +13,23 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 8b142cfc65e39e48502cde263fea51378c47f43e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70367d199ece207589d67ee38cb71f0cdda5b11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684108"
 ---
 # <a name="drawings"></a>Dessins
-<xref:System.Windows.Media.Drawing> objets sont utilisés pour dessiner efficacement des formes, des images ou texte. Dessins sont utilisés lors de la peinture avec un <xref:System.Windows.Media.DrawingBrush> ou de programmation avec <xref:System.Windows.Media.Visual> objets.  
+<xref:System.Windows.Media.Drawing> les objets sont utilisés pour dessiner efficacement des formes, des images ou texte. Dessins sont utilisés pour peindre avec un <xref:System.Windows.Media.DrawingBrush> ou programmation avec <xref:System.Windows.Media.Visual> objets.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble des objets de dessin](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
   [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Media.Drawing>  
- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Vue d’ensemble des formes et dessins de base dans WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Media.Drawing>
+- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Vue d’ensemble des formes et dessins de base dans WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

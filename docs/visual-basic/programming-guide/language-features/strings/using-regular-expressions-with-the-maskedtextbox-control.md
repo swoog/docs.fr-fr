@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 25bdfaef300b001d1c052aeea4e1ad3547a6d3d7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 58c0caa9d1df49ec53273e5b0f456cf89fc64c42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683688"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilisation d'expressions régulières avec le contrôle MaskedTextBox en Visual Basic
 Cet exemple montre comment convertir des expressions régulières simples pour travailler avec le <xref:System.Windows.Forms.MaskedTextBox> contrôle.  
@@ -23,12 +23,12 @@ Cet exemple montre comment convertir des expressions régulières simples pour t
 |Élément de masquage|Description|Élément d’expression régulière|  
 |---------------------|-----------------|--------------------------------|  
 |0|N’importe quel chiffre unique compris entre 0 et 9. Entrée obligatoire.|\d|  
-|9|Chiffre ou espace. Entrée facultative.|[\d] ?|  
-|#|Chiffre ou espace. Entrée facultative. Si cette position est vide dans le masque, elle est restituée comme un espace. Signe plus (+) et moins (-), signes sont autorisés.|[\d+-] ?|  
+|9|Chiffre ou espace. Entrée facultative.|[ \d]?|  
+|#|Chiffre ou espace. Entrée facultative. Si cette position est vide dans le masque, elle est restituée comme un espace. Signe plus (+) et moins (-), signes sont autorisés.|[ \d+-]?|  
 |L|Lettre ASCII. Entrée obligatoire.|[a-zA-Z]|  
-|?|Lettre ASCII. Entrée facultative.|[a-zA-Z] ?|  
+|?|Lettre ASCII. Entrée facultative.|[a-zA-Z]?|  
 |&|Caractère. Entrée obligatoire.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|Caractère. Entrée facultative.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}] ?|  
+|C|Caractère. Entrée facultative.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |A|Alphanumériques. Entrée facultative.|\W|  
 |.|Espace réservé décimal approprié à la culture.|Non disponible.|  
 |,|Espace réservé des milliers approprié à la culture.|Non disponible.|  
@@ -55,8 +55,8 @@ Cet exemple montre comment convertir des expressions régulières simples pour t
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Numéro de téléphone des États-Unis, indicatif facultatif. Si l’utilisateur ne souhaite pas entrer les caractères facultatifs, elle peut entrer des espaces ou placer le pointeur de souris directement à la position représentée par le premier 0 dans le masque.|  
 |`$\d{6}.00`|`$999,999.00`|Valeur monétaire dans la plage de 0 à 999999. La devise, millième et caractères décimaux sont remplacés au moment de l’exécution par leurs équivalents spécifiques à la culture.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
- <xref:System.Windows.Forms.MaskedTextBox>  
- [Validation de chaînes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- [MaskedTextBox, contrôle](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
+- <xref:System.Windows.Forms.MaskedTextBox>
+- [Validation de chaînes en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [MaskedTextBox, contrôle](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

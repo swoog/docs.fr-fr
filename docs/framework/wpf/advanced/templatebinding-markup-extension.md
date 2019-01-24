@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 7c076172424baab4553a277baab2faca634c1e87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3ae17dc98137bd417d2468fb0415fb2078acf20f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686021"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding, extension de balisage
 Cette extension lie la valeur d'une propriété dans un modèle de contrôle afin de la définir comme valeur d'une autre propriété exposée dans le contrôle basé sur un modèle.  
@@ -44,7 +44,7 @@ Cette extension lie la valeur d'une propriété dans un modèle de contrôle afi
   
  Décrire les modèles de contrôle comme un concept n’est pas couverte ici ; Pour plus d’informations, consultez [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
   
- La syntaxe d’attribut est la syntaxe la plus couramment utilisée avec cette extension de balisage. Le jeton de chaîne fourni après la chaîne d'identificateur `TemplateBinding` est assigné en tant que valeur <xref:System.Windows.TemplateBindingExtension.Property%2A> de la classe d'extension <xref:System.Windows.TemplateBindingExtension> sous-jacente.  
+ La syntaxe d’attribut est la syntaxe la plus couramment utilisée avec cette extension de balisage. Le jeton de chaîne fourni après la chaîne d’identificateur `TemplateBinding` est assigné en tant que valeur <xref:System.Windows.TemplateBindingExtension.Property%2A> de la classe d’extension <xref:System.Windows.TemplateBindingExtension> sous-jacente.  
   
  La syntaxe d'élément objet est possible, mais elle n'est pas indiquée car elle ne possède aucune application réaliste. `TemplateBinding` est utilisé pour remplir des valeurs dans des méthodes setter, à l'aide d'expressions évaluées. En outre, l'utilisation de la syntaxe d'élément objet de `TemplateBinding` pour remplir la syntaxe des éléments de propriété `<Setter.Property>` est inutilement détaillée.  
   
@@ -60,11 +60,11 @@ Cette extension lie la valeur d'une propriété dans un modèle de contrôle afi
   
  `TemplateBinding` est une extension de balisage. Les extensions de balisage sont généralement implémentées pour éviter que les valeurs d’attribut ne soient autre chose que des valeurs littérales ou des noms de gestionnaire et lorsque l’exigence dépasse le cadre de la définition de convertisseurs de type sur certains types ou propriétés. Toutes les extensions de balisage en cours d’utilisation XAML le `{` et `}` caractères dans leur syntaxe d’attribut, qui est la convention selon laquelle un processeur XAML reconnaît qu’une extension de balisage doit traiter l’attribut. Pour plus d’informations, consultez [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [RelativeSource, extension de balisage](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
- [Binding, extension de balisage](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [RelativeSource, extension de balisage](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)
+- [Binding, extension de balisage](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)

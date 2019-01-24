@@ -13,12 +13,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: ab0b7e7c35992908aeaac14053665ff84719f1fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd97b23bd67b3c98fb89037205ac12f120ca490
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692111"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Tâches courantes effectuées avec les opérateurs de Visual Basic
 Opérateurs effectuent de nombreuses tâches courantes impliquant une ou plusieurs expressions appelées *opérandes*.  
@@ -32,38 +32,38 @@ Opérateurs effectuent de nombreuses tâches courantes impliquant une ou plusieu
 |Soustrait une valeur numérique d’un autre|[-, Opérateur (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
 |Inverse le signe d’une valeur numérique|[-, Opérateur (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
 |Multiplier une valeur numérique par une autre|[* (opérateur)](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
-|Diviser une valeur numérique dans une autre|[/, Opérateur (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
+|Diviser une valeur numérique en un autre|[/, Opérateur (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
 |Rechercher le quotient d’une valeur numérique divisée par une autre (sans le reste)|[\, Opérateur (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
 |Trouver le reste d’une valeur numérique divisée par une autre (sans le quotient)|[Mod (opérateur)](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |Élever une valeur numérique à la puissance d’un autre|[^ (opérateur)](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|Le modèle binaire d’une valeur numérique est déplacée vers la gauche|[<\< (opérateur)](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
-|Le modèle binaire d’une valeur numérique est déplacée vers la droite|[>> (opérateur)](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
+|Décaler le modèle binaire d’une valeur numérique vers la gauche|[<\< Opérateur](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|Décaler le modèle binaire d’une valeur numérique vers la droite|[>> (opérateur)](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
 ## <a name="comparison-tasks"></a>Tâches de comparaison  
  Le tableau suivant récapitule les opérations de comparaison disponible.  
   
 |À|Voir|  
 |---|---|  
-|Déterminer si deux valeurs sont égales|`=` Opérateur ([opérateurs de comparaison en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Déterminer si deux valeurs sont inégales|`<>` Opérateur ([opérateurs de comparaison en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Déterminer si une valeur est inférieure à une autre|`<` Opérateur ([opérateurs de comparaison en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Déterminer si une valeur est supérieure à une autre|`>` Opérateur ([opérateurs de comparaison en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Déterminer si une valeur est inférieure ou égale à un autre|`<=` Opérateur ([opérateurs de comparaison en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Déterminer si une valeur est supérieure ou égale à un autre|`>=` Opérateur ([opérateurs de comparaison en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Déterminer si deux variables objets font référence à la même instance d’objet|[Is (opérateur)](../../../../visual-basic/language-reference/operators/is-operator.md)|  
-|Déterminer si deux variables objets font référence à différentes instances d’objet|[IsNot (opérateur)](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
+|Déterminer si deux valeurs sont égales|`=` Opérateur ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Déterminer si deux valeurs sont inégales|`<>` Opérateur ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Déterminer si une valeur est inférieure à une autre|`<` Opérateur ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Déterminer si une valeur est supérieure à une autre|`>` Opérateur ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Déterminer si une valeur est inférieure ou égale à un autre|`<=` Opérateur ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Déterminer si une valeur est supérieure ou égale à un autre|`>=` Opérateur ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Déterminer si deux variables d’objet font référence à la même instance d’objet|[Is (opérateur)](../../../../visual-basic/language-reference/operators/is-operator.md)|  
+|Déterminer si deux variables d’objet font référence à différentes instances d’objet|[IsNot (opérateur)](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
 |Déterminer si un objet est d’un type spécifique|[TypeOf (opérateur)](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
   
 ## <a name="concatenation-tasks"></a>Tâches de concaténation  
- Le tableau suivant récapitule les opérations de concaténation disponibles.  
+ Le tableau suivant résume les opérations de concaténation disponibles.  
   
 |À|Voir|  
 |---|---|  
 |Joindre plusieurs chaînes en une seule chaîne|`&` Opérateur ([en Visual Basic, les opérateurs de concaténation](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
-|Joindre des valeurs numériques avec des valeurs de chaîne|`+` Opérateur ([en Visual Basic, les opérateurs de concaténation](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|Joindre des valeurs numériques avec les valeurs de chaîne|`+` Opérateur ([en Visual Basic, les opérateurs de concaténation](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
   
 ## <a name="logical-and-bitwise-tasks"></a>Tâches logiques et au niveau du bit  
- Le tableau suivant récapitule les opérations logiques et au niveau du bit disponibles.  
+ Le tableau suivant récapitule les opérations au niveau du bit et logiques disponibles.  
   
 |À|Voir|  
 |---|---|  
@@ -76,8 +76,8 @@ Opérateurs effectuent de nombreuses tâches courantes impliquant une ou plusieu
 |Effectuer une conjonction logique de bit par bit sur deux valeurs intégrales|[And (opérateur)](../../../../visual-basic/language-reference/operators/and-operator.md)|  
 |Effectuer une disjonction logique inclusive bit par bit sur deux valeurs intégrales|[Or (opérateur)](../../../../visual-basic/language-reference/operators/or-operator.md)|  
 |Effectuer une disjonction logique exclusive bit par bit sur deux valeurs intégrales|[Xor (opérateur)](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Effectuer une négation logique de bit par bit sur une valeur intégrale|[Not (opérateur)](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|Effectuer la négation logique bit par bit sur une valeur intégrale|[Not (opérateur)](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
-## <a name="see-also"></a>Voir aussi  
- [Opérateurs et expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Opérateurs répertoriés par fonctionnalité](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a>Voir aussi
+- [Opérateurs et expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Opérateurs répertoriés par fonctionnalité](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

@@ -1,5 +1,5 @@
 ---
-title: "Comment : utiliser un validateur de nom d'utilisateur et de mot de passe personnalisé"
+title: 'Procédure : Utiliser un validateur de mot de passe et le nom d’utilisateur personnalisé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: a7573e14d224e2ec861b301816d6d886fd147180
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700531"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Comment : utiliser un validateur de nom d'utilisateur et de mot de passe personnalisé
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Procédure : Utiliser un validateur de mot de passe et le nom d’utilisateur personnalisé
 Par défaut, lorsqu’un nom d’utilisateur et le mot de passe est utilisé pour l’authentification, Windows Communication Foundation (WCF) utilise Windows pour valider le nom d’utilisateur et le mot de passe. Cependant, WCF permet pour les schémas de l’authentification des nom et mot de passe d’utilisateur personnalisée, également appelé *validateurs*. Pour incorporer un validateur de nom d'utilisateur et de mot de passe personnalisé, créez une classe qui dérive de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, puis configurez-la.  
   
  Pour un exemple d’application, consultez [validateur de mot de passe de nom d’utilisateur](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
@@ -51,7 +51,7 @@ Par défaut, lorsqu’un nom d’utilisateur et le mot de passe est utilisé pou
   
     1.  Dans le fichier de configuration, sous le [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) élément, ajoutez un [ \<liaisons >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) élément.  
   
-    2.  Ajouter un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ou [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément à la section des liaisons. Pour plus d’informations sur la création d’un élément de liaison WCF, consultez [Comment : spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Ajouter un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ou [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément à la section des liaisons. Pour plus d’informations sur la création d’un élément de liaison WCF, consultez [Comment : Spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
     3.  Définir le `mode` attribut de la [ \<sécurité >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) ou [ \<sécurité >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) à `Message`, `Transport`, ou `TransportWithMessageCredential`.  
   
@@ -64,7 +64,7 @@ Par défaut, lorsqu’un nom d’utilisateur et le mot de passe est utilisé pou
         > [!NOTE]
         >  Lorsqu’un service WCF est hébergé dans Internet Information Services (IIS) à l’aide de la sécurité au niveau du transport et le <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> propriété est définie sur <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, le schéma d’authentification personnalisé utilise un sous-ensemble de l’authentification Windows. C’est parce que dans ce scénario, IIS effectue l’authentification Windows avant l’appel de l’authentificateur personnalisé de WCF.  
   
-     Pour plus d’informations sur la création d’un élément de liaison WCF, consultez [Comment : spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Pour plus d’informations sur la création d’un élément de liaison WCF, consultez [Comment : Spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      L’exemple suivant présente le code de configuration de la liaison.  
   
@@ -117,7 +117,7 @@ Par défaut, lorsqu’un nom d’utilisateur et le mot de passe est utilisé pou
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>  
- [Guide pratique pour utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
- [Authentification](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
+- [Guide pratique pour Utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Authentification](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

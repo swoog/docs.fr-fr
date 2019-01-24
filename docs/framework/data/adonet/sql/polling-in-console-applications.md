@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 008cf6f0bdb6bb4c459ee97f6cc337b6491a5cb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702286"
 ---
 # <a name="polling-in-console-applications"></a>Interrogation dans les applications console
 Les opérations asynchrones dans ADO.NET vous permettent de lancer des opérations de base de données de longue durée sur un thread tout en exécutant d’autres tâches dans un autre thread. Toutefois, dans la plupart des scénarios, vous risquez d'atteindre un point où votre application ne doit pas continuer jusqu'à ce que l'opération de base de données soit terminée. Dans de tels cas, il est utile d'interroger l'opération asynchrone afin de déterminer si elle a été exécutée ou non.  
@@ -190,6 +190,6 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Opérations asynchrones](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Opérations asynchrones](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

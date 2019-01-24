@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-ms.openlocfilehash: 9a7bf4d26129e488226a562e1fe25149abc1dbe1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 62b072058951fd6b4f85e93407d699c3346ff5f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699136"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log (objet)
 Fournit une propriété et des méthodes pour écrire les informations des événements et des exceptions dans les écouteurs de journalisation de l’application.  
@@ -22,12 +22,12 @@ Fournit une propriété et des méthodes pour écrire les informations des évé
 > [!NOTE]
 >  Vous pouvez également utiliser les classes du .NET Framework pour enregistrer des informations provenant de votre application. Pour plus d'informations, consultez [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Espace de noms :** <xref:Microsoft.VisualBasic.Logging>  
   
  **Classe :** <xref:Microsoft.VisualBasic.Logging.Log>  
   
  **Assembly :** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [My.Application (objet)](../../../visual-basic/language-reference/objects/my-application-object.md)
+## <a name="see-also"></a>Voir aussi
+- [My.Application (objet)](../../../visual-basic/language-reference/objects/my-application-object.md)

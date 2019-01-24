@@ -2,12 +2,12 @@
 title: Collections de schémas Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694462"
 ---
 # <a name="oracle-schema-collections"></a>Collections de schémas Oracle
 Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes.  
@@ -107,7 +107,7 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |SECONDARY|Chaîne|Indique si l’index est un objet secondaire créé par la méthode ODCIIndexCreate de la cartouche de données Oracle9i (Y&#124;N).|  
 |BUFFER_POOL|Chaîne|Nom du pool de tampons par défaut à utiliser pour les blocs d'index.|  
 |USER_STATS|Chaîne|Indique si les statistiques ont été entrées directement par l'utilisateur.|  
-|DURATION|Chaîne|Indique la durée d'une table temporaire : 1)SYS$SESSION : les lignes sont préservées pour la durée de la session, 2) SYS$TRANSACTION : les lignes sont supprimées après COMMIT, 3) Null pour une table permanente.|  
+|DURATION|Chaîne|Indique la durée d'une table temporaire : (1) SYS$ SESSION : les lignes sont conservées pendant la durée de la session, 2) SYS$ TRANSACTION : les lignes sont supprimées après COMMIT, 3) Null pour Table permanente.|  
 |PCT_DIRECT_ACCESS|Decimal|Pour un index secondaire sur une table indexée, pourcentage de lignes avec une prédiction VALID |  
 |ITYP_OWNER|Chaîne|Pour un index de domaine, propriétaire du type d'index.|  
 |ITYP_NAME|Chaîne|Pour un index de domaine, nom du type d'index.|  
@@ -115,7 +115,7 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |GLOBAL_STATS|Chaîne|Pour des index partitionnés, indique si les statistiques ont été collectées en analysant l'index dans son ensemble (YES) ou ont été estimées sur la base de statistiques relatives aux partitions et sous-partitions d'index sous-jacentes (NO).|  
 |DOMIDX_STATUS|Chaîne|Indique l'état de l'index de domaine. NULL : l'index spécifié n'est pas un index de domaine. VALID : l'index est un index de domaine valide. IDXTYP_INVLD : le type d'index de cet index de domaine n'est pas valide.|  
 |DOMIDX_OPSTATUS|Chaîne|Indique l'état d'une opération effectuée sur un index de domaine : NULL : l'index spécifié n'est pas un index de domaine. VALID : l'opération a été effectuée sans erreur. FAILED : l'opération a échoué en générant une erreur.|  
-|FUNCIDX_STATUS|Chaîne|Indique l'état d'un index basé sur une fonction : NULL : cet index n'est pas basé sur une fonction, ENABLED : l'index basé sur une fonction est activé, DISABLED : l'index basé sur une fonction est désactivé.|  
+|FUNCIDX_STATUS|Chaîne|Indique l'état d'un index basé sur une fonction : NULL : Ceci n’est pas une fonction d’index, activé : l’index basé sur une fonction est activé, désactivé : l’index basé sur une fonction est désactivée.|  
 |JOIN_INDEX|Chaîne|Indique s'il s'agit ou non d'un index de jointure.|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
@@ -379,5 +379,5 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |CHAR_LENGTH|Decimal|Limite de caractères pour les données de type string.|  
 |CHAR_USED|Chaîne|Indique si la limite d'octets (B) ou la limite de caractères (C) est officielle pour la chaîne.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

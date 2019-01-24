@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 04ea64f0e6563012a3b272306df6be4575ed7659
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e17a3888e3467d8d21506108e6599c8ae5da2fe2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695606"
 ---
 # <a name="printing-overview"></a>Vue d'ensemble de l'impression
 Avec Microsoft .NET Framework, les développeurs d’applications à l’aide de Windows Presentation Foundation (WPF) ont un nouvel ensemble étoffé d’impression et impression de gestion système [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Avec [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], certaines de ces améliorations du système d'impression sont aussi accessibles aux développeurs créant des applications [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et à ceux utilisant du code non managé. Le nouveau format de fichier [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] et le chemin d'impression [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sont au cœur de cette nouvelle fonctionnalité.  
@@ -134,16 +134,16 @@ Pour les applications qui n'exigent pas la fonctionnalité ou la prise en charge
   
 -   **Compression ZIP** : tous les documents [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] utilisent la compression ZIP.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Controls.PrintDialog>  
- <xref:System.Windows.Xps.XpsDocumentWriter>  
- <xref:System.Windows.Xps.Packaging.XpsDocument>  
- <xref:System.Printing.PrintTicket>  
- <xref:System.Printing.PrintCapabilities>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.PrintQueue>  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)  
- [Sérialisation et stockage de documents](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [Microsoft XPS Document Converter (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Controls.PrintDialog>
+- <xref:System.Windows.Xps.XpsDocumentWriter>
+- <xref:System.Windows.Xps.Packaging.XpsDocument>
+- <xref:System.Printing.PrintTicket>
+- <xref:System.Printing.PrintCapabilities>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.PrintQueue>
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
+- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)
+- [Sérialisation et stockage de documents](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Microsoft XPS Document Converter (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

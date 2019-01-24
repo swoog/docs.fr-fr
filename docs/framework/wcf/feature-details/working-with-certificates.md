@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693608"
 ---
 # <a name="working-with-certificates"></a>Utilisation des certificats
 Pour programmer la sécurité relative à WCF (Windows Communication Foundation), les certificats numériques X.509 sont couramment utilisés pour authentifier les clients et les serveurs, ainsi que pour chiffrer et signer numériquement les messages. Cette rubrique décrit brièvement les fonctionnalités des certificats numériques X.509 et leur utilisation dans WCF. Elle inclut également des liens vers les rubriques qui présentent ces concepts de manière plus détaillée, ou qui montrent comment effectuer les tâches courantes à l’aide de WCF et des certificats.  
@@ -24,7 +24,7 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
  Les certificats doivent être émis par une autorité de certification, c'est-à-dire le plus souvent par une partie tierce. Les domaines Windows intègrent une autorité de certification pouvant être utilisée afin d'émettre des certificats pour les ordinateurs figurant sur ces domaines.  
   
 ## <a name="viewing-certificates"></a>Affichage des certificats  
- Si vous souhaitez utiliser des certificats, vous devrez souvent les afficher et examiner leurs propriétés au préalable. Pour ce faire, il vous suffit d'utiliser l'outil enfichable MMC (Microsoft Management Console). Pour plus d’informations, consultez [Guide pratique pour afficher des certificats à l’aide du composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Si vous souhaitez utiliser des certificats, vous devrez souvent les afficher et examiner leurs propriétés au préalable. Pour ce faire, il vous suffit d'utiliser l'outil enfichable MMC (Microsoft Management Console). Pour plus d'informations, voir [Procédure : Afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Magasin de certificats  
  Les certificats sont stockés dans des magasins. Deux emplacements de magasin majeurs existent et sont divisés en sous-magasins. Si vous disposez des droits administrateur sur un ordinateur, vous pouvez afficher ces deux principaux magasins à l'aide de l'outil enfichable MMC. Dans le cas contraire, vous pouvez uniquement afficher le magasin de l'utilisateur en cours.  
@@ -52,12 +52,12 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
 -   Si le service ou le client est une application qui s’exécute sous un compte d’utilisateur, utilisez le magasin **utilisateur actuel**.  
   
 ### <a name="accessing-stores"></a>Accès aux magasins  
- Les magasins sont protégés par des listes de contrôle d'accès à l'instar des dossiers figurant sur un ordinateur. Lors de la création d'un service hébergé par les services Internet (IIS), le processus [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] s'exécute sous le compte [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Ce compte doit avoir accès au magasin contenant les certificats utilisés par le service considéré. Chacun des principaux magasins est protégé par une liste d'accès par défaut, mais cette liste peut être modifiée. Si vous créez un rôle distinct pour l'accès à un magasin donné, vous devez accorder à ce rôle des droits d'accès. Pour apprendre à modifier la liste d’accès à l’aide de l’outil WinHttpCertConfig.exe, consultez [Guide pratique pour créer des certificats temporaires à utiliser au cours du développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Pour plus d’informations sur l’utilisation de certificats clients avec IIS, consultez [Guide pratique pour appeler un service web à l’aide d’un certificat client permettant l’authentification dans une application web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Les magasins sont protégés par des listes de contrôle d'accès à l'instar des dossiers figurant sur un ordinateur. Lors de la création d'un service hébergé par les services Internet (IIS), le processus [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] s'exécute sous le compte [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Ce compte doit avoir accès au magasin contenant les certificats utilisés par le service considéré. Chacun des principaux magasins est protégé par une liste d'accès par défaut, mais cette liste peut être modifiée. Si vous créez un rôle distinct pour l'accès à un magasin donné, vous devez accorder à ce rôle des droits d'accès. Pour savoir comment modifier la liste d’accès à l’aide de l’outil WinHttpCertConfig.exe, consultez [Comment : Créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Pour plus d’informations sur l’utilisation de certificats clients avec IIS, consultez [Guide pratique pour appeler un service web à l’aide d’un certificat client permettant l’authentification dans une application web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Chaîne d'approbation et autorités de certification  
  Les certificats sont créés selone une hiérarchie où chaque certificat individuel est lié à l'autorité de certification qui l'a émis. Ce lien renvoie au certificat de l'autorité de certification. L’autorité de certification du certificat puis des liens vers l’autorité de certification qui a émis le certificat de l’autorité de certification d’origine. Ce processus se répète jusqu'à ce que le certificat de l'autorité de certification racine soit atteint. Le certificat de l'autorité de certification racine est approuvé de manière inhérente.  
   
- Les certificats numériques sont utilisés pour authentifier une entité en s’appuyant sur cette hiérarchie, également appelée *chaîne de confiance*. Vous pouvez afficher une chaîne de certificat à l’aide du composant logiciel enfichable MMC en double-cliquant sur le certificat de votre choix, puis en cliquant sur l’onglet **Chemin de certificat**. Pour plus d’informations sur l’importation de chaînes de certificats pour une autorité de certification, consultez [Guide pratique pour spécifier la chaîne de certificats d’autorité de certification utilisée pour vérifier des signatures](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
+ Les certificats numériques sont utilisés pour authentifier une entité en s’appuyant sur cette hiérarchie, également appelée *chaîne de confiance*. Vous pouvez afficher une chaîne de certificat à l’aide du composant logiciel enfichable MMC en double-cliquant sur le certificat de votre choix, puis en cliquant sur l’onglet **Chemin de certificat**. Pour plus d’informations sur l’importation des chaînes de certificats pour une autorité de Certification, consultez [Comment : Spécifier la chaîne de certificat d’autorité certificat utilisée pour vérifier les Signatures](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   
 > [!NOTE]
 >  Le statut d'autorité racine approuvée peut être attribué à tout émetteur. Il suffit pour ce faire de placer le certificat de cet émetteur dans le magasin Autorités de certification racine approuvées.  
@@ -96,7 +96,7 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
   
 3.  Importez le certificat d'autorité racine dans le magasin Autorités de certification racine approuvées.  
   
-4.  Pour obtenir des instructions pas à pas, consultez [Guide pratique pour créer des certificats temporaires à utiliser au cours du développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4.  Pour obtenir des instructions détaillées, consultez [Comment : Créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Quel certificat utiliser ?  
  Parmi les questions les plus fréquemment posées concernant les certificats figurent notamment : quel certificat choisir et pourquoi ? La réponse à ces questions n'est pas la même que vous programmiez un service ou un client. Les informations ci-dessous contiennent des directives générales et n'offrent pas une réponse exhaustive à ces questions.  
@@ -170,9 +170,9 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
   
  Dans la première version de WCF, le mappage est effectué sans prise en compte de la stratégie de domaine. Par conséquent, avec d’anciennes applications habituées à s’exécuter sous la première mise en production, il est possible que le mappage échoue si la fonctionnalité de mappage est activée et si le certificat X.509 n’est pas conforme à la stratégie de domaine.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Channels>  
- <xref:System.ServiceModel.Security>  
- <xref:System.ServiceModel>  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Channels>
+- <xref:System.ServiceModel.Security>
+- <xref:System.ServiceModel>
+- <xref:System.Security.Cryptography.X509Certificates.X509FindType>
+- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

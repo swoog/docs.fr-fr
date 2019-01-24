@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 6a4a9bda348ce4c0dfd1e41d4154cad88d4966a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701753"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS, énumération
 Contient des valeurs qui indiquent le comportement de démarrage du common language runtime (CLR). Par défaut, le garbage collection est non simultané et seule la bibliothèque de classes de base est chargée dans la zone indépendant du domaine.  
@@ -57,7 +57,7 @@ typedef enum {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Spécifie que le garbage collection simultané doit être utilisé. Si l’appelant demande la build du serveur et le garbage collection simultané sur un ordinateur monoprocesseur, la build de la station de travail et le garbage collection non simultané sont exécutés à la place. **Remarque :** le garbage collection simultané n’est pas pris en charge dans les applications qui sont en cours d’exécution WOW64 x86 émulateur sur les systèmes 64 bits qui implémentent l’architecture Intel Itanium (anciennement appelée IA-64). Pour plus d’informations sur l’utilisation de WOW64 sur les systèmes Windows 64 bits, consultez [Applications en cours d’exécution de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_CONCURRENT_GC`|Spécifie que le garbage collection simultané doit être utilisé. Si l’appelant demande la build du serveur et le garbage collection simultané sur un ordinateur monoprocesseur, la build de la station de travail et le garbage collection non simultané sont exécutés à la place. **Remarque :**  Le garbage collection simultané n’est pas pris en charge dans les applications qui sont en cours d’exécution WOW64 x86 émulateur sur les systèmes 64 bits qui implémentent l’architecture Intel Itanium (anciennement appelée IA-64). Pour plus d’informations sur l’utilisation de WOW64 sur les systèmes Windows 64 bits, consultez [Applications en cours d’exécution de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Spécifie que l’optimisation de chargeur doit se produire.|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Spécifie qu’aucun assemblys ne sont chargés comme indépendants du domaine.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Spécifie que tous les assemblys sont chargés comme indépendants du domaine.|  
@@ -74,7 +74,7 @@ typedef enum {
 |`STARTUP_ETW`|Spécifie que le suivi d’événements pour Windows (ETW) est activé pour les événements du common language runtime. À compter de Windows Vista, le suivi d’événements est toujours activé, cet indicateur n’a aucun effet. Consultez [contrôle de l’enregistrement .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
 |`STARTUP_ARM`|Spécifie que l’analyse de ressource de domaine d’application est activée. Consultez le <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> propriété et [ \<appDomainResourceMonitoring > élément](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
@@ -83,5 +83,5 @@ typedef enum {
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

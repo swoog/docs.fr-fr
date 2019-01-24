@@ -1,18 +1,18 @@
 ---
-title: "Exemples de syntaxe de requête d'expression de requête : restriction (LINQ to DataSet)"
+title: 'Exemples de syntaxe d’Expression de requête : Restriction (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1daf42c2-c9f4-4cda-b291-7641b9c6d3fe
-ms.openlocfilehash: 556b1cc31f42cecc19492412120b31da83eff609
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 530eeba5f21cb9033d344b4c7bdfe3c9c45da2d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688348"
 ---
-# <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Exemples de syntaxe de requête d'expression de requête : restriction (LINQ to DataSet)
+# <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Exemples de syntaxe d’Expression de requête : Restriction (LINQ to DataSet)
 Les exemples de cette rubrique montrent comment utiliser la méthode <xref:System.Linq.Enumerable.Where%2A> pour interroger un <xref:System.Data.DataSet> à l'aide de la syntaxe d'expression de requête.  
   
  Le `FillDataSet` méthode utilisé dans ces exemples est spécifiée dans [chargement des données dans un jeu de données](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
@@ -23,7 +23,7 @@ Les exemples de cette rubrique montrent comment utiliser la méthode <xref:Syste
   
 [!code-csharp[DP LINQ to DataSetExamples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]        
   
- Pour plus d’informations, consultez [Comment : créer un LINQ to DataSet Project dans Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
+ Pour plus d'informations, voir [Procédure : Créer un projet LINQ to DataSet dans Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
 ## <a name="where"></a>Où  
   
@@ -51,7 +51,7 @@ Les exemples de cette rubrique montrent comment utiliser la méthode <xref:Syste
  [!code-csharp[DP LINQ to DataSetExamples#WhereDrillDown](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#wheredrilldown)]       
  [!code-vb[DP LINQ to DataSet Examples#WhereDrillDown](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#wheredrilldown)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a>Voir aussi
+- [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

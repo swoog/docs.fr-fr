@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 71c9b08407c6e570b42c4fbb7dc264829b5dc17c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 1a8eb1acf1143c31197ef12e4be3bd4451d98eaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685436"
 ---
 # <a name="datagrid-styles-and-templates"></a>Styles et modèles DataGrid
-Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.DataGrid> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.DataGrid> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="datagrid-parts"></a>Composants de DataGrid  
  Le tableau suivant répertorie les composants nommés pour le <xref:System.Windows.Controls.DataGrid> contrôle.  
@@ -109,10 +109,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |MouseOver_Unfocused_EditingRow|CommonStates|Le pointeur de la souris est positionné sur la ligne, la ligne est en mode édition et n’a pas le focus.|  
 |MouseOver_Unfocused_Selected|CommonStates|Le pointeur de la souris est positionné sur la ligne, la ligne est sélectionnée et n’a pas le focus.|  
 |Normal_CurrentRow|CommonStates|La ligne est la ligne actuelle.|  
-|Normal_CurrentRow_Selected|CommonStates|La ligne est la ligne active et est sélectionnée.|  
+|Normal_CurrentRow_Selected|CommonStates|La ligne est la ligne actuelle et est sélectionnée.|  
 |Normal_EditingRow|CommonStates|La ligne est en mode édition.|  
 |Normal_Selected|CommonStates|La ligne est sélectionnée.|  
-|Unfocused_CurrentRow_Selected|CommonStates|La ligne est la ligne active est sélectionnée et n’a pas le focus.|  
+|Unfocused_CurrentRow_Selected|CommonStates|La ligne est la ligne actuelle est sélectionnée et n’a pas le focus.|  
 |Unfocused_EditingRow|CommonStates|La ligne est en mode édition et n’a pas le focus.|  
 |Unfocused_Selected|CommonStates|La ligne est sélectionnée et n’a pas le focus.|  
 |InvalidFocused|ValidationStates|Le contrôle n’est pas valide et a le focus.|  
@@ -140,8 +140,8 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
 |Élément|Type|Description|  
 |-|-|-|  
-|PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|L’élément qui est utilisé pour redimensionner l’en-tête de colonne à partir de la gauche.|  
-|PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|L’élément qui est utilisé pour redimensionner l’en-tête de colonne à droite.|  
+|PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|L’élément qui est utilisé pour redimensionner l’en-tête de colonne de gauche.|  
+|PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|L’élément qui est utilisé pour redimensionner l’en-tête de colonne de droite.|  
   
 ## <a name="datagridcolumnheader-states"></a>États de DataGridColumnHeader  
  Le tableau suivant répertorie les états visuels pour le <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> élément.  
@@ -151,8 +151,8 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |Normale|CommonStates|État par défaut.|  
 |MouseOver|CommonStates|Le pointeur de la souris est positionné sur le contrôle.|  
 |Appuyé|CommonStates|Le contrôle est enfoncé.|  
-|SortAscending|SortStates|La colonne est triée par ordre croissant.|  
-|SortDescending|SortStates|La colonne est triée par ordre décroissant.|  
+|SortAscending|SortStates|La colonne est triée dans l’ordre croissant.|  
+|SortDescending|SortStates|La colonne est triée dans l’ordre décroissant.|  
 |Non triées|SortStates|La colonne n’est pas triée.|  
 |InvalidFocused|ValidationStates|Le contrôle n’est pas valide et a le focus.|  
 |InvalidUnfocused|ValidationStates|Le contrôle n’est pas valide et n’a pas le focus.|  
@@ -169,10 +169,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

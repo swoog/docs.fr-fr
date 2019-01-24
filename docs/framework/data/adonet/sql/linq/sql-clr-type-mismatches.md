@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 61731c4d9590892bdae8e90717d77b4dddf1d71d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147617"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700947"
 ---
 # <a name="sql-clr-type-mismatches"></a>Incompatibilité entre types SQL-CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatise en grande partie la traduction entre le modèle objet et SQL Server. Certaines situations ne permettent toutefois pas une traduction exacte. Cette incompatibilité majeure entre les types CLR (Common Language Runtime) et les types de base de données SQL Server est résumée dans les sections suivantes. Vous trouverez plus d’informations sur les mappages de types spécifiques et de traduction de fonctions à [le mappage de Type SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) et [Types de données et fonctions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -33,7 +33,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Booléenne**. Ces types peuvent être mappés à un bit ou à un numérique ou une chaîne de taille supérieure. Un littéral peut être mappé à une expression qui correspond à la même valeur (par exemple, `1=1` dans SQL pour `True` dans CLS).  
   
-    -   **Intervalle de temps**. Ce type représente la différence entre deux valeurs `DateTime` et ne correspond pas au `timestamp` de SQL Server. Dans certains cas, le <xref:System.TimeSpan?displayProperty=nameWithType> CLR peut également mapper au type `TIME` SQL Server. Le type `TIME` SQL Server a pour but de représenter les valeurs positives inférieures à 24 heures. Le <xref:System.TimeSpan> CLR offre une plage beaucoup plus étendue.  
+    -   **TimeSpan**. Ce type représente la différence entre deux valeurs `DateTime` et ne correspond pas au `timestamp` de SQL Server. Dans certains cas, le <xref:System.TimeSpan?displayProperty=nameWithType> CLR peut également mapper au type `TIME` SQL Server. Le type `TIME` SQL Server a pour but de représenter les valeurs positives inférieures à 24 heures. Le <xref:System.TimeSpan> CLR offre une plage beaucoup plus étendue.  
   
     > [!NOTE]
     >  Spécifiques à SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tape <xref:System.Data.SqlTypes> ne sont pas inclus dans cette comparaison.  
@@ -293,5 +293,5 @@ Where Col1 + Col2 > 4
   
  Outre les différences sémantiques, il est important de prendre en compte l'impact sur les performances lors du passage entre les systèmes de types SQL Server et CLR. Pour les grands groupes de données, de tels problèmes de performances peuvent déterminer si une application est déployable.  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations générales](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>Voir aussi
+- [Informations générales](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -2,14 +2,14 @@
 title: Persistance d’un objet dans Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 25951327028b9b8ced8506b3ba6395e8c9e6abed
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690434"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procédure pas à pas : persistance d’un objet dans Visual Studio (Visual Basic)
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procédure pas à pas : Persistance d’un objet dans Visual Studio (Visual Basic)
 Bien qu’il soit possible de définir des valeur par défaut pour les propriétés d’un objet au moment du design, les valeurs entrées lors de l’exécution sont perdues en cas de destruction de l’objet. Vous pouvez utiliser la sérialisation pour rendre les données d’un objet persistantes entre les instances, ce qui vous permet de stocker des valeurs et de les récupérer lors de la prochaine instanciation de l’objet.  
   
 > [!NOTE]
@@ -215,6 +215,6 @@ Bien qu’il soit possible de définir des valeur par défaut pour les propriét
   
  À ce stade, vous pouvez de nouveau générer et exécuter l’application. À l’origine, les valeurs par défaut s’affichent dans les zones de texte. Essayez de modifier les valeurs et d’entrer un nom dans la quatrième zone de texte. Fermez l’application et exécutez-la de nouveau. Notez que les nouvelles valeurs s’affichent maintenant dans les zones de texte.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sérialisation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
- [Guide de programmation Visual Basic](../../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Sérialisation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [Guide de programmation Visual Basic](../../../../visual-basic/programming-guide/index.md)

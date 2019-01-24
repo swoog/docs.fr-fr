@@ -1,5 +1,5 @@
 ---
-title: 'Comment : afficher une page web à partir d’un contrôle LinkLabel Windows Forms (Visual Basic)'
+title: 'Procédure : Afficher une Page Web à partir d’un contrôle de LinkLabel Windows Forms (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: a9964c8d333ea87dd995ec9111acc1a8ac1e79b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05b127099b85188b0df2f1f7821ceb147cc41e1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698958"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Comment : afficher une page web à partir d’un contrôle LinkLabel Windows Forms (Visual Basic)
-Cet exemple affiche une page Web dans le navigateur par défaut lorsqu’un utilisateur clique sur un Windows Form <xref:System.Windows.Forms.LinkLabel> contrôle.  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Procédure : Afficher une Page Web à partir d’un contrôle de LinkLabel Windows Forms (Visual Basic)
+Cet exemple affiche une page Web dans le navigateur par défaut lorsqu’un utilisateur clique sur un formulaire Windows <xref:System.Windows.Forms.LinkLabel> contrôle.  
   
 ## <a name="example"></a>Exemple  
   
@@ -40,7 +40,7 @@ End Sub
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Un Windows Form nommé `Form1`.  
+-   Un formulaire Windows nommé `Form1`.  
   
 -   un contrôle <xref:System.Windows.Forms.LinkLabel> nommé `LinkLabel1` ;  
   
@@ -49,6 +49,6 @@ End Sub
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  L’appel à la <xref:System.Diagnostics.Process.Start%2A> méthode requiert une confiance totale. Pour plus d'informations, consultez <xref:System.Security.SecurityException>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.LinkLabel>  
- [LinkLabel, contrôle](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.LinkLabel>
+- [LinkLabel, contrôle](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

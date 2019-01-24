@@ -9,15 +9,15 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: ebc496b1b2558d8b2e310e6977ee27a82a4a8896
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 464e2ff88b6e311470f6afe107d770922d9a395d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689232"
 ---
 # <a name="passwordbox-syles-and-templates"></a>Styles et modèles PasswordBox
-Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.PasswordBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.PasswordBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="passwordbox-parts"></a>Composants de PasswordBox  
  Le tableau suivant répertorie les composants nommés pour le <xref:System.Windows.Controls.PasswordBox> contrôle.  
@@ -40,7 +40,7 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |InvalidFocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.|  
 |InvalidUnfocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.|  
   
-## <a name="passwordbox-controltemplate-example"></a>PasswordBox ControlTemplate, exemple  
+## <a name="passwordbox-controltemplate-example"></a>Exemple de ControlTemplate PasswordBox  
  L’exemple suivant montre comment définir un <xref:System.Windows.Controls.ControlTemplate> pour la <xref:System.Windows.Controls.PasswordBox> contrôle.  
   
  [!code-xaml[ControlTemplateExamples#PasswordBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#passwordbox)]  
@@ -51,10 +51,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

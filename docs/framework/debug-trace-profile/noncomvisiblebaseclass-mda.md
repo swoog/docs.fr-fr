@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707dad3c5286fc9c8d5aa3735418607fb0a769a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a26863f2a1880cffba5eb3ea51573f45323be72d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700856"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass (MDA)
 L'Assistant Débogage managé (MDA) `nonComVisibleBaseClass` est activé quand un appel `QueryInterface` est effectué par du code natif ou non managé sur le wrapper CCW (COM Callable Wrapper) d'une classe managée visible par COM qui dérive d'une classe de base qui ne l'est pas.  L'appel `QueryInterface` provoque l'activation de l'Assistant Débogage managé uniquement dans les cas où l'appel demande l'interface de classe ou l'interface `IDispatch` par défaut de la classe managée visible par COM.  L'Assistant Débogage managé n'est pas activé si `QueryInterface` concerne une interface explicite à laquelle est appliqué l'attribut <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> et qui est implémentée explicitement par la classe visible par COM.  
@@ -54,7 +54,7 @@ constrained by the COM versioning rules.
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

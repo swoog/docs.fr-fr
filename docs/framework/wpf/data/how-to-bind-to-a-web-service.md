@@ -1,5 +1,5 @@
 ---
-title: 'Comment : effectuer une liaison à un service Web'
+title: 'Procédure : Effectuer une liaison à un service Web'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 84c5aee8d2bc7d31ebcfee98930d9a0847c527d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a738d52cfb01fff1cb21d0e6ebb8f1b7b28d57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695765"
 ---
-# <a name="how-to-bind-to-a-web-service"></a>Comment : effectuer une liaison à un service Web
+# <a name="how-to-bind-to-a-web-service"></a>Procédure : Effectuer une liaison à un service Web
 Cet exemple montre comment lier des objets retournés par les appels de méthode de service Web.  
   
 ## <a name="example"></a>Exemple  
@@ -45,7 +45,7 @@ Cet exemple montre comment lier des objets retournés par les appels de méthode
   
  Pour plus d’informations sur la structure des **getContentResponse**, consultez [Content Service documentation](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Vue d'ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Rendre des données disponibles pour la liaison en XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Vue d'ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [Rendre des données disponibles pour la liaison en XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faefff879142d66c4c596f1b30a25e349a4014b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d46dcd43ffe6963d1177a395b855a287182cdff0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685631"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception, méthode
 Notifie le débogueur qu’une recherche pour un gestionnaire d’exceptions a démarré.  
@@ -48,23 +48,23 @@ HRESULT Exception (
  [in] Pointeur vers un objet ICorDebugThread qui représente le thread sur lequel l’exception a été levée.  
   
  `pFrame`  
- [in] Un pointeur vers un objet ICorDebugFrame qui représente un frame, comme déterminé par la `dwEventType` paramètre. Pour plus d’informations, consultez le tableau dans la section Notes.  
+ [in] Un pointeur vers un objet ICorDebugFrame qui représente un frame, comme déterminé par le `dwEventType` paramètre. Pour plus d’informations, consultez le tableau dans la section Notes.  
   
  `nOffset`  
- [in] Entier qui spécifie un offset, comme déterminé par la `dwEventType` paramètre. Pour plus d’informations, consultez le tableau dans la section Notes.  
+ [in] Entier qui spécifie un offset, comme déterminé par le `dwEventType` paramètre. Pour plus d’informations, consultez le tableau dans la section Notes.  
   
  `dwEventType`  
- [in] Valeur de l’énumération CorDebugExceptionCallbackType qui spécifie le type de ce rappel d’exception.  
+ [in] Une valeur de l’énumération CorDebugExceptionCallbackType qui spécifie le type de ce rappel d’exception.  
   
  `dwFlags`  
- [in] Une valeur de la [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) énumération qui spécifie des informations supplémentaires sur l’exception  
+ [in] Une valeur de la [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) énumération qui spécifie des informations supplémentaires relatives à l’exception  
   
 ## <a name="remarks"></a>Notes  
- Le `Exception` rappel est appelé à différents points pendant la phase de recherche du processus de gestion des exceptions. Autrement dit, elle peut être appelée plusieurs fois pendant le déroulement d’une exception.  
+ Le `Exception` rappel est appelé à différents points pendant la phase de recherche du processus de gestion des exceptions. Autrement dit, il peut être appelée plusieurs fois pendant le déroulement d’une exception.  
   
  L’exception en cours de traitement peut être récupérée à partir de l’objet ICorDebugThread référencé par le `pThread` paramètre.  
   
- L’image particulière et le décalage sont déterminées par la `dwEventType` paramètre comme suit :  
+ La frame particulier et le décalage sont déterminées par la `dwEventType` paramètre comme suit :  
   
 |Valeur de `dwEventType`|Valeur de `pFrame`|Valeur de `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
@@ -74,14 +74,14 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_UNHANDLED|NULL|Non défini.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugManagedCallback2, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugManagedCallback2, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

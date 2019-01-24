@@ -2,12 +2,12 @@
 title: Attributs courants (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690902"
 ---
 # <a name="common-attributes-visual-basic"></a>Attributs courants (Visual Basic)
 Cette rubrique décrit les attributs qui sont couramment utilisés dans les programmes Visual Basic.  
@@ -75,7 +75,7 @@ Cette rubrique décrit les attributs qui sont couramment utilisés dans les prog
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Définit un alias par défaut convivial pour un manifeste d’assembly.|  
   
 ##  <a name="Obsolete"></a> Attribut Obsolete  
- L’attribut `Obsolete` est utilisé pour marquer une entité de programme comme étant une entité dont l’utilisation n’est plus recommandée. Chaque utilisation d’une entité marquée comme obsolète génère par la suite un avertissement ou une erreur, selon la façon dont l’attribut est configuré. Par exemple :  
+ L’attribut `Obsolete` est utilisé pour marquer une entité de programme comme étant une entité dont l’utilisation n’est plus recommandée. Chaque utilisation d’une entité marquée comme obsolète génère par la suite un avertissement ou une erreur, selon la façon dont l’attribut est configuré. Exemple :  
   
 ```vb  
 <System.Obsolete("use class B")>   
@@ -227,16 +227,16 @@ End Class
   
 |Attribut|Objectif|  
 |---------------|-------------|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indique au compilateur que la classe doit être exposée comme un objet COM.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Permet aux membres de module accéder à l’aide uniquement de la qualification nécessaire pour le module.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Spécifie la taille d’une chaîne de longueur fixe dans une structure à utiliser avec le fichier d’entrée et sortie fonctions.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Spécifie la taille d’un tableau fixe dans une structure à utiliser avec le fichier d’entrée et sortie fonctions.|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indique au compilateur que la classe doit être exposée en tant qu’objet COM.|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Autorise les membres de module d’être accessibles à l’aide uniquement de la qualification nécessaire pour le module.|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Spécifie la taille d’une chaîne de longueur fixe dans une structure à utiliser avec le fichier d’entrée et de sortie de fonctions.|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Spécifie la taille d’un tableau fixe dans une structure à utiliser avec le fichier d’entrée et de sortie de fonctions.|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- Utilisez `COMClassAttribute` pour simplifier le processus de création de composants COM à partir de Visual Basic. Les objets COM sont très différents des assemblys .NET Framework et sans `COMClassAttribute`, vous devez suivre un certain nombre d’étapes pour générer un objet COM à partir de Visual Basic. Pour les classes marquées avec `COMClassAttribute`, le compilateur effectue la plupart de ces étapes automatiquement.  
+ Utilisez `COMClassAttribute` pour simplifier le processus de création de composants COM à partir de Visual Basic. Les objets COM sont très différents des assemblys .NET Framework et sans `COMClassAttribute`, vous devez suivre plusieurs étapes pour générer un objet COM à partir de Visual Basic. Pour les classes marquées avec `COMClassAttribute`, le compilateur effectue la plupart de ces étapes automatiquement.  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- Utilisez `HideModuleNameAttribute` pour autoriser des membres de module d’être accessibles à l’aide uniquement de la qualification nécessaire pour le module.  
+ Utilisez `HideModuleNameAttribute` pour autoriser les membres de module d’être accessibles à l’aide uniquement de la qualification nécessaire pour le module.  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
  Utilisez `VBFixedStringAttribute` pour forcer Visual Basic pour créer une chaîne de longueur fixe. Sont des chaînes de longueur variable par défaut, et cet attribut est utile pour stocker des chaînes dans des fichiers. Le code suivant illustre cela :  
@@ -252,12 +252,12 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- Utilisez `VBFixedArrayAttribute` pour déclarer des tableaux sont de taille fixe. Comme les chaînes de Visual Basic, les tableaux sont de longueur variable par défaut. Cet attribut est utile lors de la sérialisation ou d’écrire des données dans des fichiers.  
+ Utilisez `VBFixedArrayAttribute` pour déclarer des tableaux sont de taille fixe. Comme les chaînes de Visual Basic, les tableaux sont de longueur variable par défaut. Cet attribut est utile lors de la sérialisation ou écrire des données dans des fichiers.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Guide de programmation Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Attributs](../../../../standard/attributes/index.md)  
- [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Accéder à des attributs à l’aide de la réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Guide de programmation Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Attributs](../../../../standard/attributes/index.md)
+- [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Accéder à des attributs à l’aide de la réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

@@ -2,21 +2,21 @@
 title: '&lt;security&gt; de &lt;wsHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: 2260a64b53f2ff2ace11f78c392ffc0a69c187bd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dd3ff1b1b00be376abc5f8d3c44cb0aabc49a230
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688816"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;security&gt; de &lt;wsHttpBinding&gt;
 Représente les fonctionnalités de sécurité de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  \<system.ServiceModel>  
-\<liaisons >  
+\<bindings>  
 \<wsHttpBinding>  
-\<liaison >  
-\<sécurité >  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,13 +69,13 @@ Représente les fonctionnalités de sécurité de la [ \<wsHttpBinding >](../../
 ## <a name="remarks"></a>Notes  
  La classe WSHttpBinding est conçue pour interagir avec les services qui implémentent les spécifications WS-*. La sécurité de transport de cette liaison correspond à Secure Sockets Layer (SSL) sur HTTP, c’est-à-dire à HTTPS.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.WSHttpSecurity>  
- <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<liaison >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.WSHttpSecurity>
+- <xref:System.ServiceModel.WSHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
+- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

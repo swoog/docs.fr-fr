@@ -2,12 +2,12 @@
 title: '&lt;activityStateQueries&gt; de WCF'
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 2dabfdd248006de60b5e84e739f78e03f364dde3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6b21ad3f5487a924309b8bee6b9ac972f23bdc66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701935"
 ---
 # <a name="ltactivitystatequeriesgt-of-wcf"></a>&lt;activityStateQueries&gt; de WCF
 
@@ -16,11 +16,11 @@ Représente une collection de requêtes qui permettent d’effectuer le suivi de
 Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
 
 \<system.serviceModel>  
-\<suivi >  
-\<profils >  
-\<trackingProfile >  
-\<flux de travail >  
-\<activityStateQueries >  
+\<tracking>  
+\<profiles>  
+\<trackingProfile>  
+\<workflow>  
+\<activityStateQueries>  
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,17 +60,17 @@ Aucun.
 
 |Élément|Description|
 |-------------|-----------------|
-|[\<activityStateQuery >](activitystatequery-of-wcf.md)|Requête utilisée pour effectuer le suivi de la gestion des erreurs qui se produisent dans une activité.  Cet événement se produit chaque fois qu'un FaultHandler traite une erreur.|
+|[\<activityStateQuery>](activitystatequery-of-wcf.md)|Requête utilisée pour effectuer le suivi de la gestion des erreurs qui se produisent dans une activité.  Cet événement se produit chaque fois qu'un FaultHandler traite une erreur.|
 
 ### <a name="parent-elements"></a>Éléments parents
 
 |Élément|Description|
 |-------------|-----------------|
-|[\<flux de travail >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Élément de configuration qui contient toutes les requêtes d'un flux de travail spécifique identifié par la propriété `activityDefinitionId`.|
+|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Élément de configuration qui contient toutes les requêtes d'un flux de travail spécifique identifié par la propriété `activityDefinitionId`.|
 
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>    
-- <xref:System.Activities.Tracking.ActivityStateQuery>    
-- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>
+- <xref:System.Activities.Tracking.ActivityStateQuery>
+- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

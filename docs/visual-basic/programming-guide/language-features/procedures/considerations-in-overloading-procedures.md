@@ -25,24 +25,24 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: e1768d0ac03cb6730c4337d7476ae163e75adfd3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 234cd23c487f92cfa1e2761dd7a6caadf8820704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685800"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Considérations sur les surcharges de procédures (Visual Basic)
 Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature* pour chaque version surchargée. Cela signifie généralement que chaque version doit spécifier une liste de paramètres différente. Pour plus d’informations, consultez « Signature différente » dans [surcharge de procédure](./procedure-overloading.md).  
   
- Vous pouvez surcharger une `Function` procédure avec un `Sub` procédure et inversement, à condition qu’ils ont des signatures différentes. Deux surcharges ne peuvent pas différer uniquement dans le sens une a une valeur de retournée et l’autre non.  
+ Vous pouvez surcharger un `Function` procédure avec un `Sub` procédure et inversement, à condition qu’ils ont des signatures différentes. Deux surcharges ne peuvent pas différer uniquement par un a une valeur de retournée et l’autre n’est pas le cas.  
   
  Vous pouvez surcharger une propriété de la même façon que vous surchargez une procédure et avec les mêmes restrictions. Toutefois, vous ne pouvez pas surcharger une procédure avec une propriété, ou vice versa.  
   
 ## <a name="alternatives-to-overloaded-versions"></a>Alternatives aux Versions surchargées  
- Vous devez parfois des alternatives aux versions surchargées, en particulier lorsque la présence d’arguments est facultative ou que leur nombre est variable.  
+ Vous devez parfois des alternatives aux versions surchargées, en particulier lorsque la présence d’arguments est facultative ou leur nombre est variable.  
   
- Gardez à l’esprit que les arguments facultatifs ne sont pas nécessairement pris en charge par tous les langages et les tableaux de paramètres sont limités à Visual Basic. Si vous écrivez une procédure qui est susceptible d’être appelée à partir du code écrit dans un des différents langages, les versions surchargées offrent la plus grande flexibilité.  
+ N’oubliez pas que les arguments facultatifs ne sont pas nécessairement prises en charge par tous les langages et tableaux de paramètres sont limités à Visual Basic. Si vous écrivez une procédure qui est susceptible d’être appelée à partir du code écrit dans un des différents langages, les versions surchargées offrent la plus grande flexibilité.  
   
 ### <a name="overloads-and-optional-arguments"></a>Surcharges et Arguments facultatifs  
  Lorsque le code appelant peut éventuellement fournir ou omettre un ou plusieurs arguments, vous pouvez définir plusieurs versions surchargées ou utiliser des paramètres facultatifs.  
@@ -50,14 +50,14 @@ Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature*
 #### <a name="when-to-use-overloaded-versions"></a>Quand utiliser des Versions surchargées  
  Vous pouvez envisager de définir une série de versions surchargées dans les cas suivants :  
   
--   La logique dans le code de procédure est très différente selon que le code appelant fournit un argument facultatif ou non.  
+-   La logique dans le code de procédure est considérablement différente selon que le code appelant fournit un argument facultatif ou non.  
   
 -   Le code de procédure ne peut pas vérifier de manière fiable si le code appelant a fourni un argument facultatif. C’est le cas, par exemple, s’il n’existe aucun candidat possible pour une valeur par défaut que le code appelant n’était pas supposé fournir.  
   
 #### <a name="when-to-use-optional-parameters"></a>Quand utiliser les paramètres facultatifs  
- Vous préférerez peut-être un ou plusieurs des paramètres optionnels dans les cas suivants :  
+ Vous préférerez peut-être un ou plusieurs paramètres facultatifs dans les cas suivants :  
   
--   Il est la seule action requise lorsque le code appelant ne fournit pas un argument facultatif pour définir le paramètre à une valeur par défaut. Dans ce cas, le code de procédure peut être moins compliqué si vous définissez une version unique avec un ou plusieurs `Optional` paramètres.  
+-   La seule action requise lorsque le code appelant ne fournit pas un argument facultatif consiste à définir le paramètre à une valeur par défaut. Dans ce cas, le code de procédure peut être moins compliqué si vous définissez une version unique avec un ou plusieurs `Optional` paramètres.  
   
  Pour plus d’informations, consultez [paramètres facultatifs](./optional-parameters.md).  
   
@@ -69,16 +69,16 @@ Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature*
   
 -   Vous savez que le code appelant passe jamais plus qu’un petit nombre de valeurs au tableau de paramètres.  
   
--   La logique dans le code de procédure est très différente selon le nombre de valeurs le code appelant passe.  
+-   La logique dans le code de procédure est considérablement différente selon le nombre de valeurs transmet le code appelant.  
   
 -   Le code appelant peut passer des valeurs de différents types de données.  
   
 #### <a name="when-to-use-a-parameter-array"></a>Quand utiliser un tableau de paramètres  
  Il est préférable par un `ParamArray` paramètre dans les cas suivants :  
   
--   Vous n’êtes pas en mesure de prédire le nombre de valeurs le code appelant peut passer au tableau de paramètres, et il peut être un grand nombre.  
+-   Vous n’êtes pas en mesure de prédire combien de valeurs le code appelant peut passer au tableau de paramètres, et il peut être un grand nombre.  
   
--   La logique de la procédure se prête à l’itération au sein de toutes les valeurs que le code appelant passe, essentiellement les mêmes opérations sur chaque valeur.  
+-   La logique de la procédure se prête à l’itération sur toutes les valeurs que le code appelant passe, essentiellement les mêmes opérations sur chaque valeur.  
   
  Pour plus d’informations, consultez [tableaux de paramètres](./parameter-arrays.md).  
   
@@ -91,16 +91,16 @@ Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature*
   
  [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
   
- Pour une procédure avec plus d’un paramètre facultatif, il existe un ensemble de surcharges implicites, que qui peuvent se produire au niveau logique, comme dans l’exemple précédent.  
+ Pour une procédure avec plus d’un paramètre facultatif, il existe un ensemble de surcharges implicites, est arrivé à logique, comme dans l’exemple précédent.  
   
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Surcharges implicites pour un paramètre ParamArray  
  Le compilateur considère qu’une procédure avec un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) paramètre possède un nombre infini de surcharges, qui se différencient selon ce que le code appelant passe au tableau de paramètres, comme suit :  
   
 -   Une surcharge lorsque le code appelant ne fournit pas un argument à la `ParamArray`  
   
--   Une surcharge lorsque le code appelant fournit un tableau unidimensionnel de la `ParamArray` le type d’élément  
+-   Une surcharge lorsque le code appelant fournit un tableau unidimensionnel de la `ParamArray` type d’élément  
   
--   Pour chaque entier positif, une surcharge lorsque le code appelant fournit ce nombre d’arguments, chacun de la `ParamArray` le type d’élément  
+-   Pour chaque entier positif, une surcharge lorsque le code appelant fournit ce nombre d’arguments, chacun de la `ParamArray` type d’élément  
   
  Les déclarations suivantes illustrent ces surcharges implicites.  
   
@@ -108,12 +108,12 @@ Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature*
   
  [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
   
- Vous ne pouvez pas surcharger une procédure avec une liste de paramètres qui prend un tableau unidimensionnel pour le tableau de paramètres. Toutefois, vous pouvez utiliser les signatures des autres surcharges implicites. Les déclarations suivantes illustrent ce principe.  
+ Vous ne pouvez pas surcharger une procédure avec une liste de paramètres qui accepte un tableau unidimensionnel pour le tableau de paramètres. Toutefois, vous pouvez utiliser les signatures des autres surcharges implicites. Les déclarations suivantes illustrent ce principe.  
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
   
-## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Programmation sans type en guise d’Alternative à la surcharge  
- Si vous souhaitez autoriser le code appelant passer des différents types de données à un paramètre, une autre approche consiste à la programmation sans type. Vous pouvez définir le commutateur de vérification de type `Off` avec l’option le [Option Strict, instruction](../../../../visual-basic/language-reference/statements/option-strict-statement.md) ou [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) option du compilateur. Puis il est inutile de déclarer le type de données du paramètre. Toutefois, cette approche présente les inconvénients suivants par rapport à la surcharge :  
+## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Programmation sans type comme Alternative à la surcharge  
+ Si vous souhaitez autoriser le code appelant à passer différents types de données à un paramètre, une autre approche consiste à la programmation sans type. Vous pouvez définir le commutateur de vérification de type `Off` avec soit le [Option Strict, instruction](../../../../visual-basic/language-reference/statements/option-strict-statement.md) ou [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) option du compilateur. Puis vous n’êtes pas obligé de déclarer le type de données du paramètre. Toutefois, cette approche présente les inconvénients suivants par rapport à la surcharge :  
   
 -   Programmation sans type génère un code d’exécution moins efficace.  
   
@@ -121,13 +121,13 @@ Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature*
   
 -   Le compilateur ne peut pas signaler une erreur si le code appelant passe un type de données par la procédure ne prend pas en charge.  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédures](./index.md)  
- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)  
- [Procédures de dépannage](./troubleshooting-procedures.md)  
- [Guide pratique : définir plusieurs versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Guide pratique : appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)  
- [Guide pratique : surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Guide pratique : surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
- [Résolution de surcharge](./overload-resolution.md)  
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédures](./index.md)
+- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
+- [Procédures de dépannage](./troubleshooting-procedures.md)
+- [Guide pratique pour Définir plusieurs Versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Guide pratique pour Appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)
+- [Guide pratique pour Surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Guide pratique pour Surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Résolution de surcharge](./overload-resolution.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

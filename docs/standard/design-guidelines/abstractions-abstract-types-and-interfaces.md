@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: KrzysztofCwalina
-ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702936"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstractions (Types et interfaces abstraits)
 Une abstraction est un type qui décrit un contrat, mais ne fournit pas une implémentation complète du contrat. Abstractions sont généralement implémentées comme des classes abstraites ou des interfaces, et ils sont livrés avec un ensemble bien défini de documentation de référence décrivant la sémantique requise des types qui implémente le contrat. Voici quelques-uns des abstractions plus importantes dans le .NET Framework <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, et <xref:System.Object>.  
@@ -39,5 +39,5 @@ Une abstraction est un type qui décrit un contrat, mais ne fournit pas une impl
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Conception en vue de l’extensibilité](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

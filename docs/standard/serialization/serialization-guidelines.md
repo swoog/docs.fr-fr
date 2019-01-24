@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 20676b53d21931987139288e29c009c8348ce6ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690889"
 ---
 # <a name="serialization-guidelines"></a>Indications concernant la sérialisation
 Ce document répertorie les indications à prendre en compte lors de la conception d'une API à sérialiser.  
@@ -140,10 +140,10 @@ Ce document répertorie les indications à prendre en compte lors de la concepti
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Utilisation de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
-- [Sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
-- [Types pris en charge par le sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
-- [Sérialisation binaire](binary-serialization.md)  
-- [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
-- [Sérialisation XML et SOAP](xml-and-soap-serialization.md)  
+- [Utilisation de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
+- [Types pris en charge par le sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Sérialisation binaire](binary-serialization.md)
+- [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+- [Sérialisation XML et SOAP](xml-and-soap-serialization.md)
 - [Sécurité et sérialisation](../../../docs/framework/misc/security-and-serialization.md)

@@ -2,21 +2,21 @@
 title: '&lt;security&gt; de &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: ec164fa8830321f90f824f85841a379d577ab5af
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 71f0c10c336a9682971bc774141cb0c3bd37c092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696384"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;security&gt; de &lt;netMsmqBinding&gt;
 Définit les paramètres de sécurité pour une liaison MSMQ. Elle spécifie si le transport ou la sécurité SOAP sont activés et, si c'est le cas, le mode d'authentification et les niveaux de protection utilisés.  
   
  \<system.ServiceModel>  
-\<liaisons >  
+\<bindings>  
 \<netMsmqBinding>  
-\<liaison >  
-\<sécurité >  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,14 +53,14 @@ Définit les paramètres de sécurité pour une liaison MSMQ. Elle spécifie si 
 |-------------|-----------------|  
 |liaison|L’élément de liaison de la [ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>  
- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>  
- <xref:System.ServiceModel.NetMsmqSecurity>  
- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<liaison >](../../../../../docs/framework/misc/binding.md)  
- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>
+- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>
+- <xref:System.ServiceModel.NetMsmqSecurity>
+- [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

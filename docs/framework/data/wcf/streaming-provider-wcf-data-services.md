@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697346"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Fournisseurs de diffusion en continu (WCF Data Services)
 Un service de données peut exposer des données Large Object Binary. Ces données binaires peuvent représenter des flux vidéo et audio, des images, des fichiers de document ou d'autres types de supports binaires. Lorsqu'une entité du modèle de données inclut une ou plusieurs propriétés binaires, le service de données retourne ces données binaires encodées en Base 64 au sein de l'entrée dans le flux de réponse. Étant donné que le chargement et de sérialisation des données binaires volumineuses de cette manière peuvent affecter les performances, le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] définit un mécanisme pour récupérer des données binaires indépendantes de l’entité à laquelle il appartient. Cela s'effectue en séparant l'entité et les données binaires de l'entité dans un ou plusieurs flux de données  
@@ -38,7 +38,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
 5.  Activer l'accès aux ressources binaires sur le serveur ou dans une source de données.  
   
- Les exemples de cette rubrique sont basés sur un exemple de diffusion en continu de service photo, ce qui est décrit en détail dans le billet de [série fournisseur de Services de diffusion en continu de données : implémentation d’un fournisseur de diffusion en continu (partie 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Le code source pour cet exemple de service est disponible sur le [page exemple de diffusion en continu de Service des données de Photo](https://go.microsoft.com/fwlink/?LinkID=198988) dans MSDN Code Gallery.  
+ Les exemples de cette rubrique sont basés sur un exemple de diffusion en continu de service de photos, qui est décrit en détail dans l’article [série fournisseur de Services de diffusion en continu de données : Implémentation d’un fournisseur de diffusion en continu (partie 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Le code source pour cet exemple de service est disponible sur le [page exemple de diffusion en continu de Service des données de Photo](https://go.microsoft.com/fwlink/?LinkID=198988) dans MSDN Code Gallery.  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Définition d'une entrée de lien média dans le modèle de données  
  Le fournisseur de sources de données détermine la façon dont une entité est définie comme une entrée de lien média dans le modèle de données.  
@@ -50,7 +50,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
  Vous devez également ajouter l'espace de noms `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` à l'entité ou à la racine du fichier .edmx ou .csdl qui définit le modèle de données.  
   
- Pour obtenir un exemple d’un service de données qui utilise le [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fournisseur et expose une ressource multimédia, consultez le billet [série fournisseur de Services de diffusion en continu de données : implémentation d’un fournisseur de diffusion en continu (partie 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
+ Pour obtenir un exemple d’un service de données qui utilise le [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fournisseur et expose une ressource multimédia, consultez le billet [série fournisseur de Services de diffusion en continu de données : Implémentation d’un fournisseur de diffusion en continu (partie 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Fournisseur de réflexion**  
  Pour indiquer qu'une entité est une entrée de lien média, ajoutez l'objet <xref:System.Data.Services.Common.HasStreamAttribute> à la classe qui définit le type d'entité dans le fournisseur de réflexion.  
@@ -129,7 +129,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
  Pour plus d’informations, consultez [gestion des versions du Service de données](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Fournisseurs de services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Fournisseurs de services de données personnalisés](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [Utilisation des données binaires](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Fournisseurs de services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Fournisseurs de services de données personnalisés](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+- [Utilisation des données binaires](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

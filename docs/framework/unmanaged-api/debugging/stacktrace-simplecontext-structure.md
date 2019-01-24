@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698919"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext
 Fournit un contexte simple qui peut être utilisé à la place d'une structure `CONTEXT` complète.  
@@ -42,20 +42,20 @@ struct StackTrace_SimpleContext
   
 |Membre|Description|  
 |------------|-----------------|  
-|`StackOffset`|Le pointeur de pile, ou le pointeur de pile d’entrée (ESP) sur x86 plateformes.|  
-|`FrameOffset`|Offset de frame ou EBP sur x86 les plateformes.|  
-|`InstructionOffset`|Le pointeur d’instruction, ou que le pointeur d’instruction (EIP) entrée sur x86 plateformes.|  
+|`StackOffset`|Le pointeur de pile ou le pointeur de pile d’entrée (ESP) sur x86 plateformes.|  
+|`FrameOffset`|Le décalage de trame ou EBP sur x86 les plateformes.|  
+|`InstructionOffset`|Le pointeur d’instruction ou le pointeur d’instruction entrée (EIP) sur x86 plateformes.|  
   
 ## <a name="remarks"></a>Notes  
  Étant donné que les fonctions de trace de pile doivent généralement retourner uniquement l’adresse offset de frame et adresse de la pile, vous pouvez éventuellement utiliser le `SimpleContext` structure au lieu d’un grand `CONTEXT` structure.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** SOS_Stacktrace.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

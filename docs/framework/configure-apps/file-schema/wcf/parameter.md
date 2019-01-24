@@ -1,19 +1,19 @@
 ---
-title: '&lt;Paramètre&gt;'
+title: '&lt;parameter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 82a2f5c46c698508695fe5f13f67059860a50713
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a68fdecaba6ad4e64e4d3a4161d9fef6c099d60a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690733"
 ---
-# <a name="ltparametergt"></a>&lt;Paramètre&gt;
+# <a name="ltparametergt"></a>&lt;parameter&gt;
 Indique le paramètre générique lorsqu'un type déclaré est générique.  
   
- \<System.Runtime.Serialization >  
-\<dataContractSerializer >  
+ \<system.runtime.serialization>  
+\<dataContractSerializer>  
 \<declaredTypes > élément  
 \<Ajouter > élément pour \<declaredTypes >  
 \<knownType > élément  
@@ -50,7 +50,7 @@ Indique le paramètre générique lorsqu'un type déclaré est générique.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Spécifie un type connu pouvant être renvoyé par un champ ou une propriété du type déclaré.|  
+|[\<knownType>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Spécifie un type connu pouvant être renvoyé par un champ ou une propriété du type déclaré.|  
   
 ## <a name="remarks"></a>Notes  
  Pour plus d’informations sur les types connus, consultez [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) et <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -59,8 +59,8 @@ Indique le paramètre générique lorsqu'un type déclaré est générique.
   
  Cet élément de configuration ne peut pas contenir les deux attributs simultanément. Si c'est le cas, un <xref:System.Configuration.ConfigurationErrorsException> survient.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Types connus de contrats de données](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Types connus de contrats de données](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

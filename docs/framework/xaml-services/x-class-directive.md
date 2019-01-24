@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2913782d8179fb882f8e916ed25feafcb5740a3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690044"
 ---
 # <a name="xclass-directive"></a>x:Class, directive
 Configure la compilation du balisage XAML pour joindre des classes partielles entre le balisage et code-behind. La classe partielle du code est définie dans un fichier de code séparé dans un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] language, tandis que la classe partielle du balisage est créée par la génération de code pendant la compilation de XAML.  
@@ -60,8 +60,8 @@ Configure la compilation du balisage XAML pour joindre des classes partielles en
 ## <a name="silverlight-usage-notes"></a>Remarques sur l’utilisation de Silverlight  
  `x:Class` pour Silverlight est documenté séparément. Pour plus d’informations, consultez [XAML Namespace (x :)) Fonctionnalités de langage (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>Voir aussi  
- [x:Subclass, directive](../../../docs/framework/xaml-services/x-subclass-directive.md)  
- [XAML et classes personnalisées pour WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [x:ClassModifier, directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
- [Types migrés de WPF vers System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Voir aussi
+- [x:Subclass, directive](../../../docs/framework/xaml-services/x-subclass-directive.md)
+- [XAML et classes personnalisées pour WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [x:ClassModifier, directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [Types migrés de WPF vers System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Entity Data Model : héritage'
+title: 'Entity Data Model : Héritage'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: c5c1b385ea72e48fd70ed5ec0cf8d1c42c1284e4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1a5ac0e4f5d4b8fe58b5d8577a27b26163d94952
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684201"
 ---
-# <a name="entity-data-model-inheritance"></a>Entity Data Model : héritage
-Le modèle EDM (Entity Data Model) prend en charge l’héritage pour [types d’entités](../../../../docs/framework/data/adonet/entity-type.md). L'héritage dans le modèle EDM est semblable à l'héritage pour les classes dans les langages de programmation orientés objet. Comme avec les classes dans les langages orientés objet, dans un modèle conceptuel vous pouvez définir un type d’entité (un *type dérivé*) qui hérite d’un autre type d’entité (la *type de base*). Toutefois, contrairement aux classes de programmation orientée objet, dans un modèle conceptuel au type dérivé hérite toujours l’ensemble du [propriétés](../../../../docs/framework/data/adonet/property.md) et [propriétés de navigation](../../../../docs/framework/data/adonet/navigation-property.md) du type de base. Vous ne pouvez pas remplacer les propriétés héritées dans un type dérivé.  
+# <a name="entity-data-model-inheritance"></a>Entity Data Model : Héritage
+Le modèle EDM (Entity Data Model) prend en charge l’héritage pour [types d’entités](../../../../docs/framework/data/adonet/entity-type.md). L'héritage dans le modèle EDM est semblable à l'héritage pour les classes dans les langages de programmation orientés objet. Comme avec les classes dans les langages orientés objet, dans un modèle conceptuel vous pouvez définir un type d’entité (un *type dérivé*) qui hérite d’un autre type d’entité (la *type de base*). Toutefois, contrairement aux classes dans la programmation orientée objet, dans un modèle conceptuel le type dérivé hérite toujours l’ensemble le [propriétés](../../../../docs/framework/data/adonet/property.md) et [propriétés de navigation](../../../../docs/framework/data/adonet/navigation-property.md) du type de base. Vous ne pouvez pas remplacer les propriétés héritées dans un type dérivé.  
   
  Dans un modèle conceptuel, vous pouvez générer des hiérarchies d'héritage dans lesquelles un type dérivé hérite d'un autre type dérivé. Le type en haut de la hiérarchie (un type dans la hiérarchie qui n’est pas un type dérivé) est appelé le *type racine*. Dans une hiérarchie d’héritage, le [clé d’entité](../../../../docs/framework/data/adonet/entity-key.md) doit être défini sur le type racine.  
   
@@ -21,10 +21,10 @@ Le modèle EDM (Entity Data Model) prend en charge l’héritage pour [types d�
   
  ![L’héritage](../../../../docs/framework/data/adonet/media/inheritanceexample.gif "InheritanceExample")  
   
- Le [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) utilise un langage spécifique à un domaine (DSL) appelé conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) pour définir des modèles conceptuels. Le CSDL suivant définit un type d'entité, `FictionBook`, qui hérite du type `Book` (comme dans le diagramme ci-dessus) :  
+ Le [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) utilise un langage spécifique à un domaine (DSL) appelé langage de définition de schéma conceptuel ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) pour définir des modèles conceptuels. Le CSDL suivant définit un type d'entité, `FictionBook`, qui hérite du type `Book` (comme dans le diagramme ci-dessus) :  
   
  [!code-xml[EDM_Example_Model#DerivedType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books5.edmx#derivedtype)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Concepts clés d’Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Voir aussi
+- [Concepts clés d’Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

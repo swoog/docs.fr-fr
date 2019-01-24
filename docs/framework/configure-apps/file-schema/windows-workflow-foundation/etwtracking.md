@@ -3,21 +3,21 @@ title: '&lt;etwTracking&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: 6defccdd6a81a1c00a4b65fa9214c86e6cccbea2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f9d1acd5dafb9df181b036db9d3ad783ca618874
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684322"
 ---
 # <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
 Comportement de service qui permet à un service à utiliser à l’aide du suivi ETW un <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
 \<system.ServiceModel>  
-\<comportements >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<comportement >  
-\<etwTracking >  
+\<behavior>  
+\<etwTracking>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +57,7 @@ Comportement de service qui permet à un service à utiliser à l’aide du suiv
 ## <a name="example"></a>Exemple  
  L'exemple suivant présente la configuration du participant au suivi ETW standard dans le fichier Web.config.  
   
- L’Id de fournisseur par le Participant de suivi ETW pour écrire les enregistrements de suivi ETW est défini dans le  **\<diagnostics >** section. Un profil est associé au participant au suivi pour spécifier les enregistrements de suivi auxquels il est abonné. Cela est défini par le **profileName** attribut de la  **\<Ajouter >** élément. Une fois qu’ils sont définis, le participant au suivi est ajouté à la  **\<etwTracking >** comportement de service. Les participants au suivi sélectionnés sont ajoutés aux extensions de l’instance de flux de travail, afin qu’ils commencent à recevoir les enregistrements de suivi.  
+ L’Id de fournisseur qui le Participant de suivi ETW utilise pour écrire les enregistrements de suivi dans ETW est défini dans le  **\<diagnostics >** section. Un profil est associé au participant au suivi pour spécifier les enregistrements de suivi auxquels il est abonné. Cela est défini par le **profileName** attribut de la  **\<Ajouter >** élément. Une fois que ceux-ci sont définis, le participant au suivi est ajouté à la  **\<etwTracking >** comportement de service. Les participants au suivi sélectionnés sont ajoutés aux extensions de l’instance de flux de travail, afin qu’ils commencent à recevoir les enregistrements de suivi.  
   
 ```xml  
 <configuration>   
@@ -84,8 +84,8 @@ Comportement de service qui permet à un service à utiliser à l’aide du suiv
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Participants de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
+- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Participants de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

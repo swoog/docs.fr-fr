@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad04e90d1855e2de89aa6515bf16424de95ffa26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696436"
 ---
 # <a name="corprfmoduleflags-enumeration"></a>COR_PRF_MODULE_FLAGS, énumération
 Spécifie les propriétés d'un module.  
@@ -49,21 +49,21 @@ typedef enum
 |COR_PRF_MODULE_NGEN|Le module a été généré par le Générateur d’images natives (Ngen.exe).|  
 |COR_PRF_MODULE_DYNAMIC|Le module a été créé par les méthodes dans le <xref:System.Reflection.Emit?displayProperty=nameWithType> espace de noms.|  
 |COR_PRF_MODULE_COLLECTIBLE|Durée de vie du module est gérée par le garbage collector.|  
-|COR_PRF_MODULE_RESOURCE|Le module ne contient aucune métadonnée et est exclusivement utilisé en tant que ressource. L’équivalent managé de ce bit est la <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> (méthode).|  
-|COR_PRF_MODULE_FLAT_LAYOUT|Mise en page du module en mémoire est plat, non mappé. Si un module a ce bit défini, les profileurs qui lisent des informations directement à partir de l’en-tête du fichier exécutable portable (PE) ont d’être prudent lors de l’interprétation des adresses virtuelles relatives (RVA) dans l’en-tête.|  
+|COR_PRF_MODULE_RESOURCE|Le module ne contient aucune métadonnée et est utilisé exclusivement en tant que ressource. L’équivalent managé de ce bit est la <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> (méthode).|  
+|COR_PRF_MODULE_FLAT_LAYOUT|Mise en page du module en mémoire est plat, ne pas mappé. Si un module a ce bit défini, les profileurs qui lisent des informations directement à partir de l’en-tête du fichier exécutable portable (PE) devront être prudent lors de l’interprétation des adresses virtuelles relatives (RVA) dans l’en-tête.|  
 |COR_PRF_MODULE_WINDOWS_RUNTIME|L’indicateur de type de contenu de Windows Runtime est défini dans les métadonnées pour l’assembly de ce module. C’est le cas pour tous les modules de métadonnées Windows (.winmd).|  
   
 ## <a name="remarks"></a>Notes  
- Bits de COR_PRF_MODULE_FLAGS sont retournés au profileur dans le `pdwModuleFlags` paramètre de sortie de la [ICorProfilerInfo3::GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) (méthode). Certaines combinaisons de deux ou plusieurs indicateurs sont possibles, mais pas toutes les combinaisons possibles.  
+ Bits de COR_PRF_MODULE_FLAGS sont retournés au profileur dans le `pdwModuleFlags` paramètre de sortie de la [ICorProfilerInfo3::GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) (méthode). Certaines combinaisons de deux ou plusieurs indicateurs sont possibles, mais pas toutes les combinaisons sont possibles.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

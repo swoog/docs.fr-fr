@@ -1,18 +1,18 @@
 ---
-title: 'Comment : sécuriser un service avec un certificat X.509'
+title: 'Procédure : Sécuriser un Service avec un certificat X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 1db4ebff194a63552f54d1a3011099d28cbbf659
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686489"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Comment : sécuriser un service avec un certificat X.509
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procédure : Sécuriser un Service avec un certificat X.509
 Sécurisation d’un service avec un certificat X.509 est une technique de base qui utilisent la plupart des liaisons Windows Communication Foundation (WCF). Cette rubrique décrit les étapes de la configuration d'un service auto-hébergé avec un certificat X.509.  
   
  L'une des conditions préalables est de disposer d'un certificat valide pouvant être utilisé pour authentifier le serveur. Le certificat doit être envoyé au serveur par une autorité de certification approuvée. Si le certificat n'est pas valide, les clients qui essayeront d'utiliser le service ne lui feront pas confiance, et par conséquent aucune connexion ne sera établie. Pour plus d’informations sur l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -82,5 +82,5 @@ Sécurisation d’un service avec un certificat X.509 est une technique de base 
   
 -   <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

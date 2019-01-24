@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: a8652648e1ac9da96a027f9aa56f0eee40cbaf09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704015"
 ---
 # <a name="binding-declarations-overview"></a>Vue d'ensemble des déclarations de liaison
 Cette rubrique décrit les différentes façons dont vous pouvez déclarer une liaison.  
@@ -42,7 +42,7 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
  [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- Vous pouvez spécifier la plupart des propriétés de la <xref:System.Windows.Data.Binding> classe de cette façon. Pour plus d’informations sur l’extension de liaison, ainsi que pour une liste de <xref:System.Windows.Data.Binding> propriétés qui ne peut pas être définies à l’aide de l’extension de liaison, consultez la [Extension de balisage de liaison](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) vue d’ensemble.  
+ Vous pouvez spécifier la plupart des propriétés de la <xref:System.Windows.Data.Binding> classe de cette façon. Pour plus d’informations sur l’extension de liaison, ainsi que la liste de <xref:System.Windows.Data.Binding> propriétés qui ne peut pas être définies à l’aide de l’extension de liaison, consultez la [Extension de balisage de liaison](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) vue d’ensemble.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>Syntaxe de l’élément objet  
@@ -58,16 +58,16 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding et PriorityBinding  
- <xref:System.Windows.Data.MultiBinding> et <xref:System.Windows.Data.PriorityBinding> ne prennent pas en charge la syntaxe d’extension XAML. Par conséquent, vous devez utiliser la syntaxe d’élément objet si vous déclarez un <xref:System.Windows.Data.MultiBinding> ou un <xref:System.Windows.Data.PriorityBinding> en XAML.  
+ <xref:System.Windows.Data.MultiBinding> et <xref:System.Windows.Data.PriorityBinding> ne prennent pas en charge la syntaxe d’extension XAML. Par conséquent, vous devez utiliser la syntaxe d’élément objet si vous déclarez un <xref:System.Windows.Data.MultiBinding> ou un <xref:System.Windows.Data.PriorityBinding> dans XAML.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>Création d’une liaison dans le code  
- Une autre consiste à spécifier une liaison pour définir les propriétés directement sur un <xref:System.Windows.Data.Binding> objet dans le code. L’exemple suivant montre comment créer un <xref:System.Windows.Data.Binding> de l’objet et spécifier les propriétés dans le code.  Dans cet exemple, `TheConverter` est un objet qui implémente le <xref:System.Windows.Data.IValueConverter> interface.  
+ Un autre pour spécifier une liaison consiste à définir des propriétés directement sur un <xref:System.Windows.Data.Binding> objet dans le code. L’exemple suivant montre comment créer un <xref:System.Windows.Data.Binding> de l’objet et de spécifier les propriétés dans le code.  Dans cet exemple, `TheConverter` est un objet qui implémente le <xref:System.Windows.Data.IValueConverter> interface.  
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- Si l’objet que vous établissez une liaison est un <xref:System.Windows.FrameworkElement> ou un <xref:System.Windows.FrameworkContentElement> que vous pouvez appeler la `SetBinding` méthode sur votre objet directement au lieu d’utiliser <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Pour un exemple, consultez [Créer une liaison dans du code](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ Si l’objet que vous liez est un <xref:System.Windows.FrameworkElement> ou un <xref:System.Windows.FrameworkContentElement> vous pouvez appeler la `SetBinding` méthode sur votre objet directement au lieu d’utiliser <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Pour un exemple, consultez [Créer une liaison dans du code](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>Syntaxe de chemin de liaison  
@@ -75,7 +75,7 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
 -   Dans le cas le plus simple, le <xref:System.Windows.Data.Binding.Path%2A> valeur de propriété est le nom de la propriété de l’objet source à utiliser pour la liaison, tel que `Path=PropertyName`.  
   
--   Les sous-propriétés d’une propriété peuvent être spécifiées par une syntaxe semblable, comme dans c#. Par exemple, la clause `Path=ShoppingCart.Order` définit la liaison à la sous-propriété `Order` de l’objet ou la propriété `ShoppingCart`.  
+-   Les sous-propriétés d’une propriété peuvent être spécifiées par une syntaxe semblable à C#. Par exemple, la clause `Path=ShoppingCart.Order` définit la liaison à la sous-propriété `Order` de l’objet ou la propriété `ShoppingCart`.  
   
 -   Pour lier à une propriété jointe, placez des parenthèses autour de la propriété. Par exemple, pour lier à la propriété jointe <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, la syntaxe est `Path=(DockPanel.Dock)`.  
   
@@ -95,7 +95,7 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
 -   À l’intérieur des indexeurs ([ ]), le signe ^ échappe le caractère suivant.  
   
--   Si vous définissez <xref:System.Windows.Data.Binding.Path%2A> en XAML, vous devez également échapper (à l’aide d’entités XML) certains caractères qui sont spécifiques à la définition de langage XML :  
+-   Si vous définissez <xref:System.Windows.Data.Binding.Path%2A> dans XAML, vous devez également échapper (à l’aide d’entités XML) certains caractères qui sont spécifiques à la définition de langage XML :  
   
     -   Utilisez `&` pour échapper le caractère « & ».  
   
@@ -119,14 +119,14 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
 -   Si vous ne définissez pas <xref:System.Windows.Data.Binding.ConverterCulture%2A>, le moteur de liaison utilise le `Language` propriété de l’objet cible de liaison. En XAML, cette valeur par défaut est « en-US » ou hérite de la valeur de l’élément racine (ou tout élément) de la page, s’il a été défini explicitement.  
   
--   Tant que la liaison possède déjà un contexte de données (par exemple, le contexte de données hérité provenant d’un élément parent), et qu’un élément ou une collection que ce contexte renvoie est approprié pour la liaison sans nécessiter de modification supplémentaire du chemin d’accès, une déclaration de liaison peut n’avoir aucune clause du tout : `{Binding}` il s’agit souvent de la manière dont une liaison est spécifiée pour les styles de données, où la liaison agit sur une collection. Pour plus d’informations, consultez la section « Objets entiers utilisés comme source de liaison » dans la [Vue d’ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Tant que la liaison possède déjà un contexte de données (par exemple, le contexte de données hérité provenant d’un élément parent), et quelles que soient élément ou une collection qui est retournée par ce contexte est appropriée pour la liaison sans nécessiter de modification du chemin d’accès supplémentaire, une déclaration de liaison n’admet aucun clauses tout : `{Binding}` Il s’agit souvent la manière dont une liaison est spécifiée pour les styles de données, où la liaison agit sur une collection. Pour plus d’informations, consultez la section « Objets entiers utilisés comme source de liaison » dans la [Vue d’ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
--   La valeur par défaut <xref:System.Windows.Data.Binding.Mode%2A> unidirectionnel ou bidirectionnel en fonction de la propriété de dépendance qui est liée. Vous pouvez toujours déclarer explicitement le mode de liaison pour garantir que votre liaison a le comportement souhaité. Dans les propriétés de contrôle général, modifiables par l’utilisateur, tel que <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> et <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, par défaut des liaisons bidirectionnelles, alors que la plupart des autres propriétés par défaut des liaisons unidirectionnelles.  
+-   La valeur par défaut <xref:System.Windows.Data.Binding.Mode%2A> varie entre unidirectionnel ou bidirectionnel en fonction de la propriété de dépendance qui est liée. Vous pouvez toujours déclarer explicitement le mode de liaison pour garantir que votre liaison a le comportement souhaité. Dans les propriétés de contrôle général, modifiable par l’utilisateur, tel que <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> et <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, par défaut des liaisons bidirectionnelles, alors que la plupart des autres propriétés par défaut des liaisons unidirectionnelles.  
   
 -   La valeur par défaut <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur varie entre <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> et <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> en fonction de la propriété de dépendance liée. La valeur par défaut de la plupart des propriétés de dépendance est <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, tandis que celle de la propriété <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> a comme valeur par défaut <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Liaison de données](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Syntaxe XAML PropertyPath](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Liaison de données](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Syntaxe XAML PropertyPath](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)

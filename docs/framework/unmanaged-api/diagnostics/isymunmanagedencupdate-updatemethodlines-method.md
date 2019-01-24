@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50d9ac08b01a67df68ff077721ff5421fbc27707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7905b3ee83378ed1a27501b082dbfca01d6436c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688062"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines, méthode
-Permet de mettre à jour les informations de ligne pour une méthode qui n’a pas été recompilée, mais dont les lignes ont été déplacées indépendamment. Un delta pour chaque instruction est autorisée.  
+Permet la mise à jour les informations de ligne pour une méthode qui n’a pas été compilé, mais dont les lignes ont été déplacées indépendamment. Un delta pour chaque instruction est autorisé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ HRESULT UpdateMethodLines(
  [in] Un tableau de `INT32` les valeurs qui indiquent les deltas pour chaque point de séquence dans la méthode.  
   
  `cDeltas`  
- [in] A `ULONG` contenant la taille de la `pDeltas` paramètre.  
+ [in] Un `ULONG` contenant la taille de la `pDeltas` paramètre.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
@@ -52,5 +52,5 @@ HRESULT UpdateMethodLines(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedENCUpdate, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedENCUpdate, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

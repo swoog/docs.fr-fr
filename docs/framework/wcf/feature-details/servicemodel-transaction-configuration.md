@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: 2c724e3f67bbf6554abffb44f101d2f28f748023
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee35b6c02637c3013a42303dcd7aa7c813bd183c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693160"
 ---
 # <a name="servicemodel-transaction-configuration"></a>Configuration des transactions ServiceModel
-Windows Communication Foundation (WCF) fournit trois attributs pour configurer des transactions pour un service : `transactionFlow`, `transactionProtocol`, et `transactionTimeout`.  
+Windows Communication Foundation (WCF) fournit trois attributs de configuration des transactions pour un service : `transactionFlow`, `transactionProtocol`, et `transactionTimeout`.  
   
 ## <a name="configuring-transactionflow"></a>Configuration de transactionFlow  
- La plupart des liaisons prédéfinies WCF fournit contiennent les `transactionFlow` et `transactionProtocol` des attributs, afin que vous puissiez configurer la liaison pour accepter les transactions entrantes pour un point de terminaison spécifique à l’aide d’un protocole de flux de transaction spécifique. Par ailleurs, l'élément `transactionFlow` et son attribut `transactionProtocol` vous permettent de générer votre propre liaison personnalisée. Pour plus d’informations sur les éléments de configuration, consultez [ \<liaison >](../../../../docs/framework/misc/binding.md) et [schéma de Configuration WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+ La plupart des liaisons prédéfinies WCF fournit contiennent les `transactionFlow` et `transactionProtocol` des attributs, afin que vous puissiez configurer la liaison pour accepter les transactions entrantes pour un point de terminaison spécifique à l’aide d’un protocole de flux de transaction spécifique. Par ailleurs, l’élément `transactionFlow` et son attribut `transactionProtocol` vous permettent de générer votre propre liaison personnalisée. Pour plus d’informations sur la définition des éléments de configuration, consultez [ \<liaison >](../../../../docs/framework/misc/binding.md) et [schéma de Configuration WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
   
- L'attribut `transactionFlow` spécifie si le flux de transaction est activé pour les points de terminaison de service qui utilisent la liaison.  
+ L’attribut `transactionFlow` spécifie si le flux de transaction est activé pour les points de terminaison de service qui utilisent la liaison.  
   
 ## <a name="configuring-transactionprotocol"></a>Configuration de transactionProtocol  
  L'attribut `transactionProtocol` spécifie le protocole de transaction à utiliser avec les points de terminaison de service qui utilisent la liaison.  
@@ -54,7 +54,7 @@ Windows Communication Foundation (WCF) fournit trois attributs pour configurer d
 </configuration>  
 ```  
   
- L'attribut `transactionTimeout` spécifie le délai dans lequel une nouvelle transaction créée au niveau du service doit se terminer. Il est utilisé comme délai d'attente <xref:System.Transactions.TransactionScope> pour toute opération qui établit une nouvelle transaction ; si <xref:System.ServiceModel.OperationBehaviorAttribute> est appliqué, la propriété <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> a la valeur `true`.  
+ L’attribut `transactionTimeout` spécifie le délai dans lequel une nouvelle transaction créée au niveau du service doit se terminer. Il est utilisé comme délai d'attente <xref:System.Transactions.TransactionScope> pour toute opération qui établit une nouvelle transaction ; si <xref:System.ServiceModel.OperationBehaviorAttribute> est appliqué, la propriété <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> a la valeur `true`.  
   
  Le délai d’attente spécifie la durée entre la création de la transaction et l’exécution de la phase 1 du protocole de validation en deux phases.  
   
@@ -62,6 +62,6 @@ Windows Communication Foundation (WCF) fournit trois attributs pour configurer d
   
  Notez que la valeur du délai d'attente utilisée est toujours la plus petite entre le paramètre de configuration `transactionTimeout` et la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
- [\<liaison >](../../../../docs/framework/misc/binding.md)  
- [Schéma de configuration de WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+## <a name="see-also"></a>Voir aussi
+- [\<binding>](../../../../docs/framework/misc/binding.md)
+- [Schéma de configuration de WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

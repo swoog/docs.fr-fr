@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 3c2158e94f936dd2b28fe46310fd96df8dbc50fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: adda1bd1f16a43087d43382f9b7476856f4bc5c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692702"
 ---
 # <a name="handling-dataadapter-events"></a>Gestion des événements DataAdapter 
 <xref:System.Data.Common.DataAdapter> ADO.NET expose trois événements que vous pouvez utiliser pour répondre aux modifications apportées aux données au niveau de la source de données. Le tableau ci-dessous répertorie les événements `DataAdapter`.  
@@ -138,7 +138,7 @@ protected static void OnRowUpdated(
 |`Values`|Tableau d'objets contenant les valeurs de la ligne qui était ajoutée au moment de l'erreur. Les références ordinales du tableau `Values` correspondent à celles des colonnes de la ligne ajoutée. Par exemple, `Values[0]` est la valeur qui a été ajoutée comme première colonne de la ligne.|  
 |`Continue`|Vous permet de choisir la levée ou non d'une exception. L'affectation de la valeur `Continue` à la propriété `false` stoppe l'opération `Fill` en cours et une exception est levée. L'affectation de la valeur `Continue` à `true` poursuit l'opération `Fill` en dépit de l'erreur.|  
   
- L'exemple de code suivant ajoute l'événement `FillError` du `DataAdapter` à un gestionnaire d'événements. Dans le code d'événement `FillError`, l'exemple détermine s'il y a une possibilité de perte de précision, donnant ainsi l'opportunité de répondre à l'exception.  
+ L'exemple de code suivant ajoute l'événement `FillError` du `DataAdapter` à un gestionnaire d'événements. Dans le code d’événement `FillError`, l’exemple détermine s’il y a une possibilité de perte de précision, donnant ainsi l’opportunité de répondre à l’exception.  
   
 ```vb  
 AddHandler adapter.FillError, New FillErrorEventHandler( _  
@@ -186,9 +186,9 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Gestion des événements de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
- [Gestion des événements de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [Événements](../../../../docs/standard/events/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Gestion des événements de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [Gestion des événements de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [Événements](../../../../docs/standard/events/index.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

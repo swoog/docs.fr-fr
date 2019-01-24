@@ -2,12 +2,12 @@
 title: Security Validation
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699764"
 ---
 # <a name="security-validation"></a>Security Validation
 Cet exemple montre comment utiliser un comportement personnalisé pour valider des services sur un ordinateur afin de garantir qu'ils répondent à des critères spécifiques. Dans cet exemple, les services sont validés par le comportement personnalisé en analysant chaque point de terminaison sur le service et en vérifiant s’ils contiennent des éléments de liaison sécurisés. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -77,13 +77,13 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  Lors de l'ajout du comportement à tous les services, il est recommandé de sauvegarder le fichier Machine.config avant d'apporter toute modification.  
   
- Exécutez maintenant le client fourni dans le répertoire client\bin de cet exemple. A une exception se produit avec le message suivant : « le service demandé, 'http://localhost/servicemodelsamples/service.svc' n’a pas pu être activé. » Cette exception est attendue parce qu'un point de terminaison est considéré comme non sécurisé par le comportement de validation de point de terminaison et empêche le démarrage du service. Le comportement lève également une exception interne qui décrit quel point de terminaison n'est pas sécurisé et écrit un message à l'observateur d'événements du système sous la source « System.ServiceModel 4.0.0.0 » et la catégorie « WebHost ». Il est également possible d'activer le suivi sur le service dans cet exemple. Cela permet à l'utilisateur de consulter les exceptions levées par le comportement de validation de point de terminaison en ouvrant les suivis du service à l'aide de l'outil Service Trace Viewer.  
+ Exécutez maintenant le client fourni dans le répertoire client\bin de cet exemple. A une exception se produit avec le message suivant : « Le service demandé, 'http://localhost/servicemodelsamples/service.svc' ne peut pas être activé. » Cette exception est attendue parce qu'un point de terminaison est considéré comme non sécurisé par le comportement de validation de point de terminaison et empêche le démarrage du service. Le comportement lève également une exception interne qui décrit quel point de terminaison n'est pas sécurisé et écrit un message à l'observateur d'événements du système sous la source « System.ServiceModel 4.0.0.0 » et la catégorie « WebHost ». Il est également possible d'activer le suivi sur le service dans cet exemple. Cela permet à l'utilisateur de consulter les exceptions levées par le comportement de validation de point de terminaison en ouvrant les suivis du service à l'aide de l'outil Service Trace Viewer.  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Pour consulter les messages d’exception de validation non réussie d’un point de terminaison dans l’observateur d’événements  
   
 1.  Cliquez sur le **Démarrer** menu et sélectionnez **exécuter...** .  
   
-2.  Type `eventvwr` et cliquez sur **OK**.  
+2.  Tapez `eventvwr` puis cliquez sur **OK**.  
   
 3.  Dans la fenêtre de l’Observateur d’événements, cliquez sur **Application**.  
   
@@ -106,5 +106,5 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Voir aussi
+- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

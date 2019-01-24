@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 7b5a91091a0902928eb2b72bdf69612f2e3f2f48
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704041"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configuration de liaisons pour les services Windows Communication Foundation
 Lorsque vous créez une application, vous souhaitez souvent confier des décisions à l'administrateur après le déploiement de l'application. Par exemple, il n'existe souvent aucune façon de savoir à l'avance ce que sera une adresse de service ou un URI (Uniform Resource Identifier). Au lieu de d'encoder de manière irréversible une adresse, il est préférable de permettre à un administrateur de le faire après avoir créé un service. Cette souplesse est obtenue par le biais de la configuration.  
@@ -161,8 +161,8 @@ Lorsque vous créez une application, vous souhaitez souvent confier des décisio
 </bindings>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md)  
- [Liaisons fournies par le système](../../../docs/framework/wcf/system-provided-bindings.md)  
- [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Voir aussi
+- [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md)
+- [Liaisons fournies par le système](../../../docs/framework/wcf/system-provided-bindings.md)
+- [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

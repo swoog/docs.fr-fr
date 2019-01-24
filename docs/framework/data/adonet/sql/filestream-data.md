@@ -2,12 +2,12 @@
 title: Données FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4002f95e47b3c1ac7d8415d590b8c4c8a5d95a91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701090"
 ---
 # <a name="filestream-data"></a>Données FILESTREAM
 L'attribut de stockage FILESTREAM est destiné aux données binaires (BLOB) stockées dans une colonne varbinary(max). Avant l'introduction de cet attribut, le stockage des données binaires nécessitait un traitement spécial. Les données non structurées, telles que les documents texte, les images et les vidéos, sont souvent stockées en dehors de la base de données, ce qui rend difficile leur gestion.  
@@ -37,7 +37,7 @@ Values(1, 0x00, default)
 GO  
 ```  
   
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Exemple : lecture, remplacement et insertion de données FILESTREAM  
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Exemple : Lecture, remplacement et insertion de données FILESTREAM  
  L'exemple suivant montre comment lire les données à partir d'un fichier FILESTREAM. Le code obtient le chemin d'accès logique au fichier, en affectant la valeur `FileAccess` à `Read` et la valeur `FileOptions` à `SequentialScan`. Puis le code lit les octets à partir du SqlFileStream dans la mémoire tampon. Les octets s'affichent ensuite dans la fenêtre de console.  
   
  Cet exemple montre également comment écrire des données dans un fichier FILESTREAM dans lequel toutes les données existantes sont remplacées. Le code obtient le chemin d'accès logique au fichier et crée l'élément `SqlFileStream`, en affectant la valeur `FileAccess` à `Write` et la valeur `FileOptions` à `SequentialScan`. Un seul octet est écrit dans le `SqlFileStream`, remplaçant ainsi les données du fichier.  
@@ -178,9 +178,9 @@ namespace FileStreamTest
 |[Créer des Applications clientes pour les données FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Décrit les fonctions API Win32 pour une utilisation avec des données FILESTREAM.|  
 |[FILESTREAM et autres fonctionnalités SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Fournit des considérations, indications et limitations relatives à l’utilisation des données FILESTREAM avec d’autres fonctionnalités de SQL Server.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Types de données SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Sécurité d’accès du code et ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [Données binaires et de valeur élevée SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Vue d’ensemble d’ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Types de données SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Sécurité d’accès du code et ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [Données binaires et de valeur élevée SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Vue d’ensemble d’ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)

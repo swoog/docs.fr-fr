@@ -1,18 +1,18 @@
 ---
-title: "Exemples de syntaxe d'expression de requête : opérateurs de jointure (LINQ to DataSet)"
+title: 'Exemples de syntaxe d’Expression de requête : Opérateurs de jointure (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f4d86667-3392-470d-a076-5ca6cbb660f6
-ms.openlocfilehash: 462d857c231c0222517cbdedfbe3ae148e66e693
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7bd8576358cf8e8981bcb4728f47d56d11fcd8a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683438"
 ---
-# <a name="query-expression-syntax-examples-join-operators-linq-to-dataset"></a>Exemples de syntaxe d'expression de requête : opérateurs de jointure (LINQ to DataSet)
+# <a name="query-expression-syntax-examples-join-operators-linq-to-dataset"></a>Exemples de syntaxe d’Expression de requête : Opérateurs de jointure (LINQ to DataSet)
 La jointure est une opération importante dans les requêtes qui ciblent des sources de données qui n'ont pas de relations explorables les unes avec les autres, comme les tables de base de données relationnelles. Une jointure de deux sources de données est l'association d'objets dans une source de données avec des objets qui partagent un attribut commun dans l'autre source de données. Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
  Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.GroupJoin%2A> et <xref:System.Linq.Enumerable.Join%2A> pour interroger un <xref:System.Data.DataSet> à l'aide de la syntaxe d'expression de requête.  
@@ -26,7 +26,7 @@ La jointure est une opération importante dans les requêtes qui ciblent des sou
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- Pour plus d’informations, consultez [Comment : créer un LINQ to DataSet Project dans Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
+ Pour plus d'informations, voir [Procédure : Créer un projet LINQ to DataSet dans Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
 ## <a name="groupjoin"></a>GroupJoin  
   
@@ -50,7 +50,7 @@ La jointure est une opération importante dans les requêtes qui ciblent des sou
  [!code-csharp[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#join)]
  [!code-vb[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#join)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a>Voir aussi
+- [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

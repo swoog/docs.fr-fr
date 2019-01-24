@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eb24c7c4f2c60a9c16d903ab1e845b058e280f7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697047"
 ---
 # <a name="time-zone-overview"></a>Vue d’ensemble des fuseaux horaires
 
@@ -59,7 +59,7 @@ Dans .NET, un <xref:System.TimeZoneInfo> objet représente un fuseau horaire. Le
 
 La dépendance de la <xref:System.TimeZoneInfo> classe sur le Registre signifie qu’une application prenant en charge de fuseau horaire ne peut pas être sûr qu’un fuseau horaire particulier est défini dans le Registre. Par conséquent, la tentative d’instancier un fuseau horaire spécifique (autre que le fuseau horaire local ou le fuseau horaire qui représente l’heure UTC) doit utiliser la gestion des exceptions. Elle doit également fournir une méthode permettant l’application de continuer si obligatoire <xref:System.TimeZoneInfo> objet ne peut pas être instancié à partir du Registre.
 
-Pour gérer l’absence d’un fuseau horaire requis, la <xref:System.TimeZoneInfo> classe inclut un <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (méthode), que vous pouvez utiliser pour créer des fuseaux horaires personnalisés qui ne figurent pas dans le Registre. Pour plus d’informations sur la création d’un fuseau horaire personnalisé, consultez [Comment : créer des fuseaux horaires sans règles d’ajustement](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) et [Comment : créer des fuseaux horaires avec des règles d’ajustement](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). En outre, vous pouvez utiliser la <xref:System.TimeZoneInfo.ToSerializedString%2A> méthode pour convertir un nouveau fuseau horaire en une chaîne et l’enregistrer dans un magasin de données (par exemple, une base de données, un fichier texte, le Registre ou une ressource d’application). Vous pouvez ensuite utiliser le <xref:System.TimeZoneInfo.FromSerializedString%2A> méthode pour convertir cette chaîne de sauvegarde à un <xref:System.TimeZoneInfo> objet. Pour plus d’informations, consultez [Comment : enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) et [Comment : restaurer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Pour gérer l’absence d’un fuseau horaire requis, la <xref:System.TimeZoneInfo> classe inclut un <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (méthode), que vous pouvez utiliser pour créer des fuseaux horaires personnalisés qui ne figurent pas dans le Registre. Pour plus d’informations sur la création d’un fuseau horaire personnalisé, consultez [Comment : Créer des fuseaux horaires sans règles d’ajustement](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) et [Comment : Créer des fuseaux horaires avec des règles d’ajustement](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). En outre, vous pouvez utiliser la <xref:System.TimeZoneInfo.ToSerializedString%2A> méthode pour convertir un nouveau fuseau horaire en une chaîne et l’enregistrer dans un magasin de données (par exemple, une base de données, un fichier texte, le Registre ou une ressource d’application). Vous pouvez ensuite utiliser le <xref:System.TimeZoneInfo.FromSerializedString%2A> méthode pour convertir cette chaîne de sauvegarde à un <xref:System.TimeZoneInfo> objet. Pour plus d’informations, consultez [Comment : Enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) et [Comment : Restaurer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 Étant donné que chaque fuseau horaire est caractérisé par un décalage de base par rapport à l’heure UTC, ainsi que par un décalage par rapport à l’heure UTC qui reflète toutes les règles d’ajustement existantes, une heure dans un fuseau horaire peut être facilement convertie en une heure dans un autre fuseau horaire. À cet effet, le <xref:System.TimeZoneInfo> objet inclut plusieurs méthodes de conversion, y compris :
 
@@ -75,4 +75,4 @@ Pour plus d’informations sur la conversion d’heures entre fuseaux horaires, 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: ed815f66e0c542cf20b0a8127f75d10219aea92b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 031569d01e2d83c611791b3359800eda4a59b03c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692504"
 ---
 # <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; , élément (paramètres de Cache)
 Définit un élément qui est utilisé pour configurer un cache basé sur la classe <xref:System.Runtime.Caching.MemoryCache> . La classe <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> définit un élément [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) que vous pouvez utiliser pour configurer le cache. Vous pouvez utiliser plusieurs instances de la classe <xref:System.Runtime.Caching.MemoryCache> dans une même application. Chaque élément `memoryCache` dans le fichier de configuration peut contenir des paramètres pour une instance <xref:System.Runtime.Caching.MemoryCache> nommée.  
@@ -75,7 +75,7 @@ Définit un élément qui est utilisé pour configurer un cache basé sur la cla
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment affecter le nom d’objet cache par défaut comme nom de l’objet <xref:System.Runtime.Caching.MemoryCache> en affectant la valeur « default » à l’attribut `name` .  
   
- Les attributs `cacheMemoryLimitMegabytes` et `physicalMemoryLimitPercentage` prennent la valeur zéro. La définition de ces attributs sur zéro signifie que les heuristiques à dimensionnement automatique de <xref:System.Runtime.Caching.MemoryCache> sont utilisées par défaut. L’implémentation du cache doit comparer la charge de mémoire actuelle aux limites de mémoire en valeur absolue et en pourcentage toutes les deux minutes.  
+ Les attributs `cacheMemoryLimitMegabytes` et `physicalMemoryLimitPercentage` sont définis sur zéro. La définition de ces attributs sur zéro signifie que les heuristiques à dimensionnement automatique de <xref:System.Runtime.Caching.MemoryCache> sont utilisées par défaut. L’implémentation du cache doit comparer la charge de mémoire actuelle aux limites de mémoire en valeur absolue et en pourcentage toutes les deux minutes.  
   
 ```xml  
 <configuration>  
@@ -92,7 +92,7 @@ Définit un élément qui est utilisé pour configurer un cache basé sur la cla
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- <xref:System.Runtime.Caching.MemoryCache>  
-- [\<System.Runtime.Caching >, élément (paramètres de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)  
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Caching.MemoryCache>
+- [\<System.Runtime.Caching >, élément (paramètres de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)
 - [\<namedCaches >, élément (paramètres de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

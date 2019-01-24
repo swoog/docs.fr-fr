@@ -2,12 +2,12 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 75f30c19fb54d66be0e460ab64b61d283d650005
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0378aa365351dcd8c6c1b59674d785def1ee2648
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684825"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 Spécifie une condition de recherche pour un groupe ou un agrégat.  
@@ -26,7 +26,7 @@ Spécifie une condition de recherche pour un groupe ou un agrégat.
  La clause HAVING est utilisée pour spécifier une condition de filtrage supplémentaire sur le résultat d'un regroupement. Si aucune clause GROUP BY n'est spécifiée dans l'expression de requête, un groupe implicite constitué d'un seul ensemble est supposé exister.  
   
 > [!NOTE]
->  HAVING ne peut être utilisé uniquement avec les [sélectionnez](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instruction. Lorsque [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) est ne pas utilisé, HAVING se comporte comme une clause WHERE.  
+>  HAVING ne peut être utilisé uniquement avec le [sélectionnez](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instruction. Lorsque [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) est ne pas utilisé, HAVING se comporte comme une clause WHERE.  
   
  La clause HAVING fonctionne comme la clause WHERE, à la différence près que son application intervient après l'opération GROUP BY. Cela signifie que la clause HAVING ne peut faire référence qu'à des agrégats et des alias de regroupement, comme l'illustre l'exemple suivant.  
   
@@ -40,12 +40,12 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Exemple  
  La requête Entity SQL ci-dessous utilise les opérateurs HAVING et GROUP BY pour spécifier un critère de recherche pour un groupe ou un agrégat. Cette requête est basée sur le modèle de vente AdventureWorks Sales Model. Pour compiler et exécuter cette requête, procédez comme suit :  
   
-1.  Suivez la procédure de [Comment : exécuter une requête qui retourne des résultats PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne les résultats PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2.  Transmettez à la méthode `ExecutePrimitiveTypeQuery` la requête suivante en tant qu'argument :  
   
  [!code-csharp[DP EntityServices Concepts 2#HAVING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#having)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Expressions de requête](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+## <a name="see-also"></a>Voir aussi
+- [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Expressions de requête](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

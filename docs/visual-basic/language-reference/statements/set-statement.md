@@ -10,12 +10,12 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: dbc48d14bac54809e4ddd12c87429bf407169950
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d77c7d3f2e70edcc1028c207150944c5394afbe0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685371"
 ---
 # <a name="set-statement-visual-basic"></a>Set, instruction (Visual Basic)
 Déclare un `Set` procédure de propriété utilisée pour affecter une valeur à une propriété.  
@@ -33,7 +33,7 @@ End Set
  Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- Facultatif sur l’une de le `Get` et `Set` instructions dans cette propriété. Il peut s'agir d'une des valeurs suivantes :  
+ Facultatif sur un de la `Get` et `Set` instructions dans cette propriété. Il peut s'agir d'une des valeurs suivantes :  
   
 -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -43,10 +43,10 @@ End Set
   
 -   `Protected Friend`  
   
- Consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Obligatoire. Paramètre contenant la nouvelle valeur pour la propriété.  
+ Obligatoire. Paramètre qui contient la nouvelle valeur pour la propriété.  
   
  `datatype`  
  Obligatoire si `Option Strict` est `On`. Type de données de la `value` paramètre. Le type de données spécifié doit être le même que le type de données de la propriété où cette `Set` instruction est déclarée.  
@@ -62,33 +62,33 @@ End Set
   
  Visual Basic appelle automatiquement d’une propriété `Set` procédure lors d’une instruction d’assignation fournit une valeur à stocker dans la propriété.  
   
- Visual Basic passe un paramètre à la `Set` procédure pendant les assignations de propriété. Si vous ne fournissez pas un paramètre pour `Set`, l’environnement de développement intégré (IDE) utilise un paramètre implicite nommé `value`. Le paramètre conserve la valeur à affecter à la propriété. En général, stockez la valeur dans une variable locale privée et de la retourner chaque fois que le `Get` procédure est appelée.  
+ Visual Basic passe un paramètre à la `Set` procédure pendant les assignations de propriété. Si vous ne fournissez pas un paramètre pour `Set`, l’environnement de développement intégré (IDE) utilise un paramètre implicit nommé `value`. Le paramètre conserve la valeur à assigner à la propriété. Vous en général de stocker cette valeur dans une variable locale privée et renvoyez-le à chaque fois que le `Get` procédure est appelée.  
   
- Le corps de la déclaration de propriété peut contenir uniquement la propriété `Get` et `Set` procédures entre le [Property, instruction](../../../visual-basic/language-reference/statements/property-statement.md) et `End Property` instruction. Il ne peut pas stocker de celles de ces procédures. En particulier, il ne peut pas stocker la valeur de propriété en cours. Vous devez stocker cette valeur en dehors de la propriété, car si vous le stockez dans les procédures de propriété, les autres procédures de propriété ne peut pas y accéder. L’approche habituelle consiste à stocker la valeur dans un [privé](../../../visual-basic/language-reference/modifiers/private.md) variable déclarée au même niveau que la propriété. Vous devez définir un `Set` procédure à l’intérieur de la propriété à laquelle elle s’applique.  
+ Le corps de la déclaration de propriété peut contenir uniquement de la propriété `Get` et `Set` procédures entre le [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) et `End Property` instruction. Il ne peut pas stocker quoi que ce soit d’autre que ces procédures. En particulier, il ne peut pas stocker la valeur actuelle de la propriété. Vous devez stocker cette valeur en dehors de la propriété, car si vous le stockez à l’intérieur d’une des procédures de propriété, les autres procédures de propriété ne peut pas y accéder. L’approche habituelle consiste à stocker la valeur dans un [privé](../../../visual-basic/language-reference/modifiers/private.md) variable déclarée au même niveau que la propriété. Vous devez définir un `Set` procédure à l’intérieur de la propriété à laquelle elle s’applique.  
   
- Le `Set` procédure par défaut est le niveau d’accès de sa propriété conteneur sauf si vous utilisez `accessmodifier` dans la `Set` instruction.  
+ Le `Set` procédure par défaut est le niveau d’accès de sa propriété conteneur, sauf si vous utilisez `accessmodifier` dans le `Set` instruction.  
   
 ## <a name="rules"></a>Règles  
   
--   **Niveaux d’accès mixtes.** Si vous définissez une propriété en lecture-écriture, vous pouvez éventuellement spécifier un niveau d’accès différent pour un le `Get` ou `Set` procédure, mais pas les deux. Si vous faites cela, le niveau d’accès de la procédure doit être plus restrictif que le niveau d’accès de la propriété. Par exemple, si la propriété est déclarée `Friend`, vous pouvez déclarer le `Set` procédure `Private`, mais pas `Public`.  
+-   **Niveaux d’accès mixtes.** Si vous définissez une propriété en lecture-écriture, vous pouvez éventuellement spécifier un niveau d’accès différent pour un le `Get` ou `Set` procédure, mais pas les deux. Si vous procédez ainsi, le niveau d’accès de la procédure doit être plus restrictif que le niveau d’accès de la propriété. Par exemple, si la propriété est déclarée `Friend`, vous pouvez déclarer le `Set` procédure `Private`, mais pas `Public`.  
   
-     Si vous définissez un `WriteOnly` propriété, le `Set` procédure représente la propriété entière. Vous ne pouvez pas déclarer un accès différent au niveau de `Set`, parce que seront définis à deux niveaux d’accès pour la propriété.  
+     Si vous définissez un `WriteOnly` propriété, le `Set` procédure représente la propriété entière. Vous ne pouvez pas déclarer un accès différents au niveau de `Set`, parce que seront définis à deux niveaux d’accès pour la propriété.  
   
 ## <a name="behavior"></a>Comportement  
   
 -   **Retour d’une procédure de propriété.** Lorsque le `Set` procédure retourne au code appelant, l’exécution se poursuit après l’instruction qui a fourni la valeur à stocker.  
   
-     `Set` procédures de propriété peuvent retourner à l’aide du [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) ou [instruction Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` procédures de propriété peuvent retourner à l’aide du [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) ou [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
-     Le `Exit Property` et `Return` instructions provoquent la sortie immédiate d’une procédure de propriété. Un nombre quelconque de `Exit Property` et `Return` instructions peuvent apparaître n’importe où dans la procédure, et vous pouvez mélanger `Exit Property` et `Return` instructions.  
+     Le `Exit Property` et `Return` instructions provoquent la sortie immédiate d’une procédure de propriété. Un nombre quelconque de `Exit Property` et `Return` instructions peuvent apparaître n’importe où dans la procédure, et vous pouvez combiner `Exit Property` et `Return` instructions.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise la `Set` instruction pour définir la valeur d’une propriété.  
   
  [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Get (instruction)](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Procédures de propriété](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+## <a name="see-also"></a>Voir aussi
+- [Get (instruction)](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Procédures de propriété](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)

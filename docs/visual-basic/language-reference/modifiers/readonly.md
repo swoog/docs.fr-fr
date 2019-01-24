@@ -10,15 +10,15 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: e2957bf49292dfcafab8e78f4b997247c34ad279
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 741374cc375e33868239161af23a38af7680b290
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684065"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
-Spécifie qu’une variable ou une propriété peut être lues mais ne pas écrite.  
+Spécifie qu’une variable ou une propriété peut être lue mais ne pas écrite.  
   
 ## <a name="remarks"></a>Notes  
   
@@ -30,13 +30,13 @@ Spécifie qu’une variable ou une propriété peut être lues mais ne pas écri
   
 -   **Affectation d’une valeur.** Code utilisant un `ReadOnly` propriété ne peut pas définir sa valeur. Mais le code qui a accès au stockage sous-jacent peut attribuer ou modifier la valeur à tout moment.  
   
-     Vous pouvez affecter une valeur à une `ReadOnly` variable uniquement dans sa déclaration ou dans le constructeur d’une classe ou structure dans laquelle il est défini.  
+     Vous pouvez affecter une valeur à une `ReadOnly` variable uniquement dans sa déclaration ou dans le constructeur d’une classe ou une structure dans laquelle il est défini.  
   
 ## <a name="when-to-use-a-readonly-variable"></a>Quand utiliser une Variable en lecture seule  
- Il existe des situations dans lesquelles vous ne pouvez pas utiliser un [instruction Const](../../../visual-basic/language-reference/statements/const-statement.md) pour déclarer et assigner une valeur constante. Par exemple, la `Const` instruction ne peut pas accepter le type de données que vous souhaitez affecter, ou vous n’êtes peut-être pas en mesure de calculer la valeur au moment de la compilation avec une expression constante. Vous ne savez pas encore la valeur au moment de la compilation. Dans ce cas, vous pouvez utiliser un `ReadOnly` variable qui doit contenir une valeur constante.  
+ Il existe des situations dans lesquelles vous ne pouvez pas utiliser un [instruction Const](../../../visual-basic/language-reference/statements/const-statement.md) pour déclarer et affecter une valeur constante. Par exemple, le `Const` instruction ne peut pas accepter le type de données que vous souhaitez affecter, ou vous ne pouvez pas calculer la valeur au moment de la compilation avec une expression constante. Vous ne savez pas encore la valeur au moment de la compilation. Dans ce cas, vous pouvez utiliser un `ReadOnly` variable qui doit contenir une valeur constante.  
   
 > [!IMPORTANT]
->  Si le type de données de la variable est un type référence, comme un tableau ou une instance de la classe, ses membres peuvent être changés même si la variable elle-même est `ReadOnly`. L'exemple suivant illustre ce comportement.  
+>  Si le type de données de la variable est un type référence, tel qu’un tableau ou une instance de la classe, ses membres peuvent être modifiées même si la variable elle-même est `ReadOnly`. L'exemple suivant illustre ce comportement.  
   
  `ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}`  
   
@@ -46,7 +46,7 @@ Spécifie qu’une variable ou une propriété peut être lues mais ne pas écri
   
  `End Sub`  
   
- Lors de l’initialisation, le tableau vers lequel pointe `characterArray()` contient « x », « y » et « z ». Étant donné que la variable `characterArray` est `ReadOnly`, vous ne pouvez pas modifier sa valeur initialisée ; c'est-à-dire, vous ne pouvez attribuer un nouveau tableau à celui-ci. Toutefois, vous pouvez modifier les valeurs d’une ou plusieurs des membres du groupe. Après un appel à la procédure `changeArrayElement`, le tableau vers lequel pointe `characterArray()` contient « x », « M » et « z ».  
+ Cas d’initialisation, le tableau vers lequel pointe `characterArray()` contient « x », « y » et « z ». Étant donné que la variable `characterArray` est `ReadOnly`, vous ne pouvez pas modifier sa valeur initialisée ; c'est-à-dire, vous ne pouvez pas affectez-lui un nouveau tableau. Toutefois, vous pouvez modifier les valeurs d’une ou plusieurs des membres du groupe. Suite à un appel à la procédure `changeArrayElement`, le tableau vers lequel pointe `characterArray()` contient « x », « M » et « z ».  
   
  Notez que cela est similaire à la déclaration d’un paramètre de procédure à être [ByVal](../../../visual-basic/language-reference/modifiers/byval.md), ce qui empêche la procédure de modification de l’argument d’appel lui-même, mais lui permet de modifier ses membres.  
   
@@ -61,6 +61,6 @@ Spécifie qu’une variable ou une propriété peut être lues mais ne pas écri
   
  [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Voir aussi
+- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)

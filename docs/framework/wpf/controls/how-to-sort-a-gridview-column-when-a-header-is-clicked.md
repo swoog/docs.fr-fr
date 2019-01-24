@@ -1,5 +1,5 @@
 ---
-title: "Comment : trier une colonne GridView lors d'un clic sur un en-tête"
+title: "Procédure : Trier une colonne GridView lors d'un clic sur un en-tête"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694085"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Comment : trier une colonne GridView lors d'un clic sur un en-tête
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procédure : Trier une colonne GridView lors d'un clic sur un en-tête
 Cet exemple montre comment créer un <xref:System.Windows.Controls.ListView> contrôle qui implémente un <xref:System.Windows.Controls.GridView> afficher en mode trie le contenu des données lorsqu’un utilisateur clique sur un en-tête de colonne.  
   
 ## <a name="example"></a>Exemple  
@@ -69,7 +69,7 @@ Cet exemple montre comment créer un <xref:System.Windows.Controls.ListView> con
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Pour trier les données selon le contenu d’une colonne, l’exemple définit un gestionnaire d’événements pour gérer les <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement qui se produit lorsque vous appuyez sur le bouton d’en-tête de colonne. L’exemple suivant montre comment spécifier un gestionnaire d’événements pour le <xref:System.Windows.Controls.GridViewColumnHeader> contrôle.  
+ Pour trier les données en fonction du contenu d’une colonne, l’exemple définit un gestionnaire d’événements pour gérer le <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement qui se produit lorsque vous appuyez sur le bouton d’en-tête de colonne. L’exemple suivant montre comment spécifier un gestionnaire d’événements pour le <xref:System.Windows.Controls.GridViewColumnHeader> contrôle.  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [Vue d’ensemble de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Vue d’ensemble de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [Vue d’ensemble de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [Vue d’ensemble de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

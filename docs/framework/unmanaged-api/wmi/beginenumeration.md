@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08406f7d93671b406b3c7cd8719a7a0e5e423184
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695723"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration, fonction
 Réinitialise l’énumérateur au début de l’énumération.  
@@ -54,7 +54,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | La combinaison d’indicateurs dans `lEnumFlags` n’est pas valide ou non valide argument a été spécifié. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | La combinaison d’indicateurs dans `lEnumFlags` n’est pas valide ou non valide argument a été spécifié. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Un deuxième appel à `BeginEnumeration` a été effectuée sans appel intermédiaire à [ `EndEnumeration` ](endenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible pour commencer une nouvelle énumération. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
@@ -69,40 +69,40 @@ Les indicateurs qui peuvent être passés en tant que le `lEnumFlags` argument s
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Inclure les propriétés qui constituent la clé uniquement. |
-|`WBEM_FLAG_REFS_ONLY` | 0 x 8 | Inclure les propriétés qui sont des références d’objet. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Inclure les propriétés qui constituent la clé uniquement. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Inclure les propriétés qui sont des références d’objet. |
 
 **Groupe 2**
 
 Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Limiter l’énumération aux propriétés du système. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Les propriétés locales et propagées mais exclut les propriétés système à partir de l’énumération. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Limiter l’énumération aux propriétés du système. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Les propriétés locales et propagées mais exclut les propriétés système à partir de l’énumération. |
 
 Pour les classes :
 
 Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0 x 100 | Limiter l’énumération aux propriétés de substitution dans la définition de classe. |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0 x 100 | Limiter l’énumération aux propriétés de substitution dans la définition de classe en cours et de nouvelles propriétés définies dans la classe. |
-| `WBEM_MASK_CLASS_CONDITION` | 0 x 300 | Un masque (au lieu d’un indicateur) à appliquer par rapport à un `lEnumFlags` valeur à vérifier si `WBEM_FLAG_CLASS_OVERRIDES_ONLY` ou `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` est définie. |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Limiter l’énumération aux propriétés de substitution dans la définition de classe. |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Limiter l’énumération aux propriétés de substitution dans la définition de classe en cours et de nouvelles propriétés définies dans la classe. |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Un masque (au lieu d’un indicateur) à appliquer par rapport à un `lEnumFlags` valeur à vérifier si `WBEM_FLAG_CLASS_OVERRIDES_ONLY` ou `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` est définie. |
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limiter l’énumération aux propriétés qui sont définies ou modifiées dans la classe elle-même. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Limiter l’énumération de propriétés qui sont héritées de classes de base. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limiter l’énumération de propriétés qui sont héritées de classes de base. |
 
 Pour les instances :
 
 Constante  |Value  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limiter l’énumération aux propriétés qui sont définies ou modifiées dans la classe elle-même. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Limiter l’énumération de propriétés qui sont héritées de classes de base. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limiter l’énumération de propriétés qui sont héritées de classes de base. |
 
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)
