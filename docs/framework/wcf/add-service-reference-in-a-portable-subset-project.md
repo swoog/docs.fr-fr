@@ -2,12 +2,12 @@
 title: Ajouter une référence de service à un projet de sous-ensemble portable
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: dd07ab5623a66f7ad4b666955027adcaea232db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681012"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Ajouter une référence de service à un projet de sous-ensemble portable
 Projets portables du sous-ensemble permettent aux programmeurs d’assembly .NET maintenir une arborescence source unique et le système de génération tout en prenant en charge plusieurs implémentations .NET (bureau, Silverlight, Windows Phone et XBOX). Projets portables du sous-ensemble référencent uniquement des bibliothèques portables .NET qui sont un assemblage .NET framework qui peut être utilisé sur n’importe quelle implémentation .NET.  
@@ -43,6 +43,6 @@ Projets portables du sous-ensemble permettent aux programmeurs d’assembly .NET
   
 14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> n'est pas pris en charge dans les projets portables du sous-ensemble.  
   
-## <a name="see-also"></a>Voir aussi  
- [Accès aux services à l’aide d’un client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Bibliothèque de classes portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+## <a name="see-also"></a>Voir aussi
+- [Accès aux services à l’aide d’un client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Bibliothèque de classes portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

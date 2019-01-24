@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55ae8a7773bf50c57d36b63412a787636a85ab63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ebb95b6131ae28dd453ab79c1c0b7b13fccb8e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745933"
 ---
 # <a name="etw-events-in-the-net-framework"></a>Événements ETW dans le .NET Framework
 Le suivi d’événements pour Windows (ETW) est un système de suivi hautes performances, à faible charge et scalable fourni par les systèmes d’exploitation Windows. Il complète la prise en charge du profilage et du débogage fournie par le .NET Framework et peut être utilisé pour dépanner un certain nombre de situations.  
@@ -26,7 +26,7 @@ Le suivi d’événements pour Windows (ETW) est un système de suivi hautes per
  [Événements ETW dans le Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
  Décrit comment les événements ETW du CLR complètent la prise en charge du profilage et du débogage fournie par le common language runtime.  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)  
- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Voir aussi
+- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

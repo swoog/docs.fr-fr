@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: ca1d33b2077736a9760f65857bffe4e96c4aeab0
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: 3be617d53ba87c35ae44f143da15a6b647eaa0d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680778"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;ajouter&gt; , élément de bypasslist (paramètres réseau)
 Ajoute une adresse IP ou le nom DNS à la liste de contournement proxy.  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<BypassList >  
+\<defaultProxy>  
+\<bypasslist>  
 \<add>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -50,7 +50,7 @@ Ajoute une adresse IP ou le nom DNS à la liste de contournement proxy.
   
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fournit un ensemble d’expressions régulières décrivant les adresses qui n’utilisent pas un proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fournit un ensemble d’expressions régulières décrivant les adresses qui n’utilisent pas un proxy.|  
   
 ## <a name="remarks"></a>Notes  
  Le `add` élément insère des expressions régulières décrivant les adresses IP ou des noms de serveur DNS à la liste des adresses qui contournent un serveur proxy.  
@@ -80,6 +80,6 @@ Ajoute une adresse IP ou le nom DNS à la liste de contournement proxy.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

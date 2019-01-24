@@ -2,47 +2,41 @@
 title: Liste des types de données (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Boolean data type [Visual Basic], supported types in Visual Basic
-- storage [Visual Basic], order of storage
-- data types [Visual Basic], Visual Basic
-- Single data type [Visual Basic], supported types in Visual Basic
-- notation [Visual Basic], scientific
-- memory requirements, data types
-- user-defined data types [Visual Basic], Visual Basic
-- Date data type [Visual Basic], Visual Basic
-- Visual Basic, data types
-- storage [Visual Basic], allocation
-- Integer data type [Visual Basic], Visual Basic data types
-- storage [Visual Basic], space
-- Variant data types [Visual Basic], supported types in Visual Basic
-- Char data type [Visual Basic], Visual Basic data types
-- intrinsic data types [Visual Basic]
-- memory consumption [Visual Basic], data types
-- single-precision numbers
-- data types [Visual Basic], order of storage
-- Long data type [Visual Basic], supported types in Visual Basic
-- String data type [Visual Basic], Visual Basic data types
-- storage order, data types
-- StructLayoutAttribute class, Visual Basic data type storage
-- scientific notation
-- Double data type [Visual Basic], Visual Basic data types
-- Byte data type [Visual Basic], Visual Basic data types
-- Object data type [Visual Basic], supported types in Visual Basic
-- data types [Visual Basic], storage allocation
-- double-precision numbers
-- data types [Visual Basic], summary
-- dates [Visual Basic], data types
-- strings [Visual Basic], data types
-- memory consumption
-- storage order, controlling in Visual Basic
-- data types [Visual Basic], memory requirements
+  - 'Boolean data type [Visual Basic], supported types in Visual Basic'
+  - 'storage [Visual Basic], order of storage'
+  - 'data types [Visual Basic], Visual Basic'
+  - 'Single data type [Visual Basic], supported types in Visual Basic'
+  - 'notation [Visual Basic], scientific'
+  - 'memory requirements, data types'
+  - 'user-defined data types [Visual Basic], Visual Basic'
+  - 'Date data type [Visual Basic], Visual Basic'
+  - 'Visual Basic, data types'
+  - 'storage [Visual Basic], allocation'
+  - 'Integer data type [Visual Basic], Visual Basic data types'
+  - 'storage [Visual Basic], space'
+  - 'Variant data types [Visual Basic], supported types in Visual Basic'
+  - 'Char data type [Visual Basic], Visual Basic data types'
+  - 'intrinsic data types [Visual Basic]'
+  - 'memory consumption [Visual Basic], data types'
+  - single-precision numbers
+  - 'data types [Visual Basic], order of storage'
+  - 'Long data type [Visual Basic], supported types in Visual Basic'
+  - 'String data type [Visual Basic], Visual Basic data types'
+  - 'storage order, data types'
+  - 'StructLayoutAttribute class, Visual Basic data type storage'
+  - scientific notation
+  - 'Double data type [Visual Basic], Visual Basic data types'
+  - 'Byte data type [Visual Basic], Visual Basic data types'
+  - 'Object data type [Visual Basic], supported types in Visual Basic'
+  - 'data types [Visual Basic], storage allocation'
+  - double-precision numbers
+  - 'data types [Visual Basic], summary'
+  - 'dates [Visual Basic], data types'
+  - 'strings [Visual Basic], data types'
+  - memory consumption
+  - 'storage order, controlling in Visual Basic'
+  - 'data types [Visual Basic], memory requirements'
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925910"
 ---
 # <a name="data-type-summary-visual-basic"></a>Liste des types de données (Visual Basic)
 Le tableau suivant présente les types de données Visual Basic, leurs types du common language runtime prise en charge, leur allocation de stockage nominal et leur plage de valeurs.  
@@ -57,11 +51,11 @@ Le tableau suivant présente les types de données Visual Basic, leurs types du 
 |[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (à virgule flottante double précision)|<xref:System.Double>|8 octets|-1, 79769313486231570E + 308 à - 4, 94065645841246544E-324 <sup>†</sup> pour les valeurs négatives ;<br /><br /> 4, 94065645841246544E-324 à 1, 79769313486231570E + 308 <sup>†</sup> pour les valeurs positives|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 octets|2,147,483,648 et 2 147 483 647 (signé)|  
 |[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (entier long)|<xref:System.Int64>|8 octets|-9,223,372,036,854,775,808 à 9,223,372,036,854,775,807 (9.2... E + 18 <sup>†</sup>) (signé)|  
-|[Objet](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (classe)|4 octets sur une plateforme 32 bits<br /><br /> 8 octets sur une plateforme 64 bits|N’importe quel type peut être stocké dans une variable de type `Object`|  
+|[Objet](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (class)|4 octets sur une plateforme 32 bits<br /><br /> 8 octets sur une plateforme 64 bits|N’importe quel type peut être stocké dans une variable de type `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 octet|-128 à 127 (signé)|  
 |[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (entier court)|<xref:System.Int16>|2 octets|-32 768 à 32 767 (signé)|  
 |[Seul](../../../visual-basic/language-reference/data-types/single-data-type.md) (à virgule flottante simple précision)|<xref:System.Single>|4 octets|-3,4028235E + 38 à - 1, 401298E-45 <sup>†</sup> pour les valeurs négatives ;<br /><br /> 1, 401298E-45 et 3,4028235E + 38 <sup>†</sup> pour les valeurs positives|  
-|[Chaîne](../../../visual-basic/language-reference/data-types/string-data-type.md) (de longueur variable)|<xref:System.String> (classe)|Dépend de l’implémentation de plateforme|0 à environ 2 milliards de caractères Unicode|  
+|[Chaîne](../../../visual-basic/language-reference/data-types/string-data-type.md) (de longueur variable)|<xref:System.String> (class)|Dépend de l’implémentation de plateforme|0 à environ 2 milliards de caractères Unicode|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 octets|0 à 4 294 967 295 (non signé)|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 octets|0 et 18,446,744,073,709,551,615 (1.8... E + 19 <sup>†</sup>) (non signé)|  
 |[Défini par l’utilisateur](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (structure)|(hérite de <xref:System.ValueType>)|Dépend de l’implémentation de plateforme|Chaque membre de la structure a une plage déterminée par son type de données et indépendante des plages des autres membres|  
@@ -91,10 +85,10 @@ Le tableau suivant présente les types de données Visual Basic, leurs types du 
 ### <a name="object-overhead"></a>Surcharge de l’objet  
  Un `Object` faisant référence à des données élémentaires ou composites de type utilise 4 octets en plus des données contenues dans le type de données.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Caractères de type](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Caractères de type](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

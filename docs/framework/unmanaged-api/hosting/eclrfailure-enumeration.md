@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef4e12015adc3d6e67ad9c8ba8b152cd775b85e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3109d5ba49b01f25c72aaa1c31c74984a683dd73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746529"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure, énumération
-Décrit l’ensemble des erreurs pour lequel un hôte peut définir des actions de stratégie.  
+Décrit l’ensemble des échecs pour lequel un hôte peut définir des actions de stratégie.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,28 +44,28 @@ typedef enum {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|Une erreur s’est produite pendant une tentative d’allouer une ressource (par exemple, un thread, un bloc de mémoire ou un verrou) dans une région de code non critique.|  
-|`FAIL_CriticalResource`|Une erreur s’est produite pendant une tentative d’allouer une ressource (par exemple, un thread, un bloc de mémoire ou un verrou) dans une région de code critique.|  
-|`FAIL_FatalRuntime`|Le common language runtime (CLR) n’est plus en mesure d’exécuter du code managé dans le processus. Désormais, les appels à toute fonction d’hébergement retournent une valeur HRESULT de HOST_E_CLRNOTAVAILABLE.|  
+|`FAIL_NonCriticalResource`|Une défaillance s’est produite pendant la tentative d’allouer une ressource (par exemple, un thread, un bloc de mémoire ou un verrou) dans une région de code non critique.|  
+|`FAIL_CriticalResource`|Une défaillance s’est produite pendant la tentative d’allouer une ressource (par exemple, un thread, un bloc de mémoire ou un verrou) dans une zone critique de code.|  
+|`FAIL_FatalRuntime`|Le common language runtime (CLR) n’est plus en mesure d’exécuter du code managé dans le processus. Désormais, les appels à des fonctions d’hébergement retournent une valeur HRESULT de HOST_E_CLRNOTAVAILABLE.|  
 |`FAIL_OrphanedLock`|Un thread n’a pas pu libérer un verrou lors du retour d’un <xref:System.AppDomain> objet. L’hôte ne peut pas définir cet échec pour provoquer l’abandon d’un thread.|  
 |`FAIL_StackOverflow`|Un débordement de pile s’est produite.|  
 |`FAIL_AccessViolation`|Une tentative a été effectuée pour lire ou écrire la mémoire protégée. Non pris en charge dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
-|`FAIL_CodeContract`|Un échec de contrat de code s’est produite. Consultez [les contrats de Code](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
+|`FAIL_CodeContract`|Un échec de contrat de code s’est produite. Consultez [contrats de Code](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Notes  
- Consultez le [ICLRPolicyManager::SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) méthode pour obtenir la liste de [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valeurs de l’hôte peut utiliser pour spécifier les actions de stratégie pour les conditions d’échec. Pour plus d’informations sur les régions non critiques et de code, consultez [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
+ Consultez le [ICLRPolicyManager::SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) méthode pour obtenir la liste de [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valeurs l’hôte peut utiliser pour spécifier les actions de stratégie pour les conditions d’échec. Pour plus d’informations sur les régions non critiques et de code, consultez [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRPolicyManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [SetActionOnFailure, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)  
- [IHostPolicyManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRPolicyManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [SetActionOnFailure, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)
+- [IHostPolicyManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
