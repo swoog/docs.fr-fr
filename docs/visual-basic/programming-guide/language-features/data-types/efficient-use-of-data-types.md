@@ -13,32 +13,32 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 6e71c4e2225bbcde3bb2bd20ae098f5600990051
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0cb67b4b26bf59b074bf5964f253c007fdbe719
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736167"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Utilisation efficace des types de données (Visual Basic)
-Les variables non déclarées et les variables déclarées sans type de données sont voient attribuer le `Object` type de données. Il est ainsi facile d’écrire rapidement des programmes, mais il peut les rendre à s’exécuter plus lentement.  
+Variables non déclarées et les variables déclarées sans type de données sont voient attribuer le `Object` type de données. Cela rend plus facile d’écrire rapidement des programmes, mais il peut les rendre s’exécute plus lentement.  
   
 ## <a name="strong-typing"></a>Typage fort  
- Spécifier les types de données pour toutes les variables est appelé *typage fort*. À l’aide d’un typage fort présente plusieurs avantages :  
+ Spécifier les types de données pour toutes les variables est appelé *un typage fort*. À l’aide d’un typage fort présente plusieurs avantages :  
   
--   Il permet la prise en charge IntelliSense pour vos variables. Cela vous permet de vous permet de voir leurs propriétés et autres membres que vous entrez dans le code.  
+-   Il permet la prise en charge IntelliSense pour vos variables. Cela vous permet de vous permet de voir leurs propriétés et autres membres en cours de frappe dans le code.  
   
--   Il bénéficie de la vérification du type du compilateur. Il intercepte les instructions qui peuvent échouer au moment de l’exécution en raison d’erreurs de dépassement de capacité. Il intercepte également les appels aux méthodes sur des objets qui ne les prennent pas en charge.  
+-   Il tire parti de la vérification du type du compilateur. Il intercepte les instructions qui peuvent échouer au moment de l’exécution en raison d’erreurs de dépassement de capacité. Il intercepte également les appels aux méthodes sur des objets qui ne les prennent pas en charge.  
   
--   Il en résulte une exécution plus rapide de votre code.  
+-   Il en résulte dans une exécution plus rapide de votre code.  
   
-## <a name="most-efficient-data-types"></a>Types de données plus efficaces.  
- Pour les variables qui ne contiennent jamais de fractions, les types de données intégraux sont plus efficaces que les types intégraux. En Visual Basic, `Integer` et `UInteger` sont les types numériques la plus efficaces.  
+## <a name="most-efficient-data-types"></a>Types de données plus efficaces  
+ Pour les variables qui ne contiennent jamais de fractions, les types de données intégraux sont plus efficaces que les types non intégraux. En Visual Basic, `Integer` et `UInteger` sont les types numériques plus efficaces.  
   
- Pour les nombres fractionnaires, `Double` est le type de données la plus efficace, car les processeurs sur les plateformes actuelles exécutent des opérations à virgule flottante à double précision. Toutefois, les opérations avec `Double` ne sont pas aussi rapides qu’avec les types intégraux, tels que `Integer`.  
+ Pour les nombres fractionnaires, `Double` est le type de données plus efficace, car les processeurs sur les plateformes actuelles exécutent des opérations à virgule flottante à double précision. Toutefois, les opérations avec `Double` ne sont pas aussi rapides qu’avec les types intégraux tels que `Integer`.  
   
-## <a name="specifying-data-type"></a>Spécification du Type de données  
- Utilisez le [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) pour déclarer une variable d’un type spécifique. Vous pouvez spécifier simultanément son niveau d’accès à l’aide de la [Public](../../../../visual-basic/language-reference/modifiers/public.md), [protégé](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), ou [privé](../../../../visual-basic/language-reference/modifiers/private.md) (mot clé), comme dans le exemple suivant.  
+## <a name="specifying-data-type"></a>Spécifiant le Type de données  
+ Utilisez le [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) pour déclarer une variable d’un type spécifique. Vous pouvez spécifier simultanément son niveau d’accès à l’aide de la [Public](../../../../visual-basic/language-reference/modifiers/public.md), [protégé](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), ou [privé](../../../../visual-basic/language-reference/modifiers/private.md) mot clé, comme dans le exemple suivant.  
   
 ```  
 Private x As Double  
@@ -46,14 +46,14 @@ Protected s As String
 ```  
   
 ## <a name="character-conversion"></a>Conversion de caractères  
- Le `AscW` et `ChrW` fonctions opèrent en Unicode. Vous devez les utiliser de préférence à `Asc` et `Chr`, qui doit convertir vers et depuis Unicode.  
+ Le `AscW` et `ChrW` fonctions opèrent en Unicode. Vous devez les utiliser de préférence à `Asc` et `Chr`, qui doit traduire dans et hors d’Unicode.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Types de données numériques](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- [Déclaration de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Utilisation de la fonctionnalité IntelliSense](/visualstudio/ide/using-intellisense)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Types de données numériques](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
+- [Déclaration de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Utilisation de la fonctionnalité IntelliSense](/visualstudio/ide/using-intellisense)

@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : mise à jour dynamique'
+title: 'Procédure : Mise à jour dynamique'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 597a4f8776398769307214090a8b463981bc0d46
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a021e6b550baf8fb7034a163179e0626bf42cfb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736596"
 ---
-# <a name="how-to-dynamic-update"></a>Procédure : mise à jour dynamique
+# <a name="how-to-dynamic-update"></a>Procédure : Mise à jour dynamique
 Cette rubrique présente les étapes de base nécessaires pour créer et mettre à jour de manière dynamique la configuration de routage. Dans cet exemple, la configuration de routage initiale provient du fichier de configuration et route tous les messages vers le service de calculatrice regularCalc, mais elle est ensuite mise à jour par programme pour modifier le point de terminaison de destination du service roundingCalc.  
   
 > [!NOTE]
@@ -296,5 +296,5 @@ namespace Microsoft.Samples.AdvancedFilters
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Services de routage](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Services de routage](../../../../docs/framework/wcf/samples/routing-services.md)

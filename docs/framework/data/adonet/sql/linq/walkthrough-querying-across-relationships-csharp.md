@@ -1,15 +1,15 @@
 ---
-title: 'Procédure pas à pas : interrogation de relations (C#)'
+title: 'Procédure pas à pas : Interrogation de relations (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a438b0ae83a223abfc35643915e6eedd5be068a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563663"
 ---
-# <a name="walkthrough-querying-across-relationships-c"></a>Procédure pas à pas : interrogation de relations (C#)
+# <a name="walkthrough-querying-across-relationships-c"></a>Procédure pas à pas : Interrogation de relations (C#)
 Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* pour représenter les relations de clé étrangère dans la base de données.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -17,7 +17,7 @@ Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](..
  Cette procédure pas à pas a été écrite à l'aide des paramètres de développement Visual C#.  
   
 ## <a name="prerequisites"></a>Prérequis  
- Vous devez avoir terminé [procédure pas à pas : requête (c#) et modèle d’objet Simple](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Cette procédure pas à pas est basée sur cette dernière, y compris la présence du fichier northwnd.mdf dans c:\linqtest5.  
+ Vous devez avoir terminé [procédure pas à pas : Requête et modèle objet simples (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Cette procédure pas à pas est basée sur cette dernière, y compris la présence du fichier northwnd.mdf dans c:\linqtest5.  
   
 ## <a name="overview"></a>Vue d'ensemble  
  Cette procédure pas à pas se compose de trois tâches principales :  
@@ -86,7 +86,7 @@ Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](..
 4.  Appuyez sur Entrée dans la fenêtre de console pour arrêter le débogage.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- La procédure pas à pas suivante ([procédure pas à pas : manipulation de données (c#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) montre comment manipuler les données. Cette procédure pas à pas ne requiert pas d'enregistrer les deux procédures pas à pas de cette série que vous avez déjà terminées.  
+ La procédure pas à pas suivante ([procédure pas à pas : Manipulation des données (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) montre comment manipuler des données. Cette procédure pas à pas ne requiert pas d'enregistrer les deux procédures pas à pas de cette série que vous avez déjà terminées.  
   
-## <a name="see-also"></a>Voir aussi  
- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Voir aussi
+- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

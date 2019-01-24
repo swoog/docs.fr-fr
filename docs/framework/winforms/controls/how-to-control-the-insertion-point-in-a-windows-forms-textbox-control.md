@@ -1,5 +1,5 @@
 ---
-title: "Comment : contrôler le point d'insertion dans un contrôle TextBox Windows Forms"
+title: 'Procédure : Contrôler le Point d’Insertion dans un contrôle de zone de texte Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: ced563eb063bbcc429cdf1447a0158459e5d5c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ed49cac8341551dd0900a8468990e314a16e7b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660188"
 ---
-# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Comment : contrôler le point d'insertion dans un contrôle TextBox Windows Forms
-Lorsque les Windows Forms <xref:System.Windows.Forms.TextBox> contrôle reçoit d’abord le focus, l’insertion de la valeur par défaut dans la zone de texte située à gauche du texte existant. L’utilisateur peut déplacer le point d’insertion avec le clavier ou la souris. Si la zone de texte perd, puis reprend le focus, le point d’insertion sera, là où l’utilisateur a placé en dernier.  
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procédure : Contrôler le Point d’Insertion dans un contrôle de zone de texte Windows Forms
+Lorsqu’un formulaire Windows <xref:System.Windows.Forms.TextBox> contrôle reçoit tout d’abord le focus, l’insertion de la valeur par défaut dans la zone de texte est à gauche du texte existant. L’utilisateur peut déplacer le point d’insertion avec le clavier ou la souris. Si la zone de texte perd, puis reprend le focus, le point d’insertion sera, là où l’utilisateur a placé en dernier.  
   
- Dans certains cas, ce comportement peut être déconcertant pour l’utilisateur. Dans un traitement de texte, l’utilisateur peut s’y attendre nouveaux caractères apparaissent après le texte existant. Dans une application d’entrée de données, l’utilisateur peut attendre des nouveaux caractères à remplacer l’entrée existante. Le <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> et <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propriétés vous permettent de modifier le comportement selon vos besoins.  
+ Dans certains cas, ce comportement peut être déconcertant pour l’utilisateur. Dans un traitement de texte, l’utilisateur peut attendre de nouveaux caractères apparaissent après le texte existant. Dans une application de saisie de données, l’utilisateur peut attendre de nouveaux caractères à remplacer l’entrée existante. Le <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> et <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propriétés vous permettent de modifier le comportement selon vos besoins.  
   
-### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>Pour contrôler le point d’insertion dans un contrôle de zone de texte  
+### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>Pour contrôler le point d’insertion dans un contrôle TextBox  
   
 1.  Affectez à la propriété <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> une valeur appropriée. Zéro place le point d’insertion immédiatement à gauche du premier caractère.  
   
@@ -55,18 +55,18 @@ Lorsque les Windows Forms <xref:System.Windows.Forms.TextBox> contrôle reçoit 
     ```  
   
 ## <a name="making-the-insertion-point-visible-by-default"></a>Le fait de rendre le Point d’Insertion Visible par défaut  
- Le <xref:System.Windows.Forms.TextBox> point d’insertion est visible par défaut dans une nouveau formulaire uniquement si le <xref:System.Windows.Forms.TextBox> contrôle apparaît en premier dans l’ordre de tabulation. Sinon, le point d’insertion s’affiche uniquement si vous donnez le <xref:System.Windows.Forms.TextBox> le focus avec la souris ou du clavier.  
+ Le <xref:System.Windows.Forms.TextBox> point d’insertion est visible par défaut dans un nouveau formulaire uniquement si le <xref:System.Windows.Forms.TextBox> contrôle apparaît en premier dans l’ordre de tabulation. Sinon, le point d’insertion s’affiche uniquement si vous donnez le <xref:System.Windows.Forms.TextBox> le focus du clavier ou la souris.  
   
-#### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Pour que l’insertion de zone de texte pointent visible par défaut sur un formulaire  
+#### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Pour que l’insertion de zone de texte pointent visible par défaut sur un nouveau formulaire  
   
 -   Définir le <xref:System.Windows.Forms.TextBox> du contrôle <xref:System.Windows.Forms.Control.TabIndex%2A> propriété `0`.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.TextBox>  
- [Vue d’ensemble du contrôle TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Guide pratique pour créer une zone de texte pour mot de passe avec le contrôle TextBox Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [Guide pratique pour créer une zone de texte en lecture seule](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Guide pratique pour insérer des guillemets dans une chaîne](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [Guide pratique pour sélectionner du texte dans le contrôle TextBox Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [Guide pratique pour afficher des lignes multiples dans le contrôle TextBox Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox, contrôle](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.TextBox>
+- [Vue d’ensemble du contrôle TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [Guide pratique pour Créer une zone de texte mot de passe avec le contrôle de zone de texte Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Guide pratique pour Créer une zone de texte en lecture seule](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [Guide pratique pour Placez des guillemets doubles dans une chaîne](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Guide pratique pour Sélectionner du texte dans le contrôle de zone de texte Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Guide pratique pour Afficher plusieurs lignes dans le contrôle de zone de texte Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox, contrôle](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

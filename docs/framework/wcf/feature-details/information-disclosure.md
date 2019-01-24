@@ -2,12 +2,12 @@
 title: Divulgation d'informations
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 057984dada86019cd8e0a619523d717d0045062f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588243"
 ---
 # <a name="information-disclosure"></a>Divulgation d'informations
 La divulgation d'informations permet à un intrus d'obtenir des informations précieuses à propos d'un système. Par conséquent, examinez toujours les informations que vous révélez et demandez-vous si elles peuvent être utilisées par un utilisateur malveillant. Vous trouverez ci-dessous la liste des attaques par divulgation d’informations possibles et les moyens d’atténuation pour chacune d’elles.  
@@ -39,7 +39,7 @@ La divulgation d'informations permet à un intrus d'obtenir des informations pr�
 ## <a name="ntlm"></a>NTLM  
  Par défaut, dans l'environnement de domaine Windows, l'authentification Windows utilise le protocole Kerberos pour authentifier et autoriser des utilisateurs. Si le protocole Kerberos ne peut pas être utilisé pour quelque raison que ce soit, l'authentification NTLM (NT LAN Manager) est utilisée en guise de secours. Vous pouvez désactiver ce comportement en attribuant à la propriété <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> la valeur `false`. Sachez que l'activation de NTLM entraîne les problèmes suivants :  
   
--   NTLM expose le nom d'utilisateur du client. Si le nom d'utilisateur doit rester confidentiel, affectez `AllowNTLM` à la propriété `false` sur la liaison.  
+-   NTLM expose le nom d'utilisateur du client. Si le nom d’utilisateur doit rester confidentiel, affectez `AllowNTLM` à la propriété `false` sur la liaison.  
   
 -   NTLM n'assure pas l'authentification du serveur. Par conséquent, le client ne peut pas vérifier qu'il communique avec le bon service lorsque vous utilisez le protocole d'authentification NTLM.  
   
@@ -56,10 +56,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Si le domaine est spécifié, mais qu’un nom de principal du service non valide est spécifié à l’aide de la fonctionnalité d’identité du point de terminaison, alors NTLM est utilisé. Pour plus d’informations sur la façon dont l’identité du point de terminaison est spécifiée, consultez [identité de Service et d’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>Voir aussi
+- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

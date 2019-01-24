@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e6fee91146e99ba1f63ecafcbbdaae9d42675848
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731138"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT, structure
 Fournit des informations sur la disposition d'un objet Array en mémoire.  
@@ -47,27 +47,27 @@ typedef struct COR_ARRAY_LAYOUT {
 |------------|-----------------|  
 |`componentID`|L’identificateur du type d’objets contenus dans le tableau.|  
 |`componentType`|Une valeur d’énumération CorElementType qui indique si le composant est une référence de garbage collection, une classe value ou un type primitif.|  
-|`firstElementOffset`|Offset au premier élément du tableau.|  
+|`firstElementOffset`|Le décalage vers le premier élément du tableau.|  
 |`elementSize`|La taille de chaque élément.|  
-|`countOffset`|Offset au nombre d’éléments dans le tableau.|  
+|`countOffset`|Le décalage pour le nombre d’éléments dans le tableau.|  
 |`rankSize`|La taille du rang, en octets.|  
 |`numRanks`|Le nombre de rangées dans le tableau.|  
-|`rankOffset`|Le décalage de départ de rangs.|  
+|`rankOffset`|L’offset auquel commencer les rangs.|  
   
 ## <a name="remarks"></a>Notes  
- Le `rankSize` champ spécifie la taille d’un rang dans un tableau multidimensionnel. Elle est correcte pour les tableaux unidimensionnels ainsi.  
+ Le `rankSize` champ spécifie la taille d’un rang dans un tableau multidimensionnel. Elle est précise dans les tableaux unidimensionnels également.  
   
  La valeur de `numRanks` est 1 pour un tableau unidimensionnel et `N` pour un tableau multidimensionnel de `N` dimensions.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

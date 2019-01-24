@@ -6,24 +6,24 @@ helpviewer_keywords:
 - performance [Windows Forms], DataGridView control
 - performance tuning [Windows Forms], data grids
 ms.assetid: 6ccbff28-a0ff-41e4-b601-61b31b61851d
-ms.openlocfilehash: 97bf6f36ce029f879c3524fa92df08a483c2cb77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 556e3f682b6b863f8ab350c1b8ca7409a04a94fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729033"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Réglage des performances dans le contrôle DataGridView Windows Forms
-Lorsque vous travaillez avec grandes quantités de données, le `DataGridView` contrôle peut consommer une grande quantité de mémoire, sauf si vous l’utilisez avec précaution. Sur les clients avec une mémoire limitée, vous pouvez éviter certains cette surcharge en évitant les fonctionnalités qui ont un coût de mémoire élevée. Vous pouvez également gérer tout ou partie de la maintenance des données et les tâches de récupération à l’aide du mode virtuel afin de personnaliser l’utilisation de la mémoire pour votre scénario.  
+Lorsque vous travaillez avec grandes quantités de données, le `DataGridView` contrôle peut consommer une grande quantité de mémoire, sauf si vous l’utilisez avec précaution. Sur des clients avec une mémoire limitée, vous pouvez éviter certaines de cette surcharge en évitant les fonctionnalités qui ont un coût de mémoire élevée. Vous pouvez également gérer tout ou partie de la maintenance des données et les tâches de récupération vous-même à l’aide du mode virtuel afin de personnaliser l’utilisation de la mémoire pour votre scénario.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Meilleures pratiques pour la mise à l'échelle du contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
- Décrit comment utiliser le `DataGridView` contrôle de façon à éviter de trop handicaper les performances et l’utilisation inutile de mémoire lorsque vous travaillez avec grandes quantités de données.  
+ Décrit comment utiliser le `DataGridView` contrôle d’une manière qui évite les pénalités de performances et l’utilisation de mémoire inutiles lorsque vous travaillez avec grandes quantités de données.  
   
  [Mode virtuel dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
  Décrit comment utiliser le mode virtuel pour compléter ou remplacer le mécanisme de liaison de données standard.  
   
- [Procédure pas à pas : implémentation du mode virtuel dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ [Procédure pas à pas : Implémentation du Mode virtuel dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
  Décrit comment implémenter des gestionnaires pour plusieurs événements de mode virtuel. Montre également comment implémenter la restauration au niveau des lignes et validation pour les modifications de l’utilisateur.  
   
  [Implémentation du mode virtuel avec le chargement immédiat des données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
@@ -36,6 +36,6 @@ Lorsque vous travaillez avec grandes quantités de données, le `DataGridView` c
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  Fournit la documentation de référence pour le <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propriété.  
   
-## <a name="see-also"></a>Voir aussi  
- [DataGridView, contrôle](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Modes d’affichage des données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Voir aussi
+- [DataGridView, contrôle](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Modes d’affichage des données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

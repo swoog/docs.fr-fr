@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e18d64bdc67bfa5dce01c9125ee2e8585ab7db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671952"
 ---
 # <a name="method-etw-events"></a>Événements ETW de méthode
 <a name="top"></a> Ces événements collectent des informations spécifiques aux méthodes. La charge utile de ces événements est requise pour la résolution des symboles. De plus, ces événements fournissent des informations utiles telles que le nombre de fois qu'une méthode a été appelée.  
@@ -38,7 +38,7 @@ ms.locfileid: "33398103"
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
 |`JITKeyword` (0x10)|Informatif (4)|  
-|Fournisseur de runtime `NGenKeyword` (0x20)|Informatif (4)|  
+|`NGenKeyword` (0x20)|Informatif (4)|  
 |`JitRundownKeyword` (0x10)|Informatif (4)|  
 |`NGENRundownKeyword` (0x20)|Informatif (4)|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33398103"
 |MethodStartAddress|win:UInt64|Adresse de début de la méthode.|  
 |MethodSize|win:UInt32|Taille de la méthode.|  
 |MethodToken|win:UInt32|0 pour les méthodes dynamiques et les programmes d'assistance JIT.|  
-|MethodFlags|win:UInt32|0x1 : méthode dynamique.<br /><br /> 0x2 : méthode générique.<br /><br /> 0x4 : méthode de code compilé juste-à-temps (JIT) (ou code d'image natif NGEN).<br /><br /> 0x8 : méthode d'assistance.|  
+|MethodFlags|win:UInt32|0 x 1 : Méthode dynamique.<br /><br /> 0 x 2 : Méthode générique.<br /><br /> 0 x 4 : Méthode de code compilé par JIT (sinon code d’image natif NGEN).<br /><br /> 0 x 8 : Méthode d’assistance.|  
 |ClrInstanceID|win:UInt16|ID unique de l'instance de CLR ou CoreCLR.|  
   
  [Retour au début](#top)  
@@ -79,7 +79,7 @@ ms.locfileid: "33398103"
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
-|Événement|ID de l'événement|Description|  
+|Événement|ID d'événement|Description|  
 |-----------|--------------|----------------|  
 |`DCStartInit_V1`|147|Envoyé avant le démarrage de l'énumération pendant un arrêt de début.|  
 |`DCStartComplete_V1`|145|Envoyé à la fin de l'énumération pendant un arrêt de début.|  
@@ -100,10 +100,10 @@ ms.locfileid: "33398103"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|Fournisseur de runtime `JITKeyword` (0x10)|Détaillé (5)|  
+|`JITKeyword` (0x10)|Détaillé (5)|  
 |`NGenKeyword` (0x20)|Détaillé (5)|  
-|Fournisseur d'arrêt `JitRundownKeyword` (0x10)|Détaillé (5)|  
-|Fournisseur d'arrêt `NGENRundownKeyword` (0x20)|Détaillé (5)|  
+|`JitRundownKeyword` (0x10)|Détaillé (5)|  
+|`NGENRundownKeyword` (0x20)|Détaillé (5)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "33398103"
 |MethodStartAddress|win:UInt64|Adresse de début.|  
 |MethodSize|win:UInt32|Longueur de la méthode.|  
 |MethodToken|win:UInt32|0 pour les méthodes dynamiques et les programmes d'assistance JIT.|  
-|MethodFlags|win:UInt32|0x1 : méthode dynamique.<br /><br /> 0x2 : méthode générique.<br /><br /> 0x4 : méthode compilée juste-à-temps (JIT) (ou générée par NGen.exe)<br /><br /> 0x8 : méthode d'assistance.|  
+|MethodFlags|win:UInt32|0 x 1 : Méthode dynamique.<br /><br /> 0 x 2 : Méthode générique.<br /><br /> 0 x 4 : Méthode compilé par JIT (ou générée par NGen.exe)<br /><br /> 0 x 8 : Méthode d’assistance.|  
 |MethodNameSpace|win:UnicodeString|Nom d'espace de noms complet associé à la méthode.|  
 |MethodName|win:UnicodeString|Nom complet de classe associé à la méthode.|  
 |MethodSignature|win:UnicodeString|Signature de la méthode (liste de noms de types séparés par des virgules).|  
@@ -137,10 +137,10 @@ ms.locfileid: "33398103"
   
 |Mot clé pour déclencher l'événement|Niveau|  
 |-----------------------------------|-----------|  
-|Fournisseur de runtime `JITKeyword` (0x10)|Détaillé (5)|  
+|`JITKeyword` (0x10)|Détaillé (5)|  
 |`NGenKeyword` (0x20)|Détaillé (5)|  
-|Fournisseur d'arrêt `JitRundownKeyword` (0x10)|Détaillé (5)|  
-|Fournisseur d'arrêt `NGENRundownKeyword` (0x20)|Détaillé (5)|  
+|`JitRundownKeyword` (0x10)|Détaillé (5)|  
+|`NGENRundownKeyword` (0x20)|Détaillé (5)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -161,5 +161,5 @@ ms.locfileid: "33398103"
 |MethodSignature|win:UnicodeString|Signature de la méthode (liste de noms de types séparés par des virgules).|  
 |ClrInstanceID|win:UInt16|ID unique de l'instance de CLR ou CoreCLR.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Voir aussi
+- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

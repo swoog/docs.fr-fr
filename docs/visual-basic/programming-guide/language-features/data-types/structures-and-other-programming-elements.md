@@ -8,18 +8,18 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 7b375c5a45998fc0bd06f7c075f23a30dd377295
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed406254435602dcd98bc97716cc88710a470ed1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679589"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Structures et autres éléments de programmation (Visual Basic)
-Vous pouvez utiliser des structures conjointement avec les tableaux, les objets et les procédures, ainsi qu’entre eux. Les interactions utilisent la même syntaxe que ces éléments individuellement.  
+Vous pouvez utiliser des structures en conjonction avec les tableaux, les objets et les procédures, ainsi qu’entre eux. Les interactions utilisent la même syntaxe que ces éléments individuellement.  
   
 > [!NOTE]
->  Vous ne peut pas initialiser un des éléments de structure dans la déclaration de structure. Vous pouvez assigner des valeurs uniquement aux éléments d’une variable qui a été déclaré comme étant d’un type structure.  
+>  Vous ne peut pas initialiser un des éléments de structure dans la déclaration de structure. Vous pouvez assigner des valeurs uniquement aux éléments d’une variable qui a été déclarée comme étant d’un type structure.  
   
 ## <a name="structures-and-arrays"></a>Structures et les tableaux  
  Une structure peut contenir un tableau comme un ou plusieurs de ses éléments. L'exemple suivant illustre ce comportement.  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- L’exemple précédent passe la structure *par référence*, ce qui permet à la procédure de modifier ses éléments afin que les modifications prennent effet dans le code appelant. Si vous souhaitez protéger une structure contre de telles modifications, passez par valeur.  
+ L’exemple précédent passe la structure *par référence*, ce qui permet à la procédure modifier ses éléments afin que les modifications prennent effet dans le code appelant. Si vous souhaitez protéger une structure contre de telles modifications, passez par valeur.  
   
- Vous pouvez également retourner une structure d’un `Function` procédure. L'exemple suivant illustre ce comportement.  
+ Vous pouvez également retourner une structure à partir d’un `Function` procédure. L'exemple suivant illustre ce comportement.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -122,14 +122,14 @@ allSystems(1).diskDrives(0).type = "Floppy"
   
  Les structures peuvent contenir d’autres structures à une profondeur arbitraire.  
   
-## <a name="see-also"></a>Voir aussi  
- [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Types de données élémentaires](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Types valeur et types référence](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Dépannage des types de données](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Guide pratique : déclarer une structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Variables de structure](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- [Structures et classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Structure (instruction)](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>Voir aussi
+- [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Types de données élémentaires](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Dépannage des types de données](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Guide pratique pour déclarer une structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Variables de structure](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
+- [Structures et classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Structure (instruction)](../../../../visual-basic/language-reference/statements/structure-statement.md)

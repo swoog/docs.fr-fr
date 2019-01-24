@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: c6d4244ce72dedee50b65ba19978149ce86b9e87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6676328d0c1ea459f5934b5f9e2cb66580adad40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737200"
 ---
 # <a name="39lttypenamegt39-is-a-delegate-type"></a>&#39;&lt;TypeName&gt; &#39; est un type délégué
-'\<nom_type >' est un type délégué. Une construction déléguée accepte une seule expression AddressOf en tant que liste d’arguments. Souvent une expression AddressOf peut être utilisée au lieu d’une construction de délégué.  
+'\<nom_type >' est un type délégué. Une construction déléguée accepte une seule expression AddressOf comme une liste d’arguments. Une expression AddressOf peut souvent être utilisée au lieu d’une construction de délégué.  
   
- A `New` clause crée une instance d’une classe déléguée fournit une liste d’arguments non valide au constructeur délégué.  
+ Un `New` clause création d’une instance d’une classe déléguée fournit une liste d’arguments non valide au constructeur délégué.  
   
  Vous pouvez fournir une seule `AddressOf` expression lors de la création d’une nouvelle instance de délégué.  
   
@@ -27,10 +27,10 @@ ms.locfileid: "33595646"
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Utiliser un seul `AddressOf` expression dans la liste d’arguments pour la classe déléguée dans la `New` clause.  
+-   Utiliser une seule `AddressOf` expression dans la liste d’arguments pour la classe déléguée dans le `New` clause.  
   
-## <a name="see-also"></a>Voir aussi  
- [New (opérateur)](../../../visual-basic/language-reference/operators/new-operator.md)  
- [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Guide pratique : appeler une méthode déléguée](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+## <a name="see-also"></a>Voir aussi
+- [New (opérateur)](../../../visual-basic/language-reference/operators/new-operator.md)
+- [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Guide pratique pour Appeler une méthode déléguée](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

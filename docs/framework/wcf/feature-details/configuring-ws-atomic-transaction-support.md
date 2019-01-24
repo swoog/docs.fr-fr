@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592430"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configuration de la prise en charge WS-Atomic Transaction
 Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransaction (WS-AT) à l'aide de l'utilitaire de configuration WS-AT.  
@@ -54,7 +54,7 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
 ### <a name="creating-and-exporting-certificates"></a>Création et exportation de certificats  
  Cette procédure requiert le composant logiciel enfichable MMC Certificats. Ce composant logiciel enfichable est accessible en ouvrant le menu Démarrer/Exécuter, en tapant « mmc » dans la zone d'entrée et en appuyant sur OK. Ensuite, dans le **Console1** fenêtre, accédez à **la fichier/ajouter ou supprimer** -composant logiciel enfichable, cliquez sur Ajouter et choisissez **certificats** à partir de la **autonome disponible Composants logiciels enfichables** liste. Enfin, sélectionnez **compte d’ordinateur** à gérer, puis cliquez sur **OK**. Le **certificats** nœud apparaît dans la console du composant logiciel enfichable.  
   
- Vous devez déjà posséder les certificats requis pour établir la confiance. Pour savoir comment créer et installer de nouveaux certificats avant les étapes suivantes, consultez [Comment : créer et installer des certificats Client temporaires dans WCF pendant le développement](https://go.microsoft.com/fwlink/?LinkId=158925).  
+ Vous devez déjà posséder les certificats requis pour établir la confiance. Pour savoir comment créer et installer de nouveaux certificats avant les étapes suivantes, consultez [Comment : Créer et installer des certificats Client temporaires dans WCF pendant le développement](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
 1.  Sur l'ordinateur A, à l'aide du composant logiciel enfichable MMC Certificats, importez le certificat existant (certA) dans les magasins LocalMachine\MY (Nœud personnel) et LocalMachine\ROOT (nœud de l'Autorité de certification racine de confiance). Pour importer un certificat à un nœud spécifique, cliquez sur le nœud et choisissez **toutes les tâches/importer**.  
   
@@ -118,6 +118,6 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
   
 -   31 : en clair  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
- [Composant logiciel enfichable MMC Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Composant logiciel enfichable MMC Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

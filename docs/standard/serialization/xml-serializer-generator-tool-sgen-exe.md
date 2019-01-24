@@ -2,12 +2,12 @@
 title: Outil XML Serializer Generator (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 2091c75f5aeef8b64ac9afa361f28dbe0b76530b
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: aa8671146c241c2867c373aacf3cd12f12aaeb1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743554"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Outil XML Serializer Generator (Sgen.exe)
 L'outil XML Serializer Generator crée un assembly de sérialisation XML pour les types dans un assembly spécifié afin d'améliorer les performances de démarrage d'un <xref:System.Xml.Serialization.XmlSerializer> lorsqu'il sérialise ou désérialise les objets des types spécifiés.  
@@ -22,14 +22,14 @@ sgen [options]
   
 |Option|Description|  
 |------------|-----------------|  
-|**/a\[m de l’assembly\]:**_nom de fichier_|Génère le code de sérialisation pour tous les types contenus dans l’assembly ou le fichier exécutable spécifié par *nom_fichier*. Un seul nom de fichier peut être fourni. Si cet argument est répété, le dernier nom de fichier est utilisé.|  
-|**/c\[es\]:**_options_|Spécifie les options à passer au compilateur C#. Toutes les options csc.exe sont prises en charge à mesure qu'elles sont passées au compilateur. Cette option peut être utilisée pour spécifier que l'assembly doit être signé et pour indiquer le fichier de clé.|  
+|**/a\[ssembly\]:**_filename_|Génère le code de sérialisation pour tous les types contenus dans l’assembly ou le fichier exécutable spécifié par *nom_fichier*. Un seul nom de fichier peut être fourni. Si cet argument est répété, le dernier nom de fichier est utilisé.|  
+|**/c\[ompiler\]:**_options_|Spécifie les options à passer au compilateur C#. Toutes les options csc.exe sont prises en charge à mesure qu'elles sont passées au compilateur. Cette option peut être utilisée pour spécifier que l'assembly doit être signé et pour indiquer le fichier de clé.|  
 |**/d\[ebug\]**|Génère une image qui peut être utilisée avec un débogueur.|  
-|**/f\[forcer\]**|Force l'écrasement par réécriture d'un assembly existant du même nom. La valeur par défaut est **false**.|  
+|**/f\[orce\]**|Force l'écrasement par réécriture d'un assembly existant du même nom. La valeur par défaut est **false**.|  
 |**/help ou /?**|Affiche la syntaxe et les options de commande de l'outil.|  
-|**/k\[erver\]**|Efface la suppression des fichiers source générés et d'autres fichiers temporaires une fois qu'ils ont été compilés dans l'assembly de sérialisation. Cette option peut être utilisée afin de déterminer si l'outil génère le code de sérialisation pour un type particulier.|  
+|**/k\[eep\]**|Efface la suppression des fichiers source générés et d'autres fichiers temporaires une fois qu'ils ont été compilés dans l'assembly de sérialisation. Cette option peut être utilisée afin de déterminer si l'outil génère le code de sérialisation pour un type particulier.|  
 |**/n\[ologo\]**|Supprime l'affichage de la bannière de démarrage Microsoft.|  
-|**/ o\[ut\]:**_chemin d’accès_|Spécifie le répertoire dans lequel enregistrer l'assembly généré. **Remarque :**  Le nom de l'assembly généré est composé du nom de l'assembly d'entrée suivi de"xmlSerializers.dll".|  
+|**/o\[ut\]:**_path_|Spécifie le répertoire dans lequel enregistrer l'assembly généré. **Remarque :**  Le nom de l'assembly généré est composé du nom de l'assembly d'entrée suivi de"xmlSerializers.dll".|  
 |**/p\[roxytypes\]**|Génère un code de sérialisation uniquement pour les types de proxy de service Web XML.|  
 |**/r\[eference\]:**_assemblyfiles_|Spécifie les assemblys référencés par les types qui requièrent la sérialisation XML. Accepte plusieurs fichiers d'assembly séparés par des virgules.|  
 |**/s\[ilent\]**|Supprime l'affichage des messages indiquant la réussite des opérations.|  
@@ -57,6 +57,6 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Outils](../../../docs/framework/tools/index.md)  
-- [Vue d’ensemble des Services Web XML](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+- [Outils](../../../docs/framework/tools/index.md)
+- [Vue d’ensemble des Services Web XML](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)
 - [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

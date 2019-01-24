@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662736"
 ---
 # <a name="wpf-add-ins-overview"></a>Vue d'ensemble des compléments WPF
 <a name="Introduction"></a> Le .NET Framework inclut un modèle de complément, qui permet aux développeurs de créer des applications qui prennent en charge d’extensibilité des compléments. Ce modèle de complément permet de créer des compléments qui s’intègrent aux applications et étendent leurs fonctionnalités. Dans certains scénarios, les applications doivent également afficher les interfaces utilisateur qui sont fournies par des compléments. Cette rubrique montre comment WPF étend le modèle de complément .NET Framework pour activer ces scénarios, l’architecture sous-jacente, ses avantages et ses limitations.  
@@ -282,10 +282,10 @@ ms.locfileid: "53397031"
 ## <a name="performance-optimization"></a>Optimisation des performances  
  Par défaut, lorsque plusieurs domaines d’application sont utilisés, les différents assemblys .NET Framework requises par chaque application sont tous chargés dans ce domaine d’application. Ainsi, le temps nécessaire à la création de domaines d’application et au démarrage des applications dans ces domaines peut affecter les performances. Toutefois, le .NET Framework fournit un moyen de réduire les heures de début en indiquant aux applications de partager des assemblages entre domaines d’application si ceux-ci sont déjà chargés. Pour cela, vous devez utiliser le <xref:System.LoaderOptimizationAttribute> attribut, qui doit être appliqué à la méthode de point d’entrée (`Main`). Dans ce cas, utilisez uniquement du code pour implémenter votre définition d’application (consultez [Vue d’ensemble de la gestion d’applications](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.LoaderOptimizationAttribute>  
- [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [Domaines d’application](../../../../docs/framework/app-domains/application-domains.md)  
- [Vue d’ensemble de .NET framework Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Objets accessibles à distance](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.LoaderOptimizationAttribute>
+- [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Domaines d’application](../../../../docs/framework/app-domains/application-domains.md)
+- [Vue d’ensemble de .NET framework Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
+- [Objets accessibles à distance](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/app-development/how-to-topics.md)

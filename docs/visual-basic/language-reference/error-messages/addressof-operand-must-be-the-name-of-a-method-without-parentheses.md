@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-ms.openlocfilehash: 701d86e03d9b14236eec8436d99ec40cebbbcd44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f9827d885996ffab8bdab91d0f774a57073e4a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565148"
 ---
 # <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a>&#39;AddressOf&#39; opérande doit être le nom d’une méthode (sans parenthèses)
 L’opérateur `AddressOf` crée une instance de délégué de procédure qui fait référence à une procédure spécifique. La syntaxe est la suivante.  
@@ -29,6 +29,6 @@ L’opérateur `AddressOf` crée une instance de délégué de procédure qui fa
   
 2.  Assurez-vous que l’argument est un nom de méthode.  
   
-## <a name="see-also"></a>Voir aussi  
- [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+## <a name="see-also"></a>Voir aussi
+- [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md)

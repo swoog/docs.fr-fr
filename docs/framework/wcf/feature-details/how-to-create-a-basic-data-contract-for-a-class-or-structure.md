@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer un contrat de données de base destiné à une classe ou une structure'
+title: 'Procédure : Créer un contrat de données de base pour une classe ou Structure'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: bb2cebabc8e51870398689ea032d27c72f0503b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29105b7f3177403aacf5f8e628f2dceda4e26354
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747867"
 ---
-# <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Comment : créer un contrat de données de base destiné à une classe ou une structure
+# <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Procédure : Créer un contrat de données de base pour une classe ou Structure
 Cette rubrique illustre les étapes de base pour créer un contrat de données à l'aide d'une classe ou d'une structure. Pour plus d’informations sur les contrats de données et comment elles sont utilisées, consultez [à l’aide de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- Pour obtenir un didacticiel qui vous guide à travers les étapes de création d’un service Windows Communication Foundation (WCF) et un client base, consultez le [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md). Pour un exemple d’application fonctionnel qui se compose d’un service de base et un client, consultez [contrat de données de base](../../../../docs/framework/wcf/samples/basic-data-contract.md).  
+ Pour obtenir un didacticiel qui vous guide à travers les étapes de création d’un client et le service Windows Communication Foundation (WCF) de base, consultez le [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md). Pour un exemple d’application fonctionnel qui se compose d’un service de base et un client, consultez [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md).  
   
 ### <a name="to-create-a-basic-data-contract-for-a-class-or-structure"></a>Pour créer un contrat de données de base destiné à une classe ou une structure  
   
@@ -36,9 +36,9 @@ Cette rubrique illustre les étapes de base pour créer un contrat de données �
  [!code-csharp[DataContractAttribute#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/datacontractattribute/cs/overview.cs#2)]
  [!code-vb[DataContractAttribute#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#2)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Didacticiel Bien démarrer](../../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Prise en main](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Didacticiel Bien démarrer](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Prise en main](../../../../docs/framework/wcf/samples/getting-started-sample.md)

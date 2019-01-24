@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b40533553ccd7a3339a8a3ee0c8b47879efd38ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742459"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON, énumération
 Indique la raison pour laquelle le runtime est suspendu.  
@@ -44,26 +44,26 @@ typedef enum {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|L’exécution est interrompu pour une raison non spécifiée.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Le runtime est suspendu pour traiter une demande de garbage collection.<br /><br /> Les rappels de collection associés au garbage ont lieu entre les [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) et [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) rappels.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|L’exécution est suspendu afin qu’un `AppDomain` peut être arrêté.<br /><br /> Quand l’exécution est suspendu, le runtime détermine quels threads se trouvent dans le `AppDomain` qui est en cours d’arrêter et de les définir à abandonner lorsqu’ils reprennent. Il n’y aucun `AppDomain`-rappels spécifiques pendant cette interruption.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Le runtime est suspendu pour que la suspension de code peut se produire.<br /><br /> Suspension de code s’ensuit uniquement lorsque le compilateur (JIT) juste-à-temps est actif avec la suspension de code activée. Code de rappels de suspension se produisent entre la `ICorProfilerCallback::RuntimeSuspendFinished` et `ICorProfilerCallback::RuntimeResumeStarted` rappels. **Remarque :** le JIT CLR ne suspend pas les fonctions dans le .NET Framework version 2.0, cette valeur n’est pas utilisé dans la version 2.0.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Le runtime est suspendu pour s’arrêter. Il doit suspendre tous les threads pour terminer l’opération.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|Le runtime est suspendu pour une raison non précisée.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Le runtime est suspendu pour traiter une demande de garbage collection.<br /><br /> Les rappels de liées au regroupement garbage se produisent entre le [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) et [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) rappels.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Le runtime est suspendu afin qu’un `AppDomain` peut être arrêté.<br /><br /> Quand l’exécution est suspendue, le runtime détermine les threads se trouvent dans le `AppDomain` qui est en cours d’arrêter et de les définir pour abandonner lors de leur reprise. Il y a aucune `AppDomain`-rappels spécifiques pendant cette interruption.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Le runtime est suspendu pour que la suspension de code peut se produire.<br /><br /> Suspension de code s’ensuit uniquement lorsque compilateur juste-à-temps (JIT) est actif avec la suspension de code activée. Code de rappels de suspension se produisent entre le `ICorProfilerCallback::RuntimeSuspendFinished` et `ICorProfilerCallback::RuntimeResumeStarted` rappels. **Remarque :**  Le JIT CLR ne suspend pas les fonctions dans le .NET Framework version 2.0, cette valeur n’est pas utilisé dans 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Le runtime est suspendu afin qu’il s’arrête. Il doit suspendre tous les threads pour terminer l’opération.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Le runtime est suspendu dans le processus de débogage.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Le runtime est suspendu pour préparer un garbage collection.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|Le runtime est suspendu pour la recompilation JIT.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|Le runtime est suspendu pour recompilation JIT.|  
   
 ## <a name="remarks"></a>Notes  
- Tous les threads d’exécution qui se trouvent dans le code non managé sont autorisés à continuer à s’exécuter jusqu'à ce qu’ils essaient d’entrer à nouveau l’exécution, à partir de laquelle ils seront également suspendus jusqu'à ce que le runtime reprend. Cela s’applique également aux nouveaux threads qui entrent dans le runtime. Tous les threads dans le runtime sont immédiatement suspendus s’ils sont dans du code interruptible, ou suspendus lorsqu’ils atteignent du code interruptible.  
+ Tous les threads d’exécution qui se trouvent dans le code non managé sont autorisés à continuer à s’exécuter jusqu'à ce qu’ils essaient d’entrer à nouveau le runtime, auquel cas ils seront aussi suspendues jusqu'à ce que le runtime reprend. Cela s’applique également aux nouveaux threads qui entrent dans le runtime. Tous les threads dans le runtime sont immédiatement suspendus s’ils sont dans du code interruptible, soit invités à s’interrompre lorsqu’ils atteignent du code interruptible.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

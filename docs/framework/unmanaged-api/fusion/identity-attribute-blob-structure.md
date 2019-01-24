@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b4c832a4bbc915749aadf435b204e084828698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654670"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB, structure
-Contient des informations sur un attribut unique dans un assembly et se compose de trois `DWORD`s. Chaque `DWORD` est un offset dans une mémoire tampon de caractères produit par le `CurrentIntoBuffer` méthode de la [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface  
+Contient des informations sur un seul attribut dans un assembly et se compose de trois `DWORD`s. Chaque `DWORD` est un offset dans une mémoire tampon de caractères produit par le `CurrentIntoBuffer` méthode de la [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |------------|-----------------|  
 |`ofsNamespace`|Le premier offset dans la mémoire tampon de caractères. Ce décalage n’est pas suivi par espace de noms de l’attribut, mais par une série de caractères null. Par conséquent, il n’est pas utilisé.|  
 |`ofsName`|Deuxième offset dans la mémoire tampon de caractères. Cet emplacement marque le début du nom de l’attribut.|  
-|`ofsValue`|Troisième offset dans la mémoire tampon de caractères. Cet emplacement marque le début de la valeur d’attribut.|  
+|`ofsValue`|Troisième offset dans la mémoire tampon de caractères. Cet emplacement marque le début de la valeur de l’attribut.|  
   
 ## <a name="sample"></a>Exemple  
- L’exemple suivant illustre plusieurs étapes de base, entraînant finalement un remplis `IDENTITY_ATTRIBUTE_BLOB` structure :  
+ L’exemple suivant illustre plusieurs étapes de base, ce qui finalement entraînent un remplis `IDENTITY_ATTRIBUTE_BLOB` structure :  
   
 1.  Obtenir un [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) pour l’assembly.  
   
 2.  Appelez le `IReferenceIdentity::EnumAttributes` (méthode) et obtenir un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
   
-3.  Créer une mémoire tampon de caractères et effectuez un cast en tant qu’un `IDENTITY_ATTRIBUTE_BLOB` structure.  
+3.  Créer une mémoire tampon de caractères et effectuer un cast en tant qu’un `IDENTITY_ATTRIBUTE_BLOB` structure.  
   
 4.  Appelez le `CurrentIntoBuffer` méthode de la `IEnumIDENTITY_ATTRIBUTE` interface. Cette méthode copie les attributs `Namespace`, `Name`, et `Value` dans la mémoire tampon de caractères. Les trois offsets de ces chaînes seront disponibles dans le `IDENTITY_ATTRIBUTE_BLOB` structure.  
   
@@ -236,14 +236,14 @@ Exit:
  Version = 2.0.0.0  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Isolation.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IReferenceIdentity, interface](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- [IEnumIDENTITY_ATTRIBUTE, interface](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- [IDENTITY_ATTRIBUTE, structure](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- [Structures de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>Voir aussi
+- [IReferenceIdentity, interface](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE, interface](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE, structure](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
+- [Structures de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

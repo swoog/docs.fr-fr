@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738824"
 ---
 # <a name="layout"></a>Mise en page
 Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Pour créer des interfaces utilisateur dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], il est essentiel de comprendre quand et comment interviennent les calculs de disposition.  
@@ -111,7 +111,7 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
 |<xref:System.Windows.Controls.DockPanel>|Définit une zone dans laquelle vous pouvez organiser des éléments enfants horizontalement ou verticalement, les uns par rapport aux autres.|  
 |<xref:System.Windows.Controls.Grid>|Définit une zone de grille flexible composée de colonnes et de lignes.|  
 |<xref:System.Windows.Controls.StackPanel>|Dispose des éléments enfants sur une seule ligne orientée horizontalement ou verticalement.|  
-|<xref:System.Windows.Controls.VirtualizingPanel>|Fournit une infrastructure pour <xref:System.Windows.Controls.Panel> éléments qui virtualisent leur collection de données enfants. Il s'agit d'une classe abstraite.|  
+|<xref:System.Windows.Controls.VirtualizingPanel>|Fournit une infrastructure pour <xref:System.Windows.Controls.Panel> éléments qui virtualisent leur collection de données enfants. Il s’agit d’une classe abstraite.|  
 |<xref:System.Windows.Controls.WrapPanel>|Positionne des éléments enfants dans un ordre séquentiel de gauche à droite, en faisant passer le contenu à la ligne suivante au bord de la zone conteneur. Classement continue ensuite séquentiellement de haut en bas ou de droite à gauche, selon la valeur de la <xref:System.Windows.Controls.WrapPanel.Orientation%2A> propriété.|  
   
  Pour les applications qui requièrent une disposition qui n’est pas possible à l’aide des prédéfinis <xref:System.Windows.Controls.Panel> éléments, des comportements de disposition personnalisée peuvent être obtenus en héritant de <xref:System.Windows.Controls.Panel> et en remplaçant le <xref:System.Windows.FrameworkElement.MeasureOverride%2A> et <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> méthodes. Pour obtenir un exemple, consultez [Exemple de panneau radial personnalisé](https://go.microsoft.com/fwlink/?LinkID=159982).  
@@ -148,9 +148,9 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
 ## <a name="whats-next"></a>Étapes suivantes  
  Pour bien comprendre en quoi consiste la disposition, il convient dans un premier temps de comprendre comment les éléments sont mesurés et organisés. Pour plus d’informations sur la disposition <xref:System.Windows.Controls.Panel> éléments, consultez [vue d’ensemble de panneaux](../../../../docs/framework/wpf/controls/panels-overview.md). Pour mieux comprendre les différentes propriétés de positionnement qui peuvent affecter la disposition, consultez [Vue d’ensemble de l’alignement, des marges et du remplissage](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Pour obtenir un exemple de personnalisé <xref:System.Windows.Controls.Panel> élément, consultez [exemple de panneau Radial personnalisé](https://go.microsoft.com/fwlink/?LinkID=159982). Lorsque vous êtes prêt à tout mettre ensemble dans une application légère, consultez [procédure pas à pas : Ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.UIElement>  
- [Vue d’ensemble de Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Vue d'ensemble de l'alignement, des marges et du remplissage](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Disposition et conception](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.UIElement>
+- [Vue d’ensemble de Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Vue d'ensemble de l'alignement, des marges et du remplissage](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Disposition et conception](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

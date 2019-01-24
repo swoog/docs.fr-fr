@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 092f073a138a09fc25b96fbddde5b73992056981
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736992"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilisation d'un service de données dans une application cliente (services de données WCF)
 Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux en fournissant un URI à un navigateur Web. L'URI fournit l'adresse d'une ressource, et les messages de demande sont envoyés à ces adresses pour accéder ou modifier les données sous-jacentes que représente la ressource. Le navigateur émet une commande HTTP GET et retourne la ressource demandée sous forme d'un flux [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Pour plus d’informations, consultez [l’accès au Service à partir d’un navigateur Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
   
- Même si un navigateur Web peut être utile pour tester si un service [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] retourne les données attendues, les services [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de production qui vous permettent également de créer, mettre à jour et supprimer les données sont en général accessibles via le code d'application ou les langages de script d'une page Web. Cette rubrique fournit une vue d’ensemble de l’accès à [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de flux à partir d’une application cliente.  
+ Même si un navigateur web peut être utile pour tester si un service [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] retourne les données attendues, les services [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de production qui vous permettent également de créer, mettre à jour et supprimer les données sont en général accessibles via le code d’application ou les langages de script d’une page web. Cette rubrique fournit une vue d’ensemble de l’accès à [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de flux à partir d’une application cliente.  
   
 ## <a name="accessing-and-changing-data-using-rest-semantics"></a>Accès et modification des données à l'aide de la sémantique REST  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] vous aide à garantir l’interopérabilité entre les services qui exposent [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux et les applications qui consomment [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux. Applications accéder et modifier des données dans un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-en fonction de service en envoyant des messages de demande d’une action HTTP spécifique et avec un URI qui adresse une ressource d’entité par rapport à laquelle l’action doit être effectuée. Lorsque les données d'entité doivent être fournies, elles le sont comme une charge utile spécifiquement encodée dans le corps du message.  
@@ -31,9 +31,9 @@ Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../..
   
 -   **HTTP PUT** - remplace les données d’entité à la ressource demandée avec de nouvelles données qui sont fournies dans la charge utile du message de demande existantes.  
   
--   **HTTP MERGE** - en raison du manque d’efficacité lors de l’exécution d’une suppression suivie d’une insertion dans la source de données uniquement pour modifier des données d’entité, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] présente une nouvelle action HTTP MERGE. La charge utile du message de demande contient les propriétés qui doivent être changées sur la ressource d'entité adressée. Comme HTTP MERGE n'est pas défini dans la spécification HTTP, elle peut nécessiter un traitement supplémentaire pour acheminer une demande HTTP MERGE via des serveurs non-[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+-   **HTTP MERGE** - en raison du manque d’efficacité lors de l’exécution d’une suppression suivie d’une insertion dans la source de données uniquement pour modifier des données d’entité, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] présente une nouvelle action HTTP MERGE. La charge utile du message de demande contient les propriétés qui doivent être changées sur la ressource d'entité adressée. Comme HTTP MERGE n’est pas défini dans la spécification HTTP, elle peut nécessiter un traitement supplémentaire pour acheminer une demande HTTP MERGE via des serveurs non-[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- Pour plus d’informations, consultez [OData : opérations](https://go.microsoft.com/fwlink/?LinkId=185792).  
+ Pour plus d’informations, consultez [OData : Opérations](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Formats de charge utile  
  Pour une demande HTTP PUT, HTTP POST ou HTTP MERGE, la charge utile d'un message de demande contient les données d'entité que vous envoyez au service de données. Le contenu de la charge utile dépend du format de données du message. Les réponses HTTP à toutes les actions sauf DELETE contiennent également une charge utile. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les formats de charge utile suivants pour l’accès et modification de données avec le service :  
@@ -42,7 +42,7 @@ Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../..
   
 -   **JSON** -JavaScript Objet Notation (JSON) est un format d’échange de données léger basé sur un sous-ensemble du langage de programmation JavaScript. Pour plus d’informations, consultez [OData : Format JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
- Le format du message de la charge utile est demandé dans l'en-tête du message de requête HTTP. Pour plus d’informations, consultez [OData : opérations](https://go.microsoft.com/fwlink/?LinkID=185792).  
+ Le format du message de la charge utile est demandé dans l'en-tête du message de requête HTTP. Pour plus d’informations, consultez [OData : Opérations](https://go.microsoft.com/fwlink/?LinkID=185792).  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Accès et modification des données à l'aide des bibliothèques clientes  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclut des bibliothèques clientes qui vous permettent de consommer plus facilement un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux à partir de .NET Framework et les applications clientes basées sur Silverlight. Ces bibliothèques simplifient l'envoi et la réception des messages HTTP. Elles traduisent également la charge utile de message dans les objets CLR qui représentent des données d'entité. Les bibliothèques clientes comprennent les deux classes principales <xref:System.Data.Services.Client.DataServiceContext> et <xref:System.Data.Services.Client.DataServiceQuery%601>. Ces classes vous permettent d'interroger un service de données, puis d'utiliser les données d'entité retournées sous forme d'objets CLR. Pour plus d’informations, consultez [bibliothèque de Client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) et [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30).  
@@ -51,6 +51,6 @@ Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../..
   
  Il existe des bibliothèques de programmation que vous pouvez utiliser pour consommer un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux dans d’autres types d’applications clientes. Pour plus d’informations, consultez le [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
-## <a name="see-also"></a>Voir aussi  
- [Accès aux ressources d’un service de données](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- [Démarrage rapide](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Accès aux ressources d’un service de données](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Démarrage rapide](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

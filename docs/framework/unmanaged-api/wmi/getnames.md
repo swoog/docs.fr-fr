@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583559"
 ---
 # <a name="getnames-function"></a>GetNames, fonction
 Récupère une partie ou l’ensemble des noms des propriétés d’un objet. 
@@ -67,8 +67,8 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Il y a eu une défaillance générale. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un ou plusieurs paramètres ne sont pas valides, ou une combinaison incorrecte des indicateurs et des paramètres a été spécifiée. |
+|`WBEM_E_FAILED` | 0x80041001 | Il y a eu une défaillance générale. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un ou plusieurs paramètres ne sont pas valides, ou une combinaison incorrecte des indicateurs et des paramètres a été spécifiée. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
@@ -92,24 +92,24 @@ Les indicateurs qui peuvent être passés en tant que le `lEnumFlags` argument s
 
 | Indicateurs de groupe 2 |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Retourner uniquement les noms des propriétés qui définissent les clés. |
-|`WBEM_FLAG_REFS_ONLY` | 0 x 8 | Retour seuls noms de propriétés qui sont des références d’objet. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Retourner uniquement les noms des propriétés qui définissent les clés. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Retour seuls noms de propriétés qui sont des références d’objet. |
 
 | Indicateurs de groupe 3 |Value  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retourner uniquement les noms de propriétés qui appartiennent à la classe la plus dérivée. Exclure les propriétés des classes parentes. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Retourner uniquement les noms de propriétés qui appartiennent à des classes parentes. |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Retourner uniquement les noms des propriétés système. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Retourner uniquement les noms des propriétés non système. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Retourner uniquement les noms de propriétés qui appartiennent à des classes parentes. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Retourner uniquement les noms des propriétés système. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Retourner uniquement les noms des propriétés non système. |
 
 La fonction alloue toujours un nouveau `SAFEARRAY` si elle retourne `WBEM_S_NO_ERROR`, et `pstrNames` est toujours défini pour pointer vers elle. Le tableau retourné peut avoir les éléments 0 si aucune propriété correspondent aux filtres spécifiés. Si la fonction retourne une valeur autre que `WBM_S_NO_ERROR`, un nouveau `SAFEARRAY` structure n’est pas retournée.
  
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

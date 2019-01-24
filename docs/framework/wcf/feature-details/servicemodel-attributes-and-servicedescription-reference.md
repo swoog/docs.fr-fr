@@ -2,22 +2,22 @@
 title: Attributs ServiceModel et référence ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b1b10f34e300d77943a93d180b5be9e4a3366c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726622"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Attributs ServiceModel et référence ServiceDescription
-Le *arborescence de description* correspond à la hiérarchie de types (commençant par la <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) qui décrivent ensemble chaque aspect d’un service. Windows Communication Foundation (WCF) utilise une arborescence de description pour générer une exécution de service valide, pour publier des assertions de stratégie (métadonnées) concernant le service que les clients peuvent utiliser pour Web Services Description Language (WSDL) et le langage de définition de schéma XML (XSD) se connecter à et utiliser le service et pour générer diverses représentations de fichier code et la configuration des valeurs d’arborescence de description.  
+Le *arborescence de description* est la hiérarchie des types (en commençant par la <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) qui décrivent ensemble chaque aspect d’un service. Windows Communication Foundation (WCF) utilise une arborescence de description pour créer un runtime de service valide, pour publier des assertions de stratégie (métadonnées) concernant le service clients peuvent utiliser pour Web Services Description Language (WSDL) et langage de définition de schéma XML (XSD) se connecter à et utiliser le service et pour générer des représentations différentes fichier de code et la configuration des valeurs d’arborescence de description.  
   
- Cette rubrique décrit comment obtenir les propriétés relatives au contrat à partir du contrat de service, et la manière dont elles sont implémentées et ajoutées à l’arborescence de description. Dans certains cas, les valeurs d’attribut sont converties en propriétés de comportement et le comportement est ensuite inséré dans l’arborescence de description. Pour plus d’informations sur la façon dont les valeurs d’arborescence de description sont convertis en métadonnées, consultez [ServiceDescription et WSDL référence](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ Cette rubrique décrit comment obtenir les propriétés relatives au contrat à partir du contrat de service, et la manière dont elles sont implémentées et ajoutées à l’arborescence de description. Dans certains cas, les valeurs d’attribut sont converties en propriétés de comportement et le comportement est ensuite inséré dans l’arborescence de description. Pour plus d’informations sur la façon dont les valeurs d’arborescence de description sont converties en métadonnées, consultez [ServiceDescription et WSDL référence](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Mappage des opérations à l’arborescence de description  
- Dans les applications WCF, les contrats de service sont modélisés par les interfaces (ou classes) qui utilisent des attributs pour marquer l’interface ou la classe et ses méthodes sous forme de regroupement d’opérations. Lorsqu'une classe <xref:System.ServiceModel.ServiceHost> est ouverte, les implémentations et les contrats de service sont pris en compte dans, et fusionnées avec, les informations de configuration dans une arborescence de description.  
+ Dans les applications WCF, les contrats de service sont modélisés par les interfaces (ou classes) qui utilisent des attributs pour marquer l’interface ou classe et ses méthodes comme un regroupement d’opérations. Lorsqu’une classe <xref:System.ServiceModel.ServiceHost> est ouverte, les implémentations et les contrats de service sont pris en compte dans, et fusionnées avec, les informations de configuration dans une arborescence de description.  
   
- Il existe deux types de modèles d’opération : le *paramètre* modèle et le *contrat de message* modèle. Le modèle de paramètre utilise des méthodes managées qui n'ont pas de type de paramètre ou de valeur de retour marqué par la classe <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. Dans ce modèle, les développeurs contrôlent la sérialisation des paramètres et valeurs de retour, mais WCF génère les valeurs qui sont utilisés pour remplir l’arborescence de description pour le service et de son contrat.  
+ Il existe deux types de modèles d’opération : le *paramètre* modèle et le *contrat de message* modèle. Le modèle de paramètre utilise des méthodes managées qui n'ont pas de type de paramètre ou de valeur de retour marqué par la classe <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. Dans ce modèle, les développeurs de contrôlent la sérialisation de paramètres et valeurs de retour, mais WCF génère les valeurs qui sont utilisées pour remplir l’arborescence de description pour le service et son contrat.  
   
  Les liaisons spécifiées dans les fichiers de configuration sont directement chargées dans la propriété <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType>.  
   
@@ -33,7 +33,7 @@ Le *arborescence de description* correspond à la hiérarchie de types (commenç
 |---------------------------------------|-------------------------------------|  
 |CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> ajoutés à toutes les opérations <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> et éventuellement des niveaux de protection enfants. Pour plus d’informations sur la hiérarchie du niveau de protection, consultez [au niveau de Protection de présentation](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> et éventuellement des niveaux de protection enfants. Pour plus d’informations sur la hiérarchie de niveau de protection, consultez [niveau de Protection de présentation](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |Valeur ServiceKnownTypesAttribute|Valeur de l'arborescence de description affectée|  
@@ -48,7 +48,7 @@ Le *arborescence de description* correspond à la hiérarchie de types (commenç
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |Name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> et éventuellement des niveaux de protection enfants. Pour plus d’informations sur la hiérarchie du niveau de protection, consultez [au niveau de Protection de présentation](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> et éventuellement des niveaux de protection enfants. Pour plus d’informations sur la hiérarchie de niveau de protection, consultez [niveau de Protection de présentation](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> pour le message de sortie ou d'entrée, selon le contrat/contrat de rappel.|  
   
 |Valeur FaultContractAttribute|Valeur de l’arborescence de description affectée|  
@@ -111,7 +111,7 @@ Le *arborescence de description* correspond à la hiérarchie de types (commenç
 |-------------------------------------|-------------------------------------|  
 |Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> pour la partie correspondante dans <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
- Pour plus d’informations sur la façon dont les valeurs d’arborescence de description sont convertis en métadonnées, consultez [ServiceDescription et WSDL référence](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ Pour plus d’informations sur la façon dont les valeurs d’arborescence de description sont converties en métadonnées, consultez [ServiceDescription et WSDL référence](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur ServiceDescription et WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+## <a name="see-also"></a>Voir aussi
+- [Informations de référence sur ServiceDescription et WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

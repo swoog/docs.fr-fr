@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: 36add48ebee2d1804921eeeec0b59cdd4cbafecc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39d316aca5ec306de4b1e43e2eb2d1495f5525d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672342"
 ---
 # <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a>&#39;&lt;MemberName&gt; &#39; ne peut pas exposer le type &#39; &lt;typename&gt; &#39; en dehors du projet via &lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;
-Une variable, un paramètre de procédure ou un retour de fonction est exposé à l’extérieur de son conteneur, mais il est déclaré comme un type qui ne doit pas être exposé en dehors du conteneur.  
+Une variable, un paramètre de procédure ou un retour de fonction est exposé en dehors de son conteneur, mais il est déclaré comme un type qui ne doit pas être exposé en dehors du conteneur.  
   
- Le squelette du code suivant illustre une situation qui génère cette erreur.  
+ Le code squelette suivant montre une situation qui génère cette erreur.  
   
 ```  
 Private Class privateClass  
@@ -27,13 +27,13 @@ Public Class mainClass
 End Class  
 ```  
   
- Un type qui est déclaré `Protected`, `Friend`, `Protected Friend`, ou `Private` est destiné à l’accès à l’extérieur de son contexte de déclaration est limité. L’utiliser comme données de type d’une variable avec un accès moins limité nuit à cet objectif. Dans le code squelette précédent, `exposedVar` est `Public` et expose `privateClass` au code que vous ne devez pas y accéder.  
+ Un type qui est déclaré `Protected`, `Friend`, `Protected Friend`, ou `Private` est destiné à un accès en dehors de son contexte de déclaration limité. À l’utiliser en tant que les données de type d’une variable avec un accès restreint moins serait en opposition avec cet effet. Dans le code squelette précédent, `exposedVar` est `Public` et exposera `privateClass` au code que vous ne devez pas y accéder.  
   
  **ID d’erreur :** BC30909  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Modifier le niveau d’accès de la variable, un paramètre de procédure ou une fonction de retour pour être au moins aussi restrictif que le niveau d’accès de son type de données.  
+-   Changement du niveau d’accès de la variable, un paramètre de procédure ou une fonction de retour pour être au moins aussi restrictif que le niveau d’accès de son type de données.  
   
-## <a name="see-also"></a>Voir aussi  
- [Niveaux d’accès dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+## <a name="see-also"></a>Voir aussi
+- [Niveaux d’accès dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

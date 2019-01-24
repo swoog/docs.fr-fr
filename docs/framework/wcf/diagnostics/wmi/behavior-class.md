@@ -2,12 +2,12 @@
 title: Behavior, classe
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: bf7d7f4ae4340cd8aee9a200015255820ac140f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5d988ae32684bb3ef7ba3dc2ee8c1d749126bcc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743567"
 ---
 # <a name="behavior-class"></a>Behavior, classe
 ## <a name="syntax"></a>Syntaxe  
@@ -28,15 +28,15 @@ class Behavior
 ### <a name="type"></a>Type  
  Type de données : chaîne  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Type de comportement.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>

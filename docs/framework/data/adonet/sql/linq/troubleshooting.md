@@ -2,12 +2,12 @@
 title: Résolution des problèmes
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586408"
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 Les informations suivantes exposent quelques problèmes que vous pouvez rencontrer dans vos applications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] et fournissent des suggestions pour les éviter, ou du moins en réduire l'effet.  
@@ -37,7 +37,7 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
   
  Sinon, une exception <xref:System.Data.SqlClient.SqlException> est levée.  
   
- Pour plus d’informations, consultez [Comment : supprimer des lignes à partir de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ Pour plus d'informations, voir [Procédure : Supprimer des lignes de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
 ## <a name="expression-not-queryable"></a>Expression non requêtable  
  Si vous obtenez l'erreur "L'expression de type [expression] ne peut pas être interrogée. Vérifiez que vous n'omettez pas une référence d'assembly et/ou une importation d'espace de noms pour le fournisseur LINQ." , vérifiez que :  
@@ -57,7 +57,7 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>Exceptions d'ignorance (Skip) et d'acceptation (Take) dans SQL Server 2000  
  Vous devez utiliser des membres d'identité (<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>) lorsque vous utilisez <xref:System.Linq.Queryable.Take%2A> ou <xref:System.Linq.Queryable.Skip%2A> sur une base de données Microsoft SQL Server 2000. La requête doit être effectuée sur une table unique (c'est-à-dire, pas une jointure) ou il doit s'agir d'une opération <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> ou <xref:System.Linq.Queryable.Union%2A>, et elle ne doit pas inclure d'opération <xref:System.Linq.Queryable.Concat%2A>. Pour plus d’informations, consultez la section « Prise en charge SQL Server 2000 » dans [traduction des opérateurs de requête Standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
- Cette spécification ne s'applique pas à [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
+ Cette exigence ne s’applique pas à [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
  Cette exception est levée lorsqu'une valeur de colonne est null dans une requête <xref:System.Linq.Enumerable.GroupBy%2A> regroupée par une expression `boolean`, telle que `group x by (Phone==@phone)`. L'expression étant `boolean`, la clé doit donc être `boolean`, et non `nullable``boolean`. Lorsque la comparaison traduite produit un null, une tentative est faite pour assigner un `nullable``boolean` à un `boolean`, et l'exception est levée.  
@@ -69,6 +69,6 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
 ## <a name="oncreated-partial-method"></a>Méthode partielle OnCreated()  
  La méthode générée `OnCreated()` est appelée chaque fois que le constructeur d'objet est appelé, y compris dans le cas où [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] appelle le constructeur pour faire une copie pour les valeurs d'origine. Tenez compte de ce comportement si vous implémentez la méthode `OnCreated()` dans votre propre classe partielle.  
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge du débogage](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- [Forum Aux Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>Voir aussi
+- [Prise en charge du débogage](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Forum Aux Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

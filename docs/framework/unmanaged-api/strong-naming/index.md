@@ -2,18 +2,12 @@
 title: Nom fort (Informations de référence sur les API non managées)
 ms.date: 03/30/2017
 helpviewer_keywords:
-- strong naming [.NET Framework], using the unmanaged API
-- native API reference [.NET Framework], strong naming
-- unmanaged API reference [.NET Framework], strong naming
+  - 'strong naming [.NET Framework], using the unmanaged API'
+  - 'native API reference [.NET Framework], strong naming'
+  - 'unmanaged API reference [.NET Framework], strong naming'
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5eb67e9b9f8f972075a98415de63d50585974823
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193953"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nom fort (Informations de référence sur les API non managées)
 L’API de nommage fort permet à un client d’administrer la signature avec noms forts pour les assemblys.  
@@ -111,6 +105,6 @@ L’API de nommage fort permet à un client d’administrer la signature avec no
  [PublicKeyBlob, structure](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Représente la clé publique d’une paire de clés publique/privée au format binaire.  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRStrongName, interface](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- [Informations de référence sur les API non managées](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRStrongName, interface](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Informations de référence sur les API non managées](../../../../docs/framework/unmanaged-api/index.md)

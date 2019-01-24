@@ -1,5 +1,5 @@
 ---
-title: 'Comment : restaurer des fuseaux horaires dans une ressource incorporée'
+title: 'Procédure : Restaurer des fuseaux horaires dans une ressource incorporée'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656802"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Comment : restaurer des fuseaux horaires dans une ressource incorporée
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Procédure : Restaurer des fuseaux horaires dans une ressource incorporée
 
-Cette rubrique décrit comment restaurer des fuseaux horaires qui ont été enregistrés dans un fichier de ressources. Pour plus d’informations et obtenir des instructions sur l’enregistrement de fuseaux horaires, consultez [Comment : enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
+Cette rubrique décrit comment restaurer des fuseaux horaires qui ont été enregistrés dans un fichier de ressources. Pour plus d’informations et obtenir des instructions sur l’enregistrement de fuseaux horaires, consultez [Comment : Enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>Pour désérialiser un objet TimeZoneInfo à partir d’une ressource incorporée
 
@@ -60,6 +60,6 @@ Cet exemple nécessite :
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
-* [Vue d’ensemble des fuseaux horaires](../../../docs/standard/datetime/time-zone-overview.md)
-* [Guide pratique pour enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Vue d’ensemble des fuseaux horaires](../../../docs/standard/datetime/time-zone-overview.md)
+- [Guide pratique pour Enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

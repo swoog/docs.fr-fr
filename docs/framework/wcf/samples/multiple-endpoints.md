@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: a9c395ffe4f715b6d6ea034c848cbb277d60d560
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3b52583b8089efcee2a0251564c79e931a596bf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678068"
 ---
 # <a name="multiple-endpoints"></a>Multiple Endpoints
-Cet exemple montre comment configurer plusieurs points de terminaison sur un service et comment communiquer avec chacun d'entre eux à partir d'un client. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configuration de service a été modifiée pour définir deux points de terminaison qui prennent en charge le contrat `ICalculator`, mais chacun à une adresse différente à l'aide d'une liaison distincte. Le code et la configuration client ont été modifiés pour communiquer avec les deux points de terminaison de service.  
+Cet exemple montre comment configurer plusieurs points de terminaison sur un service et comment communiquer avec chacun d'entre eux à partir d'un client. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configuration de service a été modifiée pour définir deux points de terminaison qui prennent en charge le contrat `ICalculator`, mais chacun à une adresse différente à l’aide d’une liaison distincte. Le code et la configuration client ont été modifiés pour communiquer avec les deux points de terminaison de service.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- Le service fichier Web.config a été modifié pour définir deux points de terminaison, chacun prenant en charge le même contrat `ICalculator` contracte, mais à des adresses différentes à l'aide de liaisons distinctes. Le premier point de terminaison est défini à l'adresse de base à l'aide d'une liaison `basicHttpBinding`, qui n'a pas sécurité activée. Le deuxième point de terminaison est défini à {baseaddress}/secure à l'aide d'une liaison `wsHttpBinding`, qui est sécurisée par défaut à l'aide de WS-Security avec l'authentification Windows.  
+ Le service fichier Web.config a été modifié pour définir deux points de terminaison, chacun prenant en charge le même contrat `ICalculator` contracte, mais à des adresses différentes à l’aide de liaisons distinctes. Le premier point de terminaison est défini à l’adresse de base à l’aide d’une liaison `basicHttpBinding`, qui n’a pas sécurité activée. Le deuxième point de terminaison est défini à {baseaddress}/secure à l'aide d'une liaison `wsHttpBinding`, qui est sécurisée par défaut à l'aide de WS-Security avec l'authentification Windows.  
   
 ```xml  
 <service   

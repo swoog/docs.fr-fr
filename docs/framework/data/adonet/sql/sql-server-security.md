@@ -2,12 +2,12 @@
 title: Sécurité SQL Server
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 418dbd3e677619721b841736f5b4c1b423ada94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33ec28536115f8571bfda47266ed3b5cad1442bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650581"
 ---
 # <a name="sql-server-security"></a>Sécurité SQL Server
 SQL Server possède de nombreuses fonctionnalités qui prennent en charge la création d'applications de base de données sécurisées.  
@@ -33,12 +33,12 @@ SQL Server possède de nombreuses fonctionnalités qui prennent en charge la cr�
  Décrit les considérations de sécurité pour SQL Server Express.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
-[Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
-Décrit les considérations de sécurité pour SQL Server et la base de données SQL Azure.
+[Centre de sécurité pour le moteur de base de données SQL Server et de la base de données SQL Azure](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+Décrit les considérations de sécurité pour SQL Server et de la base de données SQL Azure.
 
 [Considérations de sécurité pour une Installation SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
 Décrit les problèmes de sécurité à prendre en compte avant d’installer SQL Server.
 
-## <a name="see-also"></a>Voir aussi  
- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
+## <a name="see-also"></a>Voir aussi
+- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

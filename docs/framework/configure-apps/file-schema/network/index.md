@@ -2,22 +2,16 @@
 title: Schéma des paramètres réseau
 ms.date: 03/30/2017
 helpviewer_keywords:
-- elements [.NET Framework], network configuration elements
-- sending data, network configuration elements
-- receiving data, network configuration elements
-- configuration settings [.NET Framework], networks
-- Internet, network configuration elements
-- network configuration elements
-- network settings
-- connections [.NET Framework], network configuration elements
-- network resources, network configuration elements
+  - 'elements [.NET Framework], network configuration elements'
+  - 'sending data, network configuration elements'
+  - 'receiving data, network configuration elements'
+  - 'configuration settings [.NET Framework], networks'
+  - 'Internet, network configuration elements'
+  - network configuration elements
+  - network settings
+  - 'connections [.NET Framework], network configuration elements'
+  - 'network resources, network configuration elements'
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 93248823284389a865111f9ab47cdac026be55b4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143205"
 ---
 # <a name="network-settings-schema"></a>Schéma des paramètres réseau
 Les paramètres réseau spécifient la façon dont le .NET Framework se connecte à Internet. Le tableau suivant décrit la fonction de chaque élément de configuration enfant sous [\<system.Net>, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  
@@ -39,6 +33,6 @@ Les paramètres réseau spécifient la façon dont le .NET Framework se connecte
 |[\<iriParsing>, élément (paramètres d’Uri)](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Spécifie si l’analyse d’identificateur de ressource internationale (IRI) s’applique à un <xref:System.Uri> et si les règles d’analyse IRI doivent s’appliquer.|  
 |[\<schemeSettings, élément (paramètres d’Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas spécifiques.|  
   
-## <a name="see-also"></a>Voir aussi  
-- [Configuration des applications Internet](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
+## <a name="see-also"></a>Voir aussi
+- [Configuration des applications Internet](../../../../../docs/framework/network-programming/configuring-internet-applications.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

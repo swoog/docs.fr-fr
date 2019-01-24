@@ -1,5 +1,5 @@
 ---
-title: 'Comment : rendre des certificats X.509 accessibles à WCF'
+title: 'Procédure : Rendre des certificats X.509 accessibles à WCF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 0917569b556c31413b715d75c83a96f3a4b015d7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7c90d5b0541edfc11145d9373c2554ee4595a7b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741880"
 ---
-# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Comment : rendre des certificats X.509 accessibles à WCF
+# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procédure : Rendre des certificats X.509 accessibles à WCF
 Pour rendre un certificat X.509 accessible à Windows Communication Foundation (WCF), le code d’application doit spécifier le nom de magasin de certificat et l’emplacement. Dans certains cas, l'identité du processus doit avoir accès au fichier contenant la clé privée associée au certificat X.509. Pour obtenir la clé privée associée à un certificat X.509 dans un magasin de certificats, WCF devez être autorisé à le faire. Par défaut, seuls le propriétaire et le compte système peuvent accéder à la clé privée d'un certificat.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Pour rendre des certificats X.509 accessibles à WCF  
@@ -30,8 +30,8 @@ Pour rendre un certificat X.509 accessible à Windows Communication Foundation (
         |Utilisation d'un certificat X.509|Clé privée|  
         |---------------------------|-----------------|  
         |Signature numérique d'un message SOAP sortant.|Oui|  
-        |Vérification de la signature d'un message SOAP entrant.|Non|  
-        |Chiffrement d'un message SOAP sortant.|Non|  
+        |Vérification de la signature d'un message SOAP entrant.|Aucune|  
+        |Chiffrement d'un message SOAP sortant.|Aucune|  
         |Déchiffrement d'un message SOAP entrant.|Oui|  
   
     2.  Déterminez l'emplacement et le nom du magasin de certificats dans lequel le certificat est stocké.  
@@ -43,7 +43,7 @@ Pour rendre un certificat X.509 accessible à Windows Communication Foundation (
   
     3.  Déterminer où la clé privée pour le certificat se trouve sur l’ordinateur à l’aide de la [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) outil.  
   
-         Le [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) outil nécessite le nom de magasin de certificats, emplacement de magasin de certificats et quelque chose qui identifie de façon unique le certificat. Il accepte le nom de sujet du certificat ou son empreinte numérique comme identificateur unique. Pour plus d’informations sur la façon de déterminer l’empreinte numérique d’un certificat, consultez [Comment : récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+         Le [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) outil nécessite le nom de magasin de certificats, emplacement de magasin de certificats et quelque chose qui identifie de façon unique le certificat. Il accepte le nom de sujet du certificat ou son empreinte numérique comme identificateur unique. Pour plus d’informations sur la façon de déterminer l’empreinte numérique d’un certificat, consultez [Comment : Récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
          Le code suivant exemple utilise le [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) outil pour déterminer l’emplacement de la clé privée d’un certificat dans le `My` stocker dans `CurrentUser` avec l’empreinte numérique de `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
   
@@ -70,7 +70,7 @@ Pour rendre un certificat X.509 accessible à Windows Communication Foundation (
         icacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /grant "NETWORK SERVICE":R  
         ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)  
-- [Guide pratique pour récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
+## <a name="see-also"></a>Voir aussi
+- [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
+- [Guide pratique pour Récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

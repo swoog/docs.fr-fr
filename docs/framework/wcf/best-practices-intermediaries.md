@@ -2,12 +2,12 @@
 title: 'Meilleures pratiques : Intermédiaires'
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-ms.openlocfilehash: 8b0e0e635c0e790b342115b988905ba29a6b8ad1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8a95bd555e6c1acf896daa77e93d7c735d1f091c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663620"
 ---
 # <a name="best-practices-intermediaries"></a>Meilleures pratiques : Intermédiaires
 La prudence est de mise pour une gestion correcte des erreurs lors de l'appel des intermédiaires afin de s'assurer que les canaux du côté service sur l'intermédiaire sont fermés.  
@@ -32,6 +32,6 @@ catch (Exception e)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Gestion des erreurs WCF](../../../docs/framework/wcf/wcf-error-handling.md)  
- [Spécification et gestion des erreurs dans les contrats et les services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Gestion des erreurs WCF](../../../docs/framework/wcf/wcf-error-handling.md)
+- [Spécification et gestion des erreurs dans les contrats et les services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

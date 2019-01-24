@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7f2b65f263256fe887c61c7b866beaa0038c37d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b8cccf395e77c7dfefb85302b522d7e9398ffca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730020"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent, interface
-Fournit une représentation de l’implémentation de l’hôte d’un événement de réinitialisation automatique.  
+Fournit une représentation de l’implémentation de l’hôte d’un événement d’auto-réinitialisation.  
   
 ## <a name="methods"></a>Méthodes  
   
 |Méthode|Description|  
 |------------|-----------------|  
 |[Set, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Définit l’actuel `IHostAutoEvent` instance à un état signalé.|  
-|[Wait, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Fait en `IHostAutoEvent` instance d’attendre que l’événement est détenu ou d’un certain laps de temps.|  
+|[Wait, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Fait en `IHostAutoEvent` instance attendre que l’événement est détenu ou un certain laps de temps.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRSyncManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [IHostManualEvent, interface](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
- [IHostSyncManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRSyncManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostManualEvent, interface](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [IHostSyncManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

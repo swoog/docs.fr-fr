@@ -5,21 +5,21 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 6b7c13355fe46d4b768699555bbaf522e3b49c73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d1d3530bfd8bc85d6ae2d6741cbe6d48b381f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570016"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Vue d’ensemble des extensions de balisage pour XAML
 Les extensions de balisage constituent une technique XAML permettant d'obtenir une valeur qui n'est ni une primitive ni un type XAML spécifique. Pour l'utilisation d'attributs, les extensions de balisage utilisent la séquence de caractères connue d'une accolade ouvrante `{` pour entrer la portée d'extension de balisage et d'une accolade fermante `}` pour quitter. Lors de l'utilisation des services XAML .NET Framework, vous pouvez utiliser certaines des extensions de balisage prédéfinies du langage XAML à partir de l'assembly System.Xaml. Vous pouvez également créer une sous-classe à partir de la classe <xref:System.Windows.Markup.MarkupExtension> , définie dans System.Xaml, et définir vos propres extensions de balisage. Vous pouvez également utiliser des extensions de balisage définies par une infrastructure particulière, si vous référencez déjà cette infrastructure.  
   
- Lorsqu'une utilisation d'extension de balisage fait l'objet d'un accès, le writer d'objet XAML peut fournir des services à une classe <xref:System.Windows.Markup.MarkupExtension> personnalisée via un point de connexion de service dans la substitution <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType>. Les services peuvent être utilisés pour obtenir le contexte concernant l'utilisation, les fonctions spécifiques du writer d'objet, le contexte de schéma XAML, etc.  
+ Lorsqu'une utilisation d'extension de balisage fait l'objet d'un accès, le writer d'objet XAML peut fournir des services à une classe <xref:System.Windows.Markup.MarkupExtension> personnalisée via un point de connexion de service dans la substitution <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> . Les services peuvent être utilisés pour obtenir le contexte concernant l'utilisation, les fonctions spécifiques du writer d'objet, le contexte de schéma XAML, etc.  
   
 <a name="XAML_Defined_Markup_Extensions"></a>   
 ## <a name="xaml-defined-markup-extensions"></a>Extensions de balisage définies en XAML  
- Plusieurs extensions de balisage sont implémentées par les services XAML .NET Framework pour la prise en charge du langage XAML. Ces extensions de balisage font partie de la spécification de XAML en tant que langage. Elles sont généralement identifiables par le préfixe `x:` dans la syntaxe, comme observé dans l'utilisation courante. Les implémentations des services XAML .NET Framework pour ces éléments de langage XAML dérivent toutes de la classe de base  <xref:System.Windows.Markup.MarkupExtension> .  
+ Plusieurs extensions de balisage sont implémentées par les services XAML .NET Framework pour la prise en charge du langage XAML. Ces extensions de balisage font partie de la spécification de XAML en tant que langage. Elles sont généralement identifiables par le préfixe `x:` dans la syntaxe, comme observé dans l'utilisation courante. Les implémentations des services XAML .NET Framework pour ces éléments de langage XAML dérivent toutes de la classe de base  <xref:System.Windows.Markup.MarkupExtension> .  
   
 > [!NOTE]
 >  Le préfixe `x:` est utilisé pour le mappage d'espace de noms XAML standard de l'espace de noms du langage XAML, dans l'élément racine d'une production XAML. Par exemple, les modèles de projet et de page de Visual Studio de différentes infrastructures spécifiques initialisent un fichier XAML que l’utilisation de cette `x:` mappage. Vous pouvez choisir un autre jeton de préfixe pour votre propre mappage d'espace de noms XAML. Toutefois, dans cette documentation, le mappage `x:` par défaut est considéré comme un moyen d'identification des entités qui représentent une partie définie de l'espace de noms XAML du langage XAML, par opposition à l'espace de noms XAML par défaut d'une infrastructure spécifique ou à d'autres espaces de noms CLR ou XML arbitraires.  
@@ -39,8 +39,8 @@ Les extensions de balisage constituent une technique XAML permettant d'obtenir u
 ### <a name="xreference"></a>x:Reference  
  `x:Reference` fait partie de XAML 2009, qui est une extension de l'ensemble de langages (2006) d'origine. `x:Reference` représente une référence à un autre objet existant dans un graphique d'objets. Cet objet est identifié par son `x:Name`. Pour plus d'informations, consultez [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md).  
   
-### <a name="other-x-constructs"></a>Autres constructions x:  
- Il existe d'autres constructions `x:` permettant de prendre en charge des fonctionnalités de langage XAML, mais elles ne sont pas implémentées en tant qu'extensions de balisage. Pour plus d'informations, consultez [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+### <a name="other-x-constructs"></a>Autres x: Constructions  
+ Il existe d'autres constructions `x:` permettant de prendre en charge des fonctionnalités de langage XAML, mais elles ne sont pas implémentées en tant qu'extensions de balisage. Pour plus d’informations, consultez [XAML Namespace (x :)) Fonctionnalités de langage](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>Classe de base MarkupExtension  
@@ -116,7 +116,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="property-element-usage-of-a-markup-extension"></a>Utilisation des éléments de propriété d'une extension de balisage  
  Les scénarios d'utilisation d'une extension de balisage consistent souvent à employer cette extension dans le cadre de l'utilisation d'attributs. Toutefois, il est également possible de définir la classe de stockage pour prend en charge l'utilisation des éléments de propriété.  
   
- Pour prendre en charge l'utilisation des éléments de propriété de votre extension de balisage, définissez un constructeur public par défaut. Il doit s'agir d'un constructeur d'instance, et non pas d'un constructeur statique. Ce constructeur est nécessaire car un processeur XAML doit généralement appeler le constructeur par défaut sur tout élément objet qu'il traite à partir du balisage, et cela inclut les classes d'extension de balisage sous forme d'éléments objet. Pour les scénarios avancés, vous pouvez définir des chemins de construction autres que ceux par défaut pour les classes. (Pour plus d’informations, consultez [Directive x : FactoryMethod](../../../docs/framework/xaml-services/x-factorymethod-directive.md).) Toutefois, vous ne devez pas utiliser ces modèles à des fins d’extensions de balisage, car cela complique considérablement la détection du modèle d’utilisation, à la fois pour les concepteurs et pour les utilisateurs du balisage brut.  
+ Pour prendre en charge l'utilisation des éléments de propriété de votre extension de balisage, définissez un constructeur public par défaut. Il doit s'agir d'un constructeur d'instance, et non pas d'un constructeur statique. Ce constructeur est nécessaire car un processeur XAML doit généralement appeler le constructeur par défaut sur tout élément objet qu'il traite à partir du balisage, et cela inclut les classes d'extension de balisage sous forme d'éléments objet. Pour les scénarios avancés, vous pouvez définir des chemins de construction autres que ceux par défaut pour les classes. (Pour plus d’informations, consultez [x : FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md).) Toutefois, vous ne devez pas utiliser ces modèles à des fins d’extensions de balisage, car cela complique considérablement la détection du modèle d’utilisation, à la fois pour les concepteurs et pour les utilisateurs du balisage brut.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>Association d'attributs à une extension de balisage personnalisée  
@@ -154,7 +154,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  Si vous travaillez avec un flux de nœud XAML dans le chemin d'enregistrement, la représentation du graphique d'objets ne contient généralement aucun élément pouvant vous indiquer que l'objet à sérialiser a été initialement fourni par une utilisation d'extension de balisage et un résultat `ProvideValue` . Les scénarios qui doivent rendre persistantes les utilisations des extensions de balisage pour les allers-retours tout en capturant d'autres modifications dans le graphique d'objets requièrent la conception de techniques spécifiques pour conserver les informations d'utilisation des extensions de balisage de l'entrée XAML d'origine. Par exemple, pour restaurer les utilisations d'extensions de balisage, vous devrez peut-être travailler avec le flux de nœud dans le chemin d'enregistrement ou effectuer un certain type de fusion entre le code XAML d'origine et le code XAML faisant l'objet d'allers-retours. Certaines infrastructures d'implémentation en XAML telles que WPF utilisent des types intermédiaires (expressions) pour faciliter la représentation des cas où les utilisations d'extensions de balisage ont fourni les valeurs.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Markup.MarkupExtension>  
- [Convertisseurs de types et extensions de balisage pour XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [Extensions de balisage et XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Markup.MarkupExtension>
+- [Convertisseurs de types et extensions de balisage pour XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
+- [Extensions de balisage et XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

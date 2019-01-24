@@ -1,15 +1,15 @@
 ---
-title: 'Comment : utiliser un moniker de service avec des contrats WSDL'
+title: 'Procédure : Utiliser un Moniker de Service avec des contrats WSDL'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726570"
 ---
-# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Comment : utiliser un moniker de service avec des contrats WSDL
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Procédure : Utiliser un Moniker de Service avec des contrats WSDL
 Dans certains cas, vous pouvez avoir besoin d'un client COM Interop entièrement autonome. Le service que vous souhaitez appeler peut ne pas exposer de point de terminaison MEX et la DLL du client WCF risque de ne pas être enregistrée pour COM Interop. Le cas échéant, vous pouvez créer un fichier WSDL qui décrit le service et le transmet au moniker de service WCF. Cette rubrique décrit la manière d'appeler l'exemple de mise en route WCF à l'aide d'un moniker WCF WSDL.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>Utilisation du moniker de service WSDL  
@@ -56,6 +56,6 @@ Dans certains cas, vous pouvez avoir besoin d'un client COM Interop entièrement
   
 7.  Exécutez l'application Visual Basic. Un message s'affiche avec les résultats de l'appel de Subtract(145, 76.54).  
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en main](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Vue d’ensemble de l’intégration à des applications COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Prise en main](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [Vue d’ensemble de l’intégration à des applications COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

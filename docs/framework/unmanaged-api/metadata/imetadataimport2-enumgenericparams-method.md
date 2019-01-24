@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ecd1c714f41c76833ef6a0a4b7be87e338ca1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51eeaf79e470e38461450c6f4afbef982cca7a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727961"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams, méthode
-Obtient un énumérateur pour un tableau de jetons de paramètres génériques associé avec le TypeDef spécifié ou MethodDef, jeton.  
+Obtient un énumérateur pour un tableau de jetons de paramètre générique associé au TypeDef spécifié ou le MethodDef jeton.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +41,7 @@ HRESULT EnumGenericParams (
   
 #### <a name="parameters"></a>Paramètres  
  `phEnum`  
- [dans, out] Pointeur vers l’énumérateur.  
+ [in, out] Pointeur vers l’énumérateur.  
   
  `tk`  
  [in] Le jeton TypeDef ou MethodDef dont les paramètres génériques doivent être énumérés.  
@@ -50,10 +50,10 @@ HRESULT EnumGenericParams (
  [out] Le tableau de paramètres génériques à énumérer.  
   
  `cMax`  
- [in] Nombre maximal demandé de jetons à placer dans `rGenericParams`.  
+ [in] Le nombre maximal demandé de jetons à placer dans `rGenericParams`.  
   
  `pcGenericParams`  
- [out] Le nombre retourné de jetons placé dans `rGenericParams`.  
+ [out] Le nombre retourné de jetons placés dans `rGenericParams`.  
   
 ## <a name="return-value"></a>Valeur de retour  
   
@@ -63,14 +63,14 @@ HRESULT EnumGenericParams (
 |`S_FALSE`|`phEnum` ne contient aucun élément de membre. Dans ce cas, `pcGenericParams` est définie sur 0 (zéro).|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

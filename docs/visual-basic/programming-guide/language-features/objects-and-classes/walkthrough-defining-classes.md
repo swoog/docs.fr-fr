@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: aac30a8b0272ae6c141138a91585953237ab8098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c41d3b2c8d905395f1249b15709da8dbdf5d4632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640431"
 ---
-# <a name="walkthrough-defining-classes-visual-basic"></a>Procédure pas à pas : définition des classes (Visual Basic)
+# <a name="walkthrough-defining-classes-visual-basic"></a>Procédure pas à pas : Définition de Classes (Visual Basic)
 
 Cette procédure pas à pas montre comment définir des classes que vous pouvez ensuite utiliser pour créer des objets. Il vous montre comment ajouter des propriétés et méthodes à la nouvelle classe et vous montre comment initialiser un objet.  
   
@@ -77,9 +77,9 @@ Cette procédure pas à pas montre comment définir des classes que vous pouvez 
   
 1.  Exécutez votre application en appuyant sur F5. Cliquez sur le bouton sur le formulaire pour appeler la procédure de test. Il affiche un message indiquant que l’original `UserName` est « MOORE, BOBBY », car la procédure appelée le `Capitalize` méthode de l’objet.  
   
-2.  Cliquez sur **OK** pour faire disparaître la boîte de message. Le `Button1 Click` procédure modifie la valeur de la `UserName` propriété et affiche un message indiquant que la nouvelle valeur de `UserName` est « Worden, Joe ».  
+2.  Cliquez sur **OK** pour fermer la boîte de message. Le `Button1 Click` procédure modifie la valeur de la `UserName` propriété et affiche un message indiquant que la nouvelle valeur de `UserName` est « Worden, Joe ».  
   
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation orientée objet (Visual Basic)](../../concepts/object-oriented-programming.md)  
-[Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Programmation orientée objet (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

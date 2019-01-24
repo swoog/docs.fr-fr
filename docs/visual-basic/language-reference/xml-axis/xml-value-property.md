@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 2b0719320db5843d5d010bfbd70e551646e3ded9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 54bd18b050ca58c286bfca3972b242348c61fe45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737609"
 ---
 # <a name="xml-value-property-visual-basic"></a>Propriété de valeur XML (Visual Basic)
 Fournit l’accès à la valeur du premier élément d’une collection de <xref:System.Xml.Linq.XElement> objets.  
@@ -67,13 +67,13 @@ object.Value
   
  `work`  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xml.Linq.XElement>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Propriétés d’axe XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Création de code XML dans Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Méthodes d’extension](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
- [Propriété d’indexeur d’extension](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)  
- [Propriété d’axe enfant XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [Propriété d’axe d’attribut XML](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Xml.Linq.XElement>
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Propriétés d’axe XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Création de code XML dans Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Méthodes d’extension](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Propriété d’indexeur d’extension](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)
+- [Propriété d’axe enfant XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [Propriété d’axe d’attribut XML](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

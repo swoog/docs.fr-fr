@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbf889aaa6a78e67d0f08758adc0bf31cd932e88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea3656fa00e84291ff7b2bdb65f9300cd7933c0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571780"
 ---
 # <a name="ihostmalloc-interface"></a>IHostMalloc, interface
 Fournit des méthodes qui permettent le common language runtime (CLR) pour demander des allocations fines à partir du tas via l’hôte.  
@@ -31,21 +31,21 @@ Fournit des méthodes qui permettent le common language runtime (CLR) pour deman
 |Méthode|Description|  
 |------------|-----------------|  
 |[Alloc, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)|Demande que l’hôte alloue la quantité de mémoire demandée à partir du tas.|  
-|[DebugAlloc, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Demande que l’hôte alloue la quantité de mémoire demandée à partir du tas et enregistre également où la mémoire a été allouée.|  
-|[Free, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|Libère la mémoire qui a été allouée à l’aide de la `Alloc` (méthode).|  
+|[DebugAlloc, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Demande que l’hôte alloue la quantité de mémoire demandée à partir du tas et en outre suivre où la mémoire a été allouée.|  
+|[Free, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|Libère la mémoire qui a été alloué à l’aide de la `Alloc` (méthode).|  
   
 ## <a name="remarks"></a>Notes  
  Le CLR obtient un pointeur d’interface vers un `IHostMalloc` instance en appelant le [IHostMemoryManager::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) (méthode).  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IHostMemoryManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [IHostMemoryManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

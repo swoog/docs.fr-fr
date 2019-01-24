@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: cbc9891170cde4b993a5dc890ed71c07a6f59f9e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743541"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Fonctions de conversion de types de données (Visual Basic)
 Ces fonctions sont compilé "inline", ce qui signifie que le code de conversion fait partie du code qui évalue l’expression. Parfois, il n’existe aucun appel à une procédure pour effectuer la conversion, ce qui améliore les performances. Chaque fonction convertit une expression en un type de données spécifique.  
@@ -172,7 +172,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>Comportement  
   
--   **Contrainte.** En règle générale, vous pouvez utiliser les fonctions de conversion de type de données à forcer le résultat d’une opération à un type de données particulier plutôt que le type de données par défaut. Par exemple, utilisez `CDec` à arithmétique décimale dans les cas où le simple précision, double précision ou arithmétique sur les entiers serait normalement avoir lieu.  
+-   **Coercion.** En règle générale, vous pouvez utiliser les fonctions de conversion de type de données à forcer le résultat d’une opération à un type de données particulier plutôt que le type de données par défaut. Par exemple, utilisez `CDec` à arithmétique décimale dans les cas où le simple précision, double précision ou arithmétique sur les entiers serait normalement avoir lieu.  
   
 -   **Échecs de conversion.** Si le `expression` passé à la fonction est en dehors de la plage du type de données vers lequel il doit être converti, un <xref:System.OverflowException> se produit.  
   
@@ -285,17 +285,17 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
- <xref:Microsoft.VisualBasic.Strings.Format%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Str%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
- [Fonctions de conversion](../../../visual-basic/language-reference/functions/conversion-functions.md)  
- [Conversions de type en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Int%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
+- <xref:Microsoft.VisualBasic.Strings.Format%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Str%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- [Fonctions de conversion](../../../visual-basic/language-reference/functions/conversion-functions.md)
+- [Conversions de type en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

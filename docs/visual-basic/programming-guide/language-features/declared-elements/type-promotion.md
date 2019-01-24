@@ -10,17 +10,17 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 104fa906fecc5a5bb8704fe3ab839f9f200cf73b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4761a3ebc3e1271846c2415d8f629500a515ed2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721960"
 ---
 # <a name="type-promotion-visual-basic"></a>Promotion de type (Visual Basic)
-Lorsque vous déclarez un élément de programmation dans un module, Visual Basic élève sa portée vers l’espace de noms contenant le module. Il s’agit en tant que *promotion de type*.  
+Lorsque vous déclarez un élément de programmation dans un module, Visual Basic élève sa portée vers l’espace de noms contenant le module. Il s’agit *promotion de type*.  
   
- L’exemple suivant montre une définition squelette d’un module et de deux membres de ce module.  
+ L’exemple suivant montre une définition squelette d’un module et deux membres de ce module.  
   
  [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
   
@@ -34,34 +34,34 @@ Lorsque vous déclarez un élément de programmation dans un module, Visual Basi
  Dans l’exemple précédent, le premier appel utilise des chaînes de qualification complète. Toutefois, cela n’est pas nécessaire en raison de la promotion de type. Le deuxième appel accède également aux membres du module sans inclure `projModule` dans les chaînes de qualification.  
   
 ## <a name="defeat-of-type-promotion"></a>Invalidation de la Promotion de Type  
- Si l’espace de noms comporte déjà un membre portant le même nom qu’un membre de module, la promotion de type est invalidée pour ce membre de module. L’exemple suivant montre une définition squelette d’une énumération et d’un module au sein du même espace de noms.  
+ Si l’espace de noms possède déjà un membre portant le même nom qu’un membre de module, la promotion de type est invalidée pour ce membre de module. L’exemple suivant montre une définition squelette d’une énumération et d’un module au sein du même espace de noms.  
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- Dans l’exemple précédent, Visual Basic ne peut pas promouvoir la classe `abc` à `thisNameSpace` , car il existe déjà une énumération du même nom au niveau de l’espace de noms. Pour accéder à `abcSub`, vous devez utiliser la chaîne de qualification complète `thisNamespace.thisModule.abc.abcSub`. Toutefois, la classe `xyz` est promue, vous pouvez accéder à `xyzSub` avec la chaîne de qualification plus courte `thisNamespace.xyz.xyzSub`.  
+ Dans l’exemple précédent, Visual Basic ne peut pas promouvoir la classe `abc` à `thisNameSpace` , car il existe déjà une énumération portant le même nom au niveau de l’espace de noms. Pour accéder à `abcSub`, vous devez utiliser la chaîne de qualification complète `thisNamespace.thisModule.abc.abcSub`. Toutefois, la classe `xyz` est promue, et vous pouvez accéder à `xyzSub` avec la chaîne de qualification plus courte `thisNamespace.xyz.xyzSub`.  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>Invalidation de la Promotion de Type pour les Types partiels  
- Si une classe ou structure à l’intérieur d’un module utilise la [partielle](../../../../visual-basic/language-reference/modifiers/partial.md) (mot clé), la promotion de type est automatiquement invalidée pour cette classe ou structure, ou non de l’espace de noms a un membre portant le même nom. Autres éléments dans le module sont toujours éligibles pour la promotion de type.  
+ Si une classe ou structure à l’intérieur d’un module utilise la [partielle](../../../../visual-basic/language-reference/modifiers/partial.md) mot clé, la promotion de type est automatiquement invalidée pour cette classe ou structure, ou non l’espace de noms possède un membre portant le même nom. Autres éléments dans le module sont toujours éligibles pour la promotion de type.  
   
- **Conséquences.** Invalidation de la promotion de type d’une définition partielle peut provoquer des résultats inattendus et même des erreurs du compilateur. L’exemple suivant montre des définitions partielles squelettes d’une classe, y compris à l’intérieur d’un module.  
+ **Conséquences.** Invalidation de la promotion de type d’une définition partielle peut entraîner des résultats inattendus et même des erreurs du compilateur. L’exemple suivant montre des définitions partielles squelettes d’une classe, y compris à l’intérieur d’un module.  
   
  [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
   
- Dans l’exemple précédent, le développeur peut s’attendre le compilateur fusionne les deux définitions partielles de `sampleClass`. Toutefois, le compilateur ne tient pas compte pour la définition partielle à l’intérieur de la promotion `sampleModule`. Par conséquent, il tente de compiler deux classes distinctes, toutes deux nommées `sampleClass` , mais avec des chemins d’accès de qualification différents.  
+ Dans l’exemple précédent, le développeur pourrait s’y attendre le compilateur fusionne les deux définitions partielles de `sampleClass`. Toutefois, le compilateur n’envisage pas de promotion pour la définition partielle à l’intérieur de `sampleModule`. Par conséquent, il tente de compiler les deux classes distinctes, toutes deux nommées `sampleClass` , mais avec des chemins d’accès de qualification différents.  
   
  Le compilateur fusionne des définitions partielles uniquement lorsque leurs chemins qualifiés complets sont identiques.  
   
 ## <a name="recommendations"></a>Recommandations  
- Les recommandations suivantes représentent les bonnes pratiques de programmation.  
+ Les recommandations suivantes représentent la bonne pratique de programmation.  
   
--   **Noms uniques.** Lorsque vous avez un contrôle total sur la dénomination des éléments de programmation, il est toujours de judicieux d’utiliser des noms uniques partout. Des noms identiques requièrent une qualification supplémentaire et peuvent rendre votre code plus difficile à lire. Elles peuvent entraîner des erreurs subtiles et des résultats inattendus.  
+-   **Noms uniques.** Lorsque vous avez un contrôle total sur l’affectation des noms d’éléments de programmation, il est toujours judicieux d’utiliser des noms uniques partout. Des noms identiques requièrent une qualification supplémentaire et peuvent rendre votre code plus difficile à lire. Elles peuvent également entraîner des erreurs subtiles et des résultats inattendus.  
   
--   **Qualification complète.** Lorsque vous travaillez avec des modules et autres éléments dans le même espace de noms, l’approche la plus sûre consiste à toujours utiliser la qualification complète pour tous les éléments de programmation. Si la promotion de type est invalidée pour un membre de module et que vous ne qualifiez pas complètement ce membre, vous pouvez accéder par inadvertance un élément de programmation différent.  
+-   **Nom qualifié complet.** Lorsque vous travaillez avec des modules et d’autres éléments dans le même espace de noms, l’approche la plus sûre consiste à toujours utiliser un nom qualifié complet pour tous les éléments de programmation. Si la promotion de type est invalidée pour un membre de module et vous ne qualifiez pas complètement ce membre, vous pouvez accéder par inadvertance un élément de programmation différents.  
   
-## <a name="see-also"></a>Voir aussi  
- [Module (instruction)](../../../../visual-basic/language-reference/statements/module-statement.md)  
- [Namespace (instruction)](../../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [Portée dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Guide pratique : contrôler la portée d'une variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
- [Références aux éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>Voir aussi
+- [Module (instruction)](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Namespace (instruction)](../../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)
+- [Portée dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Guide pratique pour Contrôler la portée d’une Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
+- [Références aux éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

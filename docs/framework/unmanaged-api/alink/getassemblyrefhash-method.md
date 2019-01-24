@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ccf60d067af356dda1870a2fb1dcca21966f16a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5698e5555e82fd8f64fd029f78cda361a367ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585222"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash, méthode
 Récupère un objet blob de hachage pour un assembly donné.  
@@ -38,21 +38,21 @@ HRESULT GetAssemblyRefHash(
   
 #### <a name="parameters"></a>Paramètres  
  `FileToken`  
- ID de l’assembly à laquelle fait référence le code de hachage.  
+ ID de l’assembly auquel le hachage fera référence.  
   
  `ppvHash`  
- Reçoit le blob de hachage obtenue.  
+ Reçoit l’objet blob de hachage résultante.  
   
  `pcbHash`  
- Reçoit la taille, en octets, de l’objet blob de hachage.  
+ Reçoit la taille, en octets, du blob de hachage.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
 ## <a name="requirements"></a>Spécifications  
- Requiert alink.h  
+ Nécessite alink.h  
   
-## <a name="see-also"></a>Voir aussi  
- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Voir aussi
+- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

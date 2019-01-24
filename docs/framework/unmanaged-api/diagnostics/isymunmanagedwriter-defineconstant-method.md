@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c7cf800dafa9f3e213a012f49c73d51c78e7074
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e03339ff2c1205f66281bd31c3ef67439feea39c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726483"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant, méthode
 Définit un nom pour une valeur constante.  
@@ -39,7 +39,7 @@ HRESULT DefineConstant(
   
 #### <a name="parameters"></a>Paramètres  
  `name`  
- [in] Un pointeur vers un `WCHAR` qui définit le nom de la constante.  
+ [in] Un pointeur vers un `WCHAR` qui définit le nom de constante.  
   
  `value`  
  [in] La valeur de la constante.  
@@ -56,6 +56,6 @@ HRESULT DefineConstant(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [DefineConstant2, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [DefineConstant2, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 09d96b304ba3bcf2a9de2812ce37ae69dba73a41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596005"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Conversions implicites et explicites (Visual Basic)
 Un *conversion implicite* ne nécessite pas une syntaxe spéciale dans le code source. Dans l’exemple suivant, Visual Basic convertit implicitement la valeur de `k` à une valeur à virgule flottante simple précision avant de l’assigner à `q`.  
@@ -117,7 +117,7 @@ End If
  Pour plus d’informations et un exemple, consultez [Conversions de tableau](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).  
   
 ### <a name="types-defining-ctype"></a>Types définissant CType  
- Vous pouvez définir `CType` sur une classe ou structure que vous avez défini. Cela vous permet de convertir des valeurs vers et depuis le type de votre classe ou structure. Pour plus d’informations et un exemple, consultez [Comment : définir un opérateur de Conversion](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Vous pouvez définir `CType` sur une classe ou structure que vous avez défini. Cela vous permet de convertir des valeurs vers et depuis le type de votre classe ou structure. Pour plus d’informations et un exemple, consultez [Comment : Définir un opérateur de Conversion](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 > [!NOTE]
 >  Valeurs utilisées avec un mot clé de conversion doivent être valides pour le type de données de destination, ou une erreur se produit. Par exemple, si vous tentez de convertir un `Long` à un `Integer`, la valeur de la `Long` doivent se trouver dans la plage valide pour le `Integer` type de données.  
@@ -125,15 +125,15 @@ End If
 > [!CAUTION]
 >  Spécification `CType` à convertir à partir d’un type de classe vers un autre échoue au moment de l’exécution si le type de source ne dérive pas du type de destination. Un tel échec lève une <xref:System.InvalidCastException> exception.  
   
- Toutefois, si un des types est une structure ou classe que vous avez défini et si vous avez défini `CType` sur cette classe ou structure, une conversion peut réussir si elle satisfait aux exigences de votre `CType`. Consultez [Comment : définir un opérateur de Conversion](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Toutefois, si un des types est une structure ou classe que vous avez défini et si vous avez défini `CType` sur cette classe ou structure, une conversion peut réussir si elle satisfait aux exigences de votre `CType`. Voir [Guide pratique pour Définir un opérateur de Conversion](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
  Effectuez une conversion explicite est également appelé *cast* une expression à une classe de type ou l’objet de données donné.  
   
-## <a name="see-also"></a>Voir aussi  
- [Conversions de type en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Conversion entre des chaînes et d’autres types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Comment : convertir un objet en un autre Type dans Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)  
- [Fonctions de conversion de types](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dépannage des types de données](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>Voir aussi
+- [Conversions de type en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversion entre des chaînes et d’autres types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Guide pratique pour Convertir un objet en un autre Type dans Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)
+- [Fonctions de conversion de types](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Dépannage des types de données](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

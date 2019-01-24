@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 949b6c7272b39900698b618760f5e5bad11ccc3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670639"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;écouteurs&gt; élément pour &lt;source&gt;
 Ajoute ou supprime des écouteurs dans le <xref:System.Diagnostics.TraceSource.Listeners%2A> collection pour un <xref:System.Diagnostics.TraceSource>. Un écouteur dirige la sortie de traçage vers une cible appropriée, par exemple un journal, une fenêtre ou un fichier texte.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<sources >  
-\<source >  
+\<system.diagnostics>  
+\<sources>  
+\<source>  
 \<écouteurs > élément  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -89,7 +89,7 @@ Ajoute ou supprime des écouteurs dans le <xref:System.Diagnostics.TraceSource.L
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Diagnostics.TraceListener>  
- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Écouteurs de suivi](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Diagnostics.TraceListener>
+- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Écouteurs de suivi](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6da86ce2d86a6842d2d7d8de860e9a8621bdaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d89a531ad09e6865bd9c7dad00c1d8c1840fab8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662164"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem, interface
 Représente un seul assembly dans le global assembly cache.  
@@ -32,16 +32,16 @@ Représente un seul assembly dans le global assembly cache.
 |------------|-----------------|  
 |[AbortItem, méthode](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Permet à l’assembly dans le global assembly cache effectuer des opérations de nettoyage avant qu’il est libéré.|  
 |[Commit, méthode](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Valide la référence d’assembly mis en cache dans la mémoire.|  
-|[CreateStream, méthode](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Crée un flux de données avec le format et le nom spécifié.|  
+|[CreateStream, méthode](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Crée un flux avec le format et le nom spécifié.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)  
- [IAssemblyCache, interface](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
+- [IAssemblyCache, interface](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

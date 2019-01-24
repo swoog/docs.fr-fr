@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec6472a33c49d9345793d73ac2f78f8896dc218b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b77dcbb1acffe47524aee3cd7761e342175dcd34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733695"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError, méthode
-Notifie le profileur que le compilateur (JIT) juste-à-temps a rencontré une erreur dans le processus de recompilation.  
+Notifie le profileur que compilateur juste-à-temps (JIT) a rencontré une erreur dans le processus de recompilation.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +39,13 @@ HRESULT ReJITError(
   
 #### <a name="parameters"></a>Paramètres  
  `moduleID`  
- [in] Le `ModuleID` dans lequel la recompilation ayant échoué a été tenté.  
+ [in] Le `ModuleID` dans lequel la tentative de recompilation ayant échoué a été effectuée.  
   
  `methodId`  
  [in] Le `MethodDef` de la méthode sur lequel la tentative de recompilation ayant échoué a été effectuée.  
   
  `functionId`  
- [in] L’instance de la fonction qui est recompilée ou marquée pour la recompilation. Cette valeur peut être `NULL` si la défaillance s’est produite sur une base par méthode, au lieu d’une base par instanciation (par exemple, si le profileur a spécifié un jeton de métadonnées non valide pour la méthode d’être recompilé).  
+ [in] L’instance de fonction qui est en cours de recompilation recompilée ou marquée pour. Cette valeur peut être `NULL` si la défaillance s’est produite sur une base par méthode au lieu d’une base par instanciation (par exemple, si le profileur spécifié un jeton de métadonnées non valide pour la méthode d’être recompilé).  
   
  `hrStatus`  
  [in] HRESULT qui indique la nature de l’échec. Consultez la section HRESULT d’état pour obtenir la liste de valeurs.  
@@ -59,20 +59,20 @@ HRESULT ReJITError(
 |--------------------------|-----------------|  
 |E_INVALIDARG|Le `moduleID` ou `methodDef` jeton est `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|Le module n'est pas encore totalement chargé ou il est en cours de déchargement.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|Le module spécifié a été généré dynamiquement (par exemple, en `Reflection.Emit`) et n’est donc pas prise en charge par cette méthode.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|Le module spécifié a été généré dynamiquement (par exemple, en `Reflection.Emit`) et n’est donc pas pris en charge par cette méthode.|  
 |CORPROF_E_FUNCTION_IS_COLLECTIBLE|La méthode est instanciée dans un assembly pouvant être collecté et n’est donc pas en mesure d’être recompilé. Notez que les types et fonctions définies dans un contexte de réflexion non (par exemple, `List<MyCollectibleStruct>`) peut être instancié dans un assembly pouvant être collecté.|  
 |E_OUTOFMEMORY|Le CLR a manqué de mémoire lors de la tentative de marquer la méthode spécifiée pour la recompilation JIT.|  
 |Autre|Le système d'exploitation a retourné un échec en dehors du contrôle du CLR. Par exemple, si un appel système pour modifier la protection d’accès d’une page de mémoire échoue, l’erreur de système d’exploitation s’affiche.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorProfilerCallback, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback4, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerCallback, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback4, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

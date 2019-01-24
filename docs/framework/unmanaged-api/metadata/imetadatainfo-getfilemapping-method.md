@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 562b6fcd015441ce5eb6b5f0ab7a4f361bb229c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84d53bd5bb9c0eca83b39fc9d1c83d93440e336b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645464"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping, méthode
-Obtient la région de mémoire du fichier mappé et le type de mappage.  
+Obtient la zone de mémoire du fichier mappé et le type de mappage.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +45,7 @@ HRESULT GetFileMapping (
  [out] La taille de la région mappée. Si `pdwMappingType` est `fmFlat`, c’est la taille du fichier.  
   
  `pdwMappingType`  
- [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) valeur qui indique le type de mappage. L’implémentation actuelle du common language runtime (CLR) retourne toujours `fmFlat`. Autres valeurs sont réservées à un usage ultérieur. Toutefois, vous devez toujours vérifier la valeur retournée, étant donné que les autres valeurs peuvent être activées dans les versions ou les versions de service.  
+ [out] Un [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) valeur qui indique le type de mappage. L’implémentation actuelle du common language runtime (CLR) retourne toujours `fmFlat`. Autres valeurs sont réservées pour une utilisation ultérieure. Toutefois, vous devez toujours vérifier la valeur retournée, étant donné que les autres valeurs peuvent être activées dans les versions ou versions de service.  
   
 ## <a name="return-value"></a>Valeur de retour  
   
@@ -53,26 +53,26 @@ HRESULT GetFileMapping (
 |-------------|-----------------|  
 |`S_OK`|Toutes les sorties sont remplies.|  
 |`E_INVALIDARG`|NULL a été transmise en tant que valeur d’argument.|  
-|`COR_E_NOTSUPPORTED`|L’implémentation CLR ne peut pas fournir d’informations sur la région de mémoire. Cela peut se produire pour les raisons suivantes :<br /><br /> -La portée des métadonnées a été ouverte avec le `ofWrite` ou `ofCopyMemory` indicateur.<br />-La portée des métadonnées a été ouverte sans le `ofReadOnly` indicateur.<br />-La [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) méthode a été utilisée pour ouvrir uniquement la partie métadonnées du fichier.<br />-Le fichier n’est pas un fichier exécutable portable (PE). **Remarque :** ces conditions dépendent de l’implémentation CLR, et sont susceptibles d’être affaiblies dans les futures versions du CLR.|  
+|`COR_E_NOTSUPPORTED`|L’implémentation CLR ne peut pas fournir d’informations sur la région de mémoire. Cela peut se produire pour les raisons suivantes :<br /><br /> -La portée des métadonnées a été ouverte avec le `ofWrite` ou `ofCopyMemory` indicateur.<br />-La portée des métadonnées a été ouverte sans le `ofReadOnly` indicateur.<br />-Le [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) méthode a été utilisée pour ouvrir uniquement la partie métadonnées du fichier.<br />-Le fichier n’est pas un fichier exécutable portable (PE). **Remarque :**  Ces conditions dépendent de l’implémentation CLR et sont susceptibles d’être affaiblies dans les futures versions du CLR.|  
   
 ## <a name="remarks"></a>Notes  
- La mémoire qui `ppvData` pointe vers est valide tant que la portée des métadonnées sous-jacentes est ouverte.  
+ La mémoire qui `ppvData` pointe est valide tant que la portée des métadonnées sous-jacentes est ouverte.  
   
- Dans l’ordre pour que cette méthode fonctionne, lorsque vous mappez les métadonnées d’un fichier sur disque dans la mémoire en appelant le [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) (méthode), vous devez spécifier le `ofReadOnly` indicateur et vous ne devez pas spécifier le `ofWrite` ou `ofCopyMemory` indicateur.  
+ Afin que cette méthode fonctionne, lorsque vous mappez les métadonnées d’un fichier sur disque dans la mémoire en appelant le [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) (méthode), vous devez spécifier le `ofReadOnly` indicateur et vous ne devez pas spécifier le `ofWrite` ou `ofCopyMemory` indicateur.  
   
- Le choix du type de mappage de fichier pour chaque portée est spécifique à une implémentation donnée du CLR. Elle ne peut pas être définie par l’utilisateur. L’implémentation actuelle du CLR retourne toujours `fmFlat` dans `pdwMappingType`, mais cela peut changer dans les futures versions du CLR ou dans les versions de service d’une version donnée. Vous devez toujours vérifier la valeur retournée `pdwMappingType`, car les différents types aura des dispositions différentes et les offsets.  
+ Le choix du type de mappage de fichier pour chaque étendue est spécifique à une implémentation donnée du CLR. Elle ne peut pas être définie par l’utilisateur. L’implémentation actuelle du CLR retourne toujours `fmFlat` dans `pdwMappingType`, mais cela peut changer dans les futures versions du CLR ou dans les versions de service d’une version donnée. Vous devez toujours vérifier la valeur retournée `pdwMappingType`, car différents types ont différentes dispositions et les décalages.  
   
- Passage de NULL pour une des trois paramètres n’est pas pris en charge. La méthode retourne `E_INVALIDARG`, et aucune des sorties sont remplies. Ignorer le type de mappage ou la taille de la région peut entraîner un arrêt anormal de programme.  
+ Passage de NULL pour une des trois paramètres n’est pas pris en charge. La méthode retourne `E_INVALIDARG`, et aucune des sorties sont remplis. Ignorer le type de mappage ou la taille de la région peut entraîner l’arrêt du programme anormale.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataInfo, interface](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
- [CorFileMapping, énumération](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataInfo, interface](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
+- [CorFileMapping, énumération](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

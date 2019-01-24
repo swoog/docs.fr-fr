@@ -1,5 +1,5 @@
 ---
-title: "Comment : utiliser des informations d'identification de sécurité de transport et de message"
+title: 'Procédure : Utiliser la sécurité Transport et les informations d’identification de Message'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f678c4713bff342cb3e788a85d7e58fc6e47820c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731866"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Comment : utiliser des informations d'identification de sécurité de transport et de message
-Sécurisation d’un service avec les informations d’identification de transport et message utilise le meilleur des modes de sécurité de Transport et Message dans Windows Communication Foundation (WCF). En résumé, la sécurité de la couche de transport assure l'intégrité et la confidentialité des informations tandis que la sécurité de la couche de message offre diverses informations d'identification, lesquelles ne sont pas disponibles lorsque seule la sécurité de niveau transport est utilisée. Cette rubrique contient la procédure par étape permettant d’implémenter la sécurité de transport avec les informations d’identification de message à l’aide des liaisons <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding>. Pour plus d’informations sur la définition du mode de sécurité, consultez [Comment : définir le Mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Procédure : Utiliser la sécurité Transport et les informations d’identification de Message
+Sécurisation d’un service avec les informations d’identification de transport et message utilise le meilleur des modes de sécurité de Transport et Message dans Windows Communication Foundation (WCF). En résumé, la sécurité de la couche de transport assure l'intégrité et la confidentialité des informations tandis que la sécurité de la couche de message offre diverses informations d'identification, lesquelles ne sont pas disponibles lorsque seule la sécurité de niveau transport est utilisée. Cette rubrique contient la procédure par étape permettant d’implémenter la sécurité de transport avec les informations d’identification de message à l’aide des liaisons <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding>. Pour plus d’informations sur la définition du mode de sécurité, consultez [Comment : Définir le Mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Lorsque vous affectez au mode de sécurité la valeur `TransportWithMessageCredential`, le mécanisme chargé d'offrir la sécurité de niveau transport dépend du transport utilisé. Pour le transport HTTP, le mécanisme utilisé est Secure Sockets Layer (SSL) sur HTTP, c'est-à-dire HTTPS, pour le transport TCP, il s'agit de SSL sur TCP ou de Windows.  
   
@@ -25,7 +25,7 @@ Sécurisation d’un service avec les informations d’identification de transpo
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Pour utiliser la liaison WSHttpBinding avec un certificat pour la sécurité de niveau transport (dans le code)  
   
-1.  Utilisez l’outil HttpCfg.exe pour attribuer un certificat SSL à l’un des ports de l’ordinateur. Pour plus d’informations, consultez [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Utilisez l’outil HttpCfg.exe pour attribuer un certificat SSL à l’un des ports de l’ordinateur. Pour plus d'informations, voir [Procédure : Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Créez une instance de la classe <xref:System.ServiceModel.WSHttpBinding>, puis affectez à la propriété <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> la valeur <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
@@ -84,7 +84,7 @@ Sécurisation d’un service avec les informations d’identification de transpo
   
 #### <a name="to-use-the-wshttpbinding"></a>Pour utiliser la liaison WSHttpBinding  
   
-1.  Configurez l’ordinateur en attribuant un certificat SSL à l’un de ses ports. (Pour plus d’informations, consultez [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Vous n’avez pas besoin de définir un <`transport`> valeur de l’élément avec cette configuration.  
+1.  Configurez l’ordinateur en attribuant un certificat SSL à l’un de ses ports. (Pour plus d’informations, consultez [Comment : Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Vous n’avez pas besoin de définir un <`transport`> valeur de l’élément avec cette configuration.  
   
 2.  Spécifiez le type d'informations d'identification pour la sécurité de niveau message. L’exemple suivant définit la `clientCredentialType` attribut de la <`message`> élément à `UserName`.  
   
@@ -160,7 +160,7 @@ Sécurisation d’un service avec les informations d’identification de transpo
     </bindings>  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour définir le mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Sécurisation de services](../../../../docs/framework/wcf/securing-services.md)  
- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Définir le Mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Sécurisation de services](../../../../docs/framework/wcf/securing-services.md)
+- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

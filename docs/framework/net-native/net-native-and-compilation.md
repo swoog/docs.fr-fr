@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 023759ea3d1401dbc166873d14d2c51502a1a96c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744139"
 ---
 # <a name="net-native-and-compilation"></a>Compilation et .NET natif
 Les applications Windows 8.1 et les applications de bureau Windows qui ciblent le .NET Framework sont écrites dans un langage de programmation particulier et compilées dans un langage intermédiaire. Lors de l'exécution, un compilateur juste-à-temps (JIT) est chargé de compiler du langage intermédiaire en code natif pour l'ordinateur local, juste avant qu'une méthode ne soit exécutée pour la première fois. À l'inverse, la chaîne d'outils .NET Native convertit le code source en code natif au moment de la compilation. Cette rubrique compare .NET Native avec d'autres technologies de compilation disponibles pour les applications .NET Framework. Elle explique également de façon pratique comment .NET Native génère le code natif qui peut vous aider à comprendre pourquoi les exceptions qui se produisent dans le code compilé avec .NET Native ne se produisent pas dans le code compilé par le compilateur JIT.  
@@ -100,8 +100,8 @@ Les applications Windows 8.1 et les applications de bureau Windows qui ciblent 
   
 -   Les images NGEN ont tendance à être fragiles. Par exemple, un correctif ou une modification apportée à une dépendance requièrent généralement que les assemblys qui l'utilisent soient également régénérés par NGEN. Ceci est particulièrement vrai pour les assemblys système de la bibliothèque de classes .NET Framework. À l'inverse, .NET Native permet aux applications d'être fournies indépendamment les unes des autres.  
   
-## <a name="see-also"></a>Voir aussi  
- [Métadonnées et composants autodescriptifs](../../../docs/standard/metadata-and-self-describing-components.md)  
- [Inside .NET Native (vidéo Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
- [Réflexion et .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
- [Résolution des problèmes généraux liés à .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+## <a name="see-also"></a>Voir aussi
+- [Métadonnées et composants autodescriptifs](../../../docs/standard/metadata-and-self-describing-components.md)
+- [Inside .NET Native (vidéo Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Réflexion et .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Résolution des problèmes généraux liés à .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

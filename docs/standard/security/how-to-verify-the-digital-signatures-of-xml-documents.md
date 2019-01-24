@@ -1,5 +1,5 @@
 ---
-title: 'Comment : vérifier les signatures numériques de documents XML'
+title: 'Procédure : Vérifier les Signatures numériques de Documents XML'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ef87e2c1625ebdf88dc1d21444fbbf185d486c3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b8896f5c8501b757313cc8a549b187ecedcebe97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670148"
 ---
-# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Comment : vérifier les signatures numériques de documents XML
+# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procédure : Vérifier les Signatures numériques de Documents XML
 Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Cryptography.Xml> pour vérifier les données XML signées avec une signature numérique. Les signatures numériques XML (XMLDSIG) vous permettent de vérifier que les données n'ont pas été modifiées après leur signature. Pour plus d’informations sur la norme XMLDSIG, consultez la spécification du World Wide Web Consortium (W3C) à <https://www.w3.org/TR/xmldsig-core/>.
   
  L'exemple de code de cette procédure montre comment vérifier une signature numérique XML contenue dans un élément <`Signature`>.  L'exemple récupère une clé publique RSA d'un conteneur de clé, puis utilise cette clé pour vérifier la signature.  
   
- Pour plus d’informations sur la création d’une signature numérique qui peut être vérifiée à l’aide de cette technique, consultez [Comment : signer des Documents XML avec des Signatures numériques](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ Pour plus d’informations sur la création d’une signature numérique qui peut être vérifiée à l’aide de cette technique, consultez [Comment : Signer des Documents XML avec des Signatures numériques](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>Pour vérifier la signature numérique d'un document XML  
   
@@ -68,7 +68,7 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
 ## <a name="example"></a>Exemple  
- Cet exemple suppose qu'un fichier nommé `"test.xml"` se trouve dans le même répertoire que le programme compilé.  Le `"test.xml"` fichier doit être signé à l’aide des techniques décrites dans [Comment : signer des Documents XML avec des Signatures numériques](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ Cet exemple suppose qu'un fichier nommé `"test.xml"` se trouve dans le même répertoire que le programme compilé.  Le `"test.xml"` fichier doit être signé à l’aide des techniques décrites dans [Comment : Signer des Documents XML avec des Signatures numériques](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
@@ -86,5 +86,5 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Comment : signer des documents XML avec des signatures numériques](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Guide pratique pour Signer des Documents XML avec des Signatures numériques](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

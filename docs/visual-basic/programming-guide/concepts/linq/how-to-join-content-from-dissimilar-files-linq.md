@@ -1,15 +1,15 @@
 ---
-title: 'Comment : joindre du contenu à partir de différents fichiers (LINQ) (Visual Basic)'
+title: 'Procédure : Joindre du contenu issu de fichiers (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655463"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Comment : joindre du contenu à partir de différents fichiers (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procédure : Joindre du contenu issu de fichiers (LINQ) (Visual Basic)
 
 Cet exemple montre comment joindre des données de deux fichiers CSV qui partagent une valeur commune utilisée comme clé correspondante. Cette technique peut être utile si vous devez combiner les données de deux feuilles de calcul, ou d’une feuille de calcul et d’un fichier qui a un autre format, dans un nouveau fichier. Vous pouvez modifier l’exemple pour qu’il fonctionne avec tout type de texte structuré.  
   
@@ -123,13 +123,13 @@ End Class
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Créer et compiler un projet qui cible une des options suivantes :
+Créez et compilez un projet qui cible une des options suivantes :
 
-- .NET framework version 3.5 avec une référence à System.Core.dll.
-- .NET framework version 4.0 ou ultérieure.
-- Version de .NET core 1.0 ou une version ultérieure.
+- .NET Framework version 3.5 avec une référence à System.Core.dll.
+- .NET Framework version 4.0 ou version ultérieure.
+- .NET Core version 1.0 ou version ultérieure.
   
 ## <a name="see-also"></a>Voir aussi
 
- [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -2,12 +2,12 @@
 title: Chaîne de modèle non valide
 ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
-ms.openlocfilehash: 4905f74683989d8e1a2b041a8af4af4d7432ffab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fa42632ad6d69642d7b8ec36bf2880bc10a5024
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732477"
 ---
 # <a name="invalid-pattern-string"></a>Chaîne de modèle non valide
 La chaîne de modèle spécifiée dans l’opération `Like` d’une recherche n’est pas valide.  
@@ -22,5 +22,5 @@ La chaîne de modèle spécifiée dans l’opération `Like` d’une recherche n
   
 4.  Terminez les plages de modèles par un crochet fermant.  
   
-## <a name="see-also"></a>Voir aussi  
- [Like (opérateur)](../../visual-basic/language-reference/operators/like-operator.md)
+## <a name="see-also"></a>Voir aussi
+- [Like (opérateur)](../../visual-basic/language-reference/operators/like-operator.md)

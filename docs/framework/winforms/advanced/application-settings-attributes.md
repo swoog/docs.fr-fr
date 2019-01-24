@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668949"
 ---
 # <a name="application-settings-attributes"></a>Attributs des paramètres d'application
 L’architecture de paramètres d’Application fournit beaucoup d’attributs qui peut être appliqués à la classe wrapper de paramètres des applications ou à ses propriétés individuelles. Ces attributs sont examinées au moment de l’exécution par l’infrastructure de paramètres d’application, souvent en particulier le fournisseur de paramètres, afin d’adapter son fonctionnement aux besoins énoncés du wrapper personnalisé.  
@@ -19,7 +19,7 @@ L’architecture de paramètres d’Application fournit beaucoup d’attributs q
  Le tableau suivant répertorie les attributs qui peuvent être appliqués à la classe wrapper de paramètres application, les propriétés individuelles de cette classe ou les deux. Par définition, uniquement un attribut d’étendue unique —**UserScopedSettingAttribute** ou **ApplicationScopedSettingAttribute**— doit être appliqué à chaque propriété de paramètres.  
   
 > [!NOTE]
->  Un fournisseur de paramètres personnalisés, dérivée de la <xref:System.Configuration.SettingsProvider> de classe, n’est nécessaire pour reconnaître les trois attributs suivants : **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, et **DefaultSettingValueAttribute**.  
+>  Un fournisseur de paramètres personnalisés, dérivée de la <xref:System.Configuration.SettingsProvider> de classe, n’est nécessaire pour reconnaître les trois attributs suivants : **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, and **DefaultSettingValueAttribute**.  
   
 |Attribut|une cible|Description|  
 |---------------|------------|-----------------|  
@@ -37,8 +37,8 @@ L’architecture de paramètres d’Application fournit beaucoup d’attributs q
   
  *Classe* indique que l’attribut peut être appliqué uniquement à une classe wrapper de paramètres application. *Propriété* indique que l’attribut peut être appliqué uniquement aux propriétés de paramètres. *Les deux* indique que l’attribut peut être appliqué à tout niveau.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- [Architecture des paramètres d'application](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Comment : créer des paramètres d’application](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- [Architecture des paramètres d'application](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Guide pratique pour Créer des paramètres d’Application](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4338619414c9c9ac8c5fe85479562410d1678698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7758e61635bf6611cf83d2d66d0b62a28fac97d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647684"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata, méthode
 Appelé par les services d’accès aux données du common language runtime (CLR) pour récupérer les métadonnées d’une image.  
@@ -58,16 +58,16 @@ HRESULT GetMetadata(
  [in] L’identificateur global unique de l’image.  
   
  `mdRva`  
- [in] L’adresse virtuelle relative (RVA) des métadonnées. L’adresse est relatif à l’adresse de base d’image.  
+ [in] L’adresse virtuelle relative (RVA) des métadonnées. L’adresse est par rapport à l’adresse de base d’image.  
   
  `flags`  
- [in] Réservé à un usage ultérieur.  
+ [in] Réservé pour une utilisation ultérieure.  
   
  `bufferSize`  
- [in] La taille de la mémoire tampon dans laquelle placer les métadonnées.  
+ [in] La taille de la mémoire tampon dans lequel placer les métadonnées.  
   
  `buffer`  
- [out] La mémoire tampon dans laquelle placer les métadonnées.  
+ [out] La mémoire tampon dans lequel placer les métadonnées.  
   
  `dataSize`  
  [out] La taille des métadonnées qui sont retournée.  
@@ -76,13 +76,13 @@ HRESULT GetMetadata(
  Cette méthode est implémentée par le writer de l'application de débogage.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** ClrData.idl, ClrData.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRMetadataLocator, interface](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRMetadataLocator, interface](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

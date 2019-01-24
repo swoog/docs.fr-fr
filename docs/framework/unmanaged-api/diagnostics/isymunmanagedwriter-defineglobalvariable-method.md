@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1dd657c004c58480ea2f603ad4494753463c79b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 920c768523e422220862b04fa069fc8cbea8960a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677704"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable, méthode
 Définit une variable globale unique.  
@@ -43,13 +43,13 @@ HRESULT DefineGlobalVariable(
   
 #### <a name="parameters"></a>Paramètres  
  `name`  
- [in] Un pointeur vers un `WCHAR` qui définit le nom de la variable global.  
+ [in] Un pointeur vers un `WCHAR` qui définit le nom de variable global.  
   
  `attributes`  
- [in] Attributs de la variable globales.  
+ [in] Attributs de la variable globale.  
   
  `cSig`  
- [in] A `ULONG32` qui indique la taille, en caractères, de la `signature` mémoire tampon.  
+ [in] Un `ULONG32` qui indique la taille, en caractères, de la `signature` mémoire tampon.  
   
  `signature`  
  [in] La signature de variable globale.  
@@ -58,13 +58,13 @@ HRESULT DefineGlobalVariable(
  [in] Le type d’adresse.  
   
  `addr1`  
- [in] La première adresse de la spécification du paramètre.  
+ [in] La première adresse de la spécification de paramètre.  
   
  `addr2`  
- [in] La deuxième adresse de la spécification du paramètre.  
+ [in] La deuxième adresse de la spécification de paramètre.  
   
  `addr3`  
- [in] Troisième adresse de la spécification du paramètre.  
+ [in] Troisième adresse de la spécification de paramètre.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
@@ -72,7 +72,7 @@ HRESULT DefineGlobalVariable(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [DefineLocalVariable, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)  
- [DefineGlobalVariable2, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [DefineLocalVariable, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [DefineGlobalVariable2, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)

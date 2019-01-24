@@ -1,15 +1,15 @@
 ---
-title: 'Comment : rechercher les Descendants avec un nom d’élément spécifique (Visual Basic)'
+title: 'Procédure : Rechercher les Descendants avec un nom d’élément spécifique (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: c6f702c121f6a8b9aa5750b4c5ff70c00e681b82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4311eb0a4062c01b2c8e1c19355c5284298e39dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557157"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Comment : rechercher les Descendants avec un nom d’élément spécifique (Visual Basic)
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Procédure : Rechercher les Descendants avec un nom d’élément spécifique (Visual Basic)
 Parfois, vous souhaitez rechercher tous les descendants avec un nom particulier. Vous pourriez écrire du code pour itérer au sein de tous les descendants, mais il est plus facile d'utiliser l'axe <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Exemple  
@@ -100,6 +100,6 @@ End Module
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
- [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
+- [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

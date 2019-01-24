@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726440"
 ---
 # <a name="printing-how-to-topics"></a>Rubriques "Comment" relatives à l'impression
 Les rubriques de cette section montrent comment utiliser l’impression et les fonctionnalités de gestion de système d’impression inclus avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , ainsi que la nouvelle [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] chemin d’impression.  
@@ -31,7 +31,7 @@ Les rubriques de cette section montrent comment utiliser l’impression et les f
  [Énumérer un sous-ensemble de files d'attente à l'impression](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Instructions pour la génération d’une liste des imprimantes présentant certaines caractéristiques.  
   
- [Not in Build : Comment : étendre le schéma d’impression et de créer de nouvelles Classes de système d’impression](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOT IN BUILD : Procédure : Étendre le schéma d’impression et de créer de nouvelles Classes de système d’impression](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Discussion prolongée sur comment le code managé, les programmeurs peuvent étendre le schéma d’impression pour les périphériques d’impression spécialisée ou des imprimantes à l’aide des fonctionnalités nouvelles ou rares.  
   
  [Obtenir les propriétés de l'objet de système d'impression sans réflexion](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
@@ -46,10 +46,10 @@ Les rubriques de cette section montrent comment utiliser l’impression et les f
  [Valider et fusionner des PrintTicket](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  Instructions pour la vérification qu’un ticket d’impression est valide et qu’il ne demande pas de tout ce qui n’est pas pris en charge par l’imprimante.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Printing>  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.Interop>  
- [Vue d’ensemble de l’impression](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Printing>
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.Interop>
+- [Vue d’ensemble de l’impression](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)

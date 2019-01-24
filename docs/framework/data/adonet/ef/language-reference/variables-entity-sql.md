@@ -2,12 +2,12 @@
 title: Variables (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3eed222a-f8f6-46b6-9cd5-220cc0e4e5d8
-ms.openlocfilehash: f271ffc31875e7d94a27f4752b71bfe508fcb620
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a16c450401eee1021aeef885fba129c943a87fd7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742267"
 ---
 # <a name="variables-entity-sql"></a>Variables (Entity SQL)
 ## <a name="variable"></a>Variable  
@@ -20,7 +20,7 @@ select c
 from LOB.customers as c  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Identificateurs](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
- [Paramètres](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md)  
- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Identificateurs](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)
+- [Paramètres](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md)
+- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

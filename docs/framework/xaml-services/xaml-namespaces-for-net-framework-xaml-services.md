@@ -2,12 +2,12 @@
 title: Espaces de noms XAML pour les services XAML .NET Framework
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736797"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Espaces de noms XAML pour les services XAML .NET Framework
 Un espace de noms XAML est un concept qui se développe sur la définition d’un espace de noms XML. Similaire à un espace de noms XML, vous pouvez définir un espace de noms XAML à l’aide un `xmlns` attribut dans le balisage. Espaces de noms XAML sont également représentées dans le flux de nœud XAML et d’autres API de Services XAML. Cette rubrique définit le concept d’espace de noms XAML et décrit comment les espaces de noms XAML peuvent être définies et utilisées par les contextes de schéma XAML et d’autres aspects des Services XAML du .NET Framework.  
@@ -30,7 +30,7 @@ Un espace de noms XAML est un concept qui se développe sur la définition d’u
   
  La forme la plus basique d’un identificateur qui utilise la convention d’espace de noms et assembly CLR est la suivante :  
   
- `clr-namespace:` *clrnsName* `; assembly=` *NomCourtAssembly*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyShortName*  
   
  `clr-namespace:` et `; assembly=` sont des composants de la syntaxe littérales.  
   
@@ -63,5 +63,5 @@ Un espace de noms XAML est un concept qui se développe sur la définition d’u
   
  Deux autres API qui sont pertinentes pour l’espace de noms XAML gestion dans les Services XAML .NET Framework sont les attributs <xref:System.Windows.Markup.XmlnsDefinitionAttribute> et <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Ces attributs s’appliquent aux assemblys. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> est utilisé par un contexte de schéma XAML pour interpréter toute déclaration d’espace de noms XAML qui inclut un URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> est utilisé par les outils qui émettent XAML afin qu’un espace de noms XAML particulier peut être sérialisé avec un préfixe prédictible. Pour plus d’informations, consultez [Related CLR attributs pour les Types personnalisés et les bibliothèques](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctionnement des concepts et structures du flux de nœud XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctionnement des concepts et structures du flux de nœud XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

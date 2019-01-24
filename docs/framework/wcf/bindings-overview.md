@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7d617400fe5c07e8c9754e322960f31a350f62e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657413"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Vue d’ensemble des liaisons Windows Communication Foundation
 Les liaisons sont des objets qui sont utilisés pour spécifier les détails de communication qui sont requises pour se connecter au point de terminaison d’un service Windows Communication Foundation (WCF). Chaque point de terminaison dans un service WCF requiert une liaison soit spécifiée correctement. Cette rubrique décrit les types de détails de communication définis par les liaisons, les éléments d’une liaison, les liaisons incluses dans WCF et comment une liaison peut être spécifiée pour un point de terminaison.  
@@ -32,9 +32,9 @@ Les liaisons sont des objets qui sont utilisés pour spécifier les détails de 
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système  
  Les informations contenues dans une liaison peuvent être complexes et certains paramètres peuvent ne pas être compatibles avec d'autres. Pour cette raison, WCF inclut un ensemble de liaisons fournies par le système. Ces liaisons sont conçues pour couvrir la plupart des exigences d’applications. Les classes suivantes représentent quelques exemples de liaisons fournies par le système :  
   
--   <xref:System.ServiceModel.BasicHttpBinding> : une liaison de protocole HTTP adaptée à la connexion à des services Web conformes à la spécification WS-I Basic Profile (par exemple, services basés sur les services Web ASP.NET).  
+-   <xref:System.ServiceModel.BasicHttpBinding>: Un liaison de protocole HTTP adaptée à la connexion aux services Web qui est conforme à la norme WS-I spécification Basic Profile (par exemple, services Web ASP.NET basée sur les services).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: une liaison interopérable adaptée à la connexion à des points de terminaison conformes aux protocoles WS-*.  
+-   <xref:System.ServiceModel.WSHttpBinding>: Une liaison interopérable adaptée à la connexion aux points de terminaison qui se conforment à WS-* protocoles.  
   
 -   <xref:System.ServiceModel.NetNamedPipeBinding>: Utilise le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour se connecter à d’autres points de terminaison WCF sur le même ordinateur.  
   
@@ -45,7 +45,7 @@ Les liaisons sont des objets qui sont utilisés pour spécifier les détails de 
  Pour obtenir la liste complète, avec leurs descriptions, de toutes les fourni par WCF liaisons, consultez [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Utilisation de vos propres liaisons  
- Si aucune des liaisons fournies par le système ne possède la bonne combinaison de fonctionnalités requise par une application de service, vous pouvez créer votre propre liaison. Il existe deux manières de procéder. Vous pouvez soit créer une liaison à partir d'éléments de liaison préexistants à l'aide d'un objet <xref:System.ServiceModel.Channels.CustomBinding>, soit créer une liaison entièrement définie par l'utilisateur en dérivant de la liaison <xref:System.ServiceModel.Channels.Binding>. Pour plus d’informations sur la création de votre propre liaison à l’aide de ces deux approches, consultez [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md) et [Creating liaisons](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Si aucune des liaisons fournies par le système ne possède la bonne combinaison de fonctionnalités requise par une application de service, vous pouvez créer votre propre liaison. Il existe deux manières de procéder. Vous pouvez soit créer une liaison à partir d’éléments de liaison préexistants à l’aide d’un objet <xref:System.ServiceModel.Channels.CustomBinding>, soit créer une liaison entièrement définie par l’utilisateur en dérivant de la liaison <xref:System.ServiceModel.Channels.Binding>. Pour plus d’informations sur la création de votre propre liaison à l’aide de ces deux approches, consultez [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md) et [Creating liaisons](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Utilisation des liaisons  
  L'utilisation des liaisons implique deux étapes simples :  
@@ -57,5 +57,5 @@ Les liaisons sont des objets qui sont utilisés pour spécifier les détails de 
 ## <a name="code-and-configuration"></a>Code et configuration  
  Vous pouvez définir des liaisons de deux manières : par le biais de code ou par configuration. Ces deux approches ne dépendent pas du fait que vous utilisez une liaison fournie par le système ou une liaison personnalisée. En général, l’utilisation de code procure un contrôle total sur la définition d’une liaison au moment du design. À l’aide de la configuration, en revanche, permet à un administrateur système ou l’utilisateur d’un service WCF ou le client pour modifier les paramètres d’une liaison sans devoir recompiler l’application de service. Cette souplesse est souvent souhaitable car il n’existe aucun moyen de prévoir les exigences spécifiques du matériel sur lequel une application WCF doit être déployée. Le fait de conserver les informations de liaison (et d’adressage) hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application. Notez que les liaisons définies dans le code sont créées après les liaisons spécifiées dans la configuration, ce qui permet aux liaisons définies dans le code de remplacer celles définies par configuration.  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
