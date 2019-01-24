@@ -1,18 +1,12 @@
 ---
-title: Bien démarrer - Guide C#
-description: Vous trouverez ici de petits didacticiels simples qui vous permettront d’apprendre les concepts de base de C# et d’écrire des applications .NET Core.
+title: 'Bien démarrer - Guide C#'
+description: 'Vous trouverez ici de petits didacticiels simples qui vous permettront d’apprendre les concepts de base de C# et d’écrire des applications .NET Core.'
 helpviewer_keywords:
-- Visual C#, getting started
-- getting started, Visual C#
+  - 'Visual C#, getting started'
+  - 'getting started, Visual C#'
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837891"
 ---
 # <a name="get-started-with-c"></a>Bien démarrer avec C\#
 
@@ -64,4 +58,4 @@ Les rubriques suivantes sont disponibles :
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Bien démarrer avec Visual C# et Visual Basic à l’aide de Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Bien démarrer avec Visual C# et Visual Basic à l’aide de Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

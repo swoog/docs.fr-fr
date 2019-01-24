@@ -8,19 +8,21 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 927640b63773d24be93cc90427668f9568a39652
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236815"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362728"
 ---
-# <a name="conversion-operators-c-programming-guide"></a>Opérateurs de conversion (Guide de programmation C#)
+# <a name="conversion-operators-c-programming-guide"></a>Opérateurs de conversion (guide de programmation C#)
+
 C# permet aux programmeurs de déclarer des conversions sur des classes ou structs afin d’autoriser les conversions dans les deux sens entre ces derniers et d’autres classes ou structs, ou des types de base. Les conversions sont définies comme des opérateurs et nommées en fonction du type vers lequel s’effectue l’opération. Soit le type de l’argument à convertir, soit le type du résultat de la conversion, mais pas les deux, doit être le type conteneur.  
   
  [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
-## <a name="conversion-operators-overview"></a>Vue d’ensemble des opérateurs de conversion  
+## <a name="conversion-operators-overview"></a>Vue d’ensemble des opérateurs de conversion
+
  Les opérateurs de conversion ont les propriétés suivantes :  
   
 -   Les conversions déclarées comme `implicit` se produisent automatiquement selon les besoins.  
@@ -29,7 +31,8 @@ C# permet aux programmeurs de déclarer des conversions sur des classes ou struc
   
 -   Toutes les conversions doivent être déclarées comme `static`.  
   
-## <a name="related-sections"></a>Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes
+
  Pour plus d'informations :  
   
 -   [Utilisation d’opérateurs de conversion](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  

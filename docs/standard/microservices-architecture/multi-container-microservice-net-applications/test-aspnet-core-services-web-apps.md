@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 67989dc9651745ce0bd9ee9bbcbde1af0b7bc452
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0f4b9a8461b4d14cd5b468a50af1783a340392e2
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148026"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362156"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test d’applications web et de services ASP.NET Core
 
@@ -110,7 +110,7 @@ public class PrimeWebDefaultRequestShould
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
 -   **Effectuer des tests unitaires dans .NET Core à l’aide de dotnet test** <br/>
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. Site officiel. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -118,7 +118,7 @@ public class PrimeWebDefaultRequestShould
 -   **Concepts de base des tests unitaires.** <br/>
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**. Dépôt GitHub <br/>
+-   **Moq**. Dépôt GitHub. <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
 -   **NUnit**. Site officiel. <br/>

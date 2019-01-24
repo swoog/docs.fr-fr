@@ -1,21 +1,21 @@
 ---
 title: Stratégies pour la gestion d’une défaillance partielle
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Stratégies pour la gestion d’une défaillance partielle
+description: Découvrez plusieurs stratégies pour gérer normalement les défaillances partielles.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: ba15258be8caa1a5ed800cef0ebe832aa7328252
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: ad45e357c1656b9346b7bdb5f324bde5fa76eaba
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146116"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362767"
 ---
-# <a name="strategies-for-handling-partial-failure"></a>Stratégies pour la gestion d’une défaillance partielle
+# <a name="strategies-to-handle-partial-failure"></a>Stratégies pour gérer une défaillance partielle
 
 Les stratégies pour la gestion des défaillances partielles sont les suivantes.
 
-**Utilisez la communication asynchrone (par exemple, la communication basée sur les messages) sur les microservices internes**. Il est vivement conseillé de ne pas créer de longues chaînes d’appels HTTP synchrones entre les microservices internes, car cette conception incorrecte peut devenir la cause principale de graves pannes. Au contraire, à l’exception des communications frontend entre les applications clientes et le premier niveau des microservices ou les passerelles d’API affinées, il est recommandé d’utiliser une communication asynchrone (basée sur les messages) uniquement après le premier cycle de demande/réponse, entre les microservices internes. La cohérence à terme et les architectures basées sur les événements permettent de réduire les effets en chaîne. Ces approches appliquent un plus haut niveau d’autonomie des microservices, c’est pourquoi elles préviennent le problème indiqué ici.
+**Utilisez la communication asynchrone (par exemple, la communication basée sur les messages) sur les microservices internes**. Nous vous conseillons vivement de ne pas créer de longues chaînes d’appels HTTP synchrones entre les microservices internes, car cette conception incorrecte peut devenir la cause principale de graves pannes. Au contraire, à l’exception des communications front-end entre les applications clientes et le premier niveau des microservices ou les passerelles d’API affinées, nous vous recommandons d’utiliser une communication asynchrone (basée sur les messages) uniquement après le premier cycle de requête/réponse, entre les microservices internes. La cohérence à terme et les architectures basées sur les événements permettent de réduire les effets en chaîne. Ces approches appliquent un plus haut niveau d’autonomie des microservices, c’est pourquoi elles préviennent le problème indiqué ici.
 
 **Utilisez les nouvelles tentatives avec interruption exponentielle**. Cette technique permet d’éviter les défaillances brèves et intermittentes en effectuant de nouvelles tentatives d’appel un certain nombre de fois, dans le cas où le service ne serait pas disponible pendant seulement une courte période. Cela peut se produire lors de problèmes réseau intermittents ou quand un microservice/conteneur est déplacé vers un autre nœud d’un cluster. Toutefois, si ces nouvelles tentatives ne sont pas correctement conçues avec des disjoncteurs, les effets en chaîne peuvent s’aggraver, entraînant même, à terme, un [déni de service](https://en.wikipedia.org/wiki/Denial-of-service_attack).
 
@@ -25,24 +25,24 @@ Les stratégies pour la gestion des défaillances partielles sont les suivantes.
 
 **Fournissez des solutions de secours**. Dans cette approche, le processus client exécute la logique de secours en cas d’échec d’une requête, comme le retour de données mises en cache ou d’une valeur par défaut. Il s’agit d’une approche appropriée pour les requêtes, mais qui est plus complexe pour les mises à jour ou les commandes.
 
-**Limitez le nombre de requêtes placées en file d’attente**. Les clients doivent également imposer une limite plus grande du nombre de requêtes en attente qu’un microservice client peut envoyer à un service particulier. Si la limite est atteinte, il est probablement inutile d’effectuer d’autres requêtes, et ces tentatives devraient échouer immédiatement. En termes d’implémentation, la stratégie d’[isolation par cloisonnement](https://github.com/App-vNext/Polly/wiki/Bulkhead) de Polly peut être utilisée pour satisfaire cette exigence. Cette approche est essentiellement une limitation de parallélisation avec <xref:System.Threading.SemaphoreSlim> comme implémentation. Elle autorise également une « file d’attente » à l’extérieur du cloisonnement. Vous pouvez vous protéger de manière proactive contre une charge excessive , même avant l’exécution (par exemple, parce que la capacité maximale est considérée comme atteinte). Ainsi, sa réponse à certains scénarios de défaillance est plus rapide que celle d’un disjoncteur, puisque le disjoncteur attend la défaillance. Dans Polly, l’objet BulkheadPolicy expose le niveau de remplissage du cloisonnement et de la file d’attente. De plus, en cas de dépassement, il propose des événements qui peuvent également être utilisés pour gérer la mise à l’échelle horizontale automatisée.
+**Limitez le nombre de requêtes placées en file d’attente**. Les clients doivent également imposer une limite plus grande du nombre de requêtes en attente qu’un microservice client peut envoyer à un service particulier. Si la limite est atteinte, il est probablement inutile d’effectuer d’autres requêtes, et ces tentatives devraient échouer immédiatement. En termes d’implémentation, la stratégie d’[isolation par cloisonnement](https://github.com/App-vNext/Polly/wiki/Bulkhead) de Polly peut être utilisée pour satisfaire cette exigence. Cette approche est essentiellement une limitation de parallélisation avec <xref:System.Threading.SemaphoreSlim> comme implémentation. Elle autorise également une « file d’attente » à l’extérieur du cloisonnement. Vous pouvez vous protéger de manière proactive contre une charge excessive , même avant l’exécution (par exemple, parce que la capacité maximale est considérée comme atteinte). Ainsi, sa réponse à certains scénarios de défaillance est plus rapide que celle d’un disjoncteur, puisque le disjoncteur attend la défaillance. Dans [Polly](http://www.thepollyproject.org/), l’objet BulkheadPolicy expose le niveau de remplissage du cloisonnement et de la file d’attente. De plus, en cas de dépassement, il propose des événements qui peuvent également être utilisés pour gérer la mise à l’échelle horizontale automatisée.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Modèles de résilience**
-    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
+- **Modèles de résilience**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
 
--   **Ajout de résilience et optimisation des performances**
-    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
+- **Ajout de résilience et optimisation des performances**\
+  [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Cloisonnement.** Dépôt GitHub. Implémentation de la stratégie de Polly.
-    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+- **Cloisonnement.** Dépôt GitHub. Implémentation de la stratégie de Polly.
+  [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Conception d’applications résilientes pour Azure**
-    [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
+- **Conception d’applications résilientes pour Azure**\
+  [*https://docs.microsoft.com/azure/architecture/resiliency/*](/azure/architecture/resiliency/)
 
--   **Gestion des erreurs temporaires**
-    <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
+- **Gestion des erreurs temporaires**\
+  [*https://docs.microsoft.com/azure/architecture/best-practices/transient-faults*](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
 >[Précédent](handle-partial-failure.md)

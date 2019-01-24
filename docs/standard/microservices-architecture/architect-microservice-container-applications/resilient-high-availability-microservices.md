@@ -4,12 +4,12 @@ description: Les microservices doivent être conçus pour gérer les pannes de d
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745327"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362234"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Résilience et haute disponibilité dans les microservices
 
@@ -29,12 +29,12 @@ Un microservice doit communiquer son intégrité et ses diagnostics. Cela peut s
 
 L’intégrité diffère des diagnostics. L’intégrité concerne la communication de son état par le microservice, qui vous permet de prendre les mesures appropriées. Un bon exemple est l’utilisation des mécanismes de mise à niveau et de déploiement pour conserver la disponibilité. Bien qu’un service puisse être défectueux à un instant donné en raison du blocage d’un processus ou du redémarrage de l’ordinateur, le service peut néanmoins rester opérationnel. La dernière chose à faire est d’aggraver la situation en effectuant une mise à niveau. La meilleure approche consiste à d’abord investiguer ou à attendre que le microservice récupère. Les événements d’intégrité provenant d’un microservice nous aident à prendre des décisions avisées et à créer des services qui se restaurent eux-mêmes.
 
-Dans la section [Implémentation de vérifications d’intégrité dans les services ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) de ce guide, nous expliquons comment utiliser la nouvelle bibliothèque HealthChecks d’ASP.NET dans vos microservices pour que ceux-ci puissent communiquer leur état à un service de supervision qui prendra les mesures appropriées.
+Dans la section [Implémentation de vérifications d’intégrité dans les services ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services) de ce guide, nous expliquons comment utiliser la nouvelle bibliothèque HealthChecks d’ASP.NET dans vos microservices pour que ceux-ci puissent communiquer leur état à un service de supervision qui prendra les mesures appropriées.
 
 Vous avez aussi la possibilité d’utiliser une excellente bibliothèque open source appelée Beat Pulse, disponible sur [GitHub](https://github.com/Xabaril/BeatPulse) et comme [package NuGet](https://www.nuget.org/packages/BeatPulse/). Cette bibliothèque effectue également des vérifications d’intégrité et gère étonnamment deux types de vérifications :
 
-- **Fonctionnement** : Vérifie si le microservice fonctionne, c’est-à-dire s’il est capable d’accepter des demandes et d’y répondre. 
-- **Préparation** : Vérifie si les dépendances du microservice (base de données, services de file d’attente, etc.) sont elles-mêmes prêtes pour que le microservice puisse faire ce qu’il est supposé faire. 
+- **Fonctionnement** : vérifie si le microservice fonctionne, c’est-à-dire s’il est capable d’accepter des requêtes et d’y répondre. 
+- **Préparation** : vérifie si les dépendances du microservice (base de données, services de file d’attente, etc.) sont elles-mêmes prêtes pour que le microservice puisse faire ce qu’il est supposé faire. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Utilisation des diagnostics et des flux d’événements des journaux
 
@@ -58,7 +58,7 @@ Les différents orchestrateurs peuvent sembler similaires, mais les diagnostics 
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- **The Twelve-Factor App. XI. Journaux : Traiter les journaux sous forme de flux d’événements** \
+- **The Twelve-Factor App. XI. Journaux : traiter les journaux sous forme de flux d’événements** \
   [*https://12factor.net/logs*](https://12factor.net/logs)
 
 - Dépôt GitHub **Microsoft Diagnostic EventFlow Library**. \
@@ -70,7 +70,7 @@ Les différents orchestrateurs peuvent sembler similaires, mais les diagnostics 
 - **Connecter des ordinateurs Windows au service Log Analytics dans Azure** \
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
-- **Journalisation de ce que vous voulez dire : utilisation du bloc d’application de journalisation sémantique** \
+- **Journalisation sémantique : utilisation du bloc applicatif de journalisation sémantique** \
   [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 - Site officiel de **Splunk**. \

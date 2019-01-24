@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202905"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415531"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Tas de grands objets sur les systèmes Windows
 
@@ -47,13 +47,13 @@ Le .NET Framework (à partir de .NET Framework 4.5.1) et .NET Core intègrent la
 
 La figure 1 illustre un scénario dans lequel le récupérateur de mémoire forme la génération 1 après le premier GC de la génération 0 où `Obj1` et `Obj3` sont morts, et forme la génération 2 après le premier GC de la génération 1 où `Obj2` et `Obj5` sont morts. Notez que cette figure et les suivantes sont uniquement à titre d’illustration. Elles contiennent très peu d’objets pour mieux montrer ce qui se passe sur le tas. En réalité, un GC implique généralement bien plus d’objets.
 
-![Figure 1 : GC de la génération 0 et GC de la génération 1](media/loh/loh-figure-1.jpg)  
-Figure 1 : GC des générations 0 et 1.
+![Figure 1 : GC de la génération 0 et GC de la génération 1](media/loh/loh-figure-1.jpg)  
+Figure 1 : GC des générations 0 et 1.
 
 La figure 2 montre qu’après un GC de la génération 2 qui a vu que `Obj1` et `Obj2` étaient morts, le récupérateur de mémoire forme un espace libre contigu dans la mémoire qui était auparavant occupée par `Obj1` et `Obj2`, lequel est ensuite utilisé pour répondre à une demande d’allocation concernant `Obj4`. L’espace entre le dernier objet `Obj3` et la fin du segment peut aussi être utilisé pour répondre aux demandes d’allocation.
 
-![Figure 2 : Après un GC de la génération 2](media/loh/loh-figure-2.jpg)  
-Figure 2 : Après un GC de la génération 2
+![Figure 2 : Après un GC de la génération 2](media/loh/loh-figure-2.jpg)  
+Figure 2 : Après un GC de la génération 2
 
 Si l’espace libre est insuffisant pour répondre aux demandes d’allocation des grands objets, le récupérateur de mémoire tente d’acquérir d’autres segments du système d’exploitation. En cas d’échec, il déclenche un GC de la génération 2 pour tenter de libérer l’espace.
 
@@ -61,8 +61,8 @@ Pendant un GC de la génération 1 ou 2, le récupérateur de mémoire libère l
 
 Comme que le LOH est collecté uniquement pendant le GC de la génération 2, le segment LOH peut seulement être libéré pendant ce GC. La figure 3 illustre un scénario où le récupérateur de mémoire rend un segment (segment 2) au système d’exploitation et annule la réservation d’espace supplémentaire sur les segments restants. S’il doit utiliser l’espace libéré à la fin du segment pour répondre aux demandes d’allocation de grands objets, il réserve de nouveau la mémoire. (Pour obtenir une explication de la réservation/libération, consultez la documentation de [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
 
-![Figure 3 : LOH après un GC de la génération 2](media/loh/loh-figure-3.jpg)  
-Figure 3 : LOH après un GC de la génération 2
+![Figure 3 : LOH après un GC de la génération 2](media/loh/loh-figure-3.jpg)  
+Figure 3 : LOH après un GC de la génération 2
 
 ## <a name="when-is-a-large-object-collected"></a>Quand un grand objet est-il collecté ?
 
@@ -144,7 +144,7 @@ Vous pouvez utiliser les outils suivants pour collecter des données sur les per
 
 ### <a name="net-clr-memory-performance-counters"></a>Compteurs de performances pour la mémoire CRL .NET
 
-Ces compteurs de performances sont une bonne première étape pour rechercher les problèmes de performances (même si nous vous recommandons d’utiliser les [événements ETW](#etw)). Vous configurez le moniteur de performances en ajoutant les compteurs souhaités, comme le montre la Figure 4. Ceux qui sont pertinents pour le LOH sont les suivants :
+Ces compteurs de performances sont une bonne première étape pour rechercher les problèmes de performances (même si nous vous recommandons d’utiliser les [événements ETW](#etw-events)). Vous configurez le moniteur de performances en ajoutant les compteurs souhaités, comme le montre la Figure 4. Ceux qui sont pertinents pour le LOH sont les suivants :
 
 - **Nombre de nettoyages de la génération 2**
 
@@ -156,8 +156,8 @@ Ces compteurs de performances sont une bonne première étape pour rechercher le
 
 En général, vous surveillez les compteurs de performances par le biais du moniteur de performances (PerfMon.exe). Utilisez « Ajouter des compteurs » pour ajouter le compteur de votre choix pour les processus qui vous intéressent. Vous pouvez enregistrer les données des compteurs de performances dans un fichier journal, comme illustré dans la figure 4.
 
-![Figure 4 : Ajout de compteurs de performance.](media/loh/perfcounter.png)  
-Figure 4 : LOH après un GC de la génération 2
+![Figure 4 : Ajout de compteurs de performance](media/loh/perfcounter.png)  
+Figure 4 : LOH après un GC de la génération 2
 
 Les compteurs de performances peuvent également être interrogés par programmation. Beaucoup d’utilisateurs les collectent de cette façon dans le cadre de leur processus de test normal. S’ils repèrent des compteurs avec des valeurs anormales, ils utilisent d’autres moyens d’obtenir des données plus détaillées pour les aider dans leurs recherches.
 
@@ -184,8 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Le résultat ressemble à ceci :
 
-![Figure 5 : Examen des événements ETW à l’aide de PerfView](media/loh/perfview.png)  
-Figure 5 : Événements ETW affichés à l’aide de PerfView
+![Figure 5 : Examen des événements ETW à l’aide de PerfView](media/loh/perfview.png)  
+Figure 5 : Événements ETW affichés à l’aide de PerfView
 
 Comme vous pouvez le voir, tous les GC sont effectués sur la génération 2 et ils sont déclenchés par AllocLarge, ce qui signifie que c’est l’allocation d’un grand objet qui a déclenché ce GC. Nous savons que ces allocations sont temporaires parce que la colonne **% de taux de survie LOH** indique 1 %.
 
@@ -197,8 +197,8 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 collecte un événement AllocationTick qui est déclenché toutes les 100 000 allocations environ. En d’autres termes, un événement est déclenché chaque fois qu’un grand objet est alloué. Vous pouvez alors examiner une des vues d’allocation de tas du récupérateur de mémoire qui indique les pile d’appels qui ont alloué des grands objets :
 
-![Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire](media/loh/perfview2.png)  
-Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire
+![Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire](media/loh/perfview2.png)  
+Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire
 
 Comme vous pouvez le voir, il s’agit d’un test très simple qui alloue simplement de grands objets à partir de sa méthode `Main`.
 

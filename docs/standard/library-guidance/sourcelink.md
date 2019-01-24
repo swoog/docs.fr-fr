@@ -3,13 +3,13 @@ title: Bibliothèques SourceLink et .NET
 description: Recommandations relatives aux bonnes pratiques pour l’utilisation de SourceLink afin d’améliorer le débogage pour les bibliothèques .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/15/2019
+ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128924"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333536"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -35,9 +35,9 @@ Vous pouvez utiliser [NuGet Package Explorer](https://github.com/NuGetPackageExp
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> demande au débogueur de parcourir le code au lieu d’y effectuer un pas à pas détaillé.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> contrôle si un membre est affiché dans les fenêtres de variables du débogueur.
 
-**✔️ À ENVISAGER** : Inclure des fichiers de symboles (`*.pdb`) dans le package NuGet.
+**✔️ À ENVISAGER** : publication des fichiers de symboles (`*.pdb`).
 
-> Normalement, vous devez publier les fichiers de symboles dans un [package de symboles](./nuget.md#symbol-packages). Actuellement, l’hôte public principal pour les packages de symboles ne prend pas en charge les fichiers de symboles portables (`*.pdb`) créés par les projets de style SDK et les packages de symboles sont inutiles.
+> Pour plus d’informations sur les fichiers de symboles et les packages de symboles, consultez [Packages de symboles](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
 >[Précédent](dependencies.md)

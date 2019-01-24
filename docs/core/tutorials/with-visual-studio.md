@@ -1,16 +1,16 @@
 ---
-title: Générer une application C# Hello World .NET Core dans Visual Studio 2017
+title: Générer une application C# Hello World avec .NET Core dans Visual Studio 2017
 description: Découvrez comment créer une application de console .NET Core simple avec C# à l’aide de Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168921"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362794"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Générer une application C# « Hello World » avec le SDK .NET Core dans Visual Studio 2017.
 
@@ -76,9 +76,9 @@ Améliorez votre application pour inviter l’utilisateur à entrer son nom, et 
 
 Vous avez créé et exécuté votre application. Pour développer une application professionnelle, appliquez quelques étapes supplémentaires pour rendre votre application prête à être publiée :
 
-- Pour plus d’informations sur le débogage de votre application, consultez [Débogage de votre application C# Hello World avec Visual Studio 2017](debugging-with-visual-studio.md).
+- Pour plus d’informations sur le débogage de votre application, consultez [Déboguer votre application .NET Core Hello World à l’aide de Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Pour plus d’informations sur le développement et la publication d’une version distribuable de votre application, consultez [Publication de votre application C# Hello World avec Visual Studio 2017](publishing-with-visual-studio.md).
+- Pour plus d’informations sur le développement et la publication d’une version distribuable de votre application, consultez [Publier votre application .NET Core Hello World avec Visual Studio 2017](publishing-with-visual-studio.md).
 
 ## <a name="related-topics"></a>Rubriques connexes
 

@@ -1,23 +1,23 @@
 ---
 title: Explorer de nouvelles tentatives d’appel HTTP personnalisé avec interruption exponentielle
-description: Découvrez comment vous pouvez implémenter, à partir de zéro, de nouvelles tentatives d’appel HTTP avec interruption exponentielle pour gérer les scénarios de défaillance HTTP possibles.
+description: Découvrez implémenter de nouvelles tentatives d’appel HTTP avec interruption exponentielle, à partir de zéro, pour gérer les scénarios de défaillance HTTP possibles.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145096"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362247"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Explorer de nouvelles tentatives d’appel HTTP personnalisé avec interruption exponentielle
 
 Pour créer des microservices résilients, vous devez traiter les scénarios possibles de défaillance HTTP. Une façon de gérer ces échecs, quoique déconseillée, consiste à créer votre propre implémentation de nouvelles tentatives avec interruption exponentielle.
 
-**Remarque importante :** Cette section montre comment vous pouvez créer votre propre code personnalisé pour implémenter les nouvelles tentatives d’appel HTTP. Toutefois, il est déconseillé de procéder seul et il est préférable d’utiliser des mécanismes plus puissants et fiables, mais simples d’utilisation, tels que `HttpClientFactory` avec Polly, disponible depuis la version .NET Core 2.1. Ces approches recommandées sont expliquées dans les sections suivantes. 
+**Remarque importante :** cette section montre comment créer votre propre code personnalisé pour implémenter les nouvelles tentatives d’appel HTTP. Toutefois, il est déconseillé de procéder seul et il est préférable d’utiliser des mécanismes plus puissants et fiables, mais simples d’utilisation, tels que `HttpClientFactory` avec Polly, disponible depuis la version .NET Core 2.1. Ces approches recommandées sont expliquées dans les sections suivantes.
 
-Pour commencer, vous pouvez implémenter votre propre code avec une classe utilitaire pour l’interruption exponentielle comme dans [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), et implémenter du code similaire à l’exemple ci-dessous (qui est également disponible dans ce [dépôt GitHub](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).
+Pour commencer, vous pouvez implémenter votre propre code avec une classe utilitaire pour l’interruption exponentielle comme dans [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), et implémenter du code similaire à l’exemple ci-dessous.
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -113,8 +113,7 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-N’oubliez pas que ce code est approprié uniquement comme preuve de concept. Les sections suivantes expliquent comment utiliser des approches plus sophistiquées mais plus simples, à l’aide de HttpClientFactory.
-HttpClientFactory est disponible depuis la version .NET Core 2.1 avec des bibliothèques à résilience éprouvée, comme Polly. 
+N’oubliez pas que ce code est approprié uniquement comme preuve de concept. Les sections suivantes expliquent comment utiliser des approches plus sophistiquées mais plus simples, à l’aide de HttpClientFactory. HttpClientFactory est disponible depuis la version .NET Core 2.1 avec des bibliothèques à résilience éprouvée, comme Polly.
 
 >[!div class="step-by-step"]
 >[Précédent](implement-resilient-entity-framework-core-sql-connections.md)

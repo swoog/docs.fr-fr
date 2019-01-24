@@ -1,22 +1,22 @@
 ---
-title: Guide pratique pour créer des assemblys friend non signés (C#)
+title: 'Procédure : Créer des assemblys friend non signés (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211799"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362143"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Guide pratique pour créer des assemblys friend non signés (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Procédure : Créer des assemblys friend non signés (C#)
 Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui ne sont pas signés.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Pour créer un assembly et un assembly friend  
   
 1.  Ouvrez une invite de commandes.  
   
-2.  Créez un fichier C# nommé `friend_signed_A.` qui contient le code suivant. Le code utilise l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> pour déclarer friend_signed_B comme assembly friend.  
+2.  Créez un fichier C# nommé `friend_unsigned_A.` qui contient le code suivant. Le code utilise l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> pour déclarer friend_unsigned_B comme assembly friend.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,7 +46,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui 
     }  
     ```  
   
-3.  Compilez et signez friend_signed_A à l’aide de la commande suivante.  
+3.  Compilez et signez friend_unsigned_A à l’aide de la commande suivante.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
@@ -75,7 +75,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui 
     }  
     ```  
   
-5.  Compilez friend_signed_B à l’aide de la commande suivante.  
+5.  Compilez friend_unsigned_B à l’aide de la commande suivante.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui 
   
      Le nom de l’assembly qui est généré par le compilateur doit correspondre au nom de l’assembly friend qui est passé à l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Vous devez spécifier explicitement le nom de l’assembly de sortie (.exe ou .dll) à l’aide de l’option du compilateur `/out`. Pour plus d’informations, consultez l’article [/out (C# Compiler Options) (/out [Options du compilateur C#])](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-6.  Exécutez le fichier friend_signed_B.exe.  
+6.  Exécutez le fichier friend_unsigned_B.exe.  
   
      Le programme imprime deux chaînes : « Class1.Test » et « Class2.Test ».  
   

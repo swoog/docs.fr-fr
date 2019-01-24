@@ -1,16 +1,16 @@
 ---
 title: 'Procédure : Comparer des chaînes - Guide C#'
 description: Découvrez comment comparer et trier des valeurs de chaîne, avec ou sans casse, avec ou sans tri propre à la culture
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 0eb8669e52099e35553d9e7842371045bd88a643
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334832"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415882"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Comment comparer des chaînes en C\#
 
@@ -29,7 +29,13 @@ Quand vous comparez des chaînes, vous les ordonnez les unes par rapport aux aut
 
 ## <a name="default-ordinal-comparisons"></a>Comparaisons ordinales par défaut
 
-Les méthodes les plus courantes qui testent l’égalité, <xref:System.String.Equals%2A?displayProperty=nameWithType> et <xref:System.String.op_Equality%2A?displayProperty=nameWithType>, utilisent une comparaison ordinale respectant la casse. Ces résultats sont illustrés dans l’exemple suivant.
+Les opérations les plus courantes :
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+utilisent une comparaison ordinale, une comparaison respectant la casse et la culture actuelle. Ces résultats sont illustrés dans l’exemple suivant :
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 

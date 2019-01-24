@@ -4,13 +4,8 @@ description: Cet article vous explique comment les .NET Core versions du SDK et 
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334806"
 ---
+
 # <a name="overview-of-how-net-core-is-versioned"></a>Vue d’ensemble de la gestion des versions .NET Core
 
 .NET Core fait référence au runtime .NET Core et au SDK .NET Core, qui contiennent les outils dont vous avez besoin pour développer des applications. Les kits SDK .NET Core sont conçus pour fonctionner avec n’importe quelle version précédente du runtime .NET Core. Cet article traite de la stratégie de gestion des versions du runtime et des SDK. Vous trouverez une explication des numéros de version de .NET Standard dans l’article de présentation de [.NET Standard](../../standard/net-standard.md#net-implementation-support).
@@ -106,8 +101,8 @@ Chaque version de .NET Core implémente une version de .NET Standard. L’implé
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Frameworks cibles](../../standard/frameworks.md)  
-* [Empaquetage de la distribution de .NET Core](../build/distribution-packaging.md)  
-* [Fiche d’information sur le cycle de vie de support .NET Core](https://www.microsoft.com/net/core/support)  
-* [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3)  
-* [Images Docker pour .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
+- [Frameworks cibles](../../standard/frameworks.md)
+- [Empaquetage de la distribution de .NET Core](../build/distribution-packaging.md)
+- [Fiche d’information sur le cycle de vie de support .NET Core](https://www.microsoft.com/net/core/support)
+- [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3)
+- [Images Docker pour .NET Core](https://hub.docker.com/r/microsoft/dotnet/)

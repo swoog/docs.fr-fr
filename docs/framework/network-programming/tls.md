@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194135"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415895"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Meilleures pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
 
@@ -56,7 +56,7 @@ Vous pouvez poser des questions concernant ce document dans le problème GitHub 
 
 Pour les applications ASP.NET, inspectez l’élément `<system.web><httpRuntime targetFramework>` de _web.config_ pour vérifier que vous utilisez la version du .NET Framework.
 
-Pour les Windows Forms et d’autres applications, consultez [Comment : cibler une version du .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+Pour Windows Forms et autres applications, consultez [Guide pratique pour cibler une version du .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 Utilisez les sections suivantes pour vérifier que vous n’utilisez pas une version spécifique de SSL ou TLS.
 
@@ -150,7 +150,7 @@ Les commutateurs ont le même effet, que vous procédiez à la mise en réseau H
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-La valeur de `false` pour `Switch.System.Net.DontEnableSchUseStrongCrypto` incite votre application à utiliser un chiffrement fort. La valeur de `false` pour `DontEnableSchUseStrongCrypto` utilise des protocoles de réseau plus sécurisés (TLS 1.2, TLS 1.1 et TLS 1.0) et bloque les protocoles qui ne sont pas sécurisés. Pour plus d’informations, consultez [L’indicateur SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag). La valeur de `true` désactive le chiffrement fort pour votre application.
+La valeur de `false` pour `Switch.System.Net.DontEnableSchUseStrongCrypto` incite votre application à utiliser un chiffrement fort. La valeur de `false` pour `DontEnableSchUseStrongCrypto` utilise des protocoles de réseau plus sécurisés (TLS 1.2, TLS 1.1 et TLS 1.0) et bloque les protocoles qui ne sont pas sécurisés. Pour plus d’informations, consultez [L’indicateur SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag). La valeur de `true` désactive le chiffrement fort pour votre application.
 
 Si votre application cible .NET Framework 4.6 ou versions ultérieures, la valeur par défaut de ce commutateur est `false`. Il s’agit d’une valeur par défaut sécurisée, que nous vous recommandons. Si votre application s’exécute sur .NET Framework 4.6, mais cible une version antérieure, la valeur par défaut du commutateur est `true`. Dans ce cas, vous devez le définir explicitement sur `false`.
 
@@ -191,7 +191,7 @@ Toutes les clés de Registre décrites ci-dessous ont le même effet, que vous p
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-La clé de Registre `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` a une valeur de type DWORD. La valeur de 1 incite votre application à utiliser un chiffrement fort. Le chiffrement fort utilise des protocoles de réseau plus sécurisés (TLS 1.2, TLS 1.1 et TLS 1.0) et bloque les protocoles qui ne sont pas sécurisés. La valeur de 0 désactive le chiffrement fort. Pour plus d’informations, consultez [L’indicateur SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag).
+La clé de Registre `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` a une valeur de type DWORD. La valeur de 1 incite votre application à utiliser un chiffrement fort. Le chiffrement fort utilise des protocoles de réseau plus sécurisés (TLS 1.2, TLS 1.1 et TLS 1.0) et bloque les protocoles qui ne sont pas sécurisés. La valeur de 0 désactive le chiffrement fort. Pour plus d’informations, consultez [L’indicateur SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag).
 
 Si votre application cible .NET Framework 4.6 ou versions ultérieures, la valeur par défaut de cette clé est 1. Il s’agit d’une valeur par défaut sécurisée, que nous vous recommandons. Si votre application s’exécute sur .NET Framework 4.6, mais cible une version antérieure, la valeur par défaut de la clé est 0. Dans ce cas, vous devez le définir explicitement sa valeur sur 1.
 
@@ -205,7 +205,7 @@ La clé de Registre `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFra
 
 Si votre application cible .NET Framework 4.7 ou versions ultérieures, la valeur par défaut de cette clé est 1. Il s’agit d’une valeur par défaut sécurisée, que nous vous recommandons. Si votre application s’exécute sur .NET Framework 4.7 ou versions ultérieures, mais cible une version antérieure, la valeur par défaut de la clé est 0. Dans ce cas, vous devez le définir explicitement sa valeur sur 1.
 
-Pour plus d’informations, consultez [Mise à jour cumulative pour Windows 10 Version 1511 et Windows Server 2016 Technical Preview 4 : 10 mai 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
+Pour plus d’informations, consultez [Mise à jour cumulative pour Windows 10 Version 1511 et Windows Server 2016 Technical Preview 4 : 10 mai 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
 
 Pour plus d’informations sur .NET Framework 3.5.1, consultez [Prise en charge des versions par défaut du système TLS, inclues dans .NET Framework 3.5.1 sur Windows 7 SP1 et Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
 
@@ -258,7 +258,7 @@ Pour mettre à jour .NET Framework afin de permettre au système d’exploitatio
 Voir aussi :
 
 - [Versions et dépendances de .NET Framework](../migration-guide/versions-and-dependencies.md)
-- [Comment : déterminer les versions du .NET Framework installées](../migration-guide/how-to-determine-which-versions-are-installed.md).
+- [Guide pratique pour pour déterminer les versions du .NET Framework installées](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="support-for-tls-12"></a>Prise en charge de TLS 1.2
 
@@ -285,7 +285,7 @@ Ce tableau affiche la mise à jour du système d’exploitation dont vous avez b
 
 | **Système d’exploitation** | **Mise à jour minimale nécessaire pour prendre en charge TLS 1.2 avec .NET Framework 3.5** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | [Mise à jour cumulative pour Windows 10 Version 1511 et Windows Server 2016 Technical Preview 4 : 10 mai 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
+| Windows 10</br>Windows Server 2016 | [Mise à jour cumulative pour Windows 10 Version 1511 et Windows Server 2016 Technical Preview 4 : 10 mai 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
 | Windows 8.1</br>Windows Server 2012 R2 | [Prise en charge des versions par défaut du système TLS, inclues dans .NET Framework 3.5 sur Windows 8.1 et Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 8.0</br>Windows Server 2012 | [Prise en charge des versions par défaut du système TLS, inclues dans .NET Framework 3.5 sur Windows Server 2012](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [Prise en charge des versions par défaut du système TLS, inclues dans .NET Framework 3.5.1 sur Windows 7 SP1 et Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |

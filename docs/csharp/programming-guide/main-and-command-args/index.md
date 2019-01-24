@@ -1,24 +1,18 @@
 ---
-title: Main() et arguments de ligne de commande - Guide de programmation C#
+title: "Main() et arguments de ligne de commande - Guide de programmation\_C#"
 ms.custom: seodec18
 ms.date: 08/02/2017
 f1_keywords:
-- CS5001
-- main_CSharpKeyword
-- Main
+  - CS5001
+  - main_CSharpKeyword
+  - Main
 helpviewer_keywords:
-- Main method [C#]
-- C# language, command-line arguments
-- arguments [C#], command-line
-- command line [C#], arguments
-- command-line arguments [C#], Main method
+  - 'Main method [C#]'
+  - 'C# language, command-line arguments'
+  - 'arguments [C#], command-line'
+  - 'command line [C#], arguments'
+  - 'command-line arguments [C#], Main method'
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: e9fcee86f8a3daed73adebb1f4ce3e16f7ea2042
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237088"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() et arguments de ligne de commande (Guide de programmation C#)
 
@@ -44,7 +38,7 @@ L’ajout des types de retour `async` et `Task`, `Task<int>` simplifie le code d
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Génération à partir de la ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [À l’intérieur d’un programme C#](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [Génération à partir de la ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [À l’intérieur d’un programme C#](../../../csharp/programming-guide/inside-a-program/index.md)

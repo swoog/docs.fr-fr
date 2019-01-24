@@ -4,13 +4,8 @@ description: Découvrez comment générer .NET Core et le .NET Core CLI à parti
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170065"
 ---
+
 # <a name="build-net-core-from-source"></a>Générer .NET Core à partir de la source
 
 La capacité de générer .NET Core à partir de son code source est importante à plusieurs titres : elle facilite le portage de .NET Core vers de nouvelles plateformes, elle permet les contributions et les correctifs pour le produit, et elle permet la création de versions personnalisées de .NET.
@@ -101,6 +96,6 @@ Utilisez l’exécutable `dotnet` à partir de *artifacts/{os}-{arch}/stage2* po
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Common Language Runtime .NET Core (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [Guide du développeur de l’interface CLI .NET Core](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [Empaquetage de la distribution de .NET Core](./distribution-packaging.md)
+- [Common Language Runtime .NET Core (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [Guide du développeur de l’interface CLI .NET Core](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [Empaquetage de la distribution de .NET Core](./distribution-packaging.md)

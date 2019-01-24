@@ -1,18 +1,18 @@
 ---
-title: Publier votre application Hello World avec Visual Studio 2017
-description: La publication crée l’ensemble des fichiers qui sont nécessaires pour exécuter votre application.
+title: Publier votre application .NET Core Hello World avec Visual Studio 2017
+description: La publication crée l’ensemble des fichiers qui sont nécessaires pour exécuter votre application .NET Core.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 8d6d5cc7766334e10e7ae3a70af0c309c05bc98b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ae202d8102d470e4260394f427e861750d4f0ee6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169116"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362468"
 ---
-# <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publier votre application Hello World avec Visual Studio 2017
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Publier votre application .NET Core Hello World avec Visual Studio 2017
 
 Dans [Générer une application C# Hello World avec .NET Core dans Visual Studio 2017](with-visual-studio.md) ou [Générer une application Visual Basic Hello World avec .NET Core dans Visual Studio 2017](vb-with-visual-studio.md), vous avez généré une application console Hello World. Dans [Déboguer votre application C# Hello World avec Visual Studio 2017](debugging-with-visual-studio.md), vous l’avez testée à l’aide du débogueur Visual Studio. Maintenant que vous savez qu’elle fonctionne comme prévu, vous pouvez la publier afin que les autres utilisateurs puissent l’exécuter. La publication crée l’ensemble des fichiers nécessaires pour exécuter votre application ; vous pouvez les déployer en les copiant sur une machine cible.
 

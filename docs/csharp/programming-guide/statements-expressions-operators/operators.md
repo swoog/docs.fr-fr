@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ec3cafec49ae2e05c67d177ad1ea1fdd9b73bca
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238999"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362494"
 ---
 # <a name="operators-c-programming-guide"></a>Opérateurs (guide de programmation C#)
+
 En C#, un *opérateur* est un élément de programme qui s'applique à un ou plusieurs *opérandes* dans une expression ou une instruction. Les opérateurs qui prennent un opérande, comme l'opérateur d'incrément (`++`) ou `new`, portent le nom d'opérateurs *unaires* . Les opérateurs qui prennent deux opérandes, comme les opérateurs arithmétiques (`+`,`-`,`*`,`/`) portent le nom d'opérateur *binaires* . Un opérateur, l'opérateur conditionnel (`?:`), prend trois opérandes et est le seul opérateur ternaire en C#.  
   
  L'instruction C# suivante contient un seul opérateur unaire et un seul opérande. L'opérateur d'incrément, `++`, modifie la valeur de l'opérande `y`.  
@@ -25,7 +26,8 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
   
  [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>Opérateurs, évaluation et priorité des opérateurs  
+## <a name="operators-evaluation-and-operator-precedence"></a>Opérateurs, évaluation et priorité des opérateurs
+
  Un opérande peut être une expression valide qui est composée d'une longueur quelconque de code, et qui peut comporter plusieurs sous-expressions. Dans une expression qui contient plusieurs opérateurs, l'ordre dans lequel les opérateurs sont appliqués est déterminé par la *priorité des opérateurs*, *l'associativité*et les parenthèses.  
   
  Chaque opérateur a une priorité définie. Dans une expression qui contient plusieurs opérateurs ayant différents niveaux de priorité, la priorité des opérateurs détermine l'ordre dans lequel les opérateurs sont évalués. Par exemple, l'instruction suivante assigne la valeur 3 à `n1`.  
@@ -127,7 +129,8 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |x op= y|Assignation composée. Prend en charge les opérateurs suivants : [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Fonction anonyme (expression lambda)|  
   
-## <a name="associativity"></a>Associativité  
+## <a name="associativity"></a>l'associativité
+
  Lorsque deux opérateurs ou plus, de même niveau de priorité figurent dans une expression, ils sont évalués sur la base de l'associativité. Les opérateurs associatifs sur leur gauche sont évalués dans l'ordre, de gauche à droite. Par exemple, `x * y / z` est évalué comme étant `(x * y) / z`. Les opérateurs associatifs sur leur droite sont évalués dans l'ordre, de droite à gauche. Par exemple, l'opérateur d'assignation est associatif sur sa droite. Dans le cas contraire, le code suivant génère une erreur.  
   
 ```csharp  
@@ -154,7 +157,8 @@ a = (b = c);
 |`a = b - c + d`|a, b, c, -, d, +, =|  
 |`a += b -= c`|a, b, c, -=, +=|  
   
-## <a name="adding-parentheses"></a>Ajout de parenthèses  
+## <a name="adding-parentheses"></a>Ajout de parenthèses
+
  Vous pouvez modifier l'ordre imposé par la priorité d'opérateur et l'associativité en utilisant des parenthèses. Par exemple, `2 + 3 * 2` correspond généralement à 8, car les opérateurs de multiplication ont la priorité sur les opérateurs additifs. Toutefois, si vous entrez une expression comme `(2 + 3) * 2`, l'addition est évaluée avant la multiplication, et le résultat est 10. Les exemples suivants illustrent l'ordre d'évaluation dans les expressions entre parenthèses. Comme dans les exemples précédents, l'évaluation des opérandes a lieu avant l'application de l'opérateur.  
   
 |Instruction|Ordre d'évaluation|  
@@ -163,10 +167,12 @@ a = (b = c);
 |`a = b - (c + d)`|a, b, c, d, +, -, =|  
 |`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
   
-## <a name="operator-overloading"></a>Surcharge d'opérateur  
+## <a name="operator-overloading"></a>Surcharge d’opérateur
+
  Vous pouvez modifier le comportement des opérateurs pour les classes et les structs personnalisés. Ce processus est connu sous le nom de *surcharge d'opérateur*. Pour plus d’informations, consultez [Opérateurs surchargeables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) et l’article sur le mot clé [operator](../../../csharp/language-reference/keywords/operator.md).  
   
-## <a name="related-sections"></a>Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes
+
  Pour plus d’informations, consultez [Mots clés des opérateurs](../../../csharp/language-reference/keywords/operator-keywords.md) et [Opérateurs C#](../../../csharp/language-reference/operators/index.md).  
   
 ## <a name="see-also"></a>Voir aussi

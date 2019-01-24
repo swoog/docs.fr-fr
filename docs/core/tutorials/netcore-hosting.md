@@ -4,12 +4,12 @@ description: Découvrez comment héberger le runtime .NET Core à partir du code
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d6ad3bc1b8f1795bfa3d83fbb83cb07120758f11
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: deeda8b166d8a22aac88be313d2555e4b9fa5a1c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249097"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415518"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Écrire un hôte .NET Core personnalisé pour contrôler le runtime .NET à partir de votre code natif
 
@@ -90,7 +90,7 @@ Contrairement à l’API d’hébergement mscoree.h (décrite ci-dessous), les A
 
 ### <a name="step-5---run-managed-code"></a>Étape 5 : Exécuter le code managé
 
-Le runtime étant démarré, l’hôte peut appeler le code managé. Pour cela, deux méthodes sont disponibles. L’exemple de code lié à ce tutoriel utilise la fonction `coreclr_create_delegate` permettant de créer un délégué à une méthode managée statique. Cette API prend le nom d’assembly, le nom de type qualifié par un espace de noms et le nom de méthode comme entrées, puis retourne un délégué qui peut être utilisé pour appeler la méthode.
+Le runtime étant démarré, l’hôte peut appeler le code managé. Pour cela, deux méthodes sont disponibles. L’exemple de code lié à ce tutoriel utilise la fonction `coreclr_create_delegate` permettant de créer un délégué à une méthode managée statique. Cette API prend le [nom d’assembly](../../framework/app-domains/assembly-names.md), le nom de type qualifié par un espace de noms et le nom de méthode comme entrées, puis retourne un délégué qui peut être utilisé pour appeler la méthode.
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -184,7 +184,7 @@ Avec un AppDomain opérationnel, l’hôte peut maintenant exécuter du code man
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-Si `ExecuteAssembly` ne répond pas aux besoins de l’hôte, une autre option consiste à utiliser `CreateDelegate` pour créer un pointeur de fonction vers une méthode managée statique. Cette option implique que l’hôte connaisse la signature de la méthode qu’il appelle (afin de créer le type de pointeur de fonction), mais donne aux hôtes la possibilité d’appeler du code autre qu’un point d’entrée d’assembly.
+Si `ExecuteAssembly` ne répond pas aux besoins de l’hôte, une autre option consiste à utiliser `CreateDelegate` pour créer un pointeur de fonction vers une méthode managée statique. Cette option implique que l’hôte connaisse la signature de la méthode qu’il appelle (afin de créer le type de pointeur de fonction), mais donne aux hôtes la possibilité d’appeler du code autre qu’un point d’entrée d’assembly. Le nom de l’assembly fourni dans le deuxième paramètre est le [nom d’assembly managé complet](../../framework/app-domains/assembly-names.md) de la bibliothèque à charger.
 
 ```C++
 void *pfnDelegate = NULL;

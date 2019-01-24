@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156667"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415544"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>Nouveautés de .NET Core 3.0 (préversion 1)
 
@@ -30,15 +30,12 @@ Pour plus d’informations, consultez l’[annonce de .NET Core 3.0 Préversion�
 
 ## <a name="default-executables"></a>Exécutables par défaut
 
-.NET Core permet désormais de générer des exécutables par défaut. Il s’agit d’une nouvelle fonctionnalité pour les applications qui utilisent une version .NET Core installée de façon globale. Jusqu'à présent, seuls les [déploiements autonomes](../deploying/index.md#self-contained-deployments-scd) avaient des exécutables.
+.NET core génère désormais des [exécutables dépendant du framework](../deploying/index.md#framework-dependent-executables-fde) par défaut. Il s’agit d’une nouvelle fonctionnalité pour les applications qui utilisent une version .NET Core installée de façon globale. Jusqu’à présent, seuls les [déploiements autonomes](../deploying/index.md#self-contained-deployments-scd) produisaient un exécutable.
 
 Lors de l’étape `dotnet build` ou `dotnet publish`, un exécutable est créé s’il correspond à l’environnement et à la plateforme du Kit de développement que vous utilisez. Vous pouvez obtenir le même résultat avec ces exécutables, comme vous le feriez avec d’autres exécutables natifs comme :
 
 * Vous pouvez double-cliquer sur l’exécutable.
 * Vous pouvez lancer l’application directement à partir d’une invite de commandes, par exemple `myapp.exe` sous Windows, et `./myapp` sous Linux et macOS.
-
-> [!NOTE]
-> La spécification d’un runtime avec des arguments `dotnet publish -r` ou `dotnet build -r` pour d’autres environnements de runtime n’est pas prise en charge.
 
 ## <a name="build-copies-dependencies"></a>Dépendances de copies de build
 
@@ -274,7 +271,7 @@ Outre la possibilité d’effectuer une opération `await foreach`, vous pouvez 
 > [!NOTE]
 > Seul [C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/) prend en charge la syntaxe `await foreach`
 
-## <a name="type-sequencereader"></a>Type : SequenceReader
+## <a name="type-sequencereader"></a>Type : SequenceReader
 
 Dans .NET Core 3.0, `System.Buffers.SequenceReader` a été ajouté et peut servir de lecteur pour `ReadOnlySequence<T>`. Cela permet une analyse facile, hautes performances et à faible allocation des données `System.IO.Pipelines`, capable de couvrir plusieurs mémoires tampon de stockage. 
 
@@ -307,7 +304,7 @@ public static void ReadLines(ReadOnlySequence<byte> sequence)
 }
 ```
 
-## <a name="type-metadataloadcontext"></a>Type : MetadataLoadContext
+## <a name="type-metadataloadcontext"></a>Type : MetadataLoadContext
 
 Le type `MetadataLoadContext` a été ajouté et permet la lecture des métadonnées de l'assembly sans affecter le domaine d’application de l’appelant. Les assemblys sont lus comme des données, y compris ceux générés pour des architectures et plateformes différentes de l’environnement d’exécution actuel. `MetadataLoadContext` se superpose à <xref:System.Reflection.Assembly.ReflectionOnlyLoad*>, qui est uniquement disponible dans .NET Framework.
 

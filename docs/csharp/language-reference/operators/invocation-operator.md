@@ -1,7 +1,7 @@
 ---
 title: (), opérateur - Référence C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/15/2019
 f1_keywords:
 - ()_CSharpKeyword
 helpviewer_keywords:
@@ -9,38 +9,51 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 57c23dbd6ee95597514dba92e7217bdcc3e38f24
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3a0af33739c9cb4d090842219eba4ece9700ef89
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236451"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362780"
 ---
 # <a name="-operator-c-reference"></a>(), opérateur (référence C#)
-En plus d’être utilisées pour spécifier l’ordre des opérations dans une expression, les parenthèses sont utilisées pour effectuer les tâches suivantes :  
-  
-1.  Spécifier des casts ou conversions de type  
-  
-     [!code-csharp[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
-  
-2.  Appeler des méthodes ou des délégués  
-  
-     [!code-csharp[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
-  
-## <a name="remarks"></a>Notes  
- Un cast appelle explicitement l’opérateur de conversion d’un type à l’autre. Le cast échoue si aucun opérateur de conversion n’est défini. Pour définir un opérateur de conversion, consultez [explicit](../../../csharp/language-reference/keywords/explicit.md) et [implicit](../../../csharp/language-reference/keywords/implicit.md).  
-  
- L’opérateur `()` ne peut pas être surchargé.  
-  
- Pour plus d’informations, consultez [Cast et conversions de types](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
-  
- Pour plus d’informations sur l’appel de méthode, consultez [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md).  
-  
-## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Les parenthèses, `()`, sont généralement utilisées pour l’appel de méthode ou de délégué, ou dans les expressions Cast.
+
+Vous utilisez également des parenthèses pour spécifier l’ordre dans lequel évaluer les opérations dans une expression. Pour plus d’informations, consultez la section [Ajout de parenthèses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) de l’article [Opérateurs](../../programming-guide/statements-expressions-operators/operators.md). Pour obtenir la liste des opérateurs classés par niveau de priorité, consultez [Opérateurs C#](index.md).
+
+## <a name="method-invocation"></a>Appel de méthode
+
+L’exemple suivant montre comment appeler une méthode, avec ou sans arguments, et un délégué :
+
+[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
+
+Vous utilisez également des parenthèses quand vous appelez un [constructeur](../../programming-guide/classes-and-structs/constructors.md) avec un opérateur [`new`](../keywords/new-operator.md).
+
+Pour plus d’informations sur les méthodes, consultez [Méthodes](../../programming-guide/classes-and-structs/methods.md). Pour plus d’informations sur les délégués, consultez [Délégués](../../programming-guide/delegates/index.md).
+
+## <a name="cast-expression"></a>Expression Cast
+
+Une expression Cast de la forme `(T)E` appelle un opérateur de conversion pour convertir la valeur d’expression `E` en type `T`. S’il n’existe aucune conversion explicite du type de `E` en type `T`, une erreur de compilation se produit. Pour plus d’informations sur la définition d’un opérateur de conversion, consultez les articles sur les mots clés [explicit](../keywords/explicit.md) et [implicit](../keywords/implicit.md).
+
+L’exemple suivant illustre la conversion de type entre des types numériques :
+
+[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
+
+Pour plus d’informations sur les conversions explicites prédéfinies entre des types numériques, consultez [Tableau des conversions numériques explicites](../keywords/explicit-numeric-conversions-table.md).
+
+Pour plus d’informations, consultez [Cast et conversions de types](../../programming-guide/types/casting-and-type-conversions.md) et [Opérateurs de conversion](../../programming-guide/statements-expressions-operators/conversion-operators.md).
+
+## <a name="operator-overloadability"></a>Capacité de surcharge de l’opérateur
+
+L’opérateur `()` ne peut pas être surchargé.
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour plus d’informations, consultez les sections [Expressions d’appel](~/_csharplang/spec/expressions.md#invocation-expressions) et [Expressions Cast](~/_csharplang/spec/expressions.md#cast-expressions) de la [spécification du langage C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Opérateurs C#](index.md)

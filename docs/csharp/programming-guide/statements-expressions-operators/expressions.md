@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239288"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362312"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressions (Guide de programmation C#)
 Une *expression* est une séquence d’un ou plusieurs opérandes et de zéro, un ou plusieurs opérateurs qui peuvent être évalués à une valeur, un objet, une méthode ou un espace de noms unique. Elle peut être constituée d’une valeur littérale, d’un appel de méthode, d’un opérateur et de ses opérandes, ou d’un *nom simple*. Un nom simple peut être le nom d'une variable, d'un membre de type, d'un paramètre de méthode, d'un espace de noms ou d'un type.  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>Valeurs d’expressions  
- Dans la plupart des contextes dans lesquels les expressions sont utilisées, par exemple dans les instructions ou les paramètres de méthode, l’expression est supposée correspondre à une valeur. Si x et y sont des entiers, l’expression `x + y` correspond à une valeur numérique. L’expression `new MyClass()` correspond à une référence à une nouvelle instance d’un objet `MyClass`. L’expression `myClass.ToString()` correspond à une chaîne, car c’est le type de retour de la méthode. Toutefois, même si un espace de noms est considéré comme une expression, il ne correspond pas à une valeur et ne peut donc jamais être le résultat final d’une expression. Vous ne pouvez pas passer un nom d’espace de noms à un paramètre de méthode, ni l’utiliser dans une nouvelle expression ou l’affecter à une variable. Vous pouvez l’utiliser uniquement en tant que sous-expression dans une expression plus longue. Il en va de même pour les types (par opposition aux objets <xref:System.Type?displayProperty=nameWithType>), aux noms de groupes de méthodes (par opposition aux méthodes spécifiques) et aux accesseurs d’événements [add](../../../csharp/language-reference/keywords/add.md) et [remove](../../../csharp/language-reference/keywords/remove.md).  
+ Dans la plupart des contextes dans lesquels les expressions sont utilisées, par exemple dans les instructions ou les paramètres de méthode, l’expression est supposée correspondre à une valeur. Si x et y sont des entiers, l’expression `x + y` correspond à une valeur numérique. L’expression `new MyClass()` correspond à une référence à une nouvelle instance d’une classe `MyClass`. L’expression `myClass.ToString()` correspond à une chaîne, car c’est le type de retour de la méthode. Toutefois, même si un espace de noms est considéré comme une expression, il ne correspond pas à une valeur et ne peut donc jamais être le résultat final d’une expression. Vous ne pouvez pas passer un nom d’espace de noms à un paramètre de méthode, ni l’utiliser dans une nouvelle expression ou l’affecter à une variable. Vous pouvez l’utiliser uniquement en tant que sous-expression dans une expression plus longue. Il en va de même pour les types (par opposition aux objets <xref:System.Type?displayProperty=nameWithType>), aux noms de groupes de méthodes (par opposition aux méthodes spécifiques) et aux accesseurs d’événements [add](../../../csharp/language-reference/keywords/add.md) et [remove](../../../csharp/language-reference/keywords/remove.md).  
   
  Chaque valeur possède un type associé. Par exemple, si x et y sont toutes deux des variables de type `int`, la valeur de l’expression `x + y` est également de type `int`. Si la valeur est assignée à une variable d’un type différent, ou si x et y sont des types différents, les règles de conversion de type sont appliquées. Pour plus d’informations sur le fonctionnement de ces conversions, consultez [Cast et conversions de types](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   

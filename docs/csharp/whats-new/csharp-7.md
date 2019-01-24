@@ -3,12 +3,12 @@ title: Nouveautés de C# 7.0 | Guide C#
 description: Découvrez les nouvelles fonctionnalités disponibles dans la prochaine version 7 du langage C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08e9b9d1a991c6dd18477214dec60fba95afc6c9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155286"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415726"
 ---
 # <a name="whats-new-in-c-70"></a>Nouveautés de C# 7.0
 
@@ -105,7 +105,7 @@ Vous pouvez spécifier des noms pour les champs dans la partie gauche et dans la
 
 La ligne ci-dessus génère un avertissement, `CS8123`, vous indiquant que les noms dans la partie droite de l’assignation, `Alpha` et `Beta`, sont ignorés, car ils sont en conflit avec les noms dans la partie gauche, `First` et `Second`.
 
-Les exemples ci-dessus illustrent la syntaxe de base permettant de déclarer des tuples. Ces derniers sont surtout utiles comme types de retour pour les méthodes `private` et `internal`. Ils fournissent une syntaxe simple pour permettre à ces méthodes de retourner plusieurs valeurs discrètes : vous enregistrez le travail de création d’un `class` ou d’un `struct` qui définit le type retourné. Il n’est pas nécessaire de créer un nouveau type.
+Les exemples ci-dessus illustrent la syntaxe de base permettant de déclarer des tuples. Ces derniers sont surtout utiles comme types de retour pour les méthodes `private` et `internal`. Ils fournissent une syntaxe simple pour que ces méthodes retournent plusieurs valeurs discrètes : Vous enregistrez le travail de création d’un `class` ou d’un `struct` qui définit le type retourné. Il n’est pas nécessaire de créer un nouveau type.
 
 Il est plus efficace et plus productif de créer un tuple.
 Il s’agit d’une syntaxe légère et plus simple utilisée pour définir une structure de données qui comporte plusieurs valeurs. L’exemple de méthode ci-dessous retourne les valeurs minimale et maximale trouvées dans une séquence d’entiers :
@@ -168,7 +168,7 @@ Les critères spéciaux prennent en charge les expressions `is` et les expressio
 
 ### <a name="is-expression"></a>Expression `is`
 
-L’expression de modèle `is` étend l’opérateur `is` classique pour interroger un objet au-delà de son type.
+L’expression de modèle `is` étend l’[opérateur `is`](../language-reference/keywords/is.md#pattern-matching-with-is) classique pour interroger un objet au-delà de son type.
 
 Commençons par un scénario simple. Nous allons ajouter à ce scénario des fonctionnalités qui illustrent la façon dont les expressions de critères spéciaux facilitent les algorithmes qui fonctionnent avec les types non apparentés. Nous allons commencer par une méthode qui calcule la somme d’un certain nombre de lancers de dés :
 
@@ -329,7 +329,7 @@ C# 6 a introduit les [membres expression-bodied](csharp-6.md#expression-bodied-
 > [!NOTE]
 > Cet exemple n’a pas besoin de finaliseur, mais il est présenté pour illustrer la syntaxe. Vous ne devez implémenter un finaliseur dans votre classe que si cela est nécessaire pour libérer des ressources non managées. Vous devez également envisager d’utiliser la classe <xref:System.Runtime.InteropServices.SafeHandle> au lieu de gérer directement les ressources non managées.
 
-Ces nouveaux emplacements pour les membres expression-bodied représentent une étape importante pour le langage C# : ces fonctionnalités ont été implémentées par des membres de la communauté travaillant sur le projet open source [Roslyn](https://github.com/dotnet/Roslyn).
+Ces nouveaux emplacements pour les membres expression-bodied représentent un jalon important pour le langage C# : ces fonctionnalités ont été implémentées par les membres de la communauté travaillant sur le projet open source [Roslyn](https://github.com/dotnet/Roslyn).
 
 La modification d’une méthode en un membre expression-bodied est une [modification compatible binaire](version-update-considerations.md#binary-compatible-changes).
 

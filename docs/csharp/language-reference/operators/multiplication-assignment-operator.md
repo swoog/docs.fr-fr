@@ -8,38 +8,41 @@ helpviewer_keywords:
 - '*= operator [C#]'
 - binary multiplication assignment operator (*=) [C#]
 ms.assetid: 2e472155-59db-4dbf-bb94-bcccfa1a794d
-ms.openlocfilehash: f8604cdadeda14a5761bc923bd966186fd258a6d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2038f3b55d46f3503496275b3d25b17663b8c1db
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245348"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333432"
 ---
-# <a name="-operator-c-reference"></a>*=, opérateur (référence C#)
-Opérateur d’assignation de multiplication binaire.  
-  
-## <a name="remarks"></a>Notes  
- Une expression qui utilise l’opérateur d’assignation `*=`, telle que  
-  
-```csharp  
-x *= y  
-```  
-  
- est équivalent à  
-  
-```csharp  
-x = x * y  
-```  
-  
- sauf que `x` n’est évalué qu’une seule fois. L’[opérateur *](../../../csharp/language-reference/operators/multiplication-operator.md) est prédéfini pour les types numériques de façon à effectuer une multiplication.  
-  
- L’opérateur `*=` ne peut pas être surchargé directement, mais les types définis par l’utilisateur peuvent surcharger l’[opérateur *](../../../csharp/language-reference/operators/multiplication-operator.md) (consultez [operator](../../../csharp/language-reference/keywords/operator.md)).  
-  
-## <a name="example"></a>Exemple  
- [!code-csharp[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-assignment-operator_1.cs)]  
-  
+# <a name="-operator-c-reference"></a>\*=, opérateur (référence C#)
+
+Opérateur d’assignation de multiplication binaire.
+
+## <a name="remarks"></a>Notes
+
+Une expression qui utilise l’opérateur d’assignation `*=`, telle que
+
+```csharp
+x *= y
+```
+
+est équivalent à
+
+```csharp
+x = x * y
+```
+
+sauf que `x` n’est évalué qu’une seule fois. L’[opérateur \*](multiplication-operator.md) est prédéfini pour les types numériques de façon à effectuer une multiplication.
+
+L’opérateur `*=` ne peut pas être surchargé directement, mais les types définis par l’utilisateur peuvent surcharger l’[opérateur \*](multiplication-operator.md) (voir [operator](../keywords/operator.md)).
+
+## <a name="example"></a>Exemple
+
+[!code-csharp[csRefOperators#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#13)]
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Opérateurs C#](index.md)

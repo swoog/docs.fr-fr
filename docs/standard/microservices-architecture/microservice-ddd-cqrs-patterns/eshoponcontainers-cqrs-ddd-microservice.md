@@ -4,18 +4,20 @@ description: Architecture des microservices .NET pour les applications .NET cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143634"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362829"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Appliquer des approches CQRS et CQS dans un microservice DDD dans eShopOnContainers
 
 La conception du microservice de commandes au niveau de l’application de référence eShopOnContainers est basée sur les principes CQRS. Toutefois, elle utilise l’approche la plus simple, qui consiste simplement à séparer les requêtes des commandes et à utiliser la même base de données pour les deux actions.
 
-Le concept essentiel de ces modèles, et le point important ici, est que les requêtes sont idempotentes : quel que soit le nombre de fois où vous interrogez un système, l’état de ce système ne change pas. Vous pouvez même utiliser un modèle de données « lectures » différent de la logique transactionnelle « écritures », bien que le microservice de commandes utilise la même base de données. Par conséquent, il s’agit d’une approche CQRS simplifiée.
+Le concept essentiel de ces modèles, et le point important ici, est que les requêtes sont idempotentes : quel que soit le nombre de fois où vous interrogez un système, son état ne change pas. En d’autres termes, les requêtes n’ont pas d’effet secondaire.
+
+Par conséquent, vous pourriez utiliser un modèle de données « lectures » différent de la logique transactionnelle « écritures », bien que le microservice de commandes utilise la même base de données. Il s’agit donc d’une approche CQRS simplifiée.
 
 En revanche, les commandes qui déclenchent des transactions et mises à jour de données changent l’état du système. Avec les commandes, vous devez être prudent quand vous abordez le problème de la complexité et les règles métier en constante évolution. C’est là où vous souhaitez appliquer des techniques DDD pour obtenir un système mieux modélisé.
 

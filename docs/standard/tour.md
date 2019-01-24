@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232844"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415921"
 ---
 # <a name="tour-of-net"></a>Présentation de .NET
 
@@ -64,7 +64,7 @@ Une fois que le bloc `using` est fini, le runtime .NET appelle automatiquement l
 Pour plus de détails, consultez les rubriques suivantes :
 
 * Pour C#, consultez la rubrique [using, instruction (référence C#)](../csharp/language-reference/keywords/using-statement.md).
-* Pour F#, consultez [Gestion des ressources : mot clé use](../fsharp/language-reference/resource-management-the-use-keyword.md).
+* Pour F#, consultez [Gestion des ressources : mot clé use](../fsharp/language-reference/resource-management-the-use-keyword.md).
 * Pour VB, consultez la rubrique [using, instruction (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="type-safety"></a>Cohérence des types
@@ -125,7 +125,7 @@ Le principal moyen d’effectuer une interopérabilité native est via l’« a
 
 Une grande partie de la prise en charge d’interopérabilité dans Mono (et donc dans Xamarin) pour Java et Objective-C est générée de la même façon, autrement dit, ils utilisent les mêmes principes.
 
-Pour en savoir plus sur l’interopérabilité native, lisez la rubrique [Interopérabilité native](native-interop.md).
+Pour plus d’informations sur l’interopérabilité native, consultez l’article [Interopérabilité native](native-interop/index.md).
 
 ## <a name="unsafe-code"></a>Code unsafe
 

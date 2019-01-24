@@ -3,12 +3,6 @@ title: Outils de l’interface de ligne de commande (CLI) de .NET Core
 description: Présentation des outils et fonctionnalités de l’interface de ligne de commande (CLI) de .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170187"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Outils de l’interface de ligne de commande (CLI) de .NET Core
 
@@ -146,5 +140,5 @@ Si vous avez utilisé les outils Preview 2 pour produire des projets *project.j
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Référentiel GitHub dotnet/CLI](https://github.com/dotnet/cli/)  
-* [Guide d’installation de .NET Core](https://aka.ms/dotnetcoregs)  
+- [Référentiel GitHub dotnet/CLI](https://github.com/dotnet/cli/)
+- [Guide d’installation de .NET Core](https://aka.ms/dotnetcoregs)

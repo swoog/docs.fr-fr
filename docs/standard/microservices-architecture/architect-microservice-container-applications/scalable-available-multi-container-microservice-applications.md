@@ -4,12 +4,12 @@ description: Découvrez les options qui permettent d’orchestrer des microservi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152717"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307433"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestration des microservices et des applications à plusieurs conteneurs pour une grande scalabilité et une haute disponibilité
 
@@ -17,7 +17,7 @@ L’utilisation d’orchestrateurs pour les applications prêtes pour la product
 
 La figure 4-23 illustre un déploiement dans un cluster d’une application composée de plusieurs microservices (conteneurs).
 
-![Applications Docker composées dans un cluster : vous utilisez un seul conteneur pour chaque instance de service. Les conteneurs Docker sont des « unités de déploiement », et un conteneur est une instance de Docker. Un hôte gère de nombreux conteneurs.](./media/image23.png)
+![Applications Docker composées dans un cluster : vous utilisez un conteneur pour chaque instance de service. Les conteneurs Docker sont des « unités de déploiement », et un conteneur est une instance de Docker. Un hôte gère de nombreux conteneurs.](./media/image23.png)
 
 **Figure 4-23**. Un cluster de conteneurs
 
@@ -87,11 +87,11 @@ AKS offre un moyen de simplifier la création, la configuration et la gestion d�
 
 Azure Kubernetes Service optimise la configuration des technologies et outils open source courants de clustering Docker spécifiquement pour Azure. Vous obtenez une solution ouverte qui offre la portabilité à la fois pour vos conteneurs et pour la configuration de votre application. Il vous suffit de sélectionner la taille, le nombre d’hôtes et les outils de l’orchestrateur, AKS gère tout le reste.
 
-![Structure de cluster Kubernetes : il existe un nœud maître qui gère le DNS, le planificateur, le proxy, etc., et plusieurs nœuds de travail, qui hébergent les conteneurs.](media/image36.png)
+![Structure de cluster Kubernetes : il existe un nœud principal qui gère le système DNS, le planificateur, le proxy, etc., et plusieurs nœuds de travail, qui hébergent les conteneurs.](media/image36.png)
 
 **Figure 4-24**. Structure et topologie simplifiées du cluster Kubernetes
 
-Sur la figure 4-24, vous pouvez voir la structure d’un cluster Kubernetes où un nœud principal (machine virtuelle) contrôle la majeure partie de la coordination du cluster. Vous pouvez déployer des conteneurs sur le reste des nœuds, lesquels sont managés sous forme de pool unique du point de vue d’une application. De plus, vous pouvez effectuer un scale-out de milliers, voire de dizaines de milliers de conteneurs.
+Sur la figure 4-24, vous pouvez voir la structure d’un cluster Kubernetes où un nœud principal (machine virtuelle) contrôle la majeure partie de la coordination du cluster. Vous pouvez déployer des conteneurs sur le reste des nœuds, qui sont managés sous forme de pool unique du point de vue d’une application. De plus, vous pouvez effectuer un scale-out de milliers, voire de dizaines de milliers de conteneurs.
 
 ## <a name="development-environment-for-kubernetes"></a>Environnement de développement pour Kubernetes
 

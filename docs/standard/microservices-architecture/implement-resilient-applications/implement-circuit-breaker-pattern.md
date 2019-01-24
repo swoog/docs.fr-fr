@@ -1,15 +1,15 @@
 ---
 title: Implémentation du modèle Disjoncteur
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Implémenter le modèle Disjoncteur comme système complémentaire aux nouvelles tentatives Http
+description: Découvrez comment implémenter le modèle Disjoncteur en tant que système complémentaire aux nouvelles tentatives Http.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: ca35214332b5ae0851a35d34aa329775206c2b66
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147260"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362798"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implémenter le modèle Disjoncteur
 
@@ -38,14 +38,15 @@ Ici, le seul ajout au code utilisé pour les nouvelles tentatives d’appel HTTP
 ```csharp
 //ConfigureServices()  - Startup.cs
 services.AddHttpClient<IBasketService, BasketService>()
-        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to 5 minutes
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Sample. Default lifetime is 2 minutes
+        .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
         .AddPolicyHandler(GetRetryPolicy())
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-La méthode `AddPolicyHandler()` ajoute des stratégies aux objets HttpClient que vous utiliserez. Dans ce cas, elle ajoute une stratégie Polly pour un disjoncteur.
+La méthode `AddPolicyHandler()` ajoute des stratégies aux objets `HttpClient` que vous utiliserez. Dans ce cas, elle ajoute une stratégie Polly pour un disjoncteur.
 
-Afin de bénéficier d’une approche plus modulaire, la stratégie Disjoncteur est définie dans une méthode distincte nommée GetCircuitBreakerPolicy(), comme dans le code suivant.
+Pour bénéficier d’une approche plus modulaire, la stratégie Disjoncteur est définie dans une méthode distincte nommée `GetCircuitBreakerPolicy()`, comme illustré dans le code suivant :
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
@@ -56,51 +57,48 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-Dans l’exemple de code ci-dessus, la stratégie Disjoncteur est configurée de manière à rompre ou ouvrir le circuit après cinq erreurs consécutives lors des nouvelles tentatives de requêtes HTTP. Quand cela se produit, le circuit est rompu pendant 30 secondes : durant ce laps de temps, le disjoncteur met immédiatement les appels en échec au lieu de les transmettre.  La stratégie interprète automatiquement [les exceptions et les codes d’état HTTP correspondants](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) comme des erreurs.  
+Dans l’exemple de code ci-dessus, la stratégie Disjoncteur est configurée de manière à rompre ou ouvrir le circuit après cinq erreurs consécutives lors des nouvelles tentatives de requêtes HTTP. Quand cela se produit, le circuit est rompu pendant 30 secondes : durant ce laps de temps, le disjoncteur met immédiatement les appels en échec au lieu de les transmettre.  La stratégie interprète automatiquement [les exceptions et les codes d’état HTTP correspondants](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) comme des erreurs.  
 
-Les disjoncteurs doivent également être utilisés pour rediriger les demandes vers une infrastructure de secours si vous rencontrez des problèmes dans une ressource particulière déployée dans un environnement autre que l’application cliente ou le service qui effectue l’appel HTTP. De cette façon, si le centre de données subit une panne qui a un impact uniquement sur vos microservices backend, mais pas sur vos applications clientes, ces dernières peuvent effectuer une redirection vers les services de secours. Polly planifie une nouvelle stratégie pour automatiser ce scénario de [stratégie de basculement](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy). 
+Les disjoncteurs doivent également être utilisés pour rediriger les requêtes vers une infrastructure de secours si vous rencontrez des problèmes dans une ressource particulière déployée dans un environnement autre que l’application cliente ou le service qui effectue l’appel HTTP. De cette façon, si le centre de données subit une panne qui a un impact uniquement sur vos microservices back-end, mais pas sur vos applications clientes, ces dernières peuvent effectuer une redirection vers les services de secours. Polly planifie une nouvelle stratégie pour automatiser ce scénario de [stratégie de basculement](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy). 
 
 Toutes ces fonctionnalités sont appropriées pour les cas où vous gérez le basculement à partir du code .NET, au lieu qu’il soit géré automatiquement par Azure, avec la transparence des emplacements. 
 
 Du point de vue de l’utilisation, lorsque vous utilisez HttpClient, il est inutile d’ajouter quoi que ce soit de nouveau ici, car le code est le même que lors de l’utilisation de HttpClient avec HttpClientFactory, comme indiqué dans les sections précédentes. 
 
-## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Test des disjoncteurs et des nouvelles tentatives Http dans eShopOnContainers
+## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Tester les disjoncteurs et les nouvelles tentatives Http dans eShopOnContainers
 
-Chaque fois que vous démarrez la solution eShopOnContainers sur un hôte Docker, celle-ci doit démarrer plusieurs conteneurs. Certains des conteneurs sont plus lents à démarrer et à initialiser, comme le conteneur SQL Server. Cela est particulièrement vrai la première fois que vous déployez l’application eShopOnContainers dans Docker, car elle doit configurer les images et la base de données. Le fait que certains conteneurs démarrent plus lentement que d’autres peut entraîner la levée d’exceptions HTTP par le reste des services, même si vous définissez des dépendances entre les conteneurs au niveau de Docker Compose, comme expliqué dans les sections précédentes. Ces dépendances Docker Compose entre les conteneurs sont uniquement au niveau processus. Il est possible que le processus de point d’entrée du conteneur soit démarré alors que SQL Server n’est pas prêt pour les requêtes. Cela peut avoir pour conséquence une cascade d’erreurs, et l’application peut recevoir une exception lors d’une tentative d’utilisation de ce conteneur particulier. 
+Chaque fois que vous démarrez la solution eShopOnContainers sur un hôte Docker, celle-ci doit démarrer plusieurs conteneurs. Certains des conteneurs sont plus lents à démarrer et à initialiser, comme le conteneur SQL Server. C’est particulièrement vrai la première fois que vous déployez l’application eShopOnContainers dans Docker, car elle doit configurer les images et la base de données. Le fait que certains conteneurs démarrent plus lentement que d’autres peut entraîner la levée d’exceptions HTTP par le reste des services, même si vous définissez des dépendances entre les conteneurs au niveau de Docker Compose, comme expliqué dans les sections précédentes. Ces dépendances Docker Compose entre les conteneurs sont uniquement au niveau processus. Il est possible que le processus de point d’entrée du conteneur soit démarré alors que SQL Server n’est pas prêt pour les requêtes. Cela peut avoir pour conséquence une cascade d’erreurs, et l’application peut recevoir une exception lors d’une tentative d’utilisation de ce conteneur particulier.
 
 Vous pouvez également voir ce type d’erreur au démarrage pendant le déploiement de l’application dans le cloud. Dans ce cas, il est possible que les orchestrateurs déplacent des conteneurs d’un nœud ou d’une machine virtuelle vers un autre nœud ou une autre machine virtuelle (autrement dit, de démarrer de nouvelles instances) lors de l’équilibrage du nombre de conteneurs entre les nœuds du cluster.
 
 La façon dont « eShopOnContainers » résout ces problèmes lors du démarrage de tous les conteneurs consiste à utiliser le modèle de nouvelle tentative illustré précédemment. 
 
-### <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Test du disjoncteur dans eShopOnContainers
+### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>Tester le disjoncteur dans eShopOnContainers
 
 Il existe plusieurs façons de rompre/ouvrir le circuit et de le tester avec eShopOnContainers.
 
 L’une des options consiste à réduire le nombre de tentatives autorisées à 1 dans la stratégie Disjoncteur et à redéployer l’ensemble de la solution dans Docker. Avec une seule nouvelle tentative, il y a de fortes chances qu’une requête HTTP échoue pendant le déploiement, que le disjoncteur s’ouvre et que vous obteniez une erreur.
 
-Une autre option est d’utiliser l’intergiciel (middleware) personnalisé qui est implémenté dans le microservice Basket. Quand ce middleware est activé, il intercepte toutes les requêtes HTTP et retourne le code d’état 500. Vous pouvez activer le middleware en effectuant une requête GET à l’URI qui a échoué, comme suit :
+Une autre option consiste à utiliser l’intergiciel (middleware) personnalisé qui est implémenté dans le microservice **Basket**. Quand ce middleware est activé, il intercepte toutes les requêtes HTTP et retourne le code d’état 500. Vous pouvez activer le middleware en effectuant une requête GET à l’URI qui a échoué, comme suit :
 
-- `GET http://localhost:5103/failing`
+- `GET http://localhost:5103/failing`\
+  Cette requête retourne l’état actuel du middleware. Si le middleware est activé, la requête retourne le code d’état 500. Si le middleware est désactivé, il n’y a pas de réponse.
 
-Cette requête retourne l’état actuel du middleware. Si le middleware est activé, la requête retourne le code d’état 500. Si le middleware est désactivé, il n’y a pas de réponse. 
+- `GET http://localhost:5103/failing?enable`\
+  Cette requête active le middleware.
 
-- `GET http://localhost:5103/failing?enable`
-
-Cette requête active le middleware. 
-
-- `GET http://localhost:5103/failing?disable`
-
-Cette requête désactive le middleware. 
+- `GET http://localhost:5103/failing?disable`\
+  Cette requête désactive le middleware.
 
 Par exemple, une fois que l’application est en cours d’exécution, vous pouvez activer le middleware en créant une requête à l’aide de l’URI suivant dans n’importe quel navigateur. Notez que le microservice de commandes utilise le port 5103.
 
 `http://localhost:5103/failing?enable` 
 
-Vous pouvez alors vérifier l’état à l’aide de l’URI `http://localhost:5103/failing`, comme illustré à la figure 10-4.
+Vous pouvez alors vérifier l’état à l’aide de l’URI `http://localhost:5103/failing`, comme illustré à la Figure 8-5.
 
-![](./media/image4.png)
+![Vue dans le navigateur du résultat de la vérification de l’état de l’échec de simulation du middleware](./media/image4.png)
 
-**Figure 10-4**. Vérification de l’état du middleware ASP.NET (désactivé dans le cas présent) « Failing » (En échec). 
+**Figure 8-5**. Vérification de l’état du middleware ASP.NET (désactivé dans le cas présent) « Failing » (En échec).
 
 À ce stade, le microservice Basket répond avec le code d’état 500 chaque fois que vous l’appelez.
 
@@ -115,7 +113,7 @@ public class CartController : Controller
     public async Task<IActionResult> Index()
     {
         try
-        {          
+        {
             var user = _appUserParser.Parse(HttpContext.User);
             //Http requests using the Typed Client (Service Agent)
             var vm = await _basketSvc.GetBasket(user);
@@ -123,11 +121,11 @@ public class CartController : Controller
         }
         catch (BrokenCircuitException)
         {
-            // Catches error when Basket.api is in circuit-opened mode                 
+            // Catches error when Basket.api is in circuit-opened mode
             HandleBrokenCircuitException();
         }
         return View();
-    }       
+    }
 
     private void HandleBrokenCircuitException()
     {
@@ -136,20 +134,20 @@ public class CartController : Controller
 }
 ```
 
-Voici un résumé. La stratégie Nouvelle tentative tente plusieurs fois d’exécuter la requête HTTP et obtient des erreurs HTTP. Quand le nombre maximal de nouvelles tentatives pour la stratégie Disjoncteur est atteint (dans le cas présent, 5), l’application lève une exception BrokenCircuitException. Le résultat est un message convivial, comme illustré dans la figure 10-5.
+Voici un résumé. La stratégie Nouvelle tentative tente plusieurs fois d’exécuter la requête HTTP et obtient des erreurs HTTP. Quand le nombre maximal de nouvelles tentatives pour la stratégie Disjoncteur est atteint (dans le cas présent, 5), l’application lève une exception BrokenCircuitException. Le résultat est un message convivial, comme illustré à la Figure 8-6.
 
-![](./media/image5.png)
+![Vue dans le navigateur de l’application web MVC montrant un message « basket service inoperative » déclenché par la stratégie de disjoncteur](./media/image5.png)
 
-**Figure 10-5**. Disjoncteur retournant une erreur à l’interface utilisateur
+**Figure 8-6**. Disjoncteur retournant une erreur à l’interface utilisateur
 
-Vous pouvez implémenter une logique différente pour déterminer quand ouvrir/rompre le circuit. Vous pouvez également essayer une requête HTTP sur un autre microservice backend s’il existe un centre de données de secours ou un système backend redondant. 
+Vous pouvez implémenter une logique différente pour déterminer quand ouvrir/rompre le circuit. Vous pouvez également essayer une requête HTTP sur un autre microservice back-end s’il existe un centre de données de secours ou un système back-end redondant. 
 
 Enfin, une autre solution pour la stratégie `CircuitBreakerPolicy` consiste à utiliser `Isolate` (qui force l’ouverture du circuit et le maintient ouvert) et `Reset` (qui le referme). Ces solutions peuvent être utilisées pour créer un point de terminaison HTTP d’utilitaire qui appelle Isolate et Reset directement sur la stratégie.  Un tel point de terminaison HTTP peut également être utilisé, correctement sécurisé, en production pour l’isolation temporaire d’un système en aval, par exemple quand vous voulez procéder à sa mise à niveau. Ou bien il peut déclencher le circuit manuellement pour protéger un système en aval que vous soupçonnez d’avoir provoqué l’erreur.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Modèle Disjoncteur**
-    [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- **Modèle Disjoncteur**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
 >[Précédent](implement-http-call-retries-exponential-backoff-polly.md)

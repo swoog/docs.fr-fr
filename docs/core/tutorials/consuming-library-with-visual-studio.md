@@ -1,5 +1,5 @@
 ---
-title: Utilisation d’une bibliothèque .NET Standard dans Visual Studio 2017
+title: Consommer une bibliothèque .NET Standard dans Visual Studio 2017
 description: Créez une application .NET Core qui appelle des membres d’une autre bibliothèque de classes avec Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
@@ -8,14 +8,14 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168886"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362390"
 ---
-# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Utilisation d’une bibliothèque .NET Standard dans Visual Studio 2017
+# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Consommer une bibliothèque .NET Standard dans Visual Studio 2017
 
 Une fois que vous avez créé une bibliothèque de classes .NET Standard en suivant les étapes de [Création d’une bibliothèque de classes C# avec .NET Core dans Visual Studio 2017](./library-with-visual-studio.md) ou [Création d’une bibliothèque de classes Visual Basic avec .NET Core dans Visual Studio 2017](vb-library-with-visual-studio.md), que vous l’avez testée en suivant les instructions dans [Test d’une bibliothèque de classes avec .NET Core dans Visual Studio 2017](testing-library-with-visual-studio.md) et que vous avez créé une version Release de la bibliothèque, l’étape suivante consiste à la rendre accessible aux appelants. Pour cela, deux solutions s'offrent à vous :
 
