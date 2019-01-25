@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 7c9051b15f6d9cf37d7d0245f758905467d5bbc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e80ce58048bfa7f2fecc65e7167479df07bf57c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715086"
 ---
-# <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a><span data-ttu-id="a0588-102">&#39;Classe&#39; instruction doit se terminer par une mise en correspondance &#39;End Class&#39;</span><span class="sxs-lookup"><span data-stu-id="a0588-102">&#39;Class&#39; statement must end with a matching &#39;End Class&#39;</span></span>
-<span data-ttu-id="a0588-103">`Class` permet de lancer un `Class` bloquer ; par conséquent, elle ne peut apparaître au début du bloc, avec une mise en correspondance `End Class` instruction termine le bloc.</span><span class="sxs-lookup"><span data-stu-id="a0588-103">`Class` is used to initiate a `Class` block; hence it can only appear at the beginning of the block, with a matching `End Class` statement ending the block.</span></span> <span data-ttu-id="a0588-104">Soit vous avez un redondant `Class` instruction, ou vous n’avez pas terminé votre `Class` bloc avec `End Class`.</span><span class="sxs-lookup"><span data-stu-id="a0588-104">Either you have a redundant `Class` statement, or you have not ended your `Class` block with `End Class`.</span></span>  
+# <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a><span data-ttu-id="5bbed-102">&#39;Classe&#39; instruction doit se terminer par une mise en correspondance &#39;End Class&#39;</span><span class="sxs-lookup"><span data-stu-id="5bbed-102">&#39;Class&#39; statement must end with a matching &#39;End Class&#39;</span></span>
+<span data-ttu-id="5bbed-103">`Class` permet de lancer un `Class` bloquer ; il ne peut donc apparaître au début du bloc, avec une mise en correspondance `End Class` instruction fin du bloc.</span><span class="sxs-lookup"><span data-stu-id="5bbed-103">`Class` is used to initiate a `Class` block; hence it can only appear at the beginning of the block, with a matching `End Class` statement ending the block.</span></span> <span data-ttu-id="5bbed-104">Soit vous avez un redondant `Class` instruction, ou vous n’avez pas terminé votre `Class` bloc avec `End Class`.</span><span class="sxs-lookup"><span data-stu-id="5bbed-104">Either you have a redundant `Class` statement, or you have not ended your `Class` block with `End Class`.</span></span>  
   
- <span data-ttu-id="a0588-105">**ID d’erreur :** BC30481</span><span class="sxs-lookup"><span data-stu-id="a0588-105">**Error ID:** BC30481</span></span>  
+ <span data-ttu-id="5bbed-105">**ID d’erreur :** BC30481</span><span class="sxs-lookup"><span data-stu-id="5bbed-105">**Error ID:** BC30481</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a0588-106">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="a0588-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5bbed-106">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="5bbed-106">To correct this error</span></span>  
   
--   <span data-ttu-id="a0588-107">Recherchez et supprimez l’inutiles `Class` instruction.</span><span class="sxs-lookup"><span data-stu-id="a0588-107">Locate and remove the unnecessary `Class` statement.</span></span>  
+-   <span data-ttu-id="5bbed-107">Recherchez et supprimez l’instruction `Class` inutile.</span><span class="sxs-lookup"><span data-stu-id="5bbed-107">Locate and remove the unnecessary `Class` statement.</span></span>  
   
--   <span data-ttu-id="a0588-108">Conclure le `Class` bloc avec une mise en correspondance `End Class`.</span><span class="sxs-lookup"><span data-stu-id="a0588-108">Conclude the `Class` block with a matching `End Class`.</span></span>  
+-   <span data-ttu-id="5bbed-108">Conclure le `Class` bloc avec une mise en correspondance `End Class`.</span><span class="sxs-lookup"><span data-stu-id="5bbed-108">Conclude the `Class` block with a matching `End Class`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0588-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a0588-109">See Also</span></span>  
- [<span data-ttu-id="a0588-110">Fin \<mot clé > instruction</span><span class="sxs-lookup"><span data-stu-id="a0588-110">End \<keyword> Statement</span></span>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)  
- [<span data-ttu-id="a0588-111">Class (instruction)</span><span class="sxs-lookup"><span data-stu-id="a0588-111">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)
+## <a name="see-also"></a><span data-ttu-id="5bbed-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5bbed-109">See also</span></span>
+- [<span data-ttu-id="5bbed-110">Fin \<mot clé > instruction</span><span class="sxs-lookup"><span data-stu-id="5bbed-110">End \<keyword> Statement</span></span>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [<span data-ttu-id="5bbed-111">Class (instruction)</span><span class="sxs-lookup"><span data-stu-id="5bbed-111">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)
