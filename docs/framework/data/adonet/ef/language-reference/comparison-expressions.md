@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: 5d201d331d766d865d0ee7afb164813084fa3651
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cca909e67464d08c0bb4ff8a0d0186d9d600ce18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596343"
 ---
 # <a name="comparison-expressions"></a>Comparaison des expressions
 Une expression de comparaison définit une valeur constante, une valeur de propriété ou un résultat de méthode par rapport à une autre valeur (égal, différent de, supérieur à ou inférieur à). Si une comparaison particulière n'est pas valide pour [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], une exception est levée. Toutes les comparaisons, implicites et explicites, requièrent que tous les composants soient comparables dans la source de données. Des expressions de comparaison sont souvent utilisées dans des clauses `Where` pour restreindre les résultats d'une requête.  
@@ -53,5 +53,5 @@ Une expression de comparaison définit une valeur constante, une valeur de propr
  [!code-csharp[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#methodasconstantfails)]
  [!code-vb[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodasconstantfails)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions dans les requêtes LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a>Voir aussi
+- [Expressions dans les requêtes LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

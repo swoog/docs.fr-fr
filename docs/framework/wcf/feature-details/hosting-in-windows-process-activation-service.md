@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 19a37b2d988ba779c4373ba296b43f6508db5925
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731268"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hébergement dans le service d'activation de processus de Windows (WAS, Windows Process Activation Service)
 Le Service de l’Activation des processus Windows (WAS) gère l’activation et la durée de vie du processus de travail qui contiennent des applications à héberger des services de Windows Communication Foundation (WCF). Le modèle de processus WAS généralise le modèle de processus [!INCLUDE[iis601](../../../../includes/iis601-md.md)] pour le serveur HTTP en supprimant la dépendance envers le protocole HTTP. Ainsi, les services WCF à utiliser les protocoles HTTP et non-HTTP, tel que Net.TCP, dans un environnement d’hébergement qui prend en charge l’activation basée sur le message et offre la possibilité d’héberger un grand nombre d’applications sur un ordinateur donné.  
   
- Pour plus d’informations sur la création d’un service WCF qui s’exécute dans l’environnement d’hébergement WAS, consultez [Comment : héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Pour plus d’informations sur la création d’un service WCF qui s’exécute dans l’environnement d’hébergement WAS, consultez [Comment : Héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Le modèle de processus WAS fournit plusieurs fonctionnalités qui permettent aux applications d’être hébergées de façon plus fiable, plus maniable et plus efficace au niveau de l’utilisation des ressources :  
   
@@ -40,7 +40,7 @@ Le Service de l’Activation des processus Windows (WAS) gère l’activation et
 |Scénario|Liaisons de site|Chemin d'application|URI d'application de base|  
 |--------------|-------------------|----------------------|---------------------------|  
 |HTTP uniquement|http : * : 80 :\*|/appTwo|http://localhost/appTwo/|  
-|À la fois HTTP et non-HTTP|http : * : 80 :\*<br /><br /> NET.TCP : 808 :\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
+|À la fois HTTP et non-HTTP|http : * : 80 :\*<br /><br /> net.tcp: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
 |Non-HTTP uniquement|net.pipe: *|/appThree|net.pipe://appThree/|  
   
  Les services et les ressources dans une application peuvent également être adressés. Dans une application, les ressources d'application sont adressées relativement au chemin d'accès d'application de base. Par exemple, supposez qu'un site sur un nom d'ordinateur contoso.com aie des liaisons de site pour les protocoles HTTP et Net.TCP à la fois. Supposez également que le site contienne une application située dans /Billing, qui expose un service à GetOrders.svc. Dans ce cas, si le service GetOrders.svc a exposé un point de terminaison avec une adresse relative de SecureEndpoint, le point de terminaison du service est exposé aux deux URI suivants :  
@@ -51,9 +51,9 @@ Le Service de l’Activation des processus Windows (WAS) gère l’activation et
 ## <a name="the-was-runtime"></a>Exécution WAS  
  Les applications sont organisées en sites pour les besoins d'adressage et de gestion. Au moment de l'exécution, les applications sont également groupées ensemble dans des pools d'applications. Un pool d'applications peut loger de nombreuses applications différentes à partir de nombreux sites différents. Toutes les applications à l'intérieur d'un pool d'applications partagent un jeu commun de caractéristiques d'exécution. Par exemple, elles s'exécutent toutes sous la même version CRL (Common Language Runtime) et elles partagent toutes une identité de processus commune. Chaque pool d'applications correspond à une instance d'un processus de travail (w3wp.exe). Chaque application gérée qui s'exécute dans un pool d'applications partagé est isolée des autres applications au moyen d'un AppDomain CLR.  
   
-## <a name="see-also"></a>Voir aussi  
- [Architecture d’activation WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
- [Configuration du service WAS pour une utilisation avec WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Guide pratique pour installer et configurer des composants d’activation WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
- [How to: Host a WCF Service in WAS (Comment : héberger un service WCF dans WAS)](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Fonctionnalités d’hébergement de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Voir aussi
+- [Architecture d’activation WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
+- [Configuration du service WAS pour une utilisation avec WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Guide pratique pour Installer et configurer les composants d’Activation WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Guide pratique pour Héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1a43cabfd3ab22ad9035ecb30435b21b75040308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718791"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Déclaration de variable en Visual Basic
 Vous déclarez une variable pour spécifier son nom et les caractéristiques. L’instruction de déclaration de variables est la [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Son emplacement et son contenu déterminent les caractéristiques de la variable.  
@@ -73,17 +73,17 @@ Dim l, m As Long, x, y As Single
 ## <a name="characteristics-of-declared-variables"></a>Caractéristiques des Variables déclarées  
  Le *durée de vie* d’une variable est la période de temps pendant laquelle il est disponible pour utilisation. En règle générale, une variable existe tant que l’élément qui le déclare (par exemple, une procédure ou une classe) continue d’exister. Si la variable n’a pas besoin excède la durée de vie de son élément conteneur, il est inutile à rien de spécial dans la déclaration. Si la variable doit continuer d’exister plus longtemps que son élément conteneur, vous pouvez inclure le `Static` ou `Shared` mot clé dans son `Dim` instruction. Pour plus d’informations, consultez [durée de vie dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
- Le *étendue* d’une variable est l’ensemble du code que vous pouvez vous y référer sans qualifier son nom. La portée d’une variable est déterminée par l’où elle est déclarée. Code que qui se trouve dans une région donnée peut utiliser les variables définies dans cette région sans devoir qualifier leurs noms. Pour plus d’informations, consultez [étendue en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ Le *étendue* d’une variable est l’ensemble du code que vous pouvez vous y référer sans qualifier son nom. La portée d’une variable est déterminée par l’où elle est déclarée. Code que qui se trouve dans une région donnée peut utiliser les variables définies dans cette région sans devoir qualifier leurs noms. Pour plus d'informations, consultez [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
  D’une variable *niveau d’accès* est l’étendue de code qui a l’autorisation d’y accéder. Cela est déterminé par le modificateur d’accès (tel que [Public](../../../../visual-basic/language-reference/modifiers/public.md) ou [privé](../../../../visual-basic/language-reference/modifiers/private.md)) que vous utilisez dans le `Dim` instruction. Pour plus d’informations, consultez [niveaux en Visual Basic d’accès](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique : créer une variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [Guide pratique : placer des données dans et en dehors d’une variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)  
- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Caractéristiques d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer (instruction)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Créer une Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Guide pratique pour Déplacer des données dans et hors d’une Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Caractéristiques d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer (instruction)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

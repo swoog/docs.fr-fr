@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 2e37a42b3767d279da0d742ba9958ceb6628aab1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5078e12ed5c68556a1d1d04d01c90440b57c1407
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736401"
 ---
 # <a name="services-and-transactions"></a>Services et transactions
 Applications Windows Communication Foundation (WCF) peuvent initier une transaction à partir d’un client et coordonner la transaction au sein de l’opération de service. Les clients peuvent initier une transaction et appeler plusieurs opérations de service et s’assurer que les opérations de service sont validées ou annulées en tant qu’unité unique.  
@@ -88,7 +88,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge transactionnelle dans System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- [Modèles de transaction](../../../docs/framework/wcf/feature-details/transaction-models.md)  
- [Flux de transaction WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+## <a name="see-also"></a>Voir aussi
+- [Prise en charge transactionnelle dans System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
+- [Modèles de transaction](../../../docs/framework/wcf/feature-details/transaction-models.md)
+- [Flux de transaction WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1232e8c574f263f709a9b66c7b1b3d06cca5e4da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 126cc9d407e2653fdb3f4ea7b03fa05c24a572d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629115"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA, méthode
 Obtient l’adresse virtuelle relative (RVA) et les indicateurs d’implémentation de la méthode ou le champ représenté par le jeton spécifié.  
@@ -39,23 +39,23 @@ HRESULT GetRVA (
   
 #### <a name="parameters"></a>Paramètres  
  `tk`  
- [in] Un jeton de métadonnées MethodDef ou FieldDef qui représente l’objet de code pour renvoyer l’adresse RVA. Si le jeton est FieldDef, le champ doit être une variable globale.  
+ [in] Un jeton de métadonnées MethodDef ou FieldDef qui représente l’objet de code pour retourner l’adresse RVA. Si le jeton est FieldDef, le champ doit être une variable globale.  
   
  `pulCodeRVA`  
  [out] Pointeur vers l’adresse virtuelle relative de l’objet de code représenté par le jeton.  
   
  `pdwImplFlags`  
- [out] Pointeur vers les indicateurs d’implémentation pour la méthode. Cette valeur est un masque de bits de le [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) énumération. La valeur de `pdwImplFlags` n’est valide uniquement si `tk` est un jeton MethodDef.  
+ [out] Pointeur vers les indicateurs d’implémentation pour la méthode. Cette valeur est un masque de bits à partir de la [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) énumération. La valeur de `pdwImplFlags` est valide uniquement si `tk` est un jeton MethodDef.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

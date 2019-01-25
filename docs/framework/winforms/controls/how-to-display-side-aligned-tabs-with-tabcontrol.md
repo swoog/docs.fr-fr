@@ -1,5 +1,5 @@
 ---
-title: "Comment : afficher des onglets alignés sur le côté à l'aide de TabControl"
+title: 'Procédure : Afficher des onglets alignés à droite avec contrôle TabControl'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: e145547ba4c8648a765e9507b7f35e50cb15fd82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b2d691cb41a48b51bb48291e321d763a9ff7e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650575"
 ---
-# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Comment : afficher des onglets alignés sur le côté à l'aide de TabControl
-La propriété <xref:System.Windows.Forms.TabControl.Alignment%2A> de <xref:System.Windows.Forms.TabControl> prend en charge l'affichage vertical des onglets (le long du bord gauche ou droit du contrôle), par opposition à l'affichage horizontal (en haut ou en bas du contrôle). Par défaut, cet affichage vertical offre une expérience utilisateur médiocre, car la propriété <xref:System.Windows.Forms.TabPage.Text%2A> de l'objet <xref:System.Windows.Forms.TabPage> ne s'affiche pas dans l'onglet quand les styles visuels sont activés. De plus, il n'existe aucun moyen direct de contrôler la direction du texte dans l'onglet. Vous pouvez utiliser Owner Draw sur <xref:System.Windows.Forms.TabControl> pour améliorer cette expérience.  
+# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Procédure : Afficher des onglets alignés à droite avec contrôle TabControl
+La propriété <xref:System.Windows.Forms.TabControl.Alignment%2A> de <xref:System.Windows.Forms.TabControl> prend en charge l’affichage vertical des onglets (le long du bord gauche ou droit du contrôle), par opposition à l’affichage horizontal (en haut ou en bas du contrôle). Par défaut, cet affichage vertical offre une expérience utilisateur médiocre, car la propriété <xref:System.Windows.Forms.TabPage.Text%2A> de l'objet <xref:System.Windows.Forms.TabPage> ne s'affiche pas dans l'onglet quand les styles visuels sont activés. De plus, il n'existe aucun moyen direct de contrôler la direction du texte dans l'onglet. Vous pouvez utiliser Owner Draw sur <xref:System.Windows.Forms.TabControl> pour améliorer cette expérience.  
   
  La procédure suivante montre comment afficher des onglets alignés à droite, avec le texte de l'onglet affiché de gauche à droite, à l'aide de la fonctionnalité « Owner Draw ».  
   
@@ -40,5 +40,5 @@ La propriété <xref:System.Windows.Forms.TabControl.Alignment%2A> de <xref:Syst
      [!code-csharp[TabControl.RightAlignedTabs#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
      [!code-vb[TabControl.RightAlignedTabs#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>Voir aussi  
- [TabControl, contrôle](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- [TabControl, contrôle](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)

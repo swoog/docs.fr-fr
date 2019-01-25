@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb8ff76da288975ef291d226bb1f205e73a64252
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9a5c9336d571fb392fbed9fed2196fca813bc7d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674662"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey, fonction
 Obtient un jeton représentant une clé publique. Un jeton de nom fort est la forme abrégée d’une clé publique.  
   
- Cette fonction est déconseillée. Utilisez le [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md) méthode à la place.  
+ Cette fonction a été déconseillée. Utilisez le [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md) méthode à la place.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,13 +51,13 @@ BOOLEANStrongNameTokenFromPublicKey (
  [in] La taille, en octets, de `pbPublicKeyBlob`.  
   
  `ppbStrongNameToken`  
- [out] Le jeton de nom fort correspondant à la clé passée dans `pbPublicKeyBlob`. Le common language runtime alloue de la mémoire dans lequel retourner le jeton. L’appelant doit libérer cette mémoire en utilisant la [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) (fonction).  
+ [out] Le jeton de nom fort correspondant à la clé passée dans `pbPublicKeyBlob`. Le common language runtime alloue la mémoire dans lequel retourner le jeton. L’appelant doit libérer cette mémoire en utilisant la [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) (fonction).  
   
  `pcbStrongNameToken`  
  [out] La taille, en octets, du jeton de nom fort retourné.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` de réussite ; dans le cas contraire, `false`.  
+ `true` de réussite ; Sinon, `false`.  
   
 ## <a name="remarks"></a>Notes  
  Un jeton de nom fort est la forme abrégée d’une clé publique utilisée pour économiser de l’espace lorsque vous stockez des informations de clé dans les métadonnées. Plus précisément, les jetons de nom fort sont utilisés dans les références d’assembly pour faire référence à l’assembly dépendant.  
@@ -65,15 +65,15 @@ BOOLEANStrongNameTokenFromPublicKey (
  Si le `StrongNameTokenFromPublicKey` (fonction) ne pas aboutir, appelez le [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) fonction pour récupérer la dernière erreur générée.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** StrongName.h  
   
- **Bibliothèque :** inclus en tant que ressource dans mscoree.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans mscoree.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [StrongNameTokenFromPublicKey, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
- [StrongNameGetPublicKey, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
- [PublicKeyBlob, structure](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+## <a name="see-also"></a>Voir aussi
+- [StrongNameTokenFromPublicKey, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [StrongNameGetPublicKey, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [PublicKeyBlob, structure](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)

@@ -2,11 +2,12 @@
 title: Meilleures pratiques dans un environnement de confiance partielle
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: fca975ff4216384b970535273511eb07cd6ded68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640106"
 ---
 # <a name="partial-trust-best-practices"></a>Meilleures pratiques dans un environnement de confiance partielle
 Cette rubrique décrit les meilleures pratiques lors de l’exécution de Windows Communication Foundation (WCF) dans un environnement de confiance partielle.  
@@ -44,9 +45,9 @@ Cette rubrique décrit les meilleures pratiques lors de l’exécution de Window
 -   Les méthodes d'instance qui implémentent l'interface <xref:System.Xml.Serialization.IXmlSerializable> doivent être `public`.  
   
 ## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>Utilisation de WCF à partir d'un code de plateforme d'un niveau de confiance suffisant qui autorise les appels d'appelants d'un niveau de confiance partiel  
- Le modèle de sécurité de confiance partielle WCF suppose que tout appelant d’une méthode publique de WCF ou une propriété est en cours d’exécution dans le contexte de sécurité (CAS) de l’accès de code de l’application d’hébergement. WCF suppose également ce contexte de sécurité qu’une seule application existe pour chaque <xref:System.AppDomain>, et que ce contexte est établi au <xref:System.AppDomain> heure de création par un hôte approuvé (par exemple, par un appel à <xref:System.AppDomain.CreateDomain%2A> ou par le Gestionnaire d’applications ASP.NET).  
+ Le modèle de sécurité de confiance partielle WCF suppose que tout appelant d’une propriété ou une méthode publique de WCF s’exécute dans le contexte de sécurité (CAS) de l’accès de code de l’application d’hébergement. WCF suppose également ce contexte de sécurité qu’une seule application existe pour chaque <xref:System.AppDomain>, et que ce contexte est établi au niveau <xref:System.AppDomain> heure de création par un hôte approuvé (par exemple, par un appel à <xref:System.AppDomain.CreateDomain%2A> ou par le Gestionnaire d’applications ASP.NET).  
   
- Ce modèle de sécurité s'applique aux applications écrites par l'utilisateur qui ne peuvent pas déclarer des autorisations CAS supplémentaires, telles que l'exécution du code utilisateur dans une application ASP.NET de confiance moyenne. Toutefois, le code de plate-forme de confiance (par exemple, un assembly tiers qui est installé dans le global assembly cache et accepte les appels à partir du code de niveau de confiance partiel) doit accepter les prudence lors de l’appel à WCF pour le compte d’une application de confiance partielle pour Évitez d’introduire des failles de sécurité au niveau de l’application.  
+ Ce modèle de sécurité s'applique aux applications écrites par l'utilisateur qui ne peuvent pas déclarer des autorisations CAS supplémentaires, telles que l'exécution du code utilisateur dans une application ASP.NET de confiance moyenne. Toutefois, le code de plate-forme de niveau de confiance (par exemple, un assembly tiers qui est installé dans le global assembly cache et accepte les appels du code partiellement fiable) doit prendre prudence lors de l’appel à WCF pour le compte d’une application de confiance partielle pour Évitez d’introduire des failles de sécurité de niveau application.  
   
  Code de confiance totale doit éviter de modifier le jeu d’autorisations CAS du thread actuel (en appelant <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, ou <xref:System.Security.PermissionSet.Deny%2A>) avant d’appeler des API WCF pour le compte du code partiellement fiable. La déclaration ou le refus, ou toute création d'un contexte d'autorisation spécifique au thread qui est indépendant du contexte de sécurité au niveau de l'application, peut entraîner un comportement imprévu. Selon l'application, ce comportement peut provoquer des failles de sécurité au niveau de l'application.  
   
@@ -54,16 +55,16 @@ Cette rubrique décrit les meilleures pratiques lors de l’exécution de Window
   
 -   Le contexte de sécurité spécifique au thread ne peut pas être maintenu pour la durée de l'opération, ce qui provoque des exceptions de sécurité potentielles.  
   
--   Le code WCF interne, ainsi que tous les rappels fournis par l’utilisateur s’exécute dans un contexte de sécurité différent de celui sous lequel l’appel a été initialisé à l’origine. Ces contextes sont les suivants :  
+-   Code WCF interne, ainsi que des rappels fourni par l’utilisateur peuvent s’exécuter dans un contexte de sécurité différent de celui sous lequel l’appel a été lancé à l’origine. Ces contextes sont les suivants :  
   
     -   Le contexte d'autorisation d'application.  
   
-    -   N’importe quel contexte d’autorisation spécifique au thread créé précédemment par d’autres threads utilisateur utilisés pour appeler dans WCF pendant la durée de vie d’en cours d’exécution <xref:System.AppDomain>.  
+    -   N’importe quel contexte d’autorisation spécifique au thread créé précédemment par d’autres threads utilisateur utilisés pour appeler dans WCF pendant la durée de vie de l’en cours d’exécution <xref:System.AppDomain>.  
   
- WCF garantit que du code partiellement fiable ne peut pas obtenir les autorisations de confiance totale, sauf si ces autorisations sont déclarées par un composant de niveau de confiance suffisant avant d’appeler des API publiques de WCF. Toutefois, il ne garantit pas que les effets de la déclaration de la confiance totale sont isolés d'un thread, d'une opération ou d'une action utilisateur en particulier.  
+ WCF garantit que du code partiellement fiable ne peut pas obtenir les autorisations de confiance totale, sauf si ces autorisations sont déclarées par un composant de niveau de confiance suffisant avant l’appel des API publiques WCF. Toutefois, il ne garantit pas que les effets de la déclaration de la confiance totale sont isolés d'un thread, d'une opération ou d'une action utilisateur en particulier.  
   
  La meilleure pratique consiste à éviter de créer le contexte d'autorisation spécifique au thread en appelant <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A> ou <xref:System.Security.PermissionSet.Deny%2A>. Au lieu de cela, accordez ou refusez le privilège à l'application, afin qu'aucune méthode <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A> ou <xref:System.Security.PermissionSet.PermitOnly%2A> ne soit requise.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.IXmlSerializable>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.IXmlSerializable>

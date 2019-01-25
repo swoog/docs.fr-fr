@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95c2218aadd62902ff9bc7f2e6a190aa2ce241ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75dc379baf8d92b9b27bdb58ccab930c2d4f91e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709167"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3, interface
 Contrôle les notifications de débogueur personnalisées.  
@@ -30,7 +30,7 @@ Contrôle les notifications de débogueur personnalisées.
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[SetEnableCustomNotification, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Active ou désactive les notifications de débogueur personnalisées du type spécifié.|  
+|[SetEnableCustomNotification, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Active et désactive les notifications de débogueur personnalisées du type spécifié.|  
   
 ## <a name="remarks"></a>Notes  
  Cette interface étend logiquement les interfaces ICorDebugProcess et ICorDebugProcess2.  
@@ -39,14 +39,14 @@ Contrôle les notifications de débogueur personnalisées.
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

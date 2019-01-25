@@ -1,5 +1,5 @@
 ---
-title: "Comment : utiliser un thread d'arrière-plan pour rechercher des fichiers"
+title: 'Procédure : Utiliser un Thread d’arrière-plan pour rechercher des fichiers'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 1034868939837fc43cf7595c819a6109331a2684
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536325"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Comment : utiliser un thread d'arrière-plan pour rechercher des fichiers
-Le <xref:System.ComponentModel.BackgroundWorker> composant remplace et ajoute des fonctionnalités à la <xref:System.Threading> espace de noms ; Toutefois, le <xref:System.Threading> espace de noms est conservé pour la compatibilité descendante et une utilisation ultérieure, si vous choisissez. Pour plus d’informations, consultez [vue d’ensemble du composant BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procédure : Utiliser un Thread d’arrière-plan pour rechercher des fichiers
+Le <xref:System.ComponentModel.BackgroundWorker> composant remplace et ajoute des fonctionnalités à la <xref:System.Threading> espace de noms ; Toutefois, le <xref:System.Threading> espace de noms est conservé pour compatibilité descendante et une utilisation ultérieure, si vous choisissez. Pour plus d’informations, consultez [vue d’ensemble du composant BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
   
- Windows Forms utilise le modèle de thread unique cloisonné (STA), car Windows Forms est basée sur des fenêtres Win32 natives qui sont par nature avec thread cloisonné. Le modèle STA implique une fenêtre peut être créée sur un thread, mais il ne peut pas basculer les threads créés une fois que tous les appels de fonction pour qu’il doivent se produire sur le thread de sa création. En dehors de Windows Forms, les classes dans le .NET Framework utilisent le modèle de thread libre. Pour plus d’informations sur les threads dans le .NET Framework, consultez [Threading](../../../../docs/standard/threading/index.md).  
+ Windows Forms utilise le modèle de thread unique cloisonné (STA), car Windows Forms repose sur des fenêtres Win32 natives qui sont par nature avec thread cloisonné. Le modèle STA implique une fenêtre peut être créée sur n’importe quel thread, mais elle ne peut pas basculer les threads créés une fois que tous les appels de fonction à ce dernier doivent se produire sur son thread de création. En dehors de Windows Forms, les classes dans le .NET Framework utilisent le modèle de thread libre. Pour plus d’informations à propos du threading dans le .NET Framework, consultez [Threading](../../../../docs/standard/threading/index.md).  
   
- Le modèle STA requiert que toutes les méthodes sur un contrôle qui doivent être appelée à partir du thread de création du contrôle à l’extérieur doivent être marshalées vers (exécutées sur) thread de création du contrôle. La classe de base <xref:System.Windows.Forms.Control> fournit plusieurs méthodes (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, et <xref:System.Windows.Forms.Control.EndInvoke%2A>) à cet effet. <xref:System.Windows.Forms.Control.Invoke%2A> effectue des appels de méthode synchrones ; <xref:System.Windows.Forms.Control.BeginInvoke%2A> effectue des appels de méthode asynchrone.  
+ Le modèle STA requiert que toutes les méthodes sur un contrôle qui doivent être appelés à partir en dehors du thread de création du contrôle doivent être marshalées (exécutées sur) le thread du contrôle la création. La classe de base <xref:System.Windows.Forms.Control> fournit plusieurs méthodes (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, et <xref:System.Windows.Forms.Control.EndInvoke%2A>) à cet effet. <xref:System.Windows.Forms.Control.Invoke%2A> effectue des appels de méthode synchrones ; <xref:System.Windows.Forms.Control.BeginInvoke%2A> effectue des appels de méthode asynchrone.  
   
- Si vous utilisez le multithreading dans votre contrôle pour des tâches gourmandes en ressources, l’interface utilisateur peut rester réactif pendant un gourmande en ressources de calcul s’exécute sur un thread d’arrière-plan.  
+ Si vous utilisez le multithreading dans votre contrôle pour des tâches gourmandes en ressources, l’interface utilisateur peut rester réactif pendant un calcul gourmandes en ressources s’exécute sur un thread d’arrière-plan.  
   
- L’exemple suivant (`DirectorySearcher`) montre un contrôle Windows Forms multithread qui utilise un thread d’arrière-plan à la recherche de manière récursive un répertoire pour les fichiers de mise en correspondance une chaîne de recherche spécifié, puis remplit une zone de liste avec les résultats de la recherche. Les concepts clés illustrés par l’exemple sont les suivantes :  
+ L’exemple suivant (`DirectorySearcher`) montre un contrôle Windows Forms multithread qui utilise un thread d’arrière-plan à la recherche de manière récursive un répertoire pour les fichiers correspondant à la chaîne de recherche spécifiés, puis remplit une zone de liste avec les résultats de recherche. Les concepts clés illustrés par l’exemple sont les suivantes :  
   
--   `DirectorySearcher` démarre un nouveau thread pour effectuer la recherche. Le thread s’exécute le `ThreadProcedure` méthode qui à son tour appelle l’application d’assistance `RecurseDirectory` méthode pour effectuer la recherche réelle et remplir la zone de liste. Toutefois, le remplissage de la zone de liste requiert un appel inter-threads, comme expliqué dans les deux éléments de liste à puces.  
+-   `DirectorySearcher` démarre un nouveau thread pour effectuer la recherche. Le thread s’exécute le `ThreadProcedure` méthode qui appelle à son tour l’assistance `RecurseDirectory` méthode pour effectuer la recherche réelle et remplir la zone de liste. Toutefois, le remplissage de la zone de liste requiert un appel inter-threads, comme expliqué dans les deux éléments de liste à puces.  
   
 -   `DirectorySearcher` définit le `AddFiles` pour ajouter des fichiers à une zone de liste ; Toutefois, `RecurseDirectory` ne peut pas appeler directement `AddFiles` car `AddFiles` s’exécute uniquement dans le thread STA qui a créé `DirectorySearcher`.  
   
--   La seule façon de `RecurseDirectory` peut appeler `AddFiles` s’effectue via un appel inter-threads, autrement dit, en appelant <xref:System.Windows.Forms.Control.Invoke%2A> ou <xref:System.Windows.Forms.Control.BeginInvoke%2A> pour marshaler `AddFiles` vers le thread de création de `DirectorySearcher`. `RecurseDirectory` utilise <xref:System.Windows.Forms.Control.BeginInvoke%2A> afin que l’appel peut être effectué de façon asynchrone.  
+-   La seule façon de `RecurseDirectory` peut appeler `AddFiles` s’effectue via un appel inter-threads, autrement dit, en appelant <xref:System.Windows.Forms.Control.Invoke%2A> ou <xref:System.Windows.Forms.Control.BeginInvoke%2A> pour marshaler `AddFiles` pour le thread de création de `DirectorySearcher`. `RecurseDirectory` utilise <xref:System.Windows.Forms.Control.BeginInvoke%2A> afin que l’appel peut être effectué de façon asynchrone.  
   
--   Marshaling d’une méthode requiert l’équivalent d’un pointeur de fonction ou un rappel. Pour cela, à l’aide de délégués dans le .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> prend un délégué en tant qu’argument. `DirectorySearcher` Par conséquent, définit un délégué (`FileListDelegate`), lie `AddFiles` à une instance de `FileListDelegate` dans son constructeur et passe cette instance de délégué à <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` définit également un délégué d’événement qui est marshalé lorsque la recherche est terminée.  
+-   Marshaling d’une méthode requiert l’équivalent d’un pointeur de fonction ou un rappel. Cela est accompli à l’aide de délégués dans le .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> prend un délégué en tant qu’argument. `DirectorySearcher` Par conséquent, définit un délégué (`FileListDelegate`), lie `AddFiles` à une instance de `FileListDelegate` dans son constructeur et passe cette instance de délégué à <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` définit également un délégué d’événement qui est marshalé à l’issue de la recherche.  
   
 ```vb  
 Option Strict  
@@ -569,7 +569,7 @@ namespace Microsoft.Samples.DirectorySearcher
 }  
 ```  
   
-## <a name="using-the-multithreaded-control-on-a-form"></a>L’utilisation du contrôle multithread sur un formulaire  
+## <a name="using-the-multithreaded-control-on-a-form"></a>Utilisation du contrôle multithread sur un formulaire  
  L’exemple suivant montre comment le multithread `DirectorySearcher` contrôle peut être utilisé sur un formulaire.  
   
 ```vb  
@@ -762,7 +762,7 @@ namespace SampleUsage
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ComponentModel.BackgroundWorker>
+- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

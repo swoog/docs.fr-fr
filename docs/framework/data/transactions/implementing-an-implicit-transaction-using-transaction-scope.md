@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645845"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implémentation d'une transaction implicite à l'aide de l'étendue de transaction
 La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour indiquer qu'un bloc de code participe à une transaction, sans avoir à intervenir sur la transaction même. Une étendue de transaction peut sélectionner et gérer automatiquement la transaction ambiante. En raison de sa facilité d'utilisation et de son efficacité, il est recommandé d'utiliser la classe <xref:System.Transactions.TransactionScope> lors du développement d'une application de transaction.  
@@ -23,16 +23,16 @@ La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- L'étendue de transaction démarre après la création d'un nouvel objet <xref:System.Transactions.TransactionScope>.  Comme illustré dans l’exemple de code, il est recommandé de créer des étendues avec une **à l’aide de** instruction. Le **à l’aide de** instruction est disponible à la fois en c# et Visual Basic, et fonctionne comme un **try... finally** bloc pour garantir que l’étendue est correctement supprimé.  
+ L'étendue de transaction démarre après la création d'un nouvel objet <xref:System.Transactions.TransactionScope>.  Comme illustré dans l’exemple de code, il est recommandé de créer des étendues avec un **à l’aide de** instruction. Le **à l’aide de** instruction est disponible à la fois dans C# et dans Visual Basic et fonctionne comme un **try... enfin** bloc pour garantir que l’étendue est correctement supprimé.  
   
- Lorsque vous instanciez <xref:System.Transactions.TransactionScope>, le gestionnaire de transactions détermine la transaction à laquelle participer. Une fois déterminée, la portée participe toujours à cette transaction. La décision est basée sur deux facteurs : présence d’une transaction ambiante et la valeur de la **TransactionScopeOption** dans le constructeur. La transaction ambiante est la transaction dans laquelle s'exécute votre code. Vous pouvez obtenir une référence à la transaction ambiante en appelant la propriété <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> statique de la classe <xref:System.Transactions.Transaction>. Pour plus d’informations sur la façon dont ce paramètre est utilisé, consultez la [la gestion du flux de transaction à l’aide de TransactionScopeOption](#ManageTxFlow) section de cette rubrique.  
+ Lorsque vous instanciez <xref:System.Transactions.TransactionScope>, le gestionnaire de transactions détermine la transaction à laquelle participer. Une fois déterminée, la portée participe toujours à cette transaction. La décision est basée sur deux facteurs : si une transaction ambiante est présente et la valeur de la **TransactionScopeOption** paramètre dans le constructeur. La transaction ambiante est la transaction dans laquelle s'exécute votre code. Vous pouvez obtenir une référence à la transaction ambiante en appelant la propriété <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> statique de la classe <xref:System.Transactions.Transaction>. Pour plus d’informations sur l’utilisation de ce paramètre, consultez le [la gestion des flux de transaction à l’aide de TransactionScopeOption](#ManageTxFlow) section de cette rubrique.  
   
 ## <a name="completing-a-transaction-scope"></a>Fin d'une étendue de transaction  
- Une fois que votre application a effectué toutes les tâches nécessaires au cours d'une transaction, appelez la méthode <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> (une seule fois) pour informer le gestionnaire de transactions que la transaction peut être validée. Il est vivement conseillé de placer l’appel à <xref:System.Transactions.TransactionScope.Complete%2A> en tant que dernière instruction dans le **à l’aide de** bloc.  
+ Une fois que votre application a effectué toutes les tâches nécessaires au cours d'une transaction, appelez la méthode <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> (une seule fois) pour informer le gestionnaire de transactions que la transaction peut être validée. Il est vivement conseillé de placer l’appel à <xref:System.Transactions.TransactionScope.Complete%2A> en tant que la dernière instruction dans le **à l’aide de** bloc.  
   
- Ne pas appeler cette méthode d’abandonne la transaction, car le Gestionnaire de transactions interprète comme une défaillance du système, ou équivalent à une exception levée dans l’étendue de la transaction. Toutefois, l'appel à cette méthode ne garantit pas la validation de la transaction. Il s'agit simplement d'un moyen d'informer le gestionnaire de transactions de votre état. Après avoir appelé la méthode <xref:System.Transactions.TransactionScope.Complete%2A>, vous ne pouvez plus accéder à la transaction ambiante via la propriété <xref:System.Transactions.Transaction.Current%2A> sous peine de lever une exception.  
+ Ne pas appeler cette méthode d’abandonne la transaction, parce que le Gestionnaire de transactions l’interprète comme une défaillance du système, ou équivalent à une exception levée dans l’étendue de la transaction. Toutefois, l'appel à cette méthode ne garantit pas la validation de la transaction. Il s'agit simplement d'un moyen d'informer le gestionnaire de transactions de votre état. Après avoir appelé la méthode <xref:System.Transactions.TransactionScope.Complete%2A>, vous ne pouvez plus accéder à la transaction ambiante via la propriété <xref:System.Transactions.Transaction.Current%2A> sous peine de lever une exception.  
   
- Si le <xref:System.Transactions.TransactionScope> de l’objet créé la transaction au départ, le travail réel de la validation de la transaction par le Gestionnaire de transactions se produit après la dernière ligne de code dans le **à l’aide de** bloc. S'il n'a pas créé la transaction, la validation se produit chaque fois que <xref:System.Transactions.CommittableTransaction.Commit%2A> est appelé par le propriétaire de l'objet <xref:System.Transactions.CommittableTransaction>. À ce stade le Gestionnaire de transactions appelle la ressource gestionnaires et les informe de valider ou de restaurer, selon que le <xref:System.Transactions.TransactionScope.Complete%2A> méthode a été appelée sur le <xref:System.Transactions.TransactionScope> objet.  
+ Si le <xref:System.Transactions.TransactionScope> de l’objet a créé la transaction au départ, le travail réel de la validation de la transaction par le Gestionnaire de transactions se produit après la dernière ligne de code dans le **à l’aide de** bloc. S’il n’a pas créé la transaction, la validation se produit chaque fois que <xref:System.Transactions.CommittableTransaction.Commit%2A> est appelé par le propriétaire de l’objet <xref:System.Transactions.CommittableTransaction>. À ce stade le Gestionnaire de transactions appelle des gestionnaires de la ressource et les informe de commit ou rollback, selon que le <xref:System.Transactions.TransactionScope.Complete%2A> méthode a été appelée sur le <xref:System.Transactions.TransactionScope> objet.  
   
  Le **à l’aide de** instruction garantit que le <xref:System.Transactions.TransactionScope.Dispose%2A> méthode de la <xref:System.Transactions.TransactionScope> objet est appelé même si une exception se produit. La méthode <xref:System.Transactions.TransactionScope.Dispose%2A> marque la fin de l'étendue de transaction. Il est possible que les exceptions qui se produisent après l'appel à cette méthode n'affectent pas la transaction. Cette méthode restaure également la transaction ambiante à son état précédent.  
   
@@ -41,7 +41,7 @@ La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour
 ## <a name="rolling-back-a-transaction"></a>Restauration d'une transaction  
  Pour restaurer une transaction, n'appelez pas la méthode <xref:System.Transactions.TransactionScope.Complete%2A> dans l'étendue de transaction. Par exemple, vous pouvez lever une exception dans l'étendue. La transaction à laquelle il participe est restaurée.  
   
-##  <a name="ManageTxFlow"></a> La gestion du flux de transaction à l’aide de TransactionScopeOption  
+##  <a name="ManageTxFlow"></a> La gestion des flux de transaction à l’aide de TransactionScopeOption  
  L'étendue de transaction peut être imbriquée en appelant une méthode qui utilise une <xref:System.Transactions.TransactionScope> à partir d'une méthode utilisant sa propre étendue, comme la méthode `RootMethod` de l'exemple suivant,  
   
 ```csharp  
@@ -81,7 +81,7 @@ void SomeMethod()
   
  Si l'étendue est instanciée avec <xref:System.Transactions.TransactionScopeOption.RequiresNew>, il s'agit toujours de l'étendue racine. Une nouvelle transaction démarre et devient la nouvelle transaction ambiante de l'étendue.  
   
- Si la portée est instanciée avec <xref:System.Transactions.TransactionScopeOption.Suppress>, elle ne prend jamais part à une transaction, qu'une transaction ambiante existe ou non. Une étendue instanciée avec cette valeur toujours avoir **null** en tant que sa transaction ambiante.  
+ Si la portée est instanciée avec <xref:System.Transactions.TransactionScopeOption.Suppress>, elle ne prend jamais part à une transaction, qu'une transaction ambiante existe ou non. Une étendue instanciée avec cette valeur toujours avoir **null** sa transaction ambiante.  
   
  Ces options sont répertoriées dans le tableau suivant.  
   
@@ -166,8 +166,8 @@ using(TransactionScope scope1 = new TransactionScope())
  En cas d'utilisation d'objets <xref:System.Transactions.TransactionScope> imbriqués, toutes les étendues imbriquées doivent être configurées pour utiliser le même niveau d'isolation pour pouvoir joindre la transaction ambiante. Si un objet <xref:System.Transactions.TransactionScope> imbriqué tente de joindre la transaction ambiante avec un niveau d'isolation différent, une exception <xref:System.ArgumentException> est levée.  
   
 ## <a name="interop-with-com"></a>Interopérabilité avec COM+  
- Lors de la création d'une nouvelle instance <xref:System.Transactions.TransactionScope>, vous pouvez utiliser l'énumération <xref:System.Transactions.EnterpriseServicesInteropOption> dans l'un des constructeurs pour spécifier comment interagir avec COM+. Pour plus d’informations, consultez [l’interopérabilité avec les Services d’entreprise et les Transactions COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ Lors de la création d'une nouvelle instance <xref:System.Transactions.TransactionScope>, vous pouvez utiliser l'énumération <xref:System.Transactions.EnterpriseServicesInteropOption> dans l'un des constructeurs pour spécifier comment interagir avec COM+. Pour plus d’informations, consultez [l’interopérabilité avec Enterprise Services et les Transactions COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Transactions.Transaction.Clone%2A>  
- <xref:System.Transactions.TransactionScope>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Transactions.Transaction.Clone%2A>
+- <xref:System.Transactions.TransactionScope>

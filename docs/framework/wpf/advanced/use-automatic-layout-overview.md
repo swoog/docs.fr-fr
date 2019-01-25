@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609601"
 ---
 # <a name="use-automatic-layout-overview"></a>Vue d'ensemble de l'utilisation de la disposition automatique
 Cette rubrique présente des instructions pour les développeurs sur la façon d’écrire [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications localisables [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Dans le passé, la localisation d’une interface utilisateur a été beaucoup de temps. Chaque langue de l’interface utilisateur était adaptée nécessitait un réglage de pixel par pixel. Aujourd'hui, grâce à la conception et des normes de codage, de droite [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] peut être construite afin que les traducteurs aient moins de redimensionnement et de repositionnement. L’approche à écrire des applications qui peuvent être plus facilement redimensionnées et repositionnées est appelée à la disposition automatique et peut être obtenue en utilisant [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] design de l’application.  
@@ -107,7 +107,7 @@ Grille
   
  **Remarque** pour l’exemple de code complet, consultez [partage de propriétés de dimensionnement entre grilles](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Globalisation pour WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Utiliser la disposition automatique pour créer un bouton](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Utiliser une grille pour la disposition automatique](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+## <a name="see-also"></a>Voir aussi
+- [Globalisation pour WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Utiliser la disposition automatique pour créer un bouton](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [Utiliser une grille pour la disposition automatique](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

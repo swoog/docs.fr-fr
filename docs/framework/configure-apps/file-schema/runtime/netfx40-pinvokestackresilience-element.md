@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49dc991fd1f30bce6c328725a794750c753145cd
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 3742ab7c69b6c4870d00428ea7da9fee2a719925
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684851"
 ---
 # <a name="ltnetfx40pinvokestackresiliencegt-element"></a>&lt;NetFx40_PInvokeStackResilience&gt; élément
 Indique si le runtime corrige automatiquement les déclarations incorrectes d’appel de code non managé à l’exécution, au prix de transitions plus lentes entre le code managé et le code non managé.  
   
  \<configuration>  
 \<runtime>  
-< NetFx40_PInvokeStackResilience >  
+<NetFx40_PInvokeStackResilience>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,7 +76,7 @@ Indique si le runtime corrige automatiquement les déclarations incorrectes d’
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)

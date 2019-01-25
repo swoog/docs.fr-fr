@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 41950c52-1ac8-4212-b814-c77e20879f91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f35c26b98521311267a627265f2dae8fa9e333de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 399f27db0a2d18e3bcd90b87f4470a77cb50595d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646854"
 ---
 # <a name="icordebugmoduledebugevent-interface"></a>ICorDebugModuleDebugEvent, interface
 Étend la [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) interface pour prendre en charge les événements au niveau du module.  
@@ -27,14 +27,14 @@ ms.locfileid: "33421838"
 >  L'interface est uniquement disponible avec .NET Native. Une tentative d'appel à `QueryInterface` pour récupérer un pointeur d'interface retourne `E_NOINTERFACE` pour les scénarios ICorDebug en dehors de .NET Native.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

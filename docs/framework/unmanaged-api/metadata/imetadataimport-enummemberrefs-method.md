@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c148ee0b2c96f2a387dac54eaff690ab3f05ebf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34a6762618780b22bcd8be376209912390524578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592011"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs, méthode
 Énumère les jetons MemberRef représentant les membres du type spécifié.  
@@ -41,7 +41,7 @@ HRESULT EnumMemberRefs (
   
 #### <a name="parameters"></a>Paramètres  
  `phEnum`  
- [dans, out] Pointeur vers l’énumérateur.  
+ [in, out] Pointeur vers l’énumérateur.  
   
  `tkParent`  
  [in] Un jeton TypeDef, TypeRef, MethodDef ou ModuleRef pour le type dont les membres doivent être énumérés.  
@@ -60,17 +60,17 @@ HRESULT EnumMemberRefs (
 |HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMemberRefs` retourné avec succès.|  
-|`S_FALSE`|Il n’existe pas de jetons MemberRef à énumérer. Dans ce cas, `pcTokens` a la valeur zéro.|  
+|`S_FALSE`|Il n’y a aucune jetons MemberRef à énumérer. Dans ce cas, `pcTokens` est à zéro.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

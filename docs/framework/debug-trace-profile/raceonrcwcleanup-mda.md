@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09e3b275bfaa5743c0271578df97f92269ac7c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2fe4a5a2886fdbbd36ee491ea66dbce353fb034
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717244"
 ---
 # <a name="raceonrcwcleanup-mda"></a>Assistant Débogage managé raceOnRCWCleanup
 L’Assistant Débogage managé (MDA) `raceOnRCWCleanup` est activé quand le Common Language Runtime (CLR) détecte qu’un [wrapper RCW](../../../docs/framework/interop/runtime-callable-wrapper.md) est en cours d’utilisation au moment où un appel visant à le libérer est effectué à l’aide d’une commande telle que la méthode <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>.  
@@ -46,7 +46,7 @@ L’Assistant Débogage managé (MDA) `raceOnRCWCleanup` est activé quand le Co
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

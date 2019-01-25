@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 93512ab00fe05a4166125c5e319ce91a5cc04573
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b056f52879c4309db0cbb33ecc789d25439a8c68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576848"
 ---
 # <a name="controls-by-category"></a>Contrôles par catégorie
-Contrôles Windows Presentation Foundation (WPF) peuvent être regroupés logiquement dans plusieurs catégories. Ces catégories peuvent vous aider à identifier les contrôles ayant des modèles d’utilisation ou une fonctionnalité similaires pour sélectionner le contrôle adapté à votre scénario.  
+Contrôles Windows Presentation Foundation (WPF) peuvent être regroupées logiquement en plusieurs catégories. Ces catégories peuvent vous aider à identifier les contrôles ayant des modèles d’utilisation ou une fonctionnalité similaires pour sélectionner le contrôle adapté à votre scénario.  
   
 ## <a name="layout"></a>Mise en page  
  Les contrôles de disposition permettent de gérer la taille, les dimensions, la position et la disposition des éléments enfants.  
@@ -56,7 +56,7 @@ Contrôles Windows Presentation Foundation (WPF) peuvent être regroupés logiqu
 -   <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Boutons  
- Les boutons constituent l’un des contrôles d’interface utilisateur les plus élémentaires. Applications généralement effectuent certaines tâches dans le <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement lorsqu’un utilisateur clique dessus.  
+ Les boutons constituent l’un des contrôles d’interface utilisateur les plus élémentaires. Applications effectuent généralement une tâche dans le <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement lorsqu’un utilisateur clique dessus.  
   
 -   <xref:System.Windows.Controls.Button>  
   
@@ -177,5 +177,5 @@ Contrôles Windows Presentation Foundation (WPF) peuvent être regroupés logiqu
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>Voir aussi  
- [Bibliothèque de contrôles](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a>Voir aussi
+- [Bibliothèque de contrôles](../../../../docs/framework/wpf/controls/control-library.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 60b2b8b8e07cfec9000ddd974891070b625fde01
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4d8d2c8135e8f24f62b83837b610292ae2b258ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546636"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implémentation du modèle de contrôle Scroll d’UI Automation
 > [!NOTE]
@@ -30,17 +30,17 @@ Exemple d’un contrôle de défilement qui n’utilise pas les barres de défil
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Conventions et recommandations en matière d'implémentation  
- Quand vous implémentez le modèle de contrôle Scroll, notez les conventions et recommandations suivantes :  
+ Quand vous implémentez le modèle de contrôle Scroll, notez les conventions et recommandations suivantes :  
   
 -   Les enfants de ce contrôle doivent implémenter <xref:System.Windows.Automation.Provider.IScrollItemProvider>.  
   
 -   Les barres de défilement d’un contrôle conteneur ne prennent pas en charge le modèle de contrôle <xref:System.Windows.Automation.ScrollPattern> . Elles doivent prendre en charge le modèle de contrôle <xref:System.Windows.Automation.RangeValuePattern> à la place.  
   
--   Lorsque le défilement est mesuré sous forme de pourcentage, toutes les valeurs ou quantités liées à la graduation du défilement doivent être normalisées dans une plage de 0 à 100.  
+-   Lorsque le défilement est mesuré sous forme de pourcentage, toutes les valeurs ou quantités liées à la graduation du défilement doivent être normalisées dans une plage de 0 à 100.  
   
 -   Les propriétés<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> et <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> sont indépendantes de <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
   
--   Si <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` alors <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> doit avoir la valeur 100 % et <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> la valeur <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. De la même façon, si <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` alors <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> doit avoir la valeur 100 % et <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> la valeur <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Cela permet au client UI Automation utiliser ces valeurs de propriété dans le <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> méthode tout en évitant une [condition de concurrence critique](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) si une direction le client n’est pas intéressé par défilement est activée.  
+-   Si <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` alors <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> doit avoir la valeur 100 % et <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> la valeur <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. De la même façon, si <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` alors <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> doit avoir la valeur 100 % et <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> la valeur <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Cela permet au client UI Automation d’utiliser ces valeurs de propriété dans la méthode <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> tout en évitant une [condition de concurrence critique](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) si une direction de défilement qui n’intéresse pas le client est activée.  
   
 -   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> est spécifique aux paramètres régionaux. Le paramètre HorizontalScrollPercent = 100.0 doit définir l’emplacement de défilement du contrôle sur l’équivalent de sa position la plus à droite pour des langues telles que le français qui sont lues de gauche à droite. Par ailleurs, pour des langues telles que l’arabe, qui sont lues de droite à gauche, le paramètre HorizontalScrollPercent = 100.0 doit définir l’emplacement de défilement sur la position la plus à gauche.  
   
@@ -48,7 +48,7 @@ Exemple d’un contrôle de défilement qui n’utilise pas les barres de défil
 ## <a name="required-members-for-iscrollprovider"></a>Membres requis pour IScrollProvider  
  Les propriétés et méthodes suivantes sont nécessaires à l'implémentation d' <xref:System.Windows.Automation.Provider.IScrollProvider>.  
   
-|Membre requis|Type de membre|Notes|  
+|Membre obligatoire|Type de membre|Notes|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|Propriété|Aucun.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|Propriété|Aucun.|  
@@ -72,9 +72,9 @@ Exemple d’un contrôle de défilement qui n’utilise pas les barres de défil
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> lève cette exception quand une valeur supérieure à 100 ou inférieure à 0 est passée (sauf -1 qui est équivalent à <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>).|  
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> et <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> lèvent cette exception lors d’une tentative de défilement dans une direction non prise en charge.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -1,18 +1,18 @@
 ---
-title: "Comment : déplacer un ToolStrip hors d'un ToolStripContainer dans un formulaire"
+title: 'Procédure : Déplacer un ToolStrip hors d’un ToolStripContainer dans un formulaire'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: a4b6e3bbc0750ba69607b5c0f96bdbb542aea1be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e5c621b9738ce6b5f259425e63a2369556c4ded
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597712"
 ---
-# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Comment : déplacer un ToolStrip hors d'un ToolStripContainer dans un formulaire
+# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Procédure : Déplacer un ToolStrip hors d’un ToolStripContainer dans un formulaire
 Utilisez la procédure suivante pour déplacer un <xref:System.Windows.Forms.ToolStrip> d’un <xref:System.Windows.Forms.ToolStripContainer> sur un formulaire.  
   
 > [!NOTE]
@@ -30,7 +30,7 @@ Utilisez la procédure suivante pour déplacer un <xref:System.Windows.Forms.Too
   
 5.  Définir le <xref:System.Windows.Forms.ToolStrip.Dock%2A> propriété de la <xref:System.Windows.Forms.ToolStrip> à **haut**.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.ToolStripContainer>  
- [Vue d’ensemble du contrôle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.ToolStripContainer>
+- [Vue d’ensemble du contrôle ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

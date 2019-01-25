@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a9ef59cfe63ba745e6f5eba3ba2c3f3f983886
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8e919c546df93a2023858c31ebc4d2dec507513
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730137"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount, méthode
 Obtient le nombre de points de séquence au sein de cette méthode.  
@@ -44,5 +44,5 @@ HRESULT GetSequencePointCount(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

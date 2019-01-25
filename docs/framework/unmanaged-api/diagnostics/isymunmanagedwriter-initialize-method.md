@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44046560f4f788c4a7d695ff18c9c01740fea35a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9c38a2d87f8c8db0b77dd60460d6d00a73f41ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710987"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize, méthode
 Définit l’interface d’émetteur de métadonnées avec laquelle ce writer sera associé et définit le nom de fichier de sortie dans lequel les symboles de débogage doit être écrite.  
@@ -44,10 +44,10 @@ HRESULT Initialize(
  [in] Pointeur vers l’interface d’émetteur de métadonnées.  
   
  `filename`  
- [in] Le nom de fichier dans lequel sont écrits les symboles de débogage. Si vous spécifiez un nom de fichier pour un writer qui n'utilise pas les noms de fichiers, ce paramètre est ignoré.  
+ [in] Le nom de fichier dans lequel les symboles de débogage sont écrits. Si vous spécifiez un nom de fichier pour un writer qui n'utilise pas les noms de fichiers, ce paramètre est ignoré.  
   
  `pIStream`  
- [in] Si spécifié, le writer de symbole émettra les symboles dans le donné <xref:System.Runtime.InteropServices.ComTypes.IStream> plutôt que dans le fichier spécifié dans le `filename` paramètre. Le paramètre `pIStream` est optionnel.  
+ [in] Si spécifié, le writer de symbole émettra les symboles dans la donnée <xref:System.Runtime.InteropServices.ComTypes.IStream> plutôt que dans le fichier spécifié dans le `filename` paramètre. Le paramètre `pIStream` est optionnel.  
   
  `fFullBuild`  
  [in] `true` s’il s’agit d’une régénération complète ; `false` s’il s’agit d’une compilation incrémentielle.  
@@ -58,6 +58,6 @@ HRESULT Initialize(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [Initialize2, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Initialize2, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)

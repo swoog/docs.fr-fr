@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7d280cd20b8ff76efe977983e3e9f6da32990c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a886d8ab8f2d59bb9c9b0b3ff00fd89f7c931ff8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692819"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip, méthode
 Déplace le curseur vers l’avant dans l’énumération par le nombre spécifié d’éléments.  
@@ -37,16 +37,16 @@ HRESULT Skip (
   
 #### <a name="parameters"></a>Paramètres  
  `celt`  
- [in] Le nombre d’éléments permettant de déplacer le curseur vers le bas.  
+ [in] Le nombre d’éléments par lequel déplacer le curseur vers l’avant.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugEnum, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugEnum, interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

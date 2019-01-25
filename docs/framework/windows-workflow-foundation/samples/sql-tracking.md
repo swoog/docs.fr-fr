@@ -2,12 +2,12 @@
 title: Suivi SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 741df337187b2a5fffe63052c9fafbd430f7c2fc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 240e6ab750b4ef82d2afcf1c2ab26c08369926d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690603"
 ---
 # <a name="sql-tracking"></a>Suivi SQL
 Cet exemple montre comment écrire un participant de suivi SQL personnalisé, qui écrit des enregistrements de suivi dans une base de données SQL. Windows Workflow Foundation (WF) fournit des flux de travail de suivi pour gagner en visibilité concernant l’exécution d’une instance de workflow. Le runtime de suivi émet des enregistrements de suivi de workflow lors de l'exécution du workflow. Pour plus d’informations sur le suivi de flux de travail, consultez [suivi et traçage de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
@@ -21,7 +21,7 @@ Cet exemple montre comment écrire un participant de suivi SQL personnalisé, qu
     > [!NOTE]
     >  Le script crée la base de données sur l'instance par défaut de SQL Express. Si vous souhaitez l'installer sur une instance de base de données différente, modifiez le script Trackingsetup.cmd.  
   
-3.  Ouvrez SqlTrackingSample.sln dans Visual Studio 2010.  
+3.  Open SqlTrackingSample.sln in Visual Studio 2010.  
   
 4.  Appuyez sur Ctrl+Maj+B pour générer la solution.  
   
@@ -59,5 +59,5 @@ Cet exemple montre comment écrire un participant de suivi SQL personnalisé, qu
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Voir aussi
+- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

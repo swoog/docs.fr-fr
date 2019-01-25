@@ -2,12 +2,12 @@
 title: Modèles Visual Studio WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 73d2645977381602ef028d091675a22fb933d60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a7529b14c3c83f0df7b41581ef18e5192209bc5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624936"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modèles Visual Studio WCF
 Modèles Visual Studio de Windows Communication Foundation (WCF) sont prédéfinis et des modèles d’élément que vous pouvez utiliser dans Visual Studio pour créer rapidement des services WCF et les applications s’y rapportant.  
@@ -82,6 +82,6 @@ Modèles Visual Studio de Windows Communication Foundation (WCF) sont prédéfin
 > [!NOTE]
 >  Le service WCF compatible Silverlight expose un point de terminaison `basicHttpBinding` sans activer de paramètre de sécurité. Par conséquent, les informations concernant le service peuvent être obtenues par tous les clients qui s'y connectent. Les messages échangés entre le service et le client ne sont pas signés ni chiffrés. Pour sécuriser correctement le point de terminaison, vous devez utiliser l'authentification ASP.NET, HTTPS ou d'autres mécanismes.  
   
-## <a name="see-also"></a>Voir aussi  
- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
- [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>Voir aussi
+- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

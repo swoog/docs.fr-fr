@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 9525eb35041d32c65563e88ad64cd17b60b2a29b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 88a7a74eac5a27cdf473e161a8ffdb59c1eb9ab2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674555"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Spécifie que le compilateur doit compiler sans référence à la bibliothèque runtime Visual Basic, ou avec une référence à une bibliothèque runtime spécifique.  
@@ -94,8 +94,8 @@ Spécifie que le compilateur doit compiler sans référence à la bibliothèque 
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Core Visual Basic – nouveau mode de compilation dans Visual Studio 2010 SP1](https://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)  
- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+## <a name="see-also"></a>Voir aussi
+- [Core Visual Basic – nouveau mode de compilation dans Visual Studio 2010 SP1](https://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)
+- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

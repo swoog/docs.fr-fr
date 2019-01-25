@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4708fa173725e4c91a13f5b92cdbb1fdf8a8a4d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb8686342b20bd6afe0a4c4803d64428ed95c98b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665771"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity, interface
 Représente une référence à la signature unique d’un objet de code.  
@@ -30,18 +30,18 @@ Représente une référence à la signature unique d’un objet de code.
   
 |Méthode|Description|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|Obtient un pointeur d’interface vers un nouveau `IReferenceIdentity` instance qui est identique à ce `IReferenceIdentity`, à l’exception des modifications d’attribut spécifiées.|  
+|`IReferenceIdentity::Clone`|Obtient un pointeur d’interface vers un nouveau `IReferenceIdentity` instance qui est identique à ce `IReferenceIdentity`, sauf pour les modifications de l’attribut spécifié.|  
 |`IReferenceIdentity::EnumAttributes`|Obtient un pointeur d’interface vers un `IEnumIDENTITY_ATTRIBUTE` instance qui contient les attributs associés à ce `IReferenceIdentity`.|  
 |`IReferenceIdentity::GetAttribute`|Obtient la valeur de l’attribut dans l’espace de noms spécifié, avec le nom spécifié.|  
-|`IReferenceIdentity::SetAttribute`|Définit l’attribut qui possède l’espace de noms et le nom spécifié à la valeur spécifiée.|  
+|`IReferenceIdentity::SetAttribute`|Définit l’attribut qui a l’espace de noms spécifié et le nom spécifié à la valeur spécifiée.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Isolation.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IEnumIDENTITY_ATTRIBUTE, interface](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IEnumIDENTITY_ATTRIBUTE, interface](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)

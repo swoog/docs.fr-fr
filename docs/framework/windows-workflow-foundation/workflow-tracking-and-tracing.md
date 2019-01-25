@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 5358a3abe84c7fe7d753560611f0c7338b060826
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4510ac86cec556734d3d238ba1f02b00074e2609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687165"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Suivi et traçage de workflow
-Le suivi Windows Workflow est une fonctionnalité de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] conçue pour offrir plus de visibilité lors de l'exécution de workflow. Il fournit une infrastructure de suivi pour suivre l'exécution d'une instance de workflow. L'infrastructure de suivi WF instrumente de façon transparente un workflow pour émettre des enregistrements qui reflètent des événements clés pendant l'exécution. Cette fonctionnalité est disponible par défaut pour tous les workflows [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Il n'est pas nécessaire de modifier un workflow [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] pour activer son suivi. Il suffit seulement de déterminer quelles données vous souhaitez obtenir. Lorsqu'une instance de workflow démarre ou se termine, les enregistrements de suivi de son exécution sont émis. Le suivi peut également extraire des données métier pertinentes associées aux variables de workflow. Par exemple, si le workflow représente un système de traitement des commandes, l'ID de commande peut être extrait avec l'objet <xref:System.Activities.Tracking.TrackingRecord>. En règle générale, le suivi WF facilite l'accès aux diagnostics ou aux analyses d'entreprise depuis l'exécution du workflow.  
+Le suivi Windows Workflow est une fonctionnalité de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] conçue pour offrir plus de visibilité lors de l’exécution de workflow. Il fournit une infrastructure de suivi pour suivre l'exécution d'une instance de workflow. L'infrastructure de suivi WF instrumente de façon transparente un workflow pour émettre des enregistrements qui reflètent des événements clés pendant l'exécution. Cette fonctionnalité est disponible par défaut pour tous les workflows [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Il n'est pas nécessaire de modifier un workflow [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] pour activer son suivi. Il suffit seulement de déterminer quelles données vous souhaitez obtenir. Lorsqu'une instance de workflow démarre ou se termine, les enregistrements de suivi de son exécution sont émis. Le suivi peut également extraire des données métier pertinentes associées aux variables de workflow. Par exemple, si le workflow représente un système de traitement des commandes, l'ID de commande peut être extrait avec l'objet <xref:System.Activities.Tracking.TrackingRecord>. En règle générale, le suivi WF facilite l'accès aux diagnostics ou aux analyses d'entreprise depuis l'exécution du workflow.  
   
  Ces composants de suivi sont équivalents au service de suivi dans [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]. Dans [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], les performances ont été améliorées et le modèle de programmation simplifié pour la fonctionnalité de suivi WF. L'exécution du suivi instrumente une instance de workflow pour émettre des événements associés au cycle de vie de workflow, aux activités de workflow et aux événements personnalisés.  
   
@@ -51,5 +51,5 @@ Le suivi Windows Workflow est une fonctionnalité de [!INCLUDE[netfx_current_lon
  [Suivi de workflow](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
  Décrit les deux méthodes d'activation du suivi de débogage pour un workflow.  
   
-## <a name="see-also"></a>Voir aussi  
- [Suivi SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+## <a name="see-also"></a>Voir aussi
+- [Suivi SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)

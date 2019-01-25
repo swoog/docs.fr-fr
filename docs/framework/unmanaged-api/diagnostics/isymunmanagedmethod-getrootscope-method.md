@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 417ce67d807fddd3b99ceff4b05f1524db3044e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 458f6ab4a6848ce6921542ca62fe6d5c7cf4719f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704639"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>ISymUnmanagedMethod::GetRootScope, méthode
-Obtient la portée lexicale racine dans cette méthode. Cette portée englobe la totalité de la méthode.  
+Obtient la portée lexicale racine au sein de cette méthode. Cette portée englobe la totalité de la méthode.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ HRESULT GetRootScope(
   
 #### <a name="parameters"></a>Paramètres  
  `pRetVal`  
- [out] Un pointeur qui est défini à le [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
+ [out] Un pointeur qui est défini à retourné [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
@@ -44,5 +44,5 @@ HRESULT GetRootScope(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710337"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType, méthode
-Spécifie les types imbriqués comme étant exportable. Le [ExportType, méthode](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) peut également exporter les types imbriqués, mais cette méthode est plus rapide.  
+Spécifie les types imbriqués comme étant exportables. Le [ExportType, méthode](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) peut également exporter les types imbriqués, mais cette méthode est plus rapide.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,9 +67,9 @@ HRESULT ExportNestedType(
  Retourne S_OK si la méthode réussit.  
   
 ## <a name="requirements"></a>Spécifications  
- Requiert alink.h  
+ Nécessite alink.h  
   
-## <a name="see-also"></a>Voir aussi  
- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Voir aussi
+- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

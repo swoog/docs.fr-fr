@@ -1,15 +1,15 @@
 ---
-title: 'Comment : écrire des données d’objet dans un fichier XML (Visual Basic)'
+title: 'Procédure : Écrire des données de l’objet dans un fichier XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 434706383c50e5df8e419e3988da8dc7cce87c83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715827"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Comment : écrire des données d’objet dans un fichier XML (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Procédure : Écrire des données de l’objet dans un fichier XML (Visual Basic)
 Cet exemple écrit l’objet d’une classe dans un fichier XML en utilisant la classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Exemple  
@@ -54,7 +54,7 @@ End Module
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Cet exemple crée un fichier s’il n’existe pas déjà. Si une application doit créer un fichier, elle doit disposer de l’autorisation `Create` pour accéder au dossier. Si le fichier existe déjà, l’application a uniquement besoin de l’autorisation `Write`, qui est une autorisation de niveau inférieur. Quand cela est possible, il est plus sûr de créer le fichier au cours du déploiement et de n’accorder l’autorisation `Read` que sur un seul fichier, plutôt que l’autorisation `Create` sur un dossier.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IO.StreamWriter>  
- [Guide pratique : lire des données d’objet à partir d’un fichier XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [Sérialisation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IO.StreamWriter>
+- [Guide pratique pour Lire les données d’objet à partir d’un fichier XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Sérialisation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

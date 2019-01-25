@@ -1,19 +1,19 @@
 ---
-title: 'Comment : trier des éléments (Visual Basic)'
+title: 'Procédure : Trier les éléments (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: 868f3eb448393e5c06a37ab68431620638e9dc35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f049c4d0e8180781cb6581d4efda2297d4b7151d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746219"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Comment : trier des éléments (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>Procédure : Trier les éléments (Visual Basic)
 Cet exemple montre comment écrire une requête qui trie ses résultats.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Données numériques (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Données numériques (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre la même requête pour du code XML qui est dans un espace de noms. Pour plus d’informations, consultez [utilisation des espaces de noms XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Données numériques dans un espace de noms](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Données numériques dans un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -74,6 +74,6 @@ End Module
 89.99  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Tri des données](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
- [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Tri des données](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

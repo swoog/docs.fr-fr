@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665134"
 ---
 # <a name="names-of-namespaces"></a>Noms d'espaces de noms
 Comme avec les autres instructions d’affectation de noms, l’objectif lorsque vous nommez des espaces de noms consiste à créer suffisamment claire pour le programmeur immédiatement savoir qui est le contenu de l’espace de noms susceptible d’être à l’aide de l’infrastructure. Le modèle suivant spécifie la règle générale pour nommer les espaces de noms :  
@@ -36,7 +36,7 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
   
  **✓ CONSIDER** à l’aide de noms au pluriel, le cas échéant.  
   
- Par exemple, utilisez `System.Collections` au lieu de `System.Collection`. Noms de marques et les acronymes sont toutefois des exceptions à cette règle. Par exemple, utilisez `System.IO` au lieu de `System.IOs`.  
+ Par exemple, utilisez `System.Collections` à la place `System.Collection`. Noms de marques et les acronymes sont toutefois des exceptions à cette règle. Par exemple, utilisez `System.IO` à la place `System.IOs`.  
   
  **X DO NOT** utiliser le même nom pour un espace de noms et un type dans cet espace de noms.  
   
@@ -86,5 +86,5 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Directives de nommage](../../../docs/standard/design-guidelines/naming-guidelines.md)

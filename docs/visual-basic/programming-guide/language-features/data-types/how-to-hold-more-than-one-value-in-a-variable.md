@@ -1,5 +1,5 @@
 ---
-title: 'Comment : stocker plusieurs valeurs dans une variable (Visual Basic)'
+title: 'Procédure : Stocker plusieurs valeurs dans une Variable (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671497"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Comment : stocker plusieurs valeurs dans une variable (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procédure : Stocker plusieurs valeurs dans une Variable (Visual Basic)
 Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *type de données composite*.  
   
  [Les Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluent des structures, des tableaux et des classes. Une variable de type de données composite peut contenir une combinaison de types de données élémentaires et d’autres types composites. Structures et classes peuvent contenir du code ainsi que les données.  
@@ -41,11 +41,11 @@ Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *t
   
 5.  Suivez le `As` mot clé par le nom du type de données composite approprié.  
   
-## <a name="see-also"></a>Voir aussi  
- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)  
- [Caractères de type](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Types valeur et types référence](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Voir aussi
+- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)
+- [Caractères de type](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

@@ -1,5 +1,5 @@
 ---
-title: "Comment : définir et retourner des valeurs numériques à l'aide du contrôle NumericUpDown Windows Forms"
+title: 'Procédure : Définir et retourner des valeurs numériques avec le contrôle NumericUpDown Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: e214f556224577c3029b2b742784e58932d792f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fd995e5f7694616d7b6be7aa9a2eab6611997b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688959"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Comment : définir et retourner des valeurs numériques à l'aide du contrôle NumericUpDown Windows Forms
-La valeur numérique de Windows Forms <xref:System.Windows.Forms.NumericUpDown> contrôle est déterminée par son <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriété. Vous pouvez écrire des tests conditionnels pour la valeur du contrôle comme avec n’importe quelle autre propriété. Une fois la <xref:System.Windows.Forms.NumericUpDown.Value%2A> est définie, vous pouvez l’adapter directement en écrivant du code pour effectuer des opérations, ou vous pouvez appeler la <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> et <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> méthodes.  
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Procédure : Définir et retourner des valeurs numériques avec le contrôle NumericUpDown Windows Forms
+La valeur numérique des formulaires Windows <xref:System.Windows.Forms.NumericUpDown> contrôle est déterminé par son <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriété. Vous pouvez écrire des tests conditionnels pour la valeur du contrôle comme avec toute autre propriété. Une fois le <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriété est définie, vous pouvez l’ajuster directement en écrivant du code pour effectuer des opérations sur celui-ci, ou vous pouvez appeler la <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> et <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> méthodes.  
   
 ### <a name="to-set-the-numeric-value"></a>Pour définir la valeur numérique  
   
@@ -36,7 +37,7 @@ La valeur numérique de Windows Forms <xref:System.Windows.Forms.NumericUpDown> 
     numericUpDown1->Value = 55;  
     ```  
   
-     - ou -  
+     ou  
   
 2.  Appelez le <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> ou <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> méthode pour augmenter ou diminuer la valeur de la quantité spécifiée dans le <xref:System.Windows.Forms.NumericUpDown.Increment%2A> propriété.  
   
@@ -88,11 +89,11 @@ La valeur numérique de Windows Forms <xref:System.Windows.Forms.NumericUpDown> 
     }  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.NumericUpDown>  
- <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>  
- [NumericUpDown, contrôle](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- [Vue d’ensemble du contrôle NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.NumericUpDown>
+- <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>
+- [NumericUpDown, contrôle](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)
+- [Vue d’ensemble du contrôle NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)

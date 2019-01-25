@@ -2,15 +2,15 @@
 title: Construction de types (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 917c59a6602ce0313b91ba78fd59d11596f86e9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718583"
 ---
 # <a name="constructing-types-entity-sql"></a>Construction de types (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit trois types de constructeurs : constructeurs de ligne, constructeurs de type nommé et constructeurs de collection.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] propose trois types de constructeurs : constructeurs de ligne, constructeurs de type nommé et constructeurs de collection.  
   
 ## <a name="row-constructors"></a>Constructeurs de ligne  
  Les constructeurs de ligne s'avèrent utiles dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] pour construire des enregistrements anonymes structurellement typés à partir d'une ou plusieurs valeurs. Le type de résultat d'un constructeur de ligne est un type de ligne dont les types de champs correspondent aux types des valeurs qui ont servi à construire la ligne. Par exemple, l’expression suivante construit une valeur de type `Record(a int, b string, c int)`:  
@@ -63,7 +63,7 @@ ms.locfileid: "32765254"
   
  Pour plus d’informations, consultez [constructeur de Type nommé](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Système de type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+## <a name="see-also"></a>Voir aussi
+- [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Système de type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

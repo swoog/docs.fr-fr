@@ -2,18 +2,18 @@
 title: '&lt;mexHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-ms.openlocfilehash: c60fcf5071d52d30c1b6b99a19640a0fdc1265f8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f22ac3beb5ee90a543e65734bd89123293c2dd3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680411"
 ---
 # <a name="ltmexhttpbindinggt"></a>&lt;mexHttpBinding&gt;
 Spécifie les paramètres pour une liaison utilisée dans le cadre de l’échange de messages WS-MetadataExchange (WS-MEX) sur HTTP.  
   
  \<system.ServiceModel>  
-\<liaisons >  
+\<bindings>  
 \<mexHttpBinding>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -49,18 +49,18 @@ Spécifie les paramètres pour une liaison utilisée dans le cadre de l’échan
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaisons >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
  Cette liaison est essentiellement une liaison `WSHttpBinding` dont la sécurité est désactivée. Elle prend en charge la plupart des demandes de métadonnées.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>  
- <xref:System.ServiceModel.Configuration.MexHttpBindingElement>  
- [Guide pratique pour Publier les métadonnées d’un Service à l’aide d’un fichier de Configuration](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [Publication et récupération de métadonnées sur une liaison personnalisée](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
- [Métadonnées](../../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<liaison >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>
+- <xref:System.ServiceModel.Configuration.MexHttpBindingElement>
+- [Guide pratique pour Publier les métadonnées d’un Service à l’aide d’un fichier de Configuration](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Publication et récupération de métadonnées sur une liaison personnalisée](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
+- [Métadonnées](../../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
