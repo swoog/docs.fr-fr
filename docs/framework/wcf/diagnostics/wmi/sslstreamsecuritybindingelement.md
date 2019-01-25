@@ -2,17 +2,17 @@
 title: SslStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 18130d50-8996-4257-9c60-bc457f8654d8
-ms.openlocfilehash: f75fa33be2857904417edb78757b3d40d6efdb59
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 44a1a2db3ed8c942bb0d7d815c594ad3aa3ff4cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588733"
 ---
-# <a name="sslstreamsecuritybindingelement"></a><span data-ttu-id="51911-102">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="51911-102">SslStreamSecurityBindingElement</span></span>
-<span data-ttu-id="51911-103">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="51911-103">SslStreamSecurityBindingElement</span></span>  
+# <a name="sslstreamsecuritybindingelement"></a><span data-ttu-id="3d144-102">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="3d144-102">SslStreamSecurityBindingElement</span></span>
+<span data-ttu-id="3d144-103">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="3d144-103">SslStreamSecurityBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51911-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="51911-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d144-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="3d144-104">Syntax</span></span>  
   
 ```csharp
 class SslStreamSecurityBindingElement : BindingElement  
@@ -21,24 +21,24 @@ class SslStreamSecurityBindingElement : BindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="51911-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="51911-105">Methods</span></span>  
- <span data-ttu-id="51911-106">La classe SslStreamSecurityBindingElement ne définit pas de méthode.</span><span class="sxs-lookup"><span data-stu-id="51911-106">The SslStreamSecurityBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="3d144-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="3d144-105">Methods</span></span>  
+ <span data-ttu-id="3d144-106">La classe SslStreamSecurityBindingElement ne définit pas de méthode.</span><span class="sxs-lookup"><span data-stu-id="3d144-106">The SslStreamSecurityBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="51911-107">Properties</span><span class="sxs-lookup"><span data-stu-id="51911-107">Properties</span></span>  
- <span data-ttu-id="51911-108">La classe SslStreamSecurityBindingElement a la propriété suivante :</span><span class="sxs-lookup"><span data-stu-id="51911-108">The SslStreamSecurityBindingElement class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="3d144-107">Properties</span><span class="sxs-lookup"><span data-stu-id="3d144-107">Properties</span></span>  
+ <span data-ttu-id="3d144-108">La classe SslStreamSecurityBindingElement a la propriété suivante :</span><span class="sxs-lookup"><span data-stu-id="3d144-108">The SslStreamSecurityBindingElement class has the following property:</span></span>  
   
-### <a name="requireclientcertificate"></a><span data-ttu-id="51911-109">RequireClientCertificate</span><span class="sxs-lookup"><span data-stu-id="51911-109">RequireClientCertificate</span></span>  
- <span data-ttu-id="51911-110">Type de données : booléen</span><span class="sxs-lookup"><span data-stu-id="51911-110">Data type: boolean</span></span>  
+### <a name="requireclientcertificate"></a><span data-ttu-id="3d144-109">RequireClientCertificate</span><span class="sxs-lookup"><span data-stu-id="3d144-109">RequireClientCertificate</span></span>  
+ <span data-ttu-id="3d144-110">Type de données : booléen</span><span class="sxs-lookup"><span data-stu-id="3d144-110">Data type: boolean</span></span>  
   
- <span data-ttu-id="51911-111">Type d'accès : lecture seule</span><span class="sxs-lookup"><span data-stu-id="51911-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="3d144-111">Type d’accès : Propriétés en lecture seule</span><span class="sxs-lookup"><span data-stu-id="3d144-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="51911-112">Spécifie si un certificat client est requis pour cette liaison.</span><span class="sxs-lookup"><span data-stu-id="51911-112">Specifies whether a client certificate is required for this binding.</span></span>  
+ <span data-ttu-id="3d144-112">Spécifie si un certificat client est requis pour cette liaison.</span><span class="sxs-lookup"><span data-stu-id="3d144-112">Specifies whether a client certificate is required for this binding.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51911-113">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="51911-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d144-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="3d144-113">Requirements</span></span>  
   
-|<span data-ttu-id="51911-114">MOF</span><span class="sxs-lookup"><span data-stu-id="51911-114">MOF</span></span>|<span data-ttu-id="51911-115">Déclaré dans Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="51911-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="3d144-114">MOF</span><span class="sxs-lookup"><span data-stu-id="3d144-114">MOF</span></span>|<span data-ttu-id="3d144-115">Déclaré dans Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="3d144-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="51911-116">Espace de noms</span><span class="sxs-lookup"><span data-stu-id="51911-116">Namespace</span></span>|<span data-ttu-id="51911-117">Défini dans root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="51911-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="3d144-116">Espace de noms</span><span class="sxs-lookup"><span data-stu-id="3d144-116">Namespace</span></span>|<span data-ttu-id="3d144-117">Défini dans root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="3d144-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="51911-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="51911-118">See Also</span></span>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+## <a name="see-also"></a><span data-ttu-id="3d144-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3d144-118">See also</span></span>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>

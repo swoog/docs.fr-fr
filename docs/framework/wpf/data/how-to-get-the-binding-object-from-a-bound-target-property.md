@@ -1,35 +1,35 @@
 ---
-title: "Comment : obtenir l'objet de liaison d'une propriété cible liée aux données"
+title: "Procédure : Obtenir l'objet de liaison d'une propriété cible liée aux données"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: 7cebaf1077fb66420d77d656db32f444dd932b85
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 6be1cb74b60c4c7779053e5fd79d07d123bd4d35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709843"
 ---
-# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a><span data-ttu-id="f1cd8-102">Comment : obtenir l'objet de liaison d'une propriété cible liée aux données</span><span class="sxs-lookup"><span data-stu-id="f1cd8-102">How to: Get the Binding Object from a Bound Target Property</span></span>
-<span data-ttu-id="f1cd8-103">Cet exemple montre comment obtenir l’objet de liaison à partir d’une propriété cible liée à des données.</span><span class="sxs-lookup"><span data-stu-id="f1cd8-103">This example shows how to obtain the binding object from a data-bound target property.</span></span>  
+# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a><span data-ttu-id="14607-102">Procédure : Obtenir l'objet de liaison d'une propriété cible liée aux données</span><span class="sxs-lookup"><span data-stu-id="14607-102">How to: Get the Binding Object from a Bound Target Property</span></span>
+<span data-ttu-id="14607-103">Cet exemple montre comment obtenir l’objet de liaison à partir d’une propriété cible liée à des données.</span><span class="sxs-lookup"><span data-stu-id="14607-103">This example shows how to obtain the binding object from a data-bound target property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f1cd8-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="f1cd8-104">Example</span></span>  
- <span data-ttu-id="f1cd8-105">Vous pouvez procédez comme suit pour obtenir le <xref:System.Windows.Data.Binding> objet :</span><span class="sxs-lookup"><span data-stu-id="f1cd8-105">You can do the following to get the <xref:System.Windows.Data.Binding> object:</span></span>  
+## <a name="example"></a><span data-ttu-id="14607-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="14607-104">Example</span></span>  
+ <span data-ttu-id="14607-105">Vous pouvez procédez comme suit pour obtenir le <xref:System.Windows.Data.Binding> objet :</span><span class="sxs-lookup"><span data-stu-id="14607-105">You can do the following to get the <xref:System.Windows.Data.Binding> object:</span></span>  
   
  [!code-csharp[BindValidation#GetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#getbinding)]  
   
 > [!NOTE]
->  <span data-ttu-id="f1cd8-106">Vous devez spécifier la propriété de dépendance pour la liaison de votre choix car il est possible que plusieurs propriétés de l’objet cible utilisent la liaison de données.</span><span class="sxs-lookup"><span data-stu-id="f1cd8-106">You must specify the dependency property for the binding you want because it is possible that more than one property of the target object is using data binding.</span></span>  
+>  <span data-ttu-id="14607-106">Vous devez spécifier la propriété de dépendance pour la liaison de votre choix car il est possible que plusieurs propriétés de l’objet cible utilisent la liaison de données.</span><span class="sxs-lookup"><span data-stu-id="14607-106">You must specify the dependency property for the binding you want because it is possible that more than one property of the target object is using data binding.</span></span>  
   
- <span data-ttu-id="f1cd8-107">Vous pouvez également obtenir le <xref:System.Windows.Data.BindingExpression> , puis obtenir la valeur de la <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> propriété.</span><span class="sxs-lookup"><span data-stu-id="f1cd8-107">Alternatively, you can get the <xref:System.Windows.Data.BindingExpression> and then get the value of the <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> property.</span></span>  
+ <span data-ttu-id="14607-107">Vous pouvez également obtenir le <xref:System.Windows.Data.BindingExpression> , puis obtenir la valeur de la <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> propriété.</span><span class="sxs-lookup"><span data-stu-id="14607-107">Alternatively, you can get the <xref:System.Windows.Data.BindingExpression> and then get the value of the <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> property.</span></span>  
   
- <span data-ttu-id="f1cd8-108">Pour obtenir un exemple complet, consultez [Validation de liaison, exemple](https://go.microsoft.com/fwlink/?LinkID=159972).</span><span class="sxs-lookup"><span data-stu-id="f1cd8-108">For the complete example see [Binding Validation Sample](https://go.microsoft.com/fwlink/?LinkID=159972).</span></span>  
+ <span data-ttu-id="14607-108">Pour obtenir un exemple complet, consultez [Validation de liaison, exemple](https://go.microsoft.com/fwlink/?LinkID=159972).</span><span class="sxs-lookup"><span data-stu-id="14607-108">For the complete example see [Binding Validation Sample](https://go.microsoft.com/fwlink/?LinkID=159972).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f1cd8-109">Si votre liaison est un <xref:System.Windows.Data.MultiBinding>, utilisez <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>.</span><span class="sxs-lookup"><span data-stu-id="f1cd8-109">If your binding is a <xref:System.Windows.Data.MultiBinding>, use <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>.</span></span> <span data-ttu-id="f1cd8-110">S’il s’agit une <xref:System.Windows.Data.PriorityBinding>, utilisez <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>.</span><span class="sxs-lookup"><span data-stu-id="f1cd8-110">If it is a <xref:System.Windows.Data.PriorityBinding>, use <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>.</span></span> <span data-ttu-id="f1cd8-111">Si vous ne savez pas si la propriété cible est liée à l’aide un <xref:System.Windows.Data.Binding>, un <xref:System.Windows.Data.MultiBinding>, ou un <xref:System.Windows.Data.PriorityBinding>, vous pouvez utiliser <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.</span><span class="sxs-lookup"><span data-stu-id="f1cd8-111">If you are uncertain whether the target property is bound using a <xref:System.Windows.Data.Binding>, a <xref:System.Windows.Data.MultiBinding>, or a <xref:System.Windows.Data.PriorityBinding>, you can use <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.</span></span>  
+>  <span data-ttu-id="14607-109">Si votre liaison est un <xref:System.Windows.Data.MultiBinding>, utilisez <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>.</span><span class="sxs-lookup"><span data-stu-id="14607-109">If your binding is a <xref:System.Windows.Data.MultiBinding>, use <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>.</span></span> <span data-ttu-id="14607-110">S’il s’agit une <xref:System.Windows.Data.PriorityBinding>, utilisez <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>.</span><span class="sxs-lookup"><span data-stu-id="14607-110">If it is a <xref:System.Windows.Data.PriorityBinding>, use <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>.</span></span> <span data-ttu-id="14607-111">Si vous ne savez pas si la propriété cible est liée à l’aide un <xref:System.Windows.Data.Binding>, un <xref:System.Windows.Data.MultiBinding>, ou un <xref:System.Windows.Data.PriorityBinding>, vous pouvez utiliser <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.</span><span class="sxs-lookup"><span data-stu-id="14607-111">If you are uncertain whether the target property is bound using a <xref:System.Windows.Data.Binding>, a <xref:System.Windows.Data.MultiBinding>, or a <xref:System.Windows.Data.PriorityBinding>, you can use <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1cd8-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f1cd8-112">See Also</span></span>  
- [<span data-ttu-id="f1cd8-113">Créer une liaison dans du code</span><span class="sxs-lookup"><span data-stu-id="f1cd8-113">Create a Binding in Code</span></span>](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [<span data-ttu-id="f1cd8-114">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="f1cd8-114">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="14607-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="14607-112">See also</span></span>
+- [<span data-ttu-id="14607-113">Créer une liaison dans du code</span><span class="sxs-lookup"><span data-stu-id="14607-113">Create a Binding in Code</span></span>](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)
+- [<span data-ttu-id="14607-114">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="14607-114">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
