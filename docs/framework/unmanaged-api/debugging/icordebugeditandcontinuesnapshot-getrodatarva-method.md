@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c46e85309f1e6867899a3b0fb123f4a3e535493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a0fcd03fde49622a8c388bb821549cec2cf3a154
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531013"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="b5d31-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA, méthode</span><span class="sxs-lookup"><span data-stu-id="b5d31-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
-<span data-ttu-id="b5d31-103">`GetRoDataRVA` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="b5d31-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="b5d31-104">N’appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="b5d31-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="fe81f-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA, méthode</span><span class="sxs-lookup"><span data-stu-id="fe81f-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
+<span data-ttu-id="fe81f-103">`GetRoDataRVA` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="fe81f-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="fe81f-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="fe81f-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5d31-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b5d31-105">See Also</span></span>  
- [<span data-ttu-id="b5d31-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="b5d31-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="fe81f-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fe81f-105">See also</span></span>
+- [<span data-ttu-id="fe81f-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="fe81f-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

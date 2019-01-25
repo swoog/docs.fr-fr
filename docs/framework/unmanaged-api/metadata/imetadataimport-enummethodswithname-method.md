@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cea47f8300c57362abae0c10223559319ecb2469
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 901603da64502c994f625be609f5a6e21a1db1c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519240"
 ---
-# <a name="imetadataimportenummethodswithname-method"></a><span data-ttu-id="37523-102">IMetaDataImport::EnumMethodsWithName, méthode</span><span class="sxs-lookup"><span data-stu-id="37523-102">IMetaDataImport::EnumMethodsWithName Method</span></span>
-<span data-ttu-id="37523-103">Énumère les méthodes portant le nom spécifié et définies par le type référencé par le jeton TypeDef spécifié.</span><span class="sxs-lookup"><span data-stu-id="37523-103">Enumerates methods that have the specified name and that are defined by the type referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenummethodswithname-method"></a><span data-ttu-id="7048a-102">IMetaDataImport::EnumMethodsWithName, méthode</span><span class="sxs-lookup"><span data-stu-id="7048a-102">IMetaDataImport::EnumMethodsWithName Method</span></span>
+<span data-ttu-id="7048a-103">Énumère les méthodes portant le nom spécifié et définies par le type référencé par le jeton TypeDef spécifié.</span><span class="sxs-lookup"><span data-stu-id="7048a-103">Enumerates methods that have the specified name and that are defined by the type referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37523-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="37523-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7048a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7048a-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMethodsWithName (  
@@ -40,44 +40,44 @@ HRESULT EnumMethodsWithName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="37523-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="37523-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7048a-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="7048a-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="37523-106">[dans, out] Pointeur vers l’énumérateur.</span><span class="sxs-lookup"><span data-stu-id="37523-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="37523-107">Cela doit être NULL pour le premier appel de cette méthode.</span><span class="sxs-lookup"><span data-stu-id="37523-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="7048a-106">[in, out] Pointeur vers l’énumérateur.</span><span class="sxs-lookup"><span data-stu-id="7048a-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="7048a-107">Cela doit être NULL pour le premier appel de cette méthode.</span><span class="sxs-lookup"><span data-stu-id="7048a-107">This must be NULL for the first call of this method.</span></span>  
   
  `cl`  
- <span data-ttu-id="37523-108">[in] Un jeton TypeDef représentant le type dont les méthodes à énumérer.</span><span class="sxs-lookup"><span data-stu-id="37523-108">[in] A TypeDef token representing the type whose methods to enumerate.</span></span>  
+ <span data-ttu-id="7048a-108">[in] Jeton TypeDef représentant le type dont les méthodes à énumérer.</span><span class="sxs-lookup"><span data-stu-id="7048a-108">[in] A TypeDef token representing the type whose methods to enumerate.</span></span>  
   
  `szName`  
- <span data-ttu-id="37523-109">[in] Nom qui limite la portée de l’énumération.</span><span class="sxs-lookup"><span data-stu-id="37523-109">[in] The name that limits the scope of the enumeration.</span></span>  
+ <span data-ttu-id="7048a-109">[in] Nom qui limite l’étendue de l’énumération.</span><span class="sxs-lookup"><span data-stu-id="7048a-109">[in] The name that limits the scope of the enumeration.</span></span>  
   
  `rMethods`  
- <span data-ttu-id="37523-110">[out] Tableau utilisé pour stocker les jetons MethodDef.</span><span class="sxs-lookup"><span data-stu-id="37523-110">[out] The array used to store the MethodDef tokens.</span></span>  
+ <span data-ttu-id="7048a-110">[out] Tableau utilisé pour stocker les jetons MethodDef.</span><span class="sxs-lookup"><span data-stu-id="7048a-110">[out] The array used to store the MethodDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="37523-111">[in] Taille maximale du tableau `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="37523-111">[in] The maximum size of the `rMethods` array.</span></span>  
+ <span data-ttu-id="7048a-111">[in] Taille maximale du tableau `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="7048a-111">[in] The maximum size of the `rMethods` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="37523-112">[out] Le nombre de jetons MethodDef retournés dans `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="37523-112">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
+ <span data-ttu-id="7048a-112">[out] Le nombre de jetons MethodDef retournés dans `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="7048a-112">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="37523-113">Notes</span><span class="sxs-lookup"><span data-stu-id="37523-113">Remarks</span></span>  
- <span data-ttu-id="37523-114">Cette méthode énumère des champs et méthodes, mais pas propriétés ou des événements.</span><span class="sxs-lookup"><span data-stu-id="37523-114">This method enumerates fields and methods, but not properties or events.</span></span> <span data-ttu-id="37523-115">Contrairement aux [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` ignore tous les jetons de méthode qui n’ont pas le nom spécifié.</span><span class="sxs-lookup"><span data-stu-id="37523-115">Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7048a-113">Notes</span><span class="sxs-lookup"><span data-stu-id="7048a-113">Remarks</span></span>  
+ <span data-ttu-id="7048a-114">Cette méthode énumère les champs et méthodes, mais pas propriétés ou événements.</span><span class="sxs-lookup"><span data-stu-id="7048a-114">This method enumerates fields and methods, but not properties or events.</span></span> <span data-ttu-id="7048a-115">Contrairement aux [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` ignore tous les jetons de méthode qui n’ont pas le nom spécifié.</span><span class="sxs-lookup"><span data-stu-id="7048a-115">Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="37523-116">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="37523-116">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7048a-116">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="7048a-116">Return Value</span></span>  
   
-|<span data-ttu-id="37523-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="37523-117">HRESULT</span></span>|<span data-ttu-id="37523-118">Description</span><span class="sxs-lookup"><span data-stu-id="37523-118">Description</span></span>|  
+|<span data-ttu-id="7048a-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7048a-117">HRESULT</span></span>|<span data-ttu-id="7048a-118">Description</span><span class="sxs-lookup"><span data-stu-id="7048a-118">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="37523-119">`EnumMethodsWithName` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="37523-119">`EnumMethodsWithName` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="37523-120">Il n’existe pas de jetons à énumérer.</span><span class="sxs-lookup"><span data-stu-id="37523-120">There are no tokens to enumerate.</span></span> <span data-ttu-id="37523-121">Dans ce cas, `pcTokens` est égal à zéro.</span><span class="sxs-lookup"><span data-stu-id="37523-121">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="7048a-119">`EnumMethodsWithName` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="7048a-119">`EnumMethodsWithName` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="7048a-120">Il n’existe pas de jetons à énumérer.</span><span class="sxs-lookup"><span data-stu-id="7048a-120">There are no tokens to enumerate.</span></span> <span data-ttu-id="7048a-121">Dans ce cas, `pcTokens` est égal à zéro.</span><span class="sxs-lookup"><span data-stu-id="7048a-121">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="37523-122">Spécifications</span><span class="sxs-lookup"><span data-stu-id="37523-122">Requirements</span></span>  
- <span data-ttu-id="37523-123">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37523-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7048a-122">Spécifications</span><span class="sxs-lookup"><span data-stu-id="7048a-122">Requirements</span></span>  
+ <span data-ttu-id="7048a-123">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7048a-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37523-124">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="37523-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7048a-124">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7048a-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="37523-125">**Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="37523-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7048a-125">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7048a-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="37523-126">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37523-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7048a-126">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7048a-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37523-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="37523-127">See Also</span></span>  
- [<span data-ttu-id="37523-128">IMetaDataImport, interface</span><span class="sxs-lookup"><span data-stu-id="37523-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="37523-129">IMetaDataImport2, interface</span><span class="sxs-lookup"><span data-stu-id="37523-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7048a-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7048a-127">See also</span></span>
+- [<span data-ttu-id="7048a-128">IMetaDataImport, interface</span><span class="sxs-lookup"><span data-stu-id="7048a-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7048a-129">IMetaDataImport2, interface</span><span class="sxs-lookup"><span data-stu-id="7048a-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

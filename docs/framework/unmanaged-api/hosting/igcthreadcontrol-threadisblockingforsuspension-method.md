@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f4b767fe7134833ee2e404be30bb51bf1385ec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa2872fec7765f38fba9589a6fab659e73131937
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620459"
 ---
-# <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a><span data-ttu-id="2b9be-102">IGCThreadControl::ThreadIsBlockingForSuspension, méthode</span><span class="sxs-lookup"><span data-stu-id="2b9be-102">IGCThreadControl::ThreadIsBlockingForSuspension Method</span></span>
-<span data-ttu-id="2b9be-103">Avertit l’hôte que le thread qui effectue l’appel va bloquer, peut-être pour un garbage collection ou une suspension.</span><span class="sxs-lookup"><span data-stu-id="2b9be-103">Notifies the host that the thread that is making the call is about to block, perhaps for a garbage collection or other suspension.</span></span>  
+# <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a><span data-ttu-id="f48e6-102">IGCThreadControl::ThreadIsBlockingForSuspension, méthode</span><span class="sxs-lookup"><span data-stu-id="f48e6-102">IGCThreadControl::ThreadIsBlockingForSuspension Method</span></span>
+<span data-ttu-id="f48e6-103">Avertit l’hôte que le thread qui effectue l’appel va bloquer, peut-être pour une opération garbage collection ou une suspension.</span><span class="sxs-lookup"><span data-stu-id="f48e6-103">Notifies the host that the thread that is making the call is about to block, perhaps for a garbage collection or other suspension.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b9be-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2b9be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f48e6-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="f48e6-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadIsBlockingForSuspension ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="2b9be-105">Notes</span><span class="sxs-lookup"><span data-stu-id="2b9be-105">Remarks</span></span>  
- <span data-ttu-id="2b9be-106">L’hôte peut choisir dans le `ThreadIsBlockingForSuspension` rappel de replanifier un thread.</span><span class="sxs-lookup"><span data-stu-id="2b9be-106">The host may choose within the `ThreadIsBlockingForSuspension` callback whether to reschedule a thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f48e6-105">Notes</span><span class="sxs-lookup"><span data-stu-id="f48e6-105">Remarks</span></span>  
+ <span data-ttu-id="f48e6-106">L’hôte peut choisir dans le `ThreadIsBlockingForSuspension` rappel s’il faut replanifier un thread.</span><span class="sxs-lookup"><span data-stu-id="f48e6-106">The host may choose within the `ThreadIsBlockingForSuspension` callback whether to reschedule a thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b9be-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="2b9be-107">Requirements</span></span>  
- <span data-ttu-id="2b9be-108">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b9be-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f48e6-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="f48e6-107">Requirements</span></span>  
+ <span data-ttu-id="f48e6-108">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f48e6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b9be-109">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2b9be-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f48e6-109">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f48e6-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2b9be-110">**Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2b9be-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f48e6-110">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f48e6-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2b9be-111">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b9be-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f48e6-111">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f48e6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b9be-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2b9be-112">See Also</span></span>  
- [<span data-ttu-id="2b9be-113">IGCThreadControl, interface</span><span class="sxs-lookup"><span data-stu-id="2b9be-113">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f48e6-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f48e6-112">See also</span></span>
+- [<span data-ttu-id="f48e6-113">IGCThreadControl, interface</span><span class="sxs-lookup"><span data-stu-id="f48e6-113">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : dessiner une ellipse remplie dans un Windows Form'
+title: 'Procédure : Dessiner une Ellipse remplie dans un formulaire Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,29 +15,29 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: b892670031e795ecd27b194cdf2cf818f4af6254
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09c98ec2874566cc49319d174ef7f1650a436d38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616902"
 ---
-# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a><span data-ttu-id="d51d7-102">Comment : dessiner une ellipse remplie dans un Windows Form</span><span class="sxs-lookup"><span data-stu-id="d51d7-102">How to: Draw a Filled Ellipse on a Windows Form</span></span>
-<span data-ttu-id="d51d7-103">Cet exemple dessine une ellipse pleine dans un formulaire.</span><span class="sxs-lookup"><span data-stu-id="d51d7-103">This example draws a filled ellipse on a form.</span></span>  
+# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a><span data-ttu-id="9bd78-102">Procédure : Dessiner une Ellipse remplie dans un formulaire Windows</span><span class="sxs-lookup"><span data-stu-id="9bd78-102">How to: Draw a Filled Ellipse on a Windows Form</span></span>
+<span data-ttu-id="9bd78-103">Cet exemple dessine une ellipse remplie dans un formulaire.</span><span class="sxs-lookup"><span data-stu-id="9bd78-103">This example draws a filled ellipse on a form.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d51d7-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="d51d7-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9bd78-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="9bd78-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#1)]
  [!code-csharp[System.Drawing.ConceptualHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#1)]
  [!code-vb[System.Drawing.ConceptualHowTos#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d51d7-105">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="d51d7-105">Compiling the Code</span></span>  
- <span data-ttu-id="d51d7-106">Vous ne pouvez pas appeler cette méthode le <xref:System.Windows.Forms.Form.Load> Gestionnaire d’événements.</span><span class="sxs-lookup"><span data-stu-id="d51d7-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="d51d7-107">Le contenu dessiné ne sera pas redessiné si le formulaire est redimensionné ou masqué par une autre forme.</span><span class="sxs-lookup"><span data-stu-id="d51d7-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="d51d7-108">Pour que votre contenu soit automatiquement repeint, vous devez substituer la <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode).</span><span class="sxs-lookup"><span data-stu-id="d51d7-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9bd78-105">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="9bd78-105">Compiling the Code</span></span>  
+ <span data-ttu-id="9bd78-106">Vous ne pouvez pas appeler cette méthode le <xref:System.Windows.Forms.Form.Load> Gestionnaire d’événements.</span><span class="sxs-lookup"><span data-stu-id="9bd78-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="9bd78-107">Le contenu dessiné ne sera pas redessiné si le formulaire est redimensionné ou masqué par un autre formulaire.</span><span class="sxs-lookup"><span data-stu-id="9bd78-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="9bd78-108">Pour que votre contenu repeindre automatiquement, vous devez substituer la <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode).</span><span class="sxs-lookup"><span data-stu-id="9bd78-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="d51d7-109">Programmation fiable</span><span class="sxs-lookup"><span data-stu-id="d51d7-109">Robust Programming</span></span>  
- <span data-ttu-id="d51d7-110">Vous devez toujours appeler <xref:System.IDisposable.Dispose%2A> sur tous les objets qui consomment des ressources système, telles que <xref:System.Drawing.Brush> et <xref:System.Drawing.Graphics> objets.</span><span class="sxs-lookup"><span data-stu-id="d51d7-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Brush> and <xref:System.Drawing.Graphics> objects.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="9bd78-109">Programmation fiable</span><span class="sxs-lookup"><span data-stu-id="9bd78-109">Robust Programming</span></span>  
+ <span data-ttu-id="9bd78-110">Vous devez toujours appeler <xref:System.IDisposable.Dispose%2A> sur tous les objets qui consomment des ressources système, telles que <xref:System.Drawing.Brush> et <xref:System.Drawing.Graphics> objets.</span><span class="sxs-lookup"><span data-stu-id="9bd78-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Brush> and <xref:System.Drawing.Graphics> objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d51d7-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d51d7-111">See Also</span></span>  
- [<span data-ttu-id="d51d7-112">Graphiques et dessins dans Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d51d7-112">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [<span data-ttu-id="d51d7-113">Mise en route de la programmation graphique</span><span class="sxs-lookup"><span data-stu-id="d51d7-113">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [<span data-ttu-id="d51d7-114">Fusion alpha de lignes et de remplissages</span><span class="sxs-lookup"><span data-stu-id="d51d7-114">Alpha Blending Lines and Fills</span></span>](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- [<span data-ttu-id="d51d7-115">Utilisation d'un pinceau pour remplir des formes</span><span class="sxs-lookup"><span data-stu-id="d51d7-115">Using a Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="9bd78-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9bd78-111">See also</span></span>
+- [<span data-ttu-id="9bd78-112">Graphiques et dessins dans Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9bd78-112">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="9bd78-113">Mise en route de la programmation graphique</span><span class="sxs-lookup"><span data-stu-id="9bd78-113">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="9bd78-114">Fusion alpha de lignes et de remplissages</span><span class="sxs-lookup"><span data-stu-id="9bd78-114">Alpha Blending Lines and Fills</span></span>](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [<span data-ttu-id="9bd78-115">Utilisation d'un pinceau pour remplir des formes</span><span class="sxs-lookup"><span data-stu-id="9bd78-115">Using a Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a06c1f4e1fcfe9c9c361a0e0bb2e8722577a13b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61f9448735f5d26d122ed44c4f41c4fd2a9f7478
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614300"
 ---
-# <a name="iclrcontrol-interface"></a><span data-ttu-id="ecefd-102">ICLRControl, interface</span><span class="sxs-lookup"><span data-stu-id="ecefd-102">ICLRControl Interface</span></span>
-<span data-ttu-id="ecefd-103">Fournit des méthodes qui permettent à un hôte obtenir des références à et de configurer les aspects de, le common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="ecefd-103">Provides methods that allow a host to get references to, and configure aspects of, the common language runtime (CLR).</span></span>  
+# <a name="iclrcontrol-interface"></a><span data-ttu-id="8d1eb-102">ICLRControl, interface</span><span class="sxs-lookup"><span data-stu-id="8d1eb-102">ICLRControl Interface</span></span>
+<span data-ttu-id="8d1eb-103">Fournit des méthodes qui permettent à un hôte obtenir des références à et configurez les aspects de, le common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="8d1eb-103">Provides methods that allow a host to get references to, and configure aspects of, the common language runtime (CLR).</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ecefd-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="ecefd-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8d1eb-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="8d1eb-104">Methods</span></span>  
   
-|<span data-ttu-id="ecefd-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="ecefd-105">Method</span></span>|<span data-ttu-id="ecefd-106">Description</span><span class="sxs-lookup"><span data-stu-id="ecefd-106">Description</span></span>|  
+|<span data-ttu-id="8d1eb-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="8d1eb-105">Method</span></span>|<span data-ttu-id="8d1eb-106">Description</span><span class="sxs-lookup"><span data-stu-id="8d1eb-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ecefd-107">GetCLRManager, méthode</span><span class="sxs-lookup"><span data-stu-id="ecefd-107">GetCLRManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)|<span data-ttu-id="ecefd-108">Obtient un pointeur d’interface vers une instance d’un des types de manager que l’hôte peut utiliser pour configurer le CLR.</span><span class="sxs-lookup"><span data-stu-id="ecefd-108">Gets an interface pointer to an instance of any of the manager types the host can use to configure the CLR.</span></span>|  
-|[<span data-ttu-id="ecefd-109">SetAppDomainManagerType, méthode</span><span class="sxs-lookup"><span data-stu-id="ecefd-109">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)|<span data-ttu-id="ecefd-110">Définit un type dérivé <xref:System.AppDomainManager> comme type pour les gestionnaires de domaine d’application.</span><span class="sxs-lookup"><span data-stu-id="ecefd-110">Sets a type derived from <xref:System.AppDomainManager> as the type for application domain managers.</span></span>|  
+|[<span data-ttu-id="8d1eb-107">GetCLRManager, méthode</span><span class="sxs-lookup"><span data-stu-id="8d1eb-107">GetCLRManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)|<span data-ttu-id="8d1eb-108">Obtient un pointeur d’interface à une instance d’un des types de manager que l’hôte peut utiliser pour configurer le CLR.</span><span class="sxs-lookup"><span data-stu-id="8d1eb-108">Gets an interface pointer to an instance of any of the manager types the host can use to configure the CLR.</span></span>|  
+|[<span data-ttu-id="8d1eb-109">SetAppDomainManagerType, méthode</span><span class="sxs-lookup"><span data-stu-id="8d1eb-109">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)|<span data-ttu-id="8d1eb-110">Définit un type dérivé <xref:System.AppDomainManager> comme type pour les gestionnaires de domaine d’application.</span><span class="sxs-lookup"><span data-stu-id="8d1eb-110">Sets a type derived from <xref:System.AppDomainManager> as the type for application domain managers.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ecefd-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="ecefd-111">Requirements</span></span>  
- <span data-ttu-id="ecefd-112">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ecefd-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d1eb-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="8d1eb-111">Requirements</span></span>  
+ <span data-ttu-id="8d1eb-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d1eb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ecefd-113">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ecefd-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8d1eb-113">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8d1eb-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ecefd-114">**Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ecefd-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8d1eb-114">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8d1eb-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ecefd-115">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ecefd-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8d1eb-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d1eb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ecefd-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ecefd-116">See Also</span></span>  
- [<span data-ttu-id="ecefd-117">ICLRAssemblyIdentityManager, interface</span><span class="sxs-lookup"><span data-stu-id="ecefd-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [<span data-ttu-id="ecefd-118">ICLRDebugManager, interface</span><span class="sxs-lookup"><span data-stu-id="ecefd-118">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
- [<span data-ttu-id="ecefd-119">ICLRGCManager, interface</span><span class="sxs-lookup"><span data-stu-id="ecefd-119">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)  
- [<span data-ttu-id="ecefd-120">ICLRHostBindingPolicyManager, interface</span><span class="sxs-lookup"><span data-stu-id="ecefd-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)  
- [<span data-ttu-id="ecefd-121">ICLRHostProtectionManager, interface</span><span class="sxs-lookup"><span data-stu-id="ecefd-121">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- [<span data-ttu-id="ecefd-122">ICLROnEventManager, interface</span><span class="sxs-lookup"><span data-stu-id="ecefd-122">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
- [<span data-ttu-id="ecefd-123">ICLRPolicyManager, interface</span><span class="sxs-lookup"><span data-stu-id="ecefd-123">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [<span data-ttu-id="ecefd-124">IHostControl, interface</span><span class="sxs-lookup"><span data-stu-id="ecefd-124">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)  
- [<span data-ttu-id="ecefd-125">Interfaces d’hébergement</span><span class="sxs-lookup"><span data-stu-id="ecefd-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="8d1eb-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8d1eb-116">See also</span></span>
+- [<span data-ttu-id="8d1eb-117">ICLRAssemblyIdentityManager, interface</span><span class="sxs-lookup"><span data-stu-id="8d1eb-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="8d1eb-118">ICLRDebugManager, interface</span><span class="sxs-lookup"><span data-stu-id="8d1eb-118">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="8d1eb-119">ICLRGCManager, interface</span><span class="sxs-lookup"><span data-stu-id="8d1eb-119">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
+- [<span data-ttu-id="8d1eb-120">ICLRHostBindingPolicyManager, interface</span><span class="sxs-lookup"><span data-stu-id="8d1eb-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [<span data-ttu-id="8d1eb-121">ICLRHostProtectionManager, interface</span><span class="sxs-lookup"><span data-stu-id="8d1eb-121">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [<span data-ttu-id="8d1eb-122">ICLROnEventManager, interface</span><span class="sxs-lookup"><span data-stu-id="8d1eb-122">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
+- [<span data-ttu-id="8d1eb-123">ICLRPolicyManager, interface</span><span class="sxs-lookup"><span data-stu-id="8d1eb-123">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="8d1eb-124">IHostControl, interface</span><span class="sxs-lookup"><span data-stu-id="8d1eb-124">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [<span data-ttu-id="8d1eb-125">Interfaces d’hébergement</span><span class="sxs-lookup"><span data-stu-id="8d1eb-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

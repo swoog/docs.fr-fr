@@ -9,25 +9,25 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: b5417632c50924200390d0ec01048d8df3d393ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671978"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="69b38-102">Visionneuse de défilement</span><span class="sxs-lookup"><span data-stu-id="69b38-102">ScrollViewer</span></span>
-<span data-ttu-id="69b38-103">Le <xref:System.Windows.Controls.ScrollViewer> contrôle crée une zone déroulante dans laquelle le contenu peut défiler horizontalement ou verticalement.</span><span class="sxs-lookup"><span data-stu-id="69b38-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="4655f-102">Visionneuse de défilement</span><span class="sxs-lookup"><span data-stu-id="4655f-102">ScrollViewer</span></span>
+<span data-ttu-id="4655f-103">Le <xref:System.Windows.Controls.ScrollViewer> contrôle crée une région déroulante où contenu peut défiler horizontalement ou verticalement.</span><span class="sxs-lookup"><span data-stu-id="4655f-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="69b38-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="69b38-104">In This Section</span></span>  
- [<span data-ttu-id="69b38-105">Vue d’ensemble de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="69b38-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [<span data-ttu-id="69b38-106">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="69b38-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4655f-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="4655f-104">In This Section</span></span>  
+ [<span data-ttu-id="4655f-105">Vue d’ensemble de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="4655f-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
+ [<span data-ttu-id="4655f-106">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="4655f-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="69b38-107">Référence</span><span class="sxs-lookup"><span data-stu-id="69b38-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4655f-107">Référence</span><span class="sxs-lookup"><span data-stu-id="4655f-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="69b38-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="69b38-108">See Also</span></span>  
- [<span data-ttu-id="69b38-109">Vue d’ensemble de Panel</span><span class="sxs-lookup"><span data-stu-id="69b38-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="69b38-110">Disposition</span><span class="sxs-lookup"><span data-stu-id="69b38-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="4655f-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4655f-108">See also</span></span>
+- [<span data-ttu-id="4655f-109">Vue d’ensemble de Panel</span><span class="sxs-lookup"><span data-stu-id="4655f-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="4655f-110">Disposition</span><span class="sxs-lookup"><span data-stu-id="4655f-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
