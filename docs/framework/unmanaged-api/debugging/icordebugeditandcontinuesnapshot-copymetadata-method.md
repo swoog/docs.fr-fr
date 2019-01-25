@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3f37fe2628fd9a6217ba8aa4964addbfe56a69b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ba1133d44218406948ab0fd6e0b82ae404d0931
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576835"
 ---
-# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="6b666-102">ICorDebugEditAndContinueSnapshot::CopyMetaData, méthode</span><span class="sxs-lookup"><span data-stu-id="6b666-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
-<span data-ttu-id="6b666-103">`CopyMetaData` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="6b666-103">`CopyMetaData` is obsolete.</span></span> <span data-ttu-id="6b666-104">N’appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="6b666-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="d892b-102">ICorDebugEditAndContinueSnapshot::CopyMetaData, méthode</span><span class="sxs-lookup"><span data-stu-id="d892b-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
+<span data-ttu-id="d892b-103">`CopyMetaData` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="d892b-103">`CopyMetaData` is obsolete.</span></span> <span data-ttu-id="d892b-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="d892b-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b666-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6b666-105">See Also</span></span>  
- [<span data-ttu-id="6b666-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="6b666-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="d892b-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d892b-105">See also</span></span>
+- [<span data-ttu-id="d892b-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="d892b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
