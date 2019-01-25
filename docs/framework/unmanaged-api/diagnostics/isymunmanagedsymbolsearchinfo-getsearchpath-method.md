@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c490ee97a1a74cc6fe29a5b0bbece366db6025a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f87399b1124870101531f7115d0da211e646562f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670151"
 ---
-# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="53307-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath, méthode</span><span class="sxs-lookup"><span data-stu-id="53307-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
-<span data-ttu-id="53307-103">Obtient le chemin de recherche.</span><span class="sxs-lookup"><span data-stu-id="53307-103">Gets the search path.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="4006c-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath, méthode</span><span class="sxs-lookup"><span data-stu-id="4006c-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
+<span data-ttu-id="4006c-103">Obtient le chemin de recherche.</span><span class="sxs-lookup"><span data-stu-id="4006c-103">Gets the search path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="53307-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="53307-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4006c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4006c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSearchPathLength(  
     [out] ULONG32 *pcchPath);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="53307-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="53307-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4006c-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4006c-105">Parameters</span></span>  
  `pcchPath`  
- <span data-ttu-id="53307-106">[out] Un pointeur vers un `ULONG32` qui reçoit la taille, en caractères, de la mémoire tampon requise pour contenir le chemin de recherche.</span><span class="sxs-lookup"><span data-stu-id="53307-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
+ <span data-ttu-id="4006c-106">[out] Un pointeur vers un `ULONG32` qui reçoit la taille, en caractères, de la mémoire tampon requise pour contenir le chemin de recherche.</span><span class="sxs-lookup"><span data-stu-id="4006c-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="53307-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="53307-107">Return Value</span></span>  
- <span data-ttu-id="53307-108">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="53307-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4006c-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="4006c-107">Return Value</span></span>  
+ <span data-ttu-id="4006c-108">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="4006c-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="53307-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="53307-109">Requirements</span></span>  
- <span data-ttu-id="53307-110">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="53307-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4006c-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4006c-109">Requirements</span></span>  
+ <span data-ttu-id="4006c-110">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4006c-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53307-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="53307-111">See Also</span></span>  
- [<span data-ttu-id="53307-112">ISymUnmanagedSymbolSearchInfo, interface</span><span class="sxs-lookup"><span data-stu-id="53307-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4006c-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4006c-111">See also</span></span>
+- [<span data-ttu-id="4006c-112">ISymUnmanagedSymbolSearchInfo, interface</span><span class="sxs-lookup"><span data-stu-id="4006c-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
