@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer un Windows Form mis en forme'
+title: 'Procédure : Créer un formulaire Windows mis en forme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Windows Forms, circular
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
-ms.openlocfilehash: 4a799baa2732b4d2a28a9d8d67fa54d8b48dd191
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 937b785078e58026a5360155805f9cf37031cec6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527274"
 ---
-# <a name="how-to-create-a-shaped-windows-form"></a>Comment : créer un Windows Form mis en forme
-Cet exemple donne au formulaire une forme elliptique redimensionne le formulaire.  
+# <a name="how-to-create-a-shaped-windows-form"></a>Procédure : Créer un formulaire Windows mis en forme
+Cet exemple donne une forme elliptique redimensionne le formulaire à un formulaire.  
   
 ## <a name="example"></a>Exemple  
  [!code-cpp[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#10)]
@@ -38,12 +38,12 @@ Cet exemple donne au formulaire une forme elliptique redimensionne le formulaire
   
 -   Références aux espaces de noms <xref:System.Windows.Forms> et <xref:System.Drawing>.  
   
- Dans cet exemple, le <xref:System.Windows.Forms.Control.OnPaint%2A> méthode pour modifier la forme du formulaire. Pour utiliser ce code, copiez la déclaration de méthode, ainsi que le code de dessin à l’intérieur de la méthode.  
+ Cet exemple remplace le <xref:System.Windows.Forms.Control.OnPaint%2A> méthode pour modifier la forme du formulaire. Pour utiliser ce code, copiez la déclaration de méthode, ainsi que le code de dessin à l’intérieur de la méthode.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.Control.OnPaint%2A>  
- <xref:System.Drawing.Region>  
- <xref:System.Drawing>  
- <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>  
- <xref:System.Windows.Forms.Control.Region%2A>  
- [Mise en route de la programmation graphique](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.Control.OnPaint%2A>
+- <xref:System.Drawing.Region>
+- <xref:System.Drawing>
+- <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>
+- <xref:System.Windows.Forms.Control.Region%2A>
+- [Mise en route de la programmation graphique](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)

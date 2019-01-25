@@ -2,12 +2,12 @@
 title: Vue d’ensemble des attributs (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: e6d11daeac2f2392e1080eca8503c9b2c420ab35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 282788f9aa5a1ac8c4ede95f04b45c26b9f56588
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559295"
 ---
 # <a name="attributes-overview-visual-basic"></a>Vue d’ensemble des attributs (Visual Basic)
 Les attributs fournissent une méthode puissante permettant d’associer des métadonnées ou des informations déclaratives avec du code (assemblys, types, méthodes, propriétés, etc.). Une fois associé à une entité de programme, l’attribut peut être interrogé à l’exécution à l’aide d’une technique appelée *réflexion*. Pour plus d’informations, consultez la page [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -136,13 +136,13 @@ Module: CLSCompliant(True)>
   
 -   [Accéder à des attributs à l’aide de la réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
--   [Guide pratique : créer une union C/C++ à l’aide d’attributs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+-   [Guide pratique pour Créer une Union C/C++ à l’aide d’attributs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
 -   [Attributs courants (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   
 -   [Informations relatives à l’appelant (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Attributs](../../../../standard/attributes/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide de programmation Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Attributs](../../../../standard/attributes/index.md)

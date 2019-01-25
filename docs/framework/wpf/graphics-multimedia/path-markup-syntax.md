@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671263"
 ---
 # <a name="path-markup-syntax"></a>Syntaxe XAML pour les tracés
 Les tracés sont abordés dans [formes et dessins de base dans la vue d’ensemble de WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) et [vue d’ensemble de Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), toutefois, cette rubrique décrit en détail le mini langage puissant et plus complexe, vous pouvez utiliser pour spécifier le chemin d’accès géométries de manière plus compacte en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -40,20 +40,20 @@ Les tracés sont abordés dans [formes et dessins de base dans la vue d’ensemb
 ### <a name="a-note-about-white-space"></a>Remarque à propos des espaces blancs  
  Par souci de concision, un seul espace est indiqué dans les sections de syntaxe qui suivent, mais plusieurs espaces sont également acceptables partout où un seul espace est affiché.  
   
- Deux nombres n’ont en fait d’être séparées par une virgule ou un espace blanc, mais cela n’est possible lors de la chaîne résultante est ambiguë. Par exemple, `2..3` est en fait deux nombres : « 2 ». et « .3 ». De même, `2-3` est « 2 » et « -3 ». Les espaces ne sont pas requis avant ou après les commandes.  
+ Deux nombres n’ont en fait d’être séparées par une virgule ou un espace blanc, mais cela n’est possible lors de la chaîne résultante est ambiguë. Par exemple, `2..3` est en fait deux nombres : "2." et « .3 ». De même, `2-3` est « 2 » et « -3 ». Les espaces ne sont pas requis avant ou après les commandes.  
   
 ### <a name="syntax"></a>Syntaxe  
  Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attribut syntaxe d’utilisation pour un <xref:System.Windows.Media.StreamGeometry> est composé d’un texte facultatif <xref:System.Windows.Media.FillRule> valeur et un ou plusieurs descriptions de figure.  
   
 |Utilisation d’attribut XAML pour StreamGeometry|  
 |-----------------------------------------|  
-|`<` *objet* *propriété* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attribut syntaxe d’utilisation pour un <xref:System.Windows.Media.PathFigureCollection> est composé d’une ou plusieurs descriptions de figure.  
   
 |Utilisation d’attributs XAML pour PathFigureCollection|  
 |-----------------------------------------------|  
-|`<` *objet* *propriété* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |Terme|Description|  
 |----------|-----------------|  
@@ -224,11 +224,11 @@ Une majuscule `V` indique que `y` est une valeur absolue ; un minuscule `v` ind
   
  Vous pouvez également utiliser la notation scientifique. Par exemple, `+1.e17` est une valeur valide.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [Vue d’ensemble des formes et dessins de base dans WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Vue d’ensemble de Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [Vue d’ensemble des formes et dessins de base dans WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Vue d’ensemble de Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

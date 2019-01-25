@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 313128d5511ddd0f3b75c58e2c10a74eb967d130
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d7f5d570e187393b76f4af6301a81dbb350f2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518525"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Une erreur inattendue s'est produite parce qu'une ressource de système d'exploitation requise pour le démarrage de l'instance unique ne peut pas être acquise
 L'application n'a pas pu obtenir une ressource nécessaire du système d'exploitation. Ce problème peut avoir certaines des causes suivantes :  
@@ -30,7 +30,7 @@ L'application n'a pas pu obtenir une ressource nécessaire du système d'exploit
   
 4.  Notez les circonstances dans lesquelles l'erreur s'est produite, puis contactez les services de support technique Microsoft  
   
-## <a name="see-also"></a>Voir aussi  
- [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
- [Principes de base du débogueur](/visualstudio/debugger/debugger-basics)  
- [Nous contacter](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Voir aussi
+- [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Principes de base du débogueur](/visualstudio/debugger/debugger-basics)
+- [Nous contacter](/visualstudio/ide/talk-to-us)

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : rechercher un storyboard'
+title: 'Procédure : Rechercher un storyboard'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Storyboards [WPF], seeking
 - seeking Storyboards [WPF]
 ms.assetid: 887bb39a-0c2a-4ae8-956d-1d9f6f8ebbfc
-ms.openlocfilehash: 656a5cb38461f71698a312e6382a3a9c29158cc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 440b2dd157b56a1616f7137b1e311cb981b33861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604455"
 ---
-# <a name="how-to-seek-a-storyboard"></a>Comment : rechercher un storyboard
-L’exemple suivant montre comment utiliser le <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> méthode d’un <xref:System.Windows.Media.Animation.Storyboard> pour accéder à n’importe quelle position dans une animation de la table de montage séquentiel.  
+# <a name="how-to-seek-a-storyboard"></a>Procédure : Rechercher un storyboard
+L’exemple suivant montre comment utiliser le <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> méthode d’un <xref:System.Windows.Media.Animation.Storyboard> pour accéder à n’importe quelle position dans une animation de storyboard.  
   
 ## <a name="example"></a>Exemple  
  Voici le balisage XAML de cet exemple.  
@@ -29,5 +29,5 @@ L’exemple suivant montre comment utiliser le <xref:System.Windows.Media.Animat
  [!code-csharp[SeekStoryboard_snip#SeekStoryboardCodeBehindExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SeekStoryboard_snip/CSharp/SeekStoryboardExample.xaml.cs#seekstoryboardcodebehindexamplewholepage)]
  [!code-vb[SeekStoryboard_snip#SeekStoryboardCodeBehindExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SeekStoryboard_snip/VisualBasic/SeekStoryboardExample.xaml.vb#seekstoryboardcodebehindexamplewholepage)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Rechercher un storyboard de façon synchrone](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)
+## <a name="see-also"></a>Voir aussi
+- [Rechercher un storyboard de façon synchrone](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)

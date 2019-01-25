@@ -2,12 +2,12 @@
 title: Utilisation de System.Transactions dans ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 7b73ec970776f39a0c056e2a706d4818cda6cd72
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7c83532de42faff06594305b01137fd8fd63674e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711825"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Utilisation de System.Transactions dans ASP.NET
 Cette rubrique explique comment utiliser <xref:System.Transactions> dans une application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  
@@ -15,7 +15,7 @@ Cette rubrique explique comment utiliser <xref:System.Transactions> dans une app
 ## <a name="enable-distributedtransactionpermission-in-aspnet"></a>Activation de DistributedTransactionPermission dans ASP.NET  
  <xref:System.Transactions> prend en charge les appelants d’un niveau de confiance partiel et est marqué avec l’attribut **AllowPartiallyTrustedCallers** (APTCA). Les niveaux de confiance pour les <xref:System.Transactions> sont définis d’après les types de ressource (par exemple, la mémoire système, les ressources partagées au niveau du processus, les ressources système et d’autres ressources) exposés par <xref:System.Transactions> et le niveau de confiance requis pour accéder à ces ressources. Dans un environnement de confiance partielle, un assembly qui n’a pas un niveau de confiance totale ne peut utiliser que les transactions du domaine d’application (dans ce cas, les seules ressources protégées correspondent à la mémoire système), sauf s’il dispose de l’autorisation <xref:System.Transactions.DistributedTransactionPermission>.  
   
- L’autorisation<xref:System.Transactions.DistributedTransactionPermission> est demandée chaque fois que la gestion des transactions est remontée pour être managée par le MSDTC (Microsoft Distributed Transaction Coordinator). Ce genre de scénario utilise des ressources au niveau du processus et, en particulier, une ressource globale servant d’espace réservé dans le journal MSDTC. Par exemple, le composant web frontal d’une base de données ou une application qui utilise une base de donnée en tant que partie des services qu’il fournit.  
+ L’autorisation<xref:System.Transactions.DistributedTransactionPermission> est demandée chaque fois que la gestion des transactions est remontée pour être managée par le MSDTC (Microsoft Distributed Transaction Coordinator). Ce genre de scénario utilise des ressources au niveau du processus et, en particulier, une ressource globale servant d'espace réservé dans le journal MSDTC. Par exemple, le composant web frontal d’une base de données ou une application qui utilise une base de donnée en tant que partie des services qu’il fournit.  
   
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dispose de son propre jeu de niveaux de confiance et associe un jeu d’autorisations spécifique à ces niveaux de confiance via des fichiers de stratégie. Pour plus d’informations, consultez [ASP.NET Trust Levels and Policy Files](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1). Lors de la première installation du Kit de développement logiciel (SDK) Windows, aucun des fichiers de stratégie [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] par défaut n’est associé à <xref:System.Transactions.DistributedTransactionPermission>. Ainsi, lorsque votre transaction est remontée dans une application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pour gestion par le MSDTC, la remontée échoue avec une <xref:System.Security.SecurityException> lors de la demande de <xref:System.Transactions.DistributedTransactionPermission>. Pour activer la remontée des transactions au sein d’un environnement [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] de confiance partielle, vous devez accorder l’autorisation <xref:System.Transactions.DistributedTransactionPermission> aux mêmes niveaux de confiance par défaut que ceux de l’autorisation <xref:System.Data.SqlClient.SqlClientPermission>. Vous pouvez configurer vos propres niveaux de confiance et fichier de stratégie personnalisés pour la prise en charge ou modifier les fichiers de stratégie par défaut : **Web_hightrust.config** et **Web_mediumtrust.config**.  
   
@@ -59,7 +59,7 @@ Cette rubrique explique comment utiliser <xref:System.Transactions> dans une app
   
  Pour plus d’informations, consultez [add, élément d’assemblies pour compilation (schéma des paramètres ASP.NET)](https://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4).  
   
-## <a name="see-also"></a>Voir aussi  
- [ASP.NET Trust Levels and Policy Files](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [securityPolicy élément (schéma des paramètres ASP.NET)](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
- [Remontée de la gestion des transactions](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+## <a name="see-also"></a>Voir aussi
+- [ASP.NET Trust Levels and Policy Files](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)
+- [securityPolicy élément (schéma des paramètres ASP.NET)](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)
+- [Remontée de la gestion des transactions](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

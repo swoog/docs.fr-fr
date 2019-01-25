@@ -2,12 +2,12 @@
 title: Exemple Configuration
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: ae1b98d4afcc4a7bc97a4668ef7d974b27cafed9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6273b6b0f84887f031539581fbf664b9dbf50300
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579457"
 ---
 # <a name="configuration-sample"></a>Exemple Configuration
 Cet exemple illustre l'utilisation d'un fichier de configuration pour rendre un service détectable.  
@@ -192,7 +192,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </findCriteria>  
 ```  
   
- Cet exemple étend cette fonctionnalité et modifie le <xref:System.ServiceModel.Discovery.FindCriteria> utilisé par le client, ainsi que certaines propriétés de l'`updDiscoveryEndpoint` standard utilisé pour la découverte. Les critères <xref:System.ServiceModel.Discovery.FindCriteria> sont modifiés de façon à utiliser une portée et un algorithme `scopeMatchBy` spécifiques, ainsi que des critères d'arrêt personnalisés. En outre, l'exemple montre également comment un client peut envoyer des éléments XML à l'aide de messages `Probe`. Enfin, certaines modifications sont apportées au <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, comme la version du protocole utilisée et des paramètres propres au protocole UDP, ainsi que le montre le fichier de configuration suivant.  
+ Cet exemple étend cette fonctionnalité et modifie le <xref:System.ServiceModel.Discovery.FindCriteria> utilisé par le client, ainsi que certaines propriétés de l’`updDiscoveryEndpoint` standard utilisé pour la découverte. Les critères <xref:System.ServiceModel.Discovery.FindCriteria> sont modifiés de façon à utiliser une portée et un algorithme `scopeMatchBy` spécifiques, ainsi que des critères d'arrêt personnalisés. En outre, l'exemple montre également comment un client peut envoyer des éléments XML à l'aide de messages `Probe`. Enfin, certaines modifications sont apportées au <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, comme la version du protocole utilisée et des paramètres propres au protocole UDP, ainsi que le montre le fichier de configuration suivant.  
   
 ```xml  
 <udpDiscoveryEndpoint>    

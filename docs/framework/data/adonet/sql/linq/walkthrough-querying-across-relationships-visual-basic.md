@@ -1,17 +1,17 @@
 ---
-title: 'Procédure pas à pas : interrogation de relations (Visual Basic)'
+title: 'Procédure pas à pas : Interrogation de relations (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa98a823a5d97d86144ea2f76953e990cde8edec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585469"
 ---
-# <a name="walkthrough-querying-across-relationships-visual-basic"></a>Procédure pas à pas : interrogation de relations (Visual Basic)
+# <a name="walkthrough-querying-across-relationships-visual-basic"></a>Procédure pas à pas : Interrogation de relations (Visual Basic)
 Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* pour représenter les relations de clé étrangère dans la base de données.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -19,7 +19,7 @@ Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](..
  Cette procédure pas à pas a été écrite à l'aide des paramètres de développement Visual Basic.  
   
 ## <a name="prerequisites"></a>Prérequis  
- Vous devez avoir terminé [procédure pas à pas : modèle d’objet Simple et de requête (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Cette procédure pas à pas est basée sur cette dernière, y compris la présence du fichier northwnd.mdf dans c:\linqtest.  
+ Vous devez avoir terminé [procédure pas à pas : Requête (Visual Basic) et le modèle objet simples](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Cette procédure pas à pas est basée sur cette dernière, y compris la présence du fichier northwnd.mdf dans c:\linqtest.  
   
 ## <a name="overview"></a>Vue d'ensemble  
  Cette procédure pas à pas se compose de trois tâches principales :  
@@ -89,7 +89,7 @@ Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](..
 5.  Sur le **fichier** menu, cliquez sur **Enregistrer tout** si vous souhaitez enregistrer cette application.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- La procédure pas à pas suivante ([procédure pas à pas : manipulation de données (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) montre comment manipuler les données. Cette procédure pas à pas ne requiert pas d'enregistrer les deux procédures pas à pas de cette série que vous avez déjà terminées.  
+ La procédure pas à pas suivante ([procédure pas à pas : Manipulation de données (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) montre comment manipuler des données. Cette procédure pas à pas ne requiert pas d'enregistrer les deux procédures pas à pas de cette série que vous avez déjà terminées.  
   
-## <a name="see-also"></a>Voir aussi  
- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Voir aussi
+- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

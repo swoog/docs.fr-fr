@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: a387627e95ce3bf5cfb095412c7100e1bfbe836d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600425"
 ---
 # <a name="queues-overview"></a>Vue d'ensemble des files d'attente
 Cette section présente les concepts généraux et principaux relatifs à la communication mise en file d'attente. Les sections suivantes passent en plus d’informations sur la façon dont les concepts de file d’attente décrits ici sont représentées dans Windows Communication Foundation (WCF).  
@@ -73,14 +73,14 @@ Cette section présente les concepts généraux et principaux relatifs à la com
 ## <a name="poison-message-queue-programming"></a>Programmation de la file d'attente du message incohérent  
  Une fois qu'un message parvient dans la file d'attente cible, son traitement par le service peut faire l'objet de plusieurs échecs. Par exemple, une application qui lit un message de la file d'attente sous une transaction et met à jour une base de données peut être confronté à une déconnexion temporaire de la base de données. Dans ce cas, la transaction est restaurée, une nouvelle transaction est créée et le message est relu dans la file d'attente. Une deuxième tentative peut réussir ou échouer. Dans certains cas, selon la cause de l'erreur, la remise du message à l'application peut connaître plusieurs échecs. Dans ce cas, le message est considéré comme « incohérent ». Ces messages sont déplacés vers une file d'attente de messages incohérents pour être lus par une application chargée de traiter les messages incohérents.  
   
-## <a name="see-also"></a>Voir aussi  
- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Sessions et files d’attente](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Files d’attente de lettres mortes](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
- [Communications mises en file d’attente volatiles](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [Windows Communication Foundation vers Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Installation de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Intégration Message Queuing exemples de liaisons](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [Message Queuing vers Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Sécurité du message sur Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+## <a name="see-also"></a>Voir aussi
+- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Sessions et files d’attente](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [Files d’attente de lettres mortes](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [Communications mises en file d’attente volatiles](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
+- [Windows Communication Foundation vers Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
+- [Installation de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Intégration Message Queuing exemples de liaisons](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)
+- [Message Queuing vers Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [Sécurité du message sur Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

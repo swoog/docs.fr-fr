@@ -2,12 +2,12 @@
 title: Scénarios de canal homologue
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 42b16ea394b9375be14aed4b2792d306fcb62f2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05fe7f632b286876dfee36b7d5d22a77c0ae11e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566205"
 ---
 # <a name="peer-channel-scenarios"></a>Scénarios de canal homologue
 Les API de canal homologue prennent en charge les scénarios de développement suivants.  
@@ -24,5 +24,5 @@ Les API de canal homologue prennent en charge les scénarios de développement s
 ## <a name="gaming"></a>Jeux  
  À l'aide du canal homologue, les développeurs d'applications peuvent créer des versions sans serveur de leurs jeux dans lesquels les mouvements sont transmis et synchronisés à d'autres joueurs par un mécanisme d'égal à égal plutôt que par l'intermédiaire d'un serveur central. Pour les petits éditeurs de logiciels indépendants, cette technique supprime les coûts d'exploitation associés au déploiement, à la gestion et à l'entretien de serveurs centraux. Les jeux écrits à l'aide d'une architecture d'égal à égal peuvent être utilisés sur Internet, ou sur des réseaux locaux câblés ou sans fil. Les activités secondaires des jeux, telles que les salles de rencontre et les conversations en cours de jeu, peuvent être développées à l'aide d'un réseau P2P.  
   
-## <a name="see-also"></a>Voir aussi  
- [Concepts de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+## <a name="see-also"></a>Voir aussi
+- [Concepts de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592586"
 ---
 # <a name="input-overview"></a>Vue d'ensemble des entrées
 <a name="introduction"></a> Le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sous-système fournit un puissant [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] pour obtenir des entrées à partir d’une variété de périphériques, y compris la souris, clavier, tactile et stylet. Cette rubrique décrit les services fournis par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et explique l’architecture des systèmes d’entrée.
@@ -243,7 +243,7 @@ ms.locfileid: "48842786"
 
  Quand vous faites en sorte que des objets répondent à des manipulations, vous pouvez donner à l’objet une apparence d’inertie. Ainsi, vos objets peuvent simuler le monde physique. Par exemple, quand vous poussez un livre sur une table, si vous le poussez assez fort il continuera à se déplacer une fois que vous l’aurez relâché. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet de simuler ce comportement en déclenchant des événements de manipulation après que les doigts de l’utilisateur ont relâché l’objet.
 
- Pour plus d’informations sur la façon de créer une application qui permet à l’utilisateur de déplacer, de redimensionner et de faire pivoter un objet, consultez [Procédure pas à pas : création de votre première application Touch](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Pour plus d’informations sur la création d’une application qui permet à l’utilisateur à déplacer, redimensionner et faire pivoter un objet, consultez [procédure pas à pas : Créer votre première Application Touch](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
 
  Le <xref:System.Windows.UIElement> définit les événements de manipulation suivants.
 
@@ -391,4 +391,8 @@ ms.locfileid: "48842786"
  Si vous souhaitez en savoir plus, il existe des ressources supplémentaires qui expliquent les éléments de framework [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et le routage d’événement plus en détail. Pour plus d’informations, consultez les vues d’ensemble suivantes : [Vue d’ensemble des commandes](../../../../docs/framework/wpf/advanced/commanding-overview.md), [Vue d’ensemble du focus](../../../../docs/framework/wpf/advanced/focus-overview.md), [Vue d’ensemble des éléments de base](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [Arborescences dans WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md) et [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Vue d’ensemble de concentrer](../../../../docs/framework/wpf/advanced/focus-overview.md) [vue d’ensemble des commandes](../../../../docs/framework/wpf/advanced/commanding-overview.md) [vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md) [vue d’ensemble des éléments de Base](../../../../docs/framework/wpf/advanced/base-elements-overview.md) [propriétés](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [Vue d’ensemble du focus](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Vue d’ensemble des commandes](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Vue d’ensemble des éléments de base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Propriétés](../../../../docs/framework/wpf/advanced/properties-wpf.md)

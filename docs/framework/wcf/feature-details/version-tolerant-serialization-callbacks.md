@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: 84e38451f10acc341642c0bf0923cc73b79d771f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdd9108417068204b6d7ec2e4cc9ae54a160d7fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616346"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>Rappels de sérialisation avec tolérance de version
 Le modèle de programmation de contrat de données prend entièrement en charge les méthodes de rappel de sérialisation avec tolérance de version que les classes <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> et <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> prennent en charge.  
@@ -41,10 +41,10 @@ Le modèle de programmation de contrat de données prend entièrement en charge 
  [!code-csharp[C_DataContract#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#9)]
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
- <xref:System.Runtime.Serialization.StreamingContext>  
- [Sérialisation avec tolérance de version](../../../../docs/standard/serialization/version-tolerant-serialization.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>
+- <xref:System.Runtime.Serialization.StreamingContext>
+- [Sérialisation avec tolérance de version](../../../../docs/standard/serialization/version-tolerant-serialization.md)

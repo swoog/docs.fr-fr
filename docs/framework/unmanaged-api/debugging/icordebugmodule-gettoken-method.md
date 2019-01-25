@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d1e0f0d57440f0074a7ca179955a7a13e41f5d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f87724bda78c1948ae7e1ddfa3d586fe5b7e14e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575734"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken, méthode
-Obtient le jeton de l’entrée de table pour ce module.  
+Obtient le jeton pour l’entrée de table pour ce module.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT GetToken(
   
 #### <a name="parameters"></a>Paramètres  
  `pToken`  
- [out] Un pointeur vers le `mdModule` jeton qui fait référence à des métadonnées du module.  
+ [out] Un pointeur vers le `mdModule` jeton qui référence les métadonnées du module.  
   
 ## <a name="remarks"></a>Notes  
  Le jeton peut être passé à la [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), et [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaces d’importation de métadonnées.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Métadonnées](../../../../docs/framework/unmanaged-api/metadata/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Métadonnées](../../../../docs/framework/unmanaged-api/metadata/index.md)

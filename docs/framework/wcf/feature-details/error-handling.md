@@ -2,12 +2,12 @@
 title: Gestion des erreurs
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695554"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
 ## <a name="error-handling-in-windows-communication-foundation"></a>Gestion des erreurs dans Windows Communication Foundation  
@@ -67,5 +67,5 @@ ms.locfileid: "49452847"
   
  Une erreur de distribution de conversion de type peut être inspectée de la même façon que d'autres types d'erreurs de distribution en installant un gestionnaire d'erreurs. Le point d'extensibilité d'IErrorHandler est appelé pour gérer les exceptions au niveau de service. À partir de là, choisissez la réponse à renvoyer à l’appelant, et effectuez des tâches et des rapports personnalisés.  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation WCF de base](../basic-wcf-programming.md)
+## <a name="see-also"></a>Voir aussi
+- [Programmation WCF de base](../basic-wcf-programming.md)

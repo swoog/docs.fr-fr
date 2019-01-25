@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxCompletionStatusAbortedOnSessionClose
 ms.date: 03/30/2017
 ms.assetid: 7e142e9d-e81b-4309-974a-02e9cc064ea0
-ms.openlocfilehash: 7ecc70f1c4d7184401dd29908968f628f2e6792a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f41fd08138591a90b6173b5e4806e5ac73ff07da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662762"
 ---
 # <a name="systemservicemodeltxcompletionstatusabortedonsessionclose"></a>System.ServiceModel.TxCompletionStatusAbortedOnSessionClose
 La transaction spécifiée a été abandonnée car elle était inachevée lorsque la session a été fermée et le OperationBehaviorAttribute TransactionAutoCompleteOnSessionClose a été défini à false.  
@@ -18,7 +18,7 @@ La transaction spécifiée a été abandonnée car elle était inachevée lorsqu
 ## <a name="troubleshooting"></a>Résolution des problèmes  
  Cette trace indique un bogue d'application potentiel qui doit être étudié.  
   
-## <a name="see-also"></a>Voir aussi  
- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)

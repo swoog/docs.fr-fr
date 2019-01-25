@@ -2,12 +2,12 @@
 title: Transacted MSMQ Binding
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: e8b0b21acb9c99305ef144d18104338da5f8769a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e85a6396f0627454971cdd1b0b63d2fa521c2625
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678198"
 ---
 # <a name="transacted-msmq-binding"></a>Transacted MSMQ Binding
 Cet exemple montre comment effectuer la communication de messages mis en file d'attente avec transactions à l'aide de MSMQ (Message Queuing).
@@ -89,9 +89,9 @@ public static void Main()
 ```
 
 > [!NOTE]
->  Le nom de la file d'attente comporte un point (.) pour l'ordinateur local et des barres obliques inverses comme séparateur dans son chemin d'accès lors de la création de la file d'attente à l'aide de <xref:System.Messaging>. Le point de terminaison Windows Communication Foundation (WCF) utilise l’adresse de la file d’attente avec le modèle net.msmq, « localhost » pour désigner l’ordinateur local et utilise des barres obliques dans son chemin d’accès.
+>  Le nom de la file d’attente comporte un point (.) pour l’ordinateur local et des barres obliques inverses comme séparateur dans son chemin d’accès lors de la création de la file d’attente à l’aide de <xref:System.Messaging>. Le point de terminaison Windows Communication Foundation (WCF) utilise l’adresse de la file d’attente avec le modèle net.msmq, « localhost » pour désigner l’ordinateur local et utilise des barres obliques dans son chemin d’accès.
 
- Le client crée une étendue de transaction. La communication avec la file d'attente a lieu dans l'étendue de la transaction, entraînant son traitement en tant qu'une unité atomique dans laquelle tous les messages sont envoyés à la file d'attente ou aucun des messages n'est envoyé à la file d'attente. La transaction est validée par l'appel de la méthode <xref:System.Transactions.TransactionScope.Complete%2A> sur l'étendue de la transaction.
+ Le client crée une étendue de transaction. La communication avec la file d'attente a lieu dans l'étendue de la transaction, entraînant son traitement en tant qu'une unité atomique dans laquelle tous les messages sont envoyés à la file d'attente ou aucun des messages n'est envoyé à la file d'attente. La transaction est validée par l’appel de la méthode <xref:System.Transactions.TransactionScope.Complete%2A> sur l’étendue de la transaction.
 
 ```csharp
 // Create a client.

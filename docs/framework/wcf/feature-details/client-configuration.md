@@ -2,12 +2,12 @@
 title: Configuration client
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e178f8b08fbadbb5549fa10631d3a57f71a7e0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503220"
 ---
 # <a name="client-configuration"></a>Configuration client
 Vous pouvez utiliser la configuration du client Windows Communication Foundation (WCF) pour spécifier l’adresse, liaison, comportement et contrat, les propriétés « ABC » du point de terminaison client, les clients utilisent pour se connecter aux points de terminaison de service. Le [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) élément a un [ \<point de terminaison >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément dont les attributs sont utilisés pour configurer l’ABC de point de terminaison. Ces attributs sont traités dans la section « Configuration des points de terminaison » de cette rubrique.  
@@ -84,7 +84,7 @@ Vous pouvez utiliser la configuration du client Windows Communication Foundation
   
  Chaque point de terminaison doit avoir une adresse qui lui est associée pour pouvoir être localisé et identifié. L'attribut `address` peut être utilisé pour spécifier l'URL qui fournit l'emplacement du point de terminaison. Mais l'adresse d'un point de terminaison de service peut également être spécifiée dans du code en créant un URI et en l'ajoutant à <xref:System.ServiceModel.ServiceHost> qui utilise l'une des méthodes <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. Pour plus d’informations, consultez [adresses](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md). Comme indiqué dans l’introduction, le [ \<en-têtes >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) et [ \<identité >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) éléments font partie de la <xref:System.ServiceModel.EndpointAddress> et sont également traités dans le [ Adresses](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) rubrique.  
   
- L'attribut `binding` indique le type de liaison que le point de terminaison s'attend à utiliser lors de la connexion à un service. Ce type doit posséder une section de configuration inscrite s'il doit être référencé. Dans l’exemple précédent, il s’agit du [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) section, ce qui indique que le point de terminaison utilise un <xref:System.ServiceModel.WSHttpBinding>. Mais il peut y avoir plusieurs liaisons d’un type donné utilisables par le point de terminaison. Chacune de celles-ci a son propre [ \<liaison >](../../../../docs/framework/misc/binding.md) élément dans l’élément de type (binding). L'attribut `bindingconfiguration` est utilisé pour distinguer plusieurs liaisons du même type. Sa valeur est mise en correspondance avec la `name` attribut de la [ \<liaison >](../../../../docs/framework/misc/binding.md) élément. Pour plus d’informations sur la façon de configurer un client de liaison à l’aide de la configuration, consultez [Comment : spécifier une liaison Client dans Configuration](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
+ L’attribut `binding` indique le type de liaison que le point de terminaison s’attend à utiliser lors de la connexion à un service. Ce type doit posséder une section de configuration inscrite s'il doit être référencé. Dans l’exemple précédent, il s’agit du [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) section, ce qui indique que le point de terminaison utilise un <xref:System.ServiceModel.WSHttpBinding>. Mais il peut y avoir plusieurs liaisons d’un type donné utilisables par le point de terminaison. Chacune de celles-ci a son propre [ \<liaison >](../../../../docs/framework/misc/binding.md) élément dans l’élément de type (binding). L’attribut `bindingconfiguration` est utilisé pour distinguer plusieurs liaisons du même type. Sa valeur est mise en correspondance avec la `name` attribut de la [ \<liaison >](../../../../docs/framework/misc/binding.md) élément. Pour plus d’informations sur la façon de configurer un client de liaison à l’aide de la configuration, consultez [Comment : Spécifier une liaison Client dans Configuration](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
   
  Le `behaviorConfiguration` attribut est utilisé pour spécifier quel [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) de la [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) le point de terminaison doit utiliser. Sa valeur est mise en correspondance avec la `name` attribut de la [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) élément. Pour obtenir un exemple de configuration pour spécifier des comportements de client, consultez [configuration des comportements clients](../../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
@@ -93,6 +93,6 @@ Vous pouvez utiliser la configuration du client Windows Communication Foundation
 ### <a name="configuring-metadata"></a>Configuration des métadonnées  
  Le [ \<métadonnées >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) élément est utilisé pour spécifier les paramètres utilisés pour enregistrer les métadonnées des extensions d’importation. Pour plus d’informations sur l’extension du système de métadonnées, consultez [extension du système de métadonnées](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Points de terminaison : adresses, liaisons et contrats](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Configuration des comportements clients](../../../../docs/framework/wcf/configuring-client-behaviors.md)
+## <a name="see-also"></a>Voir aussi
+- [Points de terminaison : Adresses, liaisons et contrats](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Configuration des comportements clients](../../../../docs/framework/wcf/configuring-client-behaviors.md)

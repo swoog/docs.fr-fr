@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b2cf4d9940873c04ee6f0ab2d378a3d1253be4ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729195"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; élément
 Encapsule la stratégie de liaisons et l’emplacement de chaque assembly. Utilisez une `dependentAssembly` élément pour chaque assembly.  
   
  \<configuration>  
 \<runtime>  
-\<assemblyBinding >  
-\<dependentAssembly >  
+\<assemblyBinding>  
+\<dependentAssembly>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,7 +80,7 @@ Encapsule la stratégie de liaisons et l’emplacement de chaque assembly. Utili
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirection des versions d'assemblys](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

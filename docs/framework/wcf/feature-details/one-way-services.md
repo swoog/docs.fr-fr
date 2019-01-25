@@ -6,21 +6,21 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527794"
 ---
 # <a name="one-way-services"></a>Services monodirectionnels
-Le comportement par défaut d’une opération de service est le modèle demande-réponse. Dans un modèle demande-réponse, le client attend le message de réponse, même si l'opération de service est représentée dans le code en tant que méthode `void`. Avec une opération monodirectionnelle, un seul message est transmis. Le récepteur n'envoie pas de message de réponse, l'expéditeur n'en attend pas.  
+Le comportement par défaut d’une opération de service est le modèle demande-réponse. Dans un modèle demande-réponse, le client attend le message de réponse, même si l’opération de service est représentée dans le code en tant que méthode `void`. Avec une opération monodirectionnelle, un seul message est transmis. Le récepteur n'envoie pas de message de réponse, l'expéditeur n'en attend pas.  
   
  Utilisez le modèle de design monodirectionnel :  
   
 -   Lorsque le client doit appeler des opérations et n'est pas affecté par le résultat de l'opération au niveau de l'opération.  
   
--   Lorsque vous utilisez la classe <xref:System.ServiceModel.NetMsmqBinding> ou <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Pour plus d’informations sur ce scénario, consultez [les files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+-   Lorsque vous utilisez la classe <xref:System.ServiceModel.NetMsmqBinding> ou <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Pour plus d’informations sur ce scénario, consultez [files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Lorsqu'une opération est monodirectionnelle, il n'y a pas de message pour renvoyer des informations sur l'erreur au client. Vous pouvez détecter des conditions d'erreur à l'aide de fonctionnalités de la liaison sous-jacente, telle que les sessions fiables, ou en concevant un contrat de service duplex qui utilise deux opérations monodirectionnelles : un contrat monodirectionnel du client au service afin d'appeler l'opération de service, et un autre contrat monodirectionnel entre le service et le client afin que le service puisse renvoyer des erreurs au client à l'aide d'un rappel que le client implémente.  
   
@@ -44,7 +44,7 @@ public interface IOneWayCalculator
  Pour obtenir un exemple complet, consultez la [unidirectionnel](../../../../docs/framework/wcf/samples/one-way.md) exemple.  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Blocage de clients à l'aide d'opérations monodirectionnelles  
- Il est important de savoir qu’alors que certaines applications monodirectionnelles sont retournées dès que les données sortantes sont écrites dans la connexion réseau, dans plusieurs scénarios de l’implémentation d’une liaison ou d’un service peut entraîner un client WCF pour bloquer à l’aide d’opérations monodirectionnelles. Dans les applications clientes WCF, l’objet de client WCF ne retourne pas jusqu'à ce que les données sortantes ont été écrites pour la connexion réseau. Cela se vérifie pour l’ensemble des modèles d’échange de messages, dont les opérations monodirectionnelles ; cela signifie que les problèmes d’écriture de données sur le transport empêchent le client de retourner. Selon le problème, le résultat peut être une exception ou un retard d'envoi des messages au service.  
+ Il est important de savoir que bien que certaines applications monodirectionnelles sont retournées dès que les données sortantes sont écrites à la connexion réseau, dans plusieurs scénarios de l’implémentation d’une liaison ou d’un service peut provoquer un client WCF bloquer à l’aide des opérations unidirectionnelles. Dans les applications clientes WCF, l’objet de client WCF ne retourne pas jusqu'à ce que les données sortantes a été écrit pour la connexion réseau. Cela se vérifie pour l’ensemble des modèles d’échange de messages, dont les opérations monodirectionnelles ; cela signifie que les problèmes d’écriture de données sur le transport empêchent le client de retourner. Selon le problème, le résultat peut être une exception ou un retard d'envoi des messages au service.  
   
  Par exemple, si le transport ne peut pas trouver le point de terminaison, une exception <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> est levée sans beaucoup de retard. Toutefois, il est également possible que le service ne puisse pas lire les données du câble pour une raison quelconque, ce qui empêche l'opération d'envoi du transport client de retourner. Dans ce cas, si le délai <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> sur la liaison de transport client est dépassé, une exception <xref:System.TimeoutException?displayProperty=nameWithType> est levée, mais pas tant que le délai d'attente n'a pas été dépassé. Il est également possible qu'il y ait un nombre si élevé de messages sur un service que celui-ci ne puisse pas les traiter passé un certain stade. Dans ce cas également, le client monodirectionnel se bloque jusqu'à ce que le service puisse traiter les messages ou jusqu'à ce qu'une exception soit levée.  
   
@@ -54,5 +54,5 @@ public interface IOneWayCalculator
   
  Nous vous recommandons, à la place, d'examinez les divers contrôles sur le service ainsi que sur le client, puis de tester vos scénarios d'application afin de déterminer la meilleure configuration de part et d'autre. Par exemple, si l'utilisation de sessions bloque le traitement de messages sur votre service, vous pouvez affecter <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> à la propriété <xref:System.ServiceModel.InstanceContextMode.PerCall> afin que chaque message puisse être traité par une instance de service différente, et affecter <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> à <xref:System.ServiceModel.ConcurrencyMode.Multiple> afin de permettre à plusieurs threads de distribuer des messages simultanément. Une autre approche consiste à augmenter les quotas de lecture du service et les liaisons clientes.  
   
-## <a name="see-also"></a>Voir aussi  
- [Unidirectionnel](../../../../docs/framework/wcf/samples/one-way.md)
+## <a name="see-also"></a>Voir aussi
+- [Unidirectionnel](../../../../docs/framework/wcf/samples/one-way.md)

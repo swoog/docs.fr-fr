@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60e293ac8c9100876aa5a524bb5dda04e9f4183f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711971"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Instructions de codage sécurisé pour le code non managé
 Du code de bibliothèque doit appeler dans du code non managé (par exemple, des API de code natif comme Win32). Comme cela signifie sortir du périmètre de sécurité pour le code managé, la prudence est de règle. S’il ne dépend pas de la sécurité, votre code, ainsi que tout code qui l’appelle, doit disposer de l’autorisation de code non managé (<xref:System.Security.Permissions.SecurityPermission> avec l’indicateur <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> spécifié).  
@@ -51,5 +51,5 @@ Du code de bibliothèque doit appeler dans du code non managé (par exemple, des
 |**native**|Indépendant de la sécurité ; c'est-à-dire du code non managé qui nécessite l'autorisation du code non managé pour appeler. La sécurité est vérifiée, ce qui bloque un appelant non autorisé.|  
 |**unsafe**|Point d'entrée dans du code non managé potentiellement dangereux et sans sécurité. Les développeurs doivent faire preuve d'une grande prudence quand ils utilisent ce code non managé en veillant à ce que les autres protections soient en place afin d'éviter une faille en matière de sécurité. Les développeurs doivent se montrer responsables, car ce mot clé substitue le système de sécurité.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Instructions de codage sécurisé](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Voir aussi
+- [Instructions de codage sécurisé](../../../docs/standard/security/secure-coding-guidelines.md)

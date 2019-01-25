@@ -9,22 +9,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 629a08a090178ffb1df1e9905182c9f246537533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1fa9ccbffc7ca9621e32e00455a9b75a91126
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533086"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Vue d'ensemble de l'utilisation des contrôles dans Windows Forms
 Cette rubrique décrit les éléments essentiels d’une application Windows Forms et fournit un exemple simple qui utilise des contrôles et gère les événements dans une application Windows Forms.  
   
-## <a name="simple-windows-forms-applications"></a>Applications simple Windows Forms  
- Au minimum, une application Windows Forms comprend les éléments suivants :  
+## <a name="simple-windows-forms-applications"></a>Applications de formulaires Windows simple  
+ Au minimum, une application Windows Forms se compose des éléments suivants :  
   
 -   Une ou plusieurs classes qui dérivent de <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   A `Main` méthode qui appelle le `static` (`shared` en Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> méthode et passe un <xref:System.Windows.Forms.Form> instance. Le <xref:System.Windows.Forms.Application.Run%2A> méthode traite les messages à partir du système d’exploitation à l’application.  
+-   Un `Main` méthode qui appelle le `static` (`shared` en Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> et transmet un <xref:System.Windows.Forms.Form> instance à ce dernier. Le <xref:System.Windows.Forms.Application.Run%2A> méthode traite les messages à partir du système d’exploitation à l’application.  
   
  L’exemple de code suivant montre les éléments essentiels d’une application Windows Forms.  
   
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a>Utilisation de contrôles dans une Application Windows Forms  
- L’exemple de code suivant montre une application simple qui illustre la façon dont les applications Windows Forms utilisent des contrôles et de gérer des événements. L’exemple se compose de trois boutons sur un formulaire ; chaque bouton modifie la couleur d’arrière-plan quand vous cliquez dessus.  
+## <a name="using-controls-in-a-windows-forms-application"></a>Utilisation de contrôles dans une Application de formulaires Windows  
+ L’exemple de code suivant montre une application simple qui illustre comment les applications Windows Forms utilisent des contrôles et gérer des événements. L’exemple se compose de trois boutons sur un formulaire ; chaque bouton modifie la couleur d’arrière-plan d’un clic.  
   
 ```vb  
 Option Explicit  
@@ -223,6 +223,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Concepts de base du développement de contrôles Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>Voir aussi
+- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Concepts de base du développement de contrôles Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561866"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd, méthode
-Obtient les positions de document de début et de fin de la source de cette méthode. La première position du tableau correspond au début, et la deuxième position du tableau est à la fin.  
+Obtient les positions de document de début et de fin de la source de cette méthode. La première position du tableau correspond au début, et la position du deuxième tableau est la fin.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +39,13 @@ HRESULT GetSourceStartEnd(
   
 #### <a name="parameters"></a>Paramètres  
  `docs`  
- [in] Le début et de fin de documents sources.  
+ [in] Le début et fin documents sources.  
   
  `lines`  
- [in] Documents de sources de début et de fin de ligne qui correspond.  
+ [in] Documents de sources de début et fin des lignes dans le correspondantes.  
   
  `columns`  
- [in] Documents de sources de début et fin des colonnes, qui correspond.  
+ [in] Documents de sources de début et fin des colonnes dans le correspondantes.  
   
  `pRetVal`  
  [out] `true` si les positions ont été définies ; sinon, `false`.  
@@ -56,5 +56,5 @@ HRESULT GetSourceStartEnd(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

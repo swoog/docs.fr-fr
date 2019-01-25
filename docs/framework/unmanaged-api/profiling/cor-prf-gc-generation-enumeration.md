@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8283139566050b1858a003316dc46581822a9bbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15bd3ed8f1642e44ecf9c4df49feebd72eeac8c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590131"
 ---
 # <a name="corprfgcgeneration-enumeration"></a>COR_PRF_GC_GENERATION, énumération
 Identifie une génération de garbage collection.  
@@ -41,26 +41,26 @@ typedef enum {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|L’objet est stocké en tant que la génération 0.|  
-|`COR_PRF_GC_GEN_1`|L’objet est stocké en tant que la génération 1.|  
-|`COR_PRF_GC_GEN_2`|L’objet est stocké en tant que la génération 2.|  
+|`COR_PRF_GC_GEN_0`|L’objet est stocké en tant que génération 0.|  
+|`COR_PRF_GC_GEN_1`|L’objet est stocké en tant que génération 1.|  
+|`COR_PRF_GC_GEN_2`|L’objet est stocké en tant que génération 2.|  
 |`COR_PRF_GC_LARGE_OBJECT_HEAP`|L’objet est stocké dans le tas d’objets volumineux.|  
   
 ## <a name="remarks"></a>Notes  
- Le garbage collector améliore les performances de gestion de mémoire en divisant les objets en générations selon l’âge. Le garbage collector utilise actuellement trois générations, 0, 1 et 2, ainsi qu’un segment de tas spécial qui est utilisé pour les objets volumineux. Objets dont la taille est supérieure à une valeur particulière sont stockés dans le tas d’objets volumineux. Les autres objets alloués démarrent appartenant à la génération 0. Tous les objets qui existent après le garbage collection dans la génération 0 sont promus à la génération 1. Déplacer les objets qui existent dans la génération 1 après le garbage collection dans la génération 2.  
+ Le garbage collector améliore les performances de gestion de mémoire en divisant les objets dans les générations en fonction de l’âge. Le garbage collector utilise actuellement trois générations, 0, 1 et 2, ainsi qu’un segment de tas spécial qui est utilisé pour les objets volumineux. Objets dont la taille est supérieure à une valeur particulière sont stockés dans le tas d’objets volumineux. Autres objets alloués commencent appartenant à la génération 0. Tous les objets qui existent une fois que le garbage collection se produit dans la génération 0 sont promus à la génération 1. Déplacent des objets qui existent dans la génération 1 après le garbage collection dans la génération 2.  
   
- L’utilisation des générations signifie que le garbage collector doit utiliser uniquement un sous-ensemble des objets alloués à tout moment.  
+ L’utilisation de générations signifie que le garbage collector doit travailler avec uniquement un sous-ensemble des objets alloués à tout moment.  
   
  Le `COR_PRF_GC_GENERATION` énumération est utilisée par le [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

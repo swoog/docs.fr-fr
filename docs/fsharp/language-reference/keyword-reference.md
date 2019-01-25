@@ -2,12 +2,12 @@
 title: Référence des mots clés
 description: Trouver des liens vers des informations sur tous les F# mots clés du langage.
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579836"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857903"
 ---
 # <a name="keyword-reference"></a>Référence des mots clés
 
@@ -73,7 +73,7 @@ Le tableau suivant montre toutes les F# mots clés dans l’ordre alphabétique,
 |`return!`|[Expressions de calcul](computation-expressions.md)<br /><br />[Flux de travail asynchrones](asynchronous-workflows.md)|Utilisé pour indiquer une expression de calcul qui, lors de l’évaluation, fournit le résultat de l’expression de calcul qui la contient.|
 |`select`|[Expressions de requête](query-expressions.md)|Utilisé dans les expressions de requête pour spécifier quels champs ou des colonnes à extraire. Notez qu’il s’agit d’un mot clé contextuel, ce qui signifie qu’il n’est pas réellement un mot réservé et elle agit uniquement comme un mot clé dans le contexte approprié.|
 |`static`|[Membres](members/index.md)|Utilisé pour indiquer une méthode ou propriété qui peut être appelée sans une instance d’un type ou membre qui est partagé entre toutes les instances d’un type valeur.|
-|`struct`|[Structures](structures.md)<br /><br />[Contraintes](generics/constraints.md)|Utilisé pour déclarer un type structure.<br /><br />Également utilisé dans les contraintes de paramètre générique.<br /><br />Utilisé pour la compatibilité avec OCaml dans les définitions de module.|
+|`struct`|[Structures](structures.md)<br /><br /> [Tuples](tuples.md)<br/><br/>[Contraintes](generics/constraints.md)|Utilisé pour déclarer un type structure.<br /><br/>Permet de spécifier un tuple de struct.<br/><br />Également utilisé dans les contraintes de paramètre générique.<br /><br />Utilisé pour la compatibilité avec OCaml dans les définitions de module.|
 |`then`|[Expressions conditionnelles : `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Constructeurs](members/constructors.md)|Utilisé dans des expressions conditionnelles.<br /><br />Également utilisé pour effectuer des effets secondaires après la construction de l’objet.|
 |`to`|[Boucles : `for...to` Expression](loops-for-to-expression.md)|Utilisé dans `for` boucles pour indiquer une plage.|
 |`true`|[Types primitifs](primitive-types.md)|Utilisé comme un littéral booléen.|

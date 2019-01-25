@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 7ba774bfcd629a7518602d4b971e86a690b2dd83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 367cbd373df2a38a56e5362f66bedd5c0ec24efb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522756"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modificateur générique) (Visual Basic)
-Paramètres de type générique, la `Out` (mot clé) Spécifie que le type est covariant.  
+Paramètres de type générique, le `Out` mot clé spécifie que le type est covariant.  
   
 ## <a name="remarks"></a>Notes  
  La covariance permet d’utiliser un type plus dérivé que celui spécifié par le paramètre générique. Cela permet la conversion implicite des classes qui implémentent des interfaces variantes, ainsi que la conversion implicite des types délégués.  
@@ -34,11 +34,11 @@ Paramètres de type générique, la `Out` (mot clé) Spécifie que le type est c
   
 -   Le paramètre de type n’est pas utilisé comme contrainte générique pour les méthodes d’interface.  
   
- Dans un délégué générique, un paramètre de type peut être déclaré covariant s’il est utilisé uniquement comme un type de retour de méthode et pas utilisé pour les arguments de méthode.  
+ Dans un délégué générique, un paramètre de type peut être déclaré covariant s’il est utilisé uniquement comme un type de retour de méthode et non utilisé pour les arguments de méthode.  
   
  La covariance et la contravariance sont prises en charge pour les types référence, mais pas pour les types valeur.  
   
- En Visual Basic, vous ne pouvez pas déclarer des événements des interfaces covariants sans spécifier le type délégué. En outre, les interfaces covariants ne peut pas avoir de classes, d’enums ou de structures imbriqués, mais ont des interfaces imbriquées.  
+ En Visual Basic, vous ne pouvez pas déclarer des événements dans des interfaces covariantes sans spécifier le type de délégué. En outre, interfaces covariantes ne peut pas avoir imbriqués classes, des énumérations ou des structures, mais ont des interfaces imbriquées.  
   
 ## <a name="behavior"></a>Comportement  
  Une interface qui possède un paramètre de type covariant permet à ses méthodes de retourner des types plus dérivés que ceux spécifiés par le paramètre de type. Par exemple, comme dans le .NET Framework 4, dans <xref:System.Collections.Generic.IEnumerable%601>, le type T est covariant, vous pouvez assigner un objet du type `IEnumerabe(Of String)` à un objet du type `IEnumerable(Of Object)` sans utiliser de méthode de conversion spéciale.  
@@ -55,6 +55,6 @@ Paramètres de type générique, la `Out` (mot clé) Spécifie que le type est c
   
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Variance dans les interfaces génériques](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+## <a name="see-also"></a>Voir aussi
+- [Variance dans les interfaces génériques](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

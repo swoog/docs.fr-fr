@@ -3,12 +3,12 @@ title: Génération de mon premier service WCF prenant en charge les revendicati
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: e6324087afa62f276766c733284dc69e425b89bc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2102ec07a26c02c7181e3422e48939c40b86a8de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599203"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Génération de mon premier service WCF prenant en charge les revendications
 ## <a name="applies-to"></a>S'applique à  
@@ -38,7 +38,7 @@ ms.locfileid: "48836231"
   
  AD FS 2.0 fait partie de Windows Server R2 et peut être utilisé comme un STS pour les scénarios sur site. Azure Active Directory Access Control (également appelé Service de contrôle d'accès ou ACS) est un service cloud proposé dans le cadre de Microsoft Azure. À des fins de test ou à titre éducatif, vous pouvez également utiliser d'autres STS pour générer des applications qui prennent en charge les revendications. Par exemple, vous pouvez utiliser le développement STS Local qui fait partie de la [Identity and Access Tool pour Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) qui est disponible gratuitement en ligne.  
   
- Pour générer votre premier service WCF prenant en charge les revendications à l’aide de WIF, consultez [Comment : activer les WIF pour une Application de Service Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Pour générer votre premier service WCF prenant en charge les revendications à l’aide de WIF, consultez [How To : Activer WIF pour une Application de Service Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en main de WIF](../../../docs/framework/security/getting-started-with-wif.md)
+## <a name="see-also"></a>Voir aussi
+- [Prise en main de WIF](../../../docs/framework/security/getting-started-with-wif.md)

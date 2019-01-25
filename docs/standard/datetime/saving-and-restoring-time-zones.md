@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc983f1f0b2405f207d69c62b800ee854fcd409
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569456"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Enregistrement et restauration de fuseaux horaires
 
@@ -72,8 +72,8 @@ Les exemples précédents ont stocké des informations de fuseau horaire à une 
 
 Stockage d’une chaîne de fuseau horaire sérialisées de cette manière sépare également la routine de création de fuseau horaire à partir de l’application elle-même. Par exemple, une routine de création de fuseau horaire peut exécuter et créer un fichier de données qui contient des informations de fuseau horaire historiques qu’une application peut utiliser. Le fichier de données peut ensuite être installé avec l’application et il peut être ouvert et un ou plusieurs de ses zones de temps peuvent être désérialisé lorsque l’application a besoin.
 
-Pour obtenir un exemple qui utilise une ressource incorporée pour stocker les données de fuseau horaire sérialisées, consultez [Comment : enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) et [Comment : restaurer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Pour obtenir un exemple qui utilise une ressource incorporée pour stocker les données de fuseau horaire sérialisées, consultez [Comment : Enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) et [Comment : Restaurer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)

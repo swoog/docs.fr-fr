@@ -1,19 +1,19 @@
 ---
-title: '&lt;Diagnostics&gt;'
+title: '&lt;diagnostics&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: de11145620e8fdf96785908df85ab5ecdfd2e25e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524589"
 ---
-# <a name="ltdiagnosticsgt"></a>&lt;Diagnostics&gt;
+# <a name="ltdiagnosticsgt"></a>&lt;diagnostics&gt;
 L'élément `diagnostics` définit des paramètres qui peuvent être utilisés par un administrateur à des fins d'inspection et de contrôle au moment de l'exécution.  
   
  \<system.ServiceModel>  
-\<Diagnostics >  
+\<diagnostics>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,15 +47,15 @@ L'élément `diagnostics` définit des paramètres qui peuvent être utilisés p
 |Attribut|Description|  
 |---------------|-----------------|  
 |etwProviderId|Chaîne qui spécifie l'identificateur du fournisseur de suivi d'événements, qui écrit des événements dans les sessions ETW.|  
-|performanceCounters|Spécifie si les compteurs de performance de l'assembly sont activés. Les valeurs valides sont les suivantes :<br /><br /> -Désactivé : Les compteurs de performance sont désactivés.<br />-ServiceOnly : Seuls les compteurs de performance pertinents pour ce service sont activés.<br />-Toutes les : Les compteurs de performance peuvent être affichés pendant l'exécution.<br />-Valeur par défaut : Un compteur de performance unique de l'instance _WCF_Admin est créé. Cette instance est employée pour activer la collection de données SQM utilisée par l’infrastructure. Aucune des valeurs du compteur de cette instance n'est mise à jour et par conséquent toutes resteront à zéro. Il s'agit de la valeur par défaut si aucune configuration n'est présente pour WCF.|  
+|performanceCounters|Spécifie si les compteurs de performance de l'assembly sont activés. Les valeurs valides sont les suivantes :<br /><br /> -Désactivé : Les compteurs de performance sont désactivés.<br />-   ServiceOnly: Seuls les compteurs de performance pertinents pour ce service sont activés.<br />-Toutes les : Les compteurs de performance peuvent être affichés pendant l'exécution.<br />-Valeur par défaut : Un compteur de performance unique de l'instance _WCF_Admin est créé. Cette instance est employée pour activer la collection de données SQM utilisée par l’infrastructure. Aucune des valeurs du compteur de cette instance n'est mise à jour et par conséquent toutes resteront à zéro. Il s'agit de la valeur par défaut si aucune configuration n'est présente pour WCF.|  
 |wmiProviderEnabled|Valeur booléenne qui spécifie si le fournisseur WMI de l'assembly est activé. Le fournisseur WMI est requis pour que l'utilisateur puisse obtenir l'accès au moment de l'exécution aux fonctionnalités d'inspection et de contrôle de Windows Communication Foundation (WCF). La valeur par défaut est `false`.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Élément de configuration qui vous permet d'activer et désactiver différents aspects du suivi de bout en bout pendant l'exécution d'une application de service.|  
-|[\<enregistrement des messages >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Décrit les paramètres d'enregistrement des messages WCF.|  
+|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Élément de configuration qui vous permet d'activer et désactiver différents aspects du suivi de bout en bout pendant l'exécution d'une application de service.|  
+|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Décrit les paramètres d'enregistrement des messages WCF.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -84,6 +84,6 @@ L'élément `diagnostics` définit des paramètres qui peuvent être utilisés p
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>

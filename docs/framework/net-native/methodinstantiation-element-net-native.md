@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d741e8df8f2b8c6d90a1d867c73495a2ffd1304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d05f9c727672c4f249e388a32b1101aaafd2f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538258"
 ---
 # <a name="ltmethodinstantiationgt-element-net-native"></a>&lt;MethodInstantiation&gt;, élément (.NET Native)
 Applique la stratégie de réflexion runtime à une méthode générique construite.  
@@ -74,8 +74,8 @@ Applique la stratégie de réflexion runtime à une méthode générique constru
 ## <a name="remarks"></a>Notes  
  L'élément `<MethodInstantiation>` remplace la stratégie de réflexion runtime de la méthode générique ouverte correspondante.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [\<Method>, élément](../../../docs/framework/net-native/method-element-net-native.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<Method>, élément](../../../docs/framework/net-native/method-element-net-native.md)

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 05a65dd84a00478f52c8cd7d8b46341644512718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63bcc5d5205681917ba30bdb73bc496307a6322a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672511"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit, instruction (Visual Basic)
-Quitte une procédure ou un bloc et transfère immédiatement le contrôle à l’instruction qui suit l’appel de procédure ou la définition de bloc.  
+Quitte une procédure ou un bloc et transfère le contrôle immédiatement à l’instruction qui suit l’appel de procédure ou la définition de bloc.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
  `Exit Function`  
  Quitte immédiatement la `Function` procédure dans laquelle elle apparaît. L’exécution se poursuit avec l’instruction qui suit l’instruction qui a appelé le `Function` procédure. `Exit Function` peut être utilisé uniquement à l’intérieur d’un `Function` procédure.  
   
- Pour spécifier une valeur de retour, vous pouvez affecter la valeur pour le nom de fonction sur une ligne avant le `Exit Function` instruction. Pour affecter la valeur de retour et quitter la fonction en une seule instruction, vous pouvez utiliser la [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ Pour spécifier une valeur de retour, vous pouvez affecter la valeur pour le nom de fonction sur une ligne avant le `Exit Function` instruction. Pour affecter la valeur de retour et quitter la fonction dans une instruction, vous pouvez utiliser la [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
  `Exit Property`  
  Quitte immédiatement la `Property` procédure dans laquelle elle apparaît. L’exécution se poursuit avec l’instruction qui a appelé le `Property` procédure, autrement dit, avec l’instruction qui demande ou définit la valeur de propriété. `Exit Property` peut être utilisé uniquement à l’intérieur d’une propriété `Get` ou `Set` procédure.  
@@ -56,7 +56,7 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
  Dans un `Sub` procédure, le `Exit Sub` instruction est équivalente à la `Return` instruction.  
   
  `Exit Try`  
- Quitte immédiatement la `Try` ou `Catch` bloc dans lequel elle apparaît. L’exécution se poursuit avec le `Finally` bloquer si elle existe, ou avec l’instruction qui suit la `End Try` instruction sinon. `Exit Try` peut être utilisé uniquement à l’intérieur d’un `Try` ou `Catch` bloc et pas à l’intérieur un `Finally` bloc.  
+ Quitte immédiatement la `Try` ou `Catch` bloc dans lequel elle apparaît. L’exécution se poursuit avec le `Finally` bloquer le cas échéant, ou avec l’instruction qui suit la `End Try` instruction sinon. `Exit Try` peut être utilisé uniquement à l’intérieur d’un `Try` ou `Catch` bloc et pas à l’intérieur un `Finally` bloc.  
   
  `Exit While`  
  Quitte immédiatement la `While` boucle dans laquelle elle apparaît. L’exécution se poursuit avec l’instruction qui suit la `End While` instruction. `Exit While` peut être utilisé uniquement à l’intérieur d’un `While` boucle. Lorsqu’il est utilisé dans imbriqués `While` boucles, `Exit While` transfère le contrôle à la boucle qui est un niveau au-dessus de la boucle où `Exit While` se produit.  
@@ -65,7 +65,7 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
  Ne confondez pas `Exit` instructions avec `End` instructions. `Exit` ne définit pas la fin d’une instruction.  
   
 ## <a name="example"></a>Exemple  
- Dans l’exemple suivant, la condition de boucle s’arrête la boucle lorsque la `index` variable est supérieure à 100. Le `If` instruction dans la boucle, toutefois, provoque la `Exit Do` instruction pour arrêter la boucle lorsque la variable d’index est supérieure à 10.  
+ Dans l’exemple suivant, la condition de boucle s’arrête la boucle lorsque la `index` variable est supérieure à 100. Le `If` instruction dans la boucle, cependant, entraîne la `Exit Do` instruction pour arrêter la boucle lorsque la variable d’index est supérieure à 10.  
   
  [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_1.vb)]  
   
@@ -79,14 +79,14 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
   
  [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_3.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Continue (instruction)](../../../visual-basic/language-reference/statements/continue-statement.md)  
- [Do...Loop (instruction)](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [End (instruction)](../../../visual-basic/language-reference/statements/end-statement.md)  
- [For Each...Next (instruction)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next (instruction)](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Return (instruction)](../../../visual-basic/language-reference/statements/return-statement.md)  
- [Stop (instruction)](../../../visual-basic/language-reference/statements/stop-statement.md)  
- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Try...Catch...Finally (instruction)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>Voir aussi
+- [Continue (instruction)](../../../visual-basic/language-reference/statements/continue-statement.md)
+- [Do...Loop (instruction)](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [End (instruction)](../../../visual-basic/language-reference/statements/end-statement.md)
+- [For Each...Next (instruction)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next (instruction)](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Return (instruction)](../../../visual-basic/language-reference/statements/return-statement.md)
+- [Stop (instruction)](../../../visual-basic/language-reference/statements/stop-statement.md)
+- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Try...Catch...Finally (instruction)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

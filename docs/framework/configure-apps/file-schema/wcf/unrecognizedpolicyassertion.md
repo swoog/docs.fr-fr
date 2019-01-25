@@ -2,21 +2,21 @@
 title: '&lt;unrecognizedPolicyAssertion&gt;'
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 27ec88c5e59170e4dea087747d196aa0291f13c8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 28459303d041436a804c77b1b56e47def3b1b30b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656672"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a>&lt;unrecognizedPolicyAssertion&gt;
 Représente un élément de liaison qui spécifie l’assertion de stratégie. Cet élément n'a aucun attribut et est présent en tant que commutateur vide.  
   
  \<system.serviceModel>  
-\<liaisons >  
-\<customBinding >  
-\<liaison >  
-\<unrecognizedPolicyAssertion >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<unrecognizedPolicyAssertion>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,11 +40,11 @@ Représente un élément de liaison qui spécifie l’assertion de stratégie. C
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db4a980929a644d2862a382f147505644313da7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eca28f16f0430e793ad0b91b01db609f835f0a4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671250"
 ---
 # <a name="icordebugmodule-interface1"></a>ICorDebugModule Interface1
 Représente un module common language runtime (CLR), qui est un fichier exécutable ou une bibliothèque de liens dynamiques (DLL).  
@@ -32,8 +32,8 @@ Représente un module common language runtime (CLR), qui est un fichier exécuta
 |------------|-----------------|  
 |[CreateBreakpoint, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-createbreakpoint-method.md)|Non implémenté.|  
 |[EnableClassLoadCallbacks, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enableclassloadcallbacks-method.md)|Détermine si le [ICorDebugManagedCallback::LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) et [ICorDebugManagedCallback::UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) sont appelés pour ce module.|  
-|[EnableJITDebugging, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enablejitdebugging-method.md)|Détermine si le compilateur (JIT) juste-à-temps conserve les informations de débogage pour les méthodes de ce module.|  
-|[GetAssembly, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)|Obtient l’assembly contenant de ce module.|  
+|[EnableJITDebugging, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enablejitdebugging-method.md)|Détermine si le compilateur juste-à-temps (JIT) conserve des informations de débogage pour les méthodes de ce module.|  
+|[GetAssembly, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)|Obtient l’assembly conteneur de ce module.|  
 |[GetBaseAddress, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getbaseaddress-method.md)|Obtient l’adresse de base du module.|  
 |[GetClassFromToken, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)|Obtient la ICorDebugClass à partir des métadonnées.|  
 |[GetEditAndContinueSnapshot, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-geteditandcontinuesnapshot-method.md)|Obsolète.|  
@@ -44,7 +44,7 @@ Représente un module common language runtime (CLR), qui est un fichier exécuta
 |[GetName, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)|Obtient le nom de fichier du module.|  
 |[GetProcess, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getprocess-method.md)|Obtient le processus contenant de ce module.|  
 |[GetSize, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)|Obtient la taille du module en octets.|  
-|[GetToken, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-gettoken-method.md)|Obtient le jeton de l’entrée de table pour ce module.|  
+|[GetToken, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-gettoken-method.md)|Obtient le jeton pour l’entrée de table pour ce module.|  
 |[IsDynamic, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-isdynamic-method.md)|Indique si le module est dynamique.|  
 |[IsInMemory, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-isinmemory-method.md)|Indique si ce module existe uniquement en mémoire.|  
   
@@ -54,14 +54,14 @@ Représente un module common language runtime (CLR), qui est un fichier exécuta
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebug, interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebug, interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

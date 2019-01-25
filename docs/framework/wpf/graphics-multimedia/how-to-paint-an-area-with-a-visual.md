@@ -1,5 +1,5 @@
 ---
-title: 'Comment : peindre une zone avec un Visual'
+title: 'Procédure : Peindre une zone avec un visuel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-ms.openlocfilehash: 05014042c9e46232d02114f22ee8798d895e8559
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2fa5e11ffceac6563ec3fcc7ec8df84e5857da2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661475"
 ---
-# <a name="how-to-paint-an-area-with-a-visual"></a>Comment : peindre une zone avec un Visual
+# <a name="how-to-paint-an-area-with-a-visual"></a>Procédure : Peindre une zone avec un visuel
 Cet exemple montre comment utiliser le <xref:System.Windows.Media.VisualBrush> classe pour peindre une zone avec un <xref:System.Windows.Media.Visual>.  
   
  Dans l’exemple suivant, plusieurs contrôles et un panneau sont utilisés comme arrière-plan d’un rectangle.  
@@ -31,5 +31,5 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.VisualBrush> c
   
  Cet exemple de code fait partie d’un exemple plus complet fourni pour la <xref:System.Windows.Media.VisualBrush> classe. Pour obtenir un exemple complet, consultez la [VisualBrush, exemple](https://go.microsoft.com/fwlink/?LinkID=160049).  
   
-## <a name="see-also"></a>Voir aussi  
- [Peinture avec des images, des dessins et des objets visuels](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>Voir aussi
+- [Peinture avec des images, des dessins et des objets visuels](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

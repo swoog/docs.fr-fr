@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 29399beebef3de3e7b4ae8ce7f3611e3d158296f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a93519cbc320def91c030e7344b33be2a10b4351
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674334"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer, classe
 La classe `SoundPlayer` vous permet d'inclure facilement des sons dans vos applications.  
@@ -22,22 +22,22 @@ La classe `SoundPlayer` vous permet d'inclure facilement des sons dans vos appli
  [Vue d’ensemble de la classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
  Présente la classe, ainsi que ses propriétés, méthodes et événements les plus couramment utilisés.  
   
- [Guide pratique pour lire un son à partir d’un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ [Guide pratique pour Un signal sonore à partir d’un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
  Fournit du code pour jouer un son spécifique via un chemin d’accès de fichier, un chemin d’accès UNC ou un chemin d’accès HTTP.  
   
- [Guide pratique pour émettre un signal sonore à partir d’un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
+ [Guide pratique pour Émettre un signal sonore à partir d’un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
  Fournit du code pour jouer le signal sonore de l'ordinateur.  
   
- [Guide pratique pour émettre un son incorporé dans une ressource à partir d'un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
+ [Guide pratique pour Lire un son incorporé dans une ressource à partir d’un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
  Fournit du code pour lire un son à partir d'une ressource.  
   
- [Guide pratique pour émettre un son système à partir d’un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
+ [Guide pratique pour Lire un son système à partir d’un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
  Fournit du code pour jouer l'un des sons système.  
   
- [Guide pratique pour charger un son de façon asynchrone dans un Windows Form](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
+ [Guide pratique pour Charger un son de façon asynchrone dans un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
  Fournit du code pour charger un son de façon asynchrone à partir d'une URL, puis pour le lire.  
   
- [Guide pratique pour mettre en boucle l’émission d’un son dans un Windows Form](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
+ [Guide pratique pour Lecture d’un formulaire Windows d’un son en boucle](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
  Fournit du code qui joue un son de manière répétitive.  
   
 ## <a name="reference"></a>Référence  
@@ -51,6 +51,6 @@ La classe `SoundPlayer` vous permet d'inclure facilement des sons dans vos appli
  [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fournit une liste complète de contrôles Windows Forms, avec des liens vers des informations sur leur utilisation.  
   
-## <a name="see-also"></a>Voir aussi 
+## <a name="see-also"></a>Voir aussi
 
 - [My.Computer (objet)](../../../visual-basic/language-reference/objects/my-computer-object.md)

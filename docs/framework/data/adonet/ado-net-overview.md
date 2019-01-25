@@ -2,12 +2,12 @@
 title: Vue d'ensemble d'ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714384"
 ---
 # <a name="adonet-overview"></a>Vue d'ensemble d'ADO.NET
 ADO.NET propose un accès cohérent à des sources de données, telles que SQL Server et XML, ainsi qu'à des sources de données exposées via OLE DB et ODBC. Des applications grand public de partage de données peuvent utiliser ADO.NET pour se connecter à des sources de données et extraire, manipuler et mettre à jour les données qu'elles contiennent.  
@@ -20,7 +20,7 @@ ADO.NET propose un accès cohérent à des sources de données, telles que SQL S
   
  ADO.NET fournit la méthode la plus directe d'accès aux données dans le .NET Framework. Pour une abstraction de haut niveau qui permet aux applications de travailler sur un modèle conceptuel au lieu du modèle de stockage sous-jacent, consultez le [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
- **Déclaration de confidentialité**: The System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll et System.Data.DataSetExtensions.dll assemblys ne le faites pas faire la distinction entre les données privées et les données non privées d’un utilisateur.  Ces assemblys ne collectent pas les données privées d'un utilisateur, ne les stockent pas et ne les transportent pas. Toutefois, les applications tierces peuvent collecter, stocker ou transporter les données privées d'un utilisateur à l'aide de ces assemblys.  
+ **Déclaration de confidentialité**: Les assemblys System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll et System.Data.DataSetExtensions.dll ne distinguent pas d’un utilisateur données privées et non privées.  Ces assemblys ne collectent pas les données privées d'un utilisateur, ne les stockent pas et ne les transportent pas. Toutefois, les applications tierces peuvent collecter, stocker ou transporter les données privées d'un utilisateur à l'aide de ces assemblys.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Architecture ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -46,7 +46,7 @@ ADO.NET propose un accès cohérent à des sources de données, telles que SQL S
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Nouveautés d’ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- Introduit des fonctions nouvelles dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ Introduit des fonctionnalités nouvelles dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Décrit des pratiques de codage sécurisées dans ADO.NET.  
@@ -57,7 +57,7 @@ ADO.NET propose un accès cohérent à des sources de données, telles que SQL S
  [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  Explique comment se connecter à une source de données, récupérer des données et modifier des données, notamment des `DataReaders` et des `DataAdapters`.  
   
-## <a name="see-also"></a>Voir aussi  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

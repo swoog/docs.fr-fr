@@ -1,5 +1,5 @@
 ---
-title: 'Comment : dessiner des formes avec les contrôles OvalShape et RectangleShape (Visual Studio)'
+title: 'Procédure : Dessiner des formes avec les contrôles OvalShape et RectangleShape (Visual Studio)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - shapes, drawing
 - RectangleShape control [Visual Basic]
 ms.assetid: 0275b4c6-7a13-46c8-90f3-61db308c6b5d
-ms.openlocfilehash: f87865ba3aebe5739b87d6ae6bfeaa957af726d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe937236332591f6065e618c49ca5cf2c54b987c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701220"
 ---
-# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Comment : dessiner des formes avec les contrôles OvalShape et RectangleShape (Visual Studio)
+# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Procédure : Dessiner des formes avec les contrôles OvalShape et RectangleShape (Visual Studio)
 Vous pouvez utiliser le contrôle <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> pour tracer des cercles ou des ellipses sur un formulaire ou un conteneur au moment de la conception comme au moment de l'exécution. Vous pouvez utiliser le contrôle <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> pour tracer des carrés, des rectangles ou des rectangles à angles arrondis sur un formulaire ou un conteneur. Ce contrôle vous permet aussi de tracer des formes au moment de la conception ou au moment de l'exécution.  
   
  Vous pouvez personnaliser l'apparence d'une forme en modifiant la largeur, la couleur et le style de la bordure. Si l'arrière-plan d'une forme est transparent par défaut, vous pouvez le personnaliser avec une couleur unie, un motif, un dégradé (transition d'une couleur à une autre) ou une image.  
   
 ### <a name="to-draw-a-simple-shape-at-design-time"></a>Pour tracer une forme simple au moment de la conception  
   
-1.  Faites glisser le <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> ou <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> contrôler à partir de la **Visual Basic PowerPacks** onglet (pour installer, consultez [les contrôles Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) dans le **boîte à outils** pour un formulaire ou un contrôle conteneur.  
+1.  Faites glisser le <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> ou <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> contrôler à partir de la **Visual Basic PowerPacks** onglet (pour installer, consultez [Visual Basic Power Packs contrôles](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) dans le **boîte à outils** à un contrôle de formulaire ou un conteneur.  
   
 2.  Faites glisser les poignées de redimensionnement et de déplacement pour redimensionner et positionner la forme.  
   
-     Vous pouvez également redimensionner et positionner la forme en modifiant le `Size` et `Position` propriétés dans le **propriétés** fenêtre.  
+     Vous pouvez également dimensionner et positionner la forme en modifiant le `Size` et `Position` propriétés dans le **propriétés** fenêtre.  
   
      Pour créer un rectangle à angles arrondis, sélectionnez le `CornerRadius` propriété dans le **propriétés** fenêtre et affectez-lui une valeur qui est supérieure à 0.  
   
-3.  Dans le **propriétés** fenêtre, vous pouvez également définir les propriétés supplémentaires pour modifier l’apparence de la forme.  
+3.  Dans le **propriétés** fenêtre, si vous le souhaitez définir les propriétés supplémentaires pour modifier l’apparence de la forme.  
   
 ### <a name="to-draw-a-simple-shape-at-run-time"></a>Pour tracer une forme simple au moment de l'exécution  
   
@@ -39,7 +39,7 @@ Vous pouvez utiliser le contrôle <xref:Microsoft.VisualBasic.PowerPacks.OvalSha
   
 2.  Dans le **ajouter une référence** boîte de dialogue, sélectionnez **Microsoft.VisualBasic.PowerPacks.VS**, puis cliquez sur **OK**.  
   
-3.  Dans le **éditeur de Code**, ajoutez une `Imports` ou `using` instruction en haut du module :  
+3.  Dans le **éditeur de Code**, ajoutez un `Imports` ou `using` instruction en haut du module :  
   
 ```vb  
 Imports Microsoft.VisualBasic.PowerPacks  
@@ -125,12 +125,12 @@ using Microsoft.VisualBasic.PowerPacks;
   
 3.  Sélectionnez le `BackgroundImage` propriété et cliquez sur le **points de suspension** bouton (...).  
   
-4.  Dans le **sélectionner une ressource** boîte de dialogue, sélectionnez une image à afficher. Si aucune ressource d’image n’est répertorié, cliquez sur **importation** pour accéder à l’emplacement d’une image.  
+4.  Dans le **sélectionner une ressource** boîte de dialogue, sélectionnez une image à afficher. Si aucune ressource d’image n’est répertoriés, cliquez sur **importation** pour naviguer jusqu'à l’emplacement d’une image.  
   
 5.  Cliquez sur **OK** pour insérer l’image.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>  
- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>  
- [Introduction aux contrôles Line et Shape](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
- [Guide pratique : dessiner des lignes avec le contrôle LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>
+- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>
+- [Introduction aux contrôles Line et Shape](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
+- [Guide pratique pour Dessiner des lignes avec le contrôle LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)

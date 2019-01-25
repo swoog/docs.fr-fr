@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 15ce6a25aa5f403a2e55beb57b3693095743e52f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45fa54d7f7a3e167ffe0545cc3edf6a24900b2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492960"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles, clause (Visual Basic)
 Déclare qu'une procédure gère un événement spécifié.  
@@ -35,7 +35,7 @@ proceduredeclaration Handles eventlist
   
  Le mot clé `Handles` et l'instruction `AddHandler` vous permettent de spécifier que des procédures particulières gèrent des événements particuliers, mais il existe des différences. Utilisez le mot clé `Handles` quand vous définissez une procédure pour indiquer qu'elle gère un événement particulier. L'instruction `AddHandler` connecte les procédures aux événements au moment de l'exécution. Pour plus d’informations, consultez [AddHandler, instruction](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
   
- Pour les événements personnalisés, l'application appelle l'accesseur `AddHandler` de l'événement quand elle ajoute la procédure comme gestionnaire d'événements. Pour plus d’informations sur les événements personnalisés, consultez [Event, instruction](../../../visual-basic/language-reference/statements/event-statement.md).  
+ Pour les événements personnalisés, l’application appelle l’accesseur `AddHandler` de l’événement quand elle ajoute la procédure comme gestionnaire d’événements. Pour plus d’informations sur les événements personnalisés, consultez [Event, instruction](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Exemple  
  [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
@@ -54,10 +54,10 @@ proceduredeclaration Handles eventlist
   
  [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
- [AddHandler (instruction)](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler (instruction)](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Event (instruction)](../../../visual-basic/language-reference/statements/event-statement.md)  
- [RaiseEvent (instruction)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [Événements](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Voir aussi
+- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [AddHandler (instruction)](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler (instruction)](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Event (instruction)](../../../visual-basic/language-reference/statements/event-statement.md)
+- [RaiseEvent (instruction)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [Événements](../../../visual-basic/programming-guide/language-features/events/index.md)

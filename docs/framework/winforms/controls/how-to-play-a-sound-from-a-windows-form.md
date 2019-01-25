@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour émettre un son à partir d'un Windows Form
+title: 'Procédure : Un signal sonore à partir d’un formulaire Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 853d0f78b4f6dba2dc84109270f79f4b010c27b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607249"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>Guide pratique pour émettre un son à partir d'un Windows Form
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Procédure : Un signal sonore à partir d’un formulaire Windows
 Cet exemple émet un son à un chemin donné au moment de l’exécution.  
   
 ## <a name="example"></a>Exemple  
@@ -51,20 +51,20 @@ private void playSimpleSound()
   
 -   Le chemin d'accès est mal formé. Par exemple, il contient des caractères non conformes ou uniquement des espaces blancs (classe <xref:System.ArgumentException>).  
   
--   Le chemin d'accès est en lecture seule (classe <xref:System.IO.IOException>).  
+-   Le chemin d’accès est en lecture seule (classe <xref:System.IO.IOException>).  
   
 -   Le nom du chemin d'accès est `null` (classe <xref:System.ArgumentNullException>).  
   
 -   Le nom du chemin d'accès est trop long (classe <xref:System.IO.PathTooLongException>).  
   
--   Le chemin d'accès n'est pas valide (classe <xref:System.IO.DirectoryNotFoundException>).  
+-   Le chemin d’accès n’est pas valide (classe <xref:System.IO.DirectoryNotFoundException>).  
   
 -   Le chemin d’accès est uniquement un signe deux-points, « : » (<xref:System.NotSupportedException> classe).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Ne vous basez pas sur le nom d'un fichier pour en déterminer le contenu. Par exemple, le fichier `Form1.vb` peut ne pas être un fichier source Visual Basic. Vérifiez toutes les entrées avant d'utiliser les données dans votre application.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Media.SoundPlayer>  
- [Guide pratique pour charger un son de façon asynchrone dans un Windows Form](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- 
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Media.SoundPlayer>
+- [Guide pratique pour Charger un son de façon asynchrone dans un formulaire Windows](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+

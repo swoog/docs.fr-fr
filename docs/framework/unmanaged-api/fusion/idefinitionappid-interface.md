@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2735355097a1f3f581b3a4bc74f08d8f2ebf3bd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4e8bb31967a6ad515761e6cd03657f2c834debe5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545554"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId, interface
 Représente un identificateur unique pour le code qui définit l’application dans la portée actuelle.  
@@ -30,19 +30,19 @@ Représente un identificateur unique pour le code qui définit l’application d
   
 |Méthode|Description|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|Obtient une chaîne mise en forme qui représente le code dans cette `IDefinitionAppId` objet.|  
-|`IDefinitionAppId::put_Codebase`|Définit le code de ce `IDefinitionAppId` mis en forme de l’objet spécifié à la valeur de chaîne.|  
+|`IDefinitionAppId::get_Codebase`|Obtient une chaîne mise en forme qui représente le code de cette `IDefinitionAppId` objet.|  
+|`IDefinitionAppId::put_Codebase`|Définit le code de cet `IDefinitionAppId` objet spécifié à la mise en forme la valeur de chaîne.|  
 |`IDefinitionAppId::EnumAppPath`|Obtient un pointeur d’interface vers un [IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) objet qui contient les assemblys dans le chemin d’accès d’application actuel.|  
-|`IDefinitionAppId::SetAppPath`|Définit le chemin d’accès de l’application pour l’assembly dans la portée actuelle avec la valeur référencée par le [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) objet.|  
-|`IDefinitionAppId::get_SubscriptionId`|Obtient un pointeur vers une représentation sous forme de chaîne de l’identificateur de jeton pour un abonnement à cette `IDefinitionAppId` objet.|  
-|`IDefinitionAppId::put_SubscriptionId`|Définit l’identificateur de jeton pour un abonnement à cette `IDefinitionAppId` objet à la valeur de chaîne spécifiée.|  
+|`IDefinitionAppId::SetAppPath`|Définit le chemin d’accès de l’application pour l’assembly dans la portée actuelle à la valeur référencée par le [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) objet.|  
+|`IDefinitionAppId::get_SubscriptionId`|Obtient un pointeur vers une représentation sous forme de chaîne de l’identificateur de jeton pour un abonnement à ce `IDefinitionAppId` objet.|  
+|`IDefinitionAppId::put_SubscriptionId`|Définit l’identificateur de jeton pour un abonnement à ce `IDefinitionAppId` objet à la valeur de chaîne spécifiée.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Isolation.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

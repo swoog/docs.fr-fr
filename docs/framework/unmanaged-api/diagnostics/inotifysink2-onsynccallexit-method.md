@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3fe2ebecdacd3b848d5de7eecca4753a89a58f35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9cff5d2dd2cf13e8626d1cca7f66c976dad6d90f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620917"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>INotifySink2::OnSyncCallExit, méthode
 Est appelé lors de la sortie d’un appel.  
@@ -43,7 +43,7 @@ HRESULT OnSyncCallExit
  [in] ID de l’appel en cours s’est arrêté. Consultez [call_id, Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
- [out] Mémoire tampon des appels.  
+ [out] Mémoire tampon d’appel.  
   
  `out_pBufferSize`  
  [out] Taille de la mémoire tampon de l’appel, en octets.  
@@ -54,7 +54,7 @@ HRESULT OnSyncCallExit
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Voir aussi  
- [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

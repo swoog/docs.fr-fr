@@ -2,15 +2,15 @@
 title: Traçage
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 6f427425b1bbf19ecd8b30fb1498634a7a3d5fa9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 4165dbb68ac962737c9dcc99e984248c668bb1b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506795"
 ---
 # <a name="tracing"></a>Traçage
-Windows Communication Foundation (WCF) fournit l’instrumentation d’applications et les données de diagnostic pour l’analyse et de surveillance des pannes. Vous pouvez utiliser le suivi au lieu d'un débogueur pour comprendre le comportement d'une application ou la raison de sa défaillance. Vous pouvez également mettre en corrélation les erreurs et le traitement sur l'ensemble des composants afin de fournir une expérience de bout en bout.  
+Windows Communication Foundation (WCF) fournit une instrumentation de l’application et les données de diagnostic pour la surveillance des pannes et l’analyse. Vous pouvez utiliser le suivi au lieu d'un débogueur pour comprendre le comportement d'une application ou la raison de sa défaillance. Vous pouvez également mettre en corrélation les erreurs et le traitement sur l'ensemble des composants afin de fournir une expérience de bout en bout.  
   
  WCF génère les données suivantes pour le suivi de diagnostic :  
   
@@ -39,5 +39,5 @@ Windows Communication Foundation (WCF) fournit l’instrumentation d’applicati
   
  Cette rubrique répertorie tous les suivis générés par WCF.  
   
-## <a name="see-also"></a>Voir aussi  
- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a>Voir aussi
+- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

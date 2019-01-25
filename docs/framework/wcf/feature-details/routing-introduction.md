@@ -2,12 +2,12 @@
 title: Introduction au routage
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: e540e084305aee51d6820cc9ae43f7791d5c07d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d13a5cc86b7f0bbd67e1ef3ab6094bfb004972c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563767"
 ---
 # <a name="routing-introduction"></a>Introduction au routage
 Le service de routage fournit un intermédiaire SOAP générique connectable, capable de router des messages en fonction du contenu. Le service de routage vous permet de créer une logique de routage complexe et d'implémenter des scénarios, tels que l'agrégation de service, le contrôle des versions de service, le routage par priorité et en mode multidiffusion. Le service de routage fournit également une gestion des erreurs qui vous permet de définir des listes de points de terminaison de sauvegarde auxquels sont envoyés les messages en cas d'échec de l'envoi au point de terminaison de destination primaire.  
@@ -98,7 +98,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- Cet exemple configure le service de routage pour exposer un point de terminaison unique avec une adresse `http://localhost:8000/routingservice/router`, qui est utilisée pour recevoir des messages à router. Étant donné que les messages sont routés vers des points de terminaison demande-réponse, le point de terminaison de service utilise le contrat <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Cette configuration définit également un point de terminaison client unique `http://localhost:8000/servicemodelsample/service` vers lequel les messages sont routés. La table de filtres (non illustrée) nommée « routingTable1 » contient la logique de routage utilisée pour router les messages et elle est associée au point de terminaison de service en utilisant **RoutingBehavior** (pour un fichier de configuration) ou **RoutingConfiguration** (pour une configuration par programmation).  
+ Cet exemple configure le Service de routage pour exposer un point de terminaison unique avec une adresse de `http://localhost:8000/routingservice/router`, qui est utilisé pour recevoir des messages doit être routé. Étant donné que les messages sont routés vers des points de terminaison demande-réponse, le point de terminaison de service utilise le contrat <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Cette configuration définit également un point de terminaison client unique `http://localhost:8000/servicemodelsample/service` que les messages sont routés vers. La table de filtres (non illustrée) nommée « routingTable1 » contient la logique de routage utilisée pour acheminer les messages et il est associée avec le point de terminaison de service à l’aide de la **RoutingBehavior** (pour un fichier de configuration) ou  **RoutingConfiguration** (pour la configuration par programmation).  
   
 ### <a name="routing-logic"></a>Logique de routage  
  Pour définir la logique de routage utilisée pour router les messages, vous devez déterminer sur quelles données contenues dans les messages entrants il est possible d'agir de manière unique. Par exemple, si tous les points de terminaison de destination de votre routage partagent la même Action SOAP, la valeur de l'Action contenue dans le message ne constitue pas un bon indicateur du point de terminaison spécifique vers lequel le message doit être routé. Si vous devez router des messages uniquement vers un point de terminaison spécifique, vous devez appliquer un filtre sur des données qui identifient de manière unique le point de terminaison de destination vers lequel le message est routé.  
@@ -152,7 +152,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  Par défaut, le service de routage évalue uniquement les en-têtes du message. Pour permettre aux filtres d'accéder au corps du message, vous devez attribuer à la propriété <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> la valeur `false`.  
   
- **Multidiffusion**  
+ **Multicast**  
   
  Alors que de nombreuses configurations de service de routage utilisent une logique de filtre exclusive qui route les messages vers un seul point de terminaison spécifique, vous aurez peut-être besoin de router un message donné vers plusieurs points de terminaison de destination. Pour envoyer un message en mode multidiffusion à des destinations multiples, les conditions suivantes doivent être remplies :  
   
@@ -357,17 +357,17 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |Modèle|Session|Transaction|Contexte de réception|Liste de sauvegarde prise en charge|Remarques|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |One-Way||||Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Si ce message est en mode multidiffusion, seul le message sur le canal en échec est déplacé vers sa destination de sauvegarde.|  
-|One-Way||![Case à cocher](media/checkmark.gif "coche")||Non|Une exception est levée et la transaction est restaurée.|  
+|One-Way||![Case à cocher](media/checkmark.gif "coche")||Aucune|Une exception est levée et la transaction est restaurée.|  
 |One-Way|||![Case à cocher](media/checkmark.gif "coche")|Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Une fois le message correctement reçu, effectuez tous les contextes de réception. Si le message n'a pas été correctement reçu par un point de terminaison, n'effectuez pas le contexte de réception.<br /><br /> Lorsque ce message est envoyé en mode multidiffusion, le contexte de réception n'est effectué que si le message a été correctement reçu par au moins un point de terminaison (primaire ou de sauvegarde). Si aucun des points de terminaison situés sur les chemins d'accès de multidiffusion ne reçoit correctement le message, n'effectuez pas le contexte de réception.|  
 |One-Way||![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")|Oui|Abandonnez la transaction précédente, créez une nouvelle transaction et renvoyez tous les messages. Les messages qui ont rencontré une erreur sont transmis à une destination de sauvegarde.<br /><br /> Une fois créée une transaction dont toutes les transmissions ont réussi, effectuez les contextes de réception et validez la transaction.|  
 |One-Way|![Case à cocher](media/checkmark.gif "coche")|||Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Dans un scénario de multidiffusion, seuls les messages qui se trouvent dans une session ayant rencontré une erreur ou dont la fin de session a échoué sont renvoyés aux destinations de sauvegarde.|  
-|One-Way|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")||Non|Une exception est levée et la transaction est restaurée.|  
+|One-Way|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")||Aucune|Une exception est levée et la transaction est restaurée.|  
 |One-Way|![Case à cocher](media/checkmark.gif "coche")||![Case à cocher](media/checkmark.gif "coche")|Oui|Tente de renvoyer le message sur un point de terminaison de sauvegarde. Une fois tous les messages envoyés sans erreur, la session indique qu'il n'y a plus de messages, le service de routage ferme correctement tous les canaux de session sortante, tous les contextes de réception sont effectués et le canal de session entrante est fermé.|  
 |One-Way|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")|Oui|Abandonnez la transaction actuelle et créez en une nouvelle. Renvoyez tous les messages précédents de la session. Une fois créée une transaction dont tous les messages ont été correctement envoyés et lorsque la session indique qu'il n'y a plus de messages, tous les canaux de session sortante sont fermés, les contextes de réception sont tous effectués avec la transaction, le canal de session entrante est fermé et la transaction est validée.<br /><br /> Lorsque les sessions sont en mode multidiffusion, les messages qui n'ont eu aucune erreur sont renvoyés à la même destination qu'avant, et les messages qui ont rencontré une erreur sont envoyés aux destinations de sauvegarde.|  
 |Bidirectionnel||||Oui|Envoyez à une destination de sauvegarde.  Après qu'un canal a retourné un message de réponse, retournez la réponse au client d'origine.|  
 |Bidirectionnel|![Case à cocher](media/checkmark.gif "coche")|||Oui|Envoyez tous les messages sur le canal à une destination de sauvegarde.  Après qu'un canal a retourné un message de réponse, retournez la réponse au client d'origine.|  
-|Bidirectionnel||![Case à cocher](media/checkmark.gif "coche")||Non|Une exception est levée et la transaction est restaurée.|  
-|Bidirectionnel|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")||Non|Une exception est levée et la transaction est restaurée.|  
+|Bidirectionnel||![Case à cocher](media/checkmark.gif "coche")||Aucune|Une exception est levée et la transaction est restaurée.|  
+|Bidirectionnel|![Case à cocher](media/checkmark.gif "coche")|![Case à cocher](media/checkmark.gif "coche")||Aucune|Une exception est levée et la transaction est restaurée.|  
 |Duplex||||Non|La communication duplex sans session n'est pas prise en charge actuellement.|  
 |Duplex|![Case à cocher](media/checkmark.gif "coche")|||Oui|Envoyez à une destination de sauvegarde.|  
   
@@ -401,7 +401,7 @@ using (ServiceHost serviceHost =
   
  Pour utiliser l'emprunt d'identité des informations d'identification Windows avec le service de routage, vous devez configurer les informations d'identification et le service. L'objet d'informations d'identification du client (<xref:System.ServiceModel.Security.WindowsClientCredential>, accessible à partir de <xref:System.ServiceModel.ChannelFactory>) définit une propriété <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> qui doit être définie pour permettre l'emprunt d'identité. Enfin, dans le service vous devez configurer le comportement <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> pour affecter la valeur `ImpersonateCallerForAllOperations` à `true`. Le service de routage utilise cet indicateur pour déterminer s'il faut créer les clients pour transférer des messages lorsque l'emprunt d'identité est activé.  
   
-## <a name="see-also"></a>Voir aussi  
- [Filtres de message](message-filters.md)  
- [Contrats de routage](routing-contracts.md)  
- [Choix d’un filtre](choosing-a-filter.md)
+## <a name="see-also"></a>Voir aussi
+- [Filtres de message](message-filters.md)
+- [Contrats de routage](routing-contracts.md)
+- [Choix d’un filtre](choosing-a-filter.md)

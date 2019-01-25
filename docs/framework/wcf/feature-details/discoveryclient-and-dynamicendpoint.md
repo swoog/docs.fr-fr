@@ -2,12 +2,12 @@
 title: DiscoveryClient et DynamicEndpoint
 ms.date: 03/30/2017
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-ms.openlocfilehash: ff8cc071b13123a8d04162a2c52a8c3fb486d6db
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6e7b1cf13309ba6fc1da424649c667efe255278e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709986"
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient et DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> et <xref:System.ServiceModel.Discovery.DynamicEndpoint> sont deux classes utilisées sur le côté client pour rechercher des services. <xref:System.ServiceModel.Discovery.DiscoveryClient> fournit une liste de services correspondant à un jeu de critères spécifiques et permet de se connecter à ces services. <xref:System.ServiceModel.Discovery.DynamicEndpoint> effectue la même opération et, de plus, se connecte automatiquement à l'un des services trouvé dans la liste. N'importe quel point de terminaison peut être transformé en <xref:System.ServiceModel.Discovery.DynamicEndpoint>, les critères de recherche peuvent également être ajoutés par configuration, en conséquence <xref:System.ServiceModel.Discovery.DynamicEndpoint> est utile lorsque vous avez besoin de la découverte dans votre solution, mais que vous ne souhaitez pas modifier la logique cliente ; il vous suffit de modifier les points de terminaison. <xref:System.ServiceModel.Discovery.DiscoveryClient> en revanche peut être utilisé pour obtenir un contrôle plus précis de la recherche. Les utilisations et les avantages de chacun sont détaillés ci-dessous.  
@@ -89,7 +89,7 @@ EndpointAddress newEp = response.EndpointDiscoveryMetadata.Address;
 ```  
   
 ## <a name="dynamicendpoint"></a>DynamicEndpoint  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint> est un point de terminaison standard (pour plus d’informations, consultez [points de terminaison Standard](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) qui effectue la découverte et sélectionne automatiquement un service correspondant. Créez simplement un <xref:System.ServiceModel.Discovery.DynamicEndpoint>, en passant le contrat à rechercher et la liaison à utiliser, et passez l'instance <xref:System.ServiceModel.Discovery.DynamicEndpoint> au client WCF. L'exemple suivant indique comment créer et utiliser un <xref:System.ServiceModel.Discovery.DynamicEndpoint> pour appeler le service de calculatrice. La découverte est effectuée à chaque ouverture du client. N’importe quel point de terminaison défini dans la configuration peut également être transformé en un <xref:System.ServiceModel.Discovery.DynamicEndpoint> en ajoutant le `kind ="dynamicEndpoint"` d’attribut à l’élément de configuration de point de terminaison.  
+ <xref:System.ServiceModel.Discovery.DynamicEndpoint> est un point de terminaison standard (pour plus d’informations, consultez [points de terminaison Standard](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) qui effectue la découverte et sélectionne automatiquement un service correspondant. Créez simplement un <xref:System.ServiceModel.Discovery.DynamicEndpoint>, en passant le contrat à rechercher et la liaison à utiliser, et passez l’instance <xref:System.ServiceModel.Discovery.DynamicEndpoint> au client WCF. L'exemple suivant indique comment créer et utiliser un <xref:System.ServiceModel.Discovery.DynamicEndpoint> pour appeler le service de calculatrice. La découverte est effectuée à chaque ouverture du client. N’importe quel point de terminaison défini dans la configuration peut également être transformé en un <xref:System.ServiceModel.Discovery.DynamicEndpoint> en ajoutant le `kind ="dynamicEndpoint"` d’attribut à l’élément de configuration de point de terminaison.  
   
 ```  
 DynamicEndpoint dynamicEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(ICalculatorService)), new WSHttpBinding());  
@@ -105,6 +105,6 @@ double result = client.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Découverte avec étendues](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>Voir aussi
+- [Découverte avec étendues](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)

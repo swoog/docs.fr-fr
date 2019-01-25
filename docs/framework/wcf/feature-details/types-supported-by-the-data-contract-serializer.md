@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e61d257f9503d95764a5d1f6374d6e2a216fceaa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523400"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Types pris en charge par le sérialiseur de contrat de données
-Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serialization.DataContractSerializer> comme moteur de sérialisation par défaut pour convertir les données en XML et reconvertir XML en données. <xref:System.Runtime.Serialization.DataContractSerializer> est conçu pour sérialiser des types de *contrat de données* . Toutefois, il prend en charge de nombreux autres types qui peuvent être considérés comme ayant un contrat de données implicite. Voici une liste complète des types qui peuvent être sérialisés :  
+Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serialization.DataContractSerializer> en tant que son moteur de sérialisation par défaut pour convertir des données XML et reconvertir XML en données. <xref:System.Runtime.Serialization.DataContractSerializer> est conçu pour sérialiser des types de *contrat de données* . Toutefois, il prend en charge de nombreux autres types qui peuvent être considérés comme ayant un contrat de données implicite. Voici une liste complète des types qui peuvent être sérialisés :  
   
 -   Tous les types visibles publiquement qui ont un constructeur sans paramètre.  
   
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serializa
 -   Autres types primitifs. Ces types ne sont pas primitifs dans le .NET Framework mais sont traités comme des types primitifs dans le format XML sérialisé. Ces types sont <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>, <xref:System.Xml.XmlQualifiedName>et les tableaux de <xref:System.Byte>.  
   
     > [!NOTE]
-    >  Contrairement à d'autres types primitifs, <xref:System.DateTimeOffset> n'est pas un type connu par défaut. Pour plus d’informations, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
+    >  Contrairement à d'autres types primitifs, <xref:System.DateTimeOffset> n'est pas un type connu par défaut. Pour plus d’informations, consultez [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
   
 -   Types marqués avec l'attribut <xref:System.SerializableAttribute> . De nombreux types inclus dans la bibliothèque de la classe de base du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] font partie de cette catégorie. <xref:System.Runtime.Serialization.DataContractSerializer> prend totalement en charge ce modèle de programmation de sérialisation, utilisé par .NET Framework Remoting, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>et <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, incluant la prise en charge de l'interface <xref:System.Runtime.Serialization.ISerializable> .  
   
@@ -38,13 +38,13 @@ Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serializa
   
 -   Pour sérialiser ou désérialiser un type qui implémente <xref:System.Runtime.Serialization.ISerializable> dans un code d'un niveau de confiance partielle utilisant <xref:System.Runtime.Serialization.DataContractSerializer> , les autorisations <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> et <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> sont nécessaires.  
   
--   Lors de l’exécution code WCF [de confiance partielle](../../../../docs/framework/wcf/feature-details/partial-trust.md) mode, la sérialisation et la désérialisation de `readonly` champs (les deux `public` et `private`) n’est pas pris en charge. C'est parce que l'IL généré est incontrôlable et par conséquent requiert des autorisations élevées.  
+-   Lors de l’exécution code WCF [confiance partielle](../../../../docs/framework/wcf/feature-details/partial-trust.md) mode, la sérialisation et la désérialisation de `readonly` champs (les deux `public` et `private`) n’est pas pris en charge. C'est parce que l'IL généré est incontrôlable et par conséquent requiert des autorisations élevées.  
   
 -   Le <xref:System.Runtime.Serialization.DataContractSerializer> et le <xref:System.Xml.Serialization.XmlSerializer> sont pris en charge dans un environnement de confiance partielle. Toutefois, l'utilisation du <xref:System.Runtime.Serialization.DataContractSerializer> est soumise aux conditions suivantes :  
   
     -   Tous les types `[DataContract]` sérialisables doivent être "public".  
   
-    -   Tous les champs ou les propriétés `[DataMember]` sérialisables dans un type `[DataContract]` doivent être "public" et en lecture/écriture. La sérialisation et désérialisation de `readonly` champs n’est pas pris en charge lors de l’exécution de WCF dans une application de confiance partielle.  
+    -   Tous les champs ou les propriétés `[DataMember]` sérialisables dans un type `[DataContract]` doivent être "public" et en lecture/écriture. La sérialisation et désérialisation de `readonly` champs n’est pas pris en charge lors de l’exécution de WCF dans une application partiellement fiable.  
   
     -   L'attribut `[Serializable]`/`ISerializable]` n'est pas pris en charge dans un environnement de confiance partielle.  
   
@@ -67,9 +67,9 @@ Windows Communication Foundation (WCF) utilise le <xref:System.Runtime.Serializa
   
 -   Le type <xref:System.DBNull> est traité d'une façon spéciale. C'est un type singleton et, sur la désérialisation, le désérialiseur respecte la contrainte singleton et pointe toutes les références `DBNull` à l'instance singleton. Parce que `DBNull` est un type sérialisable, il demande l'autorisation <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> .  
   
-## <a name="see-also"></a>Voir aussi  
- [Types XML et ADO.NET dans les contrats de données](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
- [Types de collections dans les contrats de données](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
- [Types énumération dans les contrats de données](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
+## <a name="see-also"></a>Voir aussi
+- [Types XML et ADO.NET dans les contrats de données](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)
+- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md)
+- [Types de collections dans les contrats de données](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)
+- [Types énumération dans les contrats de données](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)

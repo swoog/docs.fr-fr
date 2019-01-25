@@ -2,12 +2,12 @@
 title: 'Procédure pas à pas : Génération SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733439"
 ---
 # <a name="walkthrough-sql-generation"></a>Procédure pas à pas : Génération SQL
 Cette rubrique illustre comment la génération SQL se produit dans le [fournisseur d’exemples](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). La requête Entity SQL suivante utilise le modèle inclus dans le fournisseur d'exemples :  
@@ -108,7 +108,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 ## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Première Phase de génération SQL : Visite de l’arborescence d’Expression  
  La figure suivante illustre l'état vide initial du visiteur.  Dans l'ensemble de cette rubrique, seules les propriétés pertinentes pour l'explication de la procédure pas à pas sont présentées.  
   
- ![Diagramme](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
   
  Lorsque le nœud Projet est visité, VisitInputExpression est appelé sur son entrée (Join4), qui déclenche la visite de Join4 par la méthode VisitJoinExpression. En sa qualité de jointure supérieure, IsParentAJoin retourne la valeur false et un nouveau SqlSelectStatement (SelectStatement0) est créé et ajouté à la pile d'instructions SELECT. De même, une nouvelle étendue (scope0) est entrée dans la table de symboles. Avant que la première entrée (gauche) de la jointure soit visitée, la valeur 'true' est ajoutée à la pile IsParentAJoin. Juste avant que Join1, qui est l'entrée gauche de Join4, soit visitée, l'état du visiteur est celui illustré dans la figure suivante.  
   
@@ -124,7 +124,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  L'entrée droite est traitée de la même façon que l'entrée gauche. L'état après la visite de l'entrée droite est illustré dans la figure suivante.  
   
- ![Diagramme](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
  La valeur « false » suivante est ajoutée à la pile IsParentAJoin et la condition de jointure Var(Extent1).CategoryID == Var(Extent2).CategoryID est traitée. Var(Extent1) est résolue en <symbol_Extent1> après une recherche dans la table de symboles. L’instance étant résolue en un symbole simple, à la suite de traitement Var(Extent1). CategoryID, un SqlBuilder avec \<symbol1 >. » CategoryID » est retourné. De la même façon, l'autre partie de la comparaison est traitée et le résultat de la visite de la condition de jointure est ajouté à la clause FROM de SelectStatement1 et la valeur « false » est retirée de la pile IsParentAJoin.  
   
@@ -134,7 +134,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Le nœud suivant à traiter est Join3, le deuxième enfant de Join4. En tant qu'enfant droit, la valeur « false » est ajoutée à la pile IsParentAJoin. L'état du visiteur à ce stade est illustré dans la figure suivante.  
   
- ![Diagramme](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
  Pour Join3, IsParentAJoin retourne la valeur false et doit démarrer un nouveau SqlSelectStatement (SelectStatement1) et l'ajouter à la pile. Le traitement continue comme pour les jointures précédentes, une nouvelle étendue est ajoutée à la pile et les enfants sont traités. L’enfant de gauche est une étendue (Extent3) et l’enfant droit est une jointure (Join2) qui doit également démarrer un nouveau SqlSelectStatement : SelectStatement2. Les enfants sur Join2 sont également des étendues et sont regroupés dans SelectStatement2.  
   
@@ -199,5 +199,5 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
   
  À la fin de la deuxième phase, la dernière instruction SQL est générée.  
   
-## <a name="see-also"></a>Voir aussi  
- [Génération SQL dans l’exemple de fournisseur](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>Voir aussi
+- [Génération SQL dans l’exemple de fournisseur](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

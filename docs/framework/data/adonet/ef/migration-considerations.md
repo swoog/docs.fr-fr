@@ -2,12 +2,12 @@
 title: Considérations sur la migration (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: cf705caa84742d654465a2dba005f2d8f32abcca
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 14f71de4a05c821ec21bf018fe2e2383d747c41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575617"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considérations sur la migration (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework présente plusieurs avantages pour une application existante. La possibilité d'utiliser un modèle conceptuel pour séparer des structures de données utilisées par l'application du schéma de la source de données constitue l'un de ces avantages les plus importants. Cela vous permet d'apporter facilement des modifications à venir au modèle de stockage ou à la source de données eux-mêmes sans apporter de modifications de compensation à l'application. Pour plus d’informations sur les avantages de l’utilisation de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consultez [présentation d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) et [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48837493"
  Le chemin d'accès pour effectuer la migration d'une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dépend à la fois du type d'application et de la stratégie d'accès aux données existante. Toutefois, vous devez toujours effectuer les tâches suivantes lorsque vous migrez une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
->  Toutes ces tâches sont effectuées automatiquement lorsque vous utilisez les outils Entity Data Model à partir de Visual Studio 2008. Pour plus d’informations, consultez [Comment : utiliser l’Assistant Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Toutes ces tâches sont effectuées automatiquement lorsque vous utilisez les outils Entity Data Model à partir de Visual Studio 2008. Pour plus d'informations, voir [Procédure : Utilisez l’Assistant Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 1.  Mettez à niveau l'application.  
   
@@ -37,23 +37,23 @@ ms.locfileid: "48837493"
   
 2.  Définissez les modèles et le mappage.  
   
-     Les fichiers de modèle et de mappage définissent des entités dans le modèle conceptuel, des structures dans la source de données (telles que des tables, des procédures stockées et des vues), ainsi que le mappage entre les entités et les structures de la source de données. Pour plus d’informations, consultez [Comment : définir manuellement les fichiers de modèle et mappage](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+     Les fichiers de modèle et de mappage définissent des entités dans le modèle conceptuel, des structures dans la source de données (telles que des tables, des procédures stockées et des vues), ainsi que le mappage entre les entités et les structures de la source de données. Pour plus d'informations, voir [Procédure : Définir le modèle manuellement et de fichiers de mappage](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
   
-     Les types définis dans le modèle de stockage doivent correspondre aux noms des objets présents dans la source de données. Si l'application existante expose des données en tant qu'objets, vous devez vous assurer que les entités et les propriétés définies dans le modèle conceptuel correspondent aux noms de ces classes de données et propriétés existantes. Pour plus d’informations, consultez [Comment : personnaliser la modélisation et les fichiers de mappage pour travailler avec des objets personnalisés](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708).  
+     Les types définis dans le modèle de stockage doivent correspondre aux noms des objets présents dans la source de données. Si l'application existante expose des données en tant qu'objets, vous devez vous assurer que les entités et les propriétés définies dans le modèle conceptuel correspondent aux noms de ces classes de données et propriétés existantes. Pour plus d'informations, voir [Procédure : Personnaliser la modélisation et mappage de fichiers pour travailler avec des objets personnalisés](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708).  
   
     > [!NOTE]
     >  Entity Data Model Designer peut être utilisé pour renommer des entités du modèle conceptuel afin qu'elles correspondent à des objets existants. Pour plus d’informations, consultez [Entity Data Model Designer](https://msdn.microsoft.com/library/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf).  
   
 3.  Définissez la chaîne de connexion.  
   
-     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise une chaîne de connexion spécialement mise en forme lors de l'exécution de requêtes sur un modèle conceptuel. Cette chaîne de connexion encapsule des informations relatives aux fichiers de modèle et de mappage et à la connexion à la source de données. Pour plus d’informations, consultez [Comment : définir la chaîne de connexion](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
+     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise une chaîne de connexion spécialement mise en forme lors de l'exécution de requêtes sur un modèle conceptuel. Cette chaîne de connexion encapsule des informations relatives aux fichiers de modèle et de mappage et à la connexion à la source de données. Pour plus d'informations, voir [Procédure : Définir la chaîne de connexion](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
   
 4.  Configurer le projet Visual Studio.  
   
-     Références à [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] assemblys et le modèle et le mappage de fichiers doivent être ajoutés au projet Visual Studio. Vous pouvez ajouter ces fichiers de mappage au projet pour garantir qu'ils sont déployés avec l'application dans l'emplacement indiqué dans la chaîne de connexion. Pour plus d’informations, consultez [Comment : configurer manuellement un projet Entity Framework](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+     Références à [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] assemblys et le modèle et le mappage de fichiers doivent être ajoutés au projet Visual Studio. Vous pouvez ajouter ces fichiers de mappage au projet pour garantir qu'ils sont déployés avec l'application dans l'emplacement indiqué dans la chaîne de connexion. Pour plus d'informations, voir [Procédure : Configurer manuellement un projet Entity Framework](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Considérations relatives aux applications comportant des objets existants  
- À partir du [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] prend en charge des objets CLR (POCO) « simples », également appelés « objets ignorant la persistance ». Dans la plupart des cas, vos objets existants peuvent fonctionner avec [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] en effectuant des changements mineurs. Pour plus d’informations, consultez [utilisation des entités POCO](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Vous pouvez également migrer une application à le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] et utiliser les classes de données qui sont générés par les outils Entity Framework. Pour plus d’informations, consultez [Comment : utiliser l’Assistant Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+ À partir du [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] prend en charge des objets CLR (POCO) « simples », également appelés « objets ignorant la persistance ». Dans la plupart des cas, vos objets existants peuvent fonctionner avec [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] en effectuant des changements mineurs. Pour plus d’informations, consultez [utilisation des entités POCO](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Vous pouvez également migrer une application à le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] et utiliser les classes de données qui sont générés par les outils Entity Framework. Pour plus d'informations, voir [Procédure : Utilisez l’Assistant Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Considérations relatives aux applications qui utilisent des fournisseurs ADO.NET  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] les fournisseurs, tels que SqlClient, vous permettent de vous permettent d’interroger une source de données pour retourner des données tabulaires. Données peuvent également être chargées dans un [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] jeu de données. La liste suivante décrit des considérations relatives à la mise à niveau d'une application qui utilise un fournisseur [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] existant :  
@@ -86,7 +86,7 @@ ms.locfileid: "48837493"
  Les services Web et les applications basées sur Windows Communication Foundation (WCF) exposent les données d'une source de données sous-jacente en utilisant un format de messagerie de demande/réponse XML. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] prend en charge la sérialisation d'objets entité en utilisant la sérialisation de contrat de données binaire, XML ou WCF. La sérialisation binaire et la sérialisation WCF prennent tous les deux en charge la sérialisation complète de graphiques d'objets. Pour plus d’informations, consultez [création d’Applications multiniveau](https://msdn.microsoft.com/library/9439d2ba-6b5f-44e8-be65-8a442d922cbb).  
   
  Applications qui utilisent des données XML.  
- La sérialisation des objets vous permet de créer des services des données [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ces services fournissent des données à des applications qui utilisent des données XML, telles que les applications Internet AJAX. Dans ces cas, envisagez d'utiliser [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Ces services de données sont basées sur l’Entity Data Model et fournissent un accès dynamique aux données d’entité à l’aide des actions Representational State Transfer (REST) HTTP standard, telles que GET, PUT et post-traitement. Pour plus d’informations, consultez [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md).  
+ La sérialisation des objets vous permet de créer des services des données [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ces services fournissent des données à des applications qui utilisent des données XML, telles que les applications Internet AJAX. Dans ces cas, envisagez d'utiliser [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Ces services de données sont basées sur l’Entity Data Model et fournissent un accès dynamique aux données d’entité à l’aide des actions Representational State Transfer (REST) HTTP standard, telles que GET, PUT et post-traitement. Pour plus d’informations, consultez [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md).  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ne prend pas en charge le type de données XML natif. Cela signifie que, lorsqu'une entité est mappée à une table avec une colonne XML, la propriété d'entité équivalente de la colonne XML est une chaîne. Les objets peuvent être déconnectés et sérialisés sous forme de données XML. Pour plus d’informations, consultez [sérialisation d’objets](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
@@ -95,6 +95,6 @@ ms.locfileid: "48837493"
  Applications qui gèrent l'état.  
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Applications Web doivent fréquemment gérer l’état d’une page Web ou d’une session utilisateur. Objets dans un <xref:System.Data.Objects.ObjectContext> instance permettre être stockée dans l’état d’affichage client ou dans l’état de session sur le serveur et versions ultérieures récupérée et rattachée à un contexte d’objet. Pour plus d’informations, consultez [attachement et détachement des objets](https://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
   
-## <a name="see-also"></a>Voir aussi  
- [Points à prendre en considération pour le déploiement](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Terminologie Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)
+## <a name="see-also"></a>Voir aussi
+- [Points à prendre en considération pour le déploiement](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Terminologie Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)

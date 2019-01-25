@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : ajouter la détectabilité par programme à un service et un client WCF'
+title: 'Procédure : Ajouter par programmation la détectabilité à un Service WCF et un Client'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a0240d09c07a23c2c578008885e5bca00169acdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643128"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procédure : ajouter la détectabilité par programme à un service et un client WCF
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procédure : Ajouter par programmation la détectabilité à un Service WCF et un Client
 Cette rubrique explique comment rendre un service Windows Communication Foundation (WCF) détectable. Il est basé sur le [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) exemple.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Pour configurer l'exemple existant de service Self-Host pour la découverte  
@@ -340,6 +340,6 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Modèle objet de découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Modèle objet de découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

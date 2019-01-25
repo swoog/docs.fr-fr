@@ -2,21 +2,21 @@
 title: '&lt;security&gt; de &lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: d0a14af56f888c5c4c2c3924625f2e6d45ed2eeb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c80a4a34d5315dbc5a22d3953fee437ebe2e938f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573450"
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;security&gt; de &lt;customBinding&gt;
 Spécifie les options de sécurité d’une liaison personnalisée.  
   
  \<system.serviceModel>  
-\<liaisons >  
-\<customBinding >  
-\<liaison >  
-\<sécurité >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,13 +51,13 @@ Spécifie les options de sécurité d’une liaison personnalisée.
 |authenticationMode|Facultatif. Spécifie le mode d'authentification utilisé entre l'initiateur et le répondeur. Reportez-vous ci-dessous pour connaître toutes les valeurs.<br /><br /> La valeur par défaut est `sspiNegotiated`.|  
 |defaultAlgorithmSuite|Facultatif. Définit les algorithmes de chiffrement de message et de clé de type WRAP. Les algorithmes et les tailles de clé sont déterminés par la classe <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Ces algorithmes se mappent à ceux définis dans la spécification Security Policy Language (WS-SecurityPolicy).<br /><br /> Les valeurs possibles sont indiquées ci-dessous. La valeur par défaut est `Basic256`.<br /><br /> Cet attribut est employé lors de l'utilisation d'une plate-forme différente qui opte pour un jeu d'algorithmes différent de la valeur par défaut. Vous devez connaître les forces et les faiblesses des algorithmes concernés lorsque vous modifiez ce paramètre. Cet attribut est de type <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
 |includeTimestamp|Valeur booléenne qui spécifie si les horodatages sont inclus dans chaque message. La valeur par défaut est `true`.|  
-|keyEntropyMode|Spécifie la manière dont les clés de sécurisation des messages sont calculées. Les clés peuvent être basées uniquement sur la clé du client, sur la clé du service ou sur une combinaison des deux. Les valeurs valides sont les suivantes :<br /><br /> -   `ClientEntropy`: La clé de session est basée sur les données de clé fournies par le client.<br />-   `ServerEntropy`: La clé de session est basée sur les données de clé fournies par le serveur.<br />-   `CombinedEntropy`: La clé de session est basée sur les données de clé fournies par le client et le service.<br /><br /> La valeur par défaut est `CombinedEntropy`.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
-|messageProtectionOrder|Définit l'ordre dans lequel les algorithmes de sécurité au niveau du message sont appliqués au message. Les valeurs valides sont les suivantes :<br /><br /> -   `SignBeforeEncrypt`: Signer en premier, puis chiffrer.<br />-   `SignBeforeEncryptAndEncryptSignature`: Signer en premier, chiffrer, puis chiffrer la signature.<br />-   `EncryptBeforeSign`: Chiffrer en premier, puis signe.<br /><br /> La valeur par défaut dépend de la version de WS-Security qui est utilisée. La valeur par défaut est `SignBeforeEncryptAndEncryptSignature` lors de l'utilisation de WS-Security 1,1. La valeur par défaut est `SignBeforeEncrypt` lors de l'utilisation de WS-Security 1.0.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
-|messageSecurityVersion|Facultatif. Définit la version de WS-Security utilisée. Les valeurs valides sont les suivantes :<br /><br /> -WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> La valeur par défaut est WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 et peut être simplement exprimée en XML par `Default`. Cet attribut est de type <xref:System.ServiceModel.MessageSecurityVersion>.|  
+|keyEntropyMode|Spécifie la manière dont les clés de sécurisation des messages sont calculées. Les clés peuvent être basées uniquement sur la clé du client, sur la clé du service ou sur une combinaison des deux. Les valeurs valides sont les suivantes :<br /><br /> -   `ClientEntropy` : La clé de session est basée sur les données de clé fournies par le client.<br />-   `ServerEntropy` : La clé de session est basée sur les données de clé fournies par le serveur.<br />-   `CombinedEntropy` : La clé de session est basée sur les données de clé fournies par le client et le service.<br /><br /> La valeur par défaut est `CombinedEntropy`.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
+|messageProtectionOrder|Définit l'ordre dans lequel les algorithmes de sécurité au niveau du message sont appliqués au message. Les valeurs valides sont les suivantes :<br /><br /> -   `SignBeforeEncrypt` : Signer en premier, puis chiffrer.<br />-   `SignBeforeEncryptAndEncryptSignature` : Signer en premier, chiffrer, puis chiffrer la signature.<br />-   `EncryptBeforeSign` : Chiffrer en premier, puis signe.<br /><br /> La valeur par défaut dépend de la version de WS-Security qui est utilisée. La valeur par défaut est `SignBeforeEncryptAndEncryptSignature` lors de l'utilisation de WS-Security 1,1. La valeur par défaut est `SignBeforeEncrypt` lors de l'utilisation de WS-Security 1.0.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
+|messageSecurityVersion|Facultatif. Définit la version de WS-Security utilisée. Les valeurs valides sont les suivantes :<br /><br /> -   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-   WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> La valeur par défaut est WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 et peut être simplement exprimée en XML par `Default`. Cet attribut est de type <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |requireDerivedKeys|Valeur booléenne qui spécifie si les clés peuvent être dérivées des clés de vérification d'origine. La valeur par défaut est `true`.|  
 |requireSecurityContextCancellation|Facultatif. Valeur booléenne qui spécifie si le contexte de sécurité doit être annulé et arrêté lorsqu'il n'est plus exigé. La valeur par défaut est `true`.|  
 |requireSignatureConfirmation|Facultatif. Valeur booléenne qui spécifie si la confirmation de signature WS-Security est activée. En cas de définition à `true`, les signatures de message sont confirmées par le répondeur.  Lorsque la liaison personnalisée est configurée pour des certificats mutuels ou si elle est configurée pour utiliser des jetons émis (liaisons WSS 1.1) cet attribut a la valeur par défaut `true`. Sinon, la valeur par défaut est `false`.<br /><br /> La confirmation de signature est utilisée pour confirmer que le service répond en toute confiance à une demande.|  
-|securityHeaderLayout|Facultatif. Spécifie le classement des éléments dans l'en-tête de sécurité. Les valeurs valides sont les suivantes :<br /><br /> -   `Strict`: Les éléments sont ajoutés à l’en-tête de sécurité conformément au principe général « déclarer avant d’utiliser ».<br />-   `Lax`: Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre qui confirme WSS : Sécurité des messages SOAP.<br />-   `LaxWithTimestampFirst`: Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre qui confirme WSS : SOAP Message security, à ceci près que le premier élément dans l’en-tête de sécurité doit être un élément wsse : timestamp.<br />-   `LaxWithTimestampLast`: Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre qui confirme WSS : SOAP Message security, sauf le dernier élément dans l’en-tête de sécurité doit être un élément wsse : timestamp.<br /><br /> La valeur par défaut est `Strict`.<br /><br /> Cet élément est de type <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|securityHeaderLayout|Facultatif. Spécifie le classement des éléments dans l'en-tête de sécurité. Les valeurs valides sont les suivantes :<br /><br /> -   `Strict` : Les éléments sont ajoutés à l’en-tête de sécurité conformément au principe général « déclarer avant d’utiliser ».<br />-   `Lax` : Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre qui confirme WSS : Sécurité des messages SOAP.<br />-   `LaxWithTimestampFirst` : Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre qui confirme WSS : SOAP Message security, à ceci près que le premier élément dans l’en-tête de sécurité doit être un élément wsse : timestamp.<br />-   `LaxWithTimestampLast` : Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre qui confirme WSS : SOAP Message security, sauf le dernier élément dans l’en-tête de sécurité doit être un élément wsse : timestamp.<br /><br /> La valeur par défaut est `Strict`.<br /><br /> Cet élément est de type <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode, attribut  
   
@@ -91,15 +91,15 @@ Spécifie les options de sécurité d’une liaison personnalisée.
 |Élément|Description|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Spécifie un jeton émis en cours. Cet élément est de type <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
-|[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Spécifie les paramètres de sécurité d’un client local pour cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
-|[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Spécifie les paramètres de sécurité d’un service local pour cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Spécifie les valeurs par défaut utilisées pour initialiser un service de conversation sécurisé.|  
+|[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Spécifie les paramètres de sécurité d’un client local pour cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
+|[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Spécifie les paramètres de sécurité d’un service local pour cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Spécifie les valeurs par défaut utilisées pour initialiser un service de conversation sécurisé.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="remarks"></a>Notes  
  Pour plus d’informations sur l’utilisation de cet élément, consultez [Modes d’authentification SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) et [Comment : Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
@@ -166,13 +166,13 @@ Spécifie les options de sécurité d’une liaison personnalisée.
 </configuration>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.SecurityElement>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.SecurityElement>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

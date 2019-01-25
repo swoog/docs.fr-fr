@@ -2,12 +2,12 @@
 title: Génération d'un client WCF à partir de métadonnées de service
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570955"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Génération d'un client WCF à partir de métadonnées de service
 Cette rubrique décrit comment utiliser plusieurs commutateurs dans Svcutil.exe pour générer des clients à partir de documents de métadonnées.  
@@ -31,15 +31,15 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |Option|Description|  
 |------------|-----------------|  
 |**/ reference :\<chemin d’accès de fichier >**|Référence les types contenus dans l'assembly spécifié. Lorsque vous générez des clients, utilisez cette option pour spécifier des assemblys qui peuvent contenir des types représentant les métadonnées importées.<br /><br /> Forme abrégée : `/r`|  
-|**/excludeType :\<type >**|Spécifie un nom de type qualifié complet ou qualifié d'assembly à exclure des types de contrat référencés.<br /><br /> Forme abrégée : `/et`|  
+|**/excludeType:\<type>**|Spécifie un nom de type qualifié complet ou qualifié d'assembly à exclure des types de contrat référencés.<br /><br /> Forme abrégée : `/et`|  
   
 ## <a name="choosing-a-serializer"></a>Choix d'un sérialiseur  
   
 |Option|Description|  
 |------------|-----------------|  
-|**/Serializer:auto**|Sélectionne automatiquement le sérialiseur. Cette opération utilise le sérialiseur `DataContract`. Si cela échoue, le `XmlSerializer` est utilisé.<br /><br /> Forme abrégée : `/ser:Auto`|  
-|**/Serializer:DataContractSerializer**|Génère des types de données qui utilisent le sérialiseur `DataContract` pour la sérialisation et la désérialisation.<br /><br /> Forme abrégée : `/ser:DataContractSerializer`|  
-|**/ Serializer : XmlSerializer**|Génère des types de données qui utilisent le `XmlSerializer` pour la sérialisation et la désérialisation.<br /><br /> Forme abrégée : `/ser:XmlSerializer`|  
+|**/serializer:Auto**|Sélectionne automatiquement le sérialiseur. Cette opération utilise le sérialiseur `DataContract`. Si cela échoue, le `XmlSerializer` est utilisé.<br /><br /> Forme abrégée : `/ser:Auto`|  
+|**/serializer:DataContractSerializer**|Génère des types de données qui utilisent le sérialiseur `DataContract` pour la sérialisation et la désérialisation.<br /><br /> Forme abrégée : `/ser:DataContractSerializer`|  
+|**/serializer:XmlSerializer**|Génère des types de données qui utilisent le `XmlSerializer` pour la sérialisation et la désérialisation.<br /><br /> Forme abrégée : `/ser:XmlSerializer`|  
 |**/importXmlTypes**|Configure le sérialiseur `DataContract` pour importer les types non `DataContract` comme types `IXmlSerializable`.<br /><br /> Forme abrégée : `/ixt`|  
 |**/dataContractOnly**|Génère du code pour les types `DataContract` uniquement. Les types `ServiceContract` sont générés.<br /><br /> Pour cette option, vous devez spécifier uniquement des fichiers de métadonnées locaux.<br /><br /> Forme abrégée : `/dconly`|  
   
@@ -53,22 +53,22 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Option|Description|  
 |------------|-----------------|  
-|**/ namespace :\<chaîne, chaîne >**|Spécifie un mappage d'un schéma WSDL ou XML `targetNamespace` à un espace de noms du Common Language Runtime (CLR). L'utilisation d'un caractère générique (*) pour le `targetNamespace` mappe tous les `targetNamespaces` sans mappage explicite à cet espace de noms CLR.<br /><br /> Pour vérifier que le nom de contrat du message n'entre pas en collision avec le nom d'opération, qualifiez la référence de type avec des signes deux-points doubles `::`, ou vérifiez que les noms sont uniques.<br /><br /> Valeur par défaut : dérivée de l'espace de noms cible du document de schéma pour `DataContracts`. L'espace de noms par défaut est utilisé pour tous les autres types générés.<br /><br /> Forme abrégée : `/n`|  
+|**/ namespace :\<chaîne, chaîne >**|Spécifie un mappage d'un schéma WSDL ou XML `targetNamespace` à un espace de noms du Common Language Runtime (CLR). L'utilisation d'un caractère générique (*) pour le `targetNamespace` mappe tous les `targetNamespaces` sans mappage explicite à cet espace de noms CLR.<br /><br /> Pour vérifier que le nom de contrat du message n'entre pas en collision avec le nom d'opération, qualifiez la référence de type avec des signes deux-points doubles `::`, ou vérifiez que les noms sont uniques.<br /><br /> Par défaut : Dérivé de l’espace de noms cible du document de schéma pour `DataContracts`. L'espace de noms par défaut est utilisé pour tous les autres types générés.<br /><br /> Forme abrégée : `/n`|  
   
 ## <a name="choosing-a-data-binding"></a>Choix d’une liaison de données  
   
 |Option|Description|  
 |------------|-----------------|  
-|**/enableDataBinding**|Implémente l'interface <xref:System.ComponentModel.INotifyPropertyChanged> sur tous les types `DataContract` pour activer la liaison de données.<br /><br /> Forme abrégée : `/edb`|  
+|**/enableDataBinding**|Implémente l’interface <xref:System.ComponentModel.INotifyPropertyChanged> sur tous les types `DataContract` pour activer la liaison de données.<br /><br /> Forme abrégée : `/edb`|  
   
 ## <a name="generating-configuration"></a>Génération de la configuration  
   
 |Option|Description|  
 |------------|-----------------|  
-|**/ config :\<configFile >**|Spécifie le nom de fichier du fichier de configuration généré.<br /><br /> Valeur par défaut : output.config.|  
+|**/config:\<configFile>**|Spécifie le nom de fichier du fichier de configuration généré.<br /><br /> Valeur par défaut : output.config.|  
 |**/mergeConfig**|Fusionne la configuration générée dans un fichier existant au lieu de remplacer le fichier existant.|  
 |**/noConfig**|Ne génère pas de fichiers de configuration.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Vue d’ensemble de l’architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Vue d’ensemble de l’architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

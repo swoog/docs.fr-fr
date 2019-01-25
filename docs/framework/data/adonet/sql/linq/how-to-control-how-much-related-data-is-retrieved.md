@@ -1,18 +1,18 @@
 ---
-title: 'Comment : contrôler la quantité de données liées récupérées'
+title: 'Procédure : Contrôler la quantité de données liée récupérée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 202e33f3130e8db7269af2b4669690cf5c6468cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b52e2cdefefce011be7d729569b76f919f9bb33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715606"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Comment : contrôler la quantité de données liées récupérées
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Procédure : Contrôler la quantité de données liée récupérée
 Utilisez la méthode <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> pour spécifier quelles données associées à votre cible principale doivent être récupérées simultanément. Par exemple, si vous savez que vous aurez besoin d'informations relatives aux commandes des clients, vous pouvez utiliser <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> pour vous assurer que les informations relatives aux commandes sont récupérées en même temps que les informations relatives au client. Cette approche permet de ne provoquer qu'un seul envoi à la base de données pour les deux ensembles d'informations.  
   
 > [!NOTE]
@@ -24,5 +24,5 @@ Utilisez la méthode <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> pour sp
  [!code-csharp[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#2)]
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interrogation de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a>Voir aussi
+- [Interrogation de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

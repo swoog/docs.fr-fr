@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54392ce12ca93d3a7979b1d0bbc78132773f88ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600113"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Choisir entre DateTime, DateTimeOffset, TimeSpan et TimeZoneInfo
 
@@ -47,7 +47,7 @@ Les applications .NET qui utilisent des informations de date et d’heure sont t
 
 ## <a name="the-datetime-structure"></a>La structure DateTime
 
-Une valeur <xref:System.DateTime> définit une date/heure spécifique. Il inclut un <xref:System.DateTime.Kind%2A> propriété qui fournit des informations limitées sur le fuseau horaire auquel cette date et heure appartient. Le <xref:System.DateTimeKind> valeur retournée par la <xref:System.DateTime.Kind%2A> propriété indique si le <xref:System.DateTime> valeur représente l’heure locale (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), temps universel coordonné (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), ou une heure non spécifiée (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
+Une valeur <xref:System.DateTime> définit une date/heure spécifique. Il inclut un <xref:System.DateTime.Kind%2A> propriété qui fournit des informations limitées sur le fuseau horaire auquel cette date et heure appartient. La valeur <xref:System.DateTimeKind> retournée par la propriété <xref:System.DateTime.Kind%2A> indique si la valeur <xref:System.DateTime> représente la date/heure locale (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), la date/heure UTC (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) ou une date/heure non spécifiée (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
 
 La structure <xref:System.DateTime> convient pour les applications qui :
 
@@ -122,4 +122,4 @@ Tirer parti de la prise en charge des fuseaux horaires dans .NET est possible se
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
