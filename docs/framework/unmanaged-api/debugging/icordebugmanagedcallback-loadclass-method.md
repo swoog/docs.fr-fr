@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1d920a97338bba3e90ec8f0c440f6dd2a93e722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f3c430e18864c0352b43641bce9a7d52af69cc80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718219"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass, méthode
 Notifie le débogueur qu’une classe a été chargée.  
@@ -44,19 +44,19 @@ HRESULT LoadClass (
  [in] Pointeur vers un objet ICorDebugClass qui représente la classe.  
   
 ## <a name="remarks"></a>Notes  
- Ce rappel se produit uniquement lors du chargement de la classe a été activé pour le module qui contient la classe. Chargement de classe est toujours activé pour les modules dynamiques.  
+ Ce rappel se produit uniquement si le chargement de classe a été activé pour le module qui contient la classe. Le chargement de classe est toujours activé pour les modules dynamiques.  
   
- Le `LoadClass` rappel fournit un moment opportun pour lier les points d’arrêt aux classes récemment générées dans les modules dynamiques.  
+ Le `LoadClass` rappel fournit un bon moment pour lier des points d’arrêt pour les classes qui vient d’être générées dans les modules dynamiques.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [UnloadClass, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)  
- [ICorDebugManagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [UnloadClass, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
+- [ICorDebugManagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

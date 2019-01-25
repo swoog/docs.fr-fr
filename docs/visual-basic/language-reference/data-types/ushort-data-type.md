@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 21d3b31fe19db7abf1a78d0c6d33abfbc2882089
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 4b21624ea31fd0e11e598bab435b9f3c6f6d9b9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512838"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort, type de données (Visual Basic)
 
@@ -74,10 +74,10 @@ Dim number = &H_5826us
   
 -   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.UInt16?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.UInt16>  
- [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Guide pratique pour appeler une fonction Windows qui possède des types non signés](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.UInt16>
+- [Types de données](../../../visual-basic/language-reference/data-types/index.md)
+- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Guide pratique pour appeler une fonction Windows qui possède des types non signés](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

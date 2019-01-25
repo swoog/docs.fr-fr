@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c77f946b14fcb5ddc786488ab42e37eb868fbc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9e54b4c4b1b3184b6aa0d50f82a501312db6a8e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655658"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps, méthode
-Obtient le jeton TypeDef parent <xref:System.Type> spécifié type imbriqué.  
+Obtient le jeton TypeDef pour le parent <xref:System.Type> du type imbriqué.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,20 +38,20 @@ HRESULT GetNestedClassProps (
   
 #### <a name="parameters"></a>Paramètres  
  `tdNestedClass`  
- [in] Jeton TypeDef représentant le <xref:System.Type> pour renvoyer la classe parente d’émission de jeton.  
+ [in] Jeton TypeDef représentant le <xref:System.Type> pour renvoyer la classe parente jeton pour.  
   
  `ptdEnclosingClass`  
  [out] Un pointeur vers le jeton TypeDef pour le <xref:System.Type> qui `tdNestedClass` est imbriqué dans.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

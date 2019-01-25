@@ -2,15 +2,15 @@
 title: SQL Server et ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 32fc946f46ddac63d87b7e5a3d8f7120799f7223
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c9b935e6a8c86c5c8f31a856b2bd4af04b9455fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743580"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server et ADO.NET
-Cette section décrit des fonctions et des comportements spécifiques au fournisseur de données .NET Framework pour SQL Server (<xref:System.Data.SqlClient>).  
+Cette section décrit des fonctionnalités et des comportements spécifiques au fournisseur de données .NET Framework pour SQL Server (<xref:System.Data.SqlClient>).  
   
  <xref:System.Data.SqlClient> permet d'accéder à différentes versions de SQL Server, qui encapsule des protocoles spécifiques à la base de données. La fonctionnalité du fournisseur de données est conçue pour être similaire à celle des fournisseurs de données .NET Framework pour OLE DB, ODBC et Oracle. <xref:System.Data.SqlClient> inclut un analyseur TDS (Tabular Data Stream) qui permet de communiquer directement avec SQL Server.  
   
@@ -40,9 +40,9 @@ Cette section décrit des fonctions et des comportements spécifiques au fournis
   
  [Documentation en ligne de SQL Server](/sql/sql-server/sql-server-technical-documentation)  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Mappages de types de données dans ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Mappages de types de données dans ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 1223dee7e307c032bd14be154b58972e51287c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 352951c4ee6a96e0bf91b583ad61b431f490a624
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518473"
 ---
 # <a name="group-elements-in-a-sequence"></a>Comment : regrouper des éléments dans une séquence
 L'opérateur <xref:System.Linq.Enumerable.GroupBy%2A> regroupe les éléments d'une séquence. Les exemples suivants utilisent la base de données Northwind.  
@@ -67,11 +67,11 @@ L'opérateur <xref:System.Linq.Enumerable.GroupBy%2A> regroupe les éléments d'
  [!code-vb[DLinqQueryExamples#34](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#34)]  
   
 ## <a name="example"></a>Exemple  
- L'opérateur <xref:System.Linq.Queryable.GroupBy%2A> ne peut prendre qu'un argument Key. Pour effectuer un regroupement sur plusieurs clés, vous devez créer un type anonyme, comme dans l'exemple suivant :  
+ L’opérateur <xref:System.Linq.Queryable.GroupBy%2A> ne peut prendre qu’un argument Key. Pour effectuer un regroupement sur plusieurs clés, vous devez créer un type anonyme, comme dans l'exemple suivant :  
   
  [!code-csharp[DLinqQueryExamples#35](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#35)]
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples de requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Téléchargement d’exemples de base de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>Voir aussi
+- [Exemples de requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Téléchargement d’exemples de base de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

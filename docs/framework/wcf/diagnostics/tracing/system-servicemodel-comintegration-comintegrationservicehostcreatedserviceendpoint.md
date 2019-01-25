@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 ms.date: 03/30/2017
 ms.assetid: d75d39da-7502-4a6a-91b9-eaa05b8e24d5
-ms.openlocfilehash: 7e7bd48d206456af6a5a8662516c4d9c82b3ed2f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ade49ceb86a401cd27a9381b1ea5d0c1ad624548
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623090"
 ---
 # <a name="systemservicemodelchannelsmsmqmoveordeleteattemptfailed"></a>System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 Impossible de déplacer ou de supprimer le message.  
@@ -19,7 +19,7 @@ Impossible de déplacer ou de supprimer le message.
   
  Ce suivi n'indique pas une défaillance générale du système. Toutefois, il indique que la disposition de message incohérent choisie a échoué pour un message. Consultez [des messages incohérents](https://go.microsoft.com/fwlink/?LinkID=99546) pour plus d’informations sur le moment où les messages deviennent incohérents et comment configurer votre service pour traiter de manière appropriée.  
   
-## <a name="see-also"></a>Voir aussi  
- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Utilisation du suivi pour résoudre les problèmes posés par votre application](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)

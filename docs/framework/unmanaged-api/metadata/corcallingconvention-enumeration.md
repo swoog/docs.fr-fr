@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c27669c8473bd52d3b82a14d570340ac38d1e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523244"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention, énumération
 Contient des valeurs qui décrivent les types de conventions d’appel effectuées dans le code managé.  
@@ -56,24 +56,24 @@ typedef enum CorCallingConvention
 |------------|-----------------|  
 |`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indique la convention d’appel par défaut.|  
 |`IMAGE_CEE_CS_CALLCONV_VARARG`|Indique que la méthode accepte un nombre variable de paramètres.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indique que l’appel est dans un champ.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indique que l’appel concerne un champ.|  
 |`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indique que l’appel concerne une méthode locale.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indique que l’appel est à une propriété.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indique que l’appel concerne une propriété.|  
 |`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indique que l’appel n’est pas géré.|  
 |`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indique une instanciation de méthode générique.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indique qu’un appel PInvoke de 64 bits à une méthode qui accepte un nombre variable de paramètres.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indique un appel PInvoke de 64 bits à une méthode qui accepte un nombre variable de paramètres.|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|Décrit une valeur de 4 bits non valide.|  
 |`IMAGE_CEE_CS_CALLCONV_MASK`|Indique que la convention d’appel est décrite par les quatre bits inférieurs.|  
 |`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indique que le bit supérieur décrit un `this` paramètre.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indique qu’un `this` paramètre est explicitement décrit dans la signature.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indique une signature de méthode générique avec un nombre explicite d’arguments de type. Il précède un nombre de paramètres ordinaires.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indique qu’un `this` paramètre est décrit explicitement dans la signature.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indique une signature de méthode générique avec un nombre d’arguments de type explicite. Il précède un nombre de paramètres ordinaires.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

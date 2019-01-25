@@ -1,5 +1,5 @@
 ---
-title: 'Comment : définir les modes de tri des colonnes du contrôle DataGridView Windows Forms'
+title: 'Procédure : Définir les Modes de tri des colonnes dans le contrôle de DataGridView Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
-ms.openlocfilehash: 08d90bb45006af798b629f58821cbf50ee9ef089
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43ee1f43dfed0a9612ef0b460e5633262c9b6a5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674883"
 ---
-# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Comment : définir les modes de tri des colonnes du contrôle DataGridView Windows Forms
-Dans la <xref:System.Windows.Forms.DataGridView> utilisent des colonnes de zone de texte (contrôle), le tri automatique par défaut, tandis que d’autres types de colonne ne sont pas triées automatiquement. Parfois, vous devez remplacer ces valeurs par défaut. Par exemple, vous pouvez afficher des images à la place de texte, des nombres ou des valeurs de cellule d’énumération. Alors que les images ne peuvent pas être triées, les valeurs sous-jacentes qu’ils représentent peuvent être triées.  
+# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Procédure : Définir les Modes de tri des colonnes dans le contrôle de DataGridView Windows Forms
+Dans la <xref:System.Windows.Forms.DataGridView> utilisent des colonnes de zone de texte contrôle, le tri automatique par défaut, tandis que les autres types de colonnes ne sont pas triées automatiquement. Parfois, vous devez remplacer ces valeurs par défaut. Par exemple, vous pouvez afficher des images au lieu de texte, des nombres ou des valeurs de cellule d’énumération. Tandis que les images ne peut pas être triées, les valeurs sous-jacentes qu’ils représentent peuvent être triées.  
   
- Dans le <xref:System.Windows.Forms.DataGridView> (contrôle), le <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> valeur de la propriété d’une colonne détermine son comportement de tri.  
+ Dans le <xref:System.Windows.Forms.DataGridView> contrôle, le <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> valeur de propriété d’une colonne détermine son comportement de tri.  
   
- La procédure suivante affiche le `Priority` colonne à partir de [Comment : personnaliser la mise en forme de données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md). Cette colonne est une colonne d’image et n’est pas triable par défaut. Il contient des valeurs de cellule réelle qui sont des chaînes, toutefois, afin qu’il peut être triée automatiquement.  
+ La procédure suivante affiche le `Priority` colonne à partir de [Comment : Personnaliser la mise en forme des données dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md). Cette colonne est une colonne d’image et n’est pas triable par défaut. Il contient des valeurs de cellules réelles qui sont des chaînes, toutefois, donc il peut être trié automatiquement.  
   
 ### <a name="to-set-the-sort-mode-for-a-column"></a>Pour définir le mode de tri pour une colonne  
   
@@ -37,9 +37,9 @@ Dans la <xref:System.Windows.Forms.DataGridView> utilisent des colonnes de zone 
   
 -   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>  
- [Tri des données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
- [Modes de tri des colonnes du contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
- [Guide pratique pour personnaliser le tri dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
+- [Tri des données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Modes de tri des colonnes du contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [Guide pratique pour Personnaliser le tri dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

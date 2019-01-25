@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 7546676b85465577b357b7ad0757b4db8d40dbe3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c45559042231b72ef1ba892cabbead03797df8e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642508"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Dépassement de capacité (erreur d'exécution Visual Basic)
 Un dépassement de capacité se produit lorsque vous essayez d’une assignation qui dépasse les limites de la cible de l’assignation.  
@@ -22,8 +22,8 @@ Un dépassement de capacité se produit lorsque vous essayez d’une assignation
   
 3.  Assurez-vous que les numéros utilisés dans les calculs sont convertis en entiers n’ont pas de résultats supérieurs aux entiers.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Int32.MaxValue?displayProperty=nameWithType>  
- <xref:System.Double.MaxValue?displayProperty=nameWithType>  
- [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
- [Types d’erreurs](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Int32.MaxValue?displayProperty=nameWithType>
+- <xref:System.Double.MaxValue?displayProperty=nameWithType>
+- [Types de données](../../../visual-basic/language-reference/data-types/index.md)
+- [Types d’erreurs](../../../visual-basic/programming-guide/language-features/error-types.md)

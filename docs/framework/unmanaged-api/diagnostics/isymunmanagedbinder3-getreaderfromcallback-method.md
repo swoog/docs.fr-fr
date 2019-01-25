@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f44d50f6736e0698fd876eedab78dbf41434af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5767b60fa992b49fdc2a60feb243a26c0e2ea1ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534547"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback, méthode
-Permet à l’utilisateur d’implémenter ou de fournir via un rappel un `IID_IDiaReadExeAtRVACallback` ou `IID_IDiaReadExeAtOffsetCallback` pour obtenir les informations de répertoire de débogage à partir de la mémoire.  
+Permet à l’utilisateur d’implémenter ou de fournir via un rappel un `IID_IDiaReadExeAtRVACallback` ou `IID_IDiaReadExeAtOffsetCallback` pour obtenir les informations de répertoire de débogage de la mémoire.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,13 +50,13 @@ HRESULT GetReaderFromCallback(
  [in] Pointeur vers le chemin de recherche.  
   
  `searchPolicy`  
- [in] Une valeur de la [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) énumération qui spécifie la stratégie à utiliser lorsque vous effectuez une recherche pour un lecteur de symboles.  
+ [in] Une valeur de la [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) énumération qui spécifie la stratégie à utiliser lors d’une recherche pour un lecteur de symboles.  
   
  `callback`  
  [in] Pointeur vers la fonction de rappel.  
   
  `pRetVal`  
- [out] Un pointeur qui est défini à le [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
+ [out] Un pointeur qui est défini à retourné [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
@@ -64,5 +64,5 @@ HRESULT GetReaderFromCallback(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedBinder3, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedBinder3, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 1d030f8058cd497212c20bca8f064f2bedc99fce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d85ff343587e8689a4859a09c8dc80932374a82e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498646"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Constantes et types de données littérales (Visual Basic)
 Un littéral est une valeur qui est exprimée en tant que telle, plutôt que comme valeur d’une variable ou le résultat d’une expression, telles que le nombre 3 ou la chaîne « Hello ». Une constante est un nom significatif qui prend la place d’un littéral et conserve cette même valeur tout au long du programme, par opposition à une variable, dont la valeur peut changer.  
@@ -61,14 +61,14 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Single`|(aucune)|F ou !|  
 |`String`|"|(aucune)|  
   
-## <a name="see-also"></a>Voir aussi  
- [Constantes définies par l’utilisateur](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)  
- [Guide pratique : déclarer une constante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)  
- [Vue d’ensemble des constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Option Strict (instruction)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Option Explicit (instruction)](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Vue d’ensemble des énumérations](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
- [Comment : déclarer une énumération](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
- [Énumérations et qualification de noms](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)  
- [Constantes et énumérations](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Constantes définies par l’utilisateur](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
+- [Guide pratique pour Déclarer une constante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
+- [Vue d’ensemble des constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Option Strict (instruction)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Explicit (instruction)](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Vue d’ensemble des énumérations](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Guide pratique pour Déclarer une énumération](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Énumérations et qualification de noms](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
+- [Types de données](../../../../visual-basic/language-reference/data-types/index.md)
+- [Constantes et énumérations](../../../../visual-basic/language-reference/constants-and-enumerations.md)

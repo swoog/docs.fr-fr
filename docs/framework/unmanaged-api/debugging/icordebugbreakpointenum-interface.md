@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBreakpointEnum Interface1
+title: ICorDebugBreakpointEnum, Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpointEnum
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8299be7189522c1b508e647ae227de5d5dd68c73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 508cb9b4b2ff13a58f1313b958acd7b043741848
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642933"
 ---
-# <a name="icordebugbreakpointenum-interface1"></a>ICorDebugBreakpointEnum Interface1
+# <a name="icordebugbreakpointenum-interface1"></a>ICorDebugBreakpointEnum, Interface1
 Implémente les méthodes ICorDebugEnum et énumère des tableaux ICorDebugBreakpoint.  
   
 ## <a name="methods"></a>Méthodes  
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[Next, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Obtient le nombre spécifié de `ICorDebugBreakpoint` les instances de l’énumération, en démarrant à la position actuelle.|  
+|[Next, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Obtient le nombre spécifié de `ICorDebugBreakpoint` instances à partir de l’énumération, en commençant à la position actuelle.|  
   
 ## <a name="remarks"></a>Notes  
   
@@ -38,13 +38,13 @@ Implémente les méthodes ICorDebugEnum et énumère des tableaux ICorDebugBreak
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

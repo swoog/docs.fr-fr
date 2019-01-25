@@ -2,12 +2,12 @@
 title: Service de routage
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495303"
 ---
 # <a name="routing-service"></a>Service de routage
 Le service de routage est un intermédiaire SOAP générique qui agit en tant que routeur de messages. La fonctionnalité principale du service de routage est la possibilité de router des messages en fonction du contenu des messages ; un message peut ainsi être envoyé à un point de terminaison client en fonction d'une valeur située à l'intérieur du message, soit dans l'en-tête, soit dans le corps du message.  
@@ -62,7 +62,7 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
  En utilisant le routage basé sur le contenu, vous pouvez exposer un point de terminaison qui reçoit des messages provenant d'applications clientes externes, puis router chaque message vers le point de terminaison interne approprié en fonction d'une valeur contenue dans le message. Cela permet d'offrir un point de terminaison spécifique à diverses applications principales, et également d'offrir aux clients un point de terminaison d'application tout en développant votre application en une variété de services.  
   
 ### <a name="service-versioning"></a>Contrôle des versions du service  
- Lors de la migration vers une nouvelle version de votre solution, vous aurez peut-être besoin de maintenir l'ancienne version en parallèle pour servir des clients existants. Cela demande souvent que les clients qui se connectent à la version plus récente utilisent une adresse différente pour communiquer avec la solution. Le service de routage vous permet d'exposer un seul point de terminaison de service qui sert aux deux versions de votre solution, en routant les messages vers la solution appropriée en fonction d'informations spécifiques à la version contenues dans le message. Pour obtenir un exemple d’une telle implémentation consultez [How To : le Service de contrôle de version](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Lors de la migration vers une nouvelle version de votre solution, vous aurez peut-être besoin de maintenir l'ancienne version en parallèle pour servir des clients existants. Cela demande souvent que les clients qui se connectent à la version plus récente utilisent une adresse différente pour communiquer avec la solution. Le service de routage vous permet d'exposer un seul point de terminaison de service qui sert aux deux versions de votre solution, en routant les messages vers la solution appropriée en fonction d'informations spécifiques à la version contenues dans le message. Pour obtenir un exemple d’une telle implémentation consultez [How To : Service de contrôle de version](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ### <a name="priority-routing"></a>Routage par priorité  
  Lorsque vous fournissez un service à plusieurs clients, vous pouvez avoir un contrat de niveau de service (SLA) avec certains partenaires exigeant que toutes les données de ces partenaires soient traitées séparément de celles des autres clients. En utilisant un filtre qui recherche les informations spécifiques au client contenues dans le message, vous pouvez router facilement des messages de partenaires spécifiques vers un point de terminaison qui a été créé pour répondre aux exigences du contrat SLA.  
@@ -105,7 +105,7 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
   
 -   Configuration dynamique  
   
-## <a name="see-also"></a>Voir aussi  
- [Introduction au routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [Contrats de routage](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Filtres de message](../../../../docs/framework/wcf/feature-details/message-filters.md)
+## <a name="see-also"></a>Voir aussi
+- [Introduction au routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Contrats de routage](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
+- [Filtres de message](../../../../docs/framework/wcf/feature-details/message-filters.md)

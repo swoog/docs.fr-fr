@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb1fc266c8451953c8b6a9c686f4a1c1951966e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51711162613db6c8045d9192e2ca9f1380509be2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556166"
 ---
 # <a name="embedresource-method"></a>EmbedResource, méthode
 Déclare une ressource incorporée. Cette méthode n’incorpore pas réellement la ressource.  
@@ -50,7 +50,7 @@ HRESULT EmbedResource(
  Nom de la ressource.  
   
  `dwOffset`  
- Décalage de la ressource adresse RVA.  
+ Décalage de la ressource à partir de l’adresse RVA.  
   
  `dwFlags`  
  Accessibilité indicateurs tels que `mrPublic` et `mrPrivate`. Ces indicateurs peuvent être passés à [DefineExportedType, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
@@ -59,9 +59,9 @@ HRESULT EmbedResource(
  Retourne S_OK si la méthode réussit.  
   
 ## <a name="requirements"></a>Spécifications  
- Requiert alink.h.  
+ Nécessite alink.h.  
   
-## <a name="see-also"></a>Voir aussi  
- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Voir aussi
+- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

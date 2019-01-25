@@ -1,18 +1,18 @@
 ---
-title: 'Comment : exécuter directement des requêtes SQL'
+title: 'Procédure : Exécuter directement des requêtes SQL'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: b7a468ccbdf63ec5e74238ac4e59a2f385d2562b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1caf81df5998e5aaef4ad011a399d70aff43ca9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634452"
 ---
-# <a name="how-to-directly-execute-sql-queries"></a>Comment : exécuter directement des requêtes SQL
+# <a name="how-to-directly-execute-sql-queries"></a>Procédure : Exécuter directement des requêtes SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit les requêtes que vous écrivez dans les requêtes SQL paramétrées (sous forme textuelle) et les envoie au serveur SQL pour traitement.  
   
  SQL ne peut pas exécuter les diverses méthodes qui peuvent être localement disponibles pour votre application. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] essaie de convertir ces méthodes locales en opérations et fonctions équivalentes qui sont disponibles à l'intérieur de l'environnement SQL. La plupart des méthodes et opérateurs sur les types intégrés [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] ont des traductions directes en commandes SQL. Certains peuvent être produits à partir des fonctions disponibles. Ceux qui ne peuvent pas être produits génèrent des exceptions runtime. Pour plus d’informations, consultez [le mappage de Type SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "33361405"
  [!code-csharp[DLinqQuerying#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#4)]
  [!code-vb[DLinqQuerying#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#4)]  
   
- Tant que les noms de colonnes dans les résultats sous forme de tableau correspondent aux propriétés de colonne de votre classe d’entité, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crée vos objets à partir de n’importe quelle requête SQL.  
+ Tant que les noms de colonne dans les résultats sous forme de tableau correspondent aux propriétés des colonnes de votre classe d’entité, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crée vos objets à partir de n’importe quelle requête SQL.  
   
 ## <a name="example"></a>Exemple  
  La méthode <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> autorise également les paramètres. Utilisez un code similaire à l'exemple de code suivant pour exécuter une requête paramétrée.  
@@ -35,6 +35,6 @@ ms.locfileid: "33361405"
   
  Les paramètres sont exprimés dans le texte de requête en utilisant la même notation avec accolades utilisée par `Console.WriteLine()` et `String.Format()`. En fait, `String.Format()` est réellement appelé sur la chaîne de requête que vous fournissez, en remplaçant les paramètres entre accolades avec générés tels que les noms de paramètres @p0, @p1 ..., @p(n).  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations générales](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Interrogation de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a>Voir aussi
+- [Informations générales](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Interrogation de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

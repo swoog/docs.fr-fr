@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3118f80086df13681e43ecc0c46c276a9cf9e033
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6a4335bf477f0eeb8c48a50b9f11fb1f32d21448
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690057"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>ITypeNameBuilder::AddByRef, méthode
 Cette m&#233;thode prend en charge l'infrastructure .NET Framework et n'est pas destin&#233;e &#224; &#234;tre utilis&#233;e directement &#224; partir de votre code.  
@@ -38,9 +38,9 @@ HRESULT AddByRef ( );
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

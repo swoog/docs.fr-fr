@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2e0c2764f96a2592ad0a4dfe5caa46536373eb80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 81b16f7e4f216d1879c57dfb2dc2bfb1e1191aa2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683334"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Propriétés UI Automation pour les clients
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "47193276"
 ## <a name="property-ids"></a>ID de propriété  
  Les [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] de propriété sont des valeurs constantes, uniques, encapsulées dans des objets <xref:System.Windows.Automation.AutomationProperty> . Les applications clientes UI Automation obtiennent ces [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] à partir de la classe <xref:System.Windows.Automation.AutomationElement> , ou de la classe de modèle de contrôle appropriée, par exemple <xref:System.Windows.Automation.ScrollPattern>. Les fournisseurs UI Automation les obtiennent à partir de <xref:System.Windows.Automation.AutomationElementIdentifiers> , ou de l’une des classes d’identificateurs de modèle de contrôle, par exemple <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
   
- Numérique <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> d’un <xref:System.Windows.Automation.AutomationProperty> est utilisé par les fournisseurs pour identifier les propriétés qui sont demandées dans le <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> (méthode). En général, les applications clientes n’ont pas besoin d’examiner l’ <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> n’est utilisé que pour le débogage et le diagnostic.  
+ Les fournisseurs utilisent l’ <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> numérique de <xref:System.Windows.Automation.AutomationProperty> pour identifier les propriétés interrogées dans la méthode <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> . En général, les applications clientes n’ont pas besoin d’examiner l’ <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> n’est utilisé que pour le débogage et le diagnostic.  
   
 <a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>Conditions de propriété  
@@ -79,7 +79,7 @@ ms.locfileid: "47193276"
 ## <a name="default-property-values"></a>Valeurs de propriété par défaut  
  Si un fournisseur UI Automation n’implémente pas une propriété, le système [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] peut fournir une valeur par défaut. Par exemple, si le fournisseur d’un contrôle ne prend pas en charge la propriété identifiée par <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] retourne une chaîne vide. De même, si le fournisseur ne prend pas en charge la propriété identifiée par <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] retourne `false`.  
   
- Vous pouvez modifier ce comportement à l’aide de la <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> et <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> surcharges de méthode. Quand vous spécifiez `true` comme second paramètre, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ne retourne pas de valeur par défaut mais la valeur spéciale <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
+ Vous pouvez changer ce comportement à l’aide des surcharges de méthode <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> et <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> . Quand vous spécifiez `true` comme second paramètre, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ne retourne pas de valeur par défaut mais la valeur spéciale <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
   
  L’exemple de code suivant tente de récupérer une propriété d’un élément. Si la propriété n’est pas prise en charge, une valeur définie par l’application est utilisée à la place.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "47193276"
 |<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|(Propriété statique) <xref:System.Windows.Automation.AutomationElement> ayant le focus d’entrée.|  
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Propriété statique) <xref:System.Windows.Automation.AutomationElement>racine.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Mise en cache dans les clients UI Automation](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [Implémentation de fournisseur UI Automation côté serveur](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [S’abonner à des événements UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+## <a name="see-also"></a>Voir aussi
+- [Mise en cache dans les clients UI Automation](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [Implémentation de fournisseur UI Automation côté serveur](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [S’abonner à des événements UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

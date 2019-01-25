@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230666cefdadd56465fac35222500ad4b6da67e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 72a504d23b7b15ad3de72995a632843874cc7c5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631750"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue, méthode
 Obtient la valeur du champ spécifié de la classe spécifiée pour la valeur de cet objet.  
@@ -48,19 +48,19 @@ HRESULT GetFieldValue (
  [out] Pointeur vers un objet « ICorDebugValue » qui représente la valeur du champ spécifié.  
   
 ## <a name="remarks"></a>Notes  
- La classe spécifiée dans le `pClass` paramètre doit être dans la hiérarchie de classe de la valeur d’objet, et le champ doit être un champ de cette classe.  
+ La classe spécifiée dans le `pClass` paramètre, doit être dans la hiérarchie de classe de la valeur d’objet et le champ doit être un champ de cette classe.  
   
- Le `GetFieldValue` méthode continuera à aboutir pour les objets génériques et les classes génériques. Par exemple, si MonDictionnaire\<V > hérite de dictionnaire\<de chaîne, V >, et la valeur de l’objet est de type MonDictionnaire\<int32 >, en passant le `ICorDebugClass` objet dictionnaire\<K, V > sera récupérer un champ de dictionnaire\<string, int32 >.  
+ Le `GetFieldValue` méthode réussira quand même pour les objets génériques et les classes génériques. Par exemple, si MonDictionnaire\<V > hérite de dictionnaire\<string, V >, et la valeur de l’objet est de type MonDictionnaire\<int32 >, en passant le `ICorDebugClass` objet de dictionnaire\<K, V > sera obtenir correctement un champ de dictionnaire\<string, int32 >.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-    
- 
+## <a name="see-also"></a>Voir aussi
+
+

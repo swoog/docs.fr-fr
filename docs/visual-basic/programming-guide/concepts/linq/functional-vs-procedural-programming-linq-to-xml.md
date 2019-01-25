@@ -2,12 +2,12 @@
 title: Comparaison entre la programmation fonctionnelle Programmation procédurale (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: 55f1e354f71e58c3592f91e198925c0fd5f0da71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5db2f686d72390cdb7e338235a39e4039281e6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645000"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Comparaison entre la programmation fonctionnelle Programmation procédurale (LINQ to XML) (Visual Basic)
 Il existe différents types d'applications XML :  
@@ -38,7 +38,7 @@ Il existe différents types d'applications XML :
   
  Pour voir une comparaison de ces deux approches, consultez [Comparaison de la modification d’arborescence XML en mémoire et de la Construction fonctionnelle (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
   
- Pour un didacticiel sur l’écriture des transformations fonctionnelles, consultez [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Pour obtenir un didacticiel sur l’écriture des transformations fonctionnelles, consultez [fonctionnelles pures Transformations de données XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ à la vue d’ensemble de programmation XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [LINQ à vue d’ensemble de programmation XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

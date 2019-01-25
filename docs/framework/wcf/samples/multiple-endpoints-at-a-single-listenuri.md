@@ -2,12 +2,12 @@
 title: Multiple Endpoints at a Single ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 45963bcf03a6734b85a1213c99facd9023711bf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbf636acf5e2cf4ef0f417b6b50a93d3e25c3ea6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643466"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Multiple Endpoints at a Single ListenUri
 Cet exemple présente un service qui héberge plusieurs points de terminaison au niveau d'un `ListenUri` unique. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice.  
@@ -37,7 +37,7 @@ Cet exemple présente un service qui héberge plusieurs points de terminaison au
         listenUri="http://localhost/servicemodelsamples/service.svc" />  
 ```  
   
- Les trois points de terminaison sont hébergés au niveau du même `ListenUri` et utilisent le même `binding` - les mêmes points de terminaison au niveau du même `ListenUri` doivent avoir la même liaison, car ils partagent une pile de canaux unique qui écoute les messages à cette adresse physique sur l'ordinateur. L'`address` de chaque point de terminaison est une adresse URN ; bien que les adresses représentent généralement des emplacements physiques, il peut en fait s'agir de n'importe quel type d'URI, car l'adresse est utilisée à des fins de correspondance et de filtrage, tel qu'indiqué dans cet exemple.  
+ Les trois points de terminaison sont hébergés au niveau du même `ListenUri` et utilisent le même `binding` - les mêmes points de terminaison au niveau du même `ListenUri` doivent avoir la même liaison, car ils partagent une pile de canaux unique qui écoute les messages à cette adresse physique sur l’ordinateur. L'`address` de chaque point de terminaison est une adresse URN ; bien que les adresses représentent généralement des emplacements physiques, il peut en fait s'agir de n'importe quel type d'URI, car l'adresse est utilisée à des fins de correspondance et de filtrage, tel qu'indiqué dans cet exemple.  
   
  Étant donné que tous les trois points de terminaison partagent la même `ListenUri`, lorsqu’un message arrive, Windows Communication Foundation (WCF) doit décider de point de terminaison auquel le message est destiné. Chaque point de terminaison comporte un filtre de messages composé de deux parties : le filtre d'adresse et le filtre de contrat. Le filtre d'adresse met en correspondance le `To` du message SOAP et l'adresse du point de terminaison de service. Par exemple, seuls les messages adressés `To "Urn:OtherEcho"` sont des candidats pour le troisième point de terminaison de ce service. Le filtre de contrat correspond aux actions associées aux opérations d'un contrat spécifique. Par exemple, des messages avec l'action de `IEcho`. `Echo` correspond aux filtres de contrat du deuxième et du troisième point de terminaison de ce service, car ces deux points de terminaison hébergent le contrat `IEcho`.  
   

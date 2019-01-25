@@ -1,5 +1,5 @@
 ---
-title: 'Comment : utiliser la protection des données'
+title: 'Procédure : Utiliser la Protection des données'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698389"
 ---
-# <a name="how-to-use-data-protection"></a>Comment : utiliser la protection des données
+# <a name="how-to-use-data-protection"></a>Procédure : Utiliser la Protection des données
 .NET Framework fournit l'accès à l'API de protection des données (DPAPI), qui permet de chiffrer des données à l'aide des informations de compte de l'utilisateur ou de l'ordinateur actuel.  Quand vous utilisez l'API de protection des données, vous simplifiez le processus de génération et de stockage explicites de la clé de chiffrement.  
   
  Utilisez la classe <xref:System.Security.Cryptography.ProtectedMemory> pour chiffrer un tableau d'octets en mémoire.  Cette fonctionnalité est disponible dans Microsoft Windows XP et les systèmes d'exploitation ultérieurs.  Vous pouvez spécifier que la mémoire chiffrée par le processus actuel peut être déchiffrée par le processus actuel uniquement, par tous les processus ou dans le même contexte utilisateur.  Reportez-vous à l'énumération <xref:System.Security.Cryptography.MemoryProtectionScope> pour obtenir une description détaillée des options <xref:System.Security.Cryptography.ProtectedMemory>.  
@@ -68,5 +68,5 @@ ms.locfileid: "49086620"
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Security.Cryptography.ProtectedMemory>  
+- <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>

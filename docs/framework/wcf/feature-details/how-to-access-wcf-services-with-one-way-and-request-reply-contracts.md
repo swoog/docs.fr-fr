@@ -1,15 +1,15 @@
 ---
-title: 'Comment : accéder aux services WCF avec des contrats unidirectionnels et demande-réponse'
+title: 'Procédure : Accéder aux Services WCF avec unidirectionnel et contrats demande-réponse'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639169"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Comment : accéder aux services WCF avec des contrats unidirectionnels et demande-réponse
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Procédure : Accéder aux Services WCF avec unidirectionnel et contrats demande-réponse
 Les procédures suivantes décrivent comment pour accéder à un service Windows Communication Foundation (WCF) qui définit un contrat unidirectionnel et un contrat demande-réponse et qui n’utilise pas le modèle de communication duplex.  
   
 ### <a name="to-define-the-service"></a>Pour définir le service  
@@ -109,7 +109,7 @@ Les procédures suivantes décrivent comment pour accéder à un service Windows
   
 ### <a name="to-access-the-service"></a>Pour accéder au service  
   
-1.  Exécutez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) à l’aide de l’adresse de point de terminaison de métadonnées exchange pour créer la classe de client pour le service à l’aide de la ligne de commande suivante : `Svcutil http://localhost:8000/Service` le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) génère un ensemble d’interfaces et des classes, comme indiqué dans l’exemple de code suivant.  
+1.  Exécutez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) à l’aide de l’adresse de point de terminaison de métadonnées exchange pour créer la classe de client pour le service à l’aide de la ligne de commande suivante : `Svcutil http://localhost:8000/Service` Le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) génère un ensemble d’interfaces et classes, comme indiqué dans l’exemple de code suivant.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -400,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Services unidirectionnels](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Services unidirectionnels](../../../../docs/framework/wcf/feature-details/one-way-services.md)

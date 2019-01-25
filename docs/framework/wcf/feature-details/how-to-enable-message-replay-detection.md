@@ -1,5 +1,5 @@
 ---
-title: 'Comment : activer la détection de relecture des messages'
+title: 'Procédure : Activer la détection de relecture de messages'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: df56d3f2bfe351c38ca2e64539de13e4cc556d2a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8a5f693b98d1437ccf0c8a373fcb11aa96ee6191
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653578"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>Comment : activer la détection de relecture des messages
+# <a name="how-to-enable-message-replay-detection"></a>Procédure : Activer la détection de relecture de messages
 Une attaque par relecture se produit lorsqu'un intrus copie un flux de messages entre deux correspondants et relit le flux à l'un ou plusieurs des correspondants. Sauf atténuation, les ordinateurs sujets à l'attaque traiteront le flux comme messages légitimes, ce qui a des conséquences néfastes telles que des ordres redondants d'un élément.  
   
  Pour plus d’informations sur la détection de relecture de message, consultez [la détection de relecture des messages](https://go.microsoft.com/fwlink/?LinkId=88536).  
@@ -26,7 +26,7 @@ Une attaque par relecture se produit lorsqu'un intrus copie un flux de messages 
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Pour contrôler la détection de relecture sur le client à l'aide du code  
   
-1.  Créez un <xref:System.ServiceModel.Channels.SecurityBindingElement> à utiliser dans un <xref:System.ServiceModel.Channels.CustomBinding>. Pour plus d’informations, consultez [Comment : créer un personnalisé de liaison à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). L'exemple suivant utilise un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> créé avec le <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> de la classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+1.  Créez un <xref:System.ServiceModel.Channels.SecurityBindingElement> à utiliser dans un <xref:System.ServiceModel.Channels.CustomBinding>. Pour plus d'informations, voir [Procédure : Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). L'exemple suivant utilise un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> créé avec le <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> de la classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
 2.  Utilisez la propriété <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> pour retourner une référence à la classe <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> et définir les propriétés suivantes, selon le cas :  
   
@@ -75,12 +75,12 @@ Une attaque par relecture se produit lorsqu'un intrus copie un flux de messages 
     ```  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant crée un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> à l'aide de la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> et définit les propriétés de relecture de la liaison.  
+ L’exemple suivant crée un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> à l’aide de la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> et définit les propriétés de relecture de la liaison.  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
-## <a name="scope-of-replay-message-security-only"></a>Étendue de relecture : sécurité de message uniquement  
+## <a name="scope-of-replay-message-security-only"></a>Étendue de relecture : Sécurité des messages uniquement  
  Notez que les procédures suivantes s'appliquent uniquement au mode de sécurité Message. Pour les modes Transport et Transport avec informations d'identification de message, les mécanismes de transport détectent les relectures.  
   
 ## <a name="secure-conversation-notes"></a>Remarques relatives aux conversations sécurisées  
@@ -102,9 +102,9 @@ Une attaque par relecture se produit lorsqu'un intrus copie un flux de messages 
   
 -   <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- [Conversations sécurisées et sessions sécurisées](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)  
- [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)  
- [Guide pratique pour créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- [Conversations sécurisées et sessions sécurisées](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
+- [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
+- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

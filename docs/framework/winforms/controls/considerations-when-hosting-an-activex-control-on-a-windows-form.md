@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: ebf856078d24ef44ca0e04955e0a971de68bb3ce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a5e8e023da0eeebf5185f57eb51aa796f6f03a1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639339"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Considérations sur l'hébergement d'un contrôle ActiveX dans un Windows Form
 Bien que les Windows Forms aient été optimisés pour héberger des contrôles Windows Forms, vous pouvez néanmoins utiliser des contrôles ActiveX. Gardez à l’esprit les considérations suivantes lors de la planification d’une application qui utilise des contrôles ActiveX :  
@@ -28,9 +28,9 @@ Bien que les Windows Forms aient été optimisés pour héberger des contrôles 
     > [!NOTE]
     >  Si le nom d’un membre du contrôle ActiveX correspond à un nom défini dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], l’importateur de contrôles ActiveX fera précéder le nom du membre avec **Ctl** lorsqu’il crée le <xref:System.Windows.Forms.AxHost> classe dérivée. Par exemple, si votre contrôle ActiveX a un membre nommé **Layout**, il est renommé **CtlLayout** dans la classe dérivée de AxHost, car l’événement **Layout** est défini dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour ajouter des contrôles ActiveX aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- [Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md)  
- [Comparaison des contrôles et des objets programmables dans divers langages et bibliothèques](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
- [Placement de contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
- [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Ajouter des contrôles ActiveX aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md)
+- [Comparaison des contrôles et des objets programmables dans divers langages et bibliothèques](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)
+- [Placement de contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+- [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)

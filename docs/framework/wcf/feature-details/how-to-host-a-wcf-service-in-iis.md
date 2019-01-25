@@ -1,18 +1,18 @@
 ---
-title: 'Comment : héberger un service WCF dans IIS'
+title: 'Procédure : Héberger un Service WCF dans IIS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651121"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>Comment : héberger un service WCF dans IIS
+# <a name="how-to-host-a-wcf-service-in-iis"></a>Procédure : Héberger un Service WCF dans IIS
 Cette rubrique décrit les étapes de base requises pour créer un service Windows Communication Foundation (WCF) qui est hébergé dans Internet Information Services (IIS). Dans cette rubrique, on suppose que vous connaissez IIS et que vous comprenez la manière d'utiliser l'outil d'administration IIS pour créer et gérer des applications IIS. Pour plus d’informations sur IIS, consultez [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un service WCF qui s’exécute dans l’environnement IIS tire pleinement parti des fonctionnalités IIS, telles que le recyclage de processus, arrêt sur inactivité, processus sur l’intégrité et l’activation basée sur le message. Cette option d'hébergement requiert que les services IIS soient configurés correctement, mais n'exige pas l'écriture d'un code d'hébergement dans le cadre de l'application. Vous pouvez utiliser l'hébergement IIS uniquement avec un transport HTTP.  
   
  Pour plus d’informations sur la façon WCF et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interagissent, consultez [Services WCF et ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Pour plus d’informations sur la configuration de la sécurité, consultez [sécurité](../../../../docs/framework/wcf/feature-details/security.md).  
@@ -23,7 +23,7 @@ Cette rubrique décrit les étapes de base requises pour créer un service Windo
   
 1.  Vérifiez que les services IIS sont installés et s'exécutent sur votre ordinateur. Pour plus d’informations sur l’installation et configuration d’IIS, consultez [installation et configuration d’IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2.  Créez un dossier pour vos fichiers d'application, appelé « IISHostedCalcService », assurez-vous que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] a accès au contenu du dossier et utilisez l'outil d'administration IIS pour créer une application IIS située physiquement dans ce répertoire d'application. Lors de la création d'un alias pour le répertoire de l'application, utilisez « IISHostedCalc ».  
+2.  Créez un dossier pour vos fichiers d’application, appelé « IISHostedCalcService », assurez-vous que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] a accès au contenu du dossier et utilisez l’outil d’administration IIS pour créer une application IIS située physiquement dans ce répertoire d’application. Lors de la création d'un alias pour le répertoire de l'application, utilisez « IISHostedCalc ».  
   
 3.  Créez un fichier appelé « service.svc » dans le répertoire de l'application. Modifiez ce fichier en ajoutant le code suivant @ServiceHost élément.  
   
@@ -75,9 +75,9 @@ Cette rubrique décrit les étapes de base requises pour créer un service Windo
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Hébergement dans les services IIS (Internet Information Services)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Hébergement de services](../../../../docs/framework/wcf/hosting-services.md)  
- [Services WCF et ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [Sécurité](../../../../docs/framework/wcf/feature-details/security.md)  
- [Fonctionnalités d’hébergement de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Voir aussi
+- [Hébergement dans les services IIS (Internet Information Services)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [Hébergement de services](../../../../docs/framework/wcf/hosting-services.md)
+- [Services WCF et ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Sécurité](../../../../docs/framework/wcf/feature-details/security.md)
+- [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

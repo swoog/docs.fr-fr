@@ -1,18 +1,18 @@
 ---
-title: "Exemples de syntaxe d'expression de requête : regroupement"
+title: 'Exemples de syntaxe d’Expression de requête : Regroupement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
-ms.openlocfilehash: 519f9073954e8f7710c9e73b61f40b4fcfefd25b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9d34b1c21ea627fdb8d307c3cda2e8393821c129
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495589"
 ---
-# <a name="query-expression-syntax-examples-grouping"></a>Exemples de syntaxe d'expression de requête : regroupement
+# <a name="query-expression-syntax-examples-grouping"></a>Exemples de syntaxe d’Expression de requête : Regroupement
 Les exemples de cette rubrique montrent comment utiliser le `GroupBy` méthode pour interroger le [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe d’expression de requête. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
   
  Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :  
@@ -38,5 +38,5 @@ Les exemples de cette rubrique montrent comment utiliser le `GroupBy` méthode p
  [!code-csharp[DP L2E Examples#GroupByCount](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbycount)]
  [!code-vb[DP L2E Examples#GroupByCount](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbycount)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Voir aussi
+- [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

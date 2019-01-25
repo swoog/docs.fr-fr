@@ -2,12 +2,12 @@
 title: OneWayBindingElement
 ms.date: 03/30/2017
 ms.assetid: 5c7e17c3-39b9-4214-ae08-9e6141734305
-ms.openlocfilehash: 34220a3651819978f5f597fdc67d54630ec5e059
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d84184febd6db3f233aae6fe558b8e0f50a9cb82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608834"
 ---
 # <a name="onewaybindingelement"></a>OneWayBindingElement
 OneWayBindingElement  
@@ -32,29 +32,29 @@ class OneWayBindingElement : BindingElement
 ### <a name="channelpoolsettings"></a>ChannelPoolSettings  
  Type de données : ChannelPoolSettings  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Paramètres du pool de canaux.  
   
 ### <a name="maxacceptedchannels"></a>MaxAcceptedChannels  
  Type de données : sint32  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Nombre maximal de canaux acceptés.  
   
 ### <a name="packetroutable"></a>PacketRoutable  
  Type de données : booléen  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Valeur qui indique si le paquet peut être routé.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Espace de noms|Défini dans root\ServiceModel|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Channels.OneWayBindingElement>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Channels.OneWayBindingElement>

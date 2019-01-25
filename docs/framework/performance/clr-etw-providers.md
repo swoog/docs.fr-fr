@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e33e93ba42ad37d6a998fc80348af551aed18a4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fd1a4d41e65ea4d39f1cfee33aa5e166eec71ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628550"
 ---
 # <a name="clr-etw-providers"></a>Fournisseurs ETW du CLR
 Le Common Language Runtime (CLR) a deux fournisseurs : le fournisseur de runtime et le fournisseur d’arrêt.  
@@ -91,5 +91,5 @@ Le Common Language Runtime (CLR) a deux fournisseurs : le fournisseur de runtim
   
  Un outil peut exécuter les étapes 2 et 3 (démarrage d’une session d’arrêt, puis arrêt du profilage) au lieu de désactiver immédiatement le profilage quand un utilisateur demande son arrêt. Un outil peut également exécuter l’étape 4.  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements ETW dans le Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+## <a name="see-also"></a>Voir aussi
+- [Événements ETW dans le Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

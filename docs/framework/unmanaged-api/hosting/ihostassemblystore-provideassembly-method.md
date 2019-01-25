@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e32d48931177a42dd14092b4052370764a217abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fe8491852ea1fd9791de761d848b774480f4b461
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550290"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly, méthode
 Obtient une référence à un assembly qui n’est pas référencé par le [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) qui est retourné à partir de [IHostAssemblyManager::GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). Le common language runtime (CLR) appelle `ProvideAssembly` pour chaque assembly qui n’apparaît pas dans la liste.  
@@ -47,7 +47,7 @@ HRESULT ProvideAssembly (
  [out] Un pointeur vers un identificateur unique pour l’assembly demandé pour ce `IStream`.  
   
  `pHostContext`  
- [out] Un pointeur vers les données spécifiques à l’hôte qui sont utilisés pour déterminer la preuve de l’assembly demandé sans avoir besoin d’une plateforme de l’appel. `pHostContext` correspond à la <xref:System.Reflection.Assembly.HostContext%2A> propriété managé <xref:System.Reflection.Assembly> classe.  
+ [out] Un pointeur vers les données spécifiques à l’hôte qui sont utilisés pour déterminer la preuve de l’assembly demandé sans avoir besoin d’une plateforme de l’appel. `pHostContext` correspond à la <xref:System.Reflection.Assembly.HostContext%2A> propriété de managé <xref:System.Reflection.Assembly> classe.  
   
  `ppStmAssemblyImage`  
  [out] Un pointeur vers l’adresse d’un `IStream` qui contient l’image exécutable portable (PE) à charger, ou null si l’assembly est introuvable.  
@@ -60,27 +60,27 @@ HRESULT ProvideAssembly (
 |HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`ProvideAssembly` retourné avec succès.|  
-|HOST_E_CLRNOTAVAILABLE|Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
+|HOST_E_CLRNOTAVAILABLE|Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
-|HOST_E_ABANDONED|Un événement a été annulé alors qu’un thread bloqué ou une fibre l’attendait.|  
-|E_FAIL|Une défaillance grave et inconnue s’est produite. Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable dans le processus. Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
-|COR_E_FILENOTFOUND (0 X 80070002)|L’assembly demandé n’a pas pu être localisé.|  
+|HOST_E_ABANDONED|Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.|  
+|E_FAIL|Une défaillance catastrophique inconnue s’est produite. Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus. Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
+|COR_E_FILENOTFOUND (0x80070002)|L’assembly demandé n’a pas pu être localisé.|  
 |E_NOT_SUFFICIENT_BUFFER|La taille de mémoire tampon spécifiée par `pAssemblyId` n’est pas suffisamment grande pour contenir l’identificateur que l’hôte souhaite retourner.|  
   
 ## <a name="remarks"></a>Notes  
- La valeur d’identité retournée pour `pAssemblyId` est spécifiée par l’hôte. Les identificateurs doivent être uniques au sein de la durée de vie d’un processus. Le CLR utilise cette valeur comme identificateur unique pour le flux. Il vérifie chaque valeur sur les valeurs de `pAssemblyId` retourné par d’autres appels à `ProvideAssembly`. Si l’hôte retourne la même `pAssemblyId` valeur d’un autre `IStream`, le CLR vérifie si le contenu de ce flux a déjà été mappé. Dans ce cas, le runtime charge la copie existante de l’image au lieu de mapper une nouvelle.  
+ La valeur d’identité retournée pour `pAssemblyId` est spécifié par l’hôte. Les identificateurs doivent être uniques au sein de la durée de vie d’un processus. Le CLR utilise cette valeur comme identificateur unique pour le flux. Il vérifie chaque valeur sur les valeurs de `pAssemblyId` retourné par d’autres appels à `ProvideAssembly`. Si l’hôte renvoie le même type `pAssemblyId` valeur pour un autre `IStream`, le CLR vérifie si le contenu de ce flux a déjà été mappé. Dans ce cas, le runtime charge la copie existante de l’image au lieu de mapper une nouvelle.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRAssemblyReferenceList, interface](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [IHostAssemblyManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
- [IHostAssemblyStore, interface](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRAssemblyReferenceList, interface](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [IHostAssemblyStore, interface](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

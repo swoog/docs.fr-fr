@@ -1,15 +1,15 @@
 ---
-title: 'Comment : interroger les fichiers les plus volumineux dans une arborescence de répertoires (LINQ) (Visual Basic)'
+title: 'Procédure : Requête la plus grande ou des fichiers dans une arborescence de répertoires (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: fd1ec163685af539e644d9fb4a0845fdcb3e1b5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc41fb29a765e8824526dcd78c9ecab377f06d22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724055"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Comment : interroger les fichiers les plus volumineux dans une arborescence de répertoires (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Procédure : Requête la plus grande ou des fichiers dans une arborescence de répertoires (LINQ) (Visual Basic)
 Cet exemple montre cinq requêtes liées à la taille des fichiers en octets :  
   
 -   Comment récupérer la taille en octets du plus grand fichier.  
@@ -120,6 +120,6 @@ End Module
 ## <a name="compiling-the-code"></a>Compilation du code  
  Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Voir aussi
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ et répertoires de fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

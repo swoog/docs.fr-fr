@@ -2,12 +2,12 @@
 title: Configuration du service d'activation de processus de Windows pour son utilisation dans Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 388907f847d40ad5634a27ac6b350638ddc5a45e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e590302c2bf82db2b584fcc21f94d078f7c07712
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643336"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Configuration du service d'activation de processus de Windows pour son utilisation dans Windows Communication Foundation
 Cette rubrique décrit les étapes requises pour configurer le service Windows Process Activation Service (également appelé WAS) dans [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services Windows Communication Foundation (WCF) les protocoles de réseau de services qui ne communiquent pas sur HTTP. Les sections suivantes définissent les étapes pour cette configuration :  
@@ -96,6 +96,6 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
   
  Pour obtenir des instructions détaillées sur la création d’un service WCF activé WAS, consultez [Comment : Héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Hébergement dans le service d’activation des processus Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
- [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Voir aussi
+- [Hébergement dans le service d’activation des processus Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
+- [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

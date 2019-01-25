@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: 5a3bbd1d4d75c84dda741d382c8dd7568dbb474b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef55549b43ecbef539d7e84a7281fa704a328938
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507588"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier, directive
 Modifie le comportement de compilation XAML lorsque `x:Class` est également fourni. Plus précisément, au lieu de la création d’un partiel `class` qui a un `Public` (la valeur par défaut), de niveau d’accès fourni `x:Class` est créé avec un `NotPublic` niveau d’accès. Ce comportement affecte le niveau d’accès pour la classe dans les assemblys générés.  
@@ -53,9 +53,9 @@ Modifie le comportement de compilation XAML lorsque `x:Class` est également fou
 ## <a name="security-notes"></a>Notes de sécurité  
  Le niveau d’accès tel que déclaré dans `x:ClassModifier` est toujours soumis à l’interprétation par les infrastructures particulières et leurs fonctionnalités. WPF inclut des fonctions pour charger et instancier des types où `x:ClassModifier` est `internal`, si cette classe est référencée à partir d’une ressource WPF via une référence URI à en-tête pack. En raison de ce cas et potentiellement d’autres similaires implémentés par d’autres infrastructures, ne comptez pas exclusivement sur `x:ClassModifier` pour bloquer l’instanciation de toutes les tentatives.  
   
-## <a name="see-also"></a>Voir aussi  
- [x:Class, directive](../../../docs/framework/xaml-services/x-class-directive.md)  
- [Code-behind et XAML dans WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [x:FieldModifier, directive](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
- [Sécurité (WPF)](../../../docs/framework/wpf/security-wpf.md)  
- [Types migrés de WPF vers System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Voir aussi
+- [x:Class, directive](../../../docs/framework/xaml-services/x-class-directive.md)
+- [Code-behind et XAML dans WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:FieldModifier, directive](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)
+- [Sécurité (WPF)](../../../docs/framework/wpf/security-wpf.md)
+- [Types migrés de WPF vers System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

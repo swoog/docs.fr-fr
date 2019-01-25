@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 44cc17c73b476e5e322b9b58b021bc7bcd63167f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65b04c85bccd169bbb2eea847d7b8af96c1a292f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505716"
 ---
 # <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39;IsNot&#39; opérande de type &#39;typename&#39; ne peut être comparé qu’à &#39;rien&#39;, car &#39;typename&#39; est un type nullable
 Une variable déclarée comme nullable a été comparée à une expression autre que `Nothing` à l’aide de la `IsNot` opérateur.  
@@ -21,7 +21,7 @@ Une variable déclarée comme nullable a été comparée à une expression autre
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Pour comparer un type nullable à une expression autre que `Nothing` à l’aide de la `IsNot` (opérateur), appelez le `GetType` méthode sur le type nullable et comparez le résultat à l’expression, comme illustré dans l’exemple suivant.  
+1.  Pour comparer un type nullable à une expression autre que `Nothing` à l’aide de l’opérateur `IsNot` , appelez la méthode `GetType` sur le type nullable et comparez le résultat à l’expression, comme illustré dans l’exemple suivant.  
   
 ```vb  
 Dim number? As Integer = 5  
@@ -33,6 +33,6 @@ If number IsNot Nothing Then
 End If  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Types valeur Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [IsNot (opérateur)](../../../visual-basic/language-reference/operators/isnot-operator.md)
+## <a name="see-also"></a>Voir aussi
+- [Types valeur Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [IsNot (opérateur)](../../../visual-basic/language-reference/operators/isnot-operator.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 357b7b42c7ad609b2a86ec3ee79a0f6f38dd9471
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641978"
 ---
 # <a name="long-data-type-visual-basic"></a>Type de données long (Visual Basic)
 
@@ -78,10 +78,10 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="see-also"></a>Voir aussi
 
-<xref:System.Int64>
-[Types de données](../../../visual-basic/language-reference/data-types/index.md)   
-[Type de données Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
-[Type de données de type short](../../../visual-basic/language-reference/data-types/short-data-type.md)   
-[Fonctions de Conversion de type](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
-[Résumé de la conversion](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
-[Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int64>
+- [Types de données](../../../visual-basic/language-reference/data-types/index.md)
+- [Integer (type de données)](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Short (type de données)](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

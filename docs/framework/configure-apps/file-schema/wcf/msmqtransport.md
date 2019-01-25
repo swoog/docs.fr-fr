@@ -2,21 +2,21 @@
 title: '&lt;msmqTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: a0406ae6e91755707656e10c75cbd25dd68d07c2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 523f2fd030f40a6d55080a48773159ab4b5887ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660578"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Déclenche le transfert de messages par un canal via le transport MSMQ lorsque celui-ci fait partie d’une liaison personnalisée.  
   
  \<system.serviceModel>  
-\<liaisons >  
-\<customBinding >  
-\<liaison >  
-\<msmqIntegration >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,28 +73,28 @@ Déclenche le transfert de messages par un canal via le transport MSMQ lorsque c
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<msmqTransportSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Indique les paramètres de sécurité du transport pour cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<msmqTransportSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Indique les paramètres de sécurité du transport pour cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="remarks"></a>Notes  
  L'élément `msmqTransport` permet de définir les propriétés du canal de communication mis en file d'attente. Le canal de communication mis en file d'attente utilise Message Queuing pour son transport.  
   
  Cet élément de liaison est l’élément de liaison par défaut utilisé par la liaison standard Message Queuing (`netMsmqBinding`).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.MsmqTransportElement>  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Transports](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Choix d’un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.MsmqTransportElement>
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Transports](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Choix d’un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: bf5113ee873b05490a0e20ffc09bf10def3d39d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05937b946efe134942f49191f577e62fc17ec066
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738415"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implémentation du modèle de contrôle SelectionItem d’UI Automation
 > [!NOTE]
@@ -48,13 +48,13 @@ ms.locfileid: "47195951"
   
 |Type d'exception|Condition|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|Quand l’une des tentatives suivantes est effectuée :<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> est appelée sur un conteneur à sélection unique où <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` et un élément est déjà sélectionné.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> est appelée sur un conteneur à sélection multiple alors que <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` et qu’un seul élément est sélectionné.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> est appelée sur un conteneur à sélection unique alors que <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` et qu’un autre élément est déjà sélectionné.|  
+|<xref:System.InvalidOperationException>|Quand l’une des tentatives suivantes est effectuée :<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> est appelée sur un conteneur à sélection unique alors que <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` et qu’un élément est déjà sélectionné.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> est appelée sur un conteneur à sélection multiple alors que <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` et qu’un seul élément est sélectionné.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> est appelée sur un conteneur à sélection unique alors que <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` et qu’un autre élément est déjà sélectionné.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Implémentation du modèle de contrôle Selection d’UI Automation](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Exemple de fournisseur de fragment](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Implémentation du modèle de contrôle Selection d’UI Automation](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)
+- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Exemple de fournisseur de fragment](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

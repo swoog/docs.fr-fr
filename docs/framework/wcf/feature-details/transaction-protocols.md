@@ -2,12 +2,12 @@
 title: Protocoles de transaction
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 2e4f464d88a63a0aad17982d0329971de4fc5a07
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 559b7ec1539a43ec27010031320be144d6f5e24b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533765"
 ---
 # <a name="transaction-protocols"></a>Protocoles de transaction
 Windows Communication Foundation (WCF) implémente les protocoles WS-Atomic Transaction et WS-Coordination.  
@@ -70,7 +70,7 @@ Windows Communication Foundation (WCF) implémente les protocoles WS-Atomic Tran
 ## <a name="transaction-manager-bindings"></a>Liaisons de gestionnaire de transactions  
  R1001 : Les gestionnaires de transactions participant à une transaction WS-AT 1.0 doivent utiliser SOAP 1.1 et WS-Addressing 2004/08 pour WS-Atomic Transaction et les échanges de messages WS-Coordination.  
   
- R1002 : les gestionnaires de transactions qui participent à une transaction WS-AT 1.1 doivent utiliser SOAP 1.1 et WS-Addressing 2005/08 pour les échanges WS-Atomic Transaction et WS-Coordination.  
+ R1002 : Les gestionnaires de transactions participant à une transaction WS-AT 1.1 doivent utiliser SOAP 1.1 et WS-Addressing 2005/08 pour WS-Atomic Transaction et les échanges de messages WS-Coordination.  
   
  Les messages d’application ne sont pas contraints à ces liaisons et sont décrits ultérieurement.  
   
@@ -80,9 +80,9 @@ Windows Communication Foundation (WCF) implémente les protocoles WS-Atomic Tran
 #### <a name="https-transport-configuration"></a>Configuration du transport HTTPS  
  Les certificats X.509 permettent d'établir l'identité de gestionnaire de transactions. L'authentification client/serveur est requise, et l'autorisation client/serveur est considérée comme un détail d'implémentation :  
   
--   R1111 : les certificats X.509 présentés sur le câble doivent avoir un nom de sujet qui correspond au nom de domaine complet de l'ordinateur d'origine.  
+-   R1111 : Certificats X.509 présentés sur le câble doivent avoir un nom de sujet qui correspond au nom de domaine complet (FQDN) de l’ordinateur d’origine.  
   
--   B1112 : le DNS doit être fonctionnel entre chaque paire expéditeur-récepteur du système pour que les vérifications du nom de sujet X.509 réussissent.  
+-   B1112 : DNS doit être fonctionnel entre chaque paire expéditeur-récepteur dans le système pour les vérifications du nom de sujet X.509 réussisse.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Configuration de liaison d’activation et d’inscription  
  WCF nécessite une liaison duplex de demande/réponse avec corrélation sur HTTPS. (Pour plus d’informations sur la corrélation et les descriptions des modèles d’échange de messages demande/réponse, consultez WS-Atomic Transaction, section 8.)  
@@ -103,11 +103,11 @@ Windows Communication Foundation (WCF) implémente les protocoles WS-Atomic Tran
   
  B1221 : WCF utilise la liaison HTTPS duplex (décrite dans [protocoles de messagerie](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) pour les messages d’Activation. Les messages de demande et de réponse sont corrélés à l'aide de WS-Addressing 2004/08 pour WS-AT 1.0 et WS-Addressing 2005/08 pour WS-AT 1.1.  
   
- La spécification WS-Atomic Transaction, section 8, fournit des informations supplémentaires sur la corrélation et les modèles d'échange de messages.  
+ La spécification WS-Atomic Transaction, section 8, fournit des informations supplémentaires sur la corrélation et les modèles d’échange de messages.  
   
--   R1222 : après réception de `CreateCoordinationContext`, le coordinateur doit émettre `SecurityContextToken` avec le `STx` secret associé. Ce jeton est retourné à l'intérieur d'un en-tête `t:IssuedTokens` selon la spécification WS-Trust.  
+-   R1222 : À la réception une `CreateCoordinationContext`, le coordinateur doit émettre un `SecurityContextToken` avec secret associé `STx`. Ce jeton est retourné à l'intérieur d'un en-tête `t:IssuedTokens` selon la spécification WS-Trust.  
   
--   R1223 : si l'activation se produit dans un contexte de coordination existant, l'en-tête `t:IssuedTokens` avec `SecurityContextToken` associé au contexte existant doit transmettre sur le message `CreateCoordinationContext`.  
+-   R1223 : Si l’Activation se produit dans un contexte de Coordination existant, le `t:IssuedTokens` en-tête avec le `SecurityContextToken` associé existant contexte doit transmettre sur le `CreateCoordinationContext` message.  
   
  Un nouveau `t:IssuedTokens` en-tête doit être généré pour attacher à sortant `wscoor:CreateCoordinationContextResponse` message.  
   
@@ -126,11 +126,11 @@ Windows Communication Foundation (WCF) implémente les protocoles WS-Atomic Tran
  B1241 : Les implémentations doivent prendre en charge `wsa:ReferenceParameters` comme décrit dans WS-Addressing pour assurer la corrélation des messages de protocole 2PC de WCF.  
   
 ## <a name="application-message-exchange"></a>Échange de messages d'application  
- Les applications sont libres d'utiliser n'importe quelle liaison spécifique pour les messages interapplication, tant que la liaison satisfait aux conditions de sécurité suivantes :  
+ Les applications sont libres d’utiliser n’importe quelle liaison spécifique pour les messages interapplication, tant que la liaison satisfait aux exigences de sécurité suivantes :  
   
--   R2001 : les messages interapplication doivent transmettre l'en-tête `t:IssuedTokens` avec `CoordinationContext` dans l'en-tête du message.  
+-   R2001 : Messages de l’application vers l’application doivent passer la `t:IssuedTokens` en-tête avec le `CoordinationContext` dans l’en-tête du message.  
   
--   R2002 : l'intégrité et la confidentialité de `t:IssuedToken` doivent être assurées.  
+-   R2002 : L’intégrité et la confidentialité de `t:IssuedToken` doit être fourni.  
   
  L'en-tête `CoordinationContext` contient `wscoor:Identifier`. Alors que la définition de `xsd:AnyURI` autorise l’utilisation d’URI absolus et relatifs, WCF prend uniquement en charge `wscoor:Identifiers`, qui sont des URI absolus.  
   
@@ -287,9 +287,9 @@ Windows Communication Foundation (WCF) implémente les protocoles WS-Atomic Tran
 <t:IssuedTokens>   
 <wst:RequestSecurityTokenResponse   
 xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"   
-xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-     wssecurity-utility-1.0.xsd"   
-xmlns:wst=http://docs.oasis-open.org/ws-sx/ws-trust/200512  
-xmlns:wsc=http://schemas.xmlsoap.org/ws/2005/02/sc  
+xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"   
+xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512"  
+xmlns:wsc="http://schemas.xmlsoap.org/ws/2005/02/sc"  
 xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">  
 <wst:TokenType>http://schemas.xmlsoap.org/ws/2005/02/sc/sct</wst:TokenType>  
 <wst:RequestedSecurityToken>   
@@ -302,14 +302,14 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
 <wst:RequestedAttachedReference>   
 <wsse:SecurityTokenReference >   
 <wsse:Reference  
-  ValueType=http://schemas.xmlsoap.org/ws/2005/02/sc/sct  
+  ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
   URI="http://fabrikam123.com/SCTi"/>  
 </wsse:SecurityTokenReference>   
 </wst:RequestedAttachedReference>   
 <wst:RequestedUnattachedReference>   
 <wsse:SecurityTokenReference>   
 <wsse:Reference  
- ValueType=http://schemas.xmlsoap.org/ws/2005/02/sc/sct  
+ ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
  URI="http://fabrikam123.com/SCTi"/>  
 </wsse:SecurityTokenReference>   
 </wst:RequestedUnattachedReference>   

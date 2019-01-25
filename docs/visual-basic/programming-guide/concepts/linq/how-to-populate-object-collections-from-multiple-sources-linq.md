@@ -1,24 +1,24 @@
 ---
-title: 'Comment : remplir des Collections d’objets à partir de plusieurs Sources (LINQ) (Visual Basic)'
+title: 'Procédure : Remplir des Collections d’objets issues de plusieurs Sources (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0228d152539abe3bf0db5a8e5bf4581eaf957b31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638819"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Comment : remplir des Collections d’objets à partir de plusieurs Sources (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Procédure : Remplir des Collections d’objets issues de plusieurs Sources (LINQ) (Visual Basic)
 
 Cet exemple montre comment fusionner des données de différentes sources en une séquence de nouveaux types.
 
 > [!NOTE]
-> N’essayez pas de joindre des données en mémoire ou des données dans le système de fichiers avec des données qui se trouve toujours dans une base de données. Ces jointures interdomaines peuvent générer des résultats indéfinis, en raison des différentes façons par lesquelles les opérations de jointure peuvent être définies pour les requêtes de base de données et autres types de sources. En outre, une telle opération risque de provoquer une exception de mémoire insuffisante si la quantité de données dans la base de données est assez élevée. Pour joindre des données d’une base de données à des données en mémoire, appelez d’abord `ToList` ou `ToArray` sur la requête de base de données, puis effectuez la jointure sur la collection retournée.
+> N’essayez pas de joindre des données du système de fichiers ou des données en mémoire à des données qui se trouvent encore dans une base de données. Ces jointures interdomaines peuvent générer des résultats indéfinis, en raison des différentes façons par lesquelles les opérations de jointure peuvent être définies pour les requêtes de base de données et autres types de sources. En outre, une telle opération risque de provoquer une exception de mémoire insuffisante si la quantité de données dans la base de données est assez élevée. Pour joindre des données d’une base de données à des données en mémoire, appelez d’abord `ToList` ou `ToArray` sur la requête de base de données, puis effectuez la jointure sur la collection retournée.
 
 ## <a name="to-create-the-data-file"></a>Pour créer le fichier de données
 
-- Copiez les fichiers names.csv et scores.csv dans votre dossier de projet, comme décrit dans [Comment : joindre contenu à partir de différents fichiers (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Copiez les fichiers names.csv et scores.csv dans votre dossier de projet, comme décrit dans [Comment : Joindre du contenu issu de fichiers (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Exemple
 
@@ -102,7 +102,7 @@ End Class
 
 Dans le [Clause Select](../../../../visual-basic/language-reference/queries/select-clause.md) clause, un initialiseur d’objet est utilisé pour instancier chaque nouvel `Student` objet en utilisant les données des deux sources.
 
-Si vous n’avez pas à stocker les résultats d’une requête, les types anonymes peuvent être plus pratiques que les types nommés. Les types nommés sont nécessaires si vous passez les résultats de requête en dehors de la méthode dans laquelle la requête est exécutée. L’exemple suivant effectue la même tâche que l’exemple précédent, mais il utilise des types anonymes plutôt que des types nommés :
+Si vous n’êtes pas obligé de stocker les résultats d’une requête, les types anonymes peuvent être plus pratiques que les types nommés. Les types nommés sont nécessaires si vous passez les résultats de requête en dehors de la méthode dans laquelle la requête est exécutée. L’exemple suivant effectue la même tâche que l’exemple précédent, mais il utilise des types anonymes plutôt que des types nommés :
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -130,12 +130,12 @@ Next
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Créer et compiler un projet qui cible une des options suivantes :
+Créez et compilez un projet qui cible une des options suivantes :
 
-- .NET framework version 3.5 avec une référence à System.Core.dll.
-- .NET framework version 4.0 ou ultérieure.
-- Version de .NET core 1.0 ou une version ultérieure.
+- .NET Framework version 3.5 avec une référence à System.Core.dll.
+- .NET Framework version 4.0 ou version ultérieure.
+- .NET Core version 1.0 ou version ultérieure.
 
 ## <a name="see-also"></a>Voir aussi
 
-[LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ et chaînes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

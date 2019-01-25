@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6e6f4f6bdfba8deecb3661d88a881759da043ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0444b6a5fd1bb286df573b1bba7d35b0d2d14a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498841"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo, méthode
 Obtient des informations détaillées sur un objet tableau.  
@@ -49,23 +49,23 @@ HRESULT GetArrayObjectInfo(
  [out] Tableau qui contient des entiers, chacun représentant la taille d’une dimension du tableau.  
   
  `pDimensionLowerBounds`  
- [out] Tableau qui contient des entiers, chacun représentant la limite inférieure lié d’une dimension du tableau.  
+ [out] Un tableau qui contient des entiers, chacun représentant faible lié d’une dimension du tableau.  
   
  `ppData`  
- [out] Pointeur vers l’adresse de la mémoire tampon brute pour le tableau, est disposé selon la convention C++.  
+ [out] Pointeur vers l’adresse de la mémoire tampon brute pour le tableau, ce qui est disposé conformément à la convention de C++.  
   
 ## <a name="remarks"></a>Notes  
  Le `pDimensionSizes` et `pDimensionLowerBounds` sont des tableaux parallèles, les éléments situés au même index dans chaque tableau sont des caractéristiques de la même entité.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41a37fa34b9d75eb8cfc1bdcb55b237faf137cad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 309570fb5a159d24f5b423d96fd9987ee3bb886f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503311"
 ---
 # <a name="thread-pool-etw-events"></a>Événements ETW de pool de threads
 <a name="top"></a> Ces événements collectent des informations sur les threads de travail et d'E/S.  
@@ -215,5 +215,5 @@ ms.locfileid: "33396105"
 |NumRetired|win:UInt64|Nombre de threads d'E/S retirés|  
 |ClrInstanceID|Win:UInt16|ID unique de l'instance de CLR ou CoreCLR.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Voir aussi
+- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

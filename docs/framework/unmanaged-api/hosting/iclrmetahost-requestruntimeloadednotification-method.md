@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519123"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification, méthode
-Fournit une fonction de rappel qui est appelée lorsqu’une version du common language runtime (CLR) est chargée en premier, mais pas encore démarrée. Cette méthode remplace la [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) (fonction).  
+Fournit une fonction de rappel qui est garantie être appelée lorsqu’une version du common language runtime (CLR) est chargée en premier, mais pas encore démarrée. Cette méthode remplace la [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) (fonction).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,26 +78,26 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Si l’hôte projette de charger ou de provoquer une autre exécution à charger de manière réentrante, la `pfnCallbackThreadSet` et `pfnCallbackThreadUnset` les paramètres qui sont fournis dans le rappel de fonction doit être utilisée de la façon suivante :  
+ Si l’hôte a l’intention de charger ou de provoquer un autre runtime à charger de manière réentrante, la `pfnCallbackThreadSet` et `pfnCallbackThreadUnset` les paramètres qui sont fournies dans le rappel de fonction doit être utilisée de la façon suivante :  
   
--   `pfnCallbackThreadSet` doit être appelé par le thread qui peut entraîner une charge de l’exécution avant la tentative de type de charge.  
+-   `pfnCallbackThreadSet` doit être appelée par le thread qui peut entraîner une charge de l’exécution avant la tentative de type de charge.  
   
--   `pfnCallbackThreadUnset` doit être appelé lorsque le thread ne provoquera plus tel chargement de runtime (et avant le retour du rappel initial).  
+-   `pfnCallbackThreadUnset` doit être appelée lorsque le thread ne provoquera plus tel un chargement de runtime (et avant le retour du rappel initial).  
   
 -   `pfnCallbackThreadSet` et `pfnCallbackThreadUnset` sont tous deux non réentrante.  
   
 > [!NOTE]
->  Héberger des applications ne doivent pas appeler `pfnCallbackThreadSet` et `pfnCallbackThreadUnset` en dehors de la `pCallbackFunction` paramètre.  
+>  Héberger des applications ne doivent pas appeler `pfnCallbackThreadSet` et `pfnCallbackThreadUnset` sort du cadre de la `pCallbackFunction` paramètre.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRMetaHost, interface](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRMetaHost, interface](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4244196a957c67a807cdb705f6d74ee2b41869d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb213ef4a335cf6784c2889cd9cf0214a1411da2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735712"
 ---
 # <a name="runtime-information-etw-events"></a>Événements ETW d'information du runtime
 Ces événements ETW journalise des informations sur l’exécution, notamment la référence SKU, le numéro de version, le mode d’activation du runtime, les paramètres de ligne de commande avec lesquels il a été démarré, le GUID (le cas échéant) et d’autres informations pertinentes. Si plusieurs runtimes sont exécutés dans un processus, les informations fournies par ces événements (le ClrInstanceID) permettent de lever l’ambiguïté sur les runtimes.  
   
  Le tableau ci-dessous montre les deux événements d’informations liés au runtime. Les événements peuvent être déclenchés sous n’importe quel mot clé ou masque. (Pour plus d'informations, consultez [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|événement|ID d'événement|Fournisseur|Description|  
+|Événement|ID d'événement|Fournisseur|Description|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|Déclenché lorsqu’un runtime est chargé.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|Énumère les runtimes chargés.|  
@@ -44,5 +44,5 @@ Ces événements ETW journalise des informations sur l’exécution, notamment 
 |ComObjectGUID|win:GUID|Non null seulement si StartupMode=0x08.|  
 |RuntimeDLLPath|win:UnicodeString|Chemin du fichier .dll du CLR qui a été chargé dans le processus.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Voir aussi
+- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

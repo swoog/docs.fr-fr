@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 164c7a6e4411d7ff3e66643c6f012fdba790ef49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37351dadf941e3512249dd8a9f433b63065ae1fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626886"
 ---
 # <a name="marshaling-mda"></a>Assistant Débogage managé marshaling
-L'Assistant Débogage managé (MDA) `marshaling` est activé quand le CLR définit des informations de marshaling pour un paramètre de méthode ou un champ de structure. Ce MDA ne fonctionne pas pour les assemblys compilés juste-à-temps (JIT).  
+L’Assistant Débogage managé (MDA) `marshaling` est activé quand le CLR définit des informations de marshaling pour un paramètre de méthode ou un champ de structure. Ce MDA ne fonctionne pas pour les assemblys compilés juste-à-temps (JIT).  
   
 ## <a name="effect-on-the-runtime"></a>Effet sur le runtime  
  Cet Assistant Débogage managé n'a aucun effet sur le CLR.  
@@ -50,7 +50,7 @@ name="assembly!Namespace.Class::myChar
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 269dac0f3d8a719224c177ef2c261e4c1e2e7e92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 646fe01f3c27979348fc19dcc63c993c006e53ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641341"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>IMetaDataEmit::DeleteToken, méthode
-Supprime le jeton spécifié de la portée de métadonnées actuelle.  
+Supprime le jeton spécifié à partir de la portée de métadonnées actuelle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,14 +40,14 @@ HRESULT DeleteToken (
  [in] Le jeton doit être supprimé.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

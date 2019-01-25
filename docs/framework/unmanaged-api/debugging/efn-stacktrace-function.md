@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28e270be8f16de9558e5d5440d621056a3114967
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636389"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace, fonction
 Fournit une représentation textuelle d'une trace de pile managée et un tableau d'enregistrements `CONTEXT` pour chaque transition entre du code non managé et du code managé.  
@@ -42,7 +42,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 #### <a name="parameters"></a>Paramètres  
  `Client`  
- [in] Le client est en cours de débogage.  
+ [in] Le client en cours de débogage.  
   
  `wszTextOut`  
  [out] La représentation textuelle de la trace de pile.  
@@ -51,7 +51,7 @@ HRESULT CALLBACK _EFN_StackTrace(
  [out] Un pointeur vers le nombre de caractères dans `wszTextOut`.  
   
  `pTransitionContexts`  
- [out] Tableau de contextes de transition.  
+ [out] Le tableau de contextes de transition.  
   
  `puiTransitionContextCount`  
  [out] Pointeur vers le nombre de contextes de transition dans le tableau.  
@@ -60,20 +60,20 @@ HRESULT CALLBACK _EFN_StackTrace(
  [in] La taille de la structure de contexte.  
   
  `Flags`  
- [in] La valeur 0 ou SOS_STACKTRACE_SHOWADDRESSES (0 x 01) pour afficher le registre EBP et le pointeur de pile d’entrée (ESP) devant chaque `module!functionname` ligne.  
+ [in] La valeur 0 ou SOS_STACKTRACE_SHOWADDRESSES (0 x 01) pour afficher le registre EBP et le pointeur de pile d’entrée (ESP) devant chacun `module!functionname` ligne.  
   
 ## <a name="remarks"></a>Notes  
- Le `_EFN_StackTrace` structure peut être appelée à partir d’une interface de programmation WinDbg. Les paramètres sont utilisés comme suit :  
+ Le `_EFN_StackTrace` structure peut être appelée à partir d’une interface de programmation WinDbg. Paramètres sont utilisés comme suit :  
   
 -   Si `wszTextOut` a la valeur null et `puiTextLength` est non null, la fonction retourne la longueur de chaîne dans `puiTextLength`.  
   
 -   Si `wszTextOut` est non null, la fonction stocke le texte dans `wszTextOut` jusqu'à l’emplacement indiqué par `puiTextLength`. Il retourne une valeur si il y a suffisamment d’espace dans la mémoire tampon, ou retourne E_OUTOFMEMORY si la mémoire tampon n’est pas assez long.  
   
--   La partie de transition de la fonction est ignorée si `pTransitionContexts` et `puiTransitionContextCount` sont tous deux null. Dans ce cas, la fonction fournit des appelants avec la sortie de texte d’uniquement les noms de fonction.  
+-   La partie de la transition de la fonction est ignorée si `pTransitionContexts` et `puiTransitionContextCount` sont tous deux null. Dans ce cas, la fonction fournit les appelants avec sortie texte du uniquement les noms de fonction.  
   
 -   Si `pTransitionContexts` a la valeur null et `puiTransitionContextCount` est non null, la fonction retourne le nombre nécessaire d’entrées de contexte dans `puiTransitionContextCount`.  
   
--   Si `pTransitionContexts` est non null, la fonction le traite comme un tableau de structures de longueur `puiTransitionContextCount`. La taille de la structure est fournie par `uiSizeOfContext`, et doit être la taille de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) ou `CONTEXT` pour l’architecture.  
+-   Si `pTransitionContexts` est non null, la fonction traite comme un tableau de structures de longueur `puiTransitionContextCount`. La taille de la structure est fournie par `uiSizeOfContext`, et doit être la taille de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) ou `CONTEXT` pour l’architecture.  
   
 -   `wszTextOut` est écrit dans le format suivant :  
   
@@ -95,11 +95,11 @@ HRESULT CALLBACK _EFN_StackTrace(
     ```  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** SOS_Stacktrace.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions statiques globales de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions statiques globales de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

@@ -1,23 +1,23 @@
 ---
-title: 'Procédure pas à pas : utilisation de procédures stockées uniquement (C#)'
+title: 'Procédure pas à pas : À l’aide de procédures stockées uniquement (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 223c93a790e610414aa48c2aea8e884b9d841666
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5234b4a2743effa4282fb8c211c42511c6432dfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650831"
 ---
-# <a name="walkthrough-using-only-stored-procedures-c"></a>Procédure pas à pas : utilisation de procédures stockées uniquement (C#)
+# <a name="walkthrough-using-only-stored-procedures-c"></a>Procédure pas à pas : À l’aide de procédures stockées uniquement (C#)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de base de bout en bout pour accéder aux données en exécutant des procédures stockées uniquement. Cette approche est souvent utilisée par les administrateurs de base de données pour limiter les moyens d'accès au magasin de données.  
   
 > [!NOTE]
 >  Vous pouvez également utiliser des procédures stockées dans les applications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pour substituer le comportement par défaut, plus particulièrement pour les processus `Create`, `Update` et `Delete`. Pour plus d’informations, consultez [personnalisation des opérations d’insertion, mise à jour et supprimer](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
- Dans cette procédure pas à pas, vous utiliserez deux méthodes mappées aux procédures stockées dans l'exemple de base de données Northwind : CustOrdersDetail et CustOrderHist. Le mappage se produit lorsque vous exécutez l'outil en ligne de commande SQLMetal pour générer un fichier C#. Pour plus d'informations, consultez la section Composants requis par la suite dans cette procédure pas à pas.  
+ Dans le cadre de cette procédure pas à pas, vous allez utiliser deux méthodes qui ont été mappés à des procédures stockées dans la base de données Northwind : CustOrdersDetail et CustOrderHist. Le mappage se produit lorsque vous exécutez l'outil en ligne de commande SQLMetal pour générer un fichier C#. Pour plus d'informations, consultez la section Composants requis par la suite dans cette procédure pas à pas.  
   
- Cette procédure pas à pas ne s'appuie pas sur le [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Les développeurs à l’aide de Visual Studio peuvent également utiliser le [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] pour implémenter des fonctionnalités de procédure stockée. Consultez [LINQ to SQL des outils dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Cette procédure pas à pas ne s'appuie pas sur le [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Les développeurs à l’aide de Visual Studio peuvent également utiliser le [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] pour implémenter des fonctionnalités de procédure stockée. Consultez [outils LINQ to SQL dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -36,14 +36,14 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
      Cette procédure pas à pas a été écrite à l'aide de l'outil SQLMetal, avec la ligne de commande suivante :  
   
-     **SqlMetal /code:"c:\linqtest7\northwind.cs » / Language : CSharp « c:\linqtest7\northwnd.mdf » /sprocs /functions / au pluriel**  
+     **sqlmetal /code:"c:\linqtest7\northwind.cs" /language:csharp "c:\linqtest7\northwnd.mdf" /sprocs /functions /pluralize**  
   
      Pour plus d’informations, consultez [SqlMetal.exe (outil de génération de code)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Vue d'ensemble  
  Cette procédure pas à pas se compose de six tâches principales :  
   
--   Configuration de la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution dans Visual Studio.  
+-   Configurer le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution dans Visual Studio.  
   
 -   Ajout de l'assembly System.Data.Linq au projet.  
   
@@ -60,9 +60,9 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Pour créer une solution LINQ to SQL  
   
-1.  Dans Visual Studio **fichier** menu, pointez sur **nouveau**, puis cliquez sur **projet**.  
+1.  Dans Visual Studio **fichier** menu, pointez sur **New**, puis cliquez sur **projet**.  
   
-2.  Dans le **types de projet** volet dans le **nouveau projet** boîte de dialogue, cliquez sur **Visual C#**.  
+2.  Dans le **types de projets** volet dans le **nouveau projet** boîte de dialogue, cliquez sur **Visual C#** .  
   
 3.  Dans le volet **Modèles** , cliquez sur **Application Windows Forms**.  
   
@@ -92,7 +92,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 1.  Sur le **projet** menu, cliquez sur **ajouter un élément existant**.  
   
-2.  Dans le **ajouter un élément existant** boîte de dialogue, accédez à c:\linqtest7\northwind.cs, puis cliquez sur **ajouter**.  
+2.  Dans le **ajouter un élément existant** boîte de dialogue Déplacer vers c:\linqtest7\northwind.cs, puis cliquez sur **ajouter**.  
   
      Le fichier northwind.cs est ajouté au projet.  
   
@@ -112,14 +112,14 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 #### <a name="to-set-up-the-user-interface"></a>Pour configurer l'interface utilisateur  
   
-1.  Revenir à la fenêtre Concepteur de formulaires (**Form1.cs]**).  
+1.  Revenez à la Windows Forms concepteur (**Form1.cs [Design]**).  
   
 2.  Dans le menu **Affichage** , cliquez sur **Boîte à outils**.  
   
      La boîte à outils s'ouvre.  
   
     > [!NOTE]
-    >  Cliquez sur le **masquage automatique** punaise pour garder la boîte à outils ouverte pendant que vous effectuez les autres étapes de cette section.  
+    >  Cliquez sur le **masquage automatique** punaise pour maintenir la boîte à outils ouverte pendant que vous effectuez les autres étapes de cette section.  
   
 3.  Faites glisser deux boutons, deux zones de texte et deux étiquettes à partir de la boîte à outils vers **Form1**.  
   
@@ -127,13 +127,13 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 4.  Avec le bouton droit **label1**, puis cliquez sur **propriétés**.  
   
-5.  Modifier la **texte** propriété à partir de **label1** à **Enter OrderID :**.  
+5.  Modifier le **texte** propriété à partir de **label1** à **Enter OrderID :**.  
   
 6.  Dans la même façon pour **label2**, modifiez le **texte** propriété à partir de **label2** à **Enter CustomerID :**.  
   
-7.  Dans la même façon, modifiez le **texte** propriété **button1** à **Order Details**.  
+7.  Dans la même façon, modifiez le **texte** propriété pour **button1** à **Order Details**.  
   
-8.  Modifier la **texte** propriété **button2** à **l’historique des commandes**.  
+8.  Modifier le **texte** propriété pour **button2** à **l’historique des commandes**.  
   
      Élargissez les contrôles boutons afin que tout le texte soit visible.  
   
@@ -182,11 +182,11 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
      La session de débogage s'arrête.  
   
-6.  Si vous avez terminé les tests, vous pouvez cliquer sur **fermer le projet** sur la **fichier** menu et enregistrez votre projet lorsque vous y êtes invité.  
+6.  Si vous avez terminé les tests, vous pouvez cliquer sur **fermer le projet** sur le **fichier** menu et enregistrez votre projet lorsque vous y êtes invité.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Vous pouvez améliorer ce projet en apportant des modifications. Par exemple, vous pouvez répertorier les procédures stockées disponibles dans une zone de liste et demander à l'utilisateur de sélectionner les procédures à exécuter. Vous pouvez également transmettre en continu la sortie des rapports dans un fichier texte.  
   
-## <a name="see-also"></a>Voir aussi  
- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
- [Procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>Voir aussi
+- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

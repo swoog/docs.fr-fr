@@ -2,12 +2,12 @@
 title: Déduction des colonnes
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 56de4b4d6cf704473ec46957625ad1c376f595c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f3edd09b1fb8169e8f609514de38b3c37574079b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655229"
 ---
 # <a name="inferring-columns"></a>Déduction des colonnes
 Après avoir déterminé les éléments à déduire en tant que tables pour un objet <xref:System.Data.DataSet> à partir d'un document XML, ADO.NET déduit les colonnes pour ces tables. ADO.NET 2.0 a introduit un nouveau moteur d’inférence de schéma qui déduit un type de données fortement typées pour chaque **simpleType** élément. Dans les versions précédentes, le type de données d’un élément déduit **simpleType** élément était toujours **xsd : String**.  
@@ -65,10 +65,10 @@ Après avoir déterminé les éléments à déduire en tant que tables pour un o
 |-------------------|-------------------|  
 |Text1|Text2|  
   
-## <a name="see-also"></a>Voir aussi  
- [Inférence de la structure relationnelle d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [Chargement d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Chargement des informations de schéma de DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Inférence de la structure relationnelle d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Chargement d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Chargement des informations de schéma de DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

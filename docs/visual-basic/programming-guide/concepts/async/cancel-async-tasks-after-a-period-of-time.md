@@ -2,12 +2,12 @@
 title: Annuler des tâches Asynch après une période spécifique (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: b1c56cb6d894dbcd9e70f06d7e5cd44b559b8cd4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a01ab79a2895bd9c5a8ae4782db06eb9dd5664a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580549"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Annuler des tâches Asynch après une période spécifique (Visual Basic)
 Si vous ne souhaitez pas attendre la fin d’une opération asynchrone, vous pouvez l’annuler après une période spécifique à l’aide de la méthode <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType>. Cette méthode planifie l’annulation de toutes les tâches associées qui ne sont pas terminées au terme de la période indiquée par l’expression `CancelAfter`.  
@@ -189,9 +189,9 @@ End Class
 ' Downloads canceled.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Annuler une tâche Asynch ou une liste de tâches (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
- [Ajuster une application Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Exemple Async : Réglage de votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+## <a name="see-also"></a>Voir aussi
+- [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Annuler une tâche Asynch ou une liste de tâches (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
+- [Ajuster une application Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Exemple Async : Réglage de votre application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -1,5 +1,5 @@
 ---
-title: "Comment : générer des notifications de modifications à l'aide de la méthode ResetItem de BindingSource"
+title: 'Procédure : Déclencher des Notifications de modification à l’aide de la méthode ResetItem de BindingSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data sources [Windows Forms], detecting changes
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
-ms.openlocfilehash: cd2a15d5c3cbdf15f055196e63548a1240202479
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 50d2203638363831d236a6add7c6f4ba4fbebf4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644815"
 ---
-# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Comment : générer des notifications de modifications à l'aide de la méthode ResetItem de BindingSource
+# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Procédure : Déclencher des Notifications de modification à l’aide de la méthode ResetItem de BindingSource
 Certaines sources de données de vos contrôles ne déclenchent pas de notifications de modifications quand des éléments sont modifiés, ajoutés ou supprimés. Avec le composant <xref:System.Windows.Forms.BindingSource>, vous pouvez établir une liaison à ces sources de données et déclencher une notification de modification à partir de votre code.  
   
 ## <a name="example"></a>Exemple  
@@ -34,11 +34,11 @@ Certaines sources de données de vos contrôles ne déclenchent pas de notificat
   
 -   Références aux assemblys System, System.Data, System.Drawing et System.Windows.Forms.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Voir également [Guide pratique pour Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.BindingNavigator>  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.BindingSource>  
- [BindingSource, composant](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Comment : lier un contrôle Windows Forms à un type](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.BindingNavigator>
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.BindingSource>
+- [BindingSource, composant](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Guide pratique pour Lier un contrôle de formulaires Windows à un Type](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

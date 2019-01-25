@@ -2,12 +2,12 @@
 title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: 44954dcc1f3407a768ba23fe87ac4b4abcf1bac5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bdf1c34f8a050764e8f8766da25076a7c1c361ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505079"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 Crée les références à une entité dans un jeu d'entités.  
@@ -38,14 +38,14 @@ from LOB.Orders as o
 ## <a name="example"></a>Exemple  
  La requête Entity SQL ci-dessous utilise l'opérateur CREATEREF pour créer des références à une entité contenue dans un jeu d'entités. Cette requête est basée sur le modèle de vente AdventureWorks Sales Model. Pour compiler et exécuter cette requête, procédez comme suit :  
   
-1.  Suivez la procédure indiquée dans [Guide pratique pour exécuter une requête qui retourne les résultats StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Suivez la procédure décrite dans [Comment : Exécuter une requête qui retourne des résultats StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Transmettez à la méthode `ExecuteStructuralTypeQuery` la requête suivante en tant qu'argument :  
   
  [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
+## <a name="see-also"></a>Voir aussi
+- [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
+- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
+- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)

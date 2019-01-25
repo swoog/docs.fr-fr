@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 0ad8d071a91edaef184c4cc1fa28298f8ec3d71a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632346"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetage de polices avec des applications
 Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des polices avec votre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.  
@@ -166,16 +166,16 @@ Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des poli
   
 -   **URI absolu à l’aide du pack : notation :** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications ne vous permettent pas créer un <xref:System.Windows.Media.FontFamily> par programmation à l’aide de l’objet « pack : » dans le cadre d’absolue [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] référence à une police. Par exemple, `"pack://application:,,,/resources/#Pericles Light"` est une référence de police non valide.  
   
--   **Incorporation de police automatique :** Au moment de la conception, il n’est pas possible de rechercher les polices utilisées par une application et de les incorporer automatiquement dans les ressources de l’application.  
+-   **Incorporation de police automatique :** Au moment du design, il n’existe aucune prise en charge pour la recherche d’utilisation d’une application de polices et d’automatiquement l’incorporation de polices dans les ressources de l’application.  
   
 -   **Sous-ensembles de polices :** Les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne prennent pas en charge la création de sous-ensembles de polices pour les documents non fixes.  
   
 -   En cas de référence incorrecte, l’application utilise une police disponible à la place.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Documents.Typography>  
- <xref:System.Windows.Media.FontFamily>  
- [Typographie Microsoft : Liens, actualités et Contacts](https://www.microsoft.com/typography/links/)  
- [Spécification OpenType](https://www.microsoft.com/typography/otspec/)  
- [Fonctionnalités des polices OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Exemple de pack de polices OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Documents.Typography>
+- <xref:System.Windows.Media.FontFamily>
+- [Typographie Microsoft : Des liens, des actualités et des Contacts](https://www.microsoft.com/typography/links/)
+- [Spécification OpenType](https://www.microsoft.com/typography/otspec/)
+- [Fonctionnalités des polices OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Exemple de pack de polices OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

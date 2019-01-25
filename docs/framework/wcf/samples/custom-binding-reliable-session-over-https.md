@@ -2,12 +2,12 @@
 title: Custom Binding Reliable Session over HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: fb23dc6e6e2e13d759d29584ed6a990ae769ac8b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d25a59b5921484c33a2b0c94febc97a04011f8d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643427"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Custom Binding Reliable Session over HTTPS
 Cet exemple illustre l'utilisation de la sécurité de transport SSL avec des sessions fiables. Les sessions fiables implémentent le protocole WS-Reliable Messaging. Vous pouvez obtenir une session fiable sécurisée en composant WS-Security sur des sessions fiables. Mais parfois, vous pouvez choisir d'utiliser à la place la sécurité de transport HTTP avec SSL.  
