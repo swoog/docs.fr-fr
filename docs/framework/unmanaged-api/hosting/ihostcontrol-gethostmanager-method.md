@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 355d2e259adb13da44b09e19872337c17ac20ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 821968fbde6d3f5434b83adf8c9661fe39d96293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742027"
 ---
-# <a name="ihostcontrolgethostmanager-method"></a><span data-ttu-id="775c4-102">IHostControl::GetHostManager, méthode</span><span class="sxs-lookup"><span data-stu-id="775c4-102">IHostControl::GetHostManager Method</span></span>
-<span data-ttu-id="775c4-103">Obtient un pointeur d’interface à l’implémentation de l’hôte de l’interface avec l’objet `IID`.</span><span class="sxs-lookup"><span data-stu-id="775c4-103">Gets an interface pointer to the host's implementation of the interface with the specified `IID`.</span></span>  
+# <a name="ihostcontrolgethostmanager-method"></a><span data-ttu-id="4af81-102">IHostControl::GetHostManager, méthode</span><span class="sxs-lookup"><span data-stu-id="4af81-102">IHostControl::GetHostManager Method</span></span>
+<span data-ttu-id="4af81-103">Obtient un pointeur d’interface vers l’implémentation de l’hôte de l’interface avec la valeur `IID`.</span><span class="sxs-lookup"><span data-stu-id="4af81-103">Gets an interface pointer to the host's implementation of the interface with the specified `IID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="775c4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="775c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4af81-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4af81-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHostManager (  
@@ -36,59 +36,59 @@ HRESULT GetHostManager (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="775c4-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="775c4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4af81-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4af81-105">Parameters</span></span>  
  `riid`  
- <span data-ttu-id="775c4-106">[in] Le `IID` de l’interface que le common language runtime (CLR) effectue une requête.</span><span class="sxs-lookup"><span data-stu-id="775c4-106">[in] The `IID` of the interface that the common language runtime (CLR) is querying for.</span></span>  
+ <span data-ttu-id="4af81-106">[in] Le `IID` de l’interface que le common language runtime (CLR) effectue une requête.</span><span class="sxs-lookup"><span data-stu-id="4af81-106">[in] The `IID` of the interface that the common language runtime (CLR) is querying for.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="775c4-107">[out] Pointeur vers l’interface implémentée par l’hôte, ou null si l’hôte ne prend pas en charge cette interface.</span><span class="sxs-lookup"><span data-stu-id="775c4-107">[out] A pointer to the host-implemented interface, or null if the host does not support this interface.</span></span>  
+ <span data-ttu-id="4af81-107">[out] Un pointeur vers l’interface implémentée par l’hôte, ou null si l’hôte ne prend pas en charge cette interface.</span><span class="sxs-lookup"><span data-stu-id="4af81-107">[out] A pointer to the host-implemented interface, or null if the host does not support this interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="775c4-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="775c4-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4af81-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="4af81-108">Return Value</span></span>  
   
-|<span data-ttu-id="775c4-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="775c4-109">HRESULT</span></span>|<span data-ttu-id="775c4-110">Description</span><span class="sxs-lookup"><span data-stu-id="775c4-110">Description</span></span>|  
+|<span data-ttu-id="4af81-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4af81-109">HRESULT</span></span>|<span data-ttu-id="4af81-110">Description</span><span class="sxs-lookup"><span data-stu-id="4af81-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="775c4-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="775c4-111">S_OK</span></span>|<span data-ttu-id="775c4-112">`GetHostManager` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="775c4-112">`GetHostManager` returned successfully.</span></span>|  
-|<span data-ttu-id="775c4-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="775c4-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="775c4-114">Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="775c4-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="775c4-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="775c4-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="775c4-116">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="775c4-116">The call timed out.</span></span>|  
-|<span data-ttu-id="775c4-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="775c4-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="775c4-118">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="775c4-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="775c4-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="775c4-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="775c4-120">Un événement a été annulé alors qu’un thread bloqué ou une fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="775c4-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="775c4-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="775c4-121">E_FAIL</span></span>|<span data-ttu-id="775c4-122">Une défaillance grave et inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="775c4-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="775c4-123">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable dans le processus.</span><span class="sxs-lookup"><span data-stu-id="775c4-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="775c4-124">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="775c4-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="775c4-125">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="775c4-125">E_INVALIDARG</span></span>|<span data-ttu-id="775c4-126">Demandé `IID` n’est pas valide.</span><span class="sxs-lookup"><span data-stu-id="775c4-126">The requested `IID` is not valid.</span></span>|  
-|<span data-ttu-id="775c4-127">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="775c4-127">E_NOINTERFACE</span></span>|<span data-ttu-id="775c4-128">L’interface demandée n’est pas pris en charge.</span><span class="sxs-lookup"><span data-stu-id="775c4-128">The requested interface is not supported.</span></span>|  
+|<span data-ttu-id="4af81-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="4af81-111">S_OK</span></span>|<span data-ttu-id="4af81-112">`GetHostManager` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="4af81-112">`GetHostManager` returned successfully.</span></span>|  
+|<span data-ttu-id="4af81-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4af81-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4af81-114">Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="4af81-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="4af81-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="4af81-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="4af81-116">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="4af81-116">The call timed out.</span></span>|  
+|<span data-ttu-id="4af81-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="4af81-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="4af81-118">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="4af81-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="4af81-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="4af81-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="4af81-120">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="4af81-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="4af81-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4af81-121">E_FAIL</span></span>|<span data-ttu-id="4af81-122">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="4af81-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="4af81-123">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="4af81-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="4af81-124">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="4af81-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="4af81-125">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="4af81-125">E_INVALIDARG</span></span>|<span data-ttu-id="4af81-126">Demandé `IID` n’est pas valide.</span><span class="sxs-lookup"><span data-stu-id="4af81-126">The requested `IID` is not valid.</span></span>|  
+|<span data-ttu-id="4af81-127">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="4af81-127">E_NOINTERFACE</span></span>|<span data-ttu-id="4af81-128">L’interface demandée n’est pas pris en charge.</span><span class="sxs-lookup"><span data-stu-id="4af81-128">The requested interface is not supported.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="775c4-129">Notes</span><span class="sxs-lookup"><span data-stu-id="775c4-129">Remarks</span></span>  
- <span data-ttu-id="775c4-130">Le CLR interroge l’hôte pour déterminer si elle prend en charge un ou plusieurs des interfaces suivantes :</span><span class="sxs-lookup"><span data-stu-id="775c4-130">The CLR queries the host to determine whether it supports one or more of the following interfaces:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4af81-129">Notes</span><span class="sxs-lookup"><span data-stu-id="4af81-129">Remarks</span></span>  
+ <span data-ttu-id="4af81-130">Le CLR interroge l’hôte pour déterminer si elle prend en charge un ou plusieurs des interfaces suivantes :</span><span class="sxs-lookup"><span data-stu-id="4af81-130">The CLR queries the host to determine whether it supports one or more of the following interfaces:</span></span>  
   
--   [<span data-ttu-id="775c4-131">IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="775c4-131">IHostMemoryManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
+-   [<span data-ttu-id="4af81-131">IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="4af81-131">IHostMemoryManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
--   [<span data-ttu-id="775c4-132">IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="775c4-132">IHostTaskManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
+-   [<span data-ttu-id="4af81-132">IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="4af81-132">IHostTaskManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
   
--   [<span data-ttu-id="775c4-133">IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="775c4-133">IHostThreadPoolManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
+-   [<span data-ttu-id="4af81-133">IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="4af81-133">IHostThreadPoolManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
   
--   [<span data-ttu-id="775c4-134">IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="775c4-134">IHostIoCompletionManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
+-   [<span data-ttu-id="4af81-134">IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="4af81-134">IHostIoCompletionManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
   
--   [<span data-ttu-id="775c4-135">IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="775c4-135">IHostSyncManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+-   [<span data-ttu-id="4af81-135">IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="4af81-135">IHostSyncManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
   
--   [<span data-ttu-id="775c4-136">IHostAssemblyManager</span><span class="sxs-lookup"><span data-stu-id="775c4-136">IHostAssemblyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
+-   [<span data-ttu-id="4af81-136">IHostAssemblyManager</span><span class="sxs-lookup"><span data-stu-id="4af81-136">IHostAssemblyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
   
--   [<span data-ttu-id="775c4-137">IHostGCManager</span><span class="sxs-lookup"><span data-stu-id="775c4-137">IHostGCManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
+-   [<span data-ttu-id="4af81-137">IHostGCManager</span><span class="sxs-lookup"><span data-stu-id="4af81-137">IHostGCManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
   
--   [<span data-ttu-id="775c4-138">IHostPolicyManager</span><span class="sxs-lookup"><span data-stu-id="775c4-138">IHostPolicyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
+-   [<span data-ttu-id="4af81-138">IHostPolicyManager</span><span class="sxs-lookup"><span data-stu-id="4af81-138">IHostPolicyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
   
--   [<span data-ttu-id="775c4-139">IHostSecurityManager</span><span class="sxs-lookup"><span data-stu-id="775c4-139">IHostSecurityManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
+-   [<span data-ttu-id="4af81-139">IHostSecurityManager</span><span class="sxs-lookup"><span data-stu-id="4af81-139">IHostSecurityManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
   
- <span data-ttu-id="775c4-140">Si l’hôte prend en charge l’interface spécifiée, il définit `ppObject` à son implémentation de cette interface.</span><span class="sxs-lookup"><span data-stu-id="775c4-140">If the host supports the specified interface, it sets `ppObject` to its implementation of that interface.</span></span> <span data-ttu-id="775c4-141">Dans le cas contraire, il définit `ppObject` avec la valeur null.</span><span class="sxs-lookup"><span data-stu-id="775c4-141">Otherwise, it sets `ppObject` to null.</span></span>  
+ <span data-ttu-id="4af81-140">Si l’hôte prend en charge l’interface spécifiée, il définit `ppObject` à son implémentation de cette interface.</span><span class="sxs-lookup"><span data-stu-id="4af81-140">If the host supports the specified interface, it sets `ppObject` to its implementation of that interface.</span></span> <span data-ttu-id="4af81-141">Sinon, il définit `ppObject` avec la valeur null.</span><span class="sxs-lookup"><span data-stu-id="4af81-141">Otherwise, it sets `ppObject` to null.</span></span>  
   
- <span data-ttu-id="775c4-142">Le CLR n’appelle pas `Release` sur les gestionnaires d’hôte, même lorsque vous l’avez arrêté.</span><span class="sxs-lookup"><span data-stu-id="775c4-142">The CLR does not call `Release` on host managers, even when you shut it down.</span></span>  
+ <span data-ttu-id="4af81-142">Le CLR n’appelle pas `Release` sur les gestionnaires d’hôte, même lorsque vous arrêtez.</span><span class="sxs-lookup"><span data-stu-id="4af81-142">The CLR does not call `Release` on host managers, even when you shut it down.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="775c4-143">Spécifications</span><span class="sxs-lookup"><span data-stu-id="775c4-143">Requirements</span></span>  
- <span data-ttu-id="775c4-144">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="775c4-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4af81-143">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4af81-143">Requirements</span></span>  
+ <span data-ttu-id="4af81-144">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4af81-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="775c4-145">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="775c4-145">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4af81-145">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4af81-145">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="775c4-146">**Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="775c4-146">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4af81-146">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4af81-146">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="775c4-147">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="775c4-147">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4af81-147">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4af81-147">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="775c4-148">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="775c4-148">See Also</span></span>  
- [<span data-ttu-id="775c4-149">IHostControl, interface</span><span class="sxs-lookup"><span data-stu-id="775c4-149">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4af81-148">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4af81-148">See also</span></span>
+- [<span data-ttu-id="4af81-149">IHostControl, interface</span><span class="sxs-lookup"><span data-stu-id="4af81-149">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
