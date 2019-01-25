@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b713eefa4f23aec34b5f55c0c3457381f54ef931
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de8569c55ef50e3f18d084f7d7ad60c733e58e50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623103"
 ---
 # <a name="ltfieldgt-element-net-native"></a>&lt;Field&gt;, élément (.NET Native)
 Applique la stratégie de réflexion runtime à un champ.  
@@ -60,7 +60,7 @@ Applique la stratégie de réflexion runtime à un champ.
 ## <a name="remarks"></a>Notes  
  Si la stratégie d'un champ n'est pas définie explicitement, elle hérite la stratégie runtime de son élément parent.  
   
-## <a name="see-also"></a>Voir aussi  
- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>Voir aussi
+- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

@@ -2,12 +2,12 @@
 title: Création d’un en-tête personnalisé qui est signé et- ou chiffrées
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 4770d650cba5c182aa56d9ac7afa39e585512d4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f8f86bcb5494cd502d14aff1cf3c4cdf4f8dd33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494819"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Création d’un en-tête personnalisé qui est signé et- ou chiffrées
 Si vous appelez un service autre que WCF à l'aide d'un client WCF, il est parfois nécessaire d'utiliser des en-têtes SOAP personnalisés. Un bogue de canonisation dans WCF empêche les en-têtes personnalisés qui sont signés et chiffrés de fonctionner avec un service non-WCF. Le problème est causé par la canonisation incorrecte des espaces de noms XML par défaut. Ceci pose problème uniquement si vous appelez des services autres que WCF avec en-têtes personnalisés qui sont signés et/ou chiffrés.  Lorsque le service reçoit le message contenant l'en-tête personnalisé signé et/ou chiffré, il n'est pas en mesure de vérifier la signature. Cette solution de contournement évite le bogue de canonisation, permet l'interopérabilité avec les services autres que WCF, mais n'empêche pas l'interopérabilité avec les services WCF.  
@@ -56,7 +56,7 @@ public  class MyMessageContract
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Contrat de message par défaut](../../../../docs/framework/wcf/samples/default-message-contract.md)  
- [Contrats de message](../../../../docs/framework/wcf/samples/message-contracts.md)  
- [Utilisation de contrats de message](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+## <a name="see-also"></a>Voir aussi
+- [Contrat de message par défaut](../../../../docs/framework/wcf/samples/default-message-contract.md)
+- [Contrats de message](../../../../docs/framework/wcf/samples/message-contracts.md)
+- [Utilisation de contrats de message](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

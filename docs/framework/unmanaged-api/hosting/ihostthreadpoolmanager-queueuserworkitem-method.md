@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b458739db024bdbe8cf0fb5a12a5d5f508d332da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3faa3762612e4d1fc608291a393e9eb2e79fe67e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616847"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem, méthode
-Une fonction pour l’exécution des files d’attente et spécifie un objet contenant les données à utiliser par cette fonction. La fonction s’exécute lorsqu’un thread devient disponible.  
+Files d’attente d’une fonction pour l’exécution et spécifie un objet contenant les données à utiliser par cette fonction. La fonction s’exécute lorsqu’un thread devienne disponible.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,32 +45,32 @@ HRESULT QueueUserWorkItem (
  [in] Objet qui contient les données à utiliser par `Function`.  
   
  `Flags`  
- [in] Un des indicateurs de valeurs, tel que défini pour Win32 `QueueUserWorkItem` (méthode), qui contrôle l’exécution.  
+ [in] Un des indicateurs de valeurs, comme défini pour Win32 `QueueUserWorkItem` (méthode), qui contrôle l’exécution.  
   
 ## <a name="return-value"></a>Valeur de retour  
   
 |HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`QueueUserWorkItem` retourné avec succès.|  
-|HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
+|HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
-|HOST_E_ABANDONED|Un événement a été annulé alors qu’un thread bloqué ou une fibre l’attendait.|  
-|E_FAIL|Une défaillance grave et inconnue s’est produite. Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable dans le processus. Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.|  
+|E_FAIL|Une défaillance catastrophique inconnue s’est produite. Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus. Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Notes  
- `QueueUserWorkItem` files d’attente d’un élément de travail vers un thread de travail dans le pool de threads. Ses types de signature et de paramètres sont identiques à celles de la fonction Win32 correspondante, qui porte le même nom. Pour plus d’informations, consultez la documentation de la plateforme Windows.  
+ `QueueUserWorkItem` files d’attente d’un élément de travail à un thread de travail dans le pool de threads. Ses types de signature et de paramètres sont identiques à ceux de la fonction Win32 correspondante, qui porte le même nom. Pour plus d’informations, consultez la documentation de la plateforme de Windows.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
- <xref:System.Threading.ThreadPool>  
- [IHostThreadPoolManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
+- <xref:System.Threading.ThreadPool>
+- [IHostThreadPoolManager, interface](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

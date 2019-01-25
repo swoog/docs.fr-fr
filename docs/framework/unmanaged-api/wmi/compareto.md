@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa46cf1fde4306af562248b4c12b048e3d8e2a51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717647"
 ---
 # <a name="compareto-function"></a>CompareTo (fonction)
 Compare un objet à un autre objet WMI.  
@@ -60,8 +60,8 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Une erreur non spécifiée s’est produite. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
+| `WBEM_E_FAILED` | 0x80041001 | Une erreur non spécifiée s’est produite. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre n’est pas valide. |
 | `WBEM_E_UNEXPECTED` | 0x8004101d | Un deuxième appel à `BeginEnumeration` a été effectuée sans appel intermédiaire à [ `EndEnumeration` ](endenumeration.md). |
 | `WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Les objets sont différents. |
@@ -78,9 +78,9 @@ Les indicateurs qui peuvent être passés en tant que le `lEnumFlags` argument s
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Ignorer la source (le serveur et l’espace de noms que dont elles sont issues). |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Ignorer tous les qualificateurs (y compris **clé** et **dynamique**) |
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Ignorer les valeurs par défaut des propriétés. Cet indicateur s’applique uniquement à la comparaison des classes. |
-| `WBEM_FLAG_IGNORE_FLAVOR` | 0 x 20 | Ignorer les versions de qualificateur. Cet indicateur toujours tienne compte, de qualificateurs mais ignore les distinctions de version telles que les règles de propagation et remplace les restrictions. |
+| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Ignorer les versions de qualificateur. Cet indicateur toujours tienne compte, de qualificateurs mais ignore les distinctions de version telles que les règles de propagation et remplace les restrictions. |
 | `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignorer la casse pour comparer les valeurs de chaîne. Cela s’applique à la fois aux chaînes et aux valeurs de qualificateur. La comparaison des noms de propriété et le qualificateur est toujours la casse, même si cet indicateur est défini. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0 x 8 | Supposons que les objets comparés sont des instances de la même classe. Par conséquent, cet indicateur compare uniquement des informations relatives aux instances. Utilisez cette indicateurs pour optimiser les performances. Si les objets ne sont pas de la même classe, les résultats sont indéfinis. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Supposons que les objets comparés sont des instances de la même classe. Par conséquent, cet indicateur compare uniquement des informations relatives aux instances. Utilisez cette indicateurs pour optimiser les performances. Si les objets ne sont pas de la même classe, les résultats sont indéfinis. |
 
 Ou vous pouvez spécifier un indicateur composite unique comme suit :
 
@@ -88,12 +88,12 @@ Ou vous pouvez spécifier un indicateur composite unique comme suit :
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Prendre en compte toutes les fonctionnalités dans la comparaison. |
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

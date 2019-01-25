@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd1a55d4100d74b769b2bc1b8fe33d2042f5e739
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab637b33797ebc5b6d16873cb460c465405b6849
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645650"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute, méthode
-Définit un attribut personnalisé en fonction de son nom. Ces attributs sont conservés dans le magasin de symboles, contrairement aux attributs personnalisés des métadonnées.  
+Définit un attribut personnalisé en fonction de son nom. Ces attributs sont stockés dans le magasin de symboles, contrairement aux attributs personnalisés de métadonnées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +45,7 @@ HRESULT SetSymAttribute(
  [in] Un pointeur vers un `WCHAR` qui contient le nom d’attribut.  
   
  `cData`  
- [in] A `ULONG32` qui indique la taille de la `data` tableau.  
+ [in] Un `ULONG32` qui indique la taille de la `data` tableau.  
   
  `data`  
  [in] La valeur d’attribut.  
@@ -56,5 +56,5 @@ HRESULT SetSymAttribute(
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ISymUnmanagedWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

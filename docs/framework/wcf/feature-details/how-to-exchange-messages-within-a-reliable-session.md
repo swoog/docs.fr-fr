@@ -1,15 +1,15 @@
 ---
-title: "Comment : échanger des messages au sein d'une session fiable"
+title: 'Procédure : Messages Exchange au sein d’une Session fiable'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720052"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Comment : échanger des messages au sein d'une session fiable
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procédure : Messages Exchange au sein d’une Session fiable
 
 Cette rubrique décrit les étapes requises pour activer une session fiable utilisant l’une des liaisons fournies par le système qui prennent en charge une telle session, mais pas par défaut. Vous activez une session fiable de façon impérative à l’aide de code ou de façon déclarative dans votre fichier de configuration. Cette procédure utilise les fichiers de configuration client et le service pour activer la session fiable et pour stipuler que les messages arrivent dans le même ordre que celui dans lequel ils ont été envoyés.
 
@@ -75,8 +75,8 @@ Plusieurs liaisons fournies par le système prennent en charge des sessions fiab
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-Pour obtenir un exemple montrant comment créer une liaison personnalisée qui prend en charge des sessions fiables, consultez [Comment : créer une liaison personnalisée de Session fiable avec HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
+Pour obtenir un exemple montrant comment créer une liaison personnalisée qui prend en charge des sessions fiables, consultez [Comment : Créer une liaison de Session fiable personnalisée avec le protocole HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

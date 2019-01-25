@@ -1,26 +1,26 @@
 ---
-title: 'Comment : spécifier une liaison de client dans la configuration'
+title: 'Procédure : Spécifier une liaison Client dans la Configuration'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: e2ea5a4b1c2ca9b661be5d4c653a3b5668bd26f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2441b307961079c28e114b4fed69c252ff42e0d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606385"
 ---
-# <a name="how-to-specify-a-client-binding-in-configuration"></a>Comment : spécifier une liaison de client dans la configuration
+# <a name="how-to-specify-a-client-binding-in-configuration"></a>Procédure : Spécifier une liaison Client dans la Configuration
 Dans cet exemple, une application console cliente est créée pour utiliser un service de calculatrice, et la liaison pour ce client est spécifiée de façon déclarative dans la configuration. Le client accède au service `CalculatorService`, lequel implémente l'interface `ICalculator`. Le service et le client utilisent la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
- La procédure présentée suppose que le service de calculatrice est en cours d'exécution. Pour plus d’informations sur la façon de créer le service, consultez [Comment : spécifier une liaison de Service dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Elle utilise également le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) fournit des services Windows Communication Foundation (WCF) pour générer automatiquement les composants du client. L'outil génère le code client et la configuration permettant d'accéder au service.  
+ La procédure présentée suppose que le service de calculatrice est en cours d'exécution. Pour plus d’informations sur la création du service, consultez [Comment : Spécifier une liaison de Service dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Il utilise également le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) que Windows Communication Foundation (WCF) fournit pour générer automatiquement les composants du client. L'outil génère le code client et la configuration permettant d'accéder au service.  
   
  La construction du client se divise en deux parties. L'outil Svcutil.exe génère la calculatrice `ClientCalculator` qui implémente l'interface `ICalculator`. Cette application cliente est ensuite construite à l'aide d'une instance de `ClientCalculator`.  
   
  Il est généralement conseillé de spécifier de façon déclarative les informations de liaison et d’adresse dans la configuration plutôt que de manière impérative dans le code. La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service. Plus généralement, le fait de laisser les informations de liaison et d’adresse hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application.  
   
- Vous pouvez effectuer toutes les étapes de configuration suivants à l’aide de la [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ Vous pouvez effectuer toutes les étapes de configuration suivantes à l’aide de la [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Pour la copie de la source de cet exemple, consultez la [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md) exemple.  
+ Pour la copie de la source de cet exemple, consultez le [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md) exemple.  
   
 ### <a name="specifying-a-client-binding-in-configuration"></a>Spécification d’une liaison de client dans la configuration  
   
@@ -50,5 +50,5 @@ Dans cet exemple, une application console cliente est créée pour utiliser un s
   
 6.  Compilez, puis exécutez le client.  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

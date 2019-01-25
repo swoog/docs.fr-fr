@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690408"
 ---
 # <a name="trees-in-wpf"></a>Arborescences dans WPF
 Dans de nombreuses technologies, les éléments et les composants sont organisés en une arborescence, où les développeurs manipulent directement les nœuds d’objet dans l’arborescence pour modifier le rendu ou le comportement d’une application. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] utilise également plusieurs métaphores d’arborescence pour définir des relations entre des éléments du programme. Pour la plupart, les développeurs WPF peuvent créer une application dans le code ou définir des parties de l’application en XAML, en se représentant mentalement la métaphore de l’arborescence des objets, mais en appelant pour cela une API spécifique ou en utilisant un balisage spécifique, au lieu d’utiliser une API générale de manipulation d’une arborescence d’objets, comme ce peut être le cas dans le modèle DOM XML. WPF expose deux classes d’assistance qui fournissent une vue de la métaphore de l’arborescence, <xref:System.Windows.LogicalTreeHelper> et <xref:System.Windows.Media.VisualTreeHelper>. Les termes « arborescence d’éléments visuels » et « arborescence logique » sont également utilisés dans la documentation WPF, car ils sont utiles pour comprendre le comportement de certaines fonctionnalités clés de WPF. Cette rubrique définit ce que représentent l’arborescence d’éléments visuels et l’arborescence logique, explique la relation de ces arborescences avec le concept d’arborescence d’un objet global et introduit <xref:System.Windows.LogicalTreeHelper> et <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -86,9 +86,9 @@ Dans de nombreuses technologies, les éléments et les composants sont organisé
   
  Cependant, la recherche de ressources peut également s’étendre au-delà de l’arborescence logique immédiate. Pour le balisage de l’application, la recherche de ressources peut continuer ensuite dans les dictionnaires de ressources de niveau application, puis dans la prise en charge des thèmes et les valeurs système qui sont référencées en tant que clés ou propriétés statiques. Les thèmes eux-mêmes peuvent également référencer des valeurs système en dehors de l’arborescence logique des thèmes si les références de ressource sont dynamiques. Pour plus d’informations sur les dictionnaires de ressources et la logique de la recherche, consultez [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des entrées](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Initialisation d’éléments objet ne figurant pas dans une arborescence d’objets](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Architecture de WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble des entrées](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Initialisation d’éléments objet ne figurant pas dans une arborescence d’objets](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
+- [Architecture de WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

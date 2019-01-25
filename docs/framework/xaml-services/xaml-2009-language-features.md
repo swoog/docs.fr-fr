@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: ed0f638975c232638de4a46db5db82bb1e85668c
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 36b1ad197b5c8e38c77a9a6a92ba1b3b659efbb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661340"
 ---
 # <a name="xaml-2009-language-features"></a>Fonctionnalités de langage XAML 2009
-XAML 2009 est l'abréviation désignant les nouvelles fonctionnalités du langage XAML qui étendent la spécification du langage XAML existante. XAML 2009 introduit plusieurs nouvelles directives et constructions. Celles-ci incluent la [Directive x : Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md); le [Directive x : FactoryMethod](../../../docs/framework/xaml-services/x-factorymethod-directive.md); le [x : Reference, Extension de balisage](../../../docs/framework/xaml-services/x-reference-markup-extension.md); le [Directive x : TypeArguments ](../../../docs/framework/xaml-services/x-typearguments-directive.md); et les types intégrés pour les primitives de langage commun (par exemple `x:Char`).  
+XAML 2009 est l'abréviation désignant les nouvelles fonctionnalités du langage XAML qui étendent la spécification du langage XAML existante. XAML 2009 introduit plusieurs nouvelles directives et constructions. Ceux-ci incluent le [x : Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md); le [x : FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md); le [x : Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md); le [x : TypeArguments, Directive ](../../../docs/framework/xaml-services/x-typearguments-directive.md); et les types intégrés pour les primitives de langage courantes (par exemple `x:Char`).  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>Prise en charge de XAML 2009 dans WPF et Visual Studio  
@@ -32,5 +32,5 @@ XAML 2009 est l'abréviation désignant les nouvelles fonctionnalités du langag
 ### <a name="event-attributes"></a>Attributs d'événement  
  Pour les attributs qui sont soutenus par des événements, XAML 2006 suppose que la compilation du balisage est impliquée et soumet les événements à la compilation du balisage. XAML 2009 prend en charge une forme de balisage ressemblant à une extension de balisage, ce qui diffère la connexion d'événements jusqu'au moment de l'analyse à l'exécution et du chargement du code XAML. Toutefois, les applications WPF et les scénarios XAML pour l'interface utilisateur WPF n'utilisent généralement pas cette fonction. WPF et son implémentation de XAML 2006 utilisent la combinaison de la connexion du gestionnaire d'événements pour les événements routés définis au niveau d' <xref:System.Windows.UIElement> et de l'étape de son compilateur de balisage pour une grande partie du traitement de ses attributs d'événement. Le compilateur de balisage prétraite également les attributs d'événement se trouvant dans le code XAML où les actions de génération déclarent que le compilateur de balisage est utilisé.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

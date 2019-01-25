@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 565508046b3fa2dc52acf8c5204153beffc15d9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbc18a8b25e0de128cc2c1828213212adad108ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719493"
 ---
 # <a name="iterator-visual-basic"></a>Itérateur (Visual Basic)
 Spécifie qu’une fonction ou `Get` accesseur est un itérateur.  
   
 ## <a name="remarks"></a>Notes  
- Un *itérateur* effectue une itération personnalisée sur une collection. Un itérateur utilise le [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) instruction pour retourner chaque élément dans la collection un à la fois. Lorsqu’un `Yield` instruction est atteinte, l’emplacement actuel dans le code est conservé. L'exécution redémarrera à partir de cet emplacement la prochaine fois que la fonction d'itérateur sera appelée.  
+ Un *itérateur* effectue une itération personnalisée sur une collection. Un itérateur utilise le [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) instruction pour retourner chaque élément dans la collection un à la fois. Quand un `Yield` instruction est atteinte, l’emplacement actuel dans le code est conservé. L'exécution redémarrera à partir de cet emplacement la prochaine fois que la fonction d'itérateur sera appelée.  
   
  Un itérateur peut être implémenté sous la forme d’une fonction ou un `Get` accesseur d’une définition de propriété. Le `Iterator` modificateur apparaît dans la déclaration de la fonction d’itérateur ou `Get` accesseur.  
   
@@ -25,7 +25,7 @@ Spécifie qu’une fonction ou `Get` accesseur est un itérateur.
   
  Le type de retour d’une fonction d’itérateur ou `Get` accesseur peut être <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, ou <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Un itérateur ne peut avoir aucune `ByRef` paramètres.  
+ Un itérateur ne peut avoir aucun `ByRef` paramètres.  
   
  Un itérateur ne peut pas être présent dans un événement, un constructeur d’instance, un constructeur statique ou un destructeur statique.  
   
@@ -39,7 +39,7 @@ Spécifie qu’une fonction ou `Get` accesseur est un itérateur.
 -   [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre une fonction d’itérateur. La fonction d’itérateur a un `Yield` instruction qui se trouve dans un [pour... Suivant](../../../visual-basic/language-reference/statements/for-next-statement.md) boucle. Chaque itération de la [pour chaque](../../../visual-basic/language-reference/statements/for-each-next-statement.md) corps de l’instruction dans `Main` crée un appel à la `Power` fonction d’itérateur. Chaque appel à la fonction d'itérateur continue vers l'exécution suivante de l'instruction `Yield`, qui se produit pendant l'itération suivante de la boucle `For…Next`.  
+ L’exemple suivant montre une fonction d’itérateur. La fonction d’itérateur a un `Yield` instruction qui se trouve dans un [pour... Suivant](../../../visual-basic/language-reference/statements/for-next-statement.md) boucle. Chaque itération de la [pour chaque](../../../visual-basic/language-reference/statements/for-each-next-statement.md) corps d’instruction dans `Main` crée un appel à la `Power` fonction d’itérateur. Chaque appel à la fonction d'itérateur continue vers l'exécution suivante de l'instruction `Yield`, qui se produit pendant l'itération suivante de la boucle `For…Next`.  
   
  [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
   
@@ -50,7 +50,7 @@ Spécifie qu’une fonction ou `Get` accesseur est un itérateur.
   
  Pour obtenir des exemples supplémentaires, consultez [itérateurs](../../programming-guide/concepts/iterators.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
- [Itérateurs](../../programming-guide/concepts/iterators.md)  
- [Yield (instruction)](../../../visual-basic/language-reference/statements/yield-statement.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>
+- [Itérateurs](../../programming-guide/concepts/iterators.md)
+- [Yield (instruction)](../../../visual-basic/language-reference/statements/yield-statement.md)

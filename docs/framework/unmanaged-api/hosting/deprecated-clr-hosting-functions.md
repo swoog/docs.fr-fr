@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86f9b4903663604094895f6747b1407ff98c990
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580901"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Fonction d'hébergement du CLR déconseillées
-Cette section décrit les fonctions statiques globales non managées qui utilisées par les versions antérieures de l’API d’hébergement.  
+Cette section décrit les fonctions statiques globales non managées qui a utilisent des versions antérieures de l’API d’hébergement.  
   
  À l’exception des fonctions d’infrastructure (`_Cor*` fonctions), qui sont utilisés uniquement par le .NET Framework, ces fonctions ont été déconseillées dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -26,7 +26,7 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
  Obsolète. Crée une instance du type managé spécifié.  
   
  [CoInitializeCor, fonction](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)  
- Obsolète. Pour initialiser le common language runtime (CLR), utilisez [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ou [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
+ Obsolète. Pour initialiser le common language runtime (CLR), utilisez soit [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ou [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
   
  [CoInitializeEE, fonction](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
  Obsolète. Garantit que le moteur d’exécution de CLR est chargé dans un processus. Utilisez le [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) méthode à la place.  
@@ -41,7 +41,7 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
  Obsolète. Charge le CLR dans un processus à l’aide des informations de version qui sont lu à partir d’un fichier XML.  
   
  [CorBindToRuntimeEx, fonction](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
- Obsolète. Permet les hôtes non managés de charger le CLR dans un processus et vous permet de définir des indicateurs pour spécifier le comportement du CLR.  
+ Obsolète. Permet des hôtes non managés de charger le CLR dans un processus et vous permet de définir des indicateurs pour spécifier le comportement du CLR.  
   
  [CorBindToRuntimeHost, fonction](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
  Obsolète. Permet aux hôtes de charger une version spécifiée du CLR dans un processus.  
@@ -56,10 +56,10 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
  Obsolète. Obtient l’adresse de la fonction spécifiée qui est exportée à partir de la dernière version installée du CLR.  
   
  [GetRequestedRuntimeInfo, fonction](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- Obsolète. Obtient les informations de version et au répertoire sur le CLR demandé par une application.  
+ Obsolète. Obtient des informations de version et au répertoire concernant le CLR demandé par une application.  
   
 ## <a name="clr-version-functions"></a>Fonctions de version CLR  
- Les fonctions de cette section retournent de la version CLR ; ils ne pas activent le CLR.  
+ Les fonctions de cette section retournent une version du CLR ; elles n’activent pas le CLR.  
   
  [GetCORVersion, fonction](../../../../docs/framework/unmanaged-api/hosting/getcorversion-function.md)  
  Obsolète. Retourne le numéro de version du CLR qui s’exécute dans le processus en cours.  
@@ -68,7 +68,7 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
  Obsolète. Obtient les informations de version CLR du fichier spécifié, à l’aide de la mémoire tampon spécifiée.  
   
  [GetRequestedRuntimeVersion, fonction](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- Obsolète. Obtient le numéro de version du CLR demandé par l’application spécifiée. Si cette version n’est pas installée, obtient la version la plus récente qui est installée avant la version demandée.  
+ Obsolète. Obtient le numéro de version du CLR demandé par l’application spécifiée. Si cette version n’est pas installée, obtient la version la plus récente est installée avant la version demandée.  
   
  [GetRequestedRuntimeVersionForCLSID, fonction](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversionforclsid-function.md)  
  Obsolète. Obtient les informations de version CLR appropriées pour la classe avec le CLSID spécifié.  
@@ -81,7 +81,7 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
   
 ## <a name="hosting-functions"></a>Fonctions d’hébergement  
  [CallFunctionShim, fonction](../../../../docs/framework/unmanaged-api/hosting/callfunctionshim-function.md)  
- Obsolète. Effectue un appel à la fonction qui porte le nom spécifié et les paramètres dans la bibliothèque spécifiée.  
+ Obsolète. Effectue un appel à la fonction qui a le nom spécifié et les paramètres dans la bibliothèque spécifiée.  
   
  [CoEEShutDownCOM, fonction](../../../../docs/framework/unmanaged-api/hosting/coeeshutdowncom-function.md)  
  Obsolète. Décharge un assembly COM du processus.  
@@ -93,7 +93,7 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
  Obsolète. Démarre l’application sur le chemin d’accès réseau spécifié, à l’aide des manifestes spécifiés et autres données d’application.  
   
  [CorMarkThreadInThreadPool, fonction](../../../../docs/framework/unmanaged-api/hosting/cormarkthreadinthreadpool-function.md)  
- Obsolète. Marque le thread de pool de threads en cours d’exécution pour l’exécution du code managé. À compter de .NET Framework version 2.0, cette fonction n’a aucun effet. Il n’est pas nécessaire et peut être supprimé de votre code.  
+ Obsolète. Marque le thread de pool de threads en cours d’exécution pour l’exécution du code managé. À compter de .NET Framework version 2.0, cette fonction n’a aucun effet. Il n’est pas nécessaire et peut être supprimée à partir de votre code.  
   
  [CoUninitializeCor, fonction](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)  
  Obsolète. Le CLR ne peut pas être déchargé d’un processus.  
@@ -114,10 +114,10 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
  Obsolète. Pointe vers une fonction que le CLR appelle pour exécuter le code managé.  
   
  [FLockClrVersionCallback, pointeur fonction](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
- Obsolète. Pointe vers une fonction que le CLR appelle pour notifier l’hôte que l’initialisation a démarré ou s’est terminée.  
+ Obsolète. Pointe vers une fonction que le CLR appelle pour notifier l’hôte que l’initialisation a démarré ou terminé.  
   
  [GetCLRIdentityManager, fonction](../../../../docs/framework/unmanaged-api/hosting/getclridentitymanager-function.md)  
- Obsolète. Obtient un pointeur vers une interface qui permet au CLR de gérer les identités.  
+ Obsolète. Obtient un pointeur vers une interface qui permet au CLR gérer les identités.  
   
  [LoadLibraryShim, fonction](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md)  
  Obsolète. Charge une version spécifiée d’une DLL .NET Framework.  
@@ -129,10 +129,10 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
  Obsolète. Traduit une valeur HRESULT à un message d’erreur approprié pour la culture spécifiée.  
   
  [LPOVERLAPPED_COMPLETION_ROUTINE, pointeur fonction](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
- Obsolète. Pointe vers une fonction qui avertit l’hôte lorsqu’un chevauchement (autrement dit, asynchrone) e/s sur un périphérique est terminée.  
+ Obsolète. Pointe vers une fonction qui avertit l’hôte lorsqu’un chevauchement (autrement dit, asynchrone) e/s sur un appareil est terminée.  
   
  [LPTHREAD_START_ROUTINE, pointeur fonction](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
- Obsolète. Pointe vers une fonction qui avertit l’hôte qu’un thread a commencé à s’exécuter.  
+ Obsolète. Pointe vers une fonction qui avertit l’hôte qu’un thread a commencé à exécuter.  
   
  [RunDll32ShimW, fonction](../../../../docs/framework/unmanaged-api/hosting/rundll32shimw-function.md)  
  Obsolète. Exécute la commande spécifiée.  
@@ -141,13 +141,13 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
  Obsolète. Pointe vers une fonction qui avertit l’hôte qu’un handle d’attente a été signalé ou a expiré.  
   
 ## <a name="infrastructure-functions"></a>Fonctions d’infrastructure  
- Les fonctions de cette section sont utilisés par le .NET Framework.  
+ Les fonctions dans cette section sont pour une utilisation par le .NET Framework.  
   
  [_CorDllMain, fonction](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
- Initialise le CLR recherche le point d’entrée managé dans l’en-tête CLR de l’assembly DLL et commence l’exécution.  
+ Initialise le CLR localise le point d’entrée managé dans l’en-tête CLR de l’assembly DLL et commence l’exécution.  
   
  [_CorExeMain, fonction](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)  
- Initialise le CLR recherche le point d’entrée managé dans l’en-tête CLR de l’assembly exécutable et commence l’exécution.  
+ Initialise le CLR localise le point d’entrée managé dans l’en-tête CLR de l’assembly exécutable et commence l’exécution.  
   
  [_CorExeMain2, fonction](../../../../docs/framework/unmanaged-api/hosting/corexemain2-function.md)  
  Exécute le point d’entrée dans le code mappé en mémoire spécifié. Cette fonction est appelée par le chargeur du système d’exploitation.  
@@ -158,5 +158,5 @@ Cette section décrit les fonctions statiques globales non managées qui utilis�
  [_CorValidateImage, fonction](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
  Valide les images de modules managés et notifie le chargeur du système d’exploitation après avoir été chargés.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions statiques globales d’hébergement .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 
+## <a name="see-also"></a>Voir aussi
+- [Fonctions statiques globales d’hébergement .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

@@ -2,11 +2,12 @@
 title: Concepts et terminologie (Transformation fonctionnelle) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: 67986e36333ac9a1aba7bec3c1b6c248b4faf55f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651862"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Concepts et terminologie (Transformation fonctionnelle) (Visual Basic)
 Cette rubrique présente les concepts et la terminologie des transformations fonctionnelles pures. L'approche de transformation fonctionnelle pour la transformation des données génère du code qui est souvent plus rapide à programmer, plus expressif et plus facile à déboguer et à maintenir que le code de programmation impératif plus traditionnel.  
@@ -30,7 +31,7 @@ Cette rubrique présente les concepts et la terminologie des transformations fon
 ### <a name="functional-programming"></a>Programmation fonctionnelle  
  La *programmation fonctionnelle* est une approche de programmation prenant directement en charge la transformation fonctionnelle pure.  
   
- Historiquement, les langages de programmation fonctionnelle à usage général, tels que ML, Scheme, Haskell et F#, ont toujours essentiellement intéressé la communauté liée au monde de l’enseignement et de la recherche. Bien qu’il a toujours été possible d’écrire des transformations fonctionnelles pures en Visual Basic, la difficulté de cette opération donc pas rend une option intéressante pour la plupart des programmeurs. Avec les versions ultérieures de Visual Basic, toutefois, nouvelles constructions de langage telles que les expressions lambda et l’inférence de type rendent la programmation fonctionnelle beaucoup plus facile et plus productive.  
+ Historiquement, les langages de programmation fonctionnelle à usage général, tels que ML, Scheme, Haskell et F#, ont toujours essentiellement intéressé la communauté liée au monde de l’enseignement et de la recherche. Bien qu’il a toujours été possible d’écrire des transformations fonctionnelles pures en Visual Basic, la difficulté de cette opération donc pas rend une option intéressante pour la plupart des programmeurs. Avec les versions ultérieures de Visual Basic, toutefois, nouvelles constructions de langage telles que les expressions lambda et l’inférence de type rendent la programmation fonctionnelle beaucoup plus facile et plus productif.  
   
  Pour plus d’informations sur la programmation fonctionnelle, consultez [Comparaison de la programmation fonctionnelle et de la Programmation impérative (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).  
   
@@ -41,9 +42,9 @@ Cette rubrique présente les concepts et la terminologie des transformations fon
  Le tableau suivant définit certains termes liés aux transformations fonctionnelles.  
   
  fonction d'ordre supérieur (première classe)  
- Fonction qui peut être traitée en tant qu'objet de programmation. Par exemple, une fonction d'ordre supérieur peut être passée à ou retournée à partir d'autres fonctions. En Visual Basic, les délégués et les expressions lambda sont des fonctionnalités de langage qui prend en charge les fonctions d’ordre supérieur. Pour écrire une fonction d’ordre supérieur, vous déclarez un ou plusieurs arguments pour prendre des délégués et vous utilisez souvent des expressions lambda lorsque vous appelez votre fonction. Une grande partie des opérateurs de requête standard sont des fonctions d'ordre supérieur.  
+ Fonction qui peut être traitée en tant qu'objet de programmation. Par exemple, une fonction d'ordre supérieur peut être passée à ou retournée à partir d'autres fonctions. En Visual Basic, les délégués et les expressions lambda sont des fonctionnalités de langage qui prennent en charge les fonctions d’ordre supérieur. Pour écrire une fonction d’ordre supérieur, vous déclarez un ou plusieurs arguments pour prendre des délégués et vous utilisez souvent des expressions lambda lorsque vous appelez votre fonction. Une grande partie des opérateurs de requête standard sont des fonctions d'ordre supérieur.  
   
- Pour plus d’informations, consultez [vue d’ensemble Standard des opérateurs de requête (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Pour plus d’informations, consultez [présentation des opérateurs de requête Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  expression lambda  
  Pour l'essentiel, il s'agit d'une fonction anonyme inline qui peut être utilisée partout où un type délégué est attendu. Cette définition des expressions lambda est simplifiée, mais elle convient pour les besoins de ce didacticiel.  
@@ -66,10 +67,10 @@ Cette rubrique présente les concepts et la terminologie des transformations fon
  exécution différée et évaluation différée  
  Action de retarder l'évaluation d'une expression jusqu'à ce que sa valeur résolue soit réellement nécessaire. L’exécution différée est prise en charge dans les collections.  
   
- Pour plus d’informations, consultez [base des opérations de requête (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) et [différée de l’exécution et l’évaluation différées dans LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Pour plus d’informations, consultez [opérations de requête de base (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) et [exécution et évaluation différées dans LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
  Ces fonctionnalités de langage seront utilisées dans les exemples de code tout au long de cette section.  
   
-## <a name="see-also"></a>Voir aussi  
- [Introduction aux Transformations fonctionnelles pures (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Comparaison de la programmation fonctionnelle et de la Programmation impérative (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Voir aussi
+- [Introduction aux Transformations fonctionnelles pures (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Comparaison de la programmation fonctionnelle et de la Programmation impérative (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

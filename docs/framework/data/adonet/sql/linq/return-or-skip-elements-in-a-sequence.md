@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 228de9f3b92d45866c98976be08b84988a2db8d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84dcc6471ad37bfda90f58c748c99ff514f7eb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668975"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Comment : retourner ou ignorer des éléments d'une séquence
 Utilisez l'opérateur <xref:System.Linq.Queryable.Take%2A> pour retourner un nombre donné d'éléments dans une séquence et ignorer le reste.  
@@ -20,14 +20,14 @@ Utilisez l'opérateur <xref:System.Linq.Queryable.Take%2A> pour retourner un nom
 > [!NOTE]
 >  <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont soumis à certaines limites lorsqu'ils sont utilisés dans des requêtes SQL Server 2000. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit <xref:System.Linq.Queryable.Skip%2A> à l’aide d’une sous-requête avec SQL `NOT EXISTS` clause. Cette traduction présente les limites suivantes :  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit <xref:System.Linq.Queryable.Skip%2A> à l’aide d’une sous-requête avec le code SQL `NOT EXISTS` clause. Cette traduction présente les limites suivantes :  
   
 -   L'argument doit être un jeu. Les multijeux ne sont pas pris en charge, même s'ils sont ordonnés.  
   
 -   La requête générée peut être beaucoup plus complexe que celle qui est générée pour la requête de base sur laquelle <xref:System.Linq.Queryable.Skip%2A> est appliqué. Cette complexité peut entraîner une dégradation des performances ou un délai d'expiration.  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant utilise `Take` pour sélectionner les cinq premiers `Employees` embauchés. Notez que la collection est d'abord triée par `HireDate`.  
+ L'exemple suivant utilise `Take` pour sélectionner les cinq premiers `Employees` embauchés. Notez que la collection est d’abord triée par `HireDate`.  
   
  [!code-csharp[DLinqQueryExamples#16](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#16)]
  [!code-vb[DLinqQueryExamples#16](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#16)]  
@@ -78,6 +78,6 @@ ORDER BY [t0].[CustomerID]
   
  Pour les arguments intégraux constants non négatifs basés sur la spécification SQL, <xref:System.Linq.Queryable.Take%2A> et <xref:System.Linq.Queryable.Skip%2A> sont bien définis.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples de requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Traduction des opérateurs de requête standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>Voir aussi
+- [Exemples de requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Traduction des opérateurs de requête standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 0d1f2c4d8c88922659b3d91ed41d5e760e6e5233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3cb11079241da4815c6e7bde4a76123965a95514
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712520"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Surcharge de procédure (Visual Basic)
-*La surcharge* une procédure consiste à définir celle-ci en plusieurs versions, en utilisant le même nom mais les listes de paramètres différentes. L’objectif de la surcharge consiste à définir de plusieurs versions étroitement liées d’une procédure sans avoir à les différencier par nom. Pour cela, en faisant varier la liste de paramètres.  
+*La surcharge* une procédure consiste à définir celle-ci en plusieurs versions, à l’aide du même nom mais des listes de paramètres différentes. L’objectif de la surcharge consiste à définir plusieurs versions étroitement liées d’une procédure sans avoir à les différencier par nom. Pour cela, en faisant varier la liste de paramètres.  
   
 ## <a name="overloading-rules"></a>Règles de surcharge  
  Lorsque vous surchargez une procédure, les règles suivantes s’appliquent :  
@@ -44,7 +44,7 @@ ms.locfileid: "33653912"
   
     -   Type de retour (uniquement pour un opérateur de conversion)  
   
-     Avec le nom de la procédure, les éléments précédents sont appelés collectivement la *signature* de la procédure. Lorsque vous appelez une procédure surchargée, le compilateur utilise la signature pour vérifier que l’appel correctement correspond à la définition.  
+     Avec le nom de la procédure, les éléments précédents sont appelés collectivement le *signature* de la procédure. Lorsque vous appelez une procédure surchargée, le compilateur utilise la signature pour vérifier que l’appel correspond exactement à la définition.  
   
 -   **Les éléments ne fait pas partie de la Signature de**. Vous ne pouvez pas surcharger une procédure sans faire varier la signature. En particulier, vous ne pouvez pas surcharger une procédure en faisant varier uniquement un ou plusieurs des éléments suivants :  
   
@@ -54,18 +54,18 @@ ms.locfileid: "33653912"
   
     -   Contraintes de paramètre de type (pour une procédure générique)  
   
-    -   Mots clés de modificateur de paramètre, telles que `ByRef` et `Optional`  
+    -   Mots clés de modificateur de paramètre, tel que `ByRef` et `Optional`  
   
     -   Si elle retourne une valeur  
   
-    -   Le type de données de la valeur de retour (à l’exception d’un opérateur de conversion)  
+    -   le type de données de la valeur de retour (à l’exception d’un opérateur de conversion)  
   
-     Les éléments dans la liste précédente ne font pas partie de la signature. Bien que vous ne pouvez pas les utiliser pour différencier des versions surchargées, vous pouvez les modifier parmi des versions surchargées qui sont correctement différenciées par leurs signatures.  
+     Les éléments dans la liste précédente ne font pas partie de la signature. Bien que vous ne pouvez pas les utiliser pour faire la distinction entre les versions surchargées, vous pouvez les modifier parmi des versions surchargées qui sont correctement différenciées par leurs signatures.  
   
--   **À liaison tardive Arguments**. Si vous envisagez de passer une variable objet à liaison tardive vers une version surchargée, vous devez déclarer le paramètre approprié comme <xref:System.Object>.  
+-   **À liaison tardive Arguments**. Si vous envisagez de passer une variable objet à liaison tardive à une version surchargée, vous devez déclarer le paramètre approprié en tant que <xref:System.Object>.  
   
 ## <a name="multiple-versions-of-a-procedure"></a>Plusieurs Versions d’une procédure  
- Supposons que vous écrivez un `Sub` procédure pour valider une transaction sur le solde d’un client et que vous souhaitez être en mesure de faire référence au client par nom ou par numéro de compte. Pour ce faire, vous pouvez définir deux `Sub` procédures, comme dans l’exemple suivant :  
+ Supposons que vous écrivez un `Sub` procédure pour valider une transaction sur le solde d’un client et que vous souhaitez être en mesure de faire référence au client par nom ou par numéro de compte. Pour ce faire, vous pouvez définir deux différents `Sub` procédures, comme dans l’exemple suivant :  
   
  [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
   
@@ -75,22 +75,22 @@ ms.locfileid: "33653912"
  [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
   
 #### <a name="additional-overloads"></a>Surcharges supplémentaires  
- Si vous voulez également accepter un montant de transaction, que ce soit `Decimal` ou `Single`, vous pouvez surcharger davantage `post` pour permettre cette variation. Si vous avez effectué cette sur chacune des surcharges dans l’exemple précédent, vous devez obtenir quatre `Sub` procédures avec le même nom mais avec quatre signatures différentes.  
+ Si vous voulez également accepter un montant de transaction dans le `Decimal` ou `Single`, vous pouvez surcharger davantage `post` pour permettre cette variation. Si vous l’avez fait pour chacune des surcharges dans l’exemple précédent, vous devez obtenir quatre `Sub` procédures, le tout avec le même nom mais avec quatre signatures différentes.  
   
 ## <a name="advantages-of-overloading"></a>Avantages de la surcharge  
- L’avantage de la surcharge d’une procédure est la flexibilité de l’appel. À utiliser le `post` procédure est déclarée dans l’exemple précédent, le code appelant peut obtenir l’identification du client selon un `String` ou un `Integer`, puis appeler la même procédure que dans les deux cas. L'exemple suivant illustre ce comportement :  
+ L’avantage de la surcharge d’une procédure est la flexibilité de l’appel. À utiliser le `post` procédure déclarée dans l’exemple précédent, le code appelant peut obtenir l’identification du client selon un `String` ou un `Integer`, puis appelez la même procédure dans les deux cas. L'exemple suivant illustre ce comportement :  
   
  [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
   
  [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédures](./index.md)  
- [Guide pratique : définir plusieurs versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Guide pratique : appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)  
- [Guide pratique : surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Guide pratique : surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
- [Considérations sur les surcharges de procédures](./considerations-in-overloading-procedures.md)  
- [Résolution de surcharge](./overload-resolution.md)  
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)  
- [Types génériques en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédures](./index.md)
+- [Guide pratique pour Définir plusieurs Versions d’une procédure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Guide pratique pour Appeler une procédure surchargée](./how-to-call-an-overloaded-procedure.md)
+- [Guide pratique pour Surcharger une procédure qui accepte des paramètres optionnels](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Guide pratique pour Surcharger une procédure qui accepte un nombre indéfini de paramètres](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Considérations sur les surcharges de procédures](./considerations-in-overloading-procedures.md)
+- [Résolution de surcharge](./overload-resolution.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

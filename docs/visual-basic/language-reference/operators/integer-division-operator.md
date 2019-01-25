@@ -17,12 +17,12 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-ms.openlocfilehash: ef3946e871e1dc248b54932e16f6cae6026da08e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac306038aefba4ca0e0f13fa2945d01c27c0804d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654683"
 ---
 # <a name="-operator-visual-basic"></a>\, opérateur (Visual Basic)
 Divise deux nombres et retourne un résultat entier.  
@@ -44,35 +44,35 @@ expression1 \ expression2
  Tous les types numériques, y compris les types non signés et à virgule flottante et `Decimal`.  
   
 ## <a name="result"></a>Résultat  
- Le résultat est le quotient entier de `expression1` divisé par `expression2`, qui abandonne tout reste et conserve uniquement la partie entière. Il s’agit en tant que *troncation*.  
+ Le résultat est le quotient entier de `expression1` divisé par `expression2`, qui abandonne tout élément restant et conserve uniquement la partie entière. Il s’agit *troncation*.  
   
  Le type de données de résultat est un type numérique approprié pour les types de données de `expression1` et `expression2`. Consultez les tableaux « Arithmétique sur les entiers » dans [Types de données de résultats de l’opérateur](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
- Le [/, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) renvoie le quotient complet qui conserve le reste dans la partie fractionnaire.  
+ Le [/, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) retourne le quotient complet qui conserve le reste dans la partie fractionnaire.  
   
 ## <a name="remarks"></a>Notes  
- Avant d’effectuer la division, Visual Basic essaie de convertir n’importe quelle expression numérique à virgule flottante `Long`. Si `Option Strict` est `On`, une erreur de compilation se produit. Si `Option Strict` est `Off`, un <xref:System.OverflowException> est possible que si la valeur est en dehors de la plage de la [Type de données Long](../../../visual-basic/language-reference/data-types/long-data-type.md). La conversion en `Long` est également soumis à *l’arrondi bancaire*. Pour plus d’informations, consultez « Parties fractionnaires » dans [les fonctions de Conversion de Type](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Avant d’effectuer la division, Visual Basic tente de convertir toute expression numérique à virgule flottante à `Long`. Si `Option Strict` est `On`, une erreur du compilateur se produit. Si `Option Strict` est `Off`, un <xref:System.OverflowException> est possible si la valeur est en dehors de la plage de la [Type de données Long](../../../visual-basic/language-reference/data-types/long-data-type.md). La conversion en `Long` est également soumise à *l’arrondi bancaire*. Pour plus d’informations, consultez « Parties fractionnaires » dans [les fonctions de Conversion de Type](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- Si `expression1` ou `expression2` prend la valeur de [rien](../../../visual-basic/language-reference/nothing.md), il est traité en tant que zéro.  
+ Si `expression1` ou `expression2` prend la valeur [rien](../../../visual-basic/language-reference/nothing.md), il est considéré comme égal à zéro.  
   
 ## <a name="attempted-division-by-zero"></a>Tentative de Division par zéro  
- Si `expression2` correspond à zéro, le `\` opérateur lève une <xref:System.DivideByZeroException> exception. Cela est vrai pour tous les types de données numériques des opérandes.  
+ Si `expression2` correspond à zéro, le `\` opérateur lève un <xref:System.DivideByZeroException> exception. Cela est vrai pour tous les types de données numériques des opérandes.  
   
 > [!NOTE]
->  Le `\` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsqu’un opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, assurez-vous que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  Le `\` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsqu’un opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, veillez à ce que vous comprenez son comportement redéfini. Pour plus d'informations, consultez [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant utilise le `\` opérateur effectue la division d’entier. Le résultat est un entier qui représente le quotient entier des deux opérandes avec le reste abandonné.  
+ L’exemple suivant utilise le `\` opérateur effectue la division d’entier. Le résultat est un entier qui représente le quotient entier des deux opérandes, avec le reste abandonné.  
   
  [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
- Les expressions dans l’exemple précédent retournent les valeurs de 2, 3, 33 et -22, respectivement.  
+ Les expressions dans l’exemple précédent retournent des valeurs de 2, 3, 33 et -22, respectivement.  
   
-## <a name="see-also"></a>Voir aussi  
- [\\=, Opérateur](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
- [/, Opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Opérateurs arithmétiques en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>Voir aussi
+- [\\=, Opérateur](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [/, Opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Opérateurs arithmétiques en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

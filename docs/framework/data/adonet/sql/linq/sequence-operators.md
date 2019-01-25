@@ -2,12 +2,12 @@
 title: Opérateurs de séquence
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 01807e48c06bce1d451961bb6204d1f8e49d53f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666161"
 ---
 # <a name="sequence-operators"></a>Opérateurs de séquence
 En général, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge les opérateurs de séquence qui présentent une ou plusieurs des caractéristiques suivantes :  
@@ -45,5 +45,5 @@ En général, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)
 ## <a name="differences-from-net"></a>Différences par rapport à .NET  
  Tous les opérateurs de séquence pris en charge fonctionnent conformément aux attentes dans le Common Language Runtime (CLR) à l'exception d'`Average`. `Average` retourne une valeur du même type que le type dont la moyenne est calculée, alors que dans le CLR, `Average` retourne toujours un <xref:System.Double> ou un <xref:System.Decimal>. Si l’argument de source est casté explicitement en valeur double/decimal ou si le sélecteur caste vers une valeur double/decimal, le SQL obtenu aura également une telle conversion et le résultat obtenu sera conforme au résultat prévu.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions et types de données](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions et types de données](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

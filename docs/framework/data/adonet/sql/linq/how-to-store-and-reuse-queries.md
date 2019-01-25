@@ -1,19 +1,19 @@
 ---
-title: 'Comment : stocker et réutiliser des requêtes'
+title: 'Procédure : Store et réutilisation de requêtes'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: a2d16cd5dce033c563783a0882f3de73194cf2d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a913839ab8e6048b18270061a75ca632e2797fb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630764"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>Comment : stocker et réutiliser des requêtes
-Lorsque vous possédez une application qui exécute de nombreuses fois des requêtes similaires d'un point de vue structurel, vous pouvez souvent améliorer les performances en compilant la requête une fois et en l'exécutant plusieurs fois avec des paramètres différents. Par exemple, une application peut avoir besoin de récupérer tous les clients d'une ville spécifique, où la ville est spécifiée à l'exécution par l'utilisateur dans un formulaire. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge l’utilisation de *des requêtes compilées* à cet effet.  
+# <a name="how-to-store-and-reuse-queries"></a>Procédure : Store et réutilisation de requêtes
+Lorsque vous possédez une application qui exécute de nombreuses fois des requêtes similaires d'un point de vue structurel, vous pouvez souvent améliorer les performances en compilant la requête une fois et en l'exécutant plusieurs fois avec des paramètres différents. Par exemple, une application peut avoir besoin de récupérer tous les clients d'une ville spécifique, où la ville est spécifiée à l'exécution par l'utilisateur dans un formulaire. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge l’utilisation de *requêtes compilées* à cet effet.  
   
 > [!NOTE]
 >  Ce modèle d’utilisation représente l’utilisation la plus courante pour les requêtes compilées. D'autres approches sont possibles. Par exemple, les requêtes compilées peuvent être stockées comme des membres statiques sur une classe partielle qui étend le code généré par le concepteur.  
@@ -28,12 +28,12 @@ Lorsque vous possédez une application qui exécute de nombreuses fois des requ�
  [!code-vb[DLinqQuerying#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#7)]  
   
 ## <a name="example"></a>Exemple  
- Vous ne pouvez pas actuellement stocker (dans des variables statiques) des requêtes qui retournent un *type anonyme*, car le type ne possède pas de nom à utiliser comme argument générique. L’exemple suivant montre comment vous pouvez contourner le problème en créant un type qui peut représenter le résultat et en l’utilisant comme argument générique.  
+ Vous ne pouvez pas actuellement store (dans des variables statiques) des requêtes qui retournent un *type anonyme*, car le type n’a aucun nom à utiliser comme un argument générique. L’exemple suivant montre comment vous pouvez contourner le problème en créant un type qui peut représenter le résultat et en l’utilisant comme argument générique.  
   
  [!code-csharp[DLinqQuerying#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#8)]
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Data.Linq.CompiledQuery>  
- [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Interrogation de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Data.Linq.CompiledQuery>
+- [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Interrogation de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

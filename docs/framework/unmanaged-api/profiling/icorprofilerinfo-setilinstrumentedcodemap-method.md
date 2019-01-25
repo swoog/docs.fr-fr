@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721160"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap, méthode
-Définit une carte de code pour la fonction spécifiée à l’aide des entrées de mappage Microsoft intermediate language (MSIL) spécifiées.  
+Définit une carte de code pour la fonction spécifiée à l’aide d’entrées de mappage Microsoft intermediate language (MSIL) spécifiées.  
   
 > [!NOTE]
->  Dans le .NET Framework version 2.0, l’appel `SetILInstrumentedCodeMap` sur un `FunctionID` que représente une fonction générique dans un domaine d’application particulier affecte toutes les instances de cette fonction dans le domaine d’application.  
+>  Dans le .NET Framework version 2.0, l’appel `SetILInstrumentedCodeMap` sur un `FunctionID` que représente une fonction générique dans un domaine d’application affecte toutes les instances de cette fonction dans le domaine d’application.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +45,7 @@ HRESULT SetILInstrumentedCodeMap(
  [in] L’ID de la fonction pour laquelle définir la carte de code.  
   
  `fStartJit`  
- [in] Valeur booléenne qui indique si l’appel à la `SetILInstrumentedCodeMap` (méthode) est le premier pour un particulier `FunctionID`. Définissez `fStartJit` à `true` dans le premier appel à `SetILInstrumentedCodeMap` pour une donnée `FunctionID`et `false` par la suite.  
+ [in] Valeur booléenne qui indique si l’appel à la `SetILInstrumentedCodeMap` méthode est le premier pour un particulier `FunctionID`. Définissez `fStartJit` à `true` dans le premier appel à `SetILInstrumentedCodeMap` pour une donnée `FunctionID`et `false` par la suite.  
   
  `cILMapEntries`  
  [in] Le nombre d’éléments dans le `cILMapEntries` tableau.  
@@ -54,15 +54,15 @@ HRESULT SetILInstrumentedCodeMap(
  [in] Tableau de structures COR_IL_MAP, dont chacun spécifie un offset MSIL.  
   
 ## <a name="remarks"></a>Notes  
- Un profileur insère souvent des instructions dans le code source d’une méthode pour instrumenter cette méthode (par exemple, pour avertir lorsqu’une ligne source donnée est atteinte). `SetILInstrumentedCodeMap` permet à un profileur de mapper les instructions MSIL d’origine vers leurs nouveaux emplacements. Un profileur peut utiliser le [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) méthode pour obtenir l’offset MSIL d’origine pour un offset natif donné.  
+ Un profileur insère souvent des instructions dans le code source d’une méthode pour instrumenter cette méthode (par exemple, pour avertir lorsqu’une ligne source donnée est atteinte). `SetILInstrumentedCodeMap` permet à un profileur mapper les instructions MSIL d’origine à leurs nouveaux emplacements. Un profileur peut utiliser le [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) méthode pour obtenir l’offset MSIL d’origine pour un offset natif donné.  
   
- Le débogueur suppose que chaque ancien offset fait référence à un offset MSIL dans le code MSIL non modifié d’origine, et que chaque nouvel offset fait référence à l’offset MSIL dans le nouveau code instrumenté. Le mappage doit être trié par ordre croissant. Pour exécuter pas à pas pour fonctionner correctement, suivez ces instructions :  
+ Le débogueur suppose que chaque ancien offset fait référence à un offset MSIL dans le code MSIL non modifié d’origine, et que chaque nouveau décalage fait référence à l’offset MSIL dans le nouveau code instrumenté. Le mappage doit être trié par ordre croissant. Pour le pas à pas fonctionne correctement, suivez ces instructions :  
   
 -   Ne réorganisez pas le code MSIL instrumenté.  
   
 -   Ne supprimez pas le code MSIL d’origine.  
   
--   Inclure les entrées pour tous les points de séquence dans le fichier du programme (PDB) de la base de données dans le mappage. Le mappage n’interpole pas les entrées manquantes. Par conséquent, étant donné la carte suivante :  
+-   Inclure des entrées pour tous les points de séquence à partir du fichier de base de données (PDB) du programme dans le mappage. Le mappage n’interpole pas les entrées manquantes. Ainsi, étant donné le plan suivant :  
   
      (0 ancien, 0 nouveau)  
   
@@ -70,26 +70,26 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 ancien, 20 nouveaux)  
   
-    -   Un ancien offset de 0, 1, 2, 3 ou 4 sera mappé au nouvel offset 0.  
+    -   Un ancien offset de 0, 1, 2, 3 ou 4 sera mappé à nouveau décalage 0.  
   
-    -   Un ancien offset de 5, 6, 7 ou 8 sera mappé au nouvel offset 10.  
+    -   Un ancien offset de 5, 6, 7 ou 8 sera mappé à nouveau décalage de 10.  
   
-    -   Un ancien offset de 9 ou version ultérieure sera mappé au nouvel offset 20.  
+    -   Un ancien offset de 9 ou version ultérieure sera mappé à nouveau décalage de 20.  
   
-    -   Un nouvel offset de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 sera mappé à l’ancien offset 0.  
+    -   Un nouveau décalage de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 sera mappé à l’ancien offset 0.  
   
-    -   Un nouvel offset de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 sera mappé à l’ancien offset 5.  
+    -   Un nouveau décalage de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 sera mappé à l’ancien offset 5.  
   
-    -   Un nouvel offset de 20 ou supérieur sera mappé à l’ancien offset 9.  
+    -   Un nouveau décalage supérieur ou égal à 20 sera mappé à l’ancien offset 9.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

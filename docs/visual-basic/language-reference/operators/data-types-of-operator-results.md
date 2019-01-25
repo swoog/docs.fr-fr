@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650481"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Types de données des résultats d'opérateur (Visual Basic)
 Visual Basic détermine le type de données de résultat d’une opération basée sur les types de données des opérandes. Dans certains cas, cela peut être un type de données avec une plage supérieure à celle de des opérandes.  
   
-## <a name="data-type-ranges"></a>Plages de types de données  
+## <a name="data-type-ranges"></a>plages de types de données  
  Les plages des types de données pertinentes, dans l’ordre du plus petit au plus grand, sont les suivantes :  
   
 -   [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — deux valeurs possibles  
@@ -111,7 +111,7 @@ Visual Basic détermine le type de données de résultat d’une opération bas�
 |`UShort`|Entier|Entier|UShort|Entier|UShort|Entier|UInteger|Longue|ULong|  
 |`Integer`|Entier|Entier|Entier|Entier|Entier|Entier|Longue|Longue|Decimal|  
 |`UInteger`|Longue|Longue|UInteger|Longue|UInteger|Longue|UInteger|Longue|ULong|  
-|`Long`|Longue|Long|Long|Long|Long|Long|Long|Longue|Decimal|  
+|`Long`|Longue|Longue|Longue|Longue|Longue|Longue|Longue|Longue|Decimal|  
 |`ULong`|Decimal|Decimal|ULong|Decimal|ULong|Decimal|ULong|Decimal|ULong|  
   
 ### <a name="-operator"></a>\, opérateur  
@@ -120,15 +120,15 @@ Visual Basic détermine le type de données de résultat d’une opération bas�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Courte|SByte|Courte|Courte|Entier|Entier|Longue|Long|Longue|  
-|`SByte`|SByte|SByte|Courte|Courte|Entier|Entier|Longue|Long|Longue|  
+|`Boolean`|Courte|SByte|Courte|Courte|Entier|Entier|Longue|Longue|Longue|  
+|`SByte`|SByte|SByte|Courte|Courte|Entier|Entier|Longue|Longue|Longue|  
 |`Byte`|Courte|Courte|Byte|Courte|UShort|Entier|UInteger|Longue|ULong|  
-|`Short`|Courte|Courte|Courte|Courte|Entier|Entier|Longue|Long|Longue|  
+|`Short`|Courte|Courte|Courte|Courte|Entier|Entier|Longue|Longue|Longue|  
 |`UShort`|Entier|Entier|UShort|Entier|UShort|Entier|UInteger|Longue|ULong|  
-|`Integer`|Entier|Entier|Entier|Entier|Entier|Entier|Longue|Long|Long|  
-|`UInteger`|Long|Longue|UInteger|Longue|UInteger|Longue|UInteger|Longue|ULong|  
-|`Long`|Longue|Long|Long|Long|Long|Long|Long|Long|Long|  
-|`ULong`|Long|Longue|ULong|Longue|ULong|Longue|ULong|Longue|ULong|  
+|`Integer`|Entier|Entier|Entier|Entier|Entier|Entier|Longue|Longue|Longue|  
+|`UInteger`|Longue|Longue|UInteger|Longue|UInteger|Longue|UInteger|Longue|ULong|  
+|`Long`|Longue|Longue|Longue|Longue|Longue|Longue|Longue|Longue|Longue|  
+|`ULong`|Longue|Longue|ULong|Longue|ULong|Longue|ULong|Longue|ULong|  
   
  Si des opérandes de le `\` opérateur est [décimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [unique](../../../visual-basic/language-reference/data-types/single-data-type.md), ou [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), Visual Basic essaie de convertir en [Long](../../../visual-basic/language-reference/data-types/long-data-type.md)avant l’opération et le résultat est de type de données `Long`.  
   
@@ -156,15 +156,15 @@ Visual Basic détermine le type de données de résultat d’une opération bas�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Booléen|SByte|Courte|Courte|Entier|Entier|Longue|Long|Longue|  
-|`SByte`|SByte|SByte|Courte|Courte|Entier|Entier|Longue|Long|Longue|  
+|`Boolean`|Booléen|SByte|Courte|Courte|Entier|Entier|Longue|Longue|Longue|  
+|`SByte`|SByte|SByte|Courte|Courte|Entier|Entier|Longue|Longue|Longue|  
 |`Byte`|Courte|Courte|Byte|Courte|UShort|Entier|UInteger|Longue|ULong|  
-|`Short`|Courte|Courte|Courte|Courte|Entier|Entier|Longue|Long|Longue|  
+|`Short`|Courte|Courte|Courte|Courte|Entier|Entier|Longue|Longue|Longue|  
 |`UShort`|Entier|Entier|UShort|Entier|UShort|Entier|UInteger|Longue|ULong|  
-|`Integer`|Entier|Entier|Entier|Entier|Entier|Entier|Longue|Long|Long|  
-|`UInteger`|Long|Longue|UInteger|Longue|UInteger|Longue|UInteger|Longue|ULong|  
-|`Long`|Longue|Long|Long|Long|Long|Long|Long|Long|Long|  
-|`ULong`|Long|Longue|ULong|Longue|ULong|Longue|ULong|Longue|ULong|  
+|`Integer`|Entier|Entier|Entier|Entier|Entier|Entier|Longue|Longue|Longue|  
+|`UInteger`|Longue|Longue|UInteger|Longue|UInteger|Longue|UInteger|Longue|ULong|  
+|`Long`|Longue|Longue|Longue|Longue|Longue|Longue|Longue|Longue|Longue|  
+|`ULong`|Longue|Longue|ULong|Longue|ULong|Longue|ULong|Longue|ULong|  
   
  Si un opérande est `Decimal`, `Single`, `Double`, ou `String`, Visual Basic essaie de convertir en `Long` avant l’opération et les données de résultat type est le même que si cet opérande a déjà été `Long`.  
   
@@ -175,14 +175,14 @@ Visual Basic détermine le type de données de résultat d’une opération bas�
   
  Le `Like` opérateur est défini uniquement pour les critères spéciaux de `String` opérandes. Visual Basic essaie de convertir chaque opérande si nécessaire en `String` avant l’opération. Le type de données de résultat est toujours `Boolean`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
- [Opérateurs et expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Opérateurs arithmétiques en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Opérateurs de comparaison en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Opérateurs](../../../visual-basic/language-reference/operators/index.md)  
- [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Opérateurs de comparaison](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Voir aussi
+- [Types de données](../../../visual-basic/language-reference/data-types/index.md)
+- [Opérateurs et expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Opérateurs arithmétiques en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Opérateurs de comparaison en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Opérateurs](../../../visual-basic/language-reference/operators/index.md)
+- [Priorité des opérateurs en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Opérateurs répertoriés par fonctionnalité](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Opérateurs arithmétiques](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Opérateurs de comparaison](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)

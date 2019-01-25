@@ -2,12 +2,12 @@
 title: Transactions distribuées
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660331"
 ---
 # <a name="distributed-transactions"></a>Transactions distribuées
 Une transaction est un ensemble de tâches liées entre elles qui échouent (abort) ou sont validées (commit) globalement, entre autres choses. Un *transaction distribuée* est une transaction qui affecte plusieurs ressources. Pour qu’une transaction distribuée soit validée, l’ensemble des participants doivent garantir que tout changement apporté aux données sera permanent. Ces modifications doivent persister même en cas de panne du système ou de tout autre événement imprévu. Il suffit qu'un seul des participants n'apporte pas cette garantie pour que l'ensemble de la transaction échoue et toutes les modifications apportées aux données dans le cadre de la transaction sont annulées.  
@@ -16,11 +16,11 @@ Une transaction est un ensemble de tâches liées entre elles qui échouent (abo
 >  Une exception est levée lorsque vous tentez de valider ou d'annuler une transaction si `DataReader` démarre pendant que la transaction est active.  
   
 ## <a name="working-with-systemtransactions"></a>Utilisation de System.Transactions  
- Dans .NET Framework, les transactions distribuées sont gérées via l'API dans l'espace de noms <xref:System.Transactions>. L'API <xref:System.Transactions> délègue la gestion de transaction distribuée à un moniteur de transaction tel que le Microsoft Distributed Transaction Coordinator (MS DTC) lorsque plusieurs gestionnaires de ressources persistants sont impliqués. Pour plus d’informations, consultez [principes fondamentaux de Transaction](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
+ Dans .NET Framework, les transactions distribuées sont gérées via l'API dans l'espace de noms <xref:System.Transactions>. L’API <xref:System.Transactions> délègue la gestion de transaction distribuée à un moniteur de transaction tel que le Microsoft Distributed Transaction Coordinator (MS DTC) lorsque plusieurs gestionnaires de ressources persistants sont impliqués. Pour plus d’informations, consultez [principes fondamentaux de Transaction](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
   
- ADO.NET 2.0 a introduit la prise en charge de l'inscription dans une transaction distribuée à l'aide de la méthode `EnlistTransaction`, qui inscrit une connexion dans une instance <xref:System.Transactions.Transaction>. Dans les versions précédentes d'ADO.NET, l'inscription explicite dans des transactions distribuées était effectuée à l'aide de la méthode `EnlistDistributedTransaction` d'une connexion afin d'inscrire une connexion dans une instance de l'objet <xref:System.EnterpriseServices.ITransaction>, qui est prise en charge à des fins de compatibilité ascendante. Pour plus d’informations sur les transactions Enterprise Services, consultez [l’interopérabilité avec Enterprise Services et les Transactions COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ ADO.NET 2.0 a introduit la prise en charge de l’inscription dans une transaction distribuée à l’aide de la méthode `EnlistTransaction`, qui inscrit une connexion dans une instance <xref:System.Transactions.Transaction>. Dans les versions précédentes d’ADO.NET, l’inscription explicite dans des transactions distribuées était effectuée à l’aide de la méthode `EnlistDistributedTransaction` d’une connexion afin d’inscrire une connexion dans une instance de l’objet <xref:System.EnterpriseServices.ITransaction>, qui est prise en charge à des fins de compatibilité ascendante. Pour plus d’informations sur les transactions Enterprise Services, consultez [l’interopérabilité avec Enterprise Services et les Transactions COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
- Lors de l'utilisation d'une transaction <xref:System.Transactions> avec le fournisseur .NET Framework pour SQL Server en relation avec une base de données SQL Server, un <xref:System.Transactions.Transaction> léger est automatiquement utilisé. La transaction peut être promue en transaction totalement distribuée en fonction des besoins. Pour plus d’informations, consultez [intégration de System.Transactions à SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
+ Lors de l’utilisation d’une transaction <xref:System.Transactions> avec le fournisseur .NET Framework pour SQL Server en relation avec une base de données SQL Server, un <xref:System.Transactions.Transaction> léger est automatiquement utilisé. La transaction peut être promue en transaction totalement distribuée en fonction des besoins. Pour plus d’informations, consultez [intégration de System.Transactions à SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
   
 > [!NOTE]
 >  Le nombre maximal de transactions distribuées auxquelles une base de données Oracle peut participer à un moment donné a la valeur 10 par défaut. Après la 10e transaction lors d'une connexion à une base de données Oracle, une exception est levée. Oracle ne prend pas en charge `DDL` à l'intérieur d'une transaction distribuée.  
@@ -31,9 +31,9 @@ Une transaction est un ensemble de tâches liées entre elles qui échouent (abo
 ## <a name="manually-enlisting-in-a-distributed-transaction"></a>Inscription manuelle dans une transaction distribuée  
  Si l'inscription automatique est désactivée ou si vous devez inscrire une transaction qui a été démarrée après l'ouverture de la connexion, vous pouvez l'inscrire dans une transaction distribuée existante en utilisant la méthode `EnlistTransaction` de l'objet <xref:System.Data.Common.DbConnection> pour le fournisseur avec lequel vous travaillez. L'inscription dans une transaction distribuée existante garantit que si la transaction vient à être annulée ou validée, les modifications apportées par le code dans la source de données seront elles aussi validées ou annulées.  
   
- L'inscription dans des transactions distribuées s'applique en particulier lors du regroupement d'objets métier. Si un objet métier est regroupé avec une connexion ouverte, l'inscription automatique dans la transaction se produit uniquement lorsque cette connexion est ouverte. Si plusieurs transactions sont effectuées à l'aide de l'objet métier regroupé, la connexion ouverte pour cet objet n'est pas automatiquement inscrite dans les nouvelles transactions lancées. Dans ce cas, vous pouvez désactiver l'inscription de transaction automatique pour la connexion et inscrire la connexion dans des transactions à l'aide de `EnlistTransaction`.  
+ L'inscription dans des transactions distribuées s'applique en particulier lors du regroupement d'objets métier. Si un objet métier est regroupé avec une connexion ouverte, l'inscription automatique dans la transaction se produit uniquement lorsque cette connexion est ouverte. Si plusieurs transactions sont effectuées à l'aide de l'objet métier regroupé, la connexion ouverte pour cet objet n'est pas automatiquement inscrite dans les nouvelles transactions lancées. Dans ce cas, vous pouvez désactiver l’inscription de transaction automatique pour la connexion et inscrire la connexion dans des transactions à l’aide de `EnlistTransaction`.  
   
- `EnlistTransaction` accepte un seul argument de type <xref:System.Transactions.Transaction> qui est une référence à la transaction existante. Après avoir appelé la méthode `EnlistTransaction` de la connexion, toutes les modifications apportées à la source de données à l'aide de la connexion sont incluses dans la transaction. Le fait de passer une valeur null désinscrit la connexion de l'inscription de transaction distribuée actuelle. Notez que la connexion doit être ouverte avant l'appel de `EnlistTransaction`.  
+ `EnlistTransaction` accepte un seul argument de type <xref:System.Transactions.Transaction> qui est une référence à la transaction existante. Après avoir appelé la méthode `EnlistTransaction` de la connexion, toutes les modifications apportées à la source de données à l’aide de la connexion sont incluses dans la transaction. Le fait de passer une valeur null désinscrit la connexion de l'inscription de transaction distribuée actuelle. Notez que la connexion doit être ouverte avant l'appel de `EnlistTransaction`.  
   
 > [!NOTE]
 >  Une fois qu'une connexion est explicitement inscrite sur une transaction, il n'est plus possible de la désinscrire ou de l'inscrire dans une autre transaction tant que la première transaction n'est pas terminée.  
@@ -47,7 +47,7 @@ Une transaction est un ensemble de tâches liées entre elles qui échouent (abo
 ## <a name="configuring-distributed-transactions"></a>Configuration de transactions distribuées  
  Vous devrez peut-être activer MS DTC sur le réseau afin d'utiliser des transactions distribuées. Si le Pare-feu Windows est activé, vous devez autoriser le service MS DTC à utiliser le réseau ou à ouvrir le port MS DTC.  
   
-## <a name="see-also"></a>Voir aussi  
- [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Intégration de System.Transactions à SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Intégration de System.Transactions à SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

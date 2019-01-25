@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30d7fcbca82ee7336caf36edb5b01bdd4aa6a290
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dc3e1d4afb0bdccc9e4806b7e9f1d82ef2c30539
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635519"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter, interface
 Fournit une méthode pour indiquer qu’un jeton spécifié sera traité.  
@@ -33,16 +33,16 @@ Fournit une méthode pour indiquer qu’un jeton spécifié sera traité.
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[MarkToken, méthode](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indique que le jeton de métadonnées spécifié sera traité.|  
+|[MarkToken, méthode](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indique que le jeton de métadonnées spécifié est traité.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

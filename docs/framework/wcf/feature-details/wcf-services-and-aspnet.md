@@ -2,12 +2,12 @@
 title: Services WCF et ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: c4d747787529ce6755a25cbd791886cf1999b699
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58b5a09f63b6efb3c48fb3836da63c24650c5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712283"
 ---
 # <a name="wcf-services-and-aspnet"></a>Services WCF et ASP.NET
 Cette rubrique présente l’hébergement Windows Communication Foundation (WCF) services côte à côte avec ASP.NET et leur hébergement dans le mode de compatibilité ASP.NET.  
@@ -29,13 +29,13 @@ Cette rubrique présente l’hébergement Windows Communication Foundation (WCF)
   
     -   HttpContext : <xref:System.Web.HttpContext.Current%2A> est toujours `null` lorsque vous y accédez à partir d’un service WCF. Utilisez <!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>--> `RequestContext` à la place.  
   
-    -   Autorisation basée sur le fichier : modèle de sécurité le WCF n’autorise pas la liste de contrôle d’accès (ACL) appliquée au fichier .svc du service lorsque vous décidez si une demande de service est autorisée.  
+    -   Autorisation basée sur le fichier : Le modèle de sécurité WCF n’autorise pas la liste de contrôle d’accès (ACL) appliquée au fichier .svc du service lorsque vous décidez si une demande de service est autorisée.  
   
-    -   Autorisation basée sur la configuration de l’URL : De la même façon, le modèle de sécurité WCF n’est pas conforme à toutes les règles d’autorisation basée sur l’URL spécifiées dans de System.Web \<autorisation > élément de configuration. Si un service se trouve dans un espace d’URL sécurisé par ASP, ces paramètres sont ignorés pour les demandes WCF. Règles d’autorisation de NET URL.  
+    -   Autorisation d’URL basée sur la configuration : De même, le modèle de sécurité WCF n’est pas conforme à toutes les règles d’autorisation basée sur l’URL spécifiées dans de System.Web \<autorisation > élément de configuration. Si un service se trouve dans un espace d’URL sécurisé par ASP, ces paramètres sont ignorés pour les demandes WCF. Règles d’autorisation de NET URL.  
   
-    -   Extensibilité HttpModule : infrastructure d’hébergement WCF The WCF intercepte les demandes quand le <xref:System.Web.HttpApplication.PostAuthenticateRequest> événement est déclenché et ne retourne pas de traitement au pipeline HTTP ASP.NET. Les modules qui a été codés pour intercepter les demandes à des étapes ultérieures du pipeline n’interceptent pas les demandes WCF.  
+    -   Extensibilité HttpModule : L’infrastructure d’hébergement WCF WCF intercepte les demandes quand le <xref:System.Web.HttpApplication.PostAuthenticateRequest> événement est déclenché et ne retourne pas de traitement au pipeline HTTP ASP.NET. Les modules qui a été codés pour intercepter les demandes à des étapes ultérieures du pipeline n’interceptent pas les demandes WCF.  
   
-    -   Emprunt d’identité ASP.NET : par défaut, WCF demande toujours s’exécute comme IIS identité de processus, même si ASP.NET est configuré pour activer l’emprunt d’identité à l’aide de System.Web \<identity impersonate = « true » / > option de configuration.  
+    -   Emprunt d’identité ASP.NET : Par défaut, WCF demande toujours s’exécute comme IIS identité de processus, même si ASP.NET est configuré pour activer l’emprunt d’identité à l’aide de System.Web \<identity impersonate = « true » / > option de configuration.  
   
  Ces restrictions s’appliquent uniquement aux services WCF hébergés dans une application IIS. Le comportement du contenu ASP.NET n’est pas affecté par la présence de WCF.  
   
@@ -58,13 +58,13 @@ Cette rubrique présente l’hébergement Windows Communication Foundation (WCF)
   
 -   <xref:System.Web.HttpContext>: Les services WCF en cours d’exécution en Mode de compatibilité ASP.NET peuvent accéder aux <xref:System.Web.HttpContext.Current%2A> et son état associé.  
   
--   Autorisation basée sur le fichier : services WCF en cours d’exécution en mode de compatibilité ASP.NET peuvent être sécurisés en joignant des listes de contrôle d’accès (ACL) du système de fichiers au fichier .svc du service.  
+-   Autorisation basée sur le fichier : Services WCF en cours d’exécution en mode de compatibilité ASP.NET peuvent être sécurisées en joignant des listes de contrôle d’accès (ACL) du système de fichiers au fichier .svc du service.  
   
 -   Autorisation d’URL configurable : ASP. Règles d’autorisation de NET URL sont appliquées pour les demandes WCF lorsque le service WCF s’exécute en Mode de compatibilité ASP.NET.  
   
--   <xref:System.Web.HttpModuleCollection> extensibilité : services WCF, car en cours d’exécution en Mode de compatibilité ASP.NET participent pleinement le cycle de vie de demande HTTP ASP.NET, n’importe quel module HTTP configuré dans le pipeline HTTP est en mesure de fonctionner sur les demandes WCF avant et après l’appel de service.  
+-   <xref:System.Web.HttpModuleCollection> extensibilité : Étant donné que les services WCF en cours d’exécution en Mode de compatibilité ASP.NET participent pleinement le cycle de vie de demande HTTP ASP.NET, n’importe quel module HTTP configuré dans le pipeline HTTP est en mesure de fonctionner sur les demandes WCF avant et après l’appel de service.  
   
--   Emprunt d’identité ASP.NET : Services WCF exécutées à l’aide de l’identité actuelle de l’ASP.NET d’emprunter l’identité thread, ce qui peut être différente de celle de l’identité du processus IIS si l’emprunt d’identité ASP.NET a été activé pour l’application. Si l’emprunt d’identité ASP.NET et WCF sont activées pour une opération de service particulier, l’implémentation du service s’exécute finalement à l’aide de l’identité obtenue de WCF.  
+-   Emprunt d’identité ASP.NET : Les services WCF exécutées à l’aide de l’identité actuelle d’ASP.NET d’emprunter l’identité thread, ce qui peut être différente de celle de l’identité du processus IIS si l’emprunt d’identité ASP.NET a été activé pour l’application. Si l’emprunt d’identité ASP.NET et WCF sont activées pour une opération de service particulier, l’implémentation du service s’exécute finalement à l’aide de l’identité obtenue de WCF.  
   
  Mode de compatibilité ASP.NET de WCF est activé au niveau de l’application via la configuration suivante (situé dans le fichier Web.config de l’application) :  
   
@@ -88,18 +88,18 @@ Cette rubrique présente l’hébergement Windows Communication Foundation (WCF)
   
 |Paramètre de mode de compatibilité défini au niveau de l'application|[AspNetCompatibilityRequirementsMode]<br /><br /> Paramètre|Résultat observé|  
 |--------------------------------------------------|---------------------------------------------------------|---------------------|  
-|aspNetCompatibilityEnabled = «`true`»|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Le service est activé.|  
-|aspNetCompatibilityEnabled = «`true`»|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Le service est activé.|  
-|aspNetCompatibilityEnabled = «`true`»|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Une erreur d'activation se produit lorsque le service reçoit un message.|  
-|aspNetCompatibilityEnabled = «`false`»|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Une erreur d'activation se produit lorsque le service reçoit un message.|  
-|aspNetCompatibilityEnabled = «`false`»|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Le service est activé.|  
-|aspNetCompatibilityEnabled = «`false`»|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Le service est activé.|  
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Le service est activé.|  
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Le service est activé.|  
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Une erreur d'activation se produit lorsque le service reçoit un message.|  
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Une erreur d'activation se produit lorsque le service reçoit un message.|  
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Le service est activé.|  
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Le service est activé.|  
   
 > [!NOTE]
 >  IIS 7.0 et WAS permet aux services WCF communiquer via des protocoles autres que HTTP. Toutefois, les services WCF en cours d’exécution dans les applications qui ont activé le mode de compatibilité ASP.NET ne sont pas autorisés à exposer des points de terminaison non-HTTP. Une telle configuration génère une exception d'activation lorsque le service reçoit son premier message.  
   
  Pour plus d’informations sur l’activation du mode de compatibilité ASP.NET pour les services WCF, consultez <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> et [compatibilité ASP.NET](../../../../docs/framework/wcf/samples/aspnet-compatibility.md) exemple.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  
- [Fonctionnalités d’hébergement de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
+- [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

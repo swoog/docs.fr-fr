@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f8e7e992ce312f7f7bf2c9dbad4d14fbb095de1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690707"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Indique qu'une déclaration de type est une définition partielle du type.  
@@ -27,7 +27,7 @@ Indique qu'une déclaration de type est une définition partielle du type.
  Vous pouvez diviser la définition d'un type entre plusieurs déclarations à l'aide du mot clé `Partial`. Vous pouvez utiliser autant de déclarations partielles que vous le souhaitez, dans autant de fichiers sources que vous le souhaitez. Toutefois, toutes les déclarations doivent être dans le même assembly et le même espace de noms.  
   
 > [!NOTE]
->  Visual Basic prend en charge *méthodes partielles*, qui sont généralement implémentées dans des classes partielles. Pour plus d’informations, consultez [méthodes partielles](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) et [Sub, instruction](../../../visual-basic/language-reference/statements/sub-statement.md).  
+>  Prend en charge de Visual Basic *méthodes partielles*, qui sont généralement implémentées dans des classes partielles. Pour plus d’informations, consultez [méthodes partielles](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) et [Sub, instruction](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,9 +45,9 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Terme|Définition|  
 |---|---|  
-|`attrlist`|Facultatif. Liste des attributs qui s'appliquent à ce type. Vous devez placer le [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) dans des crochets pointus (`< >`).|  
-|`accessmodifier`|Facultatif. Spécifie le code pouvant accéder à ce type. Consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Facultatif. Consultez [ombres](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`attrlist`|Facultatif. Liste des attributs qui s'appliquent à ce type. Vous devez placer le [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets (`< >`).|  
+|`accessmodifier`|Facultatif. Spécifie le code pouvant accéder à ce type. Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`MustInherit`|Facultatif. Consultez [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
 |`NotInheritable`|Facultatif. Consultez [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
 |`name`|Obligatoire. Nom de ce type. Doit correspondre au nom défini dans toutes les autres déclarations partielles du même type.|  
@@ -55,7 +55,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`typelist`|Requis si vous utilisez [de](../../../visual-basic/language-reference/statements/of-clause.md). Consultez [tapez liste](../../../visual-basic/language-reference/statements/type-list.md).|  
 |`Inherits`|Facultatif. Consultez [Inherits, instruction](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Requis si vous utilisez `Inherits`. Nom de la classe ou de l'interface dont cette classe dérive.|  
-|`Implements`|Facultatif. Consultez [implémente l’instruction](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Facultatif. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Requis si vous utilisez `Implements`. Noms des interfaces que ce type implémente.|  
 |`variabledeclarations`|Facultatif. Instructions qui déclarent des variables et des événements supplémentaires pour ce type.|  
 |`proceduredeclarations`|Facultatif. Instructions qui déclarent et définissent des procédures supplémentaires pour ce type.|  
@@ -93,10 +93,10 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  Les deux définitions partielles de l'exemple précédent peuvent être dans le même fichier source ou dans deux fichiers sources différents.  
   
-## <a name="see-also"></a>Voir aussi  
- [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Structure (instruction)](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Promotion de type](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Types génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Méthodes partielles](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>Voir aussi
+- [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Structure (instruction)](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Promotion de type](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Méthodes partielles](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

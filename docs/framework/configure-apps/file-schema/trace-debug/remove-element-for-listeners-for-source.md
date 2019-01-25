@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8beb3ef041b153535afcb8bd92e1c29787e1f161
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654410"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;supprimer&gt; élément pour &lt;écouteurs&gt; pour &lt;source&gt;
 Supprime un écouteur de la collection `Listeners` pour une source de trace.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<sources >  
-\<source >  
-\<écouteurs >  
+\<system.diagnostics>  
+\<sources>  
+\<source>  
+\<listeners>  
 \<remove>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -81,9 +81,9 @@ Supprime un écouteur de la collection `Listeners` pour une source de trace.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Diagnostics.TraceSource.Listeners%2A>  
- <xref:System.Diagnostics.TraceSource>  
- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
- [Écouteurs de suivi](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Diagnostics.TraceSource.Listeners%2A>
+- <xref:System.Diagnostics.TraceSource>
+- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)
+- [Écouteurs de suivi](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

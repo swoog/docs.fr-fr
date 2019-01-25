@@ -2,12 +2,12 @@
 title: Guide de programmation (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 0c6b026d86a898aa52d93833ac3e447d6f6cba11
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f6ab1634769a54bd8dbafe8c9d41b11ff787d50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636480"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Guide de programmation (LINQ to DataSet)
 Cette section fournit des informations conceptuelles et des exemples pour la programmation avec [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -25,7 +25,7 @@ Cette section fournit des informations conceptuelles et des exemples pour la pro
  [Création d’un DataTable à partir d’une requête](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
  Fournit des informations sur la création d’un <xref:System.Data.DataTable> à partir d’un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requête à l’aide de la <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> (méthode).  
   
- [Comment : implémenter CopyToDataTable\<T > où le Type générique T n’est pas un DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ [Guide pratique pour Implémenter CopyToDataTable\<T > où le Type générique T n’est pas un DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
  Explique comment implémenter une méthode `CopyToDataTable<T>` personnalisée dans laquelle le paramètre générique T n'est pas du type <xref:System.Data.DataRow>.  
   
  [Méthodes génériques Field et SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -54,5 +54,5 @@ Cette section fournit des informations conceptuelles et des exemples pour la pro
   
 ## <a name="see-also"></a>Voir aussi
 
-- [LINQ et ADO.NET](linq-and-ado-net.md)  
+- [LINQ et ADO.NET](linq-and-ado-net.md)
 - [LINQ (Language Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)

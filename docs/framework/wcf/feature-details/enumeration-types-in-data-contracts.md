@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649308"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Types énumération dans les contrats de données
 Les énumérations peuvent être exprimées dans le modèle de contrat de données. Cette rubrique décrit plusieurs exemples qui expliquent le modèle de programmation.  
@@ -30,7 +30,7 @@ Les énumérations peuvent être exprimées dans le modèle de contrat de donné
  Vous pouvez utiliser comme d'habitude les propriétés <xref:System.Runtime.Serialization.DataContractAttribute> (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> et <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) pour les contrats de données de l'énumération.  
   
 ### <a name="enumeration-member-values"></a>Valeurs de membre de l'énumération  
- En général, le contrat de données inclut des noms de membre de l'énumération, pas des valeurs numériques. Toutefois, lorsque vous utilisez le modèle de contrat de données, si la réception est un client WCF, le schéma exporté conserve les valeurs numériques. Notez que cela n’est pas le cas lorsque vous utilisez la [à l’aide de la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ En général, le contrat de données inclut des noms de membre de l'énumération, pas des valeurs numériques. Toutefois, lorsque vous utilisez le modèle de contrat de données, si le côté réception est un client WCF, le schéma exporté conserve les valeurs numériques. Notez que cela n’est pas le cas lorsque vous utilisez le [à l’aide de la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
  Dans l'exemple précédent, si `condition` a la valeur `Used` et que les données sont sérialisées en XML, le XML résultant est `<condition>Used</condition>` et pas `<condition>1</condition>`. Par conséquent, le contrat de données suivant est équivalent au contrat de données de `CarConditionEnum`.  
   
@@ -81,7 +81,7 @@ Les énumérations peuvent être exprimées dans le modèle de contrat de donné
   
 1.  Essayez de rechercher un membre de l'énumération (auquel est appliqué l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>) qui correspond à la valeur numérique. Une fois trouvé, envoyez une liste qui contient seulement ce membre.  
   
-2.  Essayez de décomposer la valeur numérique en une somme de manière à obtenir des membres de l'énumération (à chacun desquels est appliqué l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>) qui correspondent à chaque partie de la somme. Envoyez la liste de tous ces membres. Notez que la *algorithme gourmand* est utilisé pour rechercher cette somme, et donc il n’existe aucune garantie que cette somme soit trouvée même si elle est présente. Pour éviter ce problème, assurez-vous que les valeurs numériques des membres de l'énumération sont à la puissance de deux.  
+2.  Essayez de décomposer la valeur numérique en une somme de manière à obtenir des membres de l'énumération (à chacun desquels est appliqué l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>) qui correspondent à chaque partie de la somme. Envoyez la liste de tous ces membres. Notez que le *algorithme gourmand* est utilisé pour rechercher cette somme, et il n’y a donc aucune garantie que cette somme est trouvée, même si elle est présente. Pour éviter ce problème, assurez-vous que les valeurs numériques des membres de l'énumération sont à la puissance de deux.  
   
 3.  Si les deux étapes précédentes échouent et que la valeur numérique est différente de zéro, levez une <xref:System.Runtime.Serialization.SerializationException>. Si la valeur numérique est égale à zéro, envoyez la liste vide.  
   
@@ -96,7 +96,7 @@ Les énumérations peuvent être exprimées dans le modèle de contrat de donné
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Spécification du transfert de données dans des contrats de service](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Spécification du transfert de données dans des contrats de service](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

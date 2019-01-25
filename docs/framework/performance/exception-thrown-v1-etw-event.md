@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 865b7b16d5807bd9161855f453128a63c84eab96
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07932a12916138dd7cbee2576e4fc747898b8063
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610840"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Événement ETW d'exception Thrown_V1
 Cet événement capture des informations sur les exceptions levées.  
@@ -37,8 +37,8 @@ Cet événement capture des informations sur les exceptions levées.
 |Message d’exception|win:UnicodeString|Message d’exception réel.|  
 |EIPCodeThrow|win:Pointer|Pointeur d’instruction où l’exception s’est produite.|  
 |ExceptionHR|win:UInt32|Exception [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
-|ExceptionFlags|win:UInt16|0x01 : HasInnerException (consultez [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md) dans la documentation Visual Basic).<br /><br /> 0x02 : IsNestedException.<br /><br /> 0x04 : IsRethrownException.<br /><br /> 0x08 : IsCorruptedStateException (indique que l’état du processus est endommagé ; consultez [Gestion des exceptions dans un état endommagé](https://go.microsoft.com/fwlink/?LinkId=179681) sur MSDN).<br /><br /> 0x10 : IsCLSCompliant (une exception qui dérive d’<xref:System.Exception> est conforme CLS ; sinon elle n’est pas conforme CLS).|  
+|ExceptionFlags|win:UInt16|0 x 01 : HasInnerException (consultez [événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md) dans la documentation de Visual Basic).<br /><br /> 0 x 02 : IsNestedException.<br /><br /> 0 x 04 : IsRethrownException.<br /><br /> 0 x 08 : IsCorruptedStateException (indique que l’état du processus est endommagé ; consultez [gestion des Exceptions d’état endommagé](https://go.microsoft.com/fwlink/?LinkId=179681) sur MSDN).<br /><br /> 0 x 10 : IsCLSCompliant (une exception qui dérive de <xref:System.Exception> est conforme CLS ; sinon, il n’est pas conforme CLS).|  
 |ClrInstanceID|win:UInt16|ID unique de l'instance de CLR ou CoreCLR.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Voir aussi
+- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

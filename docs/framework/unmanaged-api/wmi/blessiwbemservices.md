@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a65c3c14507b2520c69875a1bc101ce826ace7ba
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716076"
 ---
 # <a name="blessiwbemservices-function"></a>Blessiwbemservices, fonction
 Indique si les informations d’identification autorisent l’accès spécifié [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) classe.   
@@ -64,18 +64,18 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0 x 80070057 | Un ou plusieurs arguments ne sont pas valides. |
-| `E_POINTER` | 0 x 80004003 | `pIWbemServices` a la valeur `null`. | 
+| `E_INVALIDARG` | 0x80070057 | Un ou plusieurs arguments ne sont pas valides. |
+| `E_POINTER` | 0x80004003 | `pIWbemServices` a la valeur `null`. | 
 | `E_FAIL` | 0x80000008 | Une erreur non spécifiée s’est produite. |
 | `E_OUTOFMEMORY` | 0x80000002 | Mémoire disponible est insuffisante pour effectuer l’opération. | 
 | `S_OK` | 0 | L’appel de fonction a réussi. | 
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: 9f963e4b60193197ae56e2021d76d541ad6bfbef
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 938adf5b20f289cc219821a549a9dd47df297ae1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624039"
 ---
 # <a name="treeview-styles-and-templates"></a>Styles et modèles TreeView
-Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.TreeView> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.TreeView> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="treeview-parts"></a>Composants de TreeView  
  Le <xref:System.Windows.Controls.TreeView> contrôle n’a pas de composants nommés.  
@@ -52,16 +52,16 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |Sans focus|FocusStates|Le <xref:System.Windows.Controls.TreeViewItem> n’a pas le focus.|  
 |Développé|ExpansionStates|Le <xref:System.Windows.Controls.TreeViewItem> contrôle est développé.|  
 |Réduit|ExpansionStates|Le <xref:System.Windows.Controls.TreeViewItem> contrôle est réduit.|  
-|HasItems|HasItemsStates|Le <xref:System.Windows.Controls.TreeViewItem> a des éléments.|  
+|HasItems|HasItemsStates|Le <xref:System.Windows.Controls.TreeViewItem> comporte des éléments.|  
 |NoItems|HasItemsStates|Le <xref:System.Windows.Controls.TreeViewItem> n’a pas d’éléments.|  
-|Selected|SelectionStates|Le <xref:System.Windows.Controls.TreeViewItem> est sélectionnée.|  
-|SelectedInactive|SelectionStates|Le <xref:System.Windows.Controls.TreeViewItem> est sélectionné mais pas actif.|  
+|Selected|SelectionStates|Le <xref:System.Windows.Controls.TreeViewItem> est sélectionné.|  
+|SelectedInactive|SelectionStates|Le <xref:System.Windows.Controls.TreeViewItem> est sélectionné mais n’est pas actif.|  
 |Non sélectionné|SelectionStates|Le <xref:System.Windows.Controls.TreeViewItem> n’est pas sélectionnée.|  
 |Valide|ValidationStates|Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.|  
 |InvalidFocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.|  
 |InvalidUnfocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.|  
   
-## <a name="treeview-controltemplate-example"></a>TreeView ControlTemplate, exemple  
+## <a name="treeview-controltemplate-example"></a>Exemple de ControlTemplate de TreeView  
  L’exemple suivant montre comment définir un <xref:System.Windows.Controls.ControlTemplate> pour la <xref:System.Windows.Controls.TreeView> contrôle et ses types associés.  
   
  [!code-xaml[ControlTemplateExamples#TreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
@@ -72,10 +72,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

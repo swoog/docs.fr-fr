@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704301"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException, méthode
 Indique si le thread a déjà eu une exception non gérée.  
@@ -45,21 +45,21 @@ HRESULT GetBlockingObjects (
 |HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Le thread a eu une exception non gérée depuis sa création.|  
-|S_FALSE|Le thread n’a jamais eu une exception non gérée.|  
+|S_FALSE|Le thread n’a jamais été une exception non gérée.|  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode indique si le thread a déjà eu une exception non gérée. Au moment où le rappel d’exception non gérée est déclenché ou JIT natif est initialisé, cette méthode retourne toujours S_OK. Il n’existe aucune garantie que les [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) méthode retournera l’exception non gérée ; Toutefois, il est si le processus n’a pas encore repris après avoir obtenu le rappel d’exception non gérée, ou à le JIT natif. En outre, il est possible (bien que peu probable) d’avoir plusieurs threads avec une exception non gérée au moment JIT natif est déclenchée. Dans ce cas il n’existe aucun moyen pour déterminer quelle exception a déclenché le JIT.  
+ Cette méthode indique si le thread a déjà eu une exception non gérée. Au moment où le rappel d’exception non gérée est déclenché ou natif JIT-attach est lancée, cette méthode renvoie toujours S_OK. Il n’existe aucune garantie que le [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) méthode retournera l’exception non gérée ; Cependant, cette opération si le processus n’a pas encore repris après avoir obtenu le rappel d’exception non gérée ou en cas de JIT natif. En outre, il est possible (bien qu’improbable) d’avoir plusieurs threads avec une exception non gérée au moment de JIT natif est déclenchée. Dans ce cas il n’existe aucun moyen pour déterminer quelle exception a déclenché la JIT-attach.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebugThread4, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebugThread4, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

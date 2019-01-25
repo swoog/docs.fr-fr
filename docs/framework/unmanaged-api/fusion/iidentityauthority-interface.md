@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab8965ca5d6c9c96cea5f5b351547ce2d4dfacc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546278"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority, interface
 Gère les clés d’identité pour les objets de code.  
@@ -30,13 +30,13 @@ Gère les clés d’identité pour les objets de code.
   
 |Méthode|Description|  
 |------------|-----------------|  
-|`IIdentityAuthority::AreDefinitionsEqual`|Obtient une valeur qui indique si les deux spécifiés [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instances sont égales.|  
-|`IIdentityAuthority::AreReferencesEqual`|Obtient une valeur qui indique si les deux spécifiés [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) instances sont égales.|  
+|`IIdentityAuthority::AreDefinitionsEqual`|Obtient une valeur qui indique si les deux spécifié [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instances sont égales.|  
+|`IIdentityAuthority::AreReferencesEqual`|Obtient une valeur qui indique si les deux spécifié [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) instances sont égales.|  
 |`IIdentityAuthority::AreTextualDefinitionsEqual`|Obtient une valeur qui indique si les deux représentations sous forme de chaîne spécifiée définition identity sont égaux.|  
-|`IIdentityAuthority::AreTextualReferencesEqual`|Obtient une valeur qui indique si les deux représentations sous forme de chaîne spécifiée référence identité sont égaux.|  
+|`IIdentityAuthority::AreTextualReferencesEqual`|Obtient une valeur qui indique si les deux représentations d’identité de référence de chaîne spécifié sont égale.|  
 |`IIdentityAuthority::CreateDefinition`|Obtient un pointeur vers un nouveau `IDefinitionIdentity` instance qui représente l’objet de code dans la portée actuelle.|  
 |`IIdentityAuthority::CreateReference`|Obtient un pointeur vers un nouveau `IReferenceIdentity` instance qui représente l’objet de code dans la portée actuelle.|  
-|`IIdentityAuthority::DefinitionToText`|Obtient une version de la chaîne mise en forme du `IDefinitionIdentity`.|  
+|`IIdentityAuthority::DefinitionToText`|Obtient une version de la chaîne mise en forme de l’objet `IDefinitionIdentity`.|  
 |`IIdentityAuthority::DefinitionToTextBuffer`|Remplit la mémoire tampon de caractères larges spécifié avec une version de chaîne de l’objet `IDefinitionIdentity`.|  
 |`IIdentityAuthority::DoesDefinitionMatchReference`|Obtient une valeur qui indique si le texte spécifié `IDefinitionIdentity` et `IReferenceIdentity` instances font référence au même objet de code.|  
 |`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Obtient une valeur qui indique si les chaînes spécifiées font référence au même objet de code.|  
@@ -44,17 +44,17 @@ Gère les clés d’identité pour les objets de code.
 |`IIdentityAuthority::GenerateReferenceKey`|Obtient un pointeur vers une clé de chaîne qui vient d’être créée pour spécifié `IReferenceIdentity`.|  
 |`IIdentityAuthority::HashDefinition`|Obtient une valeur de hachage spécifié `IDefinitionIdentity`.|  
 |`IIdentityAuthority::HashReference`|Obtient une valeur de hachage spécifié `IreferenceIdentity`.|  
-|`IIdentityAuthority::ReferenceToText`|Obtient une version de la chaîne mise en forme du `IReferenceIdentity`.|  
+|`IIdentityAuthority::ReferenceToText`|Obtient une version de la chaîne mise en forme de l’objet `IReferenceIdentity`.|  
 |`IIdentityAuthority::ReferenceToTextBuffer`|Remplit la mémoire tampon de caractères larges spécifié avec une version de chaîne de l’objet `IReferenceIdentity`.|  
-|`IIdentityAuthority::TextToDefinition`|Obtient un pointeur d’interface vers un `IDefinitionIdentity` instance générée à partir de la chaîne de mise en forme.|  
-|`IIdentityAuthority::TextToReference`|Obtient un pointeur d’interface vers un `IReferenceIdentity` instance générée à partir de la chaîne de mise en forme.|  
+|`IIdentityAuthority::TextToDefinition`|Obtient un pointeur d’interface vers un `IDefinitionIdentity` instance générée à partir du spécifié au format chaîne.|  
+|`IIdentityAuthority::TextToReference`|Obtient un pointeur d’interface vers un `IReferenceIdentity` instance générée à partir du spécifié au format chaîne.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Isolation.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

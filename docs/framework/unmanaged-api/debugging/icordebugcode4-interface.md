@@ -1,5 +1,5 @@
 ---
-title: Interface de ICorDebugCode4
+title: ICorDebugCode4 Interface
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode4
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 624db77f0db2fe374e16abae64b6bf6ad290baa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c38ce53ca1c02ead03ab9d1ff1e53cda772333f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739717"
 ---
-# <a name="icordebugcode4-interface"></a>Interface de ICorDebugCode4
+# <a name="icordebugcode4-interface"></a>ICorDebugCode4 Interface
 Fournit une méthode qui permet à un débogueur énumérer les variables locales et les arguments dans une fonction.  
   
 ## <a name="methods"></a>Méthodes  
@@ -38,16 +38,16 @@ Fournit une méthode qui permet à un débogueur énumérer les variables locale
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-    
-    
- [ICorDebugCode3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+
+
+- [ICorDebugCode3, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

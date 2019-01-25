@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667935"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr, énumération
 Contient des valeurs qui indiquent les métadonnées de type.  
@@ -80,19 +80,19 @@ typedef enum CorTypeAttr {
 |Membre|Description|  
 |------------|-----------------|  
 |`tdVisibilityMask`|Utilisé pour les informations de visibilité de type.|  
-|`tdNotPublic`|Spécifie que le type n’est pas dans la portée publique.|  
-|`tdPublic`|Spécifie que le type est dans la portée publique.|  
+|`tdNotPublic`|Spécifie que le type n’est pas dans une étendue publique.|  
+|`tdPublic`|Spécifie que le type est dans une étendue publique.|  
 |`tdNestedPublic`|Spécifie que le type est imbriqué avec une visibilité publique.|  
 |`tdNestedPrivate`|Spécifie que le type est imbriqué avec une visibilité privée.|  
 |`tdNestedFamily`|Spécifie que le type est imbriqué avec une visibilité de niveau famille.|  
 |`tdNestedAssembly`|Spécifie que le type est imbriqué avec une visibilité d’assembly.|  
-|`tdNestedFamANDAssem`|Spécifie que le type est imbriqué avec une visibilité family et assembly.|  
+|`tdNestedFamANDAssem`|Spécifie que le type est imbriqué avec une visibilité de famille et assembly.|  
 |`tdNestedFamORAssem`|Spécifie que le type est imbriqué avec une visibilité family ou assembly.|  
 |`tdLayoutMask`|Obtient les informations de disposition pour le type.|  
-|`tdAutoLayout`|Spécifie que les champs de ce type sont placés automatiquement.|  
-|`tdSequentialLayout`|Spécifie que les champs de ce type sont placés séquentiellement.|  
-|`tdExplicitLayout`|Spécifie la que disposition de ce champ est fournie explicitement.|  
-|`tdClassSemanticsMask`|Obtient des informations de sémantiques sur le type.|  
+|`tdAutoLayout`|Spécifie que les champs de ce type sont disposés automatiquement.|  
+|`tdSequentialLayout`|Spécifie que les champs de ce type sont disposés séquentiellement.|  
+|`tdExplicitLayout`|Spécifie que cette disposition de champ est fournie explicitement.|  
+|`tdClassSemanticsMask`|Obtient des informations sémantiques sur le type.|  
 |`tdClass`|Spécifie que le type est une classe.|  
 |`tdInterface`|Spécifie que le type est une interface.|  
 |`tdAbstract`|Spécifie que le type est abstrait.|  
@@ -101,24 +101,24 @@ typedef enum CorTypeAttr {
 |`tdImport`|Spécifie que le type est importé.|  
 |`tdSerializable`|Spécifie que le type est sérialisable.|  
 |`tdWindowsRuntime`|Spécifie que ce type est un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.|  
-|`tdStringFormatMask`|Obtient des informations sur comment les chaînes sont encodées et mis en forme.|  
+|`tdStringFormatMask`|Obtient des informations sur comment les chaînes sont codés et mis en forme.|  
 |`tdAnsiClass`|Spécifie que ce type interprète LPTSTR comme ANSI.|  
 |`tdUnicodeClass`|Spécifie que ce type interprète LPTSTR au format Unicode.|  
 |`tdAutoClass`|Spécifie que ce type interprète LPTSTR automatiquement.|  
 |`tdCustomFormatClass`|Spécifie que le type a un encodage non standard, comme spécifié par `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Utilisez ce masque pour obtenir des informations de codage non standard pour une interopérabilité native. La signification des valeurs de ces deux bits n’est pas spécifiée.|  
+|`tdCustomFormatMask`|Utilisez ce masque pour obtenir des informations de codage non standards pour une interopérabilité native. La signification des valeurs de ces deux bits n’est pas spécifiée.|  
 |`tdBeforeFieldInit`|Spécifie que le type doit être initialisé avant la première tentative d’accès à un champ statique.|  
 |`tdForwarder`|Spécifie que le type est exporté et un redirecteur de type.|  
-|`tdReservedMask`|Cet indicateur et les indicateurs ci-après sont utilisées en interne par le common language runtime.|  
-|`tdRTSpecialName`|Spécifie que le common language runtime doit vérifier l’encodage de nom.|  
-|`tdHasSecurity`|Spécifie que le type est associée.|  
+|`tdReservedMask`|Cet indicateur et les indicateurs ci-dessous sont utilisés en interne par le common language runtime.|  
+|`tdRTSpecialName`|Spécifie que le common language runtime doit vérifier l’encodage des noms.|  
+|`tdHasSecurity`|Spécifie que le type a la sécurité, il est associée.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

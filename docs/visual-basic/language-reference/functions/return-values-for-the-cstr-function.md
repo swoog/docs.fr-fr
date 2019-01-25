@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: 5312734633eea12aacd7e61afba616d31e06cd71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22fa31d862259c6dc8607ee44561bc8c18662d88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642816"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>Valeurs de retour pour la fonction CStr (Visual Basic)
 Le tableau suivant décrit les valeurs de retour pour `CStr` pour différents types de données de `expression`.  
@@ -28,13 +28,13 @@ Le tableau suivant décrit les valeurs de retour pour `CStr` pour différents ty
 |[Types de données numériques](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Chaîne représentant le nombre.|  
   
 ## <a name="cstr-and-date"></a>Date et la fonction CStr  
- Le `Date` type contient toujours des informations de date et heure. À des fins de conversion de type, Visual Basic considère le 1/1/0001 (le 1er janvier de l’année 1) soit un *valeur neutre* pour la date et 00:00:00 (minuit) comme une valeur neutre pour l’heure. `CStr` n’inclut pas de valeurs neutres dans la chaîne résultante. Par exemple, si vous convertissez `#January 1, 0001 9:30:00#` en une chaîne, le résultat est « 9:30:00 AM » ; les informations de date sont supprimées. Toutefois, les informations de date sont toujours présentes dans la version d’origine `Date` valeur et peuvent être récupérées avec des fonctions telles que <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+ Le `Date` type contient toujours les informations de date / heure. À des fins de conversion de type, Visual Basic prend en compte la 1/1/0001 (le 1er janvier de l’année 1) pour être un *valeur neutre* pour la date et 00:00:00 (minuit) comme une valeur neutre pour l’heure. `CStr` n’inclut pas de valeurs neutres dans la chaîne résultante. Par exemple, si vous convertissez `#January 1, 0001 9:30:00#` vers une chaîne, le résultat est « 9:30:00 AM » ; les informations de date sont supprimées. Toutefois, les informations de date sont toujours présentes dans la version d’origine `Date` valeur et peuvent être récupérées avec des fonctions telles que <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
   
 > [!NOTE]
 >  Le `CStr` fonction effectue sa conversion en fonction des paramètres de culture actuels de l’application. Pour obtenir la représentation sous forme de chaîne d’un nombre dans une culture particulière, utilisez le nombre `ToString(IFormatProvider)` (méthode). Par exemple, utilisez <xref:System.Double.ToString%2A?displayProperty=nameWithType> lors de la conversion d’une valeur de type `Double` à un `String`.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>  
- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Booléen (type de données)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
- [Date (type de données)](../../../visual-basic/language-reference/data-types/date-data-type.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>
+- [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Booléen (type de données)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)
+- [Date (type de données)](../../../visual-basic/language-reference/data-types/date-data-type.md)

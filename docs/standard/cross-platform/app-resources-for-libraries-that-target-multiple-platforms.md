@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641146"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ressources d'application pour les bibliothèques qui ciblent des plateformes multiples
 Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) type pour vous assurer que les ressources dans vos bibliothèques de classes sont accessible à partir de plusieurs plateformes de projet. Ce type de projet est disponible dans Visual Studio 2012 et qu’elle cible le sous-ensemble portable de la bibliothèque de classes .NET Framework. L'utilisation de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garantit l'accessibilité de votre bibliothèque à partir des applications de bureau, des [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], Silverlight et Windows Phone.
@@ -52,7 +52,7 @@ Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../..
  Si le projet [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] inclut des ressources localisées, utilisez le modèle « hub and spoke » pour les déployer comme vous le feriez pour une bibliothèque dans une application de bureau. Pour utiliser votre fichier de ressources principal et n'importe quel fichier de ressources localisé dans votre application [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], ajoutez une référence à l'assembly principal. Au moment de la compilation, Visual Studio extrait les ressources à partir du fichier de ressources principal et de tous les fichiers de ressources localisés dans des fichiers .resw distincts. Il compile ensuite les fichiers .resw dans un seul fichier PRI pour que le [!INCLUDE[wrt](../../../includes/wrt-md.md)] y accède au moment de l'exécution.
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Exemple : [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] non localisé.
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Exemple : Non localisé [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  L'exemple suivant d'un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] simple et non localisé utilise des ressources pour stocker les noms des colonnes et déterminer le nombre de caractères à réserver aux données tabulaires. L'exemple utilise un fichier nommé LibResources.resx pour stocker les ressources de chaîne répertoriées dans le tableau suivant.
 
 |Nom de la ressource|Valeur de la ressource|
@@ -81,7 +81,7 @@ Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../..
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Exemple : [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localisé
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Exemple : Localisé [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  L'exemple de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localisé suivant inclut des ressources pour les cultures française (France) et anglaise (États-Unis). La culture anglais (États-Unis) est la culture par défaut de l’application ; ses ressources sont répertoriées dans la table dans le [section précédente](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Le fichier de ressources de la culture française (France) est nommé LibResources.fr-FR.resx et inclut les ressources de type de chaîne répertoriées dans le tableau suivant. Le code source de la classe `UILibrary` est identique que celui présenté dans la section précédente.
 
 |Nom de la ressource|Valeur de la ressource|
@@ -106,6 +106,6 @@ Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../..
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Resources.ResourceManager>  
-- [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)
 - [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

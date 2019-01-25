@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 95a72d5d09538bc6f663f2376c7f8f928909cd57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 732c47b03c2769a6147c3c812ddd6e81dab11a55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695645"
 ---
 # <a name="forward-compatible-data-contracts"></a>Contrats de données à compatibilité ascendante
-Une fonctionnalité de la Windows Communication Foundation (WCF) système de contrat de données est les contrats permettre évoluer au fil du temps rupture. Autrement dit, un client avec une version antérieure d'un contrat de données peut communiquer avec un service disposant d'une version plus récente du même contrat de données, ou un client avec une version plus récente d'un contrat de données peut communiquer avec une version antérieure du même contrat de données. Pour plus d’informations, consultez [meilleures pratiques : contrôle de version de contrat de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Une fonctionnalité de la Windows Communication Foundation (WCF) système de contrat de données est les contrats peut évoluer au fil du temps rupture. Autrement dit, un client avec une version antérieure d'un contrat de données peut communiquer avec un service disposant d'une version plus récente du même contrat de données, ou un client avec une version plus récente d'un contrat de données peut communiquer avec une version antérieure du même contrat de données. Pour plus d’informations, consultez [meilleures pratiques : Le contrôle de version de contrat de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
- Vous pouvez appliquer la plupart des fonctionnalités de suivi des versions dès que besoin lorsque de nouvelles versions d’un contrat de données existant sont créées. Toutefois, une fonctionnalité de contrôle de version, *aller-retour*, doit être construite dans le type de la première version afin de fonctionner correctement.  
+ Vous pouvez appliquer la plupart des fonctionnalités de suivi des versions dès que besoin lorsque de nouvelles versions d’un contrat de données existant sont créées. Toutefois, une fonctionnalité de contrôle de version, *aller-retour*, doit être généré dans le type de la première version pour pouvoir fonctionner correctement.  
   
 ## <a name="round-tripping"></a>Aller-retour  
  L'aller-retour se produit lorsque des données passent d'une nouvelle version à une version ancienne et reviennent à la nouvelle version d'un contrat de données. L'aller-retour garantit qu'aucunes données ne sont perdues. L'activation de l'aller-retour rend le type compatible en aval avec toutes les modifications futures prises en charge par le modèle du suivi des versions du contrat de données.  
@@ -39,10 +39,10 @@ Une fonctionnalité de la Windows Communication Foundation (WCF) système de con
   
  Le type <xref:System.Runtime.Serialization.ExtensionDataObject> ne contient pas de méthodes ou de propriétés publiques. Il est donc impossible d'accéder directement aux données stockées à l'intérieur de la propriété <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>.  
   
- La fonctionnalité d'aller-retour peut être désactivée, soit en affectant à `ignoreExtensionDataObject` la valeur `true` dans le constructeur <xref:System.Runtime.Serialization.DataContractSerializer>, soit en affectant à la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> la valeur `true` sur <xref:System.ServiceModel.ServiceBehaviorAttribute>. Lorsque cette fonctionnalité est désactivée, le désérialiseur ne complète pas la propriété <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>, et le sérialiseur n'émet pas le contenu de la propriété.  
+ La fonctionnalité d'aller-retour peut être désactivée, soit en affectant à `ignoreExtensionDataObject` la valeur `true` dans le constructeur <xref:System.Runtime.Serialization.DataContractSerializer>, soit en affectant à la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> la valeur `true` sur <xref:System.ServiceModel.ServiceBehaviorAttribute>. Lorsque cette fonctionnalité est désactivée, le désérialiseur ne complète pas la propriété <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>, et le sérialiseur n’émet pas le contenu de la propriété.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- [Gestion de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Bonnes pratiques : gestion des versions des contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- [Gestion de version des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Meilleures pratiques : Concernant les contrats de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

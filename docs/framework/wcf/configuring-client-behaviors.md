@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf65844cda195847989d1eb8ef752fe87c9de22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532194"
 ---
 # <a name="configuring-client-behaviors"></a>Configuration des comportements clients
-Windows Communication Foundation (WCF) configure les comportements de deux manières : soit en faisant référence à des configurations de comportement, qui sont définies dans la `<behavior>` section d’un fichier de configuration client application – ou par programme dans l’appel application. Cette rubrique décrit ces deux approches.  
+Windows Communication Foundation (WCF) configure les comportements de deux manières : soit en vous reportant aux configurations de comportement, qui sont définies dans la `<behavior>` section d’un fichier de configuration client application – ou par programmation dans l’appel application. Cette rubrique décrit ces deux approches.  
   
  Lors de l'utilisation d'un fichier de configuration, la configuration du comportement est une collection nommée de paramètres de configuration. Le nom de chaque configuration de comportement doit être unique. Cette chaîne est utilisée dans l'attribut `behaviorConfiguration` d'une configuration de point de terminaison pour lier le point de terminaison au comportement.  
   
@@ -51,5 +51,5 @@ Windows Communication Foundation (WCF) configure les comportements de deux mani�
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
-## <a name="see-also"></a>Voir aussi  
- [\<comportements >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+## <a name="see-also"></a>Voir aussi
+- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

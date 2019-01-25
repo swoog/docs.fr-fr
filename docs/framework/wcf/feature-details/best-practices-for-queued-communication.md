@@ -5,15 +5,15 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b2366f531c0a7f8fd296ee2a685c38fd62ca82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719818"
 ---
 # <a name="best-practices-for-queued-communication"></a>Meilleures pratiques pour les communications mises en file d'attente
-Cette rubrique fournit des méthodes recommandées pour la communication en file d’attente dans Windows Communication Foundation (WCF). Les sections suivantes traitent des méthodes recommandées à partir d'un scénario.  
+Cette rubrique fournit des pratiques recommandées pour la communication en file d’attente dans Windows Communication Foundation (WCF). Les sections suivantes traitent des méthodes recommandées à partir d'un scénario.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Messagerie mise en file attente efficace et rapide  
  Pour les scénarios qui requièrent la séparation fournie par la messagerie en file d'attente et une messagerie performante avec des assurances de meilleur-effort, utilisez une file d'attente non transactionnelle et affectez à la propriété <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> la valeur `false`.  
@@ -36,7 +36,7 @@ Cette rubrique fournit des méthodes recommandées pour la communication en file
   
  La désactivation des files d'attente de lettres mortes pour les communications fiables de bout en bout n'est pas recommandée.  
   
- Pour plus d’informations, consultez [lettres mortes à l’aide de files d’attente pour gérer les échecs de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ Pour plus d’informations, consultez [à l’aide des files d’attente lettre morte à gérer les échecs de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Utilisation de la gestion des messages incohérents  
  La gestion des messages empoisonnés permet de reprendre le traitement des messages après une défaillance.  
@@ -60,7 +60,7 @@ Cette rubrique fournit des méthodes recommandées pour la communication en file
   
  Lorsque vous utilisez des batteries de services, sachez que MSMQ 3.0 ne prend pas en charge les lectures transactionnelles à distance. MSMQ 4.0 prend en charge les lectures transactionnelles à distance.  
   
- Pour plus d’informations, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) et [les différences de fonctionnalités Queuing dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Pour plus d’informations, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) et [différences de fonctionnalités Queuing dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>Mise en file d'attente avec sémantique d'unité de travail  
  Dans certains scénarios, les messages d'un groupe dans une file d'attente peuvent être liés et, par conséquent, l'ordre de ces messages est significatif. Dans de tels scénarios, traitez le groupe de messages connexes comme une unité unique : soit tous les messages sont traités avec succès, soit aucun ne l'est. Pour implémenter un tel comportement, utilisez des sessions avec files d'attente.  
@@ -71,25 +71,25 @@ Cette rubrique fournit des méthodes recommandées pour la communication en file
  Bien que les files d'attente soient en général unidirectionnelles, dans certains scénarios vous pouvez corréler une réponse reçue à une demande envoyée plus tôt. Si vous avez besoin d'une telle corrélation, il est recommandé d'insérer votre propre en-tête de message SOAP qui contient des informations de corrélation dans le message. En général, l'expéditeur joint cet en-tête avec le message, et le récepteur, en traitant le message et en y répondant avec un nouveau message sur une file d'attente de réponse, joint l'en-tête du message de l'expéditeur qui contient les informations de corrélation afin que l'expéditeur puisse identifier le message de réponse en relation avec le message de demande.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Intégration à des applications non WCF  
- Utilisez `MsmqIntegrationBinding` lors de l’intégration des clients ou des services WCF avec des clients ou services non-WCF. L’application non-WCF peut être une application MSMQ écrite à l’aide de System.Messaging, COM +, Visual Basic ou C++.  
+ Utilisez `MsmqIntegrationBinding` lors de l’intégration des clients ou des services WCF avec les clients ou services non-WCF. L’application non-WCF peut être une application MSMQ écrite à l’aide de System.Messaging, COM +, Visual Basic ou C++.  
   
  Lorsque vous utilisez `MsmqIntegrationBinding`, sachez ce qui suit :  
   
--   Un corps de message WCF n’est pas un corps de message MSMQ. Lorsque vous envoyez un message WCF à l’aide d’une liaison en file d’attente, le corps du message WCF est placé dans un message MSMQ. L'infrastructure MSMQ oublie cette information supplémentaire ; elle ne voit que le message MSMQ.  
+-   Un corps de message WCF n’est pas un corps de message MSMQ. Lorsque vous envoyez un message WCF à l’aide d’une liaison en file d’attente, le corps du message WCF est placé à l’intérieur d’un message MSMQ. L'infrastructure MSMQ oublie cette information supplémentaire ; elle ne voit que le message MSMQ.  
   
 -   `MsmqIntegrationBinding` prend en charge les types de sérialisation les plus courants. Selon le type de sérialisation, le type de corps du message générique, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prend des paramètres de type différents. Par exemple, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requiert `MsmqMessage\<byte[]>` et <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> requiert `MsmqMessage<Stream>`.  
   
--   Avec la sérialisation XML, vous pouvez spécifier le type connu à l’aide de la `KnownTypes` de l’attribut le [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) élément qui est ensuite utilisé pour déterminer comment désérialiser le message XML.  
+-   Avec la sérialisation XML, vous pouvez spécifier le type connu à l’aide de la `KnownTypes` d’attribut sur le [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) élément qui est ensuite utilisé pour déterminer comment désérialiser le message XML.  
   
-## <a name="see-also"></a>Voir aussi  
- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Guide pratique pour échanger des messages en file d’attente avec des points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Guide pratique pour échanger des messages avec des points de terminaison WCF et des applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Regroupement de messages mis en file d’attente dans une session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- [Traitement par lots des messages dans une transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- [Utilisation de files d’attente de lettres mortes pour gérer des défaillances de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- [Sécurisation des messages à l’aide de la sécurité de transport](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Sécurisation des messages à l’aide de la sécurité de message](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- [Résolution des problèmes de messagerie en file d’attente](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+## <a name="see-also"></a>Voir aussi
+- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Guide pratique pour Échanger des Messages en file d’attente avec les points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Guide pratique pour Échanger des Messages avec les points de terminaison WCF et Message Queuing des Applications](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Regroupement de messages mis en file d’attente dans une session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
+- [Traitement par lots des messages dans une transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
+- [Utilisation de files d’attente de lettres mortes pour gérer des défaillances de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Sécurisation des messages à l’aide de la sécurité de transport](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Sécurisation des messages à l’aide de la sécurité de message](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
+- [Résolution des problèmes de messagerie en file d’attente](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

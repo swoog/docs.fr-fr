@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
-ms.openlocfilehash: 7d8bf87150fa6e05021dd430217ae130a6baa208
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 033da165bfc0535f0091c79230b45c0d89dead31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33634844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736440"
 ---
 # <a name="device-unavailable"></a>Périphérique non disponible
 Soit vous avez perdu votre connexion réseau, soit l’appareil auquel vous essayez d’accéder est hors connexion ou n’existe pas.  
@@ -20,5 +20,5 @@ Soit vous avez perdu votre connexion réseau, soit l’appareil auquel vous essa
   
 2.  Reconnectez-vous au réseau et réessayez.  
   
-## <a name="see-also"></a>Voir aussi  
- [Types d’erreurs](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Voir aussi
+- [Types d’erreurs](../../visual-basic/programming-guide/language-features/error-types.md)

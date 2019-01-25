@@ -5,12 +5,12 @@ ms.date: 06/05/2018
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 6730238a73b41faa4409fdfc75af1de36f31d13e
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569600"
 ---
 # <a name="system-provided-bindings"></a>Liaisons fournies par le système
 
@@ -58,38 +58,38 @@ Les liaisons suivantes sont fournies avec WCF :
 |Liaison|Interopérabilité|Sécurité (valeur par défaut)|Session<br />(Default)|Transactions|Duplex|Encodage (Valeur par défaut)|Diffusion en continu<br />(Default)|
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|
 |<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Aucun), transport, message, mixte|(Aucun)|(Aucun)|N/A|Texte, (MTOM)|Oui<br />(mis en mémoire tampon)|
-|<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (message), mixte|(Aucun), session fiable, session de sécurité|(Aucun), oui|N/A|(Texte), MTOM|Non|
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Message), aucun|(Session fiable), session de sécurité|(Aucun), oui|Oui|(Texte), MTOM|Non|
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Message), mixte, aucun|(Aucun), session fiable, session de sécurité|(Aucun), oui|Non|(Texte), MTOM|Non|
+|<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (message), mixte|(Aucun), session fiable, session de sécurité|(Aucun), oui|N/A|(Texte), MTOM|Aucune|
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Message), aucun|(Session fiable), session de sécurité|(Aucun), oui|Oui|(Texte), MTOM|Aucune|
+|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Message), mixte, aucun|(Aucun), session fiable, session de sécurité|(Aucun), oui|Aucune|(Texte), MTOM|Aucune|
 |<xref:System.ServiceModel.NetHttpBinding>|.NET|(None), Transport, Message, TransportWithMessageCredential, TransportCredentialOnly|Voir la remarque ci-dessous|Aucun.|Voir la remarque ci-dessous|(Binaire), Texte, MTOM|Oui (mis en mémoire tampon)|
 |<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Voir la remarque ci-dessous|Aucun.|Voir la remarque ci-dessous|(Binaire), Texte, MTOM|Oui<br />(mis en mémoire tampon)|
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transport), message, aucun, mixte|(Transport), session fiable, session de sécurité|(Aucun), oui|Oui|Binaire|Oui<br />(mis en mémoire tampon)|
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transport), aucun|Aucun, (Transport)|(Aucun), oui|Oui|Binaire|Oui<br />(mis en mémoire tampon)|
-|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Message, (Transport), Aucun|(Aucun), Transport|Aucun, (Oui)|Non|Binaire|Non|
-|<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|(Transport)|(Aucun)|(Aucun)|Oui||Non|
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transport)|(Aucun)|Aucun, (Oui)|N/A|N/A|Non|
+|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Message, (Transport), Aucun|(Aucun), Transport|Aucun, (Oui)|Aucune|Binaire|Aucune|
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|(Transport)|(Aucun)|(Aucun)|Oui||Aucune|
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transport)|(Aucun)|Aucun, (Oui)|N/A|N/A|Aucune|
 |<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(Aucun), transport, message, mixte|(Aucun)|(Aucun)|N/A|Texte, (MTOM)|Oui<br />(mis en mémoire tampon)|
 |<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transport), message, aucun, mixte|(Transport), session fiable, session de sécurité|(Aucun), oui|Oui|Binaire|Oui<br />(mis en mémoire tampon)|
-|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (message), mixte|(Aucun), session fiable, session de sécurité|(Aucun), oui|N/A|Texte, (MTOM)|Non|
-|<xref:System.ServiceModel.UdpBinding> <br /><br /> **Remarque :** Vous pouvez obtenir une interopérabilité en implémentant la spécification standard SOAP sur UDP implémentée par cette liaison.|.NET|(Aucun)|(Aucun)|(Aucun)|N/A|(Texte)|Non|
+|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (message), mixte|(Aucun), session fiable, session de sécurité|(Aucun), oui|N/A|Texte, (MTOM)|Aucune|
+|<xref:System.ServiceModel.UdpBinding> <br /><br /> **Remarque :**  L’interopérabilité peut être obtenue en implémentant la spécification standard SOAP sur UDP implémentée par cette liaison.|.NET|(Aucun)|(Aucun)|(Aucun)|N/A|(Texte)|Aucune|
 
 > [!IMPORTANT]
-> <xref:System.ServiceModel.NetHttpBinding> est une liaison conçue pour consommer des services HTTP ou WebSocket et utilise l'encodage binaire par défaut. <xref:System.ServiceModel.NetHttpBinding> détecte s’il est utilisé avec un contrat de requête-réponse ou un contrat duplex, puis change son comportement de manière appropriée. Il utilise le protocole HTTP pour les contrats de requête-réponse et WebSockets pour les contrats duplex. Vous pouvez remplacer ce comportement à l’aide du paramètre de liaison <xref:System.ServiceModel.Channels.WebSocketTransportUsage> : WhenDuplex. Il s’agit de la valeur par défaut, dont le comportement est décrit ci-dessus. Jamais - Empêche l'utilisation de WebSockets. Toute tentative d’utilisation d’un contrat duplex avec ce paramètre entraîne une exception. Toujours - Force l'utilisation de WebSockets même pour les contrats de demande-réponse. NetHttpBinding prend en charge les sessions fiables en mode HTTP et en mode WebSocket. Les sessions en mode WebSocket sont fournies par le transport.
+> <xref:System.ServiceModel.NetHttpBinding> est une liaison conçue pour consommer des services HTTP ou WebSocket et utilise l'encodage binaire par défaut. <xref:System.ServiceModel.NetHttpBinding> détecte s’il est utilisé avec un contrat de requête-réponse ou un contrat duplex, puis change son comportement de manière appropriée. Il utilise le protocole HTTP pour les contrats de requête-réponse et WebSockets pour les contrats duplex. Ce comportement peut être remplacé à l’aide de le <xref:System.ServiceModel.Channels.WebSocketTransportUsage> paramètre de liaison : WhenDuplex - Il s'agit de la valeur par défaut et elle se comporte de la façon décrite ci-dessus. Jamais - Empêche l'utilisation de WebSockets. Toute tentative d’utilisation d’un contrat duplex avec ce paramètre entraîne une exception. Toujours - Force l'utilisation de WebSockets même pour les contrats de demande-réponse. NetHttpBinding prend en charge les sessions fiables en mode HTTP et en mode WebSocket. Les sessions en mode WebSocket sont fournies par le transport.
 
  Le tableau suivant explique les fonctionnalités répertoriées dans le tableau précédent.
 
 |Fonctionnalité|Description|
 |-------------|-----------------|
 |Type d'interopérabilité|Nomme le protocole ou la technologie avec laquelle la liaison garantit l'interopérabilité.|
-|Sécurité|Définit le mode de sécurisation du canal :<br />- Aucun : le message SOAP n’est pas sécurisé et le client n’est pas authentifié.<br />- Transport : les exigences de sécurité sont satisfaites au niveau de la couche transport.<br />- Message : les exigences de sécurité sont satisfaites au niveau de la couche message.<br />- Mixte : les revendications sont contenues dans le message ; les exigences d’intégrité et de confidentialité sont satisfaites par la couche transport.|
+|Sécurité|Définit le mode de sécurisation du canal :<br />-None : Le message SOAP n’est pas sécurisé et le client n’est pas authentifié.<br />-Transport : Exigences de sécurité sont satisfaites au niveau de la couche de transport.<br />-Message : Exigences de sécurité sont satisfaites au niveau de la couche de message.<br />-Mixte : Revendications sont contenues dans le message. les exigences de l’intégrité et la confidentialité sont satisfaites par la couche de transport.|
 |Session|Spécifie si cette liaison prend en charge des contrats de session.|
 |Transactions|Spécifie si les transactions sont activées.|
 |Duplex|Spécifie si les contrats duplex sont pris en charge. Notez que cette fonctionnalité requiert la prise en charge des sessions dans la liaison.|
-|Encodage|Spécifie le format de câble du message. Les valeurs autorisées incluent :<br />- Texte : UTF-8, par exemple.<br />- Binaire<br />- MTOM (Message Transmission Optimization Mechanism) : méthode permettant d’encoder efficacement des éléments XML binaires dans le contexte d’une enveloppe SOAP.|
-|Streaming|Spécifie si le streaming est pris en charge pour les messages entrants et sortants. Utilisez la propriété `TransferMode` sur la liaison pour définir la valeur. Les valeurs autorisées incluent :<br />- <xref:System.ServiceModel.TransferMode.Buffered> : les messages de requête et de réponse sont tous deux mis en mémoire tampon.<br />- <xref:System.ServiceModel.TransferMode.Streamed> : les messages de requête et de réponse font tous deux l’objet d’un streaming.<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest> : le message de requête fait l’objet d’un streaming et le message de réponse est mis en mémoire tampon.<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse> : le message de requête est mis en mémoire tampon et le message de réponse fait l’objet d’un streaming.|
+|Encodage|Spécifie le format de câble du message. Les valeurs autorisées incluent :<br />- Texte : UTF-8, par exemple.<br />- Binaire<br />-Message Transmission Optimization Mechanism (MTOM) : Une méthode permettant d’encoder efficacement des éléments XML binaires dans le contexte d’une enveloppe SOAP.|
+|Diffusion en continu|Spécifie si la diffusion en continu est prise en charge pour les messages entrants et sortants. Utilisez la propriété `TransferMode` sur la liaison pour définir la valeur. Les valeurs autorisées incluent :<br />- <xref:System.ServiceModel.TransferMode.Buffered> : Les messages de demande et de réponse sont mis en mémoire tampon.<br />- <xref:System.ServiceModel.TransferMode.Streamed> : Les messages de demande et de réponse sont transmis en continu.<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest> : Le message de demande est transmis en continu et le message de réponse est mis en mémoire tampon.<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse> : Le message de demande est mis en mémoire tampon et le message de réponse est transmis en continu.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la création de points de terminaison](endpoint-creation-overview.md)  
-[Utilisation de liaisons pour configurer des services et des clients](using-bindings-to-configure-services-and-clients.md)  
-[Programmation WCF de base](basic-wcf-programming.md)  
+- [Vue d’ensemble de la création de points de terminaison](endpoint-creation-overview.md)
+- [Utilisation de liaisons pour configurer des services et des clients](using-bindings-to-configure-services-and-clients.md)
+- [Programmation WCF de base](basic-wcf-programming.md)

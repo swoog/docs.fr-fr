@@ -2,12 +2,12 @@
 title: UriTemplate et UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722606"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate et UriTemplateTable
 Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la disposition des URI auxquels leurs services répondent. Windows Communication Foundation (WCF) ajouté deux nouvelles classes pour permettre aux développeurs de contrôler leurs URI. <xref:System.UriTemplate> et <xref:System.UriTemplateTable> constituent la base du moteur de répartition reposant sur l’URI de WCF. Ces classes peuvent également être utilisées sur leur propre, ce qui permet aux développeurs de tirer parti des modèles et l’URI de mécanisme de mappage sans avoir à implémenter un service WCF.  
@@ -36,7 +36,7 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
   
  <xref:System.UriTemplate.ToString> retourne la chaîne du modèle.  
   
- La propriété <xref:System.UriTemplate.PathSegmentVariableNames%2A> contient une collection des noms des variables utilisés dans les segments de chemin d'accès de la chaîne du modèle.  
+ La propriété <xref:System.UriTemplate.PathSegmentVariableNames%2A> contient une collection des noms des variables utilisés dans les segments de chemin d’accès de la chaîne du modèle.  
   
  <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> prend <xref:System.UriTemplate> comme paramètre et retourne une valeur booléenne qui spécifie si les deux modèles sont équivalents. Pour plus d’informations, consultez la section d’équivalence des modèles plus loin dans cette rubrique.  
   
@@ -87,13 +87,13 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
   
 - « CHAUSSURE / {bateau} /\*»  
   
-- « CHAUSSURE/bateau ? x = 2 »  
+- "shoe/boat?x=2"  
   
 - « CHAUSSURE / {bateau} ? x = {lit} »  
   
 - "chaussure/{bateau}?x={lit}&y=bande"  
   
-- « ? x = {CHAUSSURE} »  
+- "?x={shoe}"  
   
 - "chaussure?x=3&y={var}  
   
@@ -129,7 +129,7 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
 - /{chaussure}{bateau} – Les variables doivent être séparées par un littéral.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segments de chemin d'accès composés et correspondants  
- Les segments de chemin d’accès composés vous permettent de définit un modèle d’URI ayant plusieurs variables dans un seul segment de chemin d’accès. Par exemple, dans la chaîne de modèle suivante : « adresses / {état}. {Ville} » deux variables (état et ville) sont définis dans le même segment. Ce modèle correspondrait à une URL comme `http://example.com/Washington.Redmond` mais aussi à une URL comme `http://example.com/Washington.Redmond.Microsoft`. Dans ce cas, la variable d’état contiendra « Washington » et la variable de ville contiendra « Redmond.Microsoft ». Dans ce cas, tout texte (sauf ‘/’) correspondra à la variable {ville}. Si vous voulez un modèle qui ne correspondra pas le texte « supplémentaire », placez la variable dans un segment de modèle séparé, par exemple : « adresses / {état} / {ville}.  
+ Les segments de chemin d’accès composés vous permettent de définit un modèle d’URI ayant plusieurs variables dans un seul segment de chemin d’accès. Par exemple, dans la chaîne de modèle suivante : « Adresses / {state}. {Ville} » deux variables (état et ville) sont définis dans le même segment. Ce modèle correspondrait à une URL comme `http://example.com/Washington.Redmond` mais aussi à une URL comme `http://example.com/Washington.Redmond.Microsoft`. Dans ce cas, la variable d’état contiendra « Washington » et la variable de ville contiendra « Redmond.Microsoft ». Dans ce cas, tout texte (sauf ‘/’) correspondra à la variable {ville}. Si vous voulez un modèle qui ne correspondra pas le texte « supplémentaire », placez la variable dans un segment de modèle séparé, par exemple : « Adresses / {état} / {ville}.  
   
 ### <a name="named-wildcard-segments"></a>Segments de caractère générique nommés  
  Un segment de caractère générique nommé est tout segment variable de chemin d’accès dont le nom de variable commence par le caractère générique '\*'. La chaîne de modèle suivante contient un segment de caractère générique nommé « chaussure ».  
@@ -328,9 +328,9 @@ Si une variable a une valeur par défaut `null`, quelques contraintes supplémen
 > [!NOTE]
 > Les caractères á et Á sont considérés comme des caractères différents lorsqu'ils apparaissent dans le cadre d'un chemin d'accès d'URI ou d'un littéral de segment de chemin d'accès <xref:System.UriTemplate> (en revanche, les caractères a et A sont considérés comme identiques). Les caractères á et Á sont considérés comme identiques lorsqu'ils apparaissent dans le cadre d'un {nomVariable} <xref:System.UriTemplate> ou d'une chaîne de demande (a et A sont également considérés comme identiques).  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Modèle objet de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [Table UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [Répartiteur de table UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble du modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Modèle objet de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [Table UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [Répartiteur de table UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

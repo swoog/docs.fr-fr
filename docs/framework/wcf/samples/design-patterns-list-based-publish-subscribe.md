@@ -1,15 +1,15 @@
 ---
-title: 'Design Patterns : List-Based Publish-Subscribe'
+title: 'Modèles de conception : Liste de publication / abonnement basé'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 87151cb8e50f526838565b22088f117941d6ab98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717890"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>Design Patterns : List-Based Publish-Subscribe
+# <a name="design-patterns-list-based-publish-subscribe"></a>Modèles de conception : Liste de publication / abonnement basé
 Cet exemple illustre le modèle basé sur une liste de publication / abonnement implémenté comme un programme Windows Communication Foundation (WCF).  
   
 > [!NOTE]

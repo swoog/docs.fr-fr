@@ -1,5 +1,5 @@
 ---
-title: "Comment : trier les résultats d'une requête à l'aide de LINQ (Visual Basic)"
+title: 'Procédure : Trier les résultats de requête à l’aide de LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - sorting query results, multiple columns
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 5104ef5714819bd69cfd5b6d754e81b97f235e31
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 04e8f6eaa06577ac556dbed89088f6268aae81df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672771"
 ---
-# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Comment : trier les résultats d'une requête à l'aide de LINQ (Visual Basic)
+# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Procédure : Trier les résultats de requête à l’aide de LINQ (Visual Basic)
 Language-Integrated Query (LINQ) facilite l’accès aux informations de base de données et exécuter des requêtes.  
   
  L’exemple suivant montre comment créer une application qui effectue des requêtes sur une base de données SQL Server et trie les résultats par plusieurs champs à l’aide de la `Order By` clause. L’ordre de tri pour chaque champ peut l’ordre croissant ou décroissant. Pour plus d’informations, consultez [Clause Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
@@ -73,8 +73,8 @@ Language-Integrated Query (LINQ) facilite l’accès aux informations de base de
   
 4.  Appuyez sur F5 pour exécuter votre projet et afficher les résultats.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Requêtes](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext, méthodes (Concepteur O/R)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>Voir aussi
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Requêtes](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext, méthodes (Concepteur O/R)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
