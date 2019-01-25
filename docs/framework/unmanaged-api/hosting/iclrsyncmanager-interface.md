@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4b949466c5557415ec06bac601380675beed7fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549861"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager, interface
 Définit des méthodes qui permettent à l’hôte pour obtenir des informations sur les tâches demandées et pour détecter les blocages dans son implémentation de synchronisation.  
@@ -44,8 +44,8 @@ Définit des méthodes qui permettent à l’hôte pour obtenir des informations
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Threading.Thread>  
- [IHostSyncManager, interface](ihostsyncmanager-interface.md)  
- [Threading managé et non managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
- [Interfaces d’hébergement](hosting-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Threading.Thread>
+- [IHostSyncManager, interface](ihostsyncmanager-interface.md)
+- [Threading managé et non managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [Interfaces d’hébergement](hosting-interfaces.md)

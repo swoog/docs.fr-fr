@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 3a16952c5cd3759873faeb0fce45b8aa5170b083
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752047"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693796"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Élément personnalisé pour NameValueSectionHandler et DictionarySectionHandler
 
@@ -24,7 +24,7 @@ Définit les paramètres pour les sections de configuration personnalisées qui 
 
 ## <a name="attributes"></a>Attributs
 
-Aucun
+Aucun.
 
 ## <a name="parent-element"></a>Élément parent
 
@@ -42,7 +42,7 @@ Aucun
 
 ## <a name="remarks"></a>Notes
 
-Le  **\<sectionName >** est un élément personnalisé défini par un  **\<section >** de balise dans le  **\<configSections >** élément.
+Le  **\<sectionName >** est un élément personnalisé défini par un  **\<section >** balise dans le  **\<configSections >** élément.
 
 Le tableau suivant présente que le type d’objet de la méthode ConfigurationSettings.GetConfig retourne pour chaque gestionnaire de section de configuration :
 
@@ -55,7 +55,7 @@ Le tableau suivant présente que le type d’objet de la méthode ConfigurationS
 
 L’exemple suivant montre comment déclarer les sections qui utilisent le <xref:System.Configuration.DictionarySectionHandler> et <xref:System.Configuration.NameValueSectionHandler> classes. 
 
-Le premier élément personnalisé est  **\<dictionarySample >**, qui contient les paramètres de lecture par le <xref:System.Configuration.DictionarySectionHandler> classe dans le `System.dll` assembly. Le deuxième élément personnalisé est  **\<MaSection >**, qui contient les paramètres de lecture par le <xref:System.Configuration.NameValueSectionHandler> classe dans le `System.dll` assembly.
+Le premier élément personnalisé est  **\<dictionarySample >**, qui contient les paramètres lus par le <xref:System.Configuration.DictionarySectionHandler> classe dans le `System.dll` assembly. Le deuxième élément personnalisé est  **\<mySection >**, qui contient les paramètres lus par le <xref:System.Configuration.NameValueSectionHandler> classe dans le `System.dll` assembly.
 
 ```xml
 <configuration>
@@ -78,8 +78,8 @@ Le premier élément personnalisé est  **\<dictionarySample >**, qui contient l
 
 ## <a name="configuration-file"></a>fichier de configuration
 
-Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* les fichiers qui ne sont pas au niveau du répertoire d’application.
+Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* fichiers qui ne sont pas au niveau du répertoire d’application.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Schéma de fichier de configuration pour le .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schéma de fichier de configuration pour le .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: b48fb59f0927056c8dba75211b4fffa6f25c5c52
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 7a0b513e5045db609550133e20c20ef65f17844c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551916"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Création et utilisation de composants dans Visual Basic
 Un *composant* est une classe qui implémente l’interface <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> ou qui dérive directement ou indirectement d’une classe implémentant <xref:System.ComponentModel.IComponent>. Un composant [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] est un objet réutilisable qui peut interagir avec d’autres objets, qui permet de contrôler les ressources externes et qui offre une prise en charge au moment du design.  
@@ -62,6 +62,6 @@ Un *composant* est une classe qui implémente l’interface <xref:System.Compone
  [Dépannage de la création de contrôles et de composants](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Explique comment résoudre certains problèmes courants.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour accéder à la prise en charge au moment du design dans les Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- 
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Prise en charge d’accès au moment du Design dans les Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+

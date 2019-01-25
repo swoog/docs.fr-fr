@@ -2,12 +2,12 @@
 title: Problèmes de sécurité relatifs à la journalisation des messages
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731996"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problèmes de sécurité relatifs à la journalisation des messages
 Cette rubrique contient des instructions permettant de protéger des données sensibles afin d'éviter qu'elles ne soient visibles dans les journaux des messages et de protéger les événements générés par l'enregistrement des messages.  
@@ -99,16 +99,16 @@ Cette rubrique contient des instructions permettant de protéger des données se
 ## <a name="events-triggered-by-message-logging"></a>Événements déclenchés par la journalisation des messages  
  La section suivante répertorie tous les événements émis par la journalisation des messages.  
   
--   Journalisation des messages activée : cet événement est émis lorsque la journalisation des messages est activée dans la configuration ou via WMI. Le contenu de l'événement est "La journalisation des messages a été activée. Des informations sensibles peuvent être enregistrées en clair, même si elles ont été chiffrées sur le câble, par exemple, corps de message."  
+-   Enregistrement des messages : Cet événement est émis lors de l’enregistrement des messages est activé dans la configuration ou via WMI. Le contenu de l'événement est "La journalisation des messages a été activée. Des informations sensibles peuvent être enregistrées en clair, même si elles ont été chiffrées sur le câble, par exemple, corps de message."  
   
--   Journalisation des messages désactivée : cet événement est émis lorsque la journalisation des messages est désactivée via WMI. Le contenu de l'événement est "La journalisation des messages a été activée."  
+-   Message de déconnexion : Cet événement est émis lorsque la journalisation des messages est désactivée via WMI. Le contenu de l'événement est "La journalisation des messages a été activée."  
   
--   Enregistrement des informations personnelles connues activé : cet événement est émis lorsque l'enregistrement des données personnelles connues est activé. Cela se produit lorsque le `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `true`et le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`.  
+-   Ouvrez une session PII connu : Cet événement est émis lors de l’enregistrement des PII connu est activé. Cela se produit lorsque le `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `true`et le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`.  
   
--   Enregistrement des informations personnelles connues activé non autorisé : cet événement est émis lorsque l'enregistrement des informations personnelles connues n'est pas autorisé. Cela se produit lorsque le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`, mais la `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `false`. Aucune exception n'est levée.  
+-   Ouvrez une session PII connu ne pas autorisé : Cet événement est émis lors de l’enregistrement des PII connu n’est pas autorisé. Cela se produit lorsque le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`, mais la `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `false`. Aucune exception n'est levée.  
   
  Ces événements peuvent être affichés dans l'outil Observateur d'événements fourni avec Windows. Pour plus d’informations, consultez [la consignation des événements](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Journalisation des messages](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Problèmes de sécurité et conseils utiles pour le suivi](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>Voir aussi
+- [Journalisation des messages](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Problèmes de sécurité et conseils utiles pour le suivi](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

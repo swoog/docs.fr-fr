@@ -1,5 +1,5 @@
 ---
-title: 'Comment : convertir des chaînes hexadécimales en nombres (Visual Basic)'
+title: 'Procédure : Convertir des chaînes hexadécimales en nombres (Visual Basic)'
 ms.date: 01/31/2018
 helpviewer_keywords:
 - numbers [Visual Basic], hexadecimals
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: 65184bbb742ad549a8398d55dc7bdeed05a9d973
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 76acee8913df35d4d071017078b38a3c474c3357
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633810"
 ---
-# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Comment : convertir des chaînes hexadécimales en nombres (Visual Basic)
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Procédure : Convertir des chaînes hexadécimales en nombres (Visual Basic)
 Cet exemple convertit une chaîne hexadécimale en un entier à l’aide de la <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> (méthode).  
   
 ## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Pour convertir une chaîne hexadécimale en un nombre  
@@ -33,6 +33,6 @@ Cet exemple convertit une chaîne hexadécimale en un entier à l’aide de la <
 
    Si le préfixe ou un séparateur numérique est présente, l’appel à la <xref:System.Convert.ToInt32(System.String,System.Int32)> méthode lève un <xref:System.FormatException>.
 
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
- <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>

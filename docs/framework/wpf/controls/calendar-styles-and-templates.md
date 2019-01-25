@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 5398828d1526436ab5abbbd2e87515018b0cd8bf
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: a92882e7e1f1b5c24b613c61b575df8c34832f5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517447"
 ---
 # <a name="calendar-styles-and-templates"></a>Styles et modèles Calendar
-Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.Calendar> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.Calendar> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="calendar-parts"></a>Éléments de calendrier  
+## <a name="calendar-parts"></a>Parties de calendrier  
  Le tableau suivant répertorie les composants nommés pour le <xref:System.Windows.Controls.Calendar> contrôle.  
   
 |Élément|Type|Description|  
 |-|-|-|  
-|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Le mois actuellement affiché ou une année sur le <xref:System.Windows.Controls.Calendar>.|  
-|PART_Root|<xref:System.Windows.Controls.Panel>|Le panneau de configuration qui contient la <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
+|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Le mois affiché actuellement ou l’année sur le <xref:System.Windows.Controls.Calendar>.|  
+|PART_Root|<xref:System.Windows.Controls.Panel>|Le panneau qui contient le <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
   
 ## <a name="calendar-states"></a>États de calendrier  
  Le tableau suivant répertorie les états visuels pour le <xref:System.Windows.Controls.Calendar> contrôle.  
@@ -44,10 +44,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |PART_Root|<xref:System.Windows.FrameworkElement>|La racine du contrôle.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|Le bouton qui affiche la page précédente du calendrier lorsque vous cliquez dessus.|  
 |PART_NextButton|<xref:System.Windows.Controls.Button>|Le bouton qui affiche la page suivante du calendrier lorsque vous cliquez dessus.|  
-|PART_HeaderButton|<xref:System.Windows.Controls.Button>|Le bouton qui permet de basculer entre le mode mois, année et décennie.|  
+|PART_HeaderButton|<xref:System.Windows.Controls.Button>|Le bouton qui permet de basculer entre le mode de mois, année et mode de dix ans.|  
 |PART_MonthView|<xref:System.Windows.Controls.Grid>|Héberge le contenu en mode mois.|  
 |PART_YearView|<xref:System.Windows.Controls.Grid>|Héberge le contenu en mode année ou décennie.|  
-|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|Le segment de recouvrement de l’état désactivé.|  
+|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|La superposition de l’état désactivé.|  
 |DayTitleTemplate|<xref:System.Windows.DataTemplate>|Le <xref:System.Windows.DataTemplate> qui décrit la structure visuelle.|  
   
 ## <a name="calendaritem-states"></a>États de CalendarItem  
@@ -83,9 +83,9 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |Avec focus|FocusStates|Le bouton a le focus.|  
 |Sans focus|FocusStates|Le bouton n’a pas le focus.|  
 |Actif|ActiveStates|Le bouton est actif.|  
-|Inactif|ActiveStates|Le bouton est inactif.|  
+|inactif|ActiveStates|Le bouton est inactif.|  
 |RegularDay|DayStates|Le bouton ne représente pas <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
-|Aujourd'hui|DayStates|Le bouton représente <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
+|Aujourd'hui|DayStates|Représente le bouton <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|Le bouton représente un jour qui peut être sélectionné.|  
 |BlackoutDay|BlackoutDayStates|Le bouton représente un jour qui ne peuvent pas être sélectionné.|  
 |Valide|ValidationStates|Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.|  
@@ -95,7 +95,7 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 ## <a name="calendarbutton-parts"></a>Composants de CalendarButton  
  Le <xref:System.Windows.Controls.Primitives.CalendarButton> contrôle n’a pas de composants nommés.  
   
-## <a name="calendarbutton-states"></a>Les États CalendarButton  
+## <a name="calendarbutton-states"></a>États de CalendarButton  
  Le tableau suivant répertorie les états visuels pour le <xref:System.Windows.Controls.Primitives.CalendarButton> contrôle.  
   
 |Nom VisualState|Nom VisualStateGroup|Description|  
@@ -111,7 +111,7 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |Avec focus|FocusStates|Le bouton a le focus.|  
 |Sans focus|FocusStates|Le bouton n’a pas le focus.|  
 |Actif|ActiveStates|Le bouton est actif.|  
-|Inactif|ActiveStates|Le bouton est inactif.|  
+|inactif|ActiveStates|Le bouton est inactif.|  
 |Valide|ValidationStates|Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.|  
 |InvalidFocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.|  
 |InvalidUnfocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.|  
@@ -127,10 +127,10 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

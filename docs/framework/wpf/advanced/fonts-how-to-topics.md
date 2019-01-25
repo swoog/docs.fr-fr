@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: b4a97c97-7f88-4a89-b1d1-cf2c0d087955
-ms.openlocfilehash: dea203ab62ae751cf59eb299db9ea39d44f8e26d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aefae32182a7bc808ac72f053c233305da32032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543800"
 ---
 # <a name="fonts-how-to-topics"></a>Rubriques "Comment" relatives aux polices
 Les rubriques de cette section montrent comment utiliser les fonctionnalités de police incluses avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -20,8 +20,8 @@ Les rubriques de cette section montrent comment utiliser les fonctionnalités de
  [Énumérer les polices système](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
  [Utiliser la classe FontSizeConverter](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FontStyle>  
- <xref:System.Windows.SystemFonts>  
- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Typographie dans WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FontStyle>
+- <xref:System.Windows.SystemFonts>
+- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Typographie dans WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

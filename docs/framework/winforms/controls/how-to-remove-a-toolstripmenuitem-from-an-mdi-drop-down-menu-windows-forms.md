@@ -1,5 +1,5 @@
 ---
-title: 'Comment : supprimer un ToolStripMenuItem d’un menu déroulant MDI (Windows Forms)'
+title: 'Procédure : Supprimer un ToolStripMenuItem d’un Menu du menu déroulant MDI (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-ms.openlocfilehash: 0649e99c682464928aaae68451b2cb29d5675485
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c650f8a26629d942aa4ccf0066aee6af4b51f8b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632060"
 ---
-# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Comment : supprimer un ToolStripMenuItem d’un menu déroulant MDI (Windows Forms)
+# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Procédure : Supprimer un ToolStripMenuItem d’un Menu du menu déroulant MDI (Windows Forms)
 Dans certaines applications, le type d'une fenêtre enfant d'interface multidocument (MDI) peut être différent de celui de la fenêtre parente MDI. Par exemple, le parent MDI peut être une feuille de calcul et l'enfant MDI un graphique. Dans ce cas, vous souhaitez mettre à jour le contenu du menu du parent MDI avec le contenu du menu de l'enfant MDI à mesure que des fenêtres enfants MDI de types différents sont activées.  
   
- La procédure suivante utilise le <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, et <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propriétés pour supprimer un élément de menu à partir de la partie déroulante du menu MDI parent. Fermeture de la fenêtre enfant MDI rétablit les éléments de menu supprimés du menu MDI parent.  
+ La procédure suivante utilise le <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, et <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propriétés à supprimer un élément de menu à partir de la partie déroulante du menu MDI parent. Fermeture de la fenêtre MDI enfant restaure les éléments de menu supprimé au menu MDI parent.  
   
-### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>Pour supprimer un MenuStrip dans un menu MDI  
+### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>Pour supprimer un MenuStrip dans le menu déroulant MDI  
   
 1.  Créez un formulaire et affectez la valeur `true` à sa propriété <xref:System.Windows.Forms.Form.IsMdiContainer%2A>.  
   
@@ -30,15 +30,15 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
   
 3.  Ajoutez un élément de menu de niveau supérieur au <xref:System.Windows.Forms.MenuStrip> de `Form1` et affectez la valeur `&File` à sa propriété <xref:System.Windows.Forms.Control.Text%2A>.  
   
-4.  Ajoutez trois éléments de sous-menu à le `&File` élément de menu et le jeu de leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés `&Open`, `&Import from`, et `E&xit`.  
+4.  Ajoutez trois éléments de sous-menu à la `&File` élément de menu et définissez leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés à `&Open`, `&Import from`, et `E&xit`.  
   
-5.  Ajouter deux éléments de sous-menu à le `&Import from` élément de sous-menu et ensemble leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés `&Word` et `&Excel`.  
+5.  Ajoutez deux éléments de sous-menu à la `&Import from` élément de sous-menu et définissez leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés à `&Word` et `&Excel`.  
   
 6.  Ajoutez un formulaire au projet, ajoutez un <xref:System.Windows.Forms.MenuStrip> au formulaire et affectez la valeur `true` à la propriété <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> du <xref:System.Windows.Forms.MenuStrip> de `Form2`.  
   
 7.  Ajoutez un élément de menu de niveau supérieur au <xref:System.Windows.Forms.MenuStrip> de `Form2` et affectez la valeur `&File` à sa propriété <xref:System.Windows.Forms.ToolStripItem.Text%2A>.  
   
-8.  Ajouter un `&Import from` élément de sous-menu à le `&File` menu de `Form2`et ajoutez une `&Word` élément de sous-menu à le `&File` menu.  
+8.  Ajouter un `&Import from` élément de sous-menu à la `&File` menu de `Form2`et ajoutez un `&Word` élément de sous-menu à le `&File` menu.  
   
 9. Définir le <xref:System.Windows.Forms.MergeAction> et <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propriétés de la `Form2` les éléments de menu comme indiqué dans le tableau suivant.  
   
@@ -48,7 +48,7 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
     |Importer à partir de|MatchOnly|-1|  
     |Word|Remove|-1|  
   
-10. Dans `Form1`, créez un gestionnaire d’événements pour le <xref:System.Windows.Forms.Control.Click> l’événement de la `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Dans `Form1`, créez un gestionnaire d’événements pour le <xref:System.Windows.Forms.Control.Click> événements de la `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 11. Dans le Gestionnaire d’événements, insérez du code semblable à l’exemple de code suivant pour créer et afficher les nouvelles instances de `Form2` en tant qu’enfants MDI de `Form1`:  
   
@@ -94,7 +94,7 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
   
 -   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour créer des formulaires MDI parents](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Guide pratique pour créer des formulaires MDI enfants](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Vue d'ensemble du contrôle MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Créer des formulaires MDI parents](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Guide pratique pour Créer des formulaires MDI enfants](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [Vue d'ensemble du contrôle MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1b7dbc8dffb15485ec035049d2da7aac6915eb58
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f8dfe0520e0db676a208dcd46a45db8fefe98703
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603740"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Automation et Microsoft Active Accessibility
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "48036212"
   
  Dans [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)], la navigation entre les éléments peut être spatiale (par exemple, un déplacement vers l’élément qui se trouve à gauche de l’écran), logique (par exemple, un déplacement vers l’élément de menu suivant ou vers l’élément suivant dans l’ordre de tabulation d’une boîte de dialogue) ou hiérarchique (par exemple, un déplacement du premier enfant dans un conteneur ou d’un enfant vers son parent). La navigation hiérarchique est compliquée par le fait que les éléments enfants ne sont pas toujours des objets qui implémentent `IAccessible`.  
   
- Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], tous les éléments d’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sont des objets <xref:System.Windows.Automation.AutomationElement> qui prennent en charge les mêmes fonctionnalités de base. (Du point de vue du fournisseur, ce sont des objets qui implémentent une interface héritée <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>.) La navigation est principalement hiérarchique : des parents aux enfants et d’un frère à un autre. (La navigation entre frères a un élément logique, car elle peut suivre l’ordre de tabulation). Vous pouvez accéder à partir de n’importe quel point de départ, à l’aide de n’importe quelle vue filtrée de l’arborescence, à l’aide de la <xref:System.Windows.Automation.TreeWalker> classe. Vous pouvez également naviguer vers des enfants ou des descendants particuliers à l’aide de <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> et <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Par exemple, il est très simple de récupérer tous les éléments d’une boîte de dialogue qui prennent en charge un modèle de contrôle spécifié.  
+ Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], tous les éléments d’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sont des objets <xref:System.Windows.Automation.AutomationElement> qui prennent en charge les mêmes fonctionnalités de base. (Du point de vue du fournisseur, ce sont des objets qui implémentent une interface héritée de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>.) La navigation est principalement hiérarchique : des parents aux enfants et d’un frère à un autre. (La navigation entre frères a un élément logique, car elle peut suivre l’ordre de tabulation). Vous pouvez naviguer à partir de n’importe quel point de départ à l’aide d’une vue filtrée de l’arborescence, en utilisant la classe <xref:System.Windows.Automation.TreeWalker>. Vous pouvez également naviguer vers des enfants ou des descendants particuliers à l’aide de <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> et <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Par exemple, il est très simple de récupérer tous les éléments d’une boîte de dialogue qui prennent en charge un modèle de contrôle spécifié.  
   
  Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , la navigation est plus cohérente que dans [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Certains éléments tels que les listes déroulantes et les fenêtres indépendantes apparaissent deux fois dans l’arborescence [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] et le fait de naviguer depuis ces éléments peut entraîner des résultats inattendus. Il est en fait impossible d’implémenter correctement [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] pour un contrôle Rebar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permet la définition de l’état de parent et le repositionnement, afin qu’un élément puisse être placé n’importe où dans l’arborescence en dépit de la hiérarchie imposée par la propriété des fenêtres.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "48036212"
 |EVENT_OBJECT_SELECTIONWITHIN|Aucun équivalent|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|Différents événements de modification de propriété|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> et <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> modifié|  
+|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> et <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> modifiés|  
 |EVENT_SYSTEM_ALERT|Aucun équivalent|  
 |EVENT_SYSTEM_CAPTUREEND|Aucun équivalent|  
 |EVENT_SYSTEM_CAPTURESTART|Aucun équivalent|  
@@ -251,5 +251,5 @@ ms.locfileid: "48036212"
   
  Le modèle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] supprime le besoin qu’ont les fournisseurs d’appeler via un autre code de fournisseur. Le service principal [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] effectue toutes les opérations d’agrégation nécessaires.  
   
-## <a name="see-also"></a>Voir aussi  
- [Notions de base d’UI Automation](../../../docs/framework/ui-automation/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Notions de base d’UI Automation](../../../docs/framework/ui-automation/index.md)
