@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719974"
 ---
-# <a name="putinstancewmi-function"></a>PutInstanceWmi (fonction)
+# <a name="putinstancewmi-function"></a>PutInstanceWmi function
 Crée ou met à jour une instance d’une classe existante. L’instance est écrite dans le référentiel WMI. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -49,7 +49,7 @@ HRESULT PutInstanceWmi (
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0 x 20000 | Si la valeur, WMI ne stocke pas les qualificateurs avec le **modifié** flavor. </br> Si ce n’est pas ensemble, il est supposé que cet objet n’est pas localisé, et tous les qualificateurs sont storedwith cette instance. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si la valeur, WMI ne stocke pas les qualificateurs avec le **modifié** flavor. </br> Si ce n’est pas ensemble, il est supposé que cet objet n’est pas localisé, et tous les qualificateurs sont storedwith cette instance. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Créer l’instance s’il n’existe pas, ou remplacer si elle existe déjà. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Mettre à jour l’instance. L’instance doit exister pour l’appel réussisse. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Créer l’instance. L’appel échoue si l’instance existe déjà. |
@@ -67,12 +67,12 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0 x 80041003 | L’utilisateur n’a pas autorisé à mettre à jour une instance de la classe spécifiée. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Une erreur non spécifiée s’est produite. |
-| `WBEM_E_INVALID_CLASS` | 0 x 80041010 | La classe de prise en charge de cette instance n’est pas valide. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | L’utilisateur n’a pas autorisé à mettre à jour une instance de la classe spécifiée. |
+| `WBEM_E_FAILED` | 0x80041001 | Une erreur non spécifiée s’est produite. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | La classe de prise en charge de cette instance n’est pas valide. |
 | `WBEM_E_ILLEGAL_NULL` | 0x80041028 | un `null` a été spécifié pour une propriété qui ne peut pas être `null`, tel que celui qui est marquée par un **indexé** ou **Not_Null** qualificateur. |
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | L’instance spécifiée n’est pas valide. (Par exemple, l’appel `PutInstanceWmi` avec une classe retourne cette valeur.) |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre n’est pas valide. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | Le `WBEM_FLAG_CREATE_ONLY` indicateur a été spécifié, mais l’instance existe déjà. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` a été spécifié dans `lFlags`, mais l’instance n’existe pas. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
@@ -95,12 +95,12 @@ Appel de `PutInstanceWmi` sur une instance d’une classe abstraite n’est pas 
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

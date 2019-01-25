@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681064"
 ---
 # <a name="implements-statement"></a>Implements, instruction
 Spécifie une ou plusieurs interfaces, ou les membres d’interface, qui doivent être implémentées dans la classe ou sur définition de la structure dans laquelle elle apparaît.  
@@ -55,7 +55,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
- [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

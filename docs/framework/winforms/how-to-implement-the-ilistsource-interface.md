@@ -1,5 +1,5 @@
 ---
-title: "Comment : implémenter l'interface IListSource"
+title: 'Procédure : Implémenter l’Interface IListSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: 3b580208e003a1706cca8e9fdff4ab374b7193ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 331abebf3336d8444559c117f5747597bc3b0122
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728211"
 ---
-# <a name="how-to-implement-the-ilistsource-interface"></a>Comment : implémenter l'interface IListSource
-Implémenter le <xref:System.ComponentModel.IListSource> interface permettant de créer une classe pouvant être liée qui n’implémente pas <xref:System.Collections.IList> mais fournit à la place d’une liste à partir d’un autre emplacement.  
+# <a name="how-to-implement-the-ilistsource-interface"></a>Procédure : Implémenter l’Interface IListSource
+Implémenter le <xref:System.ComponentModel.IListSource> interface permettant de créer une classe pouvant être liée qui n’implémente pas <xref:System.Collections.IList> mais plutôt une liste à partir d’un autre emplacement.  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant montre comment implémenter la <xref:System.ComponentModel.IListSource> interface. Un composant nommé `EmployeeListSource` expose un <xref:System.Collections.IList> pour la liaison de données en implémentant le <xref:System.ComponentModel.IListSource.GetList%2A> (méthode).  
@@ -38,9 +38,9 @@ Implémenter le <xref:System.ComponentModel.IListSource> interface permettant de
   
 -   Références aux assemblys System.Drawing et System.Windows.Forms.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ComponentModel.IListSource>  
- <xref:System.ComponentModel.ITypedList>  
- <xref:System.ComponentModel.BindingList%601>  
- <xref:System.ComponentModel.IBindingList>  
- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ComponentModel.IListSource>
+- <xref:System.ComponentModel.ITypedList>
+- <xref:System.ComponentModel.BindingList%601>
+- <xref:System.ComponentModel.IBindingList>
+- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

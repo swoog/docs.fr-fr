@@ -1,5 +1,5 @@
 ---
-title: 'Comment : utiliser des certificats X.509 distincts pour les signatures et le chiffrement'
+title: 'Procédure : Utiliser des certificats X.509 distincts pour la signature et chiffrement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500484"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Comment : utiliser des certificats X.509 distincts pour les signatures et le chiffrement
-Cette rubrique montre comment configurer Windows Communication Foundation (WCF) pour utiliser différents certificats pour la signature et le cryptage sur le client et le service.  
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procédure : Utiliser des certificats X.509 distincts pour la signature et chiffrement
+Cette rubrique montre comment configurer Windows Communication Foundation (WCF) pour utiliser différents certificats pour la signature des messages et le chiffrement sur le client et le service.  
   
- Pour activer des certificats à utiliser pour la signature et le chiffrement, un client personnalisé service credentials (ou) doit être créés car WCF ne fournit pas d’une API pour définir plusieurs certificats de client ou le service. En outre, un gestionnaire de jetons de sécurité doit être configuré pour permettre l'exploitation des informations de l'ensemble des certificats et la création d'un fournisseur de jetons de sécurité qui convienne à l'utilisation des clés et à la direction des messages spécifiées.  
+ Pour activer différents certificats à utiliser pour la signature et le chiffrement, un client personnalisé ou service informations d’identification (et/ou) doit être créés car WCF ne fournit pas d’une API permettant de définir plusieurs certificats de client ou le service. En outre, un gestionnaire de jetons de sécurité doit être configuré pour permettre l'exploitation des informations de l'ensemble des certificats et la création d'un fournisseur de jetons de sécurité qui convienne à l'utilisation des clés et à la direction des messages spécifiées.  
   
  Le diagramme suivant montre les classes principales utilisées, les classes (indiquées par une flèche pointant vers le haut) desquelles ils héritent et les types de retour de certaines méthodes et propriétés.  
   
@@ -35,15 +35,15 @@ Cette rubrique montre comment configurer Windows Communication Foundation (WCF) 
   
  ![Graphique montrant l’utilisation des informations d’identification client](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   
- Pour plus d’informations sur les informations d’identification personnalisées, consultez [procédure pas à pas : création d’un Client personnalisé et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Pour plus d’informations sur les informations d’identification personnalisées, consultez [procédure pas à pas : Création du Client personnalisés et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  De plus, vous devez créer un vérificateur d’identité personnalisé et le lier à un élément de liaison de sécurité dans une liaison personnalisée. Vous devez également utiliser les informations d'identification personnalisées au lieu des informations d'identification par défaut.  
   
  Le diagramme suivant indique les classes impliquées dans la liaison personnalisée, et comment le vérificateur d’identité personnalisé est lié. Plusieurs éléments de liaison sont impliqués, qui héritent tous de <xref:System.ServiceModel.Channels.BindingElement>. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> a la propriété <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>, qui retourne une instance de <xref:System.ServiceModel.Security.IdentityVerifier>, à partir de laquelle `MyIdentityVerifier` est personnalisé.  
   
- ![Graphique indiquant un élément de liaison personnalisée](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
+ ![Graphique montrant un élément de liaison personnalisé](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
   
- Pour plus d’informations sur la création d’un vérificateur d’identité personnalisé, consultez Comment : [Comment : créer un vérificateur d’identité Client personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
+ Pour plus d’informations sur la création d’un vérificateur d’identité personnalisé, consultez Comment : [Guide pratique pour Créer un vérificateur d’identité Client personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Pour utiliser différents certificats dans les signatures et le chiffrement  
   
@@ -69,7 +69,7 @@ Cette rubrique montre comment configurer Windows Communication Foundation (WCF) 
   
 ### <a name="to-use-multiple-certificates-on-the-client"></a>Pour utiliser plusieurs certificats sur le client  
   
-1.  Créez une liaison personnalisée. L’élément de liaison de sécurité doit fonctionner en mode duplex pour permettre aux différents fournisseurs de jetons de sécurité d’être présents pendant les requêtes et les réponses. Pour ce faire, utilisez des méthodes de transfert compatibles avec le mode duplex ou utilisez l'élément <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, tel qu'illustré dans le code suivant. Liez le <xref:System.ServiceModel.Security.IdentityVerifier> personnalisé défini à l'étape suivante à l'élément de liaison de sécurité. Remplacez les informations d'identification du client par défaut par les informations d'identification du client personnalisées créées précédemment.  
+1.  Créez une liaison personnalisée. L’élément de liaison de sécurité doit fonctionner en mode duplex pour permettre aux différents fournisseurs de jetons de sécurité d’être présents pendant les requêtes et les réponses. Pour ce faire, utilisez des méthodes de transfert compatibles avec le mode duplex ou utilisez l'élément <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, tel qu'illustré dans le code suivant. Liez le <xref:System.ServiceModel.Security.IdentityVerifier> personnalisé défini à l’étape suivante à l’élément de liaison de sécurité. Remplacez les informations d'identification du client par défaut par les informations d'identification du client personnalisées créées précédemment.  
   
      [!code-csharp[c_FourCerts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#5)]
      [!code-vb[c_FourCerts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#5)]  
@@ -89,10 +89,10 @@ Cette rubrique montre comment configurer Windows Communication Foundation (WCF) 
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [Procédure pas à pas : création d’informations d’identification de client et de service personnalisées](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [Procédure pas à pas : Création du Client personnalisés et les informations d’identification de Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

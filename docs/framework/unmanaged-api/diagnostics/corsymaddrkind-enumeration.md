@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 389cf2e77728002ce1078f63df3d741d1847c105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744971"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind, énumération
-Indique le type d’adresse mémoire.  
+Indique le type d’adresse de mémoire.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,13 +54,13 @@ typedef enum CorSymAddrKind
 |`ADDR_NATIVE_REGREL`|Indique que la première adresse est un Registre et la deuxième adresse est un décalage.|  
 |`ADDR_NATIVE_OFFSET`|Indique un décalage à partir d’une adresse de base.|  
 |`ADDR_NATIVE_REGREG`|Indique que la première adresse est la partie basse d’un Registre, et la deuxième adresse est la partie haute.|  
-|`ADDR_NATIVE_REGSTK`|Indique que la première adresse est la partie basse d’un Registre et la seconde est la partie haute, et le troisième est un décalage.|  
-|`ADDR_NATIVE_STKREG`|Indique que la première adresse est un Registre et le second est un décalage, et le troisième est la partie haute du Registre.|  
+|`ADDR_NATIVE_REGSTK`|Indique que la première adresse est la partie basse d’un Registre, la seconde est la partie haute, et le troisième est un décalage.|  
+|`ADDR_NATIVE_STKREG`|Indique que la première adresse est un Registre, le second est un décalage, et le troisième est la partie haute du Registre.|  
 |`ADDR_BITFIELD`|Indique que la première adresse est le début d’un champ et la deuxième adresse est la longueur de champ.|  
 |`ADDR_NATIVE_ISECTOFFSET`|Indique que la première adresse est la section et la deuxième adresse est un décalage.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations du magasin de symboles de diagnostics](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations du magasin de symboles de diagnostics](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
