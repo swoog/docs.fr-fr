@@ -2,12 +2,12 @@
 title: Littéraux (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643102"
 ---
 # <a name="literals-entity-sql"></a>Littéraux (Entity SQL)
 Cette rubrique décrit la prise en charge des littéraux dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -17,7 +17,7 @@ Cette rubrique décrit la prise en charge des littéraux dans [!INCLUDE[esql](..
   
  Des valeurs Null typées peuvent être créées par cast sur un littéral Null. Pour plus d’informations, consultez [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
   
- Pour connaître les règles libre flottante littéraux null peut être utilisé, consultez [littéraux Null et inférence de Type](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Pour connaître les règles flottants littéraux null peuvent être utilisés, consultez [littéraux Null et inférence de Type](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Booléen  
  Les littéraux booléens sont représentés par les mots clés `true` et `false`.  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  Un littéral de date/heure (datetime) est indépendant des paramètres régionaux. Il est composé d'une partie date et d'une partie heure. Ces deux parties sont obligatoires et il n'existe pas de valeur par défaut.  
   
- La partie date doit avoir le format : `YYYY` - `MM` - `DD`, où `YYYY` est une valeur d’année à quatre chiffres comprise entre 0001 et 9999, `MM` est comprise entre 1 et 12 mois et `DD` est la valeur de jour est valide pour le mois donné `MM`.  
+ La partie date doit avoir le format : `YYYY` - `MM` - `DD`, où `YYYY` est une valeur d’année à quatre chiffres comprise entre 0001 et 9999, `MM` est comprise entre 1 et 12 mois et `DD` est la valeur du jour qui est valide pour le mois donné `MM`.  
   
  La partie heure doit avoir le format : `HH`:`MM`[:`SS`[.fffffff]], où `HH` est la valeur des heures comprise entre 0 et 23 inclus, `MM` est la valeur des minutes comprise entre 0 et 59 inclus, `SS` est la valeur des secondes comprise entre 0 et 59 inclus, et fffffff est la valeur des fractions de seconde comprise entre 0 et 9999999. Toutes les plages de valeurs sont inclusives. Les fractions de secondes sont facultatives. Les secondes sont facultatives à moins que les fractions de secondes soient spécifiées ; auquel cas, les secondes sont requises. Lorsque les secondes ou les fractions de secondes ne sont pas spécifiées, la valeur par défaut zéro est utilisée.  
   
@@ -92,7 +92,7 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>Guid  
- Un littéral `GUID` représente un identificateur global unique. Il s’agit d’une séquence formée par le mot clé `GUID` suivi de chiffres hexadécimaux dans le formulaire appelé *Registre* format : 8-4-4-4-12 entouré guillemets simples. Les chiffres hexadécimaux ne respectent pas la casse.  
+ Un littéral `GUID` représente un identificateur global unique. C’est une séquence formée par le mot clé `GUID` suivi de chiffres hexadécimaux présentés au format dit de *Registre* format : 8-4-4-4-12 entre guillemets simples. Les chiffres hexadécimaux ne respectent pas la casse.  
   
  Le symbole GUID et la charge utile du littéral peuvent être séparés d'autant d'espaces que nécessaire, mais pas de nouvelles lignes.  
   
@@ -101,5 +101,5 @@ Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

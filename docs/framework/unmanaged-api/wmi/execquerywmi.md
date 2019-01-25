@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc22edf51cbd726b69dff3da2f0540b2c3864f2e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6cd8992fc37c570b5ea20f8751bef729311bfb7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718193"
 ---
 # <a name="execquerywmi-function"></a>Execquerywmi, fonction
 Exécute une requête pour récupérer des objets.  
@@ -59,13 +59,13 @@ HRESULT ExecQueryWmi (
 
 | Constante | Value  | Description  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0 x 20000 | Si l’ensemble, la fonction récupère les qualificateurs stockées dans l’espace de noms localisé des paramètres régionaux de la connexion actuelle. <br/> Si ce n’est pas le cas, ensemble, la fonction récupère uniquement les qualificateurs stockées dans l’espace de noms immédiate. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si l’ensemble, la fonction récupère les qualificateurs stockées dans l’espace de noms localisé des paramètres régionaux de la connexion actuelle. <br/> Si ce n’est pas le cas, ensemble, la fonction récupère uniquement les qualificateurs stockées dans l’espace de noms immédiate. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | L’indicateur provoque un appel semi-synchrone. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | La fonction retourne un énumérateur avant uniquement. En règle générale, les énumérateurs avant uniquement sont plus rapides et utilisent moins de mémoire que les énumérateurs classiques, mais ils ne permettent pas d’appels à [Clone](clone.md). |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La fonction retourne un énumérateur avant uniquement. En règle générale, les énumérateurs avant uniquement sont plus rapides et utilisent moins de mémoire que les énumérateurs classiques, mais ils ne permettent pas d’appels à [Clone](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI conserve les pointeurs vers les objets dans l’enumration jusqu'à ce qu’ils sont libérés. | 
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0 x 100 | Permet de s’assurer que les objets retournés ont suffisamment d’informations dans leur par conséquent, ces propriétés système, telles que **__PATH**, **__RELPATH**, et **__SERVER**, ne sont pas `null`. |
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Permet de s’assurer que les objets retournés ont suffisamment d’informations dans leur par conséquent, ces propriétés système, telles que **__PATH**, **__RELPATH**, et **__SERVER**, ne sont pas `null`. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Cet indicateur est utilisé pour le prototypage. Il ne s’exécute pas la requête et retourne à la place un objet qui ressemble à un objet de résultat par défaut. |
-| `WBEM_FLAG_DIRECT_READ` | 0 x 200 | Entraîne un accès direct au fournisseur pour la classe spécifiée sans tenir compte de sa classe parente ou n’importe quelles sous-classes. |
+| `WBEM_FLAG_DIRECT_READ` | 0x200 | Entraîne un accès direct au fournisseur pour la classe spécifiée sans tenir compte de sa classe parente ou n’importe quelles sous-classes. |
 
 Les indicateurs recommandées sont `WBEM_FLAG_RETURN_IMMEDIATELY` et `WBEM_FLAG_FORWARD_ONLY` pour de meilleures performances.
 
@@ -98,9 +98,9 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0 x 80041003 | L’utilisateur n’a pas l’autorisation d’afficher un ou plusieurs des classes qui la fonction peut retourner. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Une erreur non spécifiée s’est produite. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | L’utilisateur n’a pas l’autorisation d’afficher un ou plusieurs des classes qui la fonction peut retourner. |
+| `WBEM_E_FAILED` | 0x80041001 | Une erreur non spécifiée s’est produite. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre n’est pas valide. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | La requête a dû à une erreur de syntaxe. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Le langage de requête demandé n’est pas pris en charge. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | La requête est trop complexe. |
@@ -120,12 +120,12 @@ Il existe des limites au nombre de `AND` et `OR` mots clés qui peuvent être ut
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

@@ -1,5 +1,5 @@
 ---
-title: "Comment : définir l'image affichée par un contrôle Windows Forms"
+title: 'Procédure : Définir l’Image affichée par un Windows Forms de contrôle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 4870f9e2acc48a90e1e2193d514926fedee05f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644922"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Comment : définir l'image affichée par un contrôle Windows Forms
-Plusieurs contrôles Windows Forms peuvent afficher des images. Ces images peuvent être des icônes qui clarifier l’objectif de contrôle, comme une icône de disquette sur un bouton qui dénote le **enregistrer** commande. Les icônes peuvent également être des images d’arrière-plan pour donner au contrôle l’apparence et le comportement de que votre choix.  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Procédure : Définir l’Image affichée par un Windows Forms de contrôle
+Plusieurs contrôles Windows Forms peuvent afficher des images. Ces images peuvent être des icônes qui clarifient l’objectif du contrôle, par exemple une icône de disquette sur un bouton qui dénote le **enregistrer** commande. Les icônes peuvent être également des images d’arrière-plan pour donner le contrôle l’apparence et le comportement de que votre choix.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Pour définir l’image affichée par un contrôle  
   
-1.  Valeur du contrôle `Image` ou `BackgroundImage` propriété à un objet de type <xref:System.Drawing.Image>. En règle générale, vous chargez l’image à partir d’un fichier à l’aide de la <xref:System.Drawing.Image.FromFile%2A> (méthode).  
+1.  Définir le contrôle `Image` ou `BackgroundImage` propriété à un objet de type <xref:System.Drawing.Image>. En règle générale, vous chargez l’image à partir d’un fichier à l’aide de la <xref:System.Drawing.Image.FromFile%2A> (méthode).  
   
      Dans l’exemple de code suivant, le chemin d’accès défini pour l’emplacement de l’image est la **Mes images** dossier. La plupart des ordinateurs exécutant le système d’exploitation Windows incluent ce répertoire. Cela permet également aux utilisateurs avec des niveaux d’accès système minimal exécuter l’application en toute sécurité. L’exemple de code suivant requiert que vous disposez déjà d’un formulaire avec un <xref:System.Windows.Forms.PictureBox> contrôle ajouté.  
   
@@ -56,7 +56,7 @@ Plusieurs contrôles Windows Forms peuvent afficher des images. Ces images peuve
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>

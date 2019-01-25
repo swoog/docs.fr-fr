@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: a792bbea108bcdf33d430c47773466ef3dccdb0c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 8a7b663368cab917cbabfc5ca089b266c47c5ee8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662372"
 ---
 # <a name="ltseealsogt-visual-basic"></a>&lt;seealso&gt; (Visual Basic)
 Spécifie un lien qui apparaît dans la section Voir aussi.  
@@ -23,7 +23,7 @@ Spécifie un lien qui apparaît dans la section Voir aussi.
   
 #### <a name="parameters"></a>Paramètres  
  `member`  
- Référence à un membre ou un champ qu’il est possible d’appeler à partir de l’environnement de compilation actuel. Le compilateur vérifie que l’élément de code donné existe et qu’il passe `member` au nom d’élément dans la sortie XML. `member` doit apparaître entre guillemets doubles (" ").  
+ Référence à un membre ou un champ qu’il est possible d’appeler à partir de l’environnement de compilation actuel. Le compilateur vérifie que l’élément de code donné existe, et qu’il passe `member` au nom d’élément dans le code XML de sortie. `member` doit apparaître entre guillemets doubles (" ").  
   
 ## <a name="remarks"></a>Notes  
  Utilisez le `<seealso>` balise pour spécifier le texte que vous souhaitez voir apparaître dans une section Voir aussi. Utilisez [\<see>](../../../visual-basic/language-reference/xmldoc/see.md) pour spécifier un lien à partir de l’intérieur du texte.  
@@ -35,5 +35,5 @@ Spécifie un lien qui apparaît dans la section Voir aussi.
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/seealso_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)

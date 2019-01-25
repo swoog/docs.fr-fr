@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48d688b64bbe9330a176ef073e96865b719ff2c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145659e8761b8c7804faf25e47a280a9d4f874b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679030"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource, méthode
 Crée une structure `ManifestResource` contenant les métadonnées pour la ressource de manifeste spécifiée et retourne le jeton de métadonnées associé.  
@@ -47,25 +47,25 @@ HRESULT DefineManifestResource (
  [in] Un jeton de métadonnées de type `mdtFile` ou `mdtAssemblyRef` qui mappe au fournisseur de ressources. Une valeur NULL indique que le fichier dans lequel les métadonnées sont incorporées est le fournisseur de ressources.  
   
  `dwOffset`  
- [in] Offset au début de la ressource dans le fichier. Pour les ressources dans les fichiers autonomes, il sera toujours zéro. Si la ressource est incorporée dans un fichier exécutable portable (fichier exécutable portable), il s’agit d’un décalage de l’objet BLOB, qui commence à l’emplacement spécifié dans le fichier d’en-tête cor.h de ressource.  
+ [in] Offset au début de la ressource dans le fichier. Pour les ressources dans les fichiers autonomes, il sera toujours égal à zéro. Si la ressource est incorporée dans un fichier PE (exécutable portable), il s’agit d’un décalage de l’objet BLOB, qui démarre à l’emplacement spécifié dans le fichier d’en-tête cor.h de ressources.  
   
  `dwResourceFlags`  
- [in] Combinaison de bits des valeurs d’indicateurs qui spécifient les paramètres de propriété pour la définition de ressource.  
+ [in] Une combinaison au niveau du bit des valeurs d’indicateurs qui spécifient les paramètres de propriété pour la définition de ressource.  
   
  `pmdmr`  
- [out] Pointeur vers le jeton de métadonnées retourné.  
+ [out] Pointeur vers le jeton de métadonnées retournées.  
   
 ## <a name="remarks"></a>Notes  
- Un `ManifestResource` structure de métadonnées doit être définie pour chaque ressource est implémentée dans chacun des fichiers de l’assembly.  
+ Un seul `ManifestResource` structure des métadonnées doit être définie pour chaque ressource est implémentée dans chacun des fichiers de l’assembly.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateforme :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateforme :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

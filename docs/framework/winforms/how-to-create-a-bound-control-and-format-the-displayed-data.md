@@ -1,19 +1,19 @@
 ---
-title: 'Comment : créer un contrôle dépendant et mettre en forme les données affichées'
+title: 'Procédure : Créer un contrôle dépendant et mettre en forme les données affichées'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45614996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689729"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Comment : créer un contrôle dépendant et mettre en forme les données affichées
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procédure : Créer un contrôle dépendant et mettre en forme les données affichées
 Avec la liaison de données Windows Forms, vous pouvez mettre en forme les données affichées dans un contrôle lié aux données à l’aide de la **mise en forme et liaison avancée** boîte de dialogue.  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ Avec la liaison de données Windows Forms, vous pouvez mettre en forme les donn�
     |Devise|Spécifiez le nombre de décimales à l’aide de **décimales** contrôle up-down.|  
     |Date et heure|Sélectionnez comment la date et l’heure doivent être affichées en sélectionnant un des éléments dans le **Type** zone de sélection.|  
     |Scientifique|Spécifiez le nombre de décimales à l’aide de **décimales** contrôle up-down.|  
-    |Personnalisé|Spécifiez une chaîne de format personnalisée.<br /><br /> Pour plus d’informations, consultez [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md). **Remarque :** les chaînes de format personnalisé ne sont pas garantis pour effectuer un aller-retour entre la source de données et d’un contrôle lié. Gérez plutôt l'événement <xref:System.Windows.Forms.Binding.Parse> ou <xref:System.Windows.Forms.Binding.Format> pour la liaison et appliquez la mise en forme personnalisée dans le code de gestion d'événements.|  
+    |Personnalisé|Spécifiez une chaîne de format personnalisée.<br /><br /> Pour plus d’informations, consultez [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md). **Remarque :**  Il n'est pas garanti que les chaînes de format personnalisées puissent effectuer un aller-retour entre la source de données et le contrôle dépendant. Gérez plutôt l’événement <xref:System.Windows.Forms.Binding.Parse> ou <xref:System.Windows.Forms.Binding.Format> pour la liaison et appliquez la mise en forme personnalisée dans le code de gestion d’événements.|  
   
 8.  Cliquez sur **OK** pour fermer la **mise en forme et liaison avancée** boîte de dialogue et revenir à la fenêtre Propriétés.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour créer un contrôle à liaison simple dans un Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Validation des entrées d’utilisateur dans les Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Liaison de données Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Créer un contrôle de liaison Simple dans un formulaire Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Validation des entrées d’utilisateur dans les Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
+- [Liaison de données Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

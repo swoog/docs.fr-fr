@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdb1570b682088e92ff7c7a78d84259d02d8512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9c930b6fe81fdb7013e95a20d33ff0ba0148f88f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658813"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor, énumération
 Spécifie les jetons de métadonnées qui seront vérifiés pour les doublons.  
@@ -72,38 +72,38 @@ typedef enum CorCheckDuplicatesFor {
 |------------|-----------------|  
 |`MDDupAll`|Vérifiez tous les jetons de métadonnées pour les doublons.|  
 |`MDDupENC`|Non utilisé.|  
-|`MDNoDupChecks`|N’activez pas les jetons de métadonnées pour les doublons.|  
-|`MDDupTypeDef`|Recherche les doublons des `mdTypeDef` jetons.|  
-|`MDDupInterfaceImpl`|Recherche les doublons des `mdInterfaceImpl` jetons.|  
-|`MDDupMethodDef`|Recherche les doublons des `mdMethodDef` jetons.|  
-|`MDDupTypeRef`|Recherche les doublons des `mdTypeRef` jetons.|  
-|`MDDupMemberRef`|Recherche les doublons des `mdMemberRef` jetons.|  
-|`MDDupCustomAttribute`|Recherche les doublons des `mdCustomAttribute` jetons.|  
-|`MDDupParamDef`|Recherche les doublons des `mdParamDef` jetons.|  
-|`MDDupPermission`|Recherche les doublons des `mdPermission` jetons.|  
-|`MDDupProperty`|Recherche les doublons des `mdProperty` jetons.|  
-|`MDDupEvent`|Recherche les doublons des `mdEvent` jetons.|  
-|`MDDupFieldDef`|Recherche les doublons des `mdFieldDef` jetons.|  
-|`MDDupSignature`|Recherche les doublons des `mdSignature` jetons.|  
-|`MDDupModuleRef`|Recherche les doublons des `mdModuleRef` jetons.|  
-|`MDDupTypeSpec`|Recherche les doublons des `mdTypeSpec` jetons.|  
-|`MDDupImplMap`|Recherche les doublons des `mdImplMap` jetons.|  
-|`MDDupAssemblyRef`|Recherche les doublons des `mdAssemblyRef` jetons.|  
-|`MDDupFile`|Recherche les doublons des `mdFile` jetons.|  
-|`MDDupExportedType`|Recherche les doublons des `mdExportedType` jetons.|  
-|`MDDupManifestResource`|Recherche les doublons des `mdManifestResource` jetons.|  
-|`MDDupGenericParam`|Recherche les doublons des `mdGenericParam` jetons.|  
-|`MDDupMethodSpec`|Recherche les doublons des `mdMethodSpec` jetons.|  
-|`MDDupGenericParamConstraint`|Recherche les doublons des `mdGenericParamConstraint` jetons.|  
-|`MDDupAssembly`|Recherche les doublons des `mdAssembly` jetons.|  
-|`MDDupDefault`|Vérification des doublons de `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, et `mdMethodSpec` jetons.|  
+|`MDNoDupChecks`|Ne pas vérifier les jetons de métadonnées pour les doublons.|  
+|`MDDupTypeDef`|Vérifier les doublons de `mdTypeDef` jetons.|  
+|`MDDupInterfaceImpl`|Vérifier les doublons de `mdInterfaceImpl` jetons.|  
+|`MDDupMethodDef`|Vérifier les doublons de `mdMethodDef` jetons.|  
+|`MDDupTypeRef`|Vérifier les doublons de `mdTypeRef` jetons.|  
+|`MDDupMemberRef`|Vérifier les doublons de `mdMemberRef` jetons.|  
+|`MDDupCustomAttribute`|Vérifier les doublons de `mdCustomAttribute` jetons.|  
+|`MDDupParamDef`|Vérifier les doublons de `mdParamDef` jetons.|  
+|`MDDupPermission`|Vérifier les doublons de `mdPermission` jetons.|  
+|`MDDupProperty`|Vérifier les doublons de `mdProperty` jetons.|  
+|`MDDupEvent`|Vérifier les doublons de `mdEvent` jetons.|  
+|`MDDupFieldDef`|Vérifier les doublons de `mdFieldDef` jetons.|  
+|`MDDupSignature`|Vérifier les doublons de `mdSignature` jetons.|  
+|`MDDupModuleRef`|Vérifier les doublons de `mdModuleRef` jetons.|  
+|`MDDupTypeSpec`|Vérifier les doublons de `mdTypeSpec` jetons.|  
+|`MDDupImplMap`|Vérifier les doublons de `mdImplMap` jetons.|  
+|`MDDupAssemblyRef`|Vérifier les doublons de `mdAssemblyRef` jetons.|  
+|`MDDupFile`|Vérifier les doublons de `mdFile` jetons.|  
+|`MDDupExportedType`|Vérifier les doublons de `mdExportedType` jetons.|  
+|`MDDupManifestResource`|Vérifier les doublons de `mdManifestResource` jetons.|  
+|`MDDupGenericParam`|Vérifier les doublons de `mdGenericParam` jetons.|  
+|`MDDupMethodSpec`|Vérifier les doublons de `mdMethodSpec` jetons.|  
+|`MDDupGenericParamConstraint`|Vérifier les doublons de `mdGenericParamConstraint` jetons.|  
+|`MDDupAssembly`|Vérifier les doublons de `mdAssembly` jetons.|  
+|`MDDupDefault`|Vérifier les doublons de `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, et `mdMethodSpec` jetons.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

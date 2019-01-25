@@ -2,12 +2,12 @@
 title: Address Headers
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: d2e38c674e0a3ea10df2e8363e90f4adf7edc9da
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c4a64b80ac629c740aea3dbdec2ab270ab061c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632931"
 ---
 # <a name="address-headers"></a>Address Headers
 Cet exemple montre comment les clients peuvent passer des paramètres de référence à un service à l’aide de Windows Communication Foundation (WCF).  

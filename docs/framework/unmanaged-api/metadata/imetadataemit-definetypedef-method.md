@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54691785e3b2619b5f4a2eecc510800b4b5cee07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4a1da4015a202debe1d864f3c0135cc296ce6fce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605474"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef, méthode
-Crée une définition de type pour un type de common language runtime et obtient un jeton de métadonnées pour cette définition de type.  
+Crée une définition de type pour un type common language runtime et obtient un jeton de métadonnées pour cette définition de type.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,27 +50,27 @@ HRESULT DefineTypeDef (
  [in] Le jeton de la classe de base. Il doit être un `mdTypeDef` ou un `mdTypeRef` jeton.  
   
  `rtkImplements`  
- [in] Tableau des jetons spécifiant les interfaces que cette classe ou interface implémente.  
+ [in] Un tableau de jetons spécifiant les interfaces qui implémente cette classe ou une interface.  
   
  `ptd`  
- [out] Le `mdTypeDef` jeton assigné.  
+ [out] Le `mdTypeDef` jeton attribué.  
   
 ## <a name="remarks"></a>Notes  
- Un indicateur dans `dwTypeDefFlags` Spécifie si le type en cours de création est un type système référence type commun (classe ou interface) ou un type de valeur système type commun.  
+ Un indicateur dans `dwTypeDefFlags` Spécifie si le type en cours de création est un common type system type référence (classe ou interface) ou un type de valeur système type commun.  
   
- Selon les paramètres fournis, cette méthode, un effet secondaire peut également créer un `mdInterfaceImpl` enregistrement pour chaque interface héritée ou implémentée par ce type. Toutefois, cette méthode ne retourne pas un de ces `mdInterfaceImpl` jetons. Si un client souhaite ultérieurement ajouter ou modifier un `mdInterfaceImpl` jeton, elle doit utiliser le `IMetaDataImport` interface pour les énumérer. Si vous souhaitez utiliser une sémantique COM de le `[default]` interface, vous devez fournir l’interface par défaut en tant que le premier élément de `rtkImplements`; un attribut personnalisé est défini sur la classe indiquera que la classe possède une interface par défaut (qui est censé toujours pour être le tout d’abord `mdInterfaceImpl` jeton déclaré pour la classe).  
+ Selon les paramètres fournis, cette méthode, comme un effet secondaire, peut également créer un `mdInterfaceImpl` enregistrement pour chaque interface héritée ou implémentée par ce type. Toutefois, cette méthode ne retourne pas un de ces `mdInterfaceImpl` jetons. Si un client souhaite ultérieurement ajouter ou modifier un `mdInterfaceImpl` jeton, il doit utiliser le `IMetaDataImport` interface pour les énumérer. Si vous souhaitez utiliser une sémantique COM de le `[default]` interface, vous devez fournir l’interface par défaut comme premier élément dans `rtkImplements`; un attribut personnalisé est défini sur la classe indiquera que la classe possède une interface par défaut (qui est censé toujours pour être le tout d’abord `mdInterfaceImpl` jeton déclaré pour la classe).  
   
- Chaque élément de la `rtkImplements` tableau contient un `mdTypeDef` ou `mdTypeRef` jeton. Le dernier élément du tableau doit être `mdTokenNil`.  
+ Chaque élément de la `rtkImplements` tableau contient un `mdTypeDef` ou `mdTypeRef` jeton. Le dernier élément dans le tableau doit être `mdTokenNil`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

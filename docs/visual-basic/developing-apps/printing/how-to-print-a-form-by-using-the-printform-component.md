@@ -1,20 +1,20 @@
 ---
-title: "Comment : imprimer un formulaire à l'aide du composant PrintForm (Visual Basic)"
+title: 'Procédure : Imprimer un formulaire à l’aide du composant PrintForm (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Form [Visual Basic], printing
 ms.assetid: df963bf6-3ee1-49f4-8b2e-1d95d1beb0be
-ms.openlocfilehash: 723524c7c9876d353624ad47d504ea2528a31cfe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0a1a62627390c8839625862b9d43d61fc07ebf12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521567"
 ---
-# <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>Comment : imprimer un formulaire à l'aide du composant PrintForm (Visual Basic)
+# <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>Procédure : Imprimer un formulaire à l’aide du composant PrintForm (Visual Basic)
 Le composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> vous permet d’imprimer rapidement une image d’un formulaire tel qu’il apparaît à l’écran sans utiliser un composant <xref:System.Drawing.Printing.PrintDocument> . Les procédures suivantes montrent comment imprimer un formulaire sur une imprimante, dans une fenêtre d’aperçu avant impression et dans un fichier PostScript encapsulé.  
   
- Les contrôles PowerPack ne sont plus inclus dans Visual Studio, mais vous pouvez les télécharger à partir de la [centre de téléchargement](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Les contrôles PowerPack ne sont plus inclus dans Visual Studio, mais vous pouvez les télécharger à partir du [Centre de téléchargement](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-a-form-to-the-default-printer"></a>Pour imprimer un formulaire sur l’imprimante par défaut  
   
@@ -62,10 +62,10 @@ Le composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> vous per
     PrintForm1.Print()  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A>  
- [Guide pratique : imprimer la zone cliente d’un formulaire](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [Guide pratique : imprimer des zones clientes et non clientes d’un formulaire](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- [Guide pratique : imprimer un formulaire à défilement variable](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)  
- [PrintForm, composant](../../../visual-basic/developing-apps/printing/printform-component.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A>
+- [Guide pratique pour imprimer la zone cliente d’un formulaire](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+- [Guide pratique pour imprimer des zones clientes et non clientes d’un formulaire](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+- [Guide pratique pour imprimer un formulaire à défilement variable](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+- [PrintForm, composant](../../../visual-basic/developing-apps/printing/printform-component.md)

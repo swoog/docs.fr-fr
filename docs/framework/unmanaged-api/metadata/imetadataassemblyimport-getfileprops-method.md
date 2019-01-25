@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f147fef90d7a9033bdfd07b75e5c33efd2c6881f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59dad67db9f9f9184a139f848020cf866a3a6771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716828"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps, méthode
-Obtient les propriétés du fichier avec la signature de métadonnées spécifiée.  
+Obtient les propriétés du fichier avec la signature de métadonnées spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ HRESULT GetFileProps (
  [out] Le nombre de caractères étendus réellement retournés dans `szName`.  
   
  `ppbHashValue`  
- [out] Pointeur vers la valeur de hachage. Il s’agit du hachage, à l’aide de l’algorithme SHA-1, du fichier.  
+ [out] Pointeur vers la valeur de hachage. Il s’agit le hachage, à l’aide de l’algorithme SHA-1, du fichier.  
   
  `pcbHashValue`  
  [out] Le nombre de caractères étendus dans la valeur de hachage retournée.  
@@ -64,13 +64,13 @@ HRESULT GetFileProps (
  [out] Pointeur vers les indicateurs qui décrivent les métadonnées appliquées à un fichier. La valeur des indicateurs est une combinaison d’une ou plusieurs [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valeurs.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateforme :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateforme :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataAssemblyImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataAssemblyImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

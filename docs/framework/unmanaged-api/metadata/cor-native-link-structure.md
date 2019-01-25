@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0d9b8a9a1014d98c51f1471f8203be07f7ff49c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 08d27eb834c1a9a3a5d163bb2d3054f599ae1669
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719558"
 ---
 # <a name="cornativelink-structure"></a>COR_NATIVE_LINK, structure
 Contient des informations utilisées pour lier du code natif.  
@@ -41,20 +41,20 @@ typedef struct
   
 |Membre|Description|  
 |------------|-----------------|  
-|`m_linkType`|Type à être lié en code natif. Cette valeur est un de le [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) valeurs.|  
-|`m_flags`|Indicateurs utilisés par l’éditeur de liens lors de la liaison du code natif. Cette valeur est un de le [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) valeurs.|  
+|`m_linkType`|Le type à lier en code natif. Cette valeur est un de la [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) valeurs.|  
+|`m_flags`|Indicateurs utilisés par l’éditeur de liens lors de la liaison du code natif. Cette valeur est un de la [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) valeurs.|  
 |`m_entryPoint`|Le jeton de métadonnées MemberRef qui représente le point d’entrée. Le format est `lib:entrypoint`.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [CorNativeLinkType, énumération](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)  
- [CorNativeLinkFlags, énumération](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)
+## <a name="see-also"></a>Voir aussi
+- [Structures de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [CorNativeLinkType, énumération](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
+- [CorNativeLinkFlags, énumération](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)

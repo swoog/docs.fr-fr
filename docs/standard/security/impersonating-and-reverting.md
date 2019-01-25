@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bec065e2a78551b85fe766f1b81590b18f4679d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516822"
 ---
 # <a name="impersonating-and-reverting"></a>Emprunt et restauration d'identité
 Parfois, vous devez obtenir un jeton de compte Windows pour emprunter l’identité d’un compte Windows. Par exemple, votre application ASP.NET peut devoir agir pour le compte de plusieurs utilisateurs à des moments différents. Votre application peut accepter un jeton représentant un administrateur à partir d’Internet Information Services (IIS), emprunter l’identité de cet utilisateur, effectuer une opération et revenir à l’identité précédente. Ensuite, elle peut accepter un jeton d’IIS représentant un utilisateur disposant de droits inférieurs, effectuer une opération et revenir à nouveau à l’identité précédente.  
@@ -36,7 +36,7 @@ Parfois, vous devez obtenir un jeton de compte Windows pour emprunter l’identi
     Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3.  Commencez l’emprunt d’identité en créant une nouvelle instance de la <xref:System.Security.Principal.WindowsImpersonationContext> classe et en l’initialisant avec la <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> méthode de la classe initialisée, comme indiqué dans le code suivant.  
+3.  Commencez l’emprunt d’identité en créant une instance de la classe <xref:System.Security.Principal.WindowsImpersonationContext> et en l’initialisant avec la méthode <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> de la classe initialisée, comme illustré dans le code suivant.  
   
     ```csharp  
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
@@ -46,7 +46,7 @@ Parfois, vous devez obtenir un jeton de compte Windows pour emprunter l’identi
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
     ```  
   
-4.  Lorsque vous n’avez plus besoin d’emprunter l’identité, appelez le <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> méthode pour rétablir l’emprunt d’identité, comme indiqué dans le code suivant.  
+4.  Quand vous n’avez plus besoin d’emprunter l’identité, appelez la méthode <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> pour rétablir l’emprunt d’identité, comme illustré dans le code suivant.  
   
     ```csharp  
     MyImpersonation.Undo();  
@@ -62,7 +62,7 @@ Parfois, vous devez obtenir un jeton de compte Windows pour emprunter l’identi
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Security.Principal.WindowsIdentity>  
-- <xref:System.Security.Principal.WindowsImpersonationContext>  
-- [Objets Principal et Identity](../../../docs/standard/security/principal-and-identity-objects.md)  
+- <xref:System.Security.Principal.WindowsIdentity>
+- <xref:System.Security.Principal.WindowsImpersonationContext>
+- [Objets Principal et Identity](../../../docs/standard/security/principal-and-identity-objects.md)
 - [Interopération avec du code non managé](../../../docs/framework/interop/index.md)

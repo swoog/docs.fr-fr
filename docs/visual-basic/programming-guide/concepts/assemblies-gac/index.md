@@ -2,17 +2,17 @@
 title: Assemblys et le Global Assembly Cache (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-ms.openlocfilehash: 6d1692d6b62e1f1f3a8f979d3de242003f034ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413d3266546fa1d2b403509793c62e76bca5bc70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717257"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Assemblys et le Global Assembly Cache (Visual Basic)
 Les assemblys constituent l’unité fondamentale dans le déploiement, la gestion de version, la portée d’activation et les autorisations de sécurité d’une application .NET. Les assemblys prennent la forme d’un fichier exécutable (.exe) ou d’un fichier de bibliothèque de liens dynamiques (.dll) et sont les blocs de construction du .NET Framework. Ils fournissent au Common Language Runtime les informations dont il a besoin pour connaître les implémentations de type. Vous pouvez comparer un assembly à une collection de types et de ressources conçus pour opérer ensemble et former une unité logique de fonctionnalité.  
   
- Les assemblys peuvent contenir un ou plusieurs modules. Par exemple, les projets plus importants peuvent être planifiés de sorte que plusieurs développeurs individuels travaillent sur des modules distincts, qui se regroupent pour créer un assembly unique. Pour plus d’informations sur les modules, consultez la rubrique [Comment : générer un assembly multifichier](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Les assemblys peuvent contenir un ou plusieurs modules. Par exemple, les projets plus importants peuvent être planifiés de sorte que plusieurs développeurs individuels travaillent sur des modules distincts, qui se regroupent pour créer un assembly unique. Pour plus d’informations sur les modules, consultez la rubrique [Comment : Générer un Assembly multifichier](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Les assemblys ont les propriétés suivantes :  
   
@@ -48,12 +48,12 @@ Les assemblys constituent l’unité fondamentale dans le déploiement, la gesti
 > [!NOTE]
 >  Pour générer un assembly dans Visual Studio, dans le menu **Générer**, choisissez **Générer**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Assemblys dans le Common Language Runtime](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Assemblys friend (Visual Basic)](friend-assemblies.md)  
- [Comment : partager un Assembly avec d’autres Applications (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
- [Comment : charger et décharger des assemblys (Visual Basic)](how-to-load-and-unload-assemblies.md)  
- [Comment : déterminer si un fichier est un Assembly (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
- [Comment : créer et utiliser des assemblys à l’aide de la ligne de commande (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [Procédure pas à pas : Incorporation de Types provenant d’assemblys managés dans Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [Procédure pas à pas : incorporation d’informations de type provenant d’assemblys Microsoft Office dans Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+## <a name="see-also"></a>Voir aussi
+- [Assemblys dans le Common Language Runtime](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblys friend (Visual Basic)](friend-assemblies.md)
+- [Guide pratique pour Partager un Assembly avec d’autres Applications (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)
+- [Guide pratique pour Charger et décharger des assemblys (Visual Basic)](how-to-load-and-unload-assemblies.md)
+- [Guide pratique pour Déterminer si un fichier est un Assembly (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Guide pratique pour Créer et utiliser des assemblys à l’aide de la ligne de commande (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Procédure pas à pas : Incorporation de Types provenant d’assemblys managés dans Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Procédure pas à pas : Incorporation d’informations de Type provenant d’assemblys Microsoft Office dans Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

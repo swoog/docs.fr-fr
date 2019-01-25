@@ -3,12 +3,12 @@ title: Utilisez fermer et abandonner pour libérer des ressources de client WCF
 description: Dispose peut échouer et lever des exceptions lors de la défaillance du réseau. Qui peut provoquer un comportement indésirable. Au lieu de cela, utilisez fermer et abandonner pour libérer des ressources de client lorsque le réseau a échoué.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: d37ad9d2277fea2656311a5a1f57d51343d10d89
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4996ccba955d7946bb76b8124b8b28d803b6f3e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736427"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Fermer et libérer des ressources abandon en toute sécurité lorsque les connexions de réseau ont supprimé
 Cet exemple montre comment utiliser le `Close` et `Abort` méthodes pour nettoyer les ressources lorsque vous utilisez un client typé. La `using` instruction provoque des exceptions lors de la connexion réseau n’est pas fiable. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le client est une application console (.exe) et le service est hébergé par les services IIS (Internet Information Services).  

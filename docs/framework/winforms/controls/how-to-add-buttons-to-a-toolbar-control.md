@@ -1,5 +1,5 @@
 ---
-title: 'Comment : ajouter des boutons à un contrôle ToolBar'
+title: 'Procédure : Ajouter des boutons à un contrôle de barre d’outils'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: e61a635d59bd9adfb73a0293df776187cdbca499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711549"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Comment : ajouter des boutons à un contrôle ToolBar
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Procédure : Ajouter des boutons à un contrôle de barre d’outils
 > [!NOTE]
 >  Le contrôle <xref:System.Windows.Forms.ToolStrip> remplace le contrôle <xref:System.Windows.Forms.ToolBar> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.ToolBar> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix.  
   
  Partie intégrante de la <xref:System.Windows.Forms.ToolBar> contrôle est les boutons que vous ajoutez à ce dernier. Ils peuvent être utilisés pour fournir un accès facile aux commandes de menu ou, alternativement, ils peuvent être placés dans une autre zone de l’interface utilisateur de votre application pour exposer à vos utilisateurs qui ne sont pas disponibles dans la structure du menu de commandes.  
   
- Les exemples ci-dessous supposent qu’un <xref:System.Windows.Forms.ToolBar> contrôle a été ajouté à un Windows Form (`Form1`).  
+ Les exemples ci-dessous supposent qu’un <xref:System.Windows.Forms.ToolBar> contrôle a été ajouté à un formulaire Windows (`Form1`).  
   
 ### <a name="to-add-buttons-programmatically"></a>Pour ajouter des boutons par programme  
   
-1.  Dans une procédure, créez des boutons de barre d’outils en les ajoutant à la <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.  
+1.  Dans une procédure, créer des boutons de barre d’outils en les ajoutant à la <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.  
   
 2.  Spécifier les paramètres de propriété d’un bouton individuel en passant l’index du bouton via le <xref:System.Windows.Forms.ToolBar.Buttons%2A> propriété.  
   
-     L’exemple ci-dessous illustre un formulaire avec un <xref:System.Windows.Forms.ToolBar> contrôle déjà été ajouté.  
+     L’exemple suivant suppose un formulaire avec un <xref:System.Windows.Forms.ToolBar> contrôle déjà ajouté.  
   
     > [!NOTE]
-    >  Le <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection est une collection de base zéro, code doit continuer en conséquence.  
+    >  Le <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection est une collection de base zéro, code doit donc continuer en conséquence.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -148,9 +148,9 @@ ms.locfileid: "33527100"
        }  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.ToolBar>  
- [Guide pratique pour définir une icône pour un bouton de barre d’outils](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [Guide pratique pour déclencher des événements de menu pour les boutons de barre d’outils](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [Vue d’ensemble du contrôle ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [ToolBar, contrôle](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.ToolBar>
+- [Guide pratique pour Définir une icône pour un bouton de barre d’outils](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [Guide pratique pour Déclencher des événements de Menu pour les boutons de barre d’outils](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Vue d’ensemble du contrôle ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
+- [ToolBar, contrôle](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

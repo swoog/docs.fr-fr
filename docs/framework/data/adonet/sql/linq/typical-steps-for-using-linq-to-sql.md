@@ -2,12 +2,12 @@
 title: Procédure standard d'utilisation de LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: e45f53b8fdea877bb3921b77d485abcab4393df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32e81d08010f67b8eac19777a40826b18c440f83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548009"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Procédure standard d'utilisation de LINQ to SQL
 Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], suivez les étapes décrites ultérieurement dans cette rubrique. Notez que de nombreuses étapes sont facultatives. Il est tout à fait possible que votre modèle objet soit utilisable dans son état par défaut.  
@@ -22,7 +22,7 @@ Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includ
   
 -   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  
   
-     Ce concepteur fournit une interface utilisateur élaborée pour créer un modèle objet à partir d'une base de données existante. Cet outil fait partie de l’IDE de Visual Studio et convient mieux aux bases de données de petites ou moyennes.  
+     Ce concepteur fournit une interface utilisateur élaborée pour créer un modèle objet à partir d'une base de données existante. Cet outil fait partie de l’IDE Visual Studio et convient mieux aux bases de données de taille réduites ou moyennes.  
   
 -   Outil de génération de code SQLMetal  
   
@@ -30,13 +30,13 @@ Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includ
   
 -   Éditeur de code  
   
-     Vous pouvez écrire votre propre code à l’aide de l’éditeur de code Visual Studio ou un autre éditeur. Cette approche, qui peut générer des erreurs, n'est pas conseillée lorsque vous disposez d'une base de données existante et que vous pouvez utiliser [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] ou SQLMetal. Toutefois, l'éditeur de code peut s'avérer particulièrement utile pour affiner ou modifier du code déjà généré à l'aide d'autres outils. Pour plus d’informations, consultez [Comment : personnaliser les Classes d’entité à l’aide de l’éditeur de Code](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     Vous pouvez écrire votre propre code à l’aide de l’éditeur de code Visual Studio ou un autre éditeur. Cette approche, qui peut générer des erreurs, n'est pas conseillée lorsque vous disposez d'une base de données existante et que vous pouvez utiliser [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] ou SQLMetal. Toutefois, l'éditeur de code peut s'avérer particulièrement utile pour affiner ou modifier du code déjà généré à l'aide d'autres outils. Pour plus d'informations, voir [Procédure : Personnaliser des Classes d’entité à l’aide de l’éditeur de Code](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Sélectionnez le type de code à générer.  
   
--   Un langage c# ou Visual Basic fichier de code source pour un mappage basé sur l’attribut.  
+-   Un C# ou fichier de code source Visual Basic pour le mappage basé sur l’attribut.  
   
-     Ensuite, vous incluez ce fichier de code dans votre projet Visual Studio. Pour plus d’informations, consultez [mappage basé sur l’attribut](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+     Vous incluez ensuite ce fichier de code dans votre projet Visual Studio. Pour plus d’informations, consultez [mappage basé sur l’attribut](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 -   Fichier XML pour le mappage externe.  
   
@@ -70,7 +70,7 @@ Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includ
  Cette étape est facultative. Pour plus d’informations, consultez [personnalisation des opérations d’insertion, mise à jour et supprimer](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
 ### <a name="3-set-appropriate-options-to-detect-and-report-concurrency-conflicts"></a>3. Définissez les options appropriées pour détecter et signaler des conflits d'accès concurrentiel.  
- Vous pouvez conserver les valeurs par défaut de votre modèle pour la gestion des conflits d'accès concurrentiel ou les adapter à vos besoins. Pour plus d’informations, consultez [Comment : spécifier lequel les membres sont testées pour les conflits d’accès concurrentiel](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md) et [Comment : spécifier lors de la concurrence Exceptions sont levées](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+ Vous pouvez conserver les valeurs par défaut de votre modèle pour la gestion des conflits d'accès concurrentiel ou les adapter à vos besoins. Pour plus d'informations, voir [Procédure : Spécifier les membres sont vérifiés pour les conflits d’accès concurrentiel](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md) et [Comment : Spécifiez quand les Exceptions d’accès concurrentiel sont levées](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
   
 ### <a name="4-establish-an-inheritance-hierarchy"></a>4. Établissez une hiérarchie d'héritage.  
  Cette étape est facultative. Pour plus d’informations, consultez [prise en charge l’héritage](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).  
@@ -81,7 +81,7 @@ Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includ
 ### <a name="6-debug-and-test-your-application"></a>6. Déboguez et testez votre application.  
  Pour plus d’informations, consultez [prise en charge de débogage](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en main](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
- [Création du modèle objet](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [Procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>Voir aussi
+- [Prise en main](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Création du modèle objet](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
