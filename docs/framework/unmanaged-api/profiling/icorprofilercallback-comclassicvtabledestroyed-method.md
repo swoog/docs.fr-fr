@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30d1e80d05344448c19c9f8f2d261442e4041487
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f60c4373410c46c5d1ea284b2cacd4b5c070ed9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682821"
 ---
-# <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a><span data-ttu-id="814d8-102">ICorProfilerCallback::COMClassicVTableDestroyed, méthode</span><span class="sxs-lookup"><span data-stu-id="814d8-102">ICorProfilerCallback::COMClassicVTableDestroyed Method</span></span>
-<span data-ttu-id="814d8-103">Notifie le profileur qu’une vtable d’interopérabilité COM est détruite.</span><span class="sxs-lookup"><span data-stu-id="814d8-103">Notifies the profiler that a COM interop vtable is being destroyed.</span></span>  
+# <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a><span data-ttu-id="6dfed-102">ICorProfilerCallback::COMClassicVTableDestroyed, méthode</span><span class="sxs-lookup"><span data-stu-id="6dfed-102">ICorProfilerCallback::COMClassicVTableDestroyed Method</span></span>
+<span data-ttu-id="6dfed-103">Notifie le profileur qu’une vtable d’interopérabilité COM est en cours de destruction.</span><span class="sxs-lookup"><span data-stu-id="6dfed-103">Notifies the profiler that a COM interop vtable is being destroyed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="814d8-104">Ce rappel n’est pas susceptible de se produire, car la destruction de vtables survient très proche de l’arrêt.</span><span class="sxs-lookup"><span data-stu-id="814d8-104">This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.</span></span>  
+>  <span data-ttu-id="6dfed-104">Ce rappel est susceptible de ne jamais se produire, car la destruction de vtable survient très près de l’arrêt.</span><span class="sxs-lookup"><span data-stu-id="6dfed-104">This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="814d8-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="814d8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6dfed-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6dfed-105">Syntax</span></span>  
   
 ```  
 HRESULT COMClassicVTableDestroyed(  
@@ -39,30 +39,30 @@ HRESULT COMClassicVTableDestroyed(
     [in] void    *pVTable);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="814d8-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="814d8-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6dfed-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="6dfed-106">Parameters</span></span>  
  `wrappedClasId`  
- <span data-ttu-id="814d8-107">[in] L’ID de la classe pour laquelle cette vtable a été créée.</span><span class="sxs-lookup"><span data-stu-id="814d8-107">[in] The ID of the class for which this vtable was created.</span></span>  
+ <span data-ttu-id="6dfed-107">[in] L’ID de la classe pour laquelle cette vtable a été créée.</span><span class="sxs-lookup"><span data-stu-id="6dfed-107">[in] The ID of the class for which this vtable was created.</span></span>  
   
  `implementedIID`  
- <span data-ttu-id="814d8-108">[in] L’ID de l’interface implémentée par la classe.</span><span class="sxs-lookup"><span data-stu-id="814d8-108">[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="814d8-109">Cette valeur peut être NULL si l’interface est uniquement interne.</span><span class="sxs-lookup"><span data-stu-id="814d8-109">This value may be NULL if the interface is internal only.</span></span>  
+ <span data-ttu-id="6dfed-108">[in] ID de l’interface implémentée par la classe.</span><span class="sxs-lookup"><span data-stu-id="6dfed-108">[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="6dfed-109">Cette valeur peut être NULL si l’interface est uniquement interne.</span><span class="sxs-lookup"><span data-stu-id="6dfed-109">This value may be NULL if the interface is internal only.</span></span>  
   
  `pVTable`  
- <span data-ttu-id="814d8-110">[in] Pointeur vers le début de la vtable.</span><span class="sxs-lookup"><span data-stu-id="814d8-110">[in] A pointer to the start of the vtable.</span></span>  
+ <span data-ttu-id="6dfed-110">[in] Pointeur vers le début de la vtable.</span><span class="sxs-lookup"><span data-stu-id="6dfed-110">[in] A pointer to the start of the vtable.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="814d8-111">Notes</span><span class="sxs-lookup"><span data-stu-id="814d8-111">Remarks</span></span>  
- <span data-ttu-id="814d8-112">Le profileur ne doit pas bloquer dans son implémentation de cette méthode, car la pile ne peut pas être dans un état qui autorise le garbage collection, et par conséquent, le garbage collection préemptif ne peut pas être activé.</span><span class="sxs-lookup"><span data-stu-id="814d8-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="814d8-113">Si le profileur bloque ici et le garbage collection est tenté, le runtime bloque jusqu'à ce que ce rappel retourne.</span><span class="sxs-lookup"><span data-stu-id="814d8-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6dfed-111">Notes</span><span class="sxs-lookup"><span data-stu-id="6dfed-111">Remarks</span></span>  
+ <span data-ttu-id="6dfed-112">Le profileur ne doit pas bloquer dans son implémentation de cette méthode, car la pile ne peut pas être dans un état qui autorise le garbage collection, et par conséquent, le garbage collection préemptif ne peut pas être activé.</span><span class="sxs-lookup"><span data-stu-id="6dfed-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="6dfed-113">Si le profileur bloque ici et le garbage collection est tenté, le runtime bloque jusqu'à ce que ce rappel renvoie.</span><span class="sxs-lookup"><span data-stu-id="6dfed-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="814d8-114">L’implémentation du profileur de cette méthode ne doit pas appeler dans du code managé ou de quelque manière qu’une allocation de mémoire managée.</span><span class="sxs-lookup"><span data-stu-id="814d8-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="6dfed-114">L’implémentation du profileur de cette méthode ne doit pas appeler dans du code managé ou de quelque manière qu’une allocation de mémoire managée.</span><span class="sxs-lookup"><span data-stu-id="6dfed-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="814d8-115">Spécifications</span><span class="sxs-lookup"><span data-stu-id="814d8-115">Requirements</span></span>  
- <span data-ttu-id="814d8-116">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="814d8-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6dfed-115">Spécifications</span><span class="sxs-lookup"><span data-stu-id="6dfed-115">Requirements</span></span>  
+ <span data-ttu-id="6dfed-116">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6dfed-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="814d8-117">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="814d8-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6dfed-117">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6dfed-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="814d8-118">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="814d8-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6dfed-118">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6dfed-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="814d8-119">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="814d8-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6dfed-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6dfed-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="814d8-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="814d8-120">See Also</span></span>  
- [<span data-ttu-id="814d8-121">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="814d8-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="814d8-122">COMClassicVTableCreated, méthode</span><span class="sxs-lookup"><span data-stu-id="814d8-122">COMClassicVTableCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
+## <a name="see-also"></a><span data-ttu-id="6dfed-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6dfed-120">See also</span></span>
+- [<span data-ttu-id="6dfed-121">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="6dfed-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="6dfed-122">COMClassicVTableCreated, méthode</span><span class="sxs-lookup"><span data-stu-id="6dfed-122">COMClassicVTableCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
