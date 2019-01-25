@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00a28e0f7ab03af8d5f2fc0dda5274f9aaa4dca2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3c20e2787eb8071b10e06b980572c347959fe3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619446"
 ---
-# <a name="imetadataimportenummethodsemantics-method"></a><span data-ttu-id="55b86-102">IMetaDataImport::EnumMethodSemantics, méthode</span><span class="sxs-lookup"><span data-stu-id="55b86-102">IMetaDataImport::EnumMethodSemantics Method</span></span>
-<span data-ttu-id="55b86-103">Énumère les propriétés et les événements de modification de propriétés auxquels la méthode spécifiée est associée.</span><span class="sxs-lookup"><span data-stu-id="55b86-103">Enumerates the properties and the property-change events to which the specified method is related.</span></span>  
+# <a name="imetadataimportenummethodsemantics-method"></a><span data-ttu-id="7cd4f-102">IMetaDataImport::EnumMethodSemantics, méthode</span><span class="sxs-lookup"><span data-stu-id="7cd4f-102">IMetaDataImport::EnumMethodSemantics Method</span></span>
+<span data-ttu-id="7cd4f-103">Énumère les propriétés et les événements de modification de propriétés auxquels la méthode spécifiée est associée.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-103">Enumerates the properties and the property-change events to which the specified method is related.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55b86-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="55b86-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7cd4f-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7cd4f-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMethodSemantics (  
@@ -39,41 +39,41 @@ HRESULT EnumMethodSemantics (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="55b86-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="55b86-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7cd4f-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="7cd4f-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="55b86-106">[dans, out] Pointeur vers l’énumérateur.</span><span class="sxs-lookup"><span data-stu-id="55b86-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="55b86-107">Cela doit être NULL pour le premier appel de cette méthode.</span><span class="sxs-lookup"><span data-stu-id="55b86-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="7cd4f-106">[in, out] Pointeur vers l’énumérateur.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="7cd4f-107">Cela doit être NULL pour le premier appel de cette méthode.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-107">This must be NULL for the first call of this method.</span></span>  
   
  `mb`  
- <span data-ttu-id="55b86-108">[in] Jeton MethodDef qui limite l’étendue de l’énumération.</span><span class="sxs-lookup"><span data-stu-id="55b86-108">[in] A MethodDef token that limits the scope of the enumeration.</span></span>  
+ <span data-ttu-id="7cd4f-108">[in] Jeton MethodDef qui limite l’étendue de l’énumération.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-108">[in] A MethodDef token that limits the scope of the enumeration.</span></span>  
   
  `rEventProp`  
- <span data-ttu-id="55b86-109">[out] Tableau utilisé pour stocker les événements ou les propriétés.</span><span class="sxs-lookup"><span data-stu-id="55b86-109">[out] The array used to store the events or properties.</span></span>  
+ <span data-ttu-id="7cd4f-109">[out] Tableau utilisé pour stocker les événements ou les propriétés.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-109">[out] The array used to store the events or properties.</span></span>  
   
  `cMax`  
- <span data-ttu-id="55b86-110">[in] Taille maximale du tableau `rEventProp`.</span><span class="sxs-lookup"><span data-stu-id="55b86-110">[in] The maximum size of the `rEventProp` array.</span></span>  
+ <span data-ttu-id="7cd4f-110">[in] Taille maximale du tableau `rEventProp`.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-110">[in] The maximum size of the `rEventProp` array.</span></span>  
   
  `pcEventProp`  
- <span data-ttu-id="55b86-111">[out] Le nombre d’événements ou de propriétés retourné dans `rEventProp`.</span><span class="sxs-lookup"><span data-stu-id="55b86-111">[out] The number of events or properties returned in `rEventProp`.</span></span>  
+ <span data-ttu-id="7cd4f-111">[out] Le nombre d’événements ou les propriétés retournées dans `rEventProp`.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-111">[out] The number of events or properties returned in `rEventProp`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="55b86-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="55b86-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7cd4f-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="7cd4f-112">Return Value</span></span>  
   
-|<span data-ttu-id="55b86-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="55b86-113">HRESULT</span></span>|<span data-ttu-id="55b86-114">Description</span><span class="sxs-lookup"><span data-stu-id="55b86-114">Description</span></span>|  
+|<span data-ttu-id="7cd4f-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7cd4f-113">HRESULT</span></span>|<span data-ttu-id="7cd4f-114">Description</span><span class="sxs-lookup"><span data-stu-id="7cd4f-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="55b86-115">`EnumMethodSemantics` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="55b86-115">`EnumMethodSemantics` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="55b86-116">Il n’existe aucun événement ou les propriétés à énumérer.</span><span class="sxs-lookup"><span data-stu-id="55b86-116">There are no events or properties to enumerate.</span></span> <span data-ttu-id="55b86-117">Dans ce cas, `pcEventProp` est égal à zéro.</span><span class="sxs-lookup"><span data-stu-id="55b86-117">In that case, `pcEventProp` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="7cd4f-115">`EnumMethodSemantics` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-115">`EnumMethodSemantics` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="7cd4f-116">Il n’existe aucun événements ou propriétés à énumérer.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-116">There are no events or properties to enumerate.</span></span> <span data-ttu-id="7cd4f-117">Dans ce cas, `pcEventProp` est égal à zéro.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-117">In that case, `pcEventProp` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="55b86-118">Notes</span><span class="sxs-lookup"><span data-stu-id="55b86-118">Remarks</span></span>  
- <span data-ttu-id="55b86-119">Définissent de nombreux types common language runtime *propriété* `Changed` événements et `On` *propriété* `Changed` méthodes associées à leurs propriétés.</span><span class="sxs-lookup"><span data-stu-id="55b86-119">Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties.</span></span> <span data-ttu-id="55b86-120">Par exemple, le <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type définit un <xref:System.Windows.Forms.Control.Font%2A> propriété, un <xref:System.Windows.Forms.Control.FontChanged> événement et un <xref:System.Windows.Forms.Control.OnFontChanged%2A> (méthode).</span><span class="sxs-lookup"><span data-stu-id="55b86-120">For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method.</span></span> <span data-ttu-id="55b86-121">La méthode d’accesseur set de la <xref:System.Windows.Forms.Control.Font%2A> les appels de propriété <xref:System.Windows.Forms.Control.OnFontChanged%2A> (méthode), qui à son tour déclenche le <xref:System.Windows.Forms.Control.FontChanged> événement.</span><span class="sxs-lookup"><span data-stu-id="55b86-121">The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event.</span></span> <span data-ttu-id="55b86-122">Vous appelleriez `EnumMethodSemantics` à l’aide du MethodDef pour <xref:System.Windows.Forms.Control.OnFontChanged%2A> pour obtenir des références à la <xref:System.Windows.Forms.Control.Font%2A> propriété et la <xref:System.Windows.Forms.Control.FontChanged> événement.</span><span class="sxs-lookup"><span data-stu-id="55b86-122">You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7cd4f-118">Notes</span><span class="sxs-lookup"><span data-stu-id="7cd4f-118">Remarks</span></span>  
+ <span data-ttu-id="7cd4f-119">Définissent de nombreux types common language runtime *propriété* `Changed` événements et `On` *propriété* `Changed` méthodes liées à leurs propriétés.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-119">Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties.</span></span> <span data-ttu-id="7cd4f-120">Par exemple, le <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type définit un <xref:System.Windows.Forms.Control.Font%2A> propriété, un <xref:System.Windows.Forms.Control.FontChanged> événement et un <xref:System.Windows.Forms.Control.OnFontChanged%2A> (méthode).</span><span class="sxs-lookup"><span data-stu-id="7cd4f-120">For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method.</span></span> <span data-ttu-id="7cd4f-121">La méthode d’accesseur set de la <xref:System.Windows.Forms.Control.Font%2A> les appels de propriété <xref:System.Windows.Forms.Control.OnFontChanged%2A> (méthode), qui à son tour déclenche le <xref:System.Windows.Forms.Control.FontChanged> événement.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-121">The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event.</span></span> <span data-ttu-id="7cd4f-122">Vous appelleriez `EnumMethodSemantics` à l’aide de le MethodDef pour <xref:System.Windows.Forms.Control.OnFontChanged%2A> pour obtenir des références à la <xref:System.Windows.Forms.Control.Font%2A> propriété et le <xref:System.Windows.Forms.Control.FontChanged> événement.</span><span class="sxs-lookup"><span data-stu-id="7cd4f-122">You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55b86-123">Spécifications</span><span class="sxs-lookup"><span data-stu-id="55b86-123">Requirements</span></span>  
- <span data-ttu-id="55b86-124">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55b86-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7cd4f-123">Spécifications</span><span class="sxs-lookup"><span data-stu-id="7cd4f-123">Requirements</span></span>  
+ <span data-ttu-id="7cd4f-124">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7cd4f-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55b86-125">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="55b86-125">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7cd4f-125">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7cd4f-125">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="55b86-126">**Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="55b86-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7cd4f-126">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7cd4f-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="55b86-127">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55b86-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7cd4f-127">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cd4f-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55b86-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="55b86-128">See Also</span></span>  
- [<span data-ttu-id="55b86-129">IMetaDataImport, interface</span><span class="sxs-lookup"><span data-stu-id="55b86-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="55b86-130">IMetaDataImport2, interface</span><span class="sxs-lookup"><span data-stu-id="55b86-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7cd4f-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7cd4f-128">See also</span></span>
+- [<span data-ttu-id="7cd4f-129">IMetaDataImport, interface</span><span class="sxs-lookup"><span data-stu-id="7cd4f-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7cd4f-130">IMetaDataImport2, interface</span><span class="sxs-lookup"><span data-stu-id="7cd4f-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

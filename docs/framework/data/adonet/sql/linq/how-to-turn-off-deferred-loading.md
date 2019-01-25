@@ -1,29 +1,29 @@
 ---
-title: 'Comment : désactiver le chargement différé'
+title: 'Procédure : Désactiver le chargement différé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
-ms.openlocfilehash: 279317f10211271fad812068215b08a93e30fbdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9878ec468333ba79d0171d0bf96235d48273e03e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669534"
 ---
-# <a name="how-to-turn-off-deferred-loading"></a><span data-ttu-id="c8e76-102">Comment : désactiver le chargement différé</span><span class="sxs-lookup"><span data-stu-id="c8e76-102">How to: Turn Off Deferred Loading</span></span>
-<span data-ttu-id="c8e76-103">Vous pouvez désactiver le chargement différé en affectant la valeur <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> à `false`.</span><span class="sxs-lookup"><span data-stu-id="c8e76-103">You can turn off deferred loading by setting <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> to `false`.</span></span> <span data-ttu-id="c8e76-104">Pour plus d’informations, consultez [différée / chargement immédiat](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span><span class="sxs-lookup"><span data-stu-id="c8e76-104">For more information, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span></span>  
+# <a name="how-to-turn-off-deferred-loading"></a><span data-ttu-id="97485-102">Procédure : Désactiver le chargement différé</span><span class="sxs-lookup"><span data-stu-id="97485-102">How to: Turn Off Deferred Loading</span></span>
+<span data-ttu-id="97485-103">Vous pouvez désactiver le chargement différé en affectant la valeur <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> à `false`.</span><span class="sxs-lookup"><span data-stu-id="97485-103">You can turn off deferred loading by setting <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> to `false`.</span></span> <span data-ttu-id="97485-104">Pour plus d’informations, consultez [différée / le chargement immédiat](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span><span class="sxs-lookup"><span data-stu-id="97485-104">For more information, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c8e76-105">Le chargement différé est désactivé lorsque le suivi d'objet est désactivé.</span><span class="sxs-lookup"><span data-stu-id="c8e76-105">Deferred loading is turned off by implication when object tracking is turned off.</span></span> <span data-ttu-id="c8e76-106">Pour plus d’informations, consultez [Comment : récupérer des informations en lecture seule](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md).</span><span class="sxs-lookup"><span data-stu-id="c8e76-106">For more information, see [How to: Retrieve Information As Read-Only](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md).</span></span>  
+>  <span data-ttu-id="97485-105">Le chargement différé est désactivé lorsque le suivi d'objet est désactivé.</span><span class="sxs-lookup"><span data-stu-id="97485-105">Deferred loading is turned off by implication when object tracking is turned off.</span></span> <span data-ttu-id="97485-106">Pour plus d'informations, voir [Procédure : Récupérer des informations en lecture seule](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md).</span><span class="sxs-lookup"><span data-stu-id="97485-106">For more information, see [How to: Retrieve Information As Read-Only](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8e76-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="c8e76-107">Example</span></span>  
- <span data-ttu-id="c8e76-108">L'exemple suivant montre comment désactiver le chargement différé en affectant la valeur <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> à `false`.</span><span class="sxs-lookup"><span data-stu-id="c8e76-108">The following example shows how to turn off deferred loading by setting <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> to `false`.</span></span>  
+## <a name="example"></a><span data-ttu-id="97485-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="97485-107">Example</span></span>  
+ <span data-ttu-id="97485-108">L'exemple suivant montre comment désactiver le chargement différé en affectant la valeur <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> à `false`.</span><span class="sxs-lookup"><span data-stu-id="97485-108">The following example shows how to turn off deferred loading by setting <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> to `false`.</span></span>  
   
  [!code-csharp[DLinqQuerying#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#3)]
  [!code-vb[DLinqQuerying#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="c8e76-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c8e76-109">See Also</span></span>  
- [<span data-ttu-id="c8e76-110">Concepts relatifs aux requêtes</span><span class="sxs-lookup"><span data-stu-id="c8e76-110">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [<span data-ttu-id="c8e76-111">Interrogation de la base de données</span><span class="sxs-lookup"><span data-stu-id="c8e76-111">Querying the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a><span data-ttu-id="97485-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="97485-109">See also</span></span>
+- [<span data-ttu-id="97485-110">Concepts relatifs aux requêtes</span><span class="sxs-lookup"><span data-stu-id="97485-110">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [<span data-ttu-id="97485-111">Interrogation de la base de données</span><span class="sxs-lookup"><span data-stu-id="97485-111">Querying the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
