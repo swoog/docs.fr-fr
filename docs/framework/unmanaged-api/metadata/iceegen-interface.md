@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e3e70749a768377ea470bc44a66b9fdabbb1f93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5dadbe757464b24ef532fdd8abe5457fa995348
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555061"
 ---
 # <a name="iceegen-interface"></a>ICeeGen, interface
 Fournit des méthodes pour la compilation de code dynamique.  
@@ -31,15 +32,15 @@ Fournit des méthodes pour la compilation de code dynamique.
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[AddSectionReloc, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Obsolète. Ajoute une instruction .reloc au code base.|  
+|[AddSectionReloc, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Obsolète. Ajoute une instruction .reloc à la base de code.|  
 |[AllocateMethodBuffer, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Obsolète. Crée une mémoire tampon de la taille spécifiée pour une méthode et obtient l’adresse virtuelle relative de la méthode.|  
 |[ComputePointer, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Obsolète. Détermine la mémoire tampon pour la section de code spécifié.|  
 |[EmitString, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Obsolète. Émet la chaîne spécifiée dans la base de code.|  
-|[GenerateCeeFile, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Obsolète. Génère un fichier de base de code qui contient le code base chargé actuellement dans cet `ICeeGen`.|  
+|[GenerateCeeFile, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Obsolète. Génère un fichier de base de code qui contient la base de code actuellement chargé dans ce `ICeeGen`.|  
 |[GenerateCeeMemoryImage, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Obsolète. Génère une image dans la mémoire pour la base de code.|  
 |[GetIlSection, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Obsolète. Obtient la section de la base de code de langage intermédiaire référencée par le handle spécifié.|  
 |[GetIMapTokenIface, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getimaptokeniface-method.md)|Obsolète. Obtient l’interface référencée par le jeton spécifié.|  
-|[GetMethodBuffer, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Obsolète. Obtient une mémoire tampon de la taille appropriée de la méthode à l’adresse virtuelle relative spécifiée.|  
+|[GetMethodBuffer, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Obsolète. Obtient une mémoire tampon de la taille appropriée pour la méthode à l’adresse virtuelle relative spécifiée.|  
 |[GetSectionBlock, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Obsolète. Obtient un bloc de section de la base de code.|  
 |[GetSectionCreate, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Obsolète. Génère et obtient une section de code utilisant le nom spécifié et les valeurs d’indicateur.|  
 |[GetSectionDataLen, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Obsolète. Obtient la longueur de la section spécifiée.|  
@@ -48,13 +49,13 @@ Fournit des méthodes pour la compilation de code dynamique.
 |[TruncateSection, méthode](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Obsolète. Tronque la section de code spécifié par la longueur spécifiée.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

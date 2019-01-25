@@ -13,17 +13,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05e571149a794cbffa9e602255455d779a83e2a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5025f4bb6433d193ecf7dec1d8375104147e9e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562568"
 ---
 # <a name="icorprofilercallback6-interface"></a>ICorProfilerCallback6, interface
 [Pris en charge dans .NET Framework 4.5.2 et ultérieur]  
   
- Une sous-classe de [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) qui fournit une méthode de rappel que le common language runtime utilise pour notifier au profileur que le chargement d’un assembly.  
+ Une sous-classe de [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) qui fournit une méthode de rappel que le common language runtime utilise pour informer un profileur à un assembly en cours de chargement.  
   
 ## <a name="methods"></a>Méthodes  
   
@@ -34,11 +34,11 @@ ms.locfileid: "33452954"
 ## <a name="remarks"></a>Notes  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 796f8ea42cc5cbe13729f7b92e15bc214d62734d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4afbc41e680d8a20166095aeb1afbc0de9bbacbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631744"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName, méthode
 Obtient le nom du domaine d’application qui est représenté par ce [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
@@ -49,18 +49,18 @@ HRESULT GetName (
  [out] Tableau dans lequel stocker le nom.  
   
 ## <a name="remarks"></a>Notes  
- Si `szName` n’est pas null, le `GetName` méthode copie jusqu'à `cchName` caractères (y compris la marque de fin null) dans `szName`. Si une valeur non null est retournée dans `pcchName`, le nombre réel de caractères dans le nom (y compris la marque de fin null) est stocké dans le `szName` tableau.  
+ Si `szName` n’est pas null, le `GetName` méthode copie jusqu'à `cchName` caractères (y compris le terminateur null) dans `szName`. Si une valeur non null est retournée dans `pcchName`, le nombre réel de caractères dans le nom (y compris le terminateur null) est stocké dans le `szName` tableau.  
   
- Le `GetName` méthode retourne un HRESULT S_OK, quelle que soit le nombre de caractères ont été copié.  
+ Le `GetName` méthode retourne une valeur S_OK HRESULT, quel que soit le nombre de caractères ont été copié.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorPub.idl, CorPub.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorPublishAppDomain, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorPublishAppDomain, interface](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

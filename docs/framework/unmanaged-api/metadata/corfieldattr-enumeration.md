@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446618"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576013"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr, énumération
 Contient des valeurs qui décrivent les métadonnées concernant un champ.  
@@ -64,18 +64,18 @@ typedef enum CorFieldAttr {
 |------------|-----------------|  
 |`fdFieldAccessMask`|Spécifie les informations d’accessibilité.|  
 |`fdPrivateScope`|Spécifie que le champ ne peut pas être référencé.|  
-|`fdPrivate`|Spécifie que le champ est accessible uniquement par son type de parent.|  
-|`fdFamANDAssem`|Spécifie que le champ est accessible par les classes dérivées de l’assembly.|  
-|`fdAssembly`|Spécifie que le champ est accessible par tous les types de l’assembly.|  
-|`fdFamily`|Spécifie que le champ est accessible uniquement par son type et les classes dérivées.|  
+|`fdPrivate`|Spécifie que le champ est accessible uniquement par son type parent.|  
+|`fdFamANDAssem`|Spécifie que le champ est accessible par les classes dérivées dans son assembly.|  
+|`fdAssembly`|Spécifie que le champ est accessible par tous les types dans son assembly.|  
+|`fdFamily`|Spécifie que le champ est accessible uniquement par son type et classes dérivées.|  
 |`fdFamORAssem`|Spécifie que le champ est accessible par les classes dérivées et par tous les types dans son assembly.|  
-|`fdPublic`|Spécifie que le champ est accessible par tous les types avec visibilité de cette étendue.|  
+|`fdPublic`|Spécifie que le champ est accessible par tous les types avec une visibilité de cette étendue.|  
 |`fdStatic`|Spécifie que le champ est un membre de son type plutôt qu’un membre d’instance.|  
 |`fdInitOnly`|Spécifie que le champ ne peut pas être modifié après son initialisation.|  
 |`fdLiteral`|Spécifie que la valeur du champ est une constante de compilation.|  
 |`fdNotSerialized`|Spécifie que le champ n’est pas sérialisé lorsque son type est exécutée à distant.|  
-|`fdSpecialName`|Spécifie que le champ est spécial, et que son nom décrit comment.|  
-|`fdPinvokeImpl`|Spécifie que l’implémentation du champ est transférée via PInvoke.|  
+|`fdSpecialName`|Spécifie que le champ est spécial et que son nom décrit comment.|  
+|`fdPinvokeImpl`|Spécifie que l’implémentation du champ est transmise via PInvoke.|  
 |`fdReservedMask`|Réservé à un usage interne par le common language runtime.|  
 |`fdRTSpecialName`|Spécifie que les métadonnées du common language runtime API internes doivent vérifier l’encodage du nom.|  
 |`fdHasFieldMarshal`|Spécifie que le champ contienne des informations de marshaling.|  
@@ -83,11 +83,11 @@ typedef enum CorFieldAttr {
 |`fdHasFieldRVA`|Spécifie que le champ a une adresse virtuelle relative.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

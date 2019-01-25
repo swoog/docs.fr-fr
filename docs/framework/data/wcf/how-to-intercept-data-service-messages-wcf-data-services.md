@@ -1,5 +1,5 @@
 ---
-title: 'Comment : intercepter les messages des services de données (services de données WCF)'
+title: 'Procédure : Intercepter les Messages de Service de données (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 9d79a9ca27470512105b3a04d681906aa365d7e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5fdbaa25f55caf3de2f0591b7258d4a7dcb1b7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586395"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Comment : intercepter les messages des services de données (services de données WCF)
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Procédure : Intercepter les Messages de Service de données (WCF Data Services)
 Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez intercepter des messages de demande afin de pouvoir ajouter la logique personnalisée à une opération. Pour intercepter un message, vous utilisez les méthodes attribuées spécialement dans le service de données. Pour plus d’informations, consultez [intercepteurs](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
   
- L'exemple de cette rubrique utilise l'exemple du service de données Northwind. Ce service est créé lorsque vous complétez le [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ L'exemple de cette rubrique utilise l'exemple du service de données Northwind. Ce service est créé lorsque vous effectuez la [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Pour définir un intercepteur de requête pour le jeu d'entités Orders  
   
@@ -44,7 +44,7 @@ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez in
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
 ## <a name="example"></a>Exemple  
- Cet exemple définit une méthode d'interception de requête pour le jeu d'entités `Orders` qui retourne une expression lambda. Cette expression contient un délégué qui filtre le `Orders` demandé en fonction du `Customers` connexe qui a un nom de contact spécifique. Le nom est déterminé ensuite selon l'utilisateur demandeur. Cet exemple suppose que le service de données est hébergé dans une application Web ASP.NET qui utilise WCF, et que l'authentification est activée. La classe <xref:System.Web.HttpContext> est utilisée pour récupérer le principe de la demande actuelle.  
+ Cet exemple définit une méthode d’interception de requête pour le jeu d’entités `Orders` qui retourne une expression lambda. Cette expression contient un délégué qui filtre le `Orders` demandé en fonction du `Customers` connexe qui a un nom de contact spécifique. Le nom est déterminé ensuite selon l'utilisateur demandeur. Cet exemple suppose que le service de données est hébergé dans une application Web ASP.NET qui utilise WCF, et que l'authentification est activée. La classe <xref:System.Web.HttpContext> est utilisée pour récupérer le principe de la demande actuelle.  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptor)]
  [!code-vb[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptor)]  
@@ -55,6 +55,6 @@ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez in
  [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptor)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptor)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour définir une opération de service](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Définir une opération de Service](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

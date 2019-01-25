@@ -1,5 +1,5 @@
 ---
-title: "Comment : imprimer dans les Windows Forms en utilisant l'aperçu avant impression"
+title: 'Procédure : Imprimer dans les formulaires de Windows à l’aide de l’aperçu avant impression'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: ff113b3abfb8363e65d7ccb101973b6821d97262
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f412e5cbcf3014f57bc2632752a6d1ecbcf46dbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596083"
 ---
-# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Comment : imprimer dans les Windows Forms en utilisant l'aperçu avant impression
+# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Procédure : Imprimer dans les formulaires de Windows à l’aide de l’aperçu avant impression
 Il est très courant, dans la programmation Windows Forms, d'offrir un aperçu avant impression en plus des services d'impression. L'un des moyens les plus simples pour ajouter des services d'aperçu avant impression à votre application consiste à utiliser un contrôle <xref:System.Windows.Forms.PrintPreviewDialog> avec la logique de gestion d'événements <xref:System.Drawing.Printing.PrintDocument.PrintPage> pour l'impression d'un fichier.  
   
 ### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>Pour afficher un aperçu d'un document texte avec un contrôle PrintPreviewDialog  
@@ -62,9 +62,9 @@ Il est très courant, dans la programmation Windows Forms, d'offrir un aperçu a
   
 -   Références aux assemblys System, System.Windows.Forms, System.Drawing.  
   
--   Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+-   Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Voir également [Guide pratique pour Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Voir aussi  
- [Comment : imprimer un fichier texte composé de plusieurs pages dans les Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- [Prise en charge de l’impression dans les Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
- [Impression plus sécurisée dans les Windows Forms](../../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Imprimer un fichier texte de plusieurs pages dans les Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Prise en charge de l’impression dans les Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Impression plus sécurisée dans les Windows Forms](../../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)

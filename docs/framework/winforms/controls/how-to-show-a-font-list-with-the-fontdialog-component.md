@@ -1,5 +1,5 @@
 ---
-title: "Comment : afficher une liste de polices à l'aide du composant FontDialog"
+title: 'Procédure : Afficher une liste de polices avec le composant FontDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,26 +13,27 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fe291df1648da5002ce3173a68208bbad659705d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a9a4bca42117233c4b01a4aeb6cffcb79119d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726401"
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Comment : afficher une liste de polices à l'aide du composant FontDialog
-Le [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) composant permet aux utilisateurs de sélectionner une police, ainsi que de modifier ses aspects de l’affichage, telles que son poids et la taille.  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Procédure : Afficher une liste de polices avec le composant FontDialog
+Le [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) composant permet aux utilisateurs de sélectionner une police, mais aussi modifier ses aspects de l’affichage, telles que son poids et la taille.  
   
- La police sélectionnée dans la boîte de dialogue est retournée dans le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété. Par conséquent, il est aussi simple que la lecture d’une propriété de tirer parti de la police sélectionnée par l’utilisateur.  
+ La police sélectionnée dans la boîte de dialogue est retournée dans le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété. Par conséquent, en tirant parti de la police sélectionnée par l’utilisateur est aussi simple que la lecture d’une propriété.  
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>Pour sélectionner les propriétés de police à l’aide du composant FontDialog  
   
 1.  Afficher la boîte de dialogue à l’aide de la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (méthode).  
   
-2.  Utilisez le <xref:System.Windows.Forms.DialogResult> propriété pour déterminer comment la boîte de dialogue a été fermée.  
+2.  Utilisez le <xref:System.Windows.Forms.DialogResult> propriété afin de déterminer comment la boîte de dialogue a été fermée.  
   
-3.  Utilisez le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété pour définir la police souhaitée.  
+3.  Utilisez le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété à définir la police souhaitée.  
   
-     Dans l’exemple ci-dessous, le <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements ouvre un <xref:System.Windows.Forms.FontDialog> composant. Lorsqu’une police est choisie et l’utilisateur clique sur **OK**, le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété d’un <xref:System.Windows.Forms.TextBox> contrôle du formulaire est définie sur la police choisie. L’exemple suppose que votre formulaire contient un <xref:System.Windows.Forms.Button> (contrôle), un <xref:System.Windows.Forms.TextBox> (contrôle) et un <xref:System.Windows.Forms.FontDialog> composant.  
+     Dans l’exemple ci-dessous, le <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements ouvre un <xref:System.Windows.Forms.FontDialog> composant. Quand une police est sélectionné et l’utilisateur clique sur **OK**, le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété d’un <xref:System.Windows.Forms.TextBox> contrôle qui se trouve sur le formulaire est défini sur la police choisie. L’exemple suppose que votre formulaire contient un <xref:System.Windows.Forms.Button> contrôle, un <xref:System.Windows.Forms.TextBox> contrôle et un <xref:System.Windows.Forms.FontDialog> composant.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -75,6 +76,6 @@ Le [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-componen
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.FontDialog>  
- [FontDialog, composant](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.FontDialog>
+- [FontDialog, composant](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

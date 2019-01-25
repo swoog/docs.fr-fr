@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 3c60a9e430b4228117fd03a43a30f27342154b1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0dd8687bac8aa8ce046fb89c109debd91409aca8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573541"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>Personnalisation d'opérations à l'aide de procédures stockées uniquement
 L'accès aux données se fait couramment à l'aide de procédures stockées uniquement.  
@@ -18,7 +18,7 @@ L'accès aux données se fait couramment à l'aide de procédures stockées uniq
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Vous pouvez modifier l’exemple fourni dans [personnalisation des opérations par à l’aide de procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md) en remplaçant les même la première requête (ce qui implique l’exécution de SQL dynamique) par un appel de méthode qui encapsule une procédure stockée.  
+ Vous pouvez modifier l’exemple fourni dans [personnalisation des opérations par à l’aide de procédures stockées](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md) en remplaçant la première requête (ce qui provoque l’exécution de SQL dynamique) par un appel de méthode qui encapsule une procédure stockée.  
   
  Supposons que `CustomersByCity` est la méthode, comme illustré dans l'exemple suivant.  
   
@@ -31,5 +31,5 @@ L'accès aux données se fait couramment à l'aide de procédures stockées uniq
  [!code-csharp[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#5)]
  [!code-vb[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Responsabilités du développeur en matière de substitution du comportement par défaut](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+## <a name="see-also"></a>Voir aussi
+- [Responsabilités du développeur en matière de substitution du comportement par défaut](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)

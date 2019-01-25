@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 438b59aa4aa4213960e0bc3d479a2b949f6d374e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 09e778f89f58556a53f19b4c89e3d82ed94cd64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614157"
 ---
 # <a name="property-animation-techniques-overview"></a>Vue d'ensemble des techniques d'animation de propriétés
 Cette rubrique décrit les différentes approches pour animer des propriétés : tables de montage séquentiel, animations locales, horloges et animations par image.  
@@ -31,10 +31,10 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
 |Technique d’animation|Scénarios|XAML pris en charge|Contrôlable de manière interactive|  
 |-------------------------|---------------|-------------------|--------------------------------|  
-|Animation de table de montage séquentiel|Par instance, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Oui|Oui|  
-|Animation locale|Par instance|Non|Non|  
-|Animation horloge|Par instance|Non|Oui|  
-|Animation par image|Par instance|Non|N/A|  
+|Animation de table de montage séquentiel|Per-instance, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Oui|Oui|  
+|Animation locale|Par instance|Aucune|Aucune|  
+|Animation horloge|Par instance|Aucune|Oui|  
+|Animation par image|Par instance|Aucune|N/A|  
   
 <a name="storyboard_animations"></a>   
 ## <a name="storyboard-animations"></a>Animations de table de montage séquentiel  
@@ -57,9 +57,9 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
 |La table de montage séquentiel démarre à l’aide de…|Par instance|Style|Modèle de contrôle|Modèle de données|Exemple|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> et une <xref:System.Windows.EventTrigger>|Oui|Oui|Oui|Oui|[Animer une propriété à l’aide d’une table de montage séquentiel](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> et une propriété <xref:System.Windows.Trigger>|Non|Oui|Oui|Oui|[Déclencher une animation en cas de modification d’une valeur de propriété](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> et un <xref:System.Windows.DataTrigger>|Non|Oui|Oui|Oui|[Comment : déclencher une animation en cas de modification de données](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|Méthode <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Oui|Non|Non|Non|[Animer une propriété à l’aide d’une table de montage séquentiel](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> et une propriété <xref:System.Windows.Trigger>|Aucune|Oui|Oui|Oui|[Déclencher une animation en cas de modification d’une valeur de propriété](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> et un <xref:System.Windows.DataTrigger>|Aucune|Oui|Oui|Oui|[Guide pratique pour Déclencher une Animation lors de la modification des données](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|Méthode <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Oui|Non|Non|Aucune|[Animer une propriété à l’aide d’une table de montage séquentiel](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Pour plus d’informations sur <xref:System.Windows.Media.Animation.Storyboard> , voir la [vue d’ensemble des Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
@@ -108,7 +108,7 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
  Pour plus d’informations sur les objets Clock, consultez [Vue d’ensemble de l’animation et du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
   
-## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a>Animation par image : ignorer le système d’animation et de minutage  
+## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a>Animation par image : Contourner le système d’Animation et minutage  
  Utilisez cette approche lorsque vous devez ignorer entièrement le système d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Un scénario pour cette approche est l’animation physique, où pour chaque étape de l’animation les objets doivent être traités une nouvelle fois en fonction du dernier jeu d’interactions d’objet.  
   
  Les animations par image ne peuvent pas être définies dans des styles, modèles de contrôle ou modèles de données.  
@@ -121,8 +121,8 @@ Cette rubrique décrit les différentes approches pour animer des propriétés 
   
  Pour plus d’informations, consultez le <xref:System.Windows.Media.CompositionTarget.Rendering> page.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Vue d'ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Vue d'ensemble de l'animation et du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Vue d'ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Vue d'ensemble de l'animation et du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

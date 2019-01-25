@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : configurer le suivi avec WorkflowServiceHost'
+title: 'Procédure : Configurer le suivi avec WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 56b9f95019995cdb55ec36769ff179ce1125c4b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ed8775a8eb13a8e69566c1d413dcd2eba6d8b6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577567"
 ---
-# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Procédure : configurer le suivi avec WorkflowServiceHost
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Procédure : Configurer le suivi avec WorkflowServiceHost
 Cette rubrique explique comment configurer le suivi pour un workflow [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] hébergé dans <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Il est configuré via un fichier Web.config en spécifiant un comportement de service.  
   
 ### <a name="configure-tracking-in-configuration"></a>Configurer le suivi dans le fichier de configuration  
@@ -27,7 +27,7 @@ Cette rubrique explique comment configurer le suivi pour un workflow [!INCLUDE[n
     ```  
   
     > [!NOTE]
-    >  L'exemple de configuration précédent utilise la configuration simplifiée. Pour plus d’informations, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md).  
+    >  L'exemple de configuration précédent utilise la configuration simplifiée. Pour plus d’informations, consultez [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).  
   
      L'exemple de configuration précédent ajoute un objet <xref:System.Activities.Tracking.EtwTrackingParticipant> et spécifie un nom de modèle de suivi. Les modèles de suivi sont créés dans un élément <`trackingProfile`> au sein d'un élément <`tracking`>. Le modèle de suivi contient des requêtes de suivi qui permettent à un participant de suivi de s'abonner à des événements de workflow émis lorsque l'état d'une instance de workflow change au moment de l'exécution. L'exemple suivant montre comment créer un modèle de suivi.  
   
@@ -68,7 +68,7 @@ Cette rubrique explique comment configurer le suivi pour un workflow [!INCLUDE[n
   
      Pour plus d’informations sur le suivi en général, consultez [suivi et traçage de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Pour obtenir un exemple de configuration du suivi par programme, consultez [configuration du suivi d’un flux de travail](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Configuration simplifiée pour les services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Profils de suivi](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Voir aussi
+- [Configuration simplifiée pour les services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
+- [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Profils de suivi](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

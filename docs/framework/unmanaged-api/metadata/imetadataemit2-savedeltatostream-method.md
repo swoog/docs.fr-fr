@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9dfd97ce5b9b192b9a2e88e3d7e4f963d929f47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0702a7a58e6bd8c13254da5adce17c9adf6fa0cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569455"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream, méthode
-Enregistre les modifications de la session modifier et continuer actuelle dans le flux spécifié.  
+Enregistre les modifications de la session active modifier et continuer dans le flux spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,20 +38,20 @@ HRESULT SaveDeltaToStream (
   
 #### <a name="parameters"></a>Paramètres  
  `pIStream`  
- [in] Un pointeur d’interface dans le flux accessible en écriture dans lequel enregistrer les modifications.  
+ [in] Un pointeur d’interface vers le flux accessible en écriture dans lequel enregistrer les modifications.  
   
  `dwSaveFlags`  
- [in] Réservé. Cette valeur doit être zéro.  
+ [in] Réservée. Cette valeur doit être égal à zéro.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

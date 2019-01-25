@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: a639e1389d0771dfcb5635b7d78982150b684fd3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617211"
 ---
 # <a name="parameter-design"></a>Conception de paramètres
 Cette section fournit des indications générales sur la conception de paramètres, y compris les sections contenant des instructions pour la vérification des arguments. En outre, vous devez consulter les instructions décrites dans [d’affectation de noms de paramètres](../../../docs/standard/design-guidelines/naming-parameters.md).  
@@ -157,5 +157,5 @@ public class String {
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)  
+- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)
 - [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

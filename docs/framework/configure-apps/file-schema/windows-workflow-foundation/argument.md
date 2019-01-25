@@ -3,12 +3,12 @@ title: '&lt;argument&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7144d53-8023-4e90-971f-895e016fd58a
-ms.openlocfilehash: 8172093f36bd09ea33b1a447ee61dc36afb1b358
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3744781f844d4a1728ba1e9846b2b8c56c0ad8fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554598"
 ---
 # <a name="ltargumentgt"></a>&lt;argument&gt;
 Élément de configuration qui représente un argument associé à une requête d'état d'activité.  
@@ -16,13 +16,13 @@ ms.locfileid: "53154227"
  Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<suivi >  
-\<trackingProfile >  
-\<flux de travail >  
-\<activityStateQueries >  
-\<activityStateQuery >  
-\<arguments >  
-\<argument >  
+\<tracking>  
+\<trackingProfile>  
+\<workflow>  
+\<activityStateQueries>  
+\<activityStateQuery>  
+\<arguments>  
+\<argument>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +57,7 @@ ms.locfileid: "53154227"
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<arguments >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Collection d’arguments associés à cette requête d’activité.|  
+|[\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Collection d’arguments associés à cette requête d’activité.|  
   
 ## <a name="remarks"></a>Notes  
  Une fonctionnalité propre à ActivityStateQuery est la possibilité d’extraire des données lors du suivi de l’exécution d’un flux de travail. Vous disposez ainsi d'un contexte supplémentaire lors de l'accès à une post-exécution d'enregistrements de suivi. Vous pouvez utiliser la [ \<arguments >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<États >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) et [ \<États >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) éléments à extraire une variable ou un argument à partir de toutes les activités dans un flux de travail. L’exemple suivant illustre une requête d’état d’activité qui extrait des variables et arguments lorsque l’enregistrement de suivi `Closed` de l’activité est émis. Variables et arguments peuvent être extraits uniquement avec un objet ActivityStateRecord et par conséquent, êtes abonnés au sein d’un suivi à l’aide du profil [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
@@ -76,8 +76,8 @@ ms.locfileid: "53154227"
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

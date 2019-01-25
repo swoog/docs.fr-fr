@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
 author: KrzysztofCwalina
-ms.openlocfilehash: 8d7b1500506ec73a0d33d5352756cb85039358e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d7174de7ddf062b829672e04952c1010fcb74058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616929"
 ---
 # <a name="unsealed-classes"></a>Classes unsealed
 Les classes sealed ne peut pas être héritées, et ils empêchent d’extensibilité. En revanche, les classes qui peuvent être héritées sont appelées des classes non scellés.  
@@ -30,6 +30,6 @@ Les classes sealed ne peut pas être héritées, et ils empêchent d’extensibi
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
-- [Conception en vue de l’extensibilité](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+- [Conception en vue de l’extensibilité](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Scellement](../../../docs/standard/design-guidelines/sealing.md)

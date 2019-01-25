@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a38c35f0acd47c9183c043e1c436413a309b138
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 925edf6226ed955d097821a42a79425d076c208b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621275"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut, méthode
-Appelée lorsqu’un appel est sortant.  
+Appelée lorsque l’appel est sortant.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ HRESULT OnSyncCallOut
  [in] ID de l’appel sortant. Consultez [call_id, Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
- [out] Mémoire tampon des appels.  
+ [out] Mémoire tampon d’appel.  
   
  `out_pBufferSize`  
  [out] Taille de la mémoire tampon de l’appel, en octets.  
@@ -53,7 +54,7 @@ HRESULT OnSyncCallOut
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Voir aussi  
- [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

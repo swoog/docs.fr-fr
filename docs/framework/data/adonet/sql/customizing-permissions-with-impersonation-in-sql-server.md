@@ -2,12 +2,12 @@
 title: Personnalisation des autorisations avec l'emprunt d'identité dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: bfee153a1293ec89285dbeabd1ed64a89764a717
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 182eadecbd5330f06fc1cd45d2c768b570f12bf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596967"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personnalisation des autorisations avec l'emprunt d'identité dans SQL Server
 De nombreuses applications utilisent des procédures stockées pour accéder aux données, en se basant sur le chaînage des propriétés de manière à limiter l'accès aux tables de base. Vous pouvez accorder des autorisations EXECUTE sur les procédures stockées, en révoquant ou refusant des autorisations sur les tables de base. SQL Server ne vérifie pas les autorisations de l'appelant si la procédure stockée et les tables ont le même propriétaire. Toutefois, le chaînage des propriétés ne fonctionne pas si les objets ont des propriétaires différents ou dans le cas d'instructions SQL dynamiques.  
@@ -65,12 +65,12 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 -   SELF. L'exécution en tant que SELF exécute la procédure dans le contexte de sécurité du créateur de la procédure stockée. Cela revient à exécuter la procédure en tant qu'un utilisateur spécifié, ce dernier étant la personne qui crée ou modifie la procédure.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Vue d’ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Gestion des autorisations avec les procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [Écriture de code SQL dynamique sécurisé dans SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [Modification des données avec les procédures stockées](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Vue d’ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Gestion des autorisations avec les procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Écriture de code SQL dynamique sécurisé dans SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
+- [Modification des données avec les procédures stockées](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

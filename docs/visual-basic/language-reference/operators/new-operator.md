@@ -11,20 +11,20 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587552"
 ---
 # <a name="new-operator-visual-basic"></a>New, opérateur (Visual Basic)
-Introduit un `New` clause pour créer une nouvelle instance de l’objet, spécifie une contrainte de constructeur sur un paramètre de type ou identifie une `Sub` procédure sous la forme d’un constructeur de classe.  
+Introduit un `New` clause pour créer une nouvelle instance de l’objet, spécifie une contrainte de constructeur sur un paramètre de type ou identifie un `Sub` procédure en tant qu’un constructeur de classe.  
   
 ## <a name="remarks"></a>Notes  
- Dans une déclaration ou une instruction d’assignation, un `New` clause doit spécifier une classe définie à partir de laquelle l’instance peut être créée. Cela signifie que la classe doit exposer un ou plusieurs constructeurs accessibles par le code appelant.  
+ Dans une déclaration ou une instruction d’assignation, un `New` clause doit spécifier une classe définie à partir de laquelle l’instance peut être créée. Cela signifie que la classe doit exposer un ou plusieurs constructeurs le code appelant peut accéder.  
   
- Vous pouvez utiliser un `New` clause dans une instruction de déclaration ou une instruction d’assignation. Lorsque l’instruction s’exécute, il appelle le constructeur approprié de la classe spécifiée, en passant les arguments que vous avez fournies. L’exemple suivant illustre cela en créant des instances d’un `Customer` classe qui possède deux constructeurs, qui ne prend aucun paramètre et une qui prend un paramètre de chaîne.  
+ Vous pouvez utiliser un `New` clause dans une instruction de déclaration ou une instruction d’assignation. Lorsque l’instruction s’exécute, il appelle le constructeur approprié de la classe spécifiée, en passant les arguments que vous avez fourni. L’exemple suivant illustre cela en créant des instances d’un `Customer` classe qui possède deux constructeurs qui n’accepte aucun paramètre et une fonction qui accepte un paramètre de chaîne.  
   
  [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
@@ -35,9 +35,9 @@ Introduit un `New` clause pour créer une nouvelle instance de l’objet, spéci
  Le common language runtime (CLR) lève une <xref:System.OutOfMemoryException> erreur si la mémoire est insuffisante pour créer la nouvelle instance.  
   
 > [!NOTE]
->  Le `New` est également utilisé dans les listes de paramètres de type pour spécifier que le type fourni doit exposer un constructeur sans paramètre accessible. Pour plus d’informations sur les paramètres de type et les contraintes, consultez [Type liste](../../../visual-basic/language-reference/statements/type-list.md).  
+>  Le `New` mot clé est également utilisé dans les listes de paramètres de type pour spécifier que le type fourni doit exposer un constructeur sans paramètre accessible. Pour plus d’informations sur les paramètres de type et contraintes, consultez [liste Type](../../../visual-basic/language-reference/statements/type-list.md).  
   
- Pour créer une procédure de constructeur pour une classe, définissez le nom d’un `Sub` procédure pour le `New` (mot clé). Pour plus d’informations, consultez [durée de vie : comment les objets sont création et destruction](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Pour créer une procédure de constructeur pour une classe, définissez le nom d’un `Sub` procédure pour le `New` mot clé. Pour plus d’informations, consultez [durée de vie : Comment les objets sont créés et détruits](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
  Le mot clé `New` peut être utilisé dans les contextes suivants :  
   
@@ -47,9 +47,9 @@ Introduit un `New` clause pour créer une nouvelle instance de l’objet, spéci
   
  [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.OutOfMemoryException>  
- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)  
- [Liste de types](../../../visual-basic/language-reference/statements/type-list.md)  
- [Types génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Durée de vie d’un objet : création et destruction des objets](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.OutOfMemoryException>
+- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)
+- [Liste de types](../../../visual-basic/language-reference/statements/type-list.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Durée de vie d’objet : Comment les objets sont créés et détruits](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

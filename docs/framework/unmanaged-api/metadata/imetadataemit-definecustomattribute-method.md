@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a11e9919dc1338c4b67c3c4b0f082e330c29d9eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7cf2fec56da39a0e3e076be37df185ff2bce5e3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616665"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute, méthode
-Crée une définition pour un attribut personnalisé avec la signature de métadonnées spécifiée, à joindre à l’objet spécifié et obtient un jeton pour cette définition d’attribut personnalisé.  
+Crée une définition pour un attribut personnalisé avec la signature de métadonnées spécifié, à joindre à l’objet spécifié et obtient un jeton pour cette définition d’attribut personnalisé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ HRESULT DefineCustomAttribute (
  [in] Le jeton pour l’élément propriétaire.  
   
  `tkType`  
- [in] Jeton qui identifie l’attribut personnalisé.  
+ [in] Le jeton qui identifie l’attribut personnalisé.  
   
  `pCustomAttribute`  
  [in] Pointeur vers l’attribut personnalisé.  
@@ -53,17 +53,17 @@ HRESULT DefineCustomAttribute (
  [in] Le nombre d’octets dans `pCustomAttribute`.  
   
  `pcv`  
- [out] Le `mdCustomAttribute` jeton assigné.  
+ [out] Le `mdCustomAttribute` jeton attribué.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

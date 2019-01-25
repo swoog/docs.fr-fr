@@ -1,21 +1,21 @@
 ---
-title: 'Comment : rechercher un élément avec un attribut spécifique (Visual Basic)'
+title: 'Procédure : Rechercher un élément avec un attribut spécifique (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-ms.openlocfilehash: ea5221553e2bb4fd624ca6b10e615c5766bfcb0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f170daa58dc2ee8759beeb04df7670d9d43fb494
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536059"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Comment : rechercher un élément avec un attribut spécifique (Visual Basic)
+# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Procédure : Rechercher un élément avec un attribut spécifique (Visual Basic)
 Cette rubrique montre comment rechercher un élément qui possède un attribut qui a une valeur spécifique.  
   
 ## <a name="example"></a>Exemple  
  L'exemple montre comment rechercher l'élément `Address` qui possède un attribut `Type` avec la valeur « Billing ».  
   
- Cet exemple utilise le document XML suivant : [Exemple de fichier XML : commande fournisseur typique (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Commande fournisseur typique (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -46,7 +46,7 @@ Next
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre la même requête pour du code XML qui est dans un espace de noms. Pour plus d’informations, consultez [utilisation des espaces de noms XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Cet exemple utilise le document XML suivant : [Exemple de fichier XML : commande fournisseur typique dans un espace de noms](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Commande fournisseur typique dans un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -78,9 +78,9 @@ End Module
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xml.Linq.XElement.Attribute%2A>  
- <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Opérations de projection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Xml.Linq.XElement.Attribute%2A>
+- <xref:System.Xml.Linq.XContainer.Elements%2A>
+- [Requêtes de base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Opérations de projection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b8968ab7c3b6fee1e29a7389020c26232e34c1e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567007"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi (fonction)
 Crée une connexion via DCOM à un espace de noms WMI sur un ordinateur spécifié.  
@@ -58,8 +58,8 @@ HRESULT ConnectServerWmi (
 
 | Constante  | Value  | Description  |
 |---------|---------|---------|
-| `CONNECT_REPOSITORY_ONLY` | 0 x 40 | Réservé à un usage interne. Ne pas utiliser. |
-| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0 x 80 | `ConnectServerWmi` retourne en deux minutes ou moins. |
+| `CONNECT_REPOSITORY_ONLY` | 0x40 | Réservé à un usage interne. Ne pas utiliser. |
+| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` retourne en deux minutes ou moins. |
 
 `strAuthority` [in] Le nom de domaine de l’utilisateur. Il peut afficher les valeurs suivantes :
 
@@ -87,8 +87,8 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Il y a eu une défaillance générale. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
+| `WBEM_E_FAILED` | 0x80041001 | Il y a eu une défaillance générale. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre n’est pas valide. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
 | `WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
@@ -101,12 +101,12 @@ Cette fonction encapsule un appel à la [IWbemLocator::ConnectServer](/windows/d
 `strUser` ne peut pas être une chaîne vide. Si le domaine est spécifié dans `strAuthority`, il ne doit pas également figurer dans `strUser`, ou la fonction retourne `WBEM_E_INVALID_PARAMETER`.
 
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

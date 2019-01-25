@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 0bcab736aad1df84713c7a111d23b82a54ec4334
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63a761b4a79743b0d4a03392ced465c3105db9bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602531"
 ---
 # <a name="sending-and-receiving-faults"></a>Envoi et réception des erreurs
 Les erreurs SOAP acheminent des informations de condition d'erreur d'un service à un client et, dans le cas duplex, d'un client à un service d'une manière interopérable. En général un service définit le contenu des erreurs personnalisées et spécifie quelles opérations peuvent les retourner. (Pour plus d’informations, consultez [définition et spécification des erreurs](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Cette rubrique explique comment un service ou un client duplex peut envoyer ces erreurs lorsque la condition d'erreur correspondante s'est produite et comment un client ou une application de service gère ces erreurs. Pour une vue d’ensemble de la gestion des erreurs dans les applications Windows Communication Foundation (WCF), consultez [spécification et gestion des erreurs dans les contrats et Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -104,9 +104,9 @@ Les erreurs SOAP acheminent des informations de condition d'erreur d'un service 
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.FaultException>  
- <xref:System.ServiceModel.FaultException%601>  
- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
- [Exceptions attendues](../../../docs/framework/wcf/samples/expected-exceptions.md)  
- [Utilisez fermer et abandonner pour libérer des ressources de client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.FaultException>
+- <xref:System.ServiceModel.FaultException%601>
+- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
+- [Exceptions attendues](../../../docs/framework/wcf/samples/expected-exceptions.md)
+- [Utilisez fermer et abandonner pour libérer des ressources de client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

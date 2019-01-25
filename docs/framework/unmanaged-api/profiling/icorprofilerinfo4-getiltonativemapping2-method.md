@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fba81500749a16a59405edaaa2ee1d12d86229f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bd3ccbe2b6b33e873bdb647987b38aeef74c1b2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552487"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2, méthode
 Obtient un mappage des offsets MSIL (Microsoft Intermediate Language) aux offsets natifs pour le code contenu dans la version recompilée juste-à-temps de la fonction spécifiée.  
@@ -50,16 +50,16 @@ HRESULT GetILToNativeMapping(
  [in] Taille maximale du tableau `map`.  
   
  `pcMap`  
- [out] Nombre total de structures COR_DEBUG_IL_TO_NATIVE_MAP disponibles.  
+ [out] Le nombre total de structures COR_DEBUG_IL_TO_NATIVE_MAP disponibles.  
   
  `map`  
  [out] Tableau de structures `COR_DEBUG_IL_TO_NATIVE_MAP` qui spécifient chacune les offsets. Suite au retour de la méthode `GetILToNativeMapping2`, `map` contient une partie ou la totalité des structures `COR_DEBUG_IL_TO_NATIVE_MAP`.  
   
 ## <a name="remarks"></a>Notes  
- `GetILToNativeMapping2` est similaire à la [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) (méthode), à ceci près qu’elle permettra au profileur de spécifier l’ID de la fonction recompilée dans les futures mises à jour.  
+ `GetILToNativeMapping2` est similaire à la [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) (méthode), à ceci près qu’elle permettra au profileur de spécifier l’ID de la fonction recompilée dans les futures versions.  
   
 > [!NOTE]
->  Le [ICorProfilerFunctionControl::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) méthode n’est pas implémentée dans le [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], de sorte que les fonctions qui ont été recompilée juste-ne peut pas avoir un mappage de langage intermédiaire – natif qui diffère de l’à l’origine fonction compilée. Par conséquent, la méthode `GetILToNativeMapping2` ne peut pas être appelée avec un ID recompilé juste-à-temps différent de zéro dans le [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+>  Le [ICorProfilerFunctionControl::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) méthode n’est pas implémentée dans le [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], de sorte que les fonctions qui ont été recompilées JIT ne peut pas avoir un mappage de langage intermédiaire – natif qui diffère l’à l’origine fonction compilée. Par conséquent, la méthode `GetILToNativeMapping2` ne peut pas être appelée avec un ID recompilé juste-à-temps différent de zéro dans le [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
  La méthode `GetILToNativeMapping2` retourne un tableau de structures `COR_DEBUG_IL_TO_NATIVE_MAP`. Pour indiquer la finalité que certaines plages d’instructions natives correspondent à des régions spéciales de code (par exemple, le prologue), une entrée dans le tableau peut avoir son `ilOffset` champ défini sur une valeur de la [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) énumération.  
   
@@ -68,16 +68,16 @@ HRESULT GetILToNativeMapping(
  Vous pouvez également commencer par appeler `GetILToNativeMapping2` avec une mémoire tampon `map` de longueur nulle pour obtenir la taille correcte de la mémoire tampon. Vous pouvez ensuite affecter à la taille de la mémoire tampon la valeur retournée dans `pcMap` et rappeler `GetILToNativeMapping2`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [GetILToNativeMapping, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)  
- [ICorProfilerInfo4, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilage](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Voir aussi
+- [GetILToNativeMapping, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [ICorProfilerInfo4, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilage](../../../../docs/framework/unmanaged-api/profiling/index.md)

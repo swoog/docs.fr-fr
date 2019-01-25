@@ -2,12 +2,12 @@
 title: Manipulation des données dans un DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: a09edc6ce3098ab135d8c27ba0f6ad56cceed159
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 54ebde293dd6701b8018e77c6bf8d773a4931e2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509557"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipulation des données dans un DataTable
 Après avoir créé un objet <xref:System.Data.DataTable> dans un objet <xref:System.Data.DataSet>, vous pouvez réaliser les mêmes opérations que lorsque vous utilisez une table d'une base de données. Vous pouvez ajouter, afficher, modifier et supprimer les données de la table, surveiller les erreurs et les événements et interroger les données de la table. Lors de la modification des données dans un **DataTable**, vous pouvez également vérifier si les modifications sont précises et déterminent s’il faut par programmation accepter ou rejeter les modifications.  
@@ -37,7 +37,7 @@ Après avoir créé un objet <xref:System.Data.DataTable> dans un objet <xref:Sy
  [AcceptChanges et RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  Explique comment accepter ou rejeter les modifications apportées à une ligne.  
   
-## <a name="see-also"></a>Voir aussi  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [Gestion des événements de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Gestion des événements de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

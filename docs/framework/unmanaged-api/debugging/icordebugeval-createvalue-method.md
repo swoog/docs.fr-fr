@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d67784daee055106f104d74d098b9926c6de2ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0af820b590271e16cbfb443c193fd0afb4ed3358
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604110"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue, méthode
 Crée une valeur du type spécifié, avec une valeur initiale de zéro ou null.  
@@ -52,12 +52,12 @@ HRESULT CreateValue (
 ## <a name="remarks"></a>Notes  
  `CreateValue` Crée un `ICorDebugValue` objet du type donné dans le seul but de l’utiliser dans une évaluation de fonction. Cet objet de valeur peut être utilisé pour passer des constantes de l’utilisateur en tant que paramètres.  
   
- Si le type de la valeur est un type primitif, sa valeur initiale est zéro ou null. Utilisez [ICorDebugGenericValue::SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) pour définir la valeur d’un type primitif.  
+ Si le type de la valeur est un type primitif, sa valeur initiale est égal à zéro ou null. Utilisez [ICorDebugGenericValue::SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) pour définir la valeur d’un type primitif.  
   
- Si la valeur de `elementType` est ELEMENT_TYPE_CLASS, vous obtenez « ICorDebugReferenceValue » (retournées dans `ppValue`) qui représente la référence d’objet null. Vous pouvez utiliser cet objet pour passer null à une évaluation de fonction qui a des paramètres de référence d’objet. Vous ne pouvez pas définir le `ICorDebugValue` à quoi que ce soit ; il reste toujours null.  
+ Si la valeur de `elementType` est ELEMENT_TYPE_CLASS, vous obtenez « ICorDebugReferenceValue » (retournées dans `ppValue`) représentant la référence d’objet null. Vous pouvez utiliser cet objet de passer null pour une évaluation de fonction qui a des paramètres de référence d’objet. Vous ne pouvez pas définir le `ICorDebugValue` à n’importe quoi : il reste toujours null.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
@@ -65,7 +65,6 @@ HRESULT CreateValue (
   
  **Versions du .NET framework :** 1.1, 1.0  
   
-## <a name="see-also"></a>Voir aussi  
-    
- [CreateValueForType, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)  
- ICorDebugValue
+## <a name="see-also"></a>Voir aussi
+
+- [CreateValueForType, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) ICorDebugValue

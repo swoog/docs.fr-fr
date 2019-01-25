@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: bee0cf4a1fcd70274ff8c1107a35ec3501ef2249
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49415248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563637"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Développer et déployer des Services de données WCF
 
@@ -42,7 +42,7 @@ Lorsque vous développez un Service de données WCF comme une [!INCLUDE[vstecasp
 
 1.  **Serveur IIS local**
 
-     Lorsque vous créez un service de données qui est une application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou un site Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] exécuté sur Internet Information Services (IIS), nous vous recommandons de développer et tester votre service de données à l'aide d'IIS sur l'ordinateur local. L'exécution du service de données sur IIS facilite le suivi des demandes HTTP pendant le débogage. Elle permet également de prédéfinir les droits requis par IIS pour accéder aux fichiers, aux bases de données et aux autres ressources requises par le service de données. Pour exécuter votre service de données sur IIS, vous devez vous assurer que IIS et Windows Communication Foundation (WCF) sont installés et configurés correctement et accorder l’accès aux comptes d’IIS dans le système de fichiers et les bases de données. Pour plus d'informations, consultez [Procédure : développer un WCF Data Service qui fonctionne sur IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Lorsque vous créez un service de données qui est une application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou un site Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] exécuté sur Internet Information Services (IIS), nous vous recommandons de développer et tester votre service de données à l'aide d'IIS sur l'ordinateur local. L'exécution du service de données sur IIS facilite le suivi des demandes HTTP pendant le débogage. Elle permet également de prédéfinir les droits requis par IIS pour accéder aux fichiers, aux bases de données et aux autres ressources requises par le service de données. Pour exécuter votre service de données sur IIS, vous devez vous assurer que IIS et Windows Communication Foundation (WCF) sont installés et configurés correctement et accorder l’accès aux comptes d’IIS dans le système de fichiers et les bases de données. Pour plus d'informations, voir [Procédure : Développer un Service de données WCF s’exécutant sur IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Vous devez exécuter Visual Studio avec des droits d’administrateur pour activer l’environnement de développement configurer le serveur IIS local.
@@ -82,7 +82,7 @@ Vous devez tenir compte de ce qui suit lorsque vous développez un service de do
 
 -   Lorsque vous déboguez un service de données, vous souhaiterez obtenir plus d’informations sur une erreur du service de données que pendant le fonctionnement normal. Pour obtenir davantage d'informations sur l'erreur à partir du service de données, affectez à la propriété <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> dans <xref:System.Data.Services.DataServiceConfiguration> la valeur `true` et affectez à la propriété <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> de l'attribut <xref:System.ServiceModel.Description.ServiceDebugBehavior> sur la classe de service de données la valeur `true`. Pour plus d’informations, consultez le billet [débogage de WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Vous pouvez également activer le traçage dans WCF pour afficher les exceptions levées dans la couche de messagerie HTTP. Pour plus d'informations, consultez [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
--   Un service de données est généralement développé comme un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projet d’application, mais vous pouvez également créer votre service de données comme un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projet de site Web dans Visual Studio. Pour plus d’informations sur les différences entre les deux types de projets, consultez la page [NIB : Projets d’application web et projets de site web dans Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
+-   Un service de données est généralement développé comme un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projet d’application, mais vous pouvez également créer votre service de données comme un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projet de site Web dans Visual Studio. Pour plus d’informations sur les différences entre les deux types de projets, consultez [NIB : Projets d’Application et les projets de Site Web dans Visual Studio Web](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
 
 -   Lorsque vous créez un service de données à l’aide de la **ajouter un nouvel élément** boîte de dialogue dans Visual Studio, le service de données est hébergé par [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dans IIS. Tandis que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et IIS sont l'hôte par défaut d'un service de données, d'autres options d'hébergement sont prises en charge. Pour plus d’informations, consultez [qui héberge le Service de données](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
 
@@ -111,7 +111,7 @@ WCF Data Service permet de choisir le processus qui héberge le service de donn�
      Pour plus d’informations sur les options de déploiement pour un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application, consultez [vue d’ensemble du déploiement Web pour Visual Studio et ASP.NET](https://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).
 
     > [!TIP]
-    > Avant de tenter de déployer le service de données sur IIS, testez le déploiement sur un serveur Web qui exécute IIS. Pour plus d'informations, consultez [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
+    > Avant de tenter de déployer le service de données sur IIS, testez le déploiement sur un serveur Web qui exécute IIS. Pour plus d'informations, voir [Procédure : Développer un Service de données WCF s’exécutant sur IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
 -   **Windows Azure**
 
@@ -121,7 +121,7 @@ WCF Data Service permet de choisir le processus qui héberge le service de donn�
 
 Vous devez tenir compte de ce qui suit lorsque vous déployez un service de données :
 
--   Lorsque vous déployez un service de données qui utilise le fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] pour accéder à une base de données SQL Server, vous devrez peut-être propager des structures de données, des données, ou les deux à votre déploiement de service de données. Visual Studio peut créer automatiquement des scripts (fichiers .sql) pour ce faire, dans la base de données de destination, et ces scripts peuvent être inclus dans le package de déploiement Web d’un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application. Pour plus d’informations, consultez [Comment : déployer une base de données avec un projet d’Application Web](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Pour un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] site Web, vous pouvez faire à l’aide de la **Assistant Publication de base de données** dans Visual Studio. Pour plus d'informations, consultez [déploiement d’une base de données à l’aide de l’Assistant Publication de base de données](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).
+-   Lorsque vous déployez un service de données qui utilise le fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] pour accéder à une base de données SQL Server, vous devrez peut-être propager des structures de données, des données, ou les deux à votre déploiement de service de données. Visual Studio peut créer automatiquement des scripts (fichiers .sql) pour ce faire, dans la base de données de destination, et ces scripts peuvent être inclus dans le package de déploiement Web d’un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application. Pour plus d'informations, voir [Procédure : Déployer une base de données avec un projet d’Application Web](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Pour un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] site Web, vous pouvez faire à l’aide de la **Assistant Publication de base de données** dans Visual Studio. Pour plus d'informations, consultez [déploiement d’une base de données à l’aide de l’Assistant Publication de base de données](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).
 
 -   Étant donné que WCF Data Services inclut une implémentation WCF de base, vous pouvez utiliser Windows Server AppFabric pour surveiller un service de données déployé sur IIS s’exécutant sur Windows Server. Pour plus d’informations sur l’utilisation de Windows Server AppFabric pour surveiller un service de données, consultez le billet [suivi de WCF Data Services avec Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : trier un tableau dans Visual Basic'
+title: 'Procédure : Trier un tableau en Visual Basic'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: a067c40e1dd0e881516cbc7769cb9afb879d1b9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b04bfbedf9d7266d1b2e190fa85b8a64cf6efbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558434"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>Comment : trier un tableau dans Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Procédure : Trier un tableau en Visual Basic
 Cet exemple déclare un tableau de `String` objets nommés `zooAnimals`, il remplit, puis le tri par ordre alphabétique.  
   
 ## <a name="example"></a>Exemple  
@@ -37,15 +37,15 @@ End Sub
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Le tableau est vide (<xref:System.ArgumentNullException> classe)  
+-   Tableau est vide (<xref:System.ArgumentNullException> classe)  
   
--   Le tableau est multidimensionnel (<xref:System.RankException> classe)  
+-   Tableau est multidimensionnel (<xref:System.RankException> classe)  
   
 -   Un ou plusieurs éléments du tableau n’implémentent pas le <xref:System.IComparable> interface (<xref:System.InvalidOperationException> classe)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
- [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Dépannage des tableaux](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
- [Collections](../../concepts/collections.md)  
- [For Each...Next (instruction)](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Array.Sort%2A?displayProperty=nameWithType>
+- [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Dépannage des tableaux](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [Collections](../../concepts/collections.md)
+- [For Each...Next (instruction)](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

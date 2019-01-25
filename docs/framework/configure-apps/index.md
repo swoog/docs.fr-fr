@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b27a5dec4483afb0f6c66c3a015c89967483cb61
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: e767218456dd4096939d3f353944cb7aeacb352d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601712"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configuration des applications à l'aide de fichiers de configuration
 Le .NET Framework, par le biais de fichiers de configuration, permet aux développeurs et administrateurs de contrôler la façon dont les applications s'exécutent avec la souplesse requise. Les fichiers de configuration sont des fichiers XML qui peuvent être modifiés selon les besoins. Un administrateur peut exercer un contrôle sur les ressources protégées auxquelles une application peut accéder, les versions d'assemblys utilisées par une application et l'endroit où sont situés les applications et objets distants. Les développeurs peuvent stocker des paramètres dans des fichiers de configuration, de façon à ce qu'il ne leur soit pas nécessaire de recompiler une application chaque fois qu'un paramètre change. Cette section décrit les éléments qui peuvent être configurés et explique en quoi la configuration d'une application peut se révéler utile.  
@@ -82,11 +82,11 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
   
 -   Application hébergée par Internet Explorer.  
   
-     Si une application hébergée dans Internet Explorer possède un fichier de configuration, l'emplacement de ce fichier est spécifié dans une balise `<link>` dont la syntaxe est la suivante :  
+     Si une application hébergée dans Internet Explorer possède un fichier de configuration, l’emplacement de ce fichier est spécifié dans une étiquette `<link>` dont la syntaxe est la suivante :  
   
      \<link rel="*ConfigurationFileName*" href="*location*">  
   
-     Dans cette balise, `location` représente une URL vers le fichier de configuration. Ceci définit la base de l'application. Le fichier de configuration doit être situé sur le même site web que l'application.  
+     Dans cette étiquette, `location` représente une URL vers le fichier de configuration. Ceci définit la base de l'application. Le fichier de configuration doit être situé sur le même site web que l'application.  
   
 ## <a name="security-configuration-files"></a>Fichiers de configuration de sécurité  
  Les fichiers de configuration de sécurité contiennent des informations sur la hiérarchie du groupe de codes et des jeux d'autorisations associée à un niveau de stratégie. Nous vous recommandons vivement d’utiliser l’[outil Stratégie de sécurité d’accès du code (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) pour modifier la stratégie de sécurité et éviter que les modifications de stratégie corrompent les fichiers de configuration de sécurité.  
@@ -103,7 +103,7 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
 -   Fichier de configuration de la stratégie de l’utilisateur : %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Comment : localiser des assemblys à l'aide de DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Guide pratique pour Localiser des assemblys à l’aide de DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Explique comment demander au runtime d'utiliser la variable d'environnement DEVPATH pour rechercher les assemblys.  
   
  [Redirection des versions d'assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -115,19 +115,19 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
  [Configuration des classes de chiffrement](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  Décrit la manière d'associer un nom d'algorithme à une classe de chiffrement et un identificateur d'objet à un algorithme de chiffrement.  
   
- [Comment : créer une stratégie d'éditeur](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [Guide pratique pour Créer une stratégie d’éditeur](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  Explique quand et comment ajouter un fichier de stratégie de l'éditeur pour spécifier la redirection de l'assembly et les paramètres de base du code.  
   
  [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)  
  Décrit la hiérarchie du schéma pour les paramètres de démarrage, de runtime et de réseau, ainsi que pour d'autres types de paramètres de configuration.  
   
-## <a name="see-also"></a>Voir aussi  
- [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Spécification de l'emplacement d'un assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [Redirection des versions d'assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [Inscription d’objets distants à l’aide de fichiers de Configuration](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
- [Administration de site web ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB : Gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
- [Caspol.exe (outil de stratégie de sécurité d’accès du code)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+## <a name="see-also"></a>Voir aussi
+- [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Spécification de l'emplacement d'un assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)
+- [Redirection des versions d'assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Inscription d’objets distants à l’aide de fichiers de Configuration](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)
+- [Administration de site web ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [NIB : Gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)
+- [Caspol.exe (outil de stratégie de sécurité d’accès du code)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
+- [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
