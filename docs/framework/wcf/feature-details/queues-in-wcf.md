@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13bc401647612c982eb13a3b607e41c6afa61716
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742745"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Files d'attente dans Windows Communication Foundation
 Les rubriques de cette section traitent de prise en charge de Windows Communication Foundation (WCF) pour les files d’attente. WCF fournit la prise en charge de file d’attente en exploitant Microsoft Message Queuing (anciennement appelé MSMQ) comme transport et permet les scénarios suivants :  
@@ -22,7 +22,7 @@ Les rubriques de cette section traitent de prise en charge de Windows Communicat
   
 -   Opérations hors circuit. L'envoi, la réception et le traitement d'opérations peut se faire hors circuit en cas de communication sur des réseaux à forte latence ou à disponibilité limitée, comme dans le cas des appareils mobiles. Les files d'attente permettent à ces opérations de se poursuivre, même lorsque les points de terminaison sont déconnectés. Lorsque la connexion est rétablie, la file d'attente envoie des messages à l'application réceptrice.  
   
- Pour utiliser la fonctionnalité de files d’attente dans une application WCF, vous pouvez utiliser une des liaisons standards, ou vous pouvez créer une liaison personnalisée si une des liaisons standard ne répondent pas à vos besoins. Pour plus d’informations sur les liaisons standard pertinentes et comment en choisir un, consultez [Comment : échanger des Messages avec les points de terminaison WCF et les Applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Pour plus d’informations sur la création de liaisons personnalisées, consultez [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Pour utiliser la fonctionnalité de files d’attente dans une application WCF, vous pouvez utiliser une des liaisons standards, ou vous pouvez créer une liaison personnalisée si une des liaisons standard ne répondent pas à vos besoins. Pour plus d’informations sur les liaisons standard pertinentes et comment en choisir un, consultez [Comment : Échanger des Messages avec des points de terminaison WCF et Applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Pour plus d’informations sur la création de liaisons personnalisées, consultez [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
@@ -31,10 +31,10 @@ Les rubriques de cette section traitent de prise en charge de Windows Communicat
  [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  Vue d’ensemble de la prise en charge de la file d’attente WCF.  
   
- [Guide pratique pour échanger des messages en file d’attente avec des points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Guide pratique pour Échanger des Messages en file d’attente avec les points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Explique comment utiliser le <xref:System.ServiceModel.NetMsmqBinding> classe pour la communication entre un client WCF et un service WCF.  
   
- [Guide pratique pour échanger des messages avec des points de terminaison WCF et des applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Guide pratique pour Échanger des Messages avec les points de terminaison WCF et Message Queuing des Applications](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Explique comment utiliser le <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> pour communiquer entre les applications WCF et Message Queuing.  
   
  [Regroupement de messages mis en file d’attente dans une session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
@@ -64,5 +64,5 @@ Les rubriques de cette section traitent de prise en charge de Windows Communicat
  [Bonnes pratiques pour les communications mises en file d’attente](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Explique les meilleures pratiques pour l’utilisation de WCF en file d’attente de communication.  
   
-## <a name="see-also"></a>Voir aussi  
- [Message Queuing](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+## <a name="see-also"></a>Voir aussi
+- [Message Queuing](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

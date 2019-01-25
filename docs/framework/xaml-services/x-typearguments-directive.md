@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520176"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments, directive
 Passes contraindre les arguments d’un générique au constructeur du type générique de type.  
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  Dans WPF et lorsque vous ciblez [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser les fonctionnalités XAML 2009 avec `x:TypeArguments` mais uniquement pour XAML libre (XAML non compilé par balisage). Le code XAML compilé par balisage pour WPF et la forme BAML du code XAML ne prennent actuellement pas en charge les mots clés et les fonctionnalités XAML 2009. Si vous avez besoin de compiler le XAML par balisage, vous devez fonctionner selon les restrictions notées dans la section « XAML 2006 et WPF XAML utilisations générique ».  
   
-## <a name="see-also"></a>Voir aussi  
- [x:Class, directive](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x:Type, extension de balisage](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Types intégrés pour les primitives associées au langage XAML courant](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [Génériques en XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>Voir aussi
+- [x:Class, directive](../../../docs/framework/xaml-services/x-class-directive.md)
+- [x:Type, extension de balisage](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Types intégrés pour les primitives associées au langage XAML courant](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+- [Génériques en XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)

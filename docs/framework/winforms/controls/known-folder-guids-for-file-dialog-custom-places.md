@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97d516e1c3ae99d639dea676f3f6798b6e7a849f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679394"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUID de dossier connus pour des emplacements personnalisés de boîtes de dialogue Fichier
-Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] dossier connu lorsque vous ajoutez des dossiers à un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection. Connus GUID de dossier ne sont pas respecter la casse et sont définis dans le fichier KnownFolders.h dans le [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] dossier connu lorsque vous ajoutez des dossiers à un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection. Connus GUID de dossier respectent pas la casse et sont définis dans le fichier KnownFolders.h dans le [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
   
 > [!NOTE]
 >  Dans certains cas, un dossier connu ajouté à la <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> s’affichera pas dans le **liens favoris** zone. Par exemple, si le dossier connu spécifié n’est pas présent sur l’ordinateur qui exécute l’application, le dossier connu n’est pas affiché.  
   
 ## <a name="list-of-guids"></a>Liste de GUID  
- Le tableau suivant répertorie [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] leur sont associées et dossiers connus <xref:System.Guid>.  
+ Le tableau suivant répertorie [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] dossiers connus et leur sont associées <xref:System.Guid>.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -70,7 +70,7 @@ Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../.
  Contacts  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- Panneau de configuration  
+ ControlPanel  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
  Cookies  
@@ -118,7 +118,7 @@ Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../.
  Musique  
  4BD8D571-6D19-48D3-BE97-422220080E43  
   
- Voisinage réseau  
+ NetHood  
  C5ABBF53-E17F-4121-8900-86626FC2C973  
   
  Réseau  
@@ -133,13 +133,13 @@ Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../.
  Images  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
- Playlists  
+ Sélections  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
  Imprimantes  
  76FC4E2D-D6AD-4519-A663-37BD56068185  
   
- Voisinage d’impression  
+ PrintHood  
  9274BD8D-CFD1-41C3-B35E-B13F55A758F4  
   
  Profil  
@@ -226,7 +226,7 @@ Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../.
  SavedGames  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- savedSearches  
+ SavedSearches  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -238,7 +238,7 @@ Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../.
  SearchHome  
  190337D1-B8CA-4121-A639-6D472D16972A  
   
- Envoyer à  
+ SendTo  
  8983036C-27C0-404B-8F08-102D10DCFD74  
   
  SidebarDefaultParts  
@@ -247,7 +247,7 @@ Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../.
  SidebarParts  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- Menu Démarrer  
+ StartMenu  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  Démarrage  
@@ -286,6 +286,6 @@ Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../.
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [Guide pratique pour ajouter un emplacement personnalisé à une boîte de dialogue Fichier](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.FileDialogCustomPlace>
+- [Guide pratique pour Ajouter un emplacement personnalisé à une boîte de dialogue fichier](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

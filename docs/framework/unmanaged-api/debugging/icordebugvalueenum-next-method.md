@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 433e387365834498203e444ed2f85889f8adde06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 020df45f7f18a029f8c098fcc4dea1c131da017c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706915"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next, méthode
 Obtient le nombre spécifié d’instances de « ICorDebugValue » à partir de l’énumération, en commençant à la position actuelle.  
@@ -40,23 +40,23 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Paramètres  
  `celt`  
- [in] Le nombre de `ICorDebugValue` instances doit être récupéré.  
+ [in] Le nombre de `ICorDebugValue` instances à récupérer.  
   
  `values`  
- [out] Un tableau de pointeurs, chacun pointant vers un `ICorDebugValue` objet.  
+ [out] Un tableau de pointeurs, chacun d’eux pointe vers un `ICorDebugValue` objet.  
   
  `pceltFetched`  
- [out] Pointeur vers le nombre de `ICorDebugValue` instances réellement retournées. Cette valeur peut être null si `celt` fait partie.  
+ [out] Pointeur vers le nombre de `ICorDebugValue` instances réellement retournés. Cette valeur peut être null si `celt` fait partie.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-    
- 
+## <a name="see-also"></a>Voir aussi
+
+

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516159"
 ---
 # <a name="denial-of-service"></a>Refus de service
 Un déni de service se produit lorsqu'un système est saturé au point que le traitement des messages est impossible ou extrêmement lent.  
@@ -26,7 +26,7 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Envoi d'un nombre excessif de demandes de licence à un service par un client malveillant  
  Si un client malveillant bombarde un service de demandes de licence, il peut induire une utilisation excessive de la mémoire par le serveur.  
   
- Atténuation : utilisez les propriétés suivantes de la classe <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> :  
+ Atténuation : Utilisez les propriétés suivantes de la <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> classe :  
   
 -   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A> : contrôle le nombre maximal de `SecurityContextToken`s limités par le temps que le serveur met en cache après une négociation `SPNego` ou `SSL`.  
   
@@ -49,7 +49,7 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Une implémentation non valide de la stratégie IAuthorizationPolicy peut provoquer le blocage du service  
  L'appel de la méthode <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> sur une implémentation défaillante de l'interface <xref:System.IdentityModel.Policy.IAuthorizationPolicy> peut provoquer le blocage du service.  
   
- Atténuation : utilisez uniquement un code de confiance. Autrement dit, utilisez uniquement un code que vous avez vous-même écrit et testé, ou qui provient d'un fournisseur approuvé. N'autorisez pas les extensions non fiables de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> à s'intégrer à votre code sans prendre toutes les précautions requises. Cela s’applique à toutes les extensions utilisées dans une implémentation de service. WCF ne fait pas de distinction entre du code d’application et du code étranger intégré à l’aide de points d’extensibilité.  
+ Atténuation : Utilisez uniquement du code approuvé. Autrement dit, utilisez uniquement un code que vous avez vous-même écrit et testé, ou qui provient d'un fournisseur approuvé. N'autorisez pas les extensions non fiables de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> à s'intégrer à votre code sans prendre toutes les précautions requises. Cela s’applique à toutes les extensions utilisées dans une implémentation de service. WCF ne fait pas de distinction entre du code d’application et du code étranger intégré à l’aide de points d’extensibilité.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>La taille maximale de jeton Kerberos peut devoir être redimensionnée  
  Si un client appartient à un grand nombre de groupes (approximativement 900, bien que le nombre réel varie selon les groupes), un problème peut se produire lorsque le bloc d'un en-tête de message dépasse 64 kilo-octets. Dans ce cas, vous pouvez augmenter la taille maximale de jeton Kerberos, comme décrit dans l’article du Support de Microsoft «[l’authentification Internet Explorer Kerberos ne fonctionne pas en raison d’une mémoire tampon insuffisante, se connectant à IIS](https://go.microsoft.com/fwlink/?LinkId=89176). » Vous serez peut-être amené à augmenter la taille maximale des messages WCF pour l’adapter au jeton Kerberos le plus grand.  
@@ -69,21 +69,21 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
 ## <a name="protect-configuration-files-with-acls"></a>Protection des fichiers de configuration avec des listes ACL  
  Vous pouvez spécifier des revendications requises et facultatives dans des fichiers de code et de configuration pour des jetons émis par [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Cette procédure entraîne l'émission d'éléments correspondants dans les messages `RequestSecurityToken` envoyés au service de jeton de sécurité. Un intrus peut modifier un code ou une configuration pour supprimer des revendications requises ou facultatives et éventuellement faire en sorte que le service de jeton de sécurité publie un jeton qui n'autorise pas l'accès au service cible.  
   
- Pour atténuer ce risque : imposez l'obligation d'accéder à l'ordinateur pour pouvoir modifier le fichier de configuration. Utilisez les listes de contrôle d'accès au fichier (ACL) pour sécuriser les fichiers de configuration. WCF nécessite que code dans le répertoire de l’application ou le global assembly cache avant d’autoriser ce code à charger à partir de la configuration. Utilisez des listes ACL de répertoire pour sécuriser des répertoires.  
+ Pour atténuer : Requièrent l’accès à l’ordinateur pour modifier le fichier de configuration. Utilisez les listes de contrôle d'accès au fichier (ACL) pour sécuriser les fichiers de configuration. WCF nécessite que code dans le répertoire de l’application ou le global assembly cache avant d’autoriser ce code à charger à partir de la configuration. Utilisez des listes ACL de répertoire pour sécuriser des répertoires.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Atteinte du nombre maximal de sessions sécurisées pour un service  
  Lorsqu'un client est correctement authentifié par un service et qu'une session sécurisée est établie avec ce dernier, le service effectue le suivi de la session jusqu'à ce qu'elle soit annulée par le client ou qu'elle expire. Chaque session établie est décomptée du nombre maximal de sessions simultanées actives pour un service. Lorsque cette limite est atteinte, les clients qui essaient de créer une session avec ce service sont rejetés jusqu'à ce qu'une ou plusieurs sessions actives expirent ou soient annulées par un client. Un client peut ouvrir plusieurs sessions sur un service, chacune de ces sessions étant décomptée du nombre limite.  
   
 > [!NOTE]
->  Lorsque vous utilisez des sessions avec état, le paragraphe précédent ne s’applique pas. Pour plus d’informations sur les sessions avec état, consultez [Comment : créer un jeton de contexte de sécurité pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Lorsque vous utilisez des sessions avec état, le paragraphe précédent ne s’applique pas. Pour plus d’informations sur les sessions avec état, consultez [Comment : Créer un contexte de sécurité jeton pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Pour atténuer ce risque, paramétrez le nombre maximal de sessions actives et la durée de vie maximale d'une session en définissant la propriété <xref:System.ServiceModel.Channels.SecurityBindingElement> de la classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Voir aussi
+- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

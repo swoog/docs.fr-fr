@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f046e1142209b519ecf71e67a11592f9aa578f84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666707"
 ---
 # <a name="ltswitchesgt-element"></a>&lt;commutateurs&gt; élément
 Contient des commutateurs de traçage et le niveau auquel ils sont définis.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<commutateurs >  
+\<system.diagnostics>  
+\<switches>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,8 +68,8 @@ Contient des commutateurs de traçage et le niveau auquel ils sont définis.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [Schéma des paramètres de trace et de débogage](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Procédure pas à pas : requête et modèle objet simples (C#)'
+title: 'Procédure pas à pas : Requête et modèle objet simples (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 2c2529c828c0b02ec2f53c7ea899bbe728ba88d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25e23b77f6f5547a5516c6db240537cb00685edc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686866"
 ---
-# <a name="walkthrough-simple-object-model-and-query-c"></a>Procédure pas à pas : requête et modèle objet simples (C#)
+# <a name="walkthrough-simple-object-model-and-query-c"></a>Procédure pas à pas : Requête et modèle objet simples (C#)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] complet essentiel de complexité minimale. Vous allez créer une classe d'entité qui modélise la table Customers dans l'exemple de base de données Northwind. Vous créerez ensuite une requête simple pour répertorier les clients localisés à Londres.  
   
  Cette procédure pas à pas est orientée code en termes de conception pour permettre l'affichage des concepts [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. En temps normal, vous utilisez le [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] pour créer votre modèle objet.  
@@ -44,9 +44,9 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Pour créer une solution LINQ to SQL  
   
-1.  Dans Visual Studio **fichier** menu, pointez sur **nouveau**, puis cliquez sur **projet**.  
+1.  Dans Visual Studio **fichier** menu, pointez sur **New**, puis cliquez sur **projet**.  
   
-2.  Dans le **types de projet** volet de la **nouveau projet** boîte de dialogue, cliquez sur **Visual C#**.  
+2.  Dans le **types de projets** volet de la **nouveau projet** boîte de dialogue, cliquez sur **Visual C#** .  
   
 3.  Dans le volet **Modèles**, cliquez sur **Application console**.  
   
@@ -57,7 +57,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
 6.  Cliquez sur **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Ajout de références et de directives LINQ  
- Cette procédure pas à pas utilise des assemblys qui ne sont pas nécessairement installés par défaut dans votre projet. Si System.Data.Linq n’est pas répertorié comme référence dans votre projet (développez le **références** nœud **l’Explorateur de solutions**), ajoutez-le comme expliqué dans les étapes suivantes.  
+ Cette procédure pas à pas utilise des assemblys qui ne sont pas nécessairement installés par défaut dans votre projet. Si System.Data.Linq n’est pas répertorié en tant que référence dans votre projet (développez le **références** nœud **l’Explorateur de solutions**), ajoutez-le comme expliqué dans les étapes suivantes.  
   
 #### <a name="to-add-systemdatalinq"></a>Pour ajouter System.Data.Linq  
   
@@ -150,9 +150,9 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
 3.  Appuyez sur Entrée dans la fenêtre de console pour fermer l'application.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Le [procédure pas à pas : interrogation de relations (c#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) rubrique suite de cette procédure pas à pas. La procédure pas à pas interrogation de relations montre comment [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut interroger des tables, semblables à *jointures* dans une base de données relationnelle.  
+ Le [procédure pas à pas : Interrogation de relations (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) rubrique continue où cette procédure pas à pas se termine. La procédure pas à pas interrogation de relations montre comment [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut interroger des tables, similaire à *jointures* dans une base de données relationnelle.  
   
  Si vous souhaitez suivre la procédure pas à pas Interrogation de relations, pensez à enregistrer la solution de la procédure que vous venez d'exécuter car elle est indispensable.  
   
-## <a name="see-also"></a>Voir aussi  
- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Voir aussi
+- [Apprentissage par les procédures pas à pas](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

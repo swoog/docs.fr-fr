@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eabaf1dd99fce7cd4c45f80666534f904fcdfdf9
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: e6615ab30fdc0d0ab65f135e1df4e206f5548dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743780"
 ---
 # <a name="ltlibrarygt-element-net-native"></a>&lt;Library&gt;, élément (.NET Native)
 Définit l'assembly qui contient des types et des membres de types dont les métadonnées sont disponibles pour la réflexion au moment de l'exécution.  
@@ -68,8 +68,8 @@ Définit l'assembly qui contient des types et des membres de types dont les mét
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [\<Application > élément](../../../docs/framework/net-native/application-element-net-native.md)  
- [\<Directives > élément](../../../docs/framework/net-native/directives-element-net-native.md)  
- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Voir aussi
+- [\<Application > élément](../../../docs/framework/net-native/application-element-net-native.md)
+- [\<Directives > élément](../../../docs/framework/net-native/directives-element-net-native.md)
+- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

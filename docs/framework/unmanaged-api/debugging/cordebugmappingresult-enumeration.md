@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca3f5a6af6ea19ec81af3f6ac0a028440f80d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16c4e03667d4af3ab5cc8b653d77f15eaef25843
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691825"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult, énumération
 Fournit les détails sur la façon dont la valeur du pointeur d'instruction a été obtenue.  
@@ -45,22 +45,22 @@ typedef enum CorDebugMappingResult {
 |------------|-----------------|  
 |`MAPPING_PROLOG`|Le code natif est dans le prologue, la valeur de l’adresse IP est 0.|  
 |`MAPPING_EPILOG`|Le code natif est dans un épilogue, la valeur de l’adresse IP est l’adresse de la dernière instruction de la méthode.|  
-|`MAPPING_NO_INFO`|Aucune information de mappage n’est disponible pour la méthode, la valeur de l’adresse IP est 0.|  
+|`MAPPING_NO_INFO`|Aucune information de mappage est disponible pour la méthode, donc la valeur de l’adresse IP est 0.|  
 |`MAPPING_UNMAPPED_ADDRESS`|Bien qu’il existe des informations de mappage pour la méthode, l’adresse actuelle ne peut pas être mappé au code Microsoft intermediate language (MSIL). La valeur de l’adresse IP est 0.|  
-|`MAPPING_EXACT`|La méthode correspond exactement au code MSIL soit le frame a été interprété, donc la valeur de l’adresse IP est précise.|  
+|`MAPPING_EXACT`|Soit la méthode correspond exactement au code MSIL ou le frame a été interprété, donc la valeur de l’adresse IP est précise.|  
 |`MAPPING_APPROXIMATE`|La méthode a été correctement mappée, mais la valeur de l’adresse IP peut être approximative.|  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la [ICorDebugILFrame::GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) méthode pour obtenir la valeur du pointeur d’instruction.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

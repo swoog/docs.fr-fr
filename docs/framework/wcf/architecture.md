@@ -6,18 +6,18 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745379"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architecture Windows Communication Foundation
 Le graphique suivant illustre les principales couches de l’architecture de Windows Communication Foundation (WCF).  
   
 ## <a name="wcf-architecture"></a>Architecture WCF  
- ![Architecture WCF](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
+ ![L’Architecture WCF](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
   
 ### <a name="contracts-and-descriptions"></a>Contrats et descriptions  
  Les contrats définissent les différents aspects du système de messages. Le contrat de données décrit chaque paramètre qui compose chaque message qu'un service peut créer ou consommer. Les paramètres de message sont définis par des documents en langage XSD (XML Schema Definition), ce qui permet à tout système comprenant XML de gérer les documents. Le contrat de message définit des parties de message spécifiques à l'aide de protocoles SOAP, et permet un contrôle plus fin de celles-ci, lorsque l'interopérabilité exige une telle précision. Le contrat de service spécifie les signatures de méthode réelles du service et est distribué en tant qu'interface dans un des langages de programmation pris en charge, tels que Visual Basic ou Visual C#.  
@@ -41,10 +41,10 @@ Le graphique suivant illustre les principales couches de l’architecture de Win
  La couche de messagerie illustre les formats et modèles d’échange possibles des données. WS-Security est une implémentation de la spécification WS-Security qui active la sécurité au niveau de la couche de message. Le canal de messagerie WS-Reliable active la garantie de remise des messages. Les encodeurs présentent divers encodages qui permettent de répondre aux besoins du message. Le canal HTTP spécifie que le protocole HTTP (HyperText Transport Protocol) est utilisé pour la remise des messages. De même, le canal TCP spécifie le protocole TCP. Le canal de flux de transaction définit les modèles de messages traités. Le canal nommé active la communication entre processus. Le canal MSMQ active l'interopérabilité avec les applications MSMQ.  
   
 ### <a name="hosting-and-activation"></a>Hébergement et activation  
- Sous sa forme définitive, un service est un programme. Comme tout autre programme, un service doit être exécuté dans un fichier exécutable. Il s’agit comme un *auto-hébergé* service.  
+ Sous sa forme définitive, un service est un programme. Comme tout autre programme, un service doit être exécuté dans un fichier exécutable. Il s’agit une *auto-hébergé* service.  
   
- Services peuvent également être *hébergé*, ou s’exécuter dans un fichier exécutable géré par un agent externe, telles que les services IIS ou le Service d’Activation Windows (WAS). ÉTAIT permet aux applications de WCF d’être activé automatiquement lors du déploiement sur un ordinateur en cours d’exécution. Les services peuvent également être exécutés manuellement comme des fichiers exécutables (fichiers .exe). Un service peut également être exécuté automatiquement en tant que service Windows. Les composants COM + peuvent également être hébergés en tant que services WCF.  
+ Les services peuvent également être *hébergé*, ou de s’exécuter dans un fichier exécutable géré par un agent externe, tel que IIS ou Windows Activation Service (WAS). ÉTAIT permet aux applications de WCF d’être activé automatiquement lors du déploiement sur un ordinateur en cours d’exécution. Les services peuvent également être exécutés manuellement comme des fichiers exécutables (fichiers .exe). Un service peut également être exécuté automatiquement en tant que service Windows. Les composants COM + peuvent également être hébergés en tant que services WCF.  
   
-## <a name="see-also"></a>Voir aussi  
- [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Concepts fondamentaux de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)
+## <a name="see-also"></a>Voir aussi
+- [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Concepts fondamentaux de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

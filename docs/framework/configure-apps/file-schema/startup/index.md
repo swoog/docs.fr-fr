@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0a03438968f487f574606f415fb9d43223030038
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 12f91a1c74e85cbce0c8f641f202a181beb7412c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728906"
 ---
 # <a name="startup-settings-schema"></a>Schéma des paramètres de démarrage
 
@@ -27,5 +27,5 @@ Les paramètres de démarrage spécifient la version du common language runtime 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Schéma des fichiers de configuration](../index.md)  
-- [Guide pratique pour Configurer une application pour prendre en charge de .NET Framework 4 ou versions ultérieures](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Schéma des fichiers de configuration](../index.md)
+- [Guide pratique pour configurer une application en vue de prendre en charge le .NET Framework 4 ou versions ultérieures](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

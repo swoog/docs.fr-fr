@@ -6,27 +6,27 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: b686747b46529b53b0802a7deb38b5b4949f4d5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2b1676ae959c5426af3021bbd340980115c5da6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724880"
 ---
 # <a name="visual-basic-coding-conventions"></a>Conventions de codage Visual Basic
 Microsoft développe des exemples et la documentation qui suivent les instructions de cette rubrique. Si vous suivez les mêmes conventions de codage, vous pouvez profiter des avantages suivants :  
   
--   Votre code aura une apparence cohérente, afin que les lecteurs peuvent mieux se concentrer sur le contenu, pas de disposition.  
+-   Votre code aura une apparence cohérente, afin que les lecteurs puissent mieux se concentrer sur le contenu, pas de disposition.  
   
--   Lecteurs de comprennent votre code plus rapidement, car ils peuvent émettre des hypothèses selon leur expérience précédente.  
+-   Les lecteurs comprennent votre code plus rapidement, car ils peuvent faire des hypothèses selon leur expérience précédente.  
   
 -   Vous pouvez copier, modifier et gérer le code plus facilement.  
   
--   Vous permettent de garantir que votre code illustre les « meilleures pratiques » pour Visual Basic.  
+-   Vous assurer que votre code illustre les « meilleures pratiques » pour Visual Basic.  
   
 ## <a name="naming-conventions"></a>Conventions d'affectation de noms  
   
--   Pour plus d’informations sur les règles d’affectation de noms, consultez [les instructions d’affectation de noms](../../../standard/design-guidelines/naming-guidelines.md) rubrique.  
+-   Pour plus d’informations sur les règles d’affectation de noms, consultez [instructions de dénomination de](../../../standard/design-guidelines/naming-guidelines.md) rubrique.  
   
 -   N’utilisez pas « Mon » ou « my » en tant que partie d’un nom de variable. Cette pratique peut créer une confusion avec les `My` objets.  
   
@@ -34,17 +34,17 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
   
 ## <a name="layout-conventions"></a>Conventions de disposition  
   
--   Insérer des tabulations en espaces et utiliser la mise en retrait intelligente avec tirets de quatre espaces.  
+-   Insérez les tabulations en tant qu’espaces et utilisez la mise en retrait intelligente avec des retraits de quatre espaces.  
   
--   Utilisez **(Reformatage) d’un code de liste automatique** à remettre en forme votre code dans l’éditeur de code. Pour plus d’informations, consultez [Options, éditeur de texte, base (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+-   Utilisez **code (Reformatage) de listing en mode Pretty** à remettre en forme votre code dans l’éditeur de code. Pour plus d’informations, consultez [Options, éditeur de texte, base (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
--   Utilisez une seule instruction par ligne. N’utilisez pas le caractère de séparation de ligne Visual Basic ( :).  
+-   Utiliser une seule instruction par ligne. N’utilisez pas le caractère de séparation de ligne Visual Basic ( :)).  
   
--   Évitez d’utiliser le caractère de continuation de ligne explicite « _ » en faveur de la continuation de ligne implicite, partout où il permet à la langue.  
+-   Évitez d’utiliser le caractère de continuation de ligne explicite « _ » en faveur de la continuation de ligne implicite partout où le langage le permet.  
   
 -   Utiliser une seule déclaration par ligne.  
   
--   Si **(Reformatage) d’un code de liste automatique** ne format des lignes de continuation automatiquement, manuellement mettre en retrait continuation lignes un taquet de tabulation. Toutefois, toujours aligner à gauche des éléments dans une liste.  
+-   Si **code (Reformatage) de listing en mode Pretty** ne format des lignes de continuation automatiquement, manuellement mettre en retrait continuation lignes un taquet de tabulation. Toutefois, toujours aligner à gauche des éléments dans une liste.  
   
     ```  
     a As Integer,  
@@ -55,19 +55,19 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
   
 ## <a name="commenting-conventions"></a>Conventions de commentaires  
   
--   Placer des commentaires sur une ligne distincte et non à la fin d’une ligne de code.  
+-   Placez les commentaires sur une ligne distincte, et non à la fin d’une ligne de code.  
   
--   Démarrez le texte de commentaire par une lettre majuscule et texte de commentaire de fin avec une période.  
+-   Démarrer le texte de commentaire par une lettre majuscule et texte de commentaire de fin par un point.  
   
 -   Insérer un espace entre le délimiteur de commentaire (') et le texte du commentaire.  
   
      [!code-vb[VbVbalrGuidelines#2](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_1.vb)]  
   
--   N’encadrez pas de commentaires avec les blocs d’astérisques mis en forme.  
+-   N’entourez pas les commentaires avec des blocs d’astérisques mis en forme.  
   
 ## <a name="program-structure"></a>Structure du programme  
   
--   Lorsque vous utilisez la `Main` (méthode), utilisez la construction par défaut pour les nouvelles applications de console et `My` pour les arguments de ligne de commande.  
+-   Lorsque vous utilisez le `Main` (méthode), utilisez la construction par défaut pour les nouvelles applications de console et `My` pour les arguments de ligne de commande.  
   
      [!code-vb[VbVbalrGuidelines#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_2.vb)]  
   
@@ -84,7 +84,7 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
      [!code-vb[VbVbalrGuidelines#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_4.vb)]  
   
 ### <a name="relaxed-delegates-in-event-handlers"></a>Délégués souples dans les gestionnaires d’événements  
- Ne relèvent pas explicitement les arguments (objet et EventArgs) aux gestionnaires d’événements. Si vous n’utilisez pas les arguments d’événement sont passés à un événement (par exemple, l’expéditeur en tant qu’objet, e en tant que EventArgs), utilisez des délégués souples et omettre les arguments d’événement dans votre code :  
+ Ne sont pas explicitement éligibles les arguments (objet et EventArgs) aux gestionnaires d’événements. Si vous n’utilisez pas les arguments d’événement sont passés à un événement (par exemple, l’expéditeur en tant qu’objet, e pour EventArgs), utilisez les délégués simplifiés et omettez les arguments d’événement dans votre code :  
   
  [!code-vb[VbVbalrGuidelines#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_5.vb)]  
   
@@ -94,7 +94,7 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
   
 ### <a name="arrays"></a>Tableaux  
   
--   Utilisez la syntaxe courte lorsque vous initialisez des tableaux sur la ligne de déclaration. Par exemple, utilisez la syntaxe suivante.  
+-   Utilisez la syntaxe concise lorsque vous initialisez des tableaux sur la ligne de déclaration. Par exemple, utilisez la syntaxe suivante.  
   
      [!code-vb[VbVbalrGuidelines#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_6.vb)]  
   
@@ -119,15 +119,15 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
      [!code-vb[VbVbalrGuidelines#13](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_11.vb)]  
   
 ### <a name="use-the-with-keyword"></a>Utilisez le mot clé  
- Lorsque vous effectuez une série d’appels à un objet, envisagez d’utiliser le `With` (mot clé) :  
+ Lorsque vous effectuez une série d’appels à un objet, envisagez d’utiliser le `With` mot clé :  
   
  [!code-vb[VbVbalrGuidelines#15](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_12.vb)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Utilisez les instructions Try... Capture et à l’aide des instructions lorsque vous utilisez la gestion des exceptions  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Utilisez les instructions Try... Catch et les instructions Using lorsque vous utilisez la gestion des exceptions  
  N’utilisez pas `On Error Goto`.  
   
 ### <a name="use-the-isnot-keyword"></a>Utilisez le mot clé IsNot  
- Utilisez le `IsNot` (mot clé) au lieu de `Not...Is Nothing`.  
+ Utilisez le `IsNot` mot clé au lieu de `Not...Is Nothing`.  
   
 ### <a name="new-keyword"></a>Nouveau mot clé  
   
@@ -139,7 +139,7 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
   
      [!code-vb[VbVbalrGuidelines#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_14.vb)]  
   
--   Utiliser des initialiseurs d’objets pour les nouveaux objets au lieu du constructeur sans paramètre :  
+-   Utilisez des initialiseurs d’objets pour les nouveaux objets au lieu du constructeur sans paramètre :  
   
      [!code-vb[VbVbalrGuidelines#23](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_15.vb)]  
   
@@ -153,19 +153,19 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
   
      [!code-vb[VbVbalrGuidelines#25](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_17.vb)]  
   
--   Lorsque vous définissez un événement, utilisez la syntaxe courte et laissez le compilateur définir le délégué :  
+-   Lorsque vous définissez un événement, utilisez la syntaxe concise et laissez le compilateur définir le délégué :  
   
      [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
   
--   Ne vérifient pas si un événement est `Nothing` (null) avant d’appeler le `RaiseEvent` (méthode). `RaiseEvent` vérifie les `Nothing` avant de déclencher l’événement.  
+-   Ne pas vérifier si un événement est `Nothing` (null) avant d’appeler le `RaiseEvent` (méthode). `RaiseEvent` vérifie les `Nothing` avant de déclencher l’événement.  
   
-### <a name="using-shared-members"></a>À l’aide de membres partagés  
+### <a name="using-shared-members"></a>À l’aide des membres partagés  
  Appelez `Shared` membres en utilisant le nom de classe, pas à partir d’une variable d’instance.  
   
 ### <a name="use-xml-literals"></a>Utiliser des littéraux XML  
- Les littéraux XML simplifient les tâches les plus courantes que vous rencontrez lorsque vous travaillez avec XML (par exemple, chargement, requête et transformation). Lorsque vous développez avec XML, suivez ces instructions :  
+ Les littéraux XML simplifient les tâches les plus courantes que vous rencontrez lorsque vous utilisez XML (par exemple, charge, requête et transformation). Lorsque vous développez avec XML, suivez ces instructions :  
   
--   Utiliser des littéraux XML pour créer des documents XML et des fragments au lieu d’appeler directement des API XML.  
+-   Utiliser des littéraux XML pour créer des documents XML et des fragments au lieu d’appeler directement les API XML.  
   
 -   Importez les espaces de noms XML au niveau du fichier ou du projet pour tirer parti des optimisations des performances des littéraux XML.  
   
@@ -177,19 +177,19 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
   
 ### <a name="linq-queries"></a>Requêtes LINQ  
   
--   Utilisez des noms explicites pour les variables de requête :  
+-   Utiliser des noms significatifs pour les variables de requête :  
   
      [!code-vb[VbVbalrGuidelines#28](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_20.vb)]  
   
--   Fournir des noms pour les éléments d’une requête pour vous assurer que les noms de propriété des types anonymes sont correctement écrits en majuscules à l’aide de la casse Pascal casse :  
+-   Fournir des noms pour les éléments d’une requête pour vous assurer que les noms de propriété des types anonymes sont correctement capitalisés à l’aide de la casse Pascal casse :  
   
      [!code-vb[VbVbalrGuidelines#29](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_21.vb)]  
   
--   Renommez les propriétés lorsque les noms de propriétés dans le résultat sont ambigus. Par exemple, si votre requête retourne un client, nom et un ID de commande, les renommer au lieu de les laisser en tant que `Name` et `ID` dans le résultat :  
+-   Renommez les propriétés lorsque les noms de propriétés dans le résultat sont ambigus. Par exemple, si votre requête retourne un client nom et un ID de commande, renommez-les au lieu de les laisser au format `Name` et `ID` dans le résultat :  
   
      [!code-vb[VbVbalrGuidelines#30](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_22.vb)]  
   
--   Utiliser l’inférence de type dans la déclaration de variables de requête et les variables de portée :  
+-   Utiliser l’inférence de type dans la déclaration des variables de requête et des variables de portée :  
   
      [!code-vb[VbVbalrGuidelines#31](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_23.vb)]  
   
@@ -205,5 +205,5 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
   
      [!code-vb[VbVbalrGuidelines#34](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_26.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Instructions de codage sécurisé](../../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Voir aussi
+- [Instructions de codage sécurisé](../../../standard/security/secure-coding-guidelines.md)

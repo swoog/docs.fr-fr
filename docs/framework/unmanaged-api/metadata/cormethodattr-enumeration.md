@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a69ca889e226168adb1b84ab64dc0f882c27606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520530"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr, énumération
 Contient des valeurs qui décrivent les fonctionnalités d’une méthode.  
@@ -71,34 +71,34 @@ typedef enum CorMethodAttr {
 |`mdMemberAccessMask`|Spécifie l’accès au membre.|  
 |`mdPrivateScope`|Spécifie que le membre ne peut pas être référencé.|  
 |`mdPrivate`|Spécifie que le membre est accessible uniquement par le type de parent.|  
-|`mdFamANDAssem`|Spécifie que le membre est accessible par les sous-types uniquement dans cet assembly.|  
-|`mdAssem`|Spécifie que le membre est accessible par tout le monde dans l’assembly.|  
-|`mdFamily`|Spécifie que le membre est accessible uniquement par le type et les sous-types.|  
-|`mdFamORAssem`|Spécifie que le membre est accessible par les classes dérivées et par d’autres types de l’assembly.|  
+|`mdFamANDAssem`|Spécifie que le membre est accessible aux sous-types uniquement dans cet assembly.|  
+|`mdAssem`|Spécifie que le membre est accessible par tous les membres de l’assembly.|  
+|`mdFamily`|Spécifie que le membre est accessible uniquement par les types et aux sous-types.|  
+|`mdFamORAssem`|Spécifie que le membre est accessible par les classes dérivées et par d’autres types dans son assembly.|  
 |`mdPublic`|Spécifie que le membre est accessible par tous les types ayant accès à l’étendue.|  
 |`mdStatic`|Spécifie que le membre est défini en tant que partie du type plutôt qu’en tant que membre d’une instance.|  
 |`mdFinal`|Spécifie que la méthode ne peut pas être substituée.|  
 |`mdVirtual`|Spécifie que la méthode peut être substituée.|  
 |`mdHideBySig`|Spécifie que la méthode masque par nom et signature, plutôt que simplement par nom.|  
-|`mdVtableLayoutMask`|Spécifie la disposition de la table virtuelle.|  
-|`mdReuseSlot`|Spécifie que l’emplacement utilisé pour cette méthode dans la table virtuelle être réutilisé. Il s'agit de la valeur par défaut.|  
+|`mdVtableLayoutMask`|Spécifie la disposition du tableau virtuel.|  
+|`mdReuseSlot`|Indique que l’emplacement utilisé pour cette méthode dans la table virtuelle être réutilisé. Il s'agit de la valeur par défaut.|  
 |`mdNewSlot`|Spécifie que la méthode obtient toujours un nouvel emplacement dans la table virtuelle.|  
-|`mdCheckAccessOnOverride`|Spécifie que la méthode peut être substituée par les types auxquels elle est visible.|  
+|`mdCheckAccessOnOverride`|Spécifie que la méthode peut être substituée par les mêmes types auxquels elle est visible.|  
 |`mdAbstract`|Spécifie que la méthode n’est pas implémentée.|  
 |`mdSpecialName`|Spécifie que la méthode est spéciale et que son nom décrit comment.|  
 |`mdPinvokeImpl`|Spécifie que l’implémentation de méthode est transférée à l’aide de PInvoke.|  
 |`mdUnmanagedExport`|Spécifie que la méthode est une méthode managée exportée vers du code non managé.|  
 |`mdReservedMask`|Réservé à un usage interne par le common language runtime.|  
 |`mdRTSpecialName`|Spécifie que le common language runtime doit vérifier l’encodage du nom de la méthode.|  
-|`mdHasSecurity`|Spécifie que la méthode a associée.|  
-|`mdRequireSecObject`|Spécifie que la méthode appelle une autre méthode qui contient le code de sécurité.|  
+|`mdHasSecurity`|Spécifie que la méthode a une sécurité associée.|  
+|`mdRequireSecObject`|Spécifie que la méthode appelle une autre méthode contenant du code de sécurité.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

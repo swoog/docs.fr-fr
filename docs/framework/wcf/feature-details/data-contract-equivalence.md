@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: b6461ffe6525b377e7f836a686a401033d344a4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708933"
 ---
 # <a name="data-contract-equivalence"></a>Équivalence de contrats de données
-Pour qu'un client puisse envoyer des données d'un certain type à un service ou pour qu'un service puisse envoyer des données à un client, le type des données envoyées n'a pas nécessairement besoin d'exister à l'extrémité de réception. La seule exigence est que les contrats de données des deux types soient équivalents. (Parfois, une équivalence stricte n’est pas requise, comme indiqué dans [contrôle de version de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
+Pour qu'un client puisse envoyer des données d'un certain type à un service ou pour qu'un service puisse envoyer des données à un client, le type des données envoyées n'a pas nécessairement besoin d'exister à l'extrémité de réception. La seule exigence est que les contrats de données des deux types soient équivalents. (Parfois, une équivalence stricte n’est pas obligatoire, comme indiqué dans [concernant les contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
   
  Pour être équivalents, des contrats de données doivent avoir le même espace de noms et le même nom. En outre, chaque membre de données d'un côté doit avoir un membre de données équivalent de l'autre côté.  
   
@@ -24,7 +24,7 @@ Pour qu'un client puisse envoyer des données d'un certain type à un service ou
 > [!NOTE]
 >  Notez que le nom et l'espace de noms des contrats de données, de même que le nom des membres de données, respectent la casse.  
   
- Pour plus d’informations sur les noms de contrat de données et les espaces de noms, ainsi que les noms de membres de données, consultez [les noms de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Pour plus d’informations sur les noms de contrat de données et les espaces de noms, ainsi que les noms de membres de données, consultez [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Si deux types existent d'un même côté (expéditeur ou récepteur) et si leurs contrats de données ne sont pas équivalents (par exemple, ils possèdent des membre de données différents), vous ne devez pas leur donner le même nom ni le même espace de noms. Vous risqueriez alors de lever des exceptions.  
   
@@ -56,13 +56,13 @@ Pour qu'un client puisse envoyer des données d'un certain type à un service ou
   
  Lors du passage des paramètres et des valeurs de retour entre un client et un service, un contrat de données d'une classe de base ne peut pas être envoyé lorsque le point de terminaison de réception attend un contrat de données d'une classe dérivée, conformément aux doctrines de la programmation orientée objet. Dans l’exemple précédent, un objet de type `Person` ne peut pas être envoyé lorsqu’un `Employee` est attendu.  
   
- Un contrat de données d'une classe dérivée peut être envoyé lorsqu'un contrat de données d'une classe de base est attendu, mais uniquement si le point de terminaison de réception prend connaissance du type dérivé à l'aide de <xref:System.Runtime.Serialization.KnownTypeAttribute>. Pour plus d’informations, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Dans l'exemple précédent, un objet de type `Employee` peut être envoyé lorsqu'un `Person` est attendu, mais uniquement si le code de récepteur utilise <xref:System.Runtime.Serialization.KnownTypeAttribute> pour l'inclure dans la liste des types connus.  
+ Un contrat de données d'une classe dérivée peut être envoyé lorsqu'un contrat de données d'une classe de base est attendu, mais uniquement si le point de terminaison de réception prend connaissance du type dérivé à l'aide de <xref:System.Runtime.Serialization.KnownTypeAttribute>. Pour plus d’informations, consultez [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Dans l'exemple précédent, un objet de type `Employee` peut être envoyé lorsqu'un `Person` est attendu, mais uniquement si le code de récepteur utilise <xref:System.Runtime.Serialization.KnownTypeAttribute> pour l'inclure dans la liste des types connus.  
   
- Lors du passage des paramètres et des valeurs de retour entre des applications, si le type attendu est une interface, il est équivalent au type attendu de type <xref:System.Object>. Dans la mesure où chaque type dérive en dernier lieu de <xref:System.Object>, chaque contrat de données dérive en dernier lieu du contrat de données pour <xref:System.Object>. De ce fait, tout type de contrat de données peut être passé lorsqu'une interface est attendue. Des étapes supplémentaires sont nécessaires pour fonctionner correctement avec les interfaces ; Pour plus d’informations, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Lors du passage des paramètres et des valeurs de retour entre des applications, si le type attendu est une interface, il est équivalent au type attendu de type <xref:System.Object>. Dans la mesure où chaque type dérive en dernier lieu de <xref:System.Object>, chaque contrat de données dérive en dernier lieu du contrat de données pour <xref:System.Object>. De ce fait, tout type de contrat de données peut être passé lorsqu'une interface est attendue. Étapes supplémentaires sont nécessaires pour fonctionner correctement avec les interfaces ; Pour plus d’informations, consultez [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Classement des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [Types connus de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Noms de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- [Classement des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md)
+- [Types connus de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Noms de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

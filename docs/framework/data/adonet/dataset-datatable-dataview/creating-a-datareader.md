@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: 1ede51ed9119051a647fd27d8d02cd2c93e61bbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d3c20fa4394b09e9ceec332d430ed638166bed8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491661"
 ---
 # <a name="creating-a-datareader"></a>Création d'un DataReader
-Les classes <xref:System.Data.DataTable> et <xref:System.Data.DataSet> ont une méthode <xref:System.Data.DataTable.CreateDataReader%2A> qui retourne le contenu de la collection <xref:System.Data.DataTable> de l'objet <xref:System.Data.DataSet> ou de l'objet <xref:System.Data.DataSet.Tables%2A> sous la forme d'un ou plusieurs jeux de résultats en lecture seule et en avant uniquement.  
+Les classes <xref:System.Data.DataTable> et <xref:System.Data.DataSet> ont une méthode <xref:System.Data.DataTable.CreateDataReader%2A> qui retourne le contenu de la collection <xref:System.Data.DataTable> de l’objet <xref:System.Data.DataSet> ou de l’objet <xref:System.Data.DataSet.Tables%2A> sous la forme d’un ou plusieurs jeux de résultats en lecture seule et en avant uniquement.  
   
 ## <a name="example"></a>Exemple  
  L'application console suivante crée une instance de l'objet <xref:System.Data.DataTable>. Cet exemple passe ensuite le plein <xref:System.Data.DataTable> à une procédure qui appelle le <xref:System.Data.DataTable.CreateDataReader%2A> (méthode), qui effectue une itération dans les résultats contenus dans le <xref:System.Data.DataTableReader>.  
@@ -30,8 +30,8 @@ Les classes <xref:System.Data.DataTable> et <xref:System.Data.DataSet> ont une m
 4 Russ  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Data.DataTable.CreateDataReader%2A>  
- <xref:System.Data.DataSet.CreateDataReader%2A>  
- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Data.DataTable.CreateDataReader%2A>
+- <xref:System.Data.DataSet.CreateDataReader%2A>
+- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

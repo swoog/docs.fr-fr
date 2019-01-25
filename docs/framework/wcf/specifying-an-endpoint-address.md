@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ff01c21481e2265a82cb9788beb8abd7b213af63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709219"
 ---
 # <a name="specifying-an-endpoint-address"></a>Spécification d'une adresse de point de terminaison
-Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via ses points de terminaison. Chaque <xref:System.ServiceModel.Description.ServiceEndpoint> contient un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> et un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Le contrat spécifie quelles opérations sont disponibles. La liaison spécifie comment communiquer avec le service et l'adresse spécifie où rechercher le service. Chaque point de terminaison doit avoir une adresse unique. L'adresse de point de terminaison est représentée par la classe <xref:System.ServiceModel.EndpointAddress>, qui contient un URI (Uniform Resource Identifier) représentant l'adresse du service, un <xref:System.ServiceModel.EndpointAddress.Identity%2A> représentant l'identité de sécurité du service et une collection de <xref:System.ServiceModel.EndpointAddress.Headers%2A> facultative. Les en-têtes facultatifs fournissent des informations d'adressage plus détaillées pour identifier ou interagir avec le point de terminaison. Par exemple, les en-tête peuvent indiquer comment traiter un message entrant, où le point de terminaison doit envoyer un message de réponse ou quelle instance d'un service utiliser pour traiter un message entrant d'un utilisateur particulier lorsque plusieurs instances sont disponibles.  
+Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via ses points de terminaison. Chaque <xref:System.ServiceModel.Description.ServiceEndpoint> contient un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> et un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Le contrat spécifie quelles opérations sont disponibles. La liaison spécifie comment communiquer avec le service et l'adresse spécifie où rechercher le service. Chaque point de terminaison doit avoir une adresse unique. L’adresse de point de terminaison est représentée par la classe <xref:System.ServiceModel.EndpointAddress>, qui contient un URI (Uniform Resource Identifier) représentant l’adresse du service, un <xref:System.ServiceModel.EndpointAddress.Identity%2A> représentant l’identité de sécurité du service et une collection de <xref:System.ServiceModel.EndpointAddress.Headers%2A> facultative. Les en-têtes facultatifs fournissent des informations d'adressage plus détaillées pour identifier ou interagir avec le point de terminaison. Par exemple, les en-tête peuvent indiquer comment traiter un message entrant, où le point de terminaison doit envoyer un message de réponse ou quelle instance d'un service utiliser pour traiter un message entrant d'un utilisateur particulier lorsque plusieurs instances sont disponibles.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Définition d'une adresse de point de terminaison  
  Dans WCF, un <xref:System.ServiceModel.EndpointAddress> modélise une référence de point de terminaison (EPR) comme défini dans la norme WS-Addressing.  
@@ -28,7 +28,7 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
   
 -   (Facultatif) Port : 322  
   
--   Chemin d'accès : /mathservice.svc/secureEndpoint  
+-   Chemin d’accès : /mathservice.svc/secureEndpoint  
   
  Une partie du modèle ERP établit que chaque référence de point de terminaison peut contenir des paramètres de référence qui ajoutent des informations d'identification supplémentaires. Dans WCF, ces paramètres de référence sont modélisés en tant qu’instances de la <xref:System.ServiceModel.Channels.AddressHeader> classe.  
   
@@ -45,7 +45,7 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
   
  Lorsque le <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> méthode est appelée (autrement dit, lorsque l’application d’hébergement tente de démarrer le service), le système recherche un [ \<service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) élément avec un attribut de nom qui spécifie « UE. Samples.HelloService ». Si le [ \<service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) élément est trouvé, le système charge la classe spécifiée et crée des points de terminaison à l’aide des définitions de point de terminaison fournies dans le fichier de configuration. Ce mécanisme vous permet de charger et de démarrer un service avec deux lignes de code tout en laissant la liaison et les informations d’adressage hors de votre code. L'avantage de cette approche est que ces modifications peuvent être apportées sans devoir recompiler ou redéployer l'application.  
   
- Les en-têtes facultatifs sont déclarés dans un [ \<en-têtes >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Voici un exemple des éléments utilisés pour spécifier des points de terminaison pour un service dans un fichier de configuration qui fait la distinction entre les deux en-têtes : clients « Gold » à partir de `http://tempuri1.org/` et les clients « Standard » à partir de `http://tempuri2.org/`. Le client appelant ce service doit avoir approprié [ \<en-têtes >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) dans son fichier de configuration.  
+ Les en-têtes facultatifs sont déclarés dans un [ \<en-têtes >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Voici un exemple des éléments utilisés pour spécifier des points de terminaison pour un service dans un fichier de configuration qui fait la distinction entre les deux en-têtes : Les clients « Gold » à partir de `http://tempuri1.org/` et les clients « Standard » à partir de `http://tempuri2.org/`. Le client appelant ce service doit avoir approprié [ \<en-têtes >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) dans son fichier de configuration.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -82,8 +82,8 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
   
  Si des points de terminaison sont fournis explicitement, les points de terminaison par défaut peuvent toujours être ajoutés en appelant <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> sur le <xref:System.ServiceModel.ServiceHost> avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Pour plus d’informations sur les points de terminaison, les liaisons et les comportements par défaut, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [Configuration simplifiée pour les services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.EndpointAddress>  
- [Identité du service et authentification](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Hébergement](../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.EndpointAddress>
+- [Identité du service et authentification](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Hébergement](../../../docs/framework/wcf/feature-details/hosting.md)

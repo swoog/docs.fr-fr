@@ -2,12 +2,12 @@
 title: Performances (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
-ms.openlocfilehash: 463075dbf1b84de1af45f7644019e49bbeca6487
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 4a9353aa1dfeae749664d1ea69b0196e5f202235
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594783"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>Performances (LINQ to XML) (Visual Basic)
 Cette section contient des informations relatives aux performances dans [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], et notamment aux performances des requêtes et de la construction fonctionnelle.  
@@ -25,5 +25,5 @@ Cette section contient des informations relatives aux performances dans [!INCLUD
  [Requêtes compilées statiquement (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
  Fournit des informations de performance sur les requêtes compilées statistiquement, par rapport à l’analyse et au traitement qui doivent être effectués par un évaluateur d’expression XPath.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide de programmation (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

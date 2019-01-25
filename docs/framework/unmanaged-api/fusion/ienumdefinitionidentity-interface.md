@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34186ee8825c0981ec095cf855c76ff5f800907d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3ff37acd9b4dffe80112f0a0ebe9c9cd86ae66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668445"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity, interface
 Sert d’énumérateur pour une collection de `IDefinitionIdentity` objets.  
@@ -55,18 +55,18 @@ IEnumDefinitionIdentity : IUnknown {
   
 |Méthode|Description|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Obtient un pointeur d’interface vers un nouveau `IEnumDefinitionIdentity` objet qui contient les mêmes membres que ce `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Clone`|Obtient un pointeur d’interface vers un nouveau `IEnumDefinitionIdentity` objet qui contient les mêmes membres que cela `IEnumDefinitionIdentity`.|  
 |`IEnumDefinitionIdentity::Next`|Obtient le nombre spécifié de `IDefinitionIdentity` objets, en commençant à la position actuelle.|  
-|`IEnumDefinitionIdentity::Reset`|Déplace le pointeur d’instruction au début de cette `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Reset`|Déplace le pointeur d’instruction au début de ce `IEnumDefinitionIdentity`.|  
 |`IEnumDefinitionIdentity::Skip`|Déplace le pointeur d’instruction par le nombre spécifié d’éléments, en commençant à la position actuelle.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Isolation.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IDefinitionIdentity, interface](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IDefinitionIdentity, interface](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

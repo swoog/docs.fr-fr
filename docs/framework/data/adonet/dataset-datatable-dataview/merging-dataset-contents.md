@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0cba481770708ae11aee9cb4e192019c733eba5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702585"
 ---
 # <a name="merging-dataset-contents"></a>Fusion de contenu de DataSet
-Vous pouvez utiliser la méthode <xref:System.Data.DataSet.Merge%2A> pour fusionner le contenu d'un tableau <xref:System.Data.DataSet>, <xref:System.Data.DataTable> ou <xref:System.Data.DataRow> dans un `DataSet` existant. La façon dont les nouvelles données sont fusionnées dans un `DataSet` existant dépend de plusieurs facteurs et options.  
+Vous pouvez utiliser la méthode <xref:System.Data.DataSet.Merge%2A> pour fusionner le contenu d’un tableau <xref:System.Data.DataSet>, <xref:System.Data.DataTable> ou <xref:System.Data.DataRow> dans un `DataSet` existant. La façon dont les nouvelles données sont fusionnées dans un `DataSet` existant dépend de plusieurs facteurs et options.  
   
 ## <a name="primary-keys"></a>Clés primaires  
  Si la table qui reçoit les nouvelles données et informations de schéma suite à une fusion dispose d'une clé primaire, les nouvelles lignes des données entrantes sont mises en correspondance avec les lignes existantes ayant les mêmes valeurs de clé primaire <xref:System.Data.DataRowVersion.Original> que celles des données entrantes. Si les colonnes du schéma entrant correspondent à celles du schéma existant, les données des lignes existantes sont modifiées. Les colonnes qui ne correspondent pas au schéma existant sont soit ignorées soit ajoutées en fonction du paramètre <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Les nouvelles lignes dont les valeurs de clé primaire ne correspondent à aucune ligne existante sont ajoutées à la table existante.  
@@ -63,9 +63,9 @@ Vous pouvez utiliser la méthode <xref:System.Data.DataSet.Merge%2A> pour fusion
  Prenons l'exemple d'une ligne `DataSet` existante d'un `Unchanged` dont la valeur de clé primaire est 1. Au cours d'une opération de fusion avec une ligne `Modified` entrante dont la valeur de clé primaire `Original` est 2 et la valeur de clé primaire `Current` est 1, la ligne existante et la ligne entrante ne sont pas mises en correspondance car les valeurs de clé primaire `Original` diffèrent. Cependant, lorsque la fusion est terminée et la vérification des contraintes effectuée, une exception est levée car les valeurs de clé primaire `Current` enfreignent la contrainte unique définie pour la colonne de clé primaire.  
   
 > [!NOTE]
->  Lorsque des lignes sont insérées dans une table de base de données contenant une colonne à incrémentation automatique comme une colonne d'identité, la valeur de colonne d'identité retournée par l'insertion peut ne pas correspondre à la valeur du `DataSet`, ce qui conduit à l'ajout des lignes retournées et non à leur fusion. Pour plus d’informations, consultez [récupération des valeurs d’identité ou NuméroAuto](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+>  Lorsque des lignes sont insérées dans une table de base de données contenant une colonne à incrémentation automatique comme une colonne d’identité, la valeur de colonne d’identité retournée par l’insertion peut ne pas correspondre à la valeur du `DataSet`, ce qui conduit à l’ajout des lignes retournées et non à leur fusion. Pour plus d’informations, consultez [récupération des valeurs d’identité ou NuméroAuto](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
- L'exemple de code suivant fusionne deux objets `DataSet` contenant des schémas différents pour donner un `DataSet` dans lequel les schémas des deux objets `DataSet` entrants sont combinés.  
+ L’exemple de code suivant fusionne deux objets `DataSet` contenant des schémas différents pour donner un `DataSet` dans lequel les schémas des deux objets `DataSet` entrants sont combinés.  
   
  [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
  [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]  
@@ -78,10 +78,10 @@ Vous pouvez utiliser la méthode <xref:System.Data.DataSet.Merge%2A> pour fusion
  [!code-csharp[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/CS/source.cs#2)]
  [!code-vb[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/VB/source.vb#2)]  
   
-## <a name="see-also"></a>Voir aussi  
- [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [États des lignes et versions des lignes](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [DataAdapters et DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Récupération de valeurs d’identité ou de numérotation automatique](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [États des lignes et versions des lignes](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [DataAdapters et DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Récupération de valeurs d’identité ou de numérotation automatique](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

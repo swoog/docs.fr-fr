@@ -1,18 +1,18 @@
 ---
-title: 'Comment : exécuter des opérations de glisser-déposer entre des applications'
+title: 'Procédure : Effectuer des opérations de glisser-déplacer entre les Applications'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 13e884b6afb8fbe7248e59009e89ed749d5727d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89b1b89c01ba80393e0965858d7767d5c9029003
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718426"
 ---
-# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Comment : exécuter des opérations de glisser-déposer entre des applications
-L'exécution d'opérations de glisser-déplacer entre applications revient à activer cette action dans une application, du moment que les deux applications concernées respectent le "contrat" établi entre les propriétés <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> et <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Procédure : Effectuer des opérations de glisser-déplacer entre les Applications
+L’exécution d’opérations de glisser-déposer entre applications revient à activer cette action dans une application, du moment que les deux applications concernées respectent le "contrat" établi entre les propriétés <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> et <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
  Dans la procédure suivante, vous allez utiliser une application Windows que vous aurez créée, ainsi que le traitement de texte WordPad fourni avec le système d'exploitation Windows pour effectuer des opérations de glisser-déplacer entre applications. WordPad possède un ensemble d'effets autorisés pour le texte faisant l'objet du glisser-déplacer. L'application Windows pour laquelle vous allez écrire du code utilisera ces effets pour que les opérations de glisser-déplacer se déroulent correctement.  
   
@@ -22,9 +22,9 @@ L'exécution d'opérations de glisser-déplacer entre applications revient à ac
   
 2.  Ajoutez un contrôle <xref:System.Windows.Forms.TextBox> à votre formulaire.  
   
-3.  Configurez le contrôle <xref:System.Windows.Forms.TextBox> pour recevoir les données déplacées.  
+3.  Configurez le contrôle <xref:System.Windows.Forms.TextBox> pour recevoir les données déposées.  
   
-     Pour plus d’informations, consultez [procédure pas à pas : exécution d’une opération de glisser-déplacer dans Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
+     Pour plus d’informations, consultez [Procédure pas à pas : Exécution d’une opération de glisser-déplacer dans les Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 4.  Exécutez votre application Windows et pendant que celle-ci s'exécute, exécutez WordPad.  
   
@@ -36,9 +36,9 @@ L'exécution d'opérations de glisser-déplacer entre applications revient à ac
   
      Notez que quand vous placez la souris sur le contrôle <xref:System.Windows.Forms.TextBox> (et déclenchez donc l'événement <xref:System.Windows.Forms.Control.DragEnter>), le curseur se transforme et vous pouvez placer le texte sélectionné dans le contrôle <xref:System.Windows.Forms.TextBox>.  
   
-     En outre, vous pouvez configurer le contrôle <xref:System.Windows.Forms.TextBox> pour permettre le glisser-déplacer des chaînes de texte dans WordPad. Pour plus d’informations, consultez [procédure pas à pas : exécution d’une opération de glisser-déplacer dans Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
+     En outre, vous pouvez configurer le contrôle <xref:System.Windows.Forms.TextBox> pour permettre le glisser-déposer des chaînes de texte dans WordPad. Pour plus d’informations, consultez [Procédure pas à pas : Exécution d’une opération de glisser-déplacer dans les Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour ajouter des données au Presse-papiers](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
- [Guide pratique pour récupérer des données du Presse-papiers](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
- [Opérations glisser-déposer et prise en charge du Presse-papiers](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Ajouter des données dans le Presse-papiers](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
+- [Guide pratique pour Récupérer des données à partir du Presse-papiers](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
+- [Opérations glisser-déposer et prise en charge du Presse-papiers](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)

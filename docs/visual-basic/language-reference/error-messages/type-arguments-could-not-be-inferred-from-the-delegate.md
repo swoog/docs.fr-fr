@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: 757483f1e88276dd9db82de1c2a7e47b5c975b0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b65a39082ddaf54aabf12ca9b95e49af80f5f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666304"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Les arguments de type ne peuvent pas être déduits à partir du délégué
 Une instruction d’assignation utilise `AddressOf` pour assigner l’adresse d’une procédure générique à un délégué, mais elle ne fournit aucun argument de type à la procédure générique.  
@@ -25,9 +25,9 @@ Une instruction d’assignation utilise `AddressOf` pour assigner l’adresse d�
   
 -   Spécifiez les arguments de type pour la procédure générique dans l’expression `AddressOf` .  
   
-## <a name="see-also"></a>Voir aussi  
- [Types génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Procédures génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Liste de types](../../../visual-basic/language-reference/statements/type-list.md)  
- [Méthodes d’extension](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>Voir aussi
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Liste de types](../../../visual-basic/language-reference/statements/type-list.md)
+- [Méthodes d’extension](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

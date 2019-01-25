@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9b1db3b3628719eca178ababd0dc9728b491e7b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658154"
 ---
 # <a name="wcf-data-services-resources"></a>Ressources de services de données WCF
 Les rubriques d'introduction [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] se trouvent aux emplacements indiqués ci-après. Un grand nombre de ces rubriques contiennent également des liens vers des rubriques connexes qui contiennent des informations plus détaillées.  
   
  [Vue d’ensemble](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
- Fournit une vue d'ensemble des caractéristiques et des fonctionnalités disponibles dans [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Fournit une vue d’ensemble des caractéristiques et des fonctionnalités disponibles dans [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Prise en main](../../../../docs/framework/data/adonet/ef/getting-started.md)  
  Explique comment concevoir et accéder à un service de données à l’aide de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], comme illustré par la [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -33,7 +33,7 @@ Les rubriques d'introduction [!INCLUDE[ssAstoria](../../../../includes/ssastoria
  Outil de programmation de données pour les développeurs [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Blog de l’équipe WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150511)  
- Blog contenant des mises à jour et des discussions sur les caractéristiques et les fonctionnalités d'[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Blog contenant des mises à jour et des discussions sur les caractéristiques et les fonctionnalités d’[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Site Web de OData](https://go.microsoft.com/fwlink/?LinkID=184554)  
  Source principale d'informations sur [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
@@ -56,8 +56,8 @@ Les rubriques d'introduction [!INCLUDE[ssAstoria](../../../../includes/ssastoria
  [À l’aide de Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  
  Livre blanc qui fournit des informations supplémentaires et des exemples pour la création des services de données et l'accès à des services de données dans les applications clientes.  
   
- [The Entity-Relationship Model : Toward a Unified View de données](https://go.microsoft.com/fwlink/?LinkId=91909) par Peter Pin-Shan Chen, Massachusetts Institute of Technology  
+ [The Entity-Relationship Model: Vers une vue unifiée des données](https://go.microsoft.com/fwlink/?LinkId=91909) par Peter Pin-Shan Chen, Massachusetts Institute of Technology  
  Décrit la base du modèle relationnel d'entités implémenté par [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Article rédigé en 1976 parmi les plus souvent cités dans le domaine de l'informatique.  
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en main](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Prise en main](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
