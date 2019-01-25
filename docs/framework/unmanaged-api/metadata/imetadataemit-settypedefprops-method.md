@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b72088e4aa9994ca6ae411ec36d4c578e3017e5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7500d7b95426aefc49fea2613ea1572f466defc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496073"
 ---
-# <a name="imetadataemitsettypedefprops-method"></a><span data-ttu-id="23ae8-102">IMetaDataEmit::SetTypeDefProps, méthode</span><span class="sxs-lookup"><span data-stu-id="23ae8-102">IMetaDataEmit::SetTypeDefProps Method</span></span>
-<span data-ttu-id="23ae8-103">Définit les fonctionnalités d’un type défini par un appel antérieur à [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="23ae8-103">Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+# <a name="imetadataemitsettypedefprops-method"></a><span data-ttu-id="bd6b3-102">IMetaDataEmit::SetTypeDefProps, méthode</span><span class="sxs-lookup"><span data-stu-id="bd6b3-102">IMetaDataEmit::SetTypeDefProps Method</span></span>
+<span data-ttu-id="bd6b3-103">Définit les fonctionnalités d’un type défini par un appel antérieur à [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="bd6b3-103">Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23ae8-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="23ae8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd6b3-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="bd6b3-104">Syntax</span></span>  
   
 ```  
 HRESULT SetTypeDefProps (  
@@ -38,28 +38,28 @@ HRESULT SetTypeDefProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="23ae8-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="23ae8-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bd6b3-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="bd6b3-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="23ae8-106">[in] Un `mdTypeDef` jeton obtenu à partir de l’appel d’origine à [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="23ae8-106">[in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+ <span data-ttu-id="bd6b3-106">[in] Un `mdTypeDef` jeton obtenu à partir de l’appel d’origine à [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="bd6b3-106">[in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
  `dwTypeDefFlags`  
- <span data-ttu-id="23ae8-107">[in] `TypeDef` attributs.</span><span class="sxs-lookup"><span data-stu-id="23ae8-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="23ae8-108">Il s’agit d’un masque de bits de `CorTypeAttr` valeurs.</span><span class="sxs-lookup"><span data-stu-id="23ae8-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
+ <span data-ttu-id="bd6b3-107">[in] `TypeDef` attributs.</span><span class="sxs-lookup"><span data-stu-id="bd6b3-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="bd6b3-108">Il s’agit d’un masque de bits de `CorTypeAttr` valeurs.</span><span class="sxs-lookup"><span data-stu-id="bd6b3-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
   
  `tkExtends`  
- <span data-ttu-id="23ae8-109">[in] Le `mdToken` de la classe de base.</span><span class="sxs-lookup"><span data-stu-id="23ae8-109">[in] The `mdToken` of the base class.</span></span> <span data-ttu-id="23ae8-110">Obtenu à partir d’un appel précédent à [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), ou `null`.</span><span class="sxs-lookup"><span data-stu-id="23ae8-110">Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.</span></span>  
+ <span data-ttu-id="bd6b3-109">[in] Le `mdToken` de la classe de base.</span><span class="sxs-lookup"><span data-stu-id="bd6b3-109">[in] The `mdToken` of the base class.</span></span> <span data-ttu-id="bd6b3-110">Obtenu à partir d’un appel précédent à [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), ou `null`.</span><span class="sxs-lookup"><span data-stu-id="bd6b3-110">Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.</span></span>  
   
  `rtkImplements[]`  
- <span data-ttu-id="23ae8-111">[in] Tableau de jetons pour les interfaces implémentées par ce type.</span><span class="sxs-lookup"><span data-stu-id="23ae8-111">[in] An array of tokens for the interfaces that this type implements.</span></span> <span data-ttu-id="23ae8-112">Ces `mdTypeRef` jetons sont obtenus à l’aide de [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md).</span><span class="sxs-lookup"><span data-stu-id="23ae8-112">These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md).</span></span> <span data-ttu-id="23ae8-113">Le dernier élément du tableau est doit être `mdTokenNil`.</span><span class="sxs-lookup"><span data-stu-id="23ae8-113">The last element of the array is must be `mdTokenNil`.</span></span>  
+ <span data-ttu-id="bd6b3-111">[in] Un tableau de jetons pour les interfaces implémentées par ce type.</span><span class="sxs-lookup"><span data-stu-id="bd6b3-111">[in] An array of tokens for the interfaces that this type implements.</span></span> <span data-ttu-id="bd6b3-112">Ces `mdTypeRef` jetons soient obtenus à l’aide de [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md).</span><span class="sxs-lookup"><span data-stu-id="bd6b3-112">These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md).</span></span> <span data-ttu-id="bd6b3-113">Est le dernier élément du tableau doit être `mdTokenNil`.</span><span class="sxs-lookup"><span data-stu-id="bd6b3-113">The last element of the array is must be `mdTokenNil`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="23ae8-114">Spécifications</span><span class="sxs-lookup"><span data-stu-id="23ae8-114">Requirements</span></span>  
- <span data-ttu-id="23ae8-115">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23ae8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd6b3-114">Spécifications</span><span class="sxs-lookup"><span data-stu-id="bd6b3-114">Requirements</span></span>  
+ <span data-ttu-id="bd6b3-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bd6b3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="23ae8-116">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="23ae8-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bd6b3-116">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bd6b3-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="23ae8-117">**Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="23ae8-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bd6b3-117">**Bibliothèque :** Utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bd6b3-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="23ae8-118">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23ae8-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bd6b3-118">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd6b3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23ae8-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="23ae8-119">See Also</span></span>  
- [<span data-ttu-id="23ae8-120">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="23ae8-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="23ae8-121">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="23ae8-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bd6b3-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bd6b3-119">See also</span></span>
+- [<span data-ttu-id="bd6b3-120">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="bd6b3-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="bd6b3-121">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="bd6b3-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

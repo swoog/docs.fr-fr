@@ -2,23 +2,23 @@
 title: Microsoft.Transactions.TransactionBridge.CommitMessageRetry
 ms.date: 03/30/2017
 ms.assetid: 4abe01f0-6398-4fba-b2f3-c054b7f7e971
-ms.openlocfilehash: f1092dd335be793fb3d2212b7b9398cc69d2f79f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d939d525fd1c7e8f41cccbc3ca7af9726f22bdfc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571429"
 ---
-# <a name="microsofttransactionstransactionbridgecommitmessageretry"></a><span data-ttu-id="f718b-102">Microsoft.Transactions.TransactionBridge.CommitMessageRetry</span><span class="sxs-lookup"><span data-stu-id="f718b-102">Microsoft.Transactions.TransactionBridge.CommitMessageRetry</span></span>
-<span data-ttu-id="f718b-103">Une nouvelle tentative de message de validation a été envoyée à un participant qui ne répond pas.</span><span class="sxs-lookup"><span data-stu-id="f718b-103">A commit message retry was sent to an unresponsive participant.</span></span>  
+# <a name="microsofttransactionstransactionbridgecommitmessageretry"></a><span data-ttu-id="ad85a-102">Microsoft.Transactions.TransactionBridge.CommitMessageRetry</span><span class="sxs-lookup"><span data-stu-id="ad85a-102">Microsoft.Transactions.TransactionBridge.CommitMessageRetry</span></span>
+<span data-ttu-id="ad85a-103">Une nouvelle tentative de message de validation a été envoyée à un participant qui ne répond pas.</span><span class="sxs-lookup"><span data-stu-id="ad85a-103">A commit message retry was sent to an unresponsive participant.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f718b-104">Description</span><span class="sxs-lookup"><span data-stu-id="f718b-104">Description</span></span>  
- <span data-ttu-id="f718b-105">Suivi lorsque le gestionnaire de transactions local a dû renvoyer un message de validation à un participant subalterne parce qu’il n’a pas reçu de réponse dans un délai donné.</span><span class="sxs-lookup"><span data-stu-id="f718b-105">Traced if the local Transaction Manager needed to resend a Commit message to a subordinate participant because it did not receive a response in a given amount of time.</span></span>  
+## <a name="description"></a><span data-ttu-id="ad85a-104">Description</span><span class="sxs-lookup"><span data-stu-id="ad85a-104">Description</span></span>  
+ <span data-ttu-id="ad85a-105">Suivi lorsque le gestionnaire de transactions local a dû renvoyer un message de validation à un participant subalterne parce qu’il n’a pas reçu de réponse dans un délai donné.</span><span class="sxs-lookup"><span data-stu-id="ad85a-105">Traced if the local Transaction Manager needed to resend a Commit message to a subordinate participant because it did not receive a response in a given amount of time.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="f718b-106">Résolution des problèmes</span><span class="sxs-lookup"><span data-stu-id="f718b-106">Troubleshooting</span></span>  
- <span data-ttu-id="f718b-107">Recherchez d'éventuels problèmes liés au réseau ou au produit pouvant empêcher la réponse d'être remise à temps.</span><span class="sxs-lookup"><span data-stu-id="f718b-107">Investigate potential network or product issues that prevent the response from being delivered on time.</span></span>  <span data-ttu-id="f718b-108">Si un nombre élevé de ces messages apparaissent, cela peut indiquer des problèmes d'infrastructure ou des délais de réponse anormalement longs.</span><span class="sxs-lookup"><span data-stu-id="f718b-108">If many of these messages are seen, it can indicate infrastructure problems or abnormally long response times.</span></span> <span data-ttu-id="f718b-109">Ces deux problèmes réduiront considérablement le débit des transactions au sein du système.</span><span class="sxs-lookup"><span data-stu-id="f718b-109">Both issues will drastically reduce the throughput of transactions within the system.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="ad85a-106">Résolution des problèmes</span><span class="sxs-lookup"><span data-stu-id="ad85a-106">Troubleshooting</span></span>  
+ <span data-ttu-id="ad85a-107">Recherchez d'éventuels problèmes liés au réseau ou au produit pouvant empêcher la réponse d'être remise à temps.</span><span class="sxs-lookup"><span data-stu-id="ad85a-107">Investigate potential network or product issues that prevent the response from being delivered on time.</span></span>  <span data-ttu-id="ad85a-108">Si un nombre élevé de ces messages apparaissent, cela peut indiquer des problèmes d'infrastructure ou des délais de réponse anormalement longs.</span><span class="sxs-lookup"><span data-stu-id="ad85a-108">If many of these messages are seen, it can indicate infrastructure problems or abnormally long response times.</span></span> <span data-ttu-id="ad85a-109">Ces deux problèmes réduiront considérablement le débit des transactions au sein du système.</span><span class="sxs-lookup"><span data-stu-id="ad85a-109">Both issues will drastically reduce the throughput of transactions within the system.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f718b-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f718b-110">See Also</span></span>  
- [<span data-ttu-id="f718b-111">Suivi</span><span class="sxs-lookup"><span data-stu-id="f718b-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f718b-112">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="f718b-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f718b-113">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="f718b-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ad85a-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ad85a-110">See also</span></span>
+- [<span data-ttu-id="ad85a-111">Suivi</span><span class="sxs-lookup"><span data-stu-id="ad85a-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="ad85a-112">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="ad85a-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="ad85a-113">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="ad85a-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
