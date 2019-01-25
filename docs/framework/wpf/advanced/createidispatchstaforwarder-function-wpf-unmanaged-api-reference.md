@@ -1,5 +1,5 @@
 ---
-title: CreateIDispatchSTAForwarder (fonction) (référence des API non managées WPF)
+title: Fonction CreateIDispatchSTAForwarder (référence des API non managées WPF)
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +8,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: f7e45d5cafa40ba147fe39888e74a67ac9f95c5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 215f6ff727b814e7e7d7c708c29a8c5221f5797f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575980"
 ---
-# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>CreateIDispatchSTAForwarder (fonction) (référence des API non managées WPF)
-Cette API prend en charge l’infrastructure de Windows Presentation Foundation (WPF) et n’est pas destinée à être utilisée directement depuis votre code.  
+# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>Fonction CreateIDispatchSTAForwarder (référence des API non managées WPF)
+Cette API prend en charge l’infrastructure Windows Presentation Foundation (WPF) et n’est pas destinée à être utilisée directement depuis votre code.  
   
- Utilisée par l’infrastructure de Windows Presentation Foundation (WPF) pour la gestion des threads et de windows.  
+ Utilisé par l’infrastructure Windows Presentation Foundation (WPF) pour la gestion de thread et de windows.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,15 +39,15 @@ HRESULT CreateIDispatchSTAForwarder(
  Un pointeur vers l’adresse d’un `IDispatch` interface.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [configuration système requise du .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [requise du .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **DLL :**  
   
  Dans le .NET Framework 3.0 et 3.5 : PresentationHostDLL.dll  
   
- Dans le .NET Framework 4 et versions ultérieures : PresentationHost_v0400.dll  
+ Dans le .NET Framework 4 et versions ultérieur : PresentationHost_v0400.dll  
   
  **Version du .NET framework :** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence des API non managées WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>Voir aussi
+- [Référence des API non managées WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

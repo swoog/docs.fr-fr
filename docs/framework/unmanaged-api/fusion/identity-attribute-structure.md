@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f716ff35ae0cd3d2a53c55756b8957e54fa355c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e26a90b6725d53774053293c04842b761da6ab12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717673"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE, structure
-Contient des informations sur les attributs de métadonnées sur une [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instance.  
+Contient des informations d’attribut de métadonnées sur une [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instance.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,23 +40,23 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`pszNamespace`|Un pointeur vers une chaîne de caractères terminée par null qui contient l’espace de noms est de l’attribut dans.|  
-|`pszName`|Un pointeur vers une chaîne de caractères terminée par null qui contient le nom de l’attribut.|  
-|`pszValue`|Un pointeur vers une chaîne de caractères terminée par null qui contient la valeur de l’attribut.|  
+|`pszNamespace`|Un pointeur vers une chaîne de caractères se terminant par null qui contient l’espace de noms de l’attribut est dans.|  
+|`pszName`|Un pointeur vers une chaîne de caractères se terminant par null qui contient le nom de l’attribut.|  
+|`pszValue`|Un pointeur vers une chaîne de caractères se terminant par null qui contient la valeur de l’attribut.|  
   
 ## <a name="remarks"></a>Notes  
- Le `IDENTITY_ATTRIBUTE` structure contient trois pointeurs vers des chaînes de caractères terminée par null. Ces trois chaînes décrivent un attribut.  
+ Le `IDENTITY_ATTRIBUTE` structure contient trois pointeurs vers des chaînes de caractères se terminant par null. Ces trois chaînes décrivent un attribut.  
   
  Une instance d’un `IDENTITY_ATTRIBUTE` structure est associée à une instance d’un [IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md) structure. Le `IDENTITY_ATTRIBUTE` structure contient les chaînes réelles et correspondants `IDENTITY_ATTRIBUTE_BLOB` structure répertorie les offsets pour les trois chaînes répertoriées dans le `IDENTITY_ATTRIBUTE` structure.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Isolation.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IDefinitionIdentity, interface](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)  
- [IDENTITY_ATTRIBUTE_BLOB, structure](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- [Structures de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>Voir aussi
+- [IDefinitionIdentity, interface](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [IDENTITY_ATTRIBUTE_BLOB, structure](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
+- [Structures de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

@@ -2,12 +2,12 @@
 title: Exemples de requête fondée sur une méthode (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 569292cc03f7cbcbaff2d8625849285ff6e2146e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0e904d975860dad6bf11344435b249c3bad84b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632853"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Exemples de requête fondée sur une méthode (LINQ to DataSet)
 Cette section fournit des exemples de programmation [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] dans une syntaxe de requête fondée sur une méthode qui utilise des opérateurs de requête standard. Le <xref:System.Data.DataSet> utilisé dans ces exemples est rempli à l’aide de la `FillDataSet` (méthode), qui est spécifié dans [chargement des données dans un jeu de données](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -37,7 +37,7 @@ Cette section fournit des exemples de programmation [!INCLUDE[linq_dataset](../.
  [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
  Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.GroupJoin%2A> et <xref:System.Linq.Enumerable.Join%2A> pour interroger un <xref:System.Data.DataSet>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples d’expressions de requête](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
- [Exemples d’opérateurs spécifiques aux DataSets](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a>Voir aussi
+- [Exemples d’expressions de requête](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)
+- [Exemples d’opérateurs spécifiques aux DataSets](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)
+- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

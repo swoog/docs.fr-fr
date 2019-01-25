@@ -1,5 +1,5 @@
 ---
-title: "Comment : implémenter l'interface ITypedList"
+title: 'Procédure : Implémenter l’Interface ITypedList'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-ms.openlocfilehash: 181879d3e41e0dd140c79a4c63d52e6999acf86d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d12c0b82d9475981d0c72f082665b11135d8bb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562166"
 ---
-# <a name="how-to-implement-the-itypedlist-interface"></a>Comment : implémenter l'interface ITypedList
-Implémentez la <xref:System.ComponentModel.ITypedList> interface pour activer la découverte du schéma pour une liste pouvant être liée.  
+# <a name="how-to-implement-the-itypedlist-interface"></a>Procédure : Implémenter l’Interface ITypedList
+Implémentez le <xref:System.ComponentModel.ITypedList> interface pour activer la découverte du schéma pour une liste pouvant être liée.  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant montre comment implémenter la <xref:System.ComponentModel.ITypedList> interface. Un type générique nommé `SortableBindingList` dérive le <xref:System.ComponentModel.BindingList%601> classe et implémente la <xref:System.ComponentModel.ITypedList> interface. Une classe simple nommée `Customer` fournit des données, qui sont liées à l’en-tête d’un <xref:System.Windows.Forms.DataGridView> contrôle.  
@@ -36,8 +37,8 @@ Implémentez la <xref:System.ComponentModel.ITypedList> interface pour activer l
   
 -   Références aux assemblys System.Drawing et System.Windows.Forms.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ComponentModel.ITypedList>  
- <xref:System.ComponentModel.BindingList%601>  
- <xref:System.ComponentModel.IBindingList>  
- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ComponentModel.ITypedList>
+- <xref:System.ComponentModel.BindingList%601>
+- <xref:System.ComponentModel.IBindingList>
+- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

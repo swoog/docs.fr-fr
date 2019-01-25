@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e6fbaabb97e4a8de3e4bdbcc0c105b6cf999c0d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590680"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Procédure : Sécuriser des points de terminaison de métadonnées
 Les métadonnées d'un service peuvent contenir des informations sensibles sur votre application dont un utilisateur malveillant peut tirer parti. Les consommateurs de votre service peuvent également avoir besoin d'un mécanisme sécurisé pour obtenir des métadonnées sur votre service. Par conséquent, il est parfois nécessaire de publier vos métadonnées à l'aide d'un point de terminaison sécurisé.  
@@ -21,7 +21,7 @@ Les métadonnées d'un service peuvent contenir des informations sensibles sur v
   
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Pour créer un point de terminaison sécurisé de métadonnées HTTPS GET dans le code  
   
-1.  Configurez un port avec un certificat X.509 approprié. Le certificat doit provenir d'une autorité approuvée et il doit avoir une utilisation prévue de l'autorisation de service. Vous devez utiliser l'outil HttpCfg.exe pour joindre le certificat au port. Consultez [Comment : Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Configurez un port avec un certificat X.509 approprié. Le certificat doit provenir d'une autorité approuvée et il doit avoir une utilisation prévue de l'autorisation de service. Vous devez utiliser l'outil HttpCfg.exe pour joindre le certificat au port. Voir [Guide pratique pour Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
     > [!IMPORTANT]
     >  Le sujet du certificat ou son nom DNS (Domain Name System) doit correspondre au nom de l'ordinateur. Ceci est essentiel car l'une des premières étapes effectuées par le mécanisme HTTPS est de vérifier que le certificat est émis vers le même URI (Uniform Resource Identifier) que l'adresse avec laquelle il est appelé.  
@@ -92,11 +92,11 @@ Les métadonnées d'un service peuvent contenir des informations sensibles sur v
   
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [Comment : Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [Guide pratique pour Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

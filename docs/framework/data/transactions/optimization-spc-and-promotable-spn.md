@@ -2,12 +2,12 @@
 title: Optimisation à l'aide de la validation à phase unique et de la notification de phase unique pouvant être promue
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: 093dfb793d5a8c8dc59eaabab09f2e5b6c81c352
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b63c0a54fda54306891bdec0edd8d2e3dc65b595
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553059"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Optimisation à l'aide de la validation à phase unique et de la notification de phase unique pouvant être promue
 Cette rubrique décrit les mécanismes fournis par l'infrastructure <xref:System.Transactions> pour l'optimisation des performances.  
@@ -32,7 +32,7 @@ Cette rubrique décrit les mécanismes fournis par l'infrastructure <xref:System
 > [!NOTE]
 >  Le **TransactionCommitted** traces (qui sont générées lorsqu’une validation est appelée sur la transaction remontée) contiennent l’ID d’activité de la transaction DTC.  
   
- Pour plus d’informations sur l’escalade de verrous de gestion, consultez [Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md).  
+ Pour plus d’informations sur la remontée de la gestion, consultez [Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md).  
   
 ## <a name="transaction-management-escalation-scenario"></a>Scénario de remontée de la gestion des transactions  
  Le scénario suivant présente une remontée vers une transaction distribuée effectuée avec le nom d'espaces <xref:System.Data> utilisé comme « proxy » pour le gestionnaire de ressources. Ce scénario suppose qu'une connexion <xref:System.Data> à la base de données (CN1), impliquée dans la transaction, est déjà établie et que l'application veut établir une seconde connexion <xref:System.Data>, (CN2). La transaction doit être remontée vers le DTC, en tant que transaction à validation en deux phases entièrement distribuée.  
@@ -54,12 +54,12 @@ Cette rubrique décrit les mécanismes fournis par l'infrastructure <xref:System
 7.  Les deux connexions sont désormais inscrites à une transaction distribuée DTC.  
   
 ## <a name="single-phase-commit-optimization"></a>Optimisation de la validation en une phase  
- Le protocole de validation en une phase est plus efficace lors de l'exécution car toutes les mises à jour sont effectuées sans coordination explicite. Pour tirer partie de cette optimisation, implémentez un gestionnaire de ressources via l'interface <xref:System.Transactions.ISinglePhaseNotification> pour la ressource et inscrivez-vous à une transaction à l'aide de la méthode <xref:System.Transactions.Transaction.EnlistDurable%2A> ou <xref:System.Transactions.Transaction.EnlistVolatile%2A>. Plus précisément, le *EnlistmentOptions* doit être égal au paramètre <xref:System.Transactions.EnlistmentOptions.None> pour vous assurer qu’une validation à phase unique est exécutée.  
+ Le protocole de validation en une phase est plus efficace lors de l'exécution car toutes les mises à jour sont effectuées sans coordination explicite. Pour tirer partie de cette optimisation, implémentez un gestionnaire de ressources via l'interface <xref:System.Transactions.ISinglePhaseNotification> pour la ressource et inscrivez-vous à une transaction à l'aide de la méthode <xref:System.Transactions.Transaction.EnlistDurable%2A> ou <xref:System.Transactions.Transaction.EnlistVolatile%2A>. Plus précisément, le *EnlistmentOptions* paramètre doit être égal à <xref:System.Transactions.EnlistmentOptions.None> pour vous assurer qu’une validation à phase unique est exécutée.  
   
  L'interface <xref:System.Transactions.ISinglePhaseNotification> étant dérivée de l'interface <xref:System.Transactions.IEnlistmentNotification>, si votre gestionnaire de ressources ne peut pas prétendre à la validation en une phase, il peut tout de même recevoir les notifications relatives à la validation en deux phases.  Si votre gestionnaire de ressources reçoit une notification <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> du gestionnaire de transactions, il doit tenter d'effectuer le nécessaire pour la validation et informer le gestionnaire de transactions de la validation ou de la restauration de la transaction en appelant la méthode <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A>, <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A> ou <xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A> pour le paramètre <xref:System.Transactions.SinglePhaseEnlistment>. À ce stade, une réponse de la <xref:System.Transactions.Enlistment.Done%2A> pour l'inscription implique la sémantique ReadOnly. Par conséquent, ne répondez pas à la <xref:System.Transactions.Enlistment.Done%2A> en plus des autres méthodes.  
   
- S'il n'y a qu'une inscription volatile et aucune inscription durable, l'inscription volatile reçoit la notification SPC.  S’il existe des inscriptions volatiles et qu’une inscription durable, les inscriptions volatiles reçoivent 2PC. Une fois terminée, l'inscription durable reçoit la notification SPC.  
+ S'il n'y a qu'une inscription volatile et aucune inscription durable, l'inscription volatile reçoit la notification SPC.  S’il existe plusieurs inscriptions volatiles et qu’une seule inscription durable, les inscriptions volatiles reçoivent 2PC. Une fois terminée, l'inscription durable reçoit la notification SPC.  
   
-## <a name="see-also"></a>Voir aussi  
- [Inscription de ressources comme participants à une transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
- [Validation d’une transaction en une phase unique et en plusieurs phases](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+## <a name="see-also"></a>Voir aussi
+- [Inscription de ressources comme participants à une transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+- [Validation d’une transaction en une phase unique et en plusieurs phases](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

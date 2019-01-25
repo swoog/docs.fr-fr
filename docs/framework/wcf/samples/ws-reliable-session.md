@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: ec9163eded7f77053b94b7cb0ff0995dca575612
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 660fb9a7f60bc95a5039cdf3bad098c330ac969e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682678"
 ---
 # <a name="ws-reliable-session"></a>WS Reliable Session
 Cet exemple montre l'utilisation des sessions fiables. Les sessions fiables fournissent la prise en charge de la messagerie et des sessions fiables. La messagerie fiable réessaie d'établir la communication en cas d'échec et permet de spécifier des assurances de remise telles que l'ordre d'arrivée des messages. Les sessions conservent l'état pour les clients entre les appels. Cet exemple implémente des sessions permettant de conserver l'état du client et spécifie des assurances de remise par ordre d'arrivée.  
@@ -30,7 +30,7 @@ Cet exemple montre l'utilisation des sessions fiables. Les sessions fiables four
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- L'exemple utilise le fichier `wsHttpBinding`. La liaison est spécifiée dans les fichiers de configuration pour le client et le service. Le type de liaison est spécifié dans l'attribut `binding` de l'élément de point de terminaison, tel qu'indiqué dans l'exemple de configuration suivant.  
+ L'exemple utilise le fichier `wsHttpBinding`. La liaison est spécifiée dans les fichiers de configuration pour le client et le service. Le type de liaison est spécifié dans l’attribut `binding` de l’élément de point de terminaison, tel qu’indiqué dans l’exemple de configuration suivant.  
   
 ```xml  
 <endpoint address=""  

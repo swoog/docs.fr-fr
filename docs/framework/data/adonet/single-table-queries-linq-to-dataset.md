@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 5a128349ea81cda7397b2dadbc2ce4096f692744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bde9a5f718dcc7bdf31f84369546d530dca38d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637247"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Requêtes d'analyse unique (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] les requêtes des sources de données qui implémentent la <xref:System.Collections.Generic.IEnumerable%601> interface ou le <xref:System.Linq.IQueryable%601> interface. Le <xref:System.Data.DataTable> classe n’implémente pas l’interface, vous devez appeler la <xref:System.Data.DataTableExtensions.AsEnumerable%2A> méthode si vous souhaitez utiliser le <xref:System.Data.DataTable> en tant que source dans le `From` clause d’un [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] requête.  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] les requêtes fonctionnent sur des sources de données qui implémentent le <xref:System.Collections.Generic.IEnumerable%601> interface ou le <xref:System.Linq.IQueryable%601> interface. Le <xref:System.Data.DataTable> classe n’implémente pas ces deux interfaces, vous devez appeler la <xref:System.Data.DataTableExtensions.AsEnumerable%2A> méthode si vous souhaitez utiliser le <xref:System.Data.DataTable> en tant que source dans le `From` clause d’une [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] requête.  
   
  L'exemple ci-dessous obtient toutes les commandes en ligne de la table SalesOrderHeader et affiche l'ID de commande, la date de commande et le numéro de commande sur la console.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33360476"
   
  Notez que le type de données spécifié dans le paramètre générique `T` de la méthode <xref:System.Data.DataRowExtensions.Field%2A> et de la méthode <xref:System.Data.DataRowExtensions.SetField%2A> doit correspondre au type de la valeur sous-jacente, sinon une <xref:System.InvalidCastException> est levée. Le nom de la colonne spécifiée doit également correspondre à celui de la colonne dans le <xref:System.Data.DataSet>, sinon une <xref:System.ArgumentException> est levée. Dans les deux cas, l'exception est levée au moment de l'exécution de l'énumération des données lorsque la requête est exécutée.  
   
-## <a name="see-also"></a>Voir aussi  
- [Requêtes de table croisée](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
- [Interrogation de DataSets typés](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [Méthodes génériques Field et SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+## <a name="see-also"></a>Voir aussi
+- [Requêtes de table croisée](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
+- [Interrogation de DataSets typés](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
+- [Méthodes génériques Field et SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

@@ -2,18 +2,18 @@
 title: '&lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: e0b8c75d8c3407e48d177a8085f601174b18a211
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c94674daa48069c1783e6378f913960d49bf7606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575474"
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Définit une liaison mise en file d’attente adaptée à la communication entre ordinateurs.  
   
  \<system.ServiceModel>  
-\<liaisons >  
+\<bindings>  
 \<netMsmqBinding>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -92,13 +92,13 @@ Définit une liaison mise en file d’attente adaptée à la communication entre
 |Élément|Description|  
 |-------------|-----------------|  
 |[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<sécurité >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Définit les paramètres de sécurité de la liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Définit les paramètres de sécurité de la liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaisons >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
  La liaison `netMsmqBinding` fournit la prise en charge de la mise en file d’attente en utilisant MSMQ (Microsoft Message Queuing) comme transport et active la prise en charge des applications faiblement couplées, de l’isolation de défaillance, du nivellement de charge et des opérations hors circuit. Pour une description de ces fonctionnalités, consultez [files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
@@ -137,11 +137,11 @@ Définit une liaison mise en file d’attente adaptée à la communication entre
 </configuration>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.NetMsmqBinding>  
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>  
- [\<liaison >](../../../../../docs/framework/misc/binding.md)  
- [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.NetMsmqBinding>
+- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Liaisons](../../../../../docs/framework/wcf/bindings.md)
+- [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ab0d482366b037f92a55f00dd33df8a312e84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6711d0e0423534744de1ee4b8a734ed2f8eab24d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514281"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo, méthode
 Obtient une valeur qui indique le type de champ statique qui s’applique au champ spécifié.  
@@ -44,22 +44,22 @@ HRESULT GetStaticFieldInfo (
  [in] Le jeton de métadonnées pour le champ statique.  
   
  `pFieldInfo`  
- [out] Un pointeur vers une valeur de la [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) énumération qui indique si le champ spécifié est statique et si, par conséquent, le type de champ statique qui s’applique au champ.  
+ [out] Un pointeur vers une valeur de la [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) énumération qui indique si le champ spécifié est statique, et si, par conséquent, le type de champ statique qui s’applique au champ.  
   
 ## <a name="remarks"></a>Notes  
  Ces informations peuvent être utilisées pour déterminer la fonction à appeler pour obtenir l’adresse du champ statique.  
   
- Le profileur de code doit toujours vérifier les métadonnées pour un champ statique pour vous assurer qu’il a réellement une adresse. Littéraux statiques (autrement dit, les constantes) existent uniquement dans les métadonnées et n’ayant pas d’adresse.  
+ Le code du profileur doit toujours vérifier les métadonnées pour un champ statique pour vous assurer qu’il a réellement une adresse. Littéraux statiques (autrement dit, les constantes) existent uniquement dans les métadonnées et n’ont pas d’adresse.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 270267fa961e2d9420364bc11992be9eff03866b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94e9c510f7f3c183bf6cbde31e2ead04cc66bfb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744113"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implémentation de fournisseur UI Automation côté serveur
 > [!NOTE]
@@ -141,7 +141,7 @@ ms.locfileid: "48837371"
   
  La structure du fragment est déterminée par votre implémentation de <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>. Pour chaque direction possible à partir de chaque fragment, cette méthode retourne l'objet fournisseur de l'élément dans cette direction. S'il n'y a aucun élément dans cette direction, la méthode retourne une référence `null` .  
   
- La racine du fragment ne prend en charge la navigation que vers les éléments enfants. Par exemple, une zone de liste retourne le premier élément de la liste quand la direction est <xref:System.Windows.Automation.Provider.NavigateDirection.FirstChild>, et le dernier élément quand la direction est <xref:System.Windows.Automation.Provider.NavigateDirection.LastChild>. La racine du fragment ne prend pas en charge la navigation vers un parent ou des frères ; cela est géré par le fournisseur de fenêtre hôte.  
+ La racine du fragment ne prend en charge la navigation que vers les éléments enfants. Par exemple, une zone de liste retourne le premier élément de la liste quand la direction est <xref:System.Windows.Automation.Provider.NavigateDirection.FirstChild>, et le dernier élément quand la direction est <xref:System.Windows.Automation.Provider.NavigateDirection.LastChild>. La racine du fragment ne prend pas en charge la navigation vers un parent ou des frères ; cela est géré par le fournisseur de fenêtre hôte.  
   
  Les éléments d'un fragment qui ne sont pas la racine doivent prendre en charge la navigation vers le parent et tous leurs frères et enfants.  
   
@@ -171,12 +171,12 @@ ms.locfileid: "48837371"
   
  Pour cela, le fournisseur de la racine du fragment pour le rebar expose un jeu d'enfants représentant les bandes. Chaque bande possède un seul fournisseur qui peut exposer des propriétés et des modèles. Dans son implémentation de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, le fournisseur de bandes retourne le fournisseur de fenêtre par défaut pour le HWND de contrôle qu'il obtient en appelant <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, en passant le handle de fenêtre du contrôle. Enfin, le fournisseur de la racine du fragment pour le rebar implémente l'interface <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> et, dans son implémentation de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> , il retourne le fournisseur de bandes approprié pour le contrôle contenu dans le HWND spécifié.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des fournisseurs UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [Exposer un fournisseur UI Automation côté serveur](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [Retourner les propriétés d’un fournisseur UI Automation](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [Déclencher des événements à partir d’un fournisseur UI Automation](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [Activer la navigation dans un fournisseur de fragment UI Automation](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Exemple de fournisseur simple](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
- [Exemple de fournisseur de fragment](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble des fournisseurs UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Exposer un fournisseur UI Automation côté serveur](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
+- [Retourner les propriétés d’un fournisseur UI Automation](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [Déclencher des événements à partir d’un fournisseur UI Automation](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [Activer la navigation dans un fournisseur de fragment UI Automation](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Exemple de fournisseur simple](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)
+- [Exemple de fournisseur de fragment](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

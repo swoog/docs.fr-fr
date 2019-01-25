@@ -1,16 +1,16 @@
 ---
-title: 'Comment : activer le suivi WIF'
+title: 'Procédure : Activer le suivi WIF'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: f763c279c29bec73d4fc20d59dc86726d84e21bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605161"
 ---
-# <a name="how-to-enable-wif-tracing"></a>Comment : activer le suivi WIF
+# <a name="how-to-enable-wif-tracing"></a>Procédure : Activer le suivi WIF
 ## <a name="applies-to"></a>S'applique à  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -42,7 +42,7 @@ ms.locfileid: "47207110"
 -   Activer le suivi et vérifier son fonctionnement  
   
 ## <a name="overview"></a>Vue d'ensemble  
- Le suivi vous permet de déboguer et résoudre de nombreux types de problèmes liés à WIF, notamment les jetons, les cookies, les revendications, les messages de protocole et bien plus encore. Le suivi WIF est semblable au suivi WCF ; par exemple, vous pouvez choisir le niveau de détail des suivis pour tout afficher, des messages critiques à l’ensemble des messages. Les suivis WIF peuvent être générés dans des fichiers **.xml** ou **.svclog** qui sont visibles à l’aide de l’outil Service Trace Viewer. Cet outil se trouve dans le répertoire **bin** du chemin d’installation du kit SDK Windows sur votre ordinateur, par exemple : **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
+ Le suivi vous permet de déboguer et résoudre de nombreux types de problèmes liés à WIF, notamment les jetons, les cookies, les revendications, les messages de protocole et bien plus encore. Le suivi WIF est semblable au suivi WCF ; par exemple, vous pouvez choisir le niveau de détail des suivis pour tout afficher, des messages critiques à l’ensemble des messages. Les suivis WIF peuvent être générés dans des fichiers **.xml** ou **.svclog** qui sont visibles à l’aide de l’outil Service Trace Viewer. Cet outil se trouve dans le **bin** répertoire du SDK Windows chemin d’installation sur votre ordinateur, par exemple : **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>Résumé des étapes  
   
@@ -65,14 +65,14 @@ ms.locfileid: "47207110"
   
 5.  La fenêtre **Identity and Access** (Identity and Access Tool) s’affiche. Sous **Fournisseurs**, sélectionnez **Test your application with the Local Development STS** (Tester votre application avec le service STS de développement local), puis cliquez sur **Appliquer**.  
   
-6.  Créez un dossier nommé **logs** à la racine du lecteur **C:**, comme illustré ci-dessous : **C:\logs**  
+6.  Créez un dossier nommé **journaux** à la racine de la **C:** lecteur, comme indiqué : **C:\logs**  
   
 7.  Ajoutez l’élément **\<system.diagnostics>** suivant au fichier de configuration *Web.config* immédiatement après l’élément de fermeture **\</configSections>**, comme illustré ci-dessous :  
   
     ```xml  
     <configuration>  
         <configSections>  
-        …  
+            ...
         </configSections>  
         <system.diagnostics>  
             <sources>  

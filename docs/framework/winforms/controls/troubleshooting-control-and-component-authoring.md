@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: caad6a76b52a970e133425c484602deb8801d252
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b49100ee2ba9ac3f86bff8c646c185f26b5c96f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620303"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Dépannage de la création de contrôles et de composants
 Cette rubrique répertorie les problèmes courants suivants qui surviennent lors du développement de composants et de contrôles. Pour plus d’informations, consultez l’article [Programmation à l’aide de composants](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
@@ -27,14 +27,14 @@ Cette rubrique répertorie les problèmes courants suivants qui surviennent lors
   
 -   Un événement est généré deux fois dans le composant ou le contrôle hérité  
   
--   Erreur au moment de la conception : « Impossible de créer le composant '*Nom du composant*' »  
+-   Erreur au moment de la conception : « Impossible de créer le composant '*nom du composant*' »  
   
 -   STAThreadAttribute  
   
 -   L’icône du composant n’apparaît pas dans la boîte à outils  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Impossible d’ajouter le contrôle à la boîte à outils  
- Si vous souhaitez ajouter un contrôle personnalisé que vous avez créé dans un autre projet ou un contrôle tiers pour la **boîte à outils**, vous devez le faire manuellement. Si le projet actuel contient votre contrôle ou composant, il doit apparaître automatiquement dans la **boîte à outils**. Pour plus d’informations, consultez l’article [Procédure pas à pas : remplissage automatique de la boîte à outils avec des composants personnalisés](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+ Si vous souhaitez ajouter un contrôle personnalisé que vous avez créé dans un autre projet ou un contrôle tiers pour la **boîte à outils**, vous devez le faire manuellement. Si le projet actuel contient votre contrôle ou composant, il doit apparaître automatiquement dans la **boîte à outils**. Pour plus d’informations, consultez [Procédure pas à pas : Remplissage automatique de la boîte à outils avec des composants personnalisés](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Pour ajouter un contrôle à la boîte à outils  
   
@@ -67,7 +67,7 @@ Cette rubrique répertorie les problèmes courants suivants qui surviennent lors
          Le contrôle est ajouté à la **boîte à outils**.  
   
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Impossible de déboguer le composant ou contrôle utilisateur Windows Forms  
- Si votre contrôle dérive le <xref:System.Windows.Forms.UserControl> (classe), vous pouvez déboguer son comportement au moment de l’exécution avec le conteneur de test. Pour plus d’informations, consultez l’article [Comment : tester le comportement d’un UserControl au moment de l’exécution](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Si votre contrôle dérive le <xref:System.Windows.Forms.UserControl> (classe), vous pouvez déboguer son comportement au moment de l’exécution avec le conteneur de test. Pour plus d'informations, voir [Procédure : Tester le comportement au moment de l’exécution d’un UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
  Les autres composants et contrôles personnalisés ne sont pas des projets autonomes. Ils doivent être hébergés par une application, telle qu’un projet Windows Forms. Pour déboguer un contrôle ou un composant, vous devez l’ajouter à un projet Windows Forms.  
   
@@ -93,7 +93,7 @@ Cette rubrique répertorie les problèmes courants suivants qui surviennent lors
   
      Vous pouvez maintenant déboguer votre contrôle ou composant comme vous le faites habituellement.  
   
- Pour plus d’informations sur le débogage, consultez les articles [Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) et [Procédure pas à pas : débogage des contrôles Windows Forms personnalisés au moment du design](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ Pour plus d’informations sur le débogage, consultez [débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) et [procédure pas à pas : Débogage personnalisés Windows Forms des contrôles au moment du Design](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Un événement est généré deux fois dans le composant ou le contrôle hérité  
  Cela est probablement dû à une clause `Handles` dupliquée. Pour plus d’informations, consultez l’article [Dépannage des gestionnaires d’événements hérités dans Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
@@ -105,13 +105,13 @@ Cette rubrique répertorie les problèmes courants suivants qui surviennent lors
  Le <xref:System.STAThreadAttribute> informe le common language runtime (CLR) que Windows Forms utilise le modèle de thread unique cloisonné. Vous pouvez constater un comportement inattendu si vous n’appliquez pas cet attribut à la méthode `Main` de votre application Windows Forms. Par exemple, des images d’arrière-plan peut ne pas apparaissent pour les contrôles tels que <xref:System.Windows.Forms.ListView>. Certains contrôles peuvent également avoir besoin de cet attribut pour fournir un comportement approprié de saisie semi-automatique et de glisser-déplacer.  
   
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>L’icône du composant n’apparaît pas dans la boîte à outils  
- Lorsque vous utilisez <xref:System.Drawing.ToolboxBitmapAttribute> pour associer une icône à votre composant personnalisé, la bitmap n’apparaît pas dans la boîte à outils des composants générés automatiquement. Pour afficher l’image bitmap, rechargez le contrôle par le biais de la boîte de dialogue **Choisir des éléments de boîte à outils**. Pour plus d’informations, consultez l’article [Comment : fournir une image bitmap pour un contrôle en vue de l’afficher dans la boîte à outils](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
+ Lorsque vous utilisez <xref:System.Drawing.ToolboxBitmapAttribute> pour associer une icône à votre composant personnalisé, la bitmap n’apparaît pas dans la boîte à outils des composants générés automatiquement. Pour afficher l’image bitmap, rechargez le contrôle par le biais de la boîte de dialogue **Choisir des éléments de boîte à outils**. Pour plus d'informations, voir [Procédure : Fournir une Bitmap de boîte à outils pour un contrôle](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Développement de contrôles Windows Forms au moment du design](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Procédure pas à pas : remplissage automatique de la boîte à outils avec des composants personnalisés](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- [Comment : tester le comportement d’un UserControl au moment de l’exécution](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- [Procédure pas à pas : débogage des contrôles Windows Forms personnalisés au moment du design](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- [Création de composants](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- [Dépannage du développement au moment du Design](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [Programmation à l’aide de composants](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+## <a name="see-also"></a>Voir aussi
+- [Développement de contrôles Windows Forms au moment du design](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Procédure pas à pas : Remplissage automatique de la boîte à outils avec des composants personnalisés](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Guide pratique pour Tester le comportement au moment de l’exécution d’un UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Procédure pas à pas : Débogage des contrôles Windows Forms personnalisés au moment du design](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [Création de composants](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)
+- [Dépannage du développement au moment du Design](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)
+- [Programmation à l’aide de composants](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

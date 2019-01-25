@@ -1,18 +1,18 @@
 ---
-title: "Exemples de syntaxe d'expression de requête : filtrage"
+title: 'Exemples de syntaxe d’Expression de requête : Filtrage'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: 667c67cea4dfa3f9a63554286d6c137280332c7e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 53087a773f6a639a6f2b421a0b30133927e294f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675188"
 ---
-# <a name="query-expression-syntax-examples-filtering"></a>Exemples de syntaxe d'expression de requête : filtrage
+# <a name="query-expression-syntax-examples-filtering"></a>Exemples de syntaxe d’Expression de requête : Filtrage
 Les exemples de cette rubrique montrent comment utiliser le `Where` et `Where…Contains` méthodes permettant d’interroger la [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe d’expression de requête. Notez que, dans lequel...`Contains` ne peut pas être utilisé dans le cadre d’un [requête compilée](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
   
  Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
@@ -65,5 +65,5 @@ Les exemples de cette rubrique montrent comment utiliser le `Where` et `Where…
  [!code-csharp[DP L2E ArraysAndListsInQueries#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#2)]
  [!code-vb[DP L2E ArraysAndListsInQueries#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Voir aussi
+- [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

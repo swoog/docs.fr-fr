@@ -2,12 +2,12 @@
 title: L’exécution différée et évaluation différées dans LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
-ms.openlocfilehash: eade2fe987ecbc399c2e2a8a65e74e3beab5e123
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc1676070488a75186def3327a84ec8b5ea5415f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492438"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>L’exécution différée et évaluation différées dans LINQ to XML (Visual Basic)
 Les opérations de requête et d'axe sont souvent implémentées pour utiliser l'exécution différée. Cette rubrique explique les conditions requises et les avantages de l'exécution différée et certaines considérations relatives à l'implémentation.  
@@ -31,7 +31,7 @@ Les opérations de requête et d'axe sont souvent implémentées pour utiliser l
   
 -   [Exemple d’exécution différée (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Didacticiel : Différée d’exécution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)  
- [Concepts et terminologie (Transformation fonctionnelle) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
- [Opérations d’agrégation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+## <a name="see-also"></a>Voir aussi
+- [Tutoriel : Exécution différée (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Concepts et terminologie (Transformation fonctionnelle) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
+- [Opérations d’agrégation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)

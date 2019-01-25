@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9e15aefd4a66eac98b679e60c628f90149fe908a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520852"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Cet exemple montre comment générer un canal de protocole personnalisé pour utiliser des cookies HTTP pour la gestion des sessions. Ce canal permet la communication entre les services Windows Communication Foundation (WCF) et les clients ASMX ou entre les clients WCF et les services ASMX.  
@@ -83,9 +83,9 @@ InputQueue<RequestContext> requestQueue;
  Le canal client correspondant est dans la classe `HttpCookieSessionChannelFactory`. Lors de la création du canal, la fabrication de canal encapsule le canal de demande interne dans un `HttpCookieRequestSessionChannel`. La classe `HttpCookieRequestSessionChannel` transfère les appels au canal de demande sous-jacent. Lorsque le client ferme le proxy, `HttpCookieRequestSessionChannel` envoie un message au service qui indique que le canal est fermé. Donc, la pile de canaux de service peut fermer doucement le canal de session en cours d'utilisation.  
   
 ## <a name="binding-and-binding-element"></a>Liaison et élément de liaison  
- Après avoir créé les canaux de service et le client, l’étape suivante consiste à les intégrer dans le runtime WCF. Les canaux sont exposés à WCF via les liaisons et éléments de liaison. Une liaison se compose d’un ou de plusieurs éléments de liaison. WCF offre plusieurs liaisons définies par le système ; par exemple, BasicHttpBinding ou WSHttpBinding. La classe `HttpCookieSessionBindingElement` contient l'implémentation pour l'élément de liaison. Elle substitue l'écouteur de canal et les méthodes de création des fabrications de canaux pour procéder aux instanciations requises de l'écouteur de canal ou de la fabrication de canal.  
+ Après avoir créé les canaux de service et le client, l’étape suivante consiste à les intégrer dans le runtime WCF. Les canaux sont exposés à WCF via les liaisons et éléments de liaison. Une liaison se compose d’un ou de plusieurs éléments de liaison. WCF offre plusieurs liaisons définies par le système ; par exemple, BasicHttpBinding ou WSHttpBinding. La classe `HttpCookieSessionBindingElement` contient l’implémentation pour l’élément de liaison. Elle substitue l'écouteur de canal et les méthodes de création des fabrications de canaux pour procéder aux instanciations requises de l'écouteur de canal ou de la fabrication de canal.  
   
- L'exemple utilise des assertions de stratégie pour décrire le service. Cela permet à l'exemple de publier ses spécifications de canal sur d'autres clients qui peuvent consommer le service. Par exemple, cet élément de liaison publie des assertions de stratégie pour permettre à des clients potentiels de savoir qu’il prend en charge des sessions. Vu que l'exemple active la propriété `ExchangeTerminateMessage` dans la configuration de l'élément de liaison, il ajoute les assertions nécessaires pour montrer que le service prend en charge une action d'échange de messages supplémentaire pour mettre fin à la conversation de la session. Les clients peuvent ensuite utiliser cette action. Le code WSDL suivant illustre les assertions de stratégie créées à partir de l'`HttpCookieSessionBindingElement`.  
+ L'exemple utilise des assertions de stratégie pour décrire le service. Cela permet à l'exemple de publier ses spécifications de canal sur d'autres clients qui peuvent consommer le service. Par exemple, cet élément de liaison publie des assertions de stratégie pour permettre à des clients potentiels de savoir qu’il prend en charge des sessions. Vu que l’exemple active la propriété `ExchangeTerminateMessage` dans la configuration de l’élément de liaison, il ajoute les assertions nécessaires pour montrer que le service prend en charge une action d’échange de messages supplémentaire pour mettre fin à la conversation de la session. Les clients peuvent ensuite utiliser cette action. Le code WSDL suivant illustre les assertions de stratégie créées à partir de l'`HttpCookieSessionBindingElement`.  
   
 ```xml  
 <wsp:Policy wsu:Id="HttpCookieSessionBinding_IWcfCookieSessionService_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
@@ -98,7 +98,7 @@ InputQueue<RequestContext> requestQueue;
 </wsp:Policy>  
 ```  
   
- La classe `HttpCookieSessionBinding` est une liaison fournie par le système qui utilise l'élément de liaison décrit précédemment.  
+ La classe `HttpCookieSessionBinding` est une liaison fournie par le système qui utilise l’élément de liaison décrit précédemment.  
   
 ## <a name="adding-the-channel-to-the-configuration-system"></a>Ajout du canal au système de configuration  
  L'exemple fournit deux classes qui exposent l'exemple de canal à travers la configuration. La première est un <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> pour l'`HttpCookieSessionBindingElement`. Le bloc de l'implémentation est délégué à `HttpCookieSessionBindingConfigurationElement`, qui dérive de <xref:System.ServiceModel.Configuration.StandardBindingElement>. L'`HttpCookieSessionBindingConfigurationElement` a des propriétés qui correspondent aux propriétés de l'`HttpCookieSessionBindingElement`.  

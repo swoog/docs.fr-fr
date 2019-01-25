@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b243ee7fdb72aaf749492a008708da4209a7736e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611980"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Vue d'ensemble des applications de navigateur XAML
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "43745474"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Création d’une nouvelle application de navigateur XAML (XBAP)  
- La méthode la plus simple pour créer un nouveau projet XBAP est avec Microsoft Visual Studio. Lorsque vous créez un nouveau projet, sélectionnez **Application de navigateur WPF** dans la liste des modèles. Pour plus d’informations, consultez l’article [Comment : créer un projet d’application de navigateur WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ La méthode la plus simple pour créer un nouveau projet XBAP est avec Microsoft Visual Studio. Lorsque vous créez un nouveau projet, sélectionnez **Application de navigateur WPF** dans la liste des modèles. Pour plus d'informations, voir [Procédure : Créer un nouveau projet d’Application de navigateur WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  Lorsque vous exécutez le projet XBAP, celui-ci s’ouvre dans une fenêtre de navigateur et non dans une fenêtre indépendante. Lorsque vous déboguez l’application XBAP à partir de Visual Studio, l’application s’exécute avec les autorisations de zone Internet et lèvera des exceptions de sécurité si ces autorisations sont dépassées. Pour plus d’informations, voir [Sécurité](../../../../docs/framework/wpf/security-wpf.md) et [Sécurité de confiance partielle de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
@@ -186,6 +186,6 @@ ms.locfileid: "43745474"
   
  En outre, amélioration de la concurrence de la séquence de téléchargement ClickOnce améliore l’heure de début jusqu'à dix pour cent. Une fois que ClickOnce téléchargé et validé les manifestes, le téléchargement d’application démarre et la barre de progression démarre mettre à jour.  
   
-## <a name="see-also"></a>Voir aussi  
- [Configurer Visual Studio pour déboguer une application de navigateur XAML et appeler un service Web](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [Déploiement d’une application WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- [Configurer Visual Studio pour déboguer une application de navigateur XAML et appeler un service Web](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [Déploiement d’une application WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

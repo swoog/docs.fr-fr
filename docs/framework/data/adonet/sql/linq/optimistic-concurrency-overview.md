@@ -1,15 +1,15 @@
 ---
-title: "Accès concurrentiel optimiste : vue d'ensemble"
+title: "Accès concurrentiel optimiste : Vue d'ensemble"
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 5b4603526896364285cb3c85d12568ed9031ed47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5395134a536969788252524ccd7c2936d3d9e2d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517457"
 ---
-# <a name="optimistic-concurrency-overview"></a>Accès concurrentiel optimiste : vue d'ensemble
+# <a name="optimistic-concurrency-overview"></a>Accès concurrentiel optimiste : Vue d'ensemble
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge le contrôle d'accès concurrentiel optimiste. Le tableau suivant décrit les conditions qui s’appliquent à l’accès concurrentiel optimiste dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation :  
   
 |Termes|Description|  
@@ -17,8 +17,8 @@ ms.locfileid: "33362926"
 |concurrence|Situation dans laquelle deux utilisateurs ou plus essaient simultanément de mettre à jour la même ligne de base de données.|  
 |conflit d'accès concurrentiel|Situation dans laquelle deux utilisateurs ou plus essaient simultanément de soumettre des valeurs incompatibles à une ou plusieurs colonnes d'une ligne.|  
 |contrôle d'accès concurrentiel|Technique utilisée pour résoudre des conflits d'accès concurrentiel.|  
-|contrôle concurrentiel optimiste|Technique qui recherche d’abord si d’autres transactions ont modifié les valeurs d’une ligne avant d’autoriser la soumission des modifications.<br /><br /> Par contraste *contrôle d’accès concurrentiel pessimiste*, qui verrouille l’enregistrement pour éviter les conflits d’accès concurrentiel.<br /><br /> *Optimiste* contrôle est appelé ainsi car il considère que le risque d’une transaction interfère avec une autre est peu probable.|  
-|résolution de conflit|Processus d'actualisation d'un élément en conflit en interrogeant de nouveau la base de données, puis en harmonisant les différences.<br /><br /> Lorsqu'un objet est actualisé, le dispositif de suivi des modifications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] contient les données suivantes :<br /><br /> -Les valeurs à l’origine à partir de la base de données et l’utiliser pour la mise à jour vérifier.<br />-Les nouvelles valeurs de base de données de la requête suivante.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] détermine ensuite si l'objet est en conflit (c'est-à-dire, si une ou plusieurs de ses valeurs membres ont été modifiées). Si l’objet est en conflit, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] détermine ensuite lesquels de ses membres sont en conflit.<br /><br /> Tout conflit entre membres que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] découvre est ajouté à une liste de conflits.|  
+|contrôle concurrentiel optimiste|Technique qui recherche d’abord si d’autres transactions ont modifié les valeurs d’une ligne avant d’autoriser la soumission des modifications.<br /><br /> Par contraste *contrôle d’accès concurrentiel pessimiste*, qui verrouille l’enregistrement afin d’éviter les conflits d’accès concurrentiel.<br /><br /> *Optimiste* contrôle est appelé ainsi car il considère que les risques d’une transaction interfère avec une autre sont faibles.|  
+|résolution de conflit|Processus d'actualisation d'un élément en conflit en interrogeant de nouveau la base de données, puis en harmonisant les différences.<br /><br /> Lorsqu'un objet est actualisé, le dispositif de suivi des modifications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] contient les données suivantes :<br /><br /> -Les valeurs à l’origine à partir de la base de données et l’utiliser pour la mise à jour vérifier.<br />-Les nouvelles valeurs de base de données à partir de la requête suivante.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] détermine ensuite si l'objet est en conflit (c'est-à-dire, si une ou plusieurs de ses valeurs membres ont été modifiées). Si l’objet est en conflit, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] détermine ensuite lesquels de ses membres sont en conflit.<br /><br /> Tout conflit entre membres que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] découvre est ajouté à une liste de conflits.|  
   
  Dans le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modèle d’objet, un *conflit d’accès concurrentiel optimiste* se produit lorsque les deux conditions suivantes sont remplies :  
   
@@ -44,29 +44,29 @@ ms.locfileid: "33362926"
 |Utilisateur1|Alfred||Marketing|  
 |User2||Mary|Service|  
   
- Vous pouvez résoudre des conflits comme celui-ci de différentes façons. Pour plus d’informations, consultez [Comment : gérer les conflits de modifications](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ Vous pouvez résoudre des conflits comme celui-ci de différentes façons. Pour plus d'informations, voir [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>Détection de conflit et liste de vérification de résolution  
  Vous pouvez détecter et résoudre des conflits à n'importe quel niveau de détail. Une approche consiste à résoudre tous les conflits à l'aide d'une des trois façons (consultez <xref:System.Data.Linq.RefreshMode>) sans considération supplémentaire. Une autre approche consiste à désigner une action spécifique pour chaque type de conflit sur tous les membres en conflit.  
   
 -   Spécifiez ou modifiez des options <xref:System.Data.Linq.Mapping.UpdateCheck> dans votre modèle objet.  
   
-     Pour plus d’informations, consultez [Comment : spécifier lequel les membres sont testées pour les conflits d’accès concurrentiel](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
+     Pour plus d'informations, voir [Procédure : Spécifier les membres sont vérifiés pour les conflits d’accès concurrentiel](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
   
 -   Dans le bloc try/catch de votre appel à <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, spécifiez à quel point vous souhaitez que les exceptions soient levées.  
   
-     Pour plus d’informations, consultez [Comment : spécifier lors de la concurrence Exceptions sont levées](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+     Pour plus d'informations, voir [Procédure : Spécifiez quand les Exceptions d’accès concurrentiel sont levées](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
   
 -   Déterminez la quantité de détails du conflit que vous souhaitez récupérer et incluez le code dans votre bloc try/catch en conséquence.  
   
-     Pour plus d’informations, consultez [Comment : récupérer des informations sur les conflits entité](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) et [Comment : récupérer des informations sur les conflits membre](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
+     Pour plus d'informations, voir [Procédure : Récupérer des informations de conflit d’entité](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) et [Comment : Récupérer des informations sur les conflits de membre](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
   
--   Inclure dans votre `try` / `catch` code la façon dont vous souhaitez résoudre les différents conflits que vous rencontrez.  
+-   Inclure dans votre `try` / `catch` code la façon dont vous souhaitez résoudre les différents conflits que vous découvrez.  
   
-     Pour plus d’informations, consultez [Comment : résoudre les conflits en conservant les valeurs de base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [Comment : résoudre les conflits en remplaçant les valeurs de base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), et [Comment : résoudre des conflits par fusion avec des valeurs de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
+     Pour plus d'informations, voir [Procédure : Résoudre les conflits en conservant des valeurs de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [Comment : Résoudre les conflits en remplaçant des valeurs de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), et [Comment : Résoudre les conflits en fusionnant des valeurs de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>Types LINQ to SQL qui prennent en charge la découverte et la résolution de conflits  
- Les classes et les fonctionnalités pour prendre en charge la résolution de conflits dans l'accès concurrentiel optimiste dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] incluent les éléments suivants :  
+ Les classes et les fonctionnalités pour prendre en charge la résolution de conflits dans l’accès concurrentiel optimiste dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] incluent les éléments suivants :  
   
 -   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
@@ -88,5 +88,5 @@ ms.locfileid: "33362926"
   
 -   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

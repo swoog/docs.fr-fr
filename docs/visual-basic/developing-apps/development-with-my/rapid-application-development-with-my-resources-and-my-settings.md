@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: 7dbb15c43d044e21c9823c4a1652b0408006e5c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4150d2f9634045351cb52e02c4f4807e55d118e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717897"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Développement rapide d'application avec My.Resources et My.Settings (Visual Basic)
 Le `My.Resources` objet fournit l’accès aux ressources de l’application et vous permet de récupérer dynamiquement des ressources pour votre application.  
@@ -26,7 +26,7 @@ Le `My.Resources` objet fournit l’accès aux ressources de l’application et 
   
  De même, le `My.Settings` objet fournit l’accès aux paramètres de l’application et vous permet de stocker et récupérer des paramètres de propriété et d’autres informations pour votre application de manière dynamique. Pour plus d’informations, consultez [My.Resources (objet)](../../../visual-basic/language-reference/objects/my-resources-object.md) et [My.Settings, objet](../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [My.Resources (objet)](../../../visual-basic/language-reference/objects/my-resources-object.md)  
- [My.Settings (objet)](../../../visual-basic/language-reference/objects/my-settings-object.md)  
- [Accès aux paramètres d’application](../../../visual-basic/developing-apps/programming/app-settings/index.md)
+## <a name="see-also"></a>Voir aussi
+- [My.Resources (objet)](../../../visual-basic/language-reference/objects/my-resources-object.md)
+- [My.Settings (objet)](../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [Accès aux paramètres d’application](../../../visual-basic/developing-apps/programming/app-settings/index.md)

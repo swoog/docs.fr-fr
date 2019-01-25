@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 164b0283864cdeb60ef7b8e19c9d457f80ee4eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696462"
 ---
 # <a name="xname-directive"></a>x:Name, directive
 Identifie de façon unique les éléments définis dans XAML dans une portée de nom XAML. Portées de nom XAML et de leurs modèles d’unicité peuvent être appliquées aux objets instanciés, lorsque les infrastructures fournissent des API ou implémentent les comportements qui accèdent au graphique d’objets créé en XAML en cours d’exécution.  
@@ -66,7 +66,7 @@ Identifie de façon unique les éléments définis dans XAML dans une portée de
 ## <a name="silverlight-usage-notes"></a>Remarques sur l’utilisation de Silverlight  
  `x:Name` pour Silverlight est documenté séparément. Pour plus d’informations, consultez [XAML Namespace (x :)) Fonctionnalités de langage (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
- [Arborescences dans WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
+- [Arborescences dans WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

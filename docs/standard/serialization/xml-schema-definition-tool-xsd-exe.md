@@ -2,12 +2,12 @@
 title: Outil XML Schema Definition (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: a7824f0f39820b186b654aa4369dc068134d6a0d
-ms.sourcegitcommit: 42522983167b52852e1a20c87d57a1f63215f9bd
+ms.openlocfilehash: c7a2cdd9fe0be020584ab87216a9d1322be185f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606807"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Outil XML Schema Definition (Xsd.exe)
 L'outil XML Schema Definition Tool (Xsd.exe) génère des classes du Common Language Runtime et du schéma XML à partir de fichiers XDR, XML et XSD ou de classes figurant dans un assembly de runtime.  
@@ -218,10 +218,10 @@ xsd myAssembly.dll
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Data.DataSet>  
-- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
-- [Outils](../../../docs/framework/tools/index.md)      
-- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
-- [Vue d’ensemble de LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [Interrogation de DataSets typés](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+- <xref:System.Data.DataSet>
+- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
+- [Outils](../../../docs/framework/tools/index.md)
+- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Vue d’ensemble de LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [Interrogation de DataSets typés](../../../docs/framework/data/adonet/querying-typed-datasets.md)
 - [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

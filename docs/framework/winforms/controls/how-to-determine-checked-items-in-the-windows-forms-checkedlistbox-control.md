@@ -1,5 +1,5 @@
 ---
-title: 'Comment : déterminer des éléments cochés dans le contrôle CheckedListBox Windows Forms'
+title: 'Procédure : Déterminer les éléments cochés dans le contrôle CheckedListBox Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 70884051ba440c5d0f9d282b7edf189c8f52807e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e1f8f7fa1f3f351314ac1d454d591f46654d8f81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643596"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Comment : déterminer des éléments cochés dans le contrôle CheckedListBox Windows Forms
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Procédure : Déterminer les éléments cochés dans le contrôle CheckedListBox Windows Forms
 Lors de la présentation des données dans un formulaire Windows <xref:System.Windows.Forms.CheckedListBox> contrôle, vous pouvez soit itérer sur la collection stockée dans le <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> propriété, ou parcourez la liste à l’aide de la <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> méthode pour déterminer quels éléments sont activés. Le <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> méthode prend un numéro d’index comme argument et retourne `true` ou `false`. Contrairement à ce que vous attendez, le <xref:System.Windows.Forms.ListBox.SelectedItems%2A> et <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> propriétés ne déterminent pas quels éléments sont activés ; ils déterminent quels éléments sont mis en surbrillance.  
   
 ### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Pour déterminer les éléments cochés dans un contrôle CheckedListBox  
@@ -111,5 +111,5 @@ Lors de la présentation des données dans un formulaire Windows <xref:System.Wi
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Voir aussi
+- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

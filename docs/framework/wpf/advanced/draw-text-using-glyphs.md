@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Glyphs objects [WPF], drawing text
 - typography [WPF], Glyphs objects
 ms.assetid: 587ab17e-a419-4ad5-b6da-8933a8e83d97
-ms.openlocfilehash: e2b35eb6df140551d5db7d597826df53e37182fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c7c4946d2c5cc2aa9001cf119b969dd375a1050
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680242"
 ---
 # <a name="draw-text-using-glyphs"></a>Dessiner du texte à l'aide de glyphes
 Cette rubrique explique comment utiliser le plus bas niveau <xref:System.Windows.Documents.Glyphs> objet pour afficher le texte dans [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -21,9 +21,9 @@ Cette rubrique explique comment utiliser le plus bas niveau <xref:System.Windows
   
  [!code-xaml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
- Cet exemple montre comment définir les autres propriétés de <xref:System.Windows.Documents.Glyphs> dans des objets [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Cet exemple montre comment définir d’autres propriétés de <xref:System.Windows.Documents.Glyphs> dans des objets [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  [!code-xaml[GlyphsOvwSamp2#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Typographie dans WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- [Typographie dans WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

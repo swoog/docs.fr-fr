@@ -2,12 +2,12 @@
 title: Notifications de requête dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636688"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notifications de requête dans SQL Server
 Basées sur l'infrastructure Service Broker, les notifications de requête permettent de notifier des applications en cas de modification de données. Cette fonction est particulièrement utile pour les applications qui génèrent un cache d'informations à partir d'une base de données, telles que les applications Web, et qui doivent être informées en cas de modification des données sources.  
@@ -61,6 +61,6 @@ Basées sur l'infrastructure Service Broker, les notifications de requête perme
  <xref:System.Web.Caching.SqlCacheDependency>  
  Décrit la classe <xref:System.Web.Caching.SqlCacheDependency> et tous ses membres.  
   
-## <a name="see-also"></a>Voir aussi  
- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

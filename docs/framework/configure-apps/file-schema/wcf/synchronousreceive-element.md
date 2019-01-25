@@ -2,21 +2,21 @@
 title: '&lt;synchronousReceive&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dedbe156dea79c78f05acdb3a044c9080665675a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598893"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt;, élément
 Cet élément de configuration est utilisé en vue de spécifier le comportement de réception des messages au moment de l'exécution dans une application cliente ou de service. Il n'a aucun attribut ou élément enfant.  
   
  \<system.ServiceModel>  
-\<comportements >  
-\<endpointBehaviors >  
-\<comportement >  
-\<synchronousReceive >  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
+\<synchronousReceive>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,6 +42,6 @@ Cet élément de configuration est utilisé en vue de spécifier le comportement
 ## <a name="remarks"></a>Notes  
  Utilisez ce comportement pour indiquer à l’écouteur de canal d’utiliser une réception synchrone au lieu de celle par défaut (asynchrone). Windows Communication Foundation (WCF) émet un nouveau thread pour pomper Chaque canal accepté. Si le nombre de canaux est important, il est possible de rencontrer une insuffisance de threads.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  
- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

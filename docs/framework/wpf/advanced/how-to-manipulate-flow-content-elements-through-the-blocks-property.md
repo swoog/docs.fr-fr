@@ -1,5 +1,5 @@
 ---
-title: 'Comment : manipuler des éléments de contenu de flux avec la propriété Blocks'
+title: 'Procédure : Manipuler des éléments de contenu de flux avec la propriété Blocks'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: 74710c4a6dd58cf2836cd7671a3e39401a5ea774
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea664409073fc342d5f988f9d2af0df9b6b0af16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521944"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Comment : manipuler des éléments de contenu de flux avec la propriété Blocks
-Ces exemples montrent quelques-unes des opérations plus courantes qui peuvent être effectuées sur les éléments de contenu de flux avec le **blocs** propriété. Cette propriété est utilisée pour ajouter et supprimer des éléments de <xref:System.Windows.Documents.BlockCollection>. Éléments de contenu flux cette fonctionnalité une **blocs** propriété incluent :  
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Procédure : Manipuler des éléments de contenu de flux avec la propriété Blocks
+Ces exemples illustrent certaines des opérations plus courantes qui peuvent être effectuées sur les éléments de contenu de flux avec le **blocs** propriété. Cette propriété est utilisée pour ajouter et supprimer des éléments à partir de <xref:System.Windows.Documents.BlockCollection>. Éléments de contenu flux cette fonctionnalité une **blocs** propriété incluent :  
   
 -   <xref:System.Windows.Documents.Figure>  
   
@@ -30,10 +30,10 @@ Ces exemples montrent quelques-unes des opérations plus courantes qui peuvent �
   
 -   <xref:System.Windows.Documents.TableCell>  
   
- Il arrive que ces exemples utilisent <xref:System.Windows.Documents.Section> en tant que flux de l’élément de contenu, mais ces techniques sont applicables à tous les éléments qui hébergent une collection d’éléments de contenu de flux.  
+ Il arrive que ces exemples utilisent <xref:System.Windows.Documents.Section> en tant que le flux de contenu élément, mais ces techniques sont applicables à tous les éléments qui hébergent une collection d’éléments de contenu de flux.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant crée un nouveau <xref:System.Windows.Documents.Section> , puis utilise le **ajouter** méthode pour ajouter un nouveau paragraphe à la **Section** contenu.  
+ L’exemple suivant crée un nouveau <xref:System.Windows.Documents.Section> et utilise ensuite le **ajouter** méthode pour ajouter un nouveau paragraphe à la **Section** contenu.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksadd)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksadd)]  
@@ -62,11 +62,11 @@ Ces exemples montrent quelques-unes des opérations plus courantes qui peuvent �
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksclear)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Documents.BlockCollection>  
- <xref:System.Windows.Documents.InlineCollection>  
- <xref:System.Windows.Documents.ListItemCollection>  
- [Vue d’ensemble des documents dynamiques](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Manipuler les groupes de lignes d’un tableau avec la propriété RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Manipuler les colonnes d’un tableau avec la propriété Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [Manipuler les groupes de lignes d’un tableau avec la propriété RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Documents.BlockCollection>
+- <xref:System.Windows.Documents.InlineCollection>
+- <xref:System.Windows.Documents.ListItemCollection>
+- [Vue d’ensemble des documents dynamiques](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Manipuler les groupes de lignes d’un tableau avec la propriété RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Manipuler les colonnes d’un tableau avec la propriété Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)
+- [Manipuler les groupes de lignes d’un tableau avec la propriété RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

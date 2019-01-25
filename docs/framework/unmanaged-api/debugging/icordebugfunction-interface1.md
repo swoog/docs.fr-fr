@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction Interface1
+title: ICorDebugFunction, Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 344acf109d58d0ed2fbc8a91da0761b4dd148a27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b810ce8634781438faccac25f96442624a78ea0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676768"
 ---
-# <a name="icordebugfunction-interface1"></a>ICorDebugFunction Interface1
+# <a name="icordebugfunction-interface1"></a>ICorDebugFunction, Interface1
 Représente une fonction ou une méthode managée.  
   
 ## <a name="methods"></a>Méthodes  
@@ -31,9 +31,9 @@ Représente une fonction ou une méthode managée.
 |Méthode|Description|  
 |------------|-----------------|  
 |[CreateBreakpoint, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|Crée un point d’arrêt au début de cette fonction.|  
-|[GetClass, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Obtient un objet ICorDebugClass qui représente la classe de que cette fonction est un membre.|  
+|[GetClass, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Obtient un objet ICorDebugClass qui représente la classe de que cette fonction est membre.|  
 |[GetCurrentVersionNumber, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|Obtient le numéro de version de la dernière modification apportée à cette fonction.|  
-|[GetILCode, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|Obtient le code de langage intermédiaire (MSIL) de Microsoft pour cette fonction.|  
+|[GetILCode, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|Obtient le code de Microsoft intermediate language (MSIL) pour cette fonction.|  
 |[GetLocalVarSigToken, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|Obtient les métadonnées de jeton pour la signature de variable locale de la fonction qui est représentée par ce `ICorDebugFunction` instance.|  
 |[GetModule, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Obtient le module dans lequel cette fonction est définie.|  
 |[GetNativeCode, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getnativecode-method.md)|Obtient le code natif pour cette fonction.|  
@@ -44,21 +44,21 @@ Représente une fonction ou une méthode managée.
   
  La relation entre le jeton de métadonnées d’une méthode `mdMethodDef`et d’une méthode `ICorDebugFunction` objet dépend de si Modifier & Continuer est autorisé sur la fonction :  
   
--   Si Modifier & Continuer n’est pas autorisé sur la fonction, une relation existe entre la `ICorDebugFunction` objet et le `mdMethodDef` jeton. Autrement dit, la fonction a un `ICorDebugFunction` objet et l’autre `mdMethodDef` jeton.  
+-   Si Modifier & Continuer n’est pas autorisée sur la fonction, il existe une relation un à un entre le `ICorDebugFunction` objet et le `mdMethodDef` jeton. Autrement dit, la fonction a un `ICorDebugFunction` objet et l’autre `mdMethodDef` jeton.  
   
--   Si Modifier & Continuer est autorisé sur la fonction, il existe une relation plusieurs-à-un entre le `ICorDebugFunction` objet et le `mdMethodDef` jeton. Autrement dit, la fonction peut avoir plusieurs instances de `ICorDebugFunction`, un pour chaque version de la fonction, mais qu’un seul `mdMethodDef` jeton.  
+-   Si Modifier & Continuer est autorisé sur la fonction, il existe une relation plusieurs-à-un entre le `ICorDebugFunction` objet et le `mdMethodDef` jeton. Autrement dit, la fonction peut avoir plusieurs instances de `ICorDebugFunction`, un pour chaque version de la fonction, mais une seule `mdMethodDef` jeton.  
   
 > [!NOTE]
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
- **Bibliothèque :** CorGuids.lib  
+ **Bibliothèque :**  CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

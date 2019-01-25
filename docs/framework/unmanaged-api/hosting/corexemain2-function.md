@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625144"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2, fonction
 Exécute le point d’entrée dans le code mappé en mémoire spécifié. Cette fonction est appelée par le chargeur du système d’exploitation.  
@@ -46,7 +46,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  [in] Le nombre d’éléments `pUnmappedPE` peut contenir.  
   
  `pImageNameIn`  
- [in] Pointeur vers le nom de l’image exécutable.  
+ [in] Un pointeur vers le nom de l’image exécutable.  
   
  `pLoadersFileName`  
  [in] Le nom du fichier de chargeur.  
@@ -55,13 +55,13 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  [in] Paramètres de ligne de commande, le cas échéant.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions statiques globales des métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions statiques globales des métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

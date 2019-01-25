@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c3cafe3a8912702a093f9df7234112c0057b440
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3031ce0eb6f23fdf5e5366d33ff075ea7816b0b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649542"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback (pointeur fonction)
 Pointe vers une fonction qui est appelée par le common language runtime (CLR) pour exécuter le code managé.  
@@ -37,18 +38,18 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 #### <a name="parameters"></a>Paramètres  
  `cookie`  
- [in] Pointeur vers la mémoire allouée par l’appelant opaque qui contient le code managé à exécuter.  
+ [in] Un pointeur vers la mémoire allouée par l’appelant opaque qui contient le code managé doit être exécuté.  
   
- L’allocation et la durée de vie de cette mémoire sont contrôlées par l’appelant (autrement dit, le CLR). Ce n’est pas mémoire de tas managé CLR.  
+ L’allocation et la durée de vie de cette mémoire sont contrôlées par l’appelant (autrement dit, le CLR). Cela n’est pas mémoire de tas managé CLR.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** MSCorWks.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions d’hébergement CLR dépréciées](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions d’hébergement CLR dépréciées](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

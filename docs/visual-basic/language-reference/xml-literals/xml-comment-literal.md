@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 60c354215c627683fd6c69d9ca66fc115c26ccda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96a7281cde546c3077cf15c625c6e09d2d0ee46f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624676"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Littéraux de commentaires XML (Visual Basic)
 Littéral représentant un <xref:System.Xml.Linq.XComment> objet.  
@@ -37,26 +37,26 @@ Littéral représentant un <xref:System.Xml.Linq.XComment> objet.
  Objet <xref:System.Xml.Linq.XComment>.  
   
 ## <a name="remarks"></a>Notes  
- Littéraux de commentaires XML ne contiennent pas de contenu de document ; ils contiennent des informations sur le document. La section de commentaire XML se termine par la séquence «--> ». Cela implique les points suivants :  
+ Littéraux de commentaire XML ne contiennent pas de contenu de document ; ils contiennent des informations sur le document. La section de commentaire XML se termine par la séquence «--> ». Cela implique les points suivants :  
   
--   Vous ne pouvez pas utiliser une expression incorporée dans un littéral de commentaire XML parce que les délimiteurs d’expression sont le contenu du commentaire XML valide.  
+-   Vous ne pouvez pas utiliser une expression incorporée dans un littéral de commentaire XML, car les délimiteurs d’expression sont le contenu du commentaire XML valide.  
   
--   Sections de commentaire XML ne peut pas être imbriquées, parce que `content` ne peut pas contenir la valeur de «--> ».  
+-   Sections de commentaire XML ne peut pas être imbriquées, étant donné que `content` ne peut pas contenir la valeur de «--> ».  
   
- Vous pouvez affecter un littéral de commentaire XML à une variable, ou vous pouvez l’inclure dans un littéral d’élément XML.  
+ Vous pouvez assigner un littéral de commentaire XML à une variable, ou vous pouvez l’inclure dans un littéral d’élément XML.  
   
 > [!NOTE]
->  Un littéral XML peut couvrir plusieurs lignes sans utiliser de caractères de continuation de ligne. Cette fonctionnalité vous permet de copier le contenu d’un document XML et le coller directement dans un programme Visual Basic.  
+>  Un littéral XML peut couvrir plusieurs lignes sans utiliser de caractères de continuation de ligne. Cette fonctionnalité vous permet de copier le contenu d’un document XML et la coller directement dans un programme Visual Basic.  
   
- Le compilateur Visual Basic convertit le littéral de commentaire XML à un appel à la <xref:System.Xml.Linq.XComment.%23ctor%2A> constructeur.  
+ Le compilateur Visual Basic convertit le littéral de commentaire XML en un appel à la <xref:System.Xml.Linq.XComment.%23ctor%2A> constructeur.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant crée un commentaire XML qui contient le texte « Ceci est un commentaire ».  
+ L’exemple suivant crée un commentaire XML qui contient le texte « Il s’agit d’un commentaire ».  
   
  [!code-vb[VbXMLSamples#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-comment-literal_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xml.Linq.XComment>  
- [Littéral d’élément XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Création de code XML dans Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Xml.Linq.XComment>
+- [Littéral d’élément XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Littéraux XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Création de code XML dans Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

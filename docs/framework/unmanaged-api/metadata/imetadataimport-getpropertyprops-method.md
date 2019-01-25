@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7312cbd31a04365801b0380d5914966f36679560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672056"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps, méthode
 Obtient les métadonnées pour la propriété représentée par le jeton spécifié.  
@@ -67,7 +67,7 @@ HRESULT GetPropertyProps (
  [out] Le nombre de caractères étendus retournés dans `szProperty`.  
   
  `pdwPropFlags`  
- [out] Pointeur vers les indicateurs d’attribut appliquée à la propriété. Cette valeur est un masque de bits de le [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) énumération.  
+ [out] Pointeur vers les indicateurs d’attribut appliqué à la propriété. Cette valeur est un masque de bits à partir de la [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) énumération.  
   
  `ppvSig`  
  [out] Pointeur vers la signature de métadonnées de la propriété.  
@@ -76,10 +76,10 @@ HRESULT GetPropertyProps (
  [out] Le nombre d’octets retournés dans `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Indicateur qui spécifie le type de la constante qui est la valeur par défaut de la propriété. Cette valeur provient de l’énumération CorElementType.  
+ [out] Un indicateur qui spécifie le type de la constante qui est la valeur par défaut de la propriété. Cette valeur provient de l’énumération CorElementType.  
   
  `ppDefaultValue`  
- [out] Un pointeur vers les octets qui stockent la valeur par défaut de cette propriété.  
+ [out] Un pointeur vers les octets qui stockent la valeur par défaut pour cette propriété.  
   
  `pcchDefaultValue`  
  [out] La taille en caractères larges de `ppDefaultValue`si `pdwCPlusTypeFlag` a la valeur ELEMENT_TYPE_STRING ; sinon, cette valeur n’est pas pertinente. Dans ce cas, la longueur de `ppDefaultValue` est déduit du type spécifié par `pdwCPlusTypeFlag`.  
@@ -88,26 +88,26 @@ HRESULT GetPropertyProps (
  [out] Pointeur vers le jeton MethodDef qui représente la méthode d’accesseur set pour la propriété.  
   
  `pmdGetter`  
- [out] Pointeur vers le jeton MethodDef qui représente la méthode d’accesseur get de la propriété.  
+ [out] Pointeur vers le jeton MethodDef qui représente la méthode d’accesseur get pour la propriété.  
   
  `rmdOtherMethod`  
- [out] Tableau de jetons MethodDef représentant des autres méthodes associées à la propriété.  
+ [out] Un tableau de jetons MethodDef représentant des autres méthodes associées à la propriété.  
   
  `cMax`  
- [in] Taille maximale du tableau `rmdOtherMethod`. Si vous ne fournissez pas un tableau assez grand pour contenir toutes les méthodes, elles sont ignorées sans avertissement.  
+ [in] Taille maximale du tableau `rmdOtherMethod`. Si vous ne fournissez pas un tableau suffisamment grand pour contenir toutes les méthodes, ils sont ignorés sans avertissement.  
   
  `pcOtherMethod`  
  [out] Le nombre de jetons MethodDef retournés dans `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

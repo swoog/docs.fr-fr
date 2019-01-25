@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84c362dca7f617aeb929f050af23e96998c4e1d5
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: ba59d9d47d5c120eb2ff0a3a3c65e0fe8cdf75e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42754640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498292"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi (fonction)
 Retourne un énumérateur qui retourne les instances d’une classe spécifiée qui répondent aux critères de sélection spécifiés. 
@@ -55,11 +55,11 @@ HRESULT CreateInstanceEnumWmi (
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0 x 20000 | Si l’ensemble, la fonction récupère les qualificateurs stockées dans l’espace de noms localisé des paramètres régionaux de la connexion actuelle. <br/> Si ce n’est pas le cas, ensemble, la fonction récupère uniquement les qualificateurs stockées dans l’espace de noms immédiate. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si l’ensemble, la fonction récupère les qualificateurs stockées dans l’espace de noms localisé des paramètres régionaux de la connexion actuelle. <br/> Si ce n’est pas le cas, ensemble, la fonction récupère uniquement les qualificateurs stockées dans l’espace de noms immédiate. |
 | `WBEM_FLAG_DEEP` | 0 | L’énumération inclut ce et toutes les sous-classes de la hiérarchie. |
 | `WBEM_FLAG_SHALLOW` | 1 | L’énumération inclut uniquement les instances pures de cette classe et exclut toutes les instances de sous-classes qui fournissent des propriétés qui que se trouvent ne pas dans cette classe. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | L’indicateur provoque un appel semi-synchrone. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | La fonction retourne un énumérateur avant uniquement. En règle générale, les énumérateurs avant uniquement sont plus rapides et utilisent moins de mémoire que les énumérateurs classiques, mais ils ne permettent pas d’appels à [Clone](clone.md). |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La fonction retourne un énumérateur avant uniquement. En règle générale, les énumérateurs avant uniquement sont plus rapides et utilisent moins de mémoire que les énumérateurs classiques, mais ils ne permettent pas d’appels à [Clone](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI conserve les pointeurs vers les objets dans l’enumration jusqu'à ce qu’ils sont libérés. | 
 
 Les indicateurs recommandées sont `WBEM_FLAG_RETURN_IMMEDIATELY` et `WBEM_FLAG_FORWARD_ONLY` pour de meilleures performances.
@@ -93,10 +93,10 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0 x 80041003 | L’utilisateur n’a pas l’autorisation d’afficher les instances de la classe spécifiée. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Une erreur non spécifiée s’est produite. |
-| `WBEM_E_INVALID_CLASS` | 0 x 80041010 | `strFilter` n’existe pas. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | L’utilisateur n’a pas l’autorisation d’afficher les instances de la classe spécifiée. |
+| `WBEM_E_FAILED` | 0x80041001 | Une erreur non spécifiée s’est produite. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strFilter` n’existe pas. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre n’est pas valide. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI s’est probablement arrêté et redémarrage. Appelez [ConnectServerWmi](connectserverwmi.md) à nouveau. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Le lien remote procedure call (RPC) entre les processus en cours et WMI a échoué. |
@@ -110,12 +110,12 @@ Notez que l’énumérateur retourné peut avoir zéro élément.
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

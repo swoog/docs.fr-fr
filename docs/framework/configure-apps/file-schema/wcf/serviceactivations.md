@@ -2,19 +2,19 @@
 title: '&lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 82422716482eafe996534e3bf1a94b4c7a604a6d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5da05c7b6a9685b9e34b3181ce8e0bd31ccd052b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704954"
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
 Un élément de configuration qui vous permet d’ajouter des paramètres qui définissent les paramètres d’activation de service virtuel qui correspondent à vos types de service Windows Communication Foundation (WCF). Cela permet d'activer des services hébergés dans WAS/IIS sans utiliser de fichier .svc.  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
-\<serviceActivations >  
+\<serviceHostingEnvironment>  
+\<serviceActivations>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +43,7 @@ Un élément de configuration qui vous permet d’ajouter des paramètres qui d�
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Définit le type instancié par l'environnement d'hébergement du service pour un transport particulier.|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Définit le type instancié par l'environnement d'hébergement du service pour un transport particulier.|  
   
 ## <a name="remarks"></a>Notes  
  L'exemple suivant indique comment configurer des paramètres d'activation dans le fichier web.config.  
@@ -66,7 +66,7 @@ Un élément de configuration qui vous permet d’ajouter des paramètres qui d�
   
  L'activation basée sur la configuration prend en charge l'activation via un protocole HTTP ou non-HTTP. Elle requiert des extensions dans relativeAddress, par exemple .svc, .xoml ou .xamlx. Vous pouvez mapper vos propres extensions au buildProviders connu, qui vous permet ensuite d’activer le service sur n’importe quelle extension. En cas de conflit, la section `<serviceActivations>` remplace les inscriptions .svc.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>

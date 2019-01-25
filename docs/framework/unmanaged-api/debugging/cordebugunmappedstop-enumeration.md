@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d812a452910913f169d4377bafa82e823c533d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a6f22c045be9af71644415ae3b6b5e64d3e399dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495433"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop, énumération
 Spécifie le type de code non mappé qui peut déclencher un arrêt dans l'exécution du code par l'exécution pas à pas.  
@@ -48,21 +48,21 @@ typedef enum CorDebugUnmappedStop {
 |`STOP_PROLOG`|Arrêter dans le code de prologue.|  
 |`STOP_EPILOG`|Arrêter dans le code d’épilogue.|  
 |`STOP_NO_MAPPING_INFO`|Arrêter dans le code qui ne possède aucune information de mappage.|  
-|`STOP_OTHER_UNMAPPED`|Arrêter dans le code non mappé qui ne tient pas dans le prologue, épilogue, informations de mappage non ou catégorie non managé.|  
+|`STOP_OTHER_UNMAPPED`|Arrêter dans le code non mappé qui ne tient pas dans le prologue, épilogue, aucune information de mappage ou catégorie non managé.|  
 |`STOP_UNMANAGED`|Arrêter en code non managé. Cette valeur est valide uniquement avec le débogage d’interopérabilité.|  
-|`STOP_ALL`|Arrêter tous les types de code non mappé.|  
+|`STOP_ALL`|Arrêter dans tous les types de code non mappé.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) pour définir les indicateurs qui spécifient le code non mappé dans lequel l’exécution pas à pas s’arrête.  
+ Utilisez le [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) méthode pour définir les indicateurs qui spécifient le code non mappé dans lequel l’exécution pas à pas s’arrête.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

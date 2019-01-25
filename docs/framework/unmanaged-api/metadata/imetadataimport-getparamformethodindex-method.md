@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31096f7a5fd23bbd54f2beb9258c9d529e94f373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740110"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex, méthode
 Obtient le jeton qui représente un paramètre spécifié de la méthode représentée par le jeton MethodDef spécifié.  
@@ -42,20 +42,20 @@ HRESULT GetParamForMethodIndex (
  [in] Un jeton qui représente la méthode pour retourner le jeton de paramètre.  
   
  `ulParamSeq`  
- [in] La position ordinale dans la liste de paramètres où se produit le paramètre demandé. Les paramètres sont numérotées à partir d’un, avec la valeur de retour à la position zéro.  
+ [in] La position ordinale dans la liste de paramètres où le paramètre demandé se produit. Les paramètres sont numérotées à partir de l’autre, avec la valeur de retour dans la position zéro.  
   
  `ppd`  
  [out] Pointeur vers un jeton ParamDef qui représente le paramètre demandé.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

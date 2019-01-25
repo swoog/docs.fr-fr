@@ -1,5 +1,5 @@
 ---
-title: "Comment : créer des gestionnaires d'événements pour les Windows Forms au moment de l'exécution"
+title: 'Procédure : Créer des gestionnaires d’événements en cours d’exécution pour les Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 38453c751e6cc63827f3f1e9d20ad2ebdfc841d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e02fec0a131523059f88d4f12f62398d80fddf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632047"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Comment : créer des gestionnaires d'événements pour les Windows Forms au moment de l'exécution
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procédure : Créer des gestionnaires d’événements en cours d’exécution pour les Windows Forms
 Outre la création d’événements à l’aide du Concepteur Windows Forms, vous pouvez créer un gestionnaire d’événements au moment de l’exécution. Cette action vous permet de connecter des gestionnaires d’événements en fonction de conditions spécifiées dans le code lors de l’exécution au lieu de les connecter au premier démarrage du programme.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Pour créer un gestionnaire d’événements au moment de l’exécution  
@@ -27,7 +28,7 @@ Outre la création d’événements à l’aide du Concepteur Windows Forms, vou
   
 2.  Ajoutez une méthode à votre formulaire avec la signature de méthode pour l’événement que vous souhaitez gérer.  
   
-     Par exemple, si vous gérez le <xref:System.Windows.Forms.Control.Click> événements d’un <xref:System.Windows.Forms.Button> (contrôle), vous devez créer une méthode telle que la suivante :  
+     Par exemple, si vous gérez le <xref:System.Windows.Forms.Control.Click> événement d’un <xref:System.Windows.Forms.Button> contrôle, vous pouvez créer une méthode telle que la suivante :  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)  
@@ -71,7 +72,7 @@ Outre la création d’événements à l’aide du Concepteur Windows Forms, vou
   
      Le <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> méthode présentée dans le code Visual Basic ci-dessus établit un gestionnaire d’événements click du bouton.  
   
-## <a name="see-also"></a>Voir aussi  
- [Création de gestionnaires d’événements dans les Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Vue d'ensemble des gestionnaires d'événements](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
- [Dépannage des gestionnaires d’événements hérités en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+## <a name="see-also"></a>Voir aussi
+- [Création de gestionnaires d’événements dans les Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Vue d'ensemble des gestionnaires d'événements](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Dépannage des gestionnaires d’événements hérités en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

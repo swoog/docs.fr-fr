@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704210"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels, énumération
 Fournit des indicateurs pour spécifier le niveau auquel appliquer ou modifier une stratégie de l’assembly.  
@@ -45,27 +45,27 @@ typedef enum {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|Spécifie que la stratégie doit être appliquée au niveau de l’administrateur.|  
+|`ePolicyLevelAdmin`|Spécifie que la stratégie doit être appliquée au niveau administrateur.|  
 |`ePolicyLevelApp`|Spécifie que la stratégie doit être appliquée au niveau de l’application.|  
 |`ePolicyLevelHost`|Spécifie que la stratégie doit être appliquée au niveau de l’hôte.|  
-|`ePolicyLevelNone`|Ne spécifie des indicateurs d’aucun niveau de stratégie.|  
+|`ePolicyLevelNone`|Ne spécifie aucun indicateur de niveau de stratégie.|  
 |`ePolicyLevelPublisher`|Spécifie que la stratégie doit être appliquée au niveau du serveur de publication.|  
 |`ePolicyLevelRetargetable`|Spécifie que la stratégie doit s’applique à des niveaux variables.|  
 |`ePolicyPortability`|Spécifie que stratégie doit prendre en charge la portabilité entre les implémentations d’un assembly .NET Framework. Consultez le [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) élément de fichier de configuration.|  
-|`ePolicyUnifiedToCLR`|Spécifie que la stratégie doit être unifiée à celui du common language runtime (CLR).|  
+|`ePolicyUnifiedToCLR`|Spécifie que la stratégie doit être unifiée avec celle du common language runtime (CLR).|  
   
 ## <a name="remarks"></a>Notes  
- Cette énumération est passée aux méthodes de la [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interface afin de spécifier les modifications dans la stratégie d’application.  
+ Cette énumération est passée aux méthodes de la [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interface pour spécifier les modifications dans la stratégie d’application.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICLRAssemblyIdentityManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [ICLRAssemblyIdentityManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

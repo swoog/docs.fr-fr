@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 6a8a589077aba413fa89518e560373df816f8943
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0615a68add60b02a875921b1abb3776267db1731
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527586"
 ---
 # <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt; , élément pour les paramètres de chiffrement
 Contient le [ \<cryptographySettings > élément](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
   
  \<configuration>  
-\<mscorlib >  
+\<mscorlib>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -70,10 +70,10 @@ Contient le [ \<cryptographySettings > élément](../../../../../docs/framework/
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
-- <xref:System.Security.Cryptography>  
-- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Schéma des paramètres de chiffrement](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
+- <xref:System.Security.Cryptography>
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schéma des paramètres de chiffrement](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configuration des classes de chiffrement](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

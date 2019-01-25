@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : liaison de données dans des applications hybrides'
+title: 'Procédure pas à pas : Liaison de données dans des Applications hybrides'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724341"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procédure pas à pas : liaison de données dans des applications hybrides
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procédure pas à pas : Liaison de données dans des Applications hybrides
 Liaison d’une source de données à un contrôle est essentielle pour permettre aux utilisateurs ayant accès aux données sous-jacentes, que vous utilisiez [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cette procédure pas à pas montre comment vous pouvez utiliser la liaison de données dans des applications hybrides qui incluent les [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôles.  
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
@@ -122,7 +122,7 @@ Liaison d’une source de données à un contrôle est essentielle pour permettr
   
 1.  À partir de la **données** menu, sélectionnez **ajouter une nouvelle Source de données**.  
   
-2.  Dans le **Assistant de Configuration de Source de données**, créer une connexion à la base de données Northwind à l’aide d’un jeu de données. Pour plus d’informations, consultez [Comment : se connecter aux données dans une base de données](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  Dans le **Assistant de Configuration de Source de données**, créer une connexion à la base de données Northwind à l’aide d’un jeu de données. Pour plus d'informations, voir [Procédure : Se connecter aux données dans une base de données](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
   
 3.  Lorsque vous êtes invité par le **Assistant de Configuration de Source de données**, enregistrer la chaîne de connexion en tant que `NorthwindConnectionString`.  
   
@@ -173,10 +173,10 @@ Liaison d’une source de données à un contrôle est essentielle pour permettr
   
 10. Appuyez sur F5 pour générer et exécuter l'application.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Liaison de données dans des Applications hybrides, exemple](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [Procédure pas à pas : hébergement d'un contrôle composite Windows Forms dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Procédure pas à pas : Hébergement d'un contrôle composite WPF dans Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Liaison de données dans des Applications hybrides, exemple](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [Procédure pas à pas : Hébergement d’un contrôle Composite de formulaires Windows dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procédure pas à pas : Hébergement d’un contrôle Composite WPF dans les Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

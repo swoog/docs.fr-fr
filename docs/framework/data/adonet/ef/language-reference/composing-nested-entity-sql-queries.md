@@ -2,12 +2,12 @@
 title: Composition de requêtes Entity SQL imbriquées
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 8a0efa672a57a9255af2d90af1725b34be75600e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 87a9877b7c865fbe393d91365d03bab8f56377c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589476"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Composition de requêtes Entity SQL imbriquées
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] est un langage fonctionnel riche. Le bloc de construction [!INCLUDE[esql](../../../../../../includes/esql-md.md)] est une expression. Contrairement au langage SQL classique, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] n’est pas limité à un jeu de résultats tabulaire : [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge la composition d’expressions complexes pouvant contenir des littéraux, des paramètres ou des expressions imbriquées. Une valeur dans l’expression peut être paramétrée ou composée d’une autre expression.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- L’exemple suivant montre comment imbriquer correctement des expressions dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Comment : ordonner l’Union de deux requêtes](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
+ L'exemple suivant montre comment imbriquer correctement des expressions dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] : [Guide pratique pour Ordonner l’Union de deux requêtes](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## <a name="nested-queries-in-projection"></a>Requêtes imbriquées dans la projection  
  Les requêtes imbriquées d'une clause de projection peuvent être traduites en requêtes de produit cartésien sur le serveur. Sur certains serveurs principaux dont SQL Server, cela peut avoir pour conséquences l'augmentation de volume de la table TempDB et une diminution des performances du serveur.  
@@ -75,5 +75,5 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

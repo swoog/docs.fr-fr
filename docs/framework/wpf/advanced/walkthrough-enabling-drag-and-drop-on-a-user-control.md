@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : activation de la fonction glisser-déplacer sur un contrôle utilisateur'
+title: 'Procédure pas à pas : L’activation de glisser-déplacer sur un contrôle utilisateur'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7ca4987da8422c00e3fc34ff4605ddd13e4091b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ffaab4115edec1fc0115b27b8904970854f79d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600672"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Procédure pas à pas : activation de la fonction glisser-déplacer sur un contrôle utilisateur
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Procédure pas à pas : L’activation de glisser-déplacer sur un contrôle utilisateur
 
 Cette procédure pas à pas montre comment créer un contrôle utilisateur personnalisé qui peut participer à un transfert de données par glisser-déplacer dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].
 
@@ -33,12 +33,12 @@ Cette procédure pas à pas décrit les tâches suivantes :
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous avez besoin de Visual Studio pour effectuer cette procédure pas à pas.
+Cette procédure pas à pas nécessite Visual Studio.
 
 ## <a name="create-the-application-project"></a>Créer le projet d’Application
  Dans cette section, vous allez créer l’infrastructure d’application, qui inclut une page principale avec deux panneaux et un <xref:System.Windows.Controls.TextBox>.
 
-1.  Créez un projet d’application WPF en Visual Basic ou Visual C# nommé `DragDropExample`. Pour plus d'informations, consultez [Guide pratique pour créer un projet d'application WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
+1.  Créez un projet d’application WPF en Visual Basic ou Visual C# nommé `DragDropExample`. Pour plus d'informations, voir [Procédure : Créer un nouveau projet d’Application WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
 
 2.  Ouvrez MainWindow.xaml.
 

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebfa886e85cd72c4ea7d088ef345bc9968dec18f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc182687b12f5941996c17f4c09da44c49ef815c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426005"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694904"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn, méthode
 Appelée lorsqu’un appel est retourné.  
@@ -43,7 +43,7 @@ HRESULT OnSyncCallReturn
  [in] ID de l’appel retourné. Consultez [call_id, Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] Mémoire tampon des appels.  
+ [in] Mémoire tampon d’appel.  
   
  `in_BufferSize`  
  [in] Taille de la mémoire tampon de l’appel, en octets.  
@@ -54,7 +54,7 @@ HRESULT OnSyncCallReturn
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Voir aussi  
- [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

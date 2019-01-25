@@ -1,5 +1,5 @@
 ---
-title: 'Comment : convertir des données liées'
+title: 'Procédure : Convertir des données liées'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: 526305f32280fb75e95538b9014c34c11ed8bffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5069b6d6b7ded52011ec4c65ca2c47e41bba2ece
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705718"
 ---
-# <a name="how-to-convert-bound-data"></a>Comment : convertir des données liées
+# <a name="how-to-convert-bound-data"></a>Procédure : Convertir des données liées
 Cet exemple montre comment appliquer la conversion de données qui sont utilisées dans les liaisons.  
   
- Pour convertir des données lors de la liaison, vous devez créer une classe qui implémente le <xref:System.Windows.Data.IValueConverter> interface, qui inclut le <xref:System.Windows.Data.IValueConverter.Convert%2A> et <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> méthodes.  
+ Pour convertir des données pendant la liaison, vous devez créer une classe qui implémente le <xref:System.Windows.Data.IValueConverter> interface, ce qui inclut le <xref:System.Windows.Data.IValueConverter.Convert%2A> et <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> méthodes.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre l’implémentation d’un convertisseur de date qui convertit la valeur de date passée pour qu’il affiche uniquement l’année, mois et jour. Lorsque vous implémentez le <xref:System.Windows.Data.IValueConverter> interface, il est conseillé de décorer l’implémentation avec un <xref:System.Windows.Data.ValueConversionAttribute> attribut pour indiquer au développement d’outils de types de données impliqués dans la conversion, comme dans l’exemple suivant :  
+ L’exemple suivant montre l’implémentation d’un convertisseur de date qui convertit la valeur de date passée pour qu’il affiche uniquement l’année, mois et jour. Lorsque vous implémentez le <xref:System.Windows.Data.IValueConverter> interface, il est conseillé pour décorer l’implémentation avec un <xref:System.Windows.Data.ValueConversionAttribute> attribut pour indiquer au développement des outils les types de données impliqués dans la conversion, comme dans l’exemple suivant :  
   
  [!code-csharp[DataBindingLab#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
  [!code-vb[DataBindingLab#18](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
@@ -37,7 +37,7 @@ Cet exemple montre comment appliquer la conversion de données qui sont utilisé
   
  Les ressources de style référencées dans l’exemple ci-dessus sont définies dans une section de ressources ne pas présentée dans cette rubrique.  
   
-## <a name="see-also"></a>Voir aussi  
- [Implémenter la validation de la liaison](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- [Implémenter la validation de la liaison](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
+- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

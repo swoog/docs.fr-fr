@@ -1,15 +1,15 @@
 ---
-title: 'Comment : migrer des services Web ASP.NET compatibles AJAX vers WCF'
+title: 'Procédure : Migrer les Services Web ASP.NET compatibles AJAX vers WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638286"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Comment : migrer des services Web ASP.NET compatibles AJAX vers WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procédure : Migrer les Services Web ASP.NET compatibles AJAX vers WCF
 Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJAX à un service compatible AJAX Windows Communication Foundation (WCF) équivalente. Il montre comment créer une version WCF fonctionnellement équivalente d’un service ASP.NET AJAX. Les deux services peuvent ensuite servir côte à côte, ou le service WCF peut être utilisé pour remplacer le service ASP.NET AJAX.
 
  Migration d’ASP.NET AJAX existant service à un service WCF AJAX vous offre les avantages suivants :
@@ -22,7 +22,7 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
 
  Le code qui résulte de l'exécution des procédures mentionnées dans cette rubrique est fourni dans l'exemple qui suit les procédures.
 
- Pour plus d’informations sur l’exposition d’un service WCF via un point de terminaison compatible AJAX, consultez le [Comment : utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) rubrique.
+ Pour plus d’informations sur l’exposition d’un service WCF via un point de terminaison compatible AJAX, consultez le [Comment : Configuration permet d’ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) rubrique.
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Pour créer et tester l'application de service Web ASP.NET
 
@@ -36,9 +36,9 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
 
 5.  À partir de la **Build** menu, sélectionnez **générer la Solution**.
 
-6.  À partir de la **déboguer** menu, sélectionnez **démarrer sans débogage**.
+6.  Dans le menu **Déboguer**, sélectionnez **Exécuter sans débogage**.
 
-7.  Sur la page Web générée, sélectionnez l'opération `HelloWorld`.
+7.  Sur la page web générée, sélectionnez l’opération `HelloWorld`.
 
 8.  Cliquez sur le **Invoke** bouton sur le `HelloWorld` page de test. Vous recevez alors la réponse XML suivante.
 
@@ -87,7 +87,7 @@ Cette rubrique décrit les procédures pour migrer un service de base ASP.NET AJ
     { … }
     ```
 
-7.  Ajouter le <xref:System.ServiceModel.Web.WebInvokeAttribute> à la `HelloWorld` opération et définissez le <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propriété à retourner <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Notez que si la propriété n'est pas définie, le type de retour par défaut est <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
+7.  Ajouter le <xref:System.ServiceModel.Web.WebInvokeAttribute> à la `HelloWorld` opération et définissez le <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propriété à retourner <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Notez que si la propriété n’est pas définie, le type de retour par défaut est <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
 
     ```
     [OperationContract]
@@ -213,4 +213,4 @@ d.Add("two", 2);
 |Caractères d'échappement|Toujours avec une barre oblique d'échappement (/) ; n'autorise jamais de caractères JSON non valides sans séquence d'échappement, tels que "\n".|Avec une barre oblique d'échappement (/) pour les valeurs DateTime.|
 
 ## <a name="see-also"></a>Voir aussi
- [Guide pratique pour utiliser la configuration pour ajouter un point de terminaison AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Guide pratique pour Utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

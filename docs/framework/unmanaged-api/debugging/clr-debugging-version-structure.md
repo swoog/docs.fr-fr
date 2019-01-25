@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fecd5af43f4b984a4ab626e9832b3318715c0516
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: a4049b0ed25d4c0fda00fe9b0dad5887fa4f6996
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506938"
 ---
 # <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION, structure
 Définit la version du produit de CLR (Common Language Runtime) à des fins de débogage.  
@@ -61,6 +61,6 @@ typedef struct _CLR_DEBUGGING_VERSION
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

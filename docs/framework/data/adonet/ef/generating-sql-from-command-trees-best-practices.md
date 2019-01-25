@@ -2,12 +2,12 @@
 title: Génération SQL à partir d’arborescences de commandes - meilleures pratiques
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659093"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Génération SQL à partir d’arborescences de commandes - meilleures pratiques
 Les arborescences de commandes de requête de sortie modèlent de façon précise les requêtes pouvant être exprimées en SQL. Toutefois, les développeurs de fournisseur sont confrontés à des problèmes courants lors de la génération SQL d'une arborescence de commandes de sortie. Cette rubrique expose ces difficultés. Dans la rubrique suivante, le fournisseur d'exemples indique comment résoudre ces problèmes.  
@@ -133,10 +133,10 @@ ON b.y = d.z
  N'utilisez pas `SELECT *` pour sélectionner des tables de base. Le modèle de stockage dans un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application peut inclure uniquement un sous-ensemble des colonnes qui se trouvent dans la table de base de données. Dans ce cas, `SELECT *` peut produire un résultat incorrect. À la place, vous devez spécifier toutes les colonnes participantes en utilisant les noms de colonne du type de résultat des expressions participantes.  
   
 ## <a name="reuse-of-expressions"></a>Réutilisation d'expressions  
- Les expressions peuvent être réutilisées dans l'arborescence de commandes de requête transmise par [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ne partez pas du principe que chaque expression apparaît une seule fois que dans l'arborescence de commandes de requête.  
+ Les expressions peuvent être réutilisées dans l’arborescence de commandes de requête transmise par [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ne partez pas du principe que chaque expression apparaît une seule fois que dans l'arborescence de commandes de requête.  
   
 ## <a name="mapping-primitive-types"></a>Mappage de types primitifs  
- Lorsque vous mappez des types conceptuels (EDM) à des types de fournisseur, vous devez mapper au type le plus large (Int32) afin que toutes les valeurs possibles puissent correspondre. Évitez également de mapper aux types qui ne peut pas être utilisé pour de nombreuses opérations, comme les types BLOB (par exemple, `ntext` dans SQL Server).  
+ Lorsque vous mappez des types conceptuels (EDM) à des types de fournisseur, vous devez mapper au type le plus large (Int32) afin que toutes les valeurs possibles puissent correspondre. Évitez également de mapper aux types qui ne peut pas être utilisé pour de nombreuses opérations, telles que des types d’objets BLOB (par exemple, `ntext` dans SQL Server).  
   
-## <a name="see-also"></a>Voir aussi  
- [Génération SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Voir aussi
+- [Génération SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

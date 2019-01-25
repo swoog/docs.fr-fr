@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 7addb503d0a7d4c7a4388144759e7f40264d7703
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 111b129b17d0fe473b0249c43e25ddc50bfe6fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513449"
 ---
 # <a name="pack-uris-in-wpf"></a>URI à en-tête pack dans WPF
 Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] sont utilisés pour identifier et charger des fichiers de plusieurs façons, notamment les éléments suivants :  
@@ -46,11 +46,11 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
   
  ![Diagramme de package et de parties](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
   
- Pour identifier les parties, la spécification OPC exploite l’extensibilité de la RFC 2396 (identificateurs de ressource uniforme (URI) : Generic Syntax) pour définir le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schéma.  
+ Pour identifier les parties, la spécification OPC exploite l’extensibilité de la RFC 2396 (identificateurs de ressource uniforme (URI) : Syntaxe générique) pour définir le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schéma.  
   
  Le schéma spécifié par un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] est défini par son préfixe ; http, ftp et file sont des exemples connus. Le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schéma utilise « pack » comme modèle et contient deux composants : autorité et chemin d’accès. Le format est le suivant pour un pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
- Pack : / /*autorité*/*chemin d’accès*
+ pack://*authority*/*path*
   
  Le *autorité* Spécifie le type de package contenant une partie, tandis que le *chemin d’accès* Spécifie l’emplacement d’une partie dans un package.  
   
@@ -89,7 +89,7 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
   
 -   **Autorité** : application:///.  
   
--   **Chemin** : nom du fichier de ressources, y compris son chemin relatif à la racine du dossier du projet de l’assembly local.  
+-   **Chemin d’accès**: Le nom du fichier de ressources, y compris son chemin d’accès, par rapport à la racine du dossier projet assembly local.  
   
  L’exemple suivant montre le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] pour un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichier de ressources qui se trouve à la racine du dossier du projet de l’assembly local.  
   
@@ -105,9 +105,9 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
   
 -   **Autorité** : application:///.  
   
--   **Chemin** : nom d’un fichier de ressources compilé dans un assembly référencé. Le chemin doit respecter le format suivant :  
+-   **Chemin d’accès**: Le nom du fichier de ressources qui est compilé dans un assembly référencé. Le chemin doit respecter le format suivant :  
   
-     *NomCourtAssembly*{*; Version*] {*; PublicKey*] ; component /*chemin d’accès*  
+     *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
     -   **NomCourtAssembly** : nom court de l’assembly référencé.  
   
@@ -141,7 +141,7 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
   
 -   **Autorité** : application:///.  
   
--   **Chemin** : nom du fichier de contenu, y compris son chemin relatif à l’emplacement, dans le système de fichiers, de l’assembly exécutable principal de l’application.  
+-   **Chemin d’accès**: Le nom du fichier de contenu, y compris son chemin d’accès relatif à l’emplacement de système de fichiers de l’assembly exécutable principal de l’application.  
   
  L’exemple suivant montre le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] pour un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichier de contenu, situé dans le même dossier que l’assembly exécutable.  
   
@@ -160,7 +160,7 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
   
 -   **Autorité** : siteoforigin:///.  
   
--   **Chemin** : nom du fichier de site d’origine, y compris son chemin relatif à l’emplacement à partir duquel l’assembly exécutable a été lancé.  
+-   **Chemin d’accès**: Le nom du site de fichier d’origine, y compris son chemin d’accès relatif à l’emplacement à partir duquel l’assembly exécutable a été lancé.  
   
  L’exemple suivant montre le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] pour un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichier site d’origine, stocké dans l’emplacement à partir duquel l’assembly exécutable est lancé.  
   
@@ -281,7 +281,7 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
   
  Le tableau 1 illustre les différents pack absolu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] que vous pouvez spécifier dans le balisage.  
   
- Tableau 1 : URI à en-tête pack absolus dans le balisage  
+ Tableau 1 : URI à en-tête Pack absolus dans le balisage  
   
 |Fichier|En-tête pack absolu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -297,7 +297,7 @@ Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../
   
  Le tableau 2 illustre les différents pack relatif [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] que vous pouvez spécifier dans le balisage.  
   
- Tableau 2 : URI à en-tête pack relatifs dans le balisage  
+ Tableau 2 : URI à en-tête Pack relatifs dans balisage  
   
 |Fichier|Pack relatif [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -342,7 +342,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Le tableau 3 illustre les différents pack relatif [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] que vous pouvez spécifier dans le code à l’aide de <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tableau 3 : URI à en-tête pack absolus dans le code  
+ Tableau 3 : URI à en-tête Pack absolus dans Code  
   
 |Fichier|En-tête pack absolu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -358,7 +358,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Le tableau 4 illustre les différents pack relatif [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] que vous pouvez spécifier dans le code à l’aide <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tableau 4 : URI à en-tête pack relatifs dans le code  
+ Tableau 4 : URI à en-tête Pack relatifs dans Code  
   
 |Fichier|Pack relatif [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -423,5 +423,5 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Pour une vue d’ensemble des thèmes dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], consultez [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Fichiers de ressources, de contenu et de données d’une application WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Voir aussi
+- [Fichiers de ressources, de contenu et de données d’une application WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fbc41ca1366b412c37d6af09e90e3f1b042ba21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bb92f9ba8ff0aed1c6eb1fa44fb4d7c9abc186a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714229"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO, structure
 Représente les arguments d’une fonction, selon un ordre de gauche à droite.  
@@ -42,23 +42,23 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
 |------------|-----------------|  
 |`numRanges`|Le nombre de blocs d’arguments. Autrement dit, cette valeur est le nombre de [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures dans le `ranges` tableau.|  
 |`totalArgumentSize`|La taille totale de tous les arguments. En d’autres termes, cette valeur est la somme des longueurs d’argument.|  
-|`ranges`|Un tableau de `COR_PRF_FUNCTION_ARGUMENT_RANGE` des structures, dont chacun représente un bloc d’arguments de fonction.|  
+|`ranges`|Un tableau de `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, chacun d’eux représente un bloc d’arguments de fonction.|  
   
 ## <a name="remarks"></a>Notes  
- Une fonction peut avoir d’arguments. Ces arguments ne peuvent pas être stockés contiguë en mémoire. Vous pouvez avoir un bloc de trois arguments dans un seul emplacement, un bloc de deux arguments à un autre emplacement et un dernier bloc d’un argument dans un emplacement différent. Ces arguments sont tous pour la même fonction ; elles sont uniquement stockées dans des emplacements différents.  
+ Une fonction peut avoir d’arguments. Ces arguments ne peuvent pas être stockés de façon contiguë en mémoire. Vous pouvez avoir un bloc de trois arguments au même endroit, un bloc de deux arguments à un autre endroit et un bloc final d’un argument dans un emplacement différent. Ces arguments sont tous pour la même fonction ; elles sont simplement stockées dans différents emplacements.  
   
- Le `COR_PRF_FUNCTION_ARGUMENT_INFO` structure représente tous les arguments d’une fonction unique. Il utilise un tableau pour référencer tous les blocs d’arguments de fonction. Par conséquent, pour une fonction unique, vous avez un seul `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, qui fait référence à plusieurs `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, chacun pointant vers un ou plusieurs arguments de fonction.  
+ Le `COR_PRF_FUNCTION_ARGUMENT_INFO` structure représente tous les arguments d’une fonction unique. Elle utilise un tableau pour référencer tous les blocs d’arguments de fonction. Par conséquent, pour une fonction unique, vous avez un seul `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, qui fait référence à plusieurs `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, chacun d’eux pointe vers un ou plusieurs arguments de fonction.  
   
- Les arguments qui sont stockés dans les registres sont répandus dans la mémoire pour générer les structures.  
+ Les arguments qui sont stockés dans les registres sont dispersées dans la mémoire pour générer les structures.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Voir aussi
+- [Structures de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

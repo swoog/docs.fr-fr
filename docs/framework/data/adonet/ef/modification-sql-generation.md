@@ -2,12 +2,12 @@
 title: Génération SQL de modification
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0bacd974c4eb9bc98851d35d574a184fde4d9468
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580055"
 ---
 # <a name="modification-sql-generation"></a>Génération SQL de modification
 Cette section décrit la manière de développer un module de génération SQL de modification pour votre fournisseur (base de données conforme SQL:1999). Ce module doit traduire une arborescence de commandes de modification en instructions SQL INSERT, UPDATE ou DELETE appropriées.  
@@ -27,7 +27,7 @@ Cette section décrit la manière de développer un module de génération SQL d
   
  DbModificationCommandTree et ses implémentations produites par le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] représentent toujours une opération de ligne unique. Cette section décrit ces types avec leurs contraintes dans .NET Framework version 3.5.  
   
- ![Diagramme](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree a une propriété Target qui représente le jeu de cibles pour l'opération de modification. La propriété d'expression de la cible, qui définit le jeu de données d'entrée, est toujours DbScanExpression.  Un DbScanExpression peut représenter une table ou une vue, ou un jeu de données définie avec une requête si la propriété de métadonnées « Defining Query » de sa cible est non null.  
   
@@ -286,5 +286,5 @@ delete [dbo].[Categories]
 where ([CategoryID] = @p0)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Écriture d’un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Voir aussi
+- [Écriture d’un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

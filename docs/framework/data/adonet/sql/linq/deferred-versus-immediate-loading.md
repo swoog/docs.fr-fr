@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 5955d7361658c825c120e62e531b72d402a12650
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c78f608225d64a428b768fbc8d03f71a393d980d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516965"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Comparaison entre le chargement différé et le chargement immédiat
 Lorsque vous recherchez un objet, vous récupérez en réalité uniquement l'objet que vous avez demandé. Le *connexes* objets ne sont pas automatiquement extraits en même temps. (Pour plus d’informations, consultez [interrogation de relations](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Vous ne pouvez pas voir que les objets connexes ne sont pas déjà chargés car une tentative d'accès à ceux-ci génère une demande qui les récupère.  
   
- Par exemple, vous souhaiterez pour un ensemble particulier de commandes de requête et puis occasionnellement envoyer une notification par courrier électronique à des clients particuliers. Vous n'auriez pas nécessairement besoin de récupérer au début toutes les données des clients pour chaque commande. Vous pouvez utiliser le chargement différé pour différer la récupération d'informations supplémentaires jusqu'au moment où cela devient indispensable. Prenons l'exemple suivant :  
+ Par exemple, vous souhaiterez peut-être interroger un ensemble particulier de commandes et ensuite qu’occasionnellement vous envoyer une notification par e-mail à des clients particuliers. Vous n'auriez pas nécessairement besoin de récupérer au début toutes les données des clients pour chaque commande. Vous pouvez utiliser le chargement différé pour différer la récupération d'informations supplémentaires jusqu'au moment où cela devient indispensable. Prenons l'exemple suivant :  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  
@@ -33,5 +33,5 @@ Lorsque vous recherchez un objet, vous récupérez en réalité uniquement l'obj
   
 -   Méthode <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> pour filtrer des objets récupérés pour une relation particulière.  
   
-## <a name="see-also"></a>Voir aussi  
- [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a>Voir aussi
+- [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

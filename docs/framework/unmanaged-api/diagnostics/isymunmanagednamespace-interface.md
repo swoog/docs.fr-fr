@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9408a56b7a1e8cbad94014b55ec5d830e1734810
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb5a833f7d6ed8f681f1f8d7ae79ac6113b8f2bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744373"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace, interface
 Représente un espace de noms.  
@@ -32,10 +32,10 @@ Représente un espace de noms.
 |------------|-----------------|  
 |[GetName, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|Obtient le nom de cet espace de noms.|  
 |[GetNamespaces, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|Obtient les enfants de cet espace de noms.|  
-|[GetVariables, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Retourne toutes les variables définies dans une portée globale au sein de cet espace de noms.|  
+|[GetVariables, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Retourne toutes les variables définies avec une portée globale dans cet espace de noms.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces du magasin de symboles de diagnostics](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces du magasin de symboles de diagnostics](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : dessiner des splines cardinales'
+title: 'Procédure : Dessiner des splines cardinales'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 3ad06eb28e1d8e6b5d5f4a77e545f174d8a68d9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f2fd0f54c95ff2185c1a1d17785d300c97f7f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739798"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>Comment : dessiner des splines cardinales
-Une spline cardinale est une courbe qui passe progressivement par un ensemble donné de points. Pour dessiner une spline cardinale, créez un <xref:System.Drawing.Graphics> de l’objet et passez l’adresse d’un tableau de points à le <xref:System.Drawing.Graphics.DrawCurve%2A> (méthode).  
+# <a name="how-to-draw-cardinal-splines"></a>Procédure : Dessiner des splines cardinales
+Une spline cardinale est une courbe qui traverse facilement un ensemble donné de points. Pour dessiner une spline cardinale, créez un <xref:System.Drawing.Graphics> de l’objet et passez l’adresse d’un tableau de points à la <xref:System.Drawing.Graphics.DrawCurve%2A> (méthode).  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Dessin d’une Spline cardinale en forme de cloche  
   
@@ -39,7 +39,7 @@ Une spline cardinale est une courbe qui passe progressivement par un ensemble do
   
 ### <a name="changing-the-bend-of-a-cardinal-spline"></a>Modification de la courbure d’une Spline cardinale  
   
--   Modifier la courbure d’une spline cardinale en passant un argument de tension à le <xref:System.Drawing.Graphics.DrawCurve%2A> (méthode). L’exemple suivant dessine trois splines cardinales qui passent par le même ensemble de points. L’illustration suivante montre les trois splines avec leur valeur de tension. Notez que lorsque la tension est 0, les points sont connectés par des lignes droites.  
+-   Modifier la courbure d’une spline cardinale en passant un argument de tension à le <xref:System.Drawing.Graphics.DrawCurve%2A> (méthode). L’exemple suivant dessine trois splines cardinales qui passent par le même ensemble de points. L’illustration suivante montre les trois splines, ainsi que leurs valeurs de tension. Notez que lorsque la tension est 0, les points sont reliés par des lignes droites.  
   
  ![Spline cardinale](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
   
@@ -49,6 +49,6 @@ Une spline cardinale est une courbe qui passe progressivement par un ensemble do
 ## <a name="compiling-the-code"></a>Compilation du code  
  Les exemples précédents sont conçus pour une utilisation avec Windows Forms, et ils nécessitent <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
-## <a name="see-also"></a>Voir aussi  
- [Lignes, courbes et formes](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Génération et dessin de courbes](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a>Voir aussi
+- [Lignes, courbes et formes](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Génération et dessin de courbes](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

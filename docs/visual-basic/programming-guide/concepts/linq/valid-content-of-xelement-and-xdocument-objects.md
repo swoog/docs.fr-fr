@@ -1,13 +1,13 @@
 ---
-title: Contenu valide de XElement et objets du Répertoire2 XDocument
+title: Contenu valide des XElement et objets du Répertoire2 XDocument
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 4b1d588f0ebbfec6d5cf7a58b63f92005db75acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 168c87f23d4545afe7b80579673c050068ee697b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502700"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenu valide des objets XElement et XDocument
 Cette rubrique décrit les arguments valides qui peuvent être passés aux constructeurs et méthodes utilisés pour ajouter du contenu aux éléments et aux documents.  
@@ -88,5 +88,5 @@ Cette rubrique décrit les arguments valides qui peuvent être passés aux const
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Remplace les nœuds enfants par du nouveau contenu.|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Remplace un nœud par du nouveau contenu.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Création d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>Voir aussi
+- [Création d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

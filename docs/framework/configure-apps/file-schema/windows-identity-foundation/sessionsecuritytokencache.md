@@ -3,20 +3,20 @@ title: '&lt;sessionSecurityTokenCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: b812673ac1c015adde357d3c0707d85643aad3e9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 024375cb114bb080c576ea033e5588526350ecdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510089"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
 Inscrit un cache pour les jetons de session avec un service ou une collection de gestionnaires de jetons de sécurité.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
-\<met en cache >  
-\<sessionSecurityTokenCache >  
+\<identityConfiguration>  
+\<caches>  
+\<sessionSecurityTokenCache>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ Inscrit un cache pour les jetons de session avec un service ou une collection de
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<met en cache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Inscrit le met en cache utilisé par un service ou une collection de gestionnaires de jetons de sécurité.|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Inscrit le met en cache utilisé par un service ou une collection de gestionnaires de jetons de sécurité.|  
   
 ## <a name="example"></a>Exemple  
  Le code XML suivant illustre la configuration d’un cache personnalisé pour contenir les jetons de sécurité de session (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). La configuration est extraite la `ClaimsAwareWebFarm` exemple. Pour plus d’informations sur cet exemple, consultez [Index exemple de Code WIF](../../../../../docs/framework/security/wif-code-sample-index.md).  
@@ -61,5 +61,5 @@ Inscrit un cache pour les jetons de session avec un service ou une collection de
 </caches>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576432"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen, classe
-Fournit des fonctionnalités pour la création d’un fichier exécutable portable natif (PE). L’interface sera généralement être utilisée par les compilateurs pour générer leur fichier exécutable de sortie compilé.  
+Fournit des fonctionnalités pour créer un fichier exécutable portable natif (PE). L’interface sera généralement être utilisée par les compilateurs pour générer leur sortie compilée exécutable.  
   
 > [!NOTE]
 >  `ICeeFileGen` prend en charge l’infrastructure .NET Framework et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -237,11 +237,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** ICeeFileGen.h  
   
  **Version du .NET framework :** 1.0  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

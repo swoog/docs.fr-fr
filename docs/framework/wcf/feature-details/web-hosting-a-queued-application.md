@@ -2,12 +2,12 @@
 title: Hébergement sur le Web d'une application en file d'attente
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: aa50b3b66230930f9553d6f0238b0a5f9178f7a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700206"
 ---
 # <a name="web-hosting-a-queued-application"></a>Hébergement sur le Web d'une application en file d'attente
 Le Service de l’Activation des processus Windows (WAS) gère l’activation et la durée de vie du processus de travail qui contiennent des applications à héberger des services de Windows Communication Foundation (WCF). Le modèle de processus WAS généralise le modèle de processus [!INCLUDE[iis601](../../../../includes/iis601-md.md)] pour le serveur HTTP en supprimant la dépendance envers le protocole HTTP. Ainsi, les services WCF à utiliser les protocoles HTTP et non-HTTP, tels que net.msmq et msmq.formatname, dans un environnement d’hébergement qui prend en charge l’activation basée sur le message et offre la possibilité d’héberger un grand nombre d’applications sur un ordinateur donné.  
@@ -41,6 +41,6 @@ Le Service de l’Activation des processus Windows (WAS) gère l’activation et
 ### <a name="subqueue-and-system-queue-caveat"></a>Limitations relatives aux sous-files d'attente et aux files d'attente système  
  Une application hébergée par le service WAS ne peut pas être activée sur la base des messages présents dans une file d'attente système, telle que la file d'attente de lettres mortes à l'échelle du système, ou dans des sous-files d'attente, telles que les sous-files d'attente de poison. Il s'agit d'une limitation pour cette version du produit.  
   
-## <a name="see-also"></a>Voir aussi  
- [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Points de terminaison de service et adressage de files d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+## <a name="see-also"></a>Voir aussi
+- [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Points de terminaison de service et adressage de files d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

@@ -2,23 +2,23 @@
 title: '&lt;add&gt;, élément de &lt;claimTypeRequirements&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 7f86073d0ecce353c63f31fd28c4bfeffb2411ed
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fb5e723f6cff9f6e573a45a1dabe008beb9399e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687312"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a>&lt;add&gt;, élément de &lt;claimTypeRequirements&gt;
 Spécifie les types de revendications requis et facultatifs censés apparaître dans les informations d'identification fédérées. Par exemple, les services déclarent les exigences relatives aux informations d’identification entrantes devant posséder un certain jeu de types de revendications.  
   
  \<system.ServiceModel>  
-\<liaisons >  
-\<wsFederatedBinding >  
-\<liaison >  
-\<sécurité >  
+\<bindings>  
+\<wsFederatedBinding>  
+\<binding>  
+\<security>  
 \<message>  
-\<claimTypeRequirements >  
+\<claimTypeRequirements>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,9 +72,9 @@ Spécifie les types de revendications requis et facultatifs censés apparaître 
 </bindings>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElement>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
+- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElement>

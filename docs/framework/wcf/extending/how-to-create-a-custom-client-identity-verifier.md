@@ -1,21 +1,21 @@
 ---
-title: "Comment : créer un vérificateur d'identité du client personnalisé"
+title: 'Procédure : Créer un vérificateur d’identité Client personnalisés'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569373"
 ---
-# <a name="how-to-create-a-custom-client-identity-verifier"></a>Comment : créer un vérificateur d'identité du client personnalisé
-Le *identité* la fonctionnalité de Windows Communication Foundation (WCF) permet à un client spécifier à l’avance l’identité attendue du service. Lorsqu'un serveur s'authentifie auprès du client, l'identité est vérifiée par rapport à l'identité attendue. (Pour obtenir une explication de l’identité et son fonctionnement, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
+# <a name="how-to-create-a-custom-client-identity-verifier"></a>Procédure : Créer un vérificateur d’identité Client personnalisés
+Le *identité* fonctionnalité de Windows Communication Foundation (WCF) permet à un client spécifier à l’avance l’identité attendue du service. Lorsqu'un serveur s'authentifie auprès du client, l'identité est vérifiée par rapport à l'identité attendue. (Pour obtenir une explication de l’identité et de son fonctionnement, consultez [identité de Service et d’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
- Si nécessaire, la vérification peut être personnalisée à l'aide d'un vérificateur d'identité personnalisé. Par exemple, vous pouvez effectuer des contrôles supplémentaires de vérification de l'identité du service. Dans cet exemple, le vérificateur d'identité personnalisé vérifie des revendications supplémentaires dans le certificat X.509 retourné par le serveur. Pour un exemple d’application, consultez [exemple](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
+ Si nécessaire, la vérification peut être personnalisée à l'aide d'un vérificateur d'identité personnalisé. Par exemple, vous pouvez effectuer des contrôles supplémentaires de vérification de l'identité du service. Dans cet exemple, le vérificateur d'identité personnalisé vérifie des revendications supplémentaires dans le certificat X.509 retourné par le serveur. Pour un exemple d’application, consultez [Service Identity, exemple](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
   
 ### <a name="to-extend-the-endpointidentity-class"></a>Pour étendre la classe EndpointIdentity  
   
@@ -81,10 +81,10 @@ Le *identité* la fonctionnalité de Windows Communication Foundation (WCF) perm
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- <xref:System.ServiceModel.EndpointIdentity>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [Exemple d’identité de service](../../../../docs/framework/wcf/samples/service-identity-sample.md)  
- [Stratégie d’autorisation](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- [Stratégie d’autorisation](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- <xref:System.ServiceModel.EndpointIdentity>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [Exemple d’identité de service](../../../../docs/framework/wcf/samples/service-identity-sample.md)
+- [Stratégie d’autorisation](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Stratégie d’autorisation](../../../../docs/framework/wcf/samples/authorization-policy.md)

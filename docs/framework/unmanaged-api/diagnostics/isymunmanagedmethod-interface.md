@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 728acc09f739fe567fca4a2571cbabf1ba8838a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b19e5ce88ea34188b2757d2a0c313341fbf1e7e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604254"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod, interface
 Représente une méthode dans le magasin de symboles. Cette interface fournit l’accès aux seuls les attributs liés aux symboles d’une méthode, au lieu des attributs de type.  
@@ -31,10 +31,10 @@ Représente une méthode dans le magasin de symboles. Cette interface fournit l�
 |Méthode|Description|  
 |------------|-----------------|  
 |[GetNamespace, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getnamespace-method.md)|Obtient l’espace de noms dans lequel cette méthode est définie.|  
-|[GetOffset, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getoffset-method.md)|Retourne l’offset dans cette méthode qui correspond à une position donnée dans un document.|  
+|[GetOffset, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getoffset-method.md)|Retourne le décalage au sein de cette méthode qui correspond à une position donnée dans un document.|  
 |[GetParameters, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getparameters-method.md)|Obtient les paramètres de cette méthode.|  
 |[GetRanges, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getranges-method.md)|Une position donnée dans un document, retourne un tableau de début et fin paires d’offsets qui correspondent aux plages de langage intermédiaire Microsoft (MSIL) qui traite de la position au sein de cette méthode.|  
-|[GetRootScope, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getrootscope-method.md)|Obtient la portée lexicale racine dans cette méthode. Cette portée englobe la totalité de la méthode.|  
+|[GetRootScope, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getrootscope-method.md)|Obtient la portée lexicale racine au sein de cette méthode. Cette portée englobe la totalité de la méthode.|  
 |[GetScopeFromOffset, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getscopefromoffset-method.md)|Obtient la portée lexicale la plus englobante dans cette méthode qui englobe l’offset donné.|  
 |[GetSequencePointCount, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getsequencepointcount-method.md)|Obtient le nombre de points de séquence au sein de cette méthode.|  
 |[GetSequencePoints, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getsequencepoints-method.md)|Obtient tous les points de séquence au sein de cette méthode.|  
@@ -44,5 +44,5 @@ Représente une méthode dans le magasin de symboles. Cette interface fournit l�
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Interfaces du magasin de symboles de diagnostics](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [Interfaces du magasin de symboles de diagnostics](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

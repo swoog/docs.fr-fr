@@ -10,11 +10,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 2970cf0f83339fe86faf4af7da80bb17bd25acfc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cab35250f4fedf0a08dc7198430a668c7428c207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567749"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Vue d'ensemble des gestionnaires d'événements (Windows Forms)
 Un gestionnaire d’événements est une méthode qui est liée à un événement. Lorsque l’événement est déclenché, le code dans le Gestionnaire d’événements est exécuté. Chaque gestionnaire d’événements fournit deux paramètres qui vous permettent de gérer l’événement correctement. L’exemple suivant montre un gestionnaire d’événements pour un <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> événement.  
@@ -41,12 +42,12 @@ private:
   }  
 ```  
   
- Le premier paramètre,`sender`, fournit une référence à l’objet qui a déclenché l’événement. Le deuxième paramètre, `e`, dans l’exemple ci-dessus, passe un objet spécifique à l’événement qui est géré. En faisant référence à des propriétés de l’objet (et parfois ses méthodes), vous pouvez obtenir des informations telles que l’emplacement de la souris pour les événements de souris ou les données transférées dans les événements de glisser-déplacer.  
+ Le premier paramètre,`sender`, fournit une référence à l’objet qui a déclenché l’événement. Le deuxième paramètre, `e`, dans l’exemple ci-dessus, passe un objet spécifique à l’événement qui est géré. En référençant les propriétés de l’objet (et, parfois, ses méthodes), vous pouvez obtenir des informations telles que l’emplacement de la souris pour les événements de souris ou les données transférées dans les événements de glisser-déplacer.  
   
- En général, chaque événement produit un gestionnaire d’événements avec un type d’objet d’événement différentes pour le deuxième paramètre. Certains gestionnaires d’événements, comme celles qui concernent le <xref:System.Windows.Forms.Control.MouseDown> et <xref:System.Windows.Forms.Control.MouseUp> événements, ont le même type d’objet pour le second paramètre. Pour ces types d’événements, vous pouvez utiliser le même gestionnaire d’événements pour gérer les deux événements.  
+ En général, chaque événement produit un gestionnaire d’événements avec un type d’objet d’événement différentes pour le deuxième paramètre. Certains gestionnaires d’événements, telles que celles pour le <xref:System.Windows.Forms.Control.MouseDown> et <xref:System.Windows.Forms.Control.MouseUp> événements, ont le même type d’objet pour le second paramètre. Pour ces types d’événements, vous pouvez utiliser le même gestionnaire d’événements pour gérer les deux événements.  
   
- Vous pouvez également utiliser le même gestionnaire d’événements pour gérer l’événement de même pour les différents contrôles. Par exemple, si vous avez un groupe de <xref:System.Windows.Forms.RadioButton> contrôles sur un formulaire, vous pouvez créer un seul gestionnaire d’événements pour le <xref:System.Windows.Forms.Control.Click> événement et de chaque contrôle <xref:System.Windows.Forms.Control.Click> événement lié au gestionnaire d’événements unique. Pour plus d’informations, consultez [Comment : connecter plusieurs événements à un seul gestionnaire d’événements dans les Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
+ Vous pouvez également utiliser le même gestionnaire d’événements pour gérer l’événement de même pour les différents contrôles. Par exemple, si vous disposez d’un groupe de <xref:System.Windows.Forms.RadioButton> contrôles sur un formulaire, vous pouvez créer un gestionnaire d’événements unique pour le <xref:System.Windows.Forms.Control.Click> événement et avoir de chaque contrôle <xref:System.Windows.Forms.Control.Click> événement lié au gestionnaire d’événements unique. Pour plus d'informations, voir [Procédure : Connecter plusieurs événements à un seul gestionnaire d’événements dans les Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Création de gestionnaires d’événements dans les Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Vue d'ensemble des événements](../../../docs/framework/winforms/events-overview-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- [Création de gestionnaires d’événements dans les Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Vue d'ensemble des événements](../../../docs/framework/winforms/events-overview-windows-forms.md)

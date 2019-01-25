@@ -1,5 +1,5 @@
 ---
-title: '&lt;PreferComInsteadOfManagedRemoting&gt; élément'
+title: '&lt;PreferComInsteadOfManagedRemoting&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 760eeeaaf82bf2014d70fa79ced2bb9166a8cb60
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9292a0973df100acbffa341d7c0ca2604455f7fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522334"
 ---
-# <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; élément
+# <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; Element
 Spécifie si le runtime utilisera COM interop au lieu de la communication à distance pour tous les appels entre les limites du domaine d’application.  
   
  \<configuration>  
 \<runtime>  
-\<PreferComInsteadOfManagedRemoting >  
+\<PreferComInsteadOfManagedRemoting>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,6 +73,6 @@ Spécifie si le runtime utilisera COM interop au lieu de la communication à dis
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

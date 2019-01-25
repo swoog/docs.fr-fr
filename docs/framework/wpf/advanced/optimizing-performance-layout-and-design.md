@@ -1,5 +1,5 @@
 ---
-title: 'Optimisation des performances : disposition et conception'
+title: 'Optimisation des performances : Disposition et conception'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: 9c9921e664d69038480e73ee6779ca9e48b81c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5dd567fa9f5db69c52072a1cc67b5c574f8e1f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623870"
 ---
-# <a name="optimizing-performance-layout-and-design"></a>Optimisation des performances : disposition et conception
+# <a name="optimizing-performance-layout-and-design"></a>Optimisation des performances : Disposition et conception
 La conception de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application peut influer sur ses performances en créant des charges mémoire inutiles pour calculer la disposition et valider les références d’objet. La construction d’objets, en particulier au moment de l’exécution, peut affecter les caractéristiques de performances de votre application.  
   
  Cette rubrique fournit des recommandations sur ces aspects des performances.  
   
 ## <a name="layout"></a>Mise en page  
- Le terme « passe de disposition » décrit le processus de mesure et de réorganisation des membres d’un <xref:System.Windows.Controls.Panel>-dérivée de collection de l’objet des enfants et puis de dessin à l’écran. La passe de disposition est un processus mathématique intensif (le nombre de calculs nécessaires est proportionnel au nombre d’enfants présents dans la collection). Par exemple, chaque fois qu’un enfant <xref:System.Windows.UIElement> objet dans la collection modifie sa position, il a la possibilité de déclencher une nouvelle passe par le système de disposition. Compte tenu de la relation étroite entre les caractéristiques d’objet et le comportement de disposition, il est important de comprendre le type des événements qui peuvent appeler le système de disposition. Votre application sera d’autant plus performante que vous réduirez autant que possible les appels inutiles de la passe de disposition.  
+ Le terme « passe de disposition » décrit le processus de mesure et réorganisation des membres d’un <xref:System.Windows.Controls.Panel>-dérivée de collection d’objets des enfants et ensuite les dessiner à l’écran. La passe de disposition est un processus mathématique intensif (le nombre de calculs nécessaires est proportionnel au nombre d’enfants présents dans la collection). Par exemple, chaque fois qu’un enfant <xref:System.Windows.UIElement> objet dans la collection change de position, il a la possibilité de déclencher une nouvelle passe par le système de disposition. Compte tenu de la relation étroite entre les caractéristiques d’objet et le comportement de disposition, il est important de comprendre le type des événements qui peuvent appeler le système de disposition. Votre application sera d’autant plus performante que vous réduirez autant que possible les appels inutiles de la passe de disposition.  
   
- Le système de disposition effectue deux passes pour chaque membre enfant d’une collection : une passe de mesure et une passe de réorganisation. Chaque objet enfant fournit sa propre implémentation substituée de la <xref:System.Windows.UIElement.Measure%2A> et <xref:System.Windows.UIElement.Arrange%2A> méthodes afin de fournir son propre comportement de disposition spécifique. Pour schématiser, une disposition est un système récursif qui entraîne le dimensionnement, le positionnement et le tracé d’un élément à l’écran.  
+ Le système de disposition effectue deux passes pour chaque membre enfant d’une collection : une passe de mesure et une passe de réorganisation. Chaque objet enfant propose sa propre implémentation substituée de le <xref:System.Windows.UIElement.Measure%2A> et <xref:System.Windows.UIElement.Arrange%2A> méthodes afin de fournir son propre comportement de disposition spécifique. Pour schématiser, une disposition est un système récursif qui entraîne le dimensionnement, le positionnement et le tracé d’un élément à l’écran.  
   
--   Un enfant <xref:System.Windows.UIElement> objet commence le processus de disposition en ayant en premier ses propriétés principales mesurées.  
+-   Un enfant <xref:System.Windows.UIElement> objet commence le processus de disposition en faisant d’abord ses propriétés principales mesurées.  
   
--   L’objet <xref:System.Windows.FrameworkElement> propriétés liées à la taille, tels que <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, et <xref:System.Windows.FrameworkElement.Margin%2A>, sont évaluées.  
+-   L’objet <xref:System.Windows.FrameworkElement> propriétés liées à la taille, telles que <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, et <xref:System.Windows.FrameworkElement.Margin%2A>, sont évaluées.  
   
--   <xref:System.Windows.Controls.Panel>-logique spécifique est appliquée, telles que la <xref:System.Windows.Controls.DockPanel.Dock%2A> propriété de la <xref:System.Windows.Controls.DockPanel>, ou <xref:System.Windows.Controls.StackPanel.Orientation%2A> propriété de la <xref:System.Windows.Controls.StackPanel>.  
+-   <xref:System.Windows.Controls.Panel>-logique spécifique est appliquée, telles que la <xref:System.Windows.Controls.DockPanel.Dock%2A> propriété de la <xref:System.Windows.Controls.DockPanel>, ou le <xref:System.Windows.Controls.StackPanel.Orientation%2A> propriété de la <xref:System.Windows.Controls.StackPanel>.  
   
 -   Le contenu est réorganisé, ou positionné, après que tous les objets enfants ont été mesurés.  
   
@@ -40,22 +40,22 @@ La conception de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sh
   
 -   Un objet enfant est ajouté à la collection.  
   
--   A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> est appliqué à l’objet enfant.  
+-   Un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> est appliqué à l’objet enfant.  
   
 -   Le <xref:System.Windows.UIElement.UpdateLayout%2A> méthode est appelée pour l’objet enfant.  
   
 -   Quand une modification est apportée à la valeur d’une propriété de dépendance marquée avec des métadonnées qui affectent les passes de mesure ou de réorganisation.  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Utiliser le panneau le plus efficace si possible  
- La complexité du processus de disposition est directement basée sur le comportement de mise en page de la <xref:System.Windows.Controls.Panel>-éléments dérivés que vous utilisez. Par exemple, un <xref:System.Windows.Controls.Grid> ou <xref:System.Windows.Controls.StackPanel> contrôle fournit beaucoup plus de fonctionnalités qu’un <xref:System.Windows.Controls.Canvas> contrôle. Ce choix accru de fonctionnalités se traduit par une augmentation du coût des performances. Toutefois, si vous n’avez pas besoin de la fonctionnalité qui un <xref:System.Windows.Controls.Grid> contrôle fournit, vous devez utiliser les alternatives moins coûteux, comme un <xref:System.Windows.Controls.Canvas> ou un panneau de configuration personnalisé.  
+ La complexité du processus de disposition est directement basée sur le comportement de disposition de la <xref:System.Windows.Controls.Panel>-éléments dérivés que vous utilisez. Par exemple, un <xref:System.Windows.Controls.Grid> ou <xref:System.Windows.Controls.StackPanel> contrôle fournit beaucoup plus de fonctionnalités qu’un <xref:System.Windows.Controls.Canvas> contrôle. Ce choix accru de fonctionnalités se traduit par une augmentation du coût des performances. Toutefois, si vous n’avez pas besoin de la fonctionnalité qui un <xref:System.Windows.Controls.Grid> fournit de contrôle, vous devez utiliser les alternatives moins coûteuses, comme un <xref:System.Windows.Controls.Canvas> ou un panneau personnalisé.  
   
  Pour plus d’informations, consultez la page [Vue d’ensemble de Panel](../../../../docs/framework/wpf/controls/panels-overview.md).  
   
 ### <a name="update-rather-than-replace-a-rendertransform"></a>Mettre à jour RenderTransform au lieu de le remplacer  
- Vous ne pourrez pas mettre à jour un <xref:System.Windows.Media.Transform> au lieu de remplacer la valeur d’un <xref:System.Windows.UIElement.RenderTransform%2A> propriété. C’est notamment le cas dans les scénarios qui comportent une animation. En mettant à jour d’un fichier <xref:System.Windows.Media.Transform>, vous évitez d’initialiser un calcul de disposition inutile.  
+ Vous pourrez peut-être mettre à jour un <xref:System.Windows.Media.Transform> au lieu d’en remplaçant la valeur d’un <xref:System.Windows.UIElement.RenderTransform%2A> propriété. C’est notamment le cas dans les scénarios qui comportent une animation. En mettant à jour une existante <xref:System.Windows.Media.Transform>, vous évitez d’initier un calcul de disposition inutile.  
   
 ### <a name="build-your-tree-top-down"></a>Générer votre arborescence de haut en bas  
- Quand un nœud est ajouté ou supprimé de l’arborescence logique, des invalidations de propriété sont déclenchées sur le parent du nœud et tous ses enfants. De ce fait, il convient de toujours suivre un modèle de construction de haut en bas pour éviter le coût d’invalidations inutiles sur des nœuds qui ont déjà été validés. Le tableau suivant montre la différence entre la vitesse d’exécution entre la génération d’une arborescence haut-bas et bas en haut, où l’arborescence est 150 niveaux avec un seul <xref:System.Windows.Controls.TextBlock> et <xref:System.Windows.Controls.DockPanel> à chaque niveau.  
+ Quand un nœud est ajouté ou supprimé de l’arborescence logique, des invalidations de propriété sont déclenchées sur le parent du nœud et tous ses enfants. De ce fait, il convient de toujours suivre un modèle de construction de haut en bas pour éviter le coût d’invalidations inutiles sur des nœuds qui ont déjà été validés. Le tableau suivant montre la différence de vitesse d’exécution entre la génération d’une arborescence de haut en bas et bas en haut, où l’arborescence comprend 150 niveaux avec une seule <xref:System.Windows.Controls.TextBlock> et <xref:System.Windows.Controls.DockPanel> à chaque niveau.  
   
 |**Action**|**Construction d’arborescence (en ms)**|**Rendu — construction d’arborescence incluse (en ms)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
@@ -69,14 +69,14 @@ La conception de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sh
   
  Pour plus d’informations sur l’arborescence logique, consultez [Arborescences dans WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Planification des performances des applications](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
- [Tirer parti du matériel](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Comportement de l’objet](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
- [Ressources d'application](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Liaison de données](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Autres recommandations relatives aux performances](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>Voir aussi
+- [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Planification des performances des applications](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
+- [Tirer parti du matériel](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
+- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportement de l’objet](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
+- [Ressources d'application](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Liaison de données](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Autres recommandations relatives aux performances](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)

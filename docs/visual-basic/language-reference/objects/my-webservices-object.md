@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 7ae99bec5797591e53c6c77f5d9f88589352104c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b3a486cb886e8f39081f30a2849e2d14573cf5e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676339"
 ---
 # <a name="mywebservices-object"></a>My.WebServices, objet
 Fournit des propriétés pour la création et l’accès à une seule instance de chaque service Web XML référencé par le projet actuel.  
@@ -48,7 +48,7 @@ Fournit des propriétés pour la création et l’accès à une seule instance d
   
  Ce code ne fonctionne pas dans un projet d’application Web.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ### <a name="availability-by-project-type"></a>Disponibilité par Type de projet  
   
@@ -60,9 +60,9 @@ Fournit des propriétés pour la création et l’accès à une seule instance d
 |Bibliothèque de contrôles Windows|**Oui**|  
 |Bibliothèque de contrôles Web|**Oui**|  
 |Service Windows|**Oui**|  
-|Site web|Non|  
+|Site web|Aucune|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>  
- <xref:System.ArgumentException>  
- [Accès aux services web d’une application](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
+- <xref:System.ArgumentException>
+- [Accès aux services web d’une application](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

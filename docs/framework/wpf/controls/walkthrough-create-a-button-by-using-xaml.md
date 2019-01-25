@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606781"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Procédure pas à pas : Créer un bouton avec XAML
 L’objectif de cette procédure pas à pas est d’apprendre à créer un bouton animé pour une utilisation dans une application Windows Presentation Foundation (WPF). Cette procédure pas à pas utilise des styles et un modèle pour créer une ressource de bouton personnalisé qui permet la réutilisation du code et la séparation de la logique de bouton de la déclaration de bouton. Cette procédure pas à pas est écrite entièrement en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -361,7 +361,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Appuyez sur F5 pour exécuter l’application et cliquez sur l’un des boutons. Notez que le bouton reste en surbrillance une fois que vous cliquez dessus, car il a encore le focus. Si vous cliquez sur un autre bouton, le nouveau bouton Obtient le focus, tandis que le dernier le perd.  
   
-4.  **Ajouter des animations pour** <xref:System.Windows.UIElement.MouseEnter> **et** <xref:System.Windows.UIElement.MouseLeave> **:  ** Ensuite, nous ajouter certaines animations aux déclencheurs. Ajoutez le balisage suivant n’importe où à l’intérieur de la `ControlTemplate.Triggers` bloc.  
+4.  **Ajouter des animations pour** <xref:System.Windows.UIElement.MouseEnter> **et** <xref:System.Windows.UIElement.MouseLeave> **:** Ensuite, nous ajouter certaines animations aux déclencheurs. Ajoutez le balisage suivant n’importe où à l’intérieur de la `ControlTemplate.Triggers` bloc.  
   
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -431,9 +431,9 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
 -   Personnaliser le comportement pour les boutons en réponse aux actions de l’utilisateur (tel que <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, et <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) incluant des effets d’animation.  
   
-## <a name="see-also"></a>Voir aussi  
- [Créer un bouton à l'aide de Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Vue d’ensemble des effets bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Créer un bouton à l'aide de Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Vue d’ensemble des effets bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

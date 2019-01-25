@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a2c476280009a617573fb7989b2184cd9baa6a8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660682"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Assignation des variables objets (Visual Basic)
 Vous utilisez une instruction d’assignation normale pour assigner un objet à une variable objet. Vous pouvez affecter une expression d’objet ou le [rien](../../../../visual-basic/language-reference/nothing.md) mot clé, comme dans l’exemple suivant illustre.  
@@ -43,7 +43,7 @@ Dim testUri As New System.Uri("https://www.microsoft.com")
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## <a name="disassociation"></a>Dissociation  
+## <a name="disassociation"></a>Disassociation  
  Affectation à une variable objet `Nothing` interrompt l’association de la variable et un objet spécifique. Cela vous empêche de modifier accidentellement l’objet en modifiant la variable. Il vous permet également de tester si la variable objet pointe vers un objet valide, comme le montre l’exemple suivant.  
   
 ```  
@@ -75,10 +75,10 @@ End Sub
 addStandardText(Me)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Déclaration des variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Valeurs des variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Comment : déclarer une Variable objet et lui assigner un objet en Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [Guide pratique : faire en sorte qu'une variable objet ne fasse pas référence à une instance](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
- [Me, My, MyBase et MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Voir aussi
+- [Variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Déclaration des variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Valeurs des variables objets](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Guide pratique pour Déclarer une Variable objet et lui assigner un objet en Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [Guide pratique pour Crée un objet de Variable ne fait pas référence à une Instance](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
+- [Me, My, MyBase et MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

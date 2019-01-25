@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 92aadfe851514dcba713455664cf8f7b0aa1c17b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597539"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commentaires dans le code (Visual Basic)
 Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de commentaire (`'`). Ce symbole indique au compilateur de Visual Basic d’ignorer le texte suivant, ou le *commentaire*. Les commentaires sont de courtes explications destinées à éclairer ceux qui lisent le code.  
@@ -59,9 +59,9 @@ Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de c
 > [!NOTE]
 >  Vous pouvez également ajouter des commentaires à votre code en faisant précéder le texte du mot clé `REM`. Toutefois, le `'` symbole et le **commentaire**/**Uncomment** boutons sont plus faciles à utiliser et nécessitent moins de mémoire et espace.  
   
-## <a name="see-also"></a>Voir aussi  
- [Documentation de votre Code avec des commentaires XML](https://msdn.microsoft.com/magazine/dd722812.aspx)  
- [Guide pratique : créer une documentation XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)  
- [Structure de programme et conventions de codage](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [REM (instruction)](../../../visual-basic/language-reference/statements/rem-statement.md)
+## <a name="see-also"></a>Voir aussi
+- [Documentation de votre Code avec des commentaires XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Guide pratique pour Créer une Documentation XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Structure de programme et conventions de codage](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [REM (instruction)](../../../visual-basic/language-reference/statements/rem-statement.md)

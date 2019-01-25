@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : organisation des contrôles Windows Forms dans WPF'
+title: 'Procédure pas à pas : Organisation des Windows Forms contrôles dans WPF'
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 31afacd6bb387a4df9eb8d36d2dc224ead63cc68
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5947168fabfe8ec22203029d9ec89b9719728413
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697619"
 ---
-# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procédure pas à pas : organisation des contrôles Windows Forms dans WPF
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procédure pas à pas : Organisation des Windows Forms contrôles dans WPF
 Cette procédure pas à pas vous montre comment utiliser [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] des fonctionnalités de disposition pour réorganiser [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles dans une application hybride.  
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
@@ -54,7 +54,7 @@ Cette procédure pas à pas vous montre comment utiliser [!INCLUDE[TLA2#tla_winc
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Vous avez besoin de Visual Studio pour effectuer cette procédure pas à pas.
+Cette procédure pas à pas nécessite Visual Studio.
   
 ## <a name="creating-the-project"></a>Création du projet  
   
@@ -251,18 +251,18 @@ Vous avez besoin de Visual Studio pour effectuer cette procédure pas à pas.
      [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
      [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]
 
-3.  Ajoutez un appel à la `InitializeFlowLayoutPanel` méthode dans le constructeur.
+3.  Ajoutez un appel à la méthode `InitializeFlowLayoutPanel` dans le constructeur.
 
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
 4.  Appuyez sur F5 pour générer et exécuter l'application. Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément remplit la <xref:System.Windows.Controls.DockPanel>, et <xref:System.Windows.Forms.FlowLayoutPanel> réorganise ses contrôles enfants dans la valeur par défaut <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Considérations sur la disposition de l’élément WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Organisation des Windows Forms contrôles dans WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=159971)  
- [Procédure pas à pas : hébergement d'un contrôle composite Windows Forms dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Procédure pas à pas : Hébergement d'un contrôle composite WPF dans Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Considérations sur la disposition de l’élément WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Organisation des Windows Forms contrôles dans WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Procédure pas à pas : Hébergement d’un contrôle Composite de formulaires Windows dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procédure pas à pas : Hébergement d’un contrôle Composite WPF dans les Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

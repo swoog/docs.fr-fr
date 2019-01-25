@@ -2,14 +2,15 @@
 title: Diagnostic d’applications transactionnelles
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550277"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostic d’applications transactionnelles
-Cette rubrique décrit comment utiliser la gestion de Windows Communication Foundation (WCF) et la fonctionnalité de diagnostic pour dépanner une application transactionnelle.  
+Cette rubrique décrit comment utiliser la gestion de Windows Communication Foundation (WCF) et de la fonctionnalité de diagnostic pour résoudre les problèmes d’une application transactionnelle.  
   
 ## <a name="performance-counters"></a>Compteurs de performance  
  WCF fournit un ensemble standard de compteurs de performance pour mesurer les performances de votre application transactionnelle. Pour plus d’informations, consultez [Compteurs de performance](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
@@ -86,13 +87,13 @@ Cette rubrique décrit comment utiliser la gestion de Windows Communication Foun
 ## <a name="tracing"></a>Traçage  
  Les suivis vous permettent de surveiller et d'analyser les erreurs dans vos applications transactionnelles. Pour activer le suivi, procédez comme suit :  
   
--   Suivi WCF standard  
+-   Suivi de WCF standard  
   
-     Ce type de suivi est identique à celui des applications WCF. Pour plus d'informations, consultez [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Ce type de suivi est identique à celui n’importe quelle application WCF. Pour plus d'informations, consultez [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Suivi WS-AtomicTransaction  
   
-     Le suivi de WS-AtomicTransaction peut être activé à l’aide de la [l’utilitaire de Configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Un suivi de ce type permet de connaître l’état des transactions et des participants d’un système. Pour activer également le suivi du modèle de service interne, affectez une valeur valide de l'énumération `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` à la clé de registre <xref:System.Diagnostics.SourceLevels>. Vous pouvez activer la journalisation des messages de la même façon que d’autres applications WCF.  
+     Suivi de WS-AtomicTransaction peut être activé à l’aide de la [(wsatConfig.exe) de l’utilitaire de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Un suivi de ce type permet de connaître l’état des transactions et des participants d’un système. Pour activer également le suivi du modèle de service interne, affectez une valeur valide de l'énumération `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` à la clé de registre <xref:System.Diagnostics.SourceLevels>. Vous pouvez activer l’enregistrement des messages dans la même façon que d’autres applications WCF.  
   
 -   Suivi `System.Transactions`  
   
@@ -117,9 +118,9 @@ Cette rubrique décrit comment utiliser la gestion de Windows Communication Foun
     </configuration>  
     ```  
   
-     Cela permet également le suivi WCF, WCF utilise également le <xref:System.Transactions> infrastructure.  
+     Cela permet également le suivi de WCF, WCF utilise également le <xref:System.Transactions> infrastructure.  
   
-## <a name="see-also"></a>Voir aussi  
- [Administration et diagnostics](../../../../docs/framework/wcf/diagnostics/index.md)  
- [Configuration du suivi](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>Voir aussi
+- [Administration et diagnostics](../../../../docs/framework/wcf/diagnostics/index.md)
+- [Configuration du suivi](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

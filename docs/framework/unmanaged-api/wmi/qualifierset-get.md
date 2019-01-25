@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 357182d6157b63f1bccf47cb43f0c78dec5875cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625937"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get (fonction)
 Obtient le qualificateur nommé spécifié.  
@@ -53,7 +53,7 @@ HRESULT QualifierSet_Get (
 [in] Le nom du qualificateur dont la valeur est demandée.
 
 `lFlags`   
-[in] Réservé. Ce paramètre doit être 0.
+[in] Réservée. Ce paramètre doit être 0.
 
 `pVal`   
 [out] Cas de réussite, le type correct et la valeur du qualificateur. Si la fonction échoue, le `VARIANT` vers lequel pointe `pVal` n’est pas modifié. Si ce paramètre est `null`, le paramètre est ignoré.
@@ -67,7 +67,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre n’est pas valide. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Le qualificateur spécifié n’existe pas. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
@@ -75,12 +75,12 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 Cette fonction encapsule un appel à la [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) (méthode).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

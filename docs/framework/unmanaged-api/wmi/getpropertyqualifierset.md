@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: ec91a1f6fba70e3c9706541dc641ddd019d44841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642202"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet (fonction)
 Récupère le jeu de qualificateurs pour une propriété particulière.
@@ -59,10 +59,10 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Il y a eu une défaillance générale. |
+|`WBEM_E_FAILED` | 0x80041001 | Il y a eu une défaillance générale. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | La méthode spécifiée n’existe pas. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre est `null`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un paramètre est `null`. |
 | `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | La fonction tente d’obtenir des qualificateurs de propriété système. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
@@ -76,12 +76,12 @@ Un appel à cette fonction est prise en charge uniquement si l’objet actuel es
 
 Étant donné que les propriétés système n’ont des qualificateurs d’aucun, la fonction retourne `WBEM_E_SYSTEM_PROPERTY` si vous tentez d’obtenir un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) pointeur pour une propriété système.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

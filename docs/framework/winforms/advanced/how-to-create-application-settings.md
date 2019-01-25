@@ -1,5 +1,5 @@
 ---
-title: "Comment : créer des paramètres d'application"
+title: 'Procédure : Créer des paramètres d’Application'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558954"
 ---
-# <a name="how-to-create-application-settings"></a>Comment : créer des paramètres d'application
+# <a name="how-to-create-application-settings"></a>Procédure : Créer des paramètres d’Application
 À l'aide de code managé, vous pouvez créer des paramètres d'application et les lier à des propriétés ou des contrôles sur votre formulaire, pour que ces paramètres soient chargés et enregistrés automatiquement au moment de l'exécution.  
   
  Dans la procédure suivante, vous allez créer manuellement une classe wrapper qui dérive de <xref:System.Configuration.ApplicationSettingsBase>. Vous ajouterez à cette classe une propriété accessible publiquement pour chaque paramètre d'application que vous souhaitez exposer.  
   
- Vous pouvez également appliquer cette procédure avec un minimum de code dans le concepteur Visual Studio.  Consultez également [Comment : créer des Application paramètres de l’aide du concepteur](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Vous pouvez également appliquer cette procédure avec un minimum de code dans le concepteur Visual Studio.  Voir également [Guide pratique pour Créer des paramètres d’Application à l’aide du concepteur](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Pour créer des paramètres d'application par programmation  
   
@@ -46,8 +46,8 @@ ms.locfileid: "48581873"
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Le fournisseur de paramètres par défaut, <xref:System.Configuration.LocalFileSettingsProvider>, conserve les informations dans des fichiers de configuration en texte brut. Cela limite la sécurité à la sécurité d'accès de fichier fournie par le système d'exploitation pour l'utilisateur actuel. Pour cette raison, vous devez faire attention aux informations stockées dans les fichiers de configuration. Par exemple, l'une des utilisations courantes des paramètres d'application consiste à stocker des chaînes de connexion qui pointent vers le magasin de données de l'application. Toutefois, pour des raisons de sécurité, ces chaînes ne doivent pas inclure de mots de passe. Pour plus d'informations sur les chaînes de connexion, consultez <xref:System.Configuration.SpecialSetting>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Configuration.SpecialSettingAttribute>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Vue d'ensemble des paramètres d'application](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Guide pratique pour valider des paramètres d'application](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Configuration.SpecialSettingAttribute>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Vue d'ensemble des paramètres d'application](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Guide pratique pour Valider les paramètres d’Application](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

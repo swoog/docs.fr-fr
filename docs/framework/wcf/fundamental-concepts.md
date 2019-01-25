@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664012"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concepts fondamentaux concernant Windows Communication Foundation
 Ce document fournit une vue d’ensemble de l’architecture de Windows Communication Foundation (WCF). Il vise à vous expliquer des concepts clés et la manière dont ils se combinent. Pour obtenir un didacticiel sur la création de la version la plus simple d’un service WCF et un client, consultez [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). Pour découvrir la programmation WCF, consultez [programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -65,7 +65,7 @@ Ce document fournit une vue d’ensemble de l’architecture de Windows Communic
  point de terminaison d'infrastructure  
  Point de terminaison exposé par l'infrastructure pour faciliter les fonctionnalités qui sont exigées ou sont fournies par le service qui n'est pas en rapport avec un contrat de service. Par exemple, un service peut avoir un point de terminaison d'infrastructure qui fournit des informations de métadonnées.  
   
- address  
+ adresse  
  Spécifie l'emplacement de réception des messages. Elle est indiquée comme un URI (Uniform Resource Identifier). La partie schématique de l'URI nomme le mécanisme de transport à utiliser pour atteindre l'adresse, tel que HTTP et TCP. La partie hiérarchique de l'URI contient un emplacement unique dont le format dépend du mécanisme de transport.  
   
  L'adresse de point de terminaison vous permet de créer des adresses uniques pour chaque point de terminaison d'un service, ou dans certaines conditions, de faire partager une adresse à plusieurs points de terminaison. L'exemple suivant représente une adresse qui fait appel au protocole HTTPS avec un port non défini par défaut :  
@@ -152,7 +152,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  Abrégé pour l'ensemble croissant des spécifications de services Web (WS), telles que WS-Security, WS-ReliableMessaging et ainsi de suite, implémentées dans WCF.  
   
-## <a name="see-also"></a>Voir aussi  
- [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Architecture Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
- [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Voir aussi
+- [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Architecture Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
+- [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

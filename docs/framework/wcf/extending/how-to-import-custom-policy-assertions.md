@@ -1,18 +1,18 @@
 ---
-title: 'Comment : importer des assertions de stratégie personnalisées'
+title: 'Procédure : Importer des Assertions de stratégie personnalisée'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674779"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Comment : importer des assertions de stratégie personnalisées
+# <a name="how-to-import-custom-policy-assertions"></a>Procédure : Importer des Assertions de stratégie personnalisée
 Les assertions de stratégie décrivent les fonctions et les exigences d’un point de terminaison de service.  Les applications clientes peuvent utiliser des assertions de stratégie dans les métadonnées de service pour configurer la liaison cliente ou personnaliser le contrat de service d'un point de terminaison de service.  
   
  Les assertions de stratégie personnalisées sont importées en implémentant l'interface <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> et en passant cet objet au système de métadonnées ou en enregistrant le type d'implémentation dans le fichier de configuration de votre application.  Les implémentations de l'interface <xref:System.ServiceModel.Description.IPolicyImportExtension> doivent fournir un constructeur par défaut.  
@@ -31,7 +31,7 @@ Les assertions de stratégie décrivent les fonctions et les exigences d’un po
   
 ### <a name="to-implement-the-systemservicemodeldescriptionipolicyimportextension-interface-on-any-class"></a>Pour implémenter l'interface System.ServiceModel.Description.IPolicyImportExtension sur une classe  
   
-1.  Dans la méthode <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, recherchez, pour chaque sujet de stratégie qui vous intéresse, les assertions de stratégie que vous souhaitez importer en appelant la méthode appropriée (selon sur la portée de l'assertion de votre choix) sur l'objet <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> passé à la méthode. L'exemple de code suivant indique comment utiliser la méthode <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> pour localiser l'assertion de stratégie personnalisée et la supprimer de la collection en une étape. Si vous utilisez la méthode de suppression pour localiser et supprimer l'assertion, l'étape 4 n'est pas nécessaire.  
+1.  Dans la méthode <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, recherchez, pour chaque sujet de stratégie qui vous intéresse, les assertions de stratégie que vous souhaitez importer en appelant la méthode appropriée (selon sur la portée de l'assertion de votre choix) sur l'objet <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> passé à la méthode. L’exemple de code suivant indique comment utiliser la méthode <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> pour localiser l’assertion de stratégie personnalisée et la supprimer de la collection en une étape. Si vous utilisez la méthode de suppression pour localiser et supprimer l'assertion, l'étape 4 n'est pas nécessaire.  
   
      [!code-csharp[CustomPolicySample#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyimporter.cs#9)]
      [!code-vb[CustomPolicySample#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyimporter.vb#9)]  
@@ -40,11 +40,11 @@ Les assertions de stratégie décrivent les fonctions et les exigences d’un po
   
 3.  Exécutez la personnalisation sur la liaison ou le contrat qui prend en charge la fonction ou l’exigence spécifiée par l’assertion de stratégie. En général, les assertions indiquent qu'une liaison requiert une configuration particulière ou un élément de liaison spécifique. Apportez ces modifications en accédant à la propriété <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType>. D'autres assertions requièrent la modification du contrat.  Vous pouvez accéder et modifier le contrat à l'aide de la propriété <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType>.  Notez que votre importateur de stratégie peut être appelé plusieurs fois pour la même liaison et le même contrat, mais pour des alternatives de stratégie différentes en cas d’échec de l’importation d’une alternative de stratégie. Votre code doit être résilient à ce comportement.  
   
-4.  Supprimez l’assertion de stratégie personnalisée de la collection d’assertions. Si vous ne supprimez pas l’assertion de Windows Communication Foundation (WCF) suppose que l’importation de stratégie a échoué et n’importe pas la liaison associée. Si vous avez utilisé la méthode <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> pour localiser l'assertion de stratégie personnalisée et la supprimer de la collection en une étape, cette étape n'est pas nécessaire.  
+4.  Supprimez l’assertion de stratégie personnalisée de la collection d’assertions. Si vous ne supprimez pas l’assertion Windows Communication Foundation (WCF) suppose que l’importation de stratégie a échoué et n’importe pas la liaison associée. Si vous avez utilisé la méthode <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> pour localiser l’assertion de stratégie personnalisée et la supprimer de la collection en une étape, cette étape n’est pas nécessaire.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Pour insérer l'importateur de stratégie personnalisé dans le système de métadonnées à l'aide d'un fichier de configuration  
   
-1.  Ajouter le type d’importateur à la `<extensions>` élément à l’intérieur du [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) élément dans le fichier de configuration du client.  
+1.  Ajouter le type d’importateur à le `<extensions>` élément à l’intérieur du [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) élément dans le fichier de configuration du client.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,16 +55,16 @@ Les assertions de stratégie décrivent les fonctions et les exigences d’un po
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Pour insérer l'importateur de stratégie personnalisé dans le système de métadonnées à l'aide de Svcutil.exe  
   
-1.  Ajouter le type d’importateur à la `<extensions>` élément à l’intérieur du [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) élément dans le fichier de configuration Svcutil.exe.config. Vous pouvez également pointer Svcutil.exe pour charger les types d'importateur de stratégie enregistrés dans un autre fichier de configuration à l'aide de l'option `/svcutilConfig`.  
+1.  Ajouter le type d’importateur à le `<extensions>` élément à l’intérieur du [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) élément dans le fichier de configuration Svcutil.exe.config. Vous pouvez également pointer Svcutil.exe pour charger les types d'importateur de stratégie enregistrés dans un autre fichier de configuration à l'aide de l'option `/svcutilConfig`.  
   
-2.  Utilisez [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour importer les métadonnées et l’importateur est appelée automatiquement.  
+2.  Utilisez [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour importer les métadonnées, l’importateur étant appelé automatiquement.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>Pour insérer par programme l'importateur de stratégie personnalisé dans le système de métadonnées  
   
 1.  Ajoutez l'importateur à la propriété <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> (par exemple, si vous utilisez <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>) avant d'importer les métadonnées.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- [Extension du système de métadonnées](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- [Extension du système de métadonnées](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

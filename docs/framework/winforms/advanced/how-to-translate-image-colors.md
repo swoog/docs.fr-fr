@@ -1,5 +1,5 @@
 ---
-title: "Comment : traduire les couleurs d'une image"
+title: 'Procédure : Traduire les couleurs d’Image'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 48f506f76ff6e9ca648822d073b6f6a852b9ca8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a3ed1f3f6b3e89c8df160b7e753839e20acd877
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549757"
 ---
-# <a name="how-to-translate-image-colors"></a>Comment : traduire les couleurs d'une image
-Une traduction ajoute une valeur à une ou plusieurs des quatre composantes de couleur. Les entrées de matrice de couleurs représentant les traductions sont présentées dans le tableau suivant.  
+# <a name="how-to-translate-image-colors"></a>Procédure : Traduire les couleurs d’Image
+Une traduction ajoute une valeur à une ou plusieurs des quatre composantes de couleur. Les entrées de matrice de couleurs qui représentent les traductions sont présentées dans le tableau suivant.  
   
 |Composant à traduire|Entrée de la matrice|  
 |--------------------------------|------------------|  
@@ -27,13 +27,13 @@ Une traduction ajoute une valeur à une ou plusieurs des quatre composantes de c
 |Alpha|[4][3]|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant construit une <xref:System.Drawing.Image> objet à partir du fichier ColorBars.bmp. Puis le code ajoute 0,75 au composant rouge de chaque pixel de l’image. L’image d’origine est dessinée en même temps que l’image transformée.  
+ L’exemple suivant construit un <xref:System.Drawing.Image> objet à partir du fichier ColorBars.bmp. Le code ajoute ensuite 0,75 au composant rouge de chaque pixel dans l’image. L’image d’origine est dessinée en même temps que l’image transformée.  
   
  L’illustration suivante montre l’image d’origine sur la gauche et l’image transformée sur la droite.  
   
- ![Traduction des couleurs](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
+ ![Traduire les couleurs](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
   
- Le tableau suivant répertorie les vecteurs de couleur pour les quatre barres avant et après la traduction rouge. Notez que la valeur maximale pour un composant de couleur est 1, le composant rouge dans la deuxième ligne ne change pas. (De même, la valeur minimale d’un composant de couleur est 0.)  
+ Le tableau suivant répertorie les vecteurs de couleur pour les quatre barres avant et après la traduction rouge. Notez que la valeur maximale pour un composant de couleur est 1, le composant rouge de la deuxième ligne ne change pas. (De même, la valeur minimale d’un composant de couleur est 0.)  
   
 |D'origine|Langue cible|  
 |--------------|----------------|  
@@ -46,10 +46,10 @@ Une traduction ajoute une valeur à une ou plusieurs des quatre composantes de c
  [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Remplacez `ColorBars.bmp` avec un nom de fichier image et le chemin d’accès valides sur votre système.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Remplacez `ColorBars.bmp` avec un nom de fichier d’image et le chemin d’accès valides sur votre système.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Drawing.Imaging.ColorMatrix>  
- <xref:System.Drawing.Imaging.ImageAttributes>  
- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Recoloriage des images](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Drawing.Imaging.ColorMatrix>
+- <xref:System.Drawing.Imaging.ImageAttributes>
+- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Recoloriage des images](../../../../docs/framework/winforms/advanced/recoloring-images.md)

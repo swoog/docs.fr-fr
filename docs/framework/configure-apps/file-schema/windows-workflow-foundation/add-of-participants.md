@@ -3,12 +3,12 @@ title: '&lt;add&gt; de &lt;participants&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: 6dbe8f6ca2bd797efc31e145ab1ca6cc82cee021
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc32b9b55ef8767be44cc69b9277c81d62a1944d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575893"
 ---
 # <a name="ltaddgt-of-ltparticipantsgt"></a>&lt;add&gt; de &lt;participants&gt;
 Configurez un participant au suivi qui écoute les enregistrements de suivi émis directement du runtime et les traite en fonction de sa configuration. Cela inclut l'écriture dans une sortie spécifique (par exemple, un fichier, une console ou le suivi d'événements pour Windows [ETW]), le traitement/regroupement des enregistrements ou toute autre combinaison requise.  
@@ -16,8 +16,8 @@ Configurez un participant au suivi qui écoute les enregistrements de suivi émi
  Pour plus d’informations de suivi de flux de travail et les participants de suivi, consultez [suivi et traçage de Workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [les participants au suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
   
 \<system.serviceModel>  
-\<suivi >  
-\<participants >  
+\<tracking>  
+\<participants>  
 \<add>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -60,7 +60,7 @@ Configurez un participant au suivi qui écoute les enregistrements de suivi émi
 ## <a name="example"></a>Exemple  
  L'exemple suivant présente la configuration du participant au suivi ETW standard dans le fichier Web.config.  
   
- L’Id de fournisseur par le Participant de suivi ETW pour écrire les enregistrements de suivi ETW est défini dans le  **\<diagnostics >** section. Un profil est associé au participant au suivi pour spécifier les enregistrements de suivi auxquels il est abonné. Cela est défini par le **profileName** attribut de la  **\<Ajouter >** élément. Une fois qu’ils sont définis, le participant au suivi est ajouté à la  **\<etwTracking >** comportement de service. Les participants au suivi sélectionnés sont ajoutés aux extensions de l’instance de flux de travail, afin qu’ils commencent à recevoir les enregistrements de suivi.  
+ L’Id de fournisseur qui le Participant de suivi ETW utilise pour écrire les enregistrements de suivi dans ETW est défini dans le  **\<diagnostics >** section. Un profil est associé au participant au suivi pour spécifier les enregistrements de suivi auxquels il est abonné. Cela est défini par le **profileName** attribut de la  **\<Ajouter >** élément. Une fois que ceux-ci sont définis, le participant au suivi est ajouté à la  **\<etwTracking >** comportement de service. Les participants au suivi sélectionnés sont ajoutés aux extensions de l’instance de flux de travail, afin qu’ils commencent à recevoir les enregistrements de suivi.  
   
 ```xml  
 <configuration>   
@@ -87,9 +87,9 @@ Configurez un participant au suivi qui écoute les enregistrements de suivi émi
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Participants de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
+- [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Participants de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

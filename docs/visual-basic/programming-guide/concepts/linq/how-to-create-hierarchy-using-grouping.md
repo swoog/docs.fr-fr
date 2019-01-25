@@ -1,21 +1,21 @@
 ---
-title: 'Comment : créer la hiérarchie à l’aide de regroupement (Visual Basic)'
+title: 'Procédure : Créer une hiérarchie à l’aide de regroupement (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: 9df85a52d63c4d7dbffb99a47378d3a1efc10cca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7c77d0e6b67f21d9d6e0ca270874641011e5924
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520995"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Comment : créer la hiérarchie à l’aide de regroupement (Visual Basic)
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Procédure : Créer une hiérarchie à l’aide de regroupement (Visual Basic)
 Cet exemple montre comment grouper des données, puis générer du code XML basé sur le regroupement.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple groupe tout d'abord les données par catégorie, puis il génère un nouveau fichier XML dans lequel la hiérarchie XML reflète le regroupement.  
   
- Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Données numériques (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Données numériques (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -79,5 +79,5 @@ Console.WriteLine(newData)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Techniques de requêtes (LINQ to XML) avancées (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Requête Techniques avancées (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

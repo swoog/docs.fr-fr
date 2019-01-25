@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b9349291979e76650f07db5e433620554928eb4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614599"
 ---
 # <a name="data-contract-surrogates"></a>Substituts de contrats de données
 Le contrat de données *substitut* est une fonctionnalité avancée reposant sur le modèle de contrat de données. Cette fonctionnalité est destinée à la personnalisation et à la substitution de type dans les situations où les utilisateurs souhaitent changer la manière dont un type est sérialisé, désérialisé ou projeté dans des métadonnées. On peut par exemple utiliser un substitut lorsque aucun contrat de données n'a été spécifié pour le type, que les champs et propriétés ne sont pas marqués avec l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> ou que les utilisateurs souhaitent créer des variations de schéma de manière dynamique.  
@@ -33,7 +33,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
 ### <a name="getdatacontracttype"></a>GetDataContractType  
  La méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> établit une correspondance entre les types. Cette méthode est requise pour la sérialisation, la désérialisation, l'importation et l'exportation.  
   
- La première tâche consiste à définir les types qui seront mappés à d’autres types. Par exemple :  
+ La première tâche consiste à définir les types qui seront mappés à d’autres types. Exemple :  
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
@@ -54,13 +54,13 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
 ### <a name="getobjecttoserialize-method"></a>Méthode GetObjectToSerialize  
  La méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> convertit l'instance de type d'origine en instance de type substitué. La méthode est requise pour la sérialisation.  
   
- L'étape suivante consiste à définir la façon dont les données physiques seront mappées de l'instance d'origine au substitut en implémentant la méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>. Par exemple :  
+ L'étape suivante consiste à définir la façon dont les données physiques seront mappées de l'instance d'origine au substitut en implémentant la méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>. Exemple :  
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
  La méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> est appelée lorsqu'un objet est sérialisé. Cette méthode transfère des données du type d'origine aux champs du type substitué. Les champs peuvent être mappés directement à des champs de substitution, ou des manipulations des données d'origine peuvent être stockées dans le substitut. Certaines utilisations possibles incluent : mappage direct des champs, exécution d'opérations sur les données à stocker dans les champs substitués, ou stockage du XML du type d'origine dans le champ substitué.  
   
- Le paramètre `targetType` fait référence au type déclaré du membre. Ce paramètre est le type substitué retourné par la méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. Le sérialiseur n'applique pas l'impératif selon lequel l'objet retourné doit être assignable à ce type. Le `obj` paramètre est l’objet à sérialiser et sera converti en son substitut si nécessaire. Cette méthode doit retourner l'objet d'entrée si le substitué ne gère pas l'objet. Autrement, le nouvel objet de substitution sera retourné. Le substitut n'est pas appelé si l'objet est null. Plusieurs mappages de substitution pour différentes instances peuvent être définis dans cette méthode.  
+ Le paramètre `targetType` fait référence au type déclaré du membre. Ce paramètre est le type substitué retourné par la méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. Le sérialiseur n'applique pas l'impératif selon lequel l'objet retourné doit être assignable à ce type. Le `obj` paramètre est l’objet à sérialiser et sera convertie en son substitut si nécessaire. Cette méthode doit retourner l'objet d'entrée si le substitué ne gère pas l'objet. Autrement, le nouvel objet de substitution sera retourné. Le substitut n'est pas appelé si l'objet est null. Plusieurs mappages de substitution pour différentes instances peuvent être définis dans cette méthode.  
   
  Lorsque vous créez un <xref:System.Runtime.Serialization.DataContractSerializer>, vous pouvez faire en sorte qu'il conserve les références d'objets. (Pour plus d’informations, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Vous devez pour cela affecter au paramètre `preserveObjectReferences` dans son constructeur la valeur `true`. Dans ce cas, le substitut est appelé une seule fois pour un objet puisque toutes les sérialisations suivantes écrivent simplement la référence dans le flux. Si `preserveObjectReferences` a la valeur `false`, le substitut est appelé chaque fois qu'une instance est rencontrée.  
   
@@ -71,7 +71,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
 ### <a name="getdeserializedobject-method"></a>Méthode GetDeserializedObject  
  La méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> convertit l'instance de type substitué en instance de type d'origine. Elle est requise pour la désérialisation.  
   
- La tâche suivante consiste à définir la façon dont les données physiques seront mappées de l’instance de substitution à l’original. Par exemple :  
+ La tâche suivante consiste à définir la façon dont les données physiques seront mappées de l’instance de substitution à l’original. Exemple :  
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
@@ -84,7 +84,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
  L'exemple précédent reconvertit des objets de type `InventorySurrogated` en type `Inventory` initial. Dans ce cas, les données sont retransférées directement à partir de `InventorySurrogated` vers ses champs correspondants dans `Inventory`. Étant donné qu'il n'y a pas de manipulations de données, chacun des champs membres contiendra les mêmes valeurs qu'avant la sérialisation.  
   
 ### <a name="getcustomdatatoexport-method"></a>Méthode GetCustomDataToExport  
- Lors de l'exportation d'un schéma, la méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> est facultative. Elle est utilisée pour insérer des conseils ou des données supplémentaires dans le schéma exporté. Les données supplémentaires peuvent être insérées au niveau du membre ou au niveau du type. Par exemple :  
+ Lors de l'exportation d'un schéma, la méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> est facultative. Elle est utilisée pour insérer des conseils ou des données supplémentaires dans le schéma exporté. Les données supplémentaires peuvent être insérées au niveau du membre ou au niveau du type. Exemple :  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -116,7 +116,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
 ### <a name="processimportedtype-method"></a>Méthode ProcessImportedType  
  La méthode <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> personnalise tout type créé à partir de l'importation de schéma. Cette méthode est facultative.  
   
- Lors de l'importation d'un schéma, cette méthode permet de personnaliser tout type importé et toute information de compilation. Par exemple :  
+ Lors de l'importation d'un schéma, cette méthode permet de personnaliser tout type importé et toute information de compilation. Exemple :  
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   
@@ -126,12 +126,12 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
   
  Si des données personnalisées sont insérées pendant l'exportation des métadonnées, elles doivent être fournies à l'utilisateur pendant l'importation afin de pouvoir être utilisées. Ces données personnalisées peuvent être utilisées pour des conseils de modèle de programmation ou autres commentaires. Chaque instance `CodeTypeDeclaration` et <xref:System.CodeDom.CodeTypeMember> inclut des données personnalisées en tant que propriété <xref:System.CodeDom.CodeObject.UserData%2A>, faisant l'objet d'un cast en type `IDataContractSurrogate`.  
   
- L'exemple ci-dessus apporte des modifications au schéma importé. Le code conserve des membres privés du type d'origine en utilisant un substitut. Le modificateur d'accès par défaut lors de l'importation d'un schéma est `public`. Par conséquent, tous les membres du schéma de substitution seront publics à moins d'être modifiés, comme dans cet exemple. Pendant l'exportation, des données personnalisées sont insérées dans les métadonnées à propos des membres privés. L’exemple consulte les données personnalisées, vérifie si le modificateur d’accès est privé, puis rend le membre approprié privé en définissant ses attributs. Sans cette personnalisation, le membre `numpens` serait défini comme public au lieu de privé.  
+ L'exemple ci-dessus apporte des modifications au schéma importé. Le code conserve des membres privés du type d'origine en utilisant un substitut. Le modificateur d’accès par défaut lors de l’importation d’un schéma est `public`. Par conséquent, tous les membres du schéma de substitution seront publics à moins d'être modifiés, comme dans cet exemple. Pendant l'exportation, des données personnalisées sont insérées dans les métadonnées à propos des membres privés. L’exemple consulte les données personnalisées, vérifie si le modificateur d’accès est privé, puis rend le membre approprié privé en définissant ses attributs. Sans cette personnalisation, le membre `numpens` serait défini comme public au lieu de privé.  
   
 ### <a name="getknowncustomdatatypes-method"></a>Méthode GetKnownCustomDataTypes  
  Cette méthode obtient des types de données personnalisés définis à partir du schéma. Elle est facultative pour l'importation de schéma.  
   
- La méthode est appelée au début de l'exportation et de l'importation de schéma. Elle retourne les types de données personnalisés utilisés dans le schéma exporté ou importé. Un <xref:System.Collections.ObjectModel.Collection%601> (le paramètre `customDataTypes`), qui est une collection de types, est passé à la méthode. La méthode doit ajouter des types connus supplémentaires à cette collection. Les types de données personnalisés connus sont nécessaires pour activer la sérialisation et la désérialisation des données personnalisées à l'aide du <xref:System.Runtime.Serialization.DataContractSerializer>. Pour plus d’informations, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ La méthode est appelée au début de l'exportation et de l'importation de schéma. Elle retourne les types de données personnalisés utilisés dans le schéma exporté ou importé. Un <xref:System.Collections.ObjectModel.Collection%601> (le paramètre `customDataTypes`), qui est une collection de types, est passé à la méthode. La méthode doit ajouter des types connus supplémentaires à cette collection. Les types de données personnalisés connus sont nécessaires pour activer la sérialisation et la désérialisation des données personnalisées à l’aide du <xref:System.Runtime.Serialization.DataContractSerializer>. Pour plus d’informations, consultez [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implémentation d'un substitut  
  Pour utiliser le substitut de contrat de données dans WCF, vous devez suivre certaines procédures spéciales.  
@@ -141,7 +141,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>Pour implémenter la sérialisation et la désérialisation  
   
-1.  Créez une instance du <xref:System.ServiceModel.ServiceHost> pour votre service. Pour plus d’informations, consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1.  Créez une instance du <xref:System.ServiceModel.ServiceHost> pour votre service. Pour obtenir des instructions complètes, consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 2.  Pour chaque <xref:System.ServiceModel.Description.ServiceEndpoint> de l'hôte de service spécifié, recherchez son <xref:System.ServiceModel.Description.OperationDescription>.  
   
@@ -191,10 +191,10 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.IDataContractSurrogate>  
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
- <xref:System.Runtime.Serialization.ImportOptions>  
- <xref:System.Runtime.Serialization.ExportOptions>  
- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.IDataContractSurrogate>
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
+- <xref:System.Runtime.Serialization.ImportOptions>
+- <xref:System.Runtime.Serialization.ExportOptions>
+- [Utilisation de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

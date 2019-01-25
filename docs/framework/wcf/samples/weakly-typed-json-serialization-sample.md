@@ -2,15 +2,15 @@
 title: Weakly-typed JSON Serialization, exemple
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 07166b89729fed7911cb842313269e420ae401b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 212a5ea362600e833303711b750d1c7a0f7252b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676053"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Weakly-typed JSON Serialization, exemple
-Lors de la sérialisation d'un type défini par l'utilisateur dans un format de transmission donné, ou de la désérialisation d'un format de transmission dans un type défini par l'utilisateur, le type défini par l'utilisateur donné doit être disponible à la fois sur le service et sur le client. En général, l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> est alors appliqué à ces types définis par l'utilisateur, et l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est appliqué à leurs membres. Ce mécanisme s’applique également à l’utilisation d’objets JSON (JavaScript Object Notation), comme le décrit la rubrique [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+Lors de la sérialisation d'un type défini par l'utilisateur dans un format de transmission donné, ou de la désérialisation d'un format de transmission dans un type défini par l'utilisateur, le type défini par l'utilisateur donné doit être disponible à la fois sur le service et sur le client. En général, l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> est alors appliqué à ces types définis par l'utilisateur, et l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est appliqué à leurs membres. Ce mécanisme s’applique également lorsque vous travaillez avec des objets JavaScript Objet Notation (JSON), comme décrit dans la rubrique [Comment : Sérialiser et désérialiser des données JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  Dans certains scénarios, un service Windows Communication Foundation (WCF) ou un client doit accéder aux objets JSON générés par un service ou d’un client qui se trouve en dehors du contrôle du développeur. Comme plus de services Web exposent publiquement des API JSON, il peut devenir difficile pour les développeurs WCF construire des types définis par l’utilisateur locales dans lesquels désérialiser des objets JSON arbitraires. Cet exemple fournit un mécanisme qui permet aux développeurs WCF travailler avec des objets JSON désérialisés et arbitraires, sans créer de types définis par l’utilisateur. C'est ce que l'on appelle la *sérialisation faiblement typée* d'objets JSON, parce que le type dans lequel un objet JSON est désérialisé n'est pas connu au moment de la compilation.  
   

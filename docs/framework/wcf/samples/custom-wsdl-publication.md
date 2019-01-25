@@ -2,12 +2,12 @@
 title: Publication WSDL personnalisée
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 725b62a26d640e242010a01ff810ea90d5cc53bc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e09e79725b0a9e4ee34e4062c1434415cfc25d03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572921"
 ---
 # <a name="custom-wsdl-publication"></a>Publication WSDL personnalisée
 Cet exemple montre comment :  
@@ -16,7 +16,7 @@ Cet exemple montre comment :
   
 -   Implémenter <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> pour importer les annotations WSDL personnalisées ;  
   
--   Implémenter <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> et <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> sur un comportement de contrat personnalisé et un comportement d'opération personnalisé, respectivement, pour écrire des annotations importées en tant que commentaires dans le CodeDom pour le contrat et l'opération importés ;  
+-   Implémenter <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> et <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> sur un comportement de contrat personnalisé et un comportement d’opération personnalisé, respectivement, pour écrire des annotations importées en tant que commentaires dans le CodeDom pour le contrat et l’opération importés ;  
   
 -   Utilisez le <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> pour télécharger le WSDL, un <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> pour importer le WSDL à l’aide de l’importateur WSDL personnalisé et le <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> pour générer le code du client Windows Communication Foundation (WCF) avec les annotations WSDL en tant que / / / et ''' commentaires en c# et Visual De base.  
   
@@ -69,7 +69,7 @@ public interface ICalculator
   
  L'`WsdlDocumentationAttribute` implémente <xref:System.ServiceModel.Description.IContractBehavior> et <xref:System.ServiceModel.Description.IOperationBehavior>, donc les instances d'attribut sont ajoutées à la <xref:System.ServiceModel.Description.ContractDescription> correspondante ou à la <xref:System.ServiceModel.Description.OperationDescription> lorsque le service est ouvert. L'attribut implémente également <xref:System.ServiceModel.Description.IWsdlExportExtension>. Lorsque <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> est appelée, le <xref:System.ServiceModel.Description.WsdlExporter> utilisé pour exporter les métadonnées et le <xref:System.ServiceModel.Description.WsdlContractConversionContext> qui contient les objets de description du service sont passés comme des paramètres permettant la modification des métadonnées exportées.  
   
- Dans cet exemple, selon que l'objet de contexte d'exportation a une <xref:System.ServiceModel.Description.ContractDescription> ou une <xref:System.ServiceModel.Description.OperationDescription>, un commentaire est extrait de l'attribut à l'aide de la propriété de texte et est ajouté à l'élément d'annotation WSDL comme le montre le code suivant.  
+ Dans cet exemple, selon que l’objet de contexte d’exportation a une <xref:System.ServiceModel.Description.ContractDescription> ou une <xref:System.ServiceModel.Description.OperationDescription>, un commentaire est extrait de l’attribut à l’aide de la propriété de texte et est ajouté à l’élément d’annotation WSDL comme le montre le code suivant.  
   
 ```  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  

@@ -6,37 +6,37 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 233da06a2bfb422a1184e8fe44004615b4bc6fde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c2a48e99f99e3e00aca61fdcf688798affa214f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507302"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Liste des répertoires et des fichiers (Visual Basic)
-Mots clés du langage Visual Basic et les membres de la bibliothèque Runtime sont organisés selon leur fonction et leur utilisent.  
+Mots clés du langage Visual Basic et les membres de la bibliothèque Runtime sont organisés selon leur fonction et utilisent.  
   
- À l’aide de la `My` fonctionnalité permet une meilleure productivité et les performances dans les opérations d’e/s de fichier que l’utilisation de ces membres. Pour plus d'informations, consultez <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ À l’aide de la `My` fonctionnalité vous donne une meilleure productivité et performances dans les opérations d’e/s de fichier que l’utilisation de ces membres. Pour plus d'informations, consultez <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
 |**Action**|**Élément de langage**|  
 |----------------|--------------------------|  
-|Modifier un répertoire ou un dossier.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
-|Changez de lecteur.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
+|Modifier un répertoire ou dossier.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
+|Modifier le lecteur.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
 |Copier un fichier.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
 |Créer un répertoire ou un dossier.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
-|Supprimer un répertoire ou un dossier.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
+|Supprimer un répertoire ou dossier.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
 |Renommer un fichier, un répertoire ou un dossier.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
 |Retourne le chemin d’accès actuel.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
-|Retourne l’horodatage d’un fichier.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
-|Retourne les attributs d’étiquette, répertoire ou fichier.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
-|Retourne la longueur d’un fichier.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Retourne l’étiquette de volume ou le nom d’un fichier.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
+|Retourne l’horodatage de date/heure d’un fichier.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
+|Retourner le fichier, répertoire ou attributs d’étiquette.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
+|Retourne la longueur de.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|Retourne l’étiquette de nom ou le volume d’un fichier.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
 |Définir les informations d’attribut pour un fichier.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>Voir aussi  
- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)  
- [Membres de la bibliothèque runtime Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)  
- [Lecture à partir de fichiers](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [Écriture dans des fichiers](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- [Création, suppression et déplacement de fichiers et de répertoires](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- [Analyse des fichiers texte avec l’objet TextFieldParser](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+## <a name="see-also"></a>Voir aussi
+- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)
+- [Membres de la bibliothèque runtime Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Lecture à partir de fichiers](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Écriture dans des fichiers](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [Création, suppression et déplacement de fichiers et de répertoires](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+- [Analyse des fichiers texte avec l’objet TextFieldParser](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
