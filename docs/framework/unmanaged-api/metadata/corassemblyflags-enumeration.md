@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f99fb7a693c47b257abe9c0b783856179fc9f0eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582372"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags, énumération
 Contient des valeurs qui décrivent les métadonnées appliquées à une compilation d'assembly.  
@@ -59,7 +59,7 @@ typedef enum CorAssemblyFlags {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`afPublicKey`|Indique que la référence d’assembly conserve la clé publique complète non hachée.|  
+|`afPublicKey`|Indique que la référence d’assembly conserve la clé publique complète et non hachée.|  
 |`afPA_None`|Indique que l’architecture de processeur n’est pas spécifiée.|  
 |`afPA_MSIL`|Indique que l’architecture de processeur est neutre (PE32 +).|  
 |`afPA_x86`|Indique que l’architecture de processeur est x86 (PE32 +).|  
@@ -67,23 +67,23 @@ typedef enum CorAssemblyFlags {
 |`afPA_AMD64`|Indique que l’architecture de processeur est AMD X64 (PE32 +).|  
 |`afPA_ARM`|Indique que l’architecture de processeur ARM (PE32 +).|  
 |`afPA_NoPlatform`|Indique que l’assembly est un assembly de référence ; Autrement dit, elle s’applique à n’importe quelle architecture mais ne peut pas s’exécuter sur n’importe quelle architecture. Par conséquent, l’indicateur est identique à `afPA_Mask`.|  
-|`afPA_Specified`|Indique que les indicateurs de l’architecture processeur doivent être propagées vers le `AssemblyRef` enregistrement.|  
+|`afPA_Specified`|Indique que les indicateurs de l’architecture processeur doivent être propagés à la `AssemblyRef` enregistrement.|  
 |`afPA_Mask`|Masque qui décrit l’architecture de processeur.|  
 |`afPA_FullMask`|Spécifie que la description d’architecture de processeur est incluse.|  
-|`afPA_Shift`|Indique un compteur de décalage dans les indicateurs de l’architecture processeur vers et à partir de l’index.|  
+|`afPA_Shift`|Indique une valeur du décalage dans les indicateurs de l’architecture processeur vers et à partir de l’index.|  
 |`afEnableJITcompileTracking`|Indique la valeur correspondante à partir de la <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> de la <xref:System.Diagnostics.DebuggableAttribute>.|  
 |`afDisableJITcompileOptimizer`|Indique la valeur correspondante à partir de la <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> de la <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Indique que l’assembly peut être reciblé au moment de l’exécution à un assembly à partir d’un autre serveur de publication.|  
+|`afRetargetable`|Indique que l’assembly peut être reciblé au moment de l’exécution à un assembly à partir d’un éditeur différent.|  
 |`afContentType_Mask`|Masque qui décrit le type de contenu.|  
 |`afContentType_Default`|Indique le type de contenu par défaut.|  
-|`afContentType_WindowsRuntime`|Indique le [!INCLUDE[wrt](../../../../includes/wrt-md.md)] le type de contenu.|  
+|`afContentType_WindowsRuntime`|Indique le [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type de contenu.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

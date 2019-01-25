@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718661"
 ---
 # <a name="xaml-resources"></a>Ressources XAML
 Une ressource est un objet pouvant être réutilisé à plusieurs endroits de votre application. Par exemple, les styles et les pinceaux sont des ressources. Cette vue d’ensemble décrit comment utiliser des ressources dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Vous pouvez également créer et accéder aux ressources à l’aide de code, ou en utilisant indifféremment entre code et [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Pour plus d’informations, consultez [ressources et Code](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -153,12 +153,12 @@ Une ressource est un objet pouvant être réutilisé à plusieurs endroits de vo
   
  <xref:System.Windows.DataTemplate> a également une clé implicite. La clé implicite d’un <xref:System.Windows.DataTemplate> est la <xref:System.Windows.DataTemplate.DataType%2A> valeur de propriété. <xref:System.Windows.DataTemplate.DataType%2A> peut également être spécifié comme le nom du type, plutôt que d’utiliser explicitement [{x : Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Pour plus d’informations, consultez [vue d’ensemble de la création de modèles de données](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.ResourceDictionary>  
- [Ressources d'application](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Ressources et code](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Définir et référencer une ressource](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Vue d’ensemble de la gestion d’applications](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [x:Type, extension de balisage](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [StaticResource, extension de balisage](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [Extension de balisage DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.ResourceDictionary>
+- [Ressources d'application](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Ressources et code](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [Définir et référencer une ressource](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
+- [Vue d’ensemble de la gestion d’applications](../../../../docs/framework/wpf/app-development/application-management-overview.md)
+- [x:Type, extension de balisage](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [StaticResource, extension de balisage](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [Extension de balisage DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

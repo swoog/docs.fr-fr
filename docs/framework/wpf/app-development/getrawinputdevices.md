@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 0cb1184ddc3e8051a68dfed12367dea65a06b623
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 18564e0de8f88e89f8fb71d28ee3bfeccceea4ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50034487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507562"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 Permet à PresentationHost.exe de découvrir les périphériques d'entrée brute (périphériques d'interface utilisateur) qui intéressent l'application hôte.  
@@ -37,6 +37,6 @@ HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );
   
  Une fois la liste de périphériques d'entrée brute extraite, PresentationHost.exe s'inscrit auprès des périphériques pour recevoir les messages de notification WM_INPUT.  
   
-## <a name="see-also"></a>Voir aussi  
- [GetRawInputDeviceList](/windows/desktop/api/winuser/nf-winuser-getrawinputdevicelist)  
- [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)
+## <a name="see-also"></a>Voir aussi
+- [GetRawInputDeviceList](/windows/desktop/api/winuser/nf-winuser-getrawinputdevicelist)
+- [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)

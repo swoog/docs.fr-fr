@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5164e85ecc97de99dcc493c2ba5efa8fc3468471
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d48c3d701b0369ab00150625c26d94f4111b2d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607210"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo, structure
 Fournit des détails sur la `Event_MDAFired` événement qui déclenche la création d’un assistant débogage managé (MDA).  
@@ -39,29 +39,29 @@ typedef struct _MDAInfo {
   
 |Membre|Description|  
 |------------|-----------------|  
-|`lpMDACaption`|Le titre de l’Assistant Débogage MANAGÉ actuel. Le titre décrit le genre d’échec qui a déclenché la `Event_MDAFired` événement.|  
+|`lpMDACaption`|Le titre de l’Assistant Débogage MANAGÉ actuel. Le titre décrit le genre d’échec qui a déclenché le `Event_MDAFired` événement.|  
 |`lpMDAMessage`|Le message de sortie fourni par l’Assistant Débogage MANAGÉ actuel.|  
   
 ## <a name="remarks"></a>Notes  
- Assistants de débogage managés (MDA) sont outils de débogage qui fonctionnent conjointement avec le common language runtime (CLR) pour effectuer des tâches telles que l’identification des conditions non valides dans le moteur d’exécution ou le vidage des informations supplémentaires sur l’état de la moteur. MDA génèrent des messages XML sur les événements qui sont difficiles à intercepter. Ils sont particulièrement utiles pour déboguer des transitions entre code managé et non managé.  
+ Les Assistants Débogage managé (MDA) sont outils de débogage qui fonctionnent conjointement avec le common language runtime (CLR) pour effectuer des tâches telles que l’identification des conditions non valides dans le moteur d’exécution ou d’immersion des informations supplémentaires sur l’état de la moteur. Les MDA génèrent des messages XML sur les événements qui sont difficiles à intercepter. Ils sont particulièrement utiles pour déboguer des transitions entre code managé et non managé.  
   
- Le runtime effectue les étapes suivantes lorsqu’un événement qui déclenche la création d’un Assistant Débogage MANAGÉ est déclenché :  
+ Le runtime entreprend les actions suivantes lorsqu’un événement qui déclenche la création d’un Assistant Débogage MANAGÉ est déclenché :  
   
 -   Si l’hôte n’a pas inscrit un [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) instance en appelant [ICLROnEventManager::RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) recevoir les notifications d’un `Event_MDAFired` événement, le runtime continue avec son comportement par défaut, non hébergé.  
   
--   Si l’ordinateur hôte a inscrit un gestionnaire pour cet événement, le runtime vérifie si un débogueur est attaché au processus. S’il s’agit, le runtime arrête le débogueur. Lorsque le débogueur continue, il appelle l’hôte. Si aucun débogueur n’est attaché, le runtime appelle `IActionOnCLREvent::OnEvent` et passe un pointeur vers un `MDAInfo` l’instance comme le `data` paramètre.  
+-   Si l’hôte a inscrit un gestionnaire pour cet événement, le runtime vérifie si un débogueur est attaché au processus. Dans le cas, le runtime arrête le débogueur. Lorsque le débogueur continue, il appelle l’hôte. Si aucun débogueur n’est attaché, le runtime appelle `IActionOnCLREvent::OnEvent` et passe un pointeur vers un `MDAInfo` instance en tant que le `data` paramètre.  
   
- L’hôte peut choisir d’activer les MDA et d’être averti quand un Assistant Débogage MANAGÉ est activé. Cela permet de l’hôte de substituer le comportement par défaut et d’abandonner le thread managé qui a déclenché l’événement pour l’empêcher d’endommager l’état du processus. Pour plus d’informations sur l’utilisation des Assistants Débogage managé, consultez [diagnostic d’erreurs avec les Assistants Débogage managé](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ L’hôte peut choisir d’activer les MDA et d’être notifié lorsqu’un MDA est activé. Cela donne la possibilité de substituer le comportement par défaut et d’abandonner le thread managé qui a déclenché l’événement, pour empêcher d’endommager l’état du processus de l’hôte. Pour plus d’informations sur l’utilisation des Assistants Débogage managé, consultez [diagnostic d’erreurs avec les Assistants Débogage managé](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.idl  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Voir aussi
+- [Structures d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

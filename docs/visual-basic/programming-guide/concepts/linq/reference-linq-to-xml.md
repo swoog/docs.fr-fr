@@ -2,12 +2,12 @@
 title: Référence (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0f4cc4b9-361d-4de2-b4c3-be7cbd5dd47b
-ms.openlocfilehash: e40f15789454abcd6fc4b9dd9aeb30399c5161e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c8ee29068ebc6d39760530466da3c9718107149
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744854"
 ---
 # <a name="reference-linq-to-xml"></a>Référence (LINQ to XML)
 Cette rubrique contient des liens vers les rubriques de référence LINQ to XML.  
@@ -19,5 +19,5 @@ Cette rubrique contient des liens vers les rubriques de référence LINQ to XML.
   
  Pour de la documentation de référence pour les méthodes d'extension qui vous permettent d'évaluer des requêtes XPath sur une arborescence XML, consultez <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

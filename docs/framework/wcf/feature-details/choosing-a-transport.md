@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494442"
 ---
 # <a name="choosing-a-transport"></a>Choix d'un transport
 Cette rubrique traite des critères permettant de choisir parmi les trois principaux transports inclus dans Windows Communication Foundation (WCF) : HTTP, TCP et canaux nommés. WCF inclut également un message queuing (également appelé MSMQ) de transport, mais ce document ne couvre pas de message queuing.  
@@ -45,7 +45,7 @@ Cette rubrique traite des critères permettant de choisir parmi les trois princi
  Lorsque la communication est requise entre les différentes applications WCF sur un seul ordinateur, et que vous souhaitez empêcher toute communication provenant d’un autre ordinateur, puis utiliser le transport de canaux nommés. Une restriction supplémentaire est que les processus qui s'exécutent du Bureau à distance Windows peuvent être limités à la même session de Bureau à distance Windows sauf s'ils possèdent des privilèges élevés.  
   
 > [!WARNING]
->  Lorsque vous utilisez le transport de canal nommé avec une réservation d’URL WeakWildcard sur plusieurs sites hébergés dans IIS, l’erreur suivante peut se produire : une erreur s’est produite dans le Service d’Activation « NetPipeActivator » du protocole « net.pipe » lors de la tentative d’écoute pour le site « 2 », Par conséquent, le protocole est temporairement désactivé pour le site. Consultez le message d’exception pour plus d’informations. URL : WeakWildcard:net.pipe:/\<nom_machine > / état : ConflictingRegistration Exception : nom du processus : SMSvcHost ID de processus : 1076\  
+>  Lorsque vous utilisez le transport de canal nommé avec une réservation d’URL WeakWildcard sur plusieurs sites hébergés dans IIS, l’erreur suivante peut se produire : Une erreur s’est produite dans le Service d’Activation « NetPipeActivator » du protocole « net.pipe » lors de la tentative d’écoute pour le site « 2 », par conséquent, le protocole est temporairement désactivé pour le site. Consultez le message d’exception pour plus d’informations. URL : WeakWildcard:net.pipe:/\<nom_machine > / état : ConflictingRegistration Exception :  Nom du processus : ID de processus de SMSvcHost : 1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Points de décision permettant de choisir un transport  
  Le tableau suivant décrit les points de décision courants permettant de choisir un transport. Vous devez considérer tous les attributs et les transports supplémentaires qui s'appliquent à votre application. Identifiez les attributs qui sont importants pour votre application, les transports qui s'associent le mieux à chacun de vos attributs, puis sélectionnez les transports qui fonctionnent le mieux avec votre jeu d'attributs.  
@@ -61,16 +61,16 @@ Cette rubrique traite des critères permettant de choisir parmi les trois princi
 |Débit|Le débit mesure la quantité de données qui peuvent être transmises et traitées dans une période spécifiée. Comme pour la latence, le choix du transport peut affecter le débit pour les opérations de service. Pour augmenter le débit pour un transport, il est nécessaire de réduire à la fois les charges mémoire de transmission du contenu et la durée d'attente pour les échanges de messages. Les transports TCP et de canaux nommés ajoutent peu de charges mémoire au corps du message et prennent en charge une forme duplex native qui réduit le temps de réponse des messages.|TCP, canal nommé|  
 |Outillage|L'outillage correspond à la prise en charge par des applications tierces d'un protocole pour le développement, le diagnostic, l'hébergement et autres activités. Le développement d'outils et de logiciels compatibles avec le protocole HTTP implique un investissement particulièrement important.|HTTP|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Création de liaisons définies par l’utilisateur](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [Liaisons](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Création de liaisons définies par l’utilisateur](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

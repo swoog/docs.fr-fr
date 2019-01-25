@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0b3b92e29c5de7365cbf1196a387bc0c9c440755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582086"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Déploiement ClickOnce pour les Windows Forms
 Les rubriques suivantes décrivent [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], une technologie destinée à faciliter le déploiement des applications Windows Forms sur les ordinateurs clients.  
@@ -38,7 +38,7 @@ Les rubriques suivantes décrivent [!INCLUDE[ndptecclick](../../../includes/ndpt
  [ClickOnce et Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
  Décrit l'utilisation de la technologie Authenticode lors du déploiement d'applications approuvées.  
   
- [Procédure pas à pas : déploiement manuel d’une application ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [Procédure pas à pas : déploiement manuel d'une application ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Illustre l'utilisation des outils en ligne de commande et du Kit de développement logiciel pour déployer une application [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] sans utiliser Visual Studio.  
   
  [Guide pratique pour ajouter un éditeur approuvé à un ordinateur client pour les applications ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
@@ -62,10 +62,10 @@ Les rubriques suivantes décrivent [!INCLUDE[ndptecclick](../../../includes/ndpt
  [Guide pratique pour inclure un fichier de données dans une application ClickOnce](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  Illustre comment marquer un fichier pour qu'il soit disponible dans le répertoire de données [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d'ensemble des paramètres d'application](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Publication d’applications ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)  
- [Génération d’applications ClickOnce à partir de la ligne de commande](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
- [Débogage des applications ClickOnce qui utilisent System.Deployment.Application](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
- [Déploiement de composants COM avec ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)  
- [Guide pratique pour publier une application ClickOnce à l’aide de l’Assistant Publication](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+## <a name="see-also"></a>Voir aussi
+- [Vue d'ensemble des paramètres d'application](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Publication d’applications ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
+- [Génération d’applications ClickOnce à partir de la ligne de commande](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
+- [Débogage des applications ClickOnce qui utilisent System.Deployment.Application](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)
+- [Déploiement de composants COM avec ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)
+- [Guide pratique pour publier une application ClickOnce à l’aide de l’Assistant Publication](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

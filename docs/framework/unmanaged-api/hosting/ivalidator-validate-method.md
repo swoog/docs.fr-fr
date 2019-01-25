@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf2c343db459879ca95372e104aee68b22dee6b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03a8bf7e215794f4a2951fe4e2d54a791bda20e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594055"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate, méthode
-Valide le spécifié fichier exécutable portable (PE) ou un fichier Microsoft intermediate language (MSIL).  
+Valide le spécifié exécutable portable (PE) ou un fichier Microsoft intermediate language (MSIL).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +50,7 @@ HRESULT Validate (
  [in] Pointeur vers le domaine d’application dans lequel le fichier est chargé.  
   
  `ulFlags`  
- [in] Une combinaison d’opérations de [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) valeurs indiquant les validations qui doivent être effectuées.  
+ [in] Une combinaison au niveau du bit de [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) valeurs indiquant les validations qui doivent être effectuées.  
   
  `ulMaxError`  
  [in] Le nombre maximal d’erreurs autorisées avant de quitter la validation.  
@@ -62,19 +62,19 @@ HRESULT Validate (
  [in] Chaîne qui spécifie le nom du fichier à valider.  
   
  `pe`  
- [in] Pointeur vers la mémoire tampon dans laquelle le fichier est stocké.  
+ [in] Pointeur vers la mémoire tampon dans lequel le fichier est stocké.  
   
  `ulSize`  
  [in] La taille, en octets, du fichier à valider.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** IValidator.idl, IValidator.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- 
+## <a name="see-also"></a>Voir aussi
+

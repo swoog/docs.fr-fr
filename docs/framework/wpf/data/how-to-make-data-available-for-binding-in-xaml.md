@@ -1,5 +1,5 @@
 ---
-title: 'Comment : rendre des données disponibles pour la liaison en XAML'
+title: 'Procédure : Rendre des données disponibles pour la liaison en XAML'
 ms.date: 01/29/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 09a6fca48c06efca6f06b9e0617de9095197bd17
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 95871b6a8d11ad4086735bd3315c360885d027dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555464"
 ---
-# <a name="how-to-make-data-available-for-binding-in-xaml"></a>Comment : rendre des données disponibles pour la liaison en XAML
+# <a name="how-to-make-data-available-for-binding-in-xaml"></a>Procédure : Rendre des données disponibles pour la liaison en XAML
 Cette rubrique présente les différentes manières vous rendre les données disponibles pour la liaison dans [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], selon les besoins de votre application.  
   
 ## <a name="example"></a>Exemple  
@@ -42,6 +42,6 @@ Cette rubrique présente les différentes manières vous rendre les données dis
   
  Pour plus d’informations sur les nombreuses façons vous pouvez spécifier les données que vous liez à, consultez [spécifier la Source de liaison](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md). Pour plus d’informations sur les types de données que vous pouvez lier à ou d’implémenter votre propre [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objets pour la liaison, consultez [vue d’ensemble des Sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess Interface1
+title: ICorDebugProcess, Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06e4e3854a850c9639e93c8db2ec8ccd567b242b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae3f64b466e0d356b540cc9d6f3db881e27ac4aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709817"
 ---
-# <a name="icordebugprocess-interface1"></a>ICorDebugProcess Interface1
+# <a name="icordebugprocess-interface1"></a>ICorDebugProcess, Interface1
 Représente un processus qui exécute le code managé. Cette interface est une sous-classe de ICorDebugController.  
   
 ## <a name="methods"></a>Méthodes  
@@ -31,14 +31,14 @@ Représente un processus qui exécute le code managé. Cette interface est une s
 |Méthode|Description|  
 |------------|-----------------|  
 |[ClearCurrentException, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md)|Efface l’exception non managée actuelle sur le thread donné.|  
-|[EnableLogMessages, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enablelogmessages-method.md)|Active ou désactive l’envoi de messages de journal au débogueur.|  
+|[EnableLogMessages, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enablelogmessages-method.md)|Active et désactive l’envoi de messages de journal au débogueur.|  
 |[EnumerateAppDomains, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateappdomains-method.md)|Énumère tous les domaines d’application dans le processus.|  
 |[EnumerateObjects, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateobjects-method.md)|Non implémenté.|  
 |[GetHandle, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethandle-method.md)|Obtient un handle vers le processus.|  
 |[GetHelperThreadID, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethelperthreadid-method.md)|Obtient l’ID de thread de système d’exploitation (OS) pour le thread d’assistance interne du débogueur.|  
-|[GetID, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|Obtient l’ID de système d’exploitation (OS) du processus.|  
+|[GetID, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|Obtient l’ID de système d’exploitation (se) du processus.|  
 |[GetObject, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|Non implémenté.|  
-|[GetThread, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|Obtient l’instance ICorDebugThread qui a le thread du système d’exploitation spécifié ID.|  
+|[GetThread, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|Obtient l’instance ICorDebugThread qui a le thread de système d’exploitation spécifié ID.|  
 |[GetThreadContext, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|Obtient le contexte pour le thread donné.|  
 |[IsOSSuspended, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|Détermine si le thread a été interrompu à la suite du débogueur qui arrête le processus.|  
 |[IsTransitionStub, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-istransitionstub-method.md)|Détermine si une adresse est à l’intérieur d’un stub qui provoquera une transition vers du code managé.|  
@@ -54,14 +54,14 @@ Représente un processus qui exécute le code managé. Cette interface est une s
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorDebug, interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorDebug, interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

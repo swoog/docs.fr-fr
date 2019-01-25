@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c2c4f15b3fb1bc5b408382589a1c8213ffd246e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c44a150fa85ff0cbda4ff2b39acefb46045adad1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500287"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter, méthode
 Est appelé lors de la saisie d’un appel.  
@@ -43,7 +43,7 @@ HRESULT OnSyncCallEnter
  [in] ID de l’appel en cours de saisie. Consultez [call_id, Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] Mémoire tampon des appels.  
+ [in] Mémoire tampon d’appel.  
   
  `in_BufferSize`  
  [in] Taille de la mémoire tampon de l’appel, en octets.  
@@ -54,7 +54,7 @@ HRESULT OnSyncCallEnter
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Voir aussi  
- [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

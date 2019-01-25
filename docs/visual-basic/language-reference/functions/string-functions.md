@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: f6c7f28cee03c2d5ac258cf1e2c8956225334f7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612019"
 ---
 # <a name="string-functions-visual-basic"></a>Fonctions de chaîne (Visual Basic)
-Le tableau suivant répertorie les fonctions Visual Basic fournit de recherche et de manipuler des chaînes.  
+Le tableau suivant répertorie les fonctions fournies par Visual Basic pour rechercher et manipuler des chaînes.  
   
 |Méthode .NET framework|Description|  
 |---------------------------|-----------------|  
 |<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Retourne un `Integer` valeur représentant le code de caractère correspondant à un caractère.|  
 |<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Retourne le caractère associé au code de caractère spécifié.|  
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Retourne un tableau de base zéro qui contient un sous-ensemble d’un `String` tableau en fonction de critères de filtre spécifiés.|  
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Retourne un tableau de base zéro qui contient un sous-ensemble d’un `String` tableau basé sur des critères de filtre spécifiés.|  
 |<xref:Microsoft.VisualBasic.Strings.Format%2A>|Retourne une chaîne mise en forme conformément aux instructions contenues dans un format `String` expression.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Retourne une expression de mise en forme en tant que valeur monétaire utilisant le symbole monétaire défini dans le panneau de configuration système.|  
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Retourne une expression sous formatée de valeur monétaire utilisant le symbole monétaire défini dans le panneau de configuration système.|  
 |<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Retourne une expression de chaîne représentant une valeur de date/heure.|  
 |<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Retourne une expression sous formatée de nombre.|  
 |<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Retourne une expression au format pourcentage (c’est-à-dire multipliée par 100) avec le caractère de fin %.|  
@@ -31,14 +31,14 @@ Le tableau suivant répertorie les fonctions Visual Basic fournit de recherche e
 |<xref:Microsoft.VisualBasic.Strings.Left%2A>|Retourne une chaîne contenant un nombre spécifié de caractères du côté gauche d’une chaîne.|  
 |<xref:Microsoft.VisualBasic.Strings.Len%2A>|Retourne un entier qui contient le nombre de caractères dans une chaîne.|  
 |<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Retourne une chaîne alignée à gauche contenant la chaîne spécifiée ajustée à la longueur spécifiée.|  
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Retourne une chaîne contenant une copie d’une chaîne spécifiée sans espaces de début.|  
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Retourne une chaîne contenant une copie d’une chaîne spécifiée sans espaces à gauche.|  
 |<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Retourne une chaîne contenant un nombre spécifié de caractères à partir d’une chaîne.|  
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Retourne une chaîne dans laquelle une sous-chaîne spécifiée a été remplacée par une autre sous-chaîne un nombre spécifié de fois.|  
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Retourne une chaîne contenant un nombre spécifié de caractères à partir de la droite d’une chaîne.|  
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Retourne une chaîne dans laquelle une sous-chaîne spécifiée a été remplacée par une autre sous-chaîne, un nombre de fois spécifié.|  
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Retourne une chaîne contenant un nombre spécifié de caractères depuis la partie droite d’une chaîne.|  
 |<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Retourne une chaîne alignée à droite contenant la chaîne spécifiée ajustée à la longueur spécifiée.|  
 |<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Retourne une chaîne contenant une copie d’une chaîne spécifiée sans espaces à droite.|  
 |<xref:Microsoft.VisualBasic.Strings.Space%2A>|Retourne une chaîne composée d’un nombre spécifié d’espaces.|  
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Retourne un tableau unidimensionnel de base zéro contenant un nombre spécifié de sous-chaînes.|  
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Retourne un tableau unidimensionnel de base zéro qui contient un nombre spécifié de sous-chaînes.|  
 |<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Retourne -1, 0 ou 1, selon le résultat d’une comparaison de chaînes.|  
 |<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Retourne une chaîne convertie comme spécifié.|  
 |<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Retourne une chaîne ou un objet constitué du caractère spécifié répété le nombre de fois spécifié.|  
@@ -46,7 +46,7 @@ Le tableau suivant répertorie les fonctions Visual Basic fournit de recherche e
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Retourne une chaîne contenant une copie d’une chaîne spécifiée sans espaces de début ou de fin.|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Retourne une chaîne ou un caractère contenant la chaîne spécifiée convertie en majuscules.|  
   
- Vous pouvez utiliser la [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) instruction pour définir si les chaînes sont comparées à l’aide d’un texte respectant la casse trier l’ordre déterminé par les paramètres régionaux de votre système (`Text`) ou par les représentations binaires internes de le (caractères `Binary`). La méthode de comparaison de texte par défaut est `Binary`.  
+ Vous pouvez utiliser la [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) instruction pour définir si les chaînes sont comparées à l’aide d’un texte respectant la casse trier l’ordre déterminé par les paramètres régionaux de votre système (`Text`) ou par les représentations binaires internes de le (des caractères `Binary`). La méthode de comparaison de texte par défaut est `Binary`.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple utilise le `UCase` fonction pour retourner une version en majuscules d’une chaîne.  
@@ -54,7 +54,7 @@ Le tableau suivant répertorie les fonctions Visual Basic fournit de recherche e
  [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise le `LTrim` fonction pour supprimer les espaces de début et la `RTrim` des espaces de fonction pour supprimer la fin d’une variable chaîne. Elle utilise le `Trim` afin de supprimer les deux types d’espaces.  
+ Cet exemple utilise le `LTrim` fonction pour supprimer les espaces de début et la `RTrim` des espaces à partir d’une variable de chaîne de fonction à la fin de la frange. Il utilise le `Trim` (fonction) pour supprimer les deux types d’espaces.  
   
  [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
@@ -69,19 +69,19 @@ Le tableau suivant répertorie les fonctions Visual Basic fournit de recherche e
  [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise le `InStr` pour retourner la position de la première occurrence d’une chaîne dans une autre fonction.  
+ Cet exemple utilise le `InStr` fonction pour retourner la position de la première occurrence d’une chaîne dans une autre.  
   
  [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
 ## <a name="example"></a>Exemple  
- Cet exemple illustre différentes utilisations de la `Format` fonction à l’aide des valeurs de format `String` formats et les formats définis par l’utilisateur. Pour le séparateur de date (`/`), séparateur d’heure (`:`) et les indicateurs AM/PM (`t` et `tt`), la sortie mise en forme affichée par votre système dépend des paramètres régionaux utilisés par le code. Lorsque fois et dates sont affichées dans l’environnement de développement, le format d’heure courte et le format de date courte des paramètres régionaux de code sont utilisés.  
+ Cet exemple illustre différentes utilisations de la `Format` fonction des valeurs de format à l’aide de deux `String` formats et les formats définis par l’utilisateur. Pour le séparateur de date (`/`), séparateur d’heure (`:`) et les indicateurs AM/PM (`t` et `tt`), la sortie mise en forme réelle affichée par votre système dépend des paramètres régionaux utilisés par le code. Lorsque heures et dates sont affichées dans l’environnement de développement, le format d’heure courte et le format de date courte des paramètres régionaux de code sont utilisés.  
   
 > [!NOTE]
->  Pour les paramètres régionaux qui utilisent une horloge de 24 heures, les indicateurs AM/PM (`t` et `tt`) ne rien afficher.  
+>  Pour les paramètres régionaux qui utilisent une horloge de 24 heures, les indicateurs AM/PM (`t` et `tt`) n’affichent rien.  
   
  [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)  
- [Membres de la bibliothèque runtime Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)  
- [Liste des manipulations de chaînes](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+## <a name="see-also"></a>Voir aussi
+- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)
+- [Membres de la bibliothèque runtime Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Liste des manipulations de chaînes](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

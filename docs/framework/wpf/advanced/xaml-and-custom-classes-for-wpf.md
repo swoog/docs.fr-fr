@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: acf3ba12a9a7e6ba9a8e378892098f5f265a23d9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f6709cad76ff05c3134c8430b36d5f34019b03ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606580"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML et classes personnalisées pour WPF
 XAML, tel qu’il est implémenté dans les frameworks [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], prend en charge la possibilité de définir une classe ou une structure personnalisée dans n’importe quel langage de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], puis d’accéder à cette classe à l’aide du balisage XAML. Vous pouvez utiliser un mélange de types définis de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] et de vos types personnalisés dans le même fichier de balisage, généralement en mappant les types personnalisés à un préfixe d’espace de noms XAML. Cette rubrique décrit les conditions que doit satisfaire une classe personnalisée pour pouvoir être utilisée comme élément XAML.  
@@ -79,7 +79,7 @@ XAML, tel qu’il est implémenté dans les frameworks [!INCLUDE[TLA#tla_clr](..
   
 -   L’objet qui est l’objet collection n’a pas besoin d’être spécifié dans la syntaxe d’élément objet. La présence de ce type de collection est implicite quand vous spécifiez une propriété dans XAML qui prend un type collection.  
   
--   Les éléments enfants de la propriété de collection dans le balisage sont traités pour devenir membres de la collection. Normalement, l’accès du code aux membres d’une collection est effectué via des méthodes de liste/dictionnaire,comme `Add`, ou via un indexeur. La syntaxe XAML ne prend cependant pas en charge les méthodes ou les indexeurs (exception : XAML 2009 peut prendre en charge des méthodes, mais l’utilisation de XAML 2009 restreint les utilisations possibles de WPF ; consultez [Fonctionnalités du langage XAML 2009](../../../../docs/framework/xaml-services/xaml-2009-language-features.md)). Les collections sont à l’évidence une spécification très courante pour générer une arborescence d’éléments, et vous devez disposer d’un moyen de remplir ces collections dans du XAML déclaratif. Par conséquent, les éléments enfants d’une propriété de collection sont traités en les ajoutant à la collection qui est la valeur du type de propriété de collection.  
+-   Les éléments enfants de la propriété de collection dans le balisage sont traités pour devenir membres de la collection. Normalement, l’accès du code aux membres d’une collection est effectué via des méthodes de liste/dictionnaire,comme `Add`, ou via un indexeur. Mais la syntaxe XAML ne prend pas en charge les méthodes ou les indexeurs (exception : XAML 2009 peut prendre en charge les méthodes, mais à l’aide de XAML 2009 restreint les utilisations possibles de WPF ; consultez [fonctionnalités du langage XAML 2009](../../../../docs/framework/xaml-services/xaml-2009-language-features.md)). Les collections sont à l’évidence une spécification très courante pour générer une arborescence d’éléments, et vous devez disposer d’un moyen de remplir ces collections dans du XAML déclaratif. Par conséquent, les éléments enfants d’une propriété de collection sont traités en les ajoutant à la collection qui est la valeur du type de propriété de collection.  
   
  L’implémentation des services XAML .NET Framework, et donc le processeur XAML WPF, utilisent la définition suivante pour ce qui constitue une propriété de collection. Le type de propriété de la propriété doit répondre à une des conditions suivantes :  
   
@@ -112,9 +112,9 @@ XAML, tel qu’il est implémenté dans les frameworks [!INCLUDE[TLA#tla_clr](..
 ## <a name="serializing-xaml"></a>Sérialisation du XAML  
  Dans certains cas, par exemple si vous êtes créateur de contrôles, vous voulez aussi garantir qu’une représentation d’objet qui peut être instanciée en XAML peut également être sérialisée dans un balisage XAML équivalent. Les spécifications de la sérialisation ne sont pas décrites dans cette rubrique. Consultez [Vue d’ensemble de la création de contrôles](../../../../docs/framework/wpf/controls/control-authoring-overview.md) et [Sérialisation et arborescence d’éléments](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Vue d’ensemble de la création de contrôles](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Vue d’ensemble des éléments de base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Propriétés de dépendance et chargement XAML](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Vue d’ensemble de la création de contrôles](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Vue d’ensemble des éléments de base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Propriétés de dépendance et chargement XAML](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)

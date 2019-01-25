@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d09c344e-3548-4944-a3ed-051880e3f5b8
-ms.openlocfilehash: 9fd2a5dc435829d08594ea3c2f1c129328386250
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb1785b12df2e8a835ba49ae59d0448fbebf794c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506821"
 ---
 # <a name="return-the-set-intersection-of-two-sequences"></a>Retourner l'intersection définie de deux séquences
 Utilisez l'opérateur <xref:System.Linq.Queryable.Intersect%2A> pour retourner l'intersection définie de deux séquences.  
@@ -23,6 +23,6 @@ Utilisez l'opérateur <xref:System.Linq.Queryable.Intersect%2A> pour retourner l
   
  Dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], l'opération <xref:System.Linq.Queryable.Intersect%2A> est correctement définie sur les jeux uniquement. La sémantique pour les multijeux n'est pas définie.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples de requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Traduction des opérateurs de requête standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>Voir aussi
+- [Exemples de requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Traduction des opérateurs de requête standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

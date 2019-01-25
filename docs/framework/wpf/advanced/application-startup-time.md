@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527326"
 ---
 # <a name="application-startup-time"></a>Temps de démarrage d'une application
 La quantité de temps nécessaire pour démarrer une application WPF peut varier considérablement. Cette rubrique décrit les différentes techniques permettant de réduire le temps de démarrage (perçu et réel) pour une application Windows Presentation Foundation (WPF).  
@@ -26,7 +26,7 @@ La quantité de temps nécessaire pour démarrer une application WPF peut varier
 ## <a name="implement-a-splash-screen"></a>Implémentation d’un écran de démarrage  
  Dans les cas où il y a un délai notable et inévitable entre le démarrage d’une application et l’affichage de la première interface utilisateur, optimisez le temps de démarrage perçu à l’aide un *écran de démarrage*. Cette approche affiche une image presque immédiatement après que l’utilisateur démarre l’application. Lorsque l’application est prête à afficher sa première interface utilisateur, l’écran de démarrage disparaît en fondu. À compter de la [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], vous pouvez utiliser la <xref:System.Windows.SplashScreen> classe pour implémenter un écran de démarrage. Pour plus d’informations, consultez [Ajouter un écran de démarrage dans une application WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
- Vous pouvez également implémenter votre propre écran de démarrage à l’aide des graphiques Win32 natifs. Affichez votre implémentation avant la <xref:System.Windows.Application.Run%2A> méthode est appelée.  
+ Vous pouvez également implémenter votre propre écran de démarrage à l’aide des graphiques Win32 natifs. Affichez votre implémentation avant le <xref:System.Windows.Application.Run%2A> méthode est appelée.  
   
 ## <a name="analyze-the-startup-code"></a>Analyse du code de démarrage  
  Déterminez la raison pour un démarrage à froid lent. Les E/S du disque peuvent être en cause, mais cela n’est pas toujours le cas. En général, vous devez réduire l’utilisation des ressources externes, comme le réseau, les services web ou le disque.  
@@ -107,9 +107,9 @@ La quantité de temps nécessaire pour démarrer une application WPF peut varier
  Utilisez le <xref:System.Resources.NeutralResourcesLanguageAttribute> pour spécifier la culture neutre pour le <xref:System.Resources.ResourceManager>. Cette approche évite les échecs de recherche d’assembly.  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>Utilisation de la classe BinaryFormatter pour la sérialisation  
- Si vous devez utiliser la sérialisation, utilisez la <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe au lieu du <xref:System.Xml.Serialization.XmlSerializer> classe. La <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe est implémentée dans la bibliothèque de classes de Base (BCL) de l’assembly mscorlib.dll. Le <xref:System.Xml.Serialization.XmlSerializer> est implémentée dans l’assembly System.Xml.dll, qui peut être une DLL supplémentaire à charger.  
+ Si vous devez utiliser la sérialisation, utilisez la <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe au lieu du <xref:System.Xml.Serialization.XmlSerializer> classe. Le <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe est implémentée dans la bibliothèque de classes de Base (BCL) de l’assembly mscorlib.dll. Le <xref:System.Xml.Serialization.XmlSerializer> est implémentée dans l’assembly System.Xml.dll, qui peut être une DLL supplémentaire à charger.  
   
- Si vous devez utiliser le <xref:System.Xml.Serialization.XmlSerializer> (classe), vous pouvez obtenir de meilleures performances si vous prégénérer l’assembly de sérialisation.  
+ Si vous devez utiliser le <xref:System.Xml.Serialization.XmlSerializer> (classe), vous pouvez obtenir de meilleures performances si vous prégénérez l’assembly de sérialisation.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Configuration de ClickOnce pour vérifier les mises à jour après le démarrage  
  Si votre application utilise [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], évitez l’accès réseau au démarrage en configurant [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] pour vérifier les mises à jour sur le site de déploiement après le démarrage de l’application.  
@@ -120,13 +120,13 @@ La quantité de temps nécessaire pour démarrer une application WPF peut varier
  La première application WPF qui s’exécute après un redémarrage est le service PresentationFontCache. Le service met en cache les polices système améliore l’accès aux polices et augmente les performances globales. Il existe une surcharge du démarrage du service, et dans certains environnements contrôlés, envisagez de configurer le service pour démarrer automatiquement lors du redémarrage du système.  
   
 ## <a name="set-data-binding-programmatically"></a>Définition des données de liaison par programmation  
- Au lieu d’utiliser XAML pour définir le <xref:System.Windows.FrameworkElement.DataContext%2A> déclarative pour la fenêtre principale, définissez-le par programmation dans le <xref:System.Windows.Application.OnActivated%2A> (méthode).  
+ Au lieu d’utiliser XAML pour définir le <xref:System.Windows.FrameworkElement.DataContext%2A> déclarative pour la fenêtre principale, vous pouvez la définir par programmation dans le <xref:System.Windows.Application.OnActivated%2A> (méthode).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.SplashScreen>  
- <xref:System.AppDomain>  
- <xref:System.Resources.NeutralResourcesLanguageAttribute>  
- <xref:System.Resources.ResourceManager>  
- [Ajouter un écran de démarrage dans une application WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (générateur d’images natives)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [\<generatePublisherEvidence> Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.SplashScreen>
+- <xref:System.AppDomain>
+- <xref:System.Resources.NeutralResourcesLanguageAttribute>
+- <xref:System.Resources.ResourceManager>
+- [Ajouter un écran de démarrage dans une application WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (générateur d’images natives)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence> Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

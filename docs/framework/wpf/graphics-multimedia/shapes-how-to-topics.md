@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620225"
 ---
 # <a name="shapes-how-to-topics"></a>Rubriques "Comment" relatives aux objets Shape
 Les rubriques de cette section montrent comment utiliser <xref:System.Windows.Shapes.Shape> objets pour dessiner des formes de base à l’écran.  
@@ -27,6 +27,6 @@ Les rubriques de cette section montrent comment utiliser <xref:System.Windows.Sh
  [Dessiner un rectangle](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
  [Modifier l'embout à la fin d'une ligne ou d'un segment](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Shapes.Shape>  
- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Shapes.Shape>
+- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

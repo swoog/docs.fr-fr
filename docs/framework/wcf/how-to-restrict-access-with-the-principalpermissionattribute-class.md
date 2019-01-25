@@ -1,5 +1,5 @@
 ---
-title: "Comment : restreindre l'accès à l'aide de la classe PrincipalPermissionAttribute"
+title: 'Procédure : Restreindre l’accès à la classe PrincipalPermissionAttribute'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 38e3c62aaf0e87860732bcb12c61da69b1c4346d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 4704a310e49246bdc8fff54abe6841f2e8482ed5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590566"
 ---
-# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Comment : restreindre l'accès à l'aide de la classe PrincipalPermissionAttribute
-Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows est une tâche de sécurité de base. Par exemple, certains utilisateurs doivent pouvoir consulter des données sensibles, telles que les informations relatives aux salaires. Cette rubrique explique comment restreindre l'accès à une méthode en exigeant que l'utilisateur appartienne à un groupe prédéfini. Pour obtenir un exemple fonctionnel, consultez [autorisant l’accès aux opérations de Service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
+# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procédure : Restreindre l’accès à la classe PrincipalPermissionAttribute
+Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows est une tâche de sécurité de base. Par exemple, certains utilisateurs doivent pouvoir consulter des données sensibles, telles que les informations relatives aux salaires. Cette rubrique explique comment restreindre l'accès à une méthode en exigeant que l'utilisateur appartienne à un groupe prédéfini. Pour obtenir un exemple fonctionnel, consultez [autoriser l’accès aux opérations de Service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
  La tâche se compose de deux procédures séparées. La première crée le groupe et le remplit avec les utilisateurs. La deuxième applique la classe <xref:System.Security.Permissions.PrincipalPermissionAttribute> pour spécifier le groupe.  
   
@@ -29,19 +29,19 @@ Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows e
   
 3.  Avec le bouton droit **groupes**, puis cliquez sur **nouveau groupe**.  
   
-4.  Dans le **nom de groupe** , tapez un nom pour le nouveau groupe.  
+4.  Dans le **nom_groupe** , tapez un nom pour le nouveau groupe.  
   
 5.  Dans le **Description** , tapez une description du nouveau groupe.  
   
-6.  Cliquez sur le **ajouter** bouton pour ajouter de nouveaux membres au groupe.  
+6.  Cliquez sur le **ajouter** pour ajouter de nouveaux membres au groupe.  
   
 7.  Si vous vous êtes vous-même ajouté au groupe et souhaitez tester le code suivant, vous devez vous déconnecter, puis vous reconnecter à l'ordinateur pour être inclus dans le groupe.  
   
 ### <a name="to-demand-user-membership"></a>Pour demander l'appartenance des utilisateurs  
   
-1.  Ouvrez le fichier de code Windows Communication Foundation (WCF) qui contient le code de contrat de service implémenté. Pour plus d’informations sur l’implémentation d’un contrat, consultez [implémentation de contrats de Service](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1.  Ouvrez le fichier de code Windows Communication Foundation (WCF) qui contient le code de contrat de service implémenté. Pour plus d’informations sur l’implémentation d’un contrat, consultez [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
-2.  Appliquez l'attribut <xref:System.Security.Permissions.PrincipalPermissionAttribute> à chaque méthode qui doit être restreinte à un groupe spécifique. Affectez <xref:System.Security.Permissions.SecurityAttribute.Action%2A> à la propriété <xref:System.Security.Permissions.SecurityAction.Demand> et le nom du groupe à la propriété <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>. Par exemple :  
+2.  Appliquez l'attribut <xref:System.Security.Permissions.PrincipalPermissionAttribute> à chaque méthode qui doit être restreinte à un groupe spécifique. Affectez <xref:System.Security.Permissions.SecurityAttribute.Action%2A> à la propriété <xref:System.Security.Permissions.SecurityAction.Demand> et le nom du groupe à la propriété <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>. Exemple :  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -52,7 +52,7 @@ Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows e
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>Utilisation d'un certificat pour contrôler l'accès à une méthode  
  Vous pouvez également utiliser la classe `PrincipalPermissionAttribute` pour contrôler l'accès à une méthode si le type d'informations d'identification du client est un certificat. Pour ce faire, vous devez avoir l'empreinte numérique et le sujet du certificat.  
   
- Pour examiner un certificat pour ses propriétés, consultez [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Pour rechercher la valeur de l’empreinte numérique, consultez [Comment : récupérer l’empreinte numérique d’un certificat](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+ Pour examiner un certificat pour ses propriétés, consultez [Comment : Afficher les certificats avec le composant logiciel enfichable MMC](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Pour rechercher la valeur d’empreinte numérique, consultez [Comment : Récupérer l’empreinte numérique d’un certificat](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 #### <a name="to-control-access-using-a-certificate"></a>Pour contrôler l'accès à l'aide d'un certificat  
   
@@ -77,18 +77,18 @@ Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows e
     </behaviors>  
     ```  
   
-     L'affectation de `UseAspNetRoles` à cette valeur indique que la propriété `Name` de `PrincipalPermissionAttribute` sera utilisée pour effectuer une comparaison de chaînes. Lorsqu’un certificat est utilisé comme une information d’identification du client, WCF concatène par défaut le nom commun du certificat et l’empreinte numérique avec un point-virgule pour créer une valeur unique pour l’identité du client principal. Avec `UseAspNetRoles` défini en tant que `PrincipalPermissionMode` sur le service, la valeur de cette identité principale est comparée à celle de la propriété `Name` afin de déterminer les droits d'accès de l'utilisateur.  
+     L'affectation de `UseAspNetRoles` à cette valeur indique que la propriété `Name` de `PrincipalPermissionAttribute` sera utilisée pour effectuer une comparaison de chaînes. Lorsqu’un certificat est utilisé comme une information d’identification du client, WCF concatène par défaut le nom commun du certificat et l’empreinte numérique par un point-virgule pour créer une valeur unique pour l’identité du client principal. Avec `UseAspNetRoles` défini en tant que `PrincipalPermissionMode` sur le service, la valeur de cette identité principale est comparée à celle de la propriété `Name` afin de déterminer les droits d'accès de l'utilisateur.  
   
      Vous pouvez également, lorsque vous créez un service auto-hébergé, définir la propriété <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> dans le code, tel qu'indiqué dans le code suivant :  
   
      [!code-csharp[c_PrincipalPermissionAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#3)]
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- <xref:System.Security.Permissions.SecurityAction.Demand>  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>  
- [Autorisation de l’accès aux opérations de service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Vue d’ensemble de la sécurité](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Implémentation de contrats de service](../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- <xref:System.Security.Permissions.SecurityAction.Demand>
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
+- [Autorisation de l’accès aux opérations de service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [Vue d’ensemble de la sécurité](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Implémentation de contrats de service](../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: 6b3664a29d5a780c7ce49f51f0ea13d064d578e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c10fd5fe3d6aa5566976b08db6c26ee49521850
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491257"
 ---
 # <a name="xml-literals-visual-basic"></a>Littéraux XML (Visual Basic)
 Les rubriques de cette section documentent la syntaxe des littéraux XML en Visual Basic. La syntaxe des littéraux XML vous permet d’incorporer du code XML directement dans votre code.  
@@ -29,5 +29,5 @@ Les rubriques de cette section documentent la syntaxe des littéraux XML en Visu
 |[Littéraux de commentaires XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|Décrit la syntaxe des littéraux qui représentent des objets <xref:System.Xml.Linq.XComment>.|  
 |[Littéral d’instruction de traitement XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|Décrit la syntaxe des littéraux qui représentent des objets <xref:System.Xml.Linq.XProcessingInstruction>.|  
   
-## <a name="see-also"></a>Voir aussi  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Voir aussi
+- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

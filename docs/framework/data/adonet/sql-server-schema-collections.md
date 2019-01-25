@@ -2,12 +2,12 @@
 title: Collections de schémas SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635037"
 ---
 # <a name="sql-server-schema-collections"></a>Collections de schémas SQL Server
 Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en charge d’autres collections de schémas en plus des collections de schémas courantes. Les collections de schémas varient légèrement selon la version de SQL Server que vous utilisez. Pour déterminer la liste des collections de schémas prises en charge, appelez le **GetSchema** méthode sans argument ou avec le nom de collection de schémas « MetaDataCollections ». Cette opération retourne un <xref:System.Data.DataTable> avec une liste des collections de schémas prises en charge, le nombre de restrictions qu’elles prennent en charge et le nombre d’éléments d’identification qu’elles utilisent.  
@@ -51,7 +51,7 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
-|type_desc|Chaîne|Le type de l'index est l'un des suivants :<br /><br /> -HEAP<br />-EN CLUSTER<br />-NON ORDONNÉS EN CLUSTERS<br />-XML<br />-SPATIALES|  
+|type_desc|Chaîne|Le type de l'index est l'un des suivants :<br /><br /> -HEAP<br />-EN CLUSTER<br />-   NONCLUSTERED<br />-   XML<br />-   SPATIAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -65,7 +65,7 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
 |table_name|Chaîne|Nom de table.|  
 |column_name|Chaîne|Nom de la colonne à laquelle l'index est associé.|  
 |ordinal_position|Int32|Position du numéro de colonne.|  
-|KeyType|Byte|Type d'objet.|  
+|KeyType|Byte|Type d’objet.|  
 |index_name|Chaîne|Nom de l’index.|  
   
 ## <a name="procedures"></a>Procédures  
@@ -255,6 +255,6 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
 |Create_Date|DateTime|Date à laquelle l'assembly a été créé/enregistré.|  
 |Permission_set_desc|Chaîne|Nom convivial de l'ensemble d'autorisations/niveau de sécurité pour l'assembly.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Récupération des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Récupération des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

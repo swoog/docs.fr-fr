@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba265b727d00690ab77c6ae831e954d59df7c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630838"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks, méthode
 Obtient une valeur qui indique si des rappels managés sont actuellement en file d’attente pour le thread spécifié.  
@@ -43,21 +43,21 @@ HRESULT HasQueuedCallbacks (
  `pbQueued`  
  [out] Un pointeur vers une valeur qui est `true` si des rappels managés sont actuellement en file d’attente pour le thread spécifié ; sinon, `false`.  
   
- Si null est spécifié pour le `pThread` paramètre, `HasQueuedCallbacks` retournera `true` s’il n’y rappels managés en file d’attente pour n’importe quel thread.  
+ Si null est spécifié pour le `pThread` paramètre, `HasQueuedCallbacks` retournera `true` s’il existe actuellement géré les rappels en attente de n’importe quel thread.  
   
 ## <a name="remarks"></a>Notes  
- Les rappels sont distribués un par un, chaque fois [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) est appelée. Le débogueur peut contrôler cet indicateur si elle souhaite créer un rapport de plusieurs événements de débogage qui se produisent simultanément.  
+ Les rappels sont distribués un par un, chaque fois [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) est appelée. Le débogueur peut contrôler cet indicateur si elle souhaite créer un rapport se produisent simultanément plusieurs événements de débogage.  
   
- Lorsque les événements de débogage sont en attente, ils ont déjà eu lieu, donc le débogueur doit vider la file d’attente entière pour vous assurer de l’état de l’élément débogué. (Appeler `ICorDebugController::Continue` pour vider la file d’attente.) Par exemple, si la file d’attente contient deux événements de débogage sur le thread *X*, et le débogueur suspend le thread *X* après le premier événement de débogage, puis appelle `ICorDebugController::Continue`, le deuxième événement de débogage pour thread *X* sera distribué bien que le thread a été suspendu.  
+ Lorsque les événements de débogage sont en attente, ils ont déjà eu lieu, afin du débogueur doit vider la file d’attente entière pour être sûr que de l’état de l’élément débogué. (Appelez `ICorDebugController::Continue` pour vider la file d’attente.) Par exemple, si la file d’attente contient deux événements de débogage sur le thread *X*, et le débogueur suspend le thread *X* après le premier événement de débogage, puis appelle `ICorDebugController::Continue`, le deuxième événement de débogage pour thread *X* seront distribués bien que le thread a été suspendu.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- 
+## <a name="see-also"></a>Voir aussi
+

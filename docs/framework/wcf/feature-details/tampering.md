@@ -2,15 +2,15 @@
 title: Falsification
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
-ms.openlocfilehash: 519881a0813ac0b9f9218db42a42723a19a3089c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86446778008782c733629ef94e6b192501bee2da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607184"
 ---
 # <a name="tampering"></a>Falsification
-*Falsification* est le fait de modifier un message, ou la remise d’un message et à l’aide de ce message modifié à un usage autre que celles prévues pour.  
+*Falsification* est l’action de modification d’un message ou la remise d’un message et à l’aide de ce message modifié à un usage autre que celles prévues pour.  
   
 ## <a name="do-not-disable-ws-addressing"></a>Ne pas désactiver WS-Addressing  
  La spécification WS-Addressing fournit des en-têtes d'adresse sur chaque message, ce qui permet au destinataire d'un message de vérifier l'expéditeur de celui-ci. Vous pouvez désactiver cette fonctionnalité en affectant <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> à la propriété <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>.  
@@ -19,10 +19,10 @@ ms.locfileid: "33498629"
   
  Pour atténuer ce risque, n'affectez jamais <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> à la propriété <xref:System.ServiceModel.Channels.AddressingVersion.None%2A> et évitez d'utiliser <xref:System.ServiceModel.Channels.MessageVersion>, tel que la propriété statique <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A>, qui affecte <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> à la propriété <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>Voir aussi
+- [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

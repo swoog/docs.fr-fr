@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c7451e5e914c372c8631922001cfec5e84a586c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527950"
 ---
 # <a name="security-considerations-for-data"></a>Considérations sur la sécurité des données
 Lorsque vous traitez des données dans Windows Communication Foundation (WCF), vous devez prendre en compte un nombre de catégories de menaces. Le tableau suivant répertorie les classes de menace les plus importantes concernant le traitement de données. WCF fournit des outils pour atténuer ces menaces.  
@@ -31,14 +31,14 @@ Lorsque vous traitez des données dans Windows Communication Foundation (WCF), v
   
  Le dernier exemple de code fourni par l'utilisateur correspond au code figurant à l'intérieur de votre implémentation de service pour chaque opération. La sécurité de votre implémentation de service relève de votre responsabilité. Il est facile de créer par inadvertance des implémentations d'opérations incertaines qui peuvent provoquer des vulnérabilités au déni de service. Par exemple, une opération qui prend une chaîne et renvoie la liste des clients d'une base de données dont le nom commence par cette chaîne. Si vous utilisez une base de données volumineuse et que la chaîne passée comporte une seule lettre, votre code risque d'essayer de créer un message plus volumineux que toute la mémoire disponible, ce qui entraîne l'échec du service entier. (Une <xref:System.OutOfMemoryException> n'est pas récupérable dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et engendre toujours l'arrêt de votre application.)  
   
- Vous devez garantir qu'aucun code malveillant n'est intégré dans les divers points d'extensibilité. Cela est particulièrement vrai pour l'exécution en confiance partielle, pour le traitement des types issus d'assemblys d'un niveau de confiance partiel ou pour créer des composants utilisables par un code de niveau de confiance partiel. Pour plus d'informations, consultez « Menaces liées à une confiance partielle » dans une section ultérieure.  
+ Vous devez garantir qu'aucun code malveillant n'est intégré dans les divers points d'extensibilité. Cela est particulièrement vrai pour l'exécution en confiance partielle, pour le traitement des types issus d'assemblys d'un niveau de confiance partiel ou pour créer des composants utilisables par un code de niveau de confiance partiel. Pour plus d'informations, consultez « Menaces liées à une confiance partielle » dans une section ultérieure.  
   
  Notez que lors de l'exécution en confiance partielle, l'infrastructure de sérialisation de contrat de données prend en charge uniquement un sous-ensemble limité du modèle de programmation de contrat de données, par exemple, des types ou des membres de données privés qui utilisent l'attribut <xref:System.SerializableAttribute> ne sont pas pris en charge. Pour plus d’informations, consultez [confiance partielle](../../../../docs/framework/wcf/feature-details/partial-trust.md).  
   
 ## <a name="avoiding-unintentional-information-disclosure"></a>Éviter la divulgation d'informations involontaire  
  Dans le cadre de la conception de types sérialisables en gardant la sécurité à l'esprit, la divulgation d'informations est une préoccupation possible.  
   
- Considérez les points suivants :  
+ Considérez les points suivants :  
   
 -   Le modèle de programmation <xref:System.Runtime.Serialization.DataContractSerializer> autorise l'exposition de données privées et internes en dehors du type ou assembly pendant la sérialisation. En outre, la forme d'un type peut être exposée pendant l'exportation de schéma. Veillez à comprendre la projection de sérialisation de votre type. Si vous souhaitez que rien ne soit exposé, désactivez-en la sérialisation (par exemple, en n'appliquant pas l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> dans le cas d'un contrat de données).  
   
@@ -53,7 +53,7 @@ Lorsque vous traitez des données dans Windows Communication Foundation (WCF), v
   
  Les attaques par déni de service sont habituellement atténuées à l'aide de quotas. Lorsqu'un quota est dépassé, une exception <xref:System.ServiceModel.QuotaExceededException> est normalement levée. Sans le quota, un message malveillant peut provoquer l'accès à toute la mémoire disponible, ce qui engendre une exception <xref:System.OutOfMemoryException> , ou l'accès à toutes les piles disponibles, ce qui engendre une <xref:System.StackOverflowException>.  
   
- Le scénario du dépassement de quota est récupérable ; s'il se produit dans un service en cours d'exécution, le message en cours de traitement est ignoré et le service continue à s'exécuter et traite d'autres messages. En revanches, les scénarios de mémoire insuffisante et de dépassement de capacité de la pile ne sont pas récupérables où que ce soit dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; le service s'arrête s'il rencontre de telles exceptions.  
+ Le scénario du dépassement de quota est récupérable ; s'il se produit dans un service en cours d'exécution, le message en cours de traitement est ignoré et le service continue à s'exécuter et traite d'autres messages. En revanches, les scénarios de mémoire insuffisante et de dépassement de capacité de la pile ne sont pas récupérables où que ce soit dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; le service s'arrête s'il rencontre de telles exceptions.  
   
  Quotas dans WCF n’impliquent pas aucune préallocation. Par exemple, si le quota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> (existant sur différentes classes) a la valeur 128 Ko, cela ne signifie pas que 128 Ko sont automatiquement alloués pour chaque message. La quantité réelle allouée dépend de la taille réelle du message entrant.  
   
@@ -89,7 +89,7 @@ Lorsque vous traitez des données dans Windows Communication Foundation (WCF), v
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>Combinaison des modèles de programmation de diffusion en continu et de mise en mémoire tampon  
  De nombreuses attaques possibles émanent du mélange de modèles de programmation de diffusion en continu et de non-diffusion en continu dans le même service. Supposez qu'il existe un contrat de service contenant deux opérations : une qui prend un <xref:System.IO.Stream> et une autre qui prend un tableau de type personnalisé. Supposez également qu'une valeur élevée est affectée à `MaxReceivedMessageSize` pour permettre à la première opération de traiter des flux volumineux. Malheureusement, cela signifie que des messages volumineux peuvent à présent être envoyés à la seconde opération, et que le désérialiseur met en mémoire tampon des données sous la forme d'un tableau avant d'appeler l'opération. Il s'agit d'une attaque par déni de service potentielle : le quota `MaxBufferSize` ne limite pas la taille du corps du message, avec laquelle le désérialiseur fonctionne.  
   
- Pour cette raison, évitez de combiner des opérations de diffusion et des opérations non diffusées dans le même contrat. Si vous devez absolument associer les deux modèles de programmation, prenez les précautions suivantes :  
+ Pour cette raison, évitez de combiner des opérations de diffusion et des opérations non diffusées dans le même contrat. Si vous devez absolument associer les deux modèles de programmation, prenez les précautions suivantes :  
   
 -   Désactivez la fonctionnalité <xref:System.Runtime.Serialization.IExtensibleDataObject> en affectant à la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> de <xref:System.ServiceModel.ServiceBehaviorAttribute> la valeur `true`. Cette désactivation permet de veiller à ce que seuls les membres qui font partie du contrat soient désérialisés.  
   
@@ -201,11 +201,11 @@ Lorsque vous traitez des données dans Windows Communication Foundation (WCF), v
   
  <xref:System.Runtime.Serialization.DataContractSerializer> est toujours autorisé à charger un type actuellement prévu conformément au contrat. Par exemple, si un contrat de données comporte un membre de données du type `Customer`, <xref:System.Runtime.Serialization.DataContractSerializer> est autorisé à charger le type `Customer` lorsqu'il désérialise ce membre de données.  
   
- En outre, <xref:System.Runtime.Serialization.DataContractSerializer> prend en charge le polymorphisme. Un membre de données peut être déclaré comme <xref:System.Object>, mais les données entrantes peuvent contenir une instance `Customer` . Cette situation est possible uniquement si le type `Customer` a été indiqué au désérialiseur via l'un de ces mécanismes :  
+ En outre, <xref:System.Runtime.Serialization.DataContractSerializer> prend en charge le polymorphisme. Un membre de données peut être déclaré comme <xref:System.Object>, mais les données entrantes peuvent contenir une instance `Customer` . Cette situation est possible uniquement si le type `Customer` a été indiqué au désérialiseur via l'un de ces mécanismes :  
   
 -   attribut<xref:System.Runtime.Serialization.KnownTypeAttribute> appliqué à un type ;  
   
--   attribut `KnownTypeAttribute` qui spécifie une méthode qui renvoie une liste de types ;  
+-   attribut`KnownTypeAttribute` qui spécifie une méthode qui renvoie une liste de types ;  
   
 -   attribut`ServiceKnownTypeAttribute` ;  
   
@@ -223,9 +223,9 @@ Lorsque vous traitez des données dans Windows Communication Foundation (WCF), v
   
  Lors de l'écriture d'une méthode qui renvoie la liste des types connus, ou lors du passage directe d'une liste au constructeur <xref:System.Runtime.Serialization.DataContractSerializer> , vérifiez que le code qui prépare la liste est sécurisé et qu'il fonctionne uniquement sur les données approuvées.  
   
- Lors de la spécification de types connus dans la configuration, vérifiez que le fichier de configuration est sécurisé. Utilisez toujours des noms forts dans la configuration (en spécifiant la clé publique de l'assembly signé où le type réside), mais ne spécifiez pas la version du type à charger. Le chargeur de type choisit automatiquement la version la plus récente, si possible. Si vous spécifiez une version particulière dans la configuration, vous exécutez le risque suivant : un type peut comporter une faille de sécurité qui peut être résolue dans une future version, mais la version vulnérable continue de se charger parce qu'elle sera spécifiée explicitement dans la configuration.  
+ Lors de la spécification de types connus dans la configuration, vérifiez que le fichier de configuration est sécurisé. Utilisez toujours des noms forts dans la configuration (en spécifiant la clé publique de l'assembly signé où le type réside), mais ne spécifiez pas la version du type à charger. Le chargeur de type choisit automatiquement la version la plus récente, si possible. Si vous spécifiez une version particulière dans la configuration, vous courez le risque suivant : Un type peut avoir une faille de sécurité qui peut-être être corrigée dans une version ultérieure, mais la version vulnérable continue à se charge, car elle est explicitement spécifiée dans la configuration.  
   
- Un nombre trop élevé de types connus a une autre conséquence : <xref:System.Runtime.Serialization.DataContractSerializer> crée un cache de code de sérialisation/désérialisation dans le domaine d'application, avec une entrée pour chaque type qu'il doit sérialiser et désérialiser. Ce cache n'est jamais effacé tant que le domaine d'application s'exécute. Par conséquent, un intrus qui sait qu'une application utilise de nombreux types connus peut provoquer la désérialisation de tous ces types, ce qui engendre la consommation d'une quantité de mémoire disproportionnellement élevée par le cache.  
+ Avoir trop de types connus a une autre conséquence : Le <xref:System.Runtime.Serialization.DataContractSerializer> crée un cache de code de sérialisation/désérialisation dans le domaine d’application, avec une entrée pour chaque type, il doit sérialiser et désérialiser. Ce cache n'est jamais effacé tant que le domaine d'application s'exécute. Par conséquent, un intrus qui sait qu'une application utilise de nombreux types connus peut provoquer la désérialisation de tous ces types, ce qui engendre la consommation d'une quantité de mémoire disproportionnellement élevée par le cache.  
   
 ### <a name="preventing-types-from-being-in-an-unintended-state"></a>Prévention des états involontaires affectés aux types  
  Un type peut avoir des contraintes de cohérence interne qui doivent être appliquées. Il faut veiller à ne pas violer ces contraintes pendant la désérialisation.  
@@ -254,7 +254,7 @@ Lorsque vous traitez des données dans Windows Communication Foundation (WCF), v
   
 -   Faites preuve de prudence lorsque vous utilisez des types hérités marqués avec l'attribut <xref:System.SerializableAttribute> . Beaucoup d'entre eux ont été conçus pour fonctionner avec [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting à des fins d'utilisation avec des données approuvées uniquement. Les types existants marqués avec cet attribut n'ont peut-être pas été conçus en tenant compte de la sécurité des états.  
   
--   Ne comptez pas sur la propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de l'attribut `DataMemberAttribute` pour garantir la présence des données en ce qui concerne la sécurité des états. Les données pourraient toujours être `null`, `zero` ou `invalid`.  
+-   Ne comptez pas sur la propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de l'attribut `DataMemberAttribute` pour garantir la présence des données en ce qui concerne la sécurité des états. Les données pourraient toujours être `null`, `zero`ou `invalid`.  
   
 -   N'approuvez jamais un graphique d'objets désérialisé provenant d'une source de données non fiable sans le valider au préalable. Chaque objet individuel peut être dans un état cohérent, à la différence du graphique d'objets dans son ensemble. En outre, même si le mode de conservation des graphiques d'objets est désactivé, le graphique désérialisé peut avoir plusieurs références au même objet ou des références circulaires. Pour plus d’informations, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
@@ -353,8 +353,8 @@ Lorsque vous traitez des données dans Windows Communication Foundation (WCF), v
   
 -   En général, lorsque vous utilisez un composant qui accepte un quota, comprenez ses implications en matière de sécurité et affectez-lui une valeur sûre.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.XmlDictionaryReader>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [Types connus de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.XmlDictionaryReader>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Types connus de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

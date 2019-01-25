@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1874b5bea465eb31bcaad2d912b90d35cfc711b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 67ec3bf10638538b49f1ec44ff583bdf4ba4ef9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572251"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage, méthode
-Notifie le profileur que le processus a reçu une demande d’appel ou de l’activation de méthode distante.  
+Notifie le profileur que le processus a reçu une demande d’appel ou de l’activation de méthode distant.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,15 +37,15 @@ HRESULT RemotingClientSendingMessage(
   
 #### <a name="parameters"></a>Paramètres  
  `pCookie`  
- [in] Une valeur qui correspond à la valeur fournie dans [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) dans ces conditions :  
+ [in] Valeur qui correspond à la valeur fournie dans [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) dans ces conditions :  
   
--   Les cookies GUID de la communication à distance sont actives.  
+-   Les cookies GUID de communication à distance sont actifs.  
   
 -   Le canal réussit à transmettre le message.  
   
 -   Les cookies GUID sont actifs sur le processus côté client.  
   
- Cela permet un appariement aisé d’appels de communication à distance et de la création d’une pile d’appel logique.  
+ Cela permet un appariement simple d’appels de communication à distance et de la création d’une pile d’appel logique.  
   
  `fIsAsync`  
  [in] Une valeur qui est `true` si l’appel est asynchrone ; sinon, `false`.  
@@ -54,13 +54,13 @@ HRESULT RemotingClientSendingMessage(
  Si la demande de message est asynchrone, la demande peut être traitée par n’importe quel thread arbitraire.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorProfilerCallback, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerCallback, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

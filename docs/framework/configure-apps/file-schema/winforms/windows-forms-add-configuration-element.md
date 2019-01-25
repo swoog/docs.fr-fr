@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507367"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms Add, élément de Configuration
 
@@ -41,15 +41,15 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 
 | Nom `key` | Valeurs | Description |
 | ---------- | ------ | ----------- |
-| « AnchorLayout.DisableSinglePassControlScaling » | « true »&#124;« false » | Indique si les contrôles ancrés sont mis à l’échelle en un seul passage. « true » pour désactiver unique passer mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
-| « DpiAwareness » | « PerMonitorV2 »&#124;« false » | Indique si une application prend en charge DPI. Définissez la clé à « PerMonitorV2 » pour prendre en charge de la prise en charge Dpi ; Sinon, affectez-lui la valeur « false ». Prise en charge DPI est une fonctionnalité d’abonnement ; Pour tirer parti de la prise en charge DPI élevée de Windows Forms, vous devez définir sa valeur à « PerMonitorV2 ». Consultez le [notes](#remarks) section pour plus d’informations. |
-| « CheckedListBox.DisableHighDpiImprovements » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.CheckedListBox> contrôle tire parti de la mise à l’échelle et la disposition des améliorations introduites dans le .NET Framework 4.7. « true » pour ne pas les améliorations caling et mise en page ; Sinon, « false ». |
-| « DataGridView.DisableHighDpiImprovements » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.DataGridView> contrôler la mise à l’échelle et la disposition des améliorations introduites dans le .NET Framework 4.7. « true » pour désactiver la prise en charge DPI ; « false » dans le cas contraire. |
-| « DisableDpiChangedMessageHandling » | « true »&#124;« false » | « true » pour désactiver la réception des messages relatifs à la résolution de mise à l’échelle des modifications ; « false » dans le cas contraire. Consultez le [notes](#remarks) section pour plus d’informations. |
-| « EnableWindowsFormsHighDpiAutoResizing » | « true »&#124;« false » | Indique si une application Windows Forms est automatiquement redimensionnée en raison de modifications de mise à l’échelle PPP. « true » pour activer le redimensionnement automatique ; Sinon, false. |
-| « Form.DisableSinglePassControlScaling » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.Form> est mis à l’échelle en un seul passage. seul-passage « true » pour désactiver la mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
-| « MonthCalendar.DisableSinglePassControlScaling » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.MonthCalendar> contrôle est mis à l’échelle en un seul passage. seul-passage « true » pour désactiver la mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
-| « Toolstrip.DisableHighDpiImprovements » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.ToolStrip> contrôle tire parti de la mise à l’échelle et la disposition des améliorations introduites dans le .NET Framework 4.7. « true » pour désactiver la prise en charge DPI ; « false » dans le cas contraire. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indique si les contrôles ancrés sont mis à l’échelle en un seul passage. « true » pour désactiver unique passer mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
+| « DpiAwareness » | "PerMonitorV2"&#124;"false" | Indique si une application prend en charge DPI. Définissez la clé à « PerMonitorV2 » pour prendre en charge de la prise en charge Dpi ; Sinon, affectez-lui la valeur « false ». Prise en charge DPI est une fonctionnalité d’abonnement ; Pour tirer parti de la prise en charge DPI élevée de Windows Forms, vous devez définir sa valeur à « PerMonitorV2 ». Consultez le [notes](#remarks) section pour plus d’informations. |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indique si le <xref:System.Windows.Forms.CheckedListBox> contrôle tire parti de la mise à l’échelle et la disposition des améliorations introduites dans le .NET Framework 4.7. « true » pour ne pas les améliorations caling et mise en page ; Sinon, « false ». |
+| "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Indique si le <xref:System.Windows.Forms.DataGridView> contrôler la mise à l’échelle et la disposition des améliorations introduites dans le .NET Framework 4.7. « true » pour désactiver la prise en charge DPI ; « false » dans le cas contraire. |
+| "DisableDpiChangedMessageHandling" | "true"&#124;"false" | « true » pour désactiver la réception des messages relatifs à la résolution de mise à l’échelle des modifications ; « false » dans le cas contraire. Consultez le [notes](#remarks) section pour plus d’informations. |
+| "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Indique si une application Windows Forms est automatiquement redimensionnée en raison de modifications de mise à l’échelle PPP. « true » pour activer le redimensionnement automatique ; Sinon, false. |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Indique si le <xref:System.Windows.Forms.Form> est mis à l’échelle en un seul passage. seul-passage « true » pour désactiver la mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Indique si le <xref:System.Windows.Forms.MonthCalendar> contrôle est mis à l’échelle en un seul passage. seul-passage « true » pour désactiver la mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
+| "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | Indique si le <xref:System.Windows.Forms.ToolStrip> contrôle tire parti de la mise à l’échelle et la disposition des améliorations introduites dans le .NET Framework 4.7. « true » pour désactiver la prise en charge DPI ; « false » dans le cas contraire. |
 
 ### <a name="child-elements"></a>Éléments enfants
 
@@ -109,6 +109,6 @@ Pour plus d’informations en tirant profit de prise en charge de la haute réso
 La mise à l’échelle unique ou multipasse influence la réactivité perçue de l’interface utilisateur et l’apparence visuelle des éléments d’interface utilisateur comme ils sont mis à l’échelle. À compter de .NET Framework 4.7, Windows Forms utilise mise à l’échelle d’une seule passe. Dans les versions précédentes du .NET Framework, la mise à l’échelle a été effectuée via plusieurs passes, ce qui a provoqué des contrôles à l’échelle plus de données nécessaires. Mise à l’échelle de transmission unique doit être désactivé uniquement si votre application dépend de l’ancien comportement.  
 
 ## <a name="see-also"></a>Voir aussi
- 
-[Section de Configuration de Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[Prise en charge de la haute résolution dans Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+
+- [Section de configuration de Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [Prise en charge de la haute résolution dans Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: a4a168fd1fad75f5038044d49886782f391ceb1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07c6cbae11cb259ac852d33992526c855c231d4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513332"
 ---
 # <a name="procedures-in-visual-basic"></a>Procédures dans Visual Basic
-A *procédure* est un bloc d’instructions Visual Basic délimitées par une instruction de déclaration (`Function`, `Sub`, `Operator`, `Get`, `Set`) et une mise en correspondance `End` déclaration. Toutes les instructions exécutables en Visual Basic doivent figurer dans une procédure.  
+Un *procédure* est un bloc d’instructions de Visual Basic délimitées par une instruction de déclaration (`Function`, `Sub`, `Operator`, `Get`, `Set`) et une mise en correspondance `End` déclaration. Toutes les instructions exécutables dans Visual Basic doivent figurer dans une procédure.  
   
 ## <a name="calling-a-procedure"></a>Appel d’une procédure  
  Vous appelez une procédure à partir d’une autre partie du code. Il s’agit d’un *appel de procédure*. Une fois la procédure exécutée, elle renvoie le contrôle au code qui l’a appelée, opération qui se nomme *appel du code*. Le code appelant est une instruction ou une expression au sein d’une instruction, qui désigne la procédure par nom et lui transfère le contrôle.  
@@ -61,14 +61,14 @@ A *procédure* est un bloc d’instructions Visual Basic délimitées par une in
   
 -   Après avoir développé des procédures pour les utiliser dans un programme, vous pouvez les utiliser dans d’autres programmes, avec peu ou pas de modifications. Cela vous évite une duplication de code.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique : créer une procédure](./how-to-create-a-procedure.md)  
- [Procédures Sub](./sub-procedures.md)  
- [Procédures Function](./function-procedures.md)  
- [Procédures de propriété](./property-procedures.md)  
- [Procédures d’opérateur](./operator-procedures.md)  
- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)  
- [Procédures récursives](./recursive-procedures.md)  
- [Surcharge de procédure](./procedure-overloading.md)  
- [Procédures génériques en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour Créer une procédure](./how-to-create-a-procedure.md)
+- [Procédures Sub](./sub-procedures.md)
+- [Procédures Function](./function-procedures.md)
+- [Procédures de propriété](./property-procedures.md)
+- [Procédures d’opérateur](./operator-procedures.md)
+- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
+- [Procédures récursives](./recursive-procedures.md)
+- [Surcharge de procédure](./procedure-overloading.md)
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Objets et classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

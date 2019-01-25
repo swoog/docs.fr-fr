@@ -2,12 +2,12 @@
 title: Options et instructions de technologie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 7312b2eae0e307fa50c89d37918403ee33412ec3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2550c286485025a394cf3f8afe6c43a0472b2cd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566279"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Options et instructions de technologie ADO.NET
 La plateforme de données ADO.NET est une stratégie multiversion visant à limiter le codage et la maintenance requis des développeurs, en permettant à ces derniers de concevoir des programmes à partir de modèles de données d’entité conceptuels. Cette plateforme inclut ADO.NET Entity Framework et les technologies associées.  
@@ -28,7 +28,7 @@ La plateforme de données ADO.NET est une stratégie multiversion visant à limi
  Entity SQL est un langage de requête textuel conçu pour interagir avec un modèle EDM. Entity SQL est un dialecte SQL qui contient des constructions pour l'interrogation en termes de concepts de modélisation de niveau supérieur, comme l'héritage, les types complexes et les relations explicites. Les développeurs peuvent également utiliser Entity SQL directement avec Object Services. Pour plus d’informations, consultez [langage Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
 ### <a name="entityclient"></a>EntityClient  
- EntityClient est un nouveau fournisseur de données .NET Framework qui permet d'interagir avec un modèle EDM. EntityClient suit le modèle du fournisseur de données .NET Framework pour l'exposition d'objets <xref:System.Data.EntityClient.EntityConnection> et <xref:System.Data.EntityClient.EntityCommand> qui retournent un <xref:System.Data.EntityClient.EntityDataReader>. EntityClient fonctionne avec le langage Entity SQL, fournissant ainsi un mappage souple aux fournisseurs de données spécifiques au stockage. Pour plus d’informations, consultez [EntityClient et Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ EntityClient est un nouveau fournisseur de données .NET Framework qui permet d'interagir avec un modèle EDM. EntityClient suit le modèle du fournisseur de données .NET Framework pour l'exposition d'objets <xref:System.Data.EntityClient.EntityConnection> et <xref:System.Data.EntityClient.EntityCommand> qui retournent un <xref:System.Data.EntityClient.EntityDataReader>. EntityClient fonctionne avec le langage Entity SQL, fournissant ainsi un mappage souple aux fournisseurs de données spécifiques au stockage. Pour plus d'informations, consultez [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ### <a name="entity-data-model-tools"></a>Entity Data Model Tools  
  Entity Framework fournit des outils en ligne de commande, des Assistants et des concepteurs permettant de faciliter la création d'applications EDM. Le contrôle EntityDataSource prend en charge les scénarios de liaison de données basés sur le modèle EDM. La surface de programmation du contrôle EntityDataSource est similaire à celle des autres contrôles de source de données dans Visual Studio. Pour plus d’informations, consultez [ADO.NET Entity Data Model Tools](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527).  
@@ -37,9 +37,9 @@ La plateforme de données ADO.NET est une stratégie multiversion visant à limi
  LINQ to SQL est une implémentation de mappage relationnel objet qui vous permet de modéliser une base de données SQL Server à l'aide de classes .NET Framework. LINQ to SQL vous permet d'interroger la base de données en utilisant LINQ ainsi que de mettre à jour, d'insérer et de supprimer des données dans cette base de données. LINQ to SQL prend en charge les transactions, les vues et les procédures stockées, en fournissant un moyen facile d'intégrer la validation des données et des règles de logique métier dans le modèle de données. L'outil Concepteur Objet/Relationnel (Concepteur O/R) vous permet de modéliser les classes d'entité et les associations basées sur les objets dans une base de données. Pour plus d’informations, consultez [Outils LINQ to SQL dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>Services de données WCF  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] déploie des services de données sur le Web ou sur un intranet. Les données sont structurées sous la forme d'entités et de relations conformément aux spécifications du modèle EDM. Les données déployées sur ce modèle sont adressables par le protocole HTTP standard. Pour plus d’informations, consultez [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] déploie des services de données sur le Web ou sur un intranet. Les données sont structurées sous la forme d'entités et de relations conformément aux spécifications du modèle EDM. Les données déployées sur ce modèle sont adressables par le protocole HTTP standard. Pour plus d’informations, consultez [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Nouveautés d’ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Nouveautés d’ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)
+- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

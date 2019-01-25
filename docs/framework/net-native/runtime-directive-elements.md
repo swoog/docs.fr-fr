@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dda1176c6d547421dab9663379329043b614783e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 52800b204873604d927193e1280f2eb6ccbcce0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638364"
 ---
 # <a name="runtime-directive-elements"></a>Éléments de directive runtime
 Le format du fichier de directives runtime (rd.xml) prend en charge les éléments de directive runtime suivants. Pour voir une représentation hiérarchique, consultez [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
@@ -68,5 +68,5 @@ Le format du fichier de directives runtime (rd.xml) prend en charge les élémen
  [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  Applique la stratégie runtime au type représenté par un argument <xref:System.Type> passé à une méthode.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de référence du fichier de configuration rd.xml](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide de référence du fichier de configuration rd.xml](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c81b403fa4d633428946d36960d5df32df76d21
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc33405d8fbb3e5f66be9ea2deb4545bd4ca0971
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620589"
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt; élément
 Spécifie si le runtime applique la stratégie de l'éditeur.  
   
  \<configuration>  
 \<runtime>  
-\<assemblyBinding >  
-\<dependentAssembly >  
-\<publisherPolicy >  
+\<assemblyBinding>  
+\<dependentAssembly>  
+\<publisherPolicy>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -85,8 +85,8 @@ Spécifie si le runtime applique la stratégie de l'éditeur.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Méthode de localisation des assemblys par le runtime](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Voir aussi
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Méthode de localisation des assemblys par le runtime](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Redirection des versions d'assemblys](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

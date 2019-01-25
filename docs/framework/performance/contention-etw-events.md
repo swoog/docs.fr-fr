@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3487b67ea49cecfd0da2b5b3f993ea54d562145d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 90beb1487581ff4c031d6f10fb613430207dc026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575565"
 ---
 # <a name="contention-etw-events"></a>Événements ETW de conflit
 Les événements de conflit sont déclenchés chaque fois qu’il existe un conflit sur les verrous <xref:System.Threading.Monitor?displayProperty=nameWithType> ou les verrous natifs utilisés par le runtime. Le conflit se produit quand un thread attend un verrou alors qu’un autre thread possède ce verrou.  
@@ -25,7 +25,7 @@ Les événements de conflit sont déclenchés chaque fois qu’il existe un conf
   
  Le tableau suivant affiche des informations sur les événements.  
   
-|événement|ID d'événement|Moment du déclenchement|  
+|Événement|ID d'événement|Moment du déclenchement|  
 |-----------|--------------|-----------------|  
 |`ContentionStart_V1`|81|Le conflit démarre. Cet événement n’inclut pas le temps qui s’écoule avant qu’un thread ne commence à attendre l’acquisition d’un verrou. Il est déclenché uniquement quand l’attente commence.|  
 |`ContentionStop`|81|Le conflit se termine.|  
@@ -37,5 +37,5 @@ Les événements de conflit sont déclenchés chaque fois qu’il existe un conf
 |Indicateurs|win:UInt8|0 pour managé ; 1 pour natif.|  
 |ClrInstanceID|win:UInt16|ID unique de l’instance de CLR.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Voir aussi
+- [Événements ETW du CLR](../../../docs/framework/performance/clr-etw-events.md)

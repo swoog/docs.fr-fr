@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625768"
 ---
 # <a name="put-function"></a>Fonction Put
 Affecte une nouvelle valeur à une propriété nommée.
@@ -53,7 +53,7 @@ HRESULT Put (
 [in] Le nom de la propriété. Ce paramètre ne peut pas être `null`.
 
 `lFlags`  
-[in] Réservé. Ce paramètre doit être 0.
+[in] Réservée. Ce paramètre doit être 0.
 
 `pVal`   
 [in] Un pointeur vers une valide `VARIANT` qui devient la nouvelle valeur de propriété. Si `pVal` est `null` ou pointe vers un `VARIANT` de type `VT_NULL`, la propriété est définie sur `null`. 
@@ -68,11 +68,11 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Il y a eu une défaillance générale. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un ou plusieurs paramètres ne sont pas valides. |
+|`WBEM_E_FAILED` | 0x80041001 | Il y a eu une défaillance générale. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un ou plusieurs paramètres ne sont pas valides. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Le type de propriété n’est pas reconnu. Cette valeur est retournée lors de la création des instances de classe si la classe existe déjà. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
-| `WBEM_E_TYPE_MISMATCH` | 0 x 80041005 | Pour les instances : indique que `pVal` pointe vers un `VARIANT` d’un type incorrect pour la propriété. <br/> Pour les définitions de classe : la propriété existe déjà dans la classe parente et le nouveau type de COM est différent de l’ancien type COM. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Pour les instances : Indique que `pVal` pointe vers un `VARIANT` d’un type incorrect pour la propriété. <br/> Pour les définitions de classe : La propriété existe déjà dans la classe parente, et le nouveau type de COM est différent de l’ancien type COM. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi. |
   
 ## <a name="remarks"></a>Notes
@@ -93,12 +93,12 @@ Utilisez le `vtType` paramètre uniquement lors de la création de nouvelles pro
 
 Pour obtenir un exemple, consultez le [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) (méthode).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Voir aussi  
-[WMI et compteurs de performances (référence des API non managées)](index.md)
+## <a name="see-also"></a>Voir aussi
+- [WMI et compteurs de performances (référence des API non managées)](index.md)

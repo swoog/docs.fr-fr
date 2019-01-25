@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: f4c0d7fa9f14868404cde6201692e26b919198be
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 19eba101e2a91d1b0549e9e3eb86d0af94f2d1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619741"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join, clause (Visual Basic)
 Combine deux collections en une collection hiérarchique unique. L’opération de jointure est basée sur les clés correspondantes.  
@@ -55,11 +55,11 @@ Group Join element [As type] In collection _
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Introduction à LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Requêtes](../../../visual-basic/language-reference/queries/index.md)  
- [Select (clause)](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From (clause)](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Join (clause)](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Where (clause)](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Group By (clause)](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a>Voir aussi
+- [Introduction à LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Requêtes](../../../visual-basic/language-reference/queries/index.md)
+- [Select (clause)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From (clause)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Join (clause)](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Where (clause)](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Group By (clause)](../../../visual-basic/language-reference/queries/group-by-clause.md)

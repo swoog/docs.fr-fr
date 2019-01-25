@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14717b67db03b941d33b5df61c64b5df078adaa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 424e0323c018367560d4cf3542e9e8668575a03f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675187"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage, méthode
 Notifie le profileur que le client envoie une demande au serveur.  
@@ -39,25 +39,25 @@ HRESULT RemotingClientSendingMessage(
  `pCookie`  
  [in] Une valeur qui correspond à la valeur fournie dans [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) dans ces conditions :  
   
--   Les cookies GUID de la communication à distance sont actives.  
+-   Les cookies GUID de communication à distance sont actifs.  
   
 -   Le canal réussit à transmettre le message.  
   
 -   Les cookies GUID sont actifs sur le processus côté serveur.  
   
- Cela permet un appariement aisé d’appels de communication à distance et de la création d’une pile d’appel logique.  
+ Cela permet un appariement simple d’appels de communication à distance et de la création d’une pile d’appel logique.  
   
  `fIsAsync`  
  [in] Une valeur qui est `true` si l’appel est asynchrone ; sinon, `false`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** CorProf.idl, CorProf.h  
+ **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [ICorProfilerCallback, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [ICorProfilerCallback, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

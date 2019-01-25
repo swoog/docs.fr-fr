@@ -1,5 +1,5 @@
 ---
-title: 'Comment : auditer les événements de sécurité relatifs à Windows Communication Foundation'
+title: 'Procédure : Auditer les événements de sécurité Windows Communication Foundation'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 90169aac0c0c2cac8860b2809467ffa3a27d0e91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566825"
 ---
-# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Comment : auditer les événements de sécurité relatifs à Windows Communication Foundation
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Procédure : Auditer les événements de sécurité Windows Communication Foundation
 Windows Communication Foundation (WCF) vous permet de consigner les événements de sécurité pour le journal des événements Windows, qui peut être affiché à l’aide de l’Observateur d’événements Windows. Cette rubrique explique comment installer une application afin qu'elle enregistre des événements de sécurité. Pour plus d’informations sur l’audit de WCF, consultez [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Pour auditer des événements de sécurité dans le code  
@@ -81,14 +81,14 @@ Windows Communication Foundation (WCF) vous permet de consigner les événements
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Affecter à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> la valeur `true` supprime toute impossibilité de générer des audits de sécurité (si la propriété a la valeur `false`, une exception est levée). Toutefois, si vous activez le Windows suivant **paramètre de sécurité locale** propriété, tout échec de génération des événements d’audit entraîne Windows arrêter immédiatement :  
   
- **Audit : Arrêter immédiatement s’il est impossible d’enregistrer les audits de sécurité de système**  
+ **Audit : Arrêter le système immédiatement s’il est impossible d’enregistrer les audits de sécurité**  
   
  Pour définir la propriété, ouvrez le **paramètres de sécurité locaux** boîte de dialogue. Sous **paramètres de sécurité**, cliquez sur **stratégies locales**. Puis cliquez sur **Options de sécurité**.  
   
  Si le <xref:System.ServiceModel.AuditLogLocation> propriété est définie sur <xref:System.ServiceModel.AuditLogLocation.Security> et **auditer l’accès aux objets** n’est pas définie le **stratégie de sécurité locale**, événements d’audit ne seront pas écrites dans le journal de sécurité. Notez qu'aucun échec n'est retourné, mais que les entrées d'audit ne sont pas écrites dans le journal de sécurité.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

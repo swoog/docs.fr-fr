@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 108c27747e0b823f2315a914f8db3c8711fbb698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f89c9edf47edcb5089e094529b8e8108271518d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590572"
 ---
 # <a name="ltnamespacegt-element-net-native"></a>&lt;Namespace&gt;, élément (.NET Native)
 Applique la stratégie de réflexion runtime à tous les types dans un espace de noms spécifié.  
@@ -19,7 +19,7 @@ Applique la stratégie de réflexion runtime à tous les types dans un espace de
 ```xml  
 <Namespace Name="namespace_name"   
            Activate="policy_type"   
-           Browse="policy_type" />  
+           Browse="policy_type"  
            Dynamic="policy_setting"  
            Serialize="policy_setting"  
            DataContractSerializer="policy_setting"  
@@ -83,7 +83,7 @@ Applique la stratégie de réflexion runtime à tous les types dans un espace de
   
  Quand il est un enfant de l’élément [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), l’élément `<Namespace>` substitue la stratégie de réflexion runtime définie par l’élément [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Voir aussi
+- [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

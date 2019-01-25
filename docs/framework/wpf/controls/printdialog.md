@@ -8,15 +8,15 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: a1f69e0960e2882e3f31b5c79eaf0aab7a1e0e82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7def3ab16fe174008d1c7287786fd22566ce3d70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689301"
 ---
 # <a name="printdialog"></a>PrintDialog
-Le <xref:System.Windows.Controls.PrintDialog> contrôle est utilisé pour instancier une boîte de dialogue d’impression standard qui configure automatiquement un <xref:System.Printing.PrintTicket> et <xref:System.Printing.PrintQueue> en fonction de l’entrée d’utilisateur.  
+Le <xref:System.Windows.Controls.PrintDialog> contrôle est utilisé pour instancier une boîte de dialogue Imprimer standard qui configure automatiquement un <xref:System.Printing.PrintTicket> et <xref:System.Printing.PrintQueue> en fonction de l’entrée d’utilisateur.  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.PrintDialog>  
@@ -25,6 +25,6 @@ Le <xref:System.Windows.Controls.PrintDialog> contrôle est utilisé pour instan
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de l’impression](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>Voir aussi
+- [Vue d’ensemble de l’impression](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

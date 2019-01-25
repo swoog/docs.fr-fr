@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637370"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType, énumération
-Spécifie la façon dont un objet est sérialisé par le common language runtime.  
+Spécifie comment un objet est sérialisé par le common language runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,32 +60,32 @@ typedef enum CorSerializationType {
 |Membre|Description|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|Sérialisation de l’objet n’est pas définie.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|L’objet est sérialisé comme un type Boolean|  
-|`SERIALIZATION_TYPE_CHAR`|Objet est sérialisé comme un type de caractère.|  
-|`SERIALIZATION_TYPE_I1`|Objet est sérialisé comme un entier signé de 1 octet.|  
-|`SERIALIZATION_TYPE_U1`|Objet est sérialisé en tant qu’entier non signé sur 1 octet.|  
-|`SERIALIZATION_TYPE_I2`|Objet est sérialisé comme un entier signé de 2 octets.|  
-|`SERIALIZATION_TYPE_U2`|Objet est sérialisé en tant qu’entier non signé de 2 octets.|  
-|`SERIALIZATION_TYPE_I4`|Objet est sérialisé comme un entier signé de 4 octets.|  
-|`SERIALIZATION_TYPE_U4`|Objet est sérialisé en tant qu’entier non signé de 4 octets.|  
-|`SERIALIZATION_TYPE_I8`|Objet est sérialisé comme un entier signé de 8 octets.|  
-|`SERIALIZATION_TYPE_U8`|Objet est sérialisé en tant qu’entier non signé de 8 octets.|  
-|`SERIALIZATION_TYPE_R4`|Objet est sérialisé en tant qu’un virgule flottante de 4 octets.|  
-|`SERIALIZATION_TYPE_R8`|Objet est sérialisé en tant qu’une virgule flottante de 8 octets.|  
-|`SERIALIZATION_TYPE_STRING`|Objet est sérialisé en tant que type System.String.|  
-|`SERIALIZATION_TYPE_SZARRAY`|L’objet est sérialisé en tant qu’une seule dimension, un tableau de limite inférieure à zéro.|  
-|`SERIALIZATION_TYPE_TYPE`|Objet est sérialisé comme un type générique.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Objet est sérialisé en tant qu’objet avec balises.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|L’objet est sérialisé comme un type booléen|  
+|`SERIALIZATION_TYPE_CHAR`|L’objet est sérialisé comme un type de caractère.|  
+|`SERIALIZATION_TYPE_I1`|L’objet est sérialisé comme un entier signé de 1 octet.|  
+|`SERIALIZATION_TYPE_U1`|L’objet est sérialisé en tant qu’entier non signé sur 1 octet.|  
+|`SERIALIZATION_TYPE_I2`|L’objet est sérialisé comme un entier signé de 2 octets.|  
+|`SERIALIZATION_TYPE_U2`|L’objet est sérialisé en tant qu’entier non signé de 2 octets.|  
+|`SERIALIZATION_TYPE_I4`|L’objet est sérialisé comme un entier signé de 4 octets.|  
+|`SERIALIZATION_TYPE_U4`|L’objet est sérialisé en tant qu’entier non signé de 4 octets.|  
+|`SERIALIZATION_TYPE_I8`|L’objet est sérialisé comme un entier signé de 8 octets.|  
+|`SERIALIZATION_TYPE_U8`|L’objet est sérialisé en tant qu’entier non signé de 8 octets.|  
+|`SERIALIZATION_TYPE_R4`|L’objet est sérialisé en tant que virgule flottante de 4 octets.|  
+|`SERIALIZATION_TYPE_R8`|L’objet est sérialisé en tant qu’une virgule flottante de 8 octets.|  
+|`SERIALIZATION_TYPE_STRING`|L’objet est sérialisé en tant que type System.String.|  
+|`SERIALIZATION_TYPE_SZARRAY`|L’objet est sérialisé en tant qu’une seule dimension, le tableau de zéro limite inférieure.|  
+|`SERIALIZATION_TYPE_TYPE`|L’objet est sérialisé comme un type générique.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|L’objet est sérialisé en tant qu’objet avec balises.|  
 |`SERIALIZATION_TYPE_FIELD`|L’objet est sérialisé en tant que champ.|  
 |`SERIALIZATION_TYPE_PROPERTY`|L’objet est sérialisé en tant que propriété.|  
 |`SERIALIZATION_TYPE_ENUM`|L’objet est sérialisé en tant qu’énumération.|  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Voir aussi
+- [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

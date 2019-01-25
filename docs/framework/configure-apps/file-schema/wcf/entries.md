@@ -2,21 +2,21 @@
 title: '&lt;Entrées&gt;'
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 8c442990ee736c17b71b625e06d961230a8ceed2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 33f98cb4b138307622a14463ce5a3008058b6e31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587058"
 ---
 # <a name="ltentriesgt"></a>&lt;Entrées&gt;
 Entrée de routage qui contient des mappages entre les filtres de routage et les points de terminaison cibles vers lesquels envoyer des messages lorsque le filtre correspond.  
   
  \<system.serviceModel>  
-\<routage >  
-\<routingTables >  
-\<table >  
-\<entrées >  
+\<routing>  
+\<routingTables>  
+\<table>  
+\<entries>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,8 +51,8 @@ Entrée de routage qui contient des mappages entre les filtres de routage et les
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<routage >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Section de configuration qui contient une table de routage.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Section de configuration qui contient une table de routage.|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

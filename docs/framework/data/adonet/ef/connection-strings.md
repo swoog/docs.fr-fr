@@ -2,17 +2,17 @@
 title: Chaînes de connexion dans ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497457"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Chaînes de connexion dans ADO.NET Entity Framework
 Une chaîne de connexion contient des informations d'initialisation qui sont passées en tant que paramètre d'un fournisseur de données à une source de données. La syntaxe dépend du fournisseur de données et la chaîne de connexion est analysée lors de la tentative d'ouverture d'une connexion. Les chaînes de connexion utilisées par Entity Framework contiennent des informations utilisées pour la connexion au fournisseur de données ADO.NET sous-jacent qui prend en charge Entity Framework. Elles contiennent également des informations sur les fichiers de modèle et de mappage requis.  
   
- La chaîne de connexion est utilisée par le fournisseur EntityClient lors de l'accès aux métadonnées de modèle et de mappage et de la connexion à la source de données. Il est possible d'accéder à cette chaîne ou de la définir via la propriété <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. La classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> peut être utilisée pour construire par programme des paramètres dans la chaîne de connexion ou y accéder par programme. Pour plus d’informations, consultez [Comment : créer une chaîne de connexion EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
+ La chaîne de connexion est utilisée par le fournisseur EntityClient lors de l'accès aux métadonnées de modèle et de mappage et de la connexion à la source de données. Il est possible d'accéder à cette chaîne ou de la définir via la propriété <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. La classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> peut être utilisée pour construire par programme des paramètres dans la chaîne de connexion ou y accéder par programme. Pour plus d'informations, voir [Procédure : Créer une chaîne de connexion EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  Le [outils Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) génèrent une chaîne de connexion qui est stockée dans le fichier de configuration de l’application. <xref:System.Data.Objects.ObjectContext> récupère automatiquement ces informations de connexion lors de la création de requêtes d'objet. Il est possible d'accéder au <xref:System.Data.EntityClient.EntityConnection> utilisé par une instance de <xref:System.Data.Objects.ObjectContext> à partir de la propriété <xref:System.Data.Objects.ObjectContext.Connection%2A>. Pour plus d’informations, consultez [gestion des connexions et Transactions](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
 
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |Option|Description|  
 |-|-|  
-|`assemblyFullName`|Nom complet d'un assembly avec la ressource incorporée. Ce nom inclut le nom simple, le nom de la version, la culture prise en charge et la clé publique, comme suit :<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Il est possible d'incorporer des ressources dans n'importe quel assembly accessible par l'application.<br /><br /> Si vous spécifiez un caractère générique (\*) pour `assemblyFullName`, le runtime Entity Framework recherche des ressources dans les emplacements suivants, dans cet ordre :<br /><br /> 1.  L'assembly appelant.<br />2.  Les assemblys référencés.<br />3.  Les assemblys situés dans le répertoire bin d'une application.<br /><br /> Si les fichiers ne se trouvent pas dans l'un de ces emplacements, une exception est levée. **Remarque :** lorsque vous utilisez le caractère générique (*), Entity Framework doit rechercher dans tous les assemblys avec le nom correct pour les ressources. Pour améliorer les performances, spécifiez le nom de l'assembly plutôt que le caractère générique.|  
+|`assemblyFullName`|Nom complet d'un assembly avec la ressource incorporée. Ce nom inclut le nom simple, le nom de la version, la culture prise en charge et la clé publique, comme suit :<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Il est possible d'incorporer des ressources dans n'importe quel assembly accessible par l'application.<br /><br /> Si vous spécifiez un caractère générique (\*) pour `assemblyFullName`, le runtime Entity Framework recherche des ressources dans les emplacements suivants, dans cet ordre :<br /><br /> 1.  L'assembly appelant.<br />2.  Les assemblys référencés.<br />3.  Les assemblys situés dans le répertoire bin d'une application.<br /><br /> Si les fichiers ne se trouvent pas dans l'un de ces emplacements, une exception est levée. **Remarque :**  Lorsque vous utilisez un caractère générique (*), Entity Framework doit rechercher les ressources portant le nom correct dans tous les assemblys. Pour améliorer les performances, spécifiez le nom de l'assembly plutôt que le caractère générique.|  
 |`resourceName`|Nom de la ressource incluse, par exemple AdvendtureWorksModel.csdl. Les services de métadonnées ne recherchent que les fichiers ou les ressources ayant l'une des extensions suivantes : .csdl, .ssdl, or .msl. Si `resourceName` n'est pas spécifié, toutes les ressources de métadonnées sont chargées. Les ressources doivent avoir des noms uniques dans un assembly. Si plusieurs fichiers portant le même nom sont définis dans différents répertoires de l'assembly, l'option `resourceName` doit inclure la structure de dossiers avant le nom de la ressource, par exemple NomDossier.NomFichier.csdl.<br /><br /> `resourceName` n'est pas requis lorsque vous spécifiez un caractère générique (*) pour `assemblyFullName`.|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  La résolution de la chaîne de substitution `DataDirectory` et de l'opérateur ~ est non récursive. Par exemple, lorsque `DataDirectory` inclut le caractère `~`, une exception se produit. Cela empêche une récurrence infinie.  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation des fournisseurs de données](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [Points à prendre en considération pour le déploiement](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Gestion des connexions et Transactions](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Chaînes de connexion](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation des fournisseurs de données](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Points à prendre en considération pour le déploiement](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Gestion des connexions et Transactions](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Chaînes de connexion](../../../../../docs/framework/data/adonet/connection-strings.md)

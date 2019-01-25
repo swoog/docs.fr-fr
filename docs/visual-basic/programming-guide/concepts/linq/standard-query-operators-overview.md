@@ -2,12 +2,12 @@
 title: Vue d’ensemble des opérateurs de requête standard (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526494"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Vue d’ensemble des opérateurs de requête standard (Visual Basic)
 Les *opérateurs de requête standard* sont les méthodes qui forment le modèle de requête LINQ. La plupart de ces méthodes fonctionnent sur des séquences, où une séquence est un objet dont le type implémente l’interface <xref:System.Collections.Generic.IEnumerable%601> ou l’interface <xref:System.Linq.IQueryable%601>. Les opérateurs de requête standard fournissent des fonctionnalités de requête, dont notamment le filtrage, la projection, l’agrégation, le tri, etc.  
@@ -64,7 +64,7 @@ MsgBox(output.ToString())
 ```  
   
 ## <a name="query-expression-syntax"></a>Syntaxe d'expression de requête  
- Certains des opérateurs de requête standard les plus courants ont une syntaxe de mots clés dédiée des langages C# et Visual Basic, qui permet de les appeler dans le cadre d’une *expression* de *requête*. Pour plus d’informations sur les opérateurs de requête standard qui ont des mots clés et leurs syntaxes correspondantes, consultez [syntaxe d’Expression de requête pour les opérateurs de requête Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+ Certains des opérateurs de requête standard les plus courants ont une syntaxe de mots clés dédiée des langages C# et Visual Basic, qui permet de les appeler dans le cadre d’une *expression* de *requête*. Pour plus d’informations sur les opérateurs de requête standard qui comportent des dédiés mots clés et leurs syntaxes correspondantes, consultez [syntaxe d’Expression de requête pour les opérateurs de requête Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Extension des opérateurs de requête standard  
  Vous pouvez augmenter l’ensemble d’opérateurs de requête standard en créant des méthodes spécifiques au domaine appropriées pour votre domaine ou technologie cible. Vous pouvez également remplacer les opérateurs de requête standard par vos propres implémentations qui fournissent des services supplémentaires, tels que l’évaluation à distance, la traduction des requêtes et l’optimisation. Pour obtenir un exemple, consultez <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
@@ -76,7 +76,7 @@ MsgBox(output.ToString())
   
  [Opérations ensemblistes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
   
- [Le filtrage des données (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
+ [Filtrage des données (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
   
  [Opérations de quantificateur (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
   
@@ -84,7 +84,7 @@ MsgBox(output.ToString())
   
  [Partitionnement des données (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
   
- [Joindre des opérations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
+ [Assembler les opérations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
   
  [Regroupement de données (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
   
@@ -94,16 +94,16 @@ MsgBox(output.ToString())
   
  [Opérations d’élément (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
   
- [Conversion de Types de données (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
+ [Conversion des Types de données (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
   
  [Opérations de concaténation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)  
   
  [Opérations d’agrégation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [Introduction à LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- [Syntaxe d’Expression de requête pour les opérateurs de requête Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [Classification des opérateurs de requête Standard en mode d’exécution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [Méthodes d’extension](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [Introduction à LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [Syntaxe d’Expression de requête pour les opérateurs de requête Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Classification des opérateurs de requête Standard en mode d’exécution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Méthodes d’extension](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

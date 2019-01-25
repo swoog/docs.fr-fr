@@ -1,5 +1,5 @@
 ---
-title: 'Comment : appeler une procédure qui retourne une valeur (Visual Basic)'
+title: 'Procédure : Appeler une procédure qui retourne une valeur (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -7,47 +7,47 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 35f757609b6d0b36652db3b14e62ecd299a063ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525454"
 ---
-# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Comment : appeler une procédure qui retourne une valeur (Visual Basic)
-A `Function` procédure retourne une valeur au code appelant. Vous appeler en incluant son nom et ses arguments soit à droite d’une instruction d’assignation ou dans une expression.  
+# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Procédure : Appeler une procédure qui retourne une valeur (Visual Basic)
+Un `Function` procédure retourne une valeur au code appelant. Vous appelez en incluant son nom et ses arguments soit situé à droite d’une instruction d’assignation ou dans une expression.  
   
 ### <a name="to-call-a-function-procedure-within-an-expression"></a>Pour appeler une procédure de fonction dans une expression  
   
-1.  Utilisez le `Function` la même manière que vous utiliseriez une variable de nom de la procédure. Vous pouvez utiliser un `Function` partout où vous pouvez utiliser une variable ou une constante dans une expression d’appel de procédure.  
+1.  Utiliser le `Function` la même façon que vous utiliseriez une variable de nom de la procédure. Vous pouvez utiliser un `Function` partout où vous pouvez utiliser une variable ou une constante dans une expression d’appel de procédure.  
   
-2.  Suivez le nom de la procédure avec des parenthèses pour encadrer la liste d’arguments. S’il n’y a pas d’arguments, vous pouvez éventuellement omettre les parenthèses. Toutefois, à l’aide de parenthèses rend votre code plus facile à lire.  
+2.  Faites suivre le nom de procédure avec des parenthèses pour encadrer la liste d’arguments. S’il n’y a aucun argument, vous pouvez éventuellement omettre les parenthèses. Toutefois, à l’aide de parenthèses rend votre code plus facile à lire.  
   
-3.  Placez les arguments dans la liste d’arguments entre parenthèses, séparées par des virgules. Assurez-vous de fournir les arguments dans le même ordre que les `Function` procédure définit les paramètres correspondants.  
+3.  Placez les arguments dans la liste d’arguments entre parenthèses, séparées par des virgules. Veillez à vous fournir les arguments dans le même ordre que les `Function` procédure définit les paramètres correspondants.  
   
-     Ou bien, vous pouvez passer un ou plusieurs arguments par nom. Pour plus d’informations, consultez [en passant les Arguments par Position et par nom](./passing-arguments-by-position-and-by-name.md).  
+     Vous pouvez également transmettre un ou plusieurs arguments par nom. Pour plus d’informations, consultez [en passant les Arguments par Position et par nom](./passing-arguments-by-position-and-by-name.md).  
   
 4.  La valeur retournée par la procédure participe à l’expression comme la valeur d’une variable ou constante le ferait.  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>Pour appeler une procédure Function dans une instruction d’assignation  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>Pour appeler une procédure de fonction dans une instruction d’assignation  
   
-1.  Utilisez le `Function` nom de la procédure suivante égaux (`=`) connectez-vous à l’instruction d’assignation.  
+1.  Utilisez le `Function` nom de procédure suivant égaux (`=`) connectez-vous à l’instruction d’assignation.  
   
-2.  Suivez le nom de la procédure avec des parenthèses pour encadrer la liste d’arguments. S’il n’y a pas d’arguments, vous pouvez éventuellement omettre les parenthèses. Toutefois, à l’aide de parenthèses rend votre code plus facile à lire.  
+2.  Faites suivre le nom de procédure avec des parenthèses pour encadrer la liste d’arguments. S’il n’y a aucun argument, vous pouvez éventuellement omettre les parenthèses. Toutefois, à l’aide de parenthèses rend votre code plus facile à lire.  
   
-3.  Placez les arguments dans la liste d’arguments entre parenthèses, séparées par des virgules. Assurez-vous de fournir les arguments dans le même ordre que les `Function` procédure définit les paramètres correspondants, sauf si vous les passez par nom.  
+3.  Placez les arguments dans la liste d’arguments entre parenthèses, séparées par des virgules. Veillez à vous fournir les arguments dans le même ordre que les `Function` procédure définit les paramètres correspondants, sauf si vous les transmettez par nom.  
   
-4.  La valeur retournée par la procédure est stockée dans la variable ou une propriété sur le côté gauche de l’instruction d’assignation.  
+4.  La valeur retournée par la procédure est stockée dans la variable ou la propriété sur le côté gauche de l’instruction d’assignation.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant appelle Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> pour récupérer la valeur d’une variable d’environnement de système d’exploitation. La première ligne appelle `Environ` au sein d’une expression et la deuxième ligne l’appelle dans une instruction d’assignation. `Environ` prend le nom de variable comme unique argument. Elle retourne la valeur de la variable au code appelant.  
+ L’exemple suivant appelle le Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> pour récupérer la valeur de variable d’environnement de système d’exploitation. La première ligne appelle `Environ` au sein d’une expression et la deuxième ligne l’appelle dans une instruction d’assignation. `Environ` prend le nom de variable comme unique argument. Elle retourne la valeur de la variable au code appelant.  
   
  [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédures Function](./function-procedures.md)  
- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)  
- [Function (instruction)](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Guide pratique : créer une procédure qui retourne une valeur](./how-to-create-a-procedure-that-returns-a-value.md)  
- [Guide pratique : retourner une valeur d’une procédure](./how-to-return-a-value-from-a-procedure.md)  
- [Guide pratique : appeler une procédure qui ne retourne pas de valeur](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédures Function](./function-procedures.md)
+- [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
+- [Function (instruction)](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Guide pratique pour Créer une procédure qui retourne une valeur](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Guide pratique pour Retourner une valeur à partir d’une procédure](./how-to-return-a-value-from-a-procedure.md)
+- [Guide pratique pour Appeler une procédure qui ne retourne pas de valeur](./how-to-call-a-procedure-that-does-not-return-a-value.md)

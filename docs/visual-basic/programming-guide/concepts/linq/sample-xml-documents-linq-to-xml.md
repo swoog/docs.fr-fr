@@ -2,12 +2,12 @@
 title: Exemples de documents XML (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: 5ddfdd9c8b7114651cea59a0b356ee87f29bd62b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9e1c8dc073a0079766e1239c9a31ea00696da84f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652382"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Exemples de documents XML (LINQ to XML)
 Les exemples de fichiers suivants sont utilisés dans les exemples de code et les extraits de code figurant dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -19,19 +19,19 @@ Les exemples de fichiers suivants sont utilisés dans les exemples de code et le
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Exemple de fichier XML : commande fournisseur typique (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)|Document XML qui contient une commande fournisseur typique.|  
-|[Exemple de fichier XML : Commande fournisseur typique dans un espace de noms](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|Document XML dans un espace de noms qui contient une commande fournisseur typique.|  
+|[Exemple de fichier XML : Commande fournisseur typique (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)|Document XML qui contient une commande fournisseur typique.|  
+|[Exemple de fichier XML : Commande fournisseur typique dans un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|Document XML dans un espace de noms qui contient une commande fournisseur typique.|  
 |[Exemple de fichier XML : Plusieurs commandes fournisseur (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)|Document XML qui contient plusieurs commandes fournisseur.|  
-|[Exemple de fichier XML : Plusieurs commandes fournisseur dans un espace de noms](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|Document XML dans un espace de noms qui contient plusieurs commandes fournisseur.|  
-|[Exemple de fichier XML : Configuration test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Document XML qui contient des pseudo-données de configuration de test.|  
-|[Exemple de fichier XML : Configuration test dans un espace de noms](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|Document XML dans un espace de noms qui contient des pseudo-données de configuration de test.|  
-|[Exemple de fichier XML : Clients et commandes (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|Document XML qui contient des clients et des commandes.|  
-|[Exemple de fichier XSD : Clients et commandes](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Définition de schéma XML (XSD) qui valide l’[exemple de fichier XML : Clients et commandes (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).|  
-|[Exemple de fichier XML : Clients et commandes dans un espace de noms](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Document XML dans un espace de noms qui contient des clients et des commandes.|  
+|[Exemple de fichier XML : Plusieurs bons de commande dans un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|Document XML dans un espace de noms qui contient plusieurs commandes fournisseur.|  
+|[Exemple de fichier XML : Configuration de test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Document XML qui contient des pseudo-données de configuration de test.|  
+|[Exemple de fichier XML : Configuration de test dans un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|Document XML dans un espace de noms qui contient des pseudo-données de configuration de test.|  
+|[Exemple de fichier XML : Les clients et commandes (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|Document XML qui contient des clients et des commandes.|  
+|[Exemple de fichier XSD : Customers et Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Un définition de schéma Xml (XSD) qui valide le [exemple de fichier XML : Les clients et commandes (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).|  
+|[Exemple de fichier XML : Clients et commandes dans un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Document XML dans un espace de noms qui contient des clients et des commandes.|  
 |[Exemple de fichier XML : Données numériques (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|Document XML qui contient des données adaptées à l'addition et au regroupement.|  
-|[Exemple de fichier XML : Données numériques dans un espace de noms](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Document XML dans un espace de noms qui contient des données adaptées à l'addition et au regroupement.|  
+|[Exemple de fichier XML : Données numériques dans un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Document XML dans un espace de noms qui contient des données adaptées à l'addition et au regroupement.|  
 |[Exemple de fichier XML : Livres (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|Document XML qui contient un catalogue de livres.|  
-|[Exemple de fichiers XML : Commandes fournisseur consolidées](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|Présente un document XML qui contient des commandes fournisseur qui se trouvent dans des espaces de noms différents.|  
+|[Exemple de fichier XML : Commandes fournisseur consolidées](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|Présente un document XML qui contient des commandes fournisseur qui se trouvent dans des espaces de noms différents.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide de programmation (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

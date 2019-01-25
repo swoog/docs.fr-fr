@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 20f36a06000d0197ad80b83766f6612a474d5758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e303a9ac6529fbbc818c94497a16463897fb0c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496125"
 ---
 # <a name="type-39lttypenamegt39-is-not-defined"></a>Type &#39; &lt;typename&gt; &#39; n’est pas défini
 L’instruction a fait référence à un type qui n’a pas été défini. Vous pouvez définir un type dans une instruction de déclaration, tel que `Enum`, `Structure`, `Class`, ou `Interface`.  
@@ -21,20 +21,20 @@ L’instruction a fait référence à un type qui n’a pas été défini. Vous 
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Assurez-vous que la définition de type et sa référence utilisent tous deux la même orthographe.  
+-   Vérifiez que la définition de type et sa référence utilisent tous deux la même orthographe.  
   
--   Assurez-vous que la définition de type est accessible à la référence. Par exemple, si le type est dans un autre module et a été déclaré `Private`, déplacez la définition de type vers le module de référence ou déclarez-le `Public`.  
+-   Vérifiez que la définition de type est accessible à la référence. Par exemple, si le type est dans un autre module et a été déclaré `Private`, déplacez la définition de type vers le module de référence ou déclarez-le `Public`.  
   
--   Assurez-vous que l’espace de noms du type n’est pas redéfinie dans votre projet. Si tel est le cas, utilisez le `Global` (mot clé) pour qualifier complètement le nom de type. Par exemple, si un projet définit un espace de noms `System`, le <xref:System.Object?displayProperty=nameWithType> type ne sont pas accessibles, sauf si elle est qualifié avec le `Global` (mot clé) : `Global.System.Object`.  
+-   Assurez-vous que l’espace de noms du type n’est pas redéfini au sein de votre projet. Si tel est le cas, utilisez le `Global` mot clé pour qualifier le nom de type. Par exemple, si un projet définit un espace de noms nommé `System`, le <xref:System.Object?displayProperty=nameWithType> type n’est pas accessible sauf s’il est qualifié avec le `Global` mot clé : `Global.System.Object`.  
   
--   Si le type est défini, mais que la bibliothèque d’objets ou la bibliothèque de types dans laquelle il est défini n’est pas inscrit dans Visual Basic, cliquez sur **ajouter une référence** sur la **projet** menu et sélectionnez l’objet approprié bibliothèque ou bibliothèque de types.  
+-   Si le type est défini, mais la bibliothèque d’objets ou la bibliothèque de type dans lequel elle est définie n’est pas inscrit dans Visual Basic, cliquez sur **ajouter une référence** sur le **projet** menu et sélectionnez l’objet approprié bibliothèque ou bibliothèque de types.  
   
 -   Assurez-vous que le type est dans un assembly qui fait partie du profil .NET Framework ciblé. Pour plus d’informations, consultez [Dépannage des erreurs de ciblage du .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
-## <a name="see-also"></a>Voir aussi  
- [Espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Enum (instruction)](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Structure (instruction)](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project)
+## <a name="see-also"></a>Voir aussi
+- [Espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Enum (instruction)](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Structure (instruction)](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project)
