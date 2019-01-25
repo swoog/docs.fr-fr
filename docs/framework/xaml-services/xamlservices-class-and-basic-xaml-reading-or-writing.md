@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: 27c7a45a45e8bbe3594813b29344d1548eecda5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbb5f31516be4e977471ee1250502e58e252f1c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503189"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Classe XAMLServices et lecture ou écriture XAML de base
 <xref:System.Xaml.XamlServices> est une classe fournie par les services XAML .NET Framework et qui peut être utilisée dans le cadre des scénarios XAML ne nécessitant pas d'accès spécifique au flux de nœud XAML ou aux informations de système de type XAML obtenues à partir de ces nœuds. L'API de<xref:System.Xaml.XamlServices> peut se résumer comme suit : `Load` ou `Parse` to suppout a XAML load path, `Save` to suppout a XAML save path, and `Transform` pour fournir une technique qui associe un chemin de chargement et un chemin d'enregistrement. `Transform` peut être utilisé pour passer d'un schéma XAML à un autre. Cette rubrique résume chacune de ces classifications d'API et décrit les différences qui existent entre des surcharges de méthode particulières.  
@@ -25,7 +25,7 @@ ms.locfileid: "33565910"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> et <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> sont des surcharges qui reposent sur des lecteurs de formats des versions antérieures du .NET Framework. Pour utiliser ces surcharges, vous devez déjà avoir créé une instance de lecteur et utiliser son API une instance de lecteur et utilisé son API `Create` pour charger le code XAML au format approprié (texte ou XML). Si vous avez déjà déplacé des pointeurs d'enregistrement dans les autres lecteurs ou exécuté d'autres opérations les concernant, cela ne pose aucun problème. La logique du chemin de chargement de <xref:System.Xaml.XamlServices.Load%2A> traite toujours l'entrée XAML entière à partir de la racine. Les scénarios associés à ces surcharges peuvent inclure les éléments suivants :  
   
--   les aires de conception dans lesquelles vous fournissez des fonctions d'édition XAML simples à partir d'un éditeur de texte XML existant ;  
+-   les aires de conception dans lesquelles vous fournissez des fonctions d'édition XAML simples à partir d'un éditeur de texte XML existant ;  
   
 -   les variantes des scénarios <xref:System.IO> de base dans lesquels vous utilisez les lecteurs dédiés pour ouvrir des fichiers ou des flux. Votre logique procède à un contrôle ou un traitement rudimentaire du contenu avant de tenter de le charger en tant que code XAML.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "33565910"
  Le défi lié à l'enregistrement et à la sérialisation d'un objet complexe qui est défini dans une forme de balisage réside dans l'obtention d'un équilibre entre une représentation complète sans perte d'informations et un excès de commentaires rendant le code XAML moins explicite. De plus, différents clients pour XAML peuvent avoir des définitions ou des attentes différentes concernant la définition de l'équilibre. Les API <xref:System.Xaml.XamlServices.Save%2A> représentent une définition de cet équilibre. Les API <xref:System.Xaml.XamlServices.Save%2A> utilisent un contexte de schéma XAML disponible et les caractéristiques CLR par défaut de <xref:System.Xaml.XamlType>, de <xref:System.Xaml.XamlMember>et d'autres concepts d'intrinsèque XAML et de système de type XAML pour déterminer si certaines constructions de flux de nœud XAML peuvent être optimisées lorsqu'elles sont réenregistrées dans le balisage. Par exemple, les chemins d'enregistrement <xref:System.Xaml.XamlServices> peuvent utiliser un contexte de schéma XAML par défaut basé sur CLR pour résoudre <xref:System.Xaml.XamlType> pour des objets, déterminer une propriété <xref:System.Xaml.XamlType.ContentProperty%2A?displayProperty=nameWithType>, puis omettre des balises d'éléments de propriété lors de l'écriture de la propriété dans le contenu XAML de cet objet.  
   
 <a name="transform"></a>   
-## <a name="transform"></a>Transform  
+## <a name="transform"></a>Transformer  
  <xref:System.Xaml.XamlServices.Transform%2A> convertit ou transforme le code XAML en associant un chemin de chargement et un chemin d'enregistrement dans le cadre d'une seule opération. Un contexte de schéma ou un système de types de stockage différent peut être utilisé pour <xref:System.Xaml.XamlReader> et <xref:System.Xaml.XamlWriter>, ce qui est l'élément qui influence le mode de transformation du code XAML obtenu. Cela fonctionne bien pour les opérations de transformation générales.  
   
  Pour les opérations qui reposent sur l'examen de chaque nœud dans un flux de nœud XAML, vous n'utiliseriez généralement pas <xref:System.Xaml.XamlServices.Transform%2A>. Au lieu de cela, vous devez définir votre propre série d'opérations chemin de chargement-chemin d'enregistrement et lancer votre propre logique. Dans l'un des chemins, utilisez une paire lecteur XAML/writer XAML autour de votre propre boucle de nœud. Par exemple, chargez le code XAML initial à l'aide de <xref:System.Xaml.XamlXmlReader> et entrez dans les nœuds avec des appels à <xref:System.Xaml.XamlXmlReader.Read%2A> successifs. En opérant au niveau du flux de nœud XAML, vous pouvez maintenant ajuster des nœuds individuels (types, membres ou autres nœuds) pour appliquer une transformation ou laisser le nœud en l'état. Envoyez ensuite le nœud à l'API `Write` pertinente d'un <xref:System.Xaml.XamlObjectWriter> et écrivez l'objet. Pour plus d'informations, consultez [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xaml.XamlObjectWriter>  
- <xref:System.Xaml.XamlServices>  
- [Services XAML](../../../docs/framework/xaml-services/index.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Xaml.XamlObjectWriter>
+- <xref:System.Xaml.XamlServices>
+- [Services XAML](../../../docs/framework/xaml-services/index.md)

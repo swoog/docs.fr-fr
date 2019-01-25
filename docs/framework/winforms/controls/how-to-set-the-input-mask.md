@@ -1,25 +1,25 @@
 ---
-title: 'Comment : définir le masque de saisie'
+title: 'Procédure : Définir le masque d’entrée'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.MaskPropertyEditor
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 6f554c239e3444db5f6ac84f7994108ac70df0a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68a3e72f23e881bc68441e8aee9674f1a822882a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658911"
 ---
-# <a name="how-to-set-the-input-mask"></a>Comment : définir le masque de saisie
-Le contrôle de zone de texte masquée est un contrôle de zone de texte amélioré qui prend en charge une syntaxe déclarative pour accepter ou rejeter l’entrée d’utilisateur. En définissant la propriété du masque, vous pouvez spécifier l’entrée d’utilisateur autorisée sans écrire une logique de validation personnalisée dans votre application. Pour plus d’informations, consultez la section Notes de la <xref:System.Windows.Forms.MaskedTextBox> classe.  
+# <a name="how-to-set-the-input-mask"></a>Procédure : Définir le masque d’entrée
+Le contrôle de zone de texte masquée est un contrôle de zone de texte amélioré qui prend en charge une syntaxe déclarative pour accepter ou rejeter l’entrée d’utilisateur. En définissant la propriété Mask, vous pouvez spécifier l’entrée d’utilisateur autorisée sans écrire la logique de validation personnalisée dans votre application. Pour plus d’informations, consultez la section Notes de la <xref:System.Windows.Forms.MaskedTextBox> classe.  
   
-## <a name="setting-the-mask-property-manually"></a>Définir la propriété masque manuellement  
- Si vous êtes familiarisé avec les caractères qui prend en charge de la propriété du masque, vous pouvez l’entrer manuellement. Pour obtenir un résumé des caractères que la propriété Masque prend en charge, consultez la section Notes de la <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriété.  
+## <a name="setting-the-mask-property-manually"></a>Définissez la propriété Mask manuellement  
+ Si vous êtes familiarisé avec les caractères qui prend en charge de la propriété Mask, vous pouvez l’entrer manuellement. Pour obtenir un résumé des caractères qui prend en charge de la propriété Mask, consultez la section Notes de la <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriété.  
   
-#### <a name="to-set-the-mask-property-manually"></a>Pour définir la propriété masque manuellement  
+#### <a name="to-set-the-mask-property-manually"></a>Pour définir la propriété Mask manuellement  
   
 1.  Dans **conception** afficher, sélectionnez un <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -27,10 +27,10 @@ Le contrôle de zone de texte masquée est un contrôle de zone de texte amélio
   
 3.  Tapez le masque que vous souhaitez. Par exemple, tapez `###`.  
   
-## <a name="using-the-input-mask-dialog-box"></a>À l’aide de la boîte de dialogue masque de saisie  
- La boîte de dialogue masque de saisie fournit des masques d’entrée prédéfinis. Vous pouvez également modifier les masques prédéfinis ou entrer votre propre masque manuellement.  
+## <a name="using-the-input-mask-dialog-box"></a>À l’aide de la boîte de dialogue de masque de saisie  
+ La boîte de dialogue de masque de saisie fournit des masques d’entrée prédéfinis. Vous pouvez également modifier les masques prédéfinis ou entrer votre propre masque manuellement.  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a>Pour ouvrir la boîte de dialogue masque de saisie  
+#### <a name="to-open-the-input-mask-dialog-box"></a>Pour ouvrir la boîte de dialogue de masque d’entrée  
   
 1.  Dans **conception** afficher, sélectionnez un <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -44,9 +44,9 @@ Le contrôle de zone de texte masquée est un contrôle de zone de texte amélio
   
     2.  Cliquez sur le bouton de sélection dans la colonne de valeur de propriété.  
   
-     Le **masque de saisie** boîte de dialogue s’affiche.  
+     Le **masque d’entrée** boîte de dialogue s’affiche.  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a>Pour utiliser la boîte de dialogue masque de saisie  
+#### <a name="to-use-the-input-mask-dialog-box"></a>Pour utiliser la boîte de dialogue de masque d’entrée  
   
 1.  (Facultatif) Cliquez sur un des masques prédéfinis dans la liste.  
   
@@ -63,5 +63,5 @@ Le contrôle de zone de texte masquée est un contrôle de zone de texte amélio
   
      Le masque est entré dans le **masque** propriété dans le **propriétés** fenêtre.  
   
-## <a name="see-also"></a>Voir aussi  
- [Procédure pas à pas : utilisation du contrôle MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a>Voir aussi
+- [Procédure pas à pas : Utilisation du contrôle MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

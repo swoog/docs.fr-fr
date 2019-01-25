@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a49b3d08b58da109924267e6c23c188efefe29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a68c210c8c87597e2f3e664ff67ff4ba3557323d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656360"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication, méthode
-Utilisé dans les scénarios de déploiement ClickOnce basée sur un manifeste pour spécifier l’application à activer dans un nouveau domaine. Pour plus d’informations sur ces scénarios, consultez [sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+Utilisé dans les scénarios de déploiement ClickOnce basée sur un manifeste pour spécifier l’application à activer dans un nouveau domaine. Pour plus d’informations sur ces scénarios, consultez [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,13 +48,13 @@ HRESULT ExecuteApplication(
  [in] Le nombre de chaînes contenues dans le `ppwzManifestPaths` tableau.  
   
  `ppwzManifestPaths`  
- [in] Facultatif. Tableau de chaînes qui contient les chemins d’accès de manifestes de l’application.  
+ [in] Facultatif. Tableau de chaînes qui contient les chemins d’accès de manifestes pour l’application.  
   
  `dwActivationData`  
  [in] Le nombre de chaînes contenues dans le `ppwzActivationData` tableau.  
   
  `ppwzActivationData`  
- [in] Facultatif. Un tableau de chaînes qui contient les données d’activation de l’application, telles que la portion de chaîne de requête de l’URL pour les applications déployées sur le Web.  
+ [in] Facultatif. Un tableau de chaînes qui contient des données de l’activation de l’application, comme la partie de chaîne de requête de l’URL pour les applications déployées sur le Web.  
   
  `pReturnValue`  
  [out] La valeur retournée par le point d’entrée de l’application.  
@@ -64,33 +64,33 @@ HRESULT ExecuteApplication(
 |HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`ExecuteApplication` retourné avec succès.|  
-|HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
+|HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
-|HOST_E_ABANDONED|Un événement a été annulé alors qu’un thread bloqué ou une fibre l’attendait.|  
-|E_FAIL|Une défaillance grave et inconnue s’est produite. Si une méthode retourne E_FAIL, le CLR n’est plus utilisable dans le processus. Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.|  
+|E_FAIL|Une défaillance catastrophique inconnue s’est produite. Si une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus. Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Notes  
  `ExecuteApplication` est utilisé pour activer des applications ClickOnce dans un domaine d’application nouvellement créé.  
   
- Le `pReturnValue` paramètre de sortie est défini sur la valeur retournée par l’application. Si vous fournissez une valeur null pour `pReturnValue`, `ExecuteApplication` n’échoue pas, mais il ne retourne pas de valeur.  
+ Le `pReturnValue` paramètre de sortie est défini sur la valeur retournée par l’application. Si vous fournissez une valeur NULL pour `pReturnValue`, `ExecuteApplication` n’échoue pas, mais il ne retourne pas de valeur.  
   
 > [!IMPORTANT]
 >  N’appelez pas la [méthode Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) méthode avant d’appeler le `ExecuteApplication` méthode permettant d’activer une application basée sur un manifeste. Si le `Start` méthode est appelée en premier, le `ExecuteApplication` appel de méthode échoue.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.ActivationContext>  
- <xref:System.AppDomainManager>  
- <xref:System.ApplicationIdentity>  
- [ICLRRuntimeHost, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [SetAppDomainManager, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)  
- [Procédure pas à pas : téléchargement d’assemblys à la demande avec l’API du déploiement ClickOnce à l’aide du concepteur](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.ActivationContext>
+- <xref:System.AppDomainManager>
+- <xref:System.ApplicationIdentity>
+- [ICLRRuntimeHost, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [SetAppDomainManager, méthode](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
+- [Procédure pas à pas : téléchargement d'assemblys à la demande avec l'API du déploiement ClickOnce à l'aide du concepteur](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: 8e9aad2ec65e037b15e19ca2e624fdc8f28bc94e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7f77c8113f8af113b4c8515994093958970864a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742131"
 ---
 # <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;expression&gt; &#39; ne peut pas être utilisé comme contrainte de type
 Une liste de contraintes contient une expression qui ne représente pas une contrainte valide sur un paramètre de type.  
@@ -41,10 +41,10 @@ Une liste de contraintes contient une expression qui ne représente pas une cont
   
 -   Si l’expression ne répond pas à la précédente liste d’exigences, supprimez-la de la liste des contraintes.  
   
--   Si l’expression fait référence à une interface ou une classe, vérifiez que le compilateur a accès à cette interface ou classe. Vous devrez peut-être qualifier son nom et ajouter une référence à votre projet. Pour plus d’informations, consultez « Références aux projets » dans [références aux éléments de déclaré](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+-   Si l’expression fait référence à une interface ou une classe, vérifiez que le compilateur a accès à cette interface ou classe. Vous devrez peut-être qualifier son nom et ajouter une référence à votre projet. Pour plus d’informations, consultez « Références aux projets » dans [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Types génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Types valeur et types référence](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Références aux éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- 
+## <a name="see-also"></a>Voir aussi
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Value Types and Reference Types](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Références aux éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+

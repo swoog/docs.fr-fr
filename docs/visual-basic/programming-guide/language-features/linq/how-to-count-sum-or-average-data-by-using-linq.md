@@ -1,5 +1,5 @@
 ---
-title: "Comment : compter, additionner ou faire la moyenne de données à l'aide de LINQ (Visual Basic)"
+title: 'Procédure : Nombre, somme ou moyenne des données à l’aide de LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - average operator [LINQ in Visual Basic]
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 942cb889c595f8caaf86dee1c025a935bd7db1b1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e95f9d75ab9db07b55257bbf6ca951a898b2fb2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735089"
 ---
-# <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Comment : compter, additionner ou faire la moyenne de données à l'aide de LINQ (Visual Basic)
+# <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Procédure : Nombre, somme ou moyenne des données à l’aide de LINQ (Visual Basic)
 Language-Integrated Query (LINQ) facilite l’accès aux informations de base de données et exécuter des requêtes.  
   
  L’exemple suivant montre comment créer une application qui effectue des requêtes sur une base de données SQL Server. L’exemple de compte, additionne et calcule la moyenne les résultats à l’aide de la `Aggregate` et `Group By` clauses. Pour plus d’informations, consultez [Aggregate, Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md) et [Group By Clause](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
@@ -77,10 +77,10 @@ Language-Integrated Query (LINQ) facilite l’accès aux informations de base de
   
 4.  Appuyez sur F5 pour exécuter votre projet et afficher les résultats.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Requêtes](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext, méthodes (Concepteur O/R)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Aggregate (clause)](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Group By (clause)](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a>Voir aussi
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Requêtes](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext, méthodes (Concepteur O/R)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Aggregate (clause)](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Group By (clause)](../../../../visual-basic/language-reference/queries/group-by-clause.md)

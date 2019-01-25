@@ -1,5 +1,5 @@
 ---
-title: 'Comment : appeler des API Windows (Visual Basic)'
+title: 'Procédure : Appeler des API Windows (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - API calls [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 081f4242ef5883a8b25b8819ba3aff835b1e6ac7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5db6e299012982024f34d46906de1a3be9b20ff1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650687"
 ---
-# <a name="how-to-call-windows-apis-visual-basic"></a>Comment : appeler des API Windows (Visual Basic)
+# <a name="how-to-call-windows-apis-visual-basic"></a>Procédure : Appeler des API Windows (Visual Basic)
 Cet exemple définit et appelle le `MessageBox` fonction dans user32.dll et lui passe une chaîne.  
   
 ## <a name="example"></a>Exemple  
@@ -36,9 +36,9 @@ Cet exemple définit et appelle le `MessageBox` fonction dans user32.dll et lui 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Présentation détaillée de l’appel de code non managé](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
-- [Exemples d'appel de code non managé](../../../framework/interop/platform-invoke-examples.md)  
-- [Consommation de fonctions DLL non managées](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
-- [Définition d’une méthode avec la réflexion l’émission](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
-- [Procédure pas à pas : appel des API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+- [Présentation détaillée de l’appel de code non managé](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [Exemples d'appel de code non managé](../../../framework/interop/platform-invoke-examples.md)
+- [Consommation de fonctions DLL non managées](../../../framework/interop/consuming-unmanaged-dll-functions.md)
+- [Définition d’une méthode avec la réflexion l’émission](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)
+- [Procédure pas à pas : Appel des API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48b15429d40d3a69db52615592fc1697f385d319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e060fc62a93d98d8b86a244db1bc53a769cb31c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717166"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame, structure
 Représente les informations de frame de pile provenant d'un objet Exception.  
@@ -42,7 +42,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
 |Membre|Description|  
 |------------|-----------------|  
 |`pModule`|Pointeur vers l’objet ICorDebugModule pour le frame actuel.|  
-|`ip`|La valeur du pointeur d’instruction (EIP/RIP) pour le frame actuel.|  
+|`ip`|La valeur de pointeur d’instruction (EIP/RIP) pour le frame actuel.|  
 |`methodDef`|Le jeton de méthode pour le frame actuel.|  
 |`isLastForeignExceptionFrame`|Une valeur qui indique si le frame est la dernière image étrangère d’une exception.|  
   
@@ -50,14 +50,14 @@ typedef struct CorDebugExceptionObjectStackFrame {
  L’appelant doit libérer le pointeur vers l’objet ICorDebugModule une fois qu’il n’est plus en cours d’utilisation.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)

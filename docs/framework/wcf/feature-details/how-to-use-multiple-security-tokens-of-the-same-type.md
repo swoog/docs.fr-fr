@@ -1,15 +1,15 @@
 ---
-title: 'Comment : utiliser plusieurs jetons de sécurité du même type'
+title: 'Procédure : Utiliser plusieurs jetons de sécurité du même Type'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: b8daf8a2cecfc6a7b17911bb50ad292d481188c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40fc95c905f8923b8aaf2c97fb9dc2b937dfb06f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691345"
 ---
-# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Comment : utiliser plusieurs jetons de sécurité du même type
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Procédure : Utiliser plusieurs jetons de sécurité du même Type
 -   Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un message client ne pouvait contenir qu'un jeton d'un type donné. Désormais, les messages peuvent contenir plusieurs jetons d'un type donné. Cette rubrique explique comment inclure plusieurs jetons du même type dans un message client.  
   
 -   Notez que vous ne pouvez pas configurer un service ainsi : un service peut contenir un seul jeton de prise en charge.  
@@ -49,5 +49,5 @@ ms.locfileid: "50184258"
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Voir aussi
+- [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

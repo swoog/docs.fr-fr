@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: de7b4bf3e7dc1145b7e95197c7bd05c66acdabd6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ecfc523573a6ab8142a04557156a3819eed440e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662294"
 ---
 # <a name="where-clause-visual-basic"></a>Where, clause (Visual Basic)
 Spécifie la condition de filtrage pour une requête.  
@@ -45,9 +45,9 @@ Where condition
   
  [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Introduction à LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Requêtes](../../../visual-basic/language-reference/queries/index.md)  
- [From (clause)](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Select (clause)](../../../visual-basic/language-reference/queries/select-clause.md)  
- [For Each...Next (instruction)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Voir aussi
+- [Introduction à LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Requêtes](../../../visual-basic/language-reference/queries/index.md)
+- [From (clause)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Select (clause)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [For Each...Next (instruction)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 673712912b674c48dee094859364df9b22c51c82
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716050"
 ---
 # <a name="designing-and-implementing-services"></a>Conception et implémentation de services
 Cette section vous montre comment définir et implémenter des contrats WCF. Un contrat de service spécifie ce qu'un point de terminaison communique au monde extérieur. À un niveau plus concret, il s'agit d'une instruction à propos d'un ensemble de messages spécifiques organisé en modèles d'échange de messages de base, tels que les messages demande/réponse, unidirectionnels et duplex. Si un contrat de service est un ensemble d'échanges de messages liés de manière logique, une opération de service est un échange de messages unique. Par exemple, une opération `Hello` doit évidemment accepter un message (de sorte que l'appelant puisse annoncer la salutation) et peut ou non retourner un message (en fonction du niveau de courtoisie de l'opération).  
@@ -66,6 +66,6 @@ Cette section vous montre comment définir et implémenter des contrats WCF. Un 
   
  Ce processus d’exigence additif est important à prendre en compte lors de la conception, l’implémentation, configuration et hébergement d’une application de service Windows Communication Foundation (WCF). Par exemple, le contrat peut spécifier qu'il doit prendre en charge une session. Dans ce cas, vous devez configurer la liaison de façon à prendre en charge cette exigence contractuelle, sinon l’implémentation de service ne fonctionnera pas. Si votre service requiert l'authentification intégrée Windows (Windows Integrated Authentification, WIA) et qu'il est hébergé par les services IIS, l'option WIA de l'application Web dans laquelle se trouve le service doit être activée et l'option de prise en charge anonyme doit être désactivée. Pour plus d’informations sur les fonctionnalités et l’impact des types d’application hôte service différent, consultez [Services d’hébergement](../../../docs/framework/wcf/hosting-services.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Conception de contrats de service](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Implémentation de contrats de service](../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>Voir aussi
+- [Conception de contrats de service](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Implémentation de contrats de service](../../../docs/framework/wcf/implementing-service-contracts.md)

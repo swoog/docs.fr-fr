@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
-ms.openlocfilehash: 45787db51de562f2266c587fd2bb15ef29ebefbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f31aea5a98233c8f262a77ba5c99eea389bc33ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715437"
 ---
 # <a name="array-bounds-cannot-appear-in-type-specifiers"></a>Les tailles de tableau ne peuvent pas figurer dans les spécificateurs de type
 Les tailles de tableau ne peuvent pas être déclarés en tant que partie d’un spécificateur de type de données.  
@@ -27,11 +27,11 @@ Les tailles de tableau ne peuvent pas être déclarés en tant que partie d’un
     Dim Array(8) As Integer   
     ```  
   
--   Définir un tableau et initialisez-le avec le nombre voulu d’éléments, comme indiqué dans l’exemple suivant.  
+-   Définir un tableau et initialisez-le avec le nombre souhaité d’éléments, comme illustré dans l’exemple suivant.  
   
     ```  
     Dim Array2() As Integer = New Integer(8) {}  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Tableaux](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Tableaux](../../../visual-basic/programming-guide/language-features/arrays/index.md)

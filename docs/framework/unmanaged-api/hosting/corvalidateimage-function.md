@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a84869281ec27aface96d722603186382c6e15e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730774"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage, fonction
 Valide les images de modules managés et notifie le chargeur du système d’exploitation après avoir été chargés.  
@@ -36,7 +37,7 @@ STDAPI _CorValidateImage (
   
 #### <a name="parameters"></a>Paramètres  
  `ImageBase`  
- [in] Un pointeur vers l’emplacement de départ de l’image à valider en tant que le code managé. L’image doit être déjà chargée en mémoire.  
+ [in] Un pointeur vers l’emplacement de départ de l’image à valider en tant que le code managé. L’image doit déjà être chargée en mémoire.  
   
  `FileName`  
  [in] Le nom de fichier de l’image.  
@@ -60,7 +61,7 @@ STDAPI _CorValidateImage (
   
 -   Retourne au chargeur lorsque les images de modules managés sont chargées.  
   
- Pour les images exécutables, le chargeur du système d’exploitation appelle ensuite la [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) (fonction), quel que soit le point d’entrée spécifié dans le fichier exécutable. Pour les images d’assembly DLL, le chargeur appelle la [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) (fonction).  
+ Pour les images exécutables, le chargeur du système d’exploitation appelle ensuite la [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) (fonction), quel que soit le point d’entrée spécifié dans le fichier exécutable. Pour les images d’assembly DLL, le chargeur appelle le [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) (fonction).  
   
  `_CorExeMain` ou `_CorDllMain` effectue les actions suivantes :  
   
@@ -70,16 +71,16 @@ STDAPI _CorValidateImage (
   
 -   Commence l’exécution.  
   
- Les appels de chargeur du [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) fonctionner lorsque gérés images sont déchargées. Toutefois, cette fonction n’effectue pas d’action ; elle renvoie simplement.  
+ Les appels de chargeur le [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) fonctionner quand gérée images sont déchargées. Toutefois, cette fonction n’effectue pas d’action ; elle retourne simplement.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions statiques globales des métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions statiques globales des métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

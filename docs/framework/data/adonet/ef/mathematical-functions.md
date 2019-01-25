@@ -2,12 +2,12 @@
 title: Fonctions mathématiques
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8d766cb1416a9a07476175364fe568d81fd9b25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652265"
 ---
 # <a name="mathematical-functions"></a>Fonctions mathématiques
 
@@ -93,7 +93,7 @@ Retourne l'angle, en radians, dont la tangente est comprise entre les deux expre
 
 `SqlServer.ATN2(9, 8)`
  
-## <a name="ceilingexpression"></a>Ceiling(expression)
+## <a name="ceilingexpression"></a>CEILING(expression)
 
 Convertit l'expression spécifiée en plus petit entier supérieur ou égal à cette expression.
 
@@ -172,7 +172,7 @@ Calcule la valeur exponentielle d'une expression numérique spécifiée.
 
 **Exemple** `SqlServer.EXP(1)`
 
-## <a name="floorexpression"></a>Floor(expression)
+## <a name="floorexpression"></a>FLOOR(expression)
 
 Convertit l'expression spécifiée en plus grand entier inférieur ou égal à cette expression. 
 
@@ -221,7 +221,7 @@ Retourne le logarithme en base 10 de l'expression `Double` spécifiée.
 
 `SqlServer.LOG10(100)`
 
-## <a name="pi"></a>PI)
+## <a name="pi"></a>PI()
 
 Retourne la valeur constante de pi sous la forme d'une valeur `Double`. 
 
@@ -304,7 +304,7 @@ Valeur du paramètre `numeric_expression` donné élevé à la puissance `power_
 
 `SqlServer.ROUND(748.58, -3)`
 
-## <a name="signexpression"></a>Sign(expression) 
+## <a name="signexpression"></a>SIGN(expression) 
 
 Retourne le signe positif (+1), nul (0) ou négatif (-1) de l'expression spécifiée. 
 
@@ -383,9 +383,9 @@ Calcule la tangente d'une expression spécifiée.
 ## <a name="see-also"></a>Voir aussi
 
 Pour plus d'informations sur les fonctions mathématiques prises en charge par SqlClient, consultez la documentation correspondant à la version de SQL Server que vous avez spécifiée dans le manifeste du fournisseur SqlClient :  
-  
+
 **SQL Server 2005 :** [Fonctions mathématiques (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
 **SQL Server 2008 :** [Fonctions mathématiques (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
 **SQL Server 2012 et versions ultérieur :** [Fonctions mathématiques (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
- [Fonctions SqlClient pour Entity Framework](sqlclient-for-ef-functions.md)
+- [Fonctions SqlClient pour Entity Framework](sqlclient-for-ef-functions.md)

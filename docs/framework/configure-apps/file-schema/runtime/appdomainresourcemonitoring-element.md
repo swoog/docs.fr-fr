@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32ffe48e7a65ab4ca2250eee65d188c0c7270c11
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc507d0cf81bf2bc11edfc0b5efb08c462726b88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727870"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;appDomainResourceMonitoring&gt; élément
 Demande au runtime de collecter des statistiques sur tous les domaines d’application du processus sur toute sa durée.  
   
  \<configuration>  
 \<runtime>  
-\<appDomainResourceMonitoring >  
+\<appDomainResourceMonitoring>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,7 +72,7 @@ Demande au runtime de collecter des statistiques sur tous les domaines d’appli
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Voir aussi
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

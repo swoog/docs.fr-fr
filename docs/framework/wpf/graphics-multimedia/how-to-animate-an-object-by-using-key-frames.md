@@ -1,18 +1,18 @@
 ---
-title: "Comment : animer un objet à l'aide d'images clés"
+title: "Procédure : Animer un objet à l'aide d'images clés"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: 5e948b574e1b4a1c431b9495583e9579502576a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: eb9de4098c5fb9bde74fa93dda6dd5a878ed0339
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697528"
 ---
-# <a name="how-to-animate-an-object-by-using-key-frames"></a>Comment : animer un objet à l'aide d'images clés
+# <a name="how-to-animate-an-object-by-using-key-frames"></a>Procédure : Animer un objet à l'aide d'images clés
 Cet exemple montre comment animer un objet qui, dans cet exemple est la <xref:System.Windows.Controls.Page.Background%2A> propriété d’un <xref:System.Windows.Controls.Page> contrôle, à l’aide d’images clés.  
   
 ## <a name="example"></a>Exemple  
@@ -33,13 +33,13 @@ Cet exemple montre comment animer un objet qui, dans cet exemple est la <xref:Sy
   
  Pour l’exemple complet, consultez la page [Animation d’image clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>  
- <xref:System.Windows.Controls.Page.Background%2A>  
- <xref:System.Windows.Controls.Page>  
- <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>  
- <xref:System.Windows.Media.LinearGradientBrush>  
- <xref:System.Windows.Media.RadialGradientBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Guides pratiques relatifs aux images clés](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>
+- <xref:System.Windows.Controls.Page.Background%2A>
+- <xref:System.Windows.Controls.Page>
+- <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>
+- <xref:System.Windows.Media.LinearGradientBrush>
+- <xref:System.Windows.Media.RadialGradientBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Guides pratiques relatifs aux images clés](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

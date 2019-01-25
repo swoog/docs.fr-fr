@@ -1,5 +1,5 @@
 ---
-title: 'Comment : accéder aux objets de fuseau UTC et l’heure locale prédéfinis'
+title: 'Procédure : Accéder aux objets de fuseau UTC et l’heure locale prédéfinis'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f074e6f6d9b11cc7d7405adced3a4523a31676fa
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658024"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Comment : accéder aux objets de fuseau UTC et l’heure locale prédéfinis
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Procédure : Accéder aux objets de fuseau UTC et l’heure locale prédéfinis
 
 Le <xref:System.TimeZoneInfo> classe fournit deux propriétés, <xref:System.TimeZoneInfo.Utc%2A> et <xref:System.TimeZoneInfo.Local%2A>, qui vous offrent votre code d’accéder aux objets de fuseau horaire prédéfini. Cette rubrique explique comment accéder aux objets <xref:System.TimeZoneInfo> retournés par ces propriétés.
 
@@ -51,12 +51,12 @@ Vous devez toujours accéder au fuseau horaire local via le <xref:System.TimeZon
 
 Cet exemple nécessite :
 
-* Qu’une référence à System.Core.dll être ajoutée au projet.
+* Qu’une référence à System.Core.dll soit ajoutée au projet.
 
-* Que le <xref:System> espace de noms importés avec le `using` instruction (requise en code c#).
+* Que l'espace de noms <xref:System> soit importé avec l'instruction `using` (obligatoire en C#).
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
-* [Recherche des fuseaux horaires définis sur un système local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-* [Guide pratique pour instancier un objet TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Recherche des fuseaux horaires définis sur un système local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- [Guide pratique pour Instancier un objet TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)

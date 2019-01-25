@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc4e8140485902e4677bca0228bc125c64b497f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671860"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps, méthode
 Obtient les métadonnées associées au champ référencé par le jeton FieldDef spécifié.  
@@ -47,7 +47,7 @@ HRESULT GetFieldProps (
   
 #### <a name="parameters"></a>Paramètres  
  `mb`  
- [in] Jeton FieldDef qui représente le champ pour lequel obtenir les métadonnées associées.  
+ [in] Jeton FieldDef qui représente le champ pour obtenir les métadonnées associées.  
   
  `pClass`  
  [out] Pointeur vers un jeton TypeDef qui représente le type de la classe à laquelle appartient le champ.  
@@ -71,23 +71,23 @@ HRESULT GetFieldProps (
  [out] La taille en octets de `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] Indicateur qui spécifie le type de valeur du champ.  
+ [out] Un indicateur qui spécifie le type de valeur du champ.  
   
  `ppValue`  
- [out] Valeur de constante pour le champ.  
+ [out] Une valeur constante pour le champ.  
   
  `pcchValue`  
  [out] La taille en caractères de `ppValue`, ou zéro si aucune chaîne n’existe.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
- **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
+ **Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Voir aussi
+- [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

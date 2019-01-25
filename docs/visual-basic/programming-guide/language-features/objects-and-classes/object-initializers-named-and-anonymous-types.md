@@ -1,5 +1,5 @@
 ---
-title: "Initialiseurs d'objets : types nommés et anonymes (Visual Basic)"
+title: 'Initialiseurs d’objets : Types nommés et anonymes (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ObjectInitializer
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 612b1dcea0f776dfd4580803e76f2785e7d28da6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f65352ebd9ca12aaed6b469c5df136301e9f839c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620537"
 ---
-# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Initialiseurs d'objets : types nommés et anonymes (Visual Basic)
+# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Initialiseurs d’objets : Types nommés et anonymes (Visual Basic)
 Initialiseurs d’objets permettent de spécifier les propriétés d’un objet complexe à l’aide d’une expression unique. Ils peuvent être utilisés pour créer des instances de types nommés et de types anonymes.  
   
 ## <a name="declarations"></a>Déclarations  
@@ -125,12 +125,12 @@ Initialiseurs d’objets permettent de spécifier les propriétés d’un objet 
   
      [!code-vb[VbVbalrObjectInit#15](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/object-initializers-named-and-anonymous-types_15.vb)]  
   
-     Pour plus d’informations sur les options permettant de définir des propriétés dans les types anonymes, consultez [Comment : déduire les noms de propriété et les Types dans les déclarations de Type anonyme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+     Pour plus d’informations sur les options permettant de définir des propriétés dans les types anonymes, consultez [Comment : Déduire les Types dans les déclarations de types anonymes et les noms de propriété](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Guide pratique : déduire les types et les noms de propriétés dans des déclarations de types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
- [Key](../../../../visual-basic/language-reference/modifiers/key.md)  
- [Guide pratique : déclarer un objet à l’aide d’un initialiseur d’objet](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+## <a name="see-also"></a>Voir aussi
+- [Inférence de type local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Guide pratique pour Déduire les Types dans les déclarations de types anonymes et les noms de propriété](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+- [Guide pratique pour Déclarez un objet à l’aide d’un initialiseur d’objet](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

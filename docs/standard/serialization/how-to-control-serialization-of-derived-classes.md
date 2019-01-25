@@ -1,18 +1,18 @@
 ---
-title: 'Comment : contrôler la sérialisation de classes dérivées'
+title: 'Procédure : Contrôler la sérialisation de Classes dérivées'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: 00eb4ba1f5f84c60f1ca51871f604b6ee27798c3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728841"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Comment : contrôler la sérialisation de classes dérivées
+# <a name="how-to-control-serialization-of-derived-classes"></a>Procédure : Contrôler la sérialisation de Classes dérivées
 L’utilisation de l’attribut **XmlElementAttribute** pour modifier le nom d’un élément XML ne constitue pas l’unique moyen de personnaliser la sérialisation d’un objet. Vous pouvez également personnaliser le flux de données XML en effectuant une dérivation à partir d'une classe existante et en indiquant à l'instance <xref:System.Xml.Serialization.XmlSerializer> comment sérialiser la nouvelle classe.  
   
  Par exemple, d'après une classe `Book`, vous pouvez effectuer une dérivation et créer une classe `ExpandedBook` qui dispose de quelques propriétés supplémentaires. Toutefois, vous devez demander à **XmlSerializer** d’accepter le type dérivé lors de la sérialisation ou de la désérialisation. Pour ce faire, créez une instance <xref:System.Xml.Serialization.XmlElementAttribute> et affectez à sa propriété **Type** le type de la classe dérivée. Ajoutez **XmlElementAttribute** à une instance <xref:System.Xml.Serialization.XmlAttributes>. Ajoutez ensuite **XmlAttributes** à une instance <xref:System.Xml.Serialization.XmlAttributeOverrides>, en spécifiant le type qui est substitué et le nom du membre qui accepte la classe dérivée. L'exemple suivant le démontre.  
@@ -234,10 +234,10 @@ public class Run
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- <xref:System.Xml.Serialization.XmlElementAttribute>  
-- <xref:System.Xml.Serialization.XmlAttributes>  
-- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
-- [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [Guide pratique pour sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Guide pratique pour spécifier un nom d’élément différent pour un flux XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.Xml.Serialization.XmlElementAttribute>
+- <xref:System.Xml.Serialization.XmlAttributes>
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>
+- [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Guide pratique pour Sérialiser un objet](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Guide pratique pour Spécifiez un nom d’élément différent pour un Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
