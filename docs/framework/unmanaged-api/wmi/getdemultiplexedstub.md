@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: db41a11a3fb6c772a3e6fbb164435daa9e032ea5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516939"
 ---
-# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="5209c-103">GetDemultiplexedStub (fonction)</span><span class="sxs-lookup"><span data-stu-id="5209c-103">GetDemultiplexedStub function</span></span>
-<span data-ttu-id="5209c-104">Crée un récepteur de redirecteur d’objet pour aider un client lors de la réception des appels asynchrones WMI.</span><span class="sxs-lookup"><span data-stu-id="5209c-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="ae73b-103">GetDemultiplexedStub function</span><span class="sxs-lookup"><span data-stu-id="ae73b-103">GetDemultiplexedStub function</span></span>
+<span data-ttu-id="ae73b-104">Crée un récepteur de redirecteur d’objet pour aider un client lors de la réception des appels asynchrones WMI.</span><span class="sxs-lookup"><span data-stu-id="ae73b-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="5209c-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5209c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae73b-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ae73b-105">Syntax</span></span>  
   
 ```  
 HRESULT GetDemultiplexedStub (
@@ -38,29 +38,29 @@ HRESULT GetDemultiplexedStub (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="5209c-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="5209c-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ae73b-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="ae73b-106">Parameters</span></span>
 
 `pObject`  
-<span data-ttu-id="5209c-107">[in] Un pointeur vers l’implémentation d’in-process du client de [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span><span class="sxs-lookup"><span data-stu-id="5209c-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
+<span data-ttu-id="ae73b-107">[in] Un pointeur vers l’implémentation d’in-process du client de [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span><span class="sxs-lookup"><span data-stu-id="ae73b-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
 
 `isLocal`  
-<span data-ttu-id="5209c-108">[in] Un indicateur qui indique si l’événement est local (`true`) ; sinon, `false`.</span><span class="sxs-lookup"><span data-stu-id="5209c-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
+<span data-ttu-id="ae73b-108">[in] Un indicateur qui indique si l’événement est local (`true`) ; sinon, `false`.</span><span class="sxs-lookup"><span data-stu-id="ae73b-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
 
 `ppObject`  
-<span data-ttu-id="5209c-109">[out] Un récepteur de redirecteur d’objet pour aider un client lors de la réception des appels asynchrones de la gestion de Windows.</span><span class="sxs-lookup"><span data-stu-id="5209c-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+<span data-ttu-id="ae73b-109">[out] Un récepteur de redirecteur d’objet pour aider un client lors de la réception des appels asynchrones de la gestion de Windows.</span><span class="sxs-lookup"><span data-stu-id="ae73b-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="5209c-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="5209c-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ae73b-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="ae73b-110">Return value</span></span>
 
-<span data-ttu-id="5209c-111">Si la fonction réussit, la valeur de retour est `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="5209c-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="ae73b-111">Si la fonction réussit, la valeur de retour est `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="ae73b-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="5209c-112">Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro.</span><span class="sxs-lookup"><span data-stu-id="5209c-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="5209c-113">Pour obtenir les informations d’erreur étendues, appelez le [GetErrorInfo](geterrorinfo.md) (fonction).</span><span class="sxs-lookup"><span data-stu-id="5209c-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="ae73b-112">Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro.</span><span class="sxs-lookup"><span data-stu-id="ae73b-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="ae73b-113">Pour obtenir les informations d’erreur étendues, appelez le [GetErrorInfo](geterrorinfo.md) (fonction).</span><span class="sxs-lookup"><span data-stu-id="ae73b-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
     
-## <a name="requirements"></a><span data-ttu-id="5209c-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="5209c-114">Requirements</span></span>  
- <span data-ttu-id="5209c-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5209c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae73b-114">Spécifications</span><span class="sxs-lookup"><span data-stu-id="ae73b-114">Requirements</span></span>  
+ <span data-ttu-id="ae73b-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ae73b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5209c-116">**En-tête :** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="5209c-116">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="ae73b-116">**En-tête :** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="ae73b-116">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="5209c-117">**Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="5209c-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="ae73b-117">**Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ae73b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5209c-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5209c-118">See also</span></span>  
-[<span data-ttu-id="5209c-119">WMI et compteurs de performances (référence des API non managées)</span><span class="sxs-lookup"><span data-stu-id="5209c-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="ae73b-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ae73b-118">See also</span></span>
+- [<span data-ttu-id="ae73b-119">WMI et compteurs de performances (référence des API non managées)</span><span class="sxs-lookup"><span data-stu-id="ae73b-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

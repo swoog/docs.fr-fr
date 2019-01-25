@@ -2,27 +2,27 @@
 title: '&lt;additionalRequestParameters&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: da8109fb-581c-48f4-b718-3bbda1edc47d
-ms.openlocfilehash: 9db200b06a565f736c716d2dbff4f2ba4a677581
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 20faab16f5f3cd728eef5bc04654411c49f561fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594432"
 ---
-# <a name="ltadditionalrequestparametersgt-element"></a><span data-ttu-id="2dcb4-102">&lt;additionalRequestParameters&gt;, élément</span><span class="sxs-lookup"><span data-stu-id="2dcb4-102">&lt;additionalRequestParameters&gt; element</span></span>
-<span data-ttu-id="2dcb4-103">Contient une collection d’éléments de configuration indiquant des paramètres de demande supplémentaires.</span><span class="sxs-lookup"><span data-stu-id="2dcb4-103">This contains a collection of configuration elements that specify additional request parameters.</span></span>  
+# <a name="ltadditionalrequestparametersgt-element"></a><span data-ttu-id="d5a4c-102">&lt;additionalRequestParameters&gt;, élément</span><span class="sxs-lookup"><span data-stu-id="d5a4c-102">&lt;additionalRequestParameters&gt; element</span></span>
+<span data-ttu-id="d5a4c-103">Contient une collection d’éléments de configuration indiquant des paramètres de demande supplémentaires.</span><span class="sxs-lookup"><span data-stu-id="d5a4c-103">This contains a collection of configuration elements that specify additional request parameters.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2dcb4-104">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2dcb4-104">See Also</span></span>  
- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.AdditionalRequestParameters%2A>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="2dcb4-105">Identité du service et authentification</span><span class="sxs-lookup"><span data-stu-id="2dcb4-105">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="2dcb4-106">Fédération et jetons émis</span><span class="sxs-lookup"><span data-stu-id="2dcb4-106">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="2dcb4-107">Fonctionnalités de sécurité avec des liaisons personnalisées</span><span class="sxs-lookup"><span data-stu-id="2dcb4-107">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [<span data-ttu-id="2dcb4-108">Fédération et jetons émis</span><span class="sxs-lookup"><span data-stu-id="2dcb4-108">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="2dcb4-109">Liaisons</span><span class="sxs-lookup"><span data-stu-id="2dcb4-109">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="2dcb4-110">Extension de liaisons</span><span class="sxs-lookup"><span data-stu-id="2dcb4-110">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="2dcb4-111">Liaisons personnalisées</span><span class="sxs-lookup"><span data-stu-id="2dcb4-111">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="2dcb4-112">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="2dcb4-112">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [<span data-ttu-id="2dcb4-113">Guide pratique pour créer une liaison personnalisée à l’aide de SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="2dcb4-113">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [<span data-ttu-id="2dcb4-114">Sécurité de liaison personnalisée</span><span class="sxs-lookup"><span data-stu-id="2dcb4-114">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a><span data-ttu-id="d5a4c-104">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d5a4c-104">See also</span></span>
+- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.AdditionalRequestParameters%2A>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [<span data-ttu-id="d5a4c-105">Identité du service et authentification</span><span class="sxs-lookup"><span data-stu-id="d5a4c-105">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="d5a4c-106">Fédération et jetons émis</span><span class="sxs-lookup"><span data-stu-id="d5a4c-106">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="d5a4c-107">Fonctionnalités de sécurité avec des liaisons personnalisées</span><span class="sxs-lookup"><span data-stu-id="d5a4c-107">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [<span data-ttu-id="d5a4c-108">Fédération et jetons émis</span><span class="sxs-lookup"><span data-stu-id="d5a4c-108">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="d5a4c-109">Liaisons</span><span class="sxs-lookup"><span data-stu-id="d5a4c-109">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="d5a4c-110">Extension de liaisons</span><span class="sxs-lookup"><span data-stu-id="d5a4c-110">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="d5a4c-111">Liaisons personnalisées</span><span class="sxs-lookup"><span data-stu-id="d5a4c-111">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="d5a4c-112">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="d5a4c-112">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [<span data-ttu-id="d5a4c-113">Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="d5a4c-113">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [<span data-ttu-id="d5a4c-114">Sécurité de liaison personnalisée</span><span class="sxs-lookup"><span data-stu-id="d5a4c-114">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
