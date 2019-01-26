@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669313"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065854"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procédure : Appeler une fonction Windows qui possède des Types non signés (Visual Basic)
 Si vous consommez une classe, un module ou une structure qui possède des membres de types d’entiers non signés, vous pouvez accéder à ces membres avec Visual Basic.  
@@ -32,7 +32,7 @@ Si vous consommez une classe, un module ou une structure qui possède des membre
   
 3.  Consultez la documentation de la fonction Windows que vous appelez pour rechercher les noms et valeurs des constantes, qu'elle utilise. Nombre d'entre elles sont définies dans le fichier WinUser.h.  
   
-4.  Déclarez les constantes nécessaires dans votre code. Nombreuses constantes Windows sont des valeurs non signées de 32 bits, et vous devez déclarer ces `As``UInteger`.  
+4.  Déclarez les constantes nécessaires dans votre code. Nombreuses constantes Windows sont des valeurs non signées de 32 bits, et vous devez déclarer ces `As UInteger`.  
   
 5.  Appelez la fonction de façon normale. L’exemple suivant appelle la fonction Windows `MessageBox`, qui prend un argument d’entier non signé.  
   

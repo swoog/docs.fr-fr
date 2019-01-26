@@ -1,13 +1,13 @@
 ---
 title: Extensions de type
 description: Découvrez comment F# les extensions de type permettent d’ajouter de nouveaux membres à un type d’objet précédemment défini.
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614054"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066153"
 ---
 # <a name="type-extensions"></a>Extensions de type
 
@@ -121,7 +121,7 @@ Il n’existe aucun moyen pour obtenir ce code fonctionne avec une extension de 
 
 * En l’état, le `Sum` membre a une contrainte différente `'T` (`static member get_Zero` et `static member (+)`) à ce qui définit l’extension du type.
 * Modification de l’extension de type pour avoir la même contrainte en tant que `Sum` n’est pas la contrainte définie sur `IEnumerable<'T>`.
-* Apporter la modification de membre à `member inline Sum` générera une erreur d’incompatibilité de contraintes de type
+* Modification `member this.Sum` à `member inline this.Sum` générera une erreur d’incompatibilité de contraintes de type.
 
 Ce que vous souhaitez sont des méthodes statiques qui « flottant dans l’espace » et peuvent être présentés comme s’ils vous étendez un type. Il s’agit dans lequel les méthodes d’extension devient nécessaires.
 

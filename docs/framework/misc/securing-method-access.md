@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691474"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066010"
 ---
 # <a name="securing-method-access"></a>Sécurisation de l'accès à la méthode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Méthodes de substitution Virtual Internal ou Overloads Overridable Friend  
   
 > [!NOTE]
->  Cette section signale un problème de sécurité lorsque vous déclarez une méthode à la fois comme `virtual` et `internal` (`Overloads``Overridable``Friend` en Visual Basic). Cet avertissement s’applique uniquement aux versions de .NET Framework 1.0 et 1.1, il ne s’applique pas aux versions ultérieures.  
+>  Cette section signale un problème de sécurité lorsque vous déclarez une méthode à la fois comme `virtual` et `internal` (`Overloads` `Overridable` `Friend` en Visual Basic). Cet avertissement s’applique uniquement aux versions de .NET Framework 1.0 et 1.1, il ne s’applique pas aux versions ultérieures.  
   
  Dans les versions 1.0 et 1.1 du .NET Framework, vous devez connaître une nuance de l’accessibilité du système de type lors de la confirmation que votre code n’est pas disponible aux autres assemblys. Une méthode qui est déclarée **virtuels** et **interne** (**Overloads Overridable Friend** en Visual Basic) peut substituer l’entrée vtable de la classe parente et peut être utilisé uniquement à partir de dans le même assembly, car il est interne. Toutefois, l’accessibilité permettant les substitutions est déterminée par le **virtuel** mot clé, qui peut être substituée à partir d’un autre assembly tant que ce code a accès à la classe elle-même. Si la possibilité d’une substitution présente un problème, utilisez la sécurité déclarative pour corriger ou supprimer la **virtuel** mot clé si elle n’est pas strictement obligatoire.  
   

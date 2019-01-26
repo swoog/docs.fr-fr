@@ -2,12 +2,12 @@
 title: LINQ to XML pour les utilisateurs de XPath (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 471bd4faa44bcb23ff488df6fb93f0a28cc48950
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568164"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066260"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML pour les utilisateurs de XPath (Visual Basic)
 
@@ -32,7 +32,7 @@ Cet ensemble de rubriques illustre un certain nombre d'expressions XPath et leur
 |[Guide pratique pour Rechercher une Union de deux chemins d’emplacements (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath.md)|Compare l'utilisation de l'opérateur d'union <code>&#124;</code> dans XPath avec l'opérateur de requête standard <xref:System.Linq.Enumerable.Concat%2A> dans [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : <code>"//Category&#124;//Price"</code>|  
 |[Guide pratique pour Rechercher des nœuds frères (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|Compare comment rechercher tous les frères d'un nœud qui ont un nom spécifique avec XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. <br /><br /> L'expression XPath associée est : `"../Book"`|  
 |[Guide pratique pour Rechercher un attribut du Parent (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|Compare comment naviguer jusqu'à l'élément parent et rechercher un attribut associé à l'aide de XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : `"../@id"`|  
-|[Guide pratique pour Rechercher des attributs de frères avec un nom spécifique (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|Compare comment rechercher des attributs spécifiques des frères du nœud de contexte avec XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : `"``../Book/@id``"`|  
+|[Guide pratique pour Rechercher des attributs de frères avec un nom spécifique (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|Compare comment rechercher des attributs spécifiques des frères du nœud de contexte avec XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : `"../Book/@id"`|  
 |[Guide pratique pour Rechercher des éléments avec un attribut spécifique (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|Compare comment rechercher tous les éléments contenant un attribut spécifique à l'aide de XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. <br /><br /> L'expression XPath associée est : `"./*[@Select]"`|  
 |[Guide pratique pour Rechercher des éléments enfants en fonction de la Position (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|Compare comment rechercher un élément en fonction de sa position relative à l'aide de XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : `"Test[position() >= 2 and position() <= 4]"`|  
 |[Guide pratique pour Rechercher le frère précédent (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Compare comment faire rechercher le frère précédent d'un nœud à l'aide de XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : `"preceding-sibling::*[1]"`|  

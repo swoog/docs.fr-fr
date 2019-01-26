@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: df9538bfb778d6838b51d3b0c525a433812d8131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571819"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065867"
 ---
 # <a name="myresources-object"></a>My.Resources, objet
 Fournit des propriétés et des classes permettant d’accéder aux ressources de l’application.  
@@ -26,9 +26,9 @@ Fournit des propriétés et des classes permettant d’accéder aux ressources d
  Vous pouvez accéder à des fichiers de ressources spécifiques à la culture de l’application à partir de la `My.Resources` objet. Par défaut, le `My.Resources` objet recherche des ressources dans le fichier de ressources qui correspond à la culture dans le <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> propriété. Toutefois, vous pouvez substituer ce comportement et spécifier une culture particulière à utiliser pour les ressources. Pour plus d’informations, consultez [Ressources dans les applications de bureau](../../../framework/resources/index.md).  
   
 ## <a name="properties"></a>Properties  
- Les propriétés de la `My.Resources` objet fournissent un accès en lecture seule aux ressources de votre application. Pour ajouter ou supprimer des ressources, utilisez le **Concepteur de projet**. Vous pouvez accéder à des ressources ajoutées par le biais du **Concepteur de projets** à l’aide de `My.Resources.``resourceName`.  
+ Les propriétés de la `My.Resources` objet fournissent un accès en lecture seule aux ressources de votre application. Pour ajouter ou supprimer des ressources, utilisez le **Concepteur de projet**. Vous pouvez accéder à des ressources ajoutées par le biais du **Concepteur de projets** à l’aide de `My.Resources.` *resourceName*.  
   
- Vous pouvez également ajouter ou supprimer des fichiers de ressources en sélectionnant votre projet dans **l’Explorateur de solutions** et en cliquant sur **ajouter un nouvel élément** ou **ajouter un élément existant** à partir de la  **Projet** menu. Vous pouvez accéder à des ressources ajoutées de cette manière, à l’aide de `My.Resources.``resourceFileName`.`resourceName`.  
+ Vous pouvez également ajouter ou supprimer des fichiers de ressources en sélectionnant votre projet dans **l’Explorateur de solutions** et en cliquant sur **ajouter un nouvel élément** ou **ajouter un élément existant** à partir de la  **Projet** menu. Vous pouvez accéder à des ressources ajoutées de cette manière, à l’aide de `My.Resources.` *resourceFileName*`.`*resourceName*.  
   
  Chaque ressource a un nom, la catégorie et la valeur, et ces paramètres de ressources déterminent comment la propriété pour accéder à la ressource dans le `My.Resources` objet. Pour les ressources ajoutées dans le **Concepteur de projets**:  
   

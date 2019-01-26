@@ -2,12 +2,12 @@
 title: Custom Binding Security
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 5ed4b124fb5150974bcbe334e3fec627e027498f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49e14fd783fa89f25750aeb00efc105a850c0d3e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584897"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066128"
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 L’exemple suivant illustre comment configurer la sécurité à l’aide d’une liaison personnalisée. Il indique également comment utiliser une liaison personnalisée afin d’activer la sécurité de niveau message à l’aide d’un transport sécurisé. Cette configuration est utile lorsqu'un transport sécurisé est requis pour la transmission des messages entre le client et le service et que ces messages doivent en même temps bénéficier d'une sécurité de niveau message. Cette configuration n’est pas prise en charge par les liaisons fournies par le système.
@@ -57,7 +57,7 @@ L’exemple suivant illustre comment configurer la sécurité à l’aide d’un
 </behaviors>
 ```
 
- En outre, la liaison personnalisée utilise la sécurité de niveau message avec le type d'informations d'identification Windows, c'est-à-dire le type par défaut. Cette tâche est effectuée par l’élément de liaison `security`. Le client et le service sont tous deux authentifiés à l'aide de la sécurité au niveau du message si le mécanisme d'authentification Kerberos est disponible. Cela se produit à condition toutefois que l'exemple soit exécuté dans l'environnement Active Directory. Si le mécanisme d'authentification Kerberos n'est pas disponible, l'authentification NTLM est utilisée. NTLM authentifie le client au service mais n'authentifie pas le service au client. Le `security` élément de liaison est configuré pour utiliser `SecureConversation``authenticationType`, ce qui entraîne la création d’une session de sécurité sur le client et le service. Ceci est nécessaire pour permettre au contrat duplex du service de fonctionner.
+ En outre, la liaison personnalisée utilise la sécurité de niveau message avec le type d'informations d'identification Windows, c'est-à-dire le type par défaut. Cette tâche est effectuée par l’élément de liaison `security`. Le client et le service sont tous deux authentifiés à l'aide de la sécurité au niveau du message si le mécanisme d'authentification Kerberos est disponible. Cela se produit à condition toutefois que l'exemple soit exécuté dans l'environnement Active Directory. Si le mécanisme d'authentification Kerberos n'est pas disponible, l'authentification NTLM est utilisée. NTLM authentifie le client au service mais n'authentifie pas le service au client. L'élément de liaison `security` est configuré pour utiliser un type `SecureConversation` `authenticationType`, ce qui entraîne la création d'une session de sécurité à la fois au niveau du client et du service. Ceci est nécessaire pour permettre au contrat duplex du service de fonctionner.
 
  Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console cliente. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.
 

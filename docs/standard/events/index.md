@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679930"
 ---
 # <a name="handling-and-raising-events"></a>Gestion et déclenchement d'événements
 Les événements dans le .NET Framework sont basés sur le modèle délégué. Le modèle délégué suit le modèle de conception observateur, qui permet à un abonné de s'inscrire pour recevoir des notifications d'un fournisseur. Un émetteur d'événements émet une notification d'événement, et un récepteur d'événements reçoit cette notification et définit une réponse à celle-ci. Cet article décrit les principaux composants du modèle délégué, comment consommer les événements des applications, et comment implémenter des événements dans votre code.  
@@ -41,7 +41,7 @@ Les événements dans le .NET Framework sont basés sur le modèle délégué. L
   
  Les délégués ont de nombreux usages dans .NET Framework. Dans le contexte des événements, un délégué est un intermédiaire (ou un mécanisme similaire aux pointeurs) entre la source d'événements et le code qui gère l'événement. Vous associez un délégué à un événement en incluant le type de délégué dans la déclaration de l'événement, comme indiqué dans l'exemple de la section précédente. Pour plus d'informations sur les délégués, consultez la classe <xref:System.Delegate>.  
   
- .NET Framework fournit les délégués <xref:System.EventHandler> et <xref:System.EventHandler%601> pour prendre en charge la plupart des scénarios d'événement. Utilisez le délégué <xref:System.EventHandler> pour tous les événements qui n'incluent pas de données d'événement. Utilisez le délégué <xref:System.EventHandler%601> pour les événements qui incluent des données sur l'événement. Ces délégués n'ont aucune valeur de type de retour et prennent deux paramètres (un objet pour la source de l'événement et un objet pour les données d'événement).  
+ .NET Framework fournit les délégués <xref:System.EventHandler> et <xref:System.EventHandler%601> pour prendre en charge la plupart des scénarios d'événement. Utilisez le délégué <xref:System.EventHandler> pour tous les événements qui n'incluent pas de données d'événement. Utilisez le délégué <xref:System.EventHandler%601> pour les événements qui incluent des données sur l'événement. Ces délégués n’ont aucune valeur de type de retour et prennent deux paramètres (un objet pour la source de l’événement et un objet pour les données d’événement).  
   
  Les délégués sont multicast, ce qui signifie qu'ils peuvent contenir des références à plusieurs méthodes de gestion des événements. Pour plus d'informations, consultez la page de référence <xref:System.Delegate>. Les délégués assurent une souplesse et un contrôle précis lors de la gestion des événements. Un délégué agit comme un répartiteur d’événements pour la classe qui déclenche l’événement en gérant une liste de gestionnaires d’événements inscrits pour l’événement.  
   
@@ -76,23 +76,23 @@ Les événements dans le .NET Framework sont basés sur le modèle délégué. L
 ## <a name="raising-multiple-events"></a>Déclenchement de plusieurs événements  
  Si votre classe déclenche plusieurs événements, le compilateur génère un champ par instance de délégué d'événement. Si le nombre d’événements est important, le coût de stockage d’un champ par délégué peut ne pas convenir. Dans ce cas, .NET Framework fournit une des propriétés d'événement que vous pouvez utiliser avec une autre structure de données de votre choix pour stocker les délégués d'événement.  
   
- Les propriétés de l’événement se composent de déclarations d’événement accompagnées d’accesseurs d’événement. Les accesseurs d'événement sont des méthodes que vous définissez pour que des instances de délégué d'événement puissent être ajoutées ou supprimées de la structure des données de stockage. Notez que les propriétés d'événement sont plus lentes que les champs d'événement, car chaque délégué d'événement doit être récupéré avant de pouvoir être appelé. Le compromis réside entre la mémoire et la vitesse. Si votre classe définit de nombreux événements qui sont déclenchés peu fréquemment, vous souhaiterez implémenter les propriétés de l’événement. Pour plus d’informations, consultez [Comment : gérer plusieurs événements à l’aide des propriétés d’événements](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
+ Les propriétés de l’événement se composent de déclarations d’événement accompagnées d’accesseurs d’événement. Les accesseurs d'événement sont des méthodes que vous définissez pour que des instances de délégué d'événement puissent être ajoutées ou supprimées de la structure des données de stockage. Notez que les propriétés d'événement sont plus lentes que les champs d'événement, car chaque délégué d'événement doit être récupéré avant de pouvoir être appelé. Le compromis réside entre la mémoire et la vitesse. Si votre classe définit de nombreux événements qui sont déclenchés peu fréquemment, vous souhaiterez implémenter les propriétés de l’événement. Pour plus d'informations, voir [Procédure : Gérer plusieurs événements à l'aide de propriétés d'événements](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
   
 ## <a name="related-topics"></a>Rubriques connexes  
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Comment : déclencher et utiliser des événements](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Contient des exemples de déclenchement et de consommation d'événements.|  
-|[Comment : gérer plusieurs événements à l’aide des propriétés d’événements](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Montre comment utiliser des propriétés d'événement pour gérer plusieurs événements.|  
+|[Guide pratique pour déclencher et utiliser des événements](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Contient des exemples de déclenchement et de consommation d'événements.|  
+|[Guide pratique pour gérer plusieurs événements à l'aide de propriétés d'événements](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Montre comment utiliser des propriétés d'événement pour gérer plusieurs événements.|  
 |[Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)|Décrit le modèle de conception qui permet à un abonné de s’inscrire pour recevoir des notifications d’un fournisseur.|  
-|[Comment : consommer des événements dans une application Web Forms](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Montre comment gérer un événement déclenché par un contrôle Web Forms.|  
+|[Guide pratique pour consommer des événements dans une application Web Forms](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Montre comment gérer un événement déclenché par un contrôle Web Forms.|  
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.EventHandler>  
-- <xref:System.EventHandler%601>  
-- <xref:System.EventArgs>  
-- <xref:System.Delegate>  
-- [Vue d’ensemble des événements et des événements routés (applications UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
-- [Événements (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- <xref:System.EventHandler>
+- <xref:System.EventHandler%601>
+- <xref:System.EventArgs>
+- <xref:System.Delegate>
+- [Vue d’ensemble des événements et des événements routés (applications UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Événements (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [Événements (Guide de programmation C#)](../../csharp/programming-guide/events/index.md)

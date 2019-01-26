@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d58ac91f42e07e3f556389a818d8118d846653c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518161"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066296"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle Spinner
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "54518161"
 |------------------|------------------|  
 |Spinner<br /><br /> -Edit (0 ou 1)<br />-   Button (2)<br />-ListItem (0 ou plus)|Spinner<br /><br /> -ListItem (0 ou plus)|  
   
- Pour vous assurer que les outils de test automatisé peuvent distinguer les deux boutons de la sous-arborescence de l’affichage de contrôle, assignez `SmallIncrement` ou `SmallDecrement``AutomationId` de manière appropriée. Pour certaines implémentations, le contrôle d’édition associé peut être un homologue du contrôle compteur.  
+ Pour vous assurer que les deux boutons dans la sous-arborescence de vue de contrôle peuvent être distingués par les outils de test automatisé, assignez la `SmallIncrement` ou `SmallDecrement` `AutomationId` selon le cas. Pour certaines implémentations, le contrôle d’édition associé peut être un homologue du contrôle compteur.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Propriétés UI Automation requises  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 40ea9b6d8ad88683ef0b3d75907fe645e9f2e3e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74e373610a78cbed5d31ff408e3c4ef8f11216f6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679069"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066240"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Vue d’ensemble des modèles de contrôle UI Automation
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.locfileid: "54679069"
   
  Les clients UI Automation accèdent aux méthodes et aux propriétés des classes de modèle de contrôle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] et les utilisent pour obtenir des informations sur l’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]ou pour manipuler l’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Ces classes de modèle de contrôle se trouvent dans l’espace de noms <xref:System.Windows.Automation> (par exemple, <xref:System.Windows.Automation.InvokePattern> et <xref:System.Windows.Automation.SelectionPattern>).  
   
- Les clients utilisent des méthodes <xref:System.Windows.Automation.AutomationElement> (telles que <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> ou <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) ou les accesseurs du [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] pour accéder aux propriétés [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sur un modèle. Chaque classe de modèle de contrôle a un membre de champ (par exemple, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>'' ou <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) qui identifie ce modèle de contrôle et peut être passée en tant que paramètre à <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> ou <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> pour récupérer ce modèle pour un <xref:System.Windows.Automation.AutomationElement>.  
+ Les clients utilisent des méthodes <xref:System.Windows.Automation.AutomationElement> (telles que <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> ou <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) ou les accesseurs du [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] pour accéder aux propriétés [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sur un modèle. Chaque classe de modèle de contrôle a un membre de champ (par exemple, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> ou <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) qui identifie ce modèle de contrôle et peut être passée en tant que paramètre à <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> ou <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> pour récupérer ce modèle pour un <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Modèles de contrôle dynamique  

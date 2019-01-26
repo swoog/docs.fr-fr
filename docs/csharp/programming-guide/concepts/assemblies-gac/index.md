@@ -2,17 +2,17 @@
 title: Assemblys et le Global Assembly Cache (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 25ae3a25b825a0594d7cc9479c58e967375e61b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577044"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assemblys et le Global Assembly Cache (C#)
 Les assemblys constituent l’unité fondamentale dans le déploiement, la gestion de version, la portée d’activation et les autorisations de sécurité d’une application .NET. Les assemblys prennent la forme d’un fichier exécutable (.exe) ou d’un fichier de bibliothèque de liens dynamiques (.dll) et sont les blocs de construction du .NET Framework. Ils fournissent au Common Language Runtime les informations dont il a besoin pour connaître les implémentations de type. Vous pouvez comparer un assembly à une collection de types et de ressources conçus pour opérer ensemble et former une unité logique de fonctionnalité.  
   
- Les assemblys peuvent contenir un ou plusieurs modules. Par exemple, les projets plus importants peuvent être planifiés de sorte que plusieurs développeurs individuels travaillent sur des modules distincts, qui se regroupent pour créer un assembly unique. Pour plus d’informations sur les modules, consultez la rubrique [Comment : générer un assembly multifichier](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Les assemblys peuvent contenir un ou plusieurs modules. Par exemple, les projets plus importants peuvent être planifiés de sorte que plusieurs développeurs individuels travaillent sur des modules distincts, qui se regroupent pour créer un assembly unique. Pour plus d’informations sur les modules, consultez la rubrique [Guide pratique pour générer un assembly multifichier](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Les assemblys ont les propriétés suivantes :  
   
@@ -52,12 +52,12 @@ Les assemblys constituent l’unité fondamentale dans le déploiement, la gesti
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)  
-- [Assemblys dans le Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Assemblys friend (C#)](friend-assemblies.md)  
-- [Guide pratique pour partager un assembly avec d’autres applications (C#)](how-to-share-an-assembly-with-other-applications.md)  
-- [Guide pratique pour charger et décharger des assemblys (C#)](how-to-load-and-unload-assemblies.md)  
-- [Guide pratique pour déterminer si un fichier est un assembly (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
-- [Guide pratique pour créer et utiliser des assemblys à l’aide de la ligne de commande (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [Procédure pas à pas : incorporation de types provenant d’assemblys managés dans Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
-- [Procédure pas à pas : incorporation d’informations de type provenant d’assemblys Microsoft Office dans Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)
+- [Assemblys dans le Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblys friend (C#)](friend-assemblies.md)
+- [Guide pratique pour partager un assembly avec d’autres applications (C#)](how-to-share-an-assembly-with-other-applications.md)
+- [Guide pratique pour charger et décharger des assemblys (C#)](how-to-load-and-unload-assemblies.md)
+- [Guide pratique pour déterminer si un fichier est un assembly (C#)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Guide pratique pour créer et utiliser des assemblys à l’aide de la ligne de commande (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Procédure pas à pas : Incorporation de types provenant d’assemblys managés dans Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Procédure pas à pas : Incorporation d’informations de type provenant d’assemblys Microsoft Office dans Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

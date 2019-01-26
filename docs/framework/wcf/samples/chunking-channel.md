@@ -2,12 +2,12 @@
 title: Canal de segmentation
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 3e98e4be3c5ad9d6d18990feeae86369775972b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db14ceb956202bee06ff5e6b37b21fb837c6f1d9
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624237"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066413"
 ---
 # <a name="chunking-channel"></a>Canal de segmentation
 Lors de l’envoi de messages volumineux à l’aide de Windows Communication Foundation (WCF), il est souvent souhaitable de limiter la quantité de mémoire utilisée pour mettre en mémoire tampon des messages. L'une des solutions pour ce faire consiste à transmettre en continu le corps de ces messages (possible à condition que la plus grande partie des données figurent dans le corps des messages concernés). Certains protocoles, cependant, nécessitent la mise en mémoire tampon de l'intégralité des messages. Parmi ces protocoles figurent notamment ceux de la messagerie fiable et de la sécurité. L'une des autres solutions consiste à diviser les messages de grande taille en messages plus petits appelés segments, à envoyer ces segment un par un, puis à reconstituer les grands messages initiaux à partir de ces segments, côté destinataire. L'application peut effectuer ces opérations de segmentation et désegmentation elle-même ou utiliser un canal personnalisé pour ce faire. L'exemple de canal de segmentation suivant illustre la manière dont un protocole personnalisé ou un canal superposé peuvent être utilisés afin de segmenter ou désegmenter des messages de grande taille.  
@@ -271,7 +271,7 @@ interface ITestService
  `OnOpen` appelle la méthode `innerChannel.Open` afin d'ouvrir le canal interne.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` affecte d'abord à `stopReceive` la valeur `true` pour arrêter l'exécution de la boucle `ReceiveChunkLoop` en attente. Il attend ensuite le `receiveStopped``ManualResetEvent`, qui est défini lorsque `ReceiveChunkLoop` s’arrête. En partant de l'hypothèse que la boucle `ReceiveChunkLoop` s'arrête avant l'expiration du délai spécifié, la méthode `OnClose` appelle alors `innerChannel.Close` dans le temps encore imparti.  
+ `OnClose` affecte d'abord à `stopReceive` la valeur `true` pour arrêter l'exécution de la boucle `ReceiveChunkLoop` en attente. Cette méthode patiente ensuite jusqu'à l'arrivée de l'événement `receiveStopped` <xref:System.Threading.ManualResetEvent> défini lorsque la boucle `ReceiveChunkLoop` s'arrête. En partant de l'hypothèse que la boucle `ReceiveChunkLoop` s'arrête avant l'expiration du délai spécifié, la méthode `OnClose` appelle alors `innerChannel.Close` dans le temps encore imparti.  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` appelle la méthode `innerChannel.Abort` afin d'annuler le canal interne. Lorsqu'une boucle `ReceiveChunkLoop` est en attente, une exception est levée depuis l'appel de `innerChannel.Receive` en attente.  

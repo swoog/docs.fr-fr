@@ -7,15 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: bfed5c969466cb427e6c94d39bfcc6a6e007c320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672043"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066114"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Procédure : Déclarer une Structure (Visual Basic)
-Vous commencez une déclaration de structure par le [Structure (instruction)](../../../../visual-basic/language-reference/statements/structure-statement.md), vous vous retrouvez avec la `End` `Structure` instruction. Entre ces deux instructions, vous devez déclarer au moins un *élément*. Les éléments peuvent être de n’importe quel type de données, mais au moins un doit être une variable non partagée ou un événement non partagé.  
+Vous commencez une déclaration de structure par le [Structure (instruction)](../../../../visual-basic/language-reference/statements/structure-statement.md), vous vous retrouvez avec la `End Structure` instruction. Entre ces deux instructions, vous devez déclarer au moins un *élément*. Les éléments peuvent être de n’importe quel type de données, mais au moins un doit être une variable non partagée ou un événement non partagé.  
   
  Vous ne peut pas initialiser un des éléments de structure dans la déclaration de structure. Lorsque vous déclarez une variable comme étant d’un type structure, vous attribuez des valeurs aux éléments en y accédant via la variable.  
   

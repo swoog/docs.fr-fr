@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: b69615a5cf05427a2bfde82af976cfafb41171b0
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 08bd3b3c7ff5608193de0cdc1a869e0918c9e96e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332871"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065789"
 ---
 # <a name="events-visual-basic"></a>Événements (Visual Basic)
 Bien que vous pouvez visualiser un projet Visual Studio sous la forme d’une série de procédures qui s’exécutent dans une séquence, en réalité, la plupart des programmes sont pilotés par des événements, ce qui signifie que le flux d’exécution est déterminé par des occurrences externes nommées *événements*.  
@@ -87,7 +87,7 @@ Bien que vous pouvez visualiser un projet Visual Studio sous la forme d’une s�
  [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>Gérer des événements hérités d’une classe de base  
- Les *classes dérivées*, classes qui héritent des caractéristiques d’une classe de base, peuvent gérer des événements déclenchés par leur classe de base avec l’instruction `Handles``MyBase`.  
+ Les *classes dérivées*, classes qui héritent des caractéristiques d’une classe de base, peuvent gérer des événements déclenchés par leur classe de base avec l’instruction `Handles MyBase`.  
   
 #### <a name="to-handle-events-from-a-base-class"></a>Gérer des événements provenant d’une classe de base  
   
@@ -99,10 +99,10 @@ Bien que vous pouvez visualiser un projet Visual Studio sous la forme d’une s�
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Procédure pas à pas : déclaration et déclenchement des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Fournit une description étape par étape de la déclaration et du déclenchement des événements pour une classe.|  
-|[Procédure pas à pas : gestion des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Montre comment écrire une procédure de gestionnaire d’événements.|  
-|[Guide pratique : déclarer des événements personnalisés pour éviter les blocages](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Montre comment définir un événement personnalisé qui permet d’appeler ses gestionnaires d’événements de façon asynchrone.|  
-|[Guide pratique : déclarer des événements personnalisés pour économiser la mémoire](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Montre comment définir un événement personnalisé qui utilise la mémoire uniquement lorsque l’événement est géré.|  
+|[Procédure pas à pas : Déclaration et déclenchement des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Fournit une description étape par étape de la déclaration et du déclenchement des événements pour une classe.|  
+|[Procédure pas à pas : Gestion des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Montre comment écrire une procédure de gestionnaire d’événements.|  
+|[Guide pratique pour Déclarer des événements personnalisés pour éviter les blocages](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Montre comment définir un événement personnalisé qui permet d’appeler ses gestionnaires d’événements de façon asynchrone.|  
+|[Guide pratique pour Déclarer des événements personnalisés pour économiser la mémoire](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Montre comment définir un événement personnalisé qui utilise la mémoire uniquement lorsque l’événement est géré.|  
 |[Dépannage des gestionnaires d’événements hérités en Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Répertorie les problèmes courants qui surviennent avec les gestionnaires d’événements dans les composants hérités.|  
 |[Événements](../../../../standard/events/index.md)|Fournit une vue d’ensemble du modèle d’événement dans [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
 |[Création de gestionnaires d’événements dans les Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Explique comment utiliser des événements associés à des objets Windows Forms.|  

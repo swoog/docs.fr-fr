@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: d96be73fc63856e317b129c1fdd8c381c9df6c07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627263"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066218"
 ---
 # <a name="net-framework-data-providers"></a>Fournisseur de données .NET Framework
 Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé pour la connexion à une base de données, l'exécution de commandes et l'extraction de résultats. Ces résultats sont traités directement, placés dans un objet <xref:System.Data.DataSet> pour pouvoir être exposés à l'utilisateur le cas échéant, combinés aux données de différentes sources ou accessibles à distance entre couches. Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont légers et créent une couche minimale entre la source des données et le code, ce qui augmente les performances sans nuire aux fonctionnalités.  
@@ -151,8 +151,8 @@ using System.Data.OracleClient;
 |--------------|-----------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour SQL Server|Recommandé pour les applications de couche intermédiaire qui utilisent Microsoft SQL Server.<br /><br /> Recommandé pour les applications monocouches qui utilisent Microsoft Database Engine (MSDE) ou SQL Server.<br /><br /> Recommandé dans l’utilisation du fournisseur OLE DB pour SQL Server (SQLOLEDB) avec le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour OLE DB.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour OLE DB|Pour SQL Server, le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est recommandé de fournisseur de données pour SQL Server au lieu de ce fournisseur.<br /><br /> Il est recommandé pour les applications monocouches qui utilisent des bases de données Microsoft Access. L'utilisation d'une base de données Access pour une application de couche intermédiaire est déconseillée.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] « Fournisseur de données pour ODBC|Recommandé pour les applications monocouches et de couche intermédiaire qui utilisent des sources de données ODBC.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] « Fournisseur de données pour Oracle|Recommandé pour les applications monocouches et de couche intermédiaire qui utilisent des sources de données Oracle.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour ODBC|Recommandé pour les applications monocouches et de couche intermédiaire qui utilisent des sources de données ODBC.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour Oracle|Recommandé pour les applications monocouches et de couche intermédiaire qui utilisent des sources de données Oracle.|  
   
 ## <a name="entityclient-provider"></a>fournisseur EntityClient  
  Le fournisseur EntityClient permet d'accéder aux données basées sur un modèle de données d'entité EDM (Entity Data Model). Contrairement aux autres fournisseurs de données .NET Framework, il n'interagit pas directement avec une source de données. Au lieu de cela, il utilise Entity SQL pour communiquer avec le fournisseur de données sous-jacent. Pour plus d'informations, consultez [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  

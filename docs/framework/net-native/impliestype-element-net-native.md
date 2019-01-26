@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548048"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065971"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>&lt;ImpliesType&gt;, élément (.NET Native)
 Applique la stratégie à un type, si cette stratégie a été appliquée à la méthode ou au type conteneur.  
@@ -99,7 +99,7 @@ Applique la stratégie à un type, si cette stratégie a été appliquée à la 
 </Type>  
 ```  
   
- L'élément `<ImpliesType>` peut également apparaître dans un élément `<Method>`, car dans certains cas l'instanciation d'une méthode générique implique la réflexion d'une instanciation de type. Par exemple, imaginez une méthode générique `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` à laquelle une bibliothèque donnée accède dynamiquement, ainsi qu’aux types <xref:System.Collections.Generic.List%601> et <xref:System.Array> associés. Cela peut être exprimé sous la forme :  
+ L'élément `<ImpliesType>` peut également apparaître dans un élément `<Method>`, car dans certains cas l'instanciation d'une méthode générique implique la réflexion d'une instanciation de type. Par exemple, imaginez une méthode générique `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` qui une bibliothèque donnée accède dynamiquement, ainsi que d’associé <xref:System.Collections.Generic.List%601> et <xref:System.Array> types. Cela peut être exprimé sous la forme :  
   
 ```xml  
 <Type Name="MyType">  

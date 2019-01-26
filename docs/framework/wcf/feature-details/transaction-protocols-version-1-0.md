@@ -2,11 +2,12 @@
 title: Protocoles de transaction version 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: d510a74560369a132822e980e7812ca4deff55a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2a50e798af47dd4f80f149362f2afffbab007f6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066361"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocoles de transaction version 1.0
 Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des protocoles WS-Atomic Transaction et WS-Coordination. Pour plus d’informations sur la version 1.1, consultez [protocoles de Transaction](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -67,9 +68,9 @@ Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des 
 |xsd|http://www.w3.org/2001/XMLSchema|  
   
 ## <a name="transaction-manager-bindings"></a>Liaisons de gestionnaire de transactions  
- R1001 : les gestionnaires de transactions doivent utiliser SOAP 1.1 et WS-Addressing 2004/08 pour les échanges de message WS-Atomic Transaction et WS-Coordination.  
+ R1001 : Gestionnaires de transactions doivent utiliser SOAP 1.1 et WS-Addressing 2004/08 pour WS-Atomic Transaction et les échanges de messages WS-Coordination.  
   
- Les messages d'application ne sont pas contraints à ces liaisons et sont décrits ultérieurement.  
+ Les messages d’application ne sont pas contraints à ces liaisons et sont décrits ultérieurement.  
   
 ### <a name="transaction-manager-https-binding"></a>Liaison HTTPS de gestionnaire de transactions  
  La liaison HTTPS de gestionnaire de transactions s'appuie uniquement sur le transport de sécurité pour assurer la sécurité et établir la confiance entre chaque paire expéditeur-récepteur dans l'arborescence de transactions.  
@@ -77,17 +78,17 @@ Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des 
 #### <a name="https-transport-configuration"></a>Configuration du transport HTTPS  
  Les certificats X.509 permettent d'établir l'identité de gestionnaire de transactions. L'authentification client/serveur est requise, et l'autorisation client/serveur est considérée comme un détail d'implémentation :  
   
--   R1111 : les certificats X.509 présentés sur le câble doivent avoir un nom de sujet qui correspond au nom de domaine complet de l'ordinateur d'origine.  
+-   R1111 : Certificats X.509 présentés sur le câble doivent avoir un nom de sujet qui correspond au nom de domaine complet (FQDN) de l’ordinateur d’origine.  
   
--   B1112 : le DNS doit être fonctionnel entre chaque paire expéditeur-récepteur du système pour que les vérifications du nom de sujet X.509 réussissent.  
+-   B1112 : DNS doit être fonctionnel entre chaque paire expéditeur-récepteur dans le système pour les vérifications du nom de sujet X.509 réussisse.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Configuration de liaison d’activation et d’inscription  
- WCF requiert une liaison duplex demande/réponse avec corrélation sur HTTPS. (Pour plus d’informations sur la corrélation et les descriptions des modèles d’échange de messages demande/réponse, consultez WS-Atomic Transaction, section 8.)  
+ WCF nécessite une liaison duplex de demande/réponse avec corrélation sur HTTPS. (Pour plus d’informations sur la corrélation et les descriptions des modèles d’échange de messages demande/réponse, consultez WS-Atomic Transaction, section 8.)  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configuration de liaison de protocole 2PC  
- WCF prend en charge les messages monodirectionnels (datagramme) sur HTTPS. La corrélation au sein des messages est considérée comme un détail d'implémentation.  
+ WCF prend en charge les messages monodirectionnels (datagramme) via le protocole HTTPS. La corrélation au sein des messages est considérée comme un détail d'implémentation.  
   
- B2131 : Les implémentations doivent prendre en charge `wsa:ReferenceParameters` comme décrit dans WS-Addressing pour la corrélation de messages de protocole 2PC de WCF.  
+ B2131 : Les implémentations doivent prendre en charge `wsa:ReferenceParameters` comme décrit dans WS-Addressing pour assurer la corrélation des messages de protocole 2PC de WCF.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>Liaison de sécurité mixte de gestionnaire de transactions  
  Il s’agit d’un autre (mode mixte) qui utilise la sécurité transport combinée avec le modèle WS-Coordination Issued Token à des fins identité établissement de liaison.  L’activation et l’inscription sont les seuls éléments qui diffèrent entre les deux liaisons.  
@@ -98,40 +99,40 @@ Windows Communication Foundation (WCF) version 1 implémente la version 1.0 des 
 #### <a name="activation-message-binding-configuration"></a>Configuration de liaison de message d’activation  
  En général, les messages d’activation ne participent pas à l’interopérabilité car ils se produisent habituellement entre une application et son gestionnaire de transactions local.  
   
- B1221 : WCF utilise la liaison HTTPS duplex (décrit dans [protocoles de messagerie](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) pour les messages d’Activation. Les messages de demande et de réponse sont corrélés à l'aide de WS-Addressing 2004/08.  
+ B1221 : WCF utilise la liaison HTTPS duplex (décrite dans [protocoles de messagerie](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) pour les messages d’Activation. Les messages de demande et de réponse sont corrélés à l'aide de WS-Addressing 2004/08.  
   
  La spécification WS-Atomic Transaction, section 8, fournit des informations supplémentaires sur la corrélation et les modèles d’échange de messages.  
   
--   R1222 : après réception de `CreateCoordinationContext`, le coordinateur doit émettre `SecurityContextToken` avec le `STx` secret associé. Ce jeton est retourné à l'intérieur d'un en-tête `t:IssuedTokens` selon la spécification WS-Trust.  
+-   R1222 : À la réception une `CreateCoordinationContext`, le coordinateur doit émettre un `SecurityContextToken` avec secret associé `STx`. Ce jeton est retourné à l'intérieur d'un en-tête `t:IssuedTokens` selon la spécification WS-Trust.  
   
--   R1223 : si l'activation se produit dans un contexte de coordination existant, l'en-tête `t:IssuedTokens` avec `SecurityContextToken` associé au contexte existant doit transmettre sur le message `CreateCoordinationContext`.  
+-   R1223 : Si l’Activation se produit dans un contexte de Coordination existant, le `t:IssuedTokens` en-tête avec le `SecurityContextToken` associé existant contexte doit transmettre sur le `CreateCoordinationContext` message.  
   
- Un nouveau `t:IssuedTokens` en-tête doit être généré pour l’attachement à sortant `wscoor:CreateCoordinationContextResponse` message.  
+ Un nouveau `t:IssuedTokens` en-tête doit être généré pour attacher à sortant `wscoor:CreateCoordinationContextResponse` message.  
   
 #### <a name="registration-message-binding-configuration"></a>Configuration de liaison de message d’inscription  
- B1231 : WCF utilise la liaison HTTPS duplex (décrit dans [protocoles de messagerie](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Les messages de demande et de réponse sont corrélés à l'aide de WS-Addressing 2004/08.  
+ B1231 : WCF utilise la liaison HTTPS duplex (décrite dans [protocoles de messagerie](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Les messages de demande et de réponse sont corrélés à l'aide de WS-Addressing 2004/08.  
   
  WS-AtomicTransaction, section 8, fournit des informations supplémentaires sur la corrélation et des descriptions des modèles d’échange de messages.  
   
- R1232 : Sortant `wscoor:Register` messages doivent utiliser le `IssuedTokenOverTransport` mode d’authentification décrits dans [protocoles de sécurité](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ R1232 : Sortant `wscoor:Register` messages doivent utiliser le `IssuedTokenOverTransport` mode d’authentification décrit dans [protocoles de sécurité](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- Le `wsse:Timestamp` élément doit être signé à l’aide de la `SecurityContextToken``STx` émis. Cette signature est une preuve de possession du jeton associée à une transaction spécifique et est utilisée pour authentifier un participant qui s’inscrit à la transaction. Le message RegistrationResponse est renvoyé sur HTTPS.  
+ Le `wsse:Timestamp` élément doit être signé à l’aide de la `SecurityContextToken STx` émis. Cette signature est une preuve de possession du jeton associée à une transaction spécifique et est utilisée pour authentifier un participant qui s’inscrit à la transaction. Le message RegistrationResponse est renvoyé sur HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configuration de liaison de protocole 2PC  
- WCF prend en charge les messages monodirectionnels (datagramme) sur HTTPS. La corrélation au sein des messages est considérée comme un détail d'implémentation.  
+ WCF prend en charge les messages monodirectionnels (datagramme) via le protocole HTTPS. La corrélation au sein des messages est considérée comme un détail d'implémentation.  
   
- B2131 : Les implémentations doivent prendre en charge `wsa:ReferenceParameters` comme décrit dans WS-Addressing pour la corrélation de messages de protocole 2PC de WCF.  
+ B2131 : Les implémentations doivent prendre en charge `wsa:ReferenceParameters` comme décrit dans WS-Addressing pour assurer la corrélation des messages de protocole 2PC de WCF.  
   
 ## <a name="application-message-exchange"></a>Échange de messages d'application  
- Les applications sont libres d'utiliser n'importe quelle liaison spécifique pour les messages interapplication, tant que la liaison satisfait aux conditions de sécurité suivantes :  
+ Les applications sont libres d’utiliser n’importe quelle liaison spécifique pour les messages interapplication, tant que la liaison satisfait aux exigences de sécurité suivantes :  
   
--   R2001 : les messages interapplication doivent transmettre l'en-tête `t:IssuedTokens` avec `CoordinationContext` dans l'en-tête du message.  
+-   R2001 : Messages de l’application vers l’application doivent passer la `t:IssuedTokens` en-tête avec le `CoordinationContext` dans l’en-tête du message.  
   
--   R2002 : l'intégrité et la confidentialité de `t:IssuedToken` doivent être assurées.  
+-   R2002 : L’intégrité et la confidentialité de `t:IssuedToken` doit être fourni.  
   
- L'en-tête `CoordinationContext` contient `wscoor:Identifier`. Alors que la définition de `xsd:AnyURI` permet d’utiliser des URI absolus et relatifs, WCF prend uniquement en charge `wscoor:Identifiers`, qui sont des URI absolus.  
+ L'en-tête `CoordinationContext` contient `wscoor:Identifier`. Alors que la définition de `xsd:AnyURI` autorise l’utilisation d’URI absolus et relatifs, WCF prend uniquement en charge `wscoor:Identifiers`, qui sont des URI absolus.  
   
- Si le `wscoor:Identifier` de la `wscoor:CoordinationContext` est un URI relatif, les erreurs seront retournées par les services WCF transactionnels.  
+ Si le `wscoor:Identifier` de la `wscoor:CoordinationContext` est un URI relatif, erreurs seront retournées à partir des services WCF transactionnels.  
   
 ## <a name="message-examples"></a>Exemples de message  
   

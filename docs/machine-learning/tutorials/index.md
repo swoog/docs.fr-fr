@@ -2,19 +2,20 @@
 title: Tutoriels d’apprentissage automatique .NET - ML.NET
 description: Consultez les tutoriels ML.NET pour découvrir comment créer des solutions IA personnalisées et comment les intégrer à vos applications .NET.
 ms.custom: seodec18
-ms.date: 11/06/2018
-ms.openlocfilehash: ff3abd6158f630fc29e8eeab41e2831b6500e415
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/18/2019
+ms.openlocfilehash: 0318258160c62afdbaf650fad76574b42063ad8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563611"
 ---
 # <a name="net-machine-learning-tutorials---mlnet"></a>Tutoriels d’apprentissage automatique .NET - ML.NET
 
 Les tutoriels suivants vous permettent de comprendre comment utiliser [ML.NET](../index.md) pour créer des solutions d’apprentissage automatique personnalisées et les intégrer à vos applications .NET :
 
 - [Analyse des sentiments](sentiment-analysis.md) : montre comment appliquer une tâche de **classification binaire** avec ML.NET.
+- [Classification des problèmes GitHub](github-issue-classification.md) : montre comment appliquer une tâche de **classification multiclasse** à l’aide de ML.NET.
 - [Prévision du tarif de stationnement](taxi-fare.md) : montre comment appliquer une tâche de **régression** avec ML.NET.
 - [Clustering Iris](iris-clustering.md) : montre comment appliquer une tâche de **clustering** avec ML.NET.
 

@@ -2,12 +2,12 @@
 title: 'Procédure : Spécifiez les informations d’identification de sécurité de canal'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495199"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066194"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Procédure : Spécifiez les informations d’identification de sécurité de canal
 Le Moniker de Service Windows Communication Foundation (WCF) permet aux applications COM d’appeler les services WCF. La plupart des services WCF requiert que le client spécifier les informations d’identification pour l’authentification et l’autorisation. Lorsque vous appelez un service WCF à partir d’un client WCF, vous pouvez spécifier ces informations d’identification dans le code managé ou dans un fichier de configuration d’application. Lorsque vous appelez un service WCF à partir d’une application COM, vous pouvez utiliser le <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface pour spécifier les informations d’identification. Cette rubrique illustre diverses méthodes pour spécifier des informations d'identification à l'aide de l'interface <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
@@ -23,9 +23,9 @@ Le Moniker de Service Windows Communication Foundation (WCF) permet aux applicat
   
 2.  Ouvrez le projet de la sécurité de message.  
   
-3.  Ajouter `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` à la `ICalculator` définition d’interface.  
+3.  Ajouter `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` à la `ICalculator` définition d’interface.  
   
-4.  Ajouter `bindingNamespace=``http://Microsoft.ServiceModel.Samples` à la balise de point de terminaison dans le fichier App.config pour le service.  
+4.  Ajouter `bindingNamespace="http://Microsoft.ServiceModel.Samples"` à la balise de point de terminaison dans le fichier App.config pour le service.  
   
 5.  Générez l'exemple de la sécurité de message et exécutez Service.exe. Utiliser Internet Explorer et accédez à l’URI du service (http://localhost:8000/ServiceModelSamples/Service) pour vous assurer que le service fonctionne.  
   

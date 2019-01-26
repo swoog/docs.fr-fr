@@ -4,12 +4,12 @@ description: Apprenez à détecter et atténuer les vulnérabilités de minutage
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123642"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066172"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnérabilités de minutage avec déchiffrement symétrique en mode CBC à l’aide de la marge intérieure
 
@@ -29,7 +29,7 @@ Les chiffrements par bloc ont une autre propriété, appelée le mode, qui déte
 
 Une personne malveillante peut utiliser une oracle de remplissage, en association avec la structure des données de CBC, pour envoyer des messages légèrement modifiés pour le code qui expose l’oracle et envoyer des données jusqu'à ce que l’oracle lui indiquant les données sont correctes. À partir de cette réponse, l’attaquant peut déchiffrer le message octet par octet.
 
-Réseaux informatiques modernes sont de ce type haute qualité qu’une personne malveillante peut détecter très petite (inférieure à 0,1 ms) les différences dans l’exécution de temps sur des systèmes distants. Les applications qui sont en supposant que le déchiffrement réussi ne peut se produire lorsque les données n’a pas été falsifiées peuvent être vulnérables aux attaques à partir d’outils sont conçus pour observer les différences de déchiffrement ayant réussi ou échoué. Cette différence de minutage peut être plus importante dans certains langages ou des bibliothèques que d’autres, il est désormais croire qu’il s’agit d’une menace pratique pour tous les langages et bibliothèques lors de la réponse de l’application aux défaillances est pris en compte.
+Réseaux informatiques modernes sont de ce type haute qualité qu’une personne malveillante peut détecter très petite (inférieure à 0,1 ms) les différences dans l’exécution de temps sur des systèmes distants. Les applications qui sont en supposant que le déchiffrement réussi ne peut se produire lorsque les données n’a pas été falsifiées peuvent être vulnérables aux attaques à partir d’outils sont conçus pour observer les différences de déchiffrement ayant réussi ou échoué. Cette différence de minutage peut être plus importante dans certains langages ou des bibliothèques que d’autres, il est désormais croire qu’il s’agit d’une menace pratique pour tous les langages et bibliothèques lors de la réponse de l’application aux défaillances est pris en compte.
 
 Cette attaque s’appuie sur la possibilité de modifier les données chiffrées et testez le résultat avec oracle. La seule façon d’atténuer entièrement l’attaque consiste à détecter les modifications apportées aux données chiffrées et refuse d’effectuer des actions sur celui-ci. Pour ce faire, le standard consiste à créer une signature pour les données et valider la signature avant que toutes les opérations sont effectuées. La signature doit être vérifiable, il ne peut pas être créé par l’attaquant, sinon ils seraient modifier les données chiffrées, puis calculer une nouvelle signature basée sur les données modifiées. Un type courant de la signature appropriée est appelé un code d’authentification de message de hachage à clé (HMAC). Un HMAC diffère d’une somme de contrôle dans la mesure où il prend une clé secrète, connu uniquement à la personne produisant le code HMAC et à la personne validant. Sans la possession de la clé, vous ne peuvent pas produire un code HMAC correct. Lorsque vous recevez vos données, vous prendre les données chiffrées, calculer indépendamment le HMAC à l’aide de la clé secrète vous et le partage de l’expéditeur, puis compare le HMAC ils vous avons envoyé par rapport à celle calculé. Cette comparaison doit être temps constant, sinon vous avez ajouté un autre oracle détectable, ce qui permet un autre type d’attaque.
 
@@ -100,7 +100,7 @@ Les applications qui ne peuvent pas modifier leur format de messagerie mais effe
 
 ## <a name="finding-vulnerable-code---native-applications"></a>Recherche de code vulnérable - applications natives
 
-Pour les programmes basées sur la cryptographie Windows : bibliothèque de Next Generation (CNG) :
+Pour les programmes basées sur la cryptographie de Windows : Bibliothèque de génération (CNG) suivante :
 
 - L’appel de déchiffrement concerne [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), en spécifiant le `BCRYPT_BLOCK_PADDING` indicateur.
 - Le handle de clé a été initialisé en appelant [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) avec [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) défini sur `BCRYPT_CHAIN_MODE_CBC`.
@@ -109,7 +109,7 @@ Pour les programmes basées sur la cryptographie Windows : bibliothèque de Nex
 Pour les programmes développés à l’API de chiffrement Windows plus anciens :
 
 - L’appel de déchiffrement concerne [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) avec `Final=TRUE`.
-- Le handle de clé a été initialisé en appelant [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) avec [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) défini sur `CRYPT_MODE_CBC`.
+- Le handle de clé a été initialisé en appelant [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) avec [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) défini sur `CRYPT_MODE_CBC`.
   - Dans la mesure où `CRYPT_MODE_CBC` est la valeur par défaut, affectée code a ne peut-être pas attribué la valeur de `KP_MODE`.
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>Code vulnérable recherche - applications managées
