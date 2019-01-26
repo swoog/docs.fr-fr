@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a4c29db3f84570d4d5e99a1deaf8beb3145c8ea1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97d622b2480f7e4aad738c77350b1d99ecd2c1b0
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626938"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084430"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; élément
 Mappe un nom de classe à un nom d’algorithme convivial, ce qui permet à une classe d’avoir plusieurs noms conviviaux.  

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7e183a624b95e207d34697c906cc3f278c967ae9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ceeef00cb688c725cc595582fb6845b9e3fa9b92
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499771"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083390"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;supprimer&gt; élément pour &lt;namedCaches&gt;
 Supprime une entité de cache nommé de la collection `namedCaches` d’un cache mémoire.  

@@ -2,17 +2,21 @@
 title: Schéma des paramètres de traçage et de débogage
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'tracing [.NET Framework], trace and debug settings schema'
-  - 'configuration schema [.NET Framework], trace and debug settings'
-  - 'configuration settings [.NET Framework], tracing'
-  - schema configuration settings
-  - 'configuration settings [.NET Framework], debugging'
-  - 'trace listeners, trace and debug settings schema'
-  - 'configuration sections [.NET Framework]'
-  - 'elements [.NET Framework], trace and debug settings'
+- tracing [.NET Framework], trace and debug settings schema
+- configuration schema [.NET Framework], trace and debug settings
+- configuration settings [.NET Framework], tracing
+- schema configuration settings
+- configuration settings [.NET Framework], debugging
+- trace listeners, trace and debug settings schema
+- configuration sections [.NET Framework]
+- elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-author: mcleblanc
-ms.author: markl
+ms.openlocfilehash: 0ea53f0c9a209d9bcbcc1e758cdcf957cde095dc
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083494"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Schéma des paramètres de traçage et de débogage
 Les paramètres de traçage et débogage spécifient les écouteurs de trace qui collectent, stockent et acheminent les messages, ainsi que le niveau auquel un commutateur de trace est défini.  

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 726f13d778fc4cff9bdafed4518e9dee3eeab6b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f97701a959db5babffb7da29892206efe57f630f
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501280"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084014"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; élément
 Contient une classe de chiffrement qui a un mappage à un nom convivial dans l’élément [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  

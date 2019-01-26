@@ -2,12 +2,12 @@
 title: Protocole de messagerie fiable version 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: cff07ae23e83a68c4cafa1ca122d84db98163d0d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 02a0815f62999c27507ed5e1610f090e944c135a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583950"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55073211"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Protocole de messagerie fiable version 1.0
 Cette rubrique traite des détails d’implémentation de Windows Communication Foundation (WCF) pour WS-Reliable Messaging protocol de février 2005 (version 1.0) nécessaire pour l’interopérabilité utilisant le transport HTTP. WCF suit la spécification WS-Reliable Messaging avec les contraintes et les éclaircissements présentés dans cette rubrique. Notez que le protocole WS-ReliableMessaging version 1.0 est implémenté à partir de [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -37,11 +37,11 @@ Cette rubrique traite des détails d’implémentation de Windows Communication 
   
 -   B1101 : L’initiateur WCF ne génère pas de l’élément Expires facultatif dans le `CreateSequence` message ou, dans le cas lorsque le `CreateSequence` message contient un `Offer` élément, le paramètre facultatif `Expires` élément dans le `Offer` élément.  
   
--   B1102 : Lors de l’accès le `CreateSequence` du message, WCF`Responder` envoie et reçoit les deux `Expires` éléments s’ils existent, mais n’utilisent pas leurs valeurs.  
+-   B1102 : Lorsque vous accédez à la `CreateSequence` du message, WCF`Responder` envoie et reçoit les deux `Expires` éléments s’ils existent, mais n’utilisent pas leurs valeurs.  
   
  La messagerie WS-Reliable introduit le mécanisme `Offer` pour établir deux séquences corrélées réciproques qui forment une session.  
   
--   R1103 : si `CreateSequence` contient un élément `Offer`, le répondeur de messagerie fiable doit soit accepter la séquence et répondre avec `CreateSequenceResponse` contenant un élément `wsrm:Accept`, formant deux séquences réciproques corrélées, soit rejeter la demande `CreateSequence`.  
+-   R1103 : Si `CreateSequence` contient un `Offer` élément, le répondeur de messagerie fiable doit soit accepter la séquence et répondre avec `CreateSequenceResponse` qui contient un `wsrm:Accept` élément, formant deux corrélées séquences réciproques ou rejeter le `CreateSequence`demande.  
   
 -   R1104 : l'`SequenceAcknowledgement` et les messages d'application qui passent sur la séquence réciproque doivent être envoyés à la référence de point de terminaison `ReplyTo` de `CreateSequence`.  
   
@@ -53,11 +53,11 @@ Cette rubrique traite des détails d’implémentation de Windows Communication 
   
      WCF n’applique pas, mais part du principe que [paramètres de référence] de `AcksTo` et `ReplyTo` sur `CreateSequence` sont identiques et utilise [paramètres de référence] à partir de `ReplyTo` référence de point de terminaison pour les accusés de réception et les messages de séquence réciproque.  
   
--   R1107 : lorsque deux séquences réciproques sont établies à l'aide du mécanisme `Offer`, l'`SequenceAcknowledgement` et les messages d'application qui traversent les séquences réciproques doivent être envoyés à la référence de point de terminaison `ReplyTo` de `CreateSequence`.  
+-   R1107 : Lorsque deux séquences réciproques sont établies à l’aide de la `Offer` mécanisme, `SequenceAcknowledgement` et messages d’application traversent les séquences réciproques doivent être envoyés à la `ReplyTo` référence de point de terminaison de la `CreateSequence`.  
   
--   R1108 : lorsque deux séquences réciproques sont établies à l'aide du mécanisme Offer, la propriété `[address]` de l'élément enfant `wsrm:AcksTo` de la référence de point de terminaison de l'élément `wsrm:Accept` de la `CreateSequenceResponse` doit correspondre octet par octet à l'URI de destination de `CreateSequence`.  
+-   R1108 : Lorsque deux séquences réciproques sont établies à l’aide du mécanisme Offer, la `[address]` propriété de la `wsrm:AcksTo` élément enfant de référence de point de terminaison de la `wsrm:Accept` élément de la `CreateSequenceResponse` doit correspondre octet par octet l’URI de destination de la `CreateSequence`.  
   
--   R1109 : lorsque deux séquences réciproques sont établies à l'aide du mécanisme `Offer`, les messages envoyés par l'initiateur et les accusés de réception des messages envoyés par le répondeur doivent être envoyés à la même référence de point de terminaison.  
+-   R1109 : Lorsque deux séquences réciproques sont établies à l’aide de la `Offer` mécanisme, les messages envoyés par l’initiateur et les accusés de réception des messages par le répondeur doivent être envoyés à la même référence de point de terminaison.  
   
      WCF utilise la messagerie WS-Reliable pour établir des sessions fiables entre l’initiateur et le répondeur. Implémentation de la messagerie WS-Reliable de WCF fournit une session fiable pour intégral demande-réponse et unidirectionnels, modèles de messagerie en duplex. La messagerie WS-Reliable `Offer` mécanisme sur `CreateSequence` / `CreateSequenceResponse` vous permet d’établir deux séquences réciproques corrélées et fournit un protocole de session qui convient à tous les points de terminaison de message. Étant donné que WCF fournit une garantie de sécurité pour une telle session, y compris la protection de bout en bout pour l’intégrité de session, il est pratique de s’assurer de messages destinés au même correspondant arrivent à la même destination. Cela permet également la superposition des accusés de réception de séquence sur les messages d'application. Par conséquent, les contraintes R1104, R1105 et R1108 s’appliquent à WCF.  
   
@@ -167,7 +167,7 @@ Cette rubrique traite des détails d’implémentation de Windows Communication 
 ### <a name="sequenceacknowledgement-header"></a>En-tête SequenceAcknowledgement  
  WCF utilise le mécanisme de superposition des accusés de réception de séquence fournis dans la messagerie WS-Reliable.  
   
--   R1401 : lorsque deux séquences réciproques sont établies à l'aide du mécanisme `Offer`, l'en-tête `SequenceAcknowledgement` peut être inclus dans tout message d'application transmis au destinataire souhaité.  
+-   R1401 : Lorsque deux séquences réciproques sont établies à l’aide de la `Offer` mécanisme, le `SequenceAcknowledgement` en-tête peut être inclus dans n’importe quel message d’application transmis au destinataire prévu.  
   
 -   B1402 : Lorsque WCF doit générer un accusé de réception avant de recevoir un message de séquence (par exemple, pour satisfaire un `AckRequested` message), WCF génère un `SequenceAcknowledgement` en-tête qui contient la plage 0-0, comme indiqué dans l’exemple suivant.  
   
@@ -180,12 +180,12 @@ Cette rubrique traite des détails d’implémentation de Windows Communication 
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B1403 : WCF ne génère pas de `SequenceAcknowledgement` en-têtes qui contiennent un `Nack` élément mais prend en charge `Nack` éléments.  
+-   B1403 : WCF ne génère pas `SequenceAcknowledgement` en-têtes qui contiennent un `Nack` élément mais prend en charge `Nack` éléments.  
   
 ### <a name="ws-reliablemessaging-faults"></a>Erreurs de la messagerie WS-Reliable  
  Voici une liste de contraintes qui s’appliquent à l’implémentation de WCF des erreurs WS-Reliable Messaging :  
   
--   B1501 : WCF ne génère pas de `MessageNumberRollover` erreurs.  
+-   B1501 : WCF ne génère pas `MessageNumberRollover` erreurs.  
   
 -   Point de terminaison B1502:WCF peut générer `CreateSequenceRefused` comme décrit dans la spécification des erreurs.  
   
@@ -243,7 +243,7 @@ Cette rubrique traite des détails d’implémentation de Windows Communication 
 ## <a name="protocol-composition"></a>Composition du protocole  
   
 ### <a name="composition-with-ws-addressing"></a>Composition avec WS-Addressing  
- WCF prend en charge deux versions de WS-Addressing : WS-Addressing 2004/08 [WS-ADDR] et W3C WS-Addressing 1.0 Recommendations [WS-ADDR-CORE] et [WS-ADDR-SOAP].  
+ WCF prend en charge deux versions de WS-Addressing : WS-Addressing 2004/08 [WS-ADDR] et W3C WS-Addressing 1.0 recommandations [WS-ADDR-CORE] et [WS-ADDR-SOAP].  
   
  Bien que la spécification de la messagerie WS-Reliable mentionne WS-Addressing 2004/08 uniquement, cela ne constitue pas une restriction en ce qui concerne la version WS-Addressing à utiliser. Voici une liste de contraintes qui s’appliquent à WCF :  
   
@@ -261,7 +261,7 @@ Cette rubrique traite des détails d’implémentation de Windows Communication 
   
 -   R2302:AWS-session Secure Conversation doit être établie avant l’établissement ou les séquences de messagerie WS-Reliable.  
   
--   R2303 : si la durée de vie de la séquence de messagerie WS-Reliable dépasse celle de la session WS-Secure Conversation, le `SecurityContextToken` établi à l'aide de WS-Secure Conversation doit être renouvelé par le biais de la liaison WS-Secure Conversation Renewal correspondante.  
+-   R2303 : Si la durée de vie séquence WS-Reliable Messaging dépasse WS-Secure Conversation durée de vie de session, le `SecurityContextToken` établi à l’aide de WS-Secure Conversation doit être renouvelée à l’aide de la liaison WS-Secure Conversation Renewal correspondante.  
   
 -   B2304:ws-séquence de messagerie fiable ou une paire de séquences réciproques corrélées est toujours liée à une seule session WS-SecureConversation.  
   
@@ -292,11 +292,11 @@ Cette rubrique traite des détails d’implémentation de Windows Communication 
 ## <a name="flow-control-ws-reliable-messaging-extension"></a>Extension de messagerie WS-Reliable pour le contrôle de flux  
  WCF utilise extensibilité de la messagerie WS-Reliable pour renforcer le contrôle facultatif sur le flux de message de séquence.  
   
- Contrôle de flux est activé en définissant le `ReliableSessionBindingElement`de `FlowControlEnabled``bool` propriété `true`. Voici une liste de contraintes qui s’appliquent à WCF :  
+ Contrôle de flux est activé en définissant le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> propriété `true`. Voici une liste de contraintes qui s’appliquent à WCF :  
   
 -   B4001 : Lorsque le contrôle de flux de messagerie fiable est activé, WCF génère un `netrm:BufferRemaining` élément dans l’élément d’extensibilité de la `SequenceAcknowledgement` en-tête.  
   
--   B4002 : Lorsque le contrôle de flux de messagerie fiable est activé, WCF exige un `netrm:BufferRemaining` élément soit présent dans `SequenceAcknowledgement` en-tête, comme indiqué dans l’exemple suivant.  
+-   B4002 : Lorsque le contrôle de flux de messagerie fiable est activé, WCF ne nécessite pas un `netrm:BufferRemaining` élément soit présent dans `SequenceAcknowledgement` en-tête, comme indiqué dans l’exemple suivant.  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -319,9 +319,9 @@ Cette rubrique traite des détails d’implémentation de Windows Communication 
 ## <a name="message-exchange-patterns"></a>Modèles d’échange de messages  
  Cette section décrit le comportement de WCF lors de la messagerie WS-Reliable est utilisée pour différents modèles d’échange de Message. Pour chaque modèle d’échange de messages, les deux scénarios de déploiements suivants sont considérés :  
   
--   Initiateur non adressable : l'initiateur est derrière un pare-feu ; le répondeur peut remettre des messages à celui-ci uniquement sur les réponses HTTP.  
+-   Initiateur non adressable : L’initiateur est derrière un pare-feu ; Répondeur peut remettre des messages à l’initiateur uniquement sur les réponses HTTP.  
   
--   Initiateur adressable : l'initiateur et le répondeur peuvent tous les deux recevoir des requêtes HTTP ; en d'autres termes, deux connexions HTTP réciproques peuvent être établies.  
+-   Initiateur adressable : Initiateur et le répondeur peuvent recevoir des requêtes HTTP ; en d’autres termes, les deux connexions HTTP réciproques peuvent être établies.  
   
 ### <a name="one-way-non-addressable-initiator"></a>Initiateur unidirectionnel, non adressable  
   

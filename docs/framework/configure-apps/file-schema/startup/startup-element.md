@@ -9,20 +9,18 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222738"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083715"
 ---
 # <a name="ltstartupgt-element"></a>&lt;démarrage&gt; élément
 
 Spécifie les informations de démarrage de common language runtime.
 
- \<configuration > \<démarrage >
+ \<configuration> \<startup>
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +39,7 @@ Spécifie les informations de démarrage de common language runtime.
 |---------------|-----------------|
 |`useLegacyV2RuntimeActivationPolicy`|Attribut facultatif.<br /><br /> Spécifie s’il faut activer la [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] stratégie d’activation du runtime ou à utiliser le [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] stratégie d’activation.|
 
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>attribut d’useLegacyV2RuntimeActivationPolicy
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy attribute
 
 |Value|Description|
 |-----------|-----------------|
@@ -98,6 +96,6 @@ Spécifie les informations de démarrage de common language runtime.
 
 - [Schéma des paramètres de démarrage](index.md)
 - [Schéma des fichiers de configuration](../index.md)
-- [Guide pratique pour Configurer une application pour prendre en charge de .NET Framework 4 ou versions ultérieures](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Guide pratique pour configurer une application en vue de prendre en charge le .NET Framework 4 ou versions ultérieures](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Exécution côte à côte pour COM Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
 - [Exécution côte à côte in-process](../../../deployment/in-process-side-by-side-execution.md)
