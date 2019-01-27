@@ -2,12 +2,12 @@
 title: Activité
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505586"
 ---
 # <a name="activity"></a>Activité
 Cette rubrique décrit les suivis d’activité dans le modèle de suivi de Windows Communication Foundation (WCF). Les activités traitent des unités permettant à l'utilisateur de réduire la portée d'un échec. Les erreurs qui se produisent au cours d'une même activité sont directement liées entre elles. Par exemple, une opération peut échouer parce que le déchiffrement d'un message a échoué auparavant. Les suivis générés pour les échecs respectifs de l'opération et du déchiffrement apparaissent dans la même activité, dénotant l'existence d'un lien direct entre l'erreur relative au déchiffrement et celle relative à la demande.  
@@ -45,7 +45,7 @@ Cette rubrique décrit les suivis d’activité dans le modèle de suivi de Wind
 ## <a name="trace-schema"></a>Schéma de suivi  
  Les traces peuvent être émises à l'aide de tout schéma et sur toutes les plateformes Microsoft. « e2e » (pour « End to End ») est un schéma couramment utilisé. Ce schéma comporte l'identificateur à 128 bits (gAId), le nom de la source de suivi et l'ID de processus. Dans le code managé, l'écouteur <xref:System.Diagnostics.XmlWriterTraceListener> émet des suivis dans le schéma E2E.  
   
- Pour définir l’identificateur AID émis avec un suivi, les développeurs peuvent définir la propriété <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> en utilisant un Guid pour le stockage local des threads (Thread Local Storage, TLS). Cela est illustré par l'exemple suivant.  
+  Pour définir l’identificateur AID émis avec un suivi, les développeurs peuvent définir la propriété <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> en utilisant un Guid pour le stockage local des threads (Thread Local Storage, TLS). Cela est illustré par l'exemple suivant.  
   
 ```csharp
 // set the current Activity ID to a new GUID.  
@@ -64,13 +64,13 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="activity-lifetime"></a>Durée de vie des activités  
  Au sens le plus strict, les activités démarrent lorsque leur ID est utilisé pour la première fois dans un suivi émis et s'achèvent lorsque ce même ID est utilisé pour la dernière fois dans un suivi émis. <xref:System.Diagnostics> fournit un ensemble de types de suivis prédéfinis, notamment les suivis de début et de fin, qui permettent de délimiter clairement la durée de vie des activités.  
   
--   Suivi de début : signale le début des activités. Un suivi « Démarrer » fournit un enregistrement du début d’un nouveau jalon de traitement. Ce suivi contient l'ID de la nouvelle activité correspondant à la source de suivi et au processus concernés, sauf lorsque l'ID d'activité est propagé à l'ensemble des points de terminaison, auquel cas il y a un suivi de début par point de terminaison. Parmi les processus provoquant le démarrage d'une nouvelle activité figurent notamment la création d'un nouveau thread pour traitement ou l'entrée d'une nouvelle méthode publique.  
+-   Démarrer : Indique le début d’une activité. Un suivi « Démarrer » fournit un enregistrement du début d’un nouveau jalon de traitement. Ce suivi contient l'ID de la nouvelle activité correspondant à la source de suivi et au processus concernés, sauf lorsque l'ID d'activité est propagé à l'ensemble des points de terminaison, auquel cas il y a un suivi de début par point de terminaison. Parmi les processus provoquant le démarrage d'une nouvelle activité figurent notamment la création d'un nouveau thread pour traitement ou l'entrée d'une nouvelle méthode publique.  
   
--   Suivi de fin : signale la fin des activités. Un suivi « Arrêter » fournit un enregistrement de fin d’un jalon de traitement existant. Ce suivi contient l'ID de l'activité existante correspondant à la source de suivi et au processus concernés, sauf lorsque l'ID d'activité est propagé à l'ensemble des points de terminaison, auquel cas il y a un suivi de fin par point de terminaison.  Arrêt d’un thread de traitement ou la sortie d’une méthode dont le début a été désigné par un suivi « Démarrer » sont des exemples de l’arrêt d’une activité.  
+-   Arrêter : Indique la fin d’une activité. Un suivi « Arrêter » fournit un enregistrement de fin d’un jalon de traitement existant. Ce suivi contient l'ID de l'activité existante correspondant à la source de suivi et au processus concernés, sauf lorsque l'ID d'activité est propagé à l'ensemble des points de terminaison, auquel cas il y a un suivi de fin par point de terminaison.  Arrêt d’un thread de traitement ou la sortie d’une méthode dont le début a été désigné par un suivi « Démarrer » sont des exemples de l’arrêt d’une activité.  
   
--   Suivi d'interruption : signale l'interruption d'une activité. Un suivi « Interrompre » contient l’ID de l’activité dont le traitement est censé reprendre ultérieurement. Aucun suivi depuis la source de suivi en cours n'est émis pour l'ID de cette activité dans l'intervalle de temps qui s'écoule entre ses événements d'interruption et de reprise. Les exemples incluent l'interruption d'une activité lors de l'appel dans une fonction de bibliothèque externe ou lors de l'attente d'une ressource telle qu'un port de terminaison d'E/S.  
+-   Suspendre : Indique la suspension du traitement d’une activité. Un suivi « Interrompre » contient l’ID de l’activité dont le traitement est censé reprendre ultérieurement. Aucun suivi depuis la source de suivi en cours n'est émis pour l'ID de cette activité dans l'intervalle de temps qui s'écoule entre ses événements d'interruption et de reprise. Les exemples incluent l'interruption d'une activité lors de l'appel dans une fonction de bibliothèque externe ou lors de l'attente d'une ressource telle qu'un port de terminaison d'E/S.  
   
--   Suivi de reprise : signale la reprise d'une activité. Un suivi « Reprendre » contient l’id de l’activité dont le dernier suivi émis à partir de la source de suivi actuelle était un suivi « Interrompre ». Parmi les actions pouvant provoquer la reprise d'une activité figurent notamment les retours d'appel à une fonction de bibliothèque externe ou les indications de reprise envoyées par une ressource, telle qu'un port de terminaison E/S.  
+-   Reprendre : Indique la reprise du traitement d’une activité. Un suivi « Reprendre » contient l’id de l’activité dont le dernier suivi émis à partir de la source de suivi actuelle était un suivi « Interrompre ». Parmi les actions pouvant provoquer la reprise d'une activité figurent notamment les retours d'appel à une fonction de bibliothèque externe ou les indications de reprise envoyées par une ressource, telle qu'un port de terminaison E/S.  
   
 -   Transfert : Étant donné que certaines activités sont provoquées par d’autres, ou sont liées à d’autres personnes, les activités peuvent être associées à d’autres activités via « Transfert » des traces. Un suivi de transfert enregistre la relation directe existant entre deux activités.  
   
@@ -97,9 +97,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Les activités représentent des activités, par nécessairement des objets. Une activité doit être interprétée en tant que « cela se produisait quand. . . (un suivi significatif a été émis). »  
   
-## <a name="see-also"></a>Voir aussi  
- [Configuration du suivi](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Émission de suivis dans du code utilisateur](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+## <a name="see-also"></a>Voir aussi
+- [Configuration du suivi](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Émission de suivis dans du code utilisateur](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
