@@ -50,7 +50,7 @@ ms.locfileid: "55204884"
   
 |Caractère d'échappement|Description|Motif|Correspondances|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Correspond à un caractère de cloche, \u0007.|`\a`|"\u0007" dans "Erreur !" + ’\u0007’|  
+|`\a`|Correspond à un caractère de cloche, \u0007.|`\a`|"\u0007" dans "Erreur !" + '\u0007'|  
 |`\b`|Dans une classe de caractères, correspond à un retour arrière, \u0008.|`[\b]{3,}`|"\b\b\b\b" dans "\b\b\b\b"|  
 |`\t`|Correspond à une tabulation, \u0009.|`(\w+)\t`|"item1\t", "item2\t" dans "item1\titem2\t"|  
 |`\r`|Correspond à un retour chariot, \u000D. (`\r` n'est pas équivalent au caractère de saut de ligne, `\n`.)|`\r\n(\w+)`|"\r\nCe" dans "\r\nCe sont\ndeux lignes."|  
@@ -58,10 +58,10 @@ ms.locfileid: "55204884"
 |`\f`|Correspond à un saut de page, \u000C.|`[\f]{2,}`|"\f\f\f" dans "\f\f\f"|  
 |`\n`|Correspond à une nouvelle ligne, \u000A.|`\r\n(\w+)`|"\r\nCe" dans "\r\nCe sont\ndeux lignes."|  
 |`\e`|Correspond à un caractère d'échappement, \u001B.|`\e`|"\x001B" dans "\x001B"|  
-|`\` *nnn*|Utilise la représentation octale pour spécifier un caractère (*nnn* se compose de deux ou trois chiffres).|`\w\040\w`|« a b », « c d » dans « a bc d »|  
-|`\x` *nn*|Utilise une représentation hexadécimale pour spécifier un caractère (*nn* se compose de deux chiffres exactement).|`\w\x20\w`|« a b », « c d » dans « a bc d »|  
+|`\` *nnn*|Utilise la représentation octale pour spécifier un caractère (*nnn* se compose de deux ou trois chiffres).|`\w\040\w`|"a b", "c d" dans "a bc d"|  
+|`\x` *nn*|Utilise une représentation hexadécimale pour spécifier un caractère (*nn* se compose de deux chiffres exactement).|`\w\x20\w`|"a b", "c d" dans "a bc d"|  
 |`\c` *X*<br /><br /> `\c` *x*|Correspond au caractère de contrôle ASCII spécifié par *X* ou *x*, où *X* ou *x* représente la lettre du caractère de contrôle.|`\cC`|"\x0003" dans "\x0003" (Ctrl-C)|  
-|`\u` *nnnn*|Correspond à un caractère Unicode en utilisant la représentation hexadécimale (quatre chiffres exactement, représentés par *nnnn*).|`\w\u0020\w`|« a b », « c d » dans « a bc d »|  
+|`\u` *nnnn*|Correspond à un caractère Unicode en utilisant la représentation hexadécimale (quatre chiffres exactement, représentés par *nnnn*).|`\w\u0020\w`|"a b", "c d" dans "a bc d"|  
 |`\`|Lorsque ce caractère d'échappement est suivi d'un caractère non identifié comme caractère d'échappement, correspond au caractère lui-même. Par exemple, `\*` est identique à `\x2A`et `\.` est identique à `\x2E`. Cela permet au moteur des expressions régulières de lever l'ambiguïté d'éléments de langage (tels que \* ou ?) et de caractères littéraux (représentés par `\*` ou `\?`).|`\d+[\+-x\*]\d+`|"2+2" et "3\*9" dans "(2+2) \* 3\*9"|  
   
  [Retour au début](#top)  
@@ -81,7 +81,7 @@ ms.locfileid: "55204884"
 |`\w`|Correspond à n'importe quel caractère alphabétique.|`\w`|"I", "D", "A", "1", "3" dans "ID A1.3"|  
 |`\W`|Correspond à tout caractère autre qu'un caractère de mot.|`\W`|" ", "." dans "ID A1.3"|  
 |`\s`|Correspond à tout caractère espace blanc.|`\w\s`|"D " dans "ID A1.3"|  
-|`\S`|Correspond à tout caractère autre qu'un espace blanc.|`\s\S`|" _" dans "int \___ctr"|  
+|`\S`|Correspond à tout caractère autre qu'un espace blanc.|`\s\S`|" _" dans "int \__ctr"|  
 |`\d`|Correspond à n'importe quel chiffre décimal.|`\d`|"4" dans "4 = IV"|  
 |`\D`|Correspond à n'importe quel caractère autre qu'un chiffre décimal.|`\D`|" ", "=", " ", "I", "V" dans "4 = IV"|  
   
@@ -92,12 +92,12 @@ ms.locfileid: "55204884"
   
 |Assertion|Description|Motif|Correspondances|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Par défaut, la correspondance doit commencer au début de la chaîne ; en mode multiligne, elle doit commencer au début de la ligne.|`^\d{3}`|« 901 » dans « 901-333- »|  
-|`$`|Par défaut, la correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne ; en mode multiligne, elle doit se produire avant la fin de la ligne ou avant `\n` à la fin de la ligne.|`-\d{3}$`|« -333 » dans « -901-333 »|  
-|`\A`|La correspondance doit se produire au début de la chaîne.|`\A\d{3}`|« 901 » dans « 901-333- »|  
-|`\Z`|La correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne.|`-\d{3}\Z`|« -333 » dans « -901-333 »|  
-|`\z`|La correspondance doit se produire à la fin de la chaîne.|`-\d{3}\z`|« -333 » dans « -901-333 »|  
-|`\G`|La correspondance doit se produire à l'emplacement où la correspondance précédente s'est terminée.|`\G\(\d\)`|« (1) », « (3) », « (5) » dans « (1)(3)(5)[7](9\) »|  
+|`^`|Par défaut, la correspondance doit commencer au début de la chaîne ; en mode multiligne, elle doit commencer au début de la ligne.|`^\d{3}`|"901" dans "901-333-"|  
+|`$`|Par défaut, la correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne ; en mode multiligne, elle doit se produire avant la fin de la ligne ou avant `\n` à la fin de la ligne.|`-\d{3}$`|"-333" dans "-901-333"|  
+|`\A`|La correspondance doit se produire au début de la chaîne.|`\A\d{3}`|"901" dans "901-333-"|  
+|`\Z`|La correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne.|`-\d{3}\Z`|"-333" dans "-901-333"|  
+|`\z`|La correspondance doit se produire à la fin de la chaîne.|`-\d{3}\z`|"-333" dans "-901-333"|  
+|`\G`|La correspondance doit se produire à l'emplacement où la correspondance précédente s'est terminée.|`\G\(\d\)`|"(1)", "(3)", "(5)" dans "(1)(3)(5)[7](9\)"|  
 |`\b`|La correspondance doit se produire sur une limite entre un caractère `\w` (alphanumérique) et un caractère `\W` (non alphanumériques).|`\b\w+\s\w+\b`|"thèm thème", "thèm thèm" dans "thèm thème thèm thèm"|  
 |`\B`|La correspondance ne doit pas se produire sur une limite `\b` .|`\Bend\w*\b`|"ends", "ender" dans "end sends endure lender"|  
   
@@ -111,7 +111,7 @@ ms.locfileid: "55204884"
 |------------------------|-----------------|-------------|-------------|  
 |`(` *sous-expression* `)`|Capture la sous-expression mise en correspondance et lui assigne un nombre ordinal de base un.|`(\w)\1`|"oo" dans "boot"|  
 |`(?<` *name* `>` *sous-expression* `)`|Capture la sous-expression mise en correspondance dans un groupe nommé.|`(?<double>\w)\k<double>`|"oo" dans "boot"|  
-|`(?<` *nom1* `-` *nom2* `>` *sous-expression* `)`|Définit un équilibre de définition de groupe. Pour plus d’informations, consultez la section « Équilibre de définition de groupe » dans [Constructions de regroupement](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|« ((1-3)\*(3-1)) » dans « 3+2^((1-3)\*(3-1)) »|  
+|`(?<` *nom1* `-` *nom2* `>` *sous-expression* `)`|Définit un équilibre de définition de groupe. Pour plus d’informations, consultez la section « Équilibre de définition de groupe » dans [Constructions de regroupement](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" dans "3+2^((1-3)\*(3-1))"|  
 |`(?:` *sous-expression* `)`|Définit un groupe sans capture.|`Write(?:Line)?`|"WriteLine" dans "Console.WriteLine()"<br /><br /> "Write" dans "Console.Write(value)"|  
 |`(?imnsx-imnsx:` *sous-expression* `)`|Active ou désactive les options spécifiées dans *sous-expression*. Pour plus d'informations, consultez [Options des expressions régulières](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" dans "A12xl A12XL a12xl"|  
 |`(?=` *sous-expression* `)`|Assertion de préanalyse positive de largeur nulle.|`\w+(?=\.)`|"est", "courait", et "couché" dans "Il est. Le chien courait. Le soleil est couché."|  
@@ -197,11 +197,11 @@ ms.locfileid: "55204884"
   
 |Option|Description|Motif|Correspondances|  
 |------------|-----------------|-------------|-------------|  
-|`i`|Utilise la correspondance qui ne respecte pas la casse.|`\b(?i)a(?-i)a\w+\b`|« aardvark », « aaaAuto » dans « aardvark AAAuto aaaAuto Adam breakfast »|  
+|`i`|Utilise la correspondance qui ne respecte pas la casse.|`\b(?i)a(?-i)a\w+\b`|"aardvark", "aaaAuto" dans "aardvark AAAuto aaaAuto Adam breakfast"|  
 |`m`|Utilise le mode multiligne. `^` et `$` correspondent au début et à la fin d'une ligne, au lieu du début et de la fin d'une chaîne.|Pour obtenir un exemple, consultez la section « Mode multiligne » dans [Options des expressions régulières](regular-expression-options.md).||  
 |`n`|Ne capture aucun groupe sans nom.|Pour obtenir un exemple, consultez la section « Captures explicites uniquement » dans [Options des expressions régulières](regular-expression-options.md).||  
 |`s`|Utilise le mode à ligne simple.|Pour obtenir un exemple, consultez la section « Mode à ligne simple » dans [Options des expressions régulières](regular-expression-options.md).||  
-|`x`|Ignore l'espace blanc sans séquence d'échappement dans le modèle d'expression régulière.|`\b(?x) \d+ \s \w+`|« 1 aardvark », « 2 cats » dans « 1 aardvark 2 cats IV centurions »|  
+|`x`|Ignore l'espace blanc sans séquence d'échappement dans le modèle d'expression régulière.|`\b(?x) \d+ \s \w+`|"1 aardvark", "2 cats" dans "1 aardvark 2 cats IV centurions"|  
   
  [Retour au début](#top)  
   
