@@ -21,12 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 48794898eb1a3e13454a335a2335fac57d8faf3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561645"
 ---
 # <a name="configuring-internet-applications"></a>Configuration des applications Internet
 L’[élément de configuration \<system.Net> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contient des informations de configuration réseau pour les applications. Avec l’[élément \<system.Net> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), vous pouvez définir des serveurs proxy, définir des paramètres de gestion de connexion, et inclure des modules de requête et d’authentification personnalisés dans votre application.  
@@ -97,7 +97,7 @@ L’[élément de configuration \<system.Net> (Paramètres réseau)](../../../do
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Schéma des paramètres réseau](../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [\<system.Net>, élément (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+## <a name="see-also"></a>Voir aussi
+- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Schéma des paramètres réseau](../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [\<system.Net>, élément (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659489"
 ---
 # <a name="creating-new-strings-in-net"></a>Création de nouvelles chaînes dans .NET
 Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permet de créer des chaînes à l’aide d’une assignation simple, et surcharge un constructeur de classe pour prendre en charge la création de chaînes à l’aide de plusieurs paramètres différents. Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit également plusieurs méthodes dans la classe <xref:System.String?displayProperty=nameWithType> qui créent des objets String en combinant plusieurs chaînes, tableaux de chaînes ou objets.  
@@ -82,5 +82,5 @@ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permet de créer
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Opérations de chaînes de base](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Opérations de chaînes de base](../../../docs/standard/base-types/basic-string-operations.md)
 - [Mise en forme composite](../../../docs/standard/base-types/composite-formatting.md)

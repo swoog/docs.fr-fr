@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 330d8ff784218483caf153b5c14f8a30df2d2452
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 612cd108e37d6f072bafed919c14532498352e4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628927"
 ---
 # <a name="platform-invoke-examples"></a>Exemples d'appel de code non managé
 Les exemples suivants montrent comment définir et appeler la fonction **MessageBox** dans User32.dll, en passant une chaîne simple en tant qu’argument. Dans ces exemples, le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> est défini sur **Automatique** pour permettre à la plateforme cible de déterminer la largeur des caractères et le marshaling des chaînes.  
@@ -31,7 +31,7 @@ Les exemples suivants montrent comment définir et appeler la fonction **Message
   
  Pour obtenir des exemples supplémentaires, consultez [Marshaling de données à l’aide de l’appel de code managé](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [Création de prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Spécification d'un jeu de caractères](../../../docs/framework/interop/specifying-a-character-set.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- [Création de prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Spécification d'un jeu de caractères](../../../docs/framework/interop/specifying-a-character-set.md)

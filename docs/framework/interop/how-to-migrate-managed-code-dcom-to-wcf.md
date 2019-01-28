@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 202737692bae14ada229ee2c92a6630a3ed71344
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734514"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Procédure : Migrer du code DCOM managé vers WCF
 Pour des raisons de sécurité, il est recommandé d'utiliser Windows Communication Foundation (WCF) plutôt que le modèle DCOM pour les appels de code managé entre serveurs et clients dans un environnement distribué. Cet article explique comment migrer du code DCOM vers WCF pour les scénarios suivants.  
@@ -421,8 +421,8 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Conception et implémentation de services](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Génération de clients](../../../docs/framework/wcf/building-clients.md)  
- [Services duplex](../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>Voir aussi
+- [Programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Conception et implémentation de services](../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Génération de clients](../../../docs/framework/wcf/building-clients.md)
+- [Services duplex](../../../docs/framework/wcf/feature-details/duplex-services.md)

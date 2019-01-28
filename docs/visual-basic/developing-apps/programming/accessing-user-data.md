@@ -11,12 +11,12 @@ helpviewer_keywords:
 - login names [Visual Basic]
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
-ms.openlocfilehash: 097006caf56072d5a6e9f2945f5969eed249849e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ff071aadb189cec839b9cb41d510764a9187363
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605487"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Accès aux données de l’utilisateur (Visual Basic)
 Cette section contient des rubriques qui traitent de l’objet `My.User` et des tâches qu’il vous permet d’accomplir.  
@@ -31,5 +31,5 @@ Cette section contient des rubriques qui traitent de l’objet `My.User` et des 
 |Obtenir le nom de domaine de l’utilisateur si l’application utilise l’authentification Windows|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |Déterminer le rôle de l’utilisateur|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.ApplicationServices.User>
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.ApplicationServices.User>

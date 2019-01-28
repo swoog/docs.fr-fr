@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a4c205d61e6de3e835954e405cece143520b4d2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623980"
 ---
 # <a name="localizability-review"></a>Révision de l'adaptabilité
 La revue de l’adaptabilité est une étape intermédiaire du développement d’une application mondialisable. Il vérifie qu'une application globalisée est prête pour la localisation et identifie tout code ou tous les aspects de l'interface utilisateur qui nécessitent une gestion spéciale. Cette étape permet également de s'assurer que le processus de localisation n'introduira pas de défauts fonctionnels dans votre application. Lorsque tous les problèmes générés par l'examen de l'adaptabilité ont été traités, votre application est prête pour la localisation. Si la revue de l’adaptabilité est complète, vous n’aurez pas à modifier le code source pendant le processus de localisation.  
@@ -75,7 +75,7 @@ La revue de l’adaptabilité est une étape intermédiaire du développement d�
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Globalisation et localisation](../../../docs/standard/globalization-localization/index.md)  
-- [Localisation](../../../docs/standard/globalization-localization/localization.md)  
-- [Globalisation](../../../docs/standard/globalization-localization/globalization.md)  
+- [Globalisation et localisation](../../../docs/standard/globalization-localization/index.md)
+- [Localisation](../../../docs/standard/globalization-localization/localization.md)
+- [Globalisation](../../../docs/standard/globalization-localization/globalization.md)
 - [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)

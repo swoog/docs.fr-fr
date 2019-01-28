@@ -3,12 +3,12 @@ title: Concepts de base des expressions de requête (LINQ en C#)
 description: Présente les concepts liés aux expressions de requête
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709115"
 ---
 # <a name="query-expression-basics"></a>Concepts de base des expressions de requête
 
@@ -174,7 +174,7 @@ Pour plus d’informations, consultez [Guide pratique pour effectuer une sous-re
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../programming-guide/index.md)  
-- [LINQ (Language Integrated Query)](index.md)  
-- [Mots clés de requête (LINQ)](../language-reference/keywords/query-keywords.md)  
-- [Vue d’ensemble des opérateurs de requête standard](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Guide de programmation C#](../programming-guide/index.md)
+- [LINQ (Language Integrated Query)](index.md)
+- [Mots clés de requête (LINQ)](../language-reference/keywords/query-keywords.md)
+- [Vue d’ensemble des opérateurs de requête standard](../programming-guide/concepts/linq/standard-query-operators-overview.md)

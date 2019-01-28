@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: 3e2eac468643b755c6db2d6055427baa7ce2b7a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cba33803c31ccc144479ad3e7b073ea7057495d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490556"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>Guide pratique : Obtenir l'adresse d'une variable (Guide de programmation C#)
 
@@ -39,10 +39,10 @@ int* p = &number; //address-of operator &
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Expressions de pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [Types de pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [Types](../../../csharp/language-reference/keywords/types.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed, instruction](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Expressions de pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [Types de pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Types](../../../csharp/language-reference/keywords/types.md)
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
+- [fixed, instruction](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

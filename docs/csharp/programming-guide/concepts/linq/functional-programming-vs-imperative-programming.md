@@ -2,12 +2,12 @@
 title: Comparaison de la programmation fonctionnelle et de la programmation impérative (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 42c80146a091bfdcff2bbf3ebe1f4ed9a9510e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518954"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Comparaison de la programmation fonctionnelle et de la programmation impérative (C#)
 Cette rubrique compare et contraste la programmation fonctionnelle avec la programmation impérative (procédurale) plus traditionnelle.  
@@ -52,6 +52,6 @@ Cette rubrique compare et contraste la programmation fonctionnelle avec la progr
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Introduction aux transformations fonctionnelles pures (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
-- [Transformations XSLT](../../../../standard/data/xml/xslt-transformations.md)  
+- [Introduction aux transformations fonctionnelles pures (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Transformations XSLT](../../../../standard/data/xml/xslt-transformations.md)
 - [Refactorisation dans des fonctions pures (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

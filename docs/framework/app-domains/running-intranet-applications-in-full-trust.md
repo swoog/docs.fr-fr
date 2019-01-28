@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a40d77f58d6a614f874e12f118f89f25f149e55
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dca1ddd1c7f13dd1ed00d06c30aa7e91acfc43ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554528"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Exécution d'applications intranet de confiance totale
 À compter du .NET Framework version 3.5 Service Pack 1 (SP1), les applications et leurs assemblys de bibliothèque peuvent être exécutés comme des assemblys de confiance totale à partir d’un partage réseau. La preuve de zone <xref:System.Security.SecurityZone.MyComputer> est ajoutée automatiquement aux assemblys chargés sur l’intranet à partir d’un partage. Cette preuve fournit à ces assemblys le même jeu accordé (qui est généralement de confiance totale) qu’aux assemblys qui résident sur l’ordinateur. Cette fonctionnalité ne s’applique pas aux applications ClickOnce ou aux applications conçues pour s’exécuter sur un hôte.  
@@ -34,5 +34,5 @@ ms.locfileid: "50180640"
   
 -   Sur les ordinateurs 64 bits, créez une sous-clé sous la clé HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework dans le Registre système. Utilisez le nom de clé LegacyMyComputerZone avec une valeur DWORD égale à 1. Créez la même sous-clé sous la clé HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 - [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

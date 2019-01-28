@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637740"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Assemblys pouvant être collectés pour la génération de type dynamique
 
@@ -77,9 +77,9 @@ Les restrictions suivantes s’appliquent aux assemblys pouvant être collectés
 - **Objets liés au contexte**    
    Les variables statiques de contexte ne sont pas prises en charge. Les types dans un assembly pouvant être collecté ne peuvent pas étendre <xref:System.ContextBoundObject>. Toutefois, le code dans les assemblys pouvant être collectés peut utiliser des objets liés au contexte définis ailleurs.
 
-- **Données statiques de thread**       
+- **Données statiques de thread**       
    Les variables statiques de thread ne sont pas prises en charge.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Émission d’assemblys et de méthodes dynamiques](emitting-dynamic-methods-and-assemblies.md)
+- [Émission d’assemblys et de méthodes dynamiques](emitting-dynamic-methods-and-assemblies.md)

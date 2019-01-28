@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: 0dea384092a738ebcf139a065431505247c02873
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d6759ec878f34ebd5031fb3465901412f8cbda05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693822"
 ---
 # <a name="-help---c-compiler-options"></a>-help, -? (Options du compilateur C#)
 Cette option envoie une liste d’options du compilateur, accompagnée d’une brève description de chaque option, à stdout.  
@@ -34,7 +34,7 @@ Cette option envoie une liste d’options du compilateur, accompagnée d’une b
   
  Cette option de compilateur n’est pas disponible dans Visual Studio et ne peut pas être changée par programmation.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

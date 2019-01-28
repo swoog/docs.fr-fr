@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85e7213342984276d8509fca8caefb2661865733
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c7e2f0f239ffded3d9f16a32b1f8e6601e27d06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685853"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Exemple COM Interop : client .NET et serveur COM
 Cet exemple montre comment un [client .NET](#cpconcominteropsamplenetclientcomserveranchor1), généré pour accéder à un [serveur COM](#cpconcominteropsamplenetclientcomserveranchor2), crée une instance d’une coclasse COM et appelle les membres de classe pour effectuer des calculs d’emprunts.  
@@ -299,5 +299,5 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Exposition de composants COM au .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>Voir aussi
+- [Exposition de composants COM au .NET Framework](../../../docs/framework/interop/exposing-com-components.md)

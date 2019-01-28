@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85bb6dcdaa198b6b038cc80e1e38fa7d11123678
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cf8a7b090b7a54328101478aed7edbbc5efd79ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603623"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analyse d’autres chaînes dans .NET
 Outre des chaînes numériques et <xref:System.DateTime>, vous pouvez analyser des chaînes qui représentent les types <xref:System.Char>, <xref:System.Boolean> et <xref:System.Enum> dans des types de données.  
@@ -52,6 +52,6 @@ Outre des chaînes numériques et <xref:System.DateTime>, vous pouvez analyser d
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
-- [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+- [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)
 - [Conversion de type dans .NET](../../../docs/standard/base-types/type-conversion.md)

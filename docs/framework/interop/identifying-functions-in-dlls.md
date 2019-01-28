@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc160678817266dc649f60dc3f2cc77044c05691
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb1aba9e794928b0eb905722e2a5d7df84100ea4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388617"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729208"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identification des fonctions des DLL
 L’identité d’une fonction DLL est composée des éléments suivants :  
@@ -45,9 +45,9 @@ L’identité d’une fonction DLL est composée des éléments suivants :
   
  Pour obtenir une documentation complète sur l’interface API Win32, consultez le Kit Platform SDK. Pour afficher des exemples montrant comment construire des déclarations .NET à utiliser avec l’appel de code non managé, consultez [Marshaling de données à l’aide de l’appel de code non managé](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Consommation de fonctions DLL non managées](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [Spécification d'un point d'entrée](../../../docs/framework/interop/specifying-an-entry-point.md)  
- [Création d’une classe pour contenir des fonctions DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
- [Création de prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Voir aussi
+- [Consommation de fonctions DLL non managées](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [Spécification d'un point d'entrée](../../../docs/framework/interop/specifying-an-entry-point.md)
+- [Création d’une classe pour contenir des fonctions DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
+- [Création de prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)

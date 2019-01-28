@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e62d115292edc7b75ff782ac2c9161d942077333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655333"
 ---
 # <a name="com-callable-wrapper"></a>Wrapper pouvant être appelé par COM
 Quand un client COM appelle un objet .NET, le common language runtime crée l'objet managé et un wrapper CCW pour cet objet. Parce qu'ils ne peuvent pas référencer directement un objet .NET, les clients COM utilisent le wrapper CCW en tant que proxy pour l'objet managé.  
@@ -189,9 +189,9 @@ Si votre application exige des appels à liaison anticipée à des méthodes d�
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [Wrappers COM](com-wrappers.md)  
- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)  
- [Qualifier des types .NET pour l'interopérabilité](qualifying-net-types-for-interoperation.md)  
- [Wrapper pouvant être appelé par le runtime](runtime-callable-wrapper.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
+- [Wrappers COM](com-wrappers.md)
+- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
+- [Qualifier des types .NET pour l'interopérabilité](qualifying-net-types-for-interoperation.md)
+- [Wrapper pouvant être appelé par le runtime](runtime-callable-wrapper.md)

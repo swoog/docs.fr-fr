@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5718c70597acc6919c697a9033e8593865e60a2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745036"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Création d'une classe pour contenir des fonctions DLL
 L’enveloppement d’une fonction DLL fréquemment utilisée dans une classe managée est une stratégie efficace d’encapsulation des fonctionnalités de la plateforme. Bien que cette opération ne soit pas obligatoire dans tous les cas, un wrapper de classe s’avère pratique, car la définition de fonctions DLL peut être fastidieuse et sujette à erreurs. En cas de programmation en Visual Basic ou C#, vous devez déclarer les fonctions DLL dans une classe ou un module Visual Basic.  
@@ -36,8 +36,8 @@ L’enveloppement d’une fonction DLL fréquemment utilisée dans une classe ma
   
  Vous pouvez nommer la classe et ses méthodes à votre convenance. Pour afficher des exemples montrant comment construire des déclarations .NET à utiliser avec l’appel de code non managé, consultez [Marshaling de données à l’aide de l’appel de code non managé](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Consommation de fonctions DLL non managées](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [Identification des fonctions des DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [Création de prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Voir aussi
+- [Consommation de fonctions DLL non managées](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [Identification des fonctions des DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)
+- [Création de prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cbf7db4d9369eade62767e55035df4118d5248ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47235281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646644"
 ---
 # <a name="managed-thread-states"></a>États des threads managés
 La propriété <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> fournit un masque de bits qui indique l’état actuel du thread. Un thread se trouve toujours dans au moins un des états possibles de l’énumération <xref:System.Threading.ThreadState> et peut être dans plusieurs états en même temps.  
@@ -38,19 +38,19 @@ La propriété <xref:System.Threading.Thread.ThreadState%2A?displayProperty=name
 |Un autre thread appelle <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.AbortRequested>|  
 |Le thread répond à un <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Aborted>, puis <xref:System.Threading.ThreadState.Stopped>|  
   
- Étant donné que l’état de <xref:System.Threading.ThreadState.Running> a la valeur 0, il n’est pas possible d’effectuer un test de bits pour découvrir cet état. Au lieu de cela, le test suivant (en pseudo-code) peut être utilisé :  
+ Étant donné que l’état de <xref:System.Threading.ThreadState.Running> a la valeur 0, il n’est pas possible d’effectuer un test de bits pour découvrir cet état. Au lieu de cela, le test suivant (en pseudo-code) peut être utilisé :  
   
 ```  
 if ((state & (Unstarted | Stopped)) == 0)   // implies Running     
 ```  
   
- Les threads se trouvent souvent dans plusieurs états à un moment donné. Par exemple, si un thread est bloqué sur un appel de <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> et qu’un autre thread appelle <xref:System.Threading.Thread.Abort%2A> sur ce même thread, le thread sera à la fois dans l’état <xref:System.Threading.ThreadState.WaitSleepJoin> et dans l’état <xref:System.Threading.ThreadState.AbortRequested>. Dans ce cas, dès que le thread retourne de l’appel à <xref:System.Threading.Monitor.Wait%2A> ou est interrompu, il reçoit <xref:System.Threading.ThreadAbortException>.  
+ Les threads se trouvent souvent dans plusieurs états à un moment donné. Par exemple, si un thread est bloqué sur un appel de <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> appel et qu’un autre thread appelle <xref:System.Threading.Thread.Abort%2A> sur ce même thread, le thread sera à la fois dans l’état <xref:System.Threading.ThreadState.WaitSleepJoin> et dans l’état <xref:System.Threading.ThreadState.AbortRequested> en même temps. Dans ce cas, dès que le thread retourne de l’appel à <xref:System.Threading.Monitor.Wait%2A> ou est interrompu, il reçoit <xref:System.Threading.ThreadAbortException>.  
   
  Une fois qu’un thread quitte l’état <xref:System.Threading.ThreadState.Unstarted> à la suite d’un appel à <xref:System.Threading.Thread.Start%2A>, il ne peut jamais revenir à l’état <xref:System.Threading.ThreadState.Unstarted> . Un thread ne peut jamais quitter l’état <xref:System.Threading.ThreadState.Stopped> .  
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Threading.ThreadAbortException>  
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadState>  
+- <xref:System.Threading.ThreadAbortException>
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadState>
 - [Thread](../../../docs/standard/threading/index.md)

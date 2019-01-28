@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729130"
 ---
 # <a name="introducing-pluggable-protocols"></a>Introduction aux protocoles enfichables
 Microsoft .NET Framework fournit une implémentation en couche, extensible et managée de services Internet que vous pouvez intégrer rapidement et facilement à vos applications. Les classes d’accès à Internet disponibles dans les espaces de noms <xref:System.Net> et <xref:System.Net.Sockets> permettent d’implémenter des applications Internet et web.  
@@ -66,8 +66,8 @@ Microsoft .NET Framework fournit une implémentation en couche, extensible et ma
   
  Les classes **System.Net.Sockets** seront utiles aux développeurs qui sont familiarisés avec l’interface Windows Sockets ou à ceux qui recherchent le contrôle offert par la programmation au niveau du socket. Les classes **System.Net.Sockets** constituent un point de transition entre le code managé et le code natif dans les classes **System.Net**. Dans la plupart des cas, les classes **System.Net.Sockets** marshalent les données dans les classes équivalentes Windows 32 bits, et gèrent toutes les vérifications de sécurité nécessaires.  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>Voir aussi
+- [Programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

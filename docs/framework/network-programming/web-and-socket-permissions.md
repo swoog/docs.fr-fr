@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: b5767f4e16e691fec5714f98114b3ed9d5692a50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b4395d26114425556f0457f03667d0f95f786ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677639"
 ---
 # <a name="web-and-socket-permissions"></a>Autorisations web et socket
 La sécurité Internet pour les applications utilisant l’espace de noms <xref:System.Net> est apportée par les classes <xref:System.Net.WebPermission> et <xref:System.Net.SocketPermission>. La classe **WebPermission** détermine si une application est autorisée à demander des données à partir d’un URI ou d’utiliser un URI sur Internet. La classe **SocketPermission** détermine si une application est autorisée à utiliser un <xref:System.Net.Sockets.Socket> pour accepter des données sur un port local ou pour communiquer avec des appareils distants utilisant un protocole de transport à une autre adresse, en fonction de l’hôte, du numéro de port et du protocole de transport du socket.  
@@ -33,6 +33,6 @@ La sécurité Internet pour les applications utilisant l’espace de noms <xref:
   
  Pour les instances **WebPermission**, Accept signifie qu’une application peut exporter l’URI contrôlé par **WebPermission** sur Internet et Connect signifie qu’une application peut accéder à cet URI (distant ou local).  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité](../../../docs/standard/security/index.md)  
- [Sécurité dans la programmation réseau](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>Voir aussi
+- [Sécurité](../../../docs/standard/security/index.md)
+- [Sécurité dans la programmation réseau](../../../docs/framework/network-programming/security-in-network-programming.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 17bb0f246407804306a0ea0142f8944b5cf1ee30
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 56028bcf3b843a4f6884e2d7cc7d409621adba34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558817"
 ---
 # <a name="-define-c-compiler-options"></a>-define (Options du compilateur C#)
 L’option **-define** définit `name` comme symbole dans tous les fichiers de code source de votre programme.  
@@ -38,7 +38,7 @@ L’option **-define** définit `name` comme symbole dans tous les fichiers de c
   
  **-d** est la forme abrégée de **-define**.  
   
- Pour définir plusieurs symboles avec **-define**, séparez chaque nom de symbole par un point-virgule ou une virgule. Exemple :  
+ Pour définir plusieurs symboles avec **-define**, séparez chaque nom de symbole par un point-virgule ou une virgule. Par exemple :  
   
 ```console  
 -define:DEBUG;TUESDAY  
@@ -55,7 +55,7 @@ L’option **-define** définit `name` comme symbole dans tous les fichiers de c
   
 2.  Dans l’onglet **Générer**, tapez le symbole à définir dans la zone **Symboles de compilation conditionnelle**. Par exemple, si vous utilisez l’exemple de code qui suit, tapez simplement `xx` dans la zone de texte.  
   
- Pour plus d’informations sur la façon de définir cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
+ Pour plus d’informations sur la définition de cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
   
 ## <a name="example"></a>Exemple  
   
@@ -78,7 +78,7 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

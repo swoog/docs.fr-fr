@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5429dfbf7b318b60d6c3150315dbe22ee73b4792
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563442"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Vue d'ensemble du modèle de programmation par attributs (MEF)
 Dans Managed Extensibility Framework (MEF), un *modèle de programmation* est une méthode particulière qui permet de définir l'ensemble d'objets conceptuels sur lequel MEF fonctionne. Ces objets conceptuels incluent des composants, des importations et des exportations. MEF utilise ces objets mais ne spécifie pas comment ils doivent être représentés. Par conséquent, une grande variété de modèles de programmation sont possibles, y compris des modèles de programmation personnalisés.  
@@ -149,7 +149,7 @@ public class MyAddin
 }  
 ```  
   
- Dans cette classe, la méthode `DoSomething` accepte un paramètre unique `int` et retourne une `string`. Pour correspondre à cette exportation, le composant d'importation doit déclarer un membre approprié. La classe suivante importe la méthode `DoSomething`.  
+ Dans cette classe, la méthode `DoSomething` accepte un paramètre unique `int` et retourne une `string`. Pour correspondre à cette exportation, le composant d'importation doit déclarer un membre approprié. La classe suivante importe la méthode `DoSomething` .  
   
 ```vb  
 Public Class MyClass1  
@@ -670,7 +670,7 @@ public class NumFour : NumThree
 }  
 ```  
   
- Si des métadonnées sont associées à un attribut `InheritedExport`, elles seront également héritées. (Pour plus d'informations, voir la section précédente « Métadonnées et vues de métadonnées ».) Les métadonnées héritées ne peuvent pas être modifiées par la sous-classe. Toutefois, en redéclarant l'attribut `InheritedExport` avec les mêmes nom de contrat et type de contrat, mais avec de nouvelles métadonnées, la sous-classe peut remplacer les métadonnées héritées par de nouvelles métadonnées. La classe suivante illustre ce principe. Le composant `MegaLogger` hérite de `Logger` et inclut l'attribut `InheritedExport` . Comme `MegaLogger` redéclare de nouvelles métadonnées nommées Status, il n'hérite pas les métadonnées Name et Version de `Logger`.  
+ Si des métadonnées sont associées à un attribut `InheritedExport` , elles seront également héritées. (Pour plus d'informations, voir la section précédente « Métadonnées et vues de métadonnées ».) Les métadonnées héritées ne peuvent pas être modifiées par la sous-classe. Toutefois, en redéclarant l'attribut `InheritedExport` avec les mêmes nom de contrat et type de contrat, mais avec de nouvelles métadonnées, la sous-classe peut remplacer les métadonnées héritées par de nouvelles métadonnées. La classe suivante illustre ce principe. Le composant `MegaLogger` hérite de `Logger` et inclut l'attribut `InheritedExport` . Comme `MegaLogger` redéclare de nouvelles métadonnées nommées Status, il n'hérite pas les métadonnées Name et Version de `Logger`.  
   
 ```vb  
 <InheritedExport(GetType(IPlugin))>  
@@ -730,7 +730,7 @@ public class MegaLogger : Logger        {
 }  
 ```  
   
- Lors de la redéclaration de l'attribut `InheritedExport` pour remplacer les métadonnées, assurez-vous que les types de contrat sont les mêmes. (Dans l'exemple précédent, `IPlugin` est le type de contrat.) S'ils sont différents, au lieu d'effectuer le remplacement, le second attribut créera une seconde exportation indépendante à partir du composant. En règle générale, cela signifie que vous devez spécifier explicitement le type de contrat quand vous remplacez un attribut `InheritedExport`, comme illustré dans l'exemple précédent.  
+ Lors de la redéclaration de l'attribut `InheritedExport` pour remplacer les métadonnées, assurez-vous que les types de contrat sont les mêmes. (Dans l'exemple précédent, `IPlugin` est le type de contrat.) S'ils sont différents, au lieu d'effectuer le remplacement, le second attribut créera une seconde exportation indépendante à partir du composant. En règle générale, cela signifie que vous devez spécifier explicitement le type de contrat quand vous remplacez un attribut `InheritedExport` , comme illustré dans l'exemple précédent.  
   
  Comme les interfaces ne peuvent pas être instanciées directement, elles ne peuvent généralement pas être décorées avec des attributs `Export` ou `Import` . Toutefois, une interface peut être décorée avec un attribut `InheritedExport` au niveau de l'interface et cette exportation, ainsi que toutes les métadonnées associées, sera héritée par toutes les classes d'implémentation. Toutefois, l'interface elle-même ne sera pas disponible en tant que composant.  
   
@@ -957,6 +957,6 @@ public class PartSeven
   
  `IPartImportsSatisfiedNotification` contient une méthode nommée `OnImportsSatisfied`. Cette méthode est appelée par le conteneur de composition sur tous les composants qui implémentent l'interface, une fois la composition terminée et les importations du composant prêtes à l'emploi. Les composants sont créés par le moteur de composition pour remplir les importations des autres composants. Avant que les importations d'un composant aient été définies, vous ne pouvez pas effectuer d'initialisation qui manipule ou s'appuie sur des valeurs importées dans le constructeur du composant, à moins que ces valeurs aient été spécifiées en tant que composants prérequis à l'aide de l'attribut `ImportingConstructor` . Ceci est normalement la méthode conseillée mais, dans certains cas, l'injection de constructeur peut ne pas être disponible. Dans ce cas, il est possible d'effectuer l'initialisation dans `OnImportsSatisfied`et le composant doit implémenter `IPartImportsSatisfiedNotification`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vidéo Channel 9 : ouvrir vos applications avec Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Vidéo Channel 9 : Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+## <a name="see-also"></a>Voir aussi
+- [Vidéo Channel 9 : ouvrir vos applications avec Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Vidéo Channel 9 : Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

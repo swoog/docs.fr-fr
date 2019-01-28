@@ -4,12 +4,12 @@ description: Recommandations relatives aux bonnes pratiques pour parcourir les c
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0e62cda1b7475cd5d1f8bcd3558dc2fe7f6e07c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564222"
 ---
 # <a name="breaking-changes"></a>Modifications avec rupture
 
@@ -100,9 +100,9 @@ public class Document
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Considérations relatives à la version et la mise à jour pour les développeurs C#](../../csharp/whats-new/version-update-considerations.md)
-* [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-* [Règles sur les changements cassants CoreFX](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [Considérations relatives à la version et la mise à jour pour les développeurs C#](../../csharp/whats-new/version-update-considerations.md)
+- [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
+- [Règles sur les changements cassants CoreFX](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Précédent](versioning.md)

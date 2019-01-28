@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4d7dee9ebaed20970f715026661c29aae701289
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565642"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocs de scripts utilisant msxsl:script
 La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts incorporés en utilisant l'élément `msxsl:script`. Lorsque la feuille de style est chargée, toute fonction définie est compilée en langage MSIL (Microsoft Intermediate Language) par le CodeDOM (Code Document Object Model) et exécutée au cours de l’exécution. L' assembly généré à partir du bloc de script incorporé est distinct de l'assembly généré pour la feuille de style.  
@@ -25,7 +25,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts
 >  Le script XSLT ne doit être activé que si la prise en charge des scripts est nécessaire et si vous travaillez dans un environnement totalement fiable.  
   
 ## <a name="msxslscript-element-definition"></a>Définition de l'élément msxsl:script  
- L'élément `msxsl:script` est une extension Microsoft de la recommandation XSLT 1.0. Il se définit comme suit :  
+ L’élément `msxsl:script` est une extension Microsoft de la recommandation XSLT 1.0. Il se définit comme suit :  
   
 ```xml  
 <msxsl:script language = "language-name" implements-prefix = "prefix of user namespace"> </msxsl:script>  
@@ -94,7 +94,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts
 #### <a name="namespaces"></a>Espaces de noms  
  Les espaces de noms suivants sont inclus par défaut :  
   
--   System  
+-   Système  
   
 -   System.Collection  
   
@@ -150,5 +150,5 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Génération et compilation de code source dynamique](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

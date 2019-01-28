@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67062ab87182bcb42793cb166323020178ac1688
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9aebc284e845eff229fff5bd41792e0c990a1092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691358"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Transformations XSLT avec la classe XslTransform
 
@@ -27,9 +27,9 @@ Le but des transformations XSLT est de transformer le contenu d’un document XM
 ![Architecture de transformation XSLT](media/xslttransformationswithxsltransformclass.gif "xsltTransformationsWithXslTransformClass")  
 Architecture de transformation
 
-La recommandation XSLT utilise XML Path Language (XPath) pour sélectionner des parties d'un document XML, où XPath est un langage de requête utilisé pour accéder aux nœuds d'une arborescence de document. Comme illustré dans le diagramme, l'implémentation [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de XPath est utilisée pour sélectionner des parties de XML dans plusieurs classes, telles que <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> et <xref:System.Xml.XPath.XPathDocument>. Un objet <xref:System.Xml.XPath.XPathDocument> est un magasin de données XSLT optimisé qui fournit des transformations XSLT performantes lorsqu'il est utilisé avec l'objet <xref:System.Xml.Xsl.XslTransform>.
+La recommandation XSLT utilise XML Path Language (XPath) pour sélectionner des parties d'un document XML, où XPath est un langage de requête utilisé pour accéder aux nœuds d'une arborescence de document. Comme illustré dans le diagramme, l’implémentation [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de XPath est utilisée pour sélectionner des parties de XML dans plusieurs classes, telles que <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> et <xref:System.Xml.XPath.XPathDocument>. Un objet <xref:System.Xml.XPath.XPathDocument> est un magasin de données XSLT optimisé qui fournit des transformations XSLT performantes lorsqu'il est utilisé avec l'objet <xref:System.Xml.Xsl.XslTransform>.
 
-Le tableau suivant répertorie les classes généralement utilisées lors de l'utilisation de l'objet <xref:System.Xml.Xsl.XslTransform> et de XPath et leur fonction.
+Le tableau suivant répertorie les classes généralement utilisées lors de l’utilisation de l’objet <xref:System.Xml.Xsl.XslTransform> et de XPath et leur fonction.
 
 |Classe ou interface|Fonction|
 |------------------------|--------------|
@@ -37,8 +37,8 @@ Le tableau suivant répertorie les classes généralement utilisées lors de l'u
 |<xref:System.Xml.XPath.IXPathNavigable>|Interface qui fournit une méthode `CreateNavigator` à un objet <xref:System.Xml.XPath.XPathNavigator> pour le magasin.|
 |<xref:System.Xml.XmlDocument>|Permet la modification de ce document. Cette classe implémente l'objet <xref:System.Xml.XPath.IXPathNavigable>, autorisant des scénarios de modification de documents où des transformations XSLT sont ultérieurement requises. Pour plus d'informations, consultez [Entrée XmlDocument dans XslTransform](xmldocument-input-to-xsltransform.md).|
 |<xref:System.Xml.XmlDataDocument>|Classe dérivée de l'objet <xref:System.Xml.XmlDocument>. Elle établit une passerelle entre les mondes relationnels et XML en utilisant un objet <xref:System.Data.DataSet> pour optimiser le stockage de données structurées dans le document XML selon les mappages spécifiés sur l'objet <xref:System.Data.DataSet>. Elle implémente l'interface <xref:System.Xml.XPath.IXPathNavigable>, autorisant des scénarios où des transformations XSLT peuvent être effectuées sur des données relationnelles extraites d'une base de données. Pour plus d'informations, voir [Intégration de XML aux données relationnelles et à ADO.NET](xml-integration-with-relational-data-and-adonet.md).|
-|<xref:System.Xml.XPath.XPathDocument>|Classe optimisée pour le traitement de l'objet <xref:System.Xml.Xsl.XslTransform> et les requêtes XPath, elle fournit un cache très performant en lecture seule. Elle implémente l'interface <xref:System.Xml.XPath.IXPathNavigable> et représente le magasin par défaut à utiliser pour les transformations XSLT.|
-|<xref:System.Xml.XPath.XPathNodeIterator>|Permet la navigation dans des collections de nœuds XPath. Toutes les méthodes de sélection XPath sur l'objet <xref:System.Xml.XPath.XPathNavigator> retournent une classe <xref:System.Xml.XPath.XPathNodeIterator>. Plusieurs objets <xref:System.Xml.XPath.XPathNodeIterator> peuvent être créés sur le même magasin, chacune représentant une collection de nœuds sélectionnée.|
+|<xref:System.Xml.XPath.XPathDocument>|Classe optimisée pour le traitement de l’objet <xref:System.Xml.Xsl.XslTransform> et les requêtes XPath, elle fournit un cache très performant en lecture seule. Elle implémente l'interface <xref:System.Xml.XPath.IXPathNavigable> et représente le magasin par défaut à utiliser pour les transformations XSLT.|
+|<xref:System.Xml.XPath.XPathNodeIterator>|Permet la navigation dans des collections de nœuds XPath. Toutes les méthodes de sélection XPath sur l’objet <xref:System.Xml.XPath.XPathNavigator> retournent une classe <xref:System.Xml.XPath.XPathNodeIterator>. Plusieurs objets <xref:System.Xml.XPath.XPathNodeIterator> peuvent être créés sur le même magasin, chacune représentant une collection de nœuds sélectionnée.|
 
 ## <a name="msxml-xslt-extensions"></a>Extensions de MSXML XSLT
 
@@ -98,11 +98,11 @@ public class Sample
 
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Xml.Xsl.XslTransform>  
-- [Implémentation du processeur XSLT par la classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)  
-- [Implémentation de comportements discrétionnaires dans la classe XslTransform](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
-- [XPathNavigator dans les transformations](xpathnavigator-in-transformations.md)  
-- [XPathNodeIterator dans les transformations](xpathnodeiterator-in-transformations.md)  
-- [Entrée XPathDocument dans XslTransform](xpathdocument-input-to-xsltransform.md)  
-- [Entrée XmlDataDocument dans XslTransform](xmldatadocument-input-to-xsltransform.md)  
-- [Entrée XmlDocument dans XslTransform](xmldocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>
+- [Implémentation du processeur XSLT par la classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)
+- [Implémentation de comportements discrétionnaires dans la classe XslTransform](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)
+- [XPathNavigator dans les transformations](xpathnavigator-in-transformations.md)
+- [XPathNodeIterator dans les transformations](xpathnodeiterator-in-transformations.md)
+- [Entrée XPathDocument dans XslTransform](xpathdocument-input-to-xsltransform.md)
+- [Entrée XmlDataDocument dans XslTransform](xmldatadocument-input-to-xsltransform.md)
+- [Entrée XmlDocument dans XslTransform](xmldocument-input-to-xsltransform.md)

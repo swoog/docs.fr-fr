@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: b993c7873cdce60ae03e872b842f8265900442fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce346920c301aabf652ea0e141d4a2f66a3e8b2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616249"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>Opérateurs surchargeables (Guide de programmation C#)
 
@@ -38,5 +38,5 @@ Pour savoir comment surcharger un opérateur, consultez l’article sur le mot c
 - [Guide de programmation C#](../index.md)
 - [Instructions, expressions et opérateurs](index.md)
 - [Opérateurs](operators.md)
-- [Opérateurs C#](../../language-reference/operators/index.md)  
+- [Opérateurs C#](../../language-reference/operators/index.md)
 - Article [Why are overloaded operators always static in C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)

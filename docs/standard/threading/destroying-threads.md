@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 93832a296f9b80a5374bc729c04e19d1f178e99f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502544"
 ---
 # <a name="destroying-threads"></a>Détruire des threads
 La méthode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> permet d’arrêter définitivement un thread managé. Quand vous appelez <xref:System.Threading.Thread.Abort%2A>, le Common Language Runtime lève une exception <xref:System.Threading.ThreadAbortException> dans le thread cible, que ce dernier peut intercepter. Pour plus d'informations, consultez <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
@@ -68,6 +68,6 @@ catch (ThreadAbortException ex)
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Threading.ThreadAbortException>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadAbortException>
+- <xref:System.Threading.Thread>
 - [Utilisation des threads et du threading](../../../docs/standard/threading/using-threads-and-threading.md)

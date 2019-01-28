@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498071"
 ---
 # <a name="latency-modes"></a>Modes de latence
 Pour récupérer des objets, le garbage collector doit arrêter tous les threads en cours d'exécution dans une application. Dans certaines situations, par exemple, quand une application récupère des données ou affiche du contenu, un garbage collection complet peut se produire à un moment critique et nuire aux performances. Vous pouvez ajuster le niveau d'intrusion du garbage collector en définissant la propriété <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> sur l'une des valeurs<xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
@@ -56,6 +56,6 @@ Pour récupérer des objets, le garbage collector doit arrêter tous les threads
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.GC?displayProperty=nameWithType>  
-- [Collections forcées](../../../docs/standard/garbage-collection/induced.md)  
+- <xref:System.GC?displayProperty=nameWithType>
+- [Collections forcées](../../../docs/standard/garbage-collection/induced.md)
 - [Nettoyage de la mémoire](../../../docs/standard/garbage-collection/index.md)

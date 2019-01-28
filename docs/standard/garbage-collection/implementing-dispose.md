@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 683a71b27d3e3dd1c0db4e49c2c188ccad0fb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45743386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607119"
 ---
 # <a name="implementing-a-dispose-method"></a>Implémentation d’une méthode Dispose
 
@@ -35,7 +35,7 @@ Le modèle de suppression comporte deux variantes :
   
 Pour que les ressources soient toujours assurées d'être correctement nettoyées, une méthode <xref:System.IDisposable.Dispose%2A> doit pouvoir être appelée à plusieurs reprises sans lever d'exception.  
   
-L'exemple de code indiqué pour la méthode <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> affiche la façon dont un garbage collection agressif peut entraîner l'exécution d'un finaliseur pendant qu'un membre de l'objet demandé se trouve en cours d'exécution. Il est conseillé d'appeler la méthode <xref:System.GC.KeepAlive%2A> à la fin d'une méthode <xref:System.IDisposable.Dispose%2A> longue.  
+L’exemple de code indiqué pour la méthode <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> affiche la façon dont un garbage collection agressif peut entraîner l’exécution d’un finaliseur pendant qu’un membre de l’objet demandé se trouve en cours d’exécution. Il est conseillé d'appeler la méthode <xref:System.GC.KeepAlive%2A> à la fin d'une méthode <xref:System.IDisposable.Dispose%2A> longue.  
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() et Dispose(Boolean)  
@@ -76,7 +76,7 @@ Si l’appel de la méthode vient d’un finaliseur (autrement dit, si *disposin
   
 ## <a name="implementing-the-dispose-pattern-for-a-base-class"></a>Implémentation du modèle de suppression d'une classe de base
 
-Si vous implémentez le modèle de suppression d'une classe de base, vous devez spécifier ce qui suit :  
+Si vous implémentez le modèle de suppression d’une classe de base, vous devez spécifier ce qui suit :  
   
 > [!IMPORTANT]
 > Vous devez implémenter ce modèle pour toutes les classes de base qui implémentent <xref:System.IDisposable.Dispose> et qui ne sont pas `sealed` (`NotInheritable` en Visual Basic).  
@@ -87,15 +87,15 @@ Si vous implémentez le modèle de suppression d'une classe de base, vous devez 
   
 * Une classe dérivée de <xref:System.Runtime.InteropServices.SafeHandle> qui encapsule votre ressource managée (recommandée) ou une substitution de la méthode <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La classe <xref:System.Runtime.InteropServices.SafeHandle> fournit un finaliseur qui vous permet de ne pas avoir à en coder un.  
   
-Voici le modèle général d'implémentation du modèle de suppression d'une classe de base qui utilise un handle sécurisé.  
+Voici le modèle général d’implémentation du modèle de suppression d’une classe de base qui utilise un handle sécurisé.  
   
 [!code-csharp[System.IDisposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base1.cs#3)]
 [!code-vb[System.IDisposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base1.vb#3)]  
   
 > [!NOTE]
-> L'exemple précédent utilise un objet <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> pour illustrer le modèle, mais il est possible d'utiliser à la place n'importe quel objet dérivé de <xref:System.Runtime.InteropServices.SafeHandle>. Notez que l'exemple n'instancie pas correctement son objet <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.  
+> L’exemple précédent utilise un objet <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> pour illustrer le modèle, mais il est possible d’utiliser à la place n’importe quel objet dérivé de <xref:System.Runtime.InteropServices.SafeHandle>. Notez que l'exemple n'instancie pas correctement son objet <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.  
   
-Voici le modèle général d'implémentation du modèle de suppression d'une classe de base qui remplace <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
+Voici le modèle général d’implémentation du modèle de suppression d’une classe de base qui remplace <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
 [!code-csharp[System.IDisposable#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base2.cs#5)]
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
@@ -119,7 +119,7 @@ Voici le modèle général d’implémentation du modèle de suppression d’une
 > [!NOTE]
 > L'exemple précédent utilise un objet <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> pour illustrer le modèle, mais il est possible d'utiliser à la place n'importe quel objet dérivé de <xref:System.Runtime.InteropServices.SafeHandle>. Notez que l'exemple n'instancie pas correctement son objet <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.  
   
-Voici le modèle général d'implémentation du modèle de suppression d'une classe dérivée qui remplace <xref:System.Object.Finalize%2A?displayProperty=nameWithType> :  
+Voici le modèle général d’implémentation du modèle de suppression d’une classe dérivée qui remplace <xref:System.Object.Finalize%2A?displayProperty=nameWithType> :  
   
 [!code-csharp[System.IDisposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/derived2.cs#6)]
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
@@ -130,7 +130,7 @@ Voici le modèle général d'implémentation du modèle de suppression d'une cla
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Utilisation des handles sécurisés
 
-L'écriture de code pour le finaliseur d'un objet est une tâche complexe qui peut provoquer des problèmes si elle n'est pas effectuée correctement. Par conséquent, nous vous recommandons de construire des objets <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> au lieu d'implémenter un finaliseur.  
+L’écriture de code pour le finaliseur d’un objet est une tâche complexe qui peut provoquer des problèmes si elle n’est pas effectuée correctement. Par conséquent, nous vous recommandons de construire des objets <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> au lieu d'implémenter un finaliseur.  
   
 Les classes dérivées de la classe <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> simplifient les problèmes de durée de vie des objets en assignant et en libérant des handles sans interruption. Elles contiennent un finaliseur critique dont le fonctionnement pendant le déchargement d'un domaine d'application est garanti. Pour plus d'informations sur les avantages de l'utilisation d'un handle sécurisé, consultez <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. Les classes dérivées suivantes de l'espace de noms <xref:Microsoft.Win32.SafeHandles> fournissent des handles sécurisés :  
   
@@ -145,7 +145,7 @@ Les classes dérivées de la classe <xref:System.Runtime.InteropServices.SafeHan
 * La classe <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>, pour les handles d'attente.  
   
 <a name="base"></a>   
-## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Utilisation d'un handle sécurisé pour implémenter le modèle de suppression d'une classe de base
+## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Utilisation d’un handle sécurisé pour implémenter le modèle de suppression d’une classe de base
 
 L'exemple suivant illustre le modèle de suppression d'une classe de base, `DisposableStreamResource`, qui utilise un handle sécurisé pour encapsuler les ressources non managées. Il définit une classe `DisposableResource` qui utilise <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> pour encapsuler un objet <xref:System.IO.Stream> qui représente un fichier ouvert. La méthode `DisposableResource` inclut également une seule propriété, `Size`, qui retourne le nombre total d'octets du flux de fichier.  
   
@@ -162,11 +162,11 @@ L'exemple suivant illustre le modèle de suppression d'une classe dérivée, `Di
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.GC.SuppressFinalize%2A>   
-- <xref:System.IDisposable>   
-- <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>   
-- <xref:Microsoft.Win32.SafeHandles>   
-- <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
-- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-- [Guide pratique pour définir et consommer des classes et des structs (C++-CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+- <xref:System.GC.SuppressFinalize%2A>
+- <xref:System.IDisposable>
+- <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>
+- <xref:Microsoft.Win32.SafeHandles>
+- <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
+- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
+- [Guide pratique pour définir et consommer des classes et des structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
 - [Dispose, modèle](../../../docs/standard/design-guidelines/dispose-pattern.md)

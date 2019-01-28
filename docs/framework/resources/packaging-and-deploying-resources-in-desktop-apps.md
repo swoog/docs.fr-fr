@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2f0ceced1749f42d57094a09f768c192b49ff4e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad74b9e23c65209c8084588d09670e3c64e44213
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493727"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Packager et déployer des ressources dans des applications .NET
 Les applications s’appuient sur le gestionnaire des ressources du .NET Framework, représenté par la classe <xref:System.Resources.ResourceManager>, pour récupérer des ressources localisées. Le gestionnaire des ressources suppose qu’un modèle Hub and Spoke est utilisé pour empaqueter et déployer des ressources. Le hub est l’assembly principal qui contient le code exécutable non localisable et les ressources pour une culture unique, appelée culture neutre ou par défaut. La culture par défaut est la culture de secours de l’application ; il s’agit de la culture dont les ressources sont utilisées si aucune ressource localisée ne peut être trouvée. Chaque spoke se connecte à un assembly satellite qui contient les ressources d’une culture unique, mais ne contient pas de code.  
@@ -221,8 +221,8 @@ Bon jour!
 ## <a name="suggested-packaging-alternative"></a>Autre empaquetage suggéré  
  Des contraintes de temps ou de budget peuvent vous empêcher de créer un ensemble de ressources pour chaque sous-culture que votre application prend en charge. À la place, vous pouvez créer un seul assembly satellite pour une culture parente qui peut être utilisé par toutes les sous-cultures apparentées. Par exemple, vous pouvez fournir un seul assembly satellite anglais (en) qui est récupéré par les utilisateurs qui demandent des ressources anglaises spécifiques à une région et un seul assembly satellite allemand (de) pour les utilisateurs qui demandent des ressources allemandes spécifiques à une région. Par exemple, les demandes pour l’allemand tel qu’il est parlé en Allemagne (de-DE), en Autriche (de-AT) et en Suisse (de-CH) reviennent à l’assembly satellite allemand (de). Comme les ressources par défaut représentent les ressources de secours final et doivent dont être les ressources qui seront demandées par la majorité des utilisateurs de votre application, choisissez-les avec précaution. Cette solution déploie des ressources qui sont moins spécifiques à une culture, mais peut réduire de manière significative les coûts de localisation de votre application.  
   
-## <a name="see-also"></a>Voir aussi  
- [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)  
- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
- [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Création d’assemblys satellites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+## <a name="see-also"></a>Voir aussi
+- [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Création d’assemblys satellites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

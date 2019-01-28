@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 503ef7066b5d66b05c1642512ab8d59a2b1d3f9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42257790b5a6e5005ca142bd5e32d4c6fc545195
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507081"
 ---
 # <a name="copying-and-pinning"></a>copie et épinglage
 Lors du marshaling des données, le marshaleur d’interopérabilité peut copier ou épingler les données qui sont marshalées. La copie des données déplace une copie des données d’un emplacement de mémoire vers un autre emplacement de mémoire. L’illustration suivante montre les différences entre la copie d’un type valeur et la copie d’un type passé par référence à partir de la mémoire managée vers la mémoire non managée.  
@@ -77,8 +77,8 @@ Types référence passés par valeur et par référence
   
  Quand <xref:System.Text.StringBuilder?displayProperty=nameWithType> est passé par valeur, le marshaleur passe une référence à la mémoire tampon interne de **StringBuilder** directement à l’appelant. L’appelant et l’appelé doivent s’entendre sur la taille de la mémoire tampon. L’appelant est chargé de créer un **StringBuilder** de longueur adéquate. L’appelé doit prendre les précautions nécessaires pour garantir le non-débordement de la mémoire tampon. **StringBuilder** fait exception à la règle qui veut que les types référence passés par valeur sont passés comme paramètres en entrée par défaut. Il est toujours passé comme paramètre en entrée/sortie.  
   
-## <a name="see-also"></a>Voir aussi  
- [Comportement de marshaling par défaut](default-marshaling-behavior.md)  
- [Gestion de la mémoire avec le marshaleur d’interopérabilité](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
- [Attributs directionnels](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [Marshaling d'interopérabilité](interop-marshaling.md)
+## <a name="see-also"></a>Voir aussi
+- [Comportement de marshaling par défaut](default-marshaling-behavior.md)
+- [Gestion de la mémoire avec le marshaleur d’interopérabilité](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))
+- [Attributs directionnels](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Marshaling d'interopérabilité](interop-marshaling.md)

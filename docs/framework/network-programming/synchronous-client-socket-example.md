@@ -9,12 +9,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 1720d0a476d3eb5586ed8742c377324bc1950cd5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3d1e2c24cbbdcecd9daefab4312076099816ba70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596057"
 ---
 # <a name="synchronous-client-socket-example"></a>Exemple de socket client synchrone
 L’exemple de programme suivant crée un client qui se connecte à un serveur. Le client est créé avec un socket synchrone. L’exécution de l’application cliente est donc suspendue jusqu’à ce que le serveur retourne une réponse. L’application envoie une chaîne au serveur, puis affiche la chaîne retournée par le serveur sur la console.  
@@ -135,7 +135,7 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple de socket serveur synchrone](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- [Utilisation d’un socket client synchrone](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [Exemples de code de socket](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a>Voir aussi
+- [Exemple de socket serveur synchrone](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
+- [Utilisation d’un socket client synchrone](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [Exemples de code de socket](../../../docs/framework/network-programming/socket-code-examples.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 752c44bcd4ded82fb2144dca684482f30371b6aa
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6a014309829d7dbd477a7ae4a658b84a3f35d91f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742417"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Génériques et réflexion (Guide de programmation C#)
 Étant donné que le common language runtime (CLR) a accès aux informations concernant les types génériques au moment de l’exécution, vous pouvez utiliser la réflexion pour obtenir des informations sur les types génériques de la même manière que pour les types non génériques. Pour plus d’informations, consultez [Génériques dans le runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "53244926"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Génériques](../../../csharp/programming-guide/generics/index.md)  
-- [Réflexion et types génériques](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Génériques](../../../csharp/programming-guide/generics/index.md)
+- [Réflexion et types génériques](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [Génériques](~/docs/standard/generics/index.md)

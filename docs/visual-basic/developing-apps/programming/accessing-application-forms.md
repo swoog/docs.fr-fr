@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: eb40606f55785b4b6ec9271b55c8159a26822011
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44942827c4bfbaeffb3e424d8339ac6d001722ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566920"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Accès aux formulaires de l’application (Visual Basic)
 L’objet `My.Forms` permet d’accéder facilement à une instance de chaque Windows Form déclaré dans le projet de l’application. Vous pouvez également utiliser les propriétés de l’objet `My.Application` pour accéder à l’écran de démarrage et au formulaire principal de l’application, et obtenir une liste des formulaires ouverts de l’application.  
@@ -27,7 +27,7 @@ L’objet `My.Forms` permet d’accéder facilement à une instance de chaque Wi
 |Afficher les titres de tous les formulaires ouverts de l’application.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |Mettre à jour l’écran de démarrage avec les informations d’état au démarrage de l’application.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>  
- [My.Forms (objet)](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
+- [My.Forms (objet)](../../../visual-basic/language-reference/objects/my-forms-object.md)

@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a0b3e75c6a93aebf979b8df758fe37460c046a15
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415934"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065906"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implémenter un modèle de domaine de microservice avec .NET Core 
 
@@ -169,7 +169,7 @@ Par exemple, dans l’exemple de code OrderAggregate précédent, il existe plus
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Vaughn Vernon. Modeling Aggregates with DDD and Entity Framework.** Notez qu’il ne s’agit *pas* d’Entity Framework Core. \
-  [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
+  <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman. Coder pour la conception pilotée par domaine : conseils pour les développeurs focalisés sur les données** \
   [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)

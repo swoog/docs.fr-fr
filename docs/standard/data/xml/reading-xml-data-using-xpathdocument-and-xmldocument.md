@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69e22328c39ae68acc4baff12775b49fbac80696
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 68d19784bab8a5d5a1994ea139b5631f56c7c680
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580419"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Lecture de données XML à l’aide de XPathDocument et XmlDocument
 Il existe deux manières de lire un document XML dans l'espace de noms <xref:System.Xml.XPath?displayProperty=nameWithType>. La première consiste à lire un document XML à l'aide de la classe <xref:System.Xml.XPath.XPathDocument> en lecture seule et la seconde à lire un document XML à l'aide de la classe <xref:System.Xml.XmlDocument> modifiable dans l'espace de noms <xref:System.Xml?displayProperty=nameWithType>.  
   
 ## <a name="reading-xml-documents-using-the-xpathdocument-class"></a>Lecture de documents XML à l'aide de la classe XPathDocument  
- La classe <xref:System.Xml.XPath.XPathDocument> fournit une représentation rapide, en lecture seule et en mémoire d'un document XML à l'aide du modèle de données XPath. Des instances de la classe <xref:System.Xml.XPath.XPathDocument> sont créées à l'aide de l'un de ses six constructeurs. Ces constructeurs permettent de lire un document XML à l'aide d'un objet <xref:System.IO.Stream>, <xref:System.IO.TextReader> ou <xref:System.Xml.XmlReader>, ainsi que le chemin d'accès `string` à un fichier XML.  
+ La classe <xref:System.Xml.XPath.XPathDocument> fournit une représentation rapide, en lecture seule et en mémoire d'un document XML à l'aide du modèle de données XPath. Des instances de la classe <xref:System.Xml.XPath.XPathDocument> sont créées à l'aide de l'un de ses six constructeurs. Ces constructeurs permettent de lire un document XML à l’aide d’un objet <xref:System.IO.Stream>, <xref:System.IO.TextReader> ou <xref:System.Xml.XmlReader>, ainsi que le chemin d’accès `string` à un fichier XML.  
   
  L'exemple suivant illustre l'utilisation du constructeur <xref:System.Xml.XPath.XPathDocument> de la classe `string` en vue de la lecture d'un document XML.  
   
@@ -32,7 +32,7 @@ XPathDocument document = new XPathDocument("books.xml");
 ```  
   
 ## <a name="reading-xml-documents-using-the-xmldocument-class"></a>Lecture de documents XML à l'aide de la classe XmlDocument  
- La classe <xref:System.Xml.XmlDocument> est une représentation en mémoire modifiable d'un document XML qui implémente les recommandations du W3C sur les modèles objet de document (DOM) niveaux 1 et 2 (noyau). Des instances de la classe <xref:System.Xml.XmlDocument> sont créées à l'aide de l'un de ses trois constructeurs. Pour créer un nouvel objet <xref:System.Xml.XmlDocument> vide, vous pouvez appeler le constructeur de la classe <xref:System.Xml.XmlDocument> sans paramètres. Après avoir appelé le constructeur, utilisez la méthode <xref:System.Xml.XmlDocument.Load%2A> pour charger les données XML dans le nouvel objet <xref:System.Xml.XmlDocument> à partir d'un objet <xref:System.IO.Stream>, <xref:System.IO.TextReader> ou <xref:System.Xml.XmlReader>, ainsi que le chemin d'accès `string` à un fichier XML.  
+ La classe <xref:System.Xml.XmlDocument> est une représentation en mémoire modifiable d'un document XML qui implémente les recommandations du W3C sur les modèles objet de document (DOM) niveaux 1 et 2 (noyau). Des instances de la classe <xref:System.Xml.XmlDocument> sont créées à l'aide de l'un de ses trois constructeurs. Pour créer un nouvel objet <xref:System.Xml.XmlDocument> vide, vous pouvez appeler le constructeur de la classe <xref:System.Xml.XmlDocument> sans paramètres. Après avoir appelé le constructeur, utilisez la méthode <xref:System.Xml.XmlDocument.Load%2A> pour charger les données XML dans le nouvel objet <xref:System.Xml.XmlDocument> à partir d’un objet <xref:System.IO.Stream>, <xref:System.IO.TextReader> ou <xref:System.Xml.XmlReader>, ainsi que le chemin d’accès `string` à un fichier XML.  
   
  L'exemple suivant illustre l'utilisation du constructeur de la classe <xref:System.Xml.XmlDocument> sans paramètres et de la méthode <xref:System.Xml.XmlDocument.Load%2A> pour lire un document XML.  
   
@@ -74,10 +74,10 @@ document.Load("books.xml");
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [Traitement des données XML à l’aide du modèle de données XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [Accès à des données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
-- [Modification de données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [Traitement des données XML à l’aide du modèle de données XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [Accès à des données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
+- [Modification de données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
 - [Validation de schéma à l’aide de XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

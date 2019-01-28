@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a6bf86986f9e6f72fca9d6e88ac16699ff7cdb4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606477"
 ---
 # <a name="applying-attributes"></a>Application des attributs
 Effectuez la procédure suivante pour appliquer un attribut à un élément de votre code.  
@@ -54,7 +54,7 @@ Effectuez la procédure suivante pour appliquer un attribut à un élément de v
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Attributs](../../../docs/standard/attributes/index.md)  
-- [Récupération des informations stockées dans les attributs](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
-- [Concepts](/cpp/windows/attributed-programming-concepts)  
+- [Attributs](../../../docs/standard/attributes/index.md)
+- [Récupération des informations stockées dans les attributs](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [Concepts](/cpp/windows/attributed-programming-concepts)
 - [Attributs](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39333037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705321"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classes utilisées dans les E/S de fichier du .NET Framework et le système de fichiers (Visual Basic)
 Les tableaux suivants répertorient les classes couramment utilisées pour les E/S de fichier du .NET Framework. Ces classes sont réparties dans les catégories suivantes : classes d’E/S de fichier, classes utilisées pour créer des flux et classes utilisées pour lire et écrire dans les flux.  
@@ -56,8 +56,8 @@ Les tableaux suivants répertorient les classes couramment utilisées pour les E
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Lit des caractères dans un `String`. La sortie peut être un flux de n’importe quel encodage ou un `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Écrit des caractères dans un `String`. La sortie peut être un flux de n’importe quel encodage ou un `String`.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Composition de flux](../../../../standard/io/composing-streams.md)  
- [Fichier et flux de données E/S](../../../../standard/io/index.md)  
- [E/S sur fichier asynchrones](../../../../standard/io/asynchronous-file-i-o.md)  
- [Concepts de base du système de fichiers et des E/S de fichier du .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>Voir aussi
+- [Composition de flux](../../../../standard/io/composing-streams.md)
+- [Fichier et flux de données E/S](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Concepts de base du système de fichiers et des E/S de fichier du .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

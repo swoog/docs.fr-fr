@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50088791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589569"
 ---
 # <a name="assembly-security-considerations"></a>Aspects de la sécurité des assemblys
 <a name="top"></a>Lorsque vous générez un assembly, vous pouvez spécifier un jeu d’autorisations que l’assembly doit exécuter. L'octroi ou non de certaines autorisations à un assembly repose sur la preuve.  
@@ -62,7 +62,7 @@ ms.locfileid: "50088791"
   
  Comme l’affectation de nom fort et la signature à l’aide de l’[outil de signature SignTool.exe](../../../docs/framework/tools/signtool-exe.md) garantissent l’intégrité, vous pouvez baser la stratégie de sécurité d’accès du code sur ces deux formes de preuve d’assembly. L’affectation de nom fort et la signature à l’aide de l’[outil de signature SignTool.exe](../../../docs/framework/tools/signtool-exe.md) garantissent l’intégrité par les signatures numériques et les certificats. Toutes les technologies mentionnées (vérification du hachage, affectation de nom fort et signature à l’aide de l’[outil de signature SignTool.exe](../../../docs/framework/tools/signtool-exe.md)) fonctionnent ensemble pour que l’assembly ne soit pas altéré d’une manière ou d’une autre.  
   
-## <a name="see-also"></a>Voir aussi  
-- [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+## <a name="see-also"></a>Voir aussi
+- [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (outil de signature)](../../../docs/framework/tools/signtool-exe.md)

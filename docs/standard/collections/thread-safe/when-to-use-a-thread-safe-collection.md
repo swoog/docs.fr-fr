@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ca809c28e7d55d7b899809c2fd514c073dd73054
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543171"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quand utiliser une collection thread-safe
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] propose cinq nouveaux types de collection spécialement conçus pour prendre en charge les opérations d’ajout et de suppression multithread. Pour garantir la cohérence de thread, ces nouveaux types utilisent différentes sortes de mécanismes de verrouillage et de synchronisation sans verrou efficaces. La synchronisation ajoute une surcharge à une opération. La quantité de la surcharge dépend du genre de synchronisation utilisé, du genre d’opérations exécutées et d’autres facteurs tels que le nombre de threads qui tentent d’accéder simultanément à la collection.  
@@ -64,6 +64,6 @@ ms.locfileid: "49123564"
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- [Collections thread-safe](../../../../docs/standard/collections/thread-safe/index.md)  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [Collections thread-safe](../../../../docs/standard/collections/thread-safe/index.md)
 - [Programmation parallèle](../../../../docs/standard/parallel-programming/index.md)

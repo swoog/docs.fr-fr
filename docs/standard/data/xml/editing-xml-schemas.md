@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc8df722acd5c9547833cb4fe3051e1590c6c627
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e2cf9e1b4349d83a378f6b17e8740c95546bbe4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573961"
 ---
 # <a name="editing-xml-schemas"></a>Modification de schémas XML
 La modification d’un schéma XML est l’une des fonctionnalités les plus importantes du SOM (Schema Object Model). Toutes les propriétés de pré-compilation de schéma du SOM peuvent être utilisées pour changer les valeurs existantes d'un schéma XML. Le schéma XML peut ensuite être recompilé pour que les changements prennent effet.  
@@ -95,7 +95,7 @@ La modification d’un schéma XML est l’une des fonctionnalités les plus imp
 > [!NOTE]
 >  Puisque l'élément `FirstName` n'est pas un élément global dans le schéma, il n'est pas disponible dans les collections <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> ou <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. L'exemple de code localise l'élément `FirstName` en localisant d'abord l'élément `Customer`.  
 >   
->  Le premier exemple de code traversait le schéma en utilisant la collection <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> de post-compilation de schéma. Dans ce deuxième exemple, c'est la collection <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> de pré-compilation de schéma qui est utilisée pour traverser le schéma. Les deux collections offrent un accès aux éléments globaux du schéma, mais une itération via la collection <xref:System.Xml.Schema.XmlSchema.Items%2A> prend plus de temps car vous devez effectuer l'itération sur tous les éléments globaux du schéma et cette collection n'a pas de propriétés PSCI. Les collections PSCI (propriétés <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType>, etc.) offrent un accès direct à leurs éléments, attributs et types globaux ainsi qu'à leurs propriétés PSCI.  
+>  Le premier exemple de code traversait le schéma en utilisant la collection <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> de post-compilation de schéma. Dans ce deuxième exemple, c’est la collection <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> de pré-compilation de schéma qui est utilisée pour traverser le schéma. Les deux collections offrent un accès aux éléments globaux du schéma, mais une itération via la collection <xref:System.Xml.Schema.XmlSchema.Items%2A> prend plus de temps car vous devez effectuer l'itération sur tous les éléments globaux du schéma et cette collection n'a pas de propriétés PSCI. Les collections PSCI (propriétés <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType>, etc.) offrent un accès direct à leurs éléments, attributs et types globaux ainsi qu'à leurs propriétés PSCI.  
   
 1.  Si l'objet <xref:System.Xml.Schema.XmlSchemaObject> est un élément dont la propriété <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> est `"Customer"`, il obtient le type complexe de l'élément `Customer` à l'aide de la classe <xref:System.Xml.Schema.XmlSchemaComplexType> et la particule de séquence du type complexe à l'aide de la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
@@ -137,10 +137,10 @@ La modification d’un schéma XML est l’une des fonctionnalités les plus imp
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [Parcours des schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [Inclusion ou importation de schémas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Parcours des schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Inclusion ou importation de schémas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [Infoset de post-compilation de schéma](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

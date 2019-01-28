@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415531"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066426"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Tas de grands objets sur les systèmes Windows
 
@@ -34,7 +34,7 @@ Les petits objets sont toujours alloués dans la génération 0 et, selon leur d
 
 Les grands objets appartiennent à la génération 2 parce qu’ils sont nettoyés uniquement lors d’un nettoyage de la génération 2. Quand une génération est nettoyée, ses générations plus jeunes sont également nettoyées. Par exemple, pendant le nettoyage de la mémoire (GC, Garbage Collection) de la génération 1, les générations 1 et 0 sont toutes deux nettoyées. De la même façon, pendant le GC de la génération 2, le tas tout entier est nettoyé. Pour cette raison, un GC de la génération 2 est également appelé *GC complet*. Cet article fait référence au GC de la génération 2 et non au GC complet, mais les termes sont interchangeables.
 
-Les générations fournissent une vue logique du tas du récupérateur de mémoire. Physiquement, les objets vivent dans des segments de tas managés. Un *segment de tas managé* est un bloc de mémoire que le récupérateur de mémoire réserve sur le système d’exploitation en appelant la [fonction VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) pour le compte du code managé. Quand le CLR est chargé, le récupérateur de mémoire alloue deux segments de tas initiaux : un pour les petits objets (le tas de petits objets ou SOH (Small Object Heap)) et un pour les grands objets (le tas de grands objets ou LOH (Large Object Heap)).
+Les générations fournissent une vue logique du tas du récupérateur de mémoire. Physiquement, les objets vivent dans des segments de tas managés. Un *segment de tas managé* est un bloc de mémoire que le récupérateur de mémoire réserve sur le système d’exploitation en appelant la [fonction VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) pour le compte du code managé. Quand le CLR est chargé, le récupérateur de mémoire alloue deux segments de tas initiaux : un pour les petits objets (le tas de petits objets ou SOH (Small Object Heap)) et un pour les grands objets (le tas de grands objets ou LOH (Large Object Heap)).
 
 Les demandes d’allocation sont alors traitées en plaçant des objets managés sur ces segments de tas managés. Si l’objet est inférieur à 85 000 octets, il est placé sur un segment SOH, sinon, sur un segment LOH. Les segments sont réservés (en blocs plus petits) à mesure que leur nombre d’objets alloués augmente.
 Pour le SOH, les objets qui survivent à un GC sont promus à la génération suivante. Les objets qui survivent à un nettoyage de la génération 0 sont considérés comme des objets de génération 1, et ainsi de suite. Toutefois, les objets qui survivent à la plus vieille génération sont toujours considérés comme des objets de cette génération. En d’autres termes, les survivants de la génération 2 sont des objets de la génération 2 et les survivants du LOH sont des objets du LOH (qui sont nettoyés avec la génération 2).
@@ -57,9 +57,9 @@ Figure 2 : Après un GC de la génération 2
 
 Si l’espace libre est insuffisant pour répondre aux demandes d’allocation des grands objets, le récupérateur de mémoire tente d’acquérir d’autres segments du système d’exploitation. En cas d’échec, il déclenche un GC de la génération 2 pour tenter de libérer l’espace.
 
-Pendant un GC de la génération 1 ou 2, le récupérateur de mémoire libère les segments qui n’ont pas d’objet en vie et les rend au système d’exploitation en appelant la [fonction VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx). La réservation de l’espace entre le dernier objet en vie et la fin du segment est annulée (sauf sur le segment éphémère, où vivent les générations 0 et 1, sur lequel le récupérateur de mémoire maintient la réservation pour que votre application puisse l’utiliser immédiatement). Par ailleurs, les espaces libres restent réservés bien qu’ils soient réinitialisés, ce qui signifie que le système d’exploitation n’a pas besoin d’écrire de données dans ces espaces une fois revenus sur le disque.
+Pendant un GC de la génération 1 ou 2, le récupérateur de mémoire libère les segments qui n’ont pas d’objet en vie et les rend au système d’exploitation en appelant la [fonction VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree). La réservation de l’espace entre le dernier objet en vie et la fin du segment est annulée (sauf sur le segment éphémère, où vivent les générations 0 et 1, sur lequel le récupérateur de mémoire maintient la réservation pour que votre application puisse l’utiliser immédiatement). Par ailleurs, les espaces libres restent réservés bien qu’ils soient réinitialisés, ce qui signifie que le système d’exploitation n’a pas besoin d’écrire de données dans ces espaces une fois revenus sur le disque.
 
-Comme que le LOH est collecté uniquement pendant le GC de la génération 2, le segment LOH peut seulement être libéré pendant ce GC. La figure 3 illustre un scénario où le récupérateur de mémoire rend un segment (segment 2) au système d’exploitation et annule la réservation d’espace supplémentaire sur les segments restants. S’il doit utiliser l’espace libéré à la fin du segment pour répondre aux demandes d’allocation de grands objets, il réserve de nouveau la mémoire. (Pour obtenir une explication de la réservation/libération, consultez la documentation de [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
+Comme que le LOH est collecté uniquement pendant le GC de la génération 2, le segment LOH peut seulement être libéré pendant ce GC. La figure 3 illustre un scénario où le récupérateur de mémoire rend un segment (segment 2) au système d’exploitation et annule la réservation d’espace supplémentaire sur les segments restants. S’il doit utiliser l’espace libéré à la fin du segment pour répondre aux demandes d’allocation de grands objets, il réserve de nouveau la mémoire. (Pour obtenir une explication de la réservation/libération, consultez la documentation de [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).
 
 ![Figure 3 : LOH après un GC de la génération 2](media/loh/loh-figure-3.jpg)  
 Figure 3 : LOH après un GC de la génération 2
@@ -302,13 +302,13 @@ Comme le LOH n'est pas compacté, il est parfois soupçonné d’être la source
 
 Souvent, la fragmentation de mémoire virtuelle est causée par des grands objets temporaires qui obligent le récupérateur de mémoire à fréquemment acquérir de nouveaux segments de tas managé du système d’exploitation et lui en rendre des vides.
 
-Pour vérifier si le LOH provoque une fragmentation de mémoire virtuelle, vous pouvez définir un point d’arrêt sur [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) et [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) et voir qui les appelle. Par exemple, pour voir qui a essayé d’allouer des blocs de mémoire virtuelle de système d’exploitation supérieurs à 8 Mo, vous pouvez définir un point d’arrêt de la façon suivante :
+Pour vérifier si le LOH provoque une fragmentation de mémoire virtuelle, vous pouvez définir un point d’arrêt sur [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) et [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) et voir qui les appelle. Par exemple, pour voir qui a essayé d’allouer des blocs de mémoire virtuelle de système d’exploitation supérieurs à 8 Mo, vous pouvez définir un point d’arrêt de la façon suivante :
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Cette commande arrête le débogueur et affiche la pile des appels uniquement si [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) est appelée avec une taille d’allocation supérieure à 8 Mo (0x800000).
+Cette commande arrête le débogueur et affiche la pile des appels uniquement si [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) est appelée avec une taille d’allocation supérieure à 8 Mo (0x800000).
 
 CLR 2.0 a ajouté une fonctionnalité appelée *VM Hoarding* (Réserve de mémoire virtuelle) qui peut être utile dans les scénarios où les segments (aussi bien sur les tas de petits et grands objets) sont fréquemment acquis et libérés. Pour utiliser la fonctionnalité VM Hoarding, vous spécifiez un indicateur de démarrage appelé `STARTUP_HOARD_GC_VM` via l’API d’hébergement. Au lieu de renvoyer des segments vides au système d’exploitation, le CLR annule la réservation de mémoire sur ces segments et les met sur liste d’attente. (Notez que le CLR ne le fait pas pour les segments trop grands.) Le CLR utilise ensuite ces segments pour répondre aux nouvelles demandes de segment. La prochaine fois que votre application a besoin d’un nouveau segment, le CLR en utilise un de cette liste d’attente, s’il est assez grand.
 

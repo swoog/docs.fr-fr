@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982865"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066321"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Notions de base du garbage collection
 <a name="top"></a> Dans le Common Language Runtime (CLR), le garbage collector a un rôle de gestionnaire de mémoire automatique. Il fournit les avantages suivants :  
@@ -98,7 +98,7 @@ ms.locfileid: "50982865"
   
  Il existe un tas managé pour chaque processus managé. Tous les threads du processus allouent de la mémoire pour les objets sur le même tas.  
   
- Pour réserver de la mémoire, le récupérateur de mémoire appelle la fonction Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) et réserve un segment de mémoire à la fois pour les applications managées. Le récupérateur de mémoire réserve également des segments si nécessaire, et libère des segments dans le système d’exploitation (après avoir effacé tous leurs objets) en appelant la fonction Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) .  
+ Pour réserver de la mémoire, le récupérateur de mémoire appelle la fonction Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) et réserve un segment de mémoire à la fois pour les applications managées. Le récupérateur de mémoire réserve également des segments si nécessaire, et libère des segments dans le système d’exploitation (après avoir effacé tous leurs objets) en appelant la fonction Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) .  
   
 > [!IMPORTANT]
 >  La taille des segments alloués par le garbage collector est spécifique à l'implémentation et susceptible de changer à tout moment, y compris les mises à jour périodiques. Votre application ne doit jamais faire d'hypothèses concernant une taille de segment particulière, ni dépendre de celle-ci. Elle ne doit pas non plus tenter de configurer la quantité de mémoire disponible pour les allocations de segments.  

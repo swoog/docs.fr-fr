@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 8da1deec2238f74a9b594c85feab0445ec2a35b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493416"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Méthodes d’extension (Guide de programmation C#)
 Les méthodes d'extension vous permettent d'« ajouter » des méthodes à des types existants sans créer un type dérivé, ni recompiler ou modifier le type d'origine. Les méthodes d'extension sont un type particulier de méthode statique appelées comme s'il s'agissait de méthodes d'instance sur le type étendu. Pour le code client écrit en C#, F# et Visual Basic, il n’y a aucune différence apparente lors de l’appel entre une méthode d’extension et les méthodes qui sont réellement définies dans un type.  
@@ -81,11 +81,11 @@ using System.Linq;
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Exemples de programmation parallèle (il s’agit de nombreux exemples de méthodes d’extension)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
-- [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Exemples de programmation parallèle (il s’agit de nombreux exemples de méthodes d’extension)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Vue d’ensemble des opérateurs de requête standard](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Règles de conversion pour les paramètres Instance et leur impact](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
-- [Interopérabilité des méthodes d’extension entre les langages](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
-- [Méthodes d’extension et délégués curryfiés](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+- [Règles de conversion pour les paramètres Instance et leur impact](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)
+- [Interopérabilité des méthodes d’extension entre les langages](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)
+- [Méthodes d’extension et délégués curryfiés](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)
 - [Extension method Binding and Error reporting](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

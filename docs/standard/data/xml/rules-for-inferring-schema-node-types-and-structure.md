@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a518df5b016552de25091e7a9d89f737a1a66151
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683662"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Règles pour l'inférence de types et de structure de nœud de schéma
 Cette rubrique décrit comment le processus d'inférence de schéma convertit les types de nœuds d'un document XML en une structure en langage XSD (XML Schema Definition).  
@@ -148,8 +148,8 @@ Cette rubrique décrit comment le processus d'inférence de schéma convertit le
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Xml.Schema.XmlSchemaInference>  
-- [Modèle Objet du schéma (SOM) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [Inférence d’un schéma XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
-- [Inférence de schémas à partir de documents XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- <xref:System.Xml.Schema.XmlSchemaInference>
+- [Modèle Objet du schéma (SOM) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [Inférence d’un schéma XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
+- [Inférence de schémas à partir de documents XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Règles pour l’inférence de types simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

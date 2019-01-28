@@ -2,12 +2,12 @@
 title: Sélection et validation de certificats
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 2767f8fc62d44e480962690a3cbe379fea0f9662
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666661"
 ---
 # <a name="certificate-selection-and-validation"></a>Sélection et validation de certificats
 Les classes <xref:System.Net> prennent en charge plusieurs manières de sélectionner et de valider <xref:System.Security.Cryptography.X509Certificates> pour les connexions SSL (Secure Socket Layer). Un client peut sélectionner un ou plusieurs certificats pour s’authentifier auprès d’un serveur. Un serveur peut exiger qu’un certificat client ait un ou plusieurs attributs spécifiques pour l’authentification.  
@@ -52,6 +52,6 @@ Vous pouvez utiliser *HttpCfg.exe* pour configurer des certificats de serveur po
   
  Outre ces outils, les classes <xref:System.Security.Cryptography.X509Certificates.X509Certificate> et <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> fournissent des méthodes pour charger un certificat à partir du système de fichiers.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité dans la programmation réseau](../../../docs/framework/network-programming/security-in-network-programming.md)  
- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Sécurité dans la programmation réseau](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)

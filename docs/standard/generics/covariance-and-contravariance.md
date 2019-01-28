@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692962"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariance et contravariance dans les génériques
 <a name="top"></a> La covariance et la contravariance sont des termes qui font référence à la possibilité d’utiliser un type plus dérivé (plus spécifique) ou moins dérivé (moins spécifique) que celui spécifié à l’origine. Les paramètres de type générique prennent en charge la covariance et la contravariance afin de fournir une meilleure flexibilité dans l'assignation et l'utilisation des types génériques. Lorsque vous faites référence à un système de type, la covariance, la contravariance et l'invariance ont les définitions suivantes. Les exemples supposent qu'une classe de base est nommée `Base` et qu'une classe dérivée est nommée `Derived`.  
@@ -33,7 +33,7 @@ ms.locfileid: "44038742"
   
      Vous permet d'utiliser un type plus générique (moins dérivé) que celui spécifié à l'origine.  
   
-     Vous pouvez assigner une instance de `Action<Base>` (`Action(Of Base)` en Visual Basic) à une variable de type `Action<Derived>`.  
+     Vous pouvez assigner une instance de `Action<Base>` (`Action(Of Base)` en Visual Basic) à une variable de type `Action<Derived>`.  
   
 -   `Invariance`  
   
@@ -94,7 +94,7 @@ ms.locfileid: "44038742"
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Interfaces génériques avec paramètres de type générique contravariant  
  Depuis le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], plusieurs interfaces génériques ont des paramètres de type contravariant. Par exemple : <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601>et <xref:System.Collections.Generic.IEqualityComparer%601>. Ces interfaces ont des paramètres de type contravariant uniquement, par conséquent, les paramètres de type sont utilisés uniquement comme types de paramètre dans les membres des interfaces.  
   
- L'exemple suivant illustre les paramètres de type contravariant. L'exemple définit une classe abstraite (`MustInherit` dans Visual Basic) `Shape` avec une propriété `Area` . L'exemple définit également une classe `ShapeAreaComparer` qui implémente `IComparer<Shape>` (`IComparer(Of Shape)` dans Visual Basic). L'implémentation de la méthode <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> est basée sur la valeur de la propriété `Area`, de sorte que `ShapeAreaComparer` peut être utilisé pour trier des objets `Shape` par zone.  
+ L'exemple suivant illustre les paramètres de type contravariant. L'exemple définit une classe abstraite (`MustInherit` dans Visual Basic) `Shape` avec une propriété `Area` . L'exemple définit également une classe `ShapeAreaComparer` qui implémente `IComparer<Shape>` (`IComparer(Of Shape)` dans Visual Basic). L'implémentation de la méthode <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> est basée sur la valeur de la propriété `Area` , de sorte que `ShapeAreaComparer` peut être utilisé pour trier des objets `Shape` par zone.  
   
  La classe `Circle` hérite de `Shape` et remplace `Area`. L'exemple crée un <xref:System.Collections.Generic.SortedSet%601> d'objets `Circle` , à l'aide d'un constructeur qui accepte un `IComparer<Circle>` (`IComparer(Of Circle)` dans Visual Basic). Toutefois, au lieu de passer un `IComparer<Circle>`, l'exemple passe un objet `ShapeAreaComparer` qui implémente `IComparer<Shape>`. L'exemple peut passer un comparateur d'un type moins dérivé (`Shape`) lorsque le code appelle un comparateur d'un type plus dérivé (`Circle`), parce que le paramètre de type de l'interface générique <xref:System.Collections.Generic.IComparer%601> est contravariant.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "44038742"
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Délégués génériques avec paramètres de type variant  
- Dans le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], les délégués génériques `Func` , tels que <xref:System.Func%602>, ont des types de retour covariants et des types de paramètres contravariants. Les délégués génériques `Action` , tels que <xref:System.Action%602>, ont des types de paramètres contravariants. Cela signifie que les délégués peuvent être assignés à des variables avec des types de paramètres plus dérivés et (dans le cas des délégués génériques `Func`) des types de retour moins dérivés.  
+ Dans le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], les délégués génériques `Func` , tels que <xref:System.Func%602>, ont des types de retour covariants et des types de paramètres contravariants. Les délégués génériques `Action` , tels que <xref:System.Action%602>, ont des types de paramètres contravariants. Cela signifie que les délégués peuvent être assignés à des variables avec des types de paramètres plus dérivés et (dans le cas des délégués génériques `Func` ) des types de retour moins dérivés.  
   
 > [!NOTE]
 >  Le dernier paramètre de type générique des délégués génériques `Func` spécifie le type de la valeur de retour dans la signature du délégué. Il est covariant (mot clé`out` ), alors que les autres paramètres de type générique sont contravariants (mot clé`in` ).  
@@ -190,6 +190,6 @@ ms.locfileid: "44038742"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Covariance et contravariance (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
-- [Covariance et contravariance (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [Covariance et contravariance (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
+- [Covariance et contravariance (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [Variance dans les délégués](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
