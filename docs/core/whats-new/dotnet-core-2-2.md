@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 19063d5fdfc81e1c2315211d7599b9e588250589
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679775"
 ---
 # <a name="whats-new-in-net-core-22"></a>Nouveautés de .NET Core 2.2
 
@@ -98,6 +98,6 @@ Pour plus d’informations, voir [Hook de démarrage hôte](https://github.com/d
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Nouveautés de .NET Core](index.md)
-* [Nouveautés d’ASP.NET Core 2.2](/aspnet/core/release-notes/aspnetcore-2.2)  
-* [Nouvelles fonctionnalités d’EF Core 2.2](/ef/core/what-is-new/ef-core-2.2)  
+- [Nouveautés de .NET Core](index.md)
+- [Nouveautés d’ASP.NET Core 2.2](/aspnet/core/release-notes/aspnetcore-2.2)
+- [Nouvelles fonctionnalités d’EF Core 2.2](/ef/core/what-is-new/ef-core-2.2)
