@@ -2,12 +2,12 @@
 title: Commande dotnet new
 description: La commande dotnet new crée des projets .NET Core basés sur le modèle spécifié.
 ms.date: 10/24/2018
-ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516146"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -536,7 +536,7 @@ Créez un fichier *global.json* dans le répertoire actif en définissant la ver
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Modèles personnalisés pour dotnet new](custom-templates.md)  
-* [Créer un modèle personnalisé pour dotnet new](~/docs/core/tutorials/create-custom-template.md)  
-* [Dépôt GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-* [Modèles disponibles pour dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+- [Modèles personnalisés pour dotnet new](custom-templates.md)
+- [Créer un modèle personnalisé pour dotnet new](~/docs/core/tutorials/create-custom-template.md)
+- [Dépôt GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
+- [Modèles disponibles pour dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
