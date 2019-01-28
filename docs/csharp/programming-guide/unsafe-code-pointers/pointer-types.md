@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 5474d179005742c610d29ccd9dac7bf1dc94c9d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724042"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Types pointeur (Guide de programmation C#)
 
@@ -34,7 +34,7 @@ Le type spécifié avant `*` dans un type de pointeur est appelé **type référ
 
 Les types pointeur n’héritent pas de [object](../../language-reference/keywords/object.md), et aucune conversion n’est possible entre les types pointeur et `object`. Par ailleurs, le boxing et l'unboxing ne prennent pas en charge les pointeurs. Cependant, vous pouvez effectuer des conversions entre différents types pointeur ainsi qu'entre des types pointeur et des types intégraux.
 
-Lorsque vous déclarez plusieurs pointeurs dans la même déclaration, l'astérisque (*) est écrit conjointement au type sous-jacent uniquement, il n'est pas utilisé en tant que préfixe de chaque nom de pointeur. Exemple :
+Lorsque vous déclarez plusieurs pointeurs dans la même déclaration, l'astérisque (*) est écrit conjointement au type sous-jacent uniquement, il n'est pas utilisé en tant que préfixe de chaque nom de pointeur. Par exemple :
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -91,12 +91,12 @@ Le tableau suivant répertorie les opérateurs et les instructions qui peuvent f
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../index.md)  
-- [Pointeurs et code unsafe](index.md)  
-- [Conversions de pointeurs](pointer-conversions.md)  
-- [Expressions de pointeur](pointer-expressions.md)  
-- [Types](../../language-reference/keywords/types.md)  
-- [unsafe](../../language-reference/keywords/unsafe.md)  
-- [fixed, instruction](../../language-reference/keywords/fixed-statement.md)  
-- [stackalloc](../../language-reference/keywords/stackalloc.md)  
+- [Guide de programmation C#](../index.md)
+- [Pointeurs et code unsafe](index.md)
+- [Conversions de pointeurs](pointer-conversions.md)
+- [Expressions de pointeur](pointer-expressions.md)
+- [Types](../../language-reference/keywords/types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)
+- [fixed, instruction](../../language-reference/keywords/fixed-statement.md)
+- [stackalloc](../../language-reference/keywords/stackalloc.md)
 - [Conversion boxing et unboxing](../types/boxing-and-unboxing.md)

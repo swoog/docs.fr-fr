@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: ab0cf58bec2d9072fbc3af78e477a84726dd7a81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659642"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphisme (Guide de programmation C#)
 Le polymorphisme est souvent considéré comme le troisième pilier d'une programmation orientée objet, après l'encapsulation et l'héritage. Le polymorphisme est le mot grec qui signifie « plusieurs formes » et il prend deux aspects distincts :  
@@ -58,7 +58,7 @@ Le polymorphisme est souvent considéré comme le troisième pilier d'une progra
   
  [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- Les membres de classe de base masqués sont toujours accessibles à partir du code client en effectuant un cast de l'instance de la classe dérivée vers une instance de la classe de base. Exemple :  
+ Les membres de classe de base masqués sont toujours accessibles à partir du code client en effectuant un cast de l'instance de la classe dérivée vers une instance de la classe de base. Par exemple :  
   
  [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
@@ -98,10 +98,10 @@ Le polymorphisme est souvent considéré comme le troisième pilier d'une progra
 ## <a name="see-also"></a>Voir aussi
 
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)
-- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Classes abstract et sealed et membres de classe](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
-- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Événements](../../../csharp/programming-guide/events/index.md)  
-- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Indexeurs](../../../csharp/programming-guide/indexers/index.md)  
+- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Classes abstract et sealed et membres de classe](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Événements](../../../csharp/programming-guide/events/index.md)
+- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Indexeurs](../../../csharp/programming-guide/indexers/index.md)
 - [Types](../../../csharp/programming-guide/types/index.md)

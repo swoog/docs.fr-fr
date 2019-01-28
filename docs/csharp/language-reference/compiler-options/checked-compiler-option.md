@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: cf6fa0e87654d0f9d61f34ea9b29ad80921a5720
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 44a86a2e1ab9346280f655d4ee75e7282c6c9cd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578383"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (Options du compilateur C#)
 L’option **-checked** spécifie si une instruction arithmétique entière qui produit une valeur en dehors de la plage du type de données, et qui n’est pas dans la portée d’un mot clé [checked](../../../csharp/language-reference/keywords/checked.md) ou [unchecked](../../../csharp/language-reference/keywords/unchecked.md), doit provoquer une exception au moment de l’exécution.  
@@ -52,7 +52,7 @@ L’option **-checked** spécifie si une instruction arithmétique entière qui 
 csc t2.cs -checked  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

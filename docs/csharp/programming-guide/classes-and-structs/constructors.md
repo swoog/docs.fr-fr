@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 79b000952ed03e5dc28d1c33bd2cba14708fb26a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e88cc9b36f64a559105620359f4c163978cf9d8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692257"
 ---
 # <a name="constructors-c-programming-guide"></a>Constructeurs (guide de programmation C#)
 Chaque fois qu’une [classe](../../../csharp/language-reference/keywords/class.md) ou un [struct](../../../csharp/language-reference/keywords/struct.md) est créé, son constructeur est appelé. Une classe ou un struct peut avoir plusieurs constructeurs qui prennent des arguments différents. Les constructeurs permettent au programmeur de définir des valeurs par défaut, de limiter l’instanciation et d’écrire un code flexible et facile à lire. Pour obtenir plus d’informations et d’exemples, consultez [Utilisation de constructeurs](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) et [Constructeurs d’instances](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
@@ -58,8 +58,8 @@ Pour obtenir plus d’informations et d’exemples, consultez [Constructeurs sta
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Finaliseurs](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [static](../../../csharp/language-reference/keywords/static.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Finaliseurs](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [static](../../../csharp/language-reference/keywords/static.md)
 - [Why Do Initializers Run In The Opposite Order As Constructors? Part One](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

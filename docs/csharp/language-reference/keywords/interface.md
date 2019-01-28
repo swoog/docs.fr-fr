@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 2cb3121907b50d8151257739de0b66fcb597f364
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce3cb95617c87d1bf66879f4a2432b4de4ac40f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586460"
 ---
 # <a name="interface-c-reference"></a>interface (référence C#)
 
@@ -54,13 +54,13 @@ L’exemple suivant montre une implémentation d’interface. Dans cet exemple, 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../programming-guide/index.md)  
-- [Mots clés C#](index.md)  
-- [Types référence](reference-types.md)  
-- [Interfaces](../../programming-guide/interfaces/index.md)  
-- [Utilisation de propriétés](../../programming-guide/classes-and-structs/using-properties.md)  
-- [Utilisation d’indexeurs](../../programming-guide/indexers/using-indexers.md)  
-- [class](class.md)  
-- [struct](struct.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Mots clés C#](index.md)
+- [Types référence](reference-types.md)
+- [Interfaces](../../programming-guide/interfaces/index.md)
+- [Utilisation de propriétés](../../programming-guide/classes-and-structs/using-properties.md)
+- [Utilisation d’indexeurs](../../programming-guide/indexers/using-indexers.md)
+- [class](class.md)
+- [struct](struct.md)
 - [Interfaces](../../programming-guide/interfaces/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713313"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes et méthodes partielles (Guide de programmation C#)
 Il est possible de fractionner la définition d’une [classe](../../../csharp/language-reference/keywords/class.md), d’un [struct](../../../csharp/language-reference/keywords/struct.md), d’une [interface](../../../csharp/language-reference/keywords/interface.md) ou d’une méthode entre plusieurs fichiers sources. Chaque fichier source contient une section de la définition de méthode ou de type, et toutes les parties sont combinées au moment où l’application est compilée.  
@@ -164,8 +164,8 @@ Pour plus d’informations, consultez [Types partiels](~/_csharplang/spec/classe
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)  
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
 - [partial (type)](../../../csharp/language-reference/keywords/partial-type.md)

@@ -2,12 +2,12 @@
 title: 'Procédure pas à pas : Incorporation de types provenant d’assemblys managés dans Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500627"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Procédure pas à pas : Incorporation de types provenant d’assemblys managés dans Visual Studio (C#)
 Si vous incorporez des informations de type d’un assembly managé avec nom fort, vous pouvez coupler faiblement des types dans une application pour obtenir une indépendance de version. Autrement dit, votre programme peut être écrit de façon à ce qu’il utilise des types de plusieurs versions d’une bibliothèque managée sans que vous n’ayez à effectuer de recompilation pour chaque version.  
@@ -234,7 +234,7 @@ Si vous incorporez des informations de type d’un assembly managé avec nom for
   
 ## <a name="see-also"></a>Voir aussi
 
-- [/link (Options du compilateur C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
-- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)  
-- [Programmation à l’aide d’assemblys](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [/link (Options du compilateur C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)
+- [Programmation à l’aide d’assemblys](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Assemblys et le Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

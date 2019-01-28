@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df81293a00ad79892618c71a901cea30efe766ec
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d221c10a0ded848cb24f256ce8afc080e6de44a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614587"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (outil .NET Services Installation)
 L'outil .NET Services Installation (Installation des services .NET) effectue les actions suivantes :  
@@ -86,7 +86,7 @@ regsvcs /appname:myTargetApp myTest.dll
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Outils](../../../docs/framework/tools/index.md)  
- [Guide pratique pour signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Voir aussi
+- [Outils](../../../docs/framework/tools/index.md)
+- [Guide pratique pour signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

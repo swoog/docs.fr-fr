@@ -1,14 +1,14 @@
 ---
 title: Effectuer des opérations de jointure personnalisées (LINQ en C#)
 description: Découvrez comment effectuer des opérations de jointure personnalisées LINQ en C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217423"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857864"
 ---
 # <a name="perform-custom-join-operations"></a>Effectuer des opérations de jointure personnalisées
 
@@ -43,6 +43,6 @@ Dans l’exemple suivant, la requête doit joindre deux séquences sur la base d
 
 ## <a name="see-also"></a>Voir aussi
 
-- [LINQ (Language Integrated Query)](index.md)  
-- [join, clause](../language-reference/keywords/join-clause.md)  
-- [Classer les résultats d’une clause Join](order-the-results-of-a-join-clause.md)  
+- [LINQ (Language Integrated Query)](index.md)
+- [join, clause](../language-reference/keywords/join-clause.md)
+- [Classer les résultats d’une clause Join](order-the-results-of-a-join-clause.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 51cc24fd8054b87b6c92a02450420a9c4abef525
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5cda3f1a076a89326d78e2be887d10eae9a722b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558018"
 ---
 # <a name="c-features-that-support-linq"></a>Fonctionnalités C# qui prennent en charge LINQ
 La section suivante présente de nouvelles constructions de langage qui sont apparues avec C# 3.0. Même si ces nouvelles fonctionnalités sont toutes plus ou moins utilisées avec les requêtes [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], elles ne sont pas limitées à [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] et peuvent être utilisées dans n’importe quel contexte.  
@@ -72,10 +72,10 @@ select new {name = cust.Name, phone = cust.Phone};
   
  Pour plus d’informations, consultez [Types anonymes](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
-## <a name="extension-methods"></a>méthodes d’extension.  
+## <a name="extension-methods"></a>Méthodes d’extension  
  Une méthode d’extension est une méthode statique qui peut être associée à un type, de manière à être appelée comme une méthode d’instance de ce type. Cette fonctionnalité permet d’ajouter de nouvelles méthodes aux types existants sans les modifier. Les opérateurs de requête standard sont un ensemble de méthodes d’extension qui fournissent des fonctionnalités de requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pour tout type qui implémente <xref:System.Collections.Generic.IEnumerable%601>.  
   
- Pour plus d’informations, consultez la page [Méthodes d’extension](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
+ Pour plus d’informations, consultez [Méthodes d’extension](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
 ## <a name="lambda-expressions"></a>Expressions lambda  
  Une expression lambda est une fonction inline qui utilise l’opérateur => pour séparer les paramètres d’entrée du corps de la fonction, et qui peut être convertie au moment de la compilation en un délégué ou une arborescence d’expressions. En programmation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous rencontrerez des expressions lambda quand vous effectuerez des appels de méthode directs aux opérateurs de requête standard.  

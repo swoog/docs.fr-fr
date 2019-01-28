@@ -11,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 7e48783c01a5b94f51f89d25f465f22358e7aa8f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df4ccde0a9a377b06b8efc64cc78936a983c66cc
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240019"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083923"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (référence C#)
 
@@ -163,7 +163,7 @@ L'exemple suivant illustre la gestion des exceptions pour les méthodes async. P
 
 Supprimez les marques de commentaire de la ligne `throw new Exception` dans l'exemple pour illustrer la gestion des exceptions. La propriété `IsFaulted` de la tâche a la valeur `True`, la propriété `Exception.InnerException` de la tâche a la valeur de l'exception et l'exception est interceptée dans le bloc `catch`.
 
-Supprimez les marques de commentaire de la ligne `throw new OperationCancelledException` pour montrer ce qui se passe quand vous annulez un processus asynchrone. La propriété `IsCanceled` de la tâche a la valeur `true` et l'exception est interceptée dans le bloc `catch`. Sous certaines conditions qui s'appliquent à cet exemple, la propriété `IsFaulted` de la tâche a la valeur `true` et `IsCanceled` a la valeur `false`.
+Supprimez les marques de commentaire de la ligne `throw new OperationCanceledException` pour montrer ce qui se passe quand vous annulez un processus asynchrone. La propriété `IsCanceled` de la tâche a la valeur `true` et l'exception est interceptée dans le bloc `catch`. Sous certaines conditions qui s'appliquent à cet exemple, la propriété `IsFaulted` de la tâche a la valeur `true` et `IsCanceled` a la valeur `false`.
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 76d48b588db17a712ac698b604828520e38776a9
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f76fb1d52754999c16021f2417aebb8825e46340
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700011"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procédure pas à pas : Programmation Office (C# et Visual Basic)
 Visual Studio offre des fonctionnalités dans C# et Visual Basic qui améliorent la programmation Microsoft Office. Les fonctionnalités utiles de C# incluent des arguments nommés et facultatifs ainsi que des valeurs de retour de type `dynamic`. Dans la programmation COM, vous pouvez omettre le mot clé `ref` et accéder aux propriétés indexées. Les fonctionnalités de Visual Basic incluent les propriétés implémentées automatiquement, les instructions dans les expressions lambda et les initialiseurs de collection.
@@ -192,21 +192,21 @@ Pour effectuer cette procédure pas à pas, Microsoft Office Excel et Microsoft 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Propriétés implémentées automatiquement (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
-- [Propriétés implémentées automatiquement (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
-- [Initialiseurs de collection](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
-- [Initialiseurs d’objets et de collections](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Paramètres facultatifs](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
-- [Passage des arguments par position et par nom](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
-- [Arguments nommés et facultatifs](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
-- [Liaison anticipée et liaison tardive](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
-- [Utilisation du type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [Expressions lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
-- [Expressions lambda (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Guide pratique pour utiliser des propriétés indexées dans la programmation COM Interop](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
-- [Procédure pas à pas : incorporer des informations de type provenant d’assemblys Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
-- [Procédure pas à pas : incorporation de types provenant d’assemblys managés](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
-- [Procédure pas à pas : création de votre premier complément VSTO pour Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
-- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [Propriétés implémentées automatiquement (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Propriétés implémentées automatiquement (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [Initialiseurs de collection](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [Initialiseurs d’objets et de collections](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Paramètres facultatifs](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Passage des arguments par position et par nom](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
+- [Arguments nommés et facultatifs](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [Liaison anticipée et liaison tardive](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [Utilisation du type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Expressions lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Expressions lambda (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Guide pratique pour utiliser des propriétés indexées dans la programmation COM Interop](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Procédure pas à pas : incorporer des informations de type provenant d’assemblys Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [Procédure pas à pas : incorporation de types provenant d’assemblys managés](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Procédure pas à pas : création de votre premier complément VSTO pour Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interopérabilité](../../../csharp/programming-guide/interop/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600490"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressions (Guide de programmation C#)
 Une *expression* est une séquence d’un ou plusieurs opérandes et de zéro, un ou plusieurs opérateurs qui peuvent être évalués à une valeur, un objet, une méthode ou un espace de noms unique. Elle peut être constituée d’une valeur littérale, d’un appel de méthode, d’un opérateur et de ses opérandes, ou d’un *nom simple*. Un nom simple peut être le nom d'une variable, d'un membre de type, d'un paramètre de méthode, d'un espace de noms ou d'un type.  
@@ -75,9 +75,9 @@ C# prend en charge les *membres expression-bodied*, qui vous permettent de fourn
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Délégués](../../../csharp/programming-guide/delegates/index.md)  
-- [Opérateurs](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [Types](../../../csharp/programming-guide/types/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Délégués](../../../csharp/programming-guide/delegates/index.md)
+- [Opérateurs](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Types](../../../csharp/programming-guide/types/index.md)
 - [Expressions de requête LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

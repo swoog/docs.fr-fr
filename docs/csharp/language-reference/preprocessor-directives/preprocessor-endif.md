@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-ms.openlocfilehash: 13b43919b666dcc8c5adfc3490eaad73960547ae
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 58e29363ca1298966ecf88e6b456f33f43a176b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573044"
 ---
 # <a name="endif-c-reference"></a>#endif (référence C#)
 `#endif` spécifie la fin d’une directive conditionnelle, qui a commencé avec la directive [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md). Par exemple :  
@@ -30,6 +30,6 @@ ms.locfileid: "53243898"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Directives de préprocesseur C#](../../../csharp/language-reference/preprocessor-directives/index.md)

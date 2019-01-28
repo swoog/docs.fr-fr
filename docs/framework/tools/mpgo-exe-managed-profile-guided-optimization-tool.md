@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3809345432b705e4b44700fd6e8231c84bdce6ad
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: bcf1afdadf9294981674d7e007a6bbda2268969d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701831"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Outil d'optimisation guidée par profil managé)
 
@@ -126,8 +126,8 @@ mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" �
 mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Ngen.exe (générateur d’images natives)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [Amélioration des performances de lancement pour vos applications de bureau](https://go.microsoft.com/fwlink/p/?LinkId=248943)  
- [Présentation des améliorations des performances de .NET 4.5](https://go.microsoft.com/fwlink/p/?LinkId=249131)
+## <a name="see-also"></a>Voir aussi
+- [Ngen.exe (générateur d’images natives)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Amélioration des performances de lancement pour vos applications de bureau](https://go.microsoft.com/fwlink/p/?LinkId=248943)
+- [Présentation des améliorations des performances de .NET 4.5](https://go.microsoft.com/fwlink/p/?LinkId=249131)

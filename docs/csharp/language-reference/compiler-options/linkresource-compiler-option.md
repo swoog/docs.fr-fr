@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: feca4713fe0e704799e2abbae3818edd0f3a5c84
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 699ae27df2423638f38a22cc17dc83b828383394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711344"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (Options du compilateur C#)
 Crée un lien vers une ressource .NET Framework dans le fichier de sortie. Le fichier de ressources n’est pas ajouté au fichier de sortie. Cette option diffère de l’option [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) qui incorpore un fichier de ressources dans le fichier de sortie.  
@@ -31,10 +31,10 @@ Crée un lien vers une ressource .NET Framework dans le fichier de sortie. Le fi
  `filename`  
  Fichier de ressources .NET Framework que vous voulez lier à l’assembly.  
   
- `identifier`(facultatif)  
+ `identifier` (facultatif)  
  Nom logique de la ressource. Il s’agit du nom utilisé pour charger la ressource. La valeur par défaut est le nom du fichier.  
   
- `accessibility-modifier`(facultatif)  
+ `accessibility-modifier` (facultatif)  
  Accessibilité de la ressource : publique ou privée. La valeur par défaut est « public ».  
   
 ## <a name="remarks"></a>Notes  
@@ -74,9 +74,9 @@ al -out:A.dll A.netmodule -link:N.dll
 gacutil -i A.dll  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [Al.exe (Assembly Linker)](../../../framework/tools/al-exe-assembly-linker.md)  
-- [Utilisation d’assemblys et du Global Assembly Cache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Al.exe (Assembly Linker)](../../../framework/tools/al-exe-assembly-linker.md)
+- [Utilisation d’assemblys et du Global Assembly Cache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

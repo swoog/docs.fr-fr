@@ -3,12 +3,12 @@ title: Classes et objets – Présentation du tutoriel C#
 description: Créez votre premier programme C# et explorez les concepts orientés objet
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 8b823e05ea5e51bb3096d6a0611630c996f56b33
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6ce0c86a4b746b8ea2db82899a82734a68e46957
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205360"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066065"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Explorez la programmation orientée objet avec des classes et des objets
 
@@ -106,7 +106,7 @@ Ajoutez la déclaration de membre suivante à la classe `BankAccount` :
 private static int accountNumberSeed = 1234567890;
 ```
 
-Il s’agit d’un membre de données. Celui-ci est `private`, ce qui signifie qu’il est uniquement accessible par code dans la classe `BankAccount`. C’est un moyen de séparer les responsabilités publiques (comme disposer d’un numéro de compte) de l’implémentation privée (c’est-à-dire la façon dont les numéros de compte sont générés). Il est également `static`, ce qui signifie qu’il est partagé par toutes les objets ``BankAccount``. La valeur d’une variable non statique est unique pour chaque instance de l’objet ``BankAccount``. Ajoutez les deux lignes suivantes au constructeur pour assigner le numéro de compte :
+Il s’agit d’un membre de données. Celui-ci est `private`, ce qui signifie qu’il est uniquement accessible par code dans la classe `BankAccount`. C’est un moyen de séparer les responsabilités publiques (comme disposer d’un numéro de compte) de l’implémentation privée (c’est-à-dire la façon dont les numéros de compte sont générés). Il est également `static`, ce qui signifie qu’il est partagé par toutes les objets `BankAccount`. La valeur d’une variable non statique est unique pour chaque instance de l’objet `BankAccount`. Ajoutez les deux lignes suivantes au constructeur pour assigner le numéro de compte :
 
 ```csharp
 this.Number = accountNumberSeed.ToString();

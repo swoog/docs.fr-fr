@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: b2e9e94f75b048dbe4ce3430c7a590f9be156e1d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4ae3a9b09d67896336e3230caca67e3b40c6a676
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635999"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Exemple de classe COM (Guide de programmation C#)
 Voici un exemple de classe pouvant être exposée en tant qu’objet COM. Après avoir placé ce code dans un fichier .cs et l’avoir ajouté à votre projet, affectez la valeur **True** à la propriété **Inscrire pour COM Interop**. Pour plus d'informations, voir [Procédure : Inscrire un composant à COM Interop](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
@@ -39,6 +39,6 @@ Voici un exemple de classe pouvant être exposée en tant qu’objet COM. Après
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Interopérabilité](../../../csharp/programming-guide/interop/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Interopérabilité](../../../csharp/programming-guide/interop/index.md)
 - [Page Générer, Concepteur de projet (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

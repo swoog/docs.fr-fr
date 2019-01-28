@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 1939666b3dd271959c418e3d714b177e170fcd04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595979"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilité des applications dans le .NET Framework
 
@@ -77,6 +77,6 @@ Pour commencer, sélectionnez le type de modification de la compatibilité ci-de
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Versions et dépendances](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-* [Nouveautés](../../../docs/framework/whats-new/index.md)
-* [Éléments obsolètes dans la bibliothèque de classes](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Versions et dépendances](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Nouveautés](../../../docs/framework/whats-new/index.md)
+- [Éléments obsolètes dans la bibliothèque de classes](../../../docs/framework/whats-new/whats-obsolete.md)

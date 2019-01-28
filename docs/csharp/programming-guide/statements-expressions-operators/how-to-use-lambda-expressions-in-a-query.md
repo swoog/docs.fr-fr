@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 9b8adfde95cd2122136cb75e97b4113ee1d80cf9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bdcf93679664f8761e8ed32550027a2337374ffa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643583"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Procédure : Utiliser des expressions lambda dans une requête (Guide de programmation C#)
 Vous n’utilisez pas d’expressions lambda directement dans la syntaxe de requête, mais vous les utilisez dans les appels de méthode qui peuvent être contenus dans des expressions de requête. En effet, certaines opérations de requête ne peuvent être exprimées que dans une syntaxe de méthode. Pour plus d’informations sur la différence entre la syntaxe de requête et la syntaxe de méthode, consultez [Syntaxe de requête et syntaxe de méthode dans LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -32,5 +32,5 @@ Vous n’utilisez pas d’expressions lambda directement dans la syntaxe de requ
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Arborescences d’expressions (C#)](../concepts/expression-trees/index.md)  
+- [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Arborescences d’expressions (C#)](../concepts/expression-trees/index.md)

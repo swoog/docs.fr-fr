@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: 5a3658c4e6bb32158e6f81c3ac5014fbedba0713
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0dedd1480dae15d2c04b47cee132ab3227098f56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739027"
 ---
 # <a name="undef-c-reference"></a>#undef (référence C#)
 `#undef` vous permet d’annuler la définition d’un symbole de telle sorte qu’en utilisant le symbole comme expression dans une directive [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), l’expression correspond à `false`.  
@@ -43,6 +43,6 @@ class MyClass
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Directives de préprocesseur C#](../../../csharp/language-reference/preprocessor-directives/index.md)

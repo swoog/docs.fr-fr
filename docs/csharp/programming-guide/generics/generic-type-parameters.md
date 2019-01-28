@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 8b9e040beea0590320a34d35ca323374f357bf2f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 48fa90226b7a8a36f5f432921cf5d999e76c6fa8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681636"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>Paramètres de type générique (guide de programmation C#)
 Dans une définition de méthode ou un type générique, les paramètres de type représentent un espace réservé pour un type spécifique qu’un client indique quand il instancie une variable du type générique. Une classe générique, telle que `GenericList<T>` répertoriée dans [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md), ne peut pas être utilisée en l’état car il ne s’agit pas vraiment d’un type, mais plutôt d’un modèle pour un type. Pour utiliser `GenericList<T>`, le code client doit déclarer et instancier un type construit en spécifiant un argument de type à l’intérieur de crochets pointus. L’argument de type pour cette classe particulière peut être tout type reconnu par le compilateur. Il est possible de créer un nombre quelconque d’instances de type construit, chacune avec un argument de type différent, comme suit :  
@@ -38,7 +38,7 @@ Dans une définition de méthode ou un type générique, les paramètres de type
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Collections.Generic>  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Génériques](../../../csharp/programming-guide/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Génériques](../../../csharp/programming-guide/generics/index.md)
 - [Différences entre les modèles C++ et les génériques C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)

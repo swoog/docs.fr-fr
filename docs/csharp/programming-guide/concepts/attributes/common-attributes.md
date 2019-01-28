@@ -2,12 +2,12 @@
 title: Attributs courants (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558585"
 ---
 # <a name="common-attributes-c"></a>Attributs courants (C#)
 Cette rubrique décrit les attributs le plus couramment utilisés dans les programmes C#.  
@@ -73,7 +73,7 @@ Cette rubrique décrit les attributs le plus couramment utilisés dans les progr
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Définit un alias par défaut convivial pour un manifeste d’assembly.|  
   
 ##  <a name="Obsolete"></a> Attribut Obsolete  
- L’attribut `Obsolete` est utilisé pour marquer une entité de programme comme étant une entité dont l’utilisation n’est plus recommandée. Chaque utilisation d’une entité marquée comme obsolète génère par la suite un avertissement ou une erreur, selon la façon dont l’attribut est configuré. Exemple :  
+ L’attribut `Obsolete` est utilisé pour marquer une entité de programme comme étant une entité dont l’utilisation n’est plus recommandée. Chaque utilisation d’une entité marquée comme obsolète génère par la suite un avertissement ou une erreur, selon la façon dont l’attribut est configuré. Par exemple :  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -231,9 +231,9 @@ class SampleClass
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)  
-- [Attributs](../../../../../docs/standard/attributes/index.md)  
-- [Réflexion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)
+- [Attributs](../../../../../docs/standard/attributes/index.md)
+- [Réflexion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [Accès à des attributs à l’aide de la réflexion (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

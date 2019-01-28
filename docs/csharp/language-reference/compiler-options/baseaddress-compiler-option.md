@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 58d1511387c93841f49d6ced934b492fe097876b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6ff29a7a204cb8f20f2f67946d5d1ed9c976e7aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694579"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (Options du compilateur C#)
 L’option **-baseaddress** vous permet de spécifier l’adresse de base préférée à laquelle doit être chargée une DLL. Pour plus d’informations sur le moment et la raison de l’utilisation de cette option, consultez [Larry Osterman’s WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).  
@@ -47,8 +47,8 @@ L’option **-baseaddress** vous permet de spécifier l’adresse de base préf�
   
      Pour définir cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>  
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

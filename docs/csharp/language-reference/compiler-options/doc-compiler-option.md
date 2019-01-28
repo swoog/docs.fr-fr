@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 24eb3b1a70c420fd0008ea9c202c774592e1d346
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: baf0084e6caa3fce8ca8c375bdcc2bcd135fa21e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646800"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (Options du compilateur C#)
 L’option **-doc** vous permet de placer des commentaires de documentation dans un fichier XML.  
@@ -58,9 +58,9 @@ L’option **-doc** vous permet de placer des commentaires de documentation dans
   
 3.  Modifiez la propriété **Fichier de documentation XML**.  
   
- Pour plus d’informations sur la façon de définir cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
+ Pour plus d’informations sur la définition de cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

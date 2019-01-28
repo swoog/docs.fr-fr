@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 43497d3680917917894f1d904852d787fce0888c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 325be8851b63a252c381d943943937332ec91e6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638039"
 ---
 # <a name="abstract-c-reference"></a>abstract (référence C#)
 Le modificateur `abstract` indique que l’élément en cours de modification a une implémentation manquante ou incomplète. Le modificateur abstract peut être utilisé avec des classes, des méthodes, des propriétés, des indexeurs et des événements. Dans une déclaration de classe, utilisez le modificateur `abstract` pour indiquer qu’une classe doit uniquement servir de classe de base pour d’autres classes. Les membres définis comme abstraits, ou inclus dans une classe abstraite, doivent être implémentés par des classes dérivées de la classe abstraite.  
@@ -41,7 +41,7 @@ Le modificateur `abstract` indique que l’élément en cours de modification a 
   
 -   Les déclarations de méthodes abstraites sont autorisées uniquement dans les classes abstraites.  
   
--   Comme une déclaration de méthode abstraite ne fournit pas d’implémentation réelle, il n’y a pas de corps de méthode ; la déclaration de méthode se termine simplement par un point-virgule, et la signature n’est pas suivie d’accolades ({ }). Exemple :  
+-   Comme une déclaration de méthode abstraite ne fournit pas d’implémentation réelle, il n’y a pas de corps de méthode ; la déclaration de méthode se termine simplement par un point-virgule, et la signature n’est pas suivie d’accolades ({ }). Par exemple :  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -81,11 +81,11 @@ Vous obtenez une erreur indiquant que le compilateur ne peut pas créer une inst
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)  
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
-- [override](../../../csharp/language-reference/keywords/override.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)
+- [override](../../../csharp/language-reference/keywords/override.md)
 - [Mots clés C#](../../../csharp/language-reference/keywords/index.md)

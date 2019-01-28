@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - new keyword [C#]
 ms.assetid: e4136516-f058-45a8-84e5-da00a5cf9b6a
-ms.openlocfilehash: a6999491557a83d0042285a4353c24c1e729d6a2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 119dc0ddf4dd26332da2fe2367bf4d4886fd180f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578518"
 ---
 # <a name="new-c-reference"></a>new (référence C#)
 En C#, le mot clé `new` peut servir d’opérateur, de modificateur ou de contrainte.  
@@ -29,6 +29,6 @@ En C#, le mot clé `new` peut servir d’opérateur, de modificateur ou de contr
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Mots clés C#](../../../csharp/language-reference/keywords/index.md)

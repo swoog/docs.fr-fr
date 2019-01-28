@@ -2,12 +2,12 @@
 title: Conservation des espaces pendant le chargement ou l’analyse de code XML1
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 019b4452bcd76fff462edab6a584cf5ae0276ee7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3dbbbc8412cdef6ea62197171bb950d6c5344350
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704941"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Conservation des espaces blancs lors du chargement ou de l’analyse de code XML
 Cette rubrique décrit comment contrôler la gestion des espaces blancs par [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -19,7 +19,7 @@ Cette rubrique décrit comment contrôler la gestion des espaces blancs par [!IN
  Cette rubrique décrit la gestion des espaces blancs par les méthodes qui remplissent les arborescences XML. Pour plus d’informations sur le contrôle des espaces blancs quand vous sérialisez des arborescences XML, consultez [Conservation des espaces blancs lors de la sérialisation](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
   
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>Comportement des méthodes qui remplissent des arborescences XML  
- Les méthodes suivantes dans les classes <xref:System.Xml.Linq.XElement> et <xref:System.Xml.Linq.XDocument> remplissent une arborescence XML. Vous pouvez remplir une arborescence XML à partir d'un fichier, d'un objet <xref:System.IO.TextReader>, d'un objet <xref:System.Xml.XmlReader> ou d'une chaîne :  
+ Les méthodes suivantes dans les classes <xref:System.Xml.Linq.XElement> et <xref:System.Xml.Linq.XDocument> remplissent une arborescence XML. Vous pouvez remplir une arborescence XML à partir d’un fichier, d’un objet <xref:System.IO.TextReader>, d’un objet <xref:System.Xml.XmlReader> ou d’une chaîne :  
   
 -   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
   
@@ -29,13 +29,13 @@ Cette rubrique décrit comment contrôler la gestion des espaces blancs par [!IN
   
 -   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
- Si la méthode ne prend pas l'objet <xref:System.Xml.Linq.LoadOptions> comme argument, elle ne conservera pas les espaces non significatifs.  
+ Si la méthode ne prend pas l’objet <xref:System.Xml.Linq.LoadOptions> comme argument, elle ne conservera pas les espaces non significatifs.  
   
  Dans la plupart des cas, si la méthode prend l'objet <xref:System.Xml.Linq.LoadOptions> comme argument, vous pouvez, si vous le souhaitez, conserver les espaces non significatifs en tant que nœuds de texte dans l'arborescence XML. Toutefois, si la méthode charge le code XML à partir d'un objet <xref:System.Xml.XmlReader>, l'objet <xref:System.Xml.XmlReader> détermine si les espaces seront conservés. La définition de <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> n'aura aucun effet.  
   
  Avec ces méthodes, si les espaces sont conservés, des espaces non significatifs sont insérés dans l'arborescence XML en tant que nœuds <xref:System.Xml.Linq.XText>. Si les espaces ne sont pas conservés, aucun nœud de texte n'est inséré.  
   
- Vous pouvez créer une arborescence XML à l'aide d'un objet <xref:System.Xml.XmlWriter>. Les nœuds écrits dans l'objet <xref:System.Xml.XmlWriter> sont remplis dans l'arborescence. Toutefois, lorsque vous générez une arborescence XML à l’aide de cette méthode, tous les nœuds sont conservés, qu’ils soient constitués d’espaces ou non et que ces espaces soient significatifs ou non.  
+ Vous pouvez créer une arborescence XML à l’aide d’un objet <xref:System.Xml.XmlWriter>. Les nœuds écrits dans l'objet <xref:System.Xml.XmlWriter> sont remplis dans l'arborescence. Toutefois, lorsque vous générez une arborescence XML à l’aide de cette méthode, tous les nœuds sont conservés, qu’ils soient constitués d’espaces ou non et que ces espaces soient significatifs ou non.  
   
 ## <a name="see-also"></a>Voir aussi
 

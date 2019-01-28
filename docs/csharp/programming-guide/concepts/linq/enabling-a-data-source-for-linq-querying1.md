@@ -2,12 +2,12 @@
 title: Activation d’une source de données pour l’interrogation LINQ
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d3faeb15c5c8deedec3c3347c6317cac872224f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515717"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Activation d'une source de données pour l'interrogation LINQ
 Il y a différentes méthodes pour étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pour permettre l’interrogation de toute source de données dans le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. La source de données peut être une structure de données, un service Web, un système de fichiers ou une base de données, par exemple. Le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] permet aux clients d'interroger facilement une source de données pour laquelle l'interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] est activée, car la syntaxe et le modèle de la requête ne changent pas. Il existe différentes manières d’étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] à ces sources de données, dont les suivantes :  
@@ -41,8 +41,8 @@ Il y a différentes méthodes pour étendre [!INCLUDE[vbteclinq](~/includes/vbte
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Linq.IQueryable%601>  
-- <xref:System.Collections.Generic.IEnumerable%601>  
-- <xref:System.Linq.Enumerable>  
-- [Présentation des opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- <xref:System.Linq.IQueryable%601>
+- <xref:System.Collections.Generic.IEnumerable%601>
+- <xref:System.Linq.Enumerable>
+- [Vue d’ensemble des opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

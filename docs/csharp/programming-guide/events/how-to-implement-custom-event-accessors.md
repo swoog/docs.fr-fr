@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [C#], remove accessor
 - remove accessor [C#]
 ms.assetid: bf903abf-03a4-4f7b-ab6b-b7e59bc2ee1e
-ms.openlocfilehash: aaf58307cb4e33a1caa7b1ef8584fbb33decea3f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cdae5222cfe435142d93f222d140bd41ecf2c5c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643479"
 ---
 # <a name="how-to-implement-custom-event-accessors-c-programming-guide"></a>Procédure : Implémenter des accesseurs d’événement personnalisés (Guide de programmation C#)
 Un événement constitue un genre spécial de délégué multicast qui peut être appelé uniquement à partir de la classe dans laquelle il est déclaré. Le code client s’abonne à l’événement en fournissant une référence à une méthode qui doit être appelée quand l’événement est déclenché. Ces méthodes sont ajoutées à la liste d’invocation du délégué par le biais des accesseurs d’événement, qui ressemblent aux accesseurs de propriété, sauf que les accesseurs d’événement sont nommés `add` et `remove`. Dans la plupart des cas, vous n’avez pas à fournir d’accesseurs d’événement personnalisés. Quand aucun accesseur d’événement personnalisé n’est fourni dans votre code, le compilateur les ajoute automatiquement. Toutefois, vous devez parfois fournir un comportement personnalisé. Ce genre de cas est illustré dans la rubrique [Guide pratique pour  implémenter des événements d’interface](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
@@ -26,5 +26,5 @@ Un événement constitue un genre spécial de délégué multicast qui peut êtr
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Événements](../../../csharp/programming-guide/events/index.md)  
+- [Événements](../../../csharp/programming-guide/events/index.md)
 - [event](../../../csharp/language-reference/keywords/event.md)

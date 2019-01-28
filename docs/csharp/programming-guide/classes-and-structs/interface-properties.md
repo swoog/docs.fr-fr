@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: af80f403942f59d672854c80830e175ef7ebaff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652183"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Propriétés d'interface (Guide de programmation C#)
 Des propriétés peuvent être déclarées dans une [interface](../../../csharp/language-reference/keywords/interface.md). L’exemple ci-dessous porte sur un accesseur de propriété d’interface :  
@@ -53,9 +53,9 @@ Des propriétés peuvent être déclarées dans une [interface](../../../csharp/
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Utilisation de propriétés](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [Comparaison entre propriétés et indexeurs](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
-- [Indexeurs](../../../csharp/programming-guide/indexers/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Utilisation de propriétés](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [Comparaison entre propriétés et indexeurs](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
+- [Indexeurs](../../../csharp/programming-guide/indexers/index.md)
 - [Interfaces](../../../csharp/programming-guide/interfaces/index.md)

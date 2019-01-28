@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242704"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655671"
 ---
 # <a name="fields-c-programming-guide"></a>Champs (Guide de programmation C#)
 Un *champ* est une variable de tout type qui est déclarée directement dans une [classe](../../../csharp/language-reference/keywords/class.md) ou un [struct](../../../csharp/language-reference/keywords/struct.md). Les champs sont *membres* de leur type contenant.  
@@ -25,7 +25,7 @@ Un *champ* est une variable de tout type qui est déclarée directement dans une
   
  [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
- Pour accéder à un champ dans un objet, ajoutez un point après le nom de l’objet, suivi du nom du champ, comme dans `objectname.fieldname`. Exemple :  
+ Pour accéder à un champ dans un objet, ajoutez un point après le nom de l’objet, suivi du nom du champ, comme dans `objectname.fieldname`. Par exemple :  
   
  [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
@@ -49,9 +49,9 @@ Un *champ* est une variable de tout type qui est déclarée directement dans une
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Utilisation de constructeurs](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
-- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Utilisation de constructeurs](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
+- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Classes abstract et sealed et membres de classe](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

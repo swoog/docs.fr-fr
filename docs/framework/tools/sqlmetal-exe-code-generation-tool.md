@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 9bdffe76aaf9f41bfbba99bae9d2d3fa9b329d4a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: c9631ed7ecc854fe6f355eb4bbc2bfb5097ea770
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540622"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (outil de génération de code)
 L'outil en ligne de commande SqlMetal génère le code et le mappage du composant [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En appliquant les options qui apparaissent ultérieurement dans cette rubrique, vous pouvez ordonner à SqlMetal d'exécuter plusieurs actions différentes, dont les suivantes :  
@@ -132,7 +132,7 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 >  Quand vous utilisez l’option **/pluralize** avec l’exemple de base de données Northwind, notez le comportement suivant. Lorsque SqlMetal génère des noms de types de lignes pour des tables, les noms de table sont au singulier. Lorsqu'il génère des propriétés <xref:System.Data.Linq.DataContext> pour des tables, les noms de table sont au pluriel. Par coïncidence, les tables de l'exemple de base de données Northwind sont déjà au pluriel. Par conséquent, vous ne pourrez pas voir cette partie active. Bien qu’il soit courant de nommer des tables de base de données au pluriel, il est également courant dans .NET de nommer des collections au pluriel.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour générer le modèle objet en Visual Basic ou C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- [Génération de code dans LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [Mappage externe](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour générer le modèle objet en Visual Basic ou C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Génération de code dans LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [Mappage externe](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

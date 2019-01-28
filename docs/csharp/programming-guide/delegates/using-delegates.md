@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 71285057a465cd7fa09ae8290a7b74a3c6d6407c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 77c30db3e59461340ea6ac92f4769de87f4271dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570133"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilisation de délégués (guide de programmation C#)
 Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un type qui encapsule sans risque une méthode ; il est similaire à un pointeur de fonction en C et C++. Toutefois, à la différence des pointeurs de fonction C, les délégués sont orientés objet, de type sécurisé et sûrs. Le type d'un délégué est défini par le nom du délégué. L’exemple suivant déclare un délégué nommé `Del` qui peut encapsuler une méthode acceptant une chaîne ([string](../../../csharp/language-reference/keywords/string.md)) comme argument et qui retourne [void](../../../csharp/language-reference/keywords/void.md) :  
@@ -61,7 +61,7 @@ Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un 
   
  Les délégués multicast sont largement utilisés dans la gestion des événements. Les objets sources d'événements envoient des notifications d'événement aux objets destinataires qui se sont inscrits pour recevoir cet événement. Pour s'inscrire à un événement, le destinataire crée une méthode conçue pour gérer l'événement, puis crée un délégué pour cette méthode et passe le délégué à la source d'événements. La source appelle le délégué quand l'événement se produit. Le délégué appelle ensuite la méthode de gestion d'événement sur le destinataire, en fournissant les données d'événement. Le type délégué d'un événement donné est défini par la source de l'événement. Pour plus d’informations, consultez [Événements](../../../csharp/programming-guide/events/index.md).  
   
- La comparaison de délégués de deux types différents assignés au moment de la compilation provoque une erreur de compilation. Si les instances de délégué sont statiquement du type `System.Delegate`, la comparaison est alors autorisée, mais retourne la valeur false à l'exécution. Exemple :  
+ La comparaison de délégués de deux types différents assignés au moment de la compilation provoque une erreur de compilation. Si les instances de délégué sont statiquement du type `System.Delegate`, la comparaison est alors autorisée, mais retourne la valeur false à l'exécution. Par exemple :  
   
  [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   

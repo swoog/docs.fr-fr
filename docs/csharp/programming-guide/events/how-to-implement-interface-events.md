@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: d52d4d5140e96f81377733e39d1c36886718b706
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 47bd7184e26a643aa8ff17b3e0a0507ab7978216
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540280"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Procédure : Implémenter des événements d'interface (Guide de programmation C#)
 Une [interface](../../../csharp/language-reference/keywords/interface.md) peut déclarer un [événement](../../../csharp/language-reference/keywords/event.md). L’exemple suivant montre comment implémenter des événements d’interface dans une classe. En gros, les règles sont les mêmes que quand vous implémentez une propriété ou une méthode d’interface.  
@@ -60,8 +60,8 @@ En fournissant vos propres accesseurs, vous pouvez spécifier si les deux évén
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Événements](../../../csharp/programming-guide/events/index.md)  
-- [Délégués](../../../csharp/programming-guide/delegates/index.md)  
-- [Implémentation d’interface explicite](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Événements](../../../csharp/programming-guide/events/index.md)
+- [Délégués](../../../csharp/programming-guide/delegates/index.md)
+- [Implémentation d’interface explicite](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)
 - [Guide pratique pour déclencher les événements de la classe de base dans les classes dérivées](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

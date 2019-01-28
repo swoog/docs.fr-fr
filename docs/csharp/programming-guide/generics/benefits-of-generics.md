@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba4b81db0ea352f82127a838ab6b13f09d259e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650978"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Avantages des génériques (guide de programmation C#)
 Les génériques constituent la solution à une limitation dans les versions antérieures du Common Language Runtime et du langage C# dans lesquelles la généralisation s’effectue par un cast de types vers et depuis le type de base universel <xref:System.Object>. En créant une classe générique, vous pouvez créer une collection qui est de type sécurisé au moment de la compilation.  
@@ -37,9 +37,9 @@ Les génériques constituent la solution à une limitation dans les versions ant
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Collections.Generic>  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [Conversion boxing et unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
-- [Quand utiliser les collections génériques](../../../standard/collections/when-to-use-generic-collections.md)  
-- [Instructions relatives aux collections](../../../standard/design-guidelines/guidelines-for-collections.md)   
+- <xref:System.Collections.Generic>
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Conversion boxing et unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [Quand utiliser les collections génériques](../../../standard/collections/when-to-use-generic-collections.md)
+- [Instructions relatives aux collections](../../../standard/design-guidelines/guidelines-for-collections.md)

@@ -3,12 +3,12 @@ title: Structs - Guide C#
 description: En savoir plus sur le type struct et la manière de le créer
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 26b7b075dbe159d43fd7f84e9599d2d8d6a8332c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506977"
 ---
 # <a name="structs"></a>Structs
 Un *struct* est un type valeur. Lorsqu'un struct est créé, la variable à laquelle le struct est assigné contient les données réelles du struct. Lorsque le struct est affecté à une nouvelle variable, il est copié. La nouvelle variable et la variable d’origine contiennent par conséquent deux copies distinctes des mêmes données. Les modifications apportées à une copie n’affectent pas l’autre copie.

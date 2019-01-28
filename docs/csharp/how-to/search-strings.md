@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 030d71f95947e98d9f269095908b0431c2192430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623389"
 ---
 # <a name="how-to-search-strings"></a>Guide pratique pour faire des recherches dans des chaînes
 
@@ -74,12 +74,12 @@ Ce seul modèle de recherche correspond à de nombreuses chaînes valides. Les e
 
 Vous pouvez essayer ces exemples en examinant le code dans notre [dépôt GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Vous pouvez aussi télécharger les exemples [sous forme de fichier zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../programming-guide/index.md)  
-- [Chaînes](../programming-guide/strings/index.md)  
+- [Guide de programmation C#](../programming-guide/index.md)
+- [Chaînes](../programming-guide/strings/index.md)
 - [LINQ et chaînes](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [.NET Framework (expressions régulières)](../../standard/base-types/regular-expressions.md)
 - [Langage des expressions régulières - Aide-mémoire](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [Bonnes pratiques pour l’utilisation de chaînes dans .NET](../../standard/base-types/best-practices-strings.md)  
+- [Bonnes pratiques pour l’utilisation de chaînes dans .NET](../../standard/base-types/best-practices-strings.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-ms.openlocfilehash: fd53e0abaab4ff7d242b32d6f26be13e97f20c44
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ed767ca100ee0405ce918d2d842d951f09d19e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646342"
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Introduction aux génériques (guide de programmation C#)
 Les méthodes et les classes génériques combinent la réutilisabilité, la cohérence des types et l’efficacité, ce que ne peuvent pas faire leurs équivalents non génériques. Les génériques sont plus fréquemment utilisés dans des collections et des méthodes qui agissent sur eux. La version 2.0 de la bibliothèque de classes .NET Framework fournit un nouvel espace de noms, <xref:System.Collections.Generic>, qui contient plusieurs nouvelles classes de collection génériques. Pour toutes les applications qui ciblent le .NET Framework version 2.0 et ultérieures, il est recommandé d’utiliser les nouvelles classes de collection génériques plutôt que leurs équivalents non génériques, tels que <xref:System.Collections.ArrayList>. Pour plus d’informations, consultez [Génériques en .NET](../../../standard/generics/index.md).  
@@ -33,6 +33,6 @@ Les méthodes et les classes génériques combinent la réutilisabilité, la coh
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Collections.Generic>  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.Collections.Generic>
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Génériques](../../../csharp/programming-guide/generics/index.md)

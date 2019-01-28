@@ -2,12 +2,12 @@
 title: Partitionnement des données (C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: 2e719b3a61b7c42d8ec6afe5fffe88a5bf83f82e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 184d9d34e087a06ca3fad9b0a8dad571253b225d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702364"
 ---
 # <a name="partitioning-data-c"></a>Partitionnement des données (C#)
 Le partitionnement dans LINQ désigne l’opération consistant à diviser une séquence d’entrée en deux sections, sans réorganiser les éléments, puis à retourner l’une des sections.  
@@ -29,5 +29,5 @@ Le partitionnement dans LINQ désigne l’opération consistant à diviser une s
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Linq>  
-- [Présentation des opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- <xref:System.Linq>
+- [Vue d’ensemble des opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

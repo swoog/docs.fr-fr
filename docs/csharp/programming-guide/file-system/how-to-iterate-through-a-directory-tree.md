@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 22d3883470f1435a50ae27f9d633ef566fec2913
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613842"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Procédure : Itérer au sein d’une arborescence de répertoires (Guide de programmation C#)
 L’expression « itérer au sein d’une arborescence de répertoires » signifie accéder à chaque fichier dans chaque sous-répertoire imbriqué sous un dossier racine spécifié, à n’importe quelle profondeur. Vous ne devez pas nécessairement ouvrir chaque fichier. Vous pouvez simplement récupérer le nom du fichier ou du sous-répertoire sous forme de `string`, ou vous pouvez récupérer des informations supplémentaires sous la forme d’un objet <xref:System.IO.FileInfo?displayProperty=nameWithType> ou <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -59,6 +59,6 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.IO>  
-- [LINQ et répertoires de fichiers](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- <xref:System.IO>
+- [LINQ et répertoires de fichiers](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [Système de fichiers et Registre (Guide de programmation C#)](../../../csharp/programming-guide/file-system/index.md)

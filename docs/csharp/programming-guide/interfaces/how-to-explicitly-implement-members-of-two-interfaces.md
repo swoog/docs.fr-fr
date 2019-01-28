@@ -6,12 +6,12 @@ helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 3e03e80279db8c36cb975715f390ff6899d593cb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b0725d63f77fbe0b9f3151c0b742777667e93311
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701246"
 ---
 # <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Procédure : Implémenter de manière explicite des membres de deux interfaces (Guide de programmation C#)
 L’implémentation explicite d’une [interface](../../../csharp/language-reference/keywords/interface.md) permet également au programmeur d’implémenter deux interfaces qui ont les mêmes noms de membres et donnent à chaque membre d’interface une implémentation distincte. L’exemple suivant affiche les dimensions d’une zone dans les unités de mesure à la fois métriques et britanniques. La [classe](../../../csharp/language-reference/keywords/class.md) Box implémente deux interfaces, IEnglishDimensions et IMetricDimensions, qui représentent les différents systèmes de mesure. Les deux interfaces ont des noms de membres identiques, Length et Width.  
@@ -30,7 +30,7 @@ L’implémentation explicite d’une [interface](../../../csharp/language-refer
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
 - [Guide pratique pour implémenter de manière explicite des membres d’interface](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)

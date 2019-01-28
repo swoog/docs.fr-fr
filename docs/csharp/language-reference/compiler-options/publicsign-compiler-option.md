@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738064"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (Options du compilateur C#)
 
@@ -43,8 +43,8 @@ Parfois appelée « fausse signature » ou « signature OSS », la signature pub
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Option -delaysign du compilateur C#](delaysign-compiler-option.md)  
-- [Option -keyfile du compilateur C#](keyfile-compiler-option.md)  
-- [Option -keycontainer du compilateur C#](keycontainer-compiler-option.md)  
-- [Options du compilateur C#](index.md)  
+- [Option -delaysign du compilateur C#](delaysign-compiler-option.md)
+- [Option -keyfile du compilateur C#](keyfile-compiler-option.md)
+- [Option -keycontainer du compilateur C#](keycontainer-compiler-option.md)
+- [Options du compilateur C#](index.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: 233b0255121cf6e7a5283041d594e2d843f105fb
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: f9df40c3ca721ca97b575a05377bbac29a29aec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560605"
 ---
 # <a name="delegate-c-reference"></a>delegate (référence C#)
 
@@ -46,12 +46,12 @@ Le délégué doit être instancié avec une méthode ou une expression lambda q
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-- [Types référence](../../../csharp/language-reference/keywords/reference-types.md)  
-- [Délégués](../../../csharp/programming-guide/delegates/index.md)  
-- [Événements](../../../csharp/programming-guide/events/index.md)  
-- [Délégués avec méthodes nommées et méthodes anonymes](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) 
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+- [Types référence](../../../csharp/language-reference/keywords/reference-types.md)
+- [Délégués](../../../csharp/programming-guide/delegates/index.md)
+- [Événements](../../../csharp/programming-guide/events/index.md)
+- [Délégués avec méthodes nommées et méthodes anonymes](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
 - [Méthodes anonymes](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

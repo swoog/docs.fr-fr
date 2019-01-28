@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688998"
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
 Le marshaling d’interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu'un appelant puisse modifier les données transmises et renvoyer ces modifications à l'appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  
@@ -304,7 +304,7 @@ class Win32API {
 }  
 ```  
   
- Notez que l'argument `SystemTime` n'est pas typé comme un argument de référence, car `SystemTime` est une classe et non un type valeur. Contrairement aux types valeur, les classes sont toujours passées par référence.  
+ Notez que l’argument `SystemTime` n’est pas typé comme un argument de référence, car `SystemTime` est une classe et non un type valeur. Contrairement aux types valeur, les classes sont toujours passées par référence.  
   
  L'exemple de code suivant montre une autre classe `Point` qui possède une méthode appelée `SetXY`. Étant donné que le type a une disposition séquentielle, il peut être passé au code non managé et marshalé comme une structure. Toutefois, le membre `SetXY` ne peut pas être appelé depuis du code non managé, même si l'objet est passé par référence.  
   
@@ -440,9 +440,9 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Types blittable et non blittable](blittable-and-non-blittable-types.md)  
- [Copie et épinglage](copying-and-pinning.md)  
- [Marshaling par défaut pour les tableaux](default-marshaling-for-arrays.md)  
- [Marshaling par défaut pour les objets](default-marshaling-for-objects.md)  
- [Marshaling par défaut pour les chaînes](default-marshaling-for-strings.md)
+## <a name="see-also"></a>Voir aussi
+- [Types blittable et non blittable](blittable-and-non-blittable-types.md)
+- [Copie et épinglage](copying-and-pinning.md)
+- [Marshaling par défaut pour les tableaux](default-marshaling-for-arrays.md)
+- [Marshaling par défaut pour les objets](default-marshaling-for-objects.md)
+- [Marshaling par défaut pour les chaînes](default-marshaling-for-strings.md)

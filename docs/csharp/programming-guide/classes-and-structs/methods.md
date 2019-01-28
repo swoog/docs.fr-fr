@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: df2d7837217f4267f95ed73948a4eb479cc035c1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fa863a5606c7526ae32bc28a0cfeaa91f8c7b539
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712153"
 ---
 # <a name="methods-c-programming-guide"></a>Méthodes (Guide de programmation C#)
 Une méthode est un bloc de code qui contient une série d'instructions. Un programme provoque l'exécution des instructions en appelant la méthode et en spécifiant les éventuels arguments de méthode requis. En C#, chaque instruction exécutée est effectuée dans le contexte d'une méthode. La méthode Main est le point d'entrée de chaque application C# et elle est appelée par le Common Language Runtime (CLR) au démarrage du programme.  
@@ -30,7 +30,7 @@ Une méthode est un bloc de code qui contient une série d'instructions. Un prog
  [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
 ## <a name="method-access"></a>Accès aux méthodes  
- L'appel d'une méthode sur un objet revient à accéder à un champ. Après le nom de l'objet, ajoutez un point, le nom de la méthode et les parenthèses. Les arguments sont répertoriés entre les parenthèses et séparés par des virgules. Les méthodes de la classe `Motorcycle` peuvent donc être appelées comme dans l'exemple suivant :  
+ L'appel d'une méthode sur un objet revient à accéder à un champ. Après le nom de l'objet, ajoutez un point, le nom de la méthode et les parenthèses. Les arguments sont répertoriés entre les parenthèses et séparés par des virgules. Les méthodes de la classe `Motorcycle` peuvent donc être appelées comme dans l'exemple suivant :  
   
  [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
   
@@ -158,14 +158,14 @@ public Customer this[long id] => store.LookupCustomer(id);
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Classes et structs](index.md)  
-- [Modificateurs d’accès](access-modifiers.md)  
-- [Classes statiques et membres de classe statique](static-classes-and-static-class-members.md)  
-- [Héritage](inheritance.md)  
-- [Classes abstract et sealed et membres de classe](abstract-and-sealed-classes-and-class-members.md)  
-- [params](../../../csharp/language-reference/keywords/params.md)  
-- [return](../../../csharp/language-reference/keywords/return.md)  
-- [out](../../../csharp/language-reference/keywords/out.md)  
-- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Classes et structs](index.md)
+- [Modificateurs d’accès](access-modifiers.md)
+- [Classes statiques et membres de classe statique](static-classes-and-static-class-members.md)
+- [Héritage](inheritance.md)
+- [Classes abstract et sealed et membres de classe](abstract-and-sealed-classes-and-class-members.md)
+- [params](../../../csharp/language-reference/keywords/params.md)
+- [return](../../../csharp/language-reference/keywords/return.md)
+- [out](../../../csharp/language-reference/keywords/out.md)
+- [ref](../../../csharp/language-reference/keywords/ref.md)
 - [Passage de paramètres](passing-parameters.md)

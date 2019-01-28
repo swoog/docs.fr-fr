@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: dd5d85feb520e10a5d89cf91878d092695efb13a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6aabdf9956365548d3f0cdf0cd046343d8129f04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560731"
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilisation de propriétés (Guide de programmation C#)
 Les propriétés allient des caractéristiques des champs et des méthodes. Pour l’utilisateur d’un objet, une propriété s’apparente à un champ. Pour accéder à celle-ci, il doit utiliser la même syntaxe. Pour l’implémenteur d’une classe, une propriété est constituée d’un ou deux blocs de code, représentant un accesseur [get](../../../csharp/language-reference/keywords/get.md) et/ou un accesseur [set](../../../csharp/language-reference/keywords/set.md). Le bloc de code correspondant à l’accesseur `get` est exécuté à la lecture de la propriété ; le bloc de code correspondant à l’accesseur `set` est exécuté au moment où une nouvelle valeur est assignée à la propriété. Une propriété sans accesseur `set` est considérée comme étant en lecture seule. Une propriété sans accesseur `get` est considérée comme étant en écriture seule. Une propriété qui possède les deux accesseurs est en lecture-écriture.  
@@ -102,7 +102,7 @@ Les propriétés allient des caractéristiques des champs et des méthodes. Pour
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Propriétés de l’interface](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Propriétés de l’interface](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)
 - [Propriétés implémentées automatiquement](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)

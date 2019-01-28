@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 3b8f9f124943d2092b65718f5dbf17831252a4a5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708439"
 ---
 # <a name="contextual-keywords-c-reference"></a>Mots clés contextuels (référence C#)
 Un mot clé contextuel sert à donner une signification spécifique dans le code, sans pour autant être un mot réservé en C#. Cette section traite des mots clés contextuels suivants :  
@@ -36,6 +36,6 @@ Un mot clé contextuel sert à donner une signification spécifique dans le code
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Mots clés C#](../../../csharp/language-reference/keywords/index.md)

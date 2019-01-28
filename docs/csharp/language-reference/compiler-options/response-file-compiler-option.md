@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738090"
 ---
 # <a name="-c-compiler-options"></a>@ (Options du compilateur C#)
 L’option @ vous permet de spécifier un fichier qui contient les options du compilateur et les fichiers de code source à compiler.  
@@ -30,7 +30,7 @@ L’option @ vous permet de spécifier un fichier qui contient les options du co
 ## <a name="remarks"></a>Notes  
  Les options du compilateur et les fichiers de code source seront traités par le compilateur exactement comme s’ils avaient été spécifiés sur la ligne de commande.  
   
- Pour spécifier plusieurs fichiers réponse dans une compilation, spécifiez plusieurs options de fichier réponse. Exemple :  
+ Pour spécifier plusieurs fichiers réponse dans une compilation, spécifiez plusieurs options de fichier réponse. Par exemple :  
   
 ```  
 @file1.rsp @file2.rsp  
@@ -54,6 +54,6 @@ L’option @ vous permet de spécifier un fichier qui contient les options du co
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
 - [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)

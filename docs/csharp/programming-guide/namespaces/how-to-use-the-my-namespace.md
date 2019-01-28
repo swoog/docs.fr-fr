@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 00f9083fb9d0ef6c96e19e085a6cff0e0e36f2b0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 39ad5a7b97d3498fe4098faaecc8dc7fe2b43758
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236711"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688858"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Procédure : Utiliser l'espace de noms My (Guide de programmation C#)
 L’espace de noms <xref:Microsoft.VisualBasic.MyServices> (`My` en Visual Basic) permet d’accéder de manière simple et intuitive à un certain nombre de classes .NET Framework, ce qui vous permet d’écrire du code qui interagit avec l’ordinateur, l’application, les paramètres, les ressources, etc. Bien que conçu à l’origine pour une utilisation avec Visual Basic, l’espace de noms `MyServices` peut être utilisé dans les applications C#.  
@@ -41,6 +41,6 @@ L’espace de noms <xref:Microsoft.VisualBasic.MyServices> (`My` en Visual Basic
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)
 - [Utilisation d’espaces de noms](../../../csharp/programming-guide/namespaces/using-namespaces.md)

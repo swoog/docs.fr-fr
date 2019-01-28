@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3764916263f6f88615d61badaf2c32807bcc09b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f24187d0c9992008e7471ffe1a5b75f9768239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494365"
 ---
 # <a name="passing-structures"></a>Passage de structures
 De nombreuses fonctions non managées s’attendent à ce que vous passiez, en tant que paramètre de la fonction, des membres de structures (types définis par l’utilisateur en Visual Basic) ou des membres de classes qui sont définis dans le code managé. Lors du passage de structures ou de classes à du code non managé à l’aide de l’appel de code non managé, vous devez fournir des informations supplémentaires afin de conserver la disposition et l’alignement d’origine. Cette rubrique présente l’attribut <xref:System.Runtime.InteropServices.StructLayoutAttribute>, qui vous permet de définir des types mis en forme. Pour les classes et structures managées, vous pouvez sélectionner parmi plusieurs comportements de disposition prévisible fournis par l’énumération **LayoutKind**.  
@@ -175,8 +175,8 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+## <a name="see-also"></a>Voir aussi
+- [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

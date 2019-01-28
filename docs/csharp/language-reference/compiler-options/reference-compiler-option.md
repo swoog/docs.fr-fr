@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679433"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (Options du compilateur C#)
 L’option **-reference** indique au compilateur d’importer des informations de type [public](../../../csharp/language-reference/keywords/public.md) dans le fichier spécifié du projet actuel, ce qui vous permet de référencer les métadonnées des fichiers d’assembly spécifiés.  
@@ -61,7 +61,7 @@ L’option **-reference** indique au compilateur d’importer des informations d
  Le fichier de réponse csc (.rsp), qui référence les assemblys .NET Framework couramment utilisés, est utilisé par défaut. Utilisez [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) si vous ne voulez pas que le compilateur utilise csc.rsp.  
   
 > [!NOTE]
-> Dans Visual Studio, utilisez la boîte de dialogue **Ajouter une référence**. Pour plus d’informations, consultez [Guide pratique pour ajouter ou supprimer des références à l’aide du gestionnaire de références](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Pour garantir un comportement équivalent selon que vous ajoutez des références à l’aide de `-reference` ou à l’aide de la boîte de dialogue **Ajouter une référence**, définissez la propriété **Incorporer les types interop** sur **False** pour l’assembly que vous ajoutez. La valeur par défaut de la propriété est **True**.  
+> Dans Visual Studio, utilisez la boîte de dialogue **Ajouter une référence**. Pour plus d'informations, voir [Procédure : Ajouter ou supprimer des références à l’aide du gestionnaire de références](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Pour garantir un comportement équivalent selon que vous ajoutez des références à l’aide de `-reference` ou à l’aide de la boîte de dialogue **Ajouter une référence**, définissez la propriété **Incorporer les types interop** sur **False** pour l’assembly que vous ajoutez. La valeur par défaut de la propriété est **True**.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser la fonctionnalité de l’[alias extern](../../../csharp/language-reference/keywords/extern-alias.md).  
@@ -92,7 +92,7 @@ GridV1::Grid
 GridV2::Grid   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

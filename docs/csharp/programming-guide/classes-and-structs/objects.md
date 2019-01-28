@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 439f001450d51885f943cb28752de1689dd4a748
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 12c31db32b2b3ff3da7ed0972ea2cf090701f3e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491740"
 ---
 # <a name="objects-c-programming-guide"></a>Objets (Guide de programmation C#)
 Une définition de classe ou de struct s’apparente à un plan qui spécifie ce que le type peut faire. Un objet est fondamentalement un bloc de mémoire qui a été alloué et configuré selon le plan. Un programme peut créer de nombreux objets de la même classe. Les objets sont également appelés instances. Ils peuvent être stockés dans une variable nommée, dans un tableau ou dans une collection. Le code client est le code qui utilise ces variables pour appeler les méthodes et accéder aux propriétés publiques de l’objet. Dans un langage orienté objet tel que C#, un programme classique se compose de plusieurs objets qui interagissent de façon dynamique.  
@@ -63,10 +63,10 @@ Une définition de classe ou de struct s’apparente à un plan qui spécifie ce
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [object](../../../csharp/language-reference/keywords/object.md)  
-- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [struct](../../../csharp/language-reference/keywords/struct.md)  
-- [new, opérateur](../../../csharp/language-reference/keywords/new-operator.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [object](../../../csharp/language-reference/keywords/object.md)
+- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
+- [new, opérateur](../../../csharp/language-reference/keywords/new-operator.md)
 - [Système de type commun](../../../standard/base-types/common-type-system.md)

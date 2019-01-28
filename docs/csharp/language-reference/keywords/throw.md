@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f9729a3536a6611ed593f16ba3bc09e7af20a4c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4e29c0cc85f0ec6ccd3f428d64121f53b91ae9a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713848"
 ---
 # <a name="throw-c-reference"></a>throw (référence C#)
 
@@ -70,10 +70,10 @@ Les appelants de méthode utilisent alors un bloc `try-catch` ou `try-catch-fina
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../index.md)  
-- [Guide de programmation C#](../../programming-guide/index.md)  
-- [try-catch](try-catch.md)  
-- [Instructions try, catch et throw en C++](try-catch.md)  
-- [Mots clés C#](index.md)  
-- [Instructions de gestion des exceptions](exception-handling-statements.md)  
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [try-catch](try-catch.md)
+- [Instructions try, catch et throw en C++](try-catch.md)
+- [Mots clés C#](index.md)
+- [Instructions de gestion des exceptions](exception-handling-statements.md)
 - [Guide pratique pour lever explicitement des exceptions](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

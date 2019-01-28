@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 6f7eb71b6208b1991044b770a3c42cc05d8fb721
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ba80626a777f9f2d813694abf3deda0ef0c93606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732517"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Méthodes anonymes (Guide de programmation C#)
 Dans les versions de C# antérieures à 2.0, la seule façon de déclarer un type [delegate](../../../csharp/language-reference/keywords/delegate.md) consistait à utiliser des [méthodes nommées](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 a introduit les méthodes anonymes et dans C# 3.0 et ultérieur, les expressions lambda remplacent les méthodes anonymes comme meilleur moyen d’écrire du code « in line ». Toutefois, les informations relatives aux méthodes anonymes figurant dans cette rubrique s’appliquent également aux expressions lambda. Il existe un cas où une méthode anonyme fournit des fonctionnalités non disponibles dans les expressions lambda. Les méthodes anonymes vous permettent d’omettre la liste de paramètres. Cela signifie qu’une méthode anonyme peut être convertie en délégués avec diverses signatures. Cela n’est pas possible avec les expressions lambda. Pour plus d’informations spécifiques aux expressions lambda, consultez [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -59,10 +59,10 @@ Dans les versions de C# antérieures à 2.0, la seule façon de déclarer un ty
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Délégués](../../../csharp/programming-guide/delegates/index.md)  
-- [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Pointeurs et code unsafe](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
-- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Délégués](../../../csharp/programming-guide/delegates/index.md)
+- [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Pointeurs et code unsafe](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Délégués avec méthodes nommées et méthodes anonymes](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)

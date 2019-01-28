@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 7559c24151a3c9acc79c0554112c923a23a88564
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 33f7971a95b8573168da11d2bd2abc80fa74370e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736466"
 ---
 # <a name="as-c-reference"></a>as (référence C#)
 Vous pouvez utiliser l’opérateur `as` pour effectuer certains types de conversions entre des types référence ou des [types Nullable](../../../csharp/programming-guide/nullable-types/index.md) compatibles. Le code suivant fournit un exemple.  
@@ -46,10 +46,10 @@ expression is type ? (type)expression : (type)null
 
 Pour plus d’informations, consultez [Opérateur as](~/_csharplang/spec/expressions.md#the-as-operator) dans la [spécification du langage C#](../language-specification/index.md). La spécification du langage est la source de référence pour la syntaxe C# et son utilisation.
  
-## <a name="see-also"></a>Voir aussi  
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [?: Opérateur](../../../csharp/language-reference/operators/conditional-operator.md)  
+## <a name="see-also"></a>Voir aussi
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [?: Opérateur](../../../csharp/language-reference/operators/conditional-operator.md)
 - [Mots clés des opérateurs](../../../csharp/language-reference/keywords/operator-keywords.md)

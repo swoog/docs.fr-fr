@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 569f2d59bb2abf013a87bdaa694a7fcf36c70042
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c13a00ddad974ebba8eea4fceddd6a9fe3ed942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597578"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Utilisation des fichiers .resx par programmation
 Étant donné que les fichiers de ressources XML (.resx) doivent être constitués de code XML bien défini, notamment un en-tête qui doit respecter un schéma spécifique, suivi de données dans des paires nom/valeur, la création manuelle de ces fichiers est sujette aux erreurs. Alternativement, vous pouvez créer des fichiers .resx par programmation à l’aide de types et de membres de la bibliothèque de classes .NET Framework. Vous pouvez également utiliser la bibliothèque de classes .NET Framework pour récupérer des ressources stockées dans les fichiers .resx. Cette rubrique explique comment utiliser les types et les membres de l’espace de noms <xref:System.Resources> avec des fichiers .resx.  
@@ -84,7 +84,7 @@ ms.locfileid: "33398831"
   
  **al** *resourcesFilename* **-out:** *assemblyFilename*  
   
-## <a name="see-also"></a>Voir aussi  
- [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Voir aussi
+- [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 5cc7c06a763c4b274b154afc581e495a7e2aa09b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e3ba825fcbf40e08a2cb4488de2bbed9257c2508
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592833"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Constructeurs d'instances (Guide de programmation C#)
 Les constructeurs d’instances sont utilisés pour créer et initialiser toutes les variables membres d’instance quand vous utilisez l’expression [new](../../../csharp/language-reference/keywords/new.md) pour créer un objet d’une [classe](../../../csharp/language-reference/keywords/class.md). Pour initialiser une classe [statique](../../../csharp/language-reference/keywords/static.md) ou des variables statiques dans une classe non statique, vous devez définir un constructeur statique. Pour plus d’informations, consultez [Constructeurs statiques](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
@@ -23,7 +23,7 @@ Les constructeurs d’instances sont utilisés pour créer et initialiser toutes
 > [!NOTE]
 >  Pour plus de clarté, cette classe contient des champs publics. L’utilisation de champs publics n’est pas une pratique de programmation recommandée, car elle octroie à n’importe quelle méthode n’importe où dans un programme un accès sans restriction ni vérification aux mécanismes internes d’un objet. Les données membres doivent généralement être privées et doivent être accessibles uniquement via les propriétés et les méthodes de classe.  
   
- Ce constructeur d’instance est appelé chaque fois qu’un objet basé sur la classe `CoOrds` est créé. Un constructeur comme celui-ci, qui n’accepte aucun argument, est un *constructeur par défaut*. Toutefois, il est souvent utile de fournir des constructeurs supplémentaires. Par exemple, nous pouvons ajouter un constructeur à la classe `CoOrds` qui nous permet de spécifier les valeurs initiales pour les données membres :  
+ Ce constructeur d’instance est appelé chaque fois qu’un objet basé sur la classe `Coords` est créé. Un constructeur comme celui-ci, qui n’accepte aucun argument, est un *constructeur par défaut*. Toutefois, il est souvent utile de fournir des constructeurs supplémentaires. Par exemple, nous pouvons ajouter un constructeur à la classe `Coords` qui nous permet de spécifier les valeurs initiales pour les données membres :  
   
  [!code-csharp[csProgGuideObjects#76](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_2.cs)]  
   
@@ -31,7 +31,7 @@ Les constructeurs d’instances sont utilisés pour créer et initialiser toutes
   
  [!code-csharp[csProgGuideObjects#77](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_3.cs)]  
   
- Si une classe n’a pas de constructeur, un constructeur par défaut est généré automatiquement et les valeurs par défaut sont utilisées pour initialiser les champs objet. Par exemple, [int](../../../csharp/language-reference/keywords/int.md) est initialisé à 0. Pour plus d’informations sur les valeurs par défaut, consultez [Tableau des valeurs par défaut](../../../csharp/language-reference/keywords/default-values-table.md). Par conséquent, comme le constructeur par défaut de la classe `CoOrds` initialise toutes les données membres à zéro, il peut être supprimé entièrement sans modification du fonctionnement de la classe. Un exemple complet d’utilisation de plusieurs constructeurs est fourni dans l’exemple 1, plus loin dans cette rubrique, et un exemple d’un constructeur généré automatiquement est fourni dans l’exemple 2.  
+ Si une classe n’a pas de constructeur, un constructeur par défaut est généré automatiquement et les valeurs par défaut sont utilisées pour initialiser les champs objet. Par exemple, [int](../../../csharp/language-reference/keywords/int.md) est initialisé à 0. Pour plus d’informations sur les valeurs par défaut, consultez [Tableau des valeurs par défaut](../../../csharp/language-reference/keywords/default-values-table.md). Par conséquent, comme le constructeur par défaut de la classe `Coords` initialise toutes les données membres à zéro, il peut être supprimé entièrement sans modification du fonctionnement de la classe. Un exemple complet d’utilisation de plusieurs constructeurs est fourni dans l’exemple 1, plus loin dans cette rubrique, et un exemple d’un constructeur généré automatiquement est fourni dans l’exemple 2.  
   
  Les constructeurs d’instances peuvent également servir à appeler les constructeurs d’instances des classes de base. Le constructeur de classe peut appeler le constructeur de la classe de base via l’initialiseur, comme suit :  
   
@@ -60,8 +60,8 @@ Les constructeurs d’instances sont utilisés pour créer et initialiser toutes
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Constructeurs](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [Finaliseurs](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Constructeurs](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Finaliseurs](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 - [static](../../../csharp/language-reference/keywords/static.md)

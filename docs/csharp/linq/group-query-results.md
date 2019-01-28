@@ -1,14 +1,14 @@
 ---
 title: Regrouper les résultats d’une requête (LINQ en C#)
 description: Découvrez comment regrouper les résultats à l’aide de LINQ en C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: f768718cb1435efdc67791612776c9e9ce2b14b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 577a358c31fcf5346e7aab7a2e2b6be10fd1beff
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798331"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857851"
 ---
 # <a name="group-query-results"></a>Regrouper les résultats d’une requête
 
@@ -76,11 +76,11 @@ Copiez-collez la méthode suivante dans la classe `StudentClass`. Remplacez l’
 
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Linq.Enumerable.GroupBy%2A>  
-- <xref:System.Linq.IGrouping%602>  
-- [LINQ (Language Integrated Query)](index.md)  
-- [group, clause](../language-reference/keywords/group-clause.md)  
-- [Types anonymes](../programming-guide/classes-and-structs/anonymous-types.md)  
-- [Effectuer une sous-requête sur une opération de regroupement](perform-a-subquery-on-a-grouping-operation.md)  
-- [Créer un groupe imbriqué](create-a-nested-group.md)  
-- [Regroupement de données](../programming-guide/concepts/linq/grouping-data.md)  
+- <xref:System.Linq.Enumerable.GroupBy%2A>
+- <xref:System.Linq.IGrouping%602>
+- [LINQ (Language Integrated Query)](index.md)
+- [group, clause](../language-reference/keywords/group-clause.md)
+- [Types anonymes](../programming-guide/classes-and-structs/anonymous-types.md)
+- [Effectuer une sous-requête sur une opération de regroupement](perform-a-subquery-on-a-grouping-operation.md)
+- [Créer un groupe imbriqué](create-a-nested-group.md)
+- [Regroupement de données](../programming-guide/concepts/linq/grouping-data.md)

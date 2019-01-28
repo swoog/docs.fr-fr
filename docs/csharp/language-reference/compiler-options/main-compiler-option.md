@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 2f3c9daf98bfe77ea9462c8126f7a8368016875c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36e5f10a61711e3245fa4b69dc583f4bb78e55e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558580"
 ---
 # <a name="-main-c-compiler-options"></a>-main (Options du compilateur C#)
 Cette option spécifie la classe qui contient le point d’entrée du programme dans le cas où plusieurs classes contiennent une méthode **Main**.  
@@ -53,5 +53,5 @@ csc t2.cs t3.cs -main:Test2
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

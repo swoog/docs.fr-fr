@@ -2,12 +2,12 @@
 title: Résolution et publication de nom de pair
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682980"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Résolution et publication de nom de pair
 
@@ -47,5 +47,5 @@ Le pair demandeur continue ce processus avec des itérations successives dans le
   
  Dans l’espace de noms <xref:System.Net.PeerToPeer>, il existe une relation plusieurs-à-plusieurs entre les enregistrements <xref:System.Net.PeerToPeer.PeerName> qui contiennent les points de terminaison, et les clouds PNRP ou les mailles avec lesquels ils communiquent. Lorsqu’il y a des entrées obsolètes ou en double, ou plusieurs nœuds portant le même nom de pair, les nœuds PNRP peuvent obtenir des informations actuelles à l’aide de la classe <xref:System.Net.PeerToPeer.PeerNameResolver>. Les méthodes <xref:System.Net.PeerToPeer.PeerNameResolver> utilisent un seul nom de pair pour simplifier les enregistrements de noms de pairs : de un à plusieurs pairs et d’un pair à plusieurs clouds. Ceci est similaire à une requête effectuée à l’aide d’une jointure de table relationnelle. Lorsque vous avez terminé, l’objet Resolver retourne un <xref:System.Net.PeerToPeer.PeerNameRecordCollection> pour le nom de pair spécifié.  Par exemple, un nom de pair peut apparaître dans tous les enregistrements de noms de pairs de la collection, qui sont classés par cloud. Il s’agit là des instances du nom de pair dont les données prises en charge peuvent être demandées par une application PNRP.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 - <xref:System.Net.PeerToPeer>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 803c3bd4099b838ddc71fea530565f26bd4142df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5868d8782d093a4d3d566708684d3adeb39020ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695112"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procédure : Accéder aux objets Office Interop à l’aide des fonctionnalités Visual C# (Guide de programmation C#)
 Visual C# offre des fonctionnalités qui simplifient l’accès aux objets d’API Office. Les nouvelles fonctionnalités incluent les arguments nommés et les arguments facultatifs, un nouveau type appelé `dynamic` et la possibilité de passer des arguments aux paramètres de référence dans les méthodes COM comme s'il s'agissait de paramètres de valeur.  
@@ -175,8 +175,8 @@ Visual C# offre des fonctionnalités qui simplifient l’accès aux objets d’
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Type.Missing?displayProperty=nameWithType>  
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
-- [Utilisation du type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [Arguments nommés et facultatifs](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- <xref:System.Type.Missing?displayProperty=nameWithType>
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [Utilisation du type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Arguments nommés et facultatifs](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Guide pratique pour utiliser des arguments nommés et facultatifs dans la programmation Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

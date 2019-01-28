@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ddb34fd32d13224faed92bd8ba01933ca19c04a9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5c83ce79bede1ee4e5752ac0b1dcf9647df1f36c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555984"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versioning avec les mots clés override et new (Guide de programmation C#)
 Le langage C# est conçu de telle sorte que la gestion de version entre les classes de [base](../../../csharp/language-reference/keywords/base.md) et les classes dérivées dans différentes bibliothèques puisse évoluer et préserver une compatibilité descendante. Cela signifie, par exemple, que l’introduction dans une [classe](../../../csharp/language-reference/keywords/class.md) de base d’un nouveau membre portant le même nom qu’un membre dans une classe dérivée est totalement prise en charge par C# et n’engendre pas de comportement imprévisible. Cela signifie également qu'une classe doit indiquer de façon explicite si une méthode est conçue pour se substituer à une méthode héritée ou s'il s'agit d'une nouvelle méthode qui masque une méthode héritée portant un nom similaire.  
@@ -69,7 +69,7 @@ Le langage C# est conçu de telle sorte que la gestion de version entre les cla
   
  [!code-csharp[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
   
- Quand `DoWork` est appelée sur une instance de `Derived`, le compilateur C# essaie d’abord de rendre l’appel compatible avec les versions de `DoWork` déclarées à l’origine sur `Derived`. Les méthodes override ne sont pas considérées comme déclarées sur une classe ; il s’agit de nouvelles implémentations d’une méthode déclarée sur une classe de base. Le compilateur C# essaiera de faire correspondre l’appel à une méthode substituée portant le même nom et avec des paramètres compatibles uniquement s’il ne parvient pas à faire correspondre l’appel de méthode à une méthode d’origine sur `Derived`. Exemple :  
+ Quand `DoWork` est appelée sur une instance de `Derived`, le compilateur C# essaie d’abord de rendre l’appel compatible avec les versions de `DoWork` déclarées à l’origine sur `Derived`. Les méthodes override ne sont pas considérées comme déclarées sur une classe ; il s’agit de nouvelles implémentations d’une méthode déclarée sur une classe de base. Le compilateur C# essaiera de faire correspondre l’appel à une méthode substituée portant le même nom et avec des paramètres compatibles uniquement s’il ne parvient pas à faire correspondre l’appel de méthode à une méthode d’origine sur `Derived`. Par exemple :  
   
  [!code-csharp[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
   
@@ -81,7 +81,7 @@ Le langage C# est conçu de telle sorte que la gestion de version entre les cla
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

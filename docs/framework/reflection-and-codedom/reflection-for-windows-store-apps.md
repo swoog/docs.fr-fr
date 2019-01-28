@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d533ac4d4287af551e4fc0c3131c761dbbc135a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: face7f836ece3230ec1be745569060f8b34d814c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604350"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Réflexion dans le .NET Framework pour les applications Windows Store
 Depuis [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework fournit un ensemble de types et membres de réflexion à utiliser dans les applications du [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Ces types et membres sont disponibles dans le .NET Framework complet et dans [.NET pour les applications du Windows Store](https://go.microsoft.com/fwlink/?LinkID=225700). Ce document explique les principales différences entre ceux-là et leurs équivalents dans .NET Framework 4 et les versions antérieures.  
@@ -41,6 +41,6 @@ Depuis [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework four
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Réflexion](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [.NET pour les applications du Windows Store : API prises en charge](https://go.microsoft.com/fwlink/?LinkID=225700)
+## <a name="see-also"></a>Voir aussi
+- [Réflexion](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [.NET pour les applications du Windows Store : API prises en charge](https://go.microsoft.com/fwlink/?LinkID=225700)

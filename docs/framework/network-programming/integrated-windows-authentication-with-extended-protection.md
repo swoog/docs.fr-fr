@@ -2,12 +2,12 @@
 title: Authentification Windows intégrée avec protection étendue
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: e07bc903a60dfff5e9caaf93f9c2bfd579541a96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189704"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591615"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Authentification Windows intégrée avec protection étendue
 Certaines améliorations apportées changent la manière dont l’authentification Windows intégrée est gérée par les classes <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> et les classes associées dans l’espace de noms <xref:System.Net> et les espaces de noms associés. La prise en charge de la protection étendue a été ajoutée pour renforcer la sécurité.  
@@ -148,6 +148,6 @@ Certaines améliorations apportées changent la manière dont l’authentificati
   
  Ces fonctionnalités de protection étendue peuvent également être utilisées par les applications serveur pour l’authentification avec d’autres types de demandes et quand des proxies approuvés sont utilisés.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Security.Authentication.ExtendedProtection>  
- <xref:System.Security.Authentication.ExtendedProtection.Configuration>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Security.Authentication.ExtendedProtection>
+- <xref:System.Security.Authentication.ExtendedProtection.Configuration>

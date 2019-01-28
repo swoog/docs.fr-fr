@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: a75d6dd5fdb74ca3cb6fe28db7415aeb478e2237
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d7971bfb4b6f96a2d8efb9c09f96c0bd2856b9d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528717"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procédure : Convertir une chaîne en nombre (Guide de programmation C#)
 Vous pouvez convertir une [chaîne](../../../csharp/language-reference/keywords/string.md) en nombre en utilisant des méthodes dans la classe <xref:System.Convert> ou en utilisant la méthode `TryParse` des différents types numériques (int, long, float, etc.).  
@@ -56,6 +56,6 @@ Vous pouvez convertir une [chaîne](../../../csharp/language-reference/keywords/
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Types](../../../csharp/programming-guide/types/index.md)  
-- [Guide pratique pour déterminer si une chaîne représente une valeur numérique](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [Types](../../../csharp/programming-guide/types/index.md)
+- [Guide pratique pour déterminer si une chaîne représente une valeur numérique](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Utilitaire de mise en forme .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

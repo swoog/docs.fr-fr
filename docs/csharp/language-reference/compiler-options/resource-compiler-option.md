@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: e02eda66ab9fadbc7b5b042c8940096c70ef6a03
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725699"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (Options du compilateur C#)
 Incorpore la ressource spécifiée dans le fichier de sortie.  
@@ -31,10 +31,10 @@ Incorpore la ressource spécifiée dans le fichier de sortie.
  `filename`  
  Fichier de ressources .NET Framework que vous voulez incorporer dans le fichier de sortie.  
   
- `identifier`(facultatif)  
+ `identifier` (facultatif)  
  Nom logique de la ressource. Il s’agit du nom utilisé pour charger la ressource. La valeur par défaut est le nom du fichier.  
   
- `accessibility-modifier`(facultatif)  
+ `accessibility-modifier` (facultatif)  
  Accessibilité de la ressource : publique ou privée. La valeur par défaut est « public ».  
   
 ## <a name="remarks"></a>Notes  
@@ -67,7 +67,7 @@ Incorpore la ressource spécifiée dans le fichier de sortie.
 csc -resource:rf.resource in.cs  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 27f0df14fef7c261828040d905c9f624f02eddfe
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 36e910328651cc4f91acdfb2d40edea56cde2a9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676482"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Procédure : Retourner des sous-ensembles de propriétés d'éléments dans une requête (Guide de programmation C#)
 Utilisez un type anonyme dans une expression de requête lorsque les deux conditions suivantes s’appliquent :  
@@ -48,6 +48,6 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Types anonymes](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Types anonymes](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [Expressions de requête LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

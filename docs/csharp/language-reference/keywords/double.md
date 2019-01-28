@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 3c0fbe4f03edb829321971831c47f669d75f4d8c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 50e11e8547c2887ace677d2c86dcf055326ff9a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708153"
 ---
 # <a name="double-c-reference"></a>double (référence C#)
 
@@ -63,11 +63,11 @@ Dans l’exemple suivant, un [int](../../../csharp/language-reference/keywords/i
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tableau des valeurs par défaut](../../../csharp/language-reference/keywords/default-values-table.md)  
-- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tableau des types virgule flottante](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-- [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+- [Tableau des valeurs par défaut](../../../csharp/language-reference/keywords/default-values-table.md)
+- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tableau des types virgule flottante](../../../csharp/language-reference/keywords/floating-point-types-table.md)
+- [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

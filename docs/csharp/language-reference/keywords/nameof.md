@@ -6,12 +6,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 61c0744168a6fef0f8c8cfb589602e7aeff0c48b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5641b31a7fe380b2d19969f4baa7a701d74de4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638716"
 ---
 # <a name="nameof-c-reference"></a>nameof (informations de référence sur C#)
 
@@ -137,6 +137,6 @@ Pour plus d’informations, consultez [Expressions Nameof](~/_csharplang/spec/ex
  
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)

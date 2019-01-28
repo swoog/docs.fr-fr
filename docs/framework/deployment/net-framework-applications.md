@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9536b53531d3ee7575a51b8702b34b57338b4f8b
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: 3b0bfbc3ad274ba9cb2176ed8a8fd8dac513bfbb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689625"
 ---
 # <a name="deploying-net-framework-applications"></a>Déploiement d'applications .NET Framework
 Cette section de la documentation .NET Framework fournit des informations essentielles pour le déploiement d'applications .NET Framework, notamment des instructions relatives au chargement des assemblys, à la résolution des références d'assembly et à l'amélioration des performances de votre application grâce à la génération d'images natives.  
@@ -24,5 +24,5 @@ Cette section de la documentation .NET Framework fournit des informations essent
  [Bonnes pratiques pour le chargement d'assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  Explique les moyens d'éviter les problèmes d'identités de type qui peuvent générer des exceptions <xref:System.InvalidCastException> et <xref:System.MissingMethodException>, et d'autres erreurs.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 - [Guide de développement](../../../docs/framework/development-guide.md)

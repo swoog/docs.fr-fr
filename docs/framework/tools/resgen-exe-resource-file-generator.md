@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3d28b7af96dde30117ec952355958ca75ae559
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cbb939228791fa36ee64e499a2ba55dc7ce899ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614580"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
 Le Générateur de fichiers de ressources (Resgen.exe) convertit les fichiers texte (.txt ou .restext) et les fichiers de format de ressource XML (.resx) en fichiers binaires Common Language Runtime (.resources) pouvant être incorporés dans un exécutable binaire runtime ou un assembly satellite. (Consultez [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -329,9 +329,9 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Outils](../../../docs/framework/tools/index.md)  
- [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)  
- [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Voir aussi
+- [Outils](../../../docs/framework/tools/index.md)
+- [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)
+- [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

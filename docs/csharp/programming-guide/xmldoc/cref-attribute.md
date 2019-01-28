@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: af83ae8c6c209886649d4eb1543c47e63bd97449
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: acbf45b5ccd4fcb9cb1c23b843072c2abdeeca25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685943"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref, attribut (Guide de programmation C#)
 L’attribut `cref` dans une balise de documentation XML signifie « référence de code ». Il indique que le texte interne de la balise est un élément de code tel qu’un type, une méthode ou une propriété. Les outils de documentation comme [Sandcastle](https://github.com/EWSoftware/SHFB) utilisent les attributs `cref` pour générer automatiquement des liens hypertexte vers la page où le type ou le membre est documenté.  
@@ -121,5 +121,5 @@ L’attribut `cref` dans une balise de documentation XML signifie « référenc
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Commentaires sur la documentation XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [Commentaires sur la documentation XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
 - [Balises recommandées pour les commentaires de documentation](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

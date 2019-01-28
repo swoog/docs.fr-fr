@@ -2,12 +2,12 @@
 title: -target:winmdobj (Options du compilateur C#)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 38d0dedbca56475d4f2561c99e8b29e01e9d7a90
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608964"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (Options du compilateur C#)
 Si vous utilisez l’option du compilateur **-target:winmdobj**, le compilateur crée un fichier .winmdobj intermédiaire que vous pouvez convertir en fichier binaire (.winmd) Windows Runtime. Le fichier .winmd peut ensuite être consommé par des programmes JavaScript et C++, en plus des programmes en langage managé.  
@@ -46,7 +46,7 @@ Si vous utilisez l’option du compilateur **-target:winmdobj**, le compilateur 
 csc -target:winmdobj filename.cs  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [-target (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [-target (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)

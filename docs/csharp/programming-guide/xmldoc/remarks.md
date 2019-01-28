@@ -9,12 +9,12 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 75324cbe380b577481b5e8e03f486aa3ef0d5996
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: faeb1b07d4778f56ae854d5ece93588cbe5848f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536046"
 ---
 # <a name="ltremarksgt-c-programming-guide"></a>&lt;remarks&gt; (Guide de programmation C#)
 ## <a name="syntax"></a>Syntaxe  
@@ -37,5 +37,5 @@ ms.locfileid: "53243788"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Balises recommandées pour les commentaires de documentation](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

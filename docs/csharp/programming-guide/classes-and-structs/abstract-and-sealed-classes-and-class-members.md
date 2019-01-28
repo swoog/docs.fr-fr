@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 8c0b8e9814bf692e486624dd8a4a99d98337bca9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3257d365bb9816f4cb41d354f78c88ad4fa0f567
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523829"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Classes abstract et sealed et membres de classe (Guide de programmation C#)
 Le mot clé [abstract](../../../csharp/language-reference/keywords/abstract.md) vous permet de créer des classes et des membres de [class](../../../csharp/language-reference/keywords/class.md) qui sont incomplets et doivent être implémentés dans une classe dérivée.  
@@ -27,7 +27,7 @@ Le mot clé [abstract](../../../csharp/language-reference/keywords/abstract.md)
   
  Une classe abstraite ne peut pas être instanciée. Le but d'une classe abstraite est de fournir une définition commune d'une classe de base pouvant être partagée par plusieurs classes dérivées. Par exemple, une bibliothèque de classes peut définir une classe abstraite qui est utilisée comme un paramètre pour beaucoup de ses fonctions, et exiger des programmeurs qui l'utilisent de fournir leur propre implémentation de la classe en créant une classe dérivée.  
   
- Les classes abstraites peuvent également définir des méthodes abstraites. Pour ce faire, ajoutez le mot clé `abstract` avant le type de retour de la méthode. Exemple :  
+ Les classes abstraites peuvent également définir des méthodes abstraites. Pour ce faire, ajoutez le mot clé `abstract` avant le type de retour de la méthode. Par exemple :  
   
  [!code-csharp[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]  
   
@@ -38,7 +38,7 @@ Le mot clé [abstract](../../../csharp/language-reference/keywords/abstract.md)
  Si une méthode `virtual` est déclarée `abstract`, elle demeure virtuelle pour toutes les classes qui héritent de la classe abstraite. Une classe qui hérite d’une méthode abstraite ne peut pas accéder à l’implémentation d’origine de la méthode. Dans l’exemple précédent, `DoWork` sur la classe F ne peut pas appeler `DoWork` sur la classe D. De cette manière, une classe abstraite peut forcer les classes dérivées à fournir de nouvelles implémentations de méthode pour les méthodes virtuelles.  
   
 ## <a name="sealed-classes-and-class-members"></a>Classes sealed et membres de classe  
- Les classes peuvent être déclarées comme [sealed](../../../csharp/language-reference/keywords/sealed.md) en plaçant le mot clé `sealed` avant la définition de classe. Exemple :  
+ Les classes peuvent être déclarées comme [sealed](../../../csharp/language-reference/keywords/sealed.md) en plaçant le mot clé `sealed` avant la définition de classe. Par exemple :  
   
  [!code-csharp[csProgGuideInheritance#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_4.cs)]  
   
@@ -50,9 +50,9 @@ Le mot clé [abstract](../../../csharp/language-reference/keywords/abstract.md)
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Champs](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Champs](../../../csharp/programming-guide/classes-and-structs/fields.md)
 - [Guide pratique pour définir des propriétés abstraites](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

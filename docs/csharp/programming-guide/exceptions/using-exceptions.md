@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 64e62d9c6cfcffb9ea5c0b0e05a546753278e186
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ad664f5b689a2305afc17f4b480fdc445d64e25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583458"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Utilisation d'exceptions (Guide de programmation C#)
 En C#, les erreurs qui se produisent dans le programme au moment de l’exécution sont propagées à travers le programme à l’aide du mécanisme des exceptions. Les exceptions sont levées par le code qui rencontre une erreur et interceptées par le code qui peut corriger l’erreur. Les exceptions peuvent être levées par le CLR (Common Language Runtime) du .NET Framework ou par du code dans un programme. Une fois qu’une exception est levée, elle se propage jusqu’en haut de la pile des appels, jusqu’à ce qu’une instruction `catch` soit trouvée pour l’exception. Les exceptions non interceptées sont gérées par un gestionnaire d’exceptions génériques fourni par le système qui affiche une boîte de dialogue.  
@@ -46,5 +46,5 @@ En C#, les erreurs qui se produisent dans le programme au moment de l’exécut
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Exceptions et gestion des exceptions](../../../csharp/programming-guide/exceptions/index.md)

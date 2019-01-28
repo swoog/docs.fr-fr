@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 0fd917d1af38ba558634dfcf5e3a1abf95420a9d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 136d3959a52b793acddf21ae83b8d8eaec053eee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616275"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (référence C#)
 Il se peut que vous deviez référencer deux versions d’assemblys qui ont le même nom de type qualifié complet. Par exemple, vous pourriez avoir à utiliser plusieurs versions d’un assembly dans la même application. En utilisant un alias d’assembly externe, vous pouvez encapsuler les espaces de noms de chaque assembly dans des espaces de noms racines nommés par l’alias, ce qui permet de les utiliser dans le même fichier.  
@@ -28,7 +28,7 @@ Il se peut que vous deviez référencer deux versions d’assemblys qui ont le m
   
  `/r:GridV2=grid20.dll`  
   
- Cela crée les alias externes `GridV1` et `GridV2`. Pour utiliser ces alias à partir d’un programme, référencez-les en utilisant le mot clé `extern`. Exemple :  
+ Cela crée les alias externes `GridV1` et `GridV2`. Pour utiliser ces alias à partir d’un programme, référencez-les en utilisant le mot clé `extern`. Par exemple :  
   
  `extern alias GridV1;`  
   
@@ -43,9 +43,9 @@ Il se peut que vous deviez référencer deux versions d’assemblys qui ont le m
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-- [Mots clés d’espaces de noms](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [:: Opérateur](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+- [Mots clés d’espaces de noms](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [:: Opérateur](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [/reference (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

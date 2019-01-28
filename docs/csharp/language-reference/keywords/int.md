@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: 3436d2ceeec9eed80f346c28231ba376cf6d5fb6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b1a621b7cce61ecd2c26c72adbdc3aa56749c914
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615648"
 ---
 # <a name="int-c-reference"></a>int (référence C#)
 
@@ -82,11 +82,11 @@ Pour plus d’informations, consultez [Types intégraux](~/_csharplang/spec/type
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Int32>  
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tableau des types intégraux](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.Int32>
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+- [Tableau des types intégraux](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

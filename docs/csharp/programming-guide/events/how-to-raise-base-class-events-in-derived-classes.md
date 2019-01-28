@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: 11f34e230a1f953ba3d886e416f1ece4253e3c8d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6d6e84861ec48be5bccbc050624b0843947cb727
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539862"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Procédure : Déclencher les événements de la classe de base dans les classes dérivées (Guide de programmation C#)
 L’exemple suivant montre la méthode standard employée pour déclarer des événements dans une classe de base pour qu’ils puissent être déclenchés à partir de classes dérivées. Ce modèle est largement utilisé dans les classes Windows Forms de la bibliothèque de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -25,8 +25,8 @@ L’exemple suivant montre la méthode standard employée pour déclarer des év
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Événements](../../../csharp/programming-guide/events/index.md)  
-- [Délégués](../../../csharp/programming-guide/delegates/index.md)  
-- [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Événements](../../../csharp/programming-guide/events/index.md)
+- [Délégués](../../../csharp/programming-guide/delegates/index.md)
+- [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Création de gestionnaires d’événements dans les Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

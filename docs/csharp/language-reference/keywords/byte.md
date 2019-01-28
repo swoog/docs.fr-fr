@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 9c70c5a08e1509e9c8b1a007603abfbf18f03f14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fe2ef272c77b1af3a5b5a7f5bf3efb4836edcf23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691526"
 ---
 # <a name="byte-c-reference"></a>byte (référence C#)
 
@@ -106,13 +106,13 @@ SampleMethod((byte)5);
 
 Pour plus d’informations, consultez [Types intégraux](~/_csharplang/spec/types.md#integral-types) dans la [spécification du langage C#](../language-specification/index.md). La spécification du langage est la source de référence pour la syntaxe C# et son utilisation.
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Byte>  
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tableau des types intégraux](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.Byte>
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+- [Tableau des types intégraux](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
