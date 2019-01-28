@@ -8,28 +8,28 @@ dev_langs:
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cec2b85c55871c8a21a74e79cfcdd041fa063bec
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 56b5b51848858b7f1240059ca30eb48474650b73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555126"
 ---
-# <a name="conversion-of-xml-data-types"></a><span data-ttu-id="4ce89-102">Conversion des types de données XML</span><span class="sxs-lookup"><span data-stu-id="4ce89-102">Conversion of XML Data Types</span></span>
-<span data-ttu-id="4ce89-103">La majorité des méthodes présentes dans la classe **XmlConvert** sont utilisées pour la conversion de données entre le format de chaînes et le format fortement typé.</span><span class="sxs-lookup"><span data-stu-id="4ce89-103">The majority of the methods found in an **XmlConvert** class are used to convert data between strings and strongly-typed formats.</span></span> <span data-ttu-id="4ce89-104">Ces méthodes sont indépendantes des paramètres régionaux.</span><span class="sxs-lookup"><span data-stu-id="4ce89-104">Methods are locale independent.</span></span> <span data-ttu-id="4ce89-105">Cela signifie qu'elles ne prennent pas en compte les paramètres régionaux éventuels lors de la conversion.</span><span class="sxs-lookup"><span data-stu-id="4ce89-105">This means that they do not take into account any locale settings when doing conversion.</span></span>  
+# <a name="conversion-of-xml-data-types"></a><span data-ttu-id="0fa9f-102">Conversion des types de données XML</span><span class="sxs-lookup"><span data-stu-id="0fa9f-102">Conversion of XML Data Types</span></span>
+<span data-ttu-id="0fa9f-103">La majorité des méthodes présentes dans la classe **XmlConvert** sont utilisées pour la conversion de données entre le format de chaînes et le format fortement typé.</span><span class="sxs-lookup"><span data-stu-id="0fa9f-103">The majority of the methods found in an **XmlConvert** class are used to convert data between strings and strongly-typed formats.</span></span> <span data-ttu-id="0fa9f-104">Ces méthodes sont indépendantes des paramètres régionaux.</span><span class="sxs-lookup"><span data-stu-id="0fa9f-104">Methods are locale independent.</span></span> <span data-ttu-id="0fa9f-105">Cela signifie qu'elles ne prennent pas en compte les paramètres régionaux éventuels lors de la conversion.</span><span class="sxs-lookup"><span data-stu-id="0fa9f-105">This means that they do not take into account any locale settings when doing conversion.</span></span>  
   
-## <a name="reading-string-as-types"></a><span data-ttu-id="4ce89-106">Lecture de chaînes comme des types</span><span class="sxs-lookup"><span data-stu-id="4ce89-106">Reading String as types</span></span>  
- <span data-ttu-id="4ce89-107">L'exemple suivant lit une chaîne et la convertit en type **DateTime**.</span><span class="sxs-lookup"><span data-stu-id="4ce89-107">The following sample reads a string and converts it to a **DateTime** type.</span></span>  
+## <a name="reading-string-as-types"></a><span data-ttu-id="0fa9f-106">Lecture de chaînes comme des types</span><span class="sxs-lookup"><span data-stu-id="0fa9f-106">Reading String as types</span></span>  
+ <span data-ttu-id="0fa9f-107">L'exemple suivant lit une chaîne et la convertit en type **DateTime**.</span><span class="sxs-lookup"><span data-stu-id="0fa9f-107">The following sample reads a string and converts it to a **DateTime** type.</span></span>  
   
- <span data-ttu-id="4ce89-108">En supposant l'entrée XML suivante :</span><span class="sxs-lookup"><span data-stu-id="4ce89-108">Given the following XML input:</span></span>  
+ <span data-ttu-id="0fa9f-108">En supposant l'entrée XML suivante :</span><span class="sxs-lookup"><span data-stu-id="0fa9f-108">Given the following XML input:</span></span>  
   
- <span data-ttu-id="4ce89-109">**Entrée**</span><span class="sxs-lookup"><span data-stu-id="4ce89-109">**Input**</span></span>  
+ <span data-ttu-id="0fa9f-109">**Entrée**</span><span class="sxs-lookup"><span data-stu-id="0fa9f-109">**Input**</span></span>  
   
 ```xml  
 <Element>2001-02-27T11:13:23</Element>  
 ```  
   
- <span data-ttu-id="4ce89-110">Ce code convertit la chaîne au format **DateTime** :</span><span class="sxs-lookup"><span data-stu-id="4ce89-110">This code converts the string to the **DateTime** format:</span></span>  
+ <span data-ttu-id="0fa9f-110">Ce code convertit la chaîne au format **DateTime** :</span><span class="sxs-lookup"><span data-stu-id="0fa9f-110">This code converts the string to the **DateTime** format:</span></span>  
   
 ```vb  
 reader.ReadStartElement()  
@@ -43,18 +43,18 @@ DateTime vDateTime = XmlConvert.ToDateTime(reader.ReadString());
 Console.WriteLine(vDateTime);  
 ```  
   
-## <a name="writing-strings-as-types"></a><span data-ttu-id="4ce89-111">Écriture de chaînes comme des types</span><span class="sxs-lookup"><span data-stu-id="4ce89-111">Writing Strings as types</span></span>  
- <span data-ttu-id="4ce89-112">L'exemple suivant lit un type **Int32** et le convertit en chaîne.</span><span class="sxs-lookup"><span data-stu-id="4ce89-112">The following sample reads an **Int32** and converts it to a string.</span></span>  
+## <a name="writing-strings-as-types"></a><span data-ttu-id="0fa9f-111">Écriture de chaînes comme des types</span><span class="sxs-lookup"><span data-stu-id="0fa9f-111">Writing Strings as types</span></span>  
+ <span data-ttu-id="0fa9f-112">L'exemple suivant lit un type **Int32** et le convertit en chaîne.</span><span class="sxs-lookup"><span data-stu-id="0fa9f-112">The following sample reads an **Int32** and converts it to a string.</span></span>  
   
- <span data-ttu-id="4ce89-113">En supposant l'entrée XML suivante :</span><span class="sxs-lookup"><span data-stu-id="4ce89-113">Given the following XML input:</span></span>  
+ <span data-ttu-id="0fa9f-113">En supposant l'entrée XML suivante :</span><span class="sxs-lookup"><span data-stu-id="0fa9f-113">Given the following XML input:</span></span>  
   
- <span data-ttu-id="4ce89-114">**Entrée**</span><span class="sxs-lookup"><span data-stu-id="4ce89-114">**Input**</span></span>  
+ <span data-ttu-id="0fa9f-114">**Entrée**</span><span class="sxs-lookup"><span data-stu-id="0fa9f-114">**Input**</span></span>  
   
 ```xml  
 <TestInt32>-2147483648</TestInt32>  
 ```  
   
- <span data-ttu-id="4ce89-115">Ce code convertit le type **Int32** en type **String**:</span><span class="sxs-lookup"><span data-stu-id="4ce89-115">This code converts the **Int32** into a **String**:</span></span>  
+ <span data-ttu-id="0fa9f-115">Ce code convertit le type **Int32** en type **String**:</span><span class="sxs-lookup"><span data-stu-id="0fa9f-115">This code converts the **Int32** into a **String**:</span></span>  
   
 ```vb  
 Dim vInt32 As Int32 = -2147483648  
@@ -66,7 +66,7 @@ Int32 vInt32=-2147483648;
 writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4ce89-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4ce89-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0fa9f-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0fa9f-116">See also</span></span>
 
-- [<span data-ttu-id="4ce89-117">Conversion de chaînes en types de données .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4ce89-117">Converting Strings to .NET Framework Data Types</span></span>](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
-- [<span data-ttu-id="4ce89-118">Conversion de types .NET Framework en chaînes</span><span class="sxs-lookup"><span data-stu-id="4ce89-118">Converting .NET Framework Types to Strings</span></span>](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [<span data-ttu-id="0fa9f-117">Conversion de chaînes en types de données .NET Framework</span><span class="sxs-lookup"><span data-stu-id="0fa9f-117">Converting Strings to .NET Framework Data Types</span></span>](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
+- [<span data-ttu-id="0fa9f-118">Conversion de types .NET Framework en chaînes</span><span class="sxs-lookup"><span data-stu-id="0fa9f-118">Converting .NET Framework Types to Strings</span></span>](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
