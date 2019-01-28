@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 81118b9e97f320bffdbb58e5e1a2859052c4cee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582097"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 Spécifie qu'une propriété ou procédure substitue une propriété ou procédure ayant un nom identique et ayant été héritée d'une classe de base.  
@@ -31,7 +31,7 @@ Spécifie qu'une propriété ou procédure substitue une propriété ou procédu
   
 -   **Modificateurs combinés.** Vous ne pouvez pas spécifier `Overrides` avec `Shadows` ou `Shared` dans la même déclaration. Comme un élément de substitution est implicitement substituable, vous ne pouvez pas combiner `Overridable` avec `Overrides`.  
   
--   **Correspondance entre Signatures.** La signature de cette déclaration doit correspondre exactement à la *signature* de la propriété ou procédure qu’elle remplace. Cela signifie que les listes de paramètres doivent avoir le même nombre de paramètres, dans le même ordre, avec les mêmes types de données.  
+-   **Faire correspondre les Signatures.** La signature de cette déclaration doit correspondre exactement à la *signature* de la propriété ou procédure qu’elle substitue. Cela signifie que les listes de paramètres doivent avoir le même nombre de paramètres, dans le même ordre, avec les mêmes types de données.  
   
      Outre la signature, la déclaration de substitution doit également correspondre exactement à ce qui suit :  
   
@@ -61,11 +61,11 @@ Spécifie qu'une propriété ou procédure substitue une propriété ou procédu
   
  [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)  
- [Occultation dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Types génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Liste de types](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>Voir aussi
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Mots clés](../../../visual-basic/language-reference/keywords/index.md)
+- [Occultation dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Liste de types](../../../visual-basic/language-reference/statements/type-list.md)
