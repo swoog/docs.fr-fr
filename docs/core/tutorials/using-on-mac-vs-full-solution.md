@@ -4,12 +4,12 @@ description: Cette rubrique vous guide lors de la génération d’une solution 
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 710ce4c26bf06f7f7a9b1dc633fa55ddb3477dd6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f06a0b9ae9eeb9ff9020641c6f12744725f30f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727753"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Génération d’une solution .NET Core complète sur macOS à l’aide de Visual Studio pour Mac
 
@@ -192,4 +192,4 @@ Les tests unitaires effectuent des tests logiciels automatisés pendant le déve
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Notes de publication de Visual Studio 2017 pour Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
+- [Notes de publication de Visual Studio 2017 pour Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
