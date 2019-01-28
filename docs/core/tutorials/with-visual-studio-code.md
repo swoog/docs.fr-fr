@@ -4,12 +4,12 @@ description: Découvrez comment créer et déboguer votre première application 
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ea8b93128e4acd435ad95fc42257df6ab22812fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620550"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Bien démarrer avec C# et Visual Studio Code
 
@@ -140,5 +140,5 @@ L’extension Visual Studio Code C# peut générer automatiquement les ressource
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Configuration de Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-* [Débogage dans Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+- [Configuration de Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Débogage dans Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

@@ -2,12 +2,12 @@
 title: Scripts dotnet-install
 description: Découvrez les scripts dotnet-install pour installer les outils CLI .NET Core et le runtime partagé.
 ms.date: 01/16/2019
-ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: f796ac494c0be5458b3ea192e809a4d875bcc6dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608788"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Documentation sur les scripts dotnet-install
 
@@ -200,5 +200,5 @@ Vous pouvez installer une version spécifique à l’aide de l’argument `--ver
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Versions de .NET Core](https://github.com/dotnet/core/releases)
-* [Archive de téléchargement de .NET Core Runtime et du Kit SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [Versions de .NET Core](https://github.com/dotnet/core/releases)
+- [Archive de téléchargement de .NET Core Runtime et du Kit SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
