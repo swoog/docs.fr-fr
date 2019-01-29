@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615976"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Rétroaction dans les expressions régulières
 <a name="top"></a> La rétroaction se produit lorsqu'un modèle d'expression régulière contient des quantificateurs [facultatifs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) ou des [constructions d'alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), et que le moteur des expressions régulières retourne à l'état enregistré précédent pour poursuivre la recherche d'une correspondance. La rétroaction est essentielle à la puissance des expressions régulières ; elle permet aux expressions d'être puissantes et flexibles et de correspondre à des modèles très complexes. Cependant, cette puissance a un coût. La rétroaction est souvent le facteur le plus important qui affecte les performances du moteur des expressions régulières. Heureusement, le développeur contrôle le comportement du moteur des expressions régulières et comment il utilise la rétroaction. Cette rubrique explique comment la rétroaction fonctionne et comment elle peut être activée.  
@@ -137,7 +137,7 @@ ms.locfileid: "53130089"
   
  Une exception <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> indique que le moteur des expressions régulières n’a pas pu trouver de correspondance dans l’intervalle de délai d’attente spécifié, mais n’indique pas pourquoi l’exception a été levée. Cela peut provenir de la rétroaction excessive, mais il est possible que l'intervalle de délai d'attente était trop faible étant donné la charge système au moment où l'exception a été levée. Lorsque vous gérez l'exception, vous pouvez choisir d'abandonner d'autres correspondances avec la chaîne d'entrée ou augmenter l'intervalle de délai d'attente et de retenter l'opération de mise en correspondance.  
   
- Par exemple, le code suivant appelle le constructeur <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> pour instancier un objet <xref:System.Text.RegularExpressions.Regex> avec un délai d'attente d'une seconde. Le modèle d'expression régulière `(a+)+$`, qui correspond à une ou plusieurs séquences d'un ou plusieurs caractères « a » à la fin d'une ligne, est soumis à une rétroaction excessive. Si une <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> est levée, l'exemple augmente la valeur du délai d'attente jusqu'à un intervalle maximal de trois secondes. Après cela, il abandonne la tentative pour mettre en correspondance le modèle.  
+ Par exemple, le code suivant appelle le constructeur <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> pour instancier un objet <xref:System.Text.RegularExpressions.Regex> avec un délai d'attente d'une seconde. Le modèle d'expression régulière `(a+)+$`, qui correspond à une ou plusieurs séquences d'un ou plusieurs caractères « a » à la fin d'une ligne, est soumis à une rétroaction excessive. Si une <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> est levée, l'exemple augmente la valeur du délai d'attente jusqu'à un intervalle maximal de trois secondes. Après cela, il abandonne la tentative pour mettre en correspondance le modèle.  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
@@ -157,7 +157,7 @@ ms.locfileid: "53130089"
   
  `(?<=` *sous-expression* `)` est une assertion de postanalyse positive ; c'est-à-dire que le ou les caractères situés avant la position actuelle doivent correspondre à la *sous-expression*. `(?<!`*sous-expression*`)` est une assertion de postanalyse négative ; c'est-à-dire que le ou les caractères situés avant la position actuelle ne doivent pas correspondre à la *sous-expression*. Les assertions de postanalyse positive et négative sont très utiles quand la *sous-expression* est un sous-ensemble de la sous-expression précédente.  
   
- L'exemple suivant utilise deux modèles d'expressions régulières équivalents qui valident le nom d'utilisateur dans une adresse e-mail. Le premier modèle est sujet à des performances médiocres dues à une rétroaction excessive. Le second modèle modifie la première expression régulière en remplaçant un quantificateur imbriqué par une assertion de postanalyse positive. La sortie de l'exemple indique la durée d'exécution de la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.  
+ L'exemple suivant utilise deux modèles d'expressions régulières équivalents qui valident le nom d'utilisateur dans une adresse e-mail. Le premier modèle est sujet à des performances médiocres dues à une rétroaction excessive. Le second modèle modifie la première expression régulière en remplaçant un quantificateur imbriqué par une assertion de postanalyse positive. La sortie de l'exemple indique la durée d'exécution de la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
@@ -167,7 +167,7 @@ ms.locfileid: "53130089"
 |Motif|Description|  
 |-------------|-----------------|  
 |`^`|Démarrer la correspondance au début de la chaîne.|  
-|`[0-9A-Z]`|Mettre en correspondance un caractère alphanumérique. Cette comparaison ne respecte pas la casse, parce que la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
+|`[0-9A-Z]`|Mettre en correspondance un caractère alphanumérique. Cette comparaison ne respecte pas la casse, parce que la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
 |`[-.\w]*`|Mettre en correspondance zéro, une ou plusieurs occurrences d'un trait d'union, d'un point ou d'un caractère alphabétique.|  
 |`[0-9A-Z]`|Mettre en correspondance un caractère alphanumérique.|  
 |`([-.\w]*[0-9A-Z])*`|Mettre en correspondance zéro, une ou plusieurs occurrences de la combinaison de zéro ou plus traits d'union, points ou caractères alphabétiques, suivis d'un caractère alphanumérique. Il s'agit du premier groupe de capture.|  
@@ -219,8 +219,8 @@ ms.locfileid: "53130089"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md)  
-- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
-- [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
-- [Constructions d’alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
+- [Constructions d’alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
