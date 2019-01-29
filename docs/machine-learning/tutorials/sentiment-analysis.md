@@ -4,12 +4,12 @@ description: Découvrez comment utiliser ML.NET dans un scénario de classificat
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: bf4e5f00371cba1e6546903a1d27e833b0e57271
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 47cf9deb9452d15aee8cf4c1ebc5e3d0f1aa10ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628003"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification binaire d’une analyse de sentiments
 
@@ -319,14 +319,13 @@ Ajoutez un appel à la nouvelle méthode à partir de la méthode `Main`, juste 
 
 [!code-csharp[CallPredict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#16 "Call the Predict method")]
 
-Bien que le `model` est un `transformer` qui fonctionne sur plusieurs lignes de données, un scénario de production très courant est nécessaire pour les prédictions sur des exemples individuels. Le <xref:Microsoft.ML.PredictionEngine%602> est un wrapper retourné par la méthode `CreatePredictionEngine`. Nous allons ajouter le code suivant pour créer le `PredictionFunction` comme première ligne dans la méthode `Predict` :
+Bien que le `model` est un `transformer` qui fonctionne sur plusieurs lignes de données, un scénario de production très courant est nécessaire pour les prédictions sur des exemples individuels. Le <xref:Microsoft.ML.PredictionEngine%602> est un wrapper retourné par la méthode `CreatePredictionEngine`. Nous allons ajouter le code suivant pour créer le `PredictionEngine` comme première ligne dans la méthode `Predict` :
 
 [!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
   
 Ajoutez un commentaire pour tester la prédiction du modèle formé dans la méthode `Predict` en créant une instance de `SentimentData` :
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for single prediction")]
-
 
  Vous pouvez l’utiliser pour prédire le sentiment positif ou négatif d’une instance unique de données de commentaires. Pour obtenir une prédiction, utilisez <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> sur les données. Notez que les données d’entrée constituent une chaîne et que le modèle inclut la fonctionnalisation. Votre pipeline est synchronisé durant l’apprentissage et la prédiction. Vous n’aviez pas à écrire le code de prétraitement/fonctionnalisation spécifiquement pour les prédictions, et la même API gère le traitement par lots et les prédictions à usage unique.
 
@@ -437,4 +436,4 @@ Dans ce didacticiel, vous avez appris à :
 
 Passer au tutoriel suivant pour en savoir plus
 > [!div class="nextstepaction"]
-> [Prédiction du prix d’une course de taxi](taxi-fare.md)
+> [Classification des problèmes](github-issue-classification.md)

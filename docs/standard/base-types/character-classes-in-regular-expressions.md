@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: c82d4aac75fb31ec7741338fde046daefc754394
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622947"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caractères dans les expressions régulières
 <a name="Top"></a> Une classe de caractères définit un jeu de caractères, chacun d'entre eux pouvant apparaître dans une chaîne d'entrée pour aboutir à une correspondance. Le langage d’expression régulière dans .NET prend en charge les classes de caractères suivantes :  
@@ -160,7 +160,7 @@ ms.locfileid: "53131467"
 ## <a name="any-character-"></a>N'importe quel caractère :.  
  Le point (.) correspond à n'importe quel caractère à l'exception de `\n` (caractère de saut de ligne, \u000A), avec les deux qualifications suivantes :  
   
--   Si un modèle d’expression régulière est modifié par l’option <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> ou si la partie du modèle qui contient la classe de caractères `.` est modifiée par l’option `s`, `.` correspond à n’importe quel caractère. Pour plus d'informations, consultez [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
+-   Si un modèle d’expression régulière est modifié par l’option <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> ou si la partie du modèle qui contient la classe de caractères `.` est modifiée par l’option `s`, `.` correspond à n’importe quel caractère. Pour plus d'informations, consultez [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md).  
   
      L'exemple suivant illustre le comportement différent de la classe de caractères `.` par défaut et avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. L'expression régulière `^.+` commence au début de la chaîne et correspond à tous les caractères. Par défaut, la correspondance se termine à la fin de la première ligne ; le modèle d'expression régulière correspond au retour chariot, à `\r` ou à \u000D, mais il ne correspond pas à `\n`. Étant donné que l'option <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interprète la chaîne d'entrée entière comme une ligne unique, il correspond à chaque caractère de la chaîne d'entrée, notamment `\n`.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "53131467"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Étant donné qu'il correspond à n'importe quel caractère, l'élément de langage `.` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère. Pour plus d'informations, consultez [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Étant donné qu'il correspond à n'importe quel caractère, l'élément de langage `.` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère. Pour plus d'informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  [Retour au début](#Top)  
   
@@ -248,7 +248,7 @@ ms.locfileid: "53131467"
  Si un comportement conforme à ECMAScript est spécifié, `\w` est équivalent à `[a-zA-Z_0-9]`. Pour plus d’informations sur les expressions régulières ECMAScript, consultez la section « Comportement de correspondance ECMAScript » dans [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Étant donné qu'il correspond à n'importe quel caractère alphabétique, l'élément de langage `\w` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère alphabétique, suivi par un caractère alphabétique spécifique. Pour plus d'informations, consultez [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Étant donné qu'il correspond à n'importe quel caractère alphabétique, l'élément de langage `\w` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère alphabétique, suivi par un caractère alphabétique spécifique. Pour plus d'informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  L'exemple suivant utilise l'élément de langage `\w` pour le faire corresponde à des caractères en double dans un mot. L'exemple définit un modèle d'expression régulière, `(\w)\1`, qui peut être interprété comme suit.  
   
@@ -506,7 +506,7 @@ ms.locfileid: "53131467"
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> ou<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - ou -<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -594,6 +594,6 @@ ms.locfileid: "53131467"
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Char.GetUnicodeCategory%2A>  
-- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- <xref:System.Char.GetUnicodeCategory%2A>
+- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md)
