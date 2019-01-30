@@ -2,12 +2,12 @@
 title: Documentation XML (F#)
 description: En savoir plus sur la prise en charge dans F# pour générer la documentation à partir de commentaires.
 ms.date: 05/16/2016
-ms.openlocfilehash: a1fb5eb682ff1188136b31b64e2d7c537d2c9a0e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c5305dea8832112644710b2863269ef00feddd10
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153642"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204676"
 ---
 # <a name="xml-documentation"></a>Documentation XML
 
@@ -15,7 +15,7 @@ Vous pouvez générer la documentation à partir de trois barres obliques (/ / /
 
 ## <a name="generating-documentation-from-comments"></a>Générer la Documentation à partir de commentaires
 
-La prise en charge dans F# pour générer la documentation à partir de commentaires est identique à celui dans d’autres langages .NET Framework. Comme dans d’autres langages .NET Framework, le [-doc option du compilateur](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) vous permet de produire un fichier XML qui contient des informations que vous pouvez convertir dans la documentation à l’aide d’un outil tel que Sandcastle. La documentation générée à l’aide des outils conçus pour une utilisation avec les assemblys qui sont écrits dans d’autres langages .NET Framework généralement produire une vue de l’API sont basées sur la forme compilée de F# construit. À moins que les outils prennent en charge F#, documentation générée par ces outils ne correspond pas à la F# vue d’une API.
+La prise en charge dans F# pour générer la documentation à partir de commentaires est identique à celui dans d’autres langages .NET Framework. Comme dans d’autres langages .NET Framework, le [-doc option du compilateur](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) vous permet de produire un fichier XML qui contient des informations que vous pouvez convertir dans la documentation à l’aide d’un outil tel que [DocFX](https://dotnet.github.io/docfx/) ou [ Sandcastle](https://github.com/EWSoftware/SHFB). La documentation générée à l’aide des outils conçus pour une utilisation avec les assemblys qui sont écrits dans d’autres langages .NET Framework généralement produire une vue de l’API sont basées sur la forme compilée de F# construit. À moins que les outils prennent en charge F#, documentation générée par ces outils ne correspond pas à la F# vue d’une API.
 
 Pour plus d’informations sur la façon de générer la documentation à partir de XML, consultez [commentaires de Documentation XML &#40;C&#35; Guide de programmation&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
@@ -25,16 +25,16 @@ Il existe deux façons d’écrire des commentaires de documentation XML. Une co
 
 |Syntaxe de balise|Description|
 |----------|-----------|
-|**\<c\>**_texte_**\</c\>**|Spécifie que *texte* est le code. Cette balise peut être utilisée par les générateurs de documentation pour afficher du texte dans une police appropriée pour le code.|
-|**\<Résumé\>**_texte_ **\< /summary\>**|Spécifie que *texte* est une brève description de l’élément de programme. La description est généralement une ou deux phrases.|
-|**\<Remarques\>**_texte_ **\< /Remarques\>**|Spécifie que *texte* contient des informations supplémentaires sur l’élément de programme.|
-|**\<Param nom = «**_nom_**»\>**_description_**\</param\>**|Spécifie le nom et la description pour un paramètre de fonction ou une méthode.|
-|**\<typeparam nom = «**_nom_**»\>**_description_**\</typeparam\>**|Spécifie le nom et la description pour un paramètre de type.|
-|**\<Retourne\>**_texte_ **\< /retourne\>**|Spécifie que *texte* décrit la valeur de retour d’une fonction ou une méthode.|
-|**\<exception cref = »**_type_**»\>**_description_**\</exception\>**|Spécifie le type d’exception qui peut être générée et les circonstances dans lesquelles elle est levée.|
-|**\<Voir cref = »**_référence_**»\>**_texte_ **\< /consultez\>**|Spécifie un lien inline vers un autre élément de programme. Le *référence* est le nom tel qu’il apparaît dans le fichier de documentation XML. Le *texte* est le texte affiché dans le lien.|
-|**\<seealso cref = »**_référence_**» /\>**|Spécifie un lien Voir aussi la documentation pour un autre type. Le *référence* est le nom tel qu’il apparaît dans le fichier de documentation XML. Voir aussi des liens apparaissent généralement en bas d’une page de documentation.|
-|**\<Para\>**_texte_**\</para\>**|Spécifie un paragraphe de texte. Cela permet de séparer le texte à l’intérieur de la **notes** balise.|
+|**\<c\>**_text_**\</c\>**|Spécifie que *texte* est le code. Cette balise peut être utilisée par les générateurs de documentation pour afficher du texte dans une police appropriée pour le code.|
+|**\<summary\>**_text_**\</summary\>**|Spécifie que *texte* est une brève description de l’élément de programme. La description est généralement une ou deux phrases.|
+|**\<remarks\>**_text_**\</remarks\>**|Spécifie que *texte* contient des informations supplémentaires sur l’élément de programme.|
+|**\<param name="**_name_**"\>**_description_**\</param\>**|Spécifie le nom et la description pour un paramètre de fonction ou une méthode.|
+|**\<typeparam name="**_name_**"\>**_description_**\</typeparam\>**|Spécifie le nom et la description pour un paramètre de type.|
+|**\<returns\>**_text_**\</returns\>**|Spécifie que *texte* décrit la valeur de retour d’une fonction ou une méthode.|
+|**\<exception cref="**_type_**"\>**_description_**\</exception\>**|Spécifie le type d’exception qui peut être générée et les circonstances dans lesquelles elle est levée.|
+|**\<see cref="**_reference_**"\>**_text_**\</see\>**|Spécifie un lien inline vers un autre élément de programme. Le *référence* est le nom tel qu’il apparaît dans le fichier de documentation XML. Le *texte* est le texte affiché dans le lien.|
+|**\<seealso cref="**_reference_**"/\>**|Spécifie un lien Voir aussi la documentation pour un autre type. Le *référence* est le nom tel qu’il apparaît dans le fichier de documentation XML. Voir aussi des liens apparaissent généralement en bas d’une page de documentation.|
+|**\<para\>**_text_**\</para\>**|Spécifie un paragraphe de texte. Cela permet de séparer le texte à l’intérieur de la **notes** balise.|
 
 ## <a name="example"></a>Exemple
 
