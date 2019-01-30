@@ -5,6 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
+ms.openlocfilehash: 78dfaf46d1531e9d416b25d7ad4a595d5b3f947b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266908"
 ---
 # <a name="net-core-application-deployment"></a>Déploiement d’applications .NET Core
 
@@ -60,7 +66,7 @@ Elle a également plusieurs inconvénients :
 
 - La taille de votre package de déploiement est relativement importante car vous devez inclure .NET Core ainsi que votre application et ses dépendances tierces.
 
-  À compter de .NET Core 2.0, vous pouvez réduire la taille de votre déploiement sur les systèmes Linux d’environ 28 Mo à l’aide du [*mode de globalisation invariant*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) de .NET Core. En règle générale, .NET Core sur Linux s’appuie sur les [bibliothèques ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) pour la prise en charge de la globalisation. En mode invariant, les bibliothèques ne sont pas incluses dans votre déploiement, et toutes les cultures se comportent comme la [culture invariante](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  À compter de .NET Core 2.0, vous pouvez réduire la taille de votre déploiement sur les systèmes Linux d’environ 28 Mo à l’aide du [*mode de globalisation invariant*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) de .NET Core. En règle générale, .NET Core sur Linux s’appuie sur les [bibliothèques ICU](http://icu-project.org) pour la prise en charge de la globalisation. En mode invariant, les bibliothèques ne sont pas incluses dans votre déploiement, et toutes les cultures se comportent comme la [culture invariante](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Le déploiement de nombreuses applications .NET Core autonomes sur un système peut consommer une quantité significative d’espace disque car chaque application duplique les fichiers de .NET Core.
 
