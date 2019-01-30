@@ -4,7 +4,7 @@
 ## [Affectation de noms forts](strong-naming.md)
 ## [NuGet](nuget.md)
 ### [Dépendances](dependencies.md)
-### [SourceLink](sourcelink.md)
+### [Lien source](sourcelink.md)
 ### [Publication](publish-nuget-package.md)
 ## [Gestion des versions](versioning.md)
 ### [Modifications avec rupture](breaking-changes.md)
