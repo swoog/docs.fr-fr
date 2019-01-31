@@ -1,5 +1,5 @@
 ---
-title: '&lt;supprimer&gt; élément pour NameValueSectionHandler et DictionarySectionHandler'
+title: <remove> élément pour NameValueSectionHandler et DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -9,52 +9,52 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: ece76f06f5ecbf47302b62a5e546cc13298106bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c86d231a4e3e8e15df94017a6ca461b365643ea5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535578"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267415"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="7a0e5-102">\<Supprimer >, élément pour NameValueSectionHandler et DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="7a0e5-102">\<remove> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="f12a5-102">\<Supprimer >, élément pour NameValueSectionHandler et DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="f12a5-102">\<remove> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 
-<span data-ttu-id="7a0e5-103">Supprime un paramètre défini précédemment.</span><span class="sxs-lookup"><span data-stu-id="7a0e5-103">Removes a previously defined setting.</span></span>
+<span data-ttu-id="f12a5-103">Supprime un paramètre défini précédemment.</span><span class="sxs-lookup"><span data-stu-id="f12a5-103">Removes a previously defined setting.</span></span>
 
-<span data-ttu-id="7a0e5-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="7a0e5-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="7a0e5-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="7a0e5-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
-<span data-ttu-id="7a0e5-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span><span class="sxs-lookup"><span data-stu-id="7a0e5-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+<span data-ttu-id="f12a5-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="f12a5-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="f12a5-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="f12a5-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
+<span data-ttu-id="f12a5-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span><span class="sxs-lookup"><span data-stu-id="f12a5-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="7a0e5-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7a0e5-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f12a5-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="f12a5-107">Syntax</span></span>
 
 ```xml
 <add remove="key" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="7a0e5-108">Attribut</span><span class="sxs-lookup"><span data-stu-id="7a0e5-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="f12a5-108">Attribut</span><span class="sxs-lookup"><span data-stu-id="f12a5-108">Attribute</span></span>
 
-|           | <span data-ttu-id="7a0e5-109">Description</span><span class="sxs-lookup"><span data-stu-id="7a0e5-109">Description</span></span> |
+|           | <span data-ttu-id="f12a5-109">Description</span><span class="sxs-lookup"><span data-stu-id="f12a5-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="7a0e5-110">**key**</span><span class="sxs-lookup"><span data-stu-id="7a0e5-110">**key**</span></span>   | <span data-ttu-id="7a0e5-111">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="7a0e5-111">Required attribute.</span></span><br><br><span data-ttu-id="7a0e5-112">Spécifie le nom du paramètre à supprimer.</span><span class="sxs-lookup"><span data-stu-id="7a0e5-112">Specifies the name of the setting to remove.</span></span> |
+| <span data-ttu-id="f12a5-110">**key**</span><span class="sxs-lookup"><span data-stu-id="f12a5-110">**key**</span></span>   | <span data-ttu-id="f12a5-111">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="f12a5-111">Required attribute.</span></span><br><br><span data-ttu-id="f12a5-112">Spécifie le nom du paramètre à supprimer.</span><span class="sxs-lookup"><span data-stu-id="f12a5-112">Specifies the name of the setting to remove.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="7a0e5-113">Élément parent</span><span class="sxs-lookup"><span data-stu-id="7a0e5-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="f12a5-113">Élément parent</span><span class="sxs-lookup"><span data-stu-id="f12a5-113">Parent element</span></span>
 
-| <span data-ttu-id="7a0e5-114">Élément</span><span class="sxs-lookup"><span data-stu-id="7a0e5-114">Element</span></span> | <span data-ttu-id="7a0e5-115">Description</span><span class="sxs-lookup"><span data-stu-id="7a0e5-115">Description</span></span> |
+| <span data-ttu-id="f12a5-114">Élément</span><span class="sxs-lookup"><span data-stu-id="f12a5-114">Element</span></span> | <span data-ttu-id="f12a5-115">Description</span><span class="sxs-lookup"><span data-stu-id="f12a5-115">Description</span></span> |
 | ------- | ------------|
-| [<span data-ttu-id="7a0e5-116">**\<sectionName>** Element</span><span class="sxs-lookup"><span data-stu-id="7a0e5-116">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="7a0e5-117">Définit les paramètres pour les sections de configuration personnalisées qui utilisent le <xref:System.Configuration.NameValueSectionHandler> et <xref:System.Configuration.DictionarySectionHandler> classes.</span><span class="sxs-lookup"><span data-stu-id="7a0e5-117">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
+| [<span data-ttu-id="f12a5-116">**\<sectionName>** Element</span><span class="sxs-lookup"><span data-stu-id="f12a5-116">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="f12a5-117">Définit les paramètres pour les sections de configuration personnalisées qui utilisent le <xref:System.Configuration.NameValueSectionHandler> et <xref:System.Configuration.DictionarySectionHandler> classes.</span><span class="sxs-lookup"><span data-stu-id="f12a5-117">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="7a0e5-118">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="7a0e5-118">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="f12a5-118">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="f12a5-118">Child elements</span></span>
 
-<span data-ttu-id="7a0e5-119">Aucun.</span><span class="sxs-lookup"><span data-stu-id="7a0e5-119">None</span></span>
+<span data-ttu-id="f12a5-119">Aucun.</span><span class="sxs-lookup"><span data-stu-id="f12a5-119">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="7a0e5-120">Notes</span><span class="sxs-lookup"><span data-stu-id="7a0e5-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f12a5-120">Notes</span><span class="sxs-lookup"><span data-stu-id="f12a5-120">Remarks</span></span>
 
-<span data-ttu-id="7a0e5-121">Vous pouvez utiliser la  **\<Supprimer >** élément à supprimer les paramètres de votre application qui ont été définies à un niveau supérieur dans la hiérarchie de fichiers de configuration.</span><span class="sxs-lookup"><span data-stu-id="7a0e5-121">You can use the **\<remove>** element to remove settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="f12a5-121">Vous pouvez utiliser la  **\<Supprimer >** élément à supprimer les paramètres de votre application qui ont été définies à un niveau supérieur dans la hiérarchie de fichiers de configuration.</span><span class="sxs-lookup"><span data-stu-id="f12a5-121">You can use the **\<remove>** element to remove settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="7a0e5-122">Exemple</span><span class="sxs-lookup"><span data-stu-id="7a0e5-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="f12a5-122">Exemple</span><span class="sxs-lookup"><span data-stu-id="f12a5-122">Example</span></span>
 
-<span data-ttu-id="7a0e5-123">L’exemple suivant montre comment utiliser le  **\<Supprimer >** élément dans un fichier de configuration d’application pour supprimer les paramètres définis précédemment dans le fichier de configuration machine.</span><span class="sxs-lookup"><span data-stu-id="7a0e5-123">The following example shows how to use the **\<remove>** element in an application configuration file to remove settings previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="f12a5-123">L’exemple suivant montre comment utiliser le  **\<Supprimer >** élément dans un fichier de configuration d’application pour supprimer les paramètres définis précédemment dans le fichier de configuration machine.</span><span class="sxs-lookup"><span data-stu-id="f12a5-123">The following example shows how to use the **\<remove>** element in an application configuration file to remove settings previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="7a0e5-124">Le code du fichier de configuration machine suivant déclare la section  **\<mySection >** et ajoute deux paramètres, `key1` et `key2`, à celui-ci :</span><span class="sxs-lookup"><span data-stu-id="7a0e5-124">The following machine configuration file code declares the section **\<mySection>** and adds two settings, `key1` and `key2`, to it:</span></span>
+<span data-ttu-id="f12a5-124">Le code du fichier de configuration machine suivant déclare la section  **\<mySection >** et ajoute deux paramètres, `key1` et `key2`, à celui-ci :</span><span class="sxs-lookup"><span data-stu-id="f12a5-124">The following machine configuration file code declares the section **\<mySection>** and adds two settings, `key1` and `key2`, to it:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "54535578"
 </configuration>
 ```
 
-<span data-ttu-id="7a0e5-125">Le code suivant du fichier de configuration de l’application supprime le `key2` définir à partir de  **\<mySection >**:</span><span class="sxs-lookup"><span data-stu-id="7a0e5-125">The following application configuration file code removes the `key2` setting from **\<mySection>**:</span></span>
+<span data-ttu-id="f12a5-125">Le code suivant du fichier de configuration de l’application supprime le `key2` définir à partir de  **\<mySection >**:</span><span class="sxs-lookup"><span data-stu-id="f12a5-125">The following application configuration file code removes the `key2` setting from **\<mySection>**:</span></span>
 
 ```xml
 <!--Application configuration file -->
@@ -80,10 +80,10 @@ ms.locfileid: "54535578"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="7a0e5-126">fichier de configuration</span><span class="sxs-lookup"><span data-stu-id="7a0e5-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="f12a5-126">fichier de configuration</span><span class="sxs-lookup"><span data-stu-id="f12a5-126">Configuration file</span></span>
 
-<span data-ttu-id="7a0e5-127">Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* fichiers qui ne sont pas au niveau du répertoire d’application.</span><span class="sxs-lookup"><span data-stu-id="7a0e5-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="f12a5-127">Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* fichiers qui ne sont pas au niveau du répertoire d’application.</span><span class="sxs-lookup"><span data-stu-id="f12a5-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7a0e5-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7a0e5-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f12a5-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f12a5-128">See also</span></span>
 
-- [<span data-ttu-id="7a0e5-129">Schéma de fichier de configuration pour le .NET Framework</span><span class="sxs-lookup"><span data-stu-id="7a0e5-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="f12a5-129">Schéma de fichier de configuration pour le .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f12a5-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

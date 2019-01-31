@@ -1,5 +1,5 @@
 ---
-title: '&lt;httpWebRequest&gt; , élément (paramètres réseau)'
+title: <httpWebRequest>, élément (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 1a883b2e57d0f055237d68e4f69651ef496795ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f19c39922105cebe179dd9f26fdc6beac8ddc0ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590027"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268273"
 ---
-# <a name="lthttpwebrequestgt-element-network-settings"></a><span data-ttu-id="c5124-102">&lt;httpWebRequest&gt; , élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="c5124-102">&lt;httpWebRequest&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="c5124-103">Personnalise les paramètres de la demande Web.</span><span class="sxs-lookup"><span data-stu-id="c5124-103">Customizes Web request parameters.</span></span>  
+# <a name="httpwebrequest-element-network-settings"></a><span data-ttu-id="15fbb-102">\<httpWebRequest >, élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="15fbb-102">\<httpWebRequest> Element (Network Settings)</span></span>
+<span data-ttu-id="15fbb-103">Personnalise les paramètres de la demande Web.</span><span class="sxs-lookup"><span data-stu-id="15fbb-103">Customizes Web request parameters.</span></span>  
   
- <span data-ttu-id="c5124-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c5124-104">\<configuration></span></span>  
-<span data-ttu-id="c5124-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="c5124-105">\<system.net></span></span>  
-<span data-ttu-id="c5124-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="c5124-106">\<settings></span></span>  
-<span data-ttu-id="c5124-107">\<httpWebRequest></span><span class="sxs-lookup"><span data-stu-id="c5124-107">\<httpWebRequest></span></span>  
+ <span data-ttu-id="15fbb-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="15fbb-104">\<configuration></span></span>  
+<span data-ttu-id="15fbb-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="15fbb-105">\<system.net></span></span>  
+<span data-ttu-id="15fbb-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="15fbb-106">\<settings></span></span>  
+<span data-ttu-id="15fbb-107">\<httpWebRequest></span><span class="sxs-lookup"><span data-stu-id="15fbb-107">\<httpWebRequest></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5124-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c5124-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15fbb-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="15fbb-108">Syntax</span></span>  
   
 ```xml  
 <httpWebRequest  
@@ -34,35 +34,35 @@ ms.locfileid: "54590027"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c5124-109">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="c5124-109">Attributes and Elements</span></span>  
- <span data-ttu-id="c5124-110">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="c5124-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="15fbb-109">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="15fbb-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="15fbb-110">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="15fbb-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c5124-111">Attributs</span><span class="sxs-lookup"><span data-stu-id="c5124-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="15fbb-111">Attributs</span><span class="sxs-lookup"><span data-stu-id="15fbb-111">Attributes</span></span>  
   
-|<span data-ttu-id="c5124-112">**Attribut**</span><span class="sxs-lookup"><span data-stu-id="c5124-112">**Attribute**</span></span>|<span data-ttu-id="c5124-113">**Description**</span><span class="sxs-lookup"><span data-stu-id="c5124-113">**Description**</span></span>|  
+|<span data-ttu-id="15fbb-112">**Attribut**</span><span class="sxs-lookup"><span data-stu-id="15fbb-112">**Attribute**</span></span>|<span data-ttu-id="15fbb-113">**Description**</span><span class="sxs-lookup"><span data-stu-id="15fbb-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`maximumResponseHeadersLength`|<span data-ttu-id="c5124-114">Spécifie la longueur maximale d’un en-tête de réponse, en kilo-octets.</span><span class="sxs-lookup"><span data-stu-id="c5124-114">Specifies the maximum length of a response header, in kilobytes.</span></span> <span data-ttu-id="c5124-115">La valeur par défaut est 64.</span><span class="sxs-lookup"><span data-stu-id="c5124-115">The default is 64.</span></span> <span data-ttu-id="c5124-116">La valeur -1 indique qu’aucune limite de taille ne sera imposée sur les en-têtes de réponse.</span><span class="sxs-lookup"><span data-stu-id="c5124-116">A value of -1 indicates that no size limit will be imposed on the response headers.</span></span>|  
-|`maximumErrorResponseLength`|<span data-ttu-id="c5124-117">Spécifie la longueur maximale d’une réponse d’erreur, en kilo-octets.</span><span class="sxs-lookup"><span data-stu-id="c5124-117">Specifies the maximum length of an error response, in kilobytes.</span></span> <span data-ttu-id="c5124-118">La valeur par défaut est 64.</span><span class="sxs-lookup"><span data-stu-id="c5124-118">The default is 64.</span></span> <span data-ttu-id="c5124-119">La valeur -1 indique qu’aucune limite de taille ne sera imposée sur la réponse d’erreur.</span><span class="sxs-lookup"><span data-stu-id="c5124-119">A value of -1 indicates that no size limit will be imposed on the error response.</span></span>|  
-|`maximumUnauthorizedUploadLength`|<span data-ttu-id="c5124-120">Spécifie la longueur maximale d’un téléchargement en réponse à un code d’erreur non autorisé, en octets.</span><span class="sxs-lookup"><span data-stu-id="c5124-120">Specifies the maximum length of an upload in response to an unauthorized error code, in bytes.</span></span> <span data-ttu-id="c5124-121">La valeur par défaut est -1.</span><span class="sxs-lookup"><span data-stu-id="c5124-121">The default is -1.</span></span> <span data-ttu-id="c5124-122">La valeur -1 indique qu’aucune limite de taille ne sera imposée sur le téléchargement.</span><span class="sxs-lookup"><span data-stu-id="c5124-122">A value of -1 indicates that no size limit will be imposed on the upload.</span></span>|  
-|`useUnsafeHeaderParsing`|<span data-ttu-id="c5124-123">Spécifie si l’analyse des en-têtes non sécurisé est activé.</span><span class="sxs-lookup"><span data-stu-id="c5124-123">Specifies whether unsafe header parsing is enabled.</span></span> <span data-ttu-id="c5124-124">La valeur par défaut est `false`.</span><span class="sxs-lookup"><span data-stu-id="c5124-124">The default value is `false`.</span></span>|  
+|`maximumResponseHeadersLength`|<span data-ttu-id="15fbb-114">Spécifie la longueur maximale d’un en-tête de réponse, en kilo-octets.</span><span class="sxs-lookup"><span data-stu-id="15fbb-114">Specifies the maximum length of a response header, in kilobytes.</span></span> <span data-ttu-id="15fbb-115">La valeur par défaut est 64.</span><span class="sxs-lookup"><span data-stu-id="15fbb-115">The default is 64.</span></span> <span data-ttu-id="15fbb-116">La valeur -1 indique qu’aucune limite de taille ne sera imposée sur les en-têtes de réponse.</span><span class="sxs-lookup"><span data-stu-id="15fbb-116">A value of -1 indicates that no size limit will be imposed on the response headers.</span></span>|  
+|`maximumErrorResponseLength`|<span data-ttu-id="15fbb-117">Spécifie la longueur maximale d’une réponse d’erreur, en kilo-octets.</span><span class="sxs-lookup"><span data-stu-id="15fbb-117">Specifies the maximum length of an error response, in kilobytes.</span></span> <span data-ttu-id="15fbb-118">La valeur par défaut est 64.</span><span class="sxs-lookup"><span data-stu-id="15fbb-118">The default is 64.</span></span> <span data-ttu-id="15fbb-119">La valeur -1 indique qu’aucune limite de taille ne sera imposée sur la réponse d’erreur.</span><span class="sxs-lookup"><span data-stu-id="15fbb-119">A value of -1 indicates that no size limit will be imposed on the error response.</span></span>|  
+|`maximumUnauthorizedUploadLength`|<span data-ttu-id="15fbb-120">Spécifie la longueur maximale d’un téléchargement en réponse à un code d’erreur non autorisé, en octets.</span><span class="sxs-lookup"><span data-stu-id="15fbb-120">Specifies the maximum length of an upload in response to an unauthorized error code, in bytes.</span></span> <span data-ttu-id="15fbb-121">La valeur par défaut est -1.</span><span class="sxs-lookup"><span data-stu-id="15fbb-121">The default is -1.</span></span> <span data-ttu-id="15fbb-122">La valeur -1 indique qu’aucune limite de taille ne sera imposée sur le téléchargement.</span><span class="sxs-lookup"><span data-stu-id="15fbb-122">A value of -1 indicates that no size limit will be imposed on the upload.</span></span>|  
+|`useUnsafeHeaderParsing`|<span data-ttu-id="15fbb-123">Spécifie si l’analyse des en-têtes non sécurisé est activé.</span><span class="sxs-lookup"><span data-stu-id="15fbb-123">Specifies whether unsafe header parsing is enabled.</span></span> <span data-ttu-id="15fbb-124">La valeur par défaut est `false`.</span><span class="sxs-lookup"><span data-stu-id="15fbb-124">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c5124-125">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="c5124-125">Child Elements</span></span>  
- <span data-ttu-id="c5124-126">Aucun.</span><span class="sxs-lookup"><span data-stu-id="c5124-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="15fbb-125">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="15fbb-125">Child Elements</span></span>  
+ <span data-ttu-id="15fbb-126">Aucun.</span><span class="sxs-lookup"><span data-stu-id="15fbb-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c5124-127">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="c5124-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="15fbb-127">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="15fbb-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="c5124-128">**Élément**</span><span class="sxs-lookup"><span data-stu-id="c5124-128">**Element**</span></span>|<span data-ttu-id="c5124-129">**Description**</span><span class="sxs-lookup"><span data-stu-id="c5124-129">**Description**</span></span>|  
+|<span data-ttu-id="15fbb-128">**Élément**</span><span class="sxs-lookup"><span data-stu-id="15fbb-128">**Element**</span></span>|<span data-ttu-id="15fbb-129">**Description**</span><span class="sxs-lookup"><span data-stu-id="15fbb-129">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="c5124-130">settings</span><span class="sxs-lookup"><span data-stu-id="c5124-130">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="c5124-131">Configure les options réseau de base pour l’espace de noms <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="c5124-131">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="15fbb-130">settings</span><span class="sxs-lookup"><span data-stu-id="15fbb-130">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="15fbb-131">Configure les options réseau de base pour l’espace de noms <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="15fbb-131">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c5124-132">Notes</span><span class="sxs-lookup"><span data-stu-id="c5124-132">Remarks</span></span>  
- <span data-ttu-id="c5124-133">Par défaut, le .NET Framework applique strictement la norme RFC 2616 pour l’analyse URI.</span><span class="sxs-lookup"><span data-stu-id="c5124-133">By default, the .NET Framework strictly enforces RFC 2616 for URI parsing.</span></span> <span data-ttu-id="c5124-134">Certaines réponses du serveur peuvent inclure des caractères de contrôle dans les champs interdits, ce qui provoquent le <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> méthode lève un <xref:System.Net.WebException>.</span><span class="sxs-lookup"><span data-stu-id="c5124-134">Some server responses may include control characters in prohibited fields, which will cause the <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> method to throw a <xref:System.Net.WebException>.</span></span> <span data-ttu-id="c5124-135">Si **useUnsafeHeaderParsing** a la valeur **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> ne lèvera pas dans ce cas, toutefois, votre application sera vulnérable à plusieurs formes d’attaques d’analyse URI.</span><span class="sxs-lookup"><span data-stu-id="c5124-135">If **useUnsafeHeaderParsing** is set to **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> will not throw in this case; however, your application will be vulnerable to several forms of URI parsing attacks.</span></span> <span data-ttu-id="c5124-136">La meilleure solution consiste à modifier le serveur afin que la réponse n’inclut pas les caractères de contrôle.</span><span class="sxs-lookup"><span data-stu-id="c5124-136">The best solution is to change the server so that the response does not include control characters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="15fbb-132">Notes</span><span class="sxs-lookup"><span data-stu-id="15fbb-132">Remarks</span></span>  
+ <span data-ttu-id="15fbb-133">Par défaut, le .NET Framework applique strictement la norme RFC 2616 pour l’analyse URI.</span><span class="sxs-lookup"><span data-stu-id="15fbb-133">By default, the .NET Framework strictly enforces RFC 2616 for URI parsing.</span></span> <span data-ttu-id="15fbb-134">Certaines réponses du serveur peuvent inclure des caractères de contrôle dans les champs interdits, ce qui provoquent le <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> méthode lève un <xref:System.Net.WebException>.</span><span class="sxs-lookup"><span data-stu-id="15fbb-134">Some server responses may include control characters in prohibited fields, which will cause the <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> method to throw a <xref:System.Net.WebException>.</span></span> <span data-ttu-id="15fbb-135">Si **useUnsafeHeaderParsing** a la valeur **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> ne lèvera pas dans ce cas, toutefois, votre application sera vulnérable à plusieurs formes d’attaques d’analyse URI.</span><span class="sxs-lookup"><span data-stu-id="15fbb-135">If **useUnsafeHeaderParsing** is set to **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> will not throw in this case; however, your application will be vulnerable to several forms of URI parsing attacks.</span></span> <span data-ttu-id="15fbb-136">La meilleure solution consiste à modifier le serveur afin que la réponse n’inclut pas les caractères de contrôle.</span><span class="sxs-lookup"><span data-stu-id="15fbb-136">The best solution is to change the server so that the response does not include control characters.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="c5124-137">Fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="c5124-137">Configuration Files</span></span>  
- <span data-ttu-id="c5124-138">Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="c5124-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="15fbb-137">Fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="15fbb-137">Configuration Files</span></span>  
+ <span data-ttu-id="15fbb-138">Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="15fbb-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c5124-139">Exemple</span><span class="sxs-lookup"><span data-stu-id="c5124-139">Example</span></span>  
- <span data-ttu-id="c5124-140">L’exemple suivant montre comment spécifier une valeur plus élevée à la longueur d’en-tête maximale normal.</span><span class="sxs-lookup"><span data-stu-id="c5124-140">The following example shows how to specify a larger than normal maximum header length.</span></span>  
+## <a name="example"></a><span data-ttu-id="15fbb-139">Exemple</span><span class="sxs-lookup"><span data-stu-id="15fbb-139">Example</span></span>  
+ <span data-ttu-id="15fbb-140">L’exemple suivant montre comment spécifier une valeur plus élevée à la longueur d’en-tête maximale normal.</span><span class="sxs-lookup"><span data-stu-id="15fbb-140">The following example shows how to specify a larger than normal maximum header length.</span></span>  
   
 ```xml  
 <configuration>  
@@ -76,6 +76,6 @@ ms.locfileid: "54590027"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c5124-141">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c5124-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15fbb-141">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="15fbb-141">See also</span></span>
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
-- [<span data-ttu-id="c5124-142">Schéma des paramètres réseau</span><span class="sxs-lookup"><span data-stu-id="c5124-142">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="15fbb-142">Schéma des paramètres réseau</span><span class="sxs-lookup"><span data-stu-id="15fbb-142">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
