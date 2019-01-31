@@ -1,5 +1,5 @@
 ---
-title: '&lt;commutateurs&gt; élément'
+title: Élément <switches>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: ed5d30408b2c0f45f3bef091f4828bd812a63a7a
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: afd0e955698dfc7ff3d5c843dd8db10f648265b8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083351"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254663"
 ---
-# <a name="ltswitchesgt-element"></a>&lt;commutateurs&gt; élément
+# <a name="switches-element"></a>\<commutateurs > élément
 Contient des commutateurs de traçage et le niveau auquel ils sont définis.  
   
  \<configuration>  

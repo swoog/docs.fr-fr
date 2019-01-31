@@ -1,16 +1,16 @@
 ---
-title: '&lt;tracking&gt;'
+title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: 26f8c6f82ba752c9d431e30771256a58df9b14a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa96cb374204ffbdb4c0fcd353c70b6e27ef7481
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553579"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263808"
 ---
-# <a name="lttrackinggt"></a>&lt;tracking&gt;
+# <a name="tracking"></a>\<tracking>
 Représente une section de configuration permettant de définir les paramètres de suivi d'un service de flux de travail.  
   
  Pour plus d’informations de suivi de workflow et sa configuration, consultez [suivi et traçage de Workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [configuration du suivi d’un flux de travail](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  

@@ -1,5 +1,5 @@
 ---
-title: Début &#39;. &#39; ou &#39;! &#39; ne peut apparaître qu’à l’intérieur d’un &#39;avec&#39; instruction
+title: Un caractère '.' ou '!' de début ne peut apparaître que dans une instruction 'With'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30157
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
-ms.openlocfilehash: e64318d4ececbd887f55a1a202cc2d58c90c8fc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 367da8e7c9fd8c14a16a09b1f023e7637d78309d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625950"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259549"
 ---
-# <a name="leading-3939-or-3939-can-only-appear-inside-a-39with39-statement"></a>Début &#39;. &#39; ou &#39;! &#39; ne peut apparaître qu’à l’intérieur d’un &#39;avec&#39; instruction
+# <a name="leading--or--can-only-appear-inside-a-with-statement"></a>Un caractère '.' ou '!' de début ne peut apparaître que dans une instruction 'With'
 Un point (.) ou un point d’exclamation ( !) qui n’est pas à l’intérieur un `With` bloc se produit sans expression à gauche. Accès au membre (`.`) et l’accès au membre de dictionnaire (`!`) nécessitent une expression spécifiant l’élément qui contient le membre. Cela doit apparaître immédiatement à gauche de l’accesseur ou comme cible d’un `With` bloc contenant l’accès au membre.  
   
  **ID d’erreur :** BC30157  

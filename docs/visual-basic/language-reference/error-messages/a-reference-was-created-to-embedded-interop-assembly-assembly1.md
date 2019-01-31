@@ -1,5 +1,5 @@
 ---
-title: Une référence a été créée pour l’assembly d’interopérabilité incorporé &#39; &lt;assembly1&gt; &#39; en raison d’une référence indirecte à cet assembly à partir de l’assembly &#39; &lt;assembly2&gt;&#39;
+title: Une référence a été créée pour l'assembly d'interopérabilité incorporé '<assembly1>' en raison d'une référence indirecte à cet assembly à partir de l'assembly '<assembly2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40059
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: fe04742e0a3be5e1d19ab4017e55f2293988a671
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 058aa4891d05147756290affd60ea5fb260c33ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560020"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262950"
 ---
-# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Une référence a été créée pour l’assembly d’interopérabilité incorporé &#39; &lt;assembly1&gt; &#39; en raison d’une référence indirecte à cet assembly à partir de l’assembly &#39; &lt;assembly2&gt;&#39;
+# <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Une référence a été créée pour l’assembly d’interopérabilité incorporé '\<assembly1 >' en raison d’une référence indirecte à cet assembly à partir de l’assembly '\<assembly2 >'
 Une référence a été créée pour l’assembly d’interopérabilité incorporé '\<assembly1>' en raison d’une référence indirecte à cet assembly à partir de l’assembly '\<assembly2>'. Modifiez la propriété 'Incorporer les types interop' pour l’un des assemblys.  
   
  Vous avez ajouté une référence à un assembly (assembly1) avec une valeur de propriété `Embed Interop Types` égale à `True`. Cela indique au compilateur d’incorporer les informations de type interop à partir de cet assembly. Toutefois, le compilateur ne peut pas incorporer les informations de type interop à partir de cet assembly, car un autre assembly que vous avez référencé (assembly2) fait également référence à cet assembly (assembly1) et a la propriété `Embed Interop Types` définie sur `False`.  

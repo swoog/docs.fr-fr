@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Manipuler une Table&#39;s des colonnes avec la propriété Columns'
+title: "Procédure : Manipuler les colonnes d'un tableau avec la propriété Columns"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - tables [WPF], manipulating columns
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
-ms.openlocfilehash: f560e85888b5617f545082d47d124163d492ec00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3327b59cb8c387cb554206d1b17c2cd7002ef80
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655810"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258095"
 ---
-# <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>Procédure : Manipuler une Table&#39;s des colonnes avec la propriété Columns
+# <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>Procédure : Manipuler les colonnes d'un tableau avec la propriété Columns
 Cet exemple montre quelques-unes des opérations plus courantes qui peuvent être effectuées sur les colonnes d’un tableau avec la <xref:System.Windows.Documents.Table.Columns%2A> propriété.  
   
 ## <a name="example"></a>Exemple  

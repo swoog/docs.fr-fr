@@ -1,5 +1,5 @@
 ---
-title: '&lt;supportPortability&gt; élément'
+title: Élément <supportPortability>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f1ceae32445fb350f6fcc98f3a1eec044fa7885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2295ebd919a91ae9942ec225f2bfe784e5ee151
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655502"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267792"
 ---
-# <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt; élément
+# <a name="supportportability-element"></a>\<supportPortability > élément
 Spécifie qu’une application peut référencer le même assembly dans deux implémentations différentes du .NET Framework, en désactivant le comportement par défaut qui traite les assemblys de façon équivalente à des fins de portabilité des applications.  
   
  \<configuration > élément  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;supprimer&gt; élément pour &lt;écouteurs&gt; pour &lt;source&gt;'
+title: <remove>, élément de <listeners> pour <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: 9f3d8eefdf74f0960f3fe530f77a67c0706e4585
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 522319c64ddff6eb6872584937d540a8955b7c8f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083481"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260331"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;supprimer&gt; élément pour &lt;écouteurs&gt; pour &lt;source&gt;
+# <a name="remove-element-for-listeners-for-source"></a>\<Supprimer >, élément pour \<écouteurs > pour \<source >
 Supprime un écouteur de la collection `Listeners` pour une source de trace.  
   
  \<configuration>  

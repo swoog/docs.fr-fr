@@ -1,25 +1,25 @@
 ---
-title: '&lt;activityStateQuery&gt; de WCF'
+title: <activityStateQuery> de WCF
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 6d55a53a6344922cee0d42c26102d5f0bbf46f67
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97fce512415ad6ae165b29c7e8eff3394d5e675a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151786"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254793"
 ---
-# <a name="ltactivitystatequerygt-of-wcf"></a>&lt;activityStateQuery&gt; de WCF
+# <a name="activitystatequery-of-wcf"></a>\<activityStateQuery > de WCF
 
 Représente une requête qui permet d'effectuer le suivi des changements dans le cycle de vie des activités qui composent une instance de flux de travail. Par exemple, vous souhaiterez effectuer le suivi de chaque fois que l’activité « Envoyer un message électronique » se termine dans une instance de workflow. Cette requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des objets d'enregistrement d'état d'activité. Les états disponibles auxquels s'abonner sont spécifiés dans ActivityStates.  
   
 Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
 
-\<system.serviceModel > \<suivi >  
-\<profils > \<trackingProfile >  
-\<flux de travail >  
-\<activityStateQueries >  
-\<activityStateQuery >  
+\<system.serviceModel> \<tracking>  
+\<profiles> \<trackingProfile>  
+\<workflow>  
+\<activityStateQueries>  
+\<activityStateQuery>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,15 +61,15 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<arguments >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Collection d’arguments associés à cette requête d’activité.|  
-|[\<États >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Collection d’éléments de configuration qui contiennent les états de l’activité faisant l’objet d’un abonnement pour laquelle un enregistrement de suivi doit être émis.|  
-|[\<États >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Collection de variables associées à cette requête d’activité.|  
+|[\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Collection d’arguments associés à cette requête d’activité.|  
+|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Collection d’éléments de configuration qui contiennent les états de l’activité faisant l’objet d’un abonnement pour laquelle un enregistrement de suivi doit être émis.|  
+|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Collection de variables associées à cette requête d’activité.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Représente une liste d'éléments de configuration qui permettent d'effectuer le suivi des demandes d'annulation d'une activité enfant par l'activité parent. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des objets d'enregistrement de demande d'annulation.|  
+|[\<faultPropagationQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Représente une liste d'éléments de configuration qui permettent d'effectuer le suivi des demandes d'annulation d'une activité enfant par l'activité parent. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des objets d'enregistrement de demande d'annulation.|  
   
 ## <a name="remarks"></a>Notes
 

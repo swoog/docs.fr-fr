@@ -1,17 +1,17 @@
 ---
-title: Aucun fichier trouvé correspondant à «&lt;filename&gt;'
+title: Aucun fichier trouvé correspondant à «<filename>»
 ms.date: 07/20/2015
 f1_keywords:
 - vbrKILL_NoFilesFound1
 ms.assetid: 218808a2-8e36-4f13-a60a-770624e1ace3
-ms.openlocfilehash: 6498992a0868a45d5783f7d4f8816fef995b9c4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcd0bf78adcbd339c1b58f82f445fe43446366f3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729338"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263760"
 ---
-# <a name="no-files-found-matching-ltfilenamegt"></a>Aucun fichier trouvé correspondant à «&lt;filename&gt;'
+# <a name="no-files-found-matching-filename"></a>Aucun fichier trouvé correspondant à «\<nom_fichier >'
 Le nom de fichier est incorrect ou le fichier n’existe pas.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

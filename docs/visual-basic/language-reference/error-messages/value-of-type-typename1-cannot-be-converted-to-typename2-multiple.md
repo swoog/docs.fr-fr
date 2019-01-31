@@ -1,5 +1,5 @@
 ---
-title: Valeur de type &#39; &lt;nom_type1&gt; &#39; ne peut pas être converti en &#39; &lt;nom_type2&gt; &#39; (plusieurs références de fichier)
+title: La valeur du type '<typename1>' ne peut pas être convertie en '<typename2>' (plusieurs références de fichier)
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30961
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 943b9612a9217b90c19f34285e812c4e1cccf81a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691371"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261345"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Valeur de type &#39; &lt;nom_type1&gt; &#39; ne peut pas être converti en &#39; &lt;nom_type2&gt; &#39; (plusieurs références de fichier)
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >' (plusieurs références de fichier)
 Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'. Incompatibilité de type peut être dû à la combinaison d’une référence de fichier pour '\<chemin_fichier1 >' dans le projet '\<nom_projet1 >' avec une référence de fichier à '\<chemin_fichier2 >' dans le projet '\<nom_projet2 >'. Si les deux assemblys sont identiques, essayez de remplacer ces deux références pour qu’elles se situent au même emplacement.  
   
  Dans une situation où un projet fait plusieurs références de fichier à un assembly, le compilateur ne peut pas garantir qu’un type peut être converti vers un autre.  

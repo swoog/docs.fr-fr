@@ -1,5 +1,5 @@
 ---
-title: '&lt;détection&gt; élément'
+title: Élément <probing>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711903656d8bcce3a2d213af68160707a55a48e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f66ba8307a33a0a0b80cd71dd027852f67c03f72
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699998"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257043"
 ---
-# <a name="ltprobinggt-element"></a>&lt;détection&gt; élément
+# <a name="probing-element"></a>\<probing > élément
 Spécifie les sous-répertoires de base d’application pour le common language runtime à rechercher lors du chargement d’assemblys.  
   
  \<configuration>  

@@ -1,5 +1,5 @@
 ---
-title: Récursive de l’expression appelle la propriété conteneur &#39; &lt;propertyname&gt;&#39;
+title: L'expression appelle de manière récursive la propriété conteneur '<propertyname>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42026
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9382c6b6850036f3ca3795f0aa80f49b892c0a5e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553072"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259759"
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Récursive de l’expression appelle la propriété conteneur &#39; &lt;propertyname&gt;&#39;
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Récursive de l’expression appelle la propriété conteneur '\<nom_propriété >'
 Une instruction dans le `Set` d’une définition de propriété stocke une valeur dans le nom de la propriété.  
   
  L’approche recommandée pour stocker la valeur d’une propriété consiste à définir un `Private` variable dans le conteneur de la propriété et l’utiliser à la fois dans le `Get` et `Set` procédures. Le `Set` procédure doit ensuite stocker la valeur entrante dans ce `Private` variable.  
