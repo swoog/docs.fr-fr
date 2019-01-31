@@ -1,5 +1,5 @@
 ---
-title: '&lt;Désactivez&gt; , élément de bypasslist (paramètres réseau)'
+title: <clear>, élément de bypasslist (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -10,51 +10,51 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 840833f2752115cb5f5639a25daf05bcbff3d452
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3a1d8a0801168283f83160242c4e9d7e151f847
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720913"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276339"
 ---
-# <a name="ltcleargt-element-for-bypasslist-network-settings"></a><span data-ttu-id="fe87f-102">&lt;Désactivez&gt; , élément de bypasslist (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="fe87f-102">&lt;clear&gt; Element for bypasslist (Network Settings)</span></span>
-<span data-ttu-id="fe87f-103">Efface la liste de contournement proxy.</span><span class="sxs-lookup"><span data-stu-id="fe87f-103">Clears the proxy bypass list.</span></span>  
+# <a name="clear-element-for-bypasslist-network-settings"></a><span data-ttu-id="7eaf5-102">\<Désactivez >, élément de bypasslist (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="7eaf5-102">\<clear> Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="7eaf5-103">Efface la liste de contournement proxy.</span><span class="sxs-lookup"><span data-stu-id="7eaf5-103">Clears the proxy bypass list.</span></span>  
   
- <span data-ttu-id="fe87f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="fe87f-104">\<configuration></span></span>  
-<span data-ttu-id="fe87f-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="fe87f-105">\<system.net></span></span>  
-<span data-ttu-id="fe87f-106">\<defaultProxy></span><span class="sxs-lookup"><span data-stu-id="fe87f-106">\<defaultProxy></span></span>  
-<span data-ttu-id="fe87f-107">\<bypasslist></span><span class="sxs-lookup"><span data-stu-id="fe87f-107">\<bypasslist></span></span>  
-<span data-ttu-id="fe87f-108">\<clear></span><span class="sxs-lookup"><span data-stu-id="fe87f-108">\<clear></span></span>  
+ <span data-ttu-id="7eaf5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7eaf5-104">\<configuration></span></span>  
+<span data-ttu-id="7eaf5-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="7eaf5-105">\<system.net></span></span>  
+<span data-ttu-id="7eaf5-106">\<defaultProxy></span><span class="sxs-lookup"><span data-stu-id="7eaf5-106">\<defaultProxy></span></span>  
+<span data-ttu-id="7eaf5-107">\<bypasslist></span><span class="sxs-lookup"><span data-stu-id="7eaf5-107">\<bypasslist></span></span>  
+<span data-ttu-id="7eaf5-108">\<clear></span><span class="sxs-lookup"><span data-stu-id="7eaf5-108">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe87f-109">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fe87f-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7eaf5-109">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7eaf5-109">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fe87f-110">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="fe87f-110">Attributes and Elements</span></span>  
- <span data-ttu-id="fe87f-111">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="fe87f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7eaf5-110">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="7eaf5-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="7eaf5-111">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="7eaf5-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fe87f-112">Attributs</span><span class="sxs-lookup"><span data-stu-id="fe87f-112">Attributes</span></span>  
- <span data-ttu-id="fe87f-113">Aucun.</span><span class="sxs-lookup"><span data-stu-id="fe87f-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7eaf5-112">Attributs</span><span class="sxs-lookup"><span data-stu-id="7eaf5-112">Attributes</span></span>  
+ <span data-ttu-id="7eaf5-113">Aucun.</span><span class="sxs-lookup"><span data-stu-id="7eaf5-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="fe87f-114">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="fe87f-114">Child Elements</span></span>  
- <span data-ttu-id="fe87f-115">Aucun.</span><span class="sxs-lookup"><span data-stu-id="fe87f-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7eaf5-114">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="7eaf5-114">Child Elements</span></span>  
+ <span data-ttu-id="7eaf5-115">Aucun.</span><span class="sxs-lookup"><span data-stu-id="7eaf5-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="fe87f-116">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="fe87f-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7eaf5-116">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="7eaf5-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="fe87f-117">**Élément**</span><span class="sxs-lookup"><span data-stu-id="fe87f-117">**Element**</span></span>|<span data-ttu-id="fe87f-118">**Description**</span><span class="sxs-lookup"><span data-stu-id="fe87f-118">**Description**</span></span>|  
+|<span data-ttu-id="7eaf5-117">**Élément**</span><span class="sxs-lookup"><span data-stu-id="7eaf5-117">**Element**</span></span>|<span data-ttu-id="7eaf5-118">**Description**</span><span class="sxs-lookup"><span data-stu-id="7eaf5-118">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="fe87f-119">bypasslist</span><span class="sxs-lookup"><span data-stu-id="fe87f-119">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="fe87f-120">Fournit un ensemble d’expressions régulières décrivant les adresses qui n’utilisent pas un proxy.</span><span class="sxs-lookup"><span data-stu-id="fe87f-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
+|[<span data-ttu-id="7eaf5-119">bypasslist</span><span class="sxs-lookup"><span data-stu-id="7eaf5-119">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="7eaf5-120">Fournit un ensemble d’expressions régulières décrivant les adresses qui n’utilisent pas un proxy.</span><span class="sxs-lookup"><span data-stu-id="7eaf5-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fe87f-121">Notes</span><span class="sxs-lookup"><span data-stu-id="fe87f-121">Remarks</span></span>  
- <span data-ttu-id="fe87f-122">Le `clear` élément efface toutes les entrées dans la liste de contournement.</span><span class="sxs-lookup"><span data-stu-id="fe87f-122">The `clear` element clears all entries from the bypass list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7eaf5-121">Notes</span><span class="sxs-lookup"><span data-stu-id="7eaf5-121">Remarks</span></span>  
+ <span data-ttu-id="7eaf5-122">Le `clear` élément efface toutes les entrées dans la liste de contournement.</span><span class="sxs-lookup"><span data-stu-id="7eaf5-122">The `clear` element clears all entries from the bypass list.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="fe87f-123">Fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="fe87f-123">Configuration Files</span></span>  
- <span data-ttu-id="fe87f-124">Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="fe87f-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="7eaf5-123">Fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="7eaf5-123">Configuration Files</span></span>  
+ <span data-ttu-id="7eaf5-124">Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="7eaf5-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fe87f-125">Exemple</span><span class="sxs-lookup"><span data-stu-id="fe87f-125">Example</span></span>  
- <span data-ttu-id="fe87f-126">L’exemple suivant efface la liste de contournement, puis ajoute deux adresses à la liste de contournement.</span><span class="sxs-lookup"><span data-stu-id="fe87f-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="fe87f-127">La première contourne le proxy pour tous les serveurs dans le domaine contoso.com ; la deuxième contourne le proxy pour tous les serveurs dont l’adresse IP commence par 192.168.</span><span class="sxs-lookup"><span data-stu-id="fe87f-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
+## <a name="example"></a><span data-ttu-id="7eaf5-125">Exemple</span><span class="sxs-lookup"><span data-stu-id="7eaf5-125">Example</span></span>  
+ <span data-ttu-id="7eaf5-126">L’exemple suivant efface la liste de contournement, puis ajoute deux adresses à la liste de contournement.</span><span class="sxs-lookup"><span data-stu-id="7eaf5-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="7eaf5-127">La première contourne le proxy pour tous les serveurs dans le domaine contoso.com ; la deuxième contourne le proxy pour tous les serveurs dont l’adresse IP commence par 192.168.</span><span class="sxs-lookup"><span data-stu-id="7eaf5-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,6 +70,6 @@ ms.locfileid: "54720913"
 </configuration>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fe87f-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fe87f-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7eaf5-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7eaf5-128">See also</span></span>
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="fe87f-129">Schéma des paramètres réseau</span><span class="sxs-lookup"><span data-stu-id="fe87f-129">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="7eaf5-129">Schéma des paramètres réseau</span><span class="sxs-lookup"><span data-stu-id="7eaf5-129">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,22 +1,22 @@
 ---
-title: '&lt;transportConfigurationTypes&gt;'
+title: <transportConfigurationTypes>
 ms.date: 03/30/2017
 ms.assetid: 929c8b0a-5460-4f66-a098-2cb8d4e10b69
-ms.openlocfilehash: 37ce20c5fb0791596264bb7b6c03d5d0f2cc2388
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 560da96c50e99461d25c1fd65def2dc10c284470
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704915"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261669"
 ---
-# <a name="lttransportconfigurationtypesgt"></a><span data-ttu-id="d7242-102">&lt;transportConfigurationTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="d7242-102">&lt;transportConfigurationTypes&gt;</span></span>
-<span data-ttu-id="d7242-103">Représente une collection d’éléments de configuration identifiant le type d’un transport particulier.</span><span class="sxs-lookup"><span data-stu-id="d7242-103">Represents a collection of configuration elements that identify the type of a particular transport.</span></span> <span data-ttu-id="d7242-104">Peut être utilisé pour ajouter des protocoles WAS personnalisés.</span><span class="sxs-lookup"><span data-stu-id="d7242-104">This can be used to add custom WAS protocols.</span></span>  
+# <a name="transportconfigurationtypes"></a><span data-ttu-id="2128b-101">\<transportConfigurationTypes></span><span class="sxs-lookup"><span data-stu-id="2128b-101">\<transportConfigurationTypes></span></span>
+<span data-ttu-id="2128b-102">Représente une collection d’éléments de configuration identifiant le type d’un transport particulier.</span><span class="sxs-lookup"><span data-stu-id="2128b-102">Represents a collection of configuration elements that identify the type of a particular transport.</span></span> <span data-ttu-id="2128b-103">Peut être utilisé pour ajouter des protocoles WAS personnalisés.</span><span class="sxs-lookup"><span data-stu-id="2128b-103">This can be used to add custom WAS protocols.</span></span>  
   
- <span data-ttu-id="d7242-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="d7242-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="d7242-106">\<ServiceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="d7242-106">\<ServiceHostingEnvironment></span></span>  
-<span data-ttu-id="d7242-107">\<transportConfigurationTypes></span><span class="sxs-lookup"><span data-stu-id="d7242-107">\<transportConfigurationTypes></span></span>  
+ <span data-ttu-id="2128b-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2128b-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2128b-105">\<ServiceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="2128b-105">\<ServiceHostingEnvironment></span></span>  
+<span data-ttu-id="2128b-106">\<transportConfigurationTypes></span><span class="sxs-lookup"><span data-stu-id="2128b-106">\<transportConfigurationTypes></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d7242-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d7242-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2128b-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2128b-107">Syntax</span></span>  
   
 ```xml  
 <serviceHostingEnvironment>
@@ -27,30 +27,30 @@ ms.locfileid: "54704915"
 </serviceHostingEnvironment>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d7242-109">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="d7242-109">Attributes and Elements</span></span>  
- <span data-ttu-id="d7242-110">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="d7242-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2128b-108">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="2128b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="2128b-109">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="2128b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d7242-111">Attributs</span><span class="sxs-lookup"><span data-stu-id="d7242-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2128b-110">Attributs</span><span class="sxs-lookup"><span data-stu-id="2128b-110">Attributes</span></span>  
   
-|<span data-ttu-id="d7242-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="d7242-112">Attribute</span></span>|<span data-ttu-id="d7242-113">Description</span><span class="sxs-lookup"><span data-stu-id="d7242-113">Description</span></span>|  
+|<span data-ttu-id="2128b-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="2128b-111">Attribute</span></span>|<span data-ttu-id="2128b-112">Description</span><span class="sxs-lookup"><span data-stu-id="2128b-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="d7242-114">name</span><span class="sxs-lookup"><span data-stu-id="d7242-114">name</span></span>|<span data-ttu-id="d7242-115">Nom du transport.</span><span class="sxs-lookup"><span data-stu-id="d7242-115">The name of the transport</span></span>|  
-|<span data-ttu-id="d7242-116">transportConfigurationType</span><span class="sxs-lookup"><span data-stu-id="d7242-116">transportConfigurationType</span></span>|<span data-ttu-id="d7242-117">Type qui implémente le transport.</span><span class="sxs-lookup"><span data-stu-id="d7242-117">The type that implements the transport</span></span>|  
+|<span data-ttu-id="2128b-113">name</span><span class="sxs-lookup"><span data-stu-id="2128b-113">name</span></span>|<span data-ttu-id="2128b-114">Nom du transport.</span><span class="sxs-lookup"><span data-stu-id="2128b-114">The name of the transport</span></span>|  
+|<span data-ttu-id="2128b-115">transportConfigurationType</span><span class="sxs-lookup"><span data-stu-id="2128b-115">transportConfigurationType</span></span>|<span data-ttu-id="2128b-116">Type qui implémente le transport.</span><span class="sxs-lookup"><span data-stu-id="2128b-116">The type that implements the transport</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d7242-118">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="d7242-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2128b-117">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="2128b-117">Child Elements</span></span>  
   
-|<span data-ttu-id="d7242-119">Élément</span><span class="sxs-lookup"><span data-stu-id="d7242-119">Element</span></span>|<span data-ttu-id="d7242-120">Description</span><span class="sxs-lookup"><span data-stu-id="d7242-120">Description</span></span>|  
+|<span data-ttu-id="2128b-118">Élément</span><span class="sxs-lookup"><span data-stu-id="2128b-118">Element</span></span>|<span data-ttu-id="2128b-119">Description</span><span class="sxs-lookup"><span data-stu-id="2128b-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d7242-121">\<add></span><span class="sxs-lookup"><span data-stu-id="d7242-121">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-transportconfigurationtype.md)|<span data-ttu-id="d7242-122">Ajoute un élément de configuration identifiant le type d'un transport particulier.</span><span class="sxs-lookup"><span data-stu-id="d7242-122">Adds a configuration element that identifies the type of a particular transport.</span></span>|  
+|[<span data-ttu-id="2128b-120">\<add></span><span class="sxs-lookup"><span data-stu-id="2128b-120">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-transportconfigurationtype.md)|<span data-ttu-id="2128b-121">Ajoute un élément de configuration identifiant le type d'un transport particulier.</span><span class="sxs-lookup"><span data-stu-id="2128b-121">Adds a configuration element that identifies the type of a particular transport.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="d7242-123">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="d7242-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2128b-122">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="2128b-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="d7242-124">Élément</span><span class="sxs-lookup"><span data-stu-id="d7242-124">Element</span></span>|<span data-ttu-id="d7242-125">Description</span><span class="sxs-lookup"><span data-stu-id="d7242-125">Description</span></span>|  
+|<span data-ttu-id="2128b-123">Élément</span><span class="sxs-lookup"><span data-stu-id="2128b-123">Element</span></span>|<span data-ttu-id="2128b-124">Description</span><span class="sxs-lookup"><span data-stu-id="2128b-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d7242-126">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="d7242-126">\<serviceHostingEnvironment></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|<span data-ttu-id="d7242-127">Définit le type instancié par l'environnement d'hébergement du service pour un transport particulier.</span><span class="sxs-lookup"><span data-stu-id="d7242-127">Defines the type the service hosting environment instantiates for a particular transport.</span></span>|  
+|[<span data-ttu-id="2128b-125">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="2128b-125">\<serviceHostingEnvironment></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|<span data-ttu-id="2128b-126">Définit le type instancié par l'environnement d'hébergement du service pour un transport particulier.</span><span class="sxs-lookup"><span data-stu-id="2128b-126">Defines the type the service hosting environment instantiates for a particular transport.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="d7242-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d7242-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2128b-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2128b-127">See also</span></span>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElementCollection>
-- [<span data-ttu-id="d7242-129">Hébergement</span><span class="sxs-lookup"><span data-stu-id="d7242-129">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [<span data-ttu-id="2128b-128">Hébergement</span><span class="sxs-lookup"><span data-stu-id="2128b-128">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)

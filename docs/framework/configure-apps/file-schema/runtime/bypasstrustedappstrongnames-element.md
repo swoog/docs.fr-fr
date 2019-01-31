@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypassTrustedAppStrongNames&gt; Element'
+title: Élément <bypassTrustedAppStrongNames>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -9,71 +9,71 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725e2ee19c97cf2642134058ece07b32455516a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c456066eb169ab63372ceded16d60e384296c779
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565473"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282306"
 ---
-# <a name="ltbypasstrustedappstrongnamesgt-element"></a><span data-ttu-id="efc78-102">&lt;bypassTrustedAppStrongNames&gt; Element</span><span class="sxs-lookup"><span data-stu-id="efc78-102">&lt;bypassTrustedAppStrongNames&gt; Element</span></span>
-<span data-ttu-id="efc78-103">Spécifie s’il faut ignorer la validation des noms forts sur les assemblys de confiance totale sont chargés dans un niveau de confiance totale <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="efc78-103">Specifies whether to bypass the validation of strong names on full-trust assemblies that are loaded into a full-trust <xref:System.AppDomain>.</span></span>  
+# <a name="bypasstrustedappstrongnames-element"></a><span data-ttu-id="7b765-102">\<bypassTrustedAppStrongNames> Element</span><span class="sxs-lookup"><span data-stu-id="7b765-102">\<bypassTrustedAppStrongNames> Element</span></span>
+<span data-ttu-id="7b765-103">Spécifie s’il faut ignorer la validation des noms forts sur les assemblys de confiance totale sont chargés dans un niveau de confiance totale <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="7b765-103">Specifies whether to bypass the validation of strong names on full-trust assemblies that are loaded into a full-trust <xref:System.AppDomain>.</span></span>  
   
- <span data-ttu-id="efc78-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="efc78-104">\<configuration></span></span>  
-<span data-ttu-id="efc78-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="efc78-105">\<runtime></span></span>  
-<span data-ttu-id="efc78-106">\<bypassTrustedAppStrongNames></span><span class="sxs-lookup"><span data-stu-id="efc78-106">\<bypassTrustedAppStrongNames></span></span>  
+ <span data-ttu-id="7b765-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7b765-104">\<configuration></span></span>  
+<span data-ttu-id="7b765-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="7b765-105">\<runtime></span></span>  
+<span data-ttu-id="7b765-106">\<bypassTrustedAppStrongNames></span><span class="sxs-lookup"><span data-stu-id="7b765-106">\<bypassTrustedAppStrongNames></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efc78-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="efc78-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b765-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7b765-107">Syntax</span></span>  
   
 ```xml  
 <bypassTrustedAppStrongNames    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="efc78-108">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="efc78-108">Attributes and Elements</span></span>  
- <span data-ttu-id="efc78-109">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="efc78-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7b765-108">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="7b765-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="7b765-109">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="7b765-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="efc78-110">Attributs</span><span class="sxs-lookup"><span data-stu-id="efc78-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7b765-110">Attributs</span><span class="sxs-lookup"><span data-stu-id="7b765-110">Attributes</span></span>  
   
-|<span data-ttu-id="efc78-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="efc78-111">Attribute</span></span>|<span data-ttu-id="efc78-112">Description</span><span class="sxs-lookup"><span data-stu-id="efc78-112">Description</span></span>|  
+|<span data-ttu-id="7b765-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="7b765-111">Attribute</span></span>|<span data-ttu-id="7b765-112">Description</span><span class="sxs-lookup"><span data-stu-id="7b765-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="efc78-113">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="efc78-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="efc78-114">Spécifie si la fonctionnalité de contournement qui évite la validation des noms forts pour les assemblys de confiance totale est activée.</span><span class="sxs-lookup"><span data-stu-id="efc78-114">Specifies whether the bypass feature that avoids validating strong names for full-trust assemblies is enabled.</span></span> <span data-ttu-id="efc78-115">Lorsque cette fonctionnalité est activée, les noms forts ne sont pas validés est correcte lors de l’assembly est chargé.</span><span class="sxs-lookup"><span data-stu-id="efc78-115">When this feature is enabled, strong names are not validated for correctness when the assembly is loaded.</span></span> <span data-ttu-id="efc78-116">La valeur par défaut est `true`.</span><span class="sxs-lookup"><span data-stu-id="efc78-116">The default is `true`.</span></span>|  
+|`enabled`|<span data-ttu-id="7b765-113">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="7b765-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="7b765-114">Spécifie si la fonctionnalité de contournement qui évite la validation des noms forts pour les assemblys de confiance totale est activée.</span><span class="sxs-lookup"><span data-stu-id="7b765-114">Specifies whether the bypass feature that avoids validating strong names for full-trust assemblies is enabled.</span></span> <span data-ttu-id="7b765-115">Lorsque cette fonctionnalité est activée, les noms forts ne sont pas validés est correcte lors de l’assembly est chargé.</span><span class="sxs-lookup"><span data-stu-id="7b765-115">When this feature is enabled, strong names are not validated for correctness when the assembly is loaded.</span></span> <span data-ttu-id="7b765-116">La valeur par défaut est `true`.</span><span class="sxs-lookup"><span data-stu-id="7b765-116">The default is `true`.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="efc78-117">Attribut enabled</span><span class="sxs-lookup"><span data-stu-id="efc78-117">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="7b765-117">Attribut enabled</span><span class="sxs-lookup"><span data-stu-id="7b765-117">enabled Attribute</span></span>  
   
-|<span data-ttu-id="efc78-118">Valeur</span><span class="sxs-lookup"><span data-stu-id="efc78-118">Value</span></span>|<span data-ttu-id="efc78-119">Description</span><span class="sxs-lookup"><span data-stu-id="efc78-119">Description</span></span>|  
+|<span data-ttu-id="7b765-118">Valeur</span><span class="sxs-lookup"><span data-stu-id="7b765-118">Value</span></span>|<span data-ttu-id="7b765-119">Description</span><span class="sxs-lookup"><span data-stu-id="7b765-119">Description</span></span>|  
 |-----------|-----------------|  
-|`true`|<span data-ttu-id="efc78-120">Les signatures avec nom fort sur les assemblys de confiance totale ne sont pas validées lorsque les assemblys sont chargés dans un niveau de confiance totale <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="efc78-120">Strong-name signatures on full-trust assemblies are not validated when the assemblies are loaded into a full-trust <xref:System.AppDomain>.</span></span> <span data-ttu-id="efc78-121">Il s'agit de la valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="efc78-121">This is the default.</span></span>|  
-|`false`|<span data-ttu-id="efc78-122">Les signatures avec nom fort sur les assemblys de confiance totale sont validées lorsque les assemblys sont chargés dans un niveau de confiance totale <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="efc78-122">Strong-name signatures on full-trust assemblies are validated when the assemblies are loaded into a full-trust <xref:System.AppDomain>.</span></span> <span data-ttu-id="efc78-123">La signature de nom fort est vérifiée uniquement pour l’exactitude de la signature ; Il n’est pas comparée à un autre nom fort pour une correspondance.</span><span class="sxs-lookup"><span data-stu-id="efc78-123">The strong-name signature is checked only for signature correctness; it is not compared to another strong name for a match.</span></span>|  
+|`true`|<span data-ttu-id="7b765-120">Les signatures avec nom fort sur les assemblys de confiance totale ne sont pas validées lorsque les assemblys sont chargés dans un niveau de confiance totale <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="7b765-120">Strong-name signatures on full-trust assemblies are not validated when the assemblies are loaded into a full-trust <xref:System.AppDomain>.</span></span> <span data-ttu-id="7b765-121">Il s'agit de la valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="7b765-121">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="7b765-122">Les signatures avec nom fort sur les assemblys de confiance totale sont validées lorsque les assemblys sont chargés dans un niveau de confiance totale <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="7b765-122">Strong-name signatures on full-trust assemblies are validated when the assemblies are loaded into a full-trust <xref:System.AppDomain>.</span></span> <span data-ttu-id="7b765-123">La signature de nom fort est vérifiée uniquement pour l’exactitude de la signature ; Il n’est pas comparée à un autre nom fort pour une correspondance.</span><span class="sxs-lookup"><span data-stu-id="7b765-123">The strong-name signature is checked only for signature correctness; it is not compared to another strong name for a match.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="efc78-124">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="efc78-124">Child Elements</span></span>  
- <span data-ttu-id="efc78-125">Aucun.</span><span class="sxs-lookup"><span data-stu-id="efc78-125">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7b765-124">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="7b765-124">Child Elements</span></span>  
+ <span data-ttu-id="7b765-125">Aucun.</span><span class="sxs-lookup"><span data-stu-id="7b765-125">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="efc78-126">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="efc78-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7b765-126">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="7b765-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="efc78-127">Élément</span><span class="sxs-lookup"><span data-stu-id="efc78-127">Element</span></span>|<span data-ttu-id="efc78-128">Description</span><span class="sxs-lookup"><span data-stu-id="efc78-128">Description</span></span>|  
+|<span data-ttu-id="7b765-127">Élément</span><span class="sxs-lookup"><span data-stu-id="7b765-127">Element</span></span>|<span data-ttu-id="7b765-128">Description</span><span class="sxs-lookup"><span data-stu-id="7b765-128">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="efc78-129">Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="efc78-129">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="efc78-130">Contient des informations sur les liaisons d’assembly et l’opération garbage collection.</span><span class="sxs-lookup"><span data-stu-id="efc78-130">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="7b765-129">Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7b765-129">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="7b765-130">Contient des informations sur les liaisons d’assembly et l’opération garbage collection.</span><span class="sxs-lookup"><span data-stu-id="7b765-130">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="efc78-131">Notes</span><span class="sxs-lookup"><span data-stu-id="efc78-131">Remarks</span></span>  
- <span data-ttu-id="efc78-132">La fonctionnalité de contournement de noms forts évite la surcharge liée à la vérification de signature de nom fort des assemblys de confiance totale.</span><span class="sxs-lookup"><span data-stu-id="efc78-132">The strong-name bypass feature avoids the overhead of strong-name signature verification of full-trust assemblies.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7b765-131">Notes</span><span class="sxs-lookup"><span data-stu-id="7b765-131">Remarks</span></span>  
+ <span data-ttu-id="7b765-132">La fonctionnalité de contournement de noms forts évite la surcharge liée à la vérification de signature de nom fort des assemblys de confiance totale.</span><span class="sxs-lookup"><span data-stu-id="7b765-132">The strong-name bypass feature avoids the overhead of strong-name signature verification of full-trust assemblies.</span></span>  
   
- <span data-ttu-id="efc78-133">Cette fonctionnalité s'applique à tout assembly signé avec un nom fort qui présente les caractéristiques suivantes :</span><span class="sxs-lookup"><span data-stu-id="efc78-133">The bypass feature applies to any assembly that is signed with a strong name and that has the following characteristics:</span></span>  
+ <span data-ttu-id="7b765-133">Cette fonctionnalité s'applique à tout assembly signé avec un nom fort qui présente les caractéristiques suivantes :</span><span class="sxs-lookup"><span data-stu-id="7b765-133">The bypass feature applies to any assembly that is signed with a strong name and that has the following characteristics:</span></span>  
   
--   <span data-ttu-id="efc78-134">Confiance totale sans la <xref:System.Security.Policy.StrongName> preuves (par exemple, a `MyComputer` preuve de zone).</span><span class="sxs-lookup"><span data-stu-id="efc78-134">Fully trusted without the <xref:System.Security.Policy.StrongName> evidence (for example, has `MyComputer` zone evidence).</span></span>  
+-   <span data-ttu-id="7b765-134">Confiance totale sans la <xref:System.Security.Policy.StrongName> preuves (par exemple, a `MyComputer` preuve de zone).</span><span class="sxs-lookup"><span data-stu-id="7b765-134">Fully trusted without the <xref:System.Security.Policy.StrongName> evidence (for example, has `MyComputer` zone evidence).</span></span>  
   
--   <span data-ttu-id="efc78-135">Chargé dans un <xref:System.AppDomain> de confiance totale.</span><span class="sxs-lookup"><span data-stu-id="efc78-135">Loaded into a fully trusted <xref:System.AppDomain>.</span></span>  
+-   <span data-ttu-id="7b765-135">Chargé dans un <xref:System.AppDomain> de confiance totale.</span><span class="sxs-lookup"><span data-stu-id="7b765-135">Loaded into a fully trusted <xref:System.AppDomain>.</span></span>  
   
--   <span data-ttu-id="efc78-136">Chargé à partir d'un emplacement sous la propriété <xref:System.AppDomainSetup.ApplicationBase%2A> de cet <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="efc78-136">Loaded from a location under the <xref:System.AppDomainSetup.ApplicationBase%2A> property of that <xref:System.AppDomain>.</span></span>  
+-   <span data-ttu-id="7b765-136">Chargé à partir d'un emplacement sous la propriété <xref:System.AppDomainSetup.ApplicationBase%2A> de cet <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="7b765-136">Loaded from a location under the <xref:System.AppDomainSetup.ApplicationBase%2A> property of that <xref:System.AppDomain>.</span></span>  
   
--   <span data-ttu-id="efc78-137">Sans signature différée.</span><span class="sxs-lookup"><span data-stu-id="efc78-137">Not delay-signed.</span></span>  
+-   <span data-ttu-id="7b765-137">Sans signature différée.</span><span class="sxs-lookup"><span data-stu-id="7b765-137">Not delay-signed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="efc78-138">Si cette fonctionnalité a été désactivée pour toutes les applications sur l’ordinateur à l’aide d’une clé de Registre, ce paramètre de fichier de configuration n’a aucun effet.</span><span class="sxs-lookup"><span data-stu-id="efc78-138">If the bypass feature has been turned off for all applications on the computer by using a registry key, this configuration file setting has no effect.</span></span> <span data-ttu-id="efc78-139">Pour plus d'informations, voir [Procédure : Désactiver cette fonctionnalité avec un nom fort](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).</span><span class="sxs-lookup"><span data-stu-id="efc78-139">For more information, see [How to: Disable the Strong-Name Bypass Feature](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).</span></span>  
+>  <span data-ttu-id="7b765-138">Si cette fonctionnalité a été désactivée pour toutes les applications sur l’ordinateur à l’aide d’une clé de Registre, ce paramètre de fichier de configuration n’a aucun effet.</span><span class="sxs-lookup"><span data-stu-id="7b765-138">If the bypass feature has been turned off for all applications on the computer by using a registry key, this configuration file setting has no effect.</span></span> <span data-ttu-id="7b765-139">Pour plus d'informations, voir [Procédure : Désactiver cette fonctionnalité avec un nom fort](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).</span><span class="sxs-lookup"><span data-stu-id="7b765-139">For more information, see [How to: Disable the Strong-Name Bypass Feature](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="efc78-140">Exemple</span><span class="sxs-lookup"><span data-stu-id="efc78-140">Example</span></span>  
- <span data-ttu-id="efc78-141">L’exemple suivant montre comment spécifier le comportement qui valide la signature de nom fort sur les assemblys de confiance totale.</span><span class="sxs-lookup"><span data-stu-id="efc78-141">The following example shows how to specify the behavior that validates the strong-name signature on full-trust assemblies.</span></span>  
+## <a name="example"></a><span data-ttu-id="7b765-140">Exemple</span><span class="sxs-lookup"><span data-stu-id="7b765-140">Example</span></span>  
+ <span data-ttu-id="7b765-141">L’exemple suivant montre comment spécifier le comportement qui valide la signature de nom fort sur les assemblys de confiance totale.</span><span class="sxs-lookup"><span data-stu-id="7b765-141">The following example shows how to specify the behavior that validates the strong-name signature on full-trust assemblies.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,7 +83,7 @@ ms.locfileid: "54565473"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="efc78-142">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="efc78-142">See also</span></span>
-- [<span data-ttu-id="efc78-143">Schéma des paramètres d’exécution</span><span class="sxs-lookup"><span data-stu-id="efc78-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="efc78-144">Schéma des fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="efc78-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="efc78-145">Guide pratique pour Désactiver cette fonctionnalité avec un nom fort</span><span class="sxs-lookup"><span data-stu-id="efc78-145">How to: Disable the Strong-Name Bypass Feature</span></span>](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+## <a name="see-also"></a><span data-ttu-id="7b765-142">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7b765-142">See also</span></span>
+- [<span data-ttu-id="7b765-143">Schéma des paramètres d’exécution</span><span class="sxs-lookup"><span data-stu-id="7b765-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="7b765-144">Schéma des fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="7b765-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="7b765-145">Guide pratique pour désactiver la fonctionnalité consistant à ignorer les noms forts</span><span class="sxs-lookup"><span data-stu-id="7b765-145">How to: Disable the Strong-Name Bypass Feature</span></span>](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
