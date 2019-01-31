@@ -1,5 +1,5 @@
 ---
-title: Le type de variable &#39; &lt;variablename&gt; &#39; ne sera pas déduit, car il est lié à un champ dans une portée englobante
+title: Le type pour la variable '<variablename>' ne sera pas déduit, car il est lié à un champ d'une portée englobante
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42110
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 6adcc1c2a449c9192e488a5d714e1c3271568be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7289b8ab0a141d6efdb0f4ca4b4547f15e0e182
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672381"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259239"
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a><span data-ttu-id="b332e-102">Le type de variable &#39; &lt;variablename&gt; &#39; ne sera pas déduit, car il est lié à un champ dans une portée englobante</span><span class="sxs-lookup"><span data-stu-id="b332e-102">The type for variable &#39;&lt;variablename&gt;&#39; will not be inferred because it is bound to a field in an enclosing scope</span></span>
-<span data-ttu-id="b332e-103">Le type de variable '\<nom_variable >' ne sera pas déduit, car il est lié à un champ dans une portée englobante.</span><span class="sxs-lookup"><span data-stu-id="b332e-103">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope.</span></span> <span data-ttu-id="b332e-104">Modifiez le nom de «\<nom_variable >', ou utilisez le nom qualifié complet (par exemple, 'Me.NomVariable' ou 'MyBase.NomVariable').</span><span class="sxs-lookup"><span data-stu-id="b332e-104">Either change the name of '\<variablename>', or use the fully qualified name (for example, 'Me.variablename' or 'MyBase.variablename').</span></span>  
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a><span data-ttu-id="0f242-102">Le type de variable '\<nom_variable >' ne sera pas déduit, car il est lié à un champ dans une portée englobante</span><span class="sxs-lookup"><span data-stu-id="0f242-102">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope</span></span>
+<span data-ttu-id="0f242-103">Le type de variable '\<nom_variable >' ne sera pas déduit, car il est lié à un champ dans une portée englobante.</span><span class="sxs-lookup"><span data-stu-id="0f242-103">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope.</span></span> <span data-ttu-id="0f242-104">Modifiez le nom de «\<nom_variable >', ou utilisez le nom qualifié complet (par exemple, 'Me.NomVariable' ou 'MyBase.NomVariable').</span><span class="sxs-lookup"><span data-stu-id="0f242-104">Either change the name of '\<variablename>', or use the fully qualified name (for example, 'Me.variablename' or 'MyBase.variablename').</span></span>  
   
- <span data-ttu-id="b332e-105">Une variable de contrôle de boucle dans votre code a le même nom en tant que champ de la classe ou d’autres portée englobante.</span><span class="sxs-lookup"><span data-stu-id="b332e-105">A loop control variable in your code has the same name as a field of the class or other enclosing scope.</span></span> <span data-ttu-id="b332e-106">Étant donné que la variable de contrôle est utilisée sans un `As` clause, elle est liée au champ dans la portée englobante, et le compilateur ne pas créer une variable pour lui ou déduire son type.</span><span class="sxs-lookup"><span data-stu-id="b332e-106">Because the control variable is used without an `As` clause, it is bound to the field in the enclosing scope, and the compiler does not create a new variable for it or infer its type.</span></span>  
+ <span data-ttu-id="0f242-105">Une variable de contrôle de boucle dans votre code a le même nom en tant que champ de la classe ou d’autres portée englobante.</span><span class="sxs-lookup"><span data-stu-id="0f242-105">A loop control variable in your code has the same name as a field of the class or other enclosing scope.</span></span> <span data-ttu-id="0f242-106">Étant donné que la variable de contrôle est utilisée sans un `As` clause, elle est liée au champ dans la portée englobante, et le compilateur ne pas créer une variable pour lui ou déduire son type.</span><span class="sxs-lookup"><span data-stu-id="0f242-106">Because the control variable is used without an `As` clause, it is bound to the field in the enclosing scope, and the compiler does not create a new variable for it or infer its type.</span></span>  
   
- <span data-ttu-id="b332e-107">Dans l’exemple suivant, `Index`, la variable de contrôle dans le `For` instruction, est lié à la `Index` champ dans le `Customer` classe.</span><span class="sxs-lookup"><span data-stu-id="b332e-107">In the following example, `Index`, the control variable in the `For` statement, is bound to the `Index` field in the `Customer` class.</span></span> <span data-ttu-id="b332e-108">Le compilateur ne crée pas de variable pour la variable de contrôle `Index` ou déduire son type.</span><span class="sxs-lookup"><span data-stu-id="b332e-108">The compiler does not create a new variable for the control variable `Index` or infer its type.</span></span>  
+ <span data-ttu-id="0f242-107">Dans l’exemple suivant, `Index`, la variable de contrôle dans le `For` instruction, est lié à la `Index` champ dans le `Customer` classe.</span><span class="sxs-lookup"><span data-stu-id="0f242-107">In the following example, `Index`, the control variable in the `For` statement, is bound to the `Index` field in the `Customer` class.</span></span> <span data-ttu-id="0f242-108">Le compilateur ne crée pas de variable pour la variable de contrôle `Index` ou déduire son type.</span><span class="sxs-lookup"><span data-stu-id="0f242-108">The compiler does not create a new variable for the control variable `Index` or infer its type.</span></span>  
   
 ```  
 Class Customer  
@@ -38,32 +38,32 @@ Class Customer
 End Class  
 ```  
   
- <span data-ttu-id="b332e-109">Par défaut, ce message est un avertissement.</span><span class="sxs-lookup"><span data-stu-id="b332e-109">By default, this message is a warning.</span></span> <span data-ttu-id="b332e-110">Pour plus d’informations sur le masquage des avertissements ou le traitement des avertissements en tant qu’erreurs, consultez [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="b332e-110">For information about how to hide warnings or how to treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="0f242-109">Par défaut, ce message est un avertissement.</span><span class="sxs-lookup"><span data-stu-id="0f242-109">By default, this message is a warning.</span></span> <span data-ttu-id="0f242-110">Pour plus d’informations sur le masquage des avertissements ou le traitement des avertissements en tant qu’erreurs, consultez [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="0f242-110">For information about how to hide warnings or how to treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="b332e-111">**ID d’erreur :** BC42110</span><span class="sxs-lookup"><span data-stu-id="b332e-111">**Error ID:** BC42110</span></span>  
+ <span data-ttu-id="0f242-111">**ID d’erreur :** BC42110</span><span class="sxs-lookup"><span data-stu-id="0f242-111">**Error ID:** BC42110</span></span>  
   
-### <a name="to-address-this-warning"></a><span data-ttu-id="b332e-112">Pour traiter cet avertissement</span><span class="sxs-lookup"><span data-stu-id="b332e-112">To address this warning</span></span>  
+### <a name="to-address-this-warning"></a><span data-ttu-id="0f242-112">Pour traiter cet avertissement</span><span class="sxs-lookup"><span data-stu-id="0f242-112">To address this warning</span></span>  
   
--   <span data-ttu-id="b332e-113">Rendre la variable de contrôle de boucle locale en modifiant son nom à un identificateur qui n’est pas également le nom d’un champ de la classe.</span><span class="sxs-lookup"><span data-stu-id="b332e-113">Make the loop control variable local by changing its name to an identifier that is not also the name of a field of the class.</span></span>  
+-   <span data-ttu-id="0f242-113">Rendre la variable de contrôle de boucle locale en modifiant son nom à un identificateur qui n’est pas également le nom d’un champ de la classe.</span><span class="sxs-lookup"><span data-stu-id="0f242-113">Make the loop control variable local by changing its name to an identifier that is not also the name of a field of the class.</span></span>  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   <span data-ttu-id="b332e-114">Préciser que la variable de contrôle de boucle est liée au champ de classe en ajoutant le préfixe `Me.` au nom de variable.</span><span class="sxs-lookup"><span data-stu-id="b332e-114">Clarify that the loop control variable binds to the class field by prefixing `Me.` to the variable name.</span></span>  
+-   <span data-ttu-id="0f242-114">Préciser que la variable de contrôle de boucle est liée au champ de classe en ajoutant le préfixe `Me.` au nom de variable.</span><span class="sxs-lookup"><span data-stu-id="0f242-114">Clarify that the loop control variable binds to the class field by prefixing `Me.` to the variable name.</span></span>  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   <span data-ttu-id="b332e-115">Au lieu d’utiliser l’inférence de type local, utilisez un `As` clause pour spécifier un type pour la variable de contrôle de boucle.</span><span class="sxs-lookup"><span data-stu-id="b332e-115">Instead of relying on local type inference, use an `As` clause to specify a type for the loop control variable.</span></span>  
+-   <span data-ttu-id="0f242-115">Au lieu d’utiliser l’inférence de type local, utilisez un `As` clause pour spécifier un type pour la variable de contrôle de boucle.</span><span class="sxs-lookup"><span data-stu-id="0f242-115">Instead of relying on local type inference, use an `As` clause to specify a type for the loop control variable.</span></span>  
   
     ```  
     For Index As Integer = 1 To 10  
     ```  
   
-## <a name="example"></a><span data-ttu-id="b332e-116">Exemple</span><span class="sxs-lookup"><span data-stu-id="b332e-116">Example</span></span>  
- <span data-ttu-id="b332e-117">Le code suivant montre l’exemple précédent avec la première correction en place.</span><span class="sxs-lookup"><span data-stu-id="b332e-117">The following code shows the earlier example with the first correction in place.</span></span>  
+## <a name="example"></a><span data-ttu-id="0f242-116">Exemple</span><span class="sxs-lookup"><span data-stu-id="0f242-116">Example</span></span>  
+ <span data-ttu-id="0f242-117">Le code suivant montre l’exemple précédent avec la première correction en place.</span><span class="sxs-lookup"><span data-stu-id="0f242-117">The following code shows the earlier example with the first correction in place.</span></span>  
   
 ```  
 Class Customer  
@@ -81,10 +81,10 @@ Class Customer
 End Class  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b332e-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b332e-118">See also</span></span>
-- [<span data-ttu-id="b332e-119">Option Infer (instruction)</span><span class="sxs-lookup"><span data-stu-id="b332e-119">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [<span data-ttu-id="b332e-120">For Each...Next (instruction)</span><span class="sxs-lookup"><span data-stu-id="b332e-120">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [<span data-ttu-id="b332e-121">For...Next (instruction)</span><span class="sxs-lookup"><span data-stu-id="b332e-121">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [<span data-ttu-id="b332e-122">Guide pratique pour Reportez-vous à l’Instance actuelle d’un objet</span><span class="sxs-lookup"><span data-stu-id="b332e-122">How to: Refer to the Current Instance of an Object</span></span>](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
-- [<span data-ttu-id="b332e-123">Inférence de type local</span><span class="sxs-lookup"><span data-stu-id="b332e-123">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [<span data-ttu-id="b332e-124">Me, My, MyBase et MyClass</span><span class="sxs-lookup"><span data-stu-id="b332e-124">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a><span data-ttu-id="0f242-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0f242-118">See also</span></span>
+- [<span data-ttu-id="0f242-119">Option Infer (instruction)</span><span class="sxs-lookup"><span data-stu-id="0f242-119">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [<span data-ttu-id="0f242-120">For Each...Next (instruction)</span><span class="sxs-lookup"><span data-stu-id="0f242-120">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="0f242-121">For...Next (instruction)</span><span class="sxs-lookup"><span data-stu-id="0f242-121">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [<span data-ttu-id="0f242-122">Guide pratique pour Reportez-vous à l’Instance actuelle d’un objet</span><span class="sxs-lookup"><span data-stu-id="0f242-122">How to: Refer to the Current Instance of an Object</span></span>](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [<span data-ttu-id="0f242-123">Inférence de type local</span><span class="sxs-lookup"><span data-stu-id="0f242-123">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [<span data-ttu-id="0f242-124">Me, My, MyBase et MyClass</span><span class="sxs-lookup"><span data-stu-id="0f242-124">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
