@@ -1,5 +1,5 @@
 ---
-title: 'Erreur de création du manifeste d’assembly : &lt;message d’erreur&gt;'
+title: "Erreur lors de la création du manifeste d'assembly : <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30140
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: 7efdfa09ad7bf58fc3ddc8f702377a4d41b2fed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c8d9fe4b8bea45e4b655415b044937f248deab
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655385"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266479"
 ---
-# <a name="error-creating-assembly-manifest-lterror-messagegt"></a>Erreur de création du manifeste d’assembly : &lt;message d’erreur&gt;
+# <a name="error-creating-assembly-manifest-error-message"></a>Erreur de création du manifeste d’assembly : \<message d’erreur >
 Le compilateur Visual Basic appelle l’utilitaire Assembly Linker (Al.exe, également appelé Alink) pour générer un assembly avec un manifeste. L'éditeur de liens a signalé une erreur dans la phase de préémission de création de l'assembly.  
   
  Cela peut être dû à des problèmes avec le fichier de clé ou le conteneur de clé indiqué. Pour signer un assembly, vous devez fournir un fichier de clé valide contenant des informations relatives aux clés publiques et privées. Pour différer la signature d’un assembly, vous devez cocher la case **Différer la signature uniquement** et fournir un fichier de clé valide contenant des informations de clés publiques. La clé privée n'est pas nécessaire quand la signature d'un assembly est différée. Pour plus d'informations, voir [Procédure : signer un assembly avec un nom fort](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  

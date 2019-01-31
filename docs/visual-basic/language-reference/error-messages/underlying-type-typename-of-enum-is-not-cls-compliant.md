@@ -1,5 +1,5 @@
 ---
-title: Type sous-jacent &lt;typename&gt; d’Enum n’est pas conforme CLS
+title: Le type sous-jacent <typename> d'Enum n'est pas conforme CLS
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40032
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: ceda7e6ed6fc1744de14afcb0245ebabbd7fa733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75f66c79bcf6c857fb19acf7c5a75320b16a43d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674792"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258620"
 ---
-# <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Type sous-jacent &lt;typename&gt; d’Enum n’est pas conforme CLS
+# <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>Type sous-jacent \<typename > d’Enum n’est pas conforme CLS
 Le type de données spécifié pour cette énumération n’est pas dans le cadre de la [indépendance du langage et composants indépendants du langage](../../../standard/language-independence-and-language-independent-components.md) (CLS). Ce n’est pas une erreur dans votre composant, parce que le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] et Visual Basic prennent en charge ce type de données. Toutefois, un autre composant écrit dans un code strictement conforme CLS ne prenne pas en charge ce type de données. Un tel composant n’est peut-être pas en mesure d’interagir correctement avec votre composant.  
   
  Les types de données Visual Basic suivants ne sont pas conformes CLS :  

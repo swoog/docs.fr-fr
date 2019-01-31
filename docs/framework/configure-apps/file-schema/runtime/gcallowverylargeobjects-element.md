@@ -1,5 +1,5 @@
 ---
-title: '&lt;gcAllowVeryLargeObjects&gt; Element'
+title: Élément <gcAllowVeryLargeObjects>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16a6b497136b6cffabeb4151e54bec8d80928b5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af994284a56c573d70f3688ccec16459b8eed59
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549105"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273372"
 ---
-# <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt; Element
+# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Element
 Sur les plateformes 64 bits, autorise les tableaux dont la taille totale est supérieure à 2 gigaoctets (Go).  
   
  \<configuration > élément  

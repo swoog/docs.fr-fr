@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: 63158dd2dda5388870d3d5878fe29cb004aec401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 820a43e3c766c7abc47e21ad9d8c6e9d7a1d749e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592613"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269833"
 ---
 # <a name="binary-serialization"></a>Sérialisation binaire
 
@@ -47,54 +47,54 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.ArgumentNullException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.ArgumentOutOfRangeException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.ArithmeticException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Array?displayProperty=nameWithType>   
-- <xref:System.ArraySegment%601?displayProperty=nameWithType>   
+- <xref:System.Array?displayProperty=nameWithType>
+- <xref:System.ArraySegment%601?displayProperty=nameWithType>
 - <xref:System.ArrayTypeMismatchException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.BadImageFormatException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Boolean?displayProperty=nameWithType>   
-- <xref:System.Byte?displayProperty=nameWithType>   
+- <xref:System.Boolean?displayProperty=nameWithType>
+- <xref:System.Byte?displayProperty=nameWithType>
 - <xref:System.CannotUnloadAppDomainException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Char?displayProperty=nameWithType>   
-- <xref:System.Collections.ArrayList?displayProperty=nameWithType>   
-- <xref:System.Collections.BitArray?displayProperty=nameWithType>   
-- <xref:System.Collections.Comparer?displayProperty=nameWithType>   
-- <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.Comparer%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType>   
+- <xref:System.Char?displayProperty=nameWithType>
+- <xref:System.Collections.ArrayList?displayProperty=nameWithType>
+- <xref:System.Collections.BitArray?displayProperty=nameWithType>
+- <xref:System.Collections.Comparer?displayProperty=nameWithType>
+- <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.Comparer%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Hashtable?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.Collection%601?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Queue?displayProperty=nameWithType>   
-- <xref:System.Collections.SortedList?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.HybridDictionary?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.ListDictionary?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.StringCollection?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.StringDictionary?displayProperty=nameWithType>   
-- <xref:System.Collections.Stack?displayProperty=nameWithType>   
-- `System.Collections.Generic.NonRandomizedStringEqualityComparer` <!--zz <xref:System.Collections.Generic.NonRandomizedStringEqualityComparer?displayProperty=nameWithType> --> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>
+- <xref:System.Collections.Hashtable?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.Collection%601?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
+- <xref:System.Collections.Queue?displayProperty=nameWithType>
+- <xref:System.Collections.SortedList?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.HybridDictionary?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.ListDictionary?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.StringCollection?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.StringDictionary?displayProperty=nameWithType>
+- <xref:System.Collections.Stack?displayProperty=nameWithType>
+- `System.Collections.Generic.NonRandomizedStringEqualityComparer` (disponible dans .NET Core 2.0.4 et versions ultérieures)
+- <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.ComponentModel.InvalidAsynchronousStateException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures, la sérialisation à partir de .NET Framework vers le .NET Core n'est pas pris en charge)
+- <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures, la sérialisation de .NET Framework vers .NET Core n'est pas pris en charge)
 - <xref:System.ComponentModel.WarningException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.ComponentModel.Win32Exception?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -104,13 +104,13 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.Configuration.SettingsPropertyNotFoundException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Configuration.SettingsPropertyWrongTypeException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.ContextMarshalException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.DBNull?displayProperty=nameWithType> (disponible dans .NET Core 2.0.2 et versions ultérieures)   
+- <xref:System.DBNull?displayProperty=nameWithType> (disponible dans .NET Core 2.0.2 et versions ultérieures)
 - <xref:System.Data.Common.DbException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.ConstraintException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.DataException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.DataSet?displayProperty=nameWithType>
-- <xref:System.Data.DataTable?displayProperty=nameWithType> (sauf si vous affectez RemotingFormat SerializationFormat.Binary auquel cas elle peut uniquement être échangé avec .NET Core 2.1 et versions ultérieures.)   
+- <xref:System.Data.DataTable?displayProperty=nameWithType> (sauf si vous définissez RemotingFormat à SerializationFormat.Binary auquel cas il peut uniquement être échangé avec .NET Core 2.1 et versions ultérieures.)
 - <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.EvaluateException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -121,32 +121,32 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.Data.NoNullAllowedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.Odbc.OdbcException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.OperationAbortedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Data.PropertyCollection?displayProperty=nameWithType>   
+- <xref:System.Data.PropertyCollection?displayProperty=nameWithType>
 - <xref:System.Data.ReadOnlyException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.RowNotInTableException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures, la sérialisation à partir de .NET Framework vers le .NET Core n'est pas pris en charge)
+- <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures, la sérialisation de .NET Framework vers .NET Core n'est pas pris en charge)
 - <xref:System.Data.SqlTypes.SqlAlreadyFilledException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlDouble?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlGuid?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlInt16?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlInt32?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlInt64?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlDouble?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlGuid?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlInt16?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlInt32?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlInt64?displayProperty=nameWithType>
 - <xref:System.Data.SqlTypes.SqlNotFilledException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.SqlTypes.SqlNullValueException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Data.SqlTypes.SqlString?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlString?displayProperty=nameWithType>
 - <xref:System.Data.SqlTypes.SqlTruncateException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.SqlTypes.SqlTypeException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.StrongTypingException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.SyntaxErrorException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Data.VersionNotFoundException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.DataMisalignedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.DateTime?displayProperty=nameWithType>   
-- <xref:System.DateTimeOffset?displayProperty=nameWithType>   
-- <xref:System.Decimal?displayProperty=nameWithType>   
-- `System.Diagnostics.Contracts.ContractException` <!--zz <xref:System.Diagnostics.Contracts.ContractException?displayProperty=nameWithType> --> (disponible dans .NET Core 2.0.4 et versions ultérieures)
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>
+- <xref:System.Decimal?displayProperty=nameWithType>
+- `System.Diagnostics.Contracts.ContractException` (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Diagnostics.Tracing.EventSourceException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.DirectoryServices.AccountManagement.MultipleMatchesException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -170,27 +170,27 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.DirectoryServices.Protocols.TlsOperationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.DivideByZeroException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.DllNotFoundException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Double?displayProperty=nameWithType>   
-- <xref:System.Drawing.Color?displayProperty=nameWithType>   
-- <xref:System.Drawing.Point?displayProperty=nameWithType>   
-- <xref:System.Drawing.PointF?displayProperty=nameWithType>   
-- <xref:System.Drawing.Rectangle?displayProperty=nameWithType>   
-- <xref:System.Drawing.RectangleF?displayProperty=nameWithType>   
-- <xref:System.Drawing.Size?displayProperty=nameWithType>   
-- <xref:System.Drawing.SizeF?displayProperty=nameWithType>   
+- <xref:System.Double?displayProperty=nameWithType>
+- <xref:System.Drawing.Color?displayProperty=nameWithType>
+- <xref:System.Drawing.Point?displayProperty=nameWithType>
+- <xref:System.Drawing.PointF?displayProperty=nameWithType>
+- <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
+- <xref:System.Drawing.RectangleF?displayProperty=nameWithType>
+- <xref:System.Drawing.Size?displayProperty=nameWithType>
+- <xref:System.Drawing.SizeF?displayProperty=nameWithType>
 - <xref:System.DuplicateWaitObjectException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.EntryPointNotFoundException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Enum?displayProperty=nameWithType>   
+- <xref:System.Enum?displayProperty=nameWithType>
 - <xref:System.EventArgs?displayProperty=nameWithType> (disponible dans .NET Core 2.0.6 et versions ultérieures)
-- <xref:System.Exception?displayProperty=nameWithType>   
+- <xref:System.Exception?displayProperty=nameWithType>
 - <xref:System.ExecutionEngineException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.FieldAccessException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.FormatException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>   
+- <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>
 - <xref:System.Globalization.CultureNotFoundException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Globalization.SortVersion?displayProperty=nameWithType>   
-- <xref:System.Guid?displayProperty=nameWithType>   
-- `System.IO.Compression.ZLibException` <!--zz <xref:System.IO.Compression.ZLibException?displayProperty=nameWithType --> (disponible dans .NET Core 2.0.4 et versions ultérieures)
+- <xref:System.Globalization.SortVersion?displayProperty=nameWithType>
+- <xref:System.Guid?displayProperty=nameWithType>
+- `System.IO.Compression.ZLibException` (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.IO.DriveNotFoundException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.IO.EndOfStreamException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.IO.FileFormatException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -204,10 +204,10 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.InsufficientExecutionStackException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.InsufficientMemoryException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Int16?displayProperty=nameWithType>   
-- <xref:System.Int32?displayProperty=nameWithType>   
-- <xref:System.Int64?displayProperty=nameWithType>   
-- <xref:System.IntPtr?displayProperty=nameWithType>   
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.IntPtr?displayProperty=nameWithType>
 - <xref:System.InvalidCastException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.InvalidOperationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.InvalidProgramException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -218,9 +218,9 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.MissingMemberException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.MissingMethodException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.MulticastNotSupportedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Net.Cookie?displayProperty=nameWithType>   
-- <xref:System.Net.CookieCollection?displayProperty=nameWithType>   
-- <xref:System.Net.CookieContainer?displayProperty=nameWithType>   
+- <xref:System.Net.Cookie?displayProperty=nameWithType>
+- <xref:System.Net.CookieCollection?displayProperty=nameWithType>
+- <xref:System.Net.CookieContainer?displayProperty=nameWithType>
 - <xref:System.Net.CookieException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Net.HttpListenerException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Net.Mail.SmtpException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -236,10 +236,10 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.NotImplementedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.NotSupportedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.NullReferenceException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Nullable%601?displayProperty=nameWithType>   
-- <xref:System.Numerics.BigInteger?displayProperty=nameWithType>   
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>   
-- <xref:System.Object?displayProperty=nameWithType>   
+- <xref:System.Nullable%601?displayProperty=nameWithType>
+- <xref:System.Numerics.BigInteger?displayProperty=nameWithType>
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.ObjectDisposedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.OperationCanceledException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.OutOfMemoryException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -249,7 +249,7 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.Reflection.AmbiguousMatchException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Reflection.CustomAttributeFormatException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Reflection.InvalidFilterCriteriaException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures, la sérialisation à partir de .NET Framework vers le .NET Core n'est pas pris en charge)
+- <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures, la sérialisation de .NET Framework vers .NET Core n'est pas pris en charge)
 - <xref:System.Reflection.TargetException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Reflection.TargetInvocationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Reflection.TargetParameterCountException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -266,29 +266,29 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Runtime.Serialization.InvalidDataContractException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Runtime.Serialization.SerializationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.SByte?displayProperty=nameWithType>   
+- <xref:System.SByte?displayProperty=nameWithType>
 - <xref:System.Security.AccessControl.PrivilegeNotHeldException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Security.Authentication.AuthenticationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Security.Authentication.InvalidCredentialException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Security.Cryptography.CryptographicException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` <!--zz <xref:System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException?displayProperty=nameWithType --> (disponible dans .NET Core 2.0.4 et versions ultérieures)
+- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Security.HostProtectionException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Security.SecurityException?displayProperty=nameWithType> (disponible dans le .NET Core 2.0.4 et versions ultérieures, les données de sérialisation limitée)
+- <xref:System.Security.SecurityException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures, les données de sérialisation limitée)
 - <xref:System.Security.VerificationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Security.XmlSyntaxException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.ServiceProcess.TimeoutException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Single?displayProperty=nameWithType>   
+- <xref:System.Single?displayProperty=nameWithType>
 - <xref:System.StackOverflowException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.String?displayProperty=nameWithType>   
-- <xref:System.StringComparer?displayProperty=nameWithType>   
+- <xref:System.String?displayProperty=nameWithType>
+- <xref:System.StringComparer?displayProperty=nameWithType>
 - <xref:System.SystemException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Text.DecoderFallbackException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Text.EncoderFallbackException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Text.RegularExpressions.RegexMatchTimeoutException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Text.StringBuilder?displayProperty=nameWithType>   
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>
 - <xref:System.Threading.AbandonedMutexException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Threading.BarrierPostPhaseException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Threading.LockRecursionException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -301,9 +301,9 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.Threading.ThreadStartException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Threading.ThreadStateException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Threading.WaitHandleCannotBeOpenedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.TimeSpan?displayProperty=nameWithType>   
-- <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=nameWithType>   
-- <xref:System.TimeZoneInfo?displayProperty=nameWithType>   
+- <xref:System.TimeSpan?displayProperty=nameWithType>
+- <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=nameWithType>
+- <xref:System.TimeZoneInfo?displayProperty=nameWithType>
 - <xref:System.TimeZoneNotFoundException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.TimeoutException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Transactions.TransactionAbortedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -311,23 +311,23 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 - <xref:System.Transactions.TransactionInDoubtException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Transactions.TransactionManagerCommunicationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Transactions.TransactionPromotionException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Tuple?displayProperty=nameWithType>   
+- <xref:System.Tuple?displayProperty=nameWithType>
 - <xref:System.TypeAccessException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.TypeInitializationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.TypeLoadException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.TypeUnloadedException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.UInt16?displayProperty=nameWithType>   
-- <xref:System.UInt32?displayProperty=nameWithType>   
-- <xref:System.UInt64?displayProperty=nameWithType>   
-- <xref:System.UIntPtr?displayProperty=nameWithType>   
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>
+- <xref:System.UIntPtr?displayProperty=nameWithType>
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.Uri?displayProperty=nameWithType>   
+- <xref:System.Uri?displayProperty=nameWithType>
 - <xref:System.UriFormatException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
-- <xref:System.ValueTuple?displayProperty=nameWithType> (non sérialisable dans .NET Framework 4.7 et versions antérieures)  
-- <xref:System.ValueType?displayProperty=nameWithType>   
-- <xref:System.Version?displayProperty=nameWithType>   
-- <xref:System.WeakReference%601?displayProperty=nameWithType>   
-- <xref:System.WeakReference?displayProperty=nameWithType>   
+- <xref:System.ValueTuple?displayProperty=nameWithType> (non sérialisable dans .NET Framework 4.7 et versions antérieures)
+- <xref:System.ValueType?displayProperty=nameWithType>
+- <xref:System.Version?displayProperty=nameWithType>
+- <xref:System.WeakReference%601?displayProperty=nameWithType>
+- <xref:System.WeakReference?displayProperty=nameWithType>
 - <xref:System.Xml.Schema.XmlSchemaException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Xml.Schema.XmlSchemaInferenceException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
 - <xref:System.Xml.Schema.XmlSchemaValidationException?displayProperty=nameWithType> (disponible dans .NET Core 2.0.4 et versions ultérieures)
@@ -338,40 +338,42 @@ Lorsque vous implémentez un mécanisme de sérialisation dans un environnement 
 
 ## <a name="in-this-section"></a>Dans cette section
 
- [Concepts de la sérialisation](../../../docs/standard/serialization/serialization-concepts.md)  
- Aborde deux scénarios où la sérialisation est utile : conservation des données en stockage et passage d'objets sur des domaines d'application.  
-  
- [Sérialisation de base](../../../docs/standard/serialization/basic-serialization.md)  
- Décrit comment utiliser les formateurs binaires et SOAP pour sérialiser des objets.  
-  
- [Sérialisation sélective](../../../docs/standard/serialization/selective-serialization.md)  
- Décrit comment empêcher certains membres d'une classe d'être sérialisés.  
-  
- [Sérialisation personnalisée](../../../docs/standard/serialization/custom-serialization.md)  
- Décrit comment personnaliser la sérialisation d’une classe en utilisant l’interface <xref:System.Runtime.Serialization.ISerializable>.  
-  
- [Étapes du processus de sérialisation](../../../docs/standard/serialization/steps-in-the-serialization-process.md)  
- Décrit le plan d'action de la sérialisation lorsque la méthode <xref:System.Runtime.Serialization.Formatter.Serialize%2A> est appelée sur un formateur.  
-  
- [Sérialisation avec tolérance de version](../../../docs/standard/serialization/version-tolerant-serialization.md)  
- Explique comment créer des types sérialisables qui peuvent être modifiés avec le temps sans que les applications ne lèvent d'exceptions.  
-  
- [Indications concernant la sérialisation](../../../docs/standard/serialization/serialization-guidelines.md)  
- Fournit des indications générales pour décider quand sérialiser un objet.  
-  
-## <a name="reference"></a>Référence  
- <xref:System.Runtime.Serialization>  
- Contient des classes qui peuvent être utilisées pour sérialiser et désérialiser des objets.  
-  
-## <a name="related-sections"></a>Rubriques connexes  
- [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- Décrit le mécanisme de sérialisation XML inclus avec le Common Language Runtime.  
-  
- [Sécurité et sérialisation](../../../docs/framework/misc/security-and-serialization.md)  
- Décrit les indications de codage sécurisé à suivre lors de l'écriture du code qui exécute la sérialisation.  
-  
- [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
- Décrit les différentes méthodes de communication disponibles dans le .NET Framework pour les communications distantes.  
-  
- [Création de services Web XML à l’aide de clients de service Web XML et ASP.NET](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
- Fournit des rubriques qui décrivent et expliquent comment programmer des services Web XML créés à l'aide d'ASP.NET.
+- [Concepts de sérialisation](../../../docs/standard/serialization/serialization-concepts.md)\
+Aborde deux scénarios où la sérialisation est utile : conservation des données en stockage et passage d'objets sur des domaines d'application.
+
+- [Sérialisation de base](../../../docs/standard/serialization/basic-serialization.md)\
+Décrit comment utiliser les formateurs binaires et SOAP pour sérialiser des objets.
+
+- [Sérialisation sélective](../../../docs/standard/serialization/selective-serialization.md)\
+Décrit comment empêcher certains membres d'une classe d'être sérialisés.
+
+- [Sérialisation personnalisée](../../../docs/standard/serialization/custom-serialization.md)\
+Décrit comment personnaliser la sérialisation d’une classe en utilisant l’interface <xref:System.Runtime.Serialization.ISerializable>.
+
+- [Étapes du processus de sérialisation](../../../docs/standard/serialization/steps-in-the-serialization-process.md)\
+Décrit le plan d'action de la sérialisation lorsque la méthode <xref:System.Runtime.Serialization.Formatter.Serialize%2A> est appelée sur un formateur.
+
+- [Sérialisation avec tolérance de version](../../../docs/standard/serialization/version-tolerant-serialization.md)\
+Explique comment créer des types sérialisables qui peuvent être modifiés avec le temps sans que les applications ne lèvent d'exceptions.
+
+- [Indications concernant la sérialisation](../../../docs/standard/serialization/serialization-guidelines.md)\
+Fournit des indications générales pour décider quand sérialiser un objet.
+
+## <a name="reference"></a>Référence
+
+- <xref:System.Runtime.Serialization>\
+Contient des classes qui peuvent être utilisées pour sérialiser et désérialiser des objets.
+
+## <a name="related-sections"></a>Rubriques connexes
+
+- [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+Décrit le mécanisme de sérialisation XML inclus avec le Common Language Runtime.
+
+- [Sécurité et sérialisation](../../../docs/framework/misc/security-and-serialization.md)\
+Décrit les indications de codage sécurisé à suivre lors de l'écriture du code qui exécute la sérialisation.
+
+- [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)\
+Décrit les différentes méthodes de communication disponibles dans le .NET Framework pour les communications distantes.
+
+- [Services Web XML créés à l’aide de Clients de Service Web XML et ASP.NET](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)\
+Fournit des rubriques qui décrivent et expliquent comment programmer des services Web XML créés à l'aide d'ASP.NET.

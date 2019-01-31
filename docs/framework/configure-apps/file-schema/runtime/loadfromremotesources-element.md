@@ -1,5 +1,5 @@
 ---
-title: '&lt;loadFromRemoteSources&gt; élément'
+title: Élément <loadFromRemoteSources>
 ms.date: 05/24/2018
 helpviewer_keywords:
 - loadFromRemoteSources element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b2a5301defabde44c4f5a98e57bd302fe390d53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebb32a74f5413f9c927a84ababf2d60d20e0b024
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671874"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269690"
 ---
-# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; element
+# <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > élément
 Spécifie si les assemblys chargés à partir de sources distantes doivent être accordés une confiance totale dans .NET Framework 4 et versions ultérieures.
   
 > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Modifier le fournisseur de services de chiffrement pour un certificat X.509&#39;clé privée s'
+title: 'Procédure : Remplacer le fournisseur de services de chiffrement par clé privée d’un certificat X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 40c98d17a52643f451ec01bc8b97c60f2b011b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce2ce082f41700b1b86786abfa2dfe4a673fd6e0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498971"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265946"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Procédure : Modifier le fournisseur de services de chiffrement pour un certificat X.509&#39;clé privée s
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Procédure : Remplacer le fournisseur de services de chiffrement par clé privée d’un certificat X.509
 Cette rubrique montre comment modifier le fournisseur de services de chiffrement utilisé pour fournir la clé privée d’un certificat X.509 et comment intégrer le fournisseur dans l’infrastructure de sécurité de Windows Communication Foundation (WCF). Pour plus d’informations sur l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  L’infrastructure de sécurité WCF fournit un moyen d’introduire de nouveaux types de jetons de sécurité comme décrit dans [Comment : Créer un jeton personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Vous pouvez aussi utiliser un jeton personnalisé pour remplacer les types de jeton existants fournis par le système.  

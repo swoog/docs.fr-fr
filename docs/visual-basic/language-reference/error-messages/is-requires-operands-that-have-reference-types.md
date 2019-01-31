@@ -1,5 +1,5 @@
 ---
-title: '&#39;Est&#39; requiert des opérandes qui ont des types référence, mais cet opérande a le type de valeur &#39; &lt;typename&gt;&#39;'
+title: "'Is' requiert des opérandes ayant des types référence, mais cet opérande a le type valeur '<typename>'"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30020
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: 0b3f80e98087e455ec730dea8c57478528e9259c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbd0011e76ccecc605b0355025b7ca131e44724e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722918"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263928"
 ---
-# <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;Est&#39; requiert des opérandes qui ont des types référence, mais cet opérande a le type de valeur &#39; &lt;typename&gt;&#39;
+# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' requiert des opérandes qui ont des types référence, mais cet opérande a le type valeur '\<nom_type >'
 Le `Is` opérateur de comparaison détermine si deux variables d’objet font référence à la même instance. Cette comparaison n’est pas définie pour les types valeur.  
   
  **ID d’erreur :** BC30020  

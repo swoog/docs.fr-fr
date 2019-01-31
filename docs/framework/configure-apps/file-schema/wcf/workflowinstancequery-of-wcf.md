@@ -1,27 +1,27 @@
 ---
-title: '&lt;workflowInstanceQuery&gt; de WCF'
+title: <workflowInstanceQuery> de WCF
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 01867171941db82260d28b0825bdf3453e46e66c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148173"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278770"
 ---
-# <a name="ltworkflowinstancequerygt-of-wcf"></a>&lt;workflowInstanceQuery&gt; de WCF
+# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > de WCF
 
 Représente une requête qui effectue le suivi des changements dans le cycle de vie d'une instance de flux de travail, tels que le début et la fin d'un événement.  
   
 Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<suivi >  
-\<profils >  
-\<trackingProfile >  
-\<flux de travail >  
+\<tracking>  
+\<profiles>  
+\<trackingProfile>  
+\<workflow>  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
+\<workflowInstanceQuery>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ Aucun.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<États >](states-of-wcf-workflowinstancequery.md)|Collection d’états faisant l’objet d’un abonnement dans l’instance de flux de travail suivie lors de la création des enregistrements de suivi.|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|Collection d’états faisant l’objet d’un abonnement dans l’instance de flux de travail suivie lors de la création des enregistrements de suivi.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   

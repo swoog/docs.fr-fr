@@ -1,19 +1,19 @@
 ---
-title: Spécification d’un Assembly&#39;s emplacement
+title: Spécification de l'emplacement d'un assembly
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [.NET Framework], applications
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 4b5d732eb669119e346c61dce29b579911798edf
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b76537a347cdf30c65bfd6e56f274108e796a315
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083572"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258988"
 ---
-# <a name="specifying-an-assembly39s-location"></a>Spécification d’un Assembly&#39;s emplacement
+# <a name="specifying-an-assemblys-location"></a>Spécification de l'emplacement d'un assembly
 Il existe deux façons de spécifier l’emplacement d’un assembly :  
   
 -   À l’aide de la [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) élément.  

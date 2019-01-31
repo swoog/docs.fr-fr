@@ -1,15 +1,15 @@
 ---
-title: '&lt;headers&gt;'
+title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: f47462ba63b9bd8868420ee9d3a320ba18c83c65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c3c3a3d747a1338e2db3afa92c735af4a588642
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557823"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288026"
 ---
-# <a name="ltheadersgt"></a>&lt;headers&gt;
+# <a name="headers"></a>\<headers>
 Un point de terminaison peut être adressé par un ou plusieurs en-têtes SOAP en plus de son URI de base. Le jeu de scénarios où cette opération est utile est un jeu de scénarios intermédiaires SOAP où un point de terminaison requiert que les clients de ce point de terminaison incluent des en-têtes SOAP destinés à des intermédiaires. Cet élément de configuration peut être utilisé pour définir ces en-têtes d'adresse personnalisés. Les entrées de la collection d'en-têtes de points de terminaison sont des éléments XML définis par l'utilisateur. Chaque élément doit être au format XML adéquat.  
   
  \<system.ServiceModel>  

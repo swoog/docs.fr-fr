@@ -1,5 +1,5 @@
 ---
-title: '&gt;&gt;=, Opérateur (Visual Basic)'
+title: '>>=, opérateur (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.>>=
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-ms.openlocfilehash: fbfdd471a5241234780c05c0f1a045db2476f773
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ea1e03168da12564f148f525af977f29a43bec8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570774"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265283"
 ---
-# <a name="gtgt-operator-visual-basic"></a>&gt;&gt;=, Opérateur (Visual Basic)
+# <a name="-operator-visual-basic"></a>>>=, opérateur (Visual Basic)
 Effectue un décalage arithmétique vers la droite sur la valeur d’une propriété ou une variable et assigne le résultat à la variable ou propriété.  
   
 ## <a name="syntax"></a>Syntaxe  

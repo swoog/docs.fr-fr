@@ -1,16 +1,16 @@
 ---
-title: '&lt;workflowInstanceQuery&gt;'
+title: <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9096e812-626a-409a-9eda-c31a60b84c55
-ms.openlocfilehash: bef9ddcee2e373f4588d6aed06b7c51e4c6ed4b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7541ddcf4df8135d82b1f7f5ae2c02f031090e17
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662047"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275062"
 ---
-# <a name="ltworkflowinstancequerygt"></a>&lt;workflowInstanceQuery&gt;
+# <a name="workflowinstancequery"></a>\<workflowInstanceQuery>
 Représente une requête qui effectue le suivi des changements dans le cycle de vie d'une instance de flux de travail, tels que le début et la fin d'un événement.  
   
  Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

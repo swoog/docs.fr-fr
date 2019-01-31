@@ -1,15 +1,15 @@
 ---
-title: Aucune méthode '&lt;nom_méthode&gt;'accepte un argument de type'&lt;typename&gt;'pour le paramètre'&lt;nom_paramètre&gt;'
+title: Aucune méthode '<methodname>'accepte un argument de type'<typename>'pour le paramètre'<parametername>'
 ms.date: 07/20/2015
 ms.assetid: 175c01dc-279c-4996-8501-d19a6671fdeb
-ms.openlocfilehash: 5f35e05fa1652206d8da8d42a1afcb3077c17cf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c8ab89d18e2b31c60075146ba31472a19a3d601
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505976"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271640"
 ---
-# <a name="no-method-ltmethodnamegt-can-accept-an-argument-of-type-lttypenamegt-for-parameter-ltparameternamegt"></a>Aucune méthode '&lt;nom_méthode&gt;'accepte un argument de type'&lt;typename&gt;'pour le paramètre'&lt;nom_paramètre&gt;'
+# <a name="no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter-parametername"></a>Aucune méthode '\<nom_méthode >' peut accepter un argument de type '\<nom_type >' pour le paramètre '\<nom_paramètre >'
 Un appel de méthode contient un argument d’un type qui n’est pas valide.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

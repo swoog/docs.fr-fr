@@ -1,17 +1,17 @@
 ---
-title: Impossible de convertir le valeur de départ de type '&lt;type1&gt;« et valeur de pas de type »&lt;type2&gt;' en un type commun
+title: Impossible de convertir le valeur de départ de type '<type1>« et valeur de pas de type »<type2>» en un type commun
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-ms.openlocfilehash: 22732abd58a4cbc2d1c4cf8dba28a935d9ed0be1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3a6ac206082c6adaf35659db93e6535a433c6bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490586"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262700"
 ---
-# <a name="cannot-convert-start-value-of-type-lttype1gt-and-step-value-of-type-lttype2gt-to-a-common-type"></a>Impossible de convertir le valeur de départ de type '&lt;type1&gt;« et valeur de pas de type »&lt;type2&gt;' en un type commun
+# <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a>Ne peut pas convertir en valeur de départ de type '\<type1 >' et la valeur de pas de type '\<type2 >' en un type commun
 Les valeurs de contrôle `For...Next` spécifiées ont des types différents et ne sont donc pas valides, car elles ne peuvent pas être converties en type commun.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

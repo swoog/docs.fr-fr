@@ -1,5 +1,5 @@
 ---
-title: Type de valeur facultative pour le paramètre facultatif &lt;nom_paramètre&gt; n’est pas conforme CLS
+title: Le type de la valeur facultative pour le paramètre optionnel <parametername> n'est pas conforme CLS
 ms.date: 07/20/2015
 f1_keywords:
 - BC40042
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960347"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261419"
 ---
-# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>Type de valeur facultative pour le paramètre facultatif &lt;nom_paramètre&gt; n’est pas conforme CLS
+# <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>Type de valeur facultative pour le paramètre facultatif \<nom_paramètre > n’est pas conforme CLS
 Une procédure est marquée comme `<CLSCompliant(True)>` mais déclare un paramètre [facultatif](../../../visual-basic/language-reference/modifiers/optional.md) avec la valeur par défaut d’un type non conforme.  
   
  Pour qu’une procédure soit conforme à CLS ([Indépendance du langage et composants indépendants du langage](../../../standard/language-independence-and-language-independent-components.md)), elle doit utiliser uniquement des types conformes à CLS. Cette règle s’applique aux types des paramètres, au type de retour et aux types de toutes ses variables locales. Elle s’applique également aux valeurs par défaut des paramètres facultatifs.  
@@ -35,7 +35,7 @@ Une procédure est marquée comme `<CLSCompliant(True)>` mais déclare un param�
   
  Par défaut, ce message est un avertissement. Pour plus d’informations sur le masquage des avertissements ou leur traitement en tant qu’erreurs, consultez [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **ID d’erreur :** BC40042  
+ **ID d’erreur :** BC40042  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   

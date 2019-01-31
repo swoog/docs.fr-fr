@@ -1,15 +1,15 @@
 ---
-title: Élément &lt;authentication&gt;, de &lt;clientCertificate&gt;
+title: <authentication> de <clientCertificate> élément
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 1e15bd10495a2dff4a844f89a3ba5124235eea7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b07eae96367222907dd23968d445efd75906ea7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656847"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263006"
 ---
-# <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>Élément &lt;authentication&gt;, de &lt;clientCertificate&gt;
+# <a name="authentication-of-clientcertificate-element"></a>\<authentification > de \<clientCertificate > élément
 Spécifie les comportements d'authentification des certificats clients utilisés par un service.  
   
  \<system.ServiceModel>  

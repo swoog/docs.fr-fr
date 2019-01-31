@@ -1,5 +1,5 @@
 ---
-title: Exception de commentaire XML doit avoir un &#39;cref&#39; attribut
+title: L'exception de commentaire XML doit avoir un attribut 'cref'
 ms.date: 07/20/2015
 f1_keywords:
 - bc42319
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 0f276781165e80b2d869da2518dbe34b33085d5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a11bfe261ffb8ded95f2e513aaddf00aa00f702e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649945"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266635"
 ---
-# <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>Exception de commentaire XML doit avoir un &#39;cref&#39; attribut
+# <a name="xml-comment-exception-must-have-a-cref-attribute"></a>L'exception de commentaire XML doit avoir un attribut 'cref'
 Le \<exception > balise offre un moyen de documenter les exceptions qui peuvent être levées par une méthode. Requis `cref` attribut désigne le nom d’un membre qui est vérifié par le Générateur de documentation. Si le membre existe, elle est convertie en nom d’élément canonique dans le fichier de documentation.  
   
  **ID d’erreur :** BC42319  

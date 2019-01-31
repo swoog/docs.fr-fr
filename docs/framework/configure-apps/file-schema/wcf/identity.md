@@ -1,15 +1,15 @@
 ---
-title: '&lt;identity&gt;'
+title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 03e73f64090e0851b06ee67fe70c157b6145966c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e8c4a4aae3565b8af7adaa73def453107ea93
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677352"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274155"
 ---
-# <a name="ltidentitygt"></a>&lt;identity&gt;
+# <a name="identity"></a>\<identity>
 L'élément d'identité autorise un développeur client à spécifier au moment de la conception l'identité attendue du service. Dans le processus de négociation entre le client et le service, l’infrastructure Windows Communication Foundation (WCF) permet de garantir que l’identité du service attendu correspond aux valeurs de cet élément et peut donc être authentifiée. Pour plus d’informations, consultez [identité de Service et d’authentification](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<system.ServiceModel>  

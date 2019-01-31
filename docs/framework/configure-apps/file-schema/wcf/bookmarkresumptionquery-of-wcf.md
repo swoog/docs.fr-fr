@@ -1,27 +1,27 @@
 ---
-title: '&lt;bookmarkResumptionQuery&gt; de WCF'
+title: <bookmarkResumptionQuery> de WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 6463404e17edff8eb1efe3f96e44b5b9997ffca3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147809"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255114"
 ---
-# <a name="ltbookmarkresumptionquerygt-of-wcf"></a>&lt;bookmarkResumptionQuery&gt; de WCF
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > de WCF
 
 Représente une requête qui permet d'effectuer le suivi de la reprise d'un signet dans une instance de flux de travail. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des enregistrements de reprise de signet.  
   
 Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
   
 \<system.serviceModel>  
-\<suivi >  
-\<profils >  
-\<trackingProfile >  
-\<flux de travail >  
-\<bookmarkResumptionQueries >  
-\<bookmarkResumptionQuery >  
+\<tracking>  
+\<profiles>  
+\<trackingProfile>  
+\<workflow>  
+\<bookmarkResumptionQueries>  
+\<bookmarkResumptionQuery>  
   
 ## <a name="syntax"></a>Syntaxe  
   

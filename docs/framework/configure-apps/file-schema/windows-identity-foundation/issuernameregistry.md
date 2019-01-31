@@ -1,16 +1,16 @@
 ---
-title: '&lt;issuerNameRegistry&gt;'
+title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: f23f0103e228bc23a06a3ff0e0c5c2a12bdae73f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db4e0492772d6fd0e155843422b7350aa630f713
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748101"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269521"
 ---
-# <a name="ltissuernameregistrygt"></a>&lt;issuerNameRegistry&gt;
+# <a name="issuernameregistry"></a>\<issuerNameRegistry>
 Configure le Registre de nom de l’émetteur qui est utilisé par les gestionnaires dans la collection de gestionnaires de jetons.  
   
  \<system.identityModel>  

@@ -1,17 +1,17 @@
 ---
-title: '&lt;wsHttpBinding&gt;'
+title: <wsHttpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: d60e8990dcc20e99409e5d55fdca11d2dce03c7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83cad6af4d00f04cd53e5e4b064fe768647956d1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583652"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277756"
 ---
-# <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
+# <a name="wshttpbinding"></a>\<wsHttpBinding>
 Définit une liaison sécurisée, fiable, interopérable adaptée aux contrats de service non duplex. La liaison implémente les spécifications suivantes : WS-Reliable Messaging pour la fiabilité et WS-Security pour l’authentification et de sécurité de message. Le protocole de transport est HTTP et l'encodage de message est Text/XML.  
   
  \<system.ServiceModel>  

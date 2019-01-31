@@ -1,15 +1,15 @@
 ---
-title: '&lt;certificate&gt; de &lt;identity&gt;'
+title: <certificate> pour <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 28a1b992a70986652030ad42d4d4a5738350ae1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 804600e4eb1612cd8654fc58ec3df28596c1e84d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676157"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265036"
 ---
-# <a name="ltcertificategt-for-ltidentitygt"></a>&lt;certificate&gt; de &lt;identity&gt;
+# <a name="certificate-for-identity"></a>\<certificat > pour \<identité >
 Spécifie un certificat X.509 utilisé pour valider un serveur auprès d'un client.  
   
  Pour plus d’informations sur la définition de la valeur de l’élément, consultez [identité de Service et d’authentification](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  

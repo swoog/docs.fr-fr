@@ -1,17 +1,17 @@
 ---
-title: '&lt;Parameter&gt;, élément (.NET Native)'
+title: <Parameter> Élément (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c2cb79948f5bd762a0cd1b9fd83fd420a5821e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537177"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266401"
 ---
-# <a name="ltparametergt-element-net-native"></a>&lt;Parameter&gt;, élément (.NET Native)
+# <a name="parameter-element-net-native"></a>\<Paramètre >, élément (.NET Native)
 Applique la stratégie de réflexion au type de l’argument passé à une méthode.  
   
 ## <a name="syntax"></a>Syntaxe  

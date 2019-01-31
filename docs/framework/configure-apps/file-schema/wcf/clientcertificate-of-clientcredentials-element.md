@@ -1,15 +1,15 @@
 ---
-title: '&lt;clientCertificate&gt;, élément de &lt;clientCredentials&gt;'
+title: <clientCertificate> de <clientCredentials> élément
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: d908da5db4fc54b002fb4e3492b7d32da67f5524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ca2973b4c0e745f13c1364b2284909d07da738c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599125"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273126"
 ---
-# <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCertificate&gt;, élément de &lt;clientCredentials&gt;
+# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > de \<clientCredentials > élément
 Définit un certificat X.509 utilisé pour authentifier un client à un service.  
   
  \<system.ServiceModel>  

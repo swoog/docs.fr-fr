@@ -1,5 +1,5 @@
 ---
-title: Fonction &#39; &lt;nom_procédure&gt; &#39; ne&#39;t retourner une valeur pour tous les chemins de code
+title: La fonction '<procedurename>' ne retourne pas une valeur pour tous les chemins de code
 ms.date: 07/20/2015
 f1_keywords:
 - bc42105
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: b6cc5143aafb6c2554b183a1fc5fb3b1331ec5d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9782bb49a3327c6a8bd9938eca7cb3e899818784
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552188"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281058"
 ---
-# <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Fonction &#39; &lt;nom_procédure&gt; &#39; ne&#39;t retourner une valeur pour tous les chemins de code
+# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins de code
 Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins de code. Une instruction 'Return' est-elle manquante ?  
   
  Un `Function` procédure a au moins un chemin d’accès possible via son code qui ne retourne pas de valeur.  

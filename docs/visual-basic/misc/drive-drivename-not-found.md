@@ -1,17 +1,17 @@
 ---
-title: Lecteur '&lt;nom_lecteur&gt;' introuvable
+title: Lecteur '<drivename>' introuvable
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: 25a4492ee0edd57d2d173ce8dc1735ba483cf2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95d9c0d23d9159758c1dbf9719ed64e6786fa427
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631176"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288819"
 ---
-# <a name="drive-ltdrivenamegt-not-found"></a>Lecteur '&lt;nom_lecteur&gt;' introuvable
+# <a name="drive-drivename-not-found"></a>Lecteur '\<nom_lecteur >' introuvable
 Le lecteur est introuvable. Soit votre connexion réseau a été perdue, soit le lecteur auquel vous essayez d’accéder est hors connexion ou n’existe pas.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

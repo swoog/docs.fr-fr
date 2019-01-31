@@ -1,5 +1,5 @@
 ---
-title: '&lt;supportedRuntime&gt; élément'
+title: Élément <supportedRuntime>
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 3fdc3bae488fe47732fe91cbb2ac23aae3e33b81
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 93e69290062e1b82dddbb68f7a139763695a42fb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084391"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271770"
 ---
-# <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; élément
+# <a name="supportedruntime-element"></a>\<supportedRuntime > élément
 
 Spécifie quelles versions du Common Language Runtime sont prises en charge par l'application. Cet élément doit être utilisé par toutes les applications créées avec la version 1.1 ou ultérieure du .NET Framework.  
   
