@@ -1,5 +1,5 @@
 ---
-title: Conversion implicite de &#39; &lt;nom_type1&gt; &#39; à &#39; &lt;nom_type2&gt; &#39; lors de la copie de la valeur de &#39;ByRef&#39; paramètre &#39; &lt; ParameterName&gt; &#39; dans l’argument correspondant.
+title: Option Strict On interdit le passage du type '<typename1>' au type '<typename2>' lors de la recopie de la valeur du paramètre 'ByRef' '<parametername>' dans l'argument correspondant.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 9f05a5fbcbef828b4ffa920d8cade475cedb64d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537233"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279615"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>Conversion implicite de &#39; &lt;nom_type1&gt; &#39; à &#39; &lt;nom_type2&gt; &#39; lors de la copie de la valeur de &#39;ByRef&#39; paramètre &#39; &lt; ParameterName&gt; &#39; dans l’argument correspondant.
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Conversion implicite de '\<nom_type1 >' à '\<nom_type2 >' lors de la copie de la valeur du paramètre 'ByRef' '\<nom_paramètre >' dans l’argument correspondant.
 Une procédure est appelée avec un [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argument d’un type autre que celui de son paramètre correspondant.  
   
  Si vous passez un argument `ByRef`, Visual Basic copie parfois la valeur d’argument dans une variable locale dans la procédure au lieu de passer une référence. Dans ce cas, lorsque la procédure est retournée, Visual Basic doit copier la valeur de variable locale dans l’argument dans le code appelant.  

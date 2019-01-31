@@ -1,16 +1,16 @@
 ---
-title: '&lt;workflowUnhandledException&gt;'
+title: <workflowUnhandledException>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-ms.openlocfilehash: 5c5dddc6d126811d7fd1eaae2f85df1e42c1cd41
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caf5be7aaff0df436be3a1d618a9f89bb32e6bb7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700869"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254845"
 ---
-# <a name="ltworkflowunhandledexceptiongt"></a>&lt;workflowUnhandledException&gt;
+# <a name="workflowunhandledexception"></a>\<workflowUnhandledException>
 Comportement de service qui vous permet de spécifier l'action à exécuter lorsqu'une exception non prise en charge est levée dans un service de workflow.  
   
 \<system.ServiceModel>  

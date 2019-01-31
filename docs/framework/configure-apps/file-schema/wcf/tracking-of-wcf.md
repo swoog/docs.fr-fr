@@ -1,15 +1,15 @@
 ---
-title: '&lt;tracking&gt; de WCF'
+title: <tracking> de WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: 52efc1b5284c2a64eae30ea18995e5ee761dc2e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddaf6f7871b4d10961b615f74d1ed49dd76d379a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582602"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268247"
 ---
-# <a name="lttrackinggt-of-wcf"></a>&lt;tracking&gt; de WCF
+# <a name="tracking-of-wcf"></a>\<suivi > de WCF
 Représente une section de configuration permettant de définir les paramètres de suivi d'un service de flux de travail.  
   
  Pour plus d’informations de suivi de workflow et sa configuration, consultez [suivi et traçage de Workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [configuration du suivi d’un flux de travail](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;scopedCertificates&gt;, élément'
+title: Élément <scopedCertificates>
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: c6236093eada1b7be5244d98eabd99482017a395
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de85b3230461e876ec48e98887805d767e981e0f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556494"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270380"
 ---
-# <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt;, élément
+# <a name="scopedcertificates-element"></a>\<scopedCertificates > élément
 Représente une collection de certificats X.509 fournie par les services spécifiques (étendus) à des fins d’authentification. Cette collection est utilisée en général pour spécifier les certificats de service pour les services d’émission de jeton de sécurité dans un scénario fédéré.  
   
  \<system.ServiceModel>  

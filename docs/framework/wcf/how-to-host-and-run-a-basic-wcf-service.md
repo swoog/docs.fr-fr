@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Héberger et exécuter un Service de base de Windows Communication Foundation'
+title: Comment héberger et exécuter un service Windows Communication Foundation de base
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a029ef23ba3e9a0dd62e410739fa8734acc202a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129374"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277769"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Procédure : Héberger et exécuter un Service de base de Windows Communication Foundation
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Comment héberger et exécuter un service Windows Communication Foundation de base
 
-Il s’agit de la troisième des six tâches nécessaires pour créer une application WCF (Windows Communication Foundation). Pour une vue d’ensemble des six tâches, consultez la rubrique [Tutoriel Bien démarrer](../../../docs/framework/wcf/getting-started-tutorial.md).
+Il s’agit de la troisième des six tâches nécessaires pour créer une application WCF (Windows Communication Foundation). Pour une vue d’ensemble des six tâches, consultez la rubrique [Tutoriel Bien démarrer](getting-started-tutorial.md).
 
 Cette rubrique explique comment héberger un service WCF (Windows Communication Foundation) dans une application console. Cette procédure se compose des étapes suivantes :
 
@@ -142,14 +142,14 @@ End Module
 
 **Étape 2** – crée une instance de la <xref:System.ServiceModel.ServiceHost> classe pour héberger le service. Le constructeur prend deux paramètres, le type de la classe qui implémente le contrat de service et l'adresse de base du service.
 
-**Étape 3** – crée un <xref:System.ServiceModel.Description.ServiceEndpoint> instance. Un point de terminaison de service est composé d’une adresse, d’une liaison et d’un contrat de service. Le constructeur <xref:System.ServiceModel.Description.ServiceEndpoint> prend donc le type d’interface de contrat de service, une liaison et une adresse. Le contrat de service est `ICalculator`, que vous définissez et implémentez dans le type de service. La liaison utilisée dans cet exemple est <xref:System.ServiceModel.WSHttpBinding>, qui est une liaison intégrée utilisée pour se connecter aux points de terminaison qui sont conformes aux spécifications WS-*. Pour plus d’informations sur les liaisons WCF, consultez [Vue d’ensemble des liaisons WCF](../../../docs/framework/wcf/bindings-overview.md). L'adresse est ajoutée à l'adresse de base pour identifier le point de terminaison. L’adresse spécifiée dans ce code est « CalculatorService », par conséquent, l’adresse complète du point de terminaison est `"http://localhost:8000/GettingStarted/CalculatorService"`.
+**Étape 3** – crée un <xref:System.ServiceModel.Description.ServiceEndpoint> instance. Un point de terminaison de service est composé d’une adresse, d’une liaison et d’un contrat de service. Le constructeur <xref:System.ServiceModel.Description.ServiceEndpoint> prend donc le type d’interface de contrat de service, une liaison et une adresse. Le contrat de service est `ICalculator`, que vous définissez et implémentez dans le type de service. La liaison utilisée dans cet exemple est <xref:System.ServiceModel.WSHttpBinding>, qui est une liaison intégrée utilisée pour se connecter aux points de terminaison qui sont conformes aux spécifications WS-*. Pour plus d’informations sur les liaisons WCF, consultez [Vue d’ensemble des liaisons WCF](bindings-overview.md). L'adresse est ajoutée à l'adresse de base pour identifier le point de terminaison. L’adresse spécifiée dans ce code est « CalculatorService », par conséquent, l’adresse complète du point de terminaison est `"http://localhost:8000/GettingStarted/CalculatorService"`.
 
     > [!IMPORTANT]
-    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).
 
-**Étape 4** – activer l’échange de métadonnées. Les clients utilisent l'échange de métadonnées pour générer des proxys qui seront utilisés pour appeler les opérations de service. Pour permettre l’échange de métadonnées, créez une instance de <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, affectez à sa propriété <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> la valeur `true`, puis ajoutez le comportement à la collection <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` de l’instance <xref:System.ServiceModel.ServiceHost>.
+**Étape 4** – activer l’échange de métadonnées. Les clients utilisent l'échange de métadonnées pour générer des proxys qui seront utilisés pour appeler les opérations de service. Pour permettre l’échange de métadonnées, créez une instance <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, affectez la valeur <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> à sa propriété `true` et ajoutez le comportement à la collection <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> de l’instance <xref:System.ServiceModel.ServiceHost>.
 
-**Étape 5** – permet d’ouvrir le <xref:System.ServiceModel.ServiceHost> pour écouter les messages entrants. Notez que le code attend que l'utilisateur appuie sur Entrée. Si vous n'effectuez pas cette opération, l'application se ferme immédiatement et le service s'arrête. Notez également le bloc try/catch utilisé. Une fois que <xref:System.ServiceModel.ServiceHost> a été instancié, le reste du code est placé dans un bloc try/catch. Pour plus d’informations sur l’interception en toute sécurité les exceptions levées par <xref:System.ServiceModel.ServiceHost>, consultez [utilisation fermer et abandon pour libérer les ressources de client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+**Étape 5** – permet d’ouvrir le <xref:System.ServiceModel.ServiceHost> pour écouter les messages entrants. Notez que le code attend que l'utilisateur appuie sur Entrée. Si vous n'effectuez pas cette opération, l'application se ferme immédiatement et le service s'arrête. Notez également le bloc try/catch utilisé. Une fois que <xref:System.ServiceModel.ServiceHost> a été instancié, le reste du code est placé dans un bloc try/catch. Pour plus d’informations sur l’interception en toute sécurité les exceptions levées par <xref:System.ServiceModel.ServiceHost>, consultez [utilisation fermer et abandon pour libérer les ressources de client WCF](samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > Modifiez le fichier App.config dans GettingStartedLib afin de refléter les modifications apportées dans le code :
@@ -396,18 +396,18 @@ End Module
 ```
 
 > [!NOTE]
-> Les services tels que celui-ci requièrent que l'autorisation enregistre des adresses HTTP sur l'ordinateur pour écouter. Les comptes Administrateur possèdent cette autorisation, mais l'autorisation pour les espaces de noms HTTP doit être accordée aux comptes qui ne sont pas administrateur. Pour plus d’informations sur la configuration des réservations d’espaces de noms, consultez [Configuration de HTTP et HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Quand il s’exécute dans Visual Studio, le fichier service.exe doit être exécuté avec des privilèges d’administrateur.
+> Les services tels que celui-ci requièrent que l'autorisation enregistre des adresses HTTP sur l'ordinateur pour écouter. Les comptes Administrateur possèdent cette autorisation, mais l'autorisation pour les espaces de noms HTTP doit être accordée aux comptes qui ne sont pas administrateur. Pour plus d’informations sur la configuration des réservations d’espaces de noms, consultez [Configuration de HTTP et HTTPS](feature-details/configuring-http-and-https.md). Quand il s’exécute dans Visual Studio, le fichier service.exe doit être exécuté avec des privilèges d’administrateur.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Le service est en cours d'exécution. Dans la tâche suivante, vous créez un client WCF.
 
 > [!div class="nextstepaction"]
-> [Comment : Créer un client WCF](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [Guide pratique pour Créer un client WCF](how-to-create-a-wcf-client.md)
 
-Pour obtenir des informations sur la résolution des problèmes, consultez la section [Dépannage du tutoriel Bien démarrer](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
+Pour obtenir des informations sur la résolution des problèmes, consultez la section [Dépannage du tutoriel Bien démarrer](troubleshooting-the-getting-started-tutorial.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prise en main](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Auto-hébergement](../../../docs/framework/wcf/samples/self-host.md)
+- [Prise en main](samples/getting-started-sample.md)
+- [Auto-hébergement](samples/self-host.md)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;certificateReference&gt; de &lt;identity&gt;'
+title: <certificateReference> pour <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: ff831cebc78113e1808f9fe3911717f19127c4f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44bfb2fd77c4f4db6f7fede296b1cdb74e8d5e7c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626626"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254828"
 ---
-# <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;certificateReference&gt; de &lt;identity&gt;
+# <a name="certificatereference-for-identity"></a>\<certificateReference > pour \<identité >
 Spécifie les paramètres de validation du certificat X.509. Un client Windows Communication Foundation (WCF) sécurisé qui se connecte à un point de terminaison avec cette identité vérifie que les revendications présentées par le serveur contiennent la revendication d’identité utilisée pour construire cette identité.  
   
  \<identity>  

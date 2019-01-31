@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;attribut&gt; &#39; ne peut pas être appliqué, car le format du GUID &#39; &lt;nombre&gt; &#39; n’est pas correct'
+title: "'<attribute>' ne peut pas être appliqué, car le format du GUID '<number>' n'est pas correct"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32500
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: 85b8c9dcccbb307d8a744e33a5f1d4b1775fda04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e92c77e6138bbd546d9b837e095e41d5dfaf30c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623662"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279862"
 ---
-# <a name="39ltattributegt39-cannot-be-applied-because-the-format-of-the-guid-39ltnumbergt39-is-not-correct"></a>&#39;&lt;attribut&gt; &#39; ne peut pas être appliqué, car le format du GUID &#39; &lt;nombre&gt; &#39; n’est pas correct
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>«\<attribut >' ne peut pas être appliqué, car le format du GUID '\<nombre >' n’est pas correct
 Un `COMClassAttribute` bloc d’attributs Spécifie un identificateur global unique (GUID) qui n’est pas conforme au format approprié. `COMClassAttribute` utilise les GUID pour identifier de manière unique la classe, l’interface et l’événement de création.  
   
  Un GUID se compose de 16 octets, dont les huit premiers sont numériques et les huit derniers sont binaires. Il est généré par les utilitaires Microsoft tels que uuidgen.exe et est garanti être unique dans l’espace et de temps.  

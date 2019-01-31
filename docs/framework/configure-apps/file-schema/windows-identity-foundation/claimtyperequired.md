@@ -1,21 +1,21 @@
 ---
-title: '&lt;claimTypeRequired&gt;'
+title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: eafaf253e27db632f17acfce4445a07d18b109aa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837761"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277449"
 ---
-# <a name="ltclaimtyperequiredgt"></a>&lt;claimTypeRequired&gt;
+# <a name="claimtyperequired"></a>\<claimTypeRequired>
 Spécifie le jeu de revendications requises pour les jetons de sécurité entrants.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
-\<claimTypeRequired >  
+\<identityConfiguration>  
+\<claimTypeRequired>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,10 +38,10 @@ Spécifie le jeu de revendications requises pour les jetons de sécurité entran
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<claimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|Spécifie une seule revendication facultative ou obligatoire pour les jetons de sécurité entrants.|  
+|[\<claimType>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|Spécifie une seule revendication facultative ou obligatoire pour les jetons de sécurité entrants.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Spécifie les paramètres de l’identité de niveau de service.|
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Spécifie les paramètres de l’identité de niveau de service.|

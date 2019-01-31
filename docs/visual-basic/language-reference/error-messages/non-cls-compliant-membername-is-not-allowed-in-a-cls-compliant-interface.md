@@ -1,5 +1,5 @@
 ---
-title: Non conforme à CLS &lt;membername&gt; n’est pas autorisé dans une interface conforme CLS
+title: Le <membername> non conforme CLS n'est pas autorisé dans une interface conforme CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40033
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: c837065d2d448fc2523cfbd18efac962445f8bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aeacc49faad6198a9341a1ec7d010f1cd173912d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627693"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288975"
 ---
-# <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a>Non conforme à CLS &lt;membername&gt; n’est pas autorisé dans une interface conforme CLS
+# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Non conforme à CLS \<nom_membre > n’est pas autorisé dans une interface conforme CLS
 Une propriété, une procédure ou un événement dans une interface est marquée comme `<CLSCompliant(True)>` lorsque l’interface elle-même est marquée en tant que `<CLSCompliant(False)>` ou n’est pas marqué.  
   
  Pour une interface soit conforme à la [indépendance du langage et composants indépendants du langage](../../../standard/language-independence-and-language-independent-components.md) (CLS), tous ses membres doivent être conformes.  

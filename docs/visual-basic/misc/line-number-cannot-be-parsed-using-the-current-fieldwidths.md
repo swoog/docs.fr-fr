@@ -1,17 +1,17 @@
 ---
-title: Ligne &lt;nombre&gt; ne peut pas être analysée à l’aide du FieldWidths actuel
+title: Ligne <number> ne peut pas être analysée à l’aide du FieldWidths actuel
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: 8e70eef9ec40b3506c4ac65e3114cf05698bdeba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3184f023ab4663d5616e3878420e3a75a7f3cde
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722619"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262379"
 ---
-# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Ligne &lt;nombre&gt; ne peut pas être analysée à l’aide du FieldWidths actuel
+# <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>Ligne \<numéro > ne peut pas être analysée à l’aide du FieldWidths actuel
 La ligne spécifiée ne peut pas être analysée, car ses champs ont des largeurs différentes de celles spécifiées.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
@@ -20,7 +20,7 @@ La ligne spécifiée ne peut pas être analysée, car ses champs ont des largeur
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide pratique pour Lire des fichiers texte avec plusieurs Formats](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [Guide pratique pour lire des fichiers texte avec plusieurs formats](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)
 - [Analyse des fichiers texte avec l’objet TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
 - [TextFieldParser (objet)](../../visual-basic/language-reference/objects/textfieldparser-object.md)

@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;ClassName&gt; &#39; n’est pas conforme CLS, car l’interface &#39; &lt;interfacename&gt; &#39; il implémente n’est pas conforme CLS'
+title: "'<classname>' n'est pas conforme CLS, car l'interface '<interfacename>' qu'il implémente n'est pas conforme CLS"
 ms.date: 07/20/2015
 f1_keywords:
 - bc40029
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 4dda0e16a94f43cdb3deeff16fabdd1b10b62526
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6743a0decebb9711a4e44d09b03fe32f88ff2f72
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588492"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283476"
 ---
-# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a>&#39;&lt;ClassName&gt; &#39; n’est pas conforme CLS, car l’interface &#39; &lt;interfacename&gt; &#39; il implémente n’est pas conforme CLS
+# <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>«\<nom_classe >' n’est pas conforme CLS, car l’interface '\<nom_interface >' il implémente n’est pas conforme CLS
 Une classe ou une interface est marquée comme `<CLSCompliant(True)>` quand elle est dérivée d’un type ou implémente un type qui est marqué comme `<CLSCompliant(False)>` ou qui n’est pas marqué.  
   
  Pour une classe ou une interface soit conforme à la [indépendance du langage et composants indépendants du langage](../../../standard/language-independence-and-language-independent-components.md) (CLS), sa hiérarchie d’héritage entière doit être conforme. Cela signifie que chaque type dont elle hérite, directement ou indirectement, doit être conforme. De même, si une classe implémente une ou plusieurs interfaces, celles-ci doivent toutes être conformes au sein de leurs hiérarchies d’héritage.  

@@ -4,12 +4,12 @@ description: Moderniser des Applications .NET existantes avec le Cloud Azure et 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a6c13ba5bfd28cec87df1c021ed1f303d7d1f4f5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2b987d43f476f261bfdbd1b2af6ca7f792178cf8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154383"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266622"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Lift- and -shift des applications .NET existantes vers Azure IaaS (Infrastructure prête pour le Cloud)
 
@@ -89,7 +89,11 @@ Figure 2-3 illustre l’exécution de plusieurs migrations de machine virtuelle 
 
 - **Azure Migrate**
 
-    [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
+    [https://aka.ms/azuremigrate](https://aka.ms/azuremigrate)
+
+- **Centre de migration Azure**
+
+    [https://azure.microsoft.com/migration/](https://azure.microsoft.com/migration/)
 
 - **Migrer vers Azure avec Site Recovery**
 

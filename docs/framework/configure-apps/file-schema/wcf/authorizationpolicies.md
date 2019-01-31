@@ -1,15 +1,15 @@
 ---
-title: '&lt;authorizationPolicies&gt;'
+title: <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 5b367489-54d7-408b-8f56-cb157dd68eaf
-ms.openlocfilehash: 7648c221a61efb99b4dc486f9b4d121439632c63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8ca43a7b633d7d19dd37ceb0ff64075931b6c5c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519552"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254763"
 ---
-# <a name="ltauthorizationpoliciesgt"></a>&lt;authorizationPolicies&gt;
+# <a name="authorizationpolicies"></a>\<authorizationPolicies>
 Cette section de configuration contient une collection des types de stratégie d’autorisation, qui peuvent être ajoutés à l’aide du mot clé `add`. Chaque stratégie d'autorisation contient un attribut `policyType` requis unique qui est une chaîne. L'attribut spécifie une stratégie d'autorisation, qui active la transformation d'un jeu de revendications d'entrée dans un autre jeu de revendications. Le contrôle d'accès peut être accordé ou refusé en fonction de cette opération. Pour plus d’informations sur le fonctionne d’une stratégie d’autorisation, consultez <xref:System.IdentityModel.Policy.IAuthorizationPolicy> et [stratégie d’autorisation](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Voir aussi

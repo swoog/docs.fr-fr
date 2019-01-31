@@ -1,5 +1,5 @@
 ---
-title: Référence à l’assembly requise &#39; &lt;assemblyidentity&gt; &#39; contenant le type &#39; &lt;typename&gt;&#39;, mais une référence appropriée est introuvable en raison de l’ambiguïté entre projets &#39; &lt;nom_projet1&gt; &#39; et &#39; &lt;nom_projet2&gt;&#39;
+title: Une référence à l'assembly '<assemblyidentity>' contenant le type '<typename>' est requise, mais une référence adéquate n'a pas été trouvée en raison de l'ambiguïté entre les projets '<projectname1>' et '<projectname2>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30969
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 1a0c2a2fd235026729901153a0c0c300f914a78f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c74ed916e43bee6857df819c19ab03bef80b3c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553007"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285192"
 ---
-# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Référence à l’assembly requise &#39; &lt;assemblyidentity&gt; &#39; contenant le type &#39; &lt;typename&gt;&#39;, mais une référence appropriée est introuvable en raison de l’ambiguïté entre projets &#39; &lt;nom_projet1&gt; &#39; et &#39; &lt;nom_projet2&gt;&#39;
+# <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Référence à l’assembly requise '\<assemblyidentity >' contenant le type '\<nom_type >', mais une référence appropriée est introuvable en raison de l’ambiguïté entre les projets\<nom_projet1 >' et '\< nom_projet2 >'
 Une expression utilise un type, comme une classe, une structure, une interface, une énumération ou un délégué, qui est défini en dehors de votre projet. Cependant, des références de projet désignent plusieurs assemblys définissant ce type.  
   
  Les projets cités produisent des assemblys de même nom. Par conséquent, le compilateur ne peut pas déterminer quel assembly utiliser pour le type auquel vous accédez.  

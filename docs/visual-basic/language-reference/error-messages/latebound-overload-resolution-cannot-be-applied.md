@@ -1,5 +1,5 @@
 ---
-title: Résolution de surcharge à liaison tardive ne peut pas être appliquée à &#39; &lt;nom_procédure&gt; &#39; , car l’instance d’accès est un type interface
+title: La résolution de surcharge à liaison tardive ne peut pas être appliquée à '<procedurename>', car l'instance d'accès est un type interface
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651514"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272632"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Résolution de surcharge à liaison tardive ne peut pas être appliquée à &#39; &lt;nom_procédure&gt; &#39; , car l’instance d’accès est un type interface
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Résolution de surcharge à liaison tardive ne peut pas être appliquée à '\<nom_procédure >', car l’instance d’accès est un type interface
 Le compilateur tente de résoudre une référence à une propriété surchargée ou une procédure, mais la référence échoue, car un argument est de type `Object` et l’objet de référence a le type de données d’une interface. Le `Object` argument force le compilateur à résoudre la référence en tant qu’à liaison tardive.  
   
  Dans ces circonstances, le compilateur résout la surcharge via la classe d’implémentation à la place de l’interface sous-jacente. Si la classe renomme une des versions surchargées, le compilateur ne considère pas cette version comme une surcharge car son nom est différent. Ceci provoque à son tour au compilateur d’ignorer la version renommée lorsqu’il est peut-être le bon choix pour résoudre la référence.  

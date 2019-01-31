@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCredentials&gt;'
+title: <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: 978439dfeb0c5275e2ec43f9c891b6927e7a7869
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54ac4f0aa31a4311976449d545880d825c06337d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610433"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256470"
 ---
-# <a name="ltservicecredentialsgt"></a>&lt;serviceCredentials&gt;
+# <a name="servicecredentials"></a>\<serviceCredentials>
 Spécifie l’information d’identification à utiliser pour authentifier le service, ainsi que les paramètres liés à la validation des informations d’identification du client.  
   
  \<system.ServiceModel>  

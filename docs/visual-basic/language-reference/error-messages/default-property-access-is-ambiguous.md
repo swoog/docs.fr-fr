@@ -1,5 +1,5 @@
 ---
-title: Accès à la propriété par défaut est ambigu entre les membres de l’interface héritée &#39; &lt;defaultpropertyname&gt; &#39; d’interface &#39; &lt;nom_interface1&gt; &#39; et &#39; &lt;defaultpropertyname&gt; &#39; d’interface &#39; &lt;nom_interface2&gt;&#39;
+title: L'accès à la propriété par défaut est ambigu entre le membre '<defaultpropertyname>' de l'interface héritée '<interfacename1>' et le membre '<defaultpropertyname>' de l'interface héritée '<interfacename2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518642"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270587"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Accès à la propriété par défaut est ambigu entre les membres de l’interface héritée &#39; &lt;defaultpropertyname&gt; &#39; d’interface &#39; &lt;nom_interface1&gt; &#39; et &#39; &lt;defaultpropertyname&gt; &#39; d’interface &#39; &lt;nom_interface2&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Accès à la propriété par défaut est ambigu entre les membres de l’interface héritée\<defaultpropertyname >' de l’interface '\<nom_interface1 >' et '\<defaultpropertyname >' de l’interface '\< nom_interface2 >'
 Une interface hérite de deux interfaces, chacun d’eux déclare une propriété par défaut avec le même nom. Le compilateur ne peut pas résoudre un accès à cette propriété par défaut sans qualification. L'exemple suivant illustre ce comportement.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: '&#39;Pour chaque&#39; sur type &#39; &lt;typename&gt; &#39; est ambigu, car le type implémente plusieurs instanciations de &#39;System.Collections.Generic.IEnumerable (Of T)&#39;'
+title: "'For Each' pour le type '<typename>' est ambigu, car le type implémente plusieurs instanciations de 'System.Collections.Generic.IEnumerable(Of T)'"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32096
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32096
 ms.assetid: ed20d09c-913f-482e-89f8-c0a596c3ec24
-ms.openlocfilehash: 7fd779ba34afa2a59fa6c42971597df8ce01495a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a9032a00079b39851a3e8a80bc8f9bbdea1817c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597344"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281227"
 ---
-# <a name="39for-each39-on-type-39lttypenamegt39-is-ambiguous-because-the-type-implements-multiple-instantiations-of-39systemcollectionsgenericienumerableof-t39"></a>&#39;Pour chaque&#39; sur type &#39; &lt;typename&gt; &#39; est ambigu, car le type implémente plusieurs instanciations de &#39;System.Collections.Generic.IEnumerable (Of T)&#39;
+# <a name="for-each-on-type-typename-is-ambiguous-because-the-type-implements-multiple-instantiations-of-systemcollectionsgenericienumerableof-t"></a>'For Each' pour le type '\<nom_type >' est ambigu, car le type implémente plusieurs instanciations de 'System.Collections.Generic.IEnumerable (Of T)'
 Un `For Each` instruction spécifie une variable d’itérateur qui a plusieurs <xref:System.Collections.IEnumerable.GetEnumerator%2A> (méthode).  
   
  La variable d’itérateur doit être d’un type qui implémente le <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface dans un de le `Collections` espaces de noms de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Il est possible pour une classe implémenter plusieurs interfaces génériques construits, à l’aide d’un argument de type différent pour chaque construction. Si une classe qui s’en charge est utilisée pour la variable d’itérateur, cette variable a plusieurs <xref:System.Collections.IEnumerable.GetEnumerator%2A> (méthode). Dans ce cas, Visual Basic ne peut pas choisir la méthode à appeler.  
