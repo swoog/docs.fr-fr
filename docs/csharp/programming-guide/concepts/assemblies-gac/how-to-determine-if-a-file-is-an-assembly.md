@@ -1,33 +1,33 @@
 ---
-title: Guide pratique pour déterminer si un fichier est un assembly (C#)
+title: 'Procédure : Déterminer si un fichier est un assembly (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681766"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a><span data-ttu-id="7638d-102">Guide pratique pour déterminer si un fichier est un assembly (C#)</span><span class="sxs-lookup"><span data-stu-id="7638d-102">How to: Determine If a File Is an Assembly (C#)</span></span>
-<span data-ttu-id="7638d-103">Un fichier est un assembly si et seulement s’il est managé et s’il contient une entrée d’assembly dans ses métadonnées.</span><span class="sxs-lookup"><span data-stu-id="7638d-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="7638d-104">Pour plus d’informations sur les assemblys et les métadonnées, consultez la rubrique [Manifeste d’assembly](../../../../../docs/framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="7638d-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span></span>  
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a><span data-ttu-id="dde61-102">Procédure : Déterminer si un fichier est un assembly (C#)</span><span class="sxs-lookup"><span data-stu-id="dde61-102">How to: Determine If a File Is an Assembly (C#)</span></span>
+<span data-ttu-id="dde61-103">Un fichier est un assembly si et seulement s’il est managé et s’il contient une entrée d’assembly dans ses métadonnées.</span><span class="sxs-lookup"><span data-stu-id="dde61-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="dde61-104">Pour plus d’informations sur les assemblys et les métadonnées, consultez la rubrique [Manifeste d’assembly](../../../../../docs/framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="dde61-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span></span>  
   
-### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="7638d-105">Comment déterminer manuellement si un fichier est un assembly</span><span class="sxs-lookup"><span data-stu-id="7638d-105">How to manually determine if a file is an assembly</span></span>  
+### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="dde61-105">Comment déterminer manuellement si un fichier est un assembly</span><span class="sxs-lookup"><span data-stu-id="dde61-105">How to manually determine if a file is an assembly</span></span>  
   
-1.  <span data-ttu-id="7638d-106">Démarrez [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span><span class="sxs-lookup"><span data-stu-id="7638d-106">Start the [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
+1.  <span data-ttu-id="dde61-106">Démarrez [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span><span class="sxs-lookup"><span data-stu-id="dde61-106">Start the [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
   
-2.  <span data-ttu-id="7638d-107">Chargez le fichier que vous souhaitez tester.</span><span class="sxs-lookup"><span data-stu-id="7638d-107">Load the file you wish to test.</span></span>  
+2.  <span data-ttu-id="dde61-107">Chargez le fichier que vous souhaitez tester.</span><span class="sxs-lookup"><span data-stu-id="dde61-107">Load the file you wish to test.</span></span>  
   
-3.  <span data-ttu-id="7638d-108">Si **ILDASM** indique que le fichier n’est pas un fichier exécutable portable (PE), alors il ne s’agit pas d’un assembly.</span><span class="sxs-lookup"><span data-stu-id="7638d-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="7638d-109">Pour plus d’informations, consultez la rubrique [Guide pratique pour afficher le contenu d’un assembly](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span><span class="sxs-lookup"><span data-stu-id="7638d-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
+3.  <span data-ttu-id="dde61-108">Si **ILDASM** indique que le fichier n’est pas un fichier exécutable portable (PE), alors il ne s’agit pas d’un assembly.</span><span class="sxs-lookup"><span data-stu-id="dde61-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="dde61-109">Pour plus d’informations, consultez la rubrique [Guide pratique pour afficher le contenu d’un assembly](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span><span class="sxs-lookup"><span data-stu-id="dde61-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
   
-### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="7638d-110">Comment déterminer par programmation si un fichier est un assembly</span><span class="sxs-lookup"><span data-stu-id="7638d-110">How to programmatically determine if a file is an assembly</span></span>  
+### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="dde61-110">Comment déterminer par programmation si un fichier est un assembly</span><span class="sxs-lookup"><span data-stu-id="dde61-110">How to programmatically determine if a file is an assembly</span></span>  
   
-1.  <span data-ttu-id="7638d-111">Appelez la méthode <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> en passant le chemin complet et le nom du fichier que vous testez.</span><span class="sxs-lookup"><span data-stu-id="7638d-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
+1.  <span data-ttu-id="dde61-111">Appelez la méthode <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> en passant le chemin complet et le nom du fichier que vous testez.</span><span class="sxs-lookup"><span data-stu-id="dde61-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
   
-2.  <span data-ttu-id="7638d-112">Si une exception <xref:System.BadImageFormatException> est levée, le fichier n’est pas un assembly.</span><span class="sxs-lookup"><span data-stu-id="7638d-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
+2.  <span data-ttu-id="dde61-112">Si une exception <xref:System.BadImageFormatException> est levée, le fichier n’est pas un assembly.</span><span class="sxs-lookup"><span data-stu-id="dde61-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7638d-113">Exemple</span><span class="sxs-lookup"><span data-stu-id="7638d-113">Example</span></span>  
- <span data-ttu-id="7638d-114">Cet exemple teste une DLL pour voir s’il s’agit d’un assembly.</span><span class="sxs-lookup"><span data-stu-id="7638d-114">This example tests a DLL to see if it is an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="dde61-113">Exemple</span><span class="sxs-lookup"><span data-stu-id="dde61-113">Example</span></span>  
+ <span data-ttu-id="dde61-114">Cet exemple teste une DLL pour voir s’il s’agit d’un assembly.</span><span class="sxs-lookup"><span data-stu-id="dde61-114">This example tests a DLL to see if it is an assembly.</span></span>  
   
 ```csharp
 class TestAssembly  
@@ -64,10 +64,10 @@ class TestAssembly
 */  
 ```  
   
- <span data-ttu-id="7638d-115">La méthode <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> charge le fichier de test, puis le libère une fois que les informations sont lues.</span><span class="sxs-lookup"><span data-stu-id="7638d-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
+ <span data-ttu-id="dde61-115">La méthode <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> charge le fichier de test, puis le libère une fois que les informations sont lues.</span><span class="sxs-lookup"><span data-stu-id="dde61-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7638d-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7638d-116">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dde61-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="dde61-116">See also</span></span>
 
-- <xref:System.Reflection.AssemblyName>  
-- [<span data-ttu-id="7638d-117">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="7638d-117">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="7638d-118">Assemblys et le Global Assembly Cache (C#)</span><span class="sxs-lookup"><span data-stu-id="7638d-118">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- <xref:System.Reflection.AssemblyName>
+- [<span data-ttu-id="dde61-117">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="dde61-117">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="dde61-118">Assemblys et le Global Assembly Cache (C#)</span><span class="sxs-lookup"><span data-stu-id="dde61-118">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
