@@ -1,15 +1,15 @@
 ---
-title: '&lt;workflowControlEndpoint&gt;'
+title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: 9c641d4081d88b059e1d778f6383f85c064af7f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de0a51ed6f2a878ab3a6ebe15863f1f2925034ce
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558668"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272580"
 ---
-# <a name="ltworkflowcontrolendpointgt"></a>&lt;workflowControlEndpoint&gt;
+# <a name="workflowcontrolendpoint"></a>\<workflowControlEndpoint>
 Cet élément de configuration définit un point de terminaison standard permettant de contrôler l'exécution d'instances de flux de travail (créer, exécuter, interrompre, arrêter, etc.).  
   
 \<system.ServiceModel>  

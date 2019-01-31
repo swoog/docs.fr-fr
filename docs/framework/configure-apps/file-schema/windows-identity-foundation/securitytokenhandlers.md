@@ -1,20 +1,20 @@
 ---
-title: '&lt;securityTokenHandlers&gt;'
+title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206170"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277522"
 ---
-# <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
+# <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 Spécifie une collection de gestionnaires de jetons de sécurité qui sont inscrits avec le point de terminaison.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
+\<identityConfiguration>  
 \<securityTokenHandlers>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -44,13 +44,13 @@ Spécifie une collection de gestionnaires de jetons de sécurité qui sont inscr
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Ajoute un gestionnaire de jetons de sécurité à la collection de gestionnaires de jetons.|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Efface tous les gestionnaires de jetons de sécurité à partir de la collection de gestionnaires de jetons.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Supprime un gestionnaire de jetons de sécurité de la collection de gestionnaires de jetons.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fournit la configuration de la collection de gestionnaires de jetons.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fournit la configuration de la collection de gestionnaires de jetons.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Spécifie les paramètres de l’identité de niveau de service.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Spécifie les paramètres de l’identité de niveau de service.|  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez spécifier une ou plusieurs collections nommées de gestionnaires de jetons de sécurité dans une configuration de service. Vous pouvez spécifier un nom pour une collection en utilisant la `name` attribut. Les seuls noms qui gère l’infrastructure sont « ActAs » et « OnBehalfOf ». Si les gestionnaires existent dans ces collections, elles sont utilisées par un service de jeton de sécurité (STS) au lieu des gestionnaires par défaut lors du traitement `ActAs` et `OnBehalfOf` jetons.  

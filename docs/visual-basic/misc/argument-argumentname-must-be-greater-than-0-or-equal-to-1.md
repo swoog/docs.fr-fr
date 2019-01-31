@@ -1,17 +1,17 @@
 ---
-title: Argument '&lt;nom_argument&gt;' doit être supérieur à 0 ou égal à -1
+title: Argument '<argumentname>' doit être supérieur à 0 ou égal à -1
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_MinusOneOrGTZero1
 ms.assetid: 22c6bf5f-5194-43ec-8a8c-88f781801927
-ms.openlocfilehash: 8c490b22c44c6a57b7487e5be7928f17d7a91d70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ec4eb24f6e66ea7d5481afa92064f3105f2bbb9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657517"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286297"
 ---
-# <a name="argument-ltargumentnamegt-must-be-greater-than-0-or-equal-to--1"></a>Argument '&lt;nom_argument&gt;' doit être supérieur à 0 ou égal à -1
+# <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>Argument '\<nom_argument >' doit être supérieur à 0 ou égal à -1
 La valeur d’un argument est inférieure à 0 mais n’est pas égale à -1.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

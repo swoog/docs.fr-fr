@@ -1,5 +1,5 @@
 ---
-title: Type de &#39; &lt;variablename&gt; &#39; ne peut pas être déduit, car les limites de la boucle et la variable étape s’étend pas au même type
+title: Le type de '<variablename>' ne peut pas être déduit, car les limites de la boucle et la clause d'incrémentation ne sont pas converties en un même type
 ms.date: 07/20/2015
 f1_keywords:
 - bc30982
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 1ae14426181778a78254db8a5cd968d60bbdc8f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f1df0c7391c027994caabadc4b857bec55f5938
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631258"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287493"
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Type de &#39; &lt;variablename&gt; &#39; ne peut pas être déduit, car les limites de la boucle et la variable étape s’étend pas au même type
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Type de '\<nom_variable >' ne peut pas être déduit, car les limites de la boucle et la variable étape s’étend pas au même type
 Vous avez écrit un `For...Next` boucle dans laquelle le compilateur ne peut pas déduire un type de données pour la variable de contrôle de boucle, car les conditions suivantes sont remplies :  
   
 -   Le type de données de la variable de contrôle de boucle n’est pas spécifié avec une clause `As` .  

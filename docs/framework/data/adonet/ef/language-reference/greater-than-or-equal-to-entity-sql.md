@@ -1,15 +1,15 @@
 ---
-title: '&gt;= (Supérieur ou égal à) (Entity SQL)'
+title: '>= (Supérieur ou égal à) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: 34326072f4772e74a45e0ffb6ea1e35f1596b206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7b2aa7be0b978fb6b1317393fb3c6e9a87c621
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697142"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289010"
 ---
-# <a name="gt-greater-than-or-equal-to-entity-sql"></a>&gt;= (Supérieur ou égal à) (Entity SQL)
+# <a name="-greater-than-or-equal-to-entity-sql"></a>>= (supérieur ou égal à) (Entity SQL)
 Compare deux expressions pour déterminer si la valeur de l'expression de gauche est supérieure ou égale à celle de l'expression de droite.  
   
 ## <a name="syntax"></a>Syntaxe  

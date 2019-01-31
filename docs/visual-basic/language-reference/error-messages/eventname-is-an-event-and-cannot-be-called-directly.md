@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;EventName&gt; &#39; est un événement et ne peut pas être appelée directement'
+title: "'<eventname>' est un événement. Il ne peut donc pas être appelé directement"
 ms.date: 07/20/2015
 f1_keywords:
 - bc32022
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: 3efd8c18497ce288e16659db4ca4693d5a3e6acc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e27d9ce788ae7b9741c0cb80da776959748b8b9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581992"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272715"
 ---
-# <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a>&#39;&lt;EventName&gt; &#39; est un événement et ne peut pas être appelée directement
+# <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>'\<nom_événement >' est un événement et ne peut pas être appelée directement
 ' <`eventname`>' est un événement et ne peut donc pas être appelé directement. Utilisez un `RaiseEvent` instruction pour déclencher un événement.  
   
  Un appel de procédure spécifie un événement pour le nom de la procédure. Un gestionnaire d’événements est une procédure, mais l’événement lui-même est un dispositif de signalisation, qui doit être déclenché et géré.  

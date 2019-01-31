@@ -1,5 +1,5 @@
 ---
-title: '&lt;BypassList&gt; , élément (paramètres réseau)'
+title: <bypasslist>, élément (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 82a9a3e6362538fc62b4afdb010ca784590b9db9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db975d44db96f605767d7320737ff3c162bbc8a5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746336"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282956"
 ---
-# <a name="ltbypasslistgt-element-network-settings"></a>&lt;BypassList&gt; , élément (paramètres réseau)
+# <a name="bypasslist-element-network-settings"></a>\<BypassList >, élément (paramètres réseau)
 Fournit un ensemble d’expressions régulières décrivant les adresses qui n’utilisent pas un proxy.  
   
  \<configuration>  

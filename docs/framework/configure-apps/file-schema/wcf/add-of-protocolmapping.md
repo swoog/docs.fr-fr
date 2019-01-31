@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; de &lt;protocolMapping&gt;'
+title: <add> de <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: ce970b9ef71e2a28de680926f96f83500948619b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18b50ec2d848bc6bb920fb8f630ac7703654b286
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632814"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280733"
 ---
-# <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;add&gt; de &lt;protocolMapping&gt;
+# <a name="add-of-protocolmapping"></a>\<add> of \<protocolMapping>
 Représente un mappage de protocole par défaut entre un schéma de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et une liaison Windows Communication Foundation (WCF). Lorsque vous créez des points de terminaison par défaut lors de l’exécution, WCF examine les mappages configurés et décide de liaison à utiliser en tant qu’adresse de base.  
   
  \<system.serviceModel>  

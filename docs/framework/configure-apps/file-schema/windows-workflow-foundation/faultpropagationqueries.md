@@ -1,16 +1,16 @@
 ---
-title: '&lt;faultPropagationQueries&gt;'
+title: <faultPropagationQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 00ff90ae-ebe0-4c85-a93f-61557288d0a3
-ms.openlocfilehash: 546b37279c8ba58f9dd9f07dabacb7af602ff232
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0424c01397a95803b9e8502d90a55d1bd4c3b5e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610056"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269391"
 ---
-# <a name="ltfaultpropagationqueriesgt"></a>&lt;faultPropagationQueries&gt;
+# <a name="faultpropagationqueries"></a>\<faultPropagationQueries>
 Représente une collection de requêtes qui permettent d’effectuer le suivi de la gestion des erreurs qui se produisent dans une activité.  Cet événement se produit chaque fois qu'un FaultHandler traite une erreur. Vous devez utiliser cette requête pour effectuer le suivi de la gestion des erreurs qui se produisent dans une activité. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner aux enregistrements de propagation d'erreur.  
   
  Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

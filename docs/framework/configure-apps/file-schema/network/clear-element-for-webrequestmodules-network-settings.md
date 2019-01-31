@@ -1,5 +1,5 @@
 ---
-title: '&lt;Désactivez&gt; , élément de webRequestModules (paramètres réseau)'
+title: <clear>, élément de webRequestModules (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: ccb9a19d4e6d79a84123014746b659a7168b2158
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0096c7b3426645b90e2e1609fb2427334345fd87
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607002"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284152"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Désactivez&gt; , élément de webRequestModules (paramètres réseau)
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Désactivez >, élément de webRequestModules (paramètres réseau)
 Supprime tous les modules de demande Web inscrits de l’application.  
   
  \<configuration>  

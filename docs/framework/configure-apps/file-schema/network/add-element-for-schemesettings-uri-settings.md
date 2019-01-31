@@ -1,15 +1,15 @@
 ---
-title: '&lt;ajouter&gt; , élément de schemeSettings (paramètres d’Uri)'
+title: <add>, élément de schemeSettings (paramètres d'URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: d64744cf3c88d5ec0f0edf1a31cdf184c3c8277e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 672d279f35db64bec7f5b26bd1930d7048c406f1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524102"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279580"
 ---
-# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;ajouter&gt; , élément de schemeSettings (paramètres d’Uri)
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<Ajouter > élément de schemeSettings (paramètres d’Uri)
 Ajoute un paramètre de schéma pour un nom de schéma.  
   
  \<configuration>  

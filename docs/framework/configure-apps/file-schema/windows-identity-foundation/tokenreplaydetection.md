@@ -1,21 +1,21 @@
 ---
-title: '&lt;tokenReplayDetection&gt;'
+title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: bd2272cb83dc0183d5008cfa178e11783f51ca2d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261053"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283073"
 ---
-# <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
+# <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
 Active la détection de relecture de jetons et spécifie le délai d’expiration pour les jetons.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
-\<tokenReplayDetection >  
+\<identityConfiguration>  
+\<tokenReplayDetection>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,8 +48,8 @@ Active la détection de relecture de jetons et spécifie le délai d’expiratio
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Spécifie les paramètres de l’identité de niveau de service.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fournit une configuration pour une collection de sécurité gestionnaires de jetons.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Spécifie les paramètres de l’identité de niveau de service.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fournit une configuration pour une collection de sécurité gestionnaires de jetons.|  
   
 ## <a name="remarks"></a>Notes  
  Un `<tokenReplayDetection>` élément peut être spécifié au niveau du service sous le `<identityConfiguration>` élément ou sur le niveau de collection de gestionnaires de jetons de sécurité sous la `<securityTokenHandlerConfiguration>` élément. Les paramètres sur une collection de gestionnaires de jetons remplacent celles spécifiées sur le service.  

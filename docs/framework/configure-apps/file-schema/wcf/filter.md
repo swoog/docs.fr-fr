@@ -1,15 +1,15 @@
 ---
-title: '&lt;filter&gt;'
+title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 9fae9a599299fdd8cf1e996593514fc0ef38b6ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bff19f106d86c73dea80b8b57bb73442eaa2cf9f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645507"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278783"
 ---
-# <a name="ltfiltergt"></a>&lt;filter&gt;
+# <a name="filter"></a>\<filter>
 
 Définit un filtre de routage, qui détermine le type de Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> à utiliser lors de l’évaluation des messages entrants, en tant qu’ainsi les données ou les paramètres requis par le filtre de prise en charge.
 

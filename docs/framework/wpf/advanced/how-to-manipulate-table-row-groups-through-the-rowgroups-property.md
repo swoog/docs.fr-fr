@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Manipuler une Table&#39;s des groupes de lignes avec la propriété RowGroups'
+title: "Procédure : Manipuler les groupes de lignes d'un tableau avec la propriété RowGroups"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: 233ae0e76d175f4ce20a573aa2aa29d39106562e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c1e3318afeb8147e96dc3abc5417f2c29509d13
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700457"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274896"
 ---
-# <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Procédure : Manipuler une Table&#39;s des groupes de lignes avec la propriété RowGroups
+# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Procédure : Manipuler les groupes de lignes d'un tableau avec la propriété RowGroups
 Cet exemple montre quelques-unes des opérations plus courantes qui peuvent être effectuées sur les groupes de lignes d’une table avec la <xref:System.Windows.Documents.Table.RowGroups%2A> propriété.  
   
 ## <a name="example"></a>Exemple  

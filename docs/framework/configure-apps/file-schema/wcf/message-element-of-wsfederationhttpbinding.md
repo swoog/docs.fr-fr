@@ -1,15 +1,15 @@
 ---
-title: '&lt;message&gt;, élément de &lt;wsFederationHttpBinding&gt;'
+title: <message> élément de <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 9614d973319e962655fd5e9c76f8703dab85c009
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e3b48476f2928bc1daecfb1c2f9989bbb2e5f33
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740825"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274168"
 ---
-# <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>&lt;message&gt;, élément de &lt;wsFederationHttpBinding&gt;
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<message > élément de \<wsFederationHttpBinding >
 Définit les paramètres de la sécurité au niveau du message pour le [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  \<system.ServiceModel>  

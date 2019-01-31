@@ -1,5 +1,5 @@
 ---
-title: '&lt;UseSmallInternalThreadStacks&gt; élément'
+title: Élément <UseSmallInternalThreadStacks>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed128cc2ddec3c599932cd5a82364d1cf6642cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d78d03956db3f50b4d01f06c9a6438afd62fac5d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505235"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289794"
 ---
-# <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; élément
+# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > élément
 Les demandes que le common language runtime (CLR) réduire la mémoire utilisent en spécifiant des tailles de pile explicites lorsqu’il crée certains threads qu’il utilise en interne, au lieu d’utiliser la taille de pile par défaut pour ces threads.  
   
  \<configuration > élément  

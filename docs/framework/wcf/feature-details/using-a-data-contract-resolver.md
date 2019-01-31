@@ -2,12 +2,12 @@
 title: Utilisation d'un programme de résolution de contrat de données
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 8859a343c5dcc3b88edf4840a759fbed52bbf984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 844c4e0861c2cf4e6acb2b128ff1f5cefa0f7fa0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658830"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279147"
 ---
 # <a name="using-a-data-contract-resolver"></a>Utilisation d'un programme de résolution de contrat de données
 Un programme de résolution de contrat de données vous permet de configurer des types connus de manière dynamique. Les types connus sont nécessaires lors de la sérialisation ou de la désérialisation d'un type non attendu par un contrat de données. Pour plus d’informations sur les types connus, consultez [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Les types connus sont généralement spécifiés statiquement. Cela signifie que vous devez connaître tous les types possibles qu'une opération peut recevoir pendant son implémentation. Voici les scénarios où cela n'est pas vrai et où il est important de pouvoir spécifier les types connus de façon dynamique.  
@@ -55,7 +55,7 @@ public class MyCustomerResolver : DataContractResolver
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
- Vous pouvez spécifier un objet <xref:System.Runtime.Serialization.DataContractSerializer> dans un appel aux méthodes <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> ou <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A>, comme indiqué dans l'exemple suivant.  
+ Vous pouvez spécifier un objet <xref:System.Runtime.Serialization.DataContractResolver> dans un appel aux méthodes <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> ou <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType>, comme indiqué dans l'exemple suivant.  
   
 ```  
 MemoryStream ms = new MemoryStream();  

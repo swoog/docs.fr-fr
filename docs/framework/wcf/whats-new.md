@@ -1,16 +1,16 @@
 ---
-title: Ce que&#39;s dans Windows Communication Foundation 4.5
+title: Nouveautés dans Windows Communication Foundation 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1fe3ea53be6305553e789f8644e378d95bfac71b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873516"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280005"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Nouveautés dans Windows Communication Foundation 4.5
 
@@ -58,7 +58,7 @@ Cette rubrique traite des fonctionnalités de nouveau à la version 4.5 de Windo
  Certaines piles de traitement WSDL tierces ne peuvent pas traiter les documents WSDL qui dépendent d'autres documents via un xsd:import.  WCF vous permet maintenant de spécifier que toutes les informations WSDL doivent être retournées dans un document unique. Pour demander un document WSDL unique, ajoutez « ? singleWSDL » à l’URI lors de la demande de métadonnées à partir du service.
 
 ## <a name="websocket-support"></a>Prise en charge de WebSocket
- WebSockets est une technologie qui fournit la véritable communication bidirectionnelle sur les ports 80 et 443 avec des caractéristiques de performances semblables à TCP. Deux nouvelles liaisons ont été ajoutées pour prendre en charge les communications via un transport WebSocket. Voir <xref:System.ServiceModel.NetHttpBinding> et <xref:System.ServiceModel.NetHttpsBinding>. Pour plus d’informations, consultez : [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).
+ WebSockets est une technologie qui fournit la véritable communication bidirectionnelle sur les ports 80 et 443 avec des caractéristiques de performances semblables à TCP. Deux nouvelles liaisons ont été ajoutées pour prendre en charge les communications via un transport WebSocket. Voir <xref:System.ServiceModel.NetHttpBinding> et <xref:System.ServiceModel.NetHttpsBinding>. Pour plus d'informations, consultez : [Liaisons fournies par le système](../../../docs/framework/wcf/system-provided-bindings.md).
 
 ## <a name="new-transport-default-values"></a>Valeurs par défaut pour le nouveau transport
  Le tableau suivant décrit les paramètres qui ont changé et où trouver des informations supplémentaires.
