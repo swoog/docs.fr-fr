@@ -1,15 +1,15 @@
 ---
-title: '&lt;endpoint&gt; de &lt;client&gt;'
+title: <endpoint> de <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598303"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287766"
 ---
-# <a name="ltendpointgt-of-ltclientgt"></a>&lt;endpoint&gt; de &lt;client&gt;
+# <a name="endpoint-of-client"></a>\<point de terminaison > de \<client >
 Spécifie les propriétés du contrat, de la liaison et de l’adresse du point de terminaison du canal employées par les clients pour se connecter aux points de terminaison de service sur le serveur.  
   
  \<system.ServiceModel>  
