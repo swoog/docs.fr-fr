@@ -1,5 +1,5 @@
 ---
-title: "Comment : écrire dans le journal des événements de l'application (Visual Basic)"
+title: 'Procédure : écrire dans le journal des événements de l’application (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -7,50 +7,50 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: a62e1e8f6112a96935ce165e42d34c57b223cd95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78d7fbd7aa5cb0062a51145725a6fc2e9dce7525
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662632"
 ---
-# <a name="how-to-write-to-an-application-event-log-visual-basic"></a><span data-ttu-id="c4990-102">Comment : écrire dans le journal des événements de l'application (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c4990-102">How to: Write to an Application Event Log (Visual Basic)</span></span>
-<span data-ttu-id="c4990-103">Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour écrire des informations sur les événements qui se produisent dans votre application.</span><span class="sxs-lookup"><span data-stu-id="c4990-103">You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application.</span></span> <span data-ttu-id="c4990-104">Cet exemple montre comment configurer un écouteur de journalisation des événements pour que `My.Application.Log` écrive les informations de suivi dans le journal des événements de l’application.</span><span class="sxs-lookup"><span data-stu-id="c4990-104">This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.</span></span>  
+# <a name="how-to-write-to-an-application-event-log-visual-basic"></a><span data-ttu-id="54b70-102">Procédure : écrire dans le journal des événements de l’application (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="54b70-102">How to: Write to an Application Event Log (Visual Basic)</span></span>
+<span data-ttu-id="54b70-103">Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour écrire des informations sur les événements qui se produisent dans votre application.</span><span class="sxs-lookup"><span data-stu-id="54b70-103">You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application.</span></span> <span data-ttu-id="54b70-104">Cet exemple montre comment configurer un écouteur de journalisation des événements pour que `My.Application.Log` écrive les informations de suivi dans le journal des événements de l’application.</span><span class="sxs-lookup"><span data-stu-id="54b70-104">This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.</span></span>  
   
- <span data-ttu-id="c4990-105">Vous ne pouvez pas écrire dans le journal de sécurité.</span><span class="sxs-lookup"><span data-stu-id="c4990-105">You cannot write to the Security log.</span></span> <span data-ttu-id="c4990-106">Pour pouvoir écrire dans le journal système, vous devez être membre du compte LocalSystem ou Administrateur.</span><span class="sxs-lookup"><span data-stu-id="c4990-106">In order to write to the System log, you must be a member of the LocalSystem or Administrator account.</span></span>  
+ <span data-ttu-id="54b70-105">Vous ne pouvez pas écrire dans le journal de sécurité.</span><span class="sxs-lookup"><span data-stu-id="54b70-105">You cannot write to the Security log.</span></span> <span data-ttu-id="54b70-106">Pour pouvoir écrire dans le journal système, vous devez être membre du compte LocalSystem ou Administrateur.</span><span class="sxs-lookup"><span data-stu-id="54b70-106">In order to write to the System log, you must be a member of the LocalSystem or Administrator account.</span></span>  
   
- <span data-ttu-id="c4990-107">Pour afficher un journal des événements, vous pouvez utiliser l’ **Explorateur de serveurs** ou l’ **Observateur d’événements Windows**.</span><span class="sxs-lookup"><span data-stu-id="c4990-107">To view an event log, you can use **Server Explorer** or **Windows Event Viewer**.</span></span> <span data-ttu-id="c4990-108">Pour plus d'informations, consultez [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).</span><span class="sxs-lookup"><span data-stu-id="c4990-108">For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).</span></span>  
+ <span data-ttu-id="54b70-107">Pour afficher un journal des événements, vous pouvez utiliser l’ **Explorateur de serveurs** ou l’ **Observateur d’événements Windows**.</span><span class="sxs-lookup"><span data-stu-id="54b70-107">To view an event log, you can use **Server Explorer** or **Windows Event Viewer**.</span></span> <span data-ttu-id="54b70-108">Pour plus d'informations, consultez [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).</span><span class="sxs-lookup"><span data-stu-id="54b70-108">For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c4990-109">Les journaux des événements ne sont pas pris en charge sur Windows 95, Windows 98 ou Windows Millennium Edition.</span><span class="sxs-lookup"><span data-stu-id="c4990-109">Event logs are not supported on Windows 95, Windows 98, or Windows Millennium Edition.</span></span>  
+>  <span data-ttu-id="54b70-109">Les journaux des événements ne sont pas pris en charge sur Windows 95, Windows 98 ou Windows Millennium Edition.</span><span class="sxs-lookup"><span data-stu-id="54b70-109">Event logs are not supported on Windows 95, Windows 98, or Windows Millennium Edition.</span></span>  
   
-### <a name="to-add-and-configure-the-event-log-listener"></a><span data-ttu-id="c4990-110">Pour ajouter et configurer l’écouteur de journalisation des événements</span><span class="sxs-lookup"><span data-stu-id="c4990-110">To add and configure the event log listener</span></span>  
+### <a name="to-add-and-configure-the-event-log-listener"></a><span data-ttu-id="54b70-110">Pour ajouter et configurer l’écouteur de journalisation des événements</span><span class="sxs-lookup"><span data-stu-id="54b70-110">To add and configure the event log listener</span></span>  
   
-1.  <span data-ttu-id="c4990-111">Cliquez avec le bouton droit sur app.config dans l’ **Explorateur de solutions** et choisissez **Ouvrir**.</span><span class="sxs-lookup"><span data-stu-id="c4990-111">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
+1.  <span data-ttu-id="54b70-111">Cliquez avec le bouton droit sur app.config dans l’ **Explorateur de solutions** et choisissez **Ouvrir**.</span><span class="sxs-lookup"><span data-stu-id="54b70-111">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
   
-     <span data-ttu-id="c4990-112">\- ou -</span><span class="sxs-lookup"><span data-stu-id="c4990-112">\- or -</span></span>  
+     <span data-ttu-id="54b70-112">\- ou -</span><span class="sxs-lookup"><span data-stu-id="54b70-112">\- or -</span></span>  
   
-     <span data-ttu-id="c4990-113">S’il n’existe pas de fichier app.config :</span><span class="sxs-lookup"><span data-stu-id="c4990-113">If there is no app.config file,</span></span>  
+     <span data-ttu-id="54b70-113">S’il n’existe pas de fichier app.config :</span><span class="sxs-lookup"><span data-stu-id="54b70-113">If there is no app.config file,</span></span>  
   
-    1.  <span data-ttu-id="c4990-114">Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.</span><span class="sxs-lookup"><span data-stu-id="c4990-114">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1.  <span data-ttu-id="54b70-114">Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.</span><span class="sxs-lookup"><span data-stu-id="54b70-114">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="c4990-115">Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.</span><span class="sxs-lookup"><span data-stu-id="c4990-115">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2.  <span data-ttu-id="54b70-115">Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.</span><span class="sxs-lookup"><span data-stu-id="54b70-115">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="c4990-116">Cliquez sur **Ajouter**.</span><span class="sxs-lookup"><span data-stu-id="c4990-116">Click **Add**.</span></span>  
+    3.  <span data-ttu-id="54b70-116">Cliquez sur **Ajouter**.</span><span class="sxs-lookup"><span data-stu-id="54b70-116">Click **Add**.</span></span>  
   
-2.  <span data-ttu-id="c4990-117">Recherchez la section `<listeners>` dans le fichier de configuration de l’application.</span><span class="sxs-lookup"><span data-stu-id="c4990-117">Locate the `<listeners>` section in the application configuration file.</span></span>  
+2.  <span data-ttu-id="54b70-117">Recherchez la section `<listeners>` dans le fichier de configuration de l’application.</span><span class="sxs-lookup"><span data-stu-id="54b70-117">Locate the `<listeners>` section in the application configuration file.</span></span>  
   
-     <span data-ttu-id="c4990-118">Vous pouvez trouver la section `<listeners>` dans la section `<source>` avec l’attribut de nom « DefaultSource », qui est imbriquée dans la section `<system.diagnostics>` , elle-même imbriquée sous la section `<configuration>` de plus haut niveau.</span><span class="sxs-lookup"><span data-stu-id="c4990-118">You will find the `<listeners>` section in the `<source>` section with the name attribute "DefaultSource", which is nested under the `<system.diagnostics>` section, which is nested under the top-level `<configuration>` section.</span></span>  
+     <span data-ttu-id="54b70-118">Vous pouvez trouver la section `<listeners>` dans la section `<source>` avec l’attribut de nom « DefaultSource », qui est imbriquée dans la section `<system.diagnostics>` , elle-même imbriquée sous la section `<configuration>` de plus haut niveau.</span><span class="sxs-lookup"><span data-stu-id="54b70-118">You will find the `<listeners>` section in the `<source>` section with the name attribute "DefaultSource", which is nested under the `<system.diagnostics>` section, which is nested under the top-level `<configuration>` section.</span></span>  
   
-3.  <span data-ttu-id="c4990-119">Ajoutez cet élément à cette section `<listeners>` :</span><span class="sxs-lookup"><span data-stu-id="c4990-119">Add this element to that `<listeners>` section:</span></span>  
+3.  <span data-ttu-id="54b70-119">Ajoutez cet élément à cette section `<listeners>` :</span><span class="sxs-lookup"><span data-stu-id="54b70-119">Add this element to that `<listeners>` section:</span></span>  
   
     ```xml  
     <add name="EventLog"/>  
     ```  
   
-4.  <span data-ttu-id="c4990-120">Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.</span><span class="sxs-lookup"><span data-stu-id="c4990-120">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
+4.  <span data-ttu-id="54b70-120">Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.</span><span class="sxs-lookup"><span data-stu-id="54b70-120">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-5.  <span data-ttu-id="c4990-121">Ajoutez cet élément à cette section `<sharedListeners>` :</span><span class="sxs-lookup"><span data-stu-id="c4990-121">Add this element to that `<sharedListeners>` section:</span></span>  
+5.  <span data-ttu-id="54b70-121">Ajoutez cet élément à cette section `<sharedListeners>` :</span><span class="sxs-lookup"><span data-stu-id="54b70-121">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="EventLog"  
@@ -58,21 +58,21 @@ ms.locfileid: "33590684"
          initializeData="APPLICATION_NAME"/>  
     ```  
   
-     <span data-ttu-id="c4990-122">Remplacez `APPLICATION_NAME` par le nom de votre application.</span><span class="sxs-lookup"><span data-stu-id="c4990-122">Replace `APPLICATION_NAME` with the name of your application.</span></span>  
+     <span data-ttu-id="54b70-122">Remplacez `APPLICATION_NAME` par le nom de votre application.</span><span class="sxs-lookup"><span data-stu-id="54b70-122">Replace `APPLICATION_NAME` with the name of your application.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="c4990-123">En règle générale, une application écrit les erreurs seulement dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="c4990-123">Typically, an application writes only errors to the event log.</span></span> <span data-ttu-id="c4990-124">Pour plus d’informations sur le filtrage de la sortie du journal, consultez [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span><span class="sxs-lookup"><span data-stu-id="c4990-124">For information on filtering log output, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span></span>  
+    >  <span data-ttu-id="54b70-123">En règle générale, une application écrit les erreurs seulement dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="54b70-123">Typically, an application writes only errors to the event log.</span></span> <span data-ttu-id="54b70-124">Pour plus d’informations sur le filtrage de la sortie du journal, consultez [Procédure pas à pas : filtrage de la sortie de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span><span class="sxs-lookup"><span data-stu-id="54b70-124">For information on filtering log output, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span></span>  
   
-### <a name="to-write-event-information-to-the-event-log"></a><span data-ttu-id="c4990-125">Pour écrire des informations sur les événements dans le journal des événements</span><span class="sxs-lookup"><span data-stu-id="c4990-125">To write event information to the event log</span></span>  
+### <a name="to-write-event-information-to-the-event-log"></a><span data-ttu-id="54b70-125">Pour écrire des informations sur les événements dans le journal des événements</span><span class="sxs-lookup"><span data-stu-id="54b70-125">To write event information to the event log</span></span>  
   
--   <span data-ttu-id="c4990-126">Utilisez la méthode `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` pour écrire des informations dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="c4990-126">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the event log.</span></span> <span data-ttu-id="c4990-127">Pour plus d’informations, consultez [Guide pratique pour écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) et [Guide pratique pour enregistrer des exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="c4990-127">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
+-   <span data-ttu-id="54b70-126">Utilisez la méthode `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` pour écrire des informations dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="54b70-126">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the event log.</span></span> <span data-ttu-id="54b70-127">Pour plus d'informations, voir [Procédure : écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) et [Guide pratique pour journaliser des exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="54b70-127">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
   
-     <span data-ttu-id="c4990-128">Une fois l’écouteur de journalisation des événements configuré pour un assembly, il reçoit tous les messages écrits par `My.Applcation.Log` depuis cet assembly.</span><span class="sxs-lookup"><span data-stu-id="c4990-128">After you configure the event log listener for an assembly, it receives all messages that `My.Applcation.Log` writes from that assembly.</span></span>  
+     <span data-ttu-id="54b70-128">Une fois l’écouteur de journalisation des événements configuré pour un assembly, il reçoit tous les messages écrits par `My.Applcation.Log` depuis cet assembly.</span><span class="sxs-lookup"><span data-stu-id="54b70-128">After you configure the event log listener for an assembly, it receives all messages that `My.Applcation.Log` writes from that assembly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4990-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c4990-129">See Also</span></span>  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>  
- [<span data-ttu-id="c4990-130">Utilisation des journaux des applications</span><span class="sxs-lookup"><span data-stu-id="c4990-130">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [<span data-ttu-id="c4990-131">Guide pratique : enregistrer des exceptions</span><span class="sxs-lookup"><span data-stu-id="c4990-131">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
- [<span data-ttu-id="c4990-132">Procédure pas à pas : détermination de l’emplacement des informations My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="c4990-132">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+## <a name="see-also"></a><span data-ttu-id="54b70-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="54b70-129">See also</span></span>
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
+- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
+- [<span data-ttu-id="54b70-130">Utilisation des journaux des applications</span><span class="sxs-lookup"><span data-stu-id="54b70-130">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="54b70-131">Guide pratique pour journaliser des exception</span><span class="sxs-lookup"><span data-stu-id="54b70-131">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [<span data-ttu-id="54b70-132">Procédure pas à pas : Détermination de l’emplacement des informations My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="54b70-132">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

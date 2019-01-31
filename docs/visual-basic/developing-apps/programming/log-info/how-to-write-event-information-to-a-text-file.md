@@ -1,48 +1,48 @@
 ---
-title: Guide pratique pour écrire des informations sur des événements dans un fichier texte (Visual Basic)
+title: 'Procédure : écrire des informations sur des événements dans un fichier texte (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: 3adb594ee42b7b1fad77a54af04bb9f37f30c19a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 198e78b9b94111a4c07266287b943cbbccb2e978
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646173"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="44721-102">Guide pratique pour écrire des informations sur des événements dans un fichier texte (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44721-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
-<span data-ttu-id="44721-103">Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistrer des informations sur les événements qui se produisent dans votre application.</span><span class="sxs-lookup"><span data-stu-id="44721-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="44721-104">Cet exemple montre comment utiliser la méthode `My.Application.Log.WriteEntry` pour enregistrer des informations de traçage dans un fichier journal.</span><span class="sxs-lookup"><span data-stu-id="44721-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>  
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="3ca3c-102">Procédure : écrire des informations sur des événements dans un fichier texte (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3ca3c-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
+<span data-ttu-id="3ca3c-103">Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistrer des informations sur les événements qui se produisent dans votre application.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="3ca3c-104">Cet exemple montre comment utiliser la méthode `My.Application.Log.WriteEntry` pour enregistrer des informations de traçage dans un fichier journal.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>  
   
-### <a name="to-add-and-configure-the-file-log-listener"></a><span data-ttu-id="44721-105">Pour ajouter et configurer l’écouteur de journalisation du fichier</span><span class="sxs-lookup"><span data-stu-id="44721-105">To add and configure the file log listener</span></span>  
+### <a name="to-add-and-configure-the-file-log-listener"></a><span data-ttu-id="3ca3c-105">Pour ajouter et configurer l’écouteur de journalisation du fichier</span><span class="sxs-lookup"><span data-stu-id="3ca3c-105">To add and configure the file log listener</span></span>  
   
-1.  <span data-ttu-id="44721-106">Cliquez avec le bouton droit sur app.config dans l’ **Explorateur de solutions** et choisissez **Ouvrir**.</span><span class="sxs-lookup"><span data-stu-id="44721-106">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
+1.  <span data-ttu-id="3ca3c-106">Cliquez avec le bouton droit sur app.config dans l’ **Explorateur de solutions** et choisissez **Ouvrir**.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-106">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
   
-     <span data-ttu-id="44721-107">\- ou -</span><span class="sxs-lookup"><span data-stu-id="44721-107">\- or -</span></span>  
+     <span data-ttu-id="3ca3c-107">\- ou -</span><span class="sxs-lookup"><span data-stu-id="3ca3c-107">\- or -</span></span>  
   
-     <span data-ttu-id="44721-108">S’il n’existe pas de fichier app.config :</span><span class="sxs-lookup"><span data-stu-id="44721-108">If there is no app.config file:</span></span>  
+     <span data-ttu-id="3ca3c-108">S’il n’existe pas de fichier app.config :</span><span class="sxs-lookup"><span data-stu-id="3ca3c-108">If there is no app.config file:</span></span>  
   
-    1.  <span data-ttu-id="44721-109">Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.</span><span class="sxs-lookup"><span data-stu-id="44721-109">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1.  <span data-ttu-id="3ca3c-109">Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-109">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="44721-110">Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.</span><span class="sxs-lookup"><span data-stu-id="44721-110">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2.  <span data-ttu-id="3ca3c-110">Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-110">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="44721-111">Cliquez sur **Ajouter**.</span><span class="sxs-lookup"><span data-stu-id="44721-111">Click **Add**.</span></span>  
+    3.  <span data-ttu-id="3ca3c-111">Cliquez sur **Ajouter**.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-111">Click **Add**.</span></span>  
   
-2.  <span data-ttu-id="44721-112">Recherchez la section `<listeners>` dans le fichier de configuration de l’application.</span><span class="sxs-lookup"><span data-stu-id="44721-112">Locate the `<listeners>` section in the application configuration file.</span></span>  
+2.  <span data-ttu-id="3ca3c-112">Recherchez la section `<listeners>` dans le fichier de configuration de l’application.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-112">Locate the `<listeners>` section in the application configuration file.</span></span>  
   
-     <span data-ttu-id="44721-113">Vous pouvez trouver la section \<listeners> dans la section \<source> avec l’attribut de nom « DefaultSource », qui est imbriquée dans la section \<system.diagnostics>, elle-même imbriquée sous la section \<configuration> de plus haut niveau.</span><span class="sxs-lookup"><span data-stu-id="44721-113">You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.</span></span>  
+     <span data-ttu-id="3ca3c-113">Vous pouvez trouver la section \<listeners> dans la section \<source> avec l’attribut de nom « DefaultSource », qui est imbriquée dans la section \<system.diagnostics>, elle-même imbriquée sous la section \<configuration> de plus haut niveau.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-113">You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.</span></span>  
   
-3.  <span data-ttu-id="44721-114">Ajoutez cet élément à cette section `<listeners>` :</span><span class="sxs-lookup"><span data-stu-id="44721-114">Add this element to that `<listeners>` section:</span></span>  
+3.  <span data-ttu-id="3ca3c-114">Ajoutez cet élément à cette section `<listeners>` :</span><span class="sxs-lookup"><span data-stu-id="3ca3c-114">Add this element to that `<listeners>` section:</span></span>  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  <span data-ttu-id="44721-115">Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>`, imbriquée dans la section `<configuration>` de plus haut niveau.</span><span class="sxs-lookup"><span data-stu-id="44721-115">Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.</span></span>  
+4.  <span data-ttu-id="3ca3c-115">Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>`, imbriquée dans la section `<configuration>` de plus haut niveau.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-115">Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.</span></span>  
   
-5.  <span data-ttu-id="44721-116">Ajoutez cet élément à cette section `<sharedListeners>` :</span><span class="sxs-lookup"><span data-stu-id="44721-116">Add this element to that `<sharedListeners>` section:</span></span>  
+5.  <span data-ttu-id="3ca3c-116">Ajoutez cet élément à cette section `<sharedListeners>` :</span><span class="sxs-lookup"><span data-stu-id="3ca3c-116">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="FileLogListener"   
@@ -54,20 +54,20 @@ ms.locfileid: "33589056"
         customlocation="c:\temp\" />  
     ```  
   
-     <span data-ttu-id="44721-117">Remplacez la valeur de l’attribut `customlocation` par le répertoire du journal.</span><span class="sxs-lookup"><span data-stu-id="44721-117">Change the value of the `customlocation` attribute to the log directory.</span></span>  
+     <span data-ttu-id="3ca3c-117">Remplacez la valeur de l’attribut `customlocation` par le répertoire du journal.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-117">Change the value of the `customlocation` attribute to the log directory.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="44721-118">Pour définir la valeur d’une propriété d’écouteur, utilisez un attribut qui a le même nom que la propriété, en utilisant des minuscules.</span><span class="sxs-lookup"><span data-stu-id="44721-118">To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase.</span></span> <span data-ttu-id="44721-119">Par exemple, les attributs `location` et `customlocation` définissent les valeurs des propriétés <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> et <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A>.</span><span class="sxs-lookup"><span data-stu-id="44721-119">For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.</span></span>  
+    >  <span data-ttu-id="3ca3c-118">Pour définir la valeur d’une propriété d’écouteur, utilisez un attribut qui a le même nom que la propriété, en utilisant des minuscules.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-118">To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase.</span></span> <span data-ttu-id="3ca3c-119">Par exemple, les attributs `location` et `customlocation` définissent les valeurs des propriétés <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> et <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A>.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-119">For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.</span></span>  
   
-### <a name="to-write-event-information-to-the-file-log"></a><span data-ttu-id="44721-120">Pour écrire des informations sur les événements dans le journal du fichier</span><span class="sxs-lookup"><span data-stu-id="44721-120">To write event information to the file log</span></span>  
+### <a name="to-write-event-information-to-the-file-log"></a><span data-ttu-id="3ca3c-120">Pour écrire des informations sur les événements dans le journal du fichier</span><span class="sxs-lookup"><span data-stu-id="3ca3c-120">To write event information to the file log</span></span>  
   
--   <span data-ttu-id="44721-121">Utilisez la méthode `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` pour écrire des informations dans le journal du fichier.</span><span class="sxs-lookup"><span data-stu-id="44721-121">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log.</span></span> <span data-ttu-id="44721-122">Pour plus d’informations, consultez [Guide pratique pour écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) et [Guide pratique pour enregistrer des exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="44721-122">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
+-   <span data-ttu-id="3ca3c-121">Utilisez la méthode `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` pour écrire des informations dans le journal du fichier.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-121">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log.</span></span> <span data-ttu-id="3ca3c-122">Pour plus d'informations, voir [Procédure : écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) et [Guide pratique pour journaliser des exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="3ca3c-122">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
   
-     <span data-ttu-id="44721-123">Une fois l’écouteur de journalisation du fichier configuré pour un assembly, il reçoit tous les messages écrits par `My.Application.Log` à partir de cet assembly.</span><span class="sxs-lookup"><span data-stu-id="44721-123">After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>  
+     <span data-ttu-id="3ca3c-123">Une fois l’écouteur de journalisation du fichier configuré pour un assembly, il reçoit tous les messages écrits par `My.Application.Log` à partir de cet assembly.</span><span class="sxs-lookup"><span data-stu-id="3ca3c-123">After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44721-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="44721-124">See Also</span></span>  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>  
- [<span data-ttu-id="44721-125">Utilisation des journaux des applications</span><span class="sxs-lookup"><span data-stu-id="44721-125">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [<span data-ttu-id="44721-126">Guide pratique : enregistrer des exceptions</span><span class="sxs-lookup"><span data-stu-id="44721-126">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+## <a name="see-also"></a><span data-ttu-id="3ca3c-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3ca3c-124">See also</span></span>
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
+- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
+- [<span data-ttu-id="3ca3c-125">Utilisation des journaux des applications</span><span class="sxs-lookup"><span data-stu-id="3ca3c-125">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="3ca3c-126">Guide pratique pour journaliser des exception</span><span class="sxs-lookup"><span data-stu-id="3ca3c-126">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
