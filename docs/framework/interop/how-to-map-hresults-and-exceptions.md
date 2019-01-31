@@ -1,5 +1,5 @@
 ---
-title: 'Comment : mapper des HRESULT et des exceptions'
+title: 'Procédure : mapper des HRESULT et des exceptions'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729234"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Comment : mapper des HRESULT et des exceptions
+# <a name="how-to-map-hresults-and-exceptions"></a>Procédure : mapper des HRESULT et des exceptions
 Les méthodes COM signalent les erreurs en retournant des HRESULT ; les méthodes .NET les signalent en levant des exceptions. Le runtime gère la transition entre les deux. Chaque classe d’exception dans le .NET Framework est mappée à une valeur HRESULT.  
   
  Les classes d’exceptions définies par l’utilisateur peuvent spécifier la valeur HRESULT appropriée. Ces classes d’exceptions peuvent modifier dynamiquement la valeur HRESULT à retourner quand l’exception est générée par la définition du champ **HResult** sur l’objet exception. Des informations supplémentaires relatives à l’exception sont fournies au client par le biais de l’interface **IErrorInfo**, qui est implémentée sur l’objet .NET dans le processus non managé.  
@@ -142,6 +142,6 @@ CMyClass::MethodThatThrows
   
  Les champs d’exception, tels que **Message**, **Source** et **StackTrace** ne sont pas disponibles pour **StackOverflowException**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Exceptions](../../standard/exceptions/index.md)
+## <a name="see-also"></a>Voir aussi
+- [Interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Exceptions](../../standard/exceptions/index.md)

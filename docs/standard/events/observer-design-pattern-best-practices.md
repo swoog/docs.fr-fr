@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599996"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Meilleures pratiques du modèle de design observateur
 Dans le .NET Framework, le modèle de conception observateur est implémenté comme un ensemble d’interfaces. L'interface <xref:System.IObservable%601?displayProperty=nameWithType> représente le fournisseur de données, qui est également chargé de fournir une implémentation <xref:System.IDisposable> permettant aux observateurs d'annuler leur abonnement aux notifications. L'interface <xref:System.IObserver%601?displayProperty=nameWithType> représente l'observateur. Cette rubrique décrit les meilleures pratiques que les développeurs doivent suivre quand ils implémentent le modèle de conception observateur à l'aide de ces interfaces.  
   
-## <a name="threading"></a>Threads  
+## <a name="threading"></a>Thread  
  En général, un fournisseur implémente la méthode <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> en ajoutant un observateur à une liste d'abonnés représentée par un objet de collection, puis il implémente la méthode <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> en supprimant un observateur de la liste des abonnés. Un observateur peut appeler ces méthodes à tout moment. De plus, étant donné que le contrat fournisseur/observateur ne spécifie pas qui est responsable de l'annulation d'abonnement après la méthode de rappel <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, il est possible que le fournisseur et l'observateur tentent de supprimer le même membre de la liste. En raison de cette éventualité, les méthodes <xref:System.IObservable%601.Subscribe%2A> et <xref:System.IDisposable.Dispose%2A> doivent être thread-safe. En général, cela implique l’utilisation d’une [collection simultanée](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) ou d’un verrou. Les implémentations qui ne sont pas thread-safe doivent indiquer explicitement qu'elles ne le sont pas.  
   
  Les garanties supplémentaires doivent être spécifiées dans une couche supérieure au contrat fournisseur/observateur. Les implémenteurs doivent indiquer clairement lorsqu’ils imposent des exigences supplémentaires afin d’éviter la confusion des utilisateurs concernant le contrat observateur.  
@@ -37,7 +37,7 @@ Dans le .NET Framework, le modèle de conception observateur est implémenté co
   
 -   Le fournisseur doit appeler la méthode <xref:System.IObserver%601.OnError%2A> quand il gère une exception qui compromet sa capacité à fournir des mises à jour. Les informations sur ces exceptions peuvent être passées à l'observateur. Dans les autres cas, il est inutile d'informer les observateurs des exceptions.  
   
- Une fois que le fournisseur a appelé la méthode <xref:System.IObserver%601.OnError%2A> ou <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, il ne doit y avoir aucune autre notification et le fournisseur peut annuler l'abonnement de ses observateurs. Toutefois, les observateurs peuvent également annuler leur abonnement à tout moment, y compris avant et après la réception d'une notification <xref:System.IObserver%601.OnError%2A> ou <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. Le modèle de conception observateur ne détermine pas qui du fournisseur ou de l’observateur est responsable de l’annulation d’abonnement. Par conséquent, il est possible que les deux tentent de se désabonner. En règle générale, quand les observateurs annulent un abonnement, ils sont supprimés de la collection d’abonnés. Dans une application à thread unique, l'implémentation <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> doit s'assurer qu'une référence d'objet est valide et que l'objet est membre de la collection d'abonnés avant d'essayer de le supprimer. Dans une application multithread, un objet de collection thread-safe, tel qu'un objet <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>, doit être utilisé.  
+ Une fois que le fournisseur a appelé la méthode <xref:System.IObserver%601.OnError%2A> ou <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, il ne doit y avoir aucune autre notification et le fournisseur peut annuler l'abonnement de ses observateurs. Toutefois, les observateurs peuvent également annuler leur abonnement à tout moment, y compris avant et après la réception d'une notification <xref:System.IObserver%601.OnError%2A> ou <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. Le modèle de conception observateur ne détermine pas qui du fournisseur ou de l’observateur est responsable de l’annulation d’abonnement. Par conséquent, il est possible que les deux tentent de se désabonner. En règle générale, quand les observateurs annulent un abonnement, ils sont supprimés de la collection d’abonnés. Dans une application à thread unique, l’implémentation <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> doit s’assurer qu’une référence d’objet est valide et que l’objet est membre de la collection d’abonnés avant d’essayer de le supprimer. Dans une application multithread, un objet de collection thread-safe, tel qu'un objet <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>, doit être utilisé.  
   
 ### <a name="the-observer----implementing-the-onerror-method"></a>L'observateur – Implémentation de la méthode OnError  
  Quand un observateur reçoit une notification d'erreur provenant du fournisseur, celle-ci lui est fournie à titre indicatif et ne l'oblige pas à effectuer d'action particulière.  
@@ -51,10 +51,10 @@ Dans le .NET Framework, le modèle de conception observateur est implémenté co
 ## <a name="additional-best-practices"></a>Autres meilleures pratiques  
  Dans la méthode <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, une tentative d'annulation d'abonnement peut entraîner une référence null. Par conséquent, nous vous recommandons d'éviter cette pratique.  
   
- Même s'il est possible d'attacher un observateur à plusieurs fournisseurs, le modèle recommandé consiste à attacher une instance <xref:System.IObserver%601> à une seule et même instance <xref:System.IObservable%601>.  
+ Même s’il est possible d’attacher un observateur à plusieurs fournisseurs, le modèle recommandé consiste à attacher une instance <xref:System.IObserver%601> à une seule et même instance <xref:System.IObservable%601>.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)  
-- [Guide pratique pour implémenter une méthode Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)
+- [Guide pratique pour implémenter un observateur](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)

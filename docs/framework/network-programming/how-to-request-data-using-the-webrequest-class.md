@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : demande de données à l’aide de la classe WebRequest'
+title: 'Procédure : demander des données à l’aide de la classe WebRequest'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: 8a740d2eecd4d866fd3042985f1f6f3194a12ec5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ac7f9fc4a3c7a376d96d7cf820d2051bf2103e51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623064"
 ---
-# <a name="how-to-request-data-using-the-webrequest-class"></a>Procédure : demande de données à l’aide de la classe WebRequest
+# <a name="how-to-request-data-using-the-webrequest-class"></a>Procédure : demander des données à l’aide de la classe WebRequest
 La procédure suivante décrit les étapes nécessaires pour demander une ressource d’un serveur, par exemple, une page web ou un fichier. La ressource doit être identifiée par un URI.  
   
 ### <a name="to-request-data-from-a-host-server"></a>Pour demander des données à partir d’un serveur hôte  
@@ -172,9 +172,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Création de requêtes Internet](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [Utilisation de flux sur le réseau](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Accès à Internet via un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Demande de données](../../../docs/framework/network-programming/requesting-data.md)  
- [Guide pratique pour envoyer des données à l’aide de la classe WebRequest](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+## <a name="see-also"></a>Voir aussi
+- [Création de requêtes Internet](../../../docs/framework/network-programming/creating-internet-requests.md)
+- [Utilisation de flux sur le réseau](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Accès à Internet via un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Demande de données](../../../docs/framework/network-programming/requesting-data.md)
+- [Guide pratique pour envoyer des données à l’aide de la classe WebRequest](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)

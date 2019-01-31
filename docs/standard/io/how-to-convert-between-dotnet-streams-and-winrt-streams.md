@@ -1,5 +1,5 @@
 ---
-title: 'Comment : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime'
+title: 'Procédure : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492758"
 ---
-# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Comment : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Procédure : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime
 
 Le .Net Framework pour les applications Windows Store est un sous-ensemble du .NET Framework complet. En raison de la sécurité et d'autres spécifications des applications Windows Store, vous ne pouvez pas utiliser l'ensemble d'API .NET Framework pour ouvrir et lire des fichiers. Pour plus d’informations, consultez [Vue d’ensemble de .NET pour les applications du Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Toutefois, vous pouvez utiliser des API .NET Framework pour les autres opérations de manipulation des flux. Pour manipuler ces flux, il peut s’avérer nécessaire d’effectuer une conversion entre un type de flux .NET Framework tel que <xref:System.IO.MemoryStream> ou <xref:System.IO.FileStream>, et un flux Windows Runtime tel que <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> ou <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
@@ -79,6 +79,6 @@ Les flux .NET Framework ne prennent pas en charge le clonage, même après la co
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Démarrage rapide : lecture et écriture dans un fichier (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [Vue d’ensemble de .NET pour les applications Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [.NET pour les applications du Windows Store : API prises en charge](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Démarrage rapide : lecture et écriture dans un fichier (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [Vue d’ensemble de .NET pour les applications Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [.NET pour les applications du Windows Store : API prises en charge](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

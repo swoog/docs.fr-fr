@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour démarrer une application et envoyer des séquences de touches (Visual Basic)
+title: 'Procédure : démarrer une application et lui envoyer des séquences de touches (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keystrokes, sending
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - processes, starting and sending keystrokes
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
-ms.openlocfilehash: 716c88153ad01c7b225f31948c8aaaa2694dc512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36d6110a9e0ccf20718e95e6d7601e21e8d8f22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688387"
 ---
-# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Guide pratique pour démarrer une application et envoyer des séquences de touches (Visual Basic)
+# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Procédure : démarrer une application et lui envoyer des séquences de touches (Visual Basic)
 Cet exemple utilise la fonction `Shell` pour démarrer l’application Calculatrice, puis multiplie deux nombres en envoyant des séquences de touches à l’aide de la méthode `My.Computer.Keyboard.SendKeys`.  
   
 ## <a name="example"></a>Exemple  
@@ -26,7 +26,7 @@ Cet exemple utilise la fonction `Shell` pour démarrer l’application Calculatr
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  L’appel à la fonction `Shell` nécessite une confiance totale (classe <xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>  
- <xref:Microsoft.VisualBasic.Interaction.Shell%2A>  
- <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>
+## <a name="see-also"></a>Voir aussi
+- <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>
+- <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
+- <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>

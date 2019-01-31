@@ -1,5 +1,5 @@
 ---
-title: "Comment : contrôler l'ordre dans une requête PLINQ"
+title: 'Procédure : contrôler l’ordre dans une requête PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaa08106126212345bb594cdeabe6e7281cd7b5e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 30be9fc661ce05a664f9e901edef621d9de62e34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713442"
 ---
-# <a name="how-to-control-ordering-in-a-plinq-query"></a>Comment : contrôler l'ordre dans une requête PLINQ
+# <a name="how-to-control-ordering-in-a-plinq-query"></a>Procédure : contrôler l’ordre dans une requête PLINQ
 Ces exemples montrent comment contrôler le classement d’une requête PLINQ à l’aide de la méthode d’extension <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
   
 > [!WARNING]
@@ -47,5 +47,5 @@ Ces exemples montrent comment contrôler le classement d’une requête PLINQ à
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Linq.ParallelEnumerable>  
+- <xref:System.Linq.ParallelEnumerable>
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

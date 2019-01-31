@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 373d1e4e5089b23ecaeffd10fd167b701b75760c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45743980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702897"
 ---
 # <a name="xpath-namespace-navigation"></a>Navigation entre espaces de noms XPath
 Pour utiliser les requêtes XPath avec des documents XML, vous devez adresser correctement les espaces de noms XML et les éléments contenus dans ces espaces de noms. Les espaces de noms empêchent toute ambiguïté pouvant survenir lorsque des noms sont utilisés dans plusieurs contextes ; par exemple, le nom `ID` peut faire référence à plusieurs identificateurs associés à différents éléments d'un document XML. La syntaxe des espaces de noms spécifie des URI, des noms et des préfixes qui distinguent les éléments d'un document XML.  
@@ -20,7 +20,7 @@ Pour utiliser les requêtes XPath avec des documents XML, vous devez adresser co
 ## <a name="namespace-declarations"></a>Déclarations d'espaces de noms  
  Les déclarations d'espaces de noms permettent de distinguer et d'adresser les éléments d'un document XML lors de l'utilisation d'une instance de <xref:System.Xml.XPath.XPathNavigator>. Les préfixes d'espaces de noms fournissent une syntaxe courte pour l'adressage des espaces de noms.  
   
- Les préfixes sont définis par la forme : `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` Dans cette syntaxe, le préfixe « `e` » est une abréviation de l'URI formel de l'espace de noms. Vous pouvez identifier l'élément `Body` en tant que membre de l'espace de noms `Envelope` à l'aide de la syntaxe suivante : `e:Body`.  
+ Les préfixes sont définis par la forme : `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` Dans cette syntaxe, le préfixe « `e` » est une abréviation de l’URI formel de l’espace de noms. Vous pouvez identifier l'élément `Body` en tant que membre de l'espace de noms `Envelope` à l'aide de la syntaxe suivante : `e:Body`.  
   
  Le document XML suivant sera référencé en tant que `response.xml` dans l'exemple de navigation de la section suivante.  
   
@@ -72,5 +72,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Accès à des données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- [Accès à des données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
 - [Sélection, évaluation et mise en correspondance de données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

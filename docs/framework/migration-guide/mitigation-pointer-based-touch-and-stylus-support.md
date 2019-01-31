@@ -1,5 +1,5 @@
 ---
-title: 'Atténuation : Prise en charge du pointeur tactile et du stylet'
+title: 'Atténuation : prise en charge du pointeur tactile et du stylet'
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da7d55b34bc21f0c11f13565d017587b4276bad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501942"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Atténuation : Prise en charge du pointeur tactile et du stylet
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Atténuation : prise en charge du pointeur tactile et du stylet
 
 Les applications WPF qui ciblent .NET Framework 4.7 et sont en cours d’exécution sur des systèmes Windows à compter de la mise à jour Windows 10 Creators Update peuvent activer une pile facultative tactile/de stylet WPF basée sur `WM_POINTER`.
 
@@ -56,4 +56,4 @@ La suppression de cette entrée ou l’affectation de la valeur `false` désacti
 
 ## <a name="see-also"></a>Voir aussi
 
-[Reciblage des modifications dans le .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [Reciblage des modifications dans le .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

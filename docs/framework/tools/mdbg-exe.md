@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202918"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066400"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (débogueur de ligne de commande du .NET Framework)
 Le débogueur de ligne de commande du .NET Framework aide les fournisseurs d'outils et les développeurs d'applications à trouver et à corriger les bogues dans les programmes qui ont pour cible le Common Language Runtime du .NET Framework. Cet outil utilise l'API de débogage du runtime pour fournir des services de débogage. Vous pouvez utiliser MDbg.exe pour déboguer uniquement du code managé ; il n'y a pas de prise en charge du débogage du code non managé.  
@@ -57,7 +57,7 @@ MDbg [ProgramName[arguments]] [options]
 |**int**[**ercept**] *FrameNumber*|Restaure le débogueur à un numéro de frame spécifié.<br /><br /> Si le débogueur rencontre une exception, utilisez cette commande pour restaurer le débogueur au numéro de frame spécifié. Vous pouvez modifier l’état du programme à l’aide de la commande **set** et continuer à utiliser la commande **go**.|  
 |**k**[**ill**]|Arrête le processus actif.|  
 |**l**[**ist**] [*modules* &#124; *appdomains* &#124; *assemblies*]|Affiche les modules, domaines d'application ou assemblys chargés.|  
-|**lo**[**ad**] *assemblyName*|Charge une extension de la manière suivante : l'assembly spécifié est chargé et une tentative est ensuite faite pour exécuter la méthode statique `LoadExtension` à partir du type `Microsoft.Tools.Mdbg.Extension.Extension`.|  
+|**lo**[**ad**] *assemblyName*|Charge une extension de la manière suivante : l’assembly spécifié est chargé et une tentative est ensuite faite pour exécuter la méthode statique `LoadExtension` à partir du type `Microsoft.Tools.Mdbg.Extension.Extension`.|  
 |**log** [*eventType*]|Définir ou afficher les événements à enregistrer.|  
 |**mo**[**de**] [*option on/off*]|Définit différentes options du débogueur. Utilisez `mode` sans option pour obtenir la liste des modes de débogage et leurs paramètres actuels.|  
 |**mon**[**itorInfo**] *monitorReference*|Affiche les informations de verrou du moniteur d'objet.|  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |**sh**[**ow**] [*lines*]|Spécifie le nombre de lignes à afficher.|  
 |**s**[**tep**]|Déplace l'exécution à la fonction suivante sur la ligne en cours, ou passe à la ligne suivante en l'absence de fonction dans laquelle passer.|  
 |**su**[**spend**] [\* &#124; [~]*threadNumber*]|Suspend le thread actuel ou le thread spécifié par le paramètre *threadNumber*.  Si *threadNumber* est spécifié comme `*`, la commande s’applique à tous les threads. Si le numéro de thread commence par `~`, la commande s’applique à tous les threads à l’exception de celui spécifié par *threadNumber*. Les threads suspendus sont exclus de l’exécution quand le processus est exécuté par la commande **go** ou **step**. S’il n’existe aucun thread non suspendu dans le processus et que vous émettez la commande **go**, le processus ne continuera pas. Dans ce cas, appuyez sur Ctrl+C pour entrer dans le processus.|  
-|**sy**[**mbol**] *commandName* [*commandValue*]|Spécifie l'une des commandes suivantes :<br /><br /> -   `symbol path` [`"``value``"`] - Affiche ou définit le chemin actuel des symboles.<br />-   `symbol addpath` `"` `value` `"` - S’ajoute à votre chemin actuel des symboles.<br />-   `symbol reload` [`"``module``"`]- Recharge soit tous les symboles, soit les symboles du module spécifié.<br />-   `symbol list` [`module`] - Affiche les symboles actuellement chargés soit pour tous les modules, soit pour le module spécifié.|  
+|**sy**[**mbol**] *commandName* [*commandValue*]|Spécifie l'une des commandes suivantes :<br /><br /> -   `symbol path` [`"value"`] - Affiche ou définit le chemin actuel des symboles.<br />-   `symbol addpath` `"value"` - S’ajoute à votre chemin actuel des symboles.<br />-   `symbol reload` [`"module"`] - Recharge soit tous les symboles, soit les symboles du module spécifié.<br />-   `symbol list` [`module`] - Affiche les symboles actuellement chargés soit pour tous les modules, soit pour le module spécifié.|  
 |**t**[**hread**] [*newThread*] [-*nick nickname*`]`|La commande de threads sans paramètre affiche tous les threads managés dans le processus en cours. Les threads sont généralement identifiés par leur numéro de thread. Toutefois, si le thread a un surnom assigné, celui-ci est affiché à la place. Vous pouvez utiliser le paramètre `-nick` pour assigner un surnom à un thread.<br /><br /> -   **thread** `-nick` *threadName* assigne un surnom au thread en cours d’exécution.<br /><br /> Les surnoms ne peuvent pas être des nombres. Si le thread actuel a déjà un surnom assigné, le nouveau vient remplacer l'ancien. Si le nouveau surnom est une chaîne vide (""), le surnom du thread en cours est supprimé et aucun nouveau surnom n'est assigné au thread.|  
 |**u**[**p**]|Déplace le frame de la pile vers le haut.|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|Imprime la variable suivie par un handle. Le handle peut être spécifié par un nom ou par une adresse.|  
@@ -106,6 +106,6 @@ mdbg>
   
 ## <a name="examples"></a>Exemples  
   
-## <a name="see-also"></a>Voir aussi  
- [Outils](../../../docs/framework/tools/index.md)  
- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Voir aussi
+- [Outils](../../../docs/framework/tools/index.md)
+- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

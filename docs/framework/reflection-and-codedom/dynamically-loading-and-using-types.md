@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689206"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Chargement et utilisation dynamiques des types
 La réflexion fournit l’infrastructure utilisée par les compilateurs de langages tels que [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] et JScript pour implémenter la liaison tardive implicite. La liaison est le processus de localisation de la déclaration (en d’autres termes, l’implémentation) qui correspond à un type spécifié unique. Quand ce processus se produit au moment de l’exécution plutôt qu’au moment de la compilation, il est appelé liaison tardive. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] vous permet d’utiliser la liaison tardive implicite dans votre code. Le compilateur Visual Basic appelle une méthode d’assistance qui utilise la réflexion pour obtenir le type d’objet. Les arguments passés à la méthode d’assistance entraînent l’appel de la méthode appropriée au moment de l’exécution. Ces arguments sont l’instance (un objet) sur laquelle appeler la méthode, le nom de la méthode appelée (une chaîne) et les arguments passés à la méthode appelée (un tableau d’objets).  
@@ -99,8 +99,8 @@ End Module
   
  La classe <xref:System.Type> a des méthodes **Get** qui utilisent des paramètres de type **Binder** pour résoudre les références à un membre particulier. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> et <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> recherchent un membre particulier du type actuel en fournissant les informations de signature pour ce membre. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> et <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> sont rappelés pour sélectionner les informations de signature données des méthodes appropriées.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- [Affichage des informations de type](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Conversion de type dans le .NET Framework](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- [Affichage des informations de type](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Conversion de type dans le .NET Framework](../../../docs/standard/base-types/type-conversion.md)

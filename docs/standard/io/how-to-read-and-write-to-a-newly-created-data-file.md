@@ -1,5 +1,5 @@
 ---
-title: 'Comment : lire et écrire dans un fichier de données créé récemment'
+title: 'Procédure : lire et écrire dans un fichier de données créé récemment'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65c56a11531f705b7e047e435ec575969d39a616
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4f51042564158cfd7924164ce2b1a0fcc9d2658d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45592904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562828"
 ---
-# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Comment : lire et écrire dans un fichier de données créé récemment
+# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Procédure : lire et écrire dans un fichier de données créé récemment
 Les classes <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader?displayProperty=nameWithType> sont utilisées pour écrire et lire des données plutôt que des chaînes de caractères. L’exemple suivant montre comment écrire et lire des données dans un flux de fichier vide nommé `Test.data`. Après avoir créé le fichier de données dans le répertoire actif, les objets <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader> associés sont créés, et l’objet <xref:System.IO.BinaryWriter> est utilisé pour écrire les entiers de 0 à 10 dans `Test.data`, ce qui laisse le pointeur de fichier à la fin du fichier. Après avoir replacé le pointeur de fichier au début, l’objet <xref:System.IO.BinaryReader> lit le contenu spécifié.  
   
 ## <a name="example"></a>Exemple  
@@ -35,15 +35,15 @@ Les classes <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader?displa
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.IO.BinaryReader>  
-- <xref:System.IO.BinaryWriter>  
-- <xref:System.IO.FileStream>  
-- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
-- <xref:System.IO.SeekOrigin>  
-- [Guide pratique pour énumérer des répertoires et des fichiers](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Comment : ouvrir un fichier journal et y ajouter des éléments](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Comment : lire du texte dans un fichier](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Comment : écrire du texte dans un fichier](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Comment : lire les caractères d’une chaîne](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [Comment : écrire des caractères dans une chaîne](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.BinaryReader>
+- <xref:System.IO.BinaryWriter>
+- <xref:System.IO.FileStream>
+- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>
+- <xref:System.IO.SeekOrigin>
+- [Guide pratique pour énumérer des répertoires et des fichiers](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Guide pratique pour ouvrir un fichier journal et y ajouter des éléments](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Guide pratique pour lire du texte dans un fichier](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Guide pratique pour écrire du texte dans un fichier](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Guide pratique pour lire les caractères d’une chaîne](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [Guide pratique pour écrire des caractères dans une chaîne](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [Fichier et flux de données E/S](../../../docs/standard/io/index.md)

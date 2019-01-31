@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer un socket'
+title: 'Procédure : créer un socket'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 2c3bfb6435901ac8154bc801ae2a420b252d5849
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e8f90d2a9e2f2e4bef8d1ab360bfe677bd2bf695
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589699"
 ---
-# <a name="how-to-create-a-socket"></a>Comment : créer un socket
+# <a name="how-to-create-a-socket"></a>Procédure : créer un socket
 Avant de pouvoir utiliser un socket pour communiquer avec des appareils distants, le socket doit être initialisé avec des informations de protocole et d’adresse réseau. Le constructeur de la classe <xref:System.Net.Sockets.Socket> a des paramètres qui spécifient la famille d’adresses, le type de socket et le type de protocole que le socket utilise pour établir des connexions.  
   
 ## <a name="example"></a>Exemple  
@@ -60,6 +60,6 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
  Une fois qu’un **socket** est créé, il peut initier une connexion à un point de terminaison distant ou recevoir des connexions d’appareils distants.  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de sockets clients](../../../docs/framework/network-programming/using-client-sockets.md)  
- [Écoute avec des sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a>Voir aussi
+- [Utilisation de sockets clients](../../../docs/framework/network-programming/using-client-sockets.md)
+- [Écoute avec des sockets](../../../docs/framework/network-programming/listening-with-sockets.md)

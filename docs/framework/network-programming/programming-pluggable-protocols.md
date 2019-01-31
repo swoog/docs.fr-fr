@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 74dd44e704836b209366a7975d08a43375318e90
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1becdc227995064a3f34d712834ab358cc41754b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646592"
 ---
 # <a name="programming-pluggable-protocols"></a>programmation de protocoles enfichables
 Les classes abstraites <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse> fournissent la base des protocoles enfichables. En dérivant de <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse> les classes spécifiques au protocole, une application peut demander des données à une ressource Internet et lire la réponse sans spécifier le protocole utilisé.  
@@ -31,8 +31,8 @@ Les classes abstraites <xref:System.Net.WebRequest> et <xref:System.Net.WebRespo
   
  Pour tirer parti des protocoles enfichables, vos descendants <xref:System.Net.WebRequest> doivent fournir une transaction par défaut de type requête/réponse qui ne nécessite pas la définition de propriétés spécifiques au protocole. Par exemple, la classe <xref:System.Net.HttpWebRequest>, qui implémente la classe <xref:System.Net.WebRequest> pour le protocole HTTP, fournit une requête `GET` par défaut et retourne un <xref:System.Net.HttpWebResponse> qui contient le flux retourné à partir du serveur web.  
   
-## <a name="see-also"></a>Voir aussi  
- [Dérivation de WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)  
- [Dérivation à partir de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)  
- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Guide pratique pour caster une classe WebRequest en vue d’accéder aux propriétés spécifiques au protocole](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+## <a name="see-also"></a>Voir aussi
+- [Dérivation de WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [Dérivation à partir de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Guide pratique pour caster une classe WebRequest en vue d’accéder aux propriétés spécifiques au protocole](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

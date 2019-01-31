@@ -3,12 +3,12 @@ title: Structs C# - Visite guidée du langage C#
 description: Apprendre les bases des types valeur de C#, appelés structs
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d22cb23fe095874f24d7c002dfdb3eefdde66722
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142734"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065958"
 ---
 # <a name="structs"></a>Structs
 
@@ -30,7 +30,7 @@ Avec les classes, deux variables peuvent faire référence au même objet et, 
 
 [!code-csharp[PointUse](../../../samples/snippets/csharp/tour/structs/Program.cs#L19-L22)]
 
-Si `Point` est une classe, la sortie est de 20, car a et b font référence au même objet. Si Point est un struct, le résultat est 10, car l’attribution de `a` à `b` crée une copie de la valeur, et cette copie n’est pas affectée par l’assignation consécutive de `a.x`.
+Si `Point` est une classe, la sortie est 20, car `a` et `b` font référence au même objet. Si `Point` est un struct, le résultat est 10, car l’attribution de `a` à `b` crée une copie de la valeur, et cette copie n’est pas affectée par l’attribution suivante de `a.x`.
 
 L’exemple précédent illustre deux des limitations des structs. Tout d’abord, la copie d’un struct entier est généralement moins efficace que la copie d’une référence d’objet, aussi le passage de paramètres d’affectation et de valeur peut être plus coûteux avec les structures qu’avec les types référence. Ensuite, à l’exception des paramètres `in`, `ref` et `out`, il n’est pas possible de créer des références aux structures, ce qui rend leur utilisation impossible dans un certain nombre de situations.
 

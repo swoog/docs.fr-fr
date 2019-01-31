@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour rechercher le frère précédent (XPath-LINQ to XML) (C#)
+title: 'Procédure : Rechercher le frère précédent (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: c610ce4884e0760a03ec77aae4f38cf9c84a797a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 00b74edd67df65522f9f95e7f48c66a9e17a937c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708478"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Guide pratique pour rechercher le frère précédent (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Procédure : Rechercher le frère précédent (XPath-LINQ to XML) (C#)
 Il peut arriver que vous souhaitiez rechercher le frère précédent d'un nœud. Étant donné la différence de sémantique des prédicats de position pour les axes enfants précédents dans XPath par opposition à [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], il s'agit de l'une des comparaisons les plus intéressantes.  
   
 ## <a name="example"></a>Exemple  

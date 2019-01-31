@@ -1,5 +1,5 @@
 ---
-title: "Comment : décharger un domaine d'application"
+title: 'Procédure : décharger un domaine d’application'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b4cbdff72167cfc063254cf5370d22fb729b0a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 42356348ba454ffe0c3778e23dc9a0ff272c9f64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727740"
 ---
-# <a name="how-to-unload-an-application-domain"></a>Comment : décharger un domaine d'application
+# <a name="how-to-unload-an-application-domain"></a>Procédure : décharger un domaine d’application
 Quand vous avez fini d’utiliser un domaine d’application, déchargez-le à l’aide de la méthode <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>. La méthode **Unload** arrête de façon correcte le domaine d’application spécifié. Au cours du processus de déchargement, aucun nouveau thread ne peut accéder au domaine d’application, et toutes les structures de données spécifiques au domaine d’application sont libérées.  
   
  Les assemblys chargés dans le domaine d’application sont supprimés et ne sont plus disponibles. Si un assembly dans le domaine d’application est indépendant du domaine, les données de l’assembly restent en mémoire jusqu’à ce que l’ensemble du processus soit arrêté. Pour décharger un assembly indépendant du domaine, il n’existe pas d’autre mécanisme que l’arrêt de l’ensemble du processus. Il existe des cas où la demande de déchargement d’un domaine d’application ne fonctionne pas et provoque une exception <xref:System.CannotUnloadAppDomainException>.  
@@ -31,7 +31,7 @@ Quand vous avez fini d’utiliser un domaine d’application, déchargez-le à l
  [!code-csharp[System.AppDomain.Load#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source3.cs#3)]
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>Voir aussi  
-- [Programmation avec des domaines d’application](application-domains.md#programming-with-application-domains)  
-- [Guide pratique pour créer un domaine d’application](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+## <a name="see-also"></a>Voir aussi
+- [Programmation avec des domaines d’application](application-domains.md#programming-with-application-domains)
+- [Guide pratique pour créer un domaine d’application](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
 - [Utilisation des domaines d’application](../../../docs/framework/app-domains/use.md)

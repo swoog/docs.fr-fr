@@ -1,5 +1,5 @@
 ---
-title: 'Comment : implémenter une méthode Observer'
+title: 'Procédure : implémenter un observateur'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8b7534843c1f724dc4544b9a5a7062e79e973a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738051"
 ---
-# <a name="how-to-implement-an-observer"></a>Comment : implémenter une méthode Observer
+# <a name="how-to-implement-an-observer"></a>Procédure : implémenter un observateur
 Le modèle de design observateur requiert une division entre un observateur, qui s’inscrit pour recevoir des notifications, et un fournisseur, qui surveille les données et envie des notifications à un ou plusieurs observateurs. Cette rubrique décrit comment créer un observateur. Une rubrique connexe, [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md), explique comment créer un fournisseur.  
   
 ### <a name="to-create-an-observer"></a>Pour créer un observateur  
@@ -51,7 +51,7 @@ Le modèle de design observateur requiert une division entre un observateur, qui
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.IObserver%601>  
-- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)  
-- [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)  
+- <xref:System.IObserver%601>
+- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)
+- [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)
 - [Meilleures pratiques du modèle de design observateur](../../../docs/standard/events/observer-design-pattern-best-practices.md)

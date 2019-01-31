@@ -2,12 +2,12 @@
 title: Commande dotnet
 description: Découvrez la commande dotnet (le pilote générique des outils .NET Core CLI) et comment l’utiliser.
 ms.date: 06/04/2018
-ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170841"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066439"
 ---
 # <a name="dotnet-command"></a>Commande dotnet
 
@@ -78,9 +78,14 @@ Affiche les runtimes .NET Core installés.
 
 Affiche les kits de développement logiciel .NET Core installés.
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- Désactive la restauration par progression d’une version mineure, si la valeur est `0`. Pour plus d'informations, consultez [Restauration par progression](../whats-new/dotnet-core-2-1.md#roll-forward).
+Définit le comportement quand le framework partagé requis n’est pas disponible. `N` peut être :
+ * `0` : désactiver l’extrapolation même pour les versions mineures.
+ * `1` : extrapoler la version mineure, mais pas la version majeure. Il s'agit du comportement par défaut.
+ * `2` : extrapoler les versions majeures et mineures.
+
+ Pour plus d'informations, consultez [Extrapolation](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 
@@ -118,7 +123,7 @@ Affiche des informations détaillées sur une installation .NET Core et l’envi
 
 `--roll-forward-on-no-candidate-fx`
 
- Désactive la restauration par progression d’une version mineure, si la valeur est `0`. Pour plus d'informations, consultez [Restauration par progression](../whats-new/dotnet-core-2-1.md#roll-forward).
+ Désactive l’extrapolation de version mineure, si la valeur est `0`. Pour plus d'informations, consultez [Extrapolation](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 
@@ -309,7 +314,7 @@ Spécifie si le runtime .NET Core, le framework partagé ou le SDK sont résolus
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-Désactive la restauration par progression d’une version mineure, si la valeur est `0`. Pour plus d'informations, consultez [Restauration par progression](../whats-new/dotnet-core-2-1.md#roll-forward).
+Désactive l’extrapolation de version mineure, si la valeur est `0`. Pour plus d'informations, consultez [Extrapolation](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

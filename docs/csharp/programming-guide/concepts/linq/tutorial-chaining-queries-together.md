@@ -1,15 +1,15 @@
 ---
-title: 'Didacticiel : chaînage de requêtes (C#)'
+title: 'Tutoriel : Chaînage de requêtes (C#)'
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3beed32aa276f218a80267748e74707941957e53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737414"
 ---
-# <a name="tutorial-chaining-queries-together-c"></a>Didacticiel : chaînage de requêtes (C#)
+# <a name="tutorial-chaining-queries-together-c"></a>Tutoriel : Chaînage de requêtes (C#)
 Ce didacticiel illustre le modèle de traitement lorsque vous chaînez des requêtes. Le chaînage de requêtes est un aspect essentiel de l'écriture des transformations fonctionnelles. Il est important de comprendre exactement comment fonctionnent les requêtes chaînées.  
   
  Les requêtes qui traitent des documents Office Open XML utilisent cette technique de manière intensive.  

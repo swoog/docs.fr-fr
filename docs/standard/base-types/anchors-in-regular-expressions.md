@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675362"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancres dans les expressions régulières
 <a name="top"></a> Les ancres, ou assertions atomiques de largeur nulle, spécifient une position dans la chaîne où une correspondance doit se produire. Quand vous utilisez une ancre dans votre expression de recherche, le moteur des expressions régulières n'avance pas dans la chaîne ou ne consomme pas de caractères ; il recherche uniquement une correspondance à la position spécifiée. Par exemple, `^` spécifie que la correspondance doit commencer au début d'une ligne ou d'une chaîne. Par conséquent, l'expression régulière `^http:` correspond uniquement à « http: » quand elle se produit au début d'une ligne. Le tableau suivant répertorie les ancres prises en charge par les expressions régulières dans .NET.  
@@ -44,7 +44,7 @@ ms.locfileid: "53155036"
 ## <a name="start-of-string-or-line-"></a>Début de chaîne ou de ligne : ^  
  Par défaut, l’ancre `^` spécifie que le modèle suivant doit commencer à la première position de caractère de la chaîne. Si vous utilisez `^` avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (consultez [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md)), la correspondance doit se trouver au début de chaque ligne.  
   
- L'exemple suivant utilise l'ancre `^` dans une expression régulière qui extrait des informations à propos des années pendant lesquelles certaines équipes de base-ball professionnelles ont existé. L'exemple appelle deux surcharges de la méthode <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> :  
+ L'exemple suivant utilise l'ancre `^` dans une expression régulière qui extrait des informations à propos des années pendant lesquelles certaines équipes de base-ball professionnelles ont existé. L'exemple appelle deux surcharges de la méthode <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> :  
   
 -   L'appel à la surcharge <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> recherche uniquement la première sous-chaîne dans la chaîne d'entrée qui correspond au modèle d'expression régulière.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53155036"
 |Motif|Description|  
 |-------------|-----------------|  
 |`^`|Commencer la correspondance au début de la chaîne d'entrée (ou au début de la ligne si la méthode est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
-|`((\w+(\s?)){2,}`|Mettre en correspondance un ou plusieurs caractères de mot suivis de zéro ou d'un espace précisément deux fois. Il s'agit du premier groupe de capture. Cette expression définit également un deuxième et un troisième groupe de capture : le deuxième se compose du mot capturé, et le troisième se compose des espaces capturés.|  
+|`((\w+(\s?)){2,}`|Mettre en correspondance un ou plusieurs caractères de mot suivis de zéro ou d'un espace précisément deux fois. Il s'agit du premier groupe de capture. Cette expression définit également un deuxième et un troisième groupe de capture : le deuxième se compose du mot capturé, et le troisième se compose des espaces capturés.|  
 |`,\s`|Mettre en correspondance une virgule suivie d'un caractère d'espace blanc.|  
 |`(\w+\s\w+)`|Mettre en correspondance un ou plusieurs caractères de mot suivis d'un espace, suivi d'un ou plusieurs caractères de mot. Il s'agit du quatrième groupe de capture.|  
 |`,`|Mettre en correspondance une virgule.|  
@@ -73,7 +73,7 @@ ms.locfileid: "53155036"
 ## <a name="end-of-string-or-line-"></a>Fin de chaîne ou de ligne : $  
  L'ancre `$` spécifie que le modèle précédent doit se produire à la fin de la chaîne d'entrée ou avant `\n` à la fin de la chaîne d'entrée.  
   
- Si vous utilisez `$` avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, la correspondance peut également se trouver à la fin d'une ligne. Notez que `$` correspond à `\n` , mais ne correspond pas à `\r\n` (combinaison de caractères de retour chariot et de saut de ligne ou CR/LF). Pour établir une correspondance avec la combinaison de caractères CR/LF, incluez `\r?$` dans le modèle d'expression régulière.  
+ Si vous utilisez `$` avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> , la correspondance peut également se trouver à la fin d'une ligne. Notez que `$` correspond à `\n` , mais ne correspond pas à `\r\n` (combinaison de caractères de retour chariot et de saut de ligne ou CR/LF). Pour établir une correspondance avec la combinaison de caractères CR/LF, incluez `\r?$` dans le modèle d'expression régulière.  
   
  L'exemple suivant ajoute l'ancre `$` au modèle d'expression régulière utilisé dans l'exemple dans la section [Début de chaîne ou de ligne](#Start) . En cas d'utilisation avec la chaîne d'entrée d'origine, qui inclut cinq lignes de texte, la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> ne peut pas trouver de correspondance, parce que la fin de la première ligne ne correspond pas au modèle `$` . Quand la chaîne d'entrée d'origine est fractionnée dans un tableau de chaînes, la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> réussit à faire correspondre chacune des cinq lignes. Quand la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> est appelée avec le paramètre `options` défini avec la valeur <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, aucune correspondance n'est trouvée parce que le modèle d'expression régulière ne représente pas l'élément de retour chariot (\u+000D). Toutefois, quand le modèle d'expression régulière est modifié par le remplacement de `$` par `\r?$`, l'appel de la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> avec le paramètre `options` défini avec la valeur <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> trouve encore cinq correspondances.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "53155036"
   
 <a name="EndOrNOnly"></a>   
 ## <a name="end-of-string-or-before-ending-newline-z"></a>Fin de chaîne ou avant un saut de ligne final : \Z  
- L'ancre `\Z` spécifie qu'une correspondance doit se produire à la fin de la chaîne d'entrée ou avant `\n` à la fin de la chaîne d'entrée. Elle est identique à l'ancre `$`, à la différence près que l'ancre `\Z` ignore l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Par conséquent, dans une chaîne multiligne, elle peut correspondre uniquement à la fin de la dernière ligne ou à la dernière ligne avant `\n`.  
+ L'ancre `\Z` spécifie qu'une correspondance doit se produire à la fin de la chaîne d'entrée ou avant `\n` à la fin de la chaîne d'entrée. Elle est identique à l'ancre `$` , à la différence près que l'ancre `\Z` ignore l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Par conséquent, dans une chaîne multiligne, elle peut correspondre uniquement à la fin de la dernière ligne ou à la dernière ligne avant `\n`.  
   
  Notez que `\Z` correspond à `\n` , mais ne correspond pas à `\r\n` (combinaison de caractères CR/LF). Pour établir une correspondance avec les caractères CR/LF, incluez `\r?\Z` dans le modèle d'expression régulière.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "53155036"
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>Fin de chaîne uniquement : \z  
- L'ancre `\z` spécifie qu'une correspondance doit se produire à la fin de la chaîne d'entrée. Comme l'élément de langage `$`, `\z` ignore l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Contrairement à l'élément de langage `\Z`, `\z` ne correspond pas à un caractère `\n` à la fin d'une chaîne. Par conséquent, elle peut correspondre uniquement à la dernière ligne de la chaîne d'entrée.  
+ L'ancre `\z` spécifie qu'une correspondance doit se produire à la fin de la chaîne d'entrée. Comme l'élément de langage `$` , `\z` ignore l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Contrairement à l'élément de langage `\Z` , `\z` ne correspond pas à un caractère `\n` à la fin d'une chaîne. Par conséquent, elle peut correspondre uniquement à la dernière ligne de la chaîne d'entrée.  
   
  L'exemple suivant utilise l'ancre `\z` dans une expression régulière qui est sinon identique à l'exemple dans la section précédente, qui extrait des informations à propos des années pendant lesquelles certaines équipes de base-ball professionnelles ont existé. L'exemple essaie de faire correspondre chacun des cinq éléments dans un tableau de chaînes avec le modèle d'expression régulière `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`. Deux des chaînes se terminent par un retour chariot et des caractères de saut de ligne, l'une se termine par un caractère de saut de ligne, et deux ne se terminent ni par un retour chariot ni par un caractère de saut de ligne. Comme le montre la sortie, seules les chaînes sans retour chariot ou caractère de saut de ligne correspondent au modèle.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "53155036"
   
 <a name="Contiguous"></a>   
 ## <a name="contiguous-matches-g"></a>Correspondances contiguës : \G  
- L'ancre `\G` spécifie qu'une correspondance doit se produire au point où la correspondance précédente s'est terminée. Quand vous utilisez cette ancre avec la méthode <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>, elle vérifie que toutes les correspondances sont contiguës.  
+ L'ancre `\G` spécifie qu'une correspondance doit se produire au point où la correspondance précédente s'est terminée. Quand vous utilisez cette ancre avec la méthode <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> , elle vérifie que toutes les correspondances sont contiguës.  
   
  L'exemple suivant utilise une expression régulière pour extraire les noms d'espèces de rongeurs d'une chaîne délimitée par des virgules.  
   
@@ -178,5 +178,5 @@ ms.locfileid: "53155036"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md)

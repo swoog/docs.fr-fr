@@ -1,5 +1,5 @@
 ---
-title: 'Comment : écrire une boucle Parallel.For avec des variables locales de thread'
+title: 'Procédure : écrire une boucle Parallel.For avec des variables locales de thread'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18458e52c6cf38b2900036613676adea3f3b2d0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610797"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Comment : écrire une boucle Parallel.For avec des variables locales de thread
-Cet exemple montre comment utiliser des variables de thread local pour stocker et récupérer l'état de chaque tâche créée par une boucle <xref:System.Threading.Tasks.Parallel.For%2A>. En utilisant des données de thread local, vous pouvez éviter la surcharge liée à la synchronisation d'un grand nombre d'accès à un état partagé. Au lieu d'écrire dans une ressource partagée à chaque itération, vous calculez et stockez la valeur jusqu'à ce que toutes les itérations de la tâche soient terminées. Vous pouvez ensuite écrire une fois le résultat final dans la ressource partagée ou le transmettre à une autre méthode.  
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procédure : écrire une boucle Parallel.For avec des variables locales de thread
+Cet exemple montre comment utiliser des variables de thread local pour stocker et récupérer l’état de chaque tâche créée par une boucle <xref:System.Threading.Tasks.Parallel.For%2A>. En utilisant des données de thread local, vous pouvez éviter la surcharge liée à la synchronisation d'un grand nombre d'accès à un état partagé. Au lieu d'écrire dans une ressource partagée à chaque itération, vous calculez et stockez la valeur jusqu'à ce que toutes les itérations de la tâche soient terminées. Vous pouvez ensuite écrire une fois le résultat final dans la ressource partagée ou le transmettre à une autre méthode.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant appelle la méthode <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> pour calculer la somme des valeurs d'un tableau qui contient un million d'éléments. La valeur de chaque élément est égale à son index.  
@@ -46,7 +46,7 @@ Function() new MyClass()
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)  
-- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+- [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)
+- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
 - [Expressions lambda en PLINQ et dans la bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

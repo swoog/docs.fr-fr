@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 14656fa25ea1d01339bd63efb999e938e1243db8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499867"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (Options du compilateur C#)
 L’option **-warn** spécifie le niveau d’avertissement que le compilateur doit afficher.  
@@ -30,7 +30,7 @@ L’option **-warn** spécifie le niveau d’avertissement que le compilateur do
   
 ## <a name="arguments"></a>Arguments  
  `option`  
- Niveau d’avertissement que vous souhaitez afficher pour la compilation : les nombres inférieurs affichent uniquement les avertissements ayant un niveau de gravité élevé ; les nombres supérieurs affichent davantage d’avertissements. Les valeurs valides vont de 0 à 4 :  
+ Le niveau d’avertissement que vous souhaitez afficher pour la compilation : les nombres moins élevés affichent uniquement les avertissements dont le niveau de gravité est élevé ; les nombres plus élevés affichent davantage d’avertissements. Les valeurs valides vont de 0 à 4 :  
   
 |Niveau d’avertissement|Signification|  
 |-------------------|-------------|  
@@ -55,7 +55,7 @@ L’option **-warn** spécifie le niveau d’avertissement que le compilateur do
   
 3.  Modifiez la propriété **Niveau d’avertissement**.  
   
- Pour plus d’informations sur la façon de définir cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
+ Pour plus d’informations sur la définition de cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
   
 ## <a name="example"></a>Exemple  
  Compilez `in.cs` et faites en sorte que le compilateur n’affiche que les avertissements de niveau 1 :  
@@ -64,7 +64,7 @@ L’option **-warn** spécifie le niveau d’avertissement que le compilateur do
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour contrôler les préfixes d'espaces de noms (C#) (LINQ to XML)
+title: 'Procédure : Contrôler les préfixes d’espaces de noms (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: dd2a91fde868425cadbc395d6db0f913e2be600f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4664be2661e54782598345886029835108934955
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714030"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Guide pratique pour contrôler les préfixes d'espaces de noms (C#) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Procédure : Contrôler les préfixes d’espaces de noms (C#) (LINQ to XML)
 Cette rubrique décrit comment contrôler les préfixes d’espaces de noms lors de la sérialisation d’une arborescence XML.  
   
  Dans de nombreux cas, il n'est pas nécessaire de contrôler les préfixes d'espaces de noms.  

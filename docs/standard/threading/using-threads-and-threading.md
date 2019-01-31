@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690616"
 ---
 # <a name="using-threads-and-threading"></a>Utilisation des threads et du threading
 
@@ -24,11 +24,11 @@ Les applications qui utilisent le multithreading sont plus réactives aux entré
 > [!NOTE]
 > Si vous avez besoin de plus de contrôle sur le comportement des threads de l’application, vous pouvez gérer vous-même les threads. Toutefois, à compter de .NET Framework 4, la programmation multithread est considérablement simplifiée avec les classes <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), de nouvelles classes de collections simultanées dans l’espace de noms <xref:System.Collections.Concurrent?displayProperty=nameWithType>, et un nouveau modèle de programmation basé sur le concept de tâches plutôt que de threads. Pour plus d’informations, consultez [Programmation parallèle](../parallel-programming/index.md) et [Bibliothèque parallèle de tâches (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
-## <a name="how-to-create-and-start-a-new-thread"></a>Comment créer et démarrer un nouveau thread
+## <a name="how-to-create-and-start-a-new-thread"></a>Procédure : créer et démarrer un nouveau thread
 
 Pour créer un thread, vous devez créer une instance de la classe <xref:System.Threading.Thread?displayProperty=nameWithType> et fournir au constructeur le nom de la méthode que vous souhaitez exécuter sur un nouveau thread. Pour démarrer un thread créé, appelez la méthode <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Pour plus d’informations et pour obtenir des exemples, consultez l’article [Création de threads et passage de données au démarrage](creating-threads-and-passing-data-at-start-time.md) et la référence de l’API <xref:System.Threading.Thread>.
 
-## <a name="how-to-stop-a-thread"></a>Comment arrêter un thread
+## <a name="how-to-stop-a-thread"></a>Procédure : arrêter un thread
 
 Pour mettre fin à l’exécution d’un thread, utilisez la méthode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Cette méthode lève une <xref:System.Threading.ThreadAbortException> sur le thread sur lequel elle est appelée. Pour plus d’informations, consultez [Destruction de threads](destroying-threads.md).
 
@@ -36,7 +36,7 @@ Pour mettre fin à l’exécution d’un thread, utilisez la méthode <xref:Syst
 
 Utilisez la méthode <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> pour faire en sorte que le thread appelant attende l’arrêt du thread sur lequel la méthode est appelée.
 
-## <a name="how-to-pause-or-interrupt-a-thread"></a>Comment suspendre ou interrompre un thread
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Procédure : suspendre ou interrompre un thread
 
 Vous utilisez la méthode <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> pour suspendre le thread actif pendant un certain laps de temps. Vous pouvez interrompre un thread bloqué en appelant la méthode <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>. Pour plus d’informations, consultez [Suspension et interruption de threads](pausing-and-resuming-threads.md).
 
@@ -54,6 +54,6 @@ Le tableau suivant présente certaines des propriétés de <xref:System.Threadin
 
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [Threads et threading](threads-and-threading.md)  
-- [Programmation parallèle](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [Threads et threading](threads-and-threading.md)
+- [Programmation parallèle](../parallel-programming/index.md)

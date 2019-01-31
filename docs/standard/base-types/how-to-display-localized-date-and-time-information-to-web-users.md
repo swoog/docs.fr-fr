@@ -1,5 +1,5 @@
 ---
-title: "Comment : afficher des informations de date et d'heure localisées pour les utilisateurs du Web"
+title: 'Procédure : afficher des informations de date et d’heure localisées pour les utilisateurs du web'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085223"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857656"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Comment : afficher des informations de date et d'heure localisées pour les utilisateurs du Web
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procédure : afficher des informations de date et d’heure localisées pour les utilisateurs du web
 Une page Web pouvant être affichée n’importe où dans le monde, les opérations qui analysent et mettent en forme les valeurs de date et d’heure ne doivent pas s’appuyer sur un format par défaut (généralement le format de la culture locale du serveur Web) lors de l’interaction avec l’utilisateur. Au lieu de cela, les formulaires Web qui gèrent les chaînes de date et d’heure saisies par l’utilisateur doivent analyser les chaînes en utilisant la culture préférée de l’utilisateur. De même, les données de date et d’heure doivent être affichées à l’utilisateur dans un format conforme à sa culture. Cette rubrique montre comment procéder.  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Pour analyser les chaînes de date et d’heure saisies par l’utilisateur  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Pour analyser les chaînes de date et d’heure saisies par l’utilisateur  
   
 1.  Déterminez si le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> est rempli. Si ce n’est pas le cas, passez à l’étape 6.  
   
@@ -40,7 +43,7 @@ Une page Web pouvant être affichée n’importe où dans le monde, les opérati
   
 6.  Si la conversion échoue toujours ou si le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A> est vide, analysez la chaîne à l’aide de la culture invariante retournée par la propriété <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Pour analyser la date et l’heure locales de la demande de l’utilisateur  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Pour analyser la date et l’heure locales de la demande de l’utilisateur  
   
 1.  Ajoutez un contrôle <xref:System.Web.UI.WebControls.HiddenField> à votre formulaire Web.  
   
@@ -110,7 +113,7 @@ Une page Web pouvant être affichée n’importe où dans le monde, les opérati
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Analyse de chaînes de date et d’heure](../../../docs/standard/base-types/parsing-datetime.md)

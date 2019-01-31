@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour regrouper des fichiers par extension (LINQ) (C#)
+title: 'Procédure : Regrouper des fichiers par extension (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 320d89c78a317f49d98d4dc139aaa3df05fcd6f3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bad4df9009a40cede04438063b2d30916d0e68b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575147"
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>Guide pratique pour regrouper des fichiers par extension (LINQ) (C#)
+# <a name="how-to-group-files-by-extension-linq-c"></a>Procédure : Regrouper des fichiers par extension (LINQ) (C#)
 Cet exemple montre comment utiliser LINQ pour effectuer des opérations de regroupement et de tri avancées sur des listes de fichiers ou de dossiers. Il montre également comment parcourir les résultats dans la fenêtre de console à l’aide des méthodes <xref:System.Linq.Enumerable.Skip%2A> et <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Exemple  
@@ -109,5 +109,5 @@ class GroupByExtension
   
 ## <a name="see-also"></a>Voir aussi
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ et répertoires de fichiers (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

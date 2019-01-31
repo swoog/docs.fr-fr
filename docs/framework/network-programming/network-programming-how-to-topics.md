@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5b9236b3dd9d40c3f5656fd050f25cbb12f6a1ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e3569ec8608a52101cc0bf752d39fbe01ab46917
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561970"
 ---
 # <a name="network-programming-how-to-topics"></a>Rubriques "Comment" relatives à la programmation réseau
 La liste suivante comprend des liens vers les guides pratiques de la documentation conceptuelle relative à la programmation réseau.  
@@ -43,7 +43,7 @@ La liste suivante comprend des liens vers les guides pratiques de la documentati
   
 -   [Guide pratique pour charger des fichiers avec FTP](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
   
--   [Guide pratique pour répertorier le contenu d’un répertoire avec FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
+-   [Guide pratique pour lister le contenu d’un répertoire avec FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
   
  **Protocole Internet version 6 :**  
   
@@ -57,15 +57,15 @@ La liste suivante comprend des liens vers les guides pratiques de la documentati
   
 -   [Guide pratique pour définir une stratégie de cache basée sur l’emplacement pour une application](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
--   [Guide pratique pour définir la stratégie de cache à durée définie par défaut pour une application](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+-   [Guide pratique pour définir la stratégie de cache basée sur la durée par défaut pour une application](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
 -   [Guide pratique pour personnaliser une stratégie de cache basée sur la durée](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
   
--   [Guide pratique pour définir une stratégie de cache pour une requête](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
+-   [Guide pratique pour définir une stratégie de cache pour une demande](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
  **Utilisation des proxys :**  
   
--   [Guide pratique pour permettre à un WebRequest d’utiliser un proxy pour communiquer avec Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+-   [Guide pratique pour activer un WebRequest pour utiliser un proxy pour communiquer avec Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
 -   [Guide pratique pour remplacer une sélection de proxy global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
@@ -75,9 +75,9 @@ La liste suivante comprend des liens vers les guides pratiques de la documentati
   
 -   [Guide pratique pour obtenir des informations d’interface et de protocole](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
   
--   [Guide pratique pour effectuer un test ping](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
+-   [Guide pratique pour exécuter une requête ping](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>Voir aussi
+- [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

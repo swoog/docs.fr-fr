@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570721"
 ---
 # <a name="net-architectural-components"></a>Composants architecturaux de .NET
 
@@ -30,7 +30,7 @@ Chaque implémentation de .NET inclut les composants suivants :
 
 - Un ou plusieurs runtimes. Exemples : CLR pour .NET Framework, CoreCLR et CoreRT pour .NET Core.
 - Une bibliothèque de classes qui implémente .NET Standard et qui peut implémenter des API supplémentaires. Exemples : bibliothèque de classes de base .NET Framework, bibliothèque de classes de base .NET Core.
-- Le cas échéant, un ou plusieurs frameworks d’application. Exemples : [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) et [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) sont inclus dans .NET Framework.
+- Le cas échéant, un ou plusieurs frameworks d’application. Exemples : [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) et [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) sont inclus dans le .NET Framework.
 - Le cas échéant, des outils de développement. Certains outils de développement sont partagés entre plusieurs implémentations.
 
 Il existe quatre implémentations de .NET principales que Microsoft développe et gère activement : .NET Core, .NET Framework, Mono et UWP.
@@ -86,10 +86,10 @@ Vous avez accès à un ensemble complet d’outils et de composants d’infrastr
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Choix entre .NET Core et .NET Framework pour les applications serveur](choosing-core-framework-server.md)   
-- [.NET Standard](net-standard.md)  
-- [Guide .NET Core](../core/index.md)  
-- [.NET Framework Guide](../framework/index.md) (Guide du .NET Framework)  
-- [Guide C#](../csharp/index.md)  
-- [Guide F#](../fsharp/index.md)  
-- [VB.NET Guide](../visual-basic/index.md) (Guide VB.NET)  
+- [Choix entre .NET Core et .NET Framework pour les applications serveur](choosing-core-framework-server.md)
+- [.NET Standard](net-standard.md)
+- [Guide .NET Core](../core/index.md)
+- [.NET Framework Guide](../framework/index.md) (Guide du .NET Framework)
+- [Guide C#](../csharp/index.md)
+- [Guide F#](../fsharp/index.md)
+- [VB.NET Guide](../visual-basic/index.md) (Guide VB.NET)

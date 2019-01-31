@@ -4,12 +4,12 @@ description: Guide sur l’implémentation de .NET à envisager pour générer u
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699504"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Choix entre .NET Core et .NET Framework pour les applications serveur
 
@@ -91,7 +91,7 @@ Certaines technologies du .NET Framework ne sont pas disponibles dans .NET Core.
 
 * Implémentation des services WCF. Même s’il existe une [bibliothèque cliente WCF](https://github.com/dotnet/wcf) pour utiliser des services WCF à partir de .NET Core, l’implémentation serveur WCF est disponible uniquement sur le .NET Framework. Ce scénario ne fait pas partie du plan actuel pour .NET Core, mais il est envisagé pour l’avenir.
 
-* Services liés aux flux de travail : Windows Workflow Foundation (WF), les services de flux de travail (WCF + WF dans un seul service) et les Services de données WCF (anciennement « ADO.NET Data Services ») sont disponibles uniquement dans le .NET Framework.  Il n’est pas prévu d’intégrer WF/WCF+WF/WCF Data Services à .NET Core.
+* Services liés aux workflows : Windows Workflow Foundation (WF), les services de workflow (WCF + WF dans un seul service) et WCF Data Services (anciennement « ADO.NET Data Services ») sont disponibles uniquement dans le .NET Framework.  Il n’est pas prévu d’intégrer WF/WCF+WF/WCF Data Services à .NET Core.
 
 * Prise en charge des langages : Visual Basic et F# sont pris en charge dans .NET Core, mais pas pour tous les types de projet. Pour obtenir la liste des modèles de projet pris en charge, consultez [Options de modèle pour dotnet new](../core/tools/dotnet-new.md#arguments).
 
@@ -103,11 +103,11 @@ Certaines plateformes Microsoft ou tierces ne prennent pas en charge .NET Core. 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Choisir entre ASP.NET et ASP.NET Core](/aspnet/core/choose-aspnet-framework)
-* [ASP.NET Core ciblant .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
-* [Frameworks cibles](frameworks.md)
-* [Guide .NET Core](../core/index.md)  
-* [Portage depuis .NET Framework vers .NET Core](../core/porting/index.md)  
-* [Guide de .NET Framework sur Docker](../framework/docker/index.md)  
-* [Vue d’ensemble des composants .NET](components.md)  
-* [Microservices .NET. Architecture pour les applications .NET en conteneurs](microservices-architecture/index.md)
+- [Choisir entre ASP.NET et ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+- [ASP.NET Core ciblant .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
+- [Frameworks cibles](frameworks.md)
+- [Guide .NET Core](../core/index.md)
+- [Portage depuis .NET Framework vers .NET Core](../core/porting/index.md)
+- [Guide de .NET Framework sur Docker](../framework/docker/index.md)
+- [Vue d’ensemble des composants .NET](components.md)
+- [Microservices .NET. Architecture pour les applications .NET en conteneurs](microservices-architecture/index.md)

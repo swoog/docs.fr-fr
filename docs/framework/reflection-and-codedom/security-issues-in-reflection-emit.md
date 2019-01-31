@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57db77b64ddcbe282fed035b52bb122901383ca4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701402"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problèmes de sécurité dans l'émission de réflexion
 Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre trois façons d'émettre du code MSIL (Microsoft Intermediate Language), chacune avec ses propres problèmes de sécurité :  
@@ -68,7 +68,7 @@ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre trois faç
 > [!NOTE]
 >  Conceptuellement, les demandes sont effectuées pendant la construction de la méthode. Autrement dit, les demandes peuvent être faites à l'émission de chaque instruction MSIL. Dans l'implémentation actuelle, toutes les demandes sont faites quand la méthode <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> est appelée ou quand le compilateur juste-à-temps (JIT) est appelé, si la méthode est appelée sans appel de <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
   
- Si le domaine d'application le permet, les méthodes dynamiques hébergées anonymement peuvent ignorer les contrôles de visibilité JIT, avec la restriction suivante : les types et les membres non publics auxquels accède une méthode dynamique hébergée anonymement doivent être dans des assemblys dont les jeux d'autorisations doivent être équivalents à ou être des sous-ensembles du jeu d'autorisations de la pile des appels émettrice. Cette possibilité restreinte d'ignorer les contrôles de visibilité JIT est activée si le domaine d'application accorde l'autorisation <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+ Si le domaine d’application le permet, les méthodes dynamiques hébergées anonymement peuvent ignorer les contrôles de visibilité JIT, avec la restriction suivante : les types et les membres non publics auxquels accède une méthode dynamique hébergée anonymement doivent être dans des assemblys dont les jeux d’autorisations doivent être équivalents à ou être des sous-ensembles du jeu d’autorisations de la pile des appels émettrice. Cette possibilité restreinte d'ignorer les contrôles de visibilité JIT est activée si le domaine d'application accorde l'autorisation <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
 -   Si votre méthode utilise seulement des types et des membres publics, aucune autorisation n'est requise pendant la construction.  
   
@@ -153,6 +153,6 @@ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre trois faç
 ### <a name="obtaining-information-on-types-and-members"></a>Obtention d'informations sur les types et les membres  
  Depuis le [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], aucune autorisation n'est requise pour obtenir des informations sur les types et les membres non publics. La réflexion est utilisée pour obtenir les informations nécessaires à l'émission de méthodes dynamiques. Par exemple, les objets <xref:System.Reflection.MethodInfo> sont utilisés pour émettre des appels de méthode. Les versions antérieures du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] exigent <xref:System.Security.Permissions.ReflectionPermission> avec l’indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Pour plus d’informations, consultez [Considérations relatives à la sécurité de la réflexion](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Considérations sur la sécurité de la réflexion](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)  
- [Émission d’assemblys et de méthodes dynamiques](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+## <a name="see-also"></a>Voir aussi
+- [Considérations sur la sécurité de la réflexion](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [Émission d’assemblys et de méthodes dynamiques](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

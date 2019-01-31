@@ -2,12 +2,12 @@
 title: Programmation LINQ to XML avancée (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-ms.openlocfilehash: 684c91724ad8f283dc47f38e31697884f4d216d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f921bf6e560f6b8286340ec80ab12e60cf248720
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738626"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>Programmation LINQ to XML avancée (C#)
 Cette section fournit des informations qui concernent uniquement les développeurs expérimentés pour certains scénarios [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -20,7 +20,7 @@ Cette section fournit des informations qui concernent uniquement les développeu
 |[Événements LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-events.md)|Décrit comment écrire des gestionnaires d’événements pour les événements qui se produisent lorsque vous modifiez une arborescence XML.|  
 |[Programmation avec des nœuds](../../../../csharp/programming-guide/concepts/linq/programming-with-nodes.md)|Décrit comment interroger et manipuler des nœuds à un niveau de granularité supérieurs aux éléments et attributs.|  
 |[Bogues liés à l’utilisation combinée de code déclaratif et de code impératif (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|Décrit les problèmes qui se produisent lorsque vous mélangez du code déclaratif (requêtes) à du code impératif (code qui modifie l’arborescence XML).|  
-|[Guide pratique pour diffuser des fragments XML en continu avec accès aux informations d’en-tête (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|Décrit comment diffuser des fragments XML en continu à partir d'un objet <xref:System.Xml.XmlReader>. Vous pouvez utiliser cette technique pour contrôler l'encombrement mémoire de votre application.|  
+|[Guide pratique pour effectuer le streaming de fragments XML avec accès aux informations d’en-tête (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|Décrit comment diffuser des fragments XML en continu à partir d'un objet <xref:System.Xml.XmlReader>. Vous pouvez utiliser cette technique pour contrôler l'encombrement mémoire de votre application.|  
 |[Guide pratique pour effectuer une transformation de streaming de documents XML volumineux (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|Décrit comment diffuser du code XML en continu à partir d'un objet <xref:System.Xml.XmlReader>, transformer le fragment XML et diffuser la sortie en continu à l'aide de <xref:System.Xml.Linq.XStreamingElement>.|  
 |[Guide pratique pour lire et écrire un document encodé (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|Explique comment lire et écrire des documents XML qui sont encodés.|  
 |[Utilisation de XSLT pour transformer une arborescence XML (C#)](../../../../csharp/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|Décrit comment transformer une arborescence XML à l’aide de XSLT.|  

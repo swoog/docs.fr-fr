@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour modifier un document Office Open XML (C#)
+title: 'Procédure : Modifier un document Office Open XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 7a85341ee64c71a3f57b71b3db82889aee667040
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6770e661c90f9eee432933edafb28a615991775e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556023"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a>Guide pratique pour modifier un document Office Open XML (C#)
+# <a name="how-to-modify-an-office-open-xml-document-c"></a>Procédure : Modifier un document Office Open XML (C#)
 Cette rubrique présente un exemple qui ouvre un document Office Open XML, le modifie et l'enregistre.  
   
  Pour plus d’informations sur Office Open XML, consultez [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) et [www.ericwhite.com](http://ericwhite.com/).  

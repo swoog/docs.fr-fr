@@ -1,19 +1,19 @@
 ---
-title: Guide pratique pour créer une clé dans le Registre (Visual C#)
+title: 'Procédure : Créer une clé dans le Registre (Visual C#)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: a3a6af8eb493ce17ac73769decd1f60b903ae165
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: af796affa669d0f21e9d503f5263ad26b537fb91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553765"
 ---
-# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Guide pratique pour créer une clé dans le Registre (Visual C#)
+# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Procédure : Créer une clé dans le Registre (Visual C#)
 Cet exemple ajoute la paire de valeurs « Name » et « Isabella » dans le Registre de l’utilisateur actuel, sous la clé « Names ».  
   
 ## <a name="example"></a>Exemple  
@@ -57,7 +57,7 @@ key.Close();
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Système de fichiers et Registre (Guide de programmation C#)](../../../csharp/programming-guide/file-system/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Système de fichiers et Registre (Guide de programmation C#)](../../../csharp/programming-guide/file-system/index.md)
 - [Read, write and delete from the registry with C# (Lire, écrire et supprimer du Registre avec C#)](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

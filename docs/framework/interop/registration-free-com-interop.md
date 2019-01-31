@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a1e4dacf66cc17182265e8ea9f132938017a54e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698425"
 ---
 # <a name="registration-free-com-interop"></a>COM Interop sans inscription
 COM Interop sans inscription active un composant sans utiliser le Registre Windows pour stocker les informations d'assembly. Au lieu d'inscrire un composant sur un ordinateur pendant le déploiement, vous créez des fichiers manifeste de type Win32 au moment du design qui contiennent des informations sur la liaison et l'activation. Ces fichiers manifeste, plutôt que les clés de Registre, dirigent l'activation d'un objet.  
@@ -54,5 +54,5 @@ COM Interop sans inscription active un composant sans utiliser le Registre Windo
     > [!NOTE]
     >  L’exécution côte à côte est une fonctionnalité de .NET Framework qui permet à plusieurs versions du runtime et à plusieurs versions d’applications et de composants qui utilisent une version du runtime, de s’exécuter sur le même ordinateur en même temps. L'exécution côte à côte et les assemblys côte à côte sont deux mécanismes différents de la fonctionnalité de côte à côte.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour configurer les composants COM .NET Framework pour l’activation sans inscription](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour configurer les composants COM .NET Framework pour l’activation sans inscription](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Comment : démarrer des services'
+title: 'Procédure : démarrer des services'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: b3f04deb11a23957198864c444b4872aef45b2e4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494362"
 ---
-# <a name="how-to-start-services"></a>Comment : démarrer des services
+# <a name="how-to-start-services"></a>Procédure : démarrer des services
 Une fois qu’un service est installé, il doit être démarré. Le démarrage appelle la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> sur la classe de service. En règle générale, la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> définit le travail utile effectué par le service. Une fois un service démarré, il reste actif jusqu’à ce qu’il soit suspendu ou arrêté.  
   
  Vous pouvez configurer un service pour qu’il démarre automatiquement ou manuellement. Un service à démarrage automatique démarre quand l’ordinateur sur lequel il est installé est mis en marche pour la première fois ou redémarré. Un service à démarrage manuel doit être démarré par un utilisateur.  
@@ -27,7 +27,7 @@ Une fois qu’un service est installé, il doit être démarré. Le démarrage a
   
 ### <a name="to-specify-how-a-service-should-start"></a>Pour spécifier comment un service doit démarrer  
   
-1.  Après avoir créé votre service, ajoutez les programmes d’installation nécessaires à celui-ci. Pour plus d’informations, consultez [Guide pratique pour ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Après avoir créé votre service, ajoutez les programmes d’installation nécessaires à celui-ci. Pour plus d'informations, voir [Procédure : ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 2.  Dans le concepteur, cliquez sur le programme d’installation du service que vous utilisez.  
   
@@ -48,7 +48,7 @@ Une fois qu’un service est installé, il doit être démarré. Le démarrage a
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Pour démarrer manuellement un service à partir de l’Explorateur de serveurs  
   
-1.  Dans **l’Explorateur de serveurs**, ajoutez le serveur désiré s’il n’est pas déjà répertorié. Pour plus d’informations, consultez Guide pratique pour accéder à l’Explorateur de serveurs/bases de données et l’initialiser.  
+1.  Dans **l’Explorateur de serveurs**, ajoutez le serveur désiré s’il n’est pas déjà répertorié. Pour plus d'informations, consultez Guide pratique pour accéder à l’Explorateur de serveurs/bases de données et l’initialiser.  
   
 2.  Développez le nœud **Services**, puis recherchez le service à démarrer.  
   
@@ -77,7 +77,7 @@ Une fois qu’un service est installé, il doit être démarré. Le démarrage a
   
 2.  Appelez la méthode <xref:System.ServiceProcess.ServiceController.Start%2A> pour démarrer le service.  
   
-## <a name="see-also"></a>Voir aussi  
- [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Guide pratique pour créer des services Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Guide pratique pour ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>Voir aussi
+- [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Guide pratique pour créer des services Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Guide pratique pour ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

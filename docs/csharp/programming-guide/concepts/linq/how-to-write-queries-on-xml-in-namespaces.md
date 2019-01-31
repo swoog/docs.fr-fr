@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour écrire des requêtes à exécuter sur du code XML dans des espaces de noms (C#)
+title: 'Procédure : Écrire des requêtes à exécuter sur du code XML dans des espaces de noms (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: 29c4b01bfce75ce71d5214fef0cc55cd82c4e776
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722092"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Guide pratique pour écrire des requêtes à exécuter sur du code XML dans des espaces de noms (C#)
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Procédure : Écrire des requêtes à exécuter sur du code XML dans des espaces de noms (C#)
 Pour écrire des requêtes sur du code XML qui est dans un espace de noms, vous devez utiliser des objets <xref:System.Xml.Linq.XName> qui ont l'espace de noms correct.  
   
  Pour C#, l'approche la plus courante consiste à initialiser un objet <xref:System.Xml.Linq.XNamespace> à l'aide d'une chaîne contenant l'URI, puis à utiliser la surcharge d'opérateur d'addition pour combiner l'espace de noms avec le nom local.  

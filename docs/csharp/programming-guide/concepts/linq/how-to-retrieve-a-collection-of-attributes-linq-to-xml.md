@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour récupérer une collection d’attributs (LINQ to XML) (C#)
+title: 'Procédure : Récupérer une collection d’attributs (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
-ms.openlocfilehash: e872d0fefa5ea3c25208bf5deab42b59b5b7d5b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d535f56507812855f08b31417124b4408dfea017
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599814"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Guide pratique pour récupérer une collection d’attributs (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Procédure : Récupérer une collection d’attributs (LINQ to XML) (C#)
 Cette rubrique présente la méthode <xref:System.Xml.Linq.XElement.Attributes%2A>. Cette méthode récupère les attributs d'un élément.  
   
 ## <a name="example"></a>Exemple  

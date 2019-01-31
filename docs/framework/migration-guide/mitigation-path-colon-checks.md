@@ -1,17 +1,17 @@
 ---
-title: 'Atténuation : Vérifications des signes deux-points dans les chemins d’accès'
+title: 'Atténuation : vérifications des signes deux-points dans les chemins d’accès'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a54220a90a5120d13c89232d30ab40140c324097
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 741bb73280d9e81fc1865867152ab1243e9dd53c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494676"
 ---
-# <a name="mitigation-path-colon-checks"></a>Atténuation : Vérifications des signes deux-points dans les chemins d’accès
+# <a name="mitigation-path-colon-checks"></a>Atténuation : vérifications des signes deux-points dans les chemins d’accès
 Plusieurs modifications ont été apportées pour prendre en charge les chemins d’accès non pris en charge précédemment (à la fois en termes de longueur et le format), à commencer par les applications qui ciblent [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]. En particulier, les vérifications de bonne syntaxe de séparateur de lecteur (le signe deux-points) ont été rendues plus correctes.  
   
 ## <a name="impact"></a>Impact  
@@ -32,5 +32,5 @@ Plusieurs modifications ont été apportées pour prendre en charge les chemins 
     </runtime>  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Modifications de reciblage](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a>Voir aussi
+- [Modifications de reciblage](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

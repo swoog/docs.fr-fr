@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour sérialiser à l’aide de DataContractSerializer (C#)
+title: 'Procédure : Sérialiser à l’aide de DataContractSerializer (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 2c0324b1eeeab9f6cf9223e2a3e201771b188749
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75f805c2a954957519f2ebb9425ae7e2e2a967b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721839"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a>Guide pratique pour sérialiser à l’aide de DataContractSerializer (C#)
+# <a name="how-to-serialize-using-datacontractserializer-c"></a>Procédure : Sérialiser à l’aide de DataContractSerializer (C#)
 Cette rubrique présente un exemple qui sérialise et désérialise à l'aide de <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Exemple  

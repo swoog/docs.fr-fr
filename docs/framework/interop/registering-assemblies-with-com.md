@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3ba8cb41244157b1fca0f7e9d345625cc579d0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494039"
 ---
 # <a name="registering-assemblies-with-com"></a>Inscription d'assemblys dans COM
 Vous pouvez exécuter l’outil en ligne de commande [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) pour inscrire ou désinscrire un assembly à utiliser avec COM. Regasm.exe ajoute des informations sur la classe au Registre système pour que les clients COM puissent utiliser la classe .NET Framework en toute transparence. La classe <xref:System.Runtime.InteropServices.RegistrationServices> fournit des fonctionnalités équivalentes.  
@@ -43,8 +43,8 @@ Vous pouvez exécuter l’outil en ligne de commande [Assembly Registration Tool
   
  Pour la sous-clé `InprocServer32`, une référence à Mscoree.dll s’affiche (au lieu d’une bibliothèque de types COM traditionnelle) pour indiquer que le common language runtime crée l’objet managé.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)  
- [Comment : référencer des types .NET à partir de COM](how-to-reference-net-types-from-com.md)  
- [Appel d’un objet .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
- [Déploiement d’une application pour accéder à COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+## <a name="see-also"></a>Voir aussi
+- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
+- [Guide pratique pour référencer des types .NET à partir de COM](how-to-reference-net-types-from-com.md)
+- [Appel d’un objet .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))
+- [Déploiement d’une application pour accéder à COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

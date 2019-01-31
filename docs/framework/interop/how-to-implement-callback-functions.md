@@ -1,5 +1,5 @@
 ---
-title: 'Comment : implémenter des fonctions de rappel'
+title: 'Procédure : implémenter des fonctions de rappel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718674"
 ---
-# <a name="how-to-implement-callback-functions"></a>Comment : implémenter des fonctions de rappel
+# <a name="how-to-implement-callback-functions"></a>Procédure : implémenter des fonctions de rappel
 La procédure et l'exemple suivants montrent comment une application managée peut, à l'aide de l'appel de code non managé, imprimer la valeur de handle de chaque fenêtre sur l'ordinateur local. En particulier, ils utilisent la fonction **EnumWindows** pour parcourir la liste des fenêtres et une fonction de rappel managée (nommée CallBack) pour imprimer la valeur du handle des fenêtres.  
   
 ### <a name="to-implement-a-callback-function"></a>Pour implémenter une fonction de rappel  
@@ -129,6 +129,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions de rappel](../../../docs/framework/interop/callback-functions.md)  
- [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Voir aussi
+- [Fonctions de rappel](../../../docs/framework/interop/callback-functions.md)
+- [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)

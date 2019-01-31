@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32b212f336e622719d9979d46ea885deb919c51c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635024"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Types obsolètes dans le .NET Framework
 <a name="introduction"></a> Les tableaux de cet article, organisés par assembly, répertorient les types qui sont obsolètes dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Utilisez les liens suivants pour consulter la liste des types obsolètes et des alternatives recommandées dans chaque assembly. Ces types étant obsolètes, tous leurs membres le sont également. Pour obtenir la liste des membres obsolètes supplémentaires dans la bibliothèque de classes .NET Framework, consultez [Membres obsolètes](../../../docs/framework/whats-new/obsolete-members.md).
@@ -84,7 +84,7 @@ ms.locfileid: "47196750"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Utilisez plutôt <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|La classe <xref:System.Configuration.Assemblies.AssemblyHash> a été déconseillée.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|D'abord déconseillé dans .NET Framework 4.5. Au lieu de cela, utilisez la classe <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> dans l’espace de noms System.Runtime.CompilerServices.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Une autre API est disponible : émettez l'attribut personnalisé <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> à la place.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Une autre API est disponible : émettez l’attribut personnalisé <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> à la place.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Utilisez plutôt <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Utilisez plutôt <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Utilisez plutôt <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|
@@ -140,7 +140,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="Core"></a>
-### <a name="assembly-systemcoredll"></a>Assembly : System.Core.dll
+### <a name="assembly-systemcoredll"></a>Assembly : System.Core.dll
 
 |Type|Message|
 |----------|-------------|
@@ -149,7 +149,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="data"></a>
-### <a name="assembly-systemdatadll"></a>Assembly : System.Data.dll
+### <a name="assembly-systemdatadll"></a>Assembly : System.Data.dll
 
 |Type|Message|
 |----------|-------------|
@@ -161,7 +161,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="oracleclient"></a>
-### <a name="assembly-systemdataoracleclientdll"></a>Assembly : System.Data.OracleClient.dll
+### <a name="assembly-systemdataoracleclientdll"></a>Assembly : System.Data.OracleClient.dll
 
 |Type|Message|
 |----------|-------------|
@@ -177,7 +177,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="design"></a>
-### <a name="assembly-systemdesigndll"></a>Assembly : System.Design.dll
+### <a name="assembly-systemdesigndll"></a>Assembly : System.Design.dll
 
 |Type|Message|
 |----------|-------------|
@@ -199,7 +199,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="system"></a>
-### <a name="assembly-systemdll"></a>Assembly : System.dll
+### <a name="assembly-systemdll"></a>Assembly : System.dll
 
 |Type|Message|
 |----------|-------------|
@@ -214,7 +214,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="enterpriseservices"></a>
-### <a name="assembly-systementerpriseservicesdll"></a>Assembly : System.EnterpriseServices.dll
+### <a name="assembly-systementerpriseservicesdll"></a>Assembly : System.EnterpriseServices.dll
 
 |Type|Message|
 |----------|-------------|
@@ -223,7 +223,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="net"></a>
-### <a name="assembly-systemnetdll"></a>Assembly : System.Net.dll
+### <a name="assembly-systemnetdll"></a>Assembly : System.Net.dll
 
 |Type|Message|
 |----------|-------------|
@@ -240,7 +240,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="servicemodel"></a>
-### <a name="assembly-systemservicemodeldll"></a>Assembly : System.ServiceModel.dll
+### <a name="assembly-systemservicemodeldll"></a>Assembly : System.ServiceModel.dll
 
 |Type|Message|
 |----------|-------------|
@@ -256,7 +256,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="web"></a>
-### <a name="assembly-systemwebdll"></a>Assembly : System.Web.dll
+### <a name="assembly-systemwebdll"></a>Assembly : System.Web.dll
 
 |Type|Message|
 |----------|-------------|
@@ -277,7 +277,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="mobile"></a>
-### <a name="assembly-systemwebmobiledll"></a>Assembly : System.Web.Mobile.dll
+### <a name="assembly-systemwebmobiledll"></a>Assembly : System.Web.Mobile.dll
 
 |Type|Message|
 |----------|-------------|
@@ -477,7 +477,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="workflow_activities"></a>
-### <a name="assembly-systemworkflowactivitiesdll"></a>Assembly : System.Workflow.Activities.dll
+### <a name="assembly-systemworkflowactivitiesdll"></a>Assembly : System.Workflow.Activities.dll
 
 |Type|Message|
 |----------|-------------|
@@ -490,7 +490,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="workflow_componentmodel"></a>
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>Assembly : System.Workflow.ComponentModel.dll
+### <a name="assembly-systemworkflowcomponentmodeldll"></a>Assembly : System.Workflow.ComponentModel.dll
 
 |Type|Message|
 |----------|-------------|
@@ -508,7 +508,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="workflow_runtime"></a>
-### <a name="assembly-systemworkflowruntimedll"></a>Assembly : System.Workflow.Runtime.dll
+### <a name="assembly-systemworkflowruntimedll"></a>Assembly : System.Workflow.Runtime.dll
 
 |Type|Message|
 |----------|-------------|
@@ -523,7 +523,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="workflowservices"></a>
-### <a name="assembly-systemworkflowservicesdll"></a>Assembly : System.WorkflowServices.dll
+### <a name="assembly-systemworkflowservicesdll"></a>Assembly : System.WorkflowServices.dll
 
 |Type|Message|
 |----------|-------------|
@@ -552,7 +552,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="xaml"></a>
-### <a name="assembly-systemxamldll"></a>Assembly : System.Xaml.dll
+### <a name="assembly-systemxamldll"></a>Assembly : System.Xaml.dll
 
 |Type|Message|
 |----------|-------------|
@@ -561,7 +561,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="xml"></a>
-### <a name="assembly-systemxmldll"></a>Assembly : System.Xml.dll
+### <a name="assembly-systemxmldll"></a>Assembly : System.Xml.dll
 
 |Type|Message|
 |----------|-------------|
@@ -574,7 +574,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="WindowsBase"></a>
-### <a name="assembly-windowsbasedll"></a>Assembly : WindowsBase.dll
+### <a name="assembly-windowsbasedll"></a>Assembly : WindowsBase.dll
 
 |Type|Message|
 |----------|-------------|
@@ -587,13 +587,13 @@ ms.locfileid: "47196750"
  Les sections suivantes répertorient les types obsolètes dans les assemblys Microsoft. Il s'agit d'assemblys ayant un usage spécial, comme les assemblys qui ciblent un langage individuel (par exemple, Microsoft.JScript.dll ou Microsoft.VisualC.dll).
 
 <a name="IEHost"></a>
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Assembly : IEHost.dll et IEExec.exe
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Assembly : IEHost.dll et IEExec.exe
  Les assemblys IEHost.dll et IEExec.exe ont été supprimés du .NET Framework. Tous leurs types et leurs membres sont obsolètes et ne sont pas pris en charge à partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Ces assemblys ont été utilisés pour héberger des contrôles Windows Forms et exécuter des exécutables dans Internet Explorer. Les alternatives recommandées incluent ClickOnce, des applications du navigateur XAML (XBAP) et Microsoft Silverlight.
 
  [Retour au début](#introduction)
 
 <a name="Engine"></a>
-### <a name="assembly-microsoftbuildenginedll"></a>Assembly : Microsoft.Build.Engine.dll
+### <a name="assembly-microsoftbuildenginedll"></a>Assembly : Microsoft.Build.Engine.dll
 
 |Type|Message|
 |----------|-------------|
@@ -603,7 +603,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="jscript"></a>
-### <a name="assembly-microsoftjscriptdll"></a>Assembly : Microsoft.JScript.dll
+### <a name="assembly-microsoftjscriptdll"></a>Assembly : Microsoft.JScript.dll
 
 |Type|Message|
 |----------|-------------|
@@ -629,7 +629,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="VBCompat"></a>
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly : Microsoft.VisualBasic.Compatibility.dll
+### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly : Microsoft.VisualBasic.Compatibility.dll
   Pour plus d’informations sur la migration à partir de Visual Basic 6, consultez [Centre de ressources Visual Basic 6.0](https://msdn.microsoft.com/library/windows/desktop/ms788229).
 |Type|Message|
 |----------|-------------|
@@ -704,7 +704,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="VBCompatData"></a>
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Assembly : Microsoft.VisualBasic.Compatibility.Data.dll
+### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Assembly : Microsoft.VisualBasic.Compatibility.Data.dll
 
 |Type|Message|
 |----------|-------------|
@@ -761,7 +761,7 @@ ms.locfileid: "47196750"
  [Retour au début](#introduction)
 
 <a name="visualc"></a>
-### <a name="assembly-microsoftvisualcdll"></a>Assembly : Microsoft.VisualC.dll
+### <a name="assembly-microsoftvisualcdll"></a>Assembly : Microsoft.VisualC.dll
 
 |Type|Message|
 |----------|-------------|
@@ -777,4 +777,5 @@ ms.locfileid: "47196750"
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll est un assembly obsolète et existe uniquement à des fins de compatibilité descendante.|
 
 ## <a name="see-also"></a>Voir aussi
- [Éléments obsolètes dans la bibliothèque de classes .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md) [Membres obsolètes](../../../docs/framework/whats-new/obsolete-members.md)
+- [Éléments obsolètes dans la bibliothèque de classes](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Membres obsolètes](../../../docs/framework/whats-new/obsolete-members.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : implémenter un fournisseur'
+title: 'Procédure : implémenter un fournisseur'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ad5b9cc0014db05bc6e7483e389488e145beb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: eecf16625c20ad5ff89791e221a4a40b2777956b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543787"
 ---
-# <a name="how-to-implement-a-provider"></a>Comment : implémenter un fournisseur
-Le modèle de design observateur requiert une division entre un fournisseur, qui surveille les données et envoie des notifications, et un ou plusieurs observateurs, qui reçoivent des notifications (rappels) du fournisseur. Cette rubrique décrit comment créer un fournisseur. Une rubrique connexe, [Guide pratique pour implémenter une méthode Observer](../../../docs/standard/events/how-to-implement-an-observer.md), explique comment créer un observateur.  
+# <a name="how-to-implement-a-provider"></a>Procédure : implémenter un fournisseur
+Le modèle de design observateur requiert une division entre un fournisseur, qui surveille les données et envoie des notifications, et un ou plusieurs observateurs, qui reçoivent des notifications (rappels) du fournisseur. Cette rubrique décrit comment créer un fournisseur. Une rubrique connexe, [Guide pratique pour implémenter un observateur](../../../docs/standard/events/how-to-implement-an-observer.md), explique comment créer un observateur.  
   
 ### <a name="to-create-a-provider"></a>Pour créer un fournisseur  
   
@@ -62,7 +62,7 @@ Le modèle de design observateur requiert une division entre un fournisseur, qui
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.IObservable%601>  
-- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)  
-- [Guide pratique pour implémenter une méthode Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- <xref:System.IObservable%601>
+- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)
+- [Guide pratique pour implémenter un observateur](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Meilleures pratiques du modèle de design observateur](../../../docs/standard/events/observer-design-pattern-best-practices.md)

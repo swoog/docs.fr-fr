@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour remplir des collections d’objets issues de plusieurs sources (LINQ) (C#)
+title: 'Procédure : Remplir des collections d’objets issues de plusieurs sources (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571335"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Guide pratique pour remplir des collections d’objets issues de plusieurs sources (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Procédure : Remplir des collections d’objets issues de plusieurs sources (LINQ) (C#)
 
 Cet exemple montre comment fusionner des données de différentes sources en une séquence de nouveaux types.
 
@@ -18,7 +18,7 @@ Cet exemple montre comment fusionner des données de différentes sources en une
 
 ## <a name="to-create-the-data-file"></a>Pour créer le fichier de données
 
-Copiez les fichiers names.csv et scores.csv dans votre dossier de projet, comme décrit dans [Guide pratique pour joindre du contenu issu de différents fichiers (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+Copiez les fichiers names.csv et scores.csv dans votre dossier de projet, comme décrit dans le [Guide pratique pour joindre du contenu issu de fichiers non similaires (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Exemple
 
@@ -149,6 +149,6 @@ Créez et compilez un projet qui cible une des options suivantes :
 
 ## <a name="see-also"></a>Voir aussi
 
-- [LINQ et chaînes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [Initialiseurs d’objets et de collections](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Types anonymes](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ et chaînes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [Initialiseurs d’objets et de collections](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Types anonymes](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

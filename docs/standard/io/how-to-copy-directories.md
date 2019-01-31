@@ -1,6 +1,6 @@
 ---
-title: 'Comment : copier des répertoires'
-ms.date: 03/30/2017
+title: 'Procédure : copier des répertoires'
+ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,17 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f2c2fbd58b10af80a2a233cbd4211befe2dbd33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 57e2b61fb8fef37234dc10885752f92e5f9b1330
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671068"
 ---
-# <a name="how-to-copy-directories"></a>Comment : copier des répertoires
-Cet exemple montre comment utiliser les classes d’E/S pour copier de manière synchrone le contenu d’un répertoire vers un autre emplacement. Dans cet exemple, l’utilisateur peut spécifier s’il veut aussi copier les sous-répertoires. Si les sous-répertoires sont copiés, la méthode utilisée dans cet exemple le fait de manière récursive en s’appelant elle-même sur chaque sous-répertoire suivant jusqu’à ce qu’il n’y ait plus rien à copier.  
-  
- Pour obtenir un exemple de copie de fichiers de manière asynchrone, consultez [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md).  
+# <a name="how-to-copy-directories"></a>Procédure : copier des répertoires
+Cette rubrique montre comment utiliser les classes d’E/S pour copier de manière synchrone le contenu d’un répertoire vers un autre emplacement. 
+
+Pour obtenir un exemple de copie de fichier asynchrone, consultez [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md). 
+
+Cet exemple copie des sous-répertoires en définissant la propriété `copySubDirs` de la méthode `DirectoryCopy` sur `true`. La méthode `DirectoryCopy` copie les sous-répertoires de manière récursive en s’appelant elle-même sur chaque sous-répertoire jusqu’à ce qu’il n’y ait plus rien à copier.  
   
 ## <a name="example"></a>Exemple  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
@@ -32,9 +34,9 @@ Cet exemple montre comment utiliser les classes d’E/S pour copier de manière 
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.IO.FileInfo>  
-- <xref:System.IO.DirectoryInfo>  
-- <xref:System.IO.FileStream>  
-- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)  
-- [Tâches d’E/S courantes](../../../docs/standard/io/common-i-o-tasks.md)  
+- <xref:System.IO.FileInfo>
+- <xref:System.IO.DirectoryInfo>
+- <xref:System.IO.FileStream>
+- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)
+- [Tâches d’E/S courantes](../../../docs/standard/io/common-i-o-tasks.md)
 - [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md)

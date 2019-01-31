@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661865"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Méthode de localisation des assemblys par le runtime
 Pour déployer correctement votre application .NET Framework, il est important de bien comprendre comment le common language runtime localise les assemblys qui composent votre application et comment il établit des liaisons à ces assemblys. Par défaut, le runtime essaie d'établir une liaison avec la version exacte d'un assembly avec lequel l'application a été générée. Ce comportement par défaut peut être substitué par les paramètres du fichier de configuration.  
@@ -61,7 +61,7 @@ Pour déployer correctement votre application .NET Framework, il est important d
         >  Pour les assemblys sans nom fort, le runtime n'effectue pas de vérification de version, ni de vérification dans le Global Assembly Cache.  
   
 <a name="step1"></a>   
-## <a name="step-1-examining-the-configuration-files"></a>Étape 1 : examen des fichiers de configuration  
+## <a name="step-1-examining-the-configuration-files"></a>Étape 1 : examen des fichiers de configuration  
  Le comportement de la liaison d'assembly peut être configuré à différents niveaux à l'aide de ces trois fichiers XML :  
   
 -   le fichier de configuration de l'application ;  
@@ -138,7 +138,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Finalement, le runtime examine le fichier de configuration de l'ordinateur. Ce fichier, intitulé Machine.config, réside sur l'ordinateur local dans le sous-répertoire Config du répertoire racine où le runtime est installé. Il peut être utilisé par les administrateurs pour spécifier des restrictions de liaison d'assemblys qui sont propres à cet ordinateur. Les paramètres définis dans le fichier de configuration de l'ordinateur sont prioritaires par rapport aux autres paramètres de configuration. Cependant, cela ne signifie pas que tous les paramètres de configuration doivent être placés dans ce fichier. La version déterminée par le fichier de stratégie d'administrateur est finale et ne peut pas être substituée. Les substitutions spécifiées dans le fichier Machine.config s'appliquent à toutes les applications. Pour plus d'informations sur les fichiers de configuration, consultez [Configuration des applications à l'aide de fichiers de configuration](../../../docs/framework/configure-apps/index.md).  
   
 <a name="step2"></a>   
-## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Étape 2 : recherche des assemblys précédemment référencés  
+## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Étape 2 : rechercher les assemblys précédemment référencés  
  Si l'assembly demandé a aussi été demandé lors d'appels précédents, le common language runtime utilise l'assembly qui est déjà chargé. Ceci peut avoir des implications au moment de l'attribution des noms des assemblys qui composent une application. Pour plus d'informations sur l'attribution des noms des assemblys, voir [Noms d'assemblys](../../../docs/framework/app-domains/assembly-names.md).  
   
  Si une précédente demande de chargement de l'assembly avait échoué, toute nouvelle demande échoue immédiatement sans qu'aucune tentative de chargement de l'assembly ne soit effectuée. Depuis la version 2.0 du .NET Framework, les échecs de liaison d'assemblys sont mis en cache et les informations mises en cache sont utilisées pour déterminer s'il faut essayer de charger l'assembly.  
@@ -147,11 +147,11 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 >  Pour rétablir le comportement des versions 1.0 et 1.1 du .NET Framework, où il n’y avait pas de mise en cache des échecs de liaison, ajoutez l’[élément \<disableCachingBindingFailures>](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) dans votre fichier de configuration.  
   
 <a name="step3"></a>   
-## <a name="step-3-checking-the-global-assembly-cache"></a>Étape 3 : vérification du Global Assembly Cache  
+## <a name="step-3-checking-the-global-assembly-cache"></a>Étape 3 : vérifier le Global Assembly Cache  
  Pour les assemblys avec un nom fort, le processus de liaison examine ensuite le Global Assembly Cache. Le Global Assembly Cache stocke des assemblys qui peuvent être utilisés par plusieurs applications sur un ordinateur. Tous les assemblys figurant dans le Global Assembly Cache doivent avoir un nom fort.  
   
 <a name="step4"></a>   
-## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Étape 4 : localisation de l'assembly par le biais des bases de code ou de la détection  
+## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Étape 4 : localisation de l’assembly par le biais des bases de code ou de la détection  
  Une fois que la version correcte de l'assembly a été déterminée d'après les informations contenues dans la référence de l'assembly appelant et dans les fichiers de configuration, et après la vérification du Global Assembly Cache (uniquement pour les assemblys avec un nom fort), le common language runtime tente de trouver l'assembly. Le processus de localisation d'un assembly implique les étapes suivantes :  
   
 1.  Si un élément [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) est trouvé dans le fichier de configuration de l’application, le runtime vérifie l’emplacement spécifié. Si une correspondance est trouvée, cet assembly est utilisé et aucune détection n'est effectuée. Si l'assembly ne se trouve pas dans cet emplacement, la demande de liaison échoue.  
@@ -247,6 +247,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Par exemple, si Assembly1 référence Assembly2 et qu’Assembly1 a été chargé à partir de `http://www.code.microsoft.com/utils`, cet emplacement est considéré comme étant une indication de l’emplacement d’Assembly2.dll. Le runtime sonde alors l’assembly dans `http://www.code.microsoft.com/utils/Assembly2.dll` et `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Si Assembly2 n'est pas trouvé dans ces emplacements, le runtime demande à Windows Installer de lui fournir l'assembly.  
   
-## <a name="see-also"></a>Voir aussi  
-- [Meilleures pratiques pour le chargement d'assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Voir aussi
+- [Meilleures pratiques pour le chargement d'assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Déploiement](../../../docs/framework/deployment/index.md)

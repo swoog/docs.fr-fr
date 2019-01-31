@@ -1,5 +1,5 @@
 ---
-title: 'Comment : remplir un nombre avec des zéros non significatifs'
+title: 'Procédure : remplir un nombre avec des zéros non significatifs'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b48462e79c3e8ef3fdd6e0a91f5abecffc022b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673032"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Comment : remplir un nombre avec des zéros non significatifs
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Procédure : remplir un nombre avec des zéros non significatifs
 Vous pouvez ajouter des zéros non significatifs à un entier en utilisant la [chaîne de format numérique standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) « D » avec un spécificateur de précision. Vous pouvez ajouter des zéros non significatifs aux nombres entiers et à virgule flottante en utilisant une [chaîne de format numérique personnalisée](../../../docs/standard/base-types/custom-numeric-format-strings.md). Cette rubrique montre comment utiliser les deux méthodes pour remplir un nombre avec des zéros non significatifs.  
   
 ### <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Pour remplir un entier avec des zéros non significatifs dans la limite d'une longueur spécifique  
@@ -95,6 +95,6 @@ Vous pouvez ajouter des zéros non significatifs à un entier en utilisant la [c
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Mise en forme composite](../../../docs/standard/base-types/composite-formatting.md)

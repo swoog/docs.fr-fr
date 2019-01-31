@@ -1,18 +1,18 @@
 ---
-title: 'Comment : assigner des informations utilisateur aux connexions de groupe'
+title: 'Procédure : assigner des informations utilisateur aux connexions de groupe'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 6d0be3ccfc0a0b4b032283b7ed34908f79774bb6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50049540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607996"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>Comment : assigner des informations utilisateur aux connexions de groupe
+# <a name="how-to-assign-user-information-to-group-connections"></a>Procédure : assigner des informations utilisateur aux connexions de groupe
 
   
  L’exemple suivant montre comment assigner des informations utilisateur aux connexions de groupe, en supposant que l’application définit les variables *UserName*, *SecurelyStoredPassword* et *Domain* avant que cette section de code ne soit appelée et que la variable *UserName* est unique.  
@@ -108,6 +108,6 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Gestion des connexions](../../../docs/framework/network-programming/managing-connections.md)  
- [Regroupement de connexions](../../../docs/framework/network-programming/connection-grouping.md)
+## <a name="see-also"></a>Voir aussi
+- [Gestion des connexions](../../../docs/framework/network-programming/managing-connections.md)
+- [Regroupement de connexions](../../../docs/framework/network-programming/connection-grouping.md)

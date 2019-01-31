@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535306"
 ---
 # <a name="the-regular-expression-object-model"></a>Modèle objet d'expression régulière
 <a name="introduction"></a> Cette rubrique décrit le modèle objet utilisé avec les expressions régulières .NET. Elle contient les sections suivantes :  
@@ -284,7 +284,7 @@ ms.locfileid: "45664733"
 |`:`|Mettre en correspondance un symbole deux-points.|  
 |`(?<value>\w+)`|Mettre en correspondance un ou plusieurs caractères alphabétiques. Le nom de ce groupe de capture est `value`.|  
   
- Les propriétés de la classe <xref:System.Text.RegularExpressions.Group> fournissent des informations sur le groupe capturé : la propriété `Group.Value` contient la sous-chaîne capturée, la propriété `Group.Index` indique la position de début du groupe capturé dans le texte d'entrée, la propriété `Group.Length` contient la longueur du texte capturé et la propriété `Group.Success` indique si une correspondance a été trouvée entre une sous-chaîne et le modèle défini par le groupe de capture.  
+ Les propriétés de la classe <xref:System.Text.RegularExpressions.Group> fournissent des informations sur le groupe capturé : la propriété `Group.Value` contient la sous-chaîne capturée, la propriété `Group.Index` indique la position de début du groupe capturé dans le texte d’entrée, la propriété `Group.Length` contient la longueur du texte capturé et la propriété `Group.Success` indique si une correspondance a été trouvée entre une sous-chaîne et le modèle défini par le groupe de capture.  
   
  L'application de quantificateurs à un groupe (pour plus d'informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifie la relation d'une capture par groupe de capture de deux façons :  
   
@@ -301,7 +301,7 @@ ms.locfileid: "45664733"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   Les quantificateurs peuvent mettre en correspondance plusieurs occurrences d'un modèle défini par un groupe de capture. Dans ce cas, les propriétés `Value` et `Length` d'un objet <xref:System.Text.RegularExpressions.Group> ne contiennent des informations que sur la dernière sous-chaîne capturée. Par exemple, l'expression régulière suivante met en correspondance une phrase unique qui se termine par un point. Elle utilise deux constructions de regroupement : la première capture des mots individuels ainsi qu'un espace blanc, tandis que la seconde capture des mots individuels. Comme le montre le résultat de l'exemple, bien que l'expression régulière parvienne à capturer une phrase entière, le second groupe capture uniquement le dernier mot.  
+-   Les quantificateurs peuvent mettre en correspondance plusieurs occurrences d'un modèle défini par un groupe de capture. Dans ce cas, les propriétés `Value` et `Length` d'un objet <xref:System.Text.RegularExpressions.Group> ne contiennent des informations que sur la dernière sous-chaîne capturée. Par exemple, l'expression régulière suivante met en correspondance une phrase unique qui se termine par un point. Elle utilise deux constructions de regroupement : la première capture des mots individuels ainsi qu’un espace blanc, tandis que la seconde capture des mots individuels. Comme le montre le résultat de l'exemple, bien que l'expression régulière parvienne à capturer une phrase entière, le second groupe capture uniquement le dernier mot.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -353,6 +353,6 @@ ms.locfileid: "45664733"
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Text.RegularExpressions>  
-- [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- <xref:System.Text.RegularExpressions>
+- [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md)
 - [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

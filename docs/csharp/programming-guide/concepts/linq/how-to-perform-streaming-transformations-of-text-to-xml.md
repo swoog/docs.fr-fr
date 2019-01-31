@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour effectuer des transformations de streaming au format XML (C#)
+title: 'Procédure : Effectuer des transformations de streaming de texte au format XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 98fa8bd9ae393e9c87b67ae3f2874a2c279415af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 906150483f7f76b4429ea390d083e9f18696ac9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555880"
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Guide pratique pour effectuer des transformations de streaming au format XML (C#)
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Procédure : Effectuer des transformations de streaming de texte au format XML (C#)
 L'une des façons de traiter un fichier texte consiste à écrire une méthode d'extension qui diffuse en continu le fichier texte une ligne à la fois à l'aide de la construction `yield return`. Vous pouvez alors écrire une requête LINQ qui traite le fichier texte de manière différée. Si vous utilisez ensuite <xref:System.Xml.Linq.XStreamingElement> pour diffuser la sortie en continu, vous pouvez créer une transformation du fichier texte en XML qui utilise une quantité minimale de mémoire, quelle que soit la taille du fichier texte source.  
   
  Il existe certains points à noter concernant les transformations de diffusion en continu. Il est préférable d'appliquer une transformation de streaming dans les situations où vous pouvez traiter l'intégralité du fichier une seule fois et si vous pouvez traiter les lignes dans l'ordre dans lequel elles apparaissent dans le document source. Si vous devez traiter le fichier à plusieurs reprises, ou si vous devez trier les lignes avant de les traiter, vous perdez une grande partie des avantages offerts par l'utilisation d'une technique de streaming.  
@@ -88,5 +88,5 @@ class Program
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Xml.Linq.XStreamingElement>  
+- <xref:System.Xml.Linq.XStreamingElement>
 - [Techniques de requêtes avancées (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

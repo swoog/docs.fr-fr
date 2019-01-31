@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f921f40bbc5a7b72341c3fb778dd69fcc7b918c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665264"
 ---
 # <a name="the-managed-thread-pool"></a>Le pool de threads managés
 
-La classe <xref:System.Threading.ThreadPool?displayProperty=nameWithType> fournit à votre application un pool de threads de travail qui sont gérés par le système, ce qui vous permet de vous concentrer sur les tâches d'application plutôt que sur la gestion des threads. Si vous avez des tâches courtes qui nécessitent un traitement en arrière-plan, le pool de threads managés est un moyen simple de tirer parti de plusieurs threads. L’utilisation du pool de threads est beaucoup plus facile dans Framework 4 et ultérieur, car vous pouvez créer des objets <xref:System.Threading.Tasks.Task> et <xref:System.Threading.Tasks.Task%601> qui effectuent des tâches asynchrones sur les threads de pool.  
+La classe <xref:System.Threading.ThreadPool?displayProperty=nameWithType> fournit à votre application un pool de threads de travail qui sont gérés par le système, ce qui vous permet de vous concentrer sur les tâches d’application plutôt que sur la gestion des threads. Si vous avez des tâches courtes qui nécessitent un traitement en arrière-plan, le pool de threads managés est un moyen simple de tirer parti de plusieurs threads. L’utilisation du pool de threads est beaucoup plus facile dans Framework 4 et ultérieur, car vous pouvez créer des objets <xref:System.Threading.Tasks.Task> et <xref:System.Threading.Tasks.Task%601> qui effectuent des tâches asynchrones sur les threads de pool.  
   
 .NET utilise des threads de pool pour de nombreux scénarios, notamment les opérations de [bibliothèque parallèle de tâches (TPL)](../parallel-programming/task-parallel-library-tpl.md), l’achèvement des E/S asynchrones, les rappels de [timer](timers.md), les opérations d’attente inscrites, les appels de méthodes asynchrones utilisant des délégués et les connexions de sockets <xref:System.Net?displayProperty=nameWithType>.  
 
@@ -67,7 +67,7 @@ Quand une valeur minimale est atteinte, le pool de threads peut créer des threa
 
 Vous pouvez également utiliser le pool de threads en appelant <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> depuis du code managé (ou [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) depuis du code non managé) et en passant un délégué <xref:System.Threading.WaitCallback?displayProperty=nameWithType> représentant la méthode qui effectue la tâche.
 
-Une autre façon d'utiliser le pool de threads est de mettre en file d'attente des éléments de travail associés à une opération d'attente en utilisant la méthode <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> et en passant un <xref:System.Threading.WaitHandle?displayProperty=nameWithType> qui, quand il est signalé ou quand il a expiré, appelle la méthode représentée par le délégué <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType>. Les threads de pool sont utilisés pour appeler les méthodes de rappel.  
+Une autre façon d’utiliser le pool de threads est de mettre en file d’attente des éléments de travail associés à une opération d’attente en utilisant la méthode <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> et en passant un <xref:System.Threading.WaitHandle?displayProperty=nameWithType> qui, quand il est signalé ou quand il a expiré, appelle la méthode représentée par le délégué <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType>. Les threads de pool sont utilisés pour appeler les méthodes de rappel.  
 
 Pour obtenir des exemples, consultez les pages des API référencées.
   
@@ -87,12 +87,12 @@ Il existe plusieurs scénarios dans lesquels il est préférable de créer et de
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
-- [La bibliothèque parallèle de tâches](../parallel-programming/task-parallel-library-tpl.md)  
-- [Comment : retourner une valeur à partir d’une tâche](../parallel-programming/how-to-return-a-value-from-a-task.md)  
-- [Fonctionnalités et objets de threading](threading-objects-and-features.md)  
-- [Threads et threading](threads-and-threading.md)  
-- [E/S sur fichier asynchrones](../io/asynchronous-file-i-o.md)  
-- [Minuteries](timers.md)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
+- [La bibliothèque parallèle de tâches](../parallel-programming/task-parallel-library-tpl.md)
+- [Guide pratique pour retourner une valeur à partir d’une tâche](../parallel-programming/how-to-return-a-value-from-a-task.md)
+- [Fonctionnalités et objets de threading](threading-objects-and-features.md)
+- [Threads et threading](threads-and-threading.md)
+- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [Minuteries](timers.md)

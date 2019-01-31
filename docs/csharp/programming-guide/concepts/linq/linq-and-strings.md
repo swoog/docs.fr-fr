@@ -2,18 +2,18 @@
 title: LINQ et chaînes (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: da7a35f0fd66d1f7b8a72550c175b5428242fbc1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744620"
 ---
 # <a name="linq-and-strings-c"></a>LINQ et chaînes (C#)
 
 LINQ peut être utilisé pour interroger et transformer des chaînes et des collections de chaînes. Il peut être particulièrement utile avec des données semi-structurées dans des fichiers texte. Les requêtes LINQ peuvent être combinées avec les fonctions de chaîne traditionnelles et les expressions régulières. Par exemple, vous pouvez utiliser la méthode <xref:System.String.Split%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> pour créer un tableau de chaînes que vous pouvez ensuite interroger ou modifier à l’aide de LINQ. Vous pouvez utiliser la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> dans la clause `where` d’une requête LINQ. Et vous pouvez utiliser LINQ pour interroger ou modifier les résultats <xref:System.Text.RegularExpressions.MatchCollection> retournés par une expression régulière.
 
-Vous pouvez également utiliser les techniques décrites dans cette section pour transformer des données texte semi-structurées en XML. Pour plus d’informations, consultez [Comment : générer du code XML à partir de fichiers CSV](how-to-generate-xml-from-csv-files.md).
+Vous pouvez également utiliser les techniques décrites dans cette section pour transformer des données texte semi-structurées en XML. Pour plus d'informations, voir [Procédure : Générer du code XML à partir de fichiers CSV](how-to-generate-xml-from-csv-files.md).
 
 Les exemples de cette section se répartissent en deux catégories :
 
@@ -28,7 +28,7 @@ Vous pouvez interroger, analyser et modifier des blocs de texte en les fractionn
 
   Montre comment fractionner des fichiers texte avec des limites arbitraires et comment exécuter des requêtes sur chaque partie.
 
-- [Guide pratique pour interroger des caractères dans une chaîne (LINQ) (C#)](how-to-query-for-characters-in-a-string-linq.md)
+- [Guide pratique pour rechercher des caractères dans une chaîne (LINQ) (C#)](how-to-query-for-characters-in-a-string-linq.md)
 
   Montre qu’une chaîne est un type interrogeable.
 
@@ -75,4 +75,4 @@ De nombreux types différents de fichiers texte sont constitués d’une série 
 ## <a name="see-also"></a>Voir aussi
 
 - [LINQ (Language-Integrated Query) (C#)](index.md)
-- [Guide pratique : générer du code XML à partir de fichiers CSV](how-to-generate-xml-from-csv-files.md)
+- [Guide pratique pour générer du code XML à partir de fichiers CSV](how-to-generate-xml-from-csv-files.md)

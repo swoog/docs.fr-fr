@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour définir une méthode générique avec l’émission de réflexion
+title: 'Procédure : définir une méthode générique avec l’émission de réflexion'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49531945b073a909ba49b2b0865b96f9658fba50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c0b6ee6fc789b2586d76b5ec8f10815e543e1d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596853"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Guide pratique pour définir une méthode générique avec l’émission de réflexion
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procédure : définir une méthode générique avec l’émission de réflexion
 La première procédure montre comment créer une méthode générique simple avec deux paramètres de type et comment appliquer des contraintes de classe, des contraintes d’interface et des contraintes spéciales aux paramètres de type.  
   
  La deuxième procédure montre comment émettre le corps de la méthode et comment utiliser les paramètres de type de la méthode générique pour créer des instances des types génériques et appeler leurs méthodes.  
@@ -170,6 +170,6 @@ La première procédure montre comment créer une méthode générique simple av
   
 -   Compilez le code sur la ligne de commande à l’aide de csc.exe, vbc.exe ou cl.exe. Pour compiler le code dans Visual Studio, placez-le dans un modèle de projet d’application console.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Reflection.Emit.MethodBuilder>  
- [Guide pratique pour définir un type générique avec l'émission de réflexion](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Reflection.Emit.MethodBuilder>
+- [Guide pratique pour définir un type générique avec l’émission de réflexion](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

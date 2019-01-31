@@ -1,5 +1,5 @@
 ---
-title: 'Comment : gérer des exceptions dans une requête PLINQ'
+title: 'Procédure : gérer des exceptions dans une requête PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554242"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Comment : gérer des exceptions dans une requête PLINQ
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Procédure : gérer des exceptions dans une requête PLINQ
 Le premier exemple de cette rubrique montre comment gérer l’exception <xref:System.AggregateException?displayProperty=nameWithType> qui peut être levée à partir d’une requête PLINQ au cours de son exécution. Le deuxième exemple montre comment placer des blocs try-catch dans des délégués, le plus près possible de l’emplacement où l’exception sera levée. Vous pouvez ainsi les intercepter dès qu’ils se produisent et éventuellement poursuivre l’exécution de la requête. Lorsque les exceptions sont autorisées à se propager vers le thread lié, il est possible qu'une requête puisse continuer à traiter des éléments après que l'exception ait été levée.  
   
  Dans certains cas, quand PLINQ revient à l’exécution séquentielle et qu’une exception se produit, cette dernière peut être propagée directement, et non encapsulée dans une exception <xref:System.AggregateException>. En outre, les exceptions <xref:System.Threading.ThreadAbortException> sont toujours propagées directement.  
@@ -50,5 +50,5 @@ Le premier exemple de cette rubrique montre comment gérer l’exception <xref:S
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Linq.ParallelEnumerable>  
+- <xref:System.Linq.ParallelEnumerable>
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

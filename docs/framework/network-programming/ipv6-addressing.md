@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633850"
 ---
 # <a name="ipv6-addressing"></a>Adressage IPv6
 Dans le protocole IPv6, les adresses ont une longueur de 128 bits. Une telle taille d’espace d’adressage permet de subdiviser les adresses disponibles en une hiérarchie de domaines de routage qui reflète la topologie d’Internet. Elle permet également de mapper les adresses des cartes réseau (ou des interfaces) qui connectent les appareils au réseau. IPv6 contient une fonctionnalité inhérente permettant de résoudre les adresses au niveau le plus bas, c’est-à-dire au niveau de l’interface réseau, et contient également des fonctionnalités de configuration automatique.  
@@ -64,7 +64,7 @@ Dans le protocole IPv6, les adresses ont une longueur de 128 bits. Une telle t
   
     -   **Adresses site-local**. Ces adresses sont utilisées sur un même site et sont au format suivant : FEC0::*ID_sous_réseau*:*ID_interface*. Les adresses site-local sont utilisées pour l’adressage à l’intérieur d’un site sans recourir à un préfixe global.  
   
-    -   **Adresses de monodiffusion IPv6 globales**. Ces adresses peuvent être utilisées sur Internet et sont au format suivant : 010(FP, 3 bits) TLA ID (13 bits) Reserved (8 bits) NLA ID (24 bits) SLA ID (16 bits) *ID_interface* (64 bits).  
+    -   **Adresses de monodiffusion IPv6 globales**. Ces adresses peuvent être utilisées sur Internet et sont au format suivant : 010(FP, 3 bits) TLA ID (13 bits) Reserved (8 bits) NLA ID (24 bits) SLA ID (16 bits) *ID_interface* (64 bits).  
   
 -   **Adresses de multidiffusion**. Identificateur d’un ensemble d’interfaces (appartenant généralement à des nœuds différents). Un paquet envoyé à cette adresse est remis à toutes les interfaces identifiées par cette adresse. Les types d’adresses de multidiffusion remplacent les adresses de diffusion IPv4.  
   
@@ -72,6 +72,6 @@ Dans le protocole IPv6, les adresses ont une longueur de 128 bits. Une telle t
   
  En général, un nœud a toujours une adresse link-local. Il peut avoir une adresse site-local, et une ou plusieurs adresses globales.  
   
-## <a name="see-also"></a>Voir aussi  
- [Protocole IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Sockets](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Voir aussi
+- [Protocole IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Sockets](../../../docs/framework/network-programming/sockets.md)

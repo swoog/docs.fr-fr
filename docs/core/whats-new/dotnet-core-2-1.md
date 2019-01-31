@@ -7,19 +7,19 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127548"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066348"
 ---
 # <a name="whats-new-in-net-core-21"></a>Nouveautés de .NET Core 2.1
 
 .NET Core 2.1 inclut les nouvelles fonctionnalités et améliorations dans les domaines suivants :
 
 - [Outillage](#tooling)
-- [Restauration par progression](#roll-forward)
+- [Extrapolation](#roll-forward)
 - [Déploiement](#deployment)
 - [Pack de compatibilité Windows](#windows-compatibility-pack)
 - [Améliorations de la compilation JIT](#jit-compiler-improvements)
@@ -89,30 +89,37 @@ Dans le SDK .NET Core 2.1, toutes les opérations avec les outils utilisent la c
 
 - [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) pour désinstaller des outils actuellement installés.
 
-## <a name="roll-forward"></a>Restauration par progression
+## <a name="roll-forward"></a>Extrapolation
 
-Toutes les applications .NET Core depuis .NET Core 2.0 peuvent être restaurées par progression vers la dernière *version mineure* installée sur un système.
+Toutes les applications .NET Core depuis .NET Core 2.0 extrapolent automatiquement vers la dernière *version mineure* installée sur un système.
 
 À compter de .NET Core 2.0, si la version de .NET Core avec laquelle une application a été créée n’est pas présente lors de l’exécution, l’application s’exécute automatiquement avec la dernière *version mineure* installée de .NET Core. En d’autres termes, si une application est générée avec .NET Core 2.0 et que .NET Core 2.0 n’est pas présent sur le système hôte, mais que .NET Core 2.1 l’est, l’application s’exécute avec .NET Core 2.1.
 
 > [!IMPORTANT]
-> Ce comportement de restauration par progression ne s’applique pas aux préversions, ni aux versions majeures. Par exemple, une application .NET Core 1.0 ne peut pas être restaurée par progression vers .NET Core 2.0 ou .NET Core 2.1.
+> Ce comportement d’extrapolation ne s’applique pas aux préversions, Par défaut, il ne s’applique pas non plus aux versions majeures, mais vous pouvez changer ce comportement avec les paramètres ci-dessous.
 
-Vous pouvez également désactiver la restauration par progression d’une version mineure de trois manières :
+Vous pouvez modifier ce comportement en changeant le paramètre d’extrapolation en cas d’absence de framework partagé candidat. Les paramètres disponibles sont :
+- `0` : désactiver le comportement d’extrapolation de version mineure. Avec ce paramètre, une application conçue pour .NET Core 2.0.0 extrapole vers .NET Core 2.0.1, mais pas vers .NET Core 2.2.0 ou .NET Core 3.0.0.
+- `1` : activer le comportement d’extrapolation de version mineure. Il s’agit de la valeur par défaut pour ce paramètre. Avec ce paramètre, une application conçue pour .NET Core 2.0.0 extrapole vers .NET Core 2.0.1 ou .NET Core 2.2.0 (en fonction de la version installée), mais n’extrapole pas vers .NET Core 3.0.0.
+- `2` : activer le comportement d’extrapolation de version mineure et majeure. Si cette option est définie, même les versions majeures différentes sont prises en compte. Ainsi, une application conçue pour .NET Core 2.0.0 extrapole vers .NET Core 3.0.0.
 
-- Définissez la variable d’environnement `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` sur 0.
+Vous pouvez modifier ce paramètre de trois manières :
 
-- Ajoutez la ligne suivante au fichier runtimeconfig.json :
+- Affectez à la variable d’environnement `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` la valeur souhaitée.
+
+- Ajoutez la ligne suivante avec la valeur souhaitée au fichier `runtimeconfig.json` :
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Lorsque vous utilisez les [outils CLI .NET Core](../tools/index.md), incluez l’option suivante dans une commande .NET Core telle que `run` :
+- Quand vous utilisez les [outils CLI .NET Core](../tools/index.md), ajoutez l’option suivante avec la valeur souhaitée à une commande .NET Core telle que `run` :
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+L’extrapolation de version de correctif logiciel est indépendante de ce paramètre, et est effectuée une fois que l’éventuelle extrapolation de version mineure ou majeure a été appliquée.
 
 ## <a name="deployment"></a>Déploiement
 
@@ -124,7 +131,7 @@ La publication autonome s’appuie sur les versions de runtime de NuGet.org. Vou
 
 À l’aide du Kit de développement logiciel .NET Core 2.0, les applications autonomes sont publiées avec le runtime .NET Core 2.0.0, sauf si une version différente est spécifiée via la propriété `RuntimeFrameworkVersion`. Avec ce nouveau comportement, vous n’aurez plus besoin de définir cette propriété afin de sélectionner une version de runtime ultérieure pour une application autonome. Dorénavant, l’approche la plus simple consiste à toujours publier avec le Kit de développement .NET Core 2.1 (2.1.300).
 
-Pour plus d’informations, consultez [Restauration par progression du runtime de déploiement autonome](../deploying/runtime-patch-selection.md).
+Pour plus d’informations, consultez [Extrapolation du runtime de déploiement autonome](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Pack de compatibilité Windows
 
 Lorsque vous portez du code existant de .NET Framework vers .NET Core, vous pouvez utiliser le [pack de compatibilité Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Il permet d’accéder aux plus de 20 000 API disponibles dans .NET Core. Ces API incluent les types dans l’espace de noms <xref:System.Drawing?displayProperty=nameWithType>, la classe <xref:System.Diagnostics.EventLog>, WMI, les compteurs de performances, les services Windows, ainsi que les types et membres de registre Windows.
@@ -239,6 +246,6 @@ Sous Linux et macOS, vous pouvez uniquement configurer <xref:System.Net.Http.Htt
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Nouveautés de .NET Core](index.md)  
-* [Nouvelles fonctionnalités d’EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-* [Nouveautés d’ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+- [Nouveautés de .NET Core](index.md)
+- [Nouvelles fonctionnalités d’EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)
+- [Nouveautés d’ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

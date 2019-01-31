@@ -1,5 +1,5 @@
 ---
-title: "Comment : lire les caractères d'une chaîne"
+title: 'Procédure : lire les caractères d’une chaîne'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13a57f8ea7db91e5357ecfb20c4e907f2706f78d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cbf213c783d1688e9168265cedc27d2ac7a5a96d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45592917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504809"
 ---
-# <a name="how-to-read-characters-from-a-string"></a>Comment : lire les caractères d'une chaîne
+# <a name="how-to-read-characters-from-a-string"></a>Procédure : lire les caractères d’une chaîne
 Les exemples de code suivants montrent comment lire des caractères de façon synchrone et asynchrone à partir d’une chaîne.  
   
 ## <a name="example"></a>Exemple  
@@ -40,13 +40,13 @@ Les exemples de code suivants montrent comment lire des caractères de façon sy
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.IO.StringReader>  
-- <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
-- [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [NIB : Guide pratique : créer un listing de répertoires](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
-- [Comment : lire et écrire dans un fichier de données créé récemment](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Comment : ouvrir un fichier journal et y ajouter des éléments](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Comment : lire du texte dans un fichier](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Comment : écrire du texte dans un fichier](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Comment : écrire des caractères dans une chaîne](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.StringReader>
+- <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>
+- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [NIB : Procédure : créer un listing de répertoires](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)
+- [Guide pratique pour lire et écrire dans un fichier de données créé récemment](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Guide pratique pour ouvrir un fichier journal et y ajouter des éléments](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Guide pratique pour lire du texte dans un fichier](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Guide pratique pour écrire du texte dans un fichier](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Guide pratique pour écrire des caractères dans une chaîne](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [Fichier et flux de données E/S](../../../docs/standard/io/index.md)

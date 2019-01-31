@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620082"
 ---
 # <a name="selecting-a-collection-class"></a>Sélection d’une classe de collection
 Veillez à choisir votre classe de collection avec soin. L'utilisation d'un type incorrect peut limiter votre utilisation de la collection. En règle générale, évitez d'utiliser les types de l'espace de noms <xref:System.Collections>, sauf si vous ciblez spécifiquement le .NET Framework version 1.1. Les versions génériques et simultanées des collections doivent être préférées en raison de leur sécurité supérieure des types et d'autres améliorations.  
@@ -48,9 +48,9 @@ Veillez à choisir votre classe de collection avec soin. L'utilisation d'un type
   
 -   Chaque élément contiendra-t-il une valeur, une combinaison d'une clé et d'une valeur, ou une combinaison d'une clé et de plusieurs valeurs ?  
   
-    -   Une valeur : utilisez une des collections basées sur l'interface <xref:System.Collections.IList> ou l'interface générique  <xref:System.Collections.Generic.IList%601>.  
+    -   Une valeur : utilisez une des collections basées sur l’interface <xref:System.Collections.IList> ou l’interface générique <xref:System.Collections.Generic.IList%601>.  
   
-    -   Une clé et une valeur : utilisez une des collections basées sur l'interface <xref:System.Collections.IDictionary> ou l'interface générique  <xref:System.Collections.Generic.IDictionary%602>.  
+    -   Une clé et une valeur : utilisez une des collections basées sur l’interface <xref:System.Collections.IDictionary> ou l’interface générique <xref:System.Collections.Generic.IDictionary%602>.  
   
     -   Une valeur avec une clé incorporée : utilisez la classe générique <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
   
@@ -81,7 +81,7 @@ Veillez à choisir votre classe de collection avec soin. L'utilisation d'un type
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Collections>  
-- <xref:System.Collections.Specialized>  
-- <xref:System.Collections.Generic>  
+- <xref:System.Collections>
+- <xref:System.Collections.Specialized>
+- <xref:System.Collections.Generic>
 - [Collections thread-safe](../../../docs/standard/collections/thread-safe/index.md)

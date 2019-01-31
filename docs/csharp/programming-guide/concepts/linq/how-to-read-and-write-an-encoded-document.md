@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour lire et écrire un document encodé (C#)
+title: 'Procédure : Lire et écrire un document encodé (C#)'
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: a5e1d6f70d8ad2740e4d7daff8c78b49966bb7ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fdf3e05c705ca9caea32306616c79ade0aeb9be3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615453"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>Guide pratique pour lire et écrire un document encodé (C#)
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>Procédure : Lire et écrire un document encodé (C#)
 Pour créer un document XML encodé, vous devez ajouter un objet <xref:System.Xml.Linq.XDeclaration> à l'arborescence XML et définir l'encodage au nom de la page de codes souhaitée.  
   
  Toute valeur retournée par <xref:System.Text.Encoding.WebName%2A> est une valeur valide.  
@@ -78,5 +78,5 @@ Encoding of loaded document is:utf-16
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
 - [Programmation LINQ to XML avancée (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

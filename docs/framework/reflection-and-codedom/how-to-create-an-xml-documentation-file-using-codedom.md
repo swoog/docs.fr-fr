@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour créer un fichier de documentation XML à l’aide de CodeDOM
+title: 'Procédure : créer un fichier de documentation XML à l’aide de CodeDOM'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81d09188ade29b0cac8985da218494f5373980cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8086a512d117767127260bcf779fc11555cd67dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632827"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Guide pratique pour créer un fichier de documentation XML à l’aide de CodeDOM
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Procédure : créer un fichier de documentation XML à l’aide de CodeDOM
 Vous pouvez utiliser CodeDOM pour créer du code qui génère de la documentation XML. Le processus implique la création du graphique CodeDOM qui contient les commentaires de documentation XML, la génération du code et la compilation du code généré avec l’option du compilateur qui crée la sortie de documentation XML.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>Pour créer un graphique CodeDOM qui contient des commentaires de documentation XML  
@@ -79,7 +79,7 @@ Vous pouvez utiliser CodeDOM pour créer du code qui génère de la documentatio
   
 -   Cet exemple de code nécessite le jeu d’autorisations `FullTrust` pour s’exécuter correctement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Documentation de votre code avec le langage XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [Commentaires sur la documentation XML](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [Documentation XML](/cpp/ide/xml-documentation-visual-cpp)
+## <a name="see-also"></a>Voir aussi
+- [Documentation de votre code avec le langage XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Commentaires sur la documentation XML](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [Documentation XML](/cpp/ide/xml-documentation-visual-cpp)

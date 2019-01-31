@@ -159,12 +159,12 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 983d7b9a89346a89a89b5e8de23049287f719026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734485"
 ---
 # <a name="winmdexpexe-error-messages"></a>Messages d'erreur Winmdexp.exe
 Le processus de génération appelle [Winmdexp.exe (outil d’exportation de métadonnées Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quand vous utilisez le modèle de composant  **[!INCLUDE[wrt](../../../includes/wrt-md.md)]** dans Visual Studio 2012, et les messages d’erreur de Winmdexp.exe apparaissent donc dans la **liste d’erreurs**. Winmdexp.exe fonctionne sur un module compilé avec l’option `/target:winmdobj`. Comme il nécessite un module compilé en entrée, ses messages d’erreur ne s’affichent pas, sauf si la compilation réussit.  
@@ -173,6 +173,6 @@ Le processus de génération appelle [Winmdexp.exe (outil d’exportation de mé
   
  Si l’erreur n’est pas abordée dans cet article et que vous pensez que le message ne contient pas suffisamment d’informations pour résoudre le problème, utilisez le lien de commentaires dans cet article et incluez-y le message d’erreur. Vous pouvez aussi rapporter un bogue sur le [site web Microsoft Connect](https://go.microsoft.com/fwlink/p/?LinkId=251130). Vous pouvez également rechercher plus d’informations sur les [Forums Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
-## <a name="see-also"></a>Voir aussi  
- [Winmdexp.exe (outil d’exportation de métadonnées Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- [Diagnostic des conditions d’erreur du composant Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127)
+## <a name="see-also"></a>Voir aussi
+- [Winmdexp.exe (outil d’exportation de métadonnées Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Diagnostic des conditions d’erreur du composant Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127)

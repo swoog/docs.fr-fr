@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour déterminer les correctifs logiciels et mises à jour de sécurité .NET Framework installés
+title: 'Procédure : déterminer les correctifs logiciels et mises à jour de sécurité .NET Framework installés'
 description: Découvrez comment déterminer les correctifs logiciels et mises à jour de sécurité .NET Framework installés sur un ordinateur.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6373def6859023377bf899f02d710c2ac6d83c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604182"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Guide pratique pour déterminer les correctifs logiciels et mises à jour de sécurité .NET Framework installés
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Procédure : déterminer les correctifs logiciels et mises à jour de sécurité .NET Framework installés
 
 Cet article montre comment rechercher les correctifs logiciels et mises à jour de sécurité .NET Framework installés sur un ordinateur.
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour déterminer les versions du .NET Framework installées](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
-[Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md)  
-[Versions et dépendances](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Guide pratique pour déterminer les versions du .NET Framework installées](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md)
+- [Versions et dépendances](../../../docs/framework/migration-guide/versions-and-dependencies.md)

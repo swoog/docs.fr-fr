@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615044"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065992"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT Compiler (xsltc.exe)
 Le compilateur XSLT (xsltc.exe) compile des feuilles de style XSLT et génère un assembly. La feuille de style compilée peut être passée directement dans la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Vous ne pouvez pas générer d'assemblys signés avec xsltc.exe.  
@@ -34,7 +34,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |Option|Description|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Définit le nom de la classe pour la feuille de style suivante. Le nom de la classe peut être un nom qualifié complet.<br /><br /> Le nom de la classe est par défaut celui de la feuille de style. Par exemple, si la feuille de style customers.xsl est compilée, le nom de la classe par défaut est customers.|  
-|`/debug[`+&#124;-`]`|Spécifie s'il faut générer des informations de débogage.<br /><br /> Si vous spécifiez `+` ou `/debug`, le compilateur génère des informations de débogage et les place dans un fichier (PDB) de la base de données du programme. Le nom du fichier PDB généré est `assemblyName`.pdb.<br /><br /> Si vous spécifiez `-`, qui est en vigueur si vous ne spécifiez pas `/debug`, aucune information de débogage n'est créée. Un assembly retail est généré. **Remarque :** la compilation en mode débogage peut affecter considérablement les performances de XSLT.|  
+|`/debug[`+&#124;-`]`|Spécifie s'il faut générer des informations de débogage.<br /><br /> Si vous spécifiez `+` ou `/debug`, le compilateur génère des informations de débogage et les place dans un fichier (PDB) de la base de données du programme. Le nom du fichier PDB généré est `assemblyName`.pdb.<br /><br /> Si vous spécifiez `-`, qui est en vigueur si vous ne spécifiez pas `/debug`, aucune information de débogage n'est créée. Un assembly retail est généré. **Remarque :**  La compilation en mode débogage peut affecter considérablement les performances de XSLT.|  
 |`/help`|Affiche la syntaxe et les options de commande de l'outil.|  
 |`/nologo`|Supprime l'affichage du message de copyright du compilateur.|  
 |`/platform:` `string`|Spécifie les plateformes sur lesquelles l'assembly peut s'exécuter. Les valeurs de plateforme valides sont décrites ci-dessous :<br /><br /> `x86` compile votre assembly pour qu'il soit exécuté par le CLR 32 bits x86.<br /><br /> `x64` compile votre assembly pour qu'il soit exécuté par le CLR 64 bits sur un ordinateur qui prend en charge le jeu d'instructions AMD64 ou EM64T.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] compile votre assembly pour qu'il soit exécuté par le CLR 64 bits sur un ordinateur doté du processeur [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)].<br /><br /> `anycpu` compile votre assembly pour qu'il s'exécute sur n'importe quelle plateforme. Il s'agit de la valeur par défaut.|  
@@ -49,7 +49,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 >  Vous devez également inclure l'assembly compilé comme référence dans votre application.  
   
- L'outil xsltc.exe ne valide pas les noms de classe (`/class:``name`) ou les noms d'assembly (`/out:``assemblyName`). Si les noms ne sont pas valides, le Common Language Runtime lève des erreurs.  
+ L’outil xsltc.exe ne valide pas les noms de classe (`/class:`*nom*) ou les noms d’assembly (`/out:`*nom_assembly*). Si les noms ne sont pas valides, le Common Language Runtime lève des erreurs.  
   
 ## <a name="examples"></a>Exemples  
  La commande suivante compile la feuille de style et crée un assembly nommé booksort.dll.  
@@ -84,6 +84,6 @@ xsltc booksort.xsl output.xsl
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- [Guide pratique pour effectuer une transformation XSLT à l’aide d’un assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [Guide pratique pour effectuer une transformation XSLT à l’aide d’un assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
 - [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

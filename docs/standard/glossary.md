@@ -3,14 +3,14 @@ title: Glossaire .NET
 description: Découvrez la signification de certains termes utilisés dans la documentation .NET.
 author: tdykstra
 ms.author: tdykstra
-ms.date: 07/08/2017
+ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840269"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857971"
 ---
 # <a name="net-glossary"></a>Glossaire .NET
 
@@ -21,6 +21,8 @@ L’objectif principal de ce glossaire est de préciser la signification de cert
 Compilateur Ahead Of Time.
 
 Semblable au compilateur [JIT](#jit), ce compilateur convertit également le langage [IL](#il) en code machine. Contrairement à la compilation JIT, la compilation AOT se produit avant que l’application ne soit exécutée et est généralement effectuée sur une autre machine. Étant donné que les chaînes d’outil AOT ne se compilent pas au moment de l’exécution, elles n’ont pas besoin de réduire le temps consacré à la compilation. Ainsi, elles peuvent dédier plus de temps à l’optimisation. Étant donné que le contexte d’AOT est l’ensemble de l’application, le compilateur AOT effectue également une liaison entre modules et une analyse de la totalité du programme, ce qui signifie que toutes les références sont suivies et qu’un seul exécutable est produit.
+
+Consultez [CoreRT](#corert) et [.NET Native](#net-native).
 
 ## <a name="aspnet"></a>ASP.NET 
 
@@ -117,7 +119,7 @@ Une implémentation de .NET inclut les composants suivants :
 
 - Un ou plusieurs runtimes. Exemples : CLR, CoreCLR, CoreRT.
 - Une bibliothèque de classes qui implémente une version de .NET Standard et qui peut inclure des API supplémentaires. Exemples : bibliothèque de classes de base .NET Framework, bibliothèque de classes de base .NET Core.
-- Le cas échéant, un ou plusieurs frameworks d’application. Exemples : ASP.NET, Windows Forms et WPF) sont inclus dans .NET Framework.
+- Le cas échéant, un ou plusieurs frameworks d’application. Exemples : ASP.NET, Windows Forms et WPF sont inclus dans le .NET Framework.
 - Le cas échéant, des outils de développement. Certains outils de développement sont partagés entre plusieurs implémentations.
 
 Exemples d’implémentations de .NET :
@@ -272,8 +274,8 @@ Implémentation de .NET qui sert à générer des logiciels et des applications 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de .NET](index.md)  
-- [Guide du .NET Framework](../framework/index.md)  
-- [.NET Core](../core/index.md)  
-- [ASP.NET Overview](/aspnet/index#pivot=aspnet) (Vue d’ensemble d’ASP.NET)  
-- [ASP.NET Core Overview](/aspnet/index#pivot=core) (Vue d’ensemble d’ASP.NET Core)  
+- [Guide de .NET](index.md)
+- [Guide du .NET Framework](../framework/index.md)
+- [.NET Core](../core/index.md)
+- [ASP.NET Overview](/aspnet/index#pivot=aspnet) (Vue d’ensemble d’ASP.NET)
+- [ASP.NET Core Overview](/aspnet/index#pivot=core) (Vue d’ensemble d’ASP.NET Core)

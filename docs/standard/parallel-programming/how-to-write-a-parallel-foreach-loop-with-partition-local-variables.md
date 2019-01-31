@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour écrire une boucle Parallel.ForEach avec des variables locales de partition
+title: 'Procédure : écrire une boucle Parallel.ForEach avec des variables locales de partition'
 ms.date: 06/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 2f27d1f11e4517653c9beb2d868d798c215741a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730982"
 ---
-# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Guide pratique pour écrire une boucle Parallel.ForEach avec des variables locales de partition
-L’exemple suivant montre comment écrire une méthode <xref:System.Threading.Tasks.Parallel.ForEach%2A> qui utilise des variables locales de partition. Quand une boucle <xref:System.Threading.Tasks.Parallel.ForEach%2A> s'exécute, elle divise sa collection source en plusieurs partitions. Chaque partition a sa propre copie de la variable locale de partition. Une variable locale de partition est similaire à une [variable locale de thread](xref:System.Threading.ThreadLocal%601), à la différence près que plusieurs partitions peuvent s’exécuter sur un thread unique.
+# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Procédure : écrire une boucle Parallel.ForEach avec des variables locales de partition
+L’exemple suivant montre comment écrire une méthode <xref:System.Threading.Tasks.Parallel.ForEach%2A> qui utilise des variables locales de partition. Quand une boucle <xref:System.Threading.Tasks.Parallel.ForEach%2A> s’exécute, elle divise sa collection source en plusieurs partitions. Chaque partition a sa propre copie de la variable locale de partition. Une variable locale de partition est similaire à une [variable locale de thread](xref:System.Threading.ThreadLocal%601), à la différence près que plusieurs partitions peuvent s’exécuter sur un thread unique.
   
- Le code et les paramètres dans cet exemple ressemblent beaucoup à la méthode <xref:System.Threading.Tasks.Parallel.For%2A> correspondante. Pour plus d’informations, voir [Guide pratique : écrire une boucle Parallel.For avec des variables locales de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+ Le code et les paramètres dans cet exemple ressemblent beaucoup à la méthode <xref:System.Threading.Tasks.Parallel.For%2A> correspondante. Pour plus d'informations, voir [Procédure : écrire une boucle Parallel.For avec des variables locales de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
   
  Pour utiliser une variable locale de partition dans une boucle <xref:System.Threading.Tasks.Parallel.ForEach%2A>, vous devez appeler l’une des surcharges de méthode qui accepte deux paramètres de type. Le premier paramètre de type, `TSource`, spécifie le type d’élément source, tandis que le second, `TLocal`, spécifie le type de la variable locale de partition.  
   
@@ -43,13 +43,13 @@ L’exemple suivant montre comment écrire une méthode <xref:System.Threading.T
   
      Dans l’exemple, le délégué ajoute la valeur de chaque entier à la variable locale de partition, qui tient à jour le total cumulé des valeurs des éléments entiers dans la partition concernée.  
   
--   `localFinally`, délégué `Action<TLocal>` que la méthode <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> appelle quand les opérations de bouclage dans chaque partition sont terminées. La méthode <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> passe à votre délégué `Action<TLocal>` la valeur finale de la variable locale de partition pour cette partition de boucle, et vous fournissez le code qui prend en charge la combinaison du résultat de cette partition avec les résultats des autres partitions. Ce délégué peut être appelé simultanément par plusieurs tâches. C'est la raison pour laquelle l'exemple utilise la méthode <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> pour synchroniser l'accès à la variable `total`. Comme le type de délégué est un délégué <xref:System.Action%601>, aucune valeur n'est retournée.  
+-   `localFinally`, délégué `Action<TLocal>` que la méthode <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> appelle quand les opérations de bouclage dans chaque partition sont terminées. La méthode <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> passe à votre délégué `Action<TLocal>` la valeur finale de la variable locale de partition pour cette partition de boucle, et vous fournissez le code qui prend en charge la combinaison du résultat de cette partition avec les résultats des autres partitions. Ce délégué peut être appelé simultanément par plusieurs tâches. C’est la raison pour laquelle l’exemple utilise la méthode <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> pour synchroniser l’accès à la variable `total`. Comme le type de délégué est un délégué <xref:System.Action%601>, aucune valeur n'est retournée.  
   
  [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
  [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [Guide pratique : écrire une boucle Parallel.For avec des variables locales de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+- [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [Guide pratique pour écrire une boucle Parallel.For avec des variables locales de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
 - [Expressions lambda en PLINQ et dans la bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

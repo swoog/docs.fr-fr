@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603311"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tâches enfants attachées et détachées
 Une *tâche enfant* (ou *tâche imbriquée*) est une instance <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> créée dans le délégué utilisateur d’une autre tâche, appelée *tâche parent*. Une tâche enfant peut être détachée ou attachée. Une *tâche enfant détachée* est une tâche qui s’exécute indépendamment de son parent. Une *tâche enfant attachée* est une tâche imbriquée créée avec l’option <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> dont le parent ne l’empêche pas explicitement ou par défaut d’être attachée. Une tâche peut créer autant de tâches enfants attachées et détachées que le permettent les ressources système.  
@@ -36,7 +36,7 @@ Une *tâche enfant* (ou *tâche imbriquée*) est une instance <xref:System.Threa
  [!code-csharp[TPL_ChildTasks#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_childtasks/cs/nested1.cs#1)]
  [!code-vb[TPL_ChildTasks#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_childtasks/vb/nested1.vb#1)]  
   
- Si la tâche enfant est représentée par un objet <xref:System.Threading.Tasks.Task%601> plutôt que par un objet <xref:System.Threading.Tasks.Task>, vous pouvez vous assurer que la tâche parente attend la fin de la tâche enfant en accédant à la propriété <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> de celle-ci, même s'il s'agit d'une tâche enfant détachée. La propriété <xref:System.Threading.Tasks.Task%601.Result%2A> bloque jusqu'à ce que sa tâche se termine, comme le montre l'exemple suivant.  
+ Si la tâche enfant est représentée par un objet <xref:System.Threading.Tasks.Task%601> plutôt que par un objet <xref:System.Threading.Tasks.Task>, vous pouvez vous assurer que la tâche parente attend la fin de la tâche enfant en accédant à la propriété <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> de celle-ci, même s’il s’agit d’une tâche enfant détachée. La propriété <xref:System.Threading.Tasks.Task%601.Result%2A> bloque jusqu’à ce que sa tâche se termine, comme le montre l’exemple suivant.  
   
  [!code-csharp[TPL_ChildTasks#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_childtasks/cs/childtasks.cs#4)]
  [!code-vb[TPL_ChildTasks#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_childtasks/vb/tpl_childtasks.vb#4)]  
@@ -55,7 +55,7 @@ Une *tâche enfant* (ou *tâche imbriquée*) est une instance <xref:System.Threa
  [!code-vb[TPL_ChildTasks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_childtasks/vb/child1a.vb#3)]  
   
 ## <a name="exceptions-in-child-tasks"></a>Exceptions dans les tâches enfants  
- Si une tâche enfant détachée lève une exception, celle-ci doit être observée ou gérée directement dans la tâche parente, comme dans le cas de n'importe quelle tâche non imbriquée. Si une tâche enfant attachée lève une exception, celle-ci est automatiquement propagée vers la tâche parente, puis vers le thread qui attend ou essaie d'accéder à la propriété <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> de la tâche. Ainsi, en utilisant des tâches enfants attachées, vous pouvez gérer toutes les exceptions en un seul point dans l'appel à <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> sur le thread appelant. Pour plus d’informations, consultez l’article [Gestion des exceptions](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
+ Si une tâche enfant détachée lève une exception, celle-ci doit être observée ou gérée directement dans la tâche parente, comme dans le cas de n'importe quelle tâche non imbriquée. Si une tâche enfant attachée lève une exception, celle-ci est automatiquement propagée vers la tâche parente, puis vers le thread qui attend ou essaie d'accéder à la propriété <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> de la tâche. Ainsi, en utilisant des tâches enfants attachées, vous pouvez gérer toutes les exceptions en un seul point dans l’appel à <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> sur le thread appelant. Pour plus d’informations, consultez l’article [Gestion des exceptions](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
 ## <a name="cancellation-and-child-tasks"></a>Annulation et tâches enfants  
  L'annulation de tâche est coopérative. Autrement dit, pour être annulable, chaque tâche enfant attachée ou détachée doit surveiller l'état du jeton d'annulation. Pour annuler un parent et tous ses enfants à l’aide d’une demande d’annulation, vous passez le même jeton en tant qu’argument à toutes les tâches et fournissez dans chaque tâche la logique pour répondre à la demande. Pour plus d’informations, consultez [Annulation de tâches](../../../docs/standard/parallel-programming/task-cancellation.md) et [Comment : annuler une tâche et ses enfants](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
@@ -76,9 +76,9 @@ Une *tâche enfant* (ou *tâche imbriquée*) est une instance <xref:System.Threa
   
  Pour empêcher une tâche enfant de s'attacher à sa tâche parente, spécifiez l'option <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> quand vous créez l'objet <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> parent. Si une tâche enfant tente de s'attacher à son parent alors que celui-ci spécifie l'option <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>, elle échoue et s'exécute comme si l'option <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> n'était pas spécifiée.  
   
- Vous pourriez également empêcher une tâche enfant de s'attacher à son parent quand la tâche enfant ne se termine pas en temps voulu. Étant donné qu’une tâche parente ne se termine pas tant que toutes les tâches enfants ne sont pas achevées, une tâche enfant à exécution longue peut entraîner des performances médiocres de la part de l’application globale. Pour obtenir un exemple qui montre comment améliorer les performances de l’application en empêchant une tâche de s’attacher à sa tâche parente, consultez [Procédure : empêcher une tâche enfant de s’attacher à son parent](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ Vous pourriez également empêcher une tâche enfant de s'attacher à son parent quand la tâche enfant ne se termine pas en temps voulu. Étant donné qu’une tâche parente ne se termine pas tant que toutes les tâches enfants ne sont pas achevées, une tâche enfant à exécution longue peut entraîner des performances médiocres de la part de l’application globale. Pour obtenir un exemple qui montre comment améliorer les performances de l’application en empêchant une tâche de s’attacher à sa tâche parente, consultez [Comment : empêcher une tâche enfant de s’attacher à son parent](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)  
+- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)
 - [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

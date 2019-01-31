@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour intercepter les erreurs d’analyse (C#)
+title: 'Procédure : Intercepter les erreurs d’analyse (C#)'
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 879a8f037e9d31051ef0d4059ee3ce2a2fca7a4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2f56ca48278f9ad8b38f8564f54a379cc09f94ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515860"
 ---
-# <a name="how-to-catch-parsing-errors-c"></a>Guide pratique pour intercepter les erreurs d’analyse (C#)
+# <a name="how-to-catch-parsing-errors-c"></a>Procédure : Intercepter les erreurs d’analyse (C#)
 Cette rubrique montre comment détecter du code XML incorrect ou non valide.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] est implémenté avec <xref:System.Xml.XmlReader>. Si du code XML incorrect ou non valide est passé à [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], la classe sous-jacente <xref:System.Xml.XmlReader> ève une exception. Les différentes méthodes qui analysent le code XML, telles que <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, n’interceptent pas l’exception. Celle-ci peut donc être interceptée par votre application.  
