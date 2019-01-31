@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour interroger les fichiers les plus volumineux dans une arborescence de répertoires (LINQ) (C#)
+title: 'Procédure : Rechercher les fichiers les plus volumineux dans une arborescence de répertoires (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: cbdf02b8c3035b8db58238113debb273c6c9dc35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 20453c754c792d4f5c59fde481e1fec56dcd0e09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564127"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Guide pratique pour interroger les fichiers les plus volumineux dans une arborescence de répertoires (LINQ) (C#)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Procédure : Rechercher les fichiers les plus volumineux dans une arborescence de répertoires (LINQ) (C#)
 Cet exemple montre cinq requêtes liées à la taille des fichiers en octets :  
   
 -   Comment récupérer la taille en octets du plus grand fichier.  
@@ -147,5 +147,5 @@ class QueryBySize
   
 ## <a name="see-also"></a>Voir aussi
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ et répertoires de fichiers (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

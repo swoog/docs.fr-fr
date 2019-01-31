@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: b289aa2a60deb10ebda0ca8efc3e172caf2df8a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 29d0f33960534e8a5521b36eb6cc11655ab89c6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540251"
 ---
 # <a name="enabling-network-tracing"></a>Activation du suivi réseau
 Le traçage réseau fournit l’accès aux informations sur les appels de méthodes et le trafic réseau généré par une application managée. Vous devez effectuer les tâches suivantes pour activer le traçage réseau dans votre application :  
   
--   Compiler votre code avec le traçage activé. Pour plus d’informations sur les commutateurs du compilateur nécessaires pour activer le traçage, consultez [Guide pratique pour effectuer une compilation conditionnelle avec Trace et Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
+-   Compiler votre code avec le traçage activé. Voir [Guide pratique pour effectuer une compilation conditionnelle avec Trace et Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) pour plus d’informations sur les commutateurs du compilateur nécessaires pour activer le traçage.  
   
 -   Spécifier une destination de sortie de traçage.  
   
--   Configurer le comportement du traçage réseau. Pour obtenir des informations détaillées, consultez [Guide pratique pour configurer le traçage réseau](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).  
+-   Configurer le comportement du traçage réseau. Voir [Guide pratique pour configurer le traçage réseau](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) pour obtenir des informations détaillées.  
   
  Les destinations de trace les plus courantes, également appelées écouteurs de suivi, sont l’écouteur par défaut et le fichier journal.  
   
@@ -45,7 +45,7 @@ Le traçage réseau fournit l’accès aux informations sur les appels de métho
 </system.diagnostics>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Interprétation du suivi réseau](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Traçage réseau dans .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
- [Suivi et instrumentation d’applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Voir aussi
+- [Interprétation du suivi réseau](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Traçage réseau dans .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Suivi et instrumentation d’applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

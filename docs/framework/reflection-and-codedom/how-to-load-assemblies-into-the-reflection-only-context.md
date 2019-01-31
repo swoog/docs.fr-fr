@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour charger des assemblys dans le contexte de réflexion uniquement
+title: 'Procédure : charger des assemblys dans le contexte de réflexion uniquement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aa7f8a158a851baf76455da685059f02c69cb6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7eeef33745ebc8209fc7f69a9337af4093c1e8a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567046"
 ---
-# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Guide pratique pour charger des assemblys dans le contexte de réflexion uniquement
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Procédure : charger des assemblys dans le contexte de réflexion uniquement
 Le contexte de chargement de réflexion uniquement permet d’examiner des assemblys compilés pour d’autres plateformes ou d’autres versions du .NET Framework. Le code chargé dans ce contexte peut uniquement être examiné. Il ne peut pas être exécuté. Cela signifie que les objets ne peuvent pas être créés, car les constructeurs ne peut pas être exécutés. Le code ne pouvant pas être exécuté, les dépendances ne sont pas chargées automatiquement. Si vous devez les examiner, vous devez les charger vous-même.  
   
 ### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>Pour charger un assembly dans le contexte de chargement de réflexion uniquement  
@@ -52,7 +52,7 @@ Le contexte de chargement de réflexion uniquement permet d’examiner des assem
  [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
  [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
- <xref:System.Reflection.CustomAttributeData>
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
+- <xref:System.Reflection.Assembly.ReflectionOnly%2A>
+- <xref:System.Reflection.CustomAttributeData>

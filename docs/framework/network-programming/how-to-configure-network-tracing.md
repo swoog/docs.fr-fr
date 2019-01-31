@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour configurer le suivi réseau
+title: 'Procédure : configurer le traçage réseau'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540531"
 ---
-# <a name="how-to-configure-network-tracing"></a>Guide pratique pour configurer le suivi réseau
+# <a name="how-to-configure-network-tracing"></a>Procédure : configurer le traçage réseau
 Le fichier de configuration de l'application ou de l'ordinateur contient les paramètres qui déterminent le format et le contenu des traces réseau. Avant d'effectuer cette procédure, assurez-vous que le traçage est activé. Pour plus d’informations sur l’activation du suivi, consultez [Activation du suivi réseau](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
  Le fichier de configuration de l’ordinateur, machine.config, est stocké dans le dossier %Windir%\Microsoft.NET\Framework dans le répertoire dans lequel Windows a été installé. Il y a un fichier machine.config distinct dans les dossiers sous %Windir%\Microsoft.NET\Framework pour chaque version de .NET Framework installée sur l’ordinateur (par exemple, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config ou C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config).  
@@ -97,8 +97,8 @@ Le fichier de configuration de l'application ou de l'ordinateur contient les par
 |`maxdatasize`|Attribut <xref:System.Int32> facultatif. Définit le nombre maximal d'octets de données réseau incluses dans chaque trace de ligne. La valeur par défaut est 1024.<br /><br /> Cet attribut doit être défini sur l’élément \<source> comme illustré dans l’exemple. Une exception est levée si cet attribut est défini sur un élément sous l’élément \<switches>.|  
 |`Tracemode`|Attribut <xref:System.String> facultatif. Définissez la valeur `includehex` pour afficher les traces de protocole au format hexadécimal et texte. Définissez la valeur `protocolonly` pour afficher uniquement du texte. La valeur par défaut est `includehex`.<br /><br /> Cet attribut doit être défini sur l’élément \<switches> comme illustré dans l’exemple. Une exception est levée si cet attribut est défini sur un élément sous l’élément \<source>.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Interprétation du suivi réseau](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Traçage réseau dans .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
- [Activation du suivi réseau](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Suivi et instrumentation d’applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Voir aussi
+- [Interprétation du suivi réseau](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Traçage réseau dans .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Activation du suivi réseau](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Suivi et instrumentation d’applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

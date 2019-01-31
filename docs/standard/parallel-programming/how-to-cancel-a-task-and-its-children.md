@@ -1,5 +1,5 @@
 ---
-title: 'Comment : annuler une tâche et ses enfants'
+title: 'Procédure : annuler une tâche et ses enfants'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb520169f8e7925862d415a4dfb65af09263b0d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642829"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>Comment : annuler une tâche et ses enfants
+# <a name="how-to-cancel-a-task-and-its-children"></a>Procédure : annuler une tâche et ses enfants
 Ces exemples montrent comment effectuer les tâches suivantes :  
   
 1.  Créer et lancer une tâche annulable  
@@ -40,10 +40,10 @@ Ces exemples montrent comment effectuer les tâches suivantes :
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>  
-- <xref:System.Threading.CancellationToken?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
-- [Programmation asynchrone basée sur les tâches](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
-- [Tâches enfants attachées et détachées](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)  
+- <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>
+- <xref:System.Threading.CancellationToken?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
+- [Programmation asynchrone basée sur les tâches](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [Tâches enfants attachées et détachées](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
 - [Expressions lambda en PLINQ et dans la bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

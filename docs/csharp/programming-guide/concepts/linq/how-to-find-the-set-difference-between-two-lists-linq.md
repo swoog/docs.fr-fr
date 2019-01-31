@@ -1,20 +1,20 @@
 ---
-title: Guide pratique pour rechercher la différence ensembliste entre deux listes (LINQ) (C#)
+title: 'Procédure : Rechercher la différence ensembliste entre deux listes (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: e416e97b8fe3a1a76a0f04ea46353d9fd8c0ad8c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 13166aaeba50d8cca33861d5489d7839d3933099
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712731"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Guide pratique pour rechercher la différence ensembliste entre deux listes (LINQ) (C#)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Procédure : Rechercher la différence ensembliste entre deux listes (LINQ) (C#)
 Cet exemple montre comment utiliser LINQ pour comparer deux listes de chaînes et sortir les lignes qui sont présentes dans names1.txt, mais pas dans names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Pour créer les fichiers de données  
   
-1.  Copiez names1.txt et names2.txt dans votre dossier de solution comme indiqué dans [Guide pratique pour combiner et comparer des collections de chaînes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1.  Copiez names1.txt et names2.txt dans votre dossier de solution comme indiqué dans le [Guide pratique pour combiner et comparer des collections de chaînes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Exemple  
   

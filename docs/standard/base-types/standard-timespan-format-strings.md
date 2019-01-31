@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 15c357533c9f25a2f29da9a9b5cab185712f02f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634920"
 ---
 # <a name="standard-timespan-format-strings"></a>Chaînes de format TimeSpan standard.
 <a name="Top"></a> Une chaîne de format <xref:System.TimeSpan> standard utilise un spécificateur de format pour définir la représentation textuelle d'une valeur <xref:System.TimeSpan> qui résulte d'une opération de mise en forme. Toute chaîne de format contenant plusieurs caractères alphabétiques, y compris un espace blanc, est interprétée comme une chaîne de format <xref:System.TimeSpan> personnalisée. Pour plus d’informations, consultez [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -43,9 +43,9 @@ ms.locfileid: "44085262"
   
 |Spécificateur de format|Name|Description|Exemples|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|Format constant (invariant)|Ce spécificateur ne dépend pas de la culture. Son format est le suivant : `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> (les chaînes de format "t" et "T" produisent les mêmes résultats)<br /><br /> Pour plus d’informations, consultez [Spécificateur de format constant ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|Format court général|Ce spécificateur retourne uniquement ce qui est nécessaire. Il dépend de la culture et prend la forme suivante : `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Pour plus d’informations, consultez [Spécificateur de format court général ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
-|"G"|Format long général|Ce spécificateur retourne toujours les jours et sept chiffres fractionnaires. Il dépend de la culture et prend la forme suivante : `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Pour plus d’informations, consultez [Spécificateur de format long général ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
+|"c"|Format constant (invariant)|Ce spécificateur ne dépend pas de la culture. Son format est le suivant : `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> (les chaînes de format "t" et "T" produisent les mêmes résultats)<br /><br /> Informations complémentaires : [Spécificateur de format constant ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|Format court général|Ce spécificateur retourne uniquement ce qui est nécessaire. Il dépend de la culture et prend la forme suivante : `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Informations complémentaires : [Spécificateur de format court général ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
+|"G"|Format long général|Ce spécificateur retourne toujours les jours et sept chiffres fractionnaires. Il dépend de la culture et prend la forme suivante : `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Informations complémentaires : [Spécificateur de format long général ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
   
 <a name="Constant"></a>   
 ## <a name="the-constant-c-format-specifier"></a>Spécificateur de format constant ("c")  
@@ -132,6 +132,6 @@ ms.locfileid: "44085262"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
-- [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)
+- [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

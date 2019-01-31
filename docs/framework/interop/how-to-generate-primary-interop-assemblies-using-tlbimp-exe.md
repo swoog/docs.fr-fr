@@ -1,5 +1,5 @@
 ---
-title: "Comment : générer des assemblys PIA à l'aide de Tlbimp.exe"
+title: 'Procédure : générer des assemblys PIA à l’aide de Tlbimp.exe'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c196c0f6525214e2ea25e6506e9c89f4e48906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6ef2e11efe858c03d1cf4e7167ae856ec4d690a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596135"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Comment : générer des assemblys PIA à l'aide de Tlbimp.exe
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procédure : générer des assemblys PIA à l’aide de Tlbimp.exe
 Il existe deux manières de générer un assembly PIA :  
   
 -   À l’aide de l’outil [Tlbimp.exe (importateur de bibliothèques de types)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) fourni par le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
@@ -67,5 +67,5 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Comment : enregistrer des assemblys PIA](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+## <a name="see-also"></a>Voir aussi
+- [Guide pratique pour enregistrer des assemblys PIA](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

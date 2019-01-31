@@ -1,5 +1,5 @@
 ---
-title: "Comment : anticiper des conditions d'espace insuffisant avec le stockage isolé"
+title: 'Procédure : anticiper des conditions d’espace insuffisant avec le stockage isolé'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: be3c38c1cf1e6fa6f2bfd5fed05ee8150309d7d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609679"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Comment : anticiper des conditions d'espace insuffisant avec le stockage isolé
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Procédure : anticiper des conditions d’espace insuffisant avec le stockage isolé
 Le code qui utilise le stockage isolé est limité par un [quota](../../../docs/standard/io/isolated-storage.md#quotas) qui spécifie la taille maximale du compartiment de données dans lequel des fichiers et répertoires de stockage isolé existent. Le quota est défini par la stratégie de sécurité et peut être configuré par les administrateurs. Si la taille maximale autorisée est dépassée lorsque vous tenez d’écrire des données, une exception <xref:System.IO.IsolatedStorage.IsolatedStorageException> est levée et l’opération échoue. Cela permet d’éviter des attaques malveillantes par déni de service, qui pourraient amener l’application à refuser des requêtes parce que le stockage des données est rempli.  
   
  Pour vous aider à déterminer si une tentative d’écriture donnée est susceptible d’échouer pour cette raison, la classe <xref:System.IO.IsolatedStorage.IsolatedStorage> fournit trois propriétés en lecture seule : <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> et <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Vous pouvez utiliser ces propriétés pour déterminer si l’écriture dans le magasin entraînera le dépassement de la taille maximale autorisée de ce dernier. N’oubliez pas que le stockage isolé est accessible simultanément. Par conséquent, lorsque vous calculez la quantité de stockage restant, l’espace de stockage peut être consommé pendant que vous tentez d’écrire dans le magasin. Toutefois, vous pouvez utiliser la taille maximale du magasin pour aider à déterminer si la limite maximale de stockage disponible est sur le point d’être atteinte.  
@@ -47,6 +47,6 @@ Le code qui utilise le stockage isolé est limité par un [quota](../../../docs/
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- [Stockage isolé](../../../docs/standard/io/isolated-storage.md)  
-- [Obtention de magasins](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- [Stockage isolé](../../../docs/standard/io/isolated-storage.md)
+- [Guide pratique pour obtenir des magasins pour le stockage isolé](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

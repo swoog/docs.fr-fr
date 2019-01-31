@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8219888b7944a19b100f73aab3713c09fd93f45b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569938"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Création de fichiers de ressources pour les applications bureautiques
 Vous pouvez inclure des ressources, telles que des chaînes, des images ou des données d’objet, dans les fichiers de ressources pour les rendre facilement accessibles à votre application. Le .NET Framework propose cinq façons de créer des fichiers de ressources :  
@@ -58,7 +58,7 @@ name2=value2
   
  Le format de fichier de ressources des fichiers .txt et .restext est identique. L’extension de fichier .restext sert uniquement à rendre des fichiers texte immédiatement identifiables comme fichiers de ressources textuelles.  
   
- Les ressources de type chaîne s’affichent sous forme de paires *nom/valeur*, où *nom* est une chaîne qui identifie la ressource, et *valeur* est la chaîne de ressource retournée quand vous passez *nom* à une méthode de récupération de la ressource telle que <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *nom* et *valeur* doivent être séparés par un signe égal (=). Exemple :  
+ Les ressources de type chaîne s’affichent sous forme de paires *nom/valeur*, où *nom* est une chaîne qui identifie la ressource, et *valeur* est la chaîne de ressource retournée quand vous passez *nom* à une méthode de récupération de la ressource telle que <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *nom* et *valeur* doivent être séparés par un signe égal (=). Par exemple :  
   
 ```  
 FileMenuName=File  
@@ -70,7 +70,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  N’utilisez pas de fichier de ressources pour stocker des mots de passe, des informations sensibles ou des données privées.  
   
- Les chaînes vides (autrement dit, une ressource dont la valeur est <xref:System.String.Empty?displayProperty=nameWithType>) sont autorisées dans les fichiers texte. Exemple :  
+ Les chaînes vides (autrement dit, une ressource dont la valeur est <xref:System.String.Empty?displayProperty=nameWithType>) sont autorisées dans les fichiers texte. Par exemple :  
   
 ```  
 EmptyString=  
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
   
  Au moment de la compilation, Visual Studio convertit en premier les fichiers .resx dans un projet en fichiers de ressources binaires (.resources) et les stocke dans un sous-répertoire du répertoire obj du projet. Visual Studio incorpore tous les fichiers de ressources qui ne contiennent pas de ressources localisées dans l’assembly principal qui est généré par le projet. Si des fichiers de ressources contiennent des ressources localisées, Visual Studio les incorpore dans des assemblys satellites séparés pour chaque culture localisée. Il stocke ensuite chaque assembly satellite dans un répertoire dont le nom correspond à la culture localisée. Par exemple, les ressources Anglais (États-Unis) localisées sont stockées dans un assembly satellite dans le sous-répertoire en-US.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Resources>  
- [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)  
- [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>Voir aussi
+- <xref:System.Resources>
+- [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)
+- [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

@@ -1,15 +1,15 @@
 ---
-title: Guide pratique pour modifier l’espace de noms pour toute une arborescence XML (C#)
+title: 'Procédure : Changer l’espace de noms pour toute une arborescence XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: cbb7c3d332eea83d6df71812cc18633df6fbb6d0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 020d072cfb58c90720317734199d241c6892511f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539920"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Guide pratique pour modifier l’espace de noms pour toute une arborescence XML (C#)
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Procédure : Changer l’espace de noms pour toute une arborescence XML (C#)
 Vous devez parfois modifier par programmation l’espace de noms pour un élément ou un attribut. LINQ to XML rend cette tâche très simple. La propriété <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> peut être définie. La propriété <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> ne peut pas être définie, mais vous pouvez facilement copier les attributs dans un objet <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, supprimer les attributs existants, puis ajouter de nouveaux attributs qui sont dans le nouvel espace de noms souhaité.  
   
  Pour plus d’informations, consultez [Utilisation des espaces de noms XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  

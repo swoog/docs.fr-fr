@@ -1,5 +1,5 @@
 ---
-title: "Comment : gérer plusieurs événements à l'aide des propriétés d'événements"
+title: 'Procédure : gérer plusieurs événements à l’aide de propriétés d’événements'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592219"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>Comment : gérer plusieurs événements à l'aide des propriétés d'événements
-Pour utiliser des propriétés d'événements, définissez les propriétés d'événements dans la classe qui déclenche les événements, puis affectez les délégués pour les propriétés d'événements dans les classes qui gèrent les événements. Pour implémenter plusieurs propriétés d'événements dans une classe, la classe doit stocker et maintenir le délégué défini pour chaque événement en interne. Une approche courante consiste à implémenter une collection de délégués indexée par une clé d'événement.  
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>Procédure : gérer plusieurs événements à l’aide de propriétés d’événements
+Pour utiliser des propriétés d'événements, définissez les propriétés d'événements dans la classe qui déclenche les événements, puis affectez les délégués pour les propriétés d'événements dans les classes qui gèrent les événements. Pour implémenter plusieurs propriétés d'événements dans une classe, la classe doit stocker et maintenir le délégué défini pour chaque événement en interne. Une approche courante consiste à implémenter une collection de délégués indexée par une clé d’événement.  
   
- Pour stocker les délégués pour chaque événement, vous pouvez utiliser la classe <xref:System.ComponentModel.EventHandlerList> ou implémenter votre propre collection. La classe de collection doit fournir des méthodes pour le paramétrage, l'accès et la récupération du délégué de gestionnaire d'événements selon la clé d'événement. Par exemple, vous pouvez utiliser une classe <xref:System.Collections.Hashtable> ou dériver une classe personnalisée de la classe <xref:System.Collections.DictionaryBase>. Les détails de l'implémentation de la collection de délégués ne doivent pas être exposés à l'extérieur de votre classe.  
+ Pour stocker les délégués pour chaque événement, vous pouvez utiliser la classe <xref:System.ComponentModel.EventHandlerList> ou implémenter votre propre collection. La classe de collection doit fournir des méthodes pour le paramétrage, l’accès et la récupération du délégué de gestionnaire d’événements selon la clé d’événement. Par exemple, vous pouvez utiliser une classe <xref:System.Collections.Hashtable> ou dériver une classe personnalisée de la classe <xref:System.Collections.DictionaryBase>. Les détails de l’implémentation de la collection de délégués ne doivent pas être exposés à l’extérieur de votre classe.  
   
  Chaque propriété d'événement dans la classe définit une méthode d'accesseur add et une méthode d'accesseur remove. L'accesseur add pour une propriété d'événement ajoute l'instance de délégué d'entrée à la collection de délégués. L'accesseur remove pour une propriété d'événement supprime l'instance de délégué d'entrée de la collection de délégués. Les accesseurs de propriété d'événement utilisent la clé prédéfinie pour la propriété d'événement pour ajouter et supprimer des instances de la collection de délégués.  
   
@@ -52,7 +52,7 @@ Pour utiliser des propriétés d'événements, définissez les propriétés d'é
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
-- [Événements](../../../docs/standard/events/index.md)  
-- <xref:System.Web.UI.Control.Events%2A>  
-- [Guide pratique : déclarer des événements personnalisés pour économiser la mémoire](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
+- [Événements](../../../docs/standard/events/index.md)
+- <xref:System.Web.UI.Control.Events%2A>
+- [Guide pratique pour déclarer des événements personnalisés pour économiser la mémoire](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour déterminer le nom qualifié complet d’un assembly
+title: 'Procédure : déterminer le nom qualifié complet d’un assembly'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7124271c0118800883d4beb68591f8591ac43dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520709"
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Guide pratique pour déterminer le nom qualifié complet d’un assembly
+# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Procédure : déterminer le nom qualifié complet d’un assembly
 Pour découvrir le nom qualifié complet d’un assembly dans le Global Assembly Cache, utilisez l’outil Global Assembly Cache ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Voir [Guide pratique pour visualiser le contenu du Global Assembly Cache](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Pour les assemblys qui ne sont pas dans le Global Assembly Cache, vous pouvez obtenir le nom qualifié complet de l’assembly de différentes façons : vous pouvez utiliser du code pour afficher les informations sur la console ou dans une variable, ou bien vous pouvez utiliser le [Désassembleur MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) pour examiner les métadonnées de l’assembly, qui contiennent le nom qualifié complet.  
@@ -42,10 +42,10 @@ Pour découvrir le nom qualifié complet d’un assembly dans le Global Assembly
  [!code-csharp[Assembly.Fullname#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.FullName/CS/example2.cs#2)]
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
-## <a name="see-also"></a>Voir aussi  
-- [Noms d’assemblys](../../../docs/framework/app-domains/assembly-names.md)  
-- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Création et utilisation d’assemblys avec nom fort](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
-- [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Voir aussi
+- [Noms d’assemblys](../../../docs/framework/app-domains/assembly-names.md)
+- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)
+- [Création et utilisation d’assemblys avec nom fort](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
