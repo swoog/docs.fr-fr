@@ -3,10 +3,10 @@ title: Référence des mots clés
 description: Trouver des liens vers des informations sur tous les F# mots clés du langage.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "54857903"
 ---
 # <a name="keyword-reference"></a>Référence des mots clés
@@ -64,7 +64,7 @@ Le tableau suivant montre toutes les F# mots clés dans l’ordre alphabétique,
 |`null`|[Valeurs Null](values/null-values.md)<br /><br />[Contraintes](generics/constraints.md)|Indique l’absence d’un objet.<br /><br />Également utilisé dans les contraintes de paramètre générique.|
 |`of`|[Unions discriminées](discriminated-unions.md)<br /><br />[Délégués](delegates.md)<br /><br />[Types d'exceptions](exception-handling/exception-types.md)|Utilisé dans les unions discriminées pour indiquer le type de catégories de valeurs et dans les déclarations de délégué et l’exception.|
 |`open`|[Déclarations d’importation : le mot clé `open` ](import-declarations-the-open-keyword.md)|Utilisé pour rendre le contenu d’un espace de noms ou un module disponibles sans qualification.|
-|`or`|[Informations de référence des symboles et opérateurs](symbol-and-operator-reference/index.md)<br /><br />[Contraintes](generics/constraints.md)|Utilisé avec des conditions booléennes en tant que valeur booléenne `or` opérateur. Équivalent à »||`.<br /><br />Également utilisé dans les contraintes de membre.|
+|`or`|[Informations de référence des symboles et opérateurs](symbol-and-operator-reference/index.md)<br /><br />[Contraintes](generics/constraints.md)|Utilisé avec des conditions booléennes en tant que valeur booléenne `or` opérateur. Équivalent à `||`.<br /><br />Également utilisé dans les contraintes de membre.|
 |`override`|[Membres](members/index.md)|Utilisé pour implémenter une version d’une méthode abstraite ou virtuelle qui diffère de la version de base.|
 |`private`|[Contrôle d'accès](access-control.md)|Limite l’accès à un membre au code dans le même type ou module.|
 |`public`|[Contrôle d'accès](access-control.md)|Autorise l’accès à un membre à partir de l’extérieur du type.|

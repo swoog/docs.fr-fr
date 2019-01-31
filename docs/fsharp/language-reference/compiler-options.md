@@ -3,10 +3,10 @@ title: Options du compilateur
 description: Utilisez F# options de ligne de commande du compilateur pour contrôler la compilation de votre F# applications et des bibliothèques.
 ms.date: 12/10/2018
 ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "53614491"
 ---
 # <a name="compiler-options"></a>Options du compilateur

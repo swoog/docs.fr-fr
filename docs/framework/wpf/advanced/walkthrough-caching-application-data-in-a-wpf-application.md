@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513722"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480060"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procédure pas à pas : La mise en cache des données d’Application dans une Application WPF
-La mise en cache vous permet de stocker des données en mémoire pour y accéder rapidement. Lorsque les données sont accessibles à nouveau, les applications peuvent obtenir les données à partir du cache à la place de la récupération à partir de la source d’origine. Cela peut améliorer les performances et la scalabilité. La mise en cache rend également les données disponibles quand la source de données est temporairement indisponible.
+La mise en cache vous permet de stocker des données en mémoire pour y accéder rapidement. Quand vous accédez à nouveau aux données, les applications peuvent obtenir les données à partir du cache au lieu de devoir les récupérer à partir de la source d’origine. Cela peut améliorer les performances et la scalabilité. La mise en cache rend également les données disponibles quand la source de données est temporairement indisponible.
 
  Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournit des classes qui vous permettent d’utiliser la mise en cache dans [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications. Ces classes se trouvent dans le <xref:System.Runtime.Caching> espace de noms.
 
@@ -218,7 +218,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     Si aucune information d’éviction ou d’expiration est fournie, la valeur par défaut est <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, ce qui signifie que les entrées du cache n’expirent jamais en uniquement sur une heure absolue. Au lieu de cela, les entrées du cache expirent uniquement en cas de sollicitation de la mémoire. Comme meilleure pratique, vous devez toujours explicitement fournir absolue ou l’expiration des finition.
+     Si aucune information d’éviction ou d’expiration est fournie, la valeur par défaut est <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, ce qui signifie que les entrées du cache n’expirent jamais en uniquement sur une heure absolue. Au lieu de cela, les entrées du cache expirent uniquement en cas de sollicitation de la mémoire. Comme meilleure pratique, vous devez toujours explicitement fournir une expiration décalée ou absolu.
 
 7.  À l’intérieur de la `if/then` bloquer et la suite du code que vous avez ajouté à l’étape précédente, ajoutez le code suivant pour créer une collection pour les chemins d’accès de fichier que vous voulez surveiller et pour ajouter le chemin d’accès du fichier texte à la collection :
 
@@ -254,7 +254,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      L’horodatage de date et d’heure est ajoutée afin que vous serez en mesure de voir quand l’entrée de cache expire.
@@ -296,7 +296,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
 
      Le contenu mis en cache à partir du fichier texte est affiché dans une boîte de message. Notez l’horodatage sur le fichier.
 
-3.  Fermez la boîte de message, puis **Cache obtenir** à nouveau **.**
+3.  Fermez la boîte de message, puis **Cache obtenir** à nouveau.
 
      L’horodatage est inchangé. Cela indique que le contenu mis en cache s’affiche.
 
@@ -306,7 +306,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
 
 5.  Dans un éditeur de texte, ouvrez le fichier texte que vous avez créé. N’apportez pas encore de modifications.
 
-6.  Fermez la boîte de message, puis **Cache obtenir** à nouveau **.**
+6.  Fermez la boîte de message, puis **Cache obtenir** à nouveau.
 
      Notez à nouveau l’horodatage.
 
