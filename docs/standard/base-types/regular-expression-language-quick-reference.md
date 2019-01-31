@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b191a01995b7c36d733b225672a3d79f488a276
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cedabbfff10b89f9755b14b963fd1d1a143cb0f0
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531419"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204884"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
 <a name="top"></a> Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d'un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -58,10 +58,10 @@ ms.locfileid: "54531419"
 |`\f`|Correspond à un saut de page, \u000C.|`[\f]{2,}`|"\f\f\f" dans "\f\f\f"|  
 |`\n`|Correspond à une nouvelle ligne, \u000A.|`\r\n(\w+)`|"\r\nCe" dans "\r\nCe sont\ndeux lignes."|  
 |`\e`|Correspond à un caractère d'échappement, \u001B.|`\e`|"\x001B" dans "\x001B"|  
-|`\` *nnn*|Utilise la représentation octale pour spécifier un caractère (*nnn* se compose de deux ou trois chiffres).|`\w\040\w`|"a b", "c d" dans<br /><br /> "a bc d"|  
-|`\x` *nn*|Utilise une représentation hexadécimale pour spécifier un caractère (*nn* se compose de deux chiffres exactement).|`\w\x20\w`|"a b", "c d" dans<br /><br /> "a bc d"|  
+|`\` *nnn*|Utilise la représentation octale pour spécifier un caractère (*nnn* se compose de deux ou trois chiffres).|`\w\040\w`|« a b », « c d » dans « a bc d »|  
+|`\x` *nn*|Utilise une représentation hexadécimale pour spécifier un caractère (*nn* se compose de deux chiffres exactement).|`\w\x20\w`|« a b », « c d » dans « a bc d »|  
 |`\c` *X*<br /><br /> `\c` *x*|Correspond au caractère de contrôle ASCII spécifié par *X* ou *x*, où *X* ou *x* représente la lettre du caractère de contrôle.|`\cC`|"\x0003" dans "\x0003" (Ctrl-C)|  
-|`\u` *nnnn*|Correspond à un caractère Unicode en utilisant la représentation hexadécimale (quatre chiffres exactement, représentés par *nnnn*).|`\w\u0020\w`|"a b", "c d" dans<br /><br /> "a bc d"|  
+|`\u` *nnnn*|Correspond à un caractère Unicode en utilisant la représentation hexadécimale (quatre chiffres exactement, représentés par *nnnn*).|`\w\u0020\w`|« a b », « c d » dans « a bc d »|  
 |`\`|Lorsque ce caractère d'échappement est suivi d'un caractère non identifié comme caractère d'échappement, correspond au caractère lui-même. Par exemple, `\*` est identique à `\x2A`et `\.` est identique à `\x2E`. Cela permet au moteur des expressions régulières de lever l'ambiguïté d'éléments de langage (tels que \* ou ?) et de caractères littéraux (représentés par `\*` ou `\?`).|`\d+[\+-x\*]\d+`|"2+2" et "3\*9" dans "(2+2) \* 3\*9"|  
   
  [Retour au début](#top)  
@@ -92,11 +92,11 @@ ms.locfileid: "54531419"
   
 |Assertion|Description|Motif|Correspondances|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Par défaut, la correspondance doit commencer au début de la chaîne ; en mode multiligne, elle doit commencer au début de la ligne.|`^\d{3}`|"901" dans<br /><br /> "901-333-"|  
-|`$`|Par défaut, la correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne ; en mode multiligne, elle doit se produire avant la fin de la ligne ou avant `\n` à la fin de la ligne.|`-\d{3}$`|"-333" dans<br /><br /> "-901-333"|  
-|`\A`|La correspondance doit se produire au début de la chaîne.|`\A\d{3}`|"901" dans<br /><br /> "901-333-"|  
-|`\Z`|La correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne.|`-\d{3}\Z`|"-333" dans<br /><br /> "-901-333"|  
-|`\z`|La correspondance doit se produire à la fin de la chaîne.|`-\d{3}\z`|"-333" dans<br /><br /> "-901-333"|  
+|`^`|Par défaut, la correspondance doit commencer au début de la chaîne ; en mode multiligne, elle doit commencer au début de la ligne.|`^\d{3}`|« 901 » dans « 901-333- »|  
+|`$`|Par défaut, la correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne ; en mode multiligne, elle doit se produire avant la fin de la ligne ou avant `\n` à la fin de la ligne.|`-\d{3}$`|« -333 » dans « -901-333 »|  
+|`\A`|La correspondance doit se produire au début de la chaîne.|`\A\d{3}`|« 901 » dans « 901-333- »|  
+|`\Z`|La correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne.|`-\d{3}\Z`|« -333 » dans « -901-333 »|  
+|`\z`|La correspondance doit se produire à la fin de la chaîne.|`-\d{3}\z`|« -333 » dans « -901-333 »|  
 |`\G`|La correspondance doit se produire à l'emplacement où la correspondance précédente s'est terminée.|`\G\(\d\)`|« (1) », « (3) », « (5) » dans « (1)(3)(5)[7](9\) »|  
 |`\b`|La correspondance doit se produire sur une limite entre un caractère `\w` (alphanumérique) et un caractère `\W` (non alphanumériques).|`\b\w+\s\w+\b`|"thèm thème", "thèm thèm" dans "thèm thème thèm thèm"|  
 |`\B`|La correspondance ne doit pas se produire sur une limite `\b` .|`\Bend\w*\b`|"ends", "ender" dans "end sends endure lender"|  
@@ -218,7 +218,7 @@ ms.locfileid: "54531419"
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
-- <xref:System.Text.RegularExpressions.Regex>
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Expressions régulières](regular-expressions.md)
 - [Classes d'expressions régulières](the-regular-expression-object-model.md)
 - [Exemples d'expressions régulières](regular-expression-examples.md)
