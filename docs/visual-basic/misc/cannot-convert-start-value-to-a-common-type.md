@@ -1,17 +1,17 @@
 ---
-title: Ne peut pas convertir en valeur de départ de type '&lt;type1&gt;', valeur de limite de «&lt;type2&gt;« et valeur de l’étape »&lt;type3&gt;' en un type commun
+title: Ne peut pas convertir en valeur de départ de type '<type1>', valeur de limite de «<type2>« et valeur de l’étape »<type3>» en un type commun
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-ms.openlocfilehash: f0fba64fe9671c20e2f4f924ca9bb143ff721bf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49ec2dca53243227f06a589ccf647adf62372c30
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706876"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272030"
 ---
-# <a name="cannot-convert-start-value-of-type-lttype1gt-limit-value-of-lttype2gt-and-step-value-of-lttype3gt-to-a-common-type"></a>Ne peut pas convertir en valeur de départ de type '&lt;type1&gt;', valeur de limite de «&lt;type2&gt;« et valeur de l’étape »&lt;type3&gt;' en un type commun
+# <a name="cannot-convert-start-value-of-type-type1-limit-value-of-type2-and-step-value-of-type3-to-a-common-type"></a>Ne peut pas convertir en valeur de départ de type '\<type1 >', valeur de limite de «\<type2 >' et la valeur de pas de '\<type3 >' en un type commun
 Les valeurs de contrôle `For...Next` spécifiées ont des types différents et ne sont donc pas valides, car elles ne peuvent pas être converties en type commun.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

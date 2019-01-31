@@ -1,5 +1,5 @@
 ---
-title: '&#39;IsNot&#39; opérande de type &#39;typename&#39; ne peut être comparé qu’à &#39;rien&#39;, car &#39;typename&#39; est un type nullable'
+title: L’opérande 'IsNot' du type 'NomType' ne peut être comparé qu’à 'Nothing', car 'NomType' est un type nullable
 ms.date: 07/20/2015
 f1_keywords:
 - bc32128
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 65b04c85bccd169bbb2eea847d7b8af96c1a292f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caa009606825225dd4063780f9a22fb82f21cf4e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505716"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271285"
 ---
-# <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39;IsNot&#39; opérande de type &#39;typename&#39; ne peut être comparé qu’à &#39;rien&#39;, car &#39;typename&#39; est un type nullable
+# <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>L’opérande 'IsNot' du type 'NomType' ne peut être comparé qu’à 'Nothing', car 'NomType' est un type nullable
 Une variable déclarée comme nullable a été comparée à une expression autre que `Nothing` à l’aide de la `IsNot` opérateur.  
   
  **ID d’erreur :** BC32128  

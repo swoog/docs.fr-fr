@@ -1,15 +1,15 @@
 ---
-title: '&lt;udpAnnoucementEndpoint&gt;'
+title: <udpAnnoucementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: ab0e786ec4b21f25682c52fb7609d24e901f6eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c7c92db479efa9f6fdf2dafc9a6d512df4254e3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582433"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265192"
 ---
-# <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
+# <a name="udpannoucementendpoint"></a>\<udpAnnoucementEndpoint>
 Cet élément de configuration définit un point de terminaison standard utilisé par les services pour envoyer des messages d’annonce via une liaison UDP. Il a un contrat fixe et prend en charge deux versions de découverte. De plus, il possède une liaison UDP fixe et une valeur d'adresse par défaut indiquée dans les spécifications WS-Discovery (WS-Discovery Avril 2005 ou WS-Discovery version 1.1). Vous pouvez spécifier l'adresse de multidiffusion à utiliser pour l'envoi et la réception de messages d'annonce.  
   
 \<system.ServiceModel>  

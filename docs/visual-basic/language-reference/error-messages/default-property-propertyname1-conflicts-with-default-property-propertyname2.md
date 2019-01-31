@@ -1,5 +1,5 @@
 ---
-title: Propriété par défaut &#39; &lt;nom_propriété1&gt; &#39; est en conflit avec la propriété par défaut &#39; &lt;propertyname2&gt; &#39; dans &#39; &lt;classname&gt; &#39;et devrait donc être déclarée &#39;ombres&#39;
+title: La propriété par défaut '<propertyname1>' est en conflit avec la propriété par défaut '<propertyname2>' de la classe '<classname>' et devrait donc être déclarée 'Shadows'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40007
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: 3099467fa3c5a162c13c9235fb8d55375953ba3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc75b01532ffb112622d7f9bc837490c627883b3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521424"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270384"
 ---
-# <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>Propriété par défaut &#39; &lt;nom_propriété1&gt; &#39; est en conflit avec la propriété par défaut &#39; &lt;propertyname2&gt; &#39; dans &#39; &lt;classname&gt; &#39;et devrait donc être déclarée &#39;ombres&#39;
+# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Propriété par défaut '\<nom_propriété1 >' est en conflit avec la propriété par défaut '\<propertyname2 >' dans '\<nom_classe >' et devrait donc être déclarée 'Shadows'
 Une propriété est déclarée avec le même nom qu’une propriété définie dans la classe de base. Dans ce cas, la propriété de cette classe doit occulter la propriété de classe de base.  
   
  Ce message est un avertissement. `Shadows` est supposé par défaut. Pour plus d’informations sur le masquage des avertissements ou le traitement des avertissements en tant qu’erreurs, consultez [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  

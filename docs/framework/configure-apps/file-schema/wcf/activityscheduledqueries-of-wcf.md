@@ -1,15 +1,15 @@
 ---
-title: '&lt;activityScheduledQueries&gt; de WCF'
+title: <activityScheduledQueries> de WCF
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: 5430058049e8a09c1e2a289e1f997338c23b9d94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c9c292080016d7a2d0014ed07be371c0e247621
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492154"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285777"
 ---
-# <a name="ltactivityscheduledqueriesgt-of-wcf"></a>&lt;activityScheduledQueries&gt; de WCF
+# <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries > de WCF
 Représente une collection de requêtes qui permettent d’effectuer le suivi d’une activité dont l’exécution par une activité parent est planifiée. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner aux enregistrements d'une activité planifiée.  
   
 Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
