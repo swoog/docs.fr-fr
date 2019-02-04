@@ -11,85 +11,93 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae20e33f610acf77f2039b94803a19d371b771c0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0e2be4d9384f1e1ef73ce6064184aa2621a517a8
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265985"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674592"
 ---
-# <a name="gcconcurrent-element"></a><span data-ttu-id="43df3-102">\<gcConcurrent > élément</span><span class="sxs-lookup"><span data-stu-id="43df3-102">\<gcConcurrent> Element</span></span>
-<span data-ttu-id="43df3-103">Spécifie si le common language runtime exécute l’opération garbage collection sur un thread distinct.</span><span class="sxs-lookup"><span data-stu-id="43df3-103">Specifies whether the common language runtime runs garbage collection on a separate thread.</span></span>  
-  
- <span data-ttu-id="43df3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="43df3-104">\<configuration></span></span>  
-<span data-ttu-id="43df3-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="43df3-105">\<runtime></span></span>  
-<span data-ttu-id="43df3-106">\<gcConcurrent></span><span class="sxs-lookup"><span data-stu-id="43df3-106">\<gcConcurrent></span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="43df3-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="43df3-107">Syntax</span></span>  
-  
-```xml  
-<gcConcurrent    
-   enabled="true|false"/>  
-```  
-  
-## <a name="attributes-and-elements"></a><span data-ttu-id="43df3-108">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="43df3-108">Attributes and Elements</span></span>  
- <span data-ttu-id="43df3-109">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="43df3-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
-  
-### <a name="attributes"></a><span data-ttu-id="43df3-110">Attributs</span><span class="sxs-lookup"><span data-stu-id="43df3-110">Attributes</span></span>  
-  
-|<span data-ttu-id="43df3-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="43df3-111">Attribute</span></span>|<span data-ttu-id="43df3-112">Description</span><span class="sxs-lookup"><span data-stu-id="43df3-112">Description</span></span>|  
-|---------------|-----------------|  
-|`enabled`|<span data-ttu-id="43df3-113">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="43df3-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="43df3-114">Spécifie si le runtime exécute l'opération garbage collection simultanément.</span><span class="sxs-lookup"><span data-stu-id="43df3-114">Specifies whether the runtime runs garbage collection concurrently.</span></span>|  
-  
-## <a name="enabled-attribute"></a><span data-ttu-id="43df3-115">Attribut enabled</span><span class="sxs-lookup"><span data-stu-id="43df3-115">enabled Attribute</span></span>  
-  
-|<span data-ttu-id="43df3-116">Valeur</span><span class="sxs-lookup"><span data-stu-id="43df3-116">Value</span></span>|<span data-ttu-id="43df3-117">Description</span><span class="sxs-lookup"><span data-stu-id="43df3-117">Description</span></span>|  
-|-----------|-----------------|  
-|`false`|<span data-ttu-id="43df3-118">N’exécute pas l’opération garbage collection simultanément.</span><span class="sxs-lookup"><span data-stu-id="43df3-118">Does not run garbage collection concurrently.</span></span>|  
-|`true`|<span data-ttu-id="43df3-119">Exécute l’opération garbage collection simultanément.</span><span class="sxs-lookup"><span data-stu-id="43df3-119">Runs garbage collection concurrently.</span></span> <span data-ttu-id="43df3-120">Il s'agit de la valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="43df3-120">This is the default.</span></span>|  
-  
-### <a name="child-elements"></a><span data-ttu-id="43df3-121">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="43df3-121">Child Elements</span></span>  
- <span data-ttu-id="43df3-122">Aucun.</span><span class="sxs-lookup"><span data-stu-id="43df3-122">None.</span></span>  
-  
-### <a name="parent-elements"></a><span data-ttu-id="43df3-123">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="43df3-123">Parent Elements</span></span>  
-  
-|<span data-ttu-id="43df3-124">Élément</span><span class="sxs-lookup"><span data-stu-id="43df3-124">Element</span></span>|<span data-ttu-id="43df3-125">Description</span><span class="sxs-lookup"><span data-stu-id="43df3-125">Description</span></span>|  
-|-------------|-----------------|  
-|`configuration`|<span data-ttu-id="43df3-126">Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="43df3-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="43df3-127">Contient des informations sur les liaisons d’assembly et l’opération garbage collection.</span><span class="sxs-lookup"><span data-stu-id="43df3-127">Contains information about assembly binding and garbage collection.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="43df3-128">Notes</span><span class="sxs-lookup"><span data-stu-id="43df3-128">Remarks</span></span>  
- <span data-ttu-id="43df3-129">Dans les versions antérieures à .NET Framework 4, le garbage collection de station de travail prenait en charge le garbage collection simultané, qui exécutait l’opération garbage collection en arrière-plan sur un thread distinct.</span><span class="sxs-lookup"><span data-stu-id="43df3-129">Prior to the .NET Framework 4, workstation garbage collection supported concurrent garbage collection, which performed garbage collection in the background on a separate thread.</span></span> <span data-ttu-id="43df3-130">Dans .NET Framework 4, le garbage collection simultané a été remplacé par le garbage collection d'arrière-plan pour effectuer l'opération de la même manière.</span><span class="sxs-lookup"><span data-stu-id="43df3-130">In the .NET Framework 4, concurrent garbage collection was replaced by background GC, which also performs garbage collection in the background on a separate thread.</span></span> <span data-ttu-id="43df3-131">Depuis .NET Framework 4.5, le garbage collection d'arrière-plan est disponible dans le garbage collection de serveur.</span><span class="sxs-lookup"><span data-stu-id="43df3-131">Starting with the .NET Framework 4.5, background collection became available in server garbage collection.</span></span> <span data-ttu-id="43df3-132">L'élément `<gcConcurrent>` contrôle si le runtime exécute le garbage collection simultané ou d'arrière-plan, s'il est disponible, ou s'il exécute le garbage collection de premier plan.</span><span class="sxs-lookup"><span data-stu-id="43df3-132">The `<gcConcurrent>` element controls whether the runtime performs either concurrent or background garbage collection, if it is available, or whether it performs garbage collection in the foreground.</span></span>  
-  
+# <a name="gcconcurrent-element"></a><span data-ttu-id="0a618-102">\<gcConcurrent > élément</span><span class="sxs-lookup"><span data-stu-id="0a618-102">\<gcConcurrent> Element</span></span>
+
+<span data-ttu-id="0a618-103">Spécifie si le common language runtime exécute l’opération garbage collection sur un thread distinct.</span><span class="sxs-lookup"><span data-stu-id="0a618-103">Specifies whether the common language runtime runs garbage collection on a separate thread.</span></span>
+
+<span data-ttu-id="0a618-104">\<configuration>\\</span><span class="sxs-lookup"><span data-stu-id="0a618-104">\<configuration>\\</span></span>
+<span data-ttu-id="0a618-105">\<runtime>\\</span><span class="sxs-lookup"><span data-stu-id="0a618-105">\<runtime>\\</span></span>
+<span data-ttu-id="0a618-106">\<gcConcurrent></span><span class="sxs-lookup"><span data-stu-id="0a618-106">\<gcConcurrent></span></span>
+
+## <a name="syntax"></a><span data-ttu-id="0a618-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="0a618-107">Syntax</span></span>
+
+```xml
+<gcConcurrent
+   enabled="true|false"/>
+```
+
+## <a name="attributes-and-elements"></a><span data-ttu-id="0a618-108">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="0a618-108">Attributes and elements</span></span>
+
+<span data-ttu-id="0a618-109">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="0a618-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+
+### <a name="attributes"></a><span data-ttu-id="0a618-110">Attributs</span><span class="sxs-lookup"><span data-stu-id="0a618-110">Attributes</span></span>
+
+|<span data-ttu-id="0a618-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="0a618-111">Attribute</span></span>|<span data-ttu-id="0a618-112">Description</span><span class="sxs-lookup"><span data-stu-id="0a618-112">Description</span></span>|
+|---------------|-----------------|
+|`enabled`|<span data-ttu-id="0a618-113">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="0a618-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="0a618-114">Spécifie si le runtime exécute l’opération garbage collection simultanément.</span><span class="sxs-lookup"><span data-stu-id="0a618-114">Specifies whether the runtime runs garbage collection concurrently.</span></span>|
+
+## <a name="enabled-attribute"></a><span data-ttu-id="0a618-115">attribut activé</span><span class="sxs-lookup"><span data-stu-id="0a618-115">enabled attribute</span></span>
+
+|<span data-ttu-id="0a618-116">Value</span><span class="sxs-lookup"><span data-stu-id="0a618-116">Value</span></span>|<span data-ttu-id="0a618-117">Description</span><span class="sxs-lookup"><span data-stu-id="0a618-117">Description</span></span>|
+|-----------|-----------------|
+|`false`|<span data-ttu-id="0a618-118">Ne s’exécute pas le garbage collection simultanément.</span><span class="sxs-lookup"><span data-stu-id="0a618-118">Doesn't run garbage collection concurrently.</span></span>|
+|`true`|<span data-ttu-id="0a618-119">Exécute l’opération garbage collection simultanément.</span><span class="sxs-lookup"><span data-stu-id="0a618-119">Runs garbage collection concurrently.</span></span> <span data-ttu-id="0a618-120">Il s'agit de la valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="0a618-120">This is the default.</span></span>|
+
+### <a name="child-elements"></a><span data-ttu-id="0a618-121">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="0a618-121">Child elements</span></span>
+
+<span data-ttu-id="0a618-122">Aucun.</span><span class="sxs-lookup"><span data-stu-id="0a618-122">None.</span></span>
+
+### <a name="parent-elements"></a><span data-ttu-id="0a618-123">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="0a618-123">Parent elements</span></span>
+
+|<span data-ttu-id="0a618-124">Élément</span><span class="sxs-lookup"><span data-stu-id="0a618-124">Element</span></span>|<span data-ttu-id="0a618-125">Description</span><span class="sxs-lookup"><span data-stu-id="0a618-125">Description</span></span>|
+|-------------|-----------------|
+|`configuration`|<span data-ttu-id="0a618-126">Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0a618-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
+|`runtime`|<span data-ttu-id="0a618-127">Contient des informations sur les liaisons d’assembly et l’opération garbage collection.</span><span class="sxs-lookup"><span data-stu-id="0a618-127">Contains information about assembly binding and garbage collection.</span></span>|
+
+## <a name="remarks"></a><span data-ttu-id="0a618-128">Notes</span><span class="sxs-lookup"><span data-stu-id="0a618-128">Remarks</span></span>
+
+<span data-ttu-id="0a618-129">Dans les versions antérieures à .NET Framework 4, le garbage collection de station de travail prenait en charge le garbage collection simultané, qui exécutait l’opération garbage collection en arrière-plan sur un thread distinct.</span><span class="sxs-lookup"><span data-stu-id="0a618-129">Prior to the .NET Framework 4, workstation garbage collection supported concurrent garbage collection, which performed garbage collection in the background on a separate thread.</span></span> <span data-ttu-id="0a618-130">Dans .NET Framework 4, le garbage collection simultané a été remplacé par le garbage collection d'arrière-plan pour effectuer l'opération de la même manière.</span><span class="sxs-lookup"><span data-stu-id="0a618-130">In the .NET Framework 4, concurrent garbage collection was replaced by background GC, which also performs garbage collection in the background on a separate thread.</span></span> <span data-ttu-id="0a618-131">Depuis .NET Framework 4.5, le garbage collection d’arrière-plan est disponible dans le garbage collection de serveur.</span><span class="sxs-lookup"><span data-stu-id="0a618-131">Starting with the .NET Framework 4.5, background collection became available in server garbage collection.</span></span> <span data-ttu-id="0a618-132">Le `<gcConcurrent>` élément contrôle si le runtime exécute soit simultané ou en arrière-plan le garbage collection, s’il est disponible, ou s’il exécute le garbage collection de premier plan.</span><span class="sxs-lookup"><span data-stu-id="0a618-132">The `<gcConcurrent>` element controls whether the runtime performs either concurrent or background garbage collection, if it's available, or whether it performs garbage collection in the foreground.</span></span>
+
+### <a name="to-disable-background-garbage-collection"></a><span data-ttu-id="0a618-133">Pour désactiver le garbage collection d’arrière-plan</span><span class="sxs-lookup"><span data-stu-id="0a618-133">To disable background garbage collection</span></span>
+
 > [!WARNING]
->  <span data-ttu-id="43df3-133">Depuis .NET Framework 4, le garbage collection simultané est remplacé par le garbage collection d’arrière-plan.</span><span class="sxs-lookup"><span data-stu-id="43df3-133">Starting with the .NET Framework 4, concurrent garbage collection is replaced by background garbage collection.</span></span> <span data-ttu-id="43df3-134">Les termes du contrat *simultanées* et *arrière-plan* sont utilisés indifféremment dans la documentation .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="43df3-134">The terms *concurrent* and *background* are used interchangeably in the .NET Framework documentation.</span></span> <span data-ttu-id="43df3-135">Pour désactiver le garbage collection d’arrière-plan, utilisez l’élément `<gcConcurrent>` comme indiqué dans cet article.</span><span class="sxs-lookup"><span data-stu-id="43df3-135">To disable background garbage collection, use the `<gcConcurrent>` element, as discussed in this article.</span></span>  
-  
- <span data-ttu-id="43df3-136">Par défaut, le runtime utilise le garbage collection simultané ou d'arrière-plan, dont la latence est optimisée.</span><span class="sxs-lookup"><span data-stu-id="43df3-136">By default, the runtime uses concurrent or background garbage collection, which is optimized for latency.</span></span> <span data-ttu-id="43df3-137">Si votre application implique une grande interaction avec l'utilisateur, laissez le garbage collection simultané activé pour minimiser le temps d'interruption de l'application pendant l'exécution de l'opération garbage collection.</span><span class="sxs-lookup"><span data-stu-id="43df3-137">If your application involves heavy user interaction, leave concurrent garbage collection enabled to minimize the application's pause time to perform garbage collection.</span></span> <span data-ttu-id="43df3-138">Si vous définissez l'attribut `enabled` de l'élément `<gcConcurrent>` avec la valeur `false`, le runtime utilise le garbage collection non simultané, dont le débit est optimisé.</span><span class="sxs-lookup"><span data-stu-id="43df3-138">If you set the `enabled` attribute of the `<gcConcurrent>` element to `false`, the runtime uses non-concurrent garbage collection, which is optimized for throughput.</span></span> <span data-ttu-id="43df3-139">Le fichier de configuration suivant désactive le garbage collection d'arrière-plan.</span><span class="sxs-lookup"><span data-stu-id="43df3-139">The following configuration file disables background garbage collection.</span></span>  
-  
-```xml  
-<configuration>  
-   <runtime>  
-      <gcConcurrent enabled="false"/>  
-   </runtime>  
-</configuration>  
-```  
-  
- <span data-ttu-id="43df3-140">Le paramètre `<gcConcurrentSetting>` qui figure dans le fichier de configuration de l'ordinateur définit la valeur par défaut de toutes les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="43df3-140">If there is a `<gcConcurrentSetting>` setting in the machine configuration file, it defines the default value for all .NET Framework applications.</span></span> <span data-ttu-id="43df3-141">Ce paramètre se substitue au paramètre du fichier de configuration de l'application.</span><span class="sxs-lookup"><span data-stu-id="43df3-141">The machine configuration file setting overrides the application configuration file setting.</span></span>  
-  
- <span data-ttu-id="43df3-142">Pour plus d’informations sur simultané et garbage collection d’arrière-plan, consultez la section « garbage collection simultané » dans le [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md) rubrique.</span><span class="sxs-lookup"><span data-stu-id="43df3-142">For more information on concurrent and background garbage collection, see the "Concurrent garbage collection" section in the [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md) topic.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="43df3-143">Exemple</span><span class="sxs-lookup"><span data-stu-id="43df3-143">Example</span></span>  
- <span data-ttu-id="43df3-144">L’exemple suivant active le garbage collection simultané.</span><span class="sxs-lookup"><span data-stu-id="43df3-144">The following example enables concurrent garbage collection.</span></span>  
-  
-```xml  
-<configuration>  
-   <runtime>  
-      <gcConcurrent enabled="true"/>  
-   </runtime>  
-</configuration>  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="43df3-145">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="43df3-145">See also</span></span>
-- [<span data-ttu-id="43df3-146">Schéma des paramètres d’exécution</span><span class="sxs-lookup"><span data-stu-id="43df3-146">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="43df3-147">Schéma des fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="43df3-147">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="43df3-148">Principes de base du Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="43df3-148">Fundamentals of Garbage Collection</span></span>](../../../../../docs/standard/garbage-collection/fundamentals.md)
+> <span data-ttu-id="0a618-134">Depuis .NET Framework 4, le garbage collection simultané est remplacé par le garbage collection d’arrière-plan.</span><span class="sxs-lookup"><span data-stu-id="0a618-134">Starting with the .NET Framework 4, concurrent garbage collection is replaced by background garbage collection.</span></span> <span data-ttu-id="0a618-135">Les termes du contrat *simultanées* et *arrière-plan* sont utilisés indifféremment dans la documentation .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0a618-135">The terms *concurrent* and *background* are used interchangeably in the .NET Framework documentation.</span></span> <span data-ttu-id="0a618-136">Pour désactiver le garbage collection d’arrière-plan, utilisez l’élément `<gcConcurrent>` comme indiqué dans cet article.</span><span class="sxs-lookup"><span data-stu-id="0a618-136">To disable background garbage collection, use the `<gcConcurrent>` element, as discussed in this article.</span></span>
+
+<span data-ttu-id="0a618-137">Par défaut, le runtime utilise le garbage collection simultané ou d'arrière-plan, dont la latence est optimisée.</span><span class="sxs-lookup"><span data-stu-id="0a618-137">By default, the runtime uses concurrent or background garbage collection, which is optimized for latency.</span></span> <span data-ttu-id="0a618-138">Si votre application implique une grande interaction avec l'utilisateur, laissez le garbage collection simultané activé pour minimiser le temps d'interruption de l'application pendant l'exécution de l'opération garbage collection.</span><span class="sxs-lookup"><span data-stu-id="0a618-138">If your application involves heavy user interaction, leave concurrent garbage collection enabled to minimize the application's pause time to perform garbage collection.</span></span> <span data-ttu-id="0a618-139">Si vous définissez l'attribut `enabled` de l'élément `<gcConcurrent>` avec la valeur `false`, le runtime utilise le garbage collection non simultané, dont le débit est optimisé.</span><span class="sxs-lookup"><span data-stu-id="0a618-139">If you set the `enabled` attribute of the `<gcConcurrent>` element to `false`, the runtime uses non-concurrent garbage collection, which is optimized for throughput.</span></span> <span data-ttu-id="0a618-140">Le fichier de configuration suivant désactive le garbage collection d’arrière-plan.</span><span class="sxs-lookup"><span data-stu-id="0a618-140">The following configuration file disables background garbage collection.</span></span>
+
+```xml
+<configuration>
+   <runtime>
+      <gcConcurrent enabled="false"/>
+   </runtime>
+</configuration>
+```
+
+ <span data-ttu-id="0a618-141">S’il existe un `<gcConcurrentSetting>` définissant dans le fichier de configuration machine, il définit la valeur par défaut pour toutes les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0a618-141">If there's a `<gcConcurrentSetting>` setting in the machine configuration file, it defines the default value for all .NET Framework applications.</span></span> <span data-ttu-id="0a618-142">Ce paramètre se substitue au paramètre du fichier de configuration de l'application.</span><span class="sxs-lookup"><span data-stu-id="0a618-142">The machine configuration file setting overrides the application configuration file setting.</span></span>
+
+ <span data-ttu-id="0a618-143">Pour plus d’informations sur simultané et garbage collection d’arrière-plan, consultez le [le garbage collection simultané](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) section dans le [Fundamentals of Garbage Collection](../../../../standard/garbage-collection/fundamentals.md) article.</span><span class="sxs-lookup"><span data-stu-id="0a618-143">For more information on concurrent and background garbage collection, see the [Concurrent garbage collection](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) section in the [Fundamentals of Garbage Collection](../../../../standard/garbage-collection/fundamentals.md) article.</span></span>
+
+## <a name="example"></a><span data-ttu-id="0a618-144">Exemple</span><span class="sxs-lookup"><span data-stu-id="0a618-144">Example</span></span>
+
+<span data-ttu-id="0a618-145">L’exemple suivant active le garbage collection simultané :</span><span class="sxs-lookup"><span data-stu-id="0a618-145">The following example enables concurrent garbage collection:</span></span>
+
+```xml
+<configuration>
+   <runtime>
+      <gcConcurrent enabled="true"/>
+   </runtime>
+</configuration>
+```
+
+## <a name="see-also"></a><span data-ttu-id="0a618-146">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0a618-146">See also</span></span>
+
+- [<span data-ttu-id="0a618-147">Schéma des paramètres d’exécution</span><span class="sxs-lookup"><span data-stu-id="0a618-147">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="0a618-148">Schéma des fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="0a618-148">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="0a618-149">Principes de base du Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="0a618-149">Fundamentals of Garbage Collection</span></span>](../../../../standard/garbage-collection/fundamentals.md)
