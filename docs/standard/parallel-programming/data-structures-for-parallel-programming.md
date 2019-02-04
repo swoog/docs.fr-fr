@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517615"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479696"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Structures de données pour la programmation parallèle
 La version 4 de .NET Framework introduit de nouveaux types très utiles pour la programmation parallèle, notamment un ensemble de classes de collections simultanées, des primitives de synchronisation légères et des types pour l’initialisation tardive. Vous pouvez utiliser ces types avec n’importe quel code d’application multithread, y compris la bibliothèque parallèle de tâches et PLINQ.  
@@ -41,7 +41,7 @@ La version 4 de .NET Framework introduit de nouveaux types très utiles pour la 
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Permet à plusieurs threads de fonctionner en parallèle sur un algorithme en fournissant un point auquel chaque tâche peut signaler son arrivée, puis se bloquer jusqu'à ce qu’une partie ou la totalité des tâches soient arrivées. Pour plus d’informations, voir [Cloisonnement](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Simplifie les scénarios de duplication et de jointure en fournissant un mécanisme facile de réunion. Pour plus d'informations, consultez la page [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Primitive de synchronisation similaire à <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> est léger mais n’est utilisable que pour la communication intraprocessus. Pour plus d’informations, consultez la page [ManualResetEvent et ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Primitive de synchronisation similaire à <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> est léger mais n’est utilisable que pour la communication intraprocessus.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Primitive de synchronisation qui limite le nombre de threads pouvant accéder simultanément à une ressource ou à un pool de ressources. Pour plus d’informations, consultez la page [Semaphore et SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Primitive de verrou mutex obligeant le thread qui essaie d’acquérir le verrou à attendre dans une boucle ou à rester en *attente active* pendant un certain temps avant de transmettre son quantum. Dans les scénarios où l’attente du verrou est censée être courte, <xref:System.Threading.SpinLock> offre de meilleures performances que les autres types de verrouillage. Pour plus d'informations, consultez la page [SpinLock](../../../docs/standard/threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Type petit et léger qui restera en attente active pendant un certain temps et mettra le thread dans un état d’attente si le nombre est dépassé.  Pour plus d'informations, consultez la page [SpinWait](../../../docs/standard/threading/spinwait.md).|  

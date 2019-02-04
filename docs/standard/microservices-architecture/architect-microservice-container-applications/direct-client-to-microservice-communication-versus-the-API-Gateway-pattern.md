@@ -3,13 +3,13 @@ title: Modèle de passerelle API et communication directe de client à microserv
 description: Découvrez les différences et les utilisations du modèle de passerelle API et de la communication directe de client à microservice.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030540"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675450"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Modèle de passerelle API et communication directe de client à microservice
 
@@ -25,7 +25,7 @@ Une approche possible consiste à utiliser une architecture de communication dir
 
 Avec cette approche, chaque microservice a un point de terminaison public, parfois avec un port TCP différent pour chaque microservice. Voici un exemple d’URL pour un service particulier dans Azure :
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 Dans un environnement de production basé sur un cluster, cette URL serait mappée à l’équilibreur de charge utilisé dans le cluster, qui à son tour distribue les demandes entre les microservices. Dans les environnements de production, vous pouvez avoir un contrôleur de livraison d’application comme [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) entre vos microservices et Internet. Ceci fonctionne comme un niveau transparent qui non seulement effectue l’équilibrage de charge, mais permet aussi de sécuriser vos services en offrant un processus de terminaison SSL. Ceci allège la charge de vos hôtes en transférant à Azure Application Gateway les processus de terminaison SSL et d’autres tâches de routage qui consomment une grande quantité de ressources de l’UC. Dans tous les cas, un équilibreur de charge et un contrôleur de livraison d’application sont transparents du point de vue de l’architecture logique d’une application.
 
@@ -134,7 +134,7 @@ En plus de répondre à vos besoins de passerelle API, le service [Gestion des A
 
 **Figure 4-14**. Utilisation de Gestion des API Azure pour votre passerelle d’API
 
-Dans ce cas, lors l’utilisation d’un produit comme Gestion des API Azure, le fait d’avoir une seule passerelle d’API n’est pas si risqué, car ces types de passerelles d’API sont « plus fins », ce qui veut dire que vous n’implémentez pas de code C# personnalisé susceptible d’évoluer vers un composant monolithique. Ces produits font office de proxy inversé pour la communication en entrée, où vous pouvez aussi filtrer les API des microservices internes et appliquer une autorisation sur les API publiées dans ce niveau unique.
+Dans ce cas, lors l’utilisation d’un produit comme Gestion des API Azure, le fait d’avoir une seule passerelle d’API n’est pas si risqué, car ces types de passerelles d’API sont « plus fins », ce qui veut dire que vous n’implémentez pas de code C# personnalisé susceptible d’évoluer vers un composant monolithique. 
 
 Les produits Passerelle d’API agissent généralement comme un proxy inversé pour la communication en entrée, où vous pouvez aussi filtrer les API des microservices internes et appliquer une autorisation aux API publiées dans ce niveau unique.
 

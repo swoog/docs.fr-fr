@@ -1,5 +1,5 @@
 ---
-title: '&gt;, opérateur - Référence C#'
+title: '> Opérateur - Référence C#'
 ms.custom: seodec18
 ms.date: 12/18/2018
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '> operator [C#]'
 - greater than operator (>) [C#]
 ms.assetid: 26d3cb69-9c0b-4cc5-858b-5be1abd6659d
-ms.openlocfilehash: 0c9d414d159b5e2f1faa24e9bd5f073d1ca874a4
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 3b036c491d9663bf4ab0971d84a0a8d58d902ee6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655970"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287207"
 ---
-# <a name="gt-operator-c-reference"></a>&gt;, opérateur (référence C#)
+# <a name="-operator-c-reference"></a>>, opérateur (référence C#)
 
 L’opérateur de relation « supérieur à » `>` retourne `true` si son premier opérande est supérieur à son second opérande, `false` dans le cas contraire. Tous les types numériques et d’énumération prennent en charge l’opérateur `>`. Pour les opérandes du même type [enum](../keywords/enum.md), les valeurs correspondantes du type intégral sous-jacent sont comparées.
 

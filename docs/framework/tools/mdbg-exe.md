@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066400"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282033"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (débogueur de ligne de commande du .NET Framework)
 Le débogueur de ligne de commande du .NET Framework aide les fournisseurs d'outils et les développeurs d'applications à trouver et à corriger les bogues dans les programmes qui ont pour cible le Common Language Runtime du .NET Framework. Cet outil utilise l'API de débogage du runtime pour fournir des services de débogage. Vous pouvez utiliser MDbg.exe pour déboguer uniquement du code managé ; il n'y a pas de prise en charge du débogage du code non managé.  
@@ -103,8 +103,6 @@ mdbg>
  L'invite `mdbg>` indique que vous vous trouvez dans le débogueur.  
   
  Une fois que vous êtes dans le débogueur, utilisez les commandes et les arguments décrits dans la section précédente.  
-  
-## <a name="examples"></a>Exemples  
   
 ## <a name="see-also"></a>Voir aussi
 - [Outils](../../../docs/framework/tools/index.md)
