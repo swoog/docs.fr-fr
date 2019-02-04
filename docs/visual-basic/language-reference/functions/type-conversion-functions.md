@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743541"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674878"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Fonctions de conversion de types de données (Visual Basic)
 Ces fonctions sont compilé "inline", ce qui signifie que le code de conversion fait partie du code qui évalue l’expression. Parfois, il n’existe aucun appel à une procédure pour effectuer la conversion, ce qui améliore les performances. Chaque fonction convertit une expression en un type de données spécifique.  
@@ -128,7 +128,7 @@ CUShort(expression)
 |`CDbl`|[Double (type de données)](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1, 79769313486231570E + 308 à - 4, 94065645841246544E-324 pour les valeurs négatives ; 4, 94065645841246544E-324 à 1, 79769313486231570E + 308 pour les valeurs positives.|  
 |`CDec`|[Decimal (type de données)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79,228,162,514,264,337,593,543,950,335 pour les nombres à échelle zéro, autrement dit, les nombres sans décimales. Pour les nombres à 28 décimales, la plage est +/-7,9228162514264337593543950335. Le plus petit nombre possible de zéro est 0,0000000000000000000000000001 (+/-1E-28).|  
 |`CInt`|[Integer (type de données)](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (allant de -2,147,483,648) via <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2 147 483 647) ; parties fractionnaires sont arrondies.<sup> 1</sup> <br/><br/>À partir de Visual Basic 15.8, Visual Basic optimise les performances de la virgule flottante pour la conversion d’un entier avec la `CInt` fonction ; consultez la [notes](#remarks) section pour plus d’informations. Consultez le [CInt exemple](#cint-example) section pour obtenir un exemple. |  
-|`CLng`|[Long (type de données)](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) via <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9,223,372,036,854,775,807) ; parties fractionnaires sont arrondies.<sup> 1</sup><br/><br/>À partir de Visual Basic 15.8, Visual Basic optimise les performances de la virgule flottante pour la conversion d’entier 64 bits avec le `CLng` fonction ; consultez la [notes](#remarks) section pour plus d’informations. Consultez le [CInt exemple](#cint-example) section pour obtenir un exemple.|  
+|`CLng`|[Long (type de données)](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) via <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9,223,372,036,854,775,807) ; parties fractionnaires sont arrondies.<sup> 1</sup><br/><br/>À partir de Visual Basic 15.8, Visual Basic optimise les performances de la virgule flottante pour la conversion d’entier 64 bits avec le `CLng` fonction ; consultez la [notes](#remarks) section pour plus d’informations. Consultez le [CInt exemple](#cint-example) section pour obtenir un exemple.|  
 |`CObj`|[Object (type de données)](../../../visual-basic/language-reference/data-types/object-data-type.md)|Toute expression valide.|  
 |`CSByte`|[SByte (type de données)](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> -(128) via <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127) ; parties fractionnaires sont arrondies.<sup> 1</sup><br/><br/>À compter de 15.8 de Visual Basic, Visual Basic optimise les performances des valeurs à virgule flottante conversion octet signé avec la `CSByte` fonction ; consultez la [notes](#remarks) section pour plus d’informations. Consultez le [CInt exemple](#cint-example) section pour obtenir un exemple.|  
 |`CShort`|[Short (type de données)](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32 768) via <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32 767) ; parties fractionnaires sont arrondies.<sup> 1</sup><br/><br/>À partir de Visual Basic 15.8, Visual Basic optimise les performances des valeurs à virgule flottante conversion entier 16 bits avec le `CShort` fonction ; consultez la [notes](#remarks) section pour plus d’informations. Consultez le [CInt exemple](#cint-example) section pour obtenir un exemple.|  
