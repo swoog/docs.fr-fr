@@ -1,18 +1,18 @@
 ---
-title: 'Comment : créer des certificats temporaires à utiliser au cours du développement'
+title: 'Procédure : Créer des certificats temporaires à utiliser pendant le développement'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698582"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738628"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Comment : créer des certificats temporaires à utiliser au cours du développement
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procédure : Créer des certificats temporaires à utiliser pendant le développement
 
 Lorsque vous développez un service sécurisé ou un client à l’aide de Windows Communication Foundation (WCF), il est souvent nécessaire de fournir un certificat X.509 à utiliser comme informations d’identification. Le certificat fait en général partie d'une chaîne de certificats dont l'autorité racine est présente dans le magasin d'Autorités de certification racines de confiance de l'ordinateur. Une chaîne de certificats vous permet de définir la portée d'un jeu de certificats où en général l'autorité racine provient de votre organisation ou votre division. Pour émuler ce scénario au moment du développement, vous pouvez créer deux certificats pour satisfaire les conditions de sécurité. Le premier est un certificat auto-signé placé dans le magasin d'Autorités de certification racines de confiance. Le deuxième certificat est créé à partir du premier et placé dans le magasin personnel de l'emplacement de l'ordinateur local ou dans le magasin personnel de l'emplacement de l'utilisateur actif. Cette rubrique décrit les étapes pour créer ces deux certificats à l’aide de la commande Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) applet de commande.
 
@@ -21,7 +21,7 @@ Lorsque vous développez un service sécurisé ou un client à l’aide de Windo
 >
 > Par défaut, le [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) applet de commande crée des certificats auto-signés et ces certificats ne sont pas sécurisés. Placer les certificats auto-signés dans Trusted Root Certification Authorities store vous permet de créer un environnement de développement plus fidèlement votre environnement de déploiement.
 
- Pour plus d’informations sur la création et l’utilisation de certificats, consultez [utilisation des certificats](working-with-certificates.md). Pour plus d’informations sur l’utilisation d’un certificat comme information d’identification, consultez [Securing Services and Clients](securing-services-and-clients.md). Pour obtenir un didacticiel sur l’utilisation de la technologie Authenticode de Microsoft, consultez [Authenticode Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=88919).
+ Pour plus d’informations sur la création et l’utilisation de certificats, consultez [utilisation des certificats](working-with-certificates.md). Pour plus d’informations sur l’utilisation d’un certificat comme information d’identification, consultez [Securing Services and Clients](securing-services-and-clients.md). Pour obtenir un didacticiel à propos de l’utilisation de la technologie Authenticode de Microsoft, consultez [Authenticode Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=88919)(Vues d’ensemble et didacticiels relatifs à Authenticode).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Pour créer un certificat d'autorité racine auto-signé et exporter la clé privée
 
@@ -62,7 +62,7 @@ Une fois qu'un certificat auto-signé est créé, vous pouvez l'installer dans l
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Pour installer un certificat auto-signé dans les Autorités de certification racines de confiance
 
-1. Ouvrez le composant logiciel enfichable Certificat. Pour plus d’informations, consultez [Guide pratique pour afficher des certificats à l’aide du composant logiciel enfichable MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
+1. Ouvrez le composant logiciel enfichable Certificat. Pour plus d'informations, voir [Procédure : Afficher les certificats avec le composant logiciel enfichable MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Ouvrez le dossier pour stocker le certificat, soit **Ordinateur local** , soit **Utilisateur actuel**.
 
@@ -70,7 +70,7 @@ Une fois qu'un certificat auto-signé est créé, vous pouvez l'installer dans l
 
 4. Cliquez avec le bouton droit sur le dossier **Certificats** et cliquez sur **Toutes les tâches**, puis cliquez sur **Importer**.
 
-5. Suivez les instructions de l'Assistant à l'écran pour importer TempCa.cer dans le magasin.
+5. Suivez l’Assistant à l’écran des instructions pour importer le RootCA.pfx dans le magasin.
 
 ## <a name="using-certificates-with-wcf"></a>L’utilisation de certificats avec WCF
 
@@ -106,7 +106,7 @@ Dans le fichier de configuration pour un client, utilisez le code XML suivant po
 </behaviors>
 ```
 
-Pour plus d’informations sur l’utilisation de certificats dans WCF, consultez [utilisation des certificats](working-with-certificates.md).
+Pour plus d’informations sur l’utilisation des certificats dans WCF, consultez [Working with Certificates](working-with-certificates.md).
 
 ## <a name="net-framework-security"></a>sécurité du .NET Framework
 
@@ -115,5 +115,5 @@ Veillez à supprimer tous les certificats d'autorité racines temporaires des do
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation des certificats](working-with-certificates.md)
-- [Guide pratique pour afficher des certificats à l’aide du composant logiciel enfichable MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Guide pratique pour Afficher les certificats avec le composant logiciel enfichable MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Sécurisation des services et des clients](securing-services-and-clients.md)

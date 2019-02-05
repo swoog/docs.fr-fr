@@ -5,12 +5,12 @@ helpviewer_keywords:
 - StringBuilder class
 - strings [Visual Basic], using StringBuilder
 ms.assetid: 9c042880-aa16-432e-9ccb-cd00abda9ae3
-ms.openlocfilehash: 84f0f41cf8ee23466d47dae3b1068c3bc5334072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dec1afdbd3ca6c0ba719a95906de8cf6fc7ba378
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528444"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738797"
 ---
 # <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Procédure : Créer des chaînes à l’aide de StringBuilder en Visual Basic
 Cet exemple construit une longue chaîne à partir de plusieurs chaînes plus petites à l’aide de la <xref:System.Text.StringBuilder> classe. Le <xref:System.Text.StringBuilder> classe est plus efficace que le `&=` opérateur pour concaténer plusieurs chaînes.  
@@ -26,4 +26,3 @@ Cet exemple construit une longue chaîne à partir de plusieurs chaînes plus pe
 - [Chaînes](../../../../visual-basic/programming-guide/language-features/strings/index.md)
 - [Création de chaînes](../../../../standard/base-types/creating-new.md)
 - [Manipulation de chaînes](../../../../standard/base-types/manipulating-strings.md)
-- [Exemples de chaînes](https://msdn.microsoft.com/library/be9e82a3-dc95-4aaa-9396-61b66e467e02(v=vs.100))

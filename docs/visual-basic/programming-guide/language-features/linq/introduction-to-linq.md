@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5222d51ff2f60dd31ec52a8d5d6d52f37e02443
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524051"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739200"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduction à LINQ dans Visual Basic
 Language-Integrated Query (LINQ) ajoute des capacités de requête à Visual Basic et fournit des fonctionnalités puissantes et simples lorsque vous travaillez avec tous les types de données. Au lieu d’envoyer une requête à une base de données à traiter ou utilisation de la syntaxe de requête différente pour chaque type de données que vous recherchez, LINQ introduit des requêtes en tant que partie du langage Visual Basic. Il utilise une syntaxe unifiée indépendamment du type de données.  
@@ -240,7 +240,7 @@ Vous pouvez utiliser des fonctionnalités de requête LINQ supplémentaires en a
   
  [Guide pratique pour Rechercher la valeur minimale ou maximale dans un résultat de requête](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
- [Guide pratique pour affecter des procédures stockées pour effectuer des mises à jour, des insertions et des suppressions (Concepteur O/R)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
+ [Guide pratique pour affecter des procédures stockées pour effectuer des mises à jour, des insertions et des suppressions (Concepteur O/R)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
 ## <a name="featured-book-chapters"></a>Chapitres proposés  
  [Chapitre 17 : LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) dans [de programmation Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
