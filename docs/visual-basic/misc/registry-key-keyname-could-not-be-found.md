@@ -2,22 +2,21 @@
 title: Clé de Registre '<keyname>' est introuvable
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
-ms.openlocfilehash: 38c25fd9e5494b09c0b3c3aa8947d6540b9ac1bc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 83ee3160471e2271151abdfb7b4afd0d151bd9c2
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274584"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738680"
 ---
-# <a name="registry-key-keyname-could-not-be-found"></a><span data-ttu-id="f0a10-102">Clé de Registre '\<nom_clé >' est introuvable</span><span class="sxs-lookup"><span data-stu-id="f0a10-102">Registry key '\<keyname>' could not be found</span></span>
-<span data-ttu-id="f0a10-103">Une clé de Registre est introuvable.</span><span class="sxs-lookup"><span data-stu-id="f0a10-103">A registry key cannot be found.</span></span>  
+# <a name="registry-key-keyname-could-not-be-found"></a><span data-ttu-id="8ba6c-102">Clé de Registre '\<nom_clé >' est introuvable</span><span class="sxs-lookup"><span data-stu-id="8ba6c-102">Registry key '\<keyname>' could not be found</span></span>
+<span data-ttu-id="8ba6c-103">Une clé de Registre est introuvable.</span><span class="sxs-lookup"><span data-stu-id="8ba6c-103">A registry key cannot be found.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f0a10-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="f0a10-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8ba6c-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="8ba6c-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="f0a10-105">Vérifiez l’orthographe du nom de la clé.</span><span class="sxs-lookup"><span data-stu-id="f0a10-105">Check the spelling of the key name.</span></span>  
+1.  <span data-ttu-id="8ba6c-105">Vérifiez l’orthographe du nom de la clé.</span><span class="sxs-lookup"><span data-stu-id="8ba6c-105">Check the spelling of the key name.</span></span>  
   
-2.  <span data-ttu-id="f0a10-106">Assurez-vous de disposer des autorisations de sécurité suffisantes pour accéder à la clé.</span><span class="sxs-lookup"><span data-stu-id="f0a10-106">Make sure that you have sufficient security permissions to access the key.</span></span>  
+2.  <span data-ttu-id="8ba6c-106">Assurez-vous de disposer des autorisations de sécurité suffisantes pour accéder à la clé.</span><span class="sxs-lookup"><span data-stu-id="8ba6c-106">Make sure that you have sufficient security permissions to access the key.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0a10-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f0a10-107">See also</span></span>
-- [<span data-ttu-id="f0a10-108">Liste des registres</span><span class="sxs-lookup"><span data-stu-id="f0a10-108">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)
-- [<span data-ttu-id="f0a10-109">Modifications d’accès du Registre en Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="f0a10-109">Registry Access Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)
+## <a name="see-also"></a><span data-ttu-id="8ba6c-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8ba6c-107">See also</span></span>
+- [<span data-ttu-id="8ba6c-108">Liste des registres</span><span class="sxs-lookup"><span data-stu-id="8ba6c-108">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)
