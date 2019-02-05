@@ -1,17 +1,23 @@
 ---
-title: 'Types - Guide de programmation C#'
+title: Types - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'value types [C#]'
-  - 'reference types [C#]'
-  - 'types [C#]'
-  - 'C# language, data types'
-  - 'common type system [C#]'
-  - 'data types [C#]'
-  - 'C# language, types'
-  - 'strong typing [C#]'
+- value types [C#]
+- reference types [C#]
+- types [C#]
+- C# language, data types
+- common type system [C#]
+- data types [C#]
+- C# language, types
+- strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
+ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739314"
 ---
 # <a name="types-c-programming-guide"></a>Types (Guide de programmation C#)
 ## <a name="types-variables-and-values"></a>Types, variables et valeurs  
@@ -82,8 +88,8 @@ Types valeur et types référence dans le CTS
  Les types numériques intégrés sont des structs et disposent de propriétés et de méthodes auxquelles vous pouvez accéder :  
   
 ```csharp  
-// Static method on type Byte.  
-byte b = Byte.MaxValue;  
+// Static method on type byte.  
+byte b = byte.MaxValue;
 ```  
   
  Mais vous les déclarez et leur affectez des valeurs comme s’ils étaient de simples types non agrégés :  
