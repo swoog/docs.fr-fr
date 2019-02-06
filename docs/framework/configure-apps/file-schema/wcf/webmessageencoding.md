@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e263062d47708983e7771a8db63ba20d2193ece3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260032"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759639"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 Permet de lire et d’écrire du contenu XML en texte brut, les encodages de message JSON (JavaScript Objet Notation) et du contenu binaire brut dans une liaison Windows Communication Foundation (WCF).  
@@ -41,7 +41,7 @@ Permet de lire et d’écrire du contenu XML en texte brut, les encodages de me
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -60,7 +60,7 @@ Permet de lire et d’écrire du contenu XML en texte brut, les encodages de me
   
  `maxReadPoolSize` et `maxWritePoolSize` peuvent également être utilisés pour définir respectivement le nombre maximal de lecteurs et de writers à allouer. Par défaut, 64 lecteurs et 16 writers sont alloués.  
   
- Contraintes de complexité par défaut sont également définies à l’aide de la [ \<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) élément pour vous protéger contre une classe de déni de service (DOS) attaques qui tentent d’exploiter la complexité de message pour lier le traitement de point de terminaison ressources.  
+ Contraintes de complexité par défaut sont également définies à l’aide de la [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) élément pour vous protéger contre une classe de déni de service (DOS) attaques qui tentent d’exploiter la complexité de message pour lier le traitement de point de terminaison ressources.  
   
 ## <a name="example"></a>Exemple  
   

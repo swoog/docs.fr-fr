@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 56de1554480fdb31f64859da2d94a81618f01c50
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 653169dfe0e590181d3ee225e77d71e9dbe11ccd
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270462"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759065"
 ---
 # <a name="error-creating-win32-resources-error-message"></a>Erreur de création de ressources Win32 : \<message d’erreur >
 Le compilateur Visual Basic appelle l’utilitaire Assembly Linker (Al.exe, également appelé Alink) pour générer un assembly avec un manifeste. L'éditeur de liens a signalé une erreur pendant la création d'une ressource en mémoire. L'environnement peut poser problème ou votre ordinateur peut manquer de mémoire.  
@@ -27,5 +27,5 @@ Le compilateur Visual Basic appelle l’utilitaire Assembly Linker (Al.exe, éga
   
 ## <a name="see-also"></a>Voir aussi
 
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Nous contacter](/visualstudio/ide/talk-to-us)

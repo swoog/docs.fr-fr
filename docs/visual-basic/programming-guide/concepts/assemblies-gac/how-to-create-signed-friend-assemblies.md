@@ -2,12 +2,12 @@
 title: 'Procédure : Créer des assemblys Friend signés (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 02acda34783afceaeb83d0d0752e5247747b5337
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 699c3de3c246be0bafdcc66ca7fd82384dc66d92
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667292"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758870"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procédure : Créer des assemblys Friend signés (Visual Basic)
 Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayant des noms forts. Les deux assemblys doivent avoir des noms forts. Bien que les deux assemblys dans cet exemple utilisent les mêmes clés, vous pouvez utiliser des clés différentes pour deux assemblys.  
@@ -16,7 +16,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
   
 1.  Ouvrez une invite de commandes.  
   
-2.  Utilisez la séquence de commandes suivante avec l’outil Strong Name Tool pour générer un fichier de clé et afficher sa clé publique. Pour plus d’informations, consultez [Sn.exe (Strong Name Tool)][Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
+2.  Utilisez la séquence de commandes suivante avec l’outil Strong Name Tool pour générer un fichier de clé et afficher sa clé publique. Pour plus d’informations, consultez [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
     1.  Générez une clé de nom fort pour cet exemple et stockez-la dans le fichier FriendAssemblies.snk :  
   
@@ -90,6 +90,6 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
 - [Assemblys friend (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Guide pratique pour Créer des assemblys Friend non signés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [Sn.exe (Strong Name Tool)] [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md))
 - [Création et utilisation d’assemblys avec nom fort](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Concepts de programmation](../../../../visual-basic/programming-guide/concepts/index.md)

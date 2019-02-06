@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5b69d6add9a01b890cdcc1c6f3be1b1d35f3cd78
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083507"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758987"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procédure : Créer une stratégie d’éditeur
 Les fournisseurs d’assemblys peuvent indiquer que les applications doivent utiliser une version plus récente d’un assembly en incluant un fichier de stratégie de serveur de publication avec l’assembly mis à niveau. Le fichier de stratégie d’éditeur spécifie la redirection d’assembly et les paramètres de base de code et utilise le même format qu’un fichier de configuration d’application. Le fichier de stratégie d’éditeur est compilé dans un assembly et placé dans le global assembly cache.  
@@ -103,8 +103,7 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
 ## <a name="see-also"></a>Voir aussi
 - [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configuration d'applications](../../../docs/framework/configure-apps/index.md)
-- [Configuration des applications .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Configuration d’applications à l’aide de fichiers de Configuration](../../../docs/framework/configure-apps/index.md)
 - [Schéma des paramètres d’exécution](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirection des versions d'assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

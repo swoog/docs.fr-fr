@@ -3,12 +3,12 @@ title: <bufferReceive>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b23c3a54-10d4-4f13-ab6d-98b26b76f22a
-ms.openlocfilehash: 6ed37d73440dac22288ae1da526d81b2d0b990a1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1e095e3da11277c6b7b3c24e98a769500e1a0c0b
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286622"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759533"
 ---
 # <a name="bufferreceive"></a>\<bufferReceive>
 Comportement de service qui permet à un service d'utiliser le traitement de la réception mise en mémoire tampon, ce qui permet à un service de flux de travail de traiter les messages dans le désordre.  
@@ -50,5 +50,5 @@ Comportement de service qui permet à un service d'utiliser le traitement de la 
 |[\<comportement > de \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Spécifie un élément de comportement.|  
   
 ## <a name="see-also"></a>Voir aussi
-<!-- <xref:System.ServiceModel.Activities.Description.BufferReceiveServiceBehavior>  -->
+- <xref:System.ServiceModel.Activities.Description.BufferedReceiveServiceBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.BufferedReceiveElement>
