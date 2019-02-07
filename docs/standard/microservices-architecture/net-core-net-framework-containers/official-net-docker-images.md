@@ -1,15 +1,15 @@
 ---
 title: Images officielles .NET Docker
-description: Architecture de microservices .NET pour les applications .NET conteneurisées | Images officielles .NET Docker
+description: Architecture de microservices .NET pour les applications .NET en conteneur | Images officielles .NET Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131376"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479605"
 ---
 # <a name="official-net-docker-images"></a>Images officielles .NET Docker
 
@@ -27,17 +27,17 @@ Au moment de créer des images Docker pour développeurs, Microsoft s’est conc
 
 -   Images utilisées pour *exécuter* des applications .NET Core
 
-Pourquoi plusieurs images ? En règle générale, vos propriétés varient selon que vous développez, générez ou exécutez des applications conteneurisées. En proposant des images différentes en fonction des tâches, Microsoft permet d’optimiser ces processus distincts que sont le développement, la génération et le déploiement d’applications.
+Pourquoi plusieurs images ? En règle générale, vos propriétés varient selon que vous développez, générez ou exécutez des applications en conteneur. En proposant des images différentes en fonction des tâches, Microsoft permet d’optimiser ces processus distincts que sont le développement, la génération et le déploiement d’applications.
 
 ### <a name="during-development-and-build"></a>En phase de développement et de génération
 
-En phase de développement, il importe d’itérer rapidement les modifications et de pouvoir les déboguer. La taille de l’image est moins importante que la possibilité d’apporter des modifications à votre code et de voir rapidement ces modifications. Certains outils et « conteneurs d’agent de build » utilisent l’image de développement .NET Core (*microsoft/dotnet:2.1-sdk*) pendant les processus de développement et de génération. Ce qui importe au moment de générer à l’intérieur d’un conteneur Docker, ce sont les éléments nécessaires à la compilation de l’application. Il s’agit notamment du compilateur et des autres dépendances .NET.
+En phase de développement, il importe d’itérer rapidement les modifications et de pouvoir les déboguer. La taille de l’image est moins importante que la possibilité d’apporter des modifications à votre code et de voir rapidement ces modifications. Certains outils et « conteneurs d’agent de build » utilisent l’image de développement .NET Core (*microsoft/dotnet:2.2-sdk*) pendant les processus de développement et de génération. Ce qui importe au moment de générer à l’intérieur d’un conteneur Docker, ce sont les éléments nécessaires à la compilation de l’application. Il s’agit notamment du compilateur et des autres dépendances .NET.
 
 Pourquoi ce type d’image de build est-il important ? Vous ne déployez pas cette image en production. En effet, il s’agit d’une image que vous utilisez pour générer le contenu que vous placez dans une image de production. Cette image est destinée à être utilisée dans votre environnement d’intégration continue (CI) ou votre environnement de génération lorsque vous utilisez des builds Docker à plusieurs phases.
 
 ### <a name="in-production"></a>En production
 
-Ce qui importe en production, c’est la vitesse à laquelle vous pouvez déployer et démarrer vos conteneurs basées sur une image .NET Core de production. Par conséquent, l’image runtime basée sur *microsoft/dotnet:2.1-aspnetcore-runtime* est petite de façon à accélérer son transit sur le réseau de votre registre Docker à vos hôtes Docker. Le contenu est prêt à s’exécuter, ce qui permet d’écourter au maximum la durée entre le démarrage du conteneur et le traitement des résultats. Dans le modèle Docker, il n’est pas nécessaire de compiler à partir de code C\# comme c’est le cas lorsque vous exécutez la commande dotnet build ou dotnet publish en utilisant le conteneur de build.
+Ce qui importe en production, c’est la vitesse à laquelle vous pouvez déployer et démarrer vos conteneurs basées sur une image .NET Core de production. Ainsi, l’image runtime basée sur *microsoft/dotnet:2.2-aspnetcore-runtime* est petite de façon à accélérer son transit sur le réseau de votre registre Docker à vos hôtes Docker. Le contenu est prêt à s’exécuter, ce qui permet d’écourter au maximum la durée entre le démarrage du conteneur et le traitement des résultats. Dans le modèle Docker, il n’est pas nécessaire de compiler à partir de code C\# comme c’est le cas lorsque vous exécutez la commande dotnet build ou dotnet publish en utilisant le conteneur de build.
 
 Dans cette image optimisée, vous placez uniquement les fichiers binaires et le reste du contenu nécessaire à l’exécution de l’application. Par exemple, le contenu créé par la commande dotnet publish contient uniquement les fichiers binaires .NET compilés, des images et des fichiers .js et .css. Au fil du temps, vous verrez des images qui contiennent des packages prétraités avec JIT (la compilation du langage intermédiaire en code natif qui se produit lors de l’exécution).
 
@@ -47,8 +47,8 @@ En explorant les dépôts d’images .NET dans Docker Hub, vous trouverez plusie
 
 | Image                                       | Commentaires                                                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core, avec le runtime uniquement et les optimisations ASP.NET Core, Linux et Windows (multi-arch) |
-| microsoft/dotnet:**2.1-sdk**                | .NET Core, avec les SDK inclus, sur Linux et Windows (multi-arch)                                  |
+| microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core, avec le runtime uniquement et les optimisations ASP.NET Core, Linux et Windows (multi-arch) |
+| microsoft/dotnet:**2.2-sdk**                | .NET Core, avec les SDK inclus, sur Linux et Windows (multi-arch)                                  |
 
 >[!div class="step-by-step"]
 >[Précédent](net-container-os-targets.md)

@@ -1,5 +1,5 @@
 ---
-title: =&gt;, opérateur - Référence C#
+title: =>, opérateur - Référence C#
 ms.custom: seodec18
 ms.date: 01/22/2019
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: fa2e149f5b19e80e3171d08519be3ae249d2a112
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cded9d23d67e6afc8b01d6711e42759b4b51fab
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540804"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275858"
 ---
-# <a name="gt-operator-c-reference"></a>=&gt;, opérateur (référence C#)
+# <a name="-operator-c-reference"></a>=>, opérateur (référence C#)
 
 Le jeton `=>` est pris en charge sous deux formes : comme opérateur lambda, et comme séparateur d’un nom de membre et de l’implémentation de membre dans une définition de corps d’expression.
 

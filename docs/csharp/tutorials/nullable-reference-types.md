@@ -3,12 +3,12 @@ title: Concevoir avec des types référence Nullable
 description: Ce tutoriel avancé présente les types référence Nullable. Il explique comment exprimer une intention de conception lorsque les valeurs de référence peuvent être Null et comment, dans le cas contraire, indiquer au compilateur qu’elles ne peuvent pas être Null.
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e4cb423658287e5260770a680f189c227b9cd01
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156687"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204767"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutoriel : Exprimer plus clairement une intention de conception avec les types référence Nullable et non Nullable
 
@@ -190,7 +190,7 @@ La responsabilité principale de cette classe consiste à générer les réponse
 1. Demander à participer à l’enquête. Si la personne refuse, renvoyer une réponse manquante (Null).
 1. Poser chaque question et enregistrer la réponse. Chacune des réponses peut également être manquante (Null).
 
-Ajoutez le code suivant à la classe `SurveyRespondent` :
+Ajoutez le code suivant à la classe `SurveyResponse` :
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
@@ -228,7 +228,7 @@ Aucun contrôle `null` n’est nécessaire dans ce code, car vous avez conçu le
 
 ## <a name="get-the-code"></a>Obtenir le code
 
-Pour obtenir le code du tutoriel complet, voir notre référentiel [samples](https://github.com/dotnet/samples) dans le dossier [csharp/IntroToNullables](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction).
+Pour obtenir le code du tutoriel complet, consultez notre dépôt [samples](https://github.com/dotnet/samples) dans le dossier [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction).
 
 Faites des essais en modifiant les déclarations de type entre les types référence Nullable et non Nullable. Examinez les différents avertissements générés, qui visent à empêcher de déréférencer accidentellement un `null`.
 

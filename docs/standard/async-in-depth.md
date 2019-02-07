@@ -6,18 +6,18 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492831"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285023"
 ---
 # <a name="async-in-depth"></a>Async en détail
 
 L’écriture de code asynchrone utilisant des E/S et le processeur est simple avec le modèle asynchrone .NET basé sur des tâches. Le modèle est exposé par les types `Task` et `Task<T>` et les mots clés `async` et `await` en C# et Visual Basic. (Les ressources propres à chaque langage se trouvent dans la section [Voir aussi](#see-also).) Cet article explique comment utiliser le code asynchrone .NET et fournit un aperçu du framework asynchrone utilisé en coulisses.
 
-## <a name="task-and-tasklttgt"></a>Task et Task&lt;T&gt;
+## <a name="task-and-taskt"></a>Task et Task\<T>
 
 Les tâches sont des constructions utilisées pour implémenter ce que l’on appelle le [modèle de promesses de concurrence](https://en.wikipedia.org/wiki/Futures_and_promises).  En bref, elles vous offrent la « promesse » que le travail sera terminé à un moment ultérieur, ce qui vous permet de coordonner la promesse et une nouvelle API.
 
@@ -114,7 +114,7 @@ Plus important encore, parce que le travail utilisant des E/S ne se sert pratiqu
 
 Par ailleurs, la répartition du travail sur le thread d’interface utilisateur (par exemple, la mise à jour d’une interface utilisateur) est très simple avec des méthodes `async` et n’engendre pas de travail supplémentaire (par exemple, l’appel d’un délégué thread-safe).
 
-## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Approfondissement : Task et Task&lt;T&gt; pour une opération utilisant le processeur
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Approfondissement : Task et Task\<T> pour une opération utilisant le processeur
 
 Le code `async` utilisant le processeur est un peu différent du code `async` utilisant des E/S.  Comme le travail est effectué sur le processeur, il n’est pas possible de dédier un thread au calcul.  L’utilisation de `async` et `await` est un moyen d’interagir avec un thread en arrière-plan et de faire en sorte que l’appelant de la méthode async reste réactif.  Notez que cela ne protège en rien les données partagées.  Si vous utilisez des données partagées, vous devez quand même appliquer une stratégie de synchronisation appropriée.
 

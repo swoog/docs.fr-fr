@@ -10,14 +10,15 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa91bb22de6492815f79bfd50e1fefc800c6047
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586511"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479566"
 ---
 # <a name="managed-threading-basics"></a>Éléments fondamentaux du threading managé
+
 Les cinq premières rubriques de cette section sont conçues pour vous aider à déterminer quand utiliser le threading managé et pour expliquer des fonctionnalités de base. Pour plus d’informations sur les classes qui fournissent des fonctionnalités supplémentaires, consultez [Fonctionnalités et objets de Threading](../../../docs/standard/threading/threading-objects-and-features.md) et [Vue d’ensemble des Primitives de synchronisation](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
  Le reste des rubriques de cette section traitent des sujets avancés, y compris l’interaction du threading managé avec le système d’exploitation Windows.  
@@ -25,7 +26,8 @@ Les cinq premières rubriques de cette section sont conçues pour vous aider à 
 > [!NOTE]
 >  Dans [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la bibliothèque parallèle de tâches et PLINQ fournissent des API pour le parallélisme des tâches et des données dans les programmes multithreads. Pour plus d’informations, consultez la page [Programmation parallèle](../../../docs/standard/parallel-programming/index.md).  
   
-## <a name="in-this-section"></a>Dans cette section  
+## <a name="in-this-section"></a>Dans cette section
+
  [Threads et threading](../../../docs/standard/threading/threads-and-threading.md)  
  Explique les avantages et les inconvénients de plusieurs threads et présente les scénarios dans lesquels vous pouvez créer des threads ou utiliser des threads du pool de threads.  
   
@@ -34,9 +36,6 @@ Les cinq premières rubriques de cette section sont conçues pour vous aider à 
   
  [Synchronisation des données pour le multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  Décrit les stratégies de synchronisation des données dans des classes qui seront utilisées avec plusieurs threads.  
-  
- [États des threads managés](../../../docs/standard/threading/managed-thread-states.md)  
- Décrit les états de thread de base et explique comment détecter si un thread est en cours d’exécution.  
   
  [Threads de premier plan et d'arrière-plan](../../../docs/standard/threading/foreground-and-background-threads.md)  
  Explique les différences entre les threads de premier plan et d’arrière-plan.  
@@ -53,14 +52,16 @@ Les cinq premières rubriques de cette section sont conçues pour vous aider à 
  [Annulation dans les threads managés](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
  Décrit comment des opérations asynchrones ou des opérations synchrones à long terme peuvent être annulées à l’aide d’un jeton d’annulation.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Référence
+
  <xref:System.Threading.Thread>  
  Fournit la documentation de référence pour la classe **Thread** qui représente un thread managé, qu’elle provienne de code non managé ou qu’elle ait été créée dans une application managée.  
   
  <xref:System.ComponentModel.BackgroundWorker>  
  Fournit un moyen sûr d’implémenter le multithreading conjointement avec des objets d’interface utilisateur.  
   
-## <a name="related-sections"></a>Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes
+
  [Vue d’ensemble des primitives de synchronisation](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
  Décrit les classes managées utilisées pour synchroniser les activités de plusieurs threads.  
   

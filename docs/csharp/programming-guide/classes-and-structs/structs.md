@@ -1,19 +1,19 @@
 ---
-title: Structures - Guide de programmation C#
+title: Structs - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 609169d4624802f679f9661b7aa0596403cc48e7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240383"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261618"
 ---
-# <a name="structs-c-programming-guide"></a>Structures (Guide de programmation C#)
+# <a name="structs-c-programming-guide"></a>Structs (Guide de programmation C#)
 
 Les structs sont définis à l’aide du mot clé [struct](../../language-reference/keywords/struct.md), par exemple :  
   
@@ -28,8 +28,8 @@ Les structs partagent quasiment la même syntaxe que les classes. Le nom du stru
 - Contrairement aux classes, il est possible d’instancier les structs sans avoir recours à un opérateur `new`.  
 - Les structs peuvent déclarer des constructeurs qui ont des paramètres. 
 - Un struct ne peut pas hériter d'un autre struct ou d'une classe ; il ne peut pas non plus servir de base à une classe. Tous les structs héritent directement de <xref:System.ValueType>, qui hérite de <xref:System.Object>.  
-- Un struct peut implémenter des interfaces.  
-- Un struct peut être utilisé comme un type Nullable et peut avoir une valeur null.  
+- Un struct peut implémenter des interfaces. 
+- Un struct ne peut pas être `null`, et une variable de struct ne peut pas se voir assigner `null`, sauf si elle est déclarée en tant que type nullable.
   
 ## <a name="related-sections"></a>Rubriques connexes  
 

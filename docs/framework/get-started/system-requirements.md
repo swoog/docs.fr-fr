@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 765dac0a6cf8a3403880bead1716b8477662052c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2655cf5d5fb211149bdbe09179707ec53c737d3
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529526"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204559"
 ---
 # <a name="net-framework-system-requirements"></a>Configuration requise pour le .NET Framework
 
@@ -78,12 +78,14 @@ L’installation du .NET Framework nécessite des privilèges d’administrateur
 
 - Pour toutes les plateformes, nous recommandons d’effectuer une mise à niveau vers le dernier Service Pack Windows et d’installer les mises à jour critiques disponibles à partir du [site web Windows Update](https://go.microsoft.com/fwlink/?LinkId=168461) afin de garantir une compatibilité et une sécurité optimales.
 
-- Sur les systèmes d'exploitation 64 bits, le .NET Framework prend en charge WOW64 (processus 32 bits sur un ordinateur 64 bits) et le processus 64 bits natif.
+- Sur les systèmes d’exploitation 64 bits, le .NET Framework prend en charge WOW64 (processus 32 bits sur un ordinateur 64 bits) et le processus 64 bits natif.
 
 ## <a name="supported-server-operating-systems"></a>Systèmes d'exploitation serveurs pris en charge
 
 | Système d'exploitation | Éditions prises en charge | Préinstallé avec le système d'exploitation | Installable séparément |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows Server 2019 | 64 bits | .NET Framework 4.7.2 | -- |
+| Windows Server, version 1809 | 64 bits | .NET Framework 4.7.2 | -- |
 | Windows Server, version 1803 | 64 bits | .NET Framework 4.7.2 | -- |
 | Windows Server, version 1709 | 64 bits | .NET Framework 4.7.1 | .NET Framework 4.7.2 | 
 | Windows Server 2016 | 64 bits | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |

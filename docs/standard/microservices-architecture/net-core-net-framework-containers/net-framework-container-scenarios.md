@@ -3,13 +3,13 @@ title: Quand choisir .NET Framework pour les conteneurs Docker
 description: Architecture de microservices .NET pour les applications .NET en conteneur | Quand choisir .NET Framework pour les conteneurs Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: 1a91f645aa6f9ce8652fb18243c2e2775abe87d1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128750"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479904"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quand choisir .NET Framework pour les conteneurs Docker
 
@@ -31,7 +31,7 @@ Cependant, malgré cette progression exceptionnelle depuis .NET Standard 2.0 et
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>Utilisation de technologies .NET non disponibles pour .NET Core 
 
-Certaines technologies du .NET Framework ne sont pas disponibles dans la version actuelle de .NET Core (version 2.1 au moment de la rédaction de cet article). Certaines d’entre elles seront disponibles dans les prochaines versions de .NET Core (.NET Core 2.x), tandis que d’autres, qui ne s’appliquent pas aux nouveaux modèles d’application ciblés par .NET Core, risquent de ne jamais l’être.
+Certaines technologies du .NET Framework ne sont pas disponibles dans la version actuelle de .NET Core (version 2.2 au moment de la rédaction de cet article). Certaines d’entre elles seront disponibles dans les prochaines versions de .NET Core (.NET Core 2.x), tandis que d’autres, qui ne s’appliquent pas aux nouveaux modèles d’application ciblés par .NET Core, risquent de ne jamais l’être.
 
 La liste suivante recense la plupart des technologies qui ne sont pas disponibles dans .NET Core 2.x :
 

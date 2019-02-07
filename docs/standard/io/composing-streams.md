@@ -1,6 +1,6 @@
 ---
-title: Composition de flux
-ms.date: 03/30/2017
+title: Composer des flux
+ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,27 +15,34 @@ helpviewer_keywords:
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f2aa68822dd14b4cb81b48598faa6bdb4c71a13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 452071e9726a95b4b3d9bb9cefe720d39bbc3e0c
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544352"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674345"
 ---
-# <a name="composing-streams"></a>Composition de flux
-Un magasin de stockage est un support de stockage, comme un disque ou de la mémoire. Chaque magasin de stockage implémente son propre flux en tant qu’implémentation de la classe <xref:System.IO.Stream>. Chaque type de flux lit et écrit des octets depuis et vers le magasin de stockage donné. Les flux qui se connectent aux magasins de stockage sont appelés des flux de base. Les flux de base possèdent des constructeurs qui ont les paramètres requis pour connecter le flux au magasin de stockage. Par exemple, <xref:System.IO.FileStream> possède des constructeurs qui spécifient un paramètre de chemin d’accès, qui indique la façon dont le fichier est partagé par les processus, et ainsi de suite.  
+# <a name="compose-streams"></a>Composer des flux
+Un *magasin de stockage* est un support de stockage, au même titre qu’un disque ou qu’une mémoire. Chaque magasin de stockage implémente son propre flux en tant qu’implémentation de la classe <xref:System.IO.Stream>. 
+
+Chaque type de flux lit et écrit des octets depuis et vers le magasin de stockage donné. Les flux qui se connectent aux magasins de stockage sont appelés des *flux de base*. Les flux de base comprennent des constructeurs qui ont les paramètres nécessaires pour connecter le flux au magasin de stockage. Par exemple, <xref:System.IO.FileStream> comprend des constructeurs qui spécifient un paramètre de chemin, qui indique la façon dont le fichier est partagé par les processus.  
+
+La conception des classes <xref:System.IO> fournit une composition simplifiée des flux. Vous pouvez attacher des flux de base à un ou plusieurs flux directs qui fournissent les fonctionnalités souhaitées. Vous pouvez attacher un lecteur ou un enregistreur à la fin de la chaîne pour que les types préférés puissent être lus ou écrits facilement.  
+
+L’exemple de code suivant crée un **FileStream** autour du fichier *MyFile.txt* existant afin de placer *MyFile.txt* dans la mémoire tampon. Notez que les **FileStreams** sont mis en mémoire tampon par défaut.
+
+>[!IMPORTANT]
+>L’exemple suppose qu’un fichier nommé *MyFile.txt* existe déjà dans le dossier où se trouve l’application.  
+
+## <a name="example-use-streamreader"></a>Exemple : Utiliser StreamReader
+L’exemple suivant crée un <xref:System.IO.StreamReader> pour lire les caractères à partir du **FileStream**, qui est passé à **StreamReader** en tant qu’argument de son constructeur. Ensuite, <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> lit jusqu’à ce que <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> ne détecte plus aucun caractère.  
   
- La conception des classes <xref:System.IO> fournit une composition simplifiée des flux. Les flux de base peuvent être joints à un ou plusieurs flux directs qui fournissent la fonctionnalité souhaitée. Un lecteur ou un writer peut être joint à la fin de la chaîne afin que les types préférés puissent être lus ou écrits facilement.  
-  
- L’exemple de code suivant crée un **FileStream** autour du fichier `MyFile.txt` existant afin de placer `MyFile.txt` dans la mémoire tampon. (Notez que les **FileStreams** sont mis en mémoire tampon par défaut.) Ensuite, un <xref:System.IO.StreamReader> est créé pour lire les caractères à partir du **FileStream**, qui est transmis à **StreamReader** en tant qu’argument de son constructeur. <xref:System.IO.StreamReader.ReadLine%2A> lit jusqu’à ce que <xref:System.IO.StreamReader.Peek%2A> ne détecte plus aucun caractère.  
-  
- [!code-cpp[System.IO.StreamReader#20](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source2.cpp#20)]
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
- L’exemple de code suivant crée un **FileStream** autour du fichier `MyFile.txt` existant afin de placer `MyFile.txt` dans la mémoire tampon. (Notez que les **FileStreams** sont mis en mémoire tampon par défaut.) Ensuite, un **BinaryReader** est créé pour lire les octets à partir du **FileStream**, qui est transmis à **BinaryReader** en tant qu’argument de son constructeur. <xref:System.IO.BinaryReader.ReadByte%2A> lit jusqu’à ce que <xref:System.IO.BinaryReader.PeekChar%2A> ne détecte plus aucun octet.  
+## <a name="example-use-binaryreader"></a>Exemple : Utiliser BinaryReader
+L’exemple suivant crée un <xref:System.IO.BinaryReader> pour lire les octets à partir du **FileStream**, qui est passé à **BinaryReader** en tant qu’argument de son constructeur. Ensuite, <xref:System.IO.BinaryReader.ReadByte%2A> lit jusqu’à ce que <xref:System.IO.BinaryReader.PeekChar%2A> ne détecte plus aucun octet.  
   
- [!code-cpp[System.IO.StreamReader#21](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source3.cpp#21)]
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]
  [!code-vb[System.IO.StreamReader#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source3.vb#21)]  
   

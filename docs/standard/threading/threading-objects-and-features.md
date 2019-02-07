@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a355c2e996ddb00dad804dfeb22987923d91aa6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 745cd1e17e2c06a513c6fdafe8f6b5f464b95d5f
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144518"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479657"
 ---
 # <a name="threading-objects-and-features"></a>Fonctionnalités et objets de threading
 
@@ -24,7 +24,7 @@ En plus de la classe <xref:System.Threading.Thread?displayProperty=nameWithType>
 |[Pool de threads managés](the-managed-thread-pool.md)|Décrit la classe <xref:System.Threading.ThreadPool?displayProperty=nameWithType>, qui fournit un pool de threads de travail managés par .NET.|  
 |[Minuteries](timers.md)|Décrit les minuteurs .NET qui peuvent être utilisés dans un environnement multithread.|
 |[Vue d’ensemble des primitives de synchronisation](overview-of-synchronization-primitives.md)|Décrit les types qui peuvent être utilisés pour synchroniser l’accès à une ressource partagée ou contrôler les interactions de threads.|
-|[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Décrit les handles d’attente d’événements managés qui sont utilisés pour synchroniser les activités de thread en signalant et en attendant des signaux.|
+|[EventWaitHandle, CountdownEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Décrit les handles d’attente d’événements managés qui sont utilisés pour synchroniser les activités de thread en signalant et en attendant des signaux.|
 |[Mutex](mutexes.md)|Décrit <xref:System.Threading.Mutex?displayProperty=nameWithType>, qui accorde un accès exclusif à une ressource partagée.|
 |[Semaphore et SemaphoreSlim](semaphore-and-semaphoreslim.md)|Décrit la classe <xref:System.Threading.Semaphore?displayProperty=nameWithType>, qui limite le nombre de threads qui peuvent accéder simultanément à une ressource partagée ou à un pool de ressources.|
 |[Barrier](barrier.md)|Décrit la classe <xref:System.Threading.Barrier?displayProperty=nameWithType> qui implémentent le modèle de cloisonnement pour la coordination des threads dans les opérations planifiées.|

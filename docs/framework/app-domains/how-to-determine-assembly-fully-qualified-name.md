@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7124271c0118800883d4beb68591f8591ac43dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520709"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283515"
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Procédure : déterminer le nom qualifié complet d’un assembly
+# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Procédure : déterminer le nom qualifié complet d’un assembly
 Pour découvrir le nom qualifié complet d’un assembly dans le Global Assembly Cache, utilisez l’outil Global Assembly Cache ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Voir [Guide pratique pour visualiser le contenu du Global Assembly Cache](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Pour les assemblys qui ne sont pas dans le Global Assembly Cache, vous pouvez obtenir le nom qualifié complet de l’assembly de différentes façons : vous pouvez utiliser du code pour afficher les informations sur la console ou dans une variable, ou bien vous pouvez utiliser le [Désassembleur MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) pour examiner les métadonnées de l’assembly, qui contiennent le nom qualifié complet.  

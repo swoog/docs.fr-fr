@@ -4,12 +4,12 @@ description: Meilleures pratiques recommandées pour l’empaquetage avec des bi
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724302"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204611"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -69,9 +69,9 @@ Un package NuGet prend en charge plusieurs [propriétés de métadonnées](/nuge
 
 **✔️ À FAIRE** : Utiliser une image d’icône de package au format 64 x 64 et avec un arrière-plan transparent pour optimiser l’affichage.
 
-**✔️ À ENVISAGER** : Configurer [SourceLink](./sourcelink.md) pour ajouter des métadonnées de contrôle de code source à vos assemblys et packages NuGet.
+**✔️ À ENVISAGER** : Configurer [Source Link](./sourcelink.md) pour ajouter des métadonnées de contrôle de code source à vos assemblys et packages NuGet.
 
-> SourceLink ajoute automatiquement des métadonnées `RepositoryUrl` et `RepositoryType` au package NuGet. SourceLink ajoute également des informations sur le code source exact à partir duquel le package a été créé. Par exemple, le hachage de validation est ajouté comme métadonnées à un package créé à partir d’un dépôt Git.
+> Source Link ajoute automatiquement des métadonnées `RepositoryUrl` et `RepositoryType` au package NuGet. Source Link ajoute également des informations sur le code source exact à partir duquel le package a été créé. Par exemple, le hachage de validation est ajouté comme métadonnées à un package créé à partir d’un dépôt Git.
 
 ## <a name="pre-release-packages"></a>Packages de préversion
 

@@ -3,13 +3,13 @@ title: Implémenter de nouvelles tentatives d’appel HTTP avec interruption exp
 description: Découvrez comment gérer les échecs HTTP avec Polly et HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362754"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479644"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implémenter de nouvelles tentatives d’appel HTTP avec interruption exponentielle avec des stratégies Polly et HttpClientFactory
 
@@ -21,9 +21,9 @@ Toutefois, il peut être complexe d’utiliser la bibliothèque de Polly avec vo
 
 Les étapes suivantes montrent comment vous pouvez utiliser les nouvelles tentatives Http avec Polly intégré dans HttpClientFactory, ce qui est expliqué dans la section précédente.
 
-**Référencer les packages ASP.NET Core 2.1**
+**Référencer les packages ASP.NET Core 2.2**
 
-Votre projet doit utiliser les packages ASP.NET Core 2.1 à partir de NuGet. Vous avez généralement besoin du métapackage `AspNetCore` et du package d’extension `Microsoft.Extensions.Http.Polly`.
+`HttpClientFactory` est disponible depuis .NET Core 2.1. Toutefois nous vous recommandons d’utiliser les derniers packages ASP.NET Core 2.2 à partir de NuGet dans votre projet. Vous avez généralement besoin du métapackage `AspNetCore` et du package d’extension `Microsoft.Extensions.Http.Polly`.
 
 **Configurer un client avec la stratégie de nouvelle tentative de Polly, dans Startup**
 

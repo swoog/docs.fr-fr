@@ -1,5 +1,5 @@
 ---
-title: '&lt;include&gt; - Guide de programmation C#'
+title: <include> - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: a9e87e803bef38ceb91849b976e2019deed54471
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e933647487f966e9f8448cf60a2bdecdd29cdff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541168"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286259"
 ---
-# <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (Guide de programmation C#)
+# <a name="include-c-programming-guide"></a>\<include> (Guide de programmation C#)
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
@@ -67,7 +67,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>Sortie du programme  
- La sortie suivante est générée lorsque vous compilez les classes Test et Test2 avec la ligne de commande suivante : `/doc:DocFileName.xml.` Dans Visual Studio, vous spécifiez l’option de commentaires de document XML dans le volet Générer du Concepteur de projets. Dès que le compilateur C# trouve la balise \<include>, il recherche des commentaires de la documentation dans xml_include_tag.doc et non dans le fichier source actuel. Le compilateur génère ensuite DocFileName.xml, c’est-à-dire le fichier dont se servent les outils de documentation tels que [Sandcastle](https://github.com/EWSoftware/SHFB) pour produire la documentation finale.  
+ La sortie suivante est générée lorsque vous compilez les classes Test et Test2 avec la ligne de commande suivante : `/doc:DocFileName.xml.` Dans Visual Studio, vous spécifiez l’option de commentaires de document XML dans le volet Générer du Concepteur de projets. Dès que le compilateur C# trouve la balise \<include>, il recherche des commentaires de la documentation dans xml_include_tag.doc et non dans le fichier source actuel. Le compilateur génère ensuite DocFileName.xml, c’est-à-dire le fichier dont se servent les outils de documentation tels que [DocFX](https://dotnet.github.io/docfx/) et [Sandcastle](https://github.com/EWSoftware/SHFB) pour produire la documentation finale.  
   
 ```xml  
 <?xml version="1.0"?>   

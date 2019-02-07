@@ -5,14 +5,14 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: db5c6a45db299d716b2fdd115086e0dbc5952a59
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066310"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204299"
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Installer le .NET Framework sur Windows 10 et Windows Server 2016
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Installer le .NET Framework sur Windows 10 et Windows Server 2016 et ultérieur
 
 Un grand nombre d’applications sur Windows nécessitent l’installation du .NET Framework. Les instructions contenues dans cet article ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) est la dernière version.
 
@@ -27,6 +27,12 @@ La version .NET Framework 4.7.2 est fournie avec :
 * [Mise à jour d’octobre 2018 de Windows 10](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 * [Mise à jour d’avril 2018 de Windows 10](https://www.microsoft.com/software-download/windows10)
+
+* Windows Server 2019
+
+* Windows Server, version 1809
+
+* Windows Server, version 1803
 
 > [!div class="button"]
 > [Télécharger .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)

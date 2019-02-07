@@ -3,12 +3,12 @@ title: Documentation de votre code avec des commentaires XML
 description: Découvrez comment documenter votre code avec des commentaires de documentation XML et générer un fichier de documentation XML au moment de la compilation.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 15bdd65b96159b4c9b6eb45016f8bdde58c1efe3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576198"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271354"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentation de votre code avec des commentaires XML
 
@@ -53,7 +53,7 @@ L’exemple de bibliothèque prend en charge quatre opérations arithmétiques p
 Vous voulez maintenant pouvoir créer un document de référence des API à partir de votre code pour les développeurs tiers qui utilisent votre bibliothèque, mais qui n’ont pas accès au code source.
 Comme nous l’avons déjà mentionné, vous pouvez pour cela utiliser les balises de documentation XML. Vous allez maintenant découvrir les balises XML standard prises en charge par le compilateur C#.
 
-### <a name="ltsummarygt"></a>&lt;summary&gt;
+### <a name="summary"></a>\<summary>
 
 La balise `<summary>` ajoute des informations succinctes relatives à un type ou un membre.
 Je vais expliquer son utilisation en l’ajoutant à la définition de la classe `Math` et à la première méthode `Add`. N’hésitez pas à l’appliquer au reste de votre code.
@@ -62,27 +62,27 @@ Je vais expliquer son utilisation en l’ajoutant à la définition de la classe
 
 La balise `<summary>` est très importante, et nous vous recommandons de l’inclure, car son contenu est la principale source d’informations sur les types ou les membres dans IntelliSense ou un document de référence des API.
 
-### <a name="ltremarksgt"></a>&lt;remarks&gt;
+### <a name="remarks"></a>\<remarks>
 
 La balise `<remarks>` complète les informations relatives aux types ou aux membres fournies par la balise `<summary>`. Dans cet exemple, vous allez simplement l’ajouter à la classe.
 
 [!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-### <a name="ltreturnsgt"></a>&lt;returns&gt;
+### <a name="returns"></a>\<returns>
 
 La balise `<returns>` décrit la valeur de retour d’une déclaration de méthode.
 Comme auparavant, l’exemple suivant illustre la balise `<returns>` sur la première méthode `Add`. Vous pouvez effectuer la même opération sur d’autres méthodes.
 
 [!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-### <a name="ltvaluegt"></a>&lt;value&gt;
+### <a name="value"></a>\<valeur>
 
 La balise `<value>` est similaire à la balise `<returns>`, excepté que vous l’utilisez pour les propriétés.
 En supposant que votre bibliothèque `Math` a une propriété statique appelée `PI`, voici comment utiliser cette balise :
 
 [!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-### <a name="ltexamplegt"></a>&lt;example&gt;
+### <a name="example"></a>\<example>
 
 La balise `<example>` permet d’inclure un exemple de votre documentation XML.
 Cela implique l’utilisation de la balise enfant `<code>`.
@@ -91,14 +91,14 @@ Cela implique l’utilisation de la balise enfant `<code>`.
 
 La balise `code` conserve les sauts de ligne et la mise en retrait pour les exemples plus longs.
 
-### <a name="ltparagt"></a>&lt;para&gt;
+### <a name="para"></a>\<para>
 
 La balise `<para>` permet de mettre en forme le contenu de sa balise parente. `<para>` est généralement utilisée dans une balise, telle que `<remarks>` ou `<returns>`, pour diviser du texte en paragraphes.
 Vous pouvez mettre en forme le contenu de la balise `<remarks>` pour la définition de votre classe.
 
 [!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-### <a name="ltcgt"></a>&lt;c&gt;
+### <a name="c"></a>\<c>
 
 Toujours concernant la mise en forme, vous utilisez la balise `<c>` pour le marquage d’une partie du texte comme code.
 Elle est semblable à la balise `<code>`, mais inline. Elle est utile quand vous voulez afficher un exemple de code rapide comme partie du contenu d’une balise.
@@ -106,7 +106,7 @@ Mettons à jour la documentation de la classe `Math`.
 
 [!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-### <a name="ltexceptiongt"></a>&lt;exception&gt;
+### <a name="exception"></a>\<exception>
 
 En utilisant la balise `<exception>`, vous informez vos développeurs qu’une méthode peut lever des exceptions spécifiques.
 Si vous examinez votre bibliothèque `Math`, vous pouvez voir que les deux méthodes `Add` lèvent une exception si une certaine condition est remplie. Il est toutefois moins évident de voir que la méthode `Divide` utilisée avec un entier lève également une exception si le paramètre `b` est égal à zéro. Ajoutez maintenant une documentation d’exception à cette méthode.
@@ -116,7 +116,7 @@ Si vous examinez votre bibliothèque `Math`, vous pouvez voir que les deux méth
 L’attribut `cref` référence une exception qui est disponible à partir de l’environnement de compilation actuel.
 Il peut s’agir de tout type défini dans le projet ou dans un assembly référencé. Le compilateur émet un avertissement si sa valeur ne peut pas être résolue.
 
-### <a name="ltseegt"></a>&lt;see&gt;
+### <a name="see"></a>\<see>
 
 La balise `<see>` vous permet de créer un lien interactif vers une page de documentation pour un autre élément de code. Dans notre prochain exemple, nous allons créer un lien interactif entre les deux méthodes `Add`.
 
@@ -125,7 +125,7 @@ La balise `<see>` vous permet de créer un lien interactif vers une page de docu
 `cref` est un attribut **obligatoire** qui représente une référence à un type ou à ses membres et qui est disponible à partir de l’environnement de compilation actuel.
 Il peut s’agir de tout type défini dans le projet ou dans un assembly référencé.
 
-### <a name="ltseealsogt"></a>&lt;seealso&gt;
+### <a name="seealso"></a>\<seealso>
 
 Vous pouvez utiliser la balise `<seealso>` de la même façon que la balise `<see>`. La seule différence est que son contenu est généralement placé dans une section "Voir aussi". Ici, nous allons ajouter une balise `seealso` sous la méthode `Add` utilisée avec un entier pour référencer d’autres méthodes de la classe qui acceptent des paramètres entiers :
 
@@ -134,33 +134,33 @@ Vous pouvez utiliser la balise `<seealso>` de la même façon que la balise `<se
 L’attribut `cref` représente une référence à un type ou à ses membres et est disponible à partir de l’environnement de compilation actuel.
 Il peut s’agir de tout type défini dans le projet ou dans un assembly référencé.
 
-### <a name="ltparamgt"></a>&lt;param&gt;
+### <a name="param"></a>\<param>
 
 La balise `<param>` permet de décrire les paramètres d’une méthode. Voici un exemple sur la méthode `Add` double : le paramètre décrit par la balise est spécifié dans l’attribut `name` **obligatoire**.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-### <a name="lttypeparamgt"></a>&lt;typeparam&gt;
+### <a name="typeparam"></a>\<typeparam>
 
 Vous utilisez la balise `<typeparam>` exactement comme la balise `<param>`, mais pour permettre aux déclarations de types ou de méthodes génériques de décrire un paramètre générique.
 Ajoutez une méthode générique rapide à votre classe `Math` pour vérifier si une quantité est supérieure à une autre.
 
 [!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-### <a name="ltparamrefgt"></a>&lt;paramref&gt;
+### <a name="paramref"></a>\<paramref>
 
 Alors que vous décrivez ce que fait une méthode dans ce qui pourrait être une balise `<summary>`, vous souhaiterez peut-être créer une référence à un paramètre. La balise `<paramref>` est idéale pour cette tâche précise. Mettons à jour le récapitulatif de notre méthode `Add` double. Comme pour la balise `<param>`, le nom du paramètre est spécifié dans l’attribut `name` **obligatoire**.
 
 [!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-### <a name="lttypeparamrefgt"></a>&lt;typeparamref&gt;
+### <a name="typeparamref"></a>\<typeparamref>
 
 Vous utilisez la balise `<typeparamref>` exactement comme la balise `<paramref>`, mais pour permettre aux déclarations de types ou de méthodes génériques de décrire un paramètre générique.
 Vous pouvez utiliser la même méthode générique que celle créée précédemment.
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="ltlistgt"></a>&lt;liste&gt;
+### <a name="list"></a>\<list>
 
 La balise `<list>` vous permet de mettre en forme des informations de documentation sous la forme d’une liste triée, d’une liste non triée ou d’un tableau.
 Créez une liste non triée de toutes les opérations mathématiques prises en charge par votre bibliothèque `Math`.
@@ -179,7 +179,7 @@ Si vous avez suivi ce didacticiel et appliqué les balises à votre code au beso
 Avec toutes ces informations à parcourir, cela va être un cauchemar pour les développeurs qui veulent contribuer à ce code.
 Heureusement, il existe une balise XML qui peut vous aider à gérer ce problème :
 
-### <a name="ltincludegt"></a>&lt;include&gt;
+### <a name="include"></a>\<include>
 
 La balise `<include>` vous permet de faire référence à des commentaires se trouvant dans un fichier XML distinct et décrivant les types et les membres de votre code source au lieu de placer des commentaires de documentation directement dans votre fichier de code source.
 

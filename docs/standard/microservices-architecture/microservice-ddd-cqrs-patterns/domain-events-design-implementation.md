@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127847"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675476"
 ---
 # <a name="domain-events-design-and-implementation"></a>Événements de domaine : conception et implémentation
 
@@ -31,7 +31,7 @@ En résumé, les événements de domaine vous aident à exprimer explicitement l
 
 Il est important de vérifier que, tout comme pour une transaction de base de données, toutes les opérations liées à un événement de domaine se terminent correctement ou que ce n’est le cas pour aucune d’entre elles.
 
-Les événements de domaine sont similaires aux événements de type message, avec cependant une différence importante. Avec les systèmes de messagerie réels, la mise en file d’attente des messages, les répartiteurs de messages et les bus de services utilisant le protocole AMPQ, les messages sont toujours envoyés de manière asynchrone sur plusieurs processus et ordinateurs. Cela est utile pour l’intégration de plusieurs contextes délimités ou de plusieurs microservices, voire d’applications différentes. Toutefois, avec les événements de domaine, vous devez déclencher un événement à partir de l’opération de domaine actuellement exécutée, et les effets secondaires doivent se produire dans le même domaine.
+Les événements de domaine sont similaires aux événements de type message, avec cependant une différence importante. Avec les systèmes de messagerie réels, la mise en file d’attente des messages, les répartiteurs de messages et les bus de services utilisant le protocole AMQP, les messages sont toujours envoyés de manière asynchrone sur plusieurs processus et ordinateurs. Cela est utile pour l’intégration de plusieurs contextes délimités ou de plusieurs microservices, voire d’applications différentes. Toutefois, avec les événements de domaine, vous devez déclencher un événement à partir de l’opération de domaine actuellement exécutée, et les effets secondaires doivent se produire dans le même domaine.
 
 Les événements de domaine et leurs effets secondaires (les actions déclenchées par la suite qui sont gérées par les gestionnaires d’événements) doivent se produire presque immédiatement, généralement in-process, et dans le même domaine. Par conséquent, les événements de domaine peuvent être synchrones ou asynchrones. Cependant, les événements d’intégration doivent toujours être asynchrones.
 
@@ -73,7 +73,7 @@ En revanche, si vous utilisez des événements de domaine, vous pouvez créer un
 2. Recevez la commande dans un gestionnaire de commandes.
    - Exécutez la transaction d’un seul agrégat.
    - (Facultatif) Déclenchez des événements de domaine pour les effets secondaires (par exemple, OrderStartedDomainEvent).
-3. Gérez les événements de domaine (dans le processus actuel) qui vont exécuter un nombre ouvert d’effets secondaires dans plusieurs agrégats ou actions d’application. Exemple :
+3. Gérez les événements de domaine (dans le processus actuel) qui vont exécuter un nombre ouvert d’effets secondaires dans plusieurs agrégats ou actions d’application. Par exemple :
    - Vérifiez ou créez l’acheteur et la méthode de paiement.
    - Créez et envoyez un événement d’intégration associé au bus d’événements pour propager les états sur les microservices ou déclencher des actions externes, comme l’envoi d’un e-mail à l’acheteur.
    - Gérez les autres effets secondaires.
@@ -218,7 +218,7 @@ Effectuer une même transaction sur plusieurs agrégats ou compter sur la cohér
 
 > Une règle qui s’étend sur plusieurs agrégats ne peut pas être constamment à jour. Grâce au traitement des événements, au traitement par lots et autres mécanismes de mise à jour, les autres dépendances peuvent être résolues dans un temps donné. (page 128)
 
-Vaughn Vernon dit ce qui suit dans [Effective Aggregate Design. Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) :
+Vaughn Vernon dit ce qui suit dans [Effective Aggregate Design. Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) :
 
 > Par conséquent, si l’exécution d’une commande sur une instance d’agrégat nécessite que d’autres règles métier soient exécutées sur un ou plusieurs agrégats, utilisez la cohérence à terme \[...\] Il existe un moyen pratique de prendre en charge la cohérence à terme dans un modèle DDD. Une méthode d’agrégation publie un événement de domaine qui est remis à un ou plusieurs abonnés asynchrones.
 

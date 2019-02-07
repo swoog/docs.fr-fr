@@ -4,12 +4,12 @@ description: Meilleures pratiques recommandées pour la gestion de version des b
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169597"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204741"
 ---
 # <a name="versioning"></a>Gestion de version
 
@@ -87,7 +87,7 @@ La version du fichier d’assembly est utilisée pour afficher une version de fi
 
 ### <a name="assembly-informational-version"></a>Version des informations sur l'assembly
 
-La version des informations sur l’assembly est utilisée pour enregistrer des informations de version supplémentaires et n’a aucun effet sur le comportement d’exécution. La définition de cette version est facultative. Si vous utilisez SourceLink, cette version sera définie sur la build avec la version du package NuGet ainsi qu’une version de contrôle de code source. Par exemple, `1.0.0-beta1+204ff0a` inclut le hachage de validation du code source sur lequel l’assembly repose. Pour plus d’informations, consultez [SourceLink](./sourcelink.md).
+La version des informations sur l’assembly est utilisée pour enregistrer des informations de version supplémentaires et n’a aucun effet sur le comportement d’exécution. La définition de cette version est facultative. Si vous utilisez Source Link, cette version sera définie sur la build comprenant la version du package NuGet et une version de contrôle de code source. Par exemple, `1.0.0-beta1+204ff0a` inclut le hachage de validation du code source sur lequel l’assembly repose. Pour plus d’informations, consultez [Source Link](./sourcelink.md).
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>

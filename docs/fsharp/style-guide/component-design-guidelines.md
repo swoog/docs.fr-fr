@@ -3,10 +3,10 @@ title: F#instructions de conception de composant
 description: Découvrez les instructions pour l’écriture F# composants destinée à la consommation par les autres appelants.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
+ms.lasthandoff: 02/07/2019
 ms.locfileid: "55066023"
 ---
 # <a name="f-component-design-guidelines"></a>F#instructions de conception de composant
@@ -74,7 +74,7 @@ Le tableau suivant respecte les conventions d’affectation de noms et de mise e
 |-----------|------|------|----------|-------|
 | Types concrets | PascalCase | Nom / adjectif | La liste, Double, complexe | Types concrets sont des structs, des classes, des énumérations, des délégués, des enregistrements et des unions. Bien que les noms de types sont traditionnellement en minuscules dans OCaml, F# a adopté le schéma d’affectation de noms .NET pour les types.
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Balises Union     | PascalCase | Nom | Certains, ajouter, réussite | N’utilisez pas de préfixe dans les API publiques. Utiliser éventuellement un préfixe lorsque internes, tels que `tapez équipes = TAlpha | TBeta | TDelta.` |
+| Balises Union     | PascalCase | Nom | Certains, ajouter, réussite | N’utilisez pas de préfixe dans les API publiques. Si vous le souhaitez utiliser un préfixe lorsque internes, tels que `type Teams = TAlpha | TBeta | TDelta.` |
 | Événement          | PascalCase | Verbe | ValueChanged / ValueChanging |  |
 | Exceptions     | PascalCase |      | WebException | Nom doit se terminer avec « Exception ». |
 | Champ          | PascalCase | Nom | CurrentName  | |
