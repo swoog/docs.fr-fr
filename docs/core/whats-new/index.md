@@ -3,14 +3,20 @@ title: Nouveautés de .NET Core
 description: Découvrez les nouvelles fonctionnalités de chaque version de .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 12/04/2018
+ms.date: 02/04/2019
 ms.custom: seodec18
+ms.openlocfilehash: 6d494f4c2c106271fa5171ddfa57237c4b4dd9ab
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827394"
 ---
 # <a name="whats-new-in-net-core"></a>Nouveautés de .NET Core
 
 Cette page fournit un résumé des nouvelles fonctionnalités dans chaque version de .NET Core à compter de .NET Core 2.0. Les liens suivants fournissent des informations détaillées sur les principales fonctionnalités ajoutées dans chaque version.
 
-- [.NET Core 3.0 (préversion 1)](dotnet-core-3-0.md)
+- [.NET Core 3.0 (préversion 2)](dotnet-core-3-0.md)
 
 - [.NET Core 2.2](dotnet-core-2-2.md)
 

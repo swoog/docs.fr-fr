@@ -3,13 +3,13 @@ title: Architecturer des applications web modernes avec ASP.NET Core et Azure
 description: Un guide qui fournit une aide de bout en bout sur la création d’applications web monolithiques avec ASP.NET Core et Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148104"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827862"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Architecturer des applications web modernes avec ASP.NET Core et Azure
 
@@ -25,7 +25,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 Microsoft Corporation
+Copyright © 2019 par Microsoft Corporation
 
 Tous droits réservés. Aucune partie du contenu de ce document ne peut être reproduite ou transmise sous quelque forme ou par quelque moyen que ce soit sans l’autorisation écrite de l’éditeur.
 
@@ -43,7 +43,7 @@ Toutes les autres marques et tous les autres logos sont la propriété de leurs 
 
 Auteur :
 
-> **Steve Smith (@ardalis)**, Consultant en architecture des logiciels, [Ardalis.com](https://ardalis.com)
+> **Steve « ardalis » Smith** - Architecte et formateur logiciel - [Ardalis.com](https://ardalis.com)
 
 Rédacteurs :
 
@@ -63,11 +63,11 @@ Rédacteurs :
 
 - Gestion côte à côte des versions de .NET par application sur le même serveur.
 
-Les applications .NET classiques prennent en charge ces spécifications, mais ASP.NET Core et .NET Core ont été optimisés pour offrir une prise en charge améliorée des scénarios ci-dessus.
+Les applications .NET classiques prennent en charge nombre de ces spécifications, mais ASP.NET Core et .NET Core ont été optimisés pour offrir une prise en charge améliorée des scénarios ci-dessus.
 
 De plus en plus d’organisations choisissent d’héberger leurs applications web dans le cloud en utilisant des services comme Microsoft Azure. Envisagez d’héberger votre application dans le cloud si les points suivants sont importants pour votre application ou votre organisation :
 
-- Réduction des investissements dans les coûts des centres de données (matériel, logiciel, espace, utilitaires, etc.)
+- Réduction des investissements dans les coûts des centres de données (matériel, logiciel, espace, utilitaires, administration du serveur, etc.)
 
 - Tarification flexible (paiement basé sur l’utilisation et non pas pour une capacité inactive).
 
@@ -81,7 +81,7 @@ La création d’applications web avec ASP.NET Core, hébergées dans Azure, off
 
 ## <a name="purpose"></a>Objectif
 
-Ce guide fournit une aide de bout en bout sur la création d’applications web monolithiques avec ASP.NET Core et Azure.
+Ce guide fournit une aide de bout en bout sur la création d’applications web *monolithiques* avec ASP.NET Core et Azure. Dans ce contexte, « monolithiques » fait référence au fait que ces applications sont déployées comme une seule unité, pas comme une collection d’applications et de services qui interagissent.
 
 Ce guide est complémentaire à [« _Architecture des microservices .NET. pour les applications .NET en conteneur_ »](../microservices-architecture/index.md), qui est davantage consacré à Docker, aux microservices et au déploiement de conteneurs pour héberger des applications d’entreprise.
 

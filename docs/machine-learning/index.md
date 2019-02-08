@@ -3,12 +3,12 @@ title: Guide de contenu de ML.NET
 description: Découvrez comment créer des solutions IA personnalisées et les intégrer à vos applications .NET à l’aide de ML.NET.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550459"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826262"
 ---
 # <a name="mlnet-content-guide"></a>Guide de contenu de ML.NET
 
@@ -31,7 +31,7 @@ Pour comprendre les principes de base, consultez [Concepts de base pour l’appr
 
 [Classer les problèmes GitHub à l’aide d’un modèle de classification multiclasse](tutorials/github-issue-classification.md) vous montre comment créer une application qui détermine l’étiquette Domaine d’un problème GitHub.
 
-[Prédire les courses de taxi à l’aide d’un modèle de régression](tutorials/taxi-fare.md) vous montre comment créer une application prédictive qui utilise de nombreux facteurs à partir de données historiques pour déterminer la réponse.
+[Prédire les prix à l’aide d’un modèle de régression](tutorials/taxi-fare.md) vous montre comment créer une application prédictive qui utilise de nombreux facteurs à partir de données historiques pour déterminer la réponse.
 
 [Classer les iris par caractéristiques](tutorials/iris-clustering.md) vous montre comment utiliser un modèle de clustering pour analyser un jeu de données d’iris. 
 
