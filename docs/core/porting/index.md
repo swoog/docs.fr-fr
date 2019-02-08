@@ -2,14 +2,14 @@
 title: Portage de code de .NET Framework vers .NET Core
 description: Présentation du processus de portage et d’outils qui peuvent s’avérer utiles lors du portage d’un projet .NET Framework vers .NET Core.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266570"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903568"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Portage de votre code de .NET Framework vers .NET Core
 
@@ -37,8 +37,6 @@ Il s’agit du processus que nous vous recommandons d’effectuer lors du portag
 
 5. Exécutez votre plan de portage !
 
-## <a name="tools-to-help"></a>Outils pour vous aider
-
 La liste suivante présente les outils qui peuvent vous être utiles lors du processus de portage :
 
 * .NET Portability Analyzer : [outil de ligne de commande](https://github.com/Microsoft/dotnet-apiport/releases) ou [Extension Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), une chaîne d’outils qui permet de générer un rapport sur la portabilité de votre code entre le .NET Framework et .NET Core, avec une analyse des problèmes par assembly. Pour plus d’informations, consultez [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
@@ -51,4 +49,4 @@ En outre, vous pouvez essayer de porter des solutions plus petites ou des projet
 > CsprojToVs2017 est un outil tiers. Il n’existe aucune garantie que cet outil fonctionne pour tous vos projets, et il peut entraîner de légères modifications du comportement dont vous dépendez. CsprojToVs2017 doit être utilisé comme un _point de départ_ qui automatise les tâches de base pouvant être automatisées. Ce n’est pas une solution garantie pour la migration de formats de fichiers projet.
 
 >[!div class="step-by-step"]
->[Next](third-party-deps.md)
+>[Next](net-framework-tech-unavailable.md)
