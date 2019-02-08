@@ -2,12 +2,12 @@
 title: Traçage de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: ac9e290d4c9209cbf8ccf5eb3acdeceb68f9021b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f1191396c8e5a68d613c403d260d15d26fa929f
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721880"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826575"
 ---
 # <a name="data-tracing-in-adonet"></a>Traçage de données dans ADO.NET
 ADO.NET propose des fonctionnalités de traçage de données intégré qui sont pris en charge par les fournisseurs de données .NET pour SQL Server, Oracle, OLE DB et ODBC, ainsi que ADO.NET <xref:System.Data.DataSet>et les protocoles de réseau SQL Server.  
@@ -26,10 +26,10 @@ ADO.NET propose des fonctionnalités de traçage de données intégré qui sont 
   
  Pour prendre en charge plusieurs technologies de traçage, le traçage est extensible, de sorte qu'un développeur peut tracer un problème à tout niveau de la pile d'applications. Bien que le traçage ne soit pas une fonctionnalité purement ADO.NET, les fournisseurs Microsoft tirent parti des API de suivi et d’instrumentation généralisées.  
   
- Pour plus d’informations sur la définition et la configuration du traçage managé dans ADO.NET, consultez [Tracing Data Access](https://msdn.microsoft.com/library/hh880086.aspx).  
+ Pour plus d’informations sur la définition et la configuration du traçage managé dans ADO.NET, consultez [Tracing Data Access](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus  
- Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server, d’accès aux données de suivi ([suivi d’accès aux données](https://msdn.microsoft.com/library/hh880086.aspx)) a été mis à jour pour faciliter plus facile à mettre en corrélation des événements clients avec les informations de diagnostic, comme les échecs de connexion, à partir de la connectivité du serveur en anneau des informations de performances de mémoire tampon et d’applications dans le journal des événements étendus. Pour plus d’informations sur la lecture du journal des événements étendus, consultez [afficher les données de Session événements](https://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server, d’accès aux données de suivi ([suivi d’accès aux données](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) a été mis à jour pour faciliter plus facile à mettre en corrélation des événements clients avec les informations de diagnostic, comme les échecs de connexion, à partir de la connectivité du serveur en anneau des informations de performances de mémoire tampon et d’applications dans le journal des événements étendus. Pour plus d’informations sur la lecture du journal des événements étendus, consultez [afficher les données de Session événements](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).  
   
  Pour les opérations de connexion, ADO.NET envoie un ID de connexion client. Si la connexion échoue, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](https://go.microsoft.com/fwlink/?LinkId=207752)) et recherchez le `ClientConnectionID` champ et obtenir des informations de diagnostics sur la Échec de connexion. Les identificateurs de connexion client sont enregistrés dans la mémoire tampon en anneau uniquement si une erreur se produit. (Si une connexion échoue avant l'envoi du paquet de préouverture de session, aucun ID de connexion client n'est généré.) L'ID de connexion client est un GUID de 16 octets. Vous pouvez également rechercher l'ID de connexion client dans la sortie cible d'événements étendus, si l'action `client_connection_id` est ajoutée aux événements dans une session d'événements étendus. Vous pouvez activer le traçage d'accès aux données, réexécuter la commande de connexion et observer le champ `ClientConnectionID` dans la trace d'accès aux données, si vous avez besoin d'obtenir une aide supplémentaire pour le diagnostic du pilote client.  
   

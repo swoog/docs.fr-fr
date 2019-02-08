@@ -1,6 +1,6 @@
 ---
 title: Interface de IXCLRDataMethodInstance
-ms.date: 01/16/2019
+ms.date: 02/01/2019
 api.name:
 - IXCLRDataMethodInstance Interface
 api.location:
@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0eef69cea9f59911b5076f56579b0192be357431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7185802a3857fcd73c63d097090a2a7809f65279
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659109"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825925"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>Interface de IXCLRDataMethodInstance
 
@@ -33,6 +33,8 @@ Fournit des méthodes pour obtenir des informations sur une instance de méthode
 | Méthode                                                                                                                  | Description                                 |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | Obtient le langage intermédiaire aux informations de mappage d’adresse. |
+| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | Obtient l’adresse de point d’entrée plus représentatif de la compilation native de tous les points d’entrée possibles pour une méthode... |
+
 
 ## <a name="remarks"></a>Notes
 

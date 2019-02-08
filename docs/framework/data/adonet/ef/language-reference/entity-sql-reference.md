@@ -2,12 +2,12 @@
 title: Référence Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: 75f9c61a24ffdcba890ae04ccc5c656460c13088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522152"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826640"
 ---
 # <a name="entity-sql-reference"></a>Référence Entity SQL
 
@@ -67,7 +67,7 @@ Les opérateurs logiques testent le caractère vrai ou faux d'une condition. L'e
 |[\! (NOT logique)](not-entity-sql.md)|NOT logique.|
 |[&#124;&#124;(Ou logique)](or-entity-sql.md)|OR logique|
 |[CASE](case-entity-sql.md)|Évalue un ensemble d'expressions booléennes pour déterminer le résultat.|
-|[THEN](then-entity-sql.md)|Le résultat d’une [lorsque](https://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) clause lorsqu’il a la valeur true.|
+|[THEN](then-entity-sql.md)|Le résultat d’une [lorsque](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387119(v=vs.100)) clause lorsqu’il a la valeur true.|
 
 ## <a name="query-operators"></a>Opérateurs de requête
 

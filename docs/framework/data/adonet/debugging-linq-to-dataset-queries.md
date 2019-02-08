@@ -2,12 +2,12 @@
 title: Débogage des requêtes LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680505"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825508"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Débogage des requêtes LINQ to DataSet
 
@@ -16,7 +16,7 @@ Visual Studio prend en charge le débogage de [!INCLUDE[linq_dataset](../../../.
 ## <a name="viewing-results"></a>Affichage des résultats  
  Vous pouvez afficher le résultat d’une [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instruction à l’aide des DataTips, de la fenêtre Espion et de la boîte de dialogue Espion express. En utilisant une fenêtre source, vous pouvez suspendre le pointeur sur une requête dans la fenêtre source pour afficher un DataTip. Vous pouvez copier une variable [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] et la coller dans la fenêtre Espion ou dans la boîte de dialogue Espion express. Dans [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], une requête n'est pas évaluée lorsqu'elle est créée ou déclarée, mais uniquement lors de son exécution. Il s’agit *exécution différée*. Par conséquent, la variable de requête ne possède de valeur que lorsqu'elle est évaluée. Pour plus d’informations, consultez [requêtes dans LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  
   
- Pour afficher les résultats d'une requête, le débogueur doit l'évaluer. Cette évaluation implicite se produit lorsque vous affichez un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] résultat de la requête dans le débogueur et elle entraîne quelques effets dont vous devez envisager. Chaque évaluation de la requête prend du temps. Le développement du nœud de résultats est long. Ainsi, pour certaines requêtes, une évaluation répétée peut diminuer considérablement les performances. L'évaluation d'une requête provoque aussi des effets secondaires, à savoir des modifications de la valeur des données ou de l'état du programme. Toutefois, les requêtes ne présentent pas toutes des effets secondaires. Pour savoir si une requête peut être évaluée sans risque et sans effets secondaires, vous devez comprendre le code qui implémente la requête. Pour plus d’informations, consultez [effets secondaires et Expressions](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e).  
+ Pour afficher les résultats d'une requête, le débogueur doit l'évaluer. Cette évaluation implicite se produit lorsque vous affichez un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] résultat de la requête dans le débogueur et elle entraîne quelques effets dont vous devez envisager. Chaque évaluation de la requête prend du temps. Le développement du nœud de résultats est long. Ainsi, pour certaines requêtes, une évaluation répétée peut diminuer considérablement les performances. L'évaluation d'une requête provoque aussi des effets secondaires, à savoir des modifications de la valeur des données ou de l'état du programme. Toutefois, les requêtes ne présentent pas toutes des effets secondaires. Pour savoir si une requête peut être évaluée sans risque et sans effets secondaires, vous devez comprendre le code qui implémente la requête. Pour plus d’informations, consultez [effets secondaires et Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120)).  
   
 ## <a name="edit-and-continue"></a>Modifier & Continuer  
  Modifier & Continuer ne prend pas en charge les modifications apportées aux [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requêtes. Si vous ajouter, supprimer ou modifier un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instruction pendant une session de débogage, une boîte de dialogue s’affiche indiquant que la modification n’est pas pris en charge par Modifier & Continuer. À ce stade, vous pouvez annuler les modifications apportées ou arrêter la session de débogage et redémarrer une nouvelle session avec le code modifié.  

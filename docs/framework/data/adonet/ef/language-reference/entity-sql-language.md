@@ -2,12 +2,12 @@
 title: Langage d'Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 0c698f04c3b95ffb204a20d41e91ef3f6210c5d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b26d9a88130e0449d437ae9dd88e5e818f29f54d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494094"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826224"
 ---
 # <a name="entity-sql-language"></a>Langage d'Entity SQL
 Entity SQL est un langage de requête indépendant du stockage et semblable à SQL. Entity SQL vous permet d'interroger des données d'entité, en tant qu'objets ou sous une forme tabulaire. Vous devez envisager d'utiliser Entity SQL dans les cas suivants :  
@@ -48,31 +48,31 @@ Entity SQL est un langage de requête indépendant du stockage et semblable à S
 ## <a name="using-entity-sql-with-object-queries"></a>Utilisation de Entity SQL avec des requêtes d'objet  
  Pour plus d'informations sur l'utilisation de Entity SQL avec des requêtes d'objet, consultez les rubriques suivantes :  
   
- [Guide pratique pour Exécuter une requête qui retourne des objets de Type d’entité](https://msdn.microsoft.com/library/f73e137d-1534-42bb-9e31-99ca42c19b48)  
+ [Guide pratique pour Exécuter une requête qui retourne des objets de Type d’entité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738694(v=vs.100))  
   
- [Guide pratique pour Exécuter une requête paramétrable](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
+ [Guide pratique pour Exécuter une requête paramétrable](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))  
   
- [Guide pratique pour Naviguer parmi les relations à l’aide des propriétés de Navigation](https://msdn.microsoft.com/library/b1d71c7d-16a7-4b46-96ac-690176bd5057)  
+ [Guide pratique pour Naviguer parmi les relations à l’aide des propriétés de Navigation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896321(v=vs.100))  
   
- [Guide pratique pour Appeler une fonction définie par l’utilisateur](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)  
+ [Guide pratique pour Appeler une fonction définie par l’utilisateur](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))  
   
- [Guide pratique pour Filtrer les données](https://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2)  
+ [Guide pratique pour Filtrer les données](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716755(v=vs.100))  
   
- [Guide pratique pour Trier des données](https://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7)  
+ [Guide pratique pour Trier des données](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716784(v=vs.100))  
   
- [Guide pratique pour Regrouper des données](https://msdn.microsoft.com/library/df801d9d-9a8a-4157-97a6-5016b18998e1)  
+ [Guide pratique pour Regrouper des données](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896341(v=vs.100))  
   
- [Guide pratique pour Agréger des données](https://msdn.microsoft.com/library/4cf04ce8-3c0f-4f88-9d97-8fac8622598d)  
+ [Guide pratique pour Agréger des données](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716738(v=vs.100))  
   
- [Guide pratique pour Exécuter une requête qui retourne des objets de Type anonyme](https://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Guide pratique pour Exécuter une requête qui retourne des objets de Type anonyme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))  
   
- [Guide pratique pour Exécuter une requête qui retourne une Collection de Types primitifs](https://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
+ [Guide pratique pour Exécuter une requête qui retourne une Collection de Types primitifs](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738451(v=vs.100))  
   
- [Guide pratique pour Interroger les objets connexes dans une EntityCollection](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
+ [Guide pratique pour Interroger les objets connexes dans une EntityCollection](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716708(v=vs.100))  
   
- [Guide pratique pour Ordonner l’Union de deux requêtes](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
+ [Guide pratique pour Ordonner l’Union de deux requêtes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))  
   
- [Guide pratique pour Parcourir les résultats de la requête](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [Guide pratique pour Parcourir les résultats de la requête](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  

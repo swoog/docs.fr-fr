@@ -1,6 +1,6 @@
 ---
 title: Interface de ISOSDacInterface
-ms.date: 01/16/2019
+ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface Interface
 api.location:
@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5e037cf6fb88fff4886733ff4152dca0a827e0a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccaf479fc4fb90007b4999e95ee03bdd0529321e
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491026"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827927"
 ---
 # <a name="isosdacinterface-interface"></a>Interface de ISOSDacInterface
 
@@ -32,7 +32,9 @@ Fournit des méthodes d’assistance pour accéder aux données à partir de `SO
 
 | Méthode                                                                                                               | Description                                                                                                                   |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [GetMethodDescData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescdata-method.md) | Obtient les données de la donnée [MethodDesc](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md). |
+| [GetMethodDescData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescdata-method.md) | Obtient les données pour le pointeur MethodDesc donné. |
+| [GetMethodDescPtrFromIP](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescptrfromip-method.md) | Récupère le pointeur de la MethodDesc correspondant de la méthode contenant l’adresse d’instruction natif donné. |
+| [GetModuleData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmoduledata-method.md)| Extrait les données correspondant au module chargé à une adresse donnée. |
 
 ## <a name="remarks"></a>Notes
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: fcba4ea556d1f5036c2bbd0beaeb5f349dec4e36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688104"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826258"
 ---
 # <a name="code-access-security-and-adonet"></a>Sécurité d'accès du code et ADO.NET
 Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécurité d'accès du code (CAS, Code Access Security) implémentées à l'aide d'une infrastructure commune fournie par le Common Language Runtime (CLR). Dans l'univers du code non managé, la plupart des applications s'exécutent avec les autorisations de l'utilisateur ou d'une principal de sécurité. C'est pourquoi les systèmes informatiques peuvent être endommagés et des données privées compromises lorsqu'un utilisateur bénéficiant de privilèges élevés exécute des logiciels malveillants ou remplis d'erreurs.  
@@ -23,7 +23,7 @@ Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécur
  Le CLR permet au code d'effectuer uniquement les opérations pour lesquelles il dispose d'une autorisation. Le code peut demander des autorisations qui lui sont accordées en fonction de la stratégie de sécurité définie par un administrateur.  
   
 > [!NOTE]
->  Le code s'exécutant dans le CLR ne peut pas s'octroyer d'autorisations à lui-même. Par exemple, un code peut demander et obtenir moins d'autorisations qu'une stratégie de sécurité le prévoit, mais il ne pourra jamais en obtenir plus. Lors de l'octroi d'autorisations, démarrez sans autorisation, puis ajoutez les autorisations les plus restrictives pour la tâche en cours d'exécution. Démarrer avec toutes les autorisations puis en refuser individuellement génère des applications non sécurisées susceptibles de contenir des failles de sécurité involontaires dues à l'octroi de davantage d'autorisations que nécessaire. Pour plus d’informations, consultez [NIB : Configuration de la stratégie de sécurité](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) et [NIB : Gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  Le code s'exécutant dans le CLR ne peut pas s'octroyer d'autorisations à lui-même. Par exemple, un code peut demander et obtenir moins d'autorisations qu'une stratégie de sécurité le prévoit, mais il ne pourra jamais en obtenir plus. Lors de l'octroi d'autorisations, démarrez sans autorisation, puis ajoutez les autorisations les plus restrictives pour la tâche en cours d'exécution. Démarrer avec toutes les autorisations puis en refuser individuellement génère des applications non sécurisées susceptibles de contenir des failles de sécurité involontaires dues à l'octroi de davantage d'autorisations que nécessaire. Pour plus d’informations, consultez [configuration de la stratégie de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) et [gestion des stratégies de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
  Il existe trois types d'autorisations d'accès du code :  
   
@@ -38,14 +38,14 @@ Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécur
 ### <a name="requesting-permissions"></a>Demande d'autorisations  
  Les demandes d'autorisations ont pour but d'indiquer au runtime les autorisations dont votre application a besoin pour s'exécuter et de garantir que seules les autorisations requises lui sont octroyées. Par exemple, si votre application doit écrire des données sur le disque local, elle nécessite <xref:System.Security.Permissions.FileIOPermission>. Si cette autorisation n'a pas été accordée, l'application échoue lorsqu'elle tente d'écrire sur le disque. Cependant, si l'application demande `FileIOPermission` et que cette autorisation lui a été refusée, l'application génère l'exception dès le départ et ne se charge pas.  
   
- Dans un scénario dans lequel l'application a seulement besoin de lire des données du disque, vous pouvez demander à ce qu'aucune autorisation d'accès en écriture ne lui soit jamais octroyée. En cas de bogue ou d'attaque malveillante, votre code ne peut pas altérer les données sur lesquelles il opère. Pour plus d’informations, consultez [NIB : Demande des autorisations](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ Dans un scénario dans lequel l'application a seulement besoin de lire des données du disque, vous pouvez demander à ce qu'aucune autorisation d'accès en écriture ne lui soit jamais octroyée. En cas de bogue ou d'attaque malveillante, votre code ne peut pas altérer les données sur lesquelles il opère. Pour plus d’informations, consultez [demande d’autorisations](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).  
   
 ## <a name="role-based-security-and-cas"></a>Sécurité basée sur les rôles et sécurité d'accès du code (CAS)  
  L'implémentation de la sécurité basée sur les rôles et de la sécurité d'accès du code (CAS) améliore la sécurité globale de votre application. La sécurité basée sur les rôles peut utiliser un compte Windows ou une identité personnalisée, en mettant à la disposition du thread actuel des informations sur la principal de sécurité. Par ailleurs, les applications doivent souvent accorder l'accès aux données et aux ressources en fonction des informations d'identification fournies par l'utilisateur. Généralement, ces applications vérifient le rôle de l'utilisateur afin de lui donner accès aux ressources correspondant à ce rôle.  
   
  La sécurité basée sur les rôles permet à un composant d'identifier les utilisateurs actuels et leurs rôles associés au moment de l'exécution. Ces informations sont ensuite mappées à l'aide d'une stratégie de sécurité d'accès du code pour déterminer le jeu d'autorisations octroyées au moment de l'exécution. Pour un domaine d'application spécifié, l'hôte peut modifier la stratégie de sécurité basée sur les rôles par défaut et définir une principal de sécurité par défaut qui représente un utilisateur et les rôles qui lui sont associés.  
   
- Le CLR utilise des autorisations pour mettre en œuvre son mécanisme destiné à imposer des restrictions sur du code managé. Les autorisations de sécurité basées sur les rôles fournissent un mécanisme permettant de savoir si un utilisateur (ou l'agent qui agit en son nom) possède une identité particulière ou est membre d'un rôle spécifié. Pour plus d’informations, consultez [autorisations de sécurité](https://msdn.microsoft.com/library/b03757b4-e926-4196-b738-3733ced2bda0).  
+ Le CLR utilise des autorisations pour mettre en œuvre son mécanisme destiné à imposer des restrictions sur du code managé. Les autorisations de sécurité basées sur les rôles fournissent un mécanisme permettant de savoir si un utilisateur (ou l'agent qui agit en son nom) possède une identité particulière ou est membre d'un rôle spécifié. Pour plus d’informations, consultez [autorisations de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
  En fonction du type d'application en cours de construction, vous devez également envisager d'implémenter des autorisations basées sur les rôles dans la base de données. Pour plus d’informations sur la sécurité des rôles dans SQL Server, consultez [sécurité de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
@@ -139,7 +139,7 @@ Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécur
  Pour activer l'utilisation d'autorisations <xref:System.Data.SqlClient> pour une zone particulière, un administrateur système doit créer un jeu d'autorisations personnalisé et le définir comme jeu d'autorisations pour une zone particulière. Les jeux d'autorisations par défaut, tels que `LocalIntranet`, ne peuvent pas être modifiés. Par exemple, pour inclure <xref:System.Data.SqlClient> autorisations pour le code qui a un <xref:System.Security.Policy.Zone> de `LocalIntranet`, un administrateur système peut copier la jeu d’autorisations pour `LocalIntranet`, le renommer en « CustomLocalIntranet », ajoutez le <xref:System.Data.SqlClient> autorisations, importer le jeu à l’aide d’autorisations CustomLocalIntranet le [Caspol.exe (outil de stratégie de sécurité d’accès de Code)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)et définissez le jeu d’autorisations de `LocalIntranet_Zone` à CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Exemple de jeu d'autorisations  
- Voici un exemple de jeu d'autorisations destiné au fournisseur de données .NET Framework pour SQL Serveur dans un scénario à confiance partielle. Pour plus d’informations sur la création de jeux d’autorisations personnalisés, consultez [NIB : configuration des autorisations définit à l’aide de Caspol.exe](https://msdn.microsoft.com/library/94e2625e-21ad-4038-af36-6d1f9df40a57).  
+ Voici un exemple de jeu d'autorisations destiné au fournisseur de données .NET Framework pour SQL Serveur dans un scénario à confiance partielle. Pour plus d’informations sur la création de jeux d’autorisations personnalisés, consultez [configuration autorisation définit à l’aide de Caspol.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Vérification de l'accès du code ADO.NET à l'aide des autorisations de sécurité  
- Dans les scénarios avec confiance partielle, vous pouvez exiger des privilèges de sécurité d'accès du code (CAS) pour des méthodes particulières dans votre code en spécifiant un objet <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Si ce privilège n'est pas autorisé par la stratégie de sécurité limitée en vigueur, une exception est levée avant que votre code soit exécuté. Pour plus d’informations sur la stratégie de sécurité, consultez [NIB : Gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) et [NIB : Meilleures pratiques de sécurité stratégie](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ Dans les scénarios avec confiance partielle, vous pouvez exiger des privilèges de sécurité d'accès du code (CAS) pour des méthodes particulières dans votre code en spécifiant un objet <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Si ce privilège n'est pas autorisé par la stratégie de sécurité limitée en vigueur, une exception est levée avant que votre code soit exécuté. Pour plus d’informations sur la stratégie de sécurité, consultez [gestion des stratégies de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) et [meilleures pratiques de sécurité stratégie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant montre comment écrire un code requérant une chaîne de connexion particulière. Il simule le refus d'autorisations illimitées à <xref:System.Data.SqlClient>, qu'un administrateur système implémenterait à l'aide d'une stratégie de sécurité d'accès du code dans la réalité.  
@@ -196,6 +196,6 @@ Failed, as expected: Request failed.
   
 ## <a name="see-also"></a>Voir aussi
 - [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Sécurité PAVE dans le code natif et .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Sécurité dans le Code natif et .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Sécurité basée sur les rôles](../../../../docs/standard/security/role-based-security.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e56f837c4d3362ec6e71030e4fb475df42b9fba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639946"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825951"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData (méthode)
 
-Obtient les données de la donnée [MethodDesc](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md).
+Obtient les données pour le pointeur MethodDesc donné.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -34,9 +34,9 @@ Obtient les données de la donnée [MethodDesc](../../../../docs/framework/unman
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
-    void                       *data,
+    DacpMethodDescData *data,
     ULONG                      cRevertedRejitVersions,
-    void                      *rgRevertedRejitData,
+    DacpReJitData      *rgRevertedRejitData,
     void                      *pcNeededRevertedRejitData
 );
 ```
@@ -47,17 +47,17 @@ HRESULT GetMethodDescData(
 
 `ip` [in] L’adresse IP de la méthode.
 
-`data` [out] Les données associées à la MethodDesc tel que retourné par l’API internes. La structure doit au moins 168 octets.
+`data` [out] Les données associées à la MethodDesc tel que retourné par l’API internes.
 
 `cRevertedRejitVersions` [out] Le nombre de versions de rejit rétablie.
 
-`rgRevertedRejitData` [out] Les données associées aux versions rejit rétabli tel que retourné par l’API internes. La structure doit au moins 24 octets.
+`rgRevertedRejitData` [out] Les données associées aux versions rejit rétabli tel que retourné par l’API internes.
 
 `pcNeededRevertedRejitData` [out] Le nombre d’octets requis pour stocker les données associées avec les versions ReJit rétablies.
 
 ## <a name="remarks"></a>Notes
 
-La méthode fournie fait partie de la `ISOSDacInterface` interface et correspond à l’emplacement de la table de la méthode virtuelle de 20. Également le `CLRDATA_ADDRESS` sont des entiers non signés 64 bits.
+La méthode fournie fait partie de la `ISOSDacInterface` interface et correspond à l’emplacement de la table de la méthode virtuelle de 20. Pour pouvoir les utiliser, [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) doit être définie comme un entier non signé 64 bits.
 
 ## <a name="requirements"></a>Spécifications
 
