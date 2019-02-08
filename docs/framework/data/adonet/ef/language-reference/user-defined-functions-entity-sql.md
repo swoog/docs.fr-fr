@@ -2,15 +2,15 @@
 title: Fonctions définies par l'utilisateur (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
-ms.openlocfilehash: 7810f2b643ace0b8219855db80c6ed5466df1c1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86b7d26e7959be954b4ddd7404f3a3ad6c76c1c5
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694657"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904507"
 ---
 # <a name="user-defined-functions-entity-sql"></a>Fonctions définies par l'utilisateur (Entity SQL)
-Entity SQL prend en charge l'appel de fonctions définies par l'utilisateur dans une requête. Vous pouvez définir ces fonctions incluses avec la requête (voir [Comment : Appeler une fonction définie par l’utilisateur](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)) ou en tant que partie du modèle conceptuel (consultez [Comment : Définir des fonctions personnalisées dans le modèle conceptuel](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)). Fonctions de modèle conceptuel sont définies comme une commande Entity SQL dans le [DefiningExpression](https://msdn.microsoft.com/library/d3da8d8b-a048-47ee-8d81-0c2ea3acdd3e) élément d’un [fonction](https://msdn.microsoft.com/library/dc3beca7-55cf-4977-8db0-5064cdbab134) élément dans le modèle conceptuel.  
+Entity SQL prend en charge l'appel de fonctions définies par l'utilisateur dans une requête. Vous pouvez définir ces fonctions incluses avec la requête (voir [Comment : Appeler une fonction définie par l’utilisateur](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))) ou en tant que partie du modèle conceptuel (consultez [Comment : Définir des fonctions personnalisées dans le modèle conceptuel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))). Fonctions de modèle conceptuel sont définies comme une commande Entity SQL dans le [DefiningExpression](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#definingexpression-element-csdl) élément d’un [fonction](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#function-element-csdl) élément dans le modèle conceptuel.  
   
  Entity SQL permet de définir des fonctions dans la commande de requête elle-même. Le [fonction](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) opérateur définit les fonctions inline. Vous pouvez définir plusieurs fonctions dans une même commande et ces fonctions peuvent avoir le même nom de fonction, tant que les signatures des fonctions sont uniques. Pour plus d'informations, consultez [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).  
   

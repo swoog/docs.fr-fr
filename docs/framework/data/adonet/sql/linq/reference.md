@@ -2,12 +2,12 @@
 title: Référence
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b474530cd9c45ef16d004bb2445c349fdd418394
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583060"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904713"
 ---
 # <a name="reference"></a>Référence
 Cette section fournit des informations de référence pour les développeurs [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -40,8 +40,9 @@ Cette section fournit des informations de référence pour les développeurs [!I
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  Fournit un portail pour les rubriques [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- Fournit un portail pour les rubriques [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ [Language-Integrated Query (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Fournit des portails pour [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] rubriques.  
   
  [Vue d’ensemble de la technologie LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  Décrit comment le contrôle <xref:System.Web.UI.WebControls.LinqDataSource> expose [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] aux développeurs de sites Web via l'architecture de contrôle de source de données d'[!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].

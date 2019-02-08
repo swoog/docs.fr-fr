@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45748630"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904372"
 ---
 # <a name="working-with-data-definition-language"></a>Utilisation du langage de définition de données
 En commençant par le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 4, le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] prend en charge le langage de définition de données (DDL). Cela vous permet de créer ou de supprimer une instance de base de données selon la chaîne de connexion et les métadonnées du modèle de stockage (SSDL).  
@@ -40,13 +40,13 @@ En commençant par le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort
   
 2.  Ajoutez un modèle existant à votre application.  
   
-    1.  Ajouter un modèle vide nommé `SchoolModel`. Pour créer un modèle vide, consultez le [Comment : créer un fichier .edmx](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) rubrique.  
+    1.  Ajouter un modèle vide nommé `SchoolModel`. Pour créer un modèle vide, consultez le [Comment : Créer un fichier .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) rubrique.  
   
      Le fichier SchoolModel.edmx est ajouté à votre projet.  
   
-    1.  Copier le stockage conceptuel et de mappage du contenu pour le modèle School à partir de la [modèle School](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) rubrique.  
+    1.  Copier le stockage conceptuel et de mappage du contenu pour le modèle School à partir de la [modèle School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) rubrique.  
   
-    2.  Ouvrez le fichier SchoolModel.edmx et collez le contenu dans les balises `edmx:Runtime`.  
+    2.  Ouvrez le fichier SchoolModel.edmx et collez le contenu dans les étiquettes `edmx:Runtime`.  
   
 3.  Ajoutez le code suivant à votre fonction principale. Le code initialise la chaîne de connexion à votre serveur de base de données, consulte le script DDL, crée la base de données, ajoute une nouvelle entité au contexte et enregistre les modifications dans la base de données.  
   

@@ -4,16 +4,16 @@ description: Exploration des différentes architectures et les applications qui 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150301"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904793"
 ---
 # <a name="serverless-architecture"></a>Architecture sans serveur
 
-Il existe de nombreuses approches de l’utilisation des architectures sans serveur. Ce chapitre explore les exemples d’architectures courantes qui s’intègrent sans serveur. Il couvre également les problèmes qui peuvent poser des problèmes supplémentaires ou requièrent une attention supplémentaire lors de l’implémentation sans serveur. Enfin, plusieurs exemples de conception sont fournies qui illustrent les différents cas d’utilisation sans serveur.
+Il existe plusieurs approches à l’utilisation de [sans serveur](http://azure.com/serverless) architectures. Ce chapitre explore les exemples d’architectures courantes qui s’intègrent sans serveur. Il couvre également les problèmes qui peuvent poser des problèmes supplémentaires ou requièrent une attention supplémentaire lors de l’implémentation sans serveur. Enfin, plusieurs exemples de conception sont fournies qui illustrent les différents cas d’utilisation sans serveur.
 
 Les hôtes sans serveur utilisent souvent une existante basée sur le conteneur ou une couche de PaaS pour gérer les instances sans serveur. Par exemple, Azure Functions est basée sur [Azure App Service](https://docs.microsoft.com/azure/app-service/). Le Service d’application est utilisé pour monter en charge d’instances et de gérer le runtime qui exécute le code Azure Functions. Pour les fonctions Windows, les exécutions de l’hôte en tant que PaaS et les échelles out le runtime .NET. Pour les fonctions basés sur Linux, l’hôte s’appuie sur les conteneurs.
 

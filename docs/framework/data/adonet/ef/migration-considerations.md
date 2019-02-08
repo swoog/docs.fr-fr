@@ -2,12 +2,12 @@
 title: Considérations sur la migration (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 13f9b97435665138f78db6a481d27172d3253679
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d783bc79585740710e663d26ecd4110f64882b44
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827901"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903907"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considérations sur la migration (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework présente plusieurs avantages pour une application existante. La possibilité d'utiliser un modèle conceptuel pour séparer des structures de données utilisées par l'application du schéma de la source de données constitue l'un de ces avantages les plus importants. Cela vous permet d'apporter facilement des modifications à venir au modèle de stockage ou à la source de données eux-mêmes sans apporter de modifications de compensation à l'application. Pour plus d’informations sur les avantages de l’utilisation de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consultez [présentation d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) et [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -58,42 +58,49 @@ ms.locfileid: "55827901"
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Considérations relatives aux applications qui utilisent des fournisseurs ADO.NET  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] les fournisseurs, tels que SqlClient, vous permettent de vous permettent d’interroger une source de données pour retourner des données tabulaires. Données peuvent également être chargées dans un [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] jeu de données. La liste suivante décrit des considérations relatives à la mise à niveau d'une application qui utilise un fournisseur [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] existant :  
   
- Affichage de données tabulaires à l'aide d'un lecteur de données.  
- Vous pouvez envisager d’exécuter un [!INCLUDE[esql](../../../../../includes/esql-md.md)] interroger à l’aide du fournisseur EntityClient et énumérer des retourné <xref:System.Data.EntityClient.EntityDataReader> objet. Procédez de cette manière si votre application affiche des données tabulaires à l'aide d'un lecteur de données et ne requiert pas les fonctionnalités fournies par [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] pour la matérialisation des données dans des objets, le suivi des modifications et l'exécution des mises à jour. Vous pouvez continuer à utiliser le code d'accès aux données existant qui effectuer des mises à jour dans la source de données, mais vous pouvez utiliser la connexion existante accessible à partir de la propriété <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> de l'objet <xref:System.Data.EntityClient.EntityConnection>. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+- Affichage de données tabulaires à l'aide d'un lecteur de données.  
+
+  Vous pouvez envisager d’exécuter un [!INCLUDE[esql](../../../../../includes/esql-md.md)] interroger à l’aide du fournisseur EntityClient et énumérer des retourné <xref:System.Data.EntityClient.EntityDataReader> objet. Procédez de cette manière si votre application affiche des données tabulaires à l'aide d'un lecteur de données et ne requiert pas les fonctionnalités fournies par [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] pour la matérialisation des données dans des objets, le suivi des modifications et l'exécution des mises à jour. Vous pouvez continuer à utiliser le code d'accès aux données existant qui effectuer des mises à jour dans la source de données, mais vous pouvez utiliser la connexion existante accessible à partir de la propriété <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> de l'objet <xref:System.Data.EntityClient.EntityConnection>. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
- Utilisation de datasets.  
- Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fournit la plupart des fonctionnalités fournies par le DataSet, y compris la persistance en mémoire, suivi des modifications, la liaison de données et sérialisation des objets en tant que données XML. Pour plus d’informations, consultez [utilisation d’objets](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
+- Utilisation de datasets.  
+
+  Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fournit la plupart des fonctionnalités fournies par le DataSet, y compris la persistance en mémoire, suivi des modifications, la liaison de données et sérialisation des objets en tant que données XML. Pour plus d’informations, consultez [utilisation d’objets](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
   
- Si le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ne fournissent pas les fonctionnalités du DataSet requises par votre application, vous pouvez toujours tirer parti des avantages des requêtes LINQ en utilisant [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]. Pour plus d’informations, [consultez LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+  Si le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ne fournissent pas les fonctionnalités du DataSet requises par votre application, vous pouvez toujours tirer parti des avantages des requêtes LINQ en utilisant [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]. Pour plus d’informations, [consultez LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Considérations relatives aux applications qui lient des données à des contrôles  
  Le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] vous permet d’encapsuler des données dans une source de données, comme un DataSet ou un [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] contrôle de source de données et puis lier les éléments d’interface utilisateur à ces contrôles de données. La liste suivante décrit les considérations concernant la liaison de contrôles à des données Entity Framework.  
   
- Liaison de données à des contrôles.  
- Lorsque vous interrogez le modèle conceptuel, le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] retourne les données sous la forme d’objets qui sont des instances de types d’entités. Ces objets peuvent être liés directement à des contrôles, et cette liaison prend en charge les mises à jour. Cela signifie que les modifications apportées aux données dans un contrôle, par exemple une ligne dans un <xref:System.Windows.Forms.DataGridView>, sont automatiquement enregistrées dans la base de données lors de la <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> méthode est appelée.  
+- Liaison de données à des contrôles.  
+
+  Lorsque vous interrogez le modèle conceptuel, le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] retourne les données sous la forme d’objets qui sont des instances de types d’entités. Ces objets peuvent être liés directement à des contrôles, et cette liaison prend en charge les mises à jour. Cela signifie que les modifications apportées aux données dans un contrôle, par exemple une ligne dans un <xref:System.Windows.Forms.DataGridView>, sont automatiquement enregistrées dans la base de données lors de la <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> méthode est appelée.  
   
- Si votre application énumère les résultats d'une requête pour afficher des données dans un objet <xref:System.Windows.Forms.DataGridView> ou un autre type de contrôle que prend en charge la liaison de données, vous pouvez modifier votre application pour lier le contrôle au résultat d'un objet <xref:System.Data.Objects.ObjectQuery%601>.  
+  Si votre application énumère les résultats d'une requête pour afficher des données dans un objet <xref:System.Windows.Forms.DataGridView> ou un autre type de contrôle que prend en charge la liaison de données, vous pouvez modifier votre application pour lier le contrôle au résultat d'un objet <xref:System.Data.Objects.ObjectQuery%601>.  
   
- Pour plus d’informations, consultez [liaison d’objets aux contrôles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
+  Pour plus d’informations, consultez [liaison d’objets aux contrôles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
- Contrôles de source de données [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
- Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut un contrôle de source de données conçu pour simplifier la liaison de données dans [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] applications Web. Pour plus d’informations, consultez [vue d’ensemble du contrôle serveur Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
+- Contrôles de source de données [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+
+  Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut un contrôle de source de données conçu pour simplifier la liaison de données dans [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] applications Web. Pour plus d’informations, consultez [vue d’ensemble du contrôle serveur Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
 ## <a name="other-considerations"></a>Autres considérations  
  Les remarques suivantes peuvent s'appliquer lorsque vous effectuez une migration de types spécifiques d'applications vers Entity Framework.  
   
- Applications qui exposent des services de données.  
- Les services Web et les applications basées sur Windows Communication Foundation (WCF) exposent les données d'une source de données sous-jacente en utilisant un format de messagerie de demande/réponse XML. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] prend en charge la sérialisation d'objets entité en utilisant la sérialisation de contrat de données binaire, XML ou WCF. La sérialisation binaire et la sérialisation WCF prennent tous les deux en charge la sérialisation complète de graphiques d'objets. Pour plus d’informations, consultez [création d’Applications multiniveau](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100)).  
+- Applications qui exposent des services de données.  
+
+  Les services Web et les applications basées sur Windows Communication Foundation (WCF) exposent les données d'une source de données sous-jacente en utilisant un format de messagerie de demande/réponse XML. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] prend en charge la sérialisation d'objets entité en utilisant la sérialisation de contrat de données binaire, XML ou WCF. La sérialisation binaire et la sérialisation WCF prennent tous les deux en charge la sérialisation complète de graphiques d'objets. Pour plus d’informations, consultez [création d’Applications multiniveau](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100)).  
   
- Applications qui utilisent des données XML.  
- La sérialisation des objets vous permet de créer des services des données [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ces services fournissent des données à des applications qui utilisent des données XML, telles que les applications Internet AJAX. Dans ces cas, envisagez d'utiliser [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Ces services de données sont basées sur l’Entity Data Model et fournissent un accès dynamique aux données d’entité à l’aide des actions Representational State Transfer (REST) HTTP standard, telles que GET, PUT et post-traitement. Pour plus d’informations, consultez [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md).  
+- Applications qui utilisent des données XML.  
+
+  La sérialisation des objets vous permet de créer des services des données [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ces services fournissent des données à des applications qui utilisent des données XML, telles que les applications Internet AJAX. Dans ces cas, envisagez d'utiliser [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Ces services de données sont basées sur l’Entity Data Model et fournissent un accès dynamique aux données d’entité à l’aide des actions Representational State Transfer (REST) HTTP standard, telles que GET, PUT et post-traitement. Pour plus d’informations, consultez [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md).  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ne prend pas en charge le type de données XML natif. Cela signifie que, lorsqu'une entité est mappée à une table avec une colonne XML, la propriété d'entité équivalente de la colonne XML est une chaîne. Les objets peuvent être déconnectés et sérialisés sous forme de données XML. Pour plus d’informations, consultez [sérialisation d’objets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
+  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ne prend pas en charge le type de données XML natif. Cela signifie que, lorsqu'une entité est mappée à une table avec une colonne XML, la propriété d'entité équivalente de la colonne XML est une chaîne. Les objets peuvent être déconnectés et sérialisés sous forme de données XML. Pour plus d’informations, consultez [sérialisation d’objets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
- Si votre application nécessite la possibilité d'interroger des données XML, vous pouvez tout de même tirer parti des avantages des requêtes LINQ en utilisant LINQ to XML. Pour plus d’informations, consultez [LINQ to XML](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb387098(v=vs.110)).  
+  Si votre application nécessite la possibilité d'interroger des données XML, vous pouvez tout de même tirer parti des avantages des requêtes LINQ en utilisant LINQ to XML. Pour plus d’informations, consultez [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) ou [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
   
- Applications qui gèrent l'état.  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Applications Web doivent fréquemment gérer l’état d’une page Web ou d’une session utilisateur. Objets dans un <xref:System.Data.Objects.ObjectContext> instance permettre être stockée dans l’état d’affichage client ou dans l’état de session sur le serveur et versions ultérieures récupérée et rattachée à un contexte d’objet. Pour plus d’informations, consultez [attachement et détachement des objets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
+- Applications qui gèrent l'état.  
+
+  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Applications Web doivent fréquemment gérer l’état d’une page Web ou d’une session utilisateur. Objets dans un <xref:System.Data.Objects.ObjectContext> instance permettre être stockée dans l’état d’affichage client ou dans l’état de session sur le serveur et versions ultérieures récupérée et rattachée à un contexte d’objet. Pour plus d’informations, consultez [attachement et détachement des objets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>Voir aussi
 - [Points à prendre en considération pour le déploiement](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
