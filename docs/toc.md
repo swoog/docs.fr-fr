@@ -1189,7 +1189,7 @@
 ## [Didacticiels](machine-learning/tutorials/index.md)
 ### [Analyse des sentiments (classification binaire)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Classification des problèmes (classification multiclasse)](machine-learning/tutorials/github-issue-classification.md)
-### [Prévision du tarif de stationnement (régression)](machine-learning/tutorials/taxi-fare.md)
+### [Prédiction des prix (régression)](machine-learning/tutorials/taxi-fare.md)
 ### [Iris (clustering)](machine-learning/tutorials/iris-clustering.md)
 ## [Guides pratiques](machine-learning/how-to-guides/index.md)
 ### Préparer les données
@@ -1200,14 +1200,14 @@
 #### [Charger des données à partir d’un fichier texte](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [Prétraiter des données avec des normalizers](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### Entraîner, évaluer et expliquer le modèle
-#### [Entraîner un modèle avec des données qui ne figurent pas dans un fichier texte](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
-#### [Entraîner un modèle avec une validation croisée](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
+#### [Former le modèle avec des sources de données en temps réel](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [Former un modèle avec une validation croisée](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [Inspecter les valeurs de données intermédiaires du pipeline](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
-#### [Entraîner un modèle de régression](machine-learning/how-to-guides/train-regression-model-ml-net.md)
+#### [Former un modèle de régression](machine-learning/how-to-guides/train-regression-model-ml-net.md)
 #### [Déterminer l’importance de la fonctionnalité d’un modèle avec PFI](machine-learning/how-to-guides/determine-global-feature-importance-in-model.md)
 ### Utiliser le modèle entraîné  
 #### [Une prédiction à la fois avec PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
-#### [Utiliser un modèle entraîné](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [Utiliser un modèle formé](machine-learning/how-to-guides/consuming-model-ml-net.md)
 ### Infer.NET
 #### [Programmation probalistique avec Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Référence
