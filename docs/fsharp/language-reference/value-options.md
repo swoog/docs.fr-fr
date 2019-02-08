@@ -1,26 +1,26 @@
 ---
 title: Options de valeur
 description: En savoir plus sur les F# type d’Option de valeur, qui est une version de la structure du type d’Option.
-ms.date: 06/16/2018
-ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/06/2019
+ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613425"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828031"
 ---
-# <a name="value-options"></a><span data-ttu-id="bce02-103">Options de valeur</span><span class="sxs-lookup"><span data-stu-id="bce02-103">Value Options</span></span>
+# <a name="value-options"></a><span data-ttu-id="5d5a1-103">Options de valeur</span><span class="sxs-lookup"><span data-stu-id="5d5a1-103">Value Options</span></span>
 
-<span data-ttu-id="bce02-104">Le type d’Option de valeur dans F# sert à contiennent les deux circonstances suivantes :</span><span class="sxs-lookup"><span data-stu-id="bce02-104">The Value Option type in F# is used when the following two circumstances hold:</span></span>
+<span data-ttu-id="5d5a1-104">Le type d’Option de valeur dans F# sert à contiennent les deux circonstances suivantes :</span><span class="sxs-lookup"><span data-stu-id="5d5a1-104">The Value Option type in F# is used when the following two circumstances hold:</span></span>
 
-1. <span data-ttu-id="bce02-105">Un scénario est adapté pour une [ F# Option](options.md).</span><span class="sxs-lookup"><span data-stu-id="bce02-105">A scenario is appropriate for an [F# Option](options.md).</span></span>
-2. <span data-ttu-id="bce02-106">À l’aide d’un struct fournit un gain de performances dans votre scénario.</span><span class="sxs-lookup"><span data-stu-id="bce02-106">Using a struct provides a performance benefit in your scenario.</span></span>
+1. <span data-ttu-id="5d5a1-105">Un scénario est adapté pour une [ F# Option](options.md).</span><span class="sxs-lookup"><span data-stu-id="5d5a1-105">A scenario is appropriate for an [F# Option](options.md).</span></span>
+2. <span data-ttu-id="5d5a1-106">À l’aide d’un struct fournit un gain de performances dans votre scénario.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-106">Using a struct provides a performance benefit in your scenario.</span></span>
 
-<span data-ttu-id="bce02-107">Pas tous les scénarios sensibles aux performances sont « résolus » à l’aide de structs.</span><span class="sxs-lookup"><span data-stu-id="bce02-107">Not all performance-sensitive scenarios are "solved" by using structs.</span></span> <span data-ttu-id="bce02-108">Vous devez prendre en compte le coût supplémentaire de copie lors de leur utilisation au lieu de types référence.</span><span class="sxs-lookup"><span data-stu-id="bce02-108">You must consider the additional cost of copying when using them instead of reference types.</span></span> <span data-ttu-id="bce02-109">Toutefois, grand F# programmes instancier couramment des nombreux types facultatifs qui transitent par les chemins d’accès à chaud, étant donné que les structs peuvent produire parfois de meilleures performances globales pendant la durée de vie d’un programme.</span><span class="sxs-lookup"><span data-stu-id="bce02-109">However, large F# programs commonly instantiate many optional types that flow through hot paths, because structs can sometimes yield better overall performance over the lifetime of a program.</span></span>
+<span data-ttu-id="5d5a1-107">Pas tous les scénarios sensibles aux performances sont « résolus » à l’aide de structs.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-107">Not all performance-sensitive scenarios are "solved" by using structs.</span></span> <span data-ttu-id="5d5a1-108">Vous devez prendre en compte le coût supplémentaire de copie lors de leur utilisation au lieu de types référence.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-108">You must consider the additional cost of copying when using them instead of reference types.</span></span> <span data-ttu-id="5d5a1-109">Toutefois, grand F# programmes instancier couramment des nombreux types facultatifs qui transitent par les chemins d’accès à chaud, et dans ce cas, les structs peuvent produire souvent de meilleures performances globales pendant la durée de vie d’un programme.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-109">However, large F# programs commonly instantiate many optional types that flow through hot paths, and in such cases, structs can often yield better overall performance over the lifetime of a program.</span></span>
 
-## <a name="definition"></a><span data-ttu-id="bce02-110">Définition</span><span class="sxs-lookup"><span data-stu-id="bce02-110">Definition</span></span>
+## <a name="definition"></a><span data-ttu-id="5d5a1-110">Définition</span><span class="sxs-lookup"><span data-stu-id="5d5a1-110">Definition</span></span>
 
-<span data-ttu-id="bce02-111">Option la valeur est définie comme un [union discriminée de struct](discriminated-unions.md#struct-discriminated-unions) qui est similaire au type d’option de référence.</span><span class="sxs-lookup"><span data-stu-id="bce02-111">Value Option is defined as a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions) that is similar to the reference option type.</span></span> <span data-ttu-id="bce02-112">Sa définition peut être considérée de cette façon :</span><span class="sxs-lookup"><span data-stu-id="bce02-112">Its definition can be thought of this way:</span></span>
+<span data-ttu-id="5d5a1-111">Option la valeur est définie comme un [union discriminée de struct](discriminated-unions.md#struct-discriminated-unions) qui est similaire au type d’option de référence.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-111">Value Option is defined as a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions) that is similar to the reference option type.</span></span> <span data-ttu-id="5d5a1-112">Sa définition peut être considérée de cette façon :</span><span class="sxs-lookup"><span data-stu-id="5d5a1-112">Its definition can be thought of this way:</span></span>
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -30,11 +30,11 @@ type ValueOption<'T> =
     | ValueSome of 'T
 ```
 
-<span data-ttu-id="bce02-113">Option la valeur est conforme à la comparaison et l’égalité structurelle.</span><span class="sxs-lookup"><span data-stu-id="bce02-113">Value Option conforms to structural equality and comparison.</span></span> <span data-ttu-id="bce02-114">La principale différence est que le nom compilé, nom de type et noms d’incidents indiquent qu’il est un type valeur.</span><span class="sxs-lookup"><span data-stu-id="bce02-114">The main difference is that the compiled name, type name, and case names all indicate that it is a value type.</span></span>
+<span data-ttu-id="5d5a1-113">Option la valeur est conforme à la comparaison et l’égalité structurelle.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-113">Value Option conforms to structural equality and comparison.</span></span> <span data-ttu-id="5d5a1-114">La principale différence est que le nom compilé, nom de type et noms d’incidents indiquent qu’il est un type valeur.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-114">The main difference is that the compiled name, type name, and case names all indicate that it is a value type.</span></span>
 
-## <a name="using-value-options"></a><span data-ttu-id="bce02-115">À l’aide des Options de valeur</span><span class="sxs-lookup"><span data-stu-id="bce02-115">Using Value Options</span></span>
+## <a name="using-value-options"></a><span data-ttu-id="5d5a1-115">À l’aide des Options de valeur</span><span class="sxs-lookup"><span data-stu-id="5d5a1-115">Using Value Options</span></span>
 
-<span data-ttu-id="bce02-116">Options de valeur sont utilisées comme [Options](options.md).</span><span class="sxs-lookup"><span data-stu-id="bce02-116">Value Options are used just like [Options](options.md).</span></span> <span data-ttu-id="bce02-117">`ValueSome` est utilisé pour indiquer qu’une valeur est présente, et `ValueNone` est utilisé lorsqu’une valeur n’est pas présente :</span><span class="sxs-lookup"><span data-stu-id="bce02-117">`ValueSome` is used to indicate that a value is present, and `ValueNone` is used when a value is not present:</span></span>
+<span data-ttu-id="5d5a1-116">Options de valeur sont utilisées comme [Options](options.md).</span><span class="sxs-lookup"><span data-stu-id="5d5a1-116">Value Options are used just like [Options](options.md).</span></span> <span data-ttu-id="5d5a1-117">`ValueSome` est utilisé pour indiquer qu’une valeur est présente, et `ValueNone` est utilisé lorsqu’une valeur n’est pas présente :</span><span class="sxs-lookup"><span data-stu-id="5d5a1-117">`ValueSome` is used to indicate that a value is present, and `ValueNone` is used when a value is not present:</span></span>
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -55,24 +55,24 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-<span data-ttu-id="bce02-118">Comme avec [Options](options.md), la convention d’affectation de noms pour une fonction qui retourne `ValueOption` consiste à ajouter le préfixe `try`.</span><span class="sxs-lookup"><span data-stu-id="bce02-118">As with [Options](options.md), the naming convention for a function that returns `ValueOption` is to prefix it with `try`.</span></span>
+<span data-ttu-id="5d5a1-118">Comme avec [Options](options.md), la convention d’affectation de noms pour une fonction qui retourne `ValueOption` consiste à ajouter le préfixe `try`.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-118">As with [Options](options.md), the naming convention for a function that returns `ValueOption` is to prefix it with `try`.</span></span>
 
-## <a name="value-option-properties-and-methods"></a><span data-ttu-id="bce02-119">Méthodes et propriétés d’Option de valeur</span><span class="sxs-lookup"><span data-stu-id="bce02-119">Value Option properties and methods</span></span>
+## <a name="value-option-properties-and-methods"></a><span data-ttu-id="5d5a1-119">Méthodes et propriétés d’Option de valeur</span><span class="sxs-lookup"><span data-stu-id="5d5a1-119">Value Option properties and methods</span></span>
 
-<span data-ttu-id="bce02-120">Il existe une propriété pour les Options de valeur pour l’instant : `Value`.</span><span class="sxs-lookup"><span data-stu-id="bce02-120">There is one property for Value Options at this time: `Value`.</span></span> <span data-ttu-id="bce02-121">Un <xref:System.InvalidOperationException> est générée si aucune valeur n’est présent lorsque cette propriété est appelée.</span><span class="sxs-lookup"><span data-stu-id="bce02-121">An <xref:System.InvalidOperationException> is raised if no value is present when this property is invoked.</span></span>
+<span data-ttu-id="5d5a1-120">Il existe une propriété pour les Options de valeur pour l’instant : `Value`.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-120">There is one property for Value Options at this time: `Value`.</span></span> <span data-ttu-id="5d5a1-121">Un <xref:System.InvalidOperationException> est générée si aucune valeur n’est présent lorsque cette propriété est appelée.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-121">An <xref:System.InvalidOperationException> is raised if no value is present when this property is invoked.</span></span>
 
-## <a name="value-option-functions"></a><span data-ttu-id="bce02-122">Fonctions de valeur de Option</span><span class="sxs-lookup"><span data-stu-id="bce02-122">Value Option functions</span></span>
+## <a name="value-option-functions"></a><span data-ttu-id="5d5a1-122">Fonctions de valeur de Option</span><span class="sxs-lookup"><span data-stu-id="5d5a1-122">Value Option functions</span></span>
 
-<span data-ttu-id="bce02-123">Il existe actuellement une fonction liée aux module pour les Options de valeur, `defaultValueArg`:</span><span class="sxs-lookup"><span data-stu-id="bce02-123">There is currently one module-bound function for Value Options, `defaultValueArg`:</span></span>
+<span data-ttu-id="5d5a1-123">Il existe actuellement une fonction liée aux module pour les Options de valeur, `defaultValueArg`:</span><span class="sxs-lookup"><span data-stu-id="5d5a1-123">There is currently one module-bound function for Value Options, `defaultValueArg`:</span></span>
 
 ```fsharp
 val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
 ```
 
-<span data-ttu-id="bce02-124">Comme avec la `defaultArg` (fonction), `defaultValueArg` retourne la valeur sous-jacente de l’Option de valeur donnée si elle existe ; sinon, elle retourne la valeur par défaut spécifiée.</span><span class="sxs-lookup"><span data-stu-id="bce02-124">As with the `defaultArg` function, `defaultValueArg` returns the underlying value of the given Value Option if it exists; otherwise, it returns the specified default value.</span></span>
+<span data-ttu-id="5d5a1-124">Comme avec la `defaultArg` (fonction), `defaultValueArg` retourne la valeur sous-jacente de l’Option de valeur donnée si elle existe ; sinon, elle retourne la valeur par défaut spécifiée.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-124">As with the `defaultArg` function, `defaultValueArg` returns the underlying value of the given Value Option if it exists; otherwise, it returns the specified default value.</span></span>
 
-<span data-ttu-id="bce02-125">À ce stade, il n’existe aucune autre fonction liée aux module pour les Options de valeur.</span><span class="sxs-lookup"><span data-stu-id="bce02-125">At this time, there are no other module-bound functions for Value Options.</span></span>
+<span data-ttu-id="5d5a1-125">À ce stade, il n’existe aucune autre fonction liée aux module pour les Options de valeur.</span><span class="sxs-lookup"><span data-stu-id="5d5a1-125">At this time, there are no other module-bound functions for Value Options.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bce02-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bce02-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d5a1-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5d5a1-126">See also</span></span>
 
-- [<span data-ttu-id="bce02-127">Options</span><span class="sxs-lookup"><span data-stu-id="bce02-127">Options</span></span>](options.md)
+- [<span data-ttu-id="5d5a1-127">Options</span><span class="sxs-lookup"><span data-stu-id="5d5a1-127">Options</span></span>](options.md)
