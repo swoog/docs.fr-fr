@@ -2,14 +2,14 @@
 title: Porter des bibliothèques vers .NET Core
 description: Découvrez comment porter des projets de bibliothèque de .NET Framework vers .NET Core.
 author: cartermp
-ms.date: 07/14/2017
+ms.date: 12/7/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169678"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904701"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Porter des bibliothèques .NET Framework vers .NET Core
 
@@ -35,43 +35,11 @@ Cet article explique comment .NET Core définit et utilise les packages et comme
 [Développer des bibliothèques avec des outils multiplateformes](~/docs/core/tutorials/libraries.md)   
 Cette rubrique explique comment écrire des bibliothèques pour .NET à l’aide d’outils CLI multiplateformes.
 
-[Ajouts au format* csproj* pour .NET Core](~/docs/core/tools/csproj.md)   
+[Ajouts au format *csproj* pour .NET Core](~/docs/core/tools/csproj.md)   
 Cet article décrit les modifications qui ont été apportées au fichier projet dans le cadre du passage à *csproj* et à MSBuild.
 
 [Porter du code vers .NET Core - Analyser les dépendances tierces](~/docs/core/porting/third-party-deps.md)   
 Cette rubrique décrit la portabilité des dépendances tierces et explique quoi faire quand une dépendance de package NuGet ne s’exécute pas sur .NET Core.
-
-## <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologies .NET Framework non disponibles sur .NET Core
-
-Certaines technologies mises à la disposition des bibliothèques .NET Framework ne sont pas utilisables avec .NET Core, notamment les AppDomains, Remoting, la sécurité d’accès du code (CAS) et la transparence de la sécurité. Si vos bibliothèques reposent sur une ou plusieurs de ces technologies, envisagez les autres approches décrites ci-dessous. Pour plus d’informations sur la compatibilité des API, l’équipe CoreFX conserve la [Liste des modifications de comportement/arrêts de compatibilité et des API déconseillées/héritées](https://github.com/dotnet/corefx/wiki/ApiCompat) sur GitHub.
-
-Le fait qu’une technologie ou une API ne soit pas implémentée pour le moment ne signifie pas que l’absence de prise en charge soit intentionnelle. Soumettez un problème dans les [problèmes de référentiel dotnet/corefx](https://github.com/dotnet/corefx/issues) sur GitHub pour demander des API et des technologies spécifiques. Les [demandes de portage dans les problèmes](https://github.com/dotnet/corefx/labels/port-to-core) sont marquées avec l’étiquette `port-to-core`.
-
-### <a name="appdomains"></a>AppDomains
-
-Les AppDomains isolent les applications les unes des autres. Ils requièrent la prise en charge du runtime et sont généralement assez onéreux. Ils ne sont pas implémentés dans .NET Core. Nous ne prévoyons pas d’ajouter cette fonctionnalité par la suite. Pour l’isolation du code, nous recommandons d’utiliser des processus distincts ou des conteneurs à la place. Pour le chargement dynamique d’assemblys, nous recommandons la nouvelle classe <xref:System.Runtime.Loader.AssemblyLoadContext>.
-
-Pour faciliter la migration du code à partir de .NET Framework, nous avons exposé quelques-unes des API <xref:System.AppDomain> dans .NET Core. Certaines API fonctionnent normalement (par exemple, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), certains membres ne font rien (par exemple, <xref:System.AppDomain.SetCachePath%2A>) et d’autres lèvent <xref:System.PlatformNotSupportedException> (par exemple, <xref:System.AppDomain.CreateDomain%2A>). Vérifiez les types que vous utilisez par rapport à la [source de référence `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) dans le [référentiel GitHub dotnet/corefx](https://github.com/dotnet/corefx), en veillant à sélectionner la branche correspondant à la version que vous avez implémentée.
-
-### <a name="remoting"></a>Communication à distance
-
-.NET Remoting a été identifié comme architecture problématique. Elle est utilisée pour la communication entre AppDomains, qui n’est plus prise en charge. Par ailleurs, Remoting requiert la prise en charge du runtime, dont la maintenance est coûteuse. C’est pourquoi .NET Remoting n’est pas pris en charge sur .NET Core, et nous ne prévoyons pas d’ajouter sa prise en charge à l’avenir.
-
-Pour la communication entre processus, envisagez de mettre en place des mécanismes de communication interprocessus (IPC) à la place de Remoting, par exemple la classe <xref:System.IO.Pipes> ou la classe <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
-
-Pour la communication entre ordinateurs, utilisez plutôt une solution réseau. Choisissez de préférence un protocole de texte brut à faible charge, par exemple HTTP. Le [serveur web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), utilisé par ASP.NET Core, est une possibilité. Vous pouvez également envisager d’utiliser <xref:System.Net.Sockets> pour les scénarios réseau sur différents ordinateurs. Pour plus d’options, consultez la page [Projets de développement .NET open source : messagerie](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
-
-### <a name="code-access-security-cas"></a>sécurité d'accès du code (CAS, Code Access Security)
-
-Le bac à sable (sandbox), qui repose sur le runtime ou l’infrastructure pour limiter les ressources utilisées ou exécutées par une application gérée ou une bibliothèque, [n’est pas pris en charge sur .NET Framework](~/docs/framework/misc/code-access-security.md) ni, par conséquent, sur .NET Core. Nous pensons qu’il y a trop de cas dans .NET Framework et le runtime où une élévation des privilèges se produit pour continuer à traiter la sécurité d’accès du code comme une limite de sécurité. En outre, la sécurité du code complique l’implémentation et a souvent a des implications en matière de performances d’exactitude pour les applications qui ne prévoient pas de l’utiliser.
-
-Utilisez les limites de sécurité fournies par le système d’exploitation, comme la virtualisation, les conteneurs ou des comptes d’utilisateurs, pour exécuter des processus avec l’ensemble de privilèges le plus petit possible.
-
-### <a name="security-transparency"></a>Transparence de la sécurité
-
-Tout comme la sécurité d’accès du code, la transparence de la sécurité permet de séparer le code sandbox du code critique de sécurité d’une manière déclarative, mais [n’est plus prise en charge en tant que limite de sécurité](~/docs/framework/misc/security-transparent-code.md). Cette fonctionnalité est très utilisée par Silverlight. 
-
-Utilisez les limites de sécurité fournies par le système d’exploitation, comme la virtualisation, les conteneurs ou des comptes d’utilisateurs, pour exécuter des processus avec l’ensemble de privilèges le plus petit possible.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Recibler du code .NET Framework vers .NET Framework 4.7.2
 
@@ -163,3 +131,6 @@ En définitive, le travail de portage dépend fortement de la structuration du c
 1. Sélectionnez la couche suivante de code à porter et répétez les étapes précédentes.
 
 Si vous commencez par la base de votre bibliothèque et que vous vous déplacez vers l’extérieur en testant chaque couche au fur et à mesure, le portage devient un processus systématique où les problèmes sont isolés sur une seule couche de code à la fois.
+
+>[!div class="step-by-step"]
+>[Next](project-structure.md)
