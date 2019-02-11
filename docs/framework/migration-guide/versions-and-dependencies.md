@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a327cdeb69c5143b1720ff67ea493b7a088f399
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 3cec103d72cf8bf714abfe5cb645802f92b7fc5d
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204871"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759780"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versions et dépendances de .NET Framework
 Chaque version du .NET Framework contient le Common Language Runtime (CLR), les bibliothèques de classes de base et d'autres bibliothèques managées. Cette rubrique décrit les principales fonctionnalités du .NET Framework par version, fournit des informations sur les versions CLR sous-jacentes et les environnements de développement associés, et identifie les versions installées par le système d'exploitation Windows.  
@@ -80,6 +80,6 @@ Chaque version du .NET Framework contient le Common Language Runtime (CLR), les 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Compatibilité des versions](../../../docs/framework/migration-guide/version-compatibility.md)   - 
+- [Compatibilité des versions](../../../docs/framework/migration-guide/version-compatibility.md)
 - [Politique de support pour Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)
 - [Résolution des problèmes liés aux installations et désinstallations bloquées du .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

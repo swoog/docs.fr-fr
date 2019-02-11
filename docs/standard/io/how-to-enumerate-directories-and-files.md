@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c751ab03875b6af89c325981c65b7bc69d0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 863335cf080dbccd76b38c7222b74637b99ae2f0
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580458"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758662"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Procédure : énumérer des répertoires et des fichiers
 Les collections énumérables offrent de meilleures performances que les tableaux lorsque vous travaillez avec collections volumineuses de fichiers et de répertoires. Pour énumérer des répertoires et des fichiers, utilisez des méthodes qui retournent une collection énumérable de noms de répertoire ou de fichier ou leurs objets <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> ou <xref:System.IO.FileSystemInfo>.  
@@ -65,4 +65,4 @@ L’exemple suivant utilise la méthode <xref:System.IO.DirectoryInfo.EnumerateF
   
 ## <a name="see-also"></a>Voir aussi
 
-[Fichier et flux de données E/S](../../../docs/standard/io/index.md)
+- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)
