@@ -2,12 +2,12 @@
 title: Propriété et séparation des schémas utilisateur dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: adeed5ff4961a33d8f7d330941a5680f11a88b96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694800"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092603"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propriété et séparation des schémas utilisateur dans SQL Server
 Il existe un concept essentiel relative à la sécurité de SQL Server, selon lequel les propriétaires d'objets disposent d'autorisations irrévocables pour les administrer. Vous ne pouvez pas supprimer les privilèges d'un propriétaire d'objets et vous ne pouvez pas supprimer des utilisateurs d'une base de données dans laquelle se trouvent des objets qui leur appartiennent.  
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Séparation utilisateur-schéma](https://msdn.microsoft.com/library/ms190387.aspx) dans la documentation en ligne de SQL Server|Décrit les modifications introduites par la séparation utilisateur-schéma. Inclut un nouveau comportement, son impact sur la propriété, des affichages catalogue et des autorisations.|  
+|[Séparation utilisateur-schéma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Décrit les modifications introduites par la séparation utilisateur-schéma. Inclut un nouveau comportement, son impact sur la propriété, des affichages catalogue et des autorisations.|  
   
 ## <a name="see-also"></a>Voir aussi
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

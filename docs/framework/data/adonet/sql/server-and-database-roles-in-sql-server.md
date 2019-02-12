@@ -2,12 +2,12 @@
 title: Serveur et rôles de base de données dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643076"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091810"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serveur et rôles de base de données dans SQL Server
 Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles, qui vous permet d'attribuer des autorisations à un rôle ou à un groupe d'utilisateurs au lieu de les attribuer à des utilisateurs individuels. Les rôles serveur fixes et de base de données fixes possèdent un ensemble fixe d'autorisations qui leur sont attribuées.  
@@ -27,8 +27,8 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Les rôles au niveau du serveur](/sql/relational-databases/security/authentication-access/server-level-roles) et [autorisations des rôles serveur fixes](https://msdn.microsoft.com/library/ms175892.aspx) dans la documentation en ligne de SQL Server|Décrit les rôles serveur fixes et les autorisations qui s’y rapportent dans SQL Server.|  
-|[Rôles au niveau de la base de données](/sql/relational-databases/security/authentication-access/database-level-roles) et [autorisations des rôles de base de données fixe](https://msdn.microsoft.com/library/ms189612.aspx) dans la documentation en ligne de SQL Server|Décrit les rôles de base de données fixes et les autorisations qui leur sont attribuées|  
+|[Rôles au niveau du serveur](/sql/relational-databases/security/authentication-access/server-level-roles)|Décrit les rôles serveur fixes et les autorisations qui s’y rapportent dans SQL Server.|  
+|[Rôles au niveau de la base de données](/sql/relational-databases/security/authentication-access/database-level-roles)|Décrit les rôles de base de données fixes et les autorisations qui leur sont attribuées|  
   
 ## <a name="database-roles-and-users"></a>Rôles de base de données et utilisateurs  
  Les connexions doivent être mappées sur des comptes d'utilisateur de base de données afin de fonctionner avec des objets de base de données. Les utilisateurs de base de données peuvent alors être ajoutés à des rôles de base de données et héritent de tous les jeux d'autorisations associés à ces rôles. Toutes les autorisations peuvent être accordées.  
@@ -58,8 +58,8 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Identité et contrôle d’accès](https://msdn.microsoft.com/library/bb510418.aspx) dans la documentation en ligne de SQL Server|Contient des liens vers des rubriques qui décrivent les entités de sécurité, les rôles, les informations d'identification, les éléments sécurisables et les autorisations.|  
-|[Principaux](/sql/relational-databases/security/authentication-access/principals-database-engine) dans la documentation en ligne de SQL Server|Décrit les entités de sécurité et contient des liens vers des rubriques qui décrivent les rôles serveur et de base de données.|  
+|[Mise en route avec les autorisations du moteur de base de données](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contient des liens vers des rubriques qui décrivent les entités de sécurité, les rôles, les informations d'identification, les éléments sécurisables et les autorisations.|  
+|[Principaux](/sql/relational-databases/security/authentication-access/principals-database-engine)|Décrit les entités de sécurité et contient des liens vers des rubriques qui décrivent les rôles serveur et de base de données.|  
   
 ## <a name="see-also"></a>Voir aussi
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

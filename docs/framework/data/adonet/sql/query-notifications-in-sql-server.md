@@ -2,12 +2,12 @@
 title: Notifications de requête dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636688"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092291"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notifications de requête dans SQL Server
 Basées sur l'infrastructure Service Broker, les notifications de requête permettent de notifier des applications en cas de modification de données. Cette fonction est particulièrement utile pour les applications qui génèrent un cache d'informations à partir d'une base de données, telles que les applications Web, et qui doivent être informées en cas de modification des données sources.  
@@ -26,17 +26,17 @@ Basées sur l'infrastructure Service Broker, les notifications de requête perme
   
  Si vous développez une application où vous avez besoin des notifications de fraction de seconde fiables lorsque les données sont modifiées, consultez les sections **planification d’une stratégie de Notifications de requête efficace** et **Alternatives à la requête Notifications** dans le [planification des Notifications](https://go.microsoft.com/fwlink/?LinkId=211984) rubrique dans la documentation en ligne de SQL Server. Pour plus d'informations sur les notifications de requête et Service Broker de SQL Server, voir les liens aux rubriques ci-dessous dans la documentation en ligne de SQL Server.  
   
- **Documentation en ligne de SQL Server**  
+ **Documentation de SQL Server**  
   
--   [À l’aide de Notifications de requête](https://msdn.microsoft.com/library/ms175110.aspx)  
+-   [À l’aide de Notifications de requête](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [Création d’une requête pour Notification](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Création d’une requête pour Notification](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Développement (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [Centre d’informations du développeur Service Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Centre d’informations du développeur Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Développement (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Guide du développeur (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Activation de notifications de requête](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  

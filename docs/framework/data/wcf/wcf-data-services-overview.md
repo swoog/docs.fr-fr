@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 3d5e02d092489e01975037c811fedb2727e2041f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9adf5ff66a8b45bea79a9abaa139a46abb5b39
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566656"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094020"
 ---
 # <a name="wcf-data-services-overview"></a>Vue d'ensemble des services de données WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permet la création et la consommation de services de données pour le Web ou un intranet à l’aide de la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] vous permet d’exposer vos données en tant que ressources adressables par URI. Cela vous permet d'accéder et de modifier des données en utilisant la sémantique REST (Representational State Transfer), en particulier les verbes HTTP standard GET, PUT, POST et DELETE. Cette rubrique fournit une vue d'ensemble des modèles et des pratiques définies par [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], ainsi que des outils fournis par [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pour tirer parti d'[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dans les applications basées sur .NET Framework.  
   
 ## <a name="address-data-as-resources"></a>Adresser des données comme ressources  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] expose des données comme des ressources adressables par des URI. Les chemins d’accès aux ressources sont construits selon les conventions de relation d’entité de l’Entity Data Model. Dans ce modèle, les entités représentent des unités opérationnelles de données dans un domaine d’application, telles que les clients, les commandes, les éléments et les produits. Pour plus d’informations, consultez [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md).  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] expose des données comme des ressources adressables par des URI. Les chemins d'accès aux ressources sont construits selon les conventions de relation d'entité de l'Entity Data Model. Dans ce modèle, les entités représentent des unités opérationnelles de données dans un domaine d’application, telles que les clients, les commandes, les éléments et les produits. Pour plus d’informations, consultez [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md).  
   
  Dans [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], vous adressez des ressources d'entité comme un jeu d'entités qui contient des instances de types d'entité. Par exemple, l’URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` retourne toutes les commandes à partir de la `Northwind` service de données qui sont associées au client avec un `CustomerID` valeur de `ALFKI.`  
   
@@ -59,6 +59,6 @@ ms.locfileid: "54566656"
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
 - [Prise en main](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 - [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [L’accès à un Service de données (WCF Data Services)](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)
+- [Accès aux ressources de Service de données (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)

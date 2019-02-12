@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: c95ad9371854257059861b7d1e48c7afbc957ea1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d197088f94614aac007c0adc310500ae4609f757
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613228"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091654"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Procédure : Générer manuellement les Classes de Service de données Client (WCF Data Services)
 WCF Data Services s’intègre à Visual Studio pour vous permettre de générer automatiquement des classes de service de données client lorsque vous utilisez le **ajouter une référence de Service** boîte de dialogue pour ajouter une référence à un service de données dans un projet Visual Studio. Pour plus d'informations, voir [Procédure : Ajouter une référence de Service de données](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md). Vous pouvez également générer manuellement les mêmes classes de service de données client en utilisant l'outil de génération de code, `DataSvcUtil.exe`. Cet outil, qui est inclus avec WCF Data Services, génère des classes .NET Framework à partir de la définition de service de données. Il peut également être utilisé pour générer des classes de service des données depuis le fichier de modèle conceptuel (.csdl) et depuis le fichier .edmx qui représente un modèle Entity Framework dans un projet Visual Studio.
 
- L'exemple dans cette rubrique crée des classes de service de données client basées sur l'exemple de service de données Northwind. Ce service est créé lorsque vous effectuez la [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Certains exemples dans cette rubrique requièrent le fichier modèle conceptuel pour le modèle Northwind. Pour plus d'informations, voir [Procédure : Utiliser EdmGen.exe pour générer des fichiers de modèle et mappage](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md). Certains exemples dans cette rubrique requièrent le fichier .edmx pour le modèle Northwind. Pour plus d’informations, consultez [présentation d’un fichier .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).
+ L'exemple dans cette rubrique crée des classes de service de données client basées sur l'exemple de service de données Northwind. Ce service est créé lorsque vous effectuez la [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Certains exemples dans cette rubrique requièrent le fichier modèle conceptuel pour le modèle Northwind. Pour plus d'informations, voir [Procédure : Utiliser EdmGen.exe pour générer des fichiers de modèle et mappage](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md). Certains exemples dans cette rubrique requièrent le fichier .edmx pour le modèle Northwind. Pour plus d’informations, consultez [présentation d’un fichier .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>Pour générer des classes C# qui prennent en charge la liaison de données
 

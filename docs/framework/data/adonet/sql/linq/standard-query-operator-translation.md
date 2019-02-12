@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588572"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093929"
 ---
 # <a name="standard-query-operator-translation"></a>Traduction des opérateurs de requête standard
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit les opérateurs de requête standard en commandes SQL. Le processeur de requêtes de la base de données détermine la sémantique d’exécution de la traduction SQL.  
   
- Opérateurs de requête standard sont définis par rapport à *séquences*. Une séquence est *classés* et s’appuie sur l’identité de référence pour chaque élément de la séquence. Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Opérateurs de requête standard sont définis par rapport à *séquences*. Une séquence est *classés* et s’appuie sur l’identité de référence pour chaque élément de la séquence. Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) ou [présentation des opérateurs de requête Standard (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  SQL traite essentiellement des *non ordonné d’ensembles de valeurs*. Le classement est généralement une opération de post-traitement déclarée explicitement appliquée au résultat final d'une requête plutôt qu'à des résultats intermédiaires. L'identité est définie par des valeurs. Pour cette raison, les requêtes SQL sont censées traiter les multijeux (*sacs*) au lieu de *définit*.  
   

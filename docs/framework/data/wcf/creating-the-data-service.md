@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d7ab227a19eeb9bf054700f8d932b75cf3c1ddc9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 361582866dabf51665e1dc94fdc49e8710d8ad3e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772739"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091823"
 ---
 # <a name="create-the-data-service"></a>Créer le service de données
 
@@ -52,7 +52,7 @@ Dans cette rubrique, vous créez un exemple de service de données qui utilise W
 
 5. Connectez le modèle de données à la base de données en effectuant l’une des étapes suivantes, puis cliquez sur **suivant**:
 
-    -   Si vous n’avez pas déjà configuré une connexion de base de données, cliquez sur **nouvelle connexion** et créer une nouvelle connexion. Pour plus d’informations, consultez [Comment : créer des connexions aux bases de données SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Cette instance SQL Server doit avoir l'exemple de base de données Northwind joint.
+    -   Si vous n’avez pas déjà configuré une connexion de base de données, cliquez sur **nouvelle connexion** et créer une nouvelle connexion. Pour plus d'informations, voir [Procédure : Créer des connexions aux bases de données SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Cette instance SQL Server doit avoir l'exemple de base de données Northwind joint.
 
          \- ou -
 
@@ -103,4 +103,4 @@ Vous avez créé un nouveau service de données qui expose un flux OData est bas
 
 ## <a name="see-also"></a>Voir aussi
 
-- [ADO.NET Entity Data Model Tools](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

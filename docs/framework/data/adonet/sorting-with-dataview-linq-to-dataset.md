@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 11002ea61d53b16817714a4b03481383311b7c4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63dcfd80cca0db67dfad87c491d607506057a532
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733244"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092265"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Tri avec DataView (LINQ to DataSet)
 La possibilité de trier des données en utilisant des critères spécifiques, puis de les présenter à un client via un contrôle d’interface utilisateur, est un important aspect de la liaison de données. <xref:System.Data.DataView> propose plusieurs manières de trier les données et de retourner des sous-ensembles de lignes de données triés suivant des critères de tri spécifiques. En plus de sa chaîne-en fonction des fonctionnalités, de tri <xref:System.Data.DataView> vous permet également d’utiliser [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] expressions pour les critères de tri. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] les expressions permettent des opérations de tri beaucoup plus complexes et puissantes que le tri basé sur chaîne. Cette rubrique décrit les deux approches du tri à l'aide de <xref:System.Data.DataView>.  
@@ -84,4 +84,4 @@ La possibilité de trier des données en utilisant des critères spécifiques, p
 ## <a name="see-also"></a>Voir aussi
 - [Liaison de données et LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [Filtrage avec DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [Tri des données](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+- [Tri des données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

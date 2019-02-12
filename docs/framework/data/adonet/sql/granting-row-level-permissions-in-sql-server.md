@@ -2,15 +2,15 @@
 title: Attribution d'autorisations de niveau ligne dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 28e552e005cdfa0b4c69ff95927b938fa3898193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092520f04ba828c9589a16b4ffd6574d04170249
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553767"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092993"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Attribution d'autorisations de niveau ligne dans SQL Server
-Dans certains scénarios, il est nécessaire de contrôler l’accès aux données plus précisément qu’en se contentant d’accorder, de révoquer ou de refuser des autorisations. Par exemple, l’application de base de données d’un hôpital peut nécessiter que chaque médecin ne puisse accéder qu’aux informations de ses propres patients. Des scénarios similaires existent dans de nombreux environnements, notamment dans les applications financières, juridiques, publiques et militaires. Pour gérer ces scénarios, SQL Server 2016 propose une fonctionnalité [Sécurité au niveau des lignes](https://msdn.microsoft.com/library/dn765131.aspx) qui simplifie et centralise la logique d’accès au niveau des lignes dans une stratégie de sécurité. Pour les versions antérieures de SQL Server, une fonctionnalité similaire peut être obtenue à l’aide de vues permettant de mettre en œuvre un filtrage au niveau des lignes.  
+Dans certains scénarios, il est nécessaire de contrôler l’accès aux données plus précisément qu’en se contentant d’accorder, de révoquer ou de refuser des autorisations. Par exemple, l’application de base de données d’un hôpital peut nécessiter que chaque médecin ne puisse accéder qu’aux informations de ses propres patients. Des scénarios similaires existent dans de nombreux environnements, notamment dans les applications financières, juridiques, publiques et militaires. Pour gérer ces scénarios, SQL Server 2016 propose une fonctionnalité [Sécurité au niveau des lignes](/sql/relational-databases/security/row-level-security) qui simplifie et centralise la logique d’accès au niveau des lignes dans une stratégie de sécurité. Pour les versions antérieures de SQL Server, une fonctionnalité similaire peut être obtenue à l’aide de vues permettant de mettre en œuvre un filtrage au niveau des lignes.  
   
 ## <a name="implementing-row-level-filtering"></a>Implémentation du filtrage au niveau des lignes  
  Le filtrage au niveau des lignes est utilisé pour les applications qui stockent des informations dans une seule table, comme dans l’exemple de l’hôpital ci-dessus. Pour implémenter le filtrage au niveau des lignes, chaque ligne est associée à une colonne qui définit un paramètre de différenciation, comme un nom d’utilisateur, une étiquette ou tout autre identificateur. Vous créez une stratégie de sécurité ou une vue sur la table, qui filtre les lignes auxquelles l’utilisateur a accès. Vous créez ensuite des procédures stockées paramétrées qui contrôlent les types de requêtes que l’utilisateur peut exécuter.  
@@ -60,7 +60,7 @@ Dans certains scénarios, il est nécessaire de contrôler l’accès aux donné
 -   Accordez aux rôles de base de données l'autorisation EXECUTE sur les procédures stockées. Les utilisateurs ne peuvent accéder aux données que par le biais des procédures stockées fournies.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Sécurité de niveau ligne](https://msdn.microsoft.com/library/dn765131.aspx)
+- [Sécurité de niveau ligne](/sql/relational-databases/security/row-level-security)
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Vue d’ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f4d86667-3392-470d-a076-5ca6cbb660f6
-ms.openlocfilehash: 7bd8576358cf8e8981bcb4728f47d56d11fcd8a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e435ba0a5d2c8d26593dca432ce0cb6430d5752
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683438"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094137"
 ---
 # <a name="query-expression-syntax-examples-join-operators-linq-to-dataset"></a>Exemples de syntaxe d’Expression de requête : Opérateurs de jointure (LINQ to DataSet)
-La jointure est une opération importante dans les requêtes qui ciblent des sources de données qui n'ont pas de relations explorables les unes avec les autres, comme les tables de base de données relationnelles. Une jointure de deux sources de données est l'association d'objets dans une source de données avec des objets qui partagent un attribut commun dans l'autre source de données. Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+La jointure est une opération importante dans les requêtes qui ciblent des sources de données qui n'ont pas de relations explorables les unes avec les autres, comme les tables de base de données relationnelles. Une jointure de deux sources de données est l'association d'objets dans une source de données avec des objets qui partagent un attribut commun dans l'autre source de données. Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) ou [présentation des opérateurs de requête Standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.GroupJoin%2A> et <xref:System.Linq.Enumerable.Join%2A> pour interroger un <xref:System.Data.DataSet> à l'aide de la syntaxe d'expression de requête.  
   
@@ -53,4 +53,5 @@ La jointure est une opération importante dans les requêtes qui ciblent des sou
 ## <a name="see-also"></a>Voir aussi
 - [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Vue d’ensemble des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

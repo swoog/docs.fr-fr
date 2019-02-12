@@ -2,12 +2,12 @@
 title: Sécurisation des applications ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 935d963ed19175518191006c2cc367f88d69e2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585365"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092239"
 ---
 # <a name="securing-adonet-applications"></a>Sécurisation des applications ADO.NET
 L'écriture d'une application ADO.NET sécurisée ne se limite pas à éviter les pièges de codage courants, tels que la non validation des entrées d'utilisateur. Une application qui accède à des données présente de nombreux points de défaillance possibles qu'un agresseur peut exploiter pour extraire, manipuler ou détruire des données sensibles. Il est donc important de comprendre tous les aspects de la sécurité, depuis le processus de modélisation de menace durant la phase de conception de votre application, jusqu'à son déploiement éventuel et sa maintenance en cours.  
@@ -42,10 +42,10 @@ L'écriture d'une application ADO.NET sécurisée ne se limite pas à éviter le
  [Sécurité](../../../../docs/standard/security/index.md)  
  Contient des liens vers des rubriques qui décrivent tous les aspects de la sécurité dans .NET.  
   
- [Outils de sécurité](https://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Outils de sécurité](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  Outils .NET Framework pour la sécurisation et l'administration de la stratégie de sécurité.  
   
- [Ressources de création des applications sécurisées](https://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Ressources de création des applications sécurisées](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Fournit des liens vers des rubriques pour la création d'applications sécurisées.  
   
  [Bibliographie relative à la sécurité](/visualstudio/ide/security-bibliography)  

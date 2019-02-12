@@ -2,12 +2,12 @@
 title: Requêtes d'agrégation
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858690"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094124"
 ---
 # <a name="aggregate-queries"></a>Requêtes d'agrégation
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge les opérateurs d'agrégation `Average`, `Count`, `Max`, `Min` et `Sum`. Notez les caractéristiques suivantes des opérateurs d'agrégation dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] :  
@@ -18,7 +18,7 @@ ms.locfileid: "43858690"
   
 -   Les requêtes d’agrégation retournent généralement un nombre au lieu d’une collection.  
   
-     Pour plus d’informations, consultez [opérations d’agrégation](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
+     Pour plus d’informations, consultez [opérations d’agrégation](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
 -   Vous ne pouvez pas appeler d'agrégats à l'aide de types anonymes.  
   

@@ -1,13 +1,13 @@
 ---
 title: Informations de référence sur les symboles et les opérateurs
 description: En savoir plus sur les symboles et opérateurs qui sont utilisés dans le F# langage de programmation.
-ms.date: 04/04/2018
-ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/11/2019
+ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613802"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092941"
 ---
 # <a name="symbol-and-operator-reference"></a>Informations de référence sur les symboles et les opérateurs
 
@@ -133,7 +133,7 @@ Le tableau suivant indique l'ordre de priorité des opérateurs et autres mots c
 |`or`, <code>&#124;&#124;</code>|Gauche|
 |`&`, `&&`|Gauche|
 |`:>`, `:?>`|Droit|
-|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(y compris `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Gauche|
+|`<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(y compris `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Gauche|
 |`^`*op*<br /><br />(y compris `^^^`)|Droit|
 |`::`|Droit|
 |`:?`|Non associatif|

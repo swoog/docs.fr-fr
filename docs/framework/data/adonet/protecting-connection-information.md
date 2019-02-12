@@ -2,12 +2,12 @@
 title: Protection des informations de connexion
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c96861afc47c67c8e8c1f3721b09672ca3f48ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662216"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091953"
 ---
 # <a name="protecting-connection-information"></a>Protection des informations de connexion
 La protection de l'accès à votre source de données représente l'un de vos principaux objectifs lorsque vous sécurisez une application. Une chaîne de connexion présente une vulnérabilité potentielle si elle n'est pas sécurisée. Le stockage d'informations de connexion au format texte brut ou sa conservation dans la mémoire risque de compromettre l'ensemble de votre système. Chaînes de connexion incorporées dans votre code source peuvent être lu à l’aide de la [Ildasm.exe (désassembleur IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) pour afficher le langage intermédiaire Microsoft (MSIL) dans un assembly compilé.  
@@ -41,6 +41,6 @@ La protection de l'accès à votre source de données représente l'un de vos pr
   
 ## <a name="see-also"></a>Voir aussi
 - [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Chiffrement des informations de Configuration à l’aide de la Configuration protégée](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)
-- [Sécurité PAVE dans le code natif et .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Chiffrement des informations de Configuration à l’aide de la Configuration protégée](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
+- [Sécurité dans .NET](../../../standard/security/index.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

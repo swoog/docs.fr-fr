@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664081"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093812"
 ---
 # <a name="sql-server-express-user-instances"></a>Instances utilisateur SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) prend en charge une nouvelle fonctionnalité, l’instance utilisateur, disponible uniquement avec le fournisseur de données .NET Framework pour SQL Server (`SqlClient`). Une instance utilisateur est une instance séparée du moteur de base de données SQL Server Express qui est générée par une instance parente. Les instances utilisateur permettent aux utilisateurs qui ne sont pas des administrateurs système sur leur ordinateur local de s'attacher et de se connecter aux bases de données SQL Server Express. Chaque instance s'exécute dans le contexte de sécurité de l'utilisateur individuel, sur la base d'une instance par utilisateur.  
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Vous pouvez également utiliser le <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> et <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> propriétés pour générer une chaîne de connexion au moment de l’exécution.  
+>  Vous pouvez également utiliser les propriétés <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> et <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> pour créer une chaîne de connexion au moment de l'exécution.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>À l’aide de la &#124;DataDirectory&#124; chaîne de Substitution  
  `AttachDbFileName` a été étendu dans ADO.NET 2.0 avec l'introduction de la chaîne de substitution `|DataDirectory|` (dans les symboles de barre verticale). `DataDirectory` est utilisé conjointement à `AttachDbFileName` pour indiquer un chemin d'accès relatif à un fichier de données, ce qui permet aux développeurs de créer des chaînes de connexion basées sur un chemin d'accès relatif à la source de données au lieu de devoir spécifier un chemin d'accès complet.  
@@ -125,7 +125,7 @@ private static void OpenSqlConnection()
 >  Si `Min Pool Size` est utilisé dans la chaîne de connexion avec une valeur supérieure à zéro, le dispositif de regroupement maintient toujours quelques connexions ouvertes pour ne pas que l'instance utilisateur ne se ferme automatiquement.  
   
 ## <a name="how-user-instances-work"></a>Fonctionnement des instances utilisateur  
- La première fois qu’une instance utilisateur est générée pour chaque utilisateur, le **master** et **msdb** bases de données système sont copiés à partir du dossier de données de modèle dans un chemin d’accès sous le référentiel de données d’application locale de l’utilisateur répertoire pour une utilisation exclusive par l’instance utilisateur. Ce chemin d’accès est généralement `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Lorsqu’une instance utilisateur démarre, le **tempdb**, journaux et de suivi fichiers sont également écrits dans ce répertoire. Un nom est généré pour l'instance, ce qui garantit un nom unique pour chaque utilisateur.  
+ La première fois qu’une instance utilisateur est générée pour chaque utilisateur, le **master** et **msdb** bases de données système sont copiés à partir du dossier de données de modèle dans un chemin d’accès sous le référentiel de données d’application locale de l’utilisateur répertoire pour une utilisation exclusive par l’instance utilisateur. Ce chemin d'accès est généralement `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Lorsqu’une instance utilisateur démarre, le **tempdb**, journaux et de suivi fichiers sont également écrits dans ce répertoire. Un nom est généré pour l'instance, ce qui garantit un nom unique pour chaque utilisateur.  
   
  Par défaut, tous les membres du groupe Builtin\Users de Windows reçoivent les autorisations de se connecter à l'instance locale ainsi que les autorisations en lecture et en écriture sur les binaires SQL Server. Une fois que les informations d'identification de l'utilisateur appelant qui héberge l'instance utilisateur ont été vérifiées, cet utilisateur devient `sysadmin` sur cette instance. Seule la mémoire partagée est activée pour les instances utilisateur, ce qui signifie que seules les opérations sur l'ordinateur local sont possibles.  
   
@@ -146,7 +146,7 @@ private static void OpenSqlConnection()
   
 -   Toute application mono-utilisateur où le partage des données n'est pas requis.  
   
--   Déploiement ClickOnce. Si le .NET Framework 2.0 (ou version ultérieure) et SQL Server Express sont déjà installés sur l'ordinateur cible, le package d'installation téléchargé suite à une action ClickOnce peut être installé et utilisé par des utilisateurs qui ne sont pas administrateurs. Notez qu'un administrateur doit installer SQL Server Express si cette édition fait partie de l'installation. Pour plus d’informations, consultez [déploiement ClickOnce pour les Applications de formulaires Windows](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Déploiement ClickOnce. Si le .NET Framework 2.0 (ou version ultérieure) et SQL Server Express sont déjà installés sur l'ordinateur cible, le package d'installation téléchargé suite à une action ClickOnce peut être installé et utilisé par des utilisateurs qui ne sont pas administrateurs. Notez qu'un administrateur doit installer SQL Server Express si cette édition fait partie de l'installation. Pour plus d’informations, consultez [déploiement de ClickOnce pour les Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
 -   Hébergement ASP.NET dédié à l'aide de l'authentification Windows. Une seule instance SQL Server Express peut être hébergée sur un intranet. L'application se connecte à l'aide du compte Windows ASPNET, et non à l'aide de l'emprunt d'identité. Les instances utilisateur ne doivent pas être utilisées dans les scénarios d'hébergement partagés ou tiers dans lesquels toutes les applications doivent partager la même instance utilisateur et ne plus être indépendantes les unes des autres.  
   

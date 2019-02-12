@@ -1,13 +1,13 @@
 ---
 title: F#directives de mise en forme du code
 description: Découvrez des instructions pour la mise en forme F# code.
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254820"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093617"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#directives de mise en forme du code
 
@@ -354,7 +354,7 @@ type PostalAddress =
     }
 ```
 
-Le fait de placer le jeton d’ouverture sur une nouvelle ligne et le jeton de fermeture sur une nouvelle ligne est préférable si vous déclarez des implémentations d’interface ou de membres sur l’enregistrement :
+Il est préférable si vous déclarez des implémentations d’interface ou de membres sur l’enregistrement de placer le jeton d’ouverture sur une nouvelle ligne et le jeton de fermeture sur une nouvelle ligne :
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -423,6 +423,42 @@ let foo a =
 ```
 
 Les mêmes règles s’appliquent pour les éléments de liste et tableau.
+
+## <a name="formatting-copy-and-update-record-expressions"></a>Expressions d’enregistrement de copie--mise à jour et de mise en forme
+
+Une expression d’enregistrement de copie--mise à jour et est toujours un enregistrement, des instructions similaires s’appliquent donc pas.
+
+Expressions courtes peuvent tenir sur une seule ligne :
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+De plus longues expressions doivent utiliser les nouvelles lignes :
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+Et comme avec les conseils d’enregistrement, vous souhaiterez dédier des lignes distinctes pour les accolades et mettre en retrait d’une étendue à droite avec l’expression. Notez que dans certains cas spéciaux, tels que l’encapsulation d’une valeur avec une option sans parenthèses, vous devrez peut-être conserver une accolade sur une seule ligne :
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
 
 ## <a name="formatting-lists-and-arrays"></a>Mise en forme des listes et des tableaux
 
@@ -759,7 +795,7 @@ Lorsqu’il est appliqué à un paramètre, ils doivent se trouver sur la même 
 
 ## <a name="formatting-literals"></a>Mise en forme de littéraux
 
-[F#littéraux](../language-reference/literals.md) à l’aide de la `Literal` attribut doit doit placer l’attribut sur sa propre ligne et utilisez les noms d’une casse mixte :
+[F#littéraux](../language-reference/literals.md) à l’aide de la `Literal` attribut doit placer l’attribut sur sa propre ligne et utilisez les noms d’une casse mixte :
 
 ```fsharp
 [<Literal>]

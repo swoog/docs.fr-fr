@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 5db2d918dfddd1ee62dccbf43eadccf265a265e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aa51d07be6073a75ef40ade83eba13371db3a69
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701493"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094150"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Opérations asynchrones (services de données WCF)
 Les applications Web doivent gérer une latence plus élevée entre le client et le serveur, comparé aux applications qui s'exécutent sur des réseaux internes. Pour optimiser la performance et l'expérience utilisateur de votre application, nous recommandons d'utiliser les méthodes asynchrones des classes <xref:System.Data.Services.Client.DataServiceContext> et <xref:System.Data.Services.Client.DataServiceQuery%601> lors de l'accès aux serveurs [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sur le Web.  
@@ -34,7 +34,7 @@ Les applications Web doivent gérer une latence plus élevée entre le client et
 |Enregistrement des modifications apportées aux objets dans <xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>Considérations sur le threading relatives aux opérations asynchrones  
- Dans une application multithread, le délégué est inscrit comme un rappel pour l’opération asynchrone n'est pas nécessairement appelé sur le même thread qui a été utilisé pour appeler le *commencer* (méthode), qui crée la demande initiale. Dans une application où le rappel doit être appelé sur un thread spécifique, vous devez marshaler explicitement l’exécution de la *fin* (méthode), qui gère la réponse, au thread souhaité. Par exemple, dans les applications WPF (Windows Presentation Foundation) et Silverlight, la réponse doit être remarshalée au thread de l’interface utilisateur en utilisant la méthode <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> sur l’objet <xref:System.Windows.Threading.Dispatcher>. Pour plus d’informations, consultez [interrogation du Service de données (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/3a7cdc07-c37e-4da2-b98b-c3763fd0970b).  
+ Dans une application multithread, le délégué est inscrit comme un rappel pour l’opération asynchrone n'est pas nécessairement appelé sur le même thread qui a été utilisé pour appeler le *commencer* (méthode), qui crée la demande initiale. Dans une application où le rappel doit être appelé sur un thread spécifique, vous devez marshaler explicitement l’exécution de la *fin* (méthode), qui gère la réponse, au thread souhaité. Par exemple, dans les applications WPF (Windows Presentation Foundation) et Silverlight, la réponse doit être remarshalée au thread de l’interface utilisateur en utilisant la méthode <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> sur l’objet <xref:System.Windows.Threading.Dispatcher>. Pour plus d’informations, consultez [interrogation du Service de données (WCF Data Services/Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95)).  
   
 ## <a name="see-also"></a>Voir aussi
 - [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

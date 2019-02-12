@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697346"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093838"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Fournisseurs de diffusion en continu (WCF Data Services)
 Un service de données peut exposer des données Large Object Binary. Ces données binaires peuvent représenter des flux vidéo et audio, des images, des fichiers de document ou d'autres types de supports binaires. Lorsqu'une entité du modèle de données inclut une ou plusieurs propriétés binaires, le service de données retourne ces données binaires encodées en Base 64 au sein de l'entrée dans le flux de réponse. Étant donné que le chargement et de sérialisation des données binaires volumineuses de cette manière peuvent affecter les performances, le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] définit un mécanisme pour récupérer des données binaires indépendantes de l’entité à laquelle il appartient. Cela s'effectue en séparant l'entité et les données binaires de l'entité dans un ou plusieurs flux de données  
@@ -89,7 +89,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
  Pour plus d’informations, consultez [de transfert des messages de diffusion en continu](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) et [Quotas de Transport](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Par défaut, Internet Information Services (IIS) limite également la taille des demandes à 4 Mo. Pour activer votre service de données pour recevoir des flux supérieurs à 4 Mo lors de l’exécution sur IIS, vous devez également définir le `maxRequestLength` attribut de la [httpRuntime, élément (schéma des paramètres ASP.NET)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) dans la `<system.web />` section de configuration, en tant que indiqué dans l’exemple suivant :  
+ Par défaut, Internet Information Services (IIS) limite également la taille des demandes à 4 Mo. Pour activer votre service de données pour recevoir des flux supérieurs à 4 Mo lors de l’exécution sur IIS, vous devez également définir le `maxRequestLength` attribut de la [httpRuntime, élément (schéma des paramètres ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) dans la `<system.web />` section de configuration, en tant que indiqué dans l’exemple suivant :  
   
   
   
@@ -119,7 +119,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
 -   Lorsque vous implémentez les méthodes <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>ou <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, vous devez utiliser les valeurs eTag et Content-Type fournies comme paramètres de méthode. Ne définissez pas d'en-tête eTag ou Content-Type dans votre implémentation de fournisseur <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
--   Par défaut, le client transmet les flux binaires volumineux à l'aide d'un encodage de transfert HTTP segmenté. Étant donné que le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement ne prend pas en charge ce type d’encodage, vous ne pouvez pas utiliser ce serveur Web pour héberger un service de données de diffusion en continu qui doit accepter des flux binaires volumineux. Pour plus d’informations sur [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement, consultez [serveurs Web dans Visual Studio pour les projets Web ASP.NET](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Par défaut, le client transmet les flux binaires volumineux à l'aide d'un encodage de transfert HTTP segmenté. Étant donné que le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement ne prend pas en charge ce type d’encodage, vous ne pouvez pas utiliser ce serveur Web pour héberger un service de données de diffusion en continu qui doit accepter des flux binaires volumineux. Pour plus d’informations sur [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement, consultez [serveurs Web dans Visual Studio pour les projets Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Exigences pour le contrôle de version  

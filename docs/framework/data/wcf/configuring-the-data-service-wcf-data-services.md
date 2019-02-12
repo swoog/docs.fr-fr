@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 2c722f0c4847f2403e9940ade6ee42e82be29c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b7e078b2eb76191ba572a7d141b29f71d7d8a96
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614352"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092551"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configuration du service de données (services de données WCF)
 Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez créer des services de données qui exposent [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Les données de ces flux peuvent provenir de diverses sources. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise des fournisseurs de données pour exposer ces données comme un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux. Ces fournisseurs comprennent un fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], un fournisseur de réflexion et un jeu d'interfaces de fournisseur de services de données personnalisé. L'implémentation de fournisseur définit le modèle de données du service. Pour plus d’informations, consultez [fournisseurs de Services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -48,10 +48,10 @@ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez cr
 |<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|Cette propriété de configuration vous permet de dépanner plus facilement un service de données en retournant plus d'informations dans le message de réponse d'erreur. L'utilisation de cette option n'est pas destinée à un environnement de production. Pour plus d’informations, consultez [développement et déploiement des Services de données WCF](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md).|  
   
 <a name="accessRequirements"></a>   
-## <a name="minimum-resource-access-requirements"></a>Exigences minimales pour l’accès aux ressources  
+## <a name="minimum-resource-access-requirements"></a>Spécifications minimales pour l'accès aux ressources  
  Le tableau suivant détaille les droits minimaux de jeu d'entités qui doivent être accordés pour exécuter une opération spécifique. Exemples de chemin d’accès sont basés sur le service de données Northwind est créé lorsque vous complétez le [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Puisque l'énumération <xref:System.Data.Services.EntitySetRights> et l'énumération <xref:System.Data.Services.ServiceOperationRights> sont toutes deux définies à l'aide de l'objet <xref:System.FlagsAttribute>, vous pouvez utiliser un opérateur OR logique pour spécifier plusieurs autorisations pour un jeu d'entités ou une opération unique. Pour plus d'informations, voir [Procédure : Activer l’accès au Service de données](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).  
   
-|Chemin d’accès/action|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
+|Chemin d'accès/action|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|Non pris en charge|Non pris en charge|<xref:System.Data.Services.EntitySetRights.WriteAppend>|Non pris en charge|  
 |`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> et <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> et <xref:System.Data.Services.EntitySetRights.WriteMerge>|N/A|<xref:System.Data.Services.EntitySetRights.ReadSingle> et <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
@@ -69,7 +69,7 @@ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez cr
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -et-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Non pris en charge|Non pris en charge|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Non pris en charge|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -et-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|  
   
- <sup>1</sup> dans cet exemple, `Address` représente une propriété de type complexe de la `Customers` entité qui a une propriété nommée `StreetAddress`. Le modèle utilisé par les services de données Northwind ne définit pas ce type complexe explicitement. Lorsque le modèle de données est défini à l'aide du fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], vous pouvez utiliser les outils [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] pour définir un tel type complexe. Pour plus d'informations, voir [Procédure : Créer et modifier des Types complexes](https://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d).  
+ <sup>1</sup> dans cet exemple, `Address` représente une propriété de type complexe de la `Customers` entité qui a une propriété nommée `StreetAddress`. Le modèle utilisé par les services de données Northwind ne définit pas ce type complexe explicitement. Lorsque le modèle de données est défini à l'aide du fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], vous pouvez utiliser les outils [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] pour définir un tel type complexe. Pour plus d'informations, voir [Procédure : Créer et modifier des Types complexes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
  <sup>2</sup> cet URI est pris en charge lorsqu’une propriété qui retourne un objet binaire volumineux (BLOB) est définie en tant que la ressource multimédia qui appartient à une entité qui est une entrée de lien média, qui est dans ce cas, `Customers`. Pour plus d’informations, consultez [fournisseur de diffusion en continu](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

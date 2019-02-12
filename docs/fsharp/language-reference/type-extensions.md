@@ -1,13 +1,13 @@
 ---
 title: Extensions de type
 description: Découvrez comment F# les extensions de type permettent d’ajouter de nouveaux membres à un type d’objet précédemment défini.
-ms.date: 01/23/2019
-ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066153"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092473"
 ---
 # <a name="type-extensions"></a>Extensions de type
 
@@ -100,6 +100,8 @@ Vous pouvez désormais accéder `RepeatElements` comme s’il est membre de <xre
 Des extensions facultatives n’apparaissent pas sur le type étendu quand il est examiné par réflexion. Des extensions facultatives doivent être dans des modules, et ils sont uniquement dans la portée lorsque le module qui contient l’extension est ouvert ou dans la portée.
 
 Membres d’extension facultatifs sont compilés en membres statiques pour lequel l’instance d’objet est passée implicitement comme premier paramètre. Toutefois, ils agissent comme si elles sont membres d’instance ou des membres statiques selon la façon dont elles sont déclarées.
+
+Membres d’extension facultatifs sont également pas visibles par C# ou des consommateurs VB. Ils peuvent uniquement être consommés dans d’autres F# code.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Limitation générique des extensions de type intrinsèque et facultatifs
 

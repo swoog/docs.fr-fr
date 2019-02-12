@@ -2,12 +2,12 @@
 title: Expressions de calcul
 description: Découvrez comment créer une syntaxe pratique pour l’écriture de calculs F# que peuvent être séquencés et combinés à l’aide contrôler les liaisons et constructions de flux.
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610695"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093513"
 ---
 # <a name="computation-expressions"></a>Expressions de calcul
 
@@ -218,6 +218,7 @@ Le tableau suivant décrit les méthodes qui peuvent être utilisées dans une c
 |`Yield`|`'T -> M<'T>`|Appelé pour `yield` expressions dans les expressions de calcul.|
 |`YieldFrom`|`M<'T> -> M<'T>`|Appelé pour `yield!` expressions dans les expressions de calcul.|
 |`Zero`|`unit -> M<'T>`|Appelé pour vide `else` branches de `if...then` expressions dans les expressions de calcul.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indique que l’expression de calcul est passée à la `Run` membre en tant que quotation. Il traduit toutes les instances d’un calcul dans une quotation.|
 
 La plupart des méthodes dans une classe de générateur utilisent et retournent un `M<'T>` construct, qui est généralement un type défini séparément qui caractérise le genre des calculs combinés, par exemple, `Async<'T>` pour les flux de travail asynchrones et `Seq<'T>` pour les workflows de la séquence. Les signatures de ces méthodes activez-les être combinées et imbriquées avec les autres, afin que l’objet de flux de travail retourné d’une construction qui peut être passé à la suivante. Le compilateur, lorsqu’il analyse une expression de calcul, convertit l’expression en une série d’appels de fonction imbriquée en utilisant les méthodes dans le tableau précédent et le code dans l’expression de calcul.
 

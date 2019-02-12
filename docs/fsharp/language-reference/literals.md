@@ -1,13 +1,13 @@
 ---
 title: Littéraux
 description: En savoir plus sur les types de littéraux dans le F# langage de programmation.
-ms.date: 05/16/2016
-ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/08/2019
+ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612450"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092161"
 ---
 # <a name="literals"></a>Littéraux
 
@@ -31,7 +31,7 @@ Le tableau suivant présente les types de littéraux dans F#. Les caractères qu
 |unativeint|pointeur natif sous forme de nombre naturel non signé|Annuler|`0x00002D3Fun`|
 |int64|entier signé 64 bits|L|`86L`|
 |uint64|nombre de naturel non signé 64 bits|UL|`86UL`|
-|float32 unique,|nombre à virgule flottante 32 bits|F ou f|`4.14F` ou `4.14f`|
+|single, float32|nombre à virgule flottante 32 bits|F ou f|`4.14F` ou `4.14f`|
 |||LF|`0x00000000lf`|
 |type float ; Double|nombre à virgule flottante 64 bits|none|`4.14` ou `2.3E+32` ou `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
@@ -41,7 +41,7 @@ Le tableau suivant présente les types de littéraux dans F#. Les caractères qu
 |Chaîne|chaîne Unicode|none|`"text\n"`<br /><br />ou<br /><br />`@"c:\filename"`<br /><br />ou<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />ou<br /><br />`"string1" + "string2"`<br /><br />Voir aussi [chaînes](Strings.md).|
 |byte|Caractère ASCII|B|`'a'B`|
 |byte[]|Chaîne ASCII|B|`"text"B`|
-|String ou byte]|chaîne textuelle|préfixe « @ »|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
+|String ou byte]|chaîne textuelle|@ prefix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Notes
 
@@ -51,16 +51,16 @@ En tant que de F# 3.1, vous pouvez utiliser la `+` vous connecter pour combiner 
 
 ```fsharp
 [<Literal>]
-let literal1 = "a" + "b"
+let Literal1 = "a" + "b"
 
 [<Literal>]
-let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let literal2 = 1 ||| 64
+let Literal2 = 1 ||| 64
 
 [<Literal>]
-let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 L’utilisation d’autres opérateurs au niveau du bit n’est pas autorisée.
@@ -76,8 +76,8 @@ Dans les expressions de critères spéciaux, les identificateurs qui commencent 
 Entiers signés de 32 bits peuvent également être spécifiés dans hexadécimal, octal ou binaire à l’aide un `0x`, `0o` ou `0b` respectivement de préfixe.
 
 ```fsharp
-let Numbers = (0x9F, 0o77, 0b1010)
-// Result: Numbers : int * int * int = (159, 63, 10)
+let numbers = (0x9F, 0o77, 0b1010)
+// Result: numbers : int * int * int = (159, 63, 10)
 ```
 
 ## <a name="underscores-in-numeric-literals"></a>Traits de soulignement dans les littéraux numériques

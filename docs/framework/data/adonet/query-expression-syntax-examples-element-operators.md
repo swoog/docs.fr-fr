@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
-ms.openlocfilehash: 8690e4ec79dbe4b728695b073299ca3d21e7f098
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 195c698404f4411c01561ae12b31762de5ce1101
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632593"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093734"
 ---
 # <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a>Exemples de syntaxe d’Expression de requête : Opérateurs d’élément (LINQ to DataSet)
 Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.First%2A> et <xref:System.Linq.Enumerable.ElementAt%2A> pour obtenir des éléments <xref:System.Data.DataRow> à partir d'un <xref:System.Data.DataSet> à l'aide de la syntaxe d'expression de requête.  
@@ -45,4 +45,5 @@ Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:Sys
 ## <a name="see-also"></a>Voir aussi
 - [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Vue d’ensemble des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

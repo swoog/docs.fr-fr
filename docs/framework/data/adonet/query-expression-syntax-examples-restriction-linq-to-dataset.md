@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1daf42c2-c9f4-4cda-b291-7641b9c6d3fe
-ms.openlocfilehash: 530eeba5f21cb9033d344b4c7bdfe3c9c45da2d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91334da13a2c80daaede357349f1cd28a1ccc9a3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688348"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091589"
 ---
 # <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Exemples de syntaxe d’Expression de requête : Restriction (LINQ to DataSet)
 Les exemples de cette rubrique montrent comment utiliser la méthode <xref:System.Linq.Enumerable.Where%2A> pour interroger un <xref:System.Data.DataSet> à l'aide de la syntaxe d'expression de requête.  
@@ -54,4 +54,5 @@ Les exemples de cette rubrique montrent comment utiliser la méthode <xref:Syste
 ## <a name="see-also"></a>Voir aussi
 - [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Vue d’ensemble des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

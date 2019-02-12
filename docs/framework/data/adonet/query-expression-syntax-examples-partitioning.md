@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
-ms.openlocfilehash: 8897f2a9fa497a043a34c7cd6fc65959fa612d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4782566136a8698ed40fd34c0a8a442503c20cb
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725348"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092889"
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a>Exemples de syntaxe d’Expression de requête : Partitionnement (LINQ to DataSet)
 Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.Skip%2A> et <xref:System.Linq.Enumerable.Take%2A> pour interroger un <xref:System.Data.DataSet> à l'aide de la syntaxe d'expression de requête.  
@@ -45,4 +45,5 @@ Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:Sys
 ## <a name="see-also"></a>Voir aussi
 - [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Vue d’ensemble des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

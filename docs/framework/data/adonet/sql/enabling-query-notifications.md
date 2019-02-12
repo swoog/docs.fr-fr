@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: be9cae6f702b72306875246e874b99e7c79eb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a711ad4779b8c932436ce1886b1a93dda849a94
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743034"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093955"
 ---
 # <a name="enabling-query-notifications"></a>Activation de notifications de requête
 Les applications qui utilisent des notifications de requête ont un ensemble commun d’exigences. Votre source de données doit être correctement configurée pour prendre en charge les notifications de requête SQL et l'utilisateur doit disposer des autorisations appropriées côté client et côté serveur.  
@@ -28,25 +28,25 @@ Les applications qui utilisent des notifications de requête ont un ensemble com
 ## <a name="query-notifications-requirements"></a>Spécifications des notifications de requête  
  Les notifications de requête ne sont prises en charge que pour les instructions SELECT qui répondent à une liste de spécifications précises. Le tableau suivant présente des liens vers la documentation consacrée à Service Broker et aux notifications de requête dans la documentation en ligne de SQL Server.  
   
- **Documentation en ligne de SQL Server**  
+ **Documentation de SQL Server**  
   
--   [Création d’une requête pour Notification](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Création d’une requête pour Notification](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Considérations de sécurité pour Service Broker](https://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Considérations de sécurité pour Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [Sécurité et Protection (Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
+-   [Sécurité et Protection (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Considérations de sécurité pour les Services de Notifications](https://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Considérations de sécurité pour les Services de Notifications](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [Autorisations de Notification de requête](https://msdn.microsoft.com/library/ms188311.aspx)  
+-   [Autorisations de Notification de requête](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Observations à caractère internationales pour Service Broker](https://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Observations à caractère internationales pour Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [Considérations de conception de solution (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Considérations de conception de solution (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [Centre d’informations du développeur Service Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Centre d’informations du développeur Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Guide du développeur (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Guide du développeur (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Activation des notifications de requête pour exécuter l'exemple de code  
  Pour activer Service Broker sur le **AdventureWorks** de base de données à l’aide de SQL Server Management Studio, exécutez l’instruction Transact-SQL suivante :  

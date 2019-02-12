@@ -2,12 +2,12 @@
 title: Sécuriser l'accès aux données
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fad9145cde499d7f0fc1b158810b75ff85c039b
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494637"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094033"
 ---
 # <a name="secure-data-access"></a>Sécuriser l'accès aux données
 Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes de sécurité disponibles dans la base de données ou le magasin de données sous-jacent. Vous devez également prendre en compte les implications relatives à la sécurité des autres fonctionnalités ou composants que votre application peut contenir.  
@@ -24,7 +24,7 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Décrit les techniques et meilleures pratiques de sécurité permettant de protéger les informations de connexion, telles que l'utilisation d'une configuration protégée pour chiffrer les chaînes de connexion.|  
-|[Recommandations pour les stratégies d’accès aux données](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Fournit des recommandations pour l'accès aux données et l'exécution d'opérations de base de données.|  
+|[Recommandations pour les stratégies d’accès aux données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Fournit des recommandations pour l'accès aux données et l'exécution d'opérations de base de données.|  
 |[Générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)|Décrit comment créer des chaînes de connexion à partir de l'entrée de l'utilisateur au moment de l'exécution.|  
 |[Vue d’ensemble de la sécurité SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Décrit l'architecture de sécurité de SQL Server.|  
   
@@ -46,7 +46,7 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Vue d’ensemble des attaques de script](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Décrit comment se protéger contre des attaques de script et d'instructions SQL.|  
+|[Vue d’ensemble des attaques de script](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Décrit comment se protéger contre des attaques de script et d'instructions SQL.|  
   
 ## <a name="probing-attacks"></a>Détection des attaques  
  Les attaquants utilisent souvent des informations incluses dans une exception, telles que le nom de votre serveur, base de données ou table pour organiser une attaque sur votre système. Étant donné que les exceptions peuvent contenir des informations spécifiques relatives à votre application ou à votre source de données, vous pouvez mieux protéger celles-ci en exposant au client seulement les informations indispensables.  
@@ -75,7 +75,7 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Sécurité des rôles COM + et .NET Framework](https://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|Explique comment intégrer du code managé à des services de sécurité COM+.|  
+|[Sécurité basée sur les rôles](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Explique comment intégrer du code managé à des services de sécurité COM+.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Interopération avec du code non managé  
  Le .NET Framework permet l'interaction avec du code non managé, y compris des composants COM, des services COM+, des bibliothèques de types externes et de nombreux services de système d'exploitation. Travailler avec du code non managé implique de sortir du périmètre de sécurité pour le code managé. Votre code, ainsi que tout code qui l'appelle, doit disposer de l'autorisation de code non managé (<xref:System.Security.Permissions.SecurityPermission> avec l'indicateur <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> spécifié). Du code non managé peut introduire des vulnérabilités involontaires dans votre application. Par conséquent, vous devez éviter d'interagir avec du code non managé à moins que ce soit absolument nécessaire.  
@@ -90,7 +90,7 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
 ## <a name="see-also"></a>Voir aussi
 - [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Recommandations pour les stratégies d’accès aux données](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Recommandations pour les stratégies d’accès aux données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

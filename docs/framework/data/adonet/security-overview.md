@@ -2,12 +2,12 @@
 title: Sécurité Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 24da83af6876e9bbb23c7978db6b9413ec00d8ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570484"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091797"
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
 La sécurisation d'une application est un processus permanent. Un développeur ne peut à aucun moment garantir qu'une application est à l'abri de toute attaque car il est impossible de prédire les types d'attaques futures que les nouvelles technologies permettront de faire apparaître. Inversement, le fait que personne n'a encore découvert (ou révélé) les défaillances de la sécurité d'un système ne signifie pas qu'il n'en existe pas ou qu'il ne peut pas en exister. Vous devez planifier la sécurité au cours de la phase de conception du projet, ainsi que la manière dont la sécurité sera maintenue tout au long de la durée de vie de l'application.  
@@ -89,7 +89,7 @@ La sécurisation d'une application est un processus permanent. Un développeur n
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Fournit une vue d'ensemble de la sécurité de SQL Server avec des scénarios d'application qui fournissent des conseils pour créer des applications ADO.NET sécurisées qui ciblent SQL Server.|  
-|[Recommandations pour les stratégies d’accès aux données](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Fournit des recommandations pour l'accès aux données et l'exécution d'opérations de base de données.|  
+|[Recommandations pour les stratégies d’accès aux données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Fournit des recommandations pour l'accès aux données et l'exécution d'opérations de base de données.|  
   
 ## <a name="security-policy-and-administration"></a>Stratégie et administration de sécurité  
  Une administration incorrecte de la sécurité d'accès du code peut potentiellement créer des failles en matière de sécurité. Une fois qu'une application a été déployée, des techniques de surveillance de la sécurité doivent être utilisées et les risques évalués à mesure que de nouvelles menaces émergent.  
@@ -98,11 +98,11 @@ La sécurisation d'une application est un processus permanent. Un développeur n
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[NIB : Gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fournit des informations sur la création et l'administration de la stratégie de sécurité.|  
-|[NIB : Meilleures pratiques de stratégie de sécurité](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Fournit des liens qui décrivent comment administrer la stratégie de sécurité.|  
+|[Gestion des stratégies de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Fournit des informations sur la création et l'administration de la stratégie de sécurité.|  
+|[Meilleures pratiques de stratégie de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Fournit des liens qui décrivent comment administrer la stratégie de sécurité.|  
   
 ## <a name="see-also"></a>Voir aussi
 - [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Sécurité PAVE dans le code natif et .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Sécurité dans .NET](../../../standard/security/index.md)
 - [Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
