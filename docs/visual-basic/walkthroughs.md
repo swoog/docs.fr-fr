@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086762"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739460"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Procédures pas à pas relatives au langage Visual Basic
 Les procédures pas à pas fournissent des instructions détaillées pour les scénarios courants, ce qui en fait un bon point de départ pour apprendre à utiliser le produit ou une fonctionnalité particulière.  
@@ -47,9 +47,6 @@ Les procédures pas à pas fournissent des instructions détaillées pour les sc
  [Implémentation de l’héritage avec les objets COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Montre comment créer un objet COM contenant une classe à l’aide de Visual Basic 6.0, puis l’utiliser comme classe de base dans Visual Basic.  
   
- [Multithreading](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- Explique comment créer une application multithread qui recherche les occurrences d’un mot dans un fichier texte.  
-  
  [Détermination de l’emplacement des informations My.Application.Log](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  Décrit les paramètres `My.Application.Log` par défaut et explique comment déterminer les paramètres de votre application.  
   
@@ -80,5 +77,5 @@ Les procédures pas à pas fournissent des instructions détaillées pour les sc
  [Persistance d’un objet en Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Montre comment créer un objet simple et rendre ses données persistantes dans un fichier.  
   
- [Prise en charge du développement basé d’abord sur les tests avec la fonctionnalité Générer à partir de l’utilisation](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Procédure pas à pas : prise en charge du développement basé d’abord sur les tests avec la fonctionnalité Générer à partir de l’utilisation](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Explique comment effectuer le développement par test initial, dans lequel vous écrivez d’abord les tests unitaires et ensuite le code source pour garantir la réussite de ces tests.

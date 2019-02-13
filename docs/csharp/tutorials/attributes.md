@@ -4,12 +4,12 @@ description: Découvrez comment les attributs fonctionnent en C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029825"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826822"
 ---
 # <a name="using-attributes-in-c"></a>Utilisation d’attributs en C# #
 
@@ -137,7 +137,7 @@ Voici quelques attributs importants générés dans les bibliothèques de classe
 * `[Obsolete]`. Celui-ci a été utilisé dans les exemples ci-dessus, et il se trouve dans l’espace de noms `System`. Il est utile de fournir des informations déclaratives sur une base de code changeante. Un message peut être fourni sous la forme d’une chaîne et un autre paramètre booléen peut servir à passer d’un avertissement du compilateur à une erreur du compilateur.
 
 * `[Conditional]`. Cet attribut se trouve dans l'espace de noms `System.Diagnostics`. Cet attribut peut être appliqué aux méthodes (ou classes d’attributs). Vous devez transmettre une chaîne au constructeur.
-Si cette chaîne correspond à une directive `#define`, alors tous les appels à cette méthode (mais pas la méthode proprement dite) seront supprimés par le compilateur C#. Cela est généralement utilisé pour le débogage (diagnostic).
+Si cette chaîne ne correspond pas à une directive `#define`, les appels à cette méthode (mais pas la méthode proprement dite) sont supprimés par le compilateur C#. Cela est généralement utilisé pour le débogage (diagnostic).
 
 * `[CallerMemberName]`. Cet attribut peut être utilisé sur les paramètres et se trouve dans l’espace de noms `System.Runtime.CompilerServices`. Il s’agit d’un attribut utilisé pour injecter le nom de la méthode qui appelle une autre méthode. Cela est généralement utilisé comme moyen d’éliminer les « chaînes magiques » lors de l’implémentation de INotifyPropertyChanged dans divers frameworks d’interface utilisateur. En tant qu’exemple :
 

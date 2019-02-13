@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504000"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826458"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publier des applications .NET Core avec l’interface CLI
 
@@ -38,11 +38,11 @@ Vous recherchez une aide rapide sur l’utilisation de l’interface CLI ? Le t
 
 ## <a name="publishing-basics"></a>Principes de base de la publication
 
-Le paramètre `<TargetFramework>` du fichier projet spécifie le framework cible par défaut quand vous publiez votre application. Vous pouvez choisir comme framework cible n’importe quel [TFM (Target Framework Moniker)](../../standard/frameworks.md) valide. Par exemple, si votre projet utilise `<TargetFramework>netcoreapp2.2</TargetFramework>`, un binaire qui cible .NET Core 2.2 est créé. Le TFM spécifié dans ce paramètre est la cible par défaut utilisée par la commande [`dotnet publish`][dotnet-publish].
+Le paramètre `<TargetFramework>` du fichier projet spécifie le framework cible par défaut quand vous publiez votre application. Vous pouvez choisir comme framework cible n’importe quel [TFM (Target Framework Moniker)](../../standard/frameworks.md) valide. Par exemple, si votre projet utilise `<TargetFramework>netcoreapp2.2</TargetFramework>`, un binaire qui cible .NET Core 2.2 est créé. Le TFM spécifié dans ce paramètre est la cible par défaut utilisée par la commande [`dotnet publish`](../tools/dotnet-publish.md).
 
 Si vous souhaitez cibler plusieurs frameworks, vous pouvez affecter au paramètre `<TargetFrameworks>` plusieurs valeurs de TFM séparées par un point-virgule. Vous pouvez publier l’un des frameworks avec la commande `dotnet publish -f <TFM>`. Par exemple, si vous avez `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` et que vous exécutez `dotnet publish -f netcoreapp2.1`, un binaire qui cible .NET Core 2.1 est créé.
 
-Le répertoire de sortie de la commande [`dotnet publish`][dotnet-publish] est `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`, sauf s’il est défini autrement. Le mode **BUILD-CONFIGURATION** par défaut est **Debug**, sauf si vous le modifiez avec le paramètre `-c`. Par exemple, `dotnet publish -c Release -f netcoreapp2.1` publie dans `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Le répertoire de sortie de la commande [`dotnet publish`](../tools/dotnet-publish.md) est `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`, sauf s’il est défini autrement. Le mode **BUILD-CONFIGURATION** par défaut est **Debug**, sauf si vous le modifiez avec le paramètre `-c`. Par exemple, `dotnet publish -c Release -f netcoreapp2.1` publie dans `myfolder/bin/Release/netcoreapp2.1/publish/`. 
 
 Si vous utilisez le kit SDK .NET Core 3.0, le mode de publication par défaut pour les applications qui ciblent .NET Core version 2.1, 2.2 ou 3.0 est « Exécutable dépendant du framework ».
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-Quand vous exécutez l'application ([`dotnet run`][dotnet-run]), la sortie suivante s'affiche :
+Quand vous exécutez l’application ([`dotnet run`](../tools/dotnet-run.md)), la sortie suivante s’affiche :
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ Vous devez utiliser les commutateurs suivants avec la commande `dotnet publish` 
 
 - [Déploiement d’applications .NET Core](index.md)
 - [Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md

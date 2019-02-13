@@ -3,13 +3,13 @@ title: Choisir entre des applications web traditionnelles et des applications mo
 description: Apprenez à choisir entre des applications web traditionnelles et des applications monopages (SPA) quand il s’agit de créer des applications web.
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 01/30/2019
+ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745301"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825743"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Choisir entre des applications web traditionnelles et des applications monopages
 
@@ -37,6 +37,10 @@ Vous devez utiliser une application monopage (SPA, Single-Page Application) quan
 De plus, les frameworks SPA demandent de plus grandes connaissances en architecture et en sécurité. Elles subissent davantage de modifications que les applications web traditionnelles en raison des mises à jour fréquentes et des nouveaux frameworks. La configuration de processus de déploiement et de génération automatisés et l’utilisation d’options de déploiement telles que des conteneurs sont plus difficiles avec les applications SPA qu’avec les applications web traditionnelles.
 
 Les améliorations de l’expérience utilisateur rendues possibles avec le modèle SPA doivent être comparées à ces considérations.
+
+## <a name="razor-components"></a>Razor Components
+
+ASP.NET Core 3.0 introduit un nouveau modèle permettant de créer une interface utilisateur riche, interactive et composable, appelée Razor Components. Razor Components permet aux développeurs de générer une interface utilisateur avec Razor sur le serveur. Il permet aussi de fournir ce code au navigateur et de l’exécuter côté client à l’aide d’une bibliothèque JavaScript appelée WebAssembly. ASP.NET Core 3.0 est toujours en développement, mais vous verrez plus d’informations sur cette technologie dans la mise à jour 3.0 de ce livre électronique. Pour plus d’informations sur Razor Components (nom de code Blazor), consultez [Bien démarrer avec Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Quand choisir les applications web traditionnelles
 

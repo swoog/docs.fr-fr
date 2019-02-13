@@ -3,13 +3,13 @@ title: Utiliser des données dans les applications ASP.NET Core
 description: Architecturer des applications web modernes avec ASP.NET Core et Azure | Utilisation de données dans les applications ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 01/30/2019
+ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532680"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827173"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Utilisation de données dans les applications ASP.NET Core
 
@@ -123,13 +123,82 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Vous pouvez inclure plusieurs relations, et également inclure des sous-relations à l’aide de ThenInclude. EF Core exécutera une seule requête pour récupérer le jeu d’entités résultant.
+Vous pouvez inclure plusieurs relations, et également inclure des sous-relations à l’aide de ThenInclude. EF Core exécutera une seule requête pour récupérer le jeu d’entités résultant. Vous pouvez également inclure des propriétés de navigation de propriétés de navigation en passant une chaîne séparée par « . » à la méthode d’extension `.Include()`, comme suit :
+
+```csharp
+    .Include(“Items.Products”)
+```
+
+En plus de l’encapsulation de la logique de filtrage, une spécification peut spécifier la forme des données à retourner, dont les propriétés à remplir. L’exemple eShopOnWeb présente plusieurs spécifications qui illustrent l’encapsulation des informations de chargement hâtif dans la spécification. Vous pouvez voir comment la spécification est utilisée dans le cadre d’une requête ici :
+
+```csharp
+// Includes all expression-based includes
+query = specification.Includes.Aggregate(query,
+            (current, include) => current.Include(include));
+
+// Include any string-based include statements
+query = specification.IncludeStrings.Aggregate(query,
+            (current, include) => current.Include(include));
+```
 
 Une autre option de chargement des données associées consiste à utiliser le _chargement explicite_. Le chargement explicite vous permet de charger des données supplémentaires dans une entité qui a déjà été récupérée. Comme cela implique une requête distincte à la base de données, ce n’est pas recommandé pour les applications web, qui doivent réduire le nombre d’allers-retours vers la base de données effectués par requête.
 
 Le _chargement différé_ est une fonctionnalité qui charge automatiquement les données associées telles qu’elles sont référencées par l’application. La prise en charge du chargement différé a été ajoutée à la version 2.1 d’EF Core. Le chargement différé n’est pas activé par défaut et nécessite l’installation de `Microsoft.EntityFrameworkCore.Proxies`. Comme pour le chargement explicite, le chargement différé doit le plus souvent être désactivé pour les applications web, car son utilisation génère un supplément de requêtes de base de données à chaque requête web exécutée. Seulement, la surcharge induite par le chargement différé passe souvent inaperçue en phase de développement en raison de la faible latence et de la taille souvent réduite des jeux de données utilisés pour les tests. Cependant, en production, compte tenu du plus grand nombre d’utilisateurs, des données plus volumineuses et de la latence supérieure, les requêtes de base de données additionnelles peuvent souvent se traduire par des performances médiocres pour les applications web qui font largement appel au chargement différé.
 
 [Éviter les entités de chargement différé dans les applications web](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
+
+### <a name="encapsulating-data"></a>Encapsulation de données
+
+EF Core prend en charge plusieurs fonctionnalités qui permettent à votre modèle d’encapsuler correctement son état. Un problème courant dans les modèles de domaine est qu’ils exposent des propriétés de navigation de collection en tant que types de listes accessibles publiquement. Cela permet à tout collaborateur de manipuler le contenu de ces types de collection, de contourner ainsi des règles métier importantes relatives à la collection et de laisser éventuellement l’objet dans un état non valide. La solution consiste à exposer un accès en lecture seule aux collections associées et à fournir explicitement des méthodes qui définissent des moyens par lesquels les clients peuvent les manipuler, comme dans l’exemple suivant :
+
+```csharp
+public class Basket : BaseEntity
+{
+    public string BuyerId { get; set; }
+    private readonly List<BasketItem> _items = new List<BasketItem>();
+    public IReadOnlyCollection<BasketItem> Items => _items.AsReadOnly();
+
+    public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
+    {
+        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        {
+            _items.Add(new BasketItem()
+            {
+                CatalogItemId = catalogItemId,
+                Quantity = quantity,
+                UnitPrice = unitPrice
+            });
+            return;
+        }
+        var existingItem = Items.FirstOrDefault(i => i.CatalogItemId == catalogItemId);
+        existingItem.Quantity += quantity;
+    }
+}
+```
+
+Notez que ce type d’entité n’expose pas une propriété `List` ou `ICollection` publique, mais expose plutôt un type `IReadOnlyCollection` qui encapsule le type de liste sous-jacent. Lorsque vous utilisez ce modèle, vous pouvez indiquer à Entity Framework Core d’utiliser le champ de stockage comme suit :
+
+```csharp
+private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
+{
+    var navigation = builder.Metadata.FindNavigation(nameof(Basket.Items));
+
+    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+}
+```
+
+Une autre manière d’améliorer votre modèle de domaine consiste à utiliser des objets de valeur pour les types qui ne disposent pas d’identité et qui se distinguent uniquement par leurs propriétés. L’utilisation de ces types comme propriétés de vos entités peut aider à maintenir à sa place la logique spécifique à l’objet de valeur et peut éviter d’avoir une logique en double entre plusieurs entités qui utilisent le même concept. Dans Entity Framework Core, vous pouvez conserver les objets de valeur dans la même table que leur entité propriétaire en configurant le type comme une entité détenue, comme suit :
+
+```csharp
+private void ConfigureOrder(EntityTypeBuilder<Order> builder)
+{
+    builder.OwnsOne(o => o.ShipToAddress);
+}
+```
+
+Dans cet exemple, la propriété `ShipToAddress` est de type `Address`. `Address` est un objet de valeur doté de plusieurs propriétés telles que `Street` et `City`. EF Core mappe l’objet `Order` à sa table avec une colonne par propriété `Address`, en faisant précéder chaque nom de colonne par le nom de la propriété. Dans cet exemple, la table `Order` doit inclure des colonnes telles que `ShipToAddress_Street` et `ShipToAddress_City`.
+
+[EF Core 2.2 prend désormais en charge les collections d’entités détenues](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
 ### <a name="resilient-connections"></a>Connexions résilientes
 

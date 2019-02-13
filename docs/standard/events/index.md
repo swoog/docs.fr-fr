@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d692f440354583e645606def4303f0c7c8f1e777
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679930"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093591"
 ---
 # <a name="handling-and-raising-events"></a>Gestion et déclenchement d'événements
 Les événements dans le .NET Framework sont basés sur le modèle délégué. Le modèle délégué suit le modèle de conception observateur, qui permet à un abonné de s'inscrire pour recevoir des notifications d'un fournisseur. Un émetteur d'événements émet une notification d'événement, et un récepteur d'événements reçoit cette notification et définit une réponse à celle-ci. Cet article décrit les principaux composants du modèle délégué, comment consommer les événements des applications, et comment implémenter des événements dans votre code.  
@@ -45,7 +45,7 @@ Les événements dans le .NET Framework sont basés sur le modèle délégué. L
   
  Les délégués sont multicast, ce qui signifie qu'ils peuvent contenir des références à plusieurs méthodes de gestion des événements. Pour plus d'informations, consultez la page de référence <xref:System.Delegate>. Les délégués assurent une souplesse et un contrôle précis lors de la gestion des événements. Un délégué agit comme un répartiteur d’événements pour la classe qui déclenche l’événement en gérant une liste de gestionnaires d’événements inscrits pour l’événement.  
   
- Pour les scénarios dans lesquels les délégués <xref:System.EventHandler> et <xref:System.EventHandler%601> ne fonctionnent pas, vous pouvez définir un délégué. Les scénarios qui nécessitent de définir un délégué sont très rares, par exemple lorsque vous devez utiliser du code qui ne reconnaît pas les génériques. Vous marquez un délégué avec le `delegate` en (C#) et le mot clé `Delegate` (en Visual Basic) dans la déclaration. L'exemple suivant montre comment déclarer un délégué nommé `ThresholdReachedEventHandler`.  
+ Pour les scénarios dans lesquels les délégués <xref:System.EventHandler> et <xref:System.EventHandler%601> ne fonctionnent pas, vous pouvez définir un délégué. Les scénarios qui nécessitent de définir un délégué sont très rares, par exemple lorsque vous devez utiliser du code qui ne reconnaît pas les génériques. Vous marquez un délégué avec le mot clé `delegate` (en C#) et `Delegate` (en Visual Basic) dans la déclaration. L'exemple suivant montre comment déclarer un délégué nommé `ThresholdReachedEventHandler`.  
   
  [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
  [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -71,7 +71,7 @@ Les événements dans le .NET Framework sont basés sur le modèle délégué. L
  [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Gestionnaires d'événements statiques et dynamiques  
- .NET Framework permet aux abonnés de s'inscrire pour recevoir des notifications d'événements statiques ou dynamiques. Les gestionnaires d’événements statiques sont en vigueur pendant toute la durée de vie de la classe dont ils gèrent les événements. Les gestionnaires d’événements dynamiques sont explicitement activés et désactivés pendant l’exécution du programme, généralement en réponse à une logique de programme conditionnelle. Par exemple, ils peuvent être utilisés si les notifications d’événements sont nécessaires uniquement dans certaines conditions ou si une application fournit plusieurs gestionnaires d’événements et les conditions d’exécution définissent le gestionnaire approprié à utiliser. L'exemple de la section précédente indique comment ajouter dynamiquement un gestionnaire d'événements. Pour plus d’informations, consultez [Événements](../../visual-basic/programming-guide/language-features/events/index.md) et [Événements](../../csharp/programming-guide/events/index.md).  
+ .NET Framework permet aux abonnés de s'inscrire pour recevoir des notifications d'événements statiques ou dynamiques. Les gestionnaires d’événements statiques sont en vigueur pendant toute la durée de vie de la classe dont ils gèrent les événements. Les gestionnaires d’événements dynamiques sont explicitement activés et désactivés pendant l’exécution du programme, généralement en réponse à une logique de programme conditionnelle. Par exemple, ils peuvent être utilisés si les notifications d’événements sont nécessaires uniquement dans certaines conditions ou si une application fournit plusieurs gestionnaires d’événements et les conditions d’exécution définissent le gestionnaire approprié à utiliser. L'exemple de la section précédente indique comment ajouter dynamiquement un gestionnaire d'événements. Pour plus d’informations, consultez [Événements](../../visual-basic/programming-guide/language-features/events/index.md) (en Visual Basic) et [Événements](../../csharp/programming-guide/events/index.md) (en C#).  
   
 ## <a name="raising-multiple-events"></a>Déclenchement de plusieurs événements  
  Si votre classe déclenche plusieurs événements, le compilateur génère un champ par instance de délégué d'événement. Si le nombre d’événements est important, le coût de stockage d’un champ par délégué peut ne pas convenir. Dans ce cas, .NET Framework fournit une des propriétés d'événement que vous pouvez utiliser avec une autre structure de données de votre choix pour stocker les délégués d'événement.  

@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 634c76c3510d594584f06ea14bed84b1b0423c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26d763884cc392a08e8cef7f5321d23f1c52a7fa
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502173"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903509"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>Traitement des données XML à l'aide de LINQ to XML
 LINQ to XML est le nouveau modèle du .NET Framework version 3.5 pour le traitement des données XML. LINQ to XML permet aux développeurs d'effectuer toutes les opérations qu'ils souhaitent avec les données XML : interrogation, modification, création et sérialisation de documents XML, mais les avantages réels se situe dans les fonctions de requête et de création.  
   
- À la fois succinctes et expressives, les requêtes en LINQ to XML se basent sur une syntaxe qui se rapproche davantage du langage SQL que de Xpath ou XQuery. Parce que les résultats de requête peuvent être retournés en tant que collections d'éléments ou d'attributs et utilisés comme paramètres pour les objets XElement, les arborescences XML peuvent être facilement transformées d'une forme à l'autre.  
+ À la fois succinctes et expressives, les requêtes en LINQ to XML se basent sur une syntaxe qui se rapproche davantage du langage SQL que de Xpath ou XQuery. Parce que les résultats de requête peuvent être retournés en tant que collections d'éléments ou d'attributs et utilisés comme paramètres pour les objets XElement, les arborescences XML peuvent être facilement converties d'une forme à l'autre.  
   
  LINQ to XML se base sur la technologie LINQ (Langage-Integrated Query) du .NET Framework version 3.5. LINQ étend la syntaxe des langages C# et Visual Basic pour fournir de puissantes capacités de requête qui peuvent être potentiellement étendues à n'importe quel magasin de données.  
   
- Consultez [LINQ to XLM](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) pour une présentation détaillée de son utilisation et [LINQ (Language-Integrated Query](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) pour une vue d'ensemble de l'infrastructure LINQ.  
+ Pour une présentation détaillée de son utilisation, consultez [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). Pour une présentation de l’infrastructure LINQ, consultez [LINQ (Language Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md) ou [LINQ (Language Integrated Query) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

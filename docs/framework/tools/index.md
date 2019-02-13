@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041484"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220103"
 ---
 # <a name="net-framework-tools"></a>Outils du .NET Framework
 Les outils du .NET Framework facilitent la création, le déploiement et la gestion d'applications et de composants qui ciblent le .NET Framework.  
@@ -129,7 +129,7 @@ La plupart des outils .NET Framework décrits dans cette section sont installés
  Aide à localiser des ressources d'interface utilisateur (fichiers .resx ou .resources) utilisées par les Windows Forms. Vous pouvez traduire des chaînes puis dimensionner, déplacer et masquer les contrôles comme vous le souhaitez afin de placer les chaînes localisées.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Outils](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [outils WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  Inclut des outils comme l’outil isXPS Conformance (isXPS.exe) et les outils de profilage des performances.  
   
  [Outils Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  

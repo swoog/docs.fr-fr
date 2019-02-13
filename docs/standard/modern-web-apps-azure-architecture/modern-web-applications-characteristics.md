@@ -3,13 +3,13 @@ title: Caractéristiques des applications web modernes
 description: Architecturer des applications web modernes avec ASP.NET Core et Azure | Caractéristiques des applications web modernes
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: eacc66ff5d2c4bfb8d8645bc6bd319eab52437a3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147334"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828122"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Caractéristiques des applications web modernes
 
@@ -39,25 +39,25 @@ ASP.NET Core est optimisé pour le cloud (cloud public, cloud privé, n’import
 
 ## <a name="cross-platform"></a>Multiplateformes
 
-ASP.NET Core est multiplateforme et peut s’exécuter sur Linux et MacOS en plus de Windows. Cela donne accès à de nombreuses nouvelles options pour le développement et le déploiement d’applications créées avec ASP.NET Core. Les conteneurs Docker, qui exécutent généralement Linux aujourd’hui, peuvent héberger des applications ASP.NET Core, ce qui leur permet de tirer parti des avantages offerts par les [conteneurs et microservices](../microservices-architecture/index.md).
+ASP.NET Core est multiplateforme et peut s’exécuter sur Linux, macOS et Windows. Cela donne accès à de nombreuses nouvelles options pour le développement et le déploiement d’applications créées avec ASP.NET Core. Les conteneurs Docker, qu’ils exécutent Linux ou Windows, peuvent héberger des applications ASP.NET Core, ce qui leur permet de tirer parti des avantages offerts par les [conteneurs et microservices](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Faiblement couplées et modulaires
 
 Les packages NuGet sont des citoyens de première classe dans .NET Core, et les applications ASP.NET Core sont composées de nombreuses bibliothèques par le biais de NuGet. Avec ce niveau de granularité des fonctionnalités, les applications dépendent uniquement des fonctionnalités dont elles ont réellement besoin et déploient uniquement ces fonctionnalités, réduisant ainsi leur encombrement et leur surface d’exposition de vulnérabilité de sécurité.
 
-ASP.NET Core prend aussi totalement en charge l’injection de dépendances, à la fois en interne et au niveau de l’application. Les interfaces peuvent avoir plusieurs implémentations qui peuvent être échangées en fonction des besoins. L’injection de dépendances permet aux applications d’être faiblement couplées avec ces interfaces, ce qui les rend plus faciles à étendre, mettre à jour et tester.
+ASP.NET Core prend aussi totalement en charge l’[injection de dépendances](https://deviq.com/dependency-injection/), à la fois en interne et au niveau de l’application. Les interfaces peuvent avoir plusieurs implémentations qui peuvent être échangées en fonction des besoins. L’injection de dépendances permet aux applications d’être faiblement couplées avec ces interfaces, plutôt qu’avec des implémentations spécifiques, ce qui les rend plus faciles à étendre, mettre à jour et tester.
 
 ## <a name="easily-tested-with-automated-tests"></a>Facilement testées avec des tests automatisés
 
-Les applications ASP.NET Core prennent en charge les tests unitaires, et leur faible couplage et leur prise en charge des injections de dépendances facilitent le remplacement des infrastructures à problème par des implémentations factices à des fins de test. ASP.NET Core est également fourni avec un TestServer qui peut être utilisé pour héberger des applications en mémoire. Des tests fonctionnels peuvent ensuite effectuer des demandes à ce serveur en mémoire en testant la pile d’application complète (notamment les middlewares, le routage, la liaison de modèle, les filtres, etc.) et en recevant une réponse, tout ceci en une fraction du temps qui serait nécessaire pour héberger l’application sur un serveur réel et effectuer des demandes par le biais de la couche réseau. Ces tests sont particulièrement faciles à écrire et utiles pour les API, qui sont de plus en plus importantes dans les applications web modernes.
+Les applications ASP.NET Core prennent en charge les tests unitaires, et leur faible couplage et leur prise en charge de l’injection de dépendances facilitent le remplacement des infrastructures à problème par des implémentations factices à des fins de test. ASP.NET Core est également fourni avec un TestServer qui peut être utilisé pour héberger des applications en mémoire. Des tests fonctionnels peuvent ensuite effectuer des demandes à ce serveur en mémoire en testant la pile d’application complète (notamment les middlewares, le routage, la liaison de modèle, les filtres, etc.) et en recevant une réponse, tout ceci en une fraction du temps qui serait nécessaire pour héberger l’application sur un serveur réel et effectuer des demandes par le biais de la couche réseau. Ces tests sont particulièrement faciles à écrire et utiles pour les API, qui sont de plus en plus importantes dans les applications web modernes.
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>Comportements des applications traditionnelles et SPA pris en charge
 
-Les applications web traditionnelles impliquent peu de comportement côté client, mais repose sur le serveur pour la navigation, les requêtes et les mises à jour que l’application peut avoir besoin d’effectuer. Chaque nouvelle opération effectuée par l’utilisateur se traduit par une nouvelle requête web, le résultat étant un rechargement complet de la page dans le navigateur de l’utilisateur final. Les frameworks MVC (Model-View-Controller) classiques suivent généralement cette approche, chaque nouvelle requête correspondant à une action de contrôleur différente, qui à son tour fonctionne avec un modèle et retourne une vue. Certaines opérations individuelles dans une page donnée peuvent être améliorées avec des fonctionnalités AJAX (Asynchronous JavaScript and XML), mais l’architecture globale de l’application utilise de nombreuses vues MVC et points de terminaison d’URL différents.
+Les applications web traditionnelles impliquent peu de comportement côté client, mais repose sur le serveur pour la navigation, les requêtes et les mises à jour que l’application peut avoir besoin d’effectuer. Chaque nouvelle opération effectuée par l’utilisateur se traduit par une nouvelle requête web, le résultat étant un rechargement complet de la page dans le navigateur de l’utilisateur final. Les frameworks MVC (Model-View-Controller) classiques suivent généralement cette approche, chaque nouvelle requête correspondant à une action de contrôleur différente, qui à son tour fonctionne avec un modèle et retourne une vue. Certaines opérations individuelles dans une page donnée peuvent être améliorées avec des fonctionnalités AJAX (Asynchronous JavaScript and XML), mais l’architecture globale de l’application utilise de nombreuses vues MVC et points de terminaison d’URL différents. De plus, ASP.NET Core MVC prend également en charge Razor Pages, un moyen plus simple d’organiser les pages de style MVC.
 
-Les applications monopages (SPA, Single-Page Applications), en revanche, impliquent très peu de chargements de page côté serveur générés de manière dynamique (voire aucun). De nombreuses applications SPA sont initialisées dans un fichier HTML statique qui charge les bibliothèques JavaScript nécessaires pour démarrer et exécuter l’application. Ces applications utilisent de manière intensive des API web pour leurs besoins en données, et peuvent fournir des expériences utilisateur beaucoup plus riches.
+Les applications monopages (SPA, Single-Page Applications), en revanche, impliquent très peu de chargements de page côté serveur générés de manière dynamique (voire aucun). De nombreuses applications monopages sont initialisées dans un fichier HTML statique qui charge les bibliothèques JavaScript nécessaires pour démarrer et exécuter l’application. Ces applications utilisent de manière intensive des API web pour leurs besoins en données, et peuvent fournir des expériences utilisateur beaucoup plus riches.
 
-De nombreuses applications web impliquent une combinaison des comportements d’application web traditionnelle (en général pour le contenu) et d’application SPA (pour l’interactivité). ASP.NET Core prend en charge les API web et MVC (Views et/ou Razor Pages) dans la même application, en utilisant le même ensemble d’outils et de bibliothèques de framework sous-jacentes.
+De nombreuses applications web impliquent une combinaison des comportements d’application web traditionnelle (en général pour le contenu) et d’application SPA (pour l’interactivité). ASP.NET Core prend en charge les API web et MVC (basées sur les vues ou les pages) dans la même application, en utilisant le même ensemble d’outils et de bibliothèques de framework sous-jacentes.
 
 ## <a name="simple-development-and-deployment"></a>Développement et déploiement simples
 

@@ -3,13 +3,13 @@ title: Architectures courantes des applications web
 description: Architecturer des applications web modernes avec ASP.NET Core et Azure | Explorer les architectures courantes des applications web
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 3b0b109b0910eb5763ecab228115b7bc932d4a10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129933"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826731"
 ---
 # <a name="common-web-application-architectures"></a>Architectures courantes des applications web
 
@@ -87,7 +87,7 @@ Quand l’application doit grossir, des solutions de déploiement plus complexes
 
 En interne, l’organisation de ce projet en plusieurs projets par responsabilité facilite la maintenance de l’application.
 
-Il est possible d’augmenter ou de diminuer la taille des instances de cette unité pour tirer parti de l’extensibilité à la demande sur le cloud. L’augmentation de la taille des instances revient à ajouter de l’UC, de la mémoire, de l’espace disque ou d’autres ressources sur le ou les serveurs qui hébergent votre application. La diminution de la taille des instances revient à ajouter des instances supplémentaires de ces serveurs (physiques ou virtuels). Quand votre application est hébergée sur plusieurs instances, un équilibreur de charge assigne les requêtes aux différentes instances de l’application.
+Il est possible d’augmenter ou de diminuer la taille des instances de cette unité pour tirer parti de l’extensibilité à la demande sur le cloud. L’augmentation de la taille des instances revient à ajouter de l’UC, de la mémoire, de l’espace disque ou d’autres ressources sur le ou les serveurs qui hébergent votre application. Le scale-out revient à ajouter des instances supplémentaires de ces serveurs, qu’il s’agisse de serveurs physiques, de machines virtuelles ou de conteneurs. Quand votre application est hébergée sur plusieurs instances, un équilibreur de charge assigne les requêtes aux différentes instances de l’application.
 
 L’approche la plus simple pour mettre à l’échelle une application web dans Azure est de configurer la mise à l’échelle manuellement dans le plan App Service de l’application. La figure 5-6 illustre le tableau de bord Azure qui permet de configurer le nombre d’instances au service d’une application.
 
@@ -212,9 +212,9 @@ Le déploiement de mises à jour comme images Docker est beaucoup plus rapide et
 
 Comme les conteneurs sont immuables de par leur conception même, il n’y a pas de risques d’endommagement des machines virtuelles, au contraire des scripts de mise à jour qui peuvent oublier de prendre en compte une configuration ou un fichier spécifique sur le disque.
 
-_Vous pouvez utiliser des conteneurs Docker pour effectuer un déploiement monolithique d’applications web simples. Cela a pour effet d’améliorer les pipelines d’intégration continue et de déploiement continu et cela contribuer à la réussite du déploiement en production. Fini les « Comment cela se fait-il que cela fonctionne sur ma machine, mais pas en production ? »_
+Vous pouvez utiliser des conteneurs Docker pour effectuer un déploiement monolithique d’applications web simples. Cela a pour effet d’améliorer les pipelines d’intégration continue et de déploiement continu et cela contribuer à la réussite du déploiement en production. Vous ne direz plus : « Comment cela se fait-il que cela fonctionne sur ma machine, mais pas en production ? ».
 
-Une architecture basée sur des microservices présente de nombreux avantages, mais ces avantages se payent par une complexité accrue. Dans certains cas, les inconvénients prennent le pas sur les avantages et il est préférable d’utiliser une application à déploiement monolithique s’exécutant dans un petit nombre de conteneurs, voire dans un seul conteneur.
+Une architecture basée sur des microservices présente de nombreux avantages, mais ces avantages se payent par une complexité accrue. Dans certains cas, les coûts l’emportent sur les avantages, de sorte qu’il est préférable d’utiliser une application à déploiement monolithique s’exécutant dans un petit nombre de conteneurs, voire dans un seul conteneur.
 
 Il n’est pas toujours évident de décomposer une application monolithique en plusieurs microservices bien distincts. Les microservices doivent fonctionner indépendamment les uns des autres pour optimiser la résilience de l’application. Si vous ne pouvez pas proposer l’application par tranches de fonctionnalités indépendantes, la diviser ne fait qu’ajouter de la complexité.
 
@@ -224,7 +224,7 @@ Au stade initial du développement d’une application, vous n’avez peut-être
 
 Séparer une application en divers processus distincts induit aussi des coûts. Il est plus complexe de séparer des fonctionnalités en différents processus. Les protocoles de communication deviennent plus complexes. Au lieu d’appeler des méthodes, vous devez utiliser des communications asynchrones entre les services. Quand il s’agit de déplacer une architecture de microservices, vous devez ajouter la plupart des blocs de construction implémentés dans la version de microservices de l’application eShopOnContainers : gestion du bus d’événements, résilience des messages et nouvelles tentatives, cohérence éventuelle, etc.
 
-L’[application de référence eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb), bien plus simple, prend en charge l’utilisation de conteneurs monolithiques uniques. L’application comprend deux applications web : une utilisant le modèle MVC classique et une autre utilisant Razor Pages. Les deux peuvent être lancées à partir de la racine de la solution à l’aide des commandes `docker-compose build` et `docker-compose up`. Cette commande configure des conteneurs distincts pour chaque instance web, en utilisant le `Dockerfile` situé dans la racine de chaque projet web et exécute chaque conteneur sur un port distinct. Vous pouvez télécharger la source de cette application sur GitHub et l’exécuter localement. Même cette application monolithique gagne à être déployée dans un environnement de conteneurs.
+L’[application de référence eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb), bien plus simple, prend en charge l’utilisation de conteneurs monolithiques uniques. L’application inclut une application web qui inclut les vues MVC, les API web et les pages Razor traditionnelles. Cette application peut être lancée à partir de la racine de la solution à l’aide des commandes `docker-compose build` et `docker-compose up`. Cette commande configure un conteneur pour l’instance web en utilisant le `Dockerfile` situé à la racine du projet web, et exécute le conteneur sur un port spécifié. Vous pouvez télécharger la source de cette application sur GitHub et l’exécuter localement. Même cette application monolithique gagne à être déployée dans un environnement de conteneurs.
 
 Tout d’abord, un déploiement en conteneur signifie que chaque instance de l’application s’exécute dans le même environnement. Cela inclut l’environnement de développement dans lequel les tests de la première heure et le développement ont été réalisés. L’équipe de développement peut exécuter l’application dans un environnement à conteneurs qui correspond à l’environnement de production.
 
@@ -236,24 +236,14 @@ Enfin, la mise en conteneur de l’application contraint à établir une sépara
 
 Le projet `eShopOnWeb` s’exécute sur .NET Core. Par conséquent, il peut s’exécuter dans des conteneurs Linux ou Windows. Notez que pour le déploiement de Docker, vous devez utiliser le même type d’hôte pour SQL Server. Les conteneurs Linux offrent un plus faible encombrement et sont à privilégier.
 
-Vous pouvez utiliser Visual Studio 2017 pour ajouter la prise en charge de Docker à une application existante en cliquant avec le bouton droit sur un projet dans l’**Explorateur de solutions** et en choisissant **Ajouter** > **Prise en charge de Docker** . Les fichiers nécessaires sont alors ajoutés et le projet est modifié pour pouvoir les utiliser. Ces fichiers sont déjà en place dans l’exemple `eShopOnWeb` actuel.
+Vous pouvez utiliser Visual Studio 2017 ou ultérieur pour ajouter la prise en charge de Docker à une application existante en cliquant avec le bouton droit sur un projet dans l’**Explorateur de solutions** et en choisissant **Ajouter** > **Prise en charge de Docker**. Les fichiers nécessaires sont alors ajoutés et le projet est modifié pour pouvoir les utiliser. Ces fichiers sont déjà en place dans l’exemple `eShopOnWeb` actuel.
 
-Le fichier `docker-compose.yml` au niveau de la solution contient des informations sur les images à générer et les conteneurs à lancer. Ce fichier vous permet d’utiliser la commande `docker-compose` pour lancer les deux versions de l’application web en même temps. Vous pouvez aussi l’utiliser pour configurer des dépendances, telles qu’un conteneur de base de données distinct.
+Le fichier `docker-compose.yml` au niveau de la solution contient des informations sur les images à générer et les conteneurs à lancer. Ce fichier vous permet d’utiliser la commande `docker-compose` pour lancer plusieurs applications en même temps. Dans ce cas, il lance uniquement le projet Web. Vous pouvez aussi l’utiliser pour configurer des dépendances, telles qu’un conteneur de base de données distinct.
 
 ```yml
 version: '3'
 
 services:
-  eshopwebrazor:
-    image: eshopwebrazor
-    build:
-      context: .
-      dockerfile: src/WebRazorPages/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5107:5107"
-
   eshopwebmvc:
     image: eshopwebmvc
     build:
@@ -270,28 +260,27 @@ networks:
       name: nat
 ```
 
-Le fichier `docker-compose.yml` référence le `Dockerfile` dans les projets `Web` et `WebRazorPages`. Le `Dockerfile` sert à spécifier le conteneur de base qui sera utilisé et la façon dont l’application sera configurée dans ce dernier. Voici le `Dockerfile` de `WebRazorPages` :
+Le fichier `docker-compose.yml` référence le `Dockerfile` dans le projet `Web`. Le `Dockerfile` sert à spécifier le conteneur de base qui sera utilisé et la façon dont l’application sera configurée dans ce dernier. Voici le `Dockerfile` de `Web` :
 
 ```
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.1.300-preview1 AS build
-RUN npm install -g bower@1.8.4
-WORKDIR /src
+COPY *.sln .
 COPY . .
-WORKDIR /src/src/WebRazorPages
-RUN dotnet restore -nowarn:msb3202,nu1503
-RUN dotnet build --no-restore -c Release -o /app
+WORKDIR /app/src/Web
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish --no-restore -c Release -o /app
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
+COPY --from=build /app/src/Web/out ./
+
+# Optional: Set this here if not setting it from docker-compose.yml
+# ENV ASPNETCORE_ENVIRONMENT Development
+
+ENTRYPOINT ["dotnet", "Web.dll"]
 ```
 
 ### <a name="troubleshooting-docker-problems"></a>Résolution des problèmes liés à Docker
@@ -300,10 +289,9 @@ Une fois exécutée, l’application en conteneur continue de s’exécuter jusq
 
 Notez que les conteneurs Docker en cours d’exécution peuvent être liés à des ports que vous pouvez tenter d’utiliser dans votre environnement de développement. Si vous essayez d’exécuter ou de déboguer une application en utilisant le même port qu’un conteneur Docker en cours d’exécution, vous obtiendrez une erreur indiquant que le serveur ne peut pas se lier à ce port. Une fois encore, l’arrêt du conteneur devrait résoudre le problème.
 
-Si vous voulez ajouter la prise en charge de Docker à votre application à l’aide de Visual Studio, veillez à ce que Docker s’exécute pendant l’opération. L’Assistant ne fonctionnera pas correctement si Docker n’est pas en cours d’exécution au moment de démarrer l’Assistant. Par ailleurs, l’Assistant examine votre choix de conteneur actuel pour ajouter la prise en charge appropriée de Docker. Si vous voulez ajouter la prise en charge des conteneurs Windows, vous devez exécuter l’Assistant pendant que Docker s’exécute avec les conteneurs Windows configurés. Si vous voulez ajouter la prise en charge des conteneurs Linux, exécutez l’Assistant pendant que Docker s’exécute avec les conteneurs Linux configurés.
+Si vous voulez ajouter la prise en charge de Docker à votre application à l’aide de Visual Studio, veillez à ce que Docker Desktop s’exécute pendant l’opération. L’Assistant ne fonctionnera pas correctement si Docker Desktop n’est pas en cours d’exécution lorsque vous démarrez l’Assistant. Par ailleurs, l’Assistant examine votre choix de conteneur actuel pour ajouter la prise en charge appropriée de Docker. Si vous voulez ajouter la prise en charge des conteneurs Windows, vous devez exécuter l’Assistant pendant que Docker Desktop s’exécute avec les conteneurs Windows configurés. Si vous voulez ajouter la prise en charge des conteneurs Linux, exécutez l’Assistant pendant que Docker s’exécute avec les conteneurs Linux configurés.
 
-> ### <a name="references--common-web-architectures"></a>Informations de référence sur les architectures web courantes
->
+### <a name="references--common-web-architectures"></a>Informations de référence sur les architectures web courantes
 > - **L’architecture propre**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **L’architecture en oignon**  

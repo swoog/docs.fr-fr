@@ -1,24 +1,24 @@
 ---
-title: Prédire le prix des courses de taxi à New York à l’aide d’un apprenant de régression avec ML.NET
-description: Prédire le prix des courses à l’aide d’un apprenant de régression avec ML.NET.
+title: Prédire des prix en utilisant un apprenant de régression avec ML.NET
+description: Prédisez des prix en utilisant un apprenant de régression avec ML.NET.
 author: aditidugar
 ms.author: johalex
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333783"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828395"
 ---
-# <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Tutoriel : Prédire le prix des courses de taxi à New York à l’aide d’un apprenant de régression avec ML.NET
+# <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutoriel : Prédire des prix en utilisant un apprenant de régression avec ML.NET
 
 > [!NOTE]
 > Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez l’[introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Ce tutoriel montre l’utilisation de ML.NET pour générer un [modèle de régression](../resources/glossary.md#regression) afin de prédire le prix des courses de taxi à New York.
+Ce tutoriel montre comment utiliserML.NET pour créer un [modèle de régression](../resources/glossary.md#regression) afin de prédire des prix, plus précisément, des courses de taxi à New York.
 
 Dans ce didacticiel, vous apprendrez à :
 > [!div class="checklist"]
@@ -337,7 +337,7 @@ Dans ce didacticiel, vous avez appris à :
 > * Créer un pipeline d’apprentissage
 > * Charger et transformer les données
 > * Choisir un algorithme d’apprentissage
-> * Entraîner le modèle
+> * Effectuer l’apprentissage du modèle
 > * Évaluer le modèle
 > * Utiliser le modèle pour les prévisions
 

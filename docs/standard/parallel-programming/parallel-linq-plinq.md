@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d597bc3590441494478c46b832aeed57ba761ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c438170ec48f40e59f8710d4e3820d6e915bed5
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500835"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903829"
 ---
 # <a name="parallel-linq-plinq"></a>Parallel LINQ (PLINQ)
 Parallel LINQ (PLINQ) est une implémentation parallèle de LINQ to Objects. PLINQ implémente le jeu complet d’opérateurs de requête standard LINQ comme méthodes d’extension pour l’espace de noms <xref:System.Linq> et inclut des opérateurs supplémentaires pour les opérations parallèles. PLINQ combine la simplicité et la lisibilité de la syntaxe LINQ à la puissance de la programmation parallèle. Comme le code qui cible la bibliothèque parallèle de tâches, les requêtes PLINQ sont mises à l’échelle dans le degré de concurrence basé sur les fonctionnalités de l’ordinateur hôte.  
@@ -54,4 +54,5 @@ Parallel LINQ (PLINQ) est une implémentation parallèle de LINQ to Objects. PLI
 
 - <xref:System.Linq.ParallelEnumerable>
 - [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)
-- [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [LINQ (Language-Integrated Query) - C#](../../csharp/programming-guide/concepts/linq/index.md)  
+- [LINQ (Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)  
