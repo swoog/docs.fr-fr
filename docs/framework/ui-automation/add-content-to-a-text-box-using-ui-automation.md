@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd1a73-1ecb-4a05-a891-a7827ebb767f
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: b8f64b12400098d94d0e25590559877d61519777
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432e39efd77a0cf153e3d0287f061702dd3c5c1e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582161"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221002"
 ---
 # <a name="add-content-to-a-text-box-using-ui-automation"></a>Ajouter du contenu à une zone de texte à l'aide d'UI Automation
 > [!NOTE]
@@ -31,4 +31,4 @@ ms.locfileid: "54582161"
  [!code-vb[InsertText#InsertText](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InsertText/VisualBasic/Window1.xaml.vb#inserttext)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exemple de texte TextPattern Insert](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)
+- [Exemple de texte TextPattern Insert](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771478(v=vs.90))

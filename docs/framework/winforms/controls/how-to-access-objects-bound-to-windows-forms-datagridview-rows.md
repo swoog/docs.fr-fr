@@ -9,15 +9,15 @@ helpviewer_keywords:
 - data grids [Windows Forms], accessing bound objects
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
-ms.openlocfilehash: 2a4c5cc052ce8c44d36c43daf11d91c798dd741f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a36a0bb84b851945b530d7d323e13e034234051b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679446"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220401"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Procédure : Accéder aux objets liés à des Windows Forms DataGridView lignes
-Il est parfois utile d’afficher une table d’informations stockée dans une collection d’objets métier. Quand vous liez un contrôle <xref:System.Windows.Forms.DataGridView> à une telle collection, chaque propriété publique est affichée dans sa propre colonne, à moins que la propriété n’ait été marquée comme non consultable avec un <xref:System.ComponentModel.BrowsableAttribute>. Par exemple, une collection d’objets `Customer` aurait des colonnes telles que **Nom** et **Adresse**.  
+Il est parfois utile d’afficher une table d’informations stockée dans une collection d’objets métier. Quand vous liez un contrôle <xref:System.Windows.Forms.DataGridView> à une telle collection, chaque propriété publique est affichée dans sa propre colonne, à moins que la propriété n'ait été marquée comme non consultable avec un <xref:System.ComponentModel.BrowsableAttribute>. Par exemple, une collection d’objets `Customer` aurait des colonnes telles que **Nom** et **Adresse**.  
   
  Si ces objets contiennent des informations supplémentaires et du code auquel vous souhaitez accéder, vous pouvez l'atteindre via des objets de ligne. Dans l'exemple de code suivant, les utilisateurs peuvent sélectionner plusieurs lignes et cliquer sur un bouton pour envoyer une facture à chacun des clients correspondants.  
   
@@ -39,7 +39,7 @@ Il est parfois utile d’afficher une table d’informations stockée dans une c
   
 -   des références aux assemblys System et System.Windows.Forms ;  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Voir également [Guide pratique pour Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.DataGridView>

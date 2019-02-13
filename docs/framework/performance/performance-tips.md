@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b998240b6ecf692b00e16c2ad311c804edc0d7e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2969551bef279e6b13d2b08ff7f0e4711a80794
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518219"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219241"
 ---
 # <a name="net-performance-tips"></a>Conseils relatifs aux performances .NET
 Le terme *performances* désigne généralement la vitesse d’exécution d’un programme. Vous pouvez parfois augmenter la vitesse d’exécution en suivant certaines règles de base dans votre code source. Dans certains programmes, il est important d’examiner attentivement le code et d’utiliser des profileurs pour garantir que le programme s’exécute aussi rapidement que possible. Dans d’autres programmes, vous n’avez pas à effectuer une telle optimisation, car le code, tel qu’il est écrit, est suffisamment rapide. Cet article répertorie les zones dont les performances sont fréquemment impactées, et fournit des conseils d’amélioration, ainsi que des liens vers d’autres rubriques relatives aux performances. Pour plus d’informations sur la planification et la mesure des performances, consultez [Performances](../../../docs/framework/performance/index.md)  
@@ -44,6 +44,5 @@ Le terme *performances* désigne généralement la vitesse d’exécution d’un
   
 ## <a name="see-also"></a>Voir aussi
 - [Performances](../../../docs/framework/performance/index.md)
-- [Concepts de programmation](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)
 - [Guide de programmation Visual Basic](../../visual-basic/programming-guide/index.md)
 - [Guide de programmation C#](../../csharp/programming-guide/index.md)

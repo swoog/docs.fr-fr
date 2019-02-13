@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], configuring check and image margins
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
-ms.openlocfilehash: 100038cedaf74f9566f24b7b030531dda8f466af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9406a1dc0fca36a42674d5455e5529b703d87e3e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609367"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220086"
 ---
 # <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>Procédure : Configuration de la vérification ContextMenuStrip marges de sélection et Image
 Vous pouvez personnaliser un <xref:System.Windows.Forms.ContextMenuStrip> en définissant les propriétés <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> et <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> dans différentes combinaisons.  
@@ -32,7 +32,7 @@ Vous pouvez personnaliser un <xref:System.Windows.Forms.ContextMenuStrip> en dé
   
 -   des références aux assemblys System.Design, System.Drawing et System.Windows.Forms.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Voir également [Guide pratique pour Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.ContextMenuStrip>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38894f57ec93fd44610b5c612326b399d477b723
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35dcabcf65af1634533edfba1e300a8746bc97ec
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531182"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221366"
 ---
 # <a name="net-native-reflection-api-reference"></a>Guide de référence de l'API de réflexion .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] inclut trois nouveaux types d’exception : [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), et [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Notez les éléments suivants concernant ces trois types d'exception :  
@@ -25,7 +25,7 @@ ms.locfileid: "54531182"
 -   l’ [utilitaire de résolution des problèmes MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) pour les méthodes.  
   
 > [!NOTE]
->  Ce guide de référence décrit trois types d'exception propres à [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Pour la documentation de référence sur l’API de réflexion principale du .NET Framework, consultez [Espaces de noms System.Reflection](https://msdn.microsoft.com/library/gg145033.aspx). Pour la documentation de référence sur l'API d'interopérabilité principale du .NET Framework, consultez <xref:System.Runtime.InteropServices>.  
+>  Ce guide de référence décrit trois types d'exception propres à [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Pour la documentation de référence pour l’API de réflexion .NET Framework core, consultez le <xref:System.Reflection>, <xref:System.Reflection.Context> et <xref:System.Reflection.Emit> espaces de noms. Pour la documentation de référence sur l'API d'interopérabilité principale du .NET Framework, consultez <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>Espace de noms System.Reflection  
  L'espace de noms <xref:System.Reflection> contient les types principaux utilisés pour la réflexion dans le .NET Framework. Pour [!INCLUDE[net_native](../../../includes/net-native-md.md)], il inclut également deux nouveaux types d'exception :  

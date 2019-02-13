@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1d97a377706491a01b2389a89698c32b7433def2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2145888b76077056988652418fd1eab878348258
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737843"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219345"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Exposer le contenu d'un tableau à l'aide d'UI Automation
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "54737843"
  L’exemple de code suivant montre comment obtenir un <xref:System.Windows.Automation.AutomationElement> qui représente le contenu d’une cellule de tableau ; les propriétés de cellule telles que les index de ligne et de colonne, les intervalles de lignes et de colonnes et les informations d’en-tête de ligne et de colonne sont également obtenues. Cet exemple utilise un gestionnaire d’événements de modification le focus pour simuler le parcours du clavier d’un contrôle tabulaire qui implémente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Informations pour chaque élément du tableau sont exposées sur un événement de modification de focus.  
   
 > [!NOTE]
->  Dans la mesure où les changements de focus sont des événements de bureau globaux, les événements de modification de focus en dehors de la table doivent être filtrés. Consultez le [TrackFocus Sample](https://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) pour une implémentation associée.  
+>  Dans la mesure où les changements de focus sont des événements de bureau globaux, les événements de modification de focus en dehors de la table doivent être filtrés. Consultez le [TrackFocus Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771428(v=vs.90)) pour une implémentation associée.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

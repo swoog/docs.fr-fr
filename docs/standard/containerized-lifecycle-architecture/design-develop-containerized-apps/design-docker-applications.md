@@ -1,15 +1,15 @@
 ---
 title: Concevoir des applications Docker
-description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
+description: Recherchez ici une référence à des instructions détaillées sur l’architecture de microservices, car il s’agit d’une rubrique qui n’est pas détaillé dans ce guide.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: d02cec0595024eb7bd7c0ac46df093359680da74
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: f31421cab7d2072441999231adfbe771a3f9a0f5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155377"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220203"
 ---
 # <a name="design-docker-applications"></a>Concevoir des applications Docker
 

@@ -1,15 +1,15 @@
 ---
 title: Concevoir et développer des applications en conteneur à l’aide de Docker et de Microsoft Azure
-description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
+description: Nous allons aborder la charge de travail de développement/conception dans l’applications-cycle de vie Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: 2f8e969ce48a448a293efafccbce1d62b059640d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: a65f3b59df32c16c0985c8b74ba6a438490e3317
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155221"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219416"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Conception et développement d’applications en conteneur à l’aide de Docker et de Microsoft Azure
 

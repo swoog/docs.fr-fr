@@ -1,15 +1,15 @@
 ---
 title: Conteneurs, images et registres Docker
-description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
+description: Découvrez le rôle de clé que les registres lire globales de la façon de Docker du déploiement d’applications.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: af235280c985d20f9e6a2ee6096edbe6c3aad63a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 7a2e20e09561a5cc91aa29059fb8d19a14205bb5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142747"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221197"
 ---
 # <a name="docker-containers-images-and-registries"></a>Conteneurs, images et registres Docker
 
@@ -35,4 +35,4 @@ Registres d’images privés, hébergés localement ou dans le cloud, sont recom
 
 >[!div class="step-by-step"]
 >[Précédent](docker-terminology.md)
->[Suivant](Docker-application-lifecycle/index.md)
+>[Suivant](road-to-modern-applications-based-on-containers.md)

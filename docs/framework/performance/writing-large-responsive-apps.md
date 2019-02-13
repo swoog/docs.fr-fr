@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540661"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219839"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Conception d'applications .NET Framework complexes et réactives
 Cet article fournit des conseils pour améliorer les performances d'applications .NET Framework volumineuses ou d'applications qui traitent de grandes quantités de données, telles que des fichiers ou des bases de données. Ces conseils proviennent de la réécriture des compilateurs C# et Visual Basic en code managé, et cet article inclut plusieurs exemples réels issus du compilateur C#. 
@@ -37,7 +37,7 @@ Cet article fournit des conseils pour améliorer les performances d'applications
  Vous devez définir des objectifs de performances pour des scénarios ou des expériences clients clés dans votre application, et écrire des tests pour mesurer les performances. Étudiez les échecs des tests en appliquant un raisonnement scientifique : utilisez des profils pour vous guider, avancez des hypothèses concernant la nature du problème et testez vos hypothèses en faisant des expériences ou en apportant des modifications au code. Établissez des mesures de performances de référence au fil du temps en effectuant des tests réguliers, afin de pouvoir isoler les changements qui provoquent des régressions des performances. Grâce à une approche rigoureuse du traitement des performances, vous éviterez de perdre du temps avec des mises à jour de code inutiles. 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fait n° 3 : Des outils efficaces font toute la différence  
- Des outils efficaces vous permettent de plonger directement au cœur des principaux problèmes de performances (UC, mémoire ou disque) et vous aident à localiser le code à l'origine des goulots d'étranglement. Microsoft fournit divers outils d’analyse des performances, tels que le [profileur Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), l’[outil d’analyse de Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) et [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
+ Des outils efficaces vous permettent de plonger directement au cœur des principaux problèmes de performances (UC, mémoire ou disque) et vous aident à localiser le code à l'origine des goulots d'étranglement. Microsoft fournit un éventail d’outils de performances, tels que [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) et [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView est un outil gratuit et extrêmement puissant qui vous permet de porter toute votre attention sur des problèmes profonds liés par exemple aux E/S de disque, aux événements du GC et à la mémoire. Vous pouvez capturer des événements de [suivi d’événements pour Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) liés aux performances et afficher aisément les informations pour chaque application, processus, pile et thread. PerfView vous montre la quantité et le type de mémoire que votre application alloue, ainsi que les fonctions ou les piles d'appels qui contribuent aux allocations de mémoire, et pour quels volumes. Pour plus de détails, consultez l’ensemble complet de rubriques d’aide, de démonstrations et de vidéos fournies avec l’outil (par exemple, les [didacticiels PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) sur Channel 9). 
   
@@ -366,7 +366,7 @@ L’exemple suivant illustre un problème courant qui se produit quand vous essa
   
  **Exemple 6 : mise en cache dans les méthodes async**  
   
- Les fonctionnalités IDE de Visual Studio qui s’appuient sur les nouveaux compilateurs C# et Visual Basic récupèrent fréquemment des arborescences de syntaxe, et les compilateurs utilisent async à cette occasion pour maintenir la réactivité de Visual Studio. Voici la première version du code que vous pouvez écrire afin d'obtenir une arborescence de syntaxe :  
+ Les fonctionnalités IDE de Visual Studio qui s'appuient sur les nouveaux compilateurs C# et Visual Basic récupèrent fréquemment des arborescences de syntaxe, et les compilateurs utilisent async à cette occasion pour maintenir la réactivité de Visual Studio. Voici la première version du code que vous pouvez écrire afin d'obtenir une arborescence de syntaxe :  
   
 ```csharp  
 class SyntaxTree { /*...*/ }  
@@ -459,16 +459,15 @@ class Compilation { /*...*/
   
 -   Des outils efficaces font toute la différence : téléchargez PerfView et essayez-le. 
   
--   Tout se résume aux allocations : c’est dans ce domaine que l’équipe chargée de la plateforme des compilateurs a passé le plus de temps à améliorer les performances des nouveaux compilateurs. 
+-   Tout se résume aux allocations : c'est dans ce domaine que l'équipe chargée de la plateforme des compilateurs a passé le plus de temps à améliorer les performances des nouveaux compilateurs. 
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Vidéo de présentation de cette rubrique.](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Guide du débutant en profilage des performances](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Performances](../../../docs/framework/performance/index.md)
-- [Conseils sur les performances de .NET](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Conseils sur les performances de .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Windows Phone Performance Analysis Tool](https://msdn.microsoft.com/magazine/hh781024.aspx)
-- [Trouver les goulots d’étranglement de l’Application avec Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)
 - [Channel 9 didacticiels PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [Le kit SDK .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
 - [dépôt GitHub dotnet/roslyn](https://github.com/dotnet/roslyn)

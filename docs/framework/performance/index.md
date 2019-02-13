@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d3e26c835a96bba3c97e471075f5d02b5330461
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f5667d55b8a49ba7b32570ad6a230b220ac8953b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201567"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221171"
 ---
 # <a name="net-framework-performance"></a>Performances .NET Framework
-Si vous voulez créer des applications dotées de hautes performances, vous devez concevoir et planifier les performances comme vous concevez n’importe quelle autre fonctionnalité de votre application. Vous pouvez utiliser les outils fournis par Microsoft pour mesurer les performances de votre application et, si nécessaire, apporter des améliorations à l'utilisation de la mémoire, au débit de code et à la réactivité. Cette rubrique répertorie les outils d'analyse de performance fournis par Microsoft et fournit des liens vers d'autres rubriques qui couvrent les performances dans des domaines spécifiques du développement d'applications.  
+Si vous voulez créer des applications dotées de hautes performances, vous devez concevoir et planifier les performances comme vous concevez n'importe quelle autre fonctionnalité de votre application. Vous pouvez utiliser les outils fournis par Microsoft pour mesurer les performances de votre application et, si nécessaire, apporter des améliorations à l'utilisation de la mémoire, au débit de code et à la réactivité. Cette rubrique répertorie les outils d'analyse de performance fournis par Microsoft et fournit des liens vers d'autres rubriques qui couvrent les performances dans des domaines spécifiques du développement d'applications.  
   
 ## <a name="designing-and-planning-for-performance"></a>Conception et planification des performances  
  Pour créer une application présentant d'excellentes performances, vous devez concevoir les performances dans votre application comme si vous conceviez n'importe quelle autre fonctionnalité. Vous devez déterminer les scénarios où les performances sont essentielles, définir des objectifs de performances et mesurer régulièrement les performances dans ces scénarios d'application. Comme chaque application est différente et possède différents chemins d'exécution aux performances critiques, le fait de déterminer précocement ces chemins et de concentrer vos efforts vous permet de maximiser votre productivité.  
@@ -32,8 +32,8 @@ Si vous voulez créer des applications dotées de hautes performances, vous deve
   
 |Outil|Description|  
 |----------|-----------------|  
-|Analyse des performances Visual Studio|Utilisez cet outil pour analyser l'utilisation de l'UC de vos applications .NET Framework qui seront déployées sur des ordinateurs exécutant le système d'exploitation Windows.<br /><br /> Vous trouverez cet outil dans le menu **Débogage** de Visual Studio après avoir ouvert votre projet. Pour plus d'informations, consultez [Explorateur de performances](/visualstudio/profiling/performance-explorer). **Remarque** : Utilisez l’analyse de l’application Windows Phone (voir ligne suivante) quand vous ciblez Windows Phone.|  
-|Analyse de l'application Windows Phone|Utilisez cet outil pour analyser l'UC et la mémoire, le taux de transfert des données réseau, la réactivité de l'application et la consommation de la batterie dans vos applications Windows Phone.<br /><br /> Vous trouverez cet outil dans le menu **Débogage** de votre projet Windows Phone dans Visual Studio après avoir installé [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773). Pour plus d’informations, consultez [Profilage d’applications pour Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/jj215908\(v=vs.105\).aspx).|  
+|Analyse des performances Visual Studio|Utilisez cet outil pour analyser l'utilisation de l'UC de vos applications .NET Framework qui seront déployées sur des ordinateurs exécutant le système d'exploitation Windows.<br /><br /> Vous trouverez cet outil dans le menu **Débogage** de Visual Studio après avoir ouvert votre projet. Pour plus d'informations, consultez [Explorateur de performances](/visualstudio/profiling/performance-explorer). **Remarque :**  Utilisez l'analyse de l'application Windows Phone (voir ligne suivante) quand vous ciblez Windows Phone.|  
+|Analyse de l'application Windows Phone|Utilisez cet outil pour analyser l'UC et la mémoire, le taux de transfert des données réseau, la réactivité de l'application et la consommation de la batterie dans vos applications Windows Phone.<br /><br /> Vous trouverez cet outil dans le menu **Débogage** de votre projet Windows Phone dans Visual Studio après avoir installé [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773). Pour plus d’informations, consultez [profilage d’applications pour Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
 |[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Utilisez ces outils pour identifier des problèmes de performances liés à l'UC et à la mémoire. Cet outil utilise le suivi d’événements pour Windows et des API de profilage du CLR pour assurer des investigations avancées de la mémoire et de l’UC, et pour fournir des informations sur le garbage collection et la compilation JIT. Pour plus d’informations sur l’utilisation de PerfView, consultez le didacticiel et les fichiers d’aide fournis dans l’application, les [didacticiels vidéo sur Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial) et les [billets de blog](https://blogs.msdn.com/b/vancem/archive/tags/perfview/).<br /><br /> Pour plus d’informations sur les problèmes de mémoire, consultez le didacticiel sur l’[utilisation de PerfView pour l’examen de la mémoire](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Utilisez cet outil pour déterminer les performances globales du système telles que l'utilisation de la mémoire et du stockage par votre application quand plusieurs applications s'exécutent sur le même ordinateur. Cet outil est disponible à partir du centre de téléchargement dans le cadre du Kit de déploiement et d’évaluation Windows (Windows ADK) pour [!INCLUDE[win8](../../../includes/win8-md.md)]. Pour plus d’informations, consultez [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
@@ -47,10 +47,8 @@ Si vous voulez créer des applications dotées de hautes performances, vous deve
 |--------------|---------|  
 |Applications .NET Framework pour toutes les plateformes|[Garbage Collection et performances](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Conseils relatifs aux performances](../../../docs/framework/performance/performance-tips.md)|  
 |Applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] écrites en C++, C# et Visual Basic|[Bonnes pratiques pour les performances des applications du Windows Store en C++, C# et Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
-|Windows Phone|[Considérations sur les performances des applications pour Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff967560\(v=vs.105\).aspx)<br /><br /> [Analyse des applications Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/hh202934\(v=vs.105\).aspx)<br /><br /> [Lancer plus rapidement vos applications Windows Phone sur la Place de marché](https://msdn.microsoft.com/magazine/hh781024.aspx)|  
-|Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)|  
-|Silverlight|[Conseils relatifs aux performances](https://msdn.microsoft.com/library/cc189071\(v=vs.95\).aspx)|  
-|ASP.NET|[Vue d’ensemble des performances ASP.NET](https://msdn.microsoft.com/library/f882bf1b-a009-4312-ac06-74370ffabc0b)|  
+|Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
+|ASP.NET|[Vue d’ensemble des performances ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
 |Windows Forms|[Conseils pratiques pour améliorer les performances des applications Windows Forms](https://msdn.microsoft.com/magazine/cc163630.aspx)|  
   
 ## <a name="related-topics"></a>Rubriques connexes  

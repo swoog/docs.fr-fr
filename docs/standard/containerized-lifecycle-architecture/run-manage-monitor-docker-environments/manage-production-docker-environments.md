@@ -1,15 +1,15 @@
 ---
 title: Gérer les environnements de production Docker
-description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
+description: Découvrez les points clés de gestion d’un environnement de production basées sur le conteneur.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 54e2b999f744600d3b6853442bb9ccca004f4e76
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147292"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219488"
 ---
 # <a name="manage-production-docker-environments"></a>Gérer les environnements de production Docker
 

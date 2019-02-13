@@ -1,15 +1,15 @@
 ---
-title: Présentation des conteneurs et de Docker
-description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
+title: Introduction aux conteneurs et à Docker
+description: Obtenir une vue d’ensemble globale des principaux avantages de l’utilisation de Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 547a76b46a319cd1b8403505ce3da618123b490e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148819"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218695"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Présentation des conteneurs et de Docker
 

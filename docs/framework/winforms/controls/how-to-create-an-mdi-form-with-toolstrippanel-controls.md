@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 22057fe2e9ae6fb68cf5876e9f312dc23379540c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0877a88e018766287f47c9ce851973faf4bfa822
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628173"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219384"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Procédure : Créer un formulaire MDI avec des contrôles ToolStripPanel
 Vous pouvez créer un formulaire d'interface multidocument (MDI) ayant des contrôles <xref:System.Windows.Forms.ToolStrip> qui l'encadrent sur les quatre côtés.  
@@ -37,7 +37,7 @@ Vous pouvez créer un formulaire d'interface multidocument (MDI) ayant des contr
   
 -   Références aux assemblys System.Drawing et System.Windows.Forms.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Voir également [Guide pratique pour Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.ToolStrip>

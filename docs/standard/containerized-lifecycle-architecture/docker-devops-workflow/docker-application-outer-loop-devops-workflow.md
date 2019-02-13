@@ -1,15 +1,15 @@
 ---
 title: Étapes du flux de travail DevOps boucle externe pour une application Docker
-description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
+description: Découvrez les étapes pour la boucle « externe » du flux de travail DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143647"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220937"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Étapes du flux de travail DevOps boucle externe pour une application Docker
 
@@ -21,7 +21,7 @@ Figure 5-1 : Flux de travail DevOps boucle externe pour les applications Docker
 
 Maintenant, nous allons examiner chacune de ces étapes plus en détail.
 
-## <a name="step-1-inner-loop-development-workflow"></a>Étape 1 : Flux de travail de développement de la boucle interne
+## <a name="step-1-inner-loop-development-workflow"></a>Étape 1 : Flux de travail de développement de la boucle interne
 
 Cette étape est expliquée en détail dans le chapitre 4, mais, pour résumer, voici où la boucle externe commence, le moment auquel un développeur transmet le code pour le système de gestion de contrôle de source (comme Git) initiation d’actions de pipeline CI.
 
@@ -35,7 +35,7 @@ Les images locales générées par les développeurs eux-mêmes doivent être ut
 
 Azure DevOps Services et Team Foundation Server prend en charge Git et Team Foundation Version Control. Vous pouvez choisir entre eux et l’utiliser pour une expérience de Microsoft de bout en bout. Toutefois, vous pouvez également gérer votre code dans les dépôts externes (tels que GitHub, les référentiels Git en local ou Subversion) et toujours être en mesure de s’y connecter et obtenir le code comme point de départ pour votre pipeline DevOps CI.
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Étape 3 : Générer, CI, intégrer et tester avec Azure DevOps Services et Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Étape 3 : Générer, CI, intégrer et tester avec Azure DevOps Services et Docker
 
 CI est devenu une norme pour le test de logiciels modernes et de remise. La solution Docker gère une séparation claire des responsabilités entre les équipes de développement et les opérations. L’immuabilité des images Docker garantit un déploiement reproductible entre ce qui a développé, testé via l’élément de configuration et exécuter en production. Moteur docker déployé sur les ordinateurs portables de développeur et infrastructure de test rend les conteneurs portable entre les environnements.
 
@@ -157,7 +157,7 @@ Figure 5-5 : À l’aide d’Azure DevOps Services pour la publication des imag
 
 **Plus d’informations** pour en savoir plus sur l’extension Docker pour Azure DevOps Services, accédez à <https://aka.ms/vstsdockerextension>. Pour en savoir plus sur Azure Container Registry, accédez à <https://aka.ms/azurecontainerregistry>.
 
-## <a name="step-4-cd-deploy"></a>Étape 4 : CD, déployer
+## <a name="step-4-cd-deploy"></a>Étape 4 : CD, déployer
 
 L’immuabilité des images Docker garantit un déploiement reproductible avec ce qui a développé, testé via l’élément de configuration et exécuter en production. Une fois que vous avez les images de Docker d’application publiées dans votre Registre Docker (privé ou public), vous pouvez les déployer sur les environnements de plusieurs dont vous disposez (production, assurance qualité, de mise en lots, etc.) à partir de votre pipeline de CD à l’aide des Services de DevOps Azure les tâches de pipeline ou Azure DevOps Services Release Management.
 
@@ -223,11 +223,11 @@ Azure Container Service : <https://aka.ms/azurecontainerservice>
 
 Mesosphere DC/OS : <https://mesosphere.com/product/>
 
-## <a name="step-5-run-and-manage"></a>Étape 5 : Exécuter et gérer
+## <a name="step-5-run-and-manage"></a>Étape 5 : Exécuter et gérer
 
 Étant donné qu’en cours d’exécution et la gestion des applications en production de l’entreprise au niveau est un sujet majeur dans et de lui-même, en raison du type d’opérations et personnes travaillent à ce niveau (opérations informatiques), ainsi que l’étendue de grande taille de cette zone, nous avons consacré l’ensemble suivant chapitre à expliquer.
 
-## <a name="step-6-monitor-and-diagnose"></a>Étape 6 : Surveiller et diagnostiquer
+## <a name="step-6-monitor-and-diagnose"></a>Étape 6 : Surveiller et diagnostiquer
 
 Cette rubrique également est couvert dans le chapitre suivant dans le cadre des tâches qui effectue des opérations informatiques dans les systèmes de production ; Toutefois, il est important de souligner que les informations obtenues lors de cette étape doivent flux à l’équipe de développement afin que l’application est améliorée en permanence. À partir de ce point de vue, il fait également partie de DevOps, bien que les tâches et les opérations sont généralement effectuées par informatique.
 
@@ -235,4 +235,4 @@ Uniquement lors de la surveillance et diagnostic est à 100 % dans le domaine du
 
 >[!div class="step-by-step"]
 >[Précédent](index.md)
->[Suivant](../run-manage-monitor-docker-environments/index.md)
+>[Suivant](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 2be1e4be9f9cd3dc0d8f4f5c406c98932cb48238
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbeb161a9813b2d1b479b76360149ed08212459f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629755"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220704"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Procédure : Personnaliser des cellules et des colonnes dans le contrôle de DataGridView Windows Forms en étendant leur comportement et leur apparence
 Le contrôle <xref:System.Windows.Forms.DataGridView> offre plusieurs manières de personnaliser son apparence et son comportement à l'aide de propriétés, d'événements et de classes auxiliaires. Parfois, vous pouvez avoir des exigences pour vos cellules qui vont au-delà de ce que peuvent fournir ces fonctionnalités. Vous pouvez créer vos propres classes <xref:System.Windows.Forms.DataGridViewCell> pour fournir des fonctionnalités étendues.  
@@ -68,7 +68,7 @@ Le contrôle <xref:System.Windows.Forms.DataGridView> offre plusieurs manières 
   
 -   Références aux assemblys System, System.Windows.Form et System.Drawing.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Voir également [Guide pratique pour Compiler et exécuter un exemple de Code complet de Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.DataGridView>

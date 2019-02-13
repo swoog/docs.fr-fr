@@ -1,15 +1,15 @@
 ---
-title: Orchestration des microservices et des applications à une grande évolutivité et disponibilité
-description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
+title: Orchestration des microservices et des applications à plusieurs conteneurs pour une grande scalabilité et une haute disponibilité
+description: Applications de production réel doivent être déployée et gérée avec des orchestrateurs qui gèrent l’intégrité, les charges de travail et les cycles de vie de tous les conteneurs.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/19/2017
-ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 749b613ac847c57eb993bff90b36f02a0b39477f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126898"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221158"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Orchestration des microservices et des applications à une grande évolutivité et disponibilité
 
@@ -31,7 +31,7 @@ Pour aller au-delà de la gestion de conteneurs individuels ou d’applications 
 
 -   **Clusters et orchestrateurs** lorsque vous devez mettre à l’échelle-applications sur plusieurs hôtes Docker, comme avec une grande application basée sur des microservices, il est essentiel de pouvoir gérer tous ces hôtes comme un seul cluster par en faisant abstraction de la complexité de la plateforme sous-jacente. C’est ce que les clusters de conteneurs et les orchestrateurs permettent. Exemples d’orchestrators sont Docker Swarm, Mesosphere DC/OS, Kubernetes (les trois premiers disponibles via Azure Container Service) et Azure Service Fabric.
 
--   **Planificateurs** *planification* signifie la capacité d’un administrateur pour lancer des conteneurs dans un cluster afin qu’elles fournissent également une interface utilisateur. Un planificateur de cluster a plusieurs responsabilités : utiliser efficacement les ressources du cluster, pour définir les contraintes fournies par l’utilisateur, à efficacement des conteneurs d’équilibrer la charge entre les nœuds ou les hôtes et être robustes face aux erreurs, tout en offrant de haut disponibilité.
+-   **Planificateurs** *planification* signifie la capacité d’un administrateur pour lancer des conteneurs dans un cluster afin qu’elles fournissent également une interface utilisateur. Un planificateur de cluster a plusieurs responsabilités : utiliser efficacement les ressources du cluster, définir les contraintes fournies par l’utilisateur, équilibrer efficacement la charge des conteneurs entre les nœuds ou les hôtes, et faire preuve de robustesse face aux erreurs, tout en offrant une haute disponibilité.
 
 Les concepts de cluster et de planificateur sont étroitement liés : les produits fournis par les différents fournisseurs offrent souvent les deux ensembles de fonctionnalités. Tableau 4-1 répertorie les plus importants pour les plateformes et les choix d’un logiciel pour les clusters et des planificateurs. Ces clusters sont généralement proposés dans des clouds publics comme Azure.
 
@@ -147,7 +147,7 @@ En ce qui concerne les conteneurs dans Service Fabric, vous pouvez également d�
 
 Figure 4-11 : Microservice métier avec plusieurs services (conteneurs) dans Service Fabric
 
-Toutefois, les conteneurs de ce que l'on appelle « side-car » (deux conteneurs qui doivent être déployées ensemble dans le cadre d’un service logique) sont également possibles dans Service Fabric. Le point essentiel est qu’un microservice métier est la limite logique autour de plusieurs éléments cohésifs. Dans de nombreux cas, il peut être un seul service avec un seul modèle de données, mais dans d’autres cas, vous pouvez avoir plusieurs services physiques, également.
+Toutefois, les conteneurs appelés conteneurs « sidecar » (deux conteneurs qui doivent être déployés ensemble dans le cadre d’un service logique) sont également possibles dans Service Fabric. Le point essentiel est qu’un microservice métier est la limite logique autour de plusieurs éléments cohésifs. Dans de nombreux cas, il peut être un seul service avec un seul modèle de données, mais dans d’autres cas, vous pouvez avoir plusieurs services physiques, également.
 
 À ce jour (avril 2017), dans Service Fabric vous ne pouvez pas déployer les Services avec état fiable SF sur les conteneurs, vous pouvez déployer uniquement les conteneurs d’invités, les services sans état ou les services d’acteur dans des conteneurs. Notez toutefois que vous pouvez combiner des services dans des processus et services dans des conteneurs dans la même application Service Fabric, comme illustré dans la Figure 4-12.
 
@@ -181,4 +181,4 @@ Notez que les conteneurs Docker sont eux-mêmes sans état. Si vous voulez impl�
 
 >[!div class="step-by-step"]
 >[Précédent](soa-applications.md)
->[Suivant](docker-apps-development-environment.md)
+>[Suivant](deploy-azure-kubernetes-service.md)

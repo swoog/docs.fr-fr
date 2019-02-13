@@ -1,15 +1,15 @@
 ---
 title: Flux de travail de développement de la boucle interne pour les applications Docker
-description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
+description: Découvrez le flux de travail « boucle intérieure » pour le développement d’applications Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f7acb60e6136c0250d18bdce23ac21fb6aa80b34
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148858"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219086"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flux de travail de développement de la boucle interne pour les applications Docker
 
@@ -41,7 +41,7 @@ Figure 4-15 montre les étapes de base que vous devez généralement exécuter l
 
 Figure 4-15 : Flux de travail général pour le cycle de vie pour les applications Docker en conteneur à l’aide de la CLI Docker
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Étape 1 : Commencer le codage dans Visual Studio Code et créer votre base de référence de l’application ou du service initial
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Étape 1 : Commencer le codage dans Visual Studio Code et créer votre base de référence de l’application ou du service initial
 
 Manière de développer votre application est assez similaire à la façon de que procéder sans Docker. La différence est que lors du développement, vous déployez et testez l’application ou les services qui s’exécutent dans des conteneurs Docker placés dans votre environnement local (comme un Linux VM ou de Windows).
 
@@ -132,7 +132,7 @@ Comme les conteneurs Windows deviennent de plus en plus répandus, un référent
 
 Vous pouvez créer votre propre image de base de Docker à partir de zéro, comme expliqué dans cet [article](https://docs.docker.com/engine/userguide/eng-image/baseimages/) à partir de Docker. Il s’agit d’un scénario qui n’est probablement pas vous convient le mieux si vous débutez avec Docker, mais si vous souhaitez définir les bits spécifiques de votre propre image de base, vous pouvez le faire.
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Étape 3 : Créer votre l’incorporation de votre service qu’il contient des images Docker personnalisées
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Étape 3 : Créer votre l’incorporation de votre service qu’il contient des images Docker personnalisées
 
 Pour chaque service personnalisé qui compose votre application, vous devez créer une image associée. Si votre application est composée d’un service unique ou d’application web, vous aurez besoin en une seule image.
 
@@ -159,7 +159,7 @@ Vous trouverez les images existantes dans votre référentiel local (votre ordin
 
 Figure 4-20 : Affichage des images existantes à l’aide d’images docker
 
-### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Étape 4 : (Facultatif) Définir vos services dans docker-compose.yml lors de la création d’une application Docker composée avec plusieurs services
+### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Étape 4 : (Facultatif) Définir vos services dans docker-compose.yml lors de la création d’une application Docker composée avec plusieurs services
 
 Avec le fichier docker-compose.yml, vous pouvez définir un ensemble de services à être déployé comme une application composée avec les commandes de déploiement expliqués dans la section étape suivante.
 
@@ -192,7 +192,7 @@ Dans ce cas particulier, ce fichier définit deux services : le service web (vo
 
 Le service redis utilise le [dernière image publique redis](https://hub.docker.com/_/redis/) extraite du Registre Docker Hub. [redis](https://redis.io/) est un système de cache très populaire pour les applications côté serveur.
 
-### <a name="step-5-build-and-run-your-docker-app"></a>Étape 5 : Générer et exécuter votre application Docker
+### <a name="step-5-build-and-run-your-docker-app"></a>Étape 5 : Générer et exécuter votre application Docker
 
 Si votre application a uniquement un seul conteneur, vous devez l’exécuter en la déployant sur votre hôte Docker (machine virtuelle ou serveur physique). Toutefois, si votre application est composée de plusieurs services, vous devez *composer*, trop. Nous allons voir les différentes options.
 
@@ -225,7 +225,7 @@ Remarque docker compose haut et docker exécuter peut être suffisant pour le te
 
 Pour [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) et [Kubernetes](https://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment) vous utiliseriez les commandes de déploiement différents et des scripts, également.
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>Étape 6 : Tester votre application Docker (local, dans votre machine virtuelle de CD locale)
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>Étape 6 : Tester votre application Docker (local, dans votre machine virtuelle de CD locale)
 
 Cette étape varie en fonction de ce que fait votre application.
 
