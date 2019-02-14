@@ -2,12 +2,12 @@
 title: Gestion des erreurs
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695554"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261150"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
 ## <a name="error-handling-in-windows-communication-foundation"></a>Gestion des erreurs dans Windows Communication Foundation  
@@ -22,7 +22,7 @@ ms.locfileid: "54695554"
   
  Les blocs d'application visent à incorporer les meilleures pratiques fréquemment utilisées et à fournir une approche commune pour la gestion des exceptions dans votre application. D'autre part, les gestionnaires d'erreurs personnalisés et les contrats d'erreur développés s'avèrent également très utiles. Par exemple, les gestionnaires d’erreurs personnalisés offrent la possibilité de promouvoir automatiquement toutes les exceptions en FaultExceptions et également d’ajouter des fonctionnalités de journalisation à votre application.  
   
- Pour plus d’informations, consultez [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
+ Pour plus d’informations, consultez [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10)).  
   
 ### <a name="dealing-with-expected-exceptions"></a>Traiter les exceptions attendues  
  Le plan d’action approprié consiste à intercepter les exceptions attendues dans chaque opération ou d’un point d’extensibilité concerné, de déterminer si elles peuvent être récupérées et retournent l’erreur personnalisée appropriée dans une FaultException\<T >  

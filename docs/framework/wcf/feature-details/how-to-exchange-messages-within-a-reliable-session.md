@@ -2,18 +2,18 @@
 title: 'Procédure : Messages Exchange au sein d’une Session fiable'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720052"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260684"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procédure : Messages Exchange au sein d’une Session fiable
 
 Cette rubrique décrit les étapes requises pour activer une session fiable utilisant l’une des liaisons fournies par le système qui prennent en charge une telle session, mais pas par défaut. Vous activez une session fiable de façon impérative à l’aide de code ou de façon déclarative dans votre fichier de configuration. Cette procédure utilise les fichiers de configuration client et le service pour activer la session fiable et pour stipuler que les messages arrivent dans le même ordre que celui dans lequel ils ont été envoyés.
 
-La partie clé de cette procédure est que l’élément de configuration de point de terminaison contiennent un `bindingConfiguration` attribut qui fait référence à une configuration de liaison nommée `Binding1`. Le [  **\<liaison >** ](../../../../docs/framework/misc/binding.md) élément de configuration fait référence à ce nom pour activer les sessions fiables en définissant le `enabled` attribut de la [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) élément à `true`. Vous spécifiez les assurances de remise ordonnée pour la session fiable en affectant à l'attribut `ordered` la valeur `true`.
+La partie clé de cette procédure est que l’élément de configuration de point de terminaison contiennent un `bindingConfiguration` attribut qui fait référence à une configuration de liaison nommée `Binding1`. Le [  **\<liaison >** ](../../../../docs/framework/misc/binding.md) élément de configuration fait référence à ce nom pour activer les sessions fiables en définissant le `enabled` attribut de la [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) élément à `true`. Vous spécifiez les assurances de remise ordonnée pour la session fiable en affectant à l'attribut `ordered` la valeur `true`.
 
 Pour la copie de la source de cet exemple, consultez [Session fiable WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
