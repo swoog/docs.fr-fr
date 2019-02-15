@@ -2,12 +2,18 @@
 title: Nom fort (Informations de référence sur les API non managées)
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'strong naming [.NET Framework], using the unmanaged API'
-  - 'native API reference [.NET Framework], strong naming'
-  - 'unmanaged API reference [.NET Framework], strong naming'
+- strong naming [.NET Framework], using the unmanaged API
+- native API reference [.NET Framework], strong naming
+- unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305641"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nom fort (Informations de référence sur les API non managées)
 L’API de nommage fort permet à un client d’administrer la signature avec noms forts pour les assemblys.  
@@ -15,8 +21,6 @@ L’API de nommage fort permet à un client d’administrer la signature avec no
  La signature d'un assembly avec un nom fort ajoute un chiffrement à clé publique au fichier contenant le manifeste d'assembly. La signature avec un nom fort permet de vérifier l’unicité du nom, empêche l’usurpation de noms et fournit aux appelants une identité unique quand une référence est résolue. Aucun niveau de confiance n’est toutefois associé à un nom fort.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Fonctions statiques globales des noms forts](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- Décrit les fonctions statiques globales non managées utilisées par l’API de nommage fort.  
   
 > [!NOTE]
 >  Toutes ces fonctions sont dépréciées à compter de [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Pour obtenir des suggestions d’alternatives, consultez l’interface [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
@@ -98,9 +102,6 @@ L’API de nommage fort permet à un client d’administrer la signature avec no
   
  [StrongNameTokenFromPublicKey, fonction](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Obtient un jeton représentant une clé publique. Déprécié à compter de [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
-  
- [Structures de noms forts](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- Décrit la structure non managée utilisée par l’API de nommage fort pour administrer la signature des assemblys avec un nom fort.  
   
  [PublicKeyBlob, structure](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Représente la clé publique d’une paire de clés publique/privée au format binaire.  

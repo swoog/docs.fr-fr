@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ca2eb93fb2b75f043d33d376a5650092030cac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 412b61e026b019f7516332c247b203ac85304146
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43797415"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305777"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hébergement (Informations de référence sur les API non managées)
 L'API d'hébergement permet aux hôtes non managés d'intégrer le Common Language Runtime (CLR) dans leurs applications.  
@@ -35,5 +35,5 @@ L'API d'hébergement permet aux hôtes non managés d'intégrer le Common Langua
  Décrit les structures non managées utilisées par l'API d'hébergement.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Hôtes du runtime](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [Hôtes du runtime](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
  Décrit les hôtes du runtime inclus avec le .NET Framework.
