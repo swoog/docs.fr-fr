@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 9ac411cd13869b70edc46724219776ec411a23dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb1834414b402f8840a9dfa1ee9e2497cea7af5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680748"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304243"
 ---
 # <a name="message-security-anonymous"></a>Message Security Anonymous
 L’exemple Message Security Anonymous montre comment implémenter une application Windows Communication Foundation (WCF) qui utilise la sécurité d’au niveau du message sans authentifier le client, mais qui nécessite une authentification de serveur à l’aide X.509 du serveur certificat. Tous les messages d'application échangés entre le client et le serveur sont signés et chiffrés. Cet exemple est basé sur le [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) exemple. Cet exemple se compose d'un programme de console client (.exe) et d'une bibliothèque de service (.dll) hébergés par les services IIS (Internet Information Services). Le service implémente un contrat qui définit un modèle de communication demande-réponse.
@@ -202,13 +202,13 @@ Press <ENTER> to terminate client.
 2.  Exécutez Setup.bat à partir de l’exemple de dossier d’installation dans une invite de commandes développeur pour Visual Studio s’exécuter avec des privilèges d’administrateur. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.
 
     > [!NOTE]
-    > Le fichier de commandes d’installation est conçu pour être exécuté à partir d’une invite de commandes développeur pour Visual Studio. La variable d’environnement PATH doit pointer vers le répertoire d’installation du Kit de développement SDK. Cette variable d’environnement a automatiquement la valeur dans une invite de commandes développeur pour Visual Studio.  
+    > Le fichier de commandes d’installation est conçu pour être exécuté à partir d’une invite de commandes développeur pour Visual Studio. La variable d'environnement PATH doit pointer vers le répertoire d'installation du Kit de développement SDK. Cette variable d’environnement a automatiquement la valeur dans une invite de commandes développeur pour Visual Studio.  
   
 3.  Vérifier l’accès au service à l’aide d’un navigateur en entrant l’adresse `http://localhost/servicemodelsamples/service.svc`.  
   
 4.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-5.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -230,7 +230,7 @@ Press <ENTER> to terminate client.
   
 9. Sur le client, exécutez ImportServiceCert.bat dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur. Cette opération importe le certificat de service du fichier Service.cer dans le magasin CurrentUser - TrustedPeople.  
   
-10. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

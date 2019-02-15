@@ -2,12 +2,12 @@
 title: Exécution des exemples Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535878"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304672"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Exécution des exemples Windows Communication Foundation
 Les exemples Windows Communication Foundation (WCF) peuvent être exécutés dans une configuration avec ordinateur unique ou plusieurs ordinateurs. Tels qu'ils sont fournis, les exemples sont configurés pour être exécutés sur un ordinateur unique. Pour les exécuter sur plusieurs ordinateurs, il est nécessaire de modifier les paramètres de leur fichier de configuration. Les procédures suivantes permettent d'exécuter les exemples sur un même ordinateur ou sur plusieurs ordinateurs. Notez que ces procédures ne sont pas tout à fait les mêmes pour les exemples hébergés dans les services IIS et les exemples auto-hébergés. La plupart des exemples sont hébergés dans les services IIS. Consultez les informations contenues dans leur fichier lisezmoi respectif pour connaître leurs modalités d'hébergement.  
@@ -19,13 +19,13 @@ Les exemples Windows Communication Foundation (WCF) peuvent être exécutés dan
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Pour exécuter l'exemple sur le même ordinateur  
   
-1.  Si le service est hébergé par IIS, vérifiez que vous pouvez accéder au service à l’aide d’un navigateur en entrant l’adresse suivante : `http://localhost/servicemodelsamples/service.svc`. Une page de confirmation doit s'afficher en réponse. Si la page de confirmation s’affiche pas, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Si le service est hébergé par IIS, vérifiez que vous pouvez accéder au service à l’aide d’un navigateur en entrant l’adresse suivante : `http://localhost/servicemodelsamples/service.svc`. Une page de confirmation doit s'afficher en réponse. Si la page de confirmation s’affiche pas, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 2.  Si le service est auto-hébergé, exécutez Service.exe à partir du répertoire \service\bin, situé dans le dossier correspondant à votre langue. L'activité du service s'affiche dans sa fenêtre de console.  
   
 3.  Exécutez Client.exe à partir de \client\bin\\, figurant dans le dossier spécifique à la langue. L'activité du client s'affiche dans sa fenêtre de console.  
   
-4.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -81,5 +81,4 @@ Les exemples Windows Communication Foundation (WCF) peuvent être exécutés dan
   
 ## <a name="see-also"></a>Voir aussi
 - [Génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
-- [Exécution des exemples dans un groupe de travail et sur plusieurs ordinateurs](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
-- [Conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+- [Conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

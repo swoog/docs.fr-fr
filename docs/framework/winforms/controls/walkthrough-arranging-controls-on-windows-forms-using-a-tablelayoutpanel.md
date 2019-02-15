@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585417"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305842"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel
 Certaines applications exigent un formulaire dont la disposition s’organise de manière appropriée à mesure que le formulaire est redimensionné ou que le contenu change de taille. Si vous avez besoin d’une disposition dynamique et que vous ne souhaitez pas gérer les événements <xref:System.Windows.Forms.Control.Layout> explicitement dans votre code, envisagez d’utiliser un panneau de disposition.  
@@ -22,7 +22,7 @@ Certaines applications exigent un formulaire dont la disposition s’organise de
   
  Le <xref:System.Windows.Forms.TableLayoutPanel> réorganise son contenu dans une grille, fournir des fonctionnalités similaires dans le code HTML \<table > élément. Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle vous permet de placer des contrôles dans une disposition en grille sans avoir à indiquer précisément la position de chaque contrôle individuel. Ses cellules sont organisées dans des lignes et des colonnes dont la taille peut varier. Les cellules peuvent être fusionnés dans les lignes et colonnes. Cellules peuvent contenir quoi que ce soit un formulaire peut contenir et se comportent de nombreux autres aspects en tant que conteneurs.  
   
- Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle fournit également une fonction de redimensionnement proportionnel au moment de l’exécution, pour permettre à votre disposition modifier sans heurts lorsque votre formulaire est redimensionné. Cela rend la <xref:System.Windows.Forms.TableLayoutPanel> contrôle parfaitement adapté aux fins, telles que les formulaires de saisie de données et les applications localisées. Pour plus d’informations, consultez [Procédure pas à pas : Création d’un formulaire Windows redimensionnable pour l’entrée de données](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab) et [procédure pas à pas : Création d’un formulaire Windows localisables](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c).  
+ Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle fournit également une fonction de redimensionnement proportionnel au moment de l’exécution, pour permettre à votre disposition modifier sans heurts lorsque votre formulaire est redimensionné. Cela rend la <xref:System.Windows.Forms.TableLayoutPanel> contrôle parfaitement adapté aux fins, telles que les formulaires de saisie de données et les applications localisées. Pour plus d’informations, consultez [Procédure pas à pas : Création d’un formulaire Windows redimensionnable pour l’entrée de données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)) et [procédure pas à pas : Création d’un formulaire Windows localisables](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).  
   
  En règle générale, vous ne devez pas utiliser un <xref:System.Windows.Forms.TableLayoutPanel> contrôle en tant que conteneur pour la disposition entière. Utilisez <xref:System.Windows.Forms.TableLayoutPanel> pour fournir des capacités de redimensionnement proportionnelles aux parties de la disposition des contrôles.  
   
@@ -54,7 +54,7 @@ Certaines applications exigent un formulaire dont la disposition s’organise de
   
 #### <a name="to-create-the-project"></a>Pour créer le projet  
   
-1.  Créez un projet d’Application de Windows appelé « TableLayoutPanelExample ». Pour plus d'informations, voir [Procédure : Créer un projet d’Application Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Créez un projet d’Application de Windows appelé « TableLayoutPanelExample ». Pour plus d'informations, voir [Procédure : Créer un projet d’application Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
 2.  Sélectionnez le formulaire dans le **Windows** **Concepteur Forms**.  
   
@@ -184,8 +184,8 @@ Certaines applications exigent un formulaire dont la disposition s’organise de
 - [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide des lignes d’alignement](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Expérience utilisateur Microsoft Windows, Recommandations officielles à destination des développeurs et des concepteurs d’interfaces utilisateur. Redmond, Washington : Microsoft Press, 1999. (USBN : 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [Procédure pas à pas : Création d’un formulaire Windows redimensionnable pour l’entrée de données](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
-- [Procédure pas à pas : Création d’un formulaire Windows localisable](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [Procédure pas à pas : Création d’un formulaire Windows redimensionnable pour l’entrée de données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
+- [Procédure pas à pas : Création d’un formulaire Windows localisable](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [Meilleures pratiques pour le contrôle TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
 - [Vue d’ensemble de la propriété AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
 - [Guide pratique pour Ancrer des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)

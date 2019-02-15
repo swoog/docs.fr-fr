@@ -2,12 +2,12 @@
 title: Service Identity, exemple
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 1efa354f62e1b28ad6cec02d9879448205791e4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33d3344e6a74e2afa9ad36f9df2e36eb8e1cb17b
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707633"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303892"
 ---
 # <a name="service-identity-sample"></a>Service Identity, exemple
 Cet exemple montre comment définir l'identité d'un service. Au moment du design, un client peut récupérer l'identité à l'aide des métadonnées du service, puis au miment de l'exécution, il peut authentifier l'identité du service. Le concept d'identité de service consiste à permettre à un client d'authentifier un service avant d'appeler l'une de ses opérations, ce qui protège le client contre les appels non authentifiés. Sur une connexion sécurisée, le service authentifie également les informations d'identification d'un client avant de lui autoriser l'accès, mais ce n'est pas l'objet traité dans cet exemple. Consultez les exemples de [Client](../../../../docs/framework/wcf/samples/client.md) qui montrent l’authentification du serveur.
@@ -17,7 +17,7 @@ Cet exemple montre comment définir l'identité d'un service. Au moment du desig
 
  Cet exemple illustre les fonctionnalités suivantes :
 
--   Comment définir les divers types d'identité sur différents points de terminaison d'un service. Chaque type d'identité possède des fonctionnalités différentes. Le type d’identité à utiliser dépend du type d’informations d’identification de sécurité utilisé sur la liaison du point de terminaison.
+-   Comment définir les divers types d'identité sur différents points de terminaison d'un service. Chaque type d'identité possède des fonctionnalités différentes. Le type d'identité à utiliser dépend du type d'informations d'identification de sécurité utilisé sur la liaison du point de terminaison.
 
 -   L'identité peut être définie de façon déclarative dans la configuration ou de façon impérative dans le code. Pour le client et le service, vous devez généralement utiliser la configuration.
 
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur
 
-1.  Sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importez le fichier de certificat Identity.pfx du dossier de solution Identity dans le magasin de certificats LocalMachine/My (Personal) à l’aide de l’outil enfichable MMC. Ce fichier est protégé par mot de passe. Lors de l'importation, un mot de passe vous est demandé. Type `xyz` dans la zone de mot de passe. Pour plus d’informations, consultez la page [Guide pratique pour Afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) rubrique. Une fois cette opération est effectuée, exécutez Setup.bat dans une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur, qui copie ce certificat dans le magasin CurrentUser/Trusted People pour une utilisation sur le client.
+1.  Sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importez le fichier de certificat Identity.pfx du dossier de solution Identity dans le magasin de certificats LocalMachine/My (Personal) à l'aide de l'outil enfichable MMC. Ce fichier est protégé par mot de passe. Lors de l'importation, un mot de passe vous est demandé. Type `xyz` dans la zone de mot de passe. Pour plus d’informations, consultez la page [Guide pratique pour Afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) rubrique. Une fois cette opération est effectuée, exécutez Setup.bat dans une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur, qui copie ce certificat dans le magasin CurrentUser/Trusted People pour une utilisation sur le client.
 
 2.  Sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], exécutez Setup.bat à partir du dossier d’installation de l’exemple à l’intérieur d’une invite de commandes de Visual Studio 2012 avec des privilèges d’administrateur. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.
 
@@ -126,7 +126,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 4.  Lancez Client.exe à partir du répertoire \client\bin ou en appuyant sur F5 dans Visual Studio pour effectuer la génération et l'exécution. L'activité du client s'affiche sur son application de console.  
   
-5.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -150,7 +150,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 10. Sur l'ordinateur de service, lancez Service.exe à partir d'une invite de commandes.  
   
-11. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+11. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

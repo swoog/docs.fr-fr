@@ -2,12 +2,12 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 93de9ae8d1d0604efbbc07fae61463599a8b9acf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d00ae6eceb00ce53ad2b0bba2c14d9c4816b12e7
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572706"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305626"
 ---
 # <a name="custom-token"></a>Custom Token
 Cet exemple montre comment ajouter une implémentation de jeton personnalisé dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l'en-tête de message WS-Security. Il est signé et chiffré à l'aide de l'élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
@@ -594,14 +594,14 @@ string GetCallerCreditCardNumber()
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur
 
-1.  Ouvrez une fenêtre d’invite de commandes de Visual Studio 2012 avec des privilèges d’administrateur et exécutez Setup.bat à partir du dossier d’installation de l’exemple. Tous les certificats requis pour l’exécution de l’exemple sont ainsi installés. Assurez-vous que le chemin d’accès inclut le dossier dans lequel Makecert.exe se trouve.
+1.  Ouvrez une fenêtre d’invite de commandes de Visual Studio 2012 avec des privilèges d’administrateur et exécutez Setup.bat à partir du dossier d’installation de l’exemple. Tous les certificats requis pour l'exécution de l'exemple sont ainsi installés. Assurez-vous que le chemin d'accès inclut le dossier dans lequel Makecert.exe se trouve.
 
 > [!NOTE]
 >  Assurez-vous de supprimer les certificats en exécutant Cleanup.bat une fois l'exemple terminé. D'autres exemples de sécurité utilisent ces mêmes certificats.  
   
 1.  Lancez Client.exe à partir du répertoire \client\bin. L'activité du client s'affiche sur son application de console.  
   
-2.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -623,7 +623,7 @@ string GetCallerCreditCardNumber()
   
 9. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes.  
   
-10. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

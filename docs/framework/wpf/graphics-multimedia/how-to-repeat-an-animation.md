@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: 213fca0796840ae87035be4f474cfdf4648460a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 358400c07ec2e96401d95929cbdd22784db630f9
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609640"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305140"
 ---
 # <a name="how-to-repeat-an-animation"></a>Procédure : Répéter une animation
 Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriété d’un <xref:System.Windows.Media.Animation.Timeline> afin de contrôler le comportement de répétition d’une animation.  
@@ -31,7 +31,6 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Time
 ## <a name="see-also"></a>Voir aussi
 - [Accumuler des valeurs d'animation pendant des cycles de répétition](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Spécifier l’inversion automatique d’une chronologie](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
-- [Animation et minutage](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
+- [L’animation et minutage des rubriques de procédures](animation-and-timing-how-to-topics.md)
 - [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [Comportement de minuterie d’animation exemple](https://go.microsoft.com/fwlink/?LinkID=159970)

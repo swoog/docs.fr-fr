@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 791c77999b246c1a63767a937189fc6cb970e08f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 867b6e560936bfd78b56da316dc1c3811cafdf48
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607970"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304061"
 ---
 # <a name="message-security-user-name"></a>Message Security User Name
 Cet exemple montre comment implémenter une application qui utilise WS-Security et l'authentification de nom d'utilisateur pour le client et qui nécessite l'authentification du serveur à l'aide de son certificat X.509v3. Tous les messages d'application échangés entre le client et le serveur sont signés et chiffrés. Par défaut, le nom d'utilisateur et le mot de passe fournis par le client sont utilisés pour ouvrir une session à l'aide d'un compte Windows valable. Cet exemple est basé sur le [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Cet exemple se compose d'un programme de console client (client.exe) et d'une bibliothèque de service hébergé par les services IIS (Internet Information Services). Le service implémente un contrat qui définit un modèle de communication demande-réponse.  
@@ -23,7 +23,7 @@ Cet exemple montre comment implémenter une application qui utilise WS-Security 
   
 -   Comment accéder aux informations d'identité de l'appelant à partir du code du service.  
   
- Le service expose un point de terminaison unique pour communiquer avec le service, lequel est défini à l'aide du fichier de configuration Web.config. Le point de terminaison se compose d’une adresse, d’une liaison et d’un contrat. La liaison est configurée avec une norme [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), qui utilise la sécurité de message par défaut. Cet exemple définit la norme [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) à utiliser l’authentification du nom d’utilisateur client. Le comportement spécifie que les informations d'identification de l'utilisateur doivent être utilisées à des fins d'authentification du service. Le certificat de serveur doit contenir la même valeur pour le nom du sujet en tant que le `findValue` d’attribut dans le [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+ Le service expose un point de terminaison unique pour communiquer avec le service, lequel est défini à l'aide du fichier de configuration Web.config. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée avec une norme [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), qui utilise la sécurité de message par défaut. Cet exemple définit la norme [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) à utiliser l’authentification du nom d’utilisateur client. Le comportement spécifie que les informations d'identification de l'utilisateur doivent être utilisées à des fins d'authentification du service. Le certificat de serveur doit contenir la même valeur pour le nom du sujet en tant que le `findValue` d’attribut dans le [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
 ```xml  
 <system.serviceModel>  
@@ -202,13 +202,13 @@ Press <ENTER> to terminate client.
 2.  Exécutez Setup.bat à partir du dossier d’installation exemple dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.  
   
     > [!NOTE]
-    >  Le fichier de commandes Setup.bat est conçu pour être exécuté à partir d’une invite de commandes développeur pour Visual Studio. La variable d’environnement PATH doit pointer vers le répertoire d’installation du Kit de développement SDK. Cette variable d’environnement a automatiquement la valeur dans une invite de commandes développeur pour Visual Studio.  
+    >  Le fichier de commandes Setup.bat est conçu pour être exécuté à partir d’une invite de commandes développeur pour Visual Studio. La variable d'environnement PATH doit pointer vers le répertoire d'installation du Kit de développement SDK. Cette variable d’environnement a automatiquement la valeur dans une invite de commandes développeur pour Visual Studio.  
   
 3.  Vérifier l’accès au service à l’aide d’un navigateur en entrant l’adresse `http://localhost/servicemodelsamples/service.svc`.
   
 4.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-5.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -230,7 +230,7 @@ Press <ENTER> to terminate client.
   
 9. Sur le client, exécutez ImportServiceCert.bat dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur. Cette opération importe le certificat de service du fichier Service.cer dans le magasin CurrentUser - TrustedPeople.  
   
-10. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

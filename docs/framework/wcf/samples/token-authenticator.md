@@ -2,12 +2,12 @@
 title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: fbd036001e3b39c7df27e2388bc2ac4b803f0de3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6cbef617145e40cfc1e43012af2eb65afbbe05c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619543"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305000"
 ---
 # <a name="token-authenticator"></a>Token Authenticator
 Cet exemple montre comment implémenter un authentificateur de jetons personnalisé. Un authentificateur de jetons dans Windows Communication Foundation (WCF) est utilisé pour valider le jeton utilisé avec le message, vérifier qu’il est cohérent, et l’authentification de l’identité associée au jeton.
@@ -30,7 +30,7 @@ Cet exemple montre comment implémenter un authentificateur de jetons personnali
 
  Cet exemple montre également comment identité de l’appelant est accessible à partir de WCF après le processus d’authentification du jeton personnalisé.
 
- Le service expose un point de terminaison unique permettant de communiquer avec le service, défini à l'aide du fichier de configuration App.config. Le point de terminaison se compose d’une adresse, d’une liaison et d’un contrat. La liaison est configurée avec un `wsHttpBinding` standard, avec le mode de sécurité du message (mode par défaut de `wsHttpBinding`). Cet exemple définit le `wsHttpBinding` standard pour permettre l'authentification du client à l'aide du nom d'utilisateur. Le service configure également le certificat de service à l'aide du comportement `serviceCredentials`. Le comportement `securityCredentials` vous permet de spécifier un certificat de service. Un certificat de service est utilisé par un client pour authentifier le service et fournir la protection des messages. La configuration suivante référence le certificat localhost installé pendant l'installation de l'exemple, tel que décrit dans les instructions d'installation suivantes.
+ Le service expose un point de terminaison unique permettant de communiquer avec le service, défini à l'aide du fichier de configuration App.config. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée avec un `wsHttpBinding` standard, avec le mode de sécurité du message (mode par défaut de `wsHttpBinding`). Cet exemple définit le `wsHttpBinding` standard pour permettre l'authentification du client à l'aide du nom d'utilisateur. Le service configure également le certificat de service à l'aide du comportement `serviceCredentials`. Le comportement `securityCredentials` vous permet de spécifier un certificat de service. Un certificat de service est utilisé par un client pour authentifier le service et fournir la protection des messages. La configuration suivante référence le certificat localhost installé pendant l'installation de l'exemple, tel que décrit dans les instructions d'installation suivantes.
 
 ```xml
 <system.serviceModel>
@@ -212,7 +212,8 @@ static void Main()
 
 3.  Écrivez un gestionnaire de jetons de sécurité personnalisé.
 
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> pour des objets <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifiques qui lui sont passés dans la méthode `CreateSecurityTokenAuthenticator`. Le gestionnaire de jetons de sécurité permet également de créer des fournisseurs et des sérialiseurs de jeton, mais ceux-ci ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenAuthenticator` pour retourner l'authentificateur de jeton de nom d'utilisateur personnalisé lorsque les spécifications de jeton passées indiquent que l'authentificateur de nom d'utilisateur est demandé.
+     
+  <xref:System.IdentityModel.Selectors.SecurityTokenManager> permet de créer <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> pour des objets <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> spécifiques qui lui sont passés dans la méthode `CreateSecurityTokenAuthenticator`. Le gestionnaire de jetons de sécurité permet également de créer des fournisseurs et des sérialiseurs de jeton, mais ceux-ci ne sont pas traités dans cet exemple. Dans cet exemple, le gestionnaire de jetons de sécurité personnalisé hérite de classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> et substitue la méthode `CreateSecurityTokenAuthenticator` pour retourner l’authentificateur de jeton de nom d’utilisateur personnalisé lorsque les exigences de jeton passées indiquent que l’authentificateur de nom d’utilisateur est demandé.
 
     ```
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager
@@ -279,7 +280,8 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);
     ```
 
- Pour afficher les informations sur l'appelant, vous pouvez utiliser <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>, tel qu'indiqué dans le code suivant. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contient des informations sur les revendications relatives à l'appelant actuel.
+ Pour afficher les informations sur l'appelant, vous pouvez utiliser <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>, tel qu'indiqué dans le code suivant. 
+  <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contient des informations sur les revendications relatives à l'appelant actuel.
 
 ```
 static void DisplayIdentityInformation()
@@ -339,7 +341,7 @@ static void DisplayIdentityInformation()
   
 3.  Lancez client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-4.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -355,13 +357,13 @@ static void DisplayIdentityInformation()
   
 6.  Sur l'ordinateur de service, exécutez Service.exe à partir d'une invite de commandes.  
   
-7.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur client.  
+7.  Copiez les fichiers programme du client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l’ordinateur client.  
   
 8.  Dans le fichier Client.exe.config de l'ordinateur client, modifiez la valeur d'adresse du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service.  
   
 9. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes.  
   
-10. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

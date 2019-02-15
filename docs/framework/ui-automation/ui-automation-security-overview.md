@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: b35014993f10c3a60c16f784e7dd11b9a20f4f4c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d86293e2d8fedab1d9ed8a5dc0ad59bd1f386d93
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582133"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303866"
 ---
 # <a name="ui-automation-security-overview"></a>Vue d'ensemble de la sécurité UI Automation
 > [!NOTE]
@@ -60,4 +60,4 @@ ms.locfileid: "48582133"
   
  `UIAccess` a la valeur « false » par défaut ; autrement dit, si l'attribut est omis ou qu'il n'existe aucun manifeste pour l'assembly, l'application ne pourra pas accéder à l' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]protégée.  
   
- Pour plus d’informations sur [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] sécurité, la signature des applications et la création de manifestes d’assembly, consultez « Développeur meilleures pratiques et recommandations pour Applications dans un moins privilégié environnement » sur [MSDN](https://msdn.microsoft.com/library/default.asp?url=/library/dnlong/html/AccProtVista.asp).
+ Pour plus d’informations sur [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] de sécurité, la signature des applications et la création de manifestes d’assembly, consultez [pratiques recommandées et directives pour des Applications dans un environnement de privilège minimum](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480150(v=msdn.10)).

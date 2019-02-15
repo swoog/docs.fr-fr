@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 82415524e60a1c9cf44cdccd9a1b2660f4b517a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dea56b69632759193c5ccb23b9d789de6ee45e10
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607733"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303879"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Modèles de contrôle UI Automation pour les clients
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "54607733"
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>Récupération de propriétés sur des modèles de contrôle  
- Les clients peuvent récupérer les valeurs de propriété sur les modèles de contrôle en appelant <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ou <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> et en effectuant le cast de l’objet retourné en un type approprié. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriétés, consultez [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ Les clients peuvent récupérer les valeurs de propriété sur les modèles de contrôle en appelant <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ou <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> et en effectuant le cast de l'objet retourné en un type approprié. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriétés, consultez [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
  En plus des méthodes `GetPropertyValue`, les valeurs de propriété peuvent être récupérées via les accesseurs [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] pour accéder aux propriétés [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sur un modèle.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "54607733"
 - [Appeler un contrôle à l’aide d’UI Automation](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
 - [Obtenir l’état bascule d’une case à cocher à l’aide d’UI Automation](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
 - [Mappage de modèle de contrôle pour les clients UI Automation](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Exemple de texte TextPattern Insert](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)
-- [Recherche de TextPattern et exemple de sélection](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
-- [InvokePattern et ExpandCollapsePattern Menu exemple d’élément](https://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+- [Exemple de texte TextPattern Insert](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [Recherche de TextPattern et exemple de sélection](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
+- [Exemple de TogglePattern InvokePattern et ExpandCollapsePattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

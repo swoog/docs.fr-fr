@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 8d7de0ea18adf81d7bcd5b4142e1aa51d6d223ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1987d5af904f1e151617d0cea6c183c52b8386e2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743840"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305478"
 ---
 # <a name="use-the-automationid-property"></a>Utiliser la propriété AutomationID
 > [!NOTE]
@@ -47,7 +47,7 @@ ms.locfileid: "54743840"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Utiliser un chemin persistant pour revenir à un AutomationElement déjà identifié  
   
--   Les applications clientes, qu’il s’agisse de simples scripts de test ou de véritables utilitaires d’enregistrement et de lecture, peuvent nécessiter l’accès à des éléments qui ne sont pas actuellement instanciés, comme une boîte de dialogue d’ouverture de fichier ou un élément de menu, et qui donc n’existent pas dans l’arborescence UI Automation. Ces éléments ne peuvent être instanciés qu’en reproduisant, ou en « lisant », une séquence spécifique d’actions d’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] à l’aide de propriétés [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] comme AutomationID, les modèles de contrôle et les écouteurs d’événements. Consultez [Test Script Generator Sample](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) pour obtenir un exemple qui utilise [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour générer des scripts de test en fonction de l’interaction de l’utilisateur avec l’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Les applications clientes, qu’il s’agisse de simples scripts de test ou de véritables utilitaires d’enregistrement et de lecture, peuvent nécessiter l’accès à des éléments qui ne sont pas actuellement instanciés, comme une boîte de dialogue d’ouverture de fichier ou un élément de menu, et qui donc n’existent pas dans l’arborescence UI Automation. Ces éléments ne peuvent être instanciés qu’en reproduisant, ou en « lisant », une séquence spécifique d’actions d’interface utilisateur grâce à l’utilisation des propriétés UI Automation comme AutomationID, les modèles de contrôle et les écouteurs d’événements.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

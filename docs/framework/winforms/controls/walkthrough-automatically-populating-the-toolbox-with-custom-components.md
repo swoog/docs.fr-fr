@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8c40f4a58800183c142602d950e4fe1331c1eaf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4c6bf42bdd1ba6b0f9ccddb730dc517dbaab963
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730267"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304087"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Procédure pas à pas : Remplissage automatique de la boîte à outils avec des composants personnalisés
-Si vos composants sont définis par un projet dans la solution actuellement ouverte, ils apparaissent automatiquement dans le **boîte à outils**, sans qu’aucune action requise par vous. Vous pouvez également remplir manuellement la **boîte à outils** avec vos composants personnalisés à l’aide de la [boîte à outils éléments de boîte de dialogue Choisir (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), mais la **boîte à outils** tient compte d’éléments dans de votre solution générer les sorties avec toutes les caractéristiques suivantes :  
+Si vos composants sont définis par un projet dans la solution actuellement ouverte, ils apparaissent automatiquement dans le **boîte à outils**, sans qu’aucune action requise par vous. Vous pouvez également remplir manuellement la **boîte à outils** avec vos composants personnalisés à l’aide de la [boîte à outils éléments de boîte de dialogue Choisir (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), mais la **boîte à outils** tient compte d’éléments dans de votre solution générer les sorties avec toutes les caractéristiques suivantes :  
   
 -   Implémente <xref:System.ComponentModel.IComponent>;  
   
@@ -49,7 +49,7 @@ Si vos composants sont définis par un projet dans la solution actuellement ouve
   
 2.  Ajouter un nouveau composant au projet. Appelez-le `DemoComponent`.  
   
-     Pour plus d’informations, consultez [NIB : Comment : Ajouter de nouveaux éléments de projet](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Pour plus d'informations, voir [Procédure : Ajouter de nouveaux éléments de projet](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)).  
   
 3.  Générez le projet.  
   
@@ -80,7 +80,7 @@ Si vos composants sont définis par un projet dans la solution actuellement ouve
   
 1.  Décharger le projet à partir de la solution.  
   
-     Pour plus d’informations sur le déchargement de projets, consultez [NIB : Comment : Décharger et recharger des projets](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Si vous êtes invité à enregistrer, choisissez **Oui**.  
+     Pour plus d’informations sur le déchargement de projets, consultez [Comment : Décharger et recharger des projets](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100)). Si vous êtes invité à enregistrer, choisissez **Oui**.  
   
 2.  Ajouter un nouveau **Windows Application** projet à la solution. Ouvrez le formulaire dans le **concepteur**.  
   
@@ -94,7 +94,7 @@ Si vos composants sont définis par un projet dans la solution actuellement ouve
  Cette procédure pas à pas montre que la **boîte à outils** tient compte des composants d’un projet, mais la **boîte à outils** tient également compte des contrôles. Faites des essais avec vos propres contrôles personnalisés en ajoutant et supprimant des projets de contrôle à partir de votre solution.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Général, le Concepteur Windows Forms, boîte de dialogue Options](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
-- [Guide pratique pour Manipuler des onglets de boîte à outils](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)
-- [Choisir des éléments de boîte à outils, boîte de dialogue (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)
+- [Général, le Concepteur Windows Forms, boîte de dialogue Options](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Guide pratique pour Manipuler des onglets de boîte à outils](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
+- [Choisir des éléments de boîte à outils, boîte de dialogue (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Placement de contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

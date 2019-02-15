@@ -2,12 +2,12 @@
 title: X.509 Certificate Validator
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 8c87e1d8c84af500e1f415b79e7f3ec006b51860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a94653c02b642138e5e20a0452c42f0926e25ea7
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510128"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305985"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Certificate Validator
 Cet exemple montre comment implémenter un validateur de certificat X.509 personnalisé. Cela s’avère utile dans les cas où aucun des modes de validation de certificat X.509 intégrés ne convient aux spécifications de l’application. Cet exemple illustre un service qui possède un validateur personnalisé qui accepte les certificats auto-émis. Le client utilise un certificat X.509 pour s'authentifier auprès du service.
@@ -22,7 +22,7 @@ Cet exemple montre comment implémenter un validateur de certificat X.509 person
 
 -   Le serveur est authentifié à l'aide du certificat X.509 du serveur.
 
- Le service expose un point de terminaison unique permettant de communiquer avec le service, défini à l'aide du fichier de configuration App.config. Le point de terminaison se compose d’une adresse, d’une liaison et d’un contrat. La liaison est configurée avec une norme `wsHttpBinding` qui utilise par défaut `WSSecurity` et authentification par certificat client. Le comportement de service spécifie le mode personnalisé de validation des certificats clients X.509 ainsi que le type de classe du validateur. Le comportement spécifie également le certificat de serveur à l'aide de l'élément serviceCertificate. Le certificat de serveur doit contenir la même valeur pour le `SubjectName` en tant que le `findValue` dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ Le service expose un point de terminaison unique permettant de communiquer avec le service, défini à l'aide du fichier de configuration App.config. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée avec une norme `wsHttpBinding` qui utilise par défaut `WSSecurity` et authentification par certificat client. Le comportement de service spécifie le mode personnalisé de validation des certificats clients X.509 ainsi que le type de classe du validateur. Le comportement spécifie également le certificat de serveur à l'aide de l'élément serviceCertificate. Le certificat de serveur doit contenir la même valeur pour le `SubjectName` en tant que le `findValue` dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
   <system.serviceModel>
@@ -317,7 +317,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 3.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-4.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -335,7 +335,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 7.  Copiez le fichier Service.cer du répertoire de service vers le répertoire client sur l'ordinateur client.  
   
-8.  Sur le client, exécutez `setup.bat client` dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur. L’exécution de `setup.bat` à l’aide de l’argument `client` crée un certificat client appelé client.com, puis exporte ce certificat vers un fichier nommé Client.cer.  
+8.  Sur le client, exécutez `setup.bat client` dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur. L'exécution de `setup.bat` à l'aide de l'argument `client` crée un certificat client appelé client.com, puis exporte ce certificat vers un fichier nommé Client.cer.  
   
 9. Dans le fichier Client.exe.config de l'ordinateur client, modifiez la valeur d'adresse du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service. Pour ce faire, remplacez localhost par le nom de domaine complet du serveur.  
   
@@ -347,7 +347,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 13. Sur l'ordinateur serveur, lancez Service.exe à partir de la fenêtre d'invite de commandes.  
   
-14. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+14. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

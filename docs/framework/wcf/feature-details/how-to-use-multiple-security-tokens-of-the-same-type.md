@@ -2,12 +2,12 @@
 title: 'Procédure : Utiliser plusieurs jetons de sécurité du même Type'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 40fc95c905f8923b8aaf2c97fb9dc2b937dfb06f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a532d40d8c31894c63a382ecad0cbcf8b42e3a66
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691345"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303762"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Procédure : Utiliser plusieurs jetons de sécurité du même Type
 -   Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un message client ne pouvait contenir qu'un jeton d'un type donné. Désormais, les messages peuvent contenir plusieurs jetons d'un type donné. Cette rubrique explique comment inclure plusieurs jetons du même type dans un message client.  
@@ -40,7 +40,7 @@ ms.locfileid: "54691345"
   
      [!code-csharp[C_CustomBinding#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#14)]  
   
-7.  Retournez une nouvelle liaison personnalisée créée à partir de la collection d’éléments de liaison.  
+7.  Retournez une nouvelle liaison personnalisée créée à partir de la collection d'éléments de liaison.  
   
      [!code-csharp[C_CustomBinding#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#15)]  
   
@@ -48,6 +48,3 @@ ms.locfileid: "54691345"
  Vous trouverez ci-dessous la méthode complète décrite par la procédure précédente.  
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
-  
-## <a name="see-also"></a>Voir aussi
-- [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

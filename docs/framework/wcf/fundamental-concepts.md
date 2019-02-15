@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664012"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305543"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concepts fondamentaux concernant Windows Communication Foundation
 Ce document fournit une vue d’ensemble de l’architecture de Windows Communication Foundation (WCF). Il vise à vous expliquer des concepts clés et la manière dont ils se combinent. Pour obtenir un didacticiel sur la création de la version la plus simple d’un service WCF et un client, consultez [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). Pour découvrir la programmation WCF, consultez [programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -78,13 +78,13 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Définit la façon dont un point de terminaison communique avec le monde. Elle est construite à l'aide d'un ensemble de composants appelés éléments de liaison qui « s'empilent » les uns sur les autres pour créer l'infrastructure de communication. Au minimum, une liaison définit le transport (HTTP ou TCP par exemple) et l'encodage utilisés (tel que texte ou binaire). Une liaison peut contenir des éléments de liaison qui spécifient des informations détaillées comme les mécanismes de sécurité utilisés pour sécuriser les messages, ou le modèle de message utilisé par un point de terminaison. Pour plus d’informations, consultez [configuration des Services](../../../docs/framework/wcf/configuring-services.md).  
   
  Élément de liaison (binding element)  
- Représente un composant particulier de la liaison, tel qu'un transport, un encodage, une implémentation d'un protocole au niveau de l'infrastructure (comme WS-ReliableMessaging) ou tout autre composant de la pile de communication.  
+ Représente un composant particulier de la liaison, tel qu’un transport, un encodage, une implémentation d’un protocole au niveau de l’infrastructure (comme WS-ReliableMessaging) ou tout autre composant de la pile de communication.  
   
  comportements  
  Composant qui contrôle plusieurs aspects de l'exécution d'un service, d'un point de terminaison, d'une opération particulière ou d'un client. Les comportements sont groupés en fonction de leur portée : les comportements courants affectent tous les points de terminaison globalement, les comportements de service affectent uniquement des aspects relatifs à un service, les comportements de point de terminaison affectent uniquement des propriétés connexes à un point de terminaison, et les comportements au niveau de l'opération affectent des opérations particulières. Par exemple, le comportement de service « limitation » spécifie comment un service réagit lorsqu'un trop grand nombre de messages menace de submerger ses fonctions de traitement. Un comportement de point de terminaison, en revanche, contrôle uniquement les aspects pertinents aux points de terminaison, par exemple comment et où rechercher une information d'identification de sécurité.  
   
  Liaisons fournies par le système (system-provided bindings)  
- WCF inclut plusieurs liaisons fournies par le système. Il s’agit de collections d’éléments de liaison optimisés pour des scénarios spécifiques. Par exemple, <xref:System.ServiceModel.WSHttpBinding> a été conçue à des fins d'interopérabilité avec les services qui implémentent les diverses spécifications WS-*. Ces liaisons prédéfinies vous font gagner du temps en vous présentant uniquement les options qui peuvent être appliquées correctement au scénario spécifique. Si une liaison prédéfinie ne satisfait pas vos spécifications, vous pouvez créer votre propre liaison personnalisée.  
+ WCF inclut plusieurs liaisons fournies par le système. Il s'agit de collections d'éléments de liaison optimisés pour des scénarios spécifiques. Par exemple, <xref:System.ServiceModel.WSHttpBinding> a été conçue à des fins d'interopérabilité avec les services qui implémentent les diverses spécifications WS-*. Ces liaisons prédéfinies vous font gagner du temps en vous présentant uniquement les options qui peuvent être appliquées correctement au scénario spécifique. Si une liaison prédéfinie ne satisfait pas vos spécifications, vous pouvez créer votre propre liaison personnalisée.  
   
  configuration contre encodage  
  Le contrôle d'une application peut être réalisé par l'encodage, par la configuration, ou par les deux. La configuration a l'avantage de permettre à quelqu'un d'autre que le développeur (par exemple, un administrateur réseau) de définir les paramètres de client et de service après que le code a été écrit et sans devoir le recompiler. La configuration vous permet non seulement de définir des valeurs comme des adresses de point de terminaison, mais aussi de procéder à un contrôle approfondi en vous permettant d'ajouter des points de terminaison, des liaisons et des comportements. L'encodage permet au développeur de conserver un contrôle étroit sur tous les composants du service ou client, et tous les paramètres définis par la configuration peuvent être inspectés et si besoin être remplacés par le code.  
@@ -105,7 +105,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Peut être associé à une opération de service pour désigner des erreurs qui peuvent être renvoyées à l'appelant. Une opération peut être associée à plusieurs erreurs ou n'être associée à aucune erreur. Ces erreurs sont des erreurs SOAP modélisées comme des exceptions dans le modèle de programmation.  
   
  contrat de données  
- Descriptions dans les métadonnées des types de données utilisés par un service. Cela permet à d'autres d'interagir avec le service. Les types de données peuvent être utilisés dans n'importe quelle partie d'un message, par exemple comme paramètres ou types de retour. Si le service n'utilise que des types simples, l'utilisation explicite des contrats de données est inutile.  
+ Descriptions dans les métadonnées des types de données utilisés par un service. Cela permet à d'autres d'interagir avec le service. Les types de données peuvent être utilisés dans n’importe quelle partie d’un message, par exemple comme paramètres ou types de retour. Si le service n'utilise que des types simples, l'utilisation explicite des contrats de données est inutile.  
   
  hébergement  
  Un service doit être hébergé dans un processus. Un *hôte* est une application qui contrôle la durée de vie du service. Les services peuvent être auto-hébergés ou gérés par un processus d'hébergement existant.  
@@ -117,7 +117,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Application conçue pour héberger des services. Ces derniers incluent les services IIS (Internet Information Services), les services WAS (Windows Activation Services) et les services Windows. Dans ces scénarios hébergés, l'hôte contrôle la durée de vie du service. Par exemple, vous pouvez installer un répertoire virtuel qui contient l'assembly de service et le fichier de configuration à l'aide d'IIS. Lorsqu'un message est reçu, IIS démarre le service et contrôle sa durée de vie.  
   
  instancier  
- Un service dispose d'un modèle d'instanciation. Il existe trois modèles d'instanciation : « unique », dans lequel un objet CLR unique prend en charge tous les clients ; « par appel », dans lequel un nouvel objet CLR est créé pour gérer chaque appel du client ; et « par session », dans lequel un ensemble d'objets CLR est créé, un pour chaque session. Le choix d’un modèle d’instanciation dépend des exigences de l’application et du modèle d’utilisation attendu du service.  
+ Un service dispose d'un modèle d'instanciation. Il existe trois modèles d'instanciation : « unique », dans lequel un objet CLR unique prend en charge tous les clients ; « par appel », dans lequel un nouvel objet CLR est créé pour gérer chaque appel du client ; et « par session », dans lequel un ensemble d'objets CLR est créé, un pour chaque session. Le choix d’un modèle d’instanciation dépend des spécifications de l’application et du modèle d’utilisation attendu du service.  
   
  Application cliente (client application)  
  Programme qui échange des messages avec un ou plusieurs points de terminaison. L'application cliente commence par créer l'instance d'un client WCF et appelle les méthodes de ce client. Il est important de noter qu'une même application peut être à la fois un client et un service.  
@@ -141,7 +141,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Dans WCF, inclut la confidentialité (chiffrement des messages pour éviter l’espionnage), l’intégrité (la détection de falsification des messages), l’authentification (la validation des serveurs et clients) et autorisation (le contrôle d’accès à ressources). Ces fonctions sont fournies en tirant parti de mécanismes de sécurité existants, tels que TLS sur HTTP (également connu sous le nom de HTTPS), ou en implémentant une ou plusieurs spécifications de sécurité WS-*.  
   
  mode de sécurité du transport  
- Spécifie que la confidentialité, l'intégrité et l'authentification sont assurées par les mécanismes de la couche de transport (tels que HTTPS). Lors de l'utilisation d'un transport comme le HTTPS, ce mode a l'avantage d'être efficace en termes de performances, et d'être bien compris grâce à sa prédominance sur Internet. L'inconvénient est que ce type de sécurité est appliqué séparément sur chaque saut dans la voie de communication, et rend la communication susceptible d'être victime d'une attaque de « l'homme du milieu ».  
+ Spécifie que la confidentialité, l'intégrité et l'authentification sont assurées par les mécanismes de la couche de transport (tels que HTTPS). Lors de l'utilisation d'un transport comme le HTTPS, ce mode a l'avantage d'être efficace en termes de performances, et d'être bien compris grâce à sa prédominance sur Internet. L’inconvénient est que ce type de sécurité est appliqué séparément sur chaque saut dans la voie de communication, et rend la communication susceptible d’être victime d’une attaque de « l’homme du milieu ».  
   
  mode de sécurité du message  
  Spécifie que la sécurité est fournie en implémentant une ou plusieurs spécifications de sécurité, telles que la spécification nommée [Web Services Security : Sécurité des messages SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Chaque message contient les mécanismes nécessaires pour assurer la sécurité pendant son transit et permettre aux récepteurs de détecter la falsification et de déchiffrer le message. En ce sens, la sécurité est encapsulée dans chaque message, en assurant la sécurité de bout en bout sur des sauts multiples. Étant donné que les informations de sécurité deviennent une partie du message, il est également possible d’inclure plusieurs types d’informations d’identification avec le message (ils sont désignés comme *revendications*). Cette approche a également l'avantage de permettre au message de voyager en toute sécurité sur n'importe quel transport, y compris les transports multiples, entre son origine et sa destination. L'inconvénient de cette approche réside dans la complexité des mécanismes de chiffrement employés, ce qui affecte les performances.  
@@ -155,4 +155,3 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>Voir aussi
 - [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Architecture Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
-- [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
