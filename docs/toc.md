@@ -258,6 +258,7 @@
 ##### [Présentation des classes](csharp/tutorials/intro-to-csharp/introduction-to-classes.md)
 ### [Explorer C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [Utiliser des types de référence Nullable](csharp/tutorials/nullable-reference-types.md)
+### [Générer et consommer des flux asynchrones](csharp/tutorials/generate-consume-asynchronous-stream.md)
 ### [Application console](csharp/tutorials/console-teleprompter.md)
 ### [Client REST](csharp/tutorials/console-webapiclient.md)
 ### [Héritage dans C# et .NET](csharp/tutorials/inheritance.md)
