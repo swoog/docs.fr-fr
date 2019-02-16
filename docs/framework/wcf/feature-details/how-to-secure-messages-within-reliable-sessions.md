@@ -1,15 +1,15 @@
 ---
-title: 'Comment : sécuriser des messages au sein de sessions fiables'
+title: 'Procédure : Sécuriser des Messages au sein de Sessions fiables'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: 4d35f88e127bdd813a2f41a51e2aba69dc688ae6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185350"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333051"
 ---
-# <a name="how-to-secure-messages-within-reliable-sessions"></a>Comment : sécuriser des messages au sein de sessions fiables
+# <a name="how-to-secure-messages-within-reliable-sessions"></a>Procédure : Sécuriser des Messages au sein de Sessions fiables
 
 Cette rubrique décrit les étapes requises pour activer la sécurité au niveau du message pour les messages échangés dans une session fiable utilisant l’une des liaisons fournies par le système qui prennent en charge une telle session, mais pas par défaut. Activer une session sécurisée, fiable soit impérativement en utilisant du code ou de façon déclarative dans le fichier de configuration. Cette procédure utilise le client et les fichiers de configuration du service pour activer la session fiable sécurisée.
 
@@ -21,7 +21,7 @@ La procédure inclut les trois tâches clés suivantes :
 
 1. Spécifiez le type d'informations d'identification que le client doit utiliser pour être authentifié auprès du service.
 
-Il est important dans la première tâche qui contiennent l’élément de configuration de point de terminaison un `bindingConfiguration` attribut qui fait référence à une configuration de liaison nommée (dans cet exemple) `MessageSecurity`. Le [  **\<liaison >** ](../../../../docs/framework/misc/binding.md) élément de configuration puis référence ce nom pour activer les sessions fiables en définissant le `enabled` attribut de la [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) élément à `true`. Vous pouvez requérir que les assurances de remise ordonnée soient disponibles dans une session fiable en affectant à l'attribut `ordered` la valeur `true`.
+Il est important dans la première tâche qui contiennent l’élément de configuration de point de terminaison un `bindingConfiguration` attribut qui fait référence à une configuration de liaison nommée (dans cet exemple) `MessageSecurity`. Le [  **\<liaison >** ](../../../../docs/framework/misc/binding.md) élément de configuration puis référence ce nom pour activer les sessions fiables en définissant le `enabled` attribut de la [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) élément à `true`. Vous pouvez requérir que les assurances de remise ordonnée soient disponibles dans une session fiable en affectant à l'attribut `ordered` la valeur `true`.
 
 Pour la copie de la source de l’exemple sur lequel est basée cette procédure de configuration, consultez le [Session fiable WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
@@ -34,11 +34,11 @@ Les éléments essentiels de la troisième tâche sont accomplis en affectant la
 
 ### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurer le service avec une liaison WSHttpBinding afin d’utiliser une session fiable
 
-Cette procédure est décrite dans [Comment : Exchange Messages au sein d’une Session fiable](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Cette procédure est décrite dans [Comment : Échanger des Messages dans une Session fiable](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurer le client avec une liaison WSHttpBinding afin d’utiliser une session fiable
 
-Cette procédure est décrite dans [Comment : Exchange Messages au sein d’une Session fiable](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Cette procédure est décrite dans [Comment : Échanger des Messages dans une Session fiable](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="set-the-mode-and-clientcredentialtype-in-configuration"></a>Définir le mode et le ClientCredentialType dans la configuration
 

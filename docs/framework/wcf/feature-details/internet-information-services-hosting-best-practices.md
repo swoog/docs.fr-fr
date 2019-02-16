@@ -2,12 +2,12 @@
 title: Meilleures pratiques pour l'hébergement dans Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 931ba4162ed34ab391bd0ba2de2cb5a0e16ede6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521866"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333415"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Meilleures pratiques pour l'hébergement dans Internet Information Services
 Cette rubrique décrit certaines meilleures pratiques pour l’hébergement des services Windows Communication Foundation (WCF).  
@@ -39,7 +39,7 @@ Cette rubrique décrit certaines meilleures pratiques pour l’hébergement des 
   
  Vous pouvez configurer des liaisons de site web IIS en utilisant le composant logiciel enfichable IIS Microsoft Management Console (MMC).  
   
-## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Les pools d’applications qui s’exécutent dans des contextes d’utilisateur différents remplacent des assemblys d’autres comptes dans le dossier temporaire  
+## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Les pools d'applications qui s'exécutent dans des contextes d'utilisateur différents remplacent des assemblys d'autres comptes dans le dossier temporaire  
  Pour garantir que les pools d'applications qui s'exécutent dans les contextes d'utilisateur différents ne peuvent pas remplacer d'assemblys d'autres comptes dans le dossier des fichiers [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] temporaire, utilisez des identités et des dossiers temporaires différents pour des applications différentes. Par exemple, si vous avez deux applications virtuelles /Application1 et / Application2, vous pouvez créer deux pools d'applications, A et B, avec deux identités différentes. Le pool d'applications A peut s'exécuter sous une identité d'utilisateur (user1), et le pool d'applications B peut s'exécuter sous une autre identité d'utilisateur (user2), et configurer /Application1 pour utiliser A et /Application2 pour utiliser B.  
   
  Dans le fichier Web.config, vous pouvez configurer le dossier temporaire à l’aide \< system.web/compilation/@tempFolder>. Pour/Application1, il peut être « c:\tempForUser1 » et pour application2, il peut être « c:\tempForUser2 ». Accordez l’autorisation en écriture correspondante à ces dossiers pour les deux identités.  
@@ -82,5 +82,6 @@ Cette rubrique décrit certaines meilleures pratiques pour l’hébergement des 
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exemples de services d’hébergement](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)
+
+- [Exemples de services d’hébergement](../samples/hosting.md)
 - [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

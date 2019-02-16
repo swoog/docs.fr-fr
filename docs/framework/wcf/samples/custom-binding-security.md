@@ -2,12 +2,12 @@
 title: Custom Binding Security
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 49e14fd783fa89f25750aeb00efc105a850c0d3e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7f4162b26dc64f3108ab77bf7f7587cfdc24339f
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066128"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333441"
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 L’exemple suivant illustre comment configurer la sécurité à l’aide d’une liaison personnalisée. Il indique également comment utiliser une liaison personnalisée afin d’activer la sécurité de niveau message à l’aide d’un transport sécurisé. Cette configuration est utile lorsqu'un transport sécurisé est requis pour la transmission des messages entre le client et le service et que ces messages doivent en même temps bénéficier d'une sécurité de niveau message. Cette configuration n’est pas prise en charge par les liaisons fournies par le système.
@@ -23,7 +23,7 @@ L’exemple suivant illustre comment configurer la sécurité à l’aide d’un
 
 -   Sécurité de message Windows.
 
- La configuration de la liaison personnalisée active le transport sécurisé en activant simultanément la sécurité de niveau message. Le classement des éléments de liaison est important pour définir une liaison personnalisée, car chacun représente une couche dans la pile de canaux (consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md)). La liaison personnalisée est définie dans les fichiers de configuration du service et du client, tel qu’illustré dans l’exemple de configuration suivant.
+ La configuration de la liaison personnalisée active le transport sécurisé en activant simultanément la sécurité de niveau message. Le classement des éléments de liaison est important pour définir une liaison personnalisée, car chacun représente une couche dans la pile de canaux (consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md)). La liaison personnalisée est définie dans les fichiers de configuration du service et du client, tel qu'illustré dans l'exemple de configuration suivant.
 
 ```xml
 <bindings>
@@ -57,7 +57,7 @@ L’exemple suivant illustre comment configurer la sécurité à l’aide d’un
 </behaviors>
 ```
 
- En outre, la liaison personnalisée utilise la sécurité de niveau message avec le type d'informations d'identification Windows, c'est-à-dire le type par défaut. Cette tâche est effectuée par l’élément de liaison `security`. Le client et le service sont tous deux authentifiés à l'aide de la sécurité au niveau du message si le mécanisme d'authentification Kerberos est disponible. Cela se produit à condition toutefois que l'exemple soit exécuté dans l'environnement Active Directory. Si le mécanisme d'authentification Kerberos n'est pas disponible, l'authentification NTLM est utilisée. NTLM authentifie le client au service mais n'authentifie pas le service au client. L'élément de liaison `security` est configuré pour utiliser un type `SecureConversation` `authenticationType`, ce qui entraîne la création d'une session de sécurité à la fois au niveau du client et du service. Ceci est nécessaire pour permettre au contrat duplex du service de fonctionner.
+ En outre, la liaison personnalisée utilise la sécurité de niveau message avec le type d’informations d’identification Windows, c’est-à-dire le type par défaut. Cette tâche est effectuée par l’élément de liaison `security`. Le client et le service sont tous deux authentifiés à l'aide de la sécurité au niveau du message si le mécanisme d'authentification Kerberos est disponible. Cela se produit à condition toutefois que l'exemple soit exécuté dans l'environnement Active Directory. Si le mécanisme d'authentification Kerberos n'est pas disponible, l'authentification NTLM est utilisée. NTLM authentifie le client au service mais n'authentifie pas le service au client. L'élément de liaison `security` est configuré pour utiliser un type `SecureConversation` `authenticationType`, ce qui entraîne la création d'une session de sécurité à la fois au niveau du client et du service. Ceci est nécessaire pour permettre au contrat duplex du service de fonctionner.
 
  Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console cliente. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.
 
@@ -122,7 +122,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-4.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -137,7 +137,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     4.  Exécutez la commande suivante dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur : `Setup.bat service`. L'exécution de cette commande crée un certificat de service dont le nom du sujet correspond au nom de l'ordinateur sur lequel le fichier de commandes a été exécuté.  
   
         > [!NOTE]
-        >  Le fichier de commandes Setup.bat est conçu pour s'exécuter à partir d'une invite de commandes de Visual Studio 2010. La variable d’environnement PATH doit pointer vers le répertoire d’installation du Kit de développement SDK. Cette variable est définie automatiquement dans une invite de commandes de Visual Studio 2010.
+        >  Le fichier de commandes Setup.bat est conçu pour s'exécuter à partir d'une invite de commandes de Visual Studio 2010. La variable d'environnement PATH doit pointer vers le répertoire d'installation du Kit de développement SDK. Cette variable est définie automatiquement dans une invite de commandes de Visual Studio 2010.
 
     5.  Modifier le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dans le fichier Service.exe.config pour refléter le nom du sujet du certificat généré à l’étape précédente.
 
@@ -145,7 +145,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 2.  Sur l'ordinateur client :
 
-    1.  Copiez les fichiers programme du client à partir du dossier \client\bin\ sur l’ordinateur client. Copiez également le fichier Cleanup.bat.
+    1.  Copiez les fichiers programme du client à partir du dossier \client\bin\ sur l'ordinateur client. Copiez également le fichier Cleanup.bat.
 
     2.  Exécutez Cleanup.bat pour supprimer tous les anciens certificats d'exemples précédents.
 
@@ -184,6 +184,6 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple
 
--   Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d’exécuter l’exemple.
+-   Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.
 
 ## <a name="see-also"></a>Voir aussi

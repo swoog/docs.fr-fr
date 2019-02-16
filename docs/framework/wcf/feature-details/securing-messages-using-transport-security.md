@@ -2,12 +2,12 @@
 title: Sécurisation des messages à l'aide de la sécurité de transport
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354b014825b3282e494cf75637fb2434acdb2dbe
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747945"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332341"
 ---
 # <a name="securing-messages-using-transport-security"></a>Sécurisation des messages à l'aide de la sécurité de transport
 Cette section traite de la sécurité de transport Message Queuing (MSMQ) que vous pouvez utiliser pour sécuriser des messages envoyés vers une file d'attente.  
@@ -21,7 +21,7 @@ Cette section traite de la sécurité de transport Message Queuing (MSMQ) que vo
   
  Lorsque les messages à l’aide de WCF avec les mises en attente envoi <xref:System.ServiceModel.NetMsmqBinding>, le message WCF est attaché en tant que corps du message MSMQ. La sécurité de transport sécurise le message MSMQ entier (en-têtes de message ou propriétés MSMQ et le corps du message). Comme il est le corps du message MSMQ, à l’aide de la sécurité de transport sécurise également le message WCF.  
   
- Le concept clé de la sécurité de transport est que le client doit satisfaire certaines exigences de sécurité pour envoyer le message dans la file d’attente cible. Cela diffère de la sécurité de message, où le message est sécurisé pour l'application qui reçoit le message.  
+ Le concept clé de la sécurité de transport est que le client doit satisfaire certaines conditions de sécurité pour envoyer le message dans la file d'attente cible. Cela diffère de la sécurité de message, où le message est sécurisé pour l'application qui reçoit le message.  
   
  La sécurité de transport à l'aide de <xref:System.ServiceModel.NetMsmqBinding> et <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> a un impact sur la manière dont les messages MSMQ sont sécurisés en transit entre la file d'attente de transmission et la file d'attente cible, où le terme « sécurisé » implique les éléments suivants :  
   
@@ -97,6 +97,6 @@ Cette section traite de la sécurité de transport Message Queuing (MSMQ) que vo
  Les algorithmes pris en charge sont `MD5`, `SHA1`, `SHA256` et `SHA512`. La valeur par défaut est `SHA1`.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Message Queuing](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [Vue d’ensemble des files d’attente](queues-overview.md)
 - [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -1,20 +1,20 @@
 ---
-title: 'Transport: UDP'
+title: 'Transport : UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485938"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332817"
 ---
-# <a name="transport-udp"></a>Transport: UDP
+# <a name="transport-udp"></a>Transport : UDP
 L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et multidiffusion comme un transport personnalisé de Windows Communication Foundation (WCF). L’exemple décrit la procédure recommandée pour la création d’un transport personnalisé dans WCF, en utilisant l’infrastructure de canal et en suivant les bonnes pratiques WCF. Les étapes de la création d'un transport personnalisé sont les suivantes :  
   
 1.  Déterminez le canal [modèles d’échange de Message](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel ou IReplyChannel) ChannelFactory et ChannelListener prendront en charge. Déterminez ensuite si vous prendrez en charge les variantes de session de ces interfaces.  
   
-2.  Créez une fabrication et un écouteur de canal qui prennent en charge votre modèle d'échange de messages.  
+2.  Créez une fabrication et un écouteur de canal qui prennent en charge votre modèle d’échange de messages.  
   
 3.  Assurez-vous que les exceptions spécifiques au réseau sont normalisées selon la classe dérivée appropriée de <xref:System.ServiceModel.CommunicationException>.  
   
@@ -26,7 +26,7 @@ L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et mu
   
 7.  Ajoutez une liaison qui préconfigure une pile d’éléments de liaison d’après un profil bien défini. Pour plus d’informations, consultez [Ajout d’une liaison Standard](#AddingAStandardBinding).  
   
-8.  Ajoutez une section de liaison ainsi qu’un élément de configuration de liaison afin d’exposer la liaison au système de configuration. Pour plus d’informations, consultez [prise en charge de Configuration ajout](#AddingConfigurationSupport).  
+8.  Ajoutez une section de liaison ainsi qu'un élément de configuration de liaison afin d'exposer la liaison au système de configuration. Pour plus d’informations, consultez [prise en charge de Configuration ajout](#AddingConfigurationSupport).  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>Modèles d’échange de messages  
@@ -52,17 +52,17 @@ L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et mu
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject et cycle de vie des objets WCF  
  WCF propose une machine d’état commune qui est utilisée pour gérer le cycle de vie des objets tels que <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, et <xref:System.ServiceModel.Channels.IChannelListener> qui sont utilisés pour la communication. Ces objets de communication peuvent avoir cinq états différents. Ces états sont représentés par l'énumération <xref:System.ServiceModel.CommunicationState> et sont les suivants :  
   
--   Created : état d'un <xref:System.ServiceModel.ICommunicationObject> lorsqu'il est instancié pour la première fois. Aucune entrée/sortie (E/S) ne se produit dans cet état.  
+-   Créé : C’est l’état d’un <xref:System.ServiceModel.ICommunicationObject> quand elle est instanciée. Aucune entrée/sortie (E/S) ne se produit dans cet état.  
   
--   Opening : les objets passent à cet état lorsque <xref:System.ServiceModel.ICommunicationObject.Open%2A> est appelé. À ce stade, les propriétés sont rendues immuables, et les entrées/sorties peuvent commencer. Cette transition est uniquement valide à partir de l'état Created.  
+-   Ouverture : Objets passent à cet état lorsque <xref:System.ServiceModel.ICommunicationObject.Open%2A> est appelée. À ce stade, les propriétés sont rendues immuables, et les entrées/sorties peuvent commencer. Cette transition est uniquement valide à partir de l'état Created.  
   
--   Opened : les objets passent à cet état lorsque le processus d'ouverture est terminé. Cette transition est uniquement valide à partir de l'état Opening. À ce stade, l'objet est totalement utilisable pour le transfert.  
+-   Ouvert : Objets passent à cet état lorsque le processus d’ouverture est terminée. Cette transition est uniquement valide à partir de l'état Opening. À ce stade, l'objet est totalement utilisable pour le transfert.  
   
--   Closing : les objets passent à cet état lorsque <xref:System.ServiceModel.ICommunicationObject.Close%2A> est appelé pour un arrêt approprié. Cette transition est uniquement valide à partir de l'état Opened.  
+-   Fermeture : Objets passent à cet état lorsque <xref:System.ServiceModel.ICommunicationObject.Close%2A> est appelée pour un arrêt approprié. Cette transition est uniquement valide à partir de l'état Opened.  
   
--   Closed : dans cet état, les objets ne sont plus utilisables. En général, la configuration est encore accessible pour l'inspection, mais aucune communication ne peut se produire. Cet état est équivalent à la suppression des objets.  
+-   Fermé : Dans cet état objets ne sont plus utilisables. En général, la configuration est encore accessible pour l'inspection, mais aucune communication ne peut se produire. Cet état est équivalent à la suppression des objets.  
   
--   Faulted : dans cet état, les objets sont accessibles pour l'inspection, mais e sont plus utilisables. Lorsqu'une erreur non récupérable se produit, l'objet passe à cet état. La seule transition valide à partir de cet état est dans le `Closed` état.  
+-   A généré une erreur : Dans l’état Faulted, les objets sont accessibles pour l’inspection, mais n’est plus utilisable. Lorsqu'une erreur non récupérable se produit, l'objet passe à cet état. La seule transition valide à partir de cet état est dans le `Closed` état.  
   
  Des événements se déclenchent pour chaque transition d'état. La méthode <xref:System.ServiceModel.ICommunicationObject.Abort%2A> peut être appelée à tout moment et provoquer la transition immédiate de l'objet de son état actuel à l'état Closed. L'appel de <xref:System.ServiceModel.ICommunicationObject.Abort%2A> termine toute tâche inachevée.  
   
@@ -81,7 +81,8 @@ L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et mu
  Dans cet exemple, l'implémentation de la fabrication est contenue dans UdpChannelFactory.cs et l'implémentation de l'écouteur est contenue dans UdpChannelListener.cs. Les implémentations <xref:System.ServiceModel.Channels.IChannel> sont contenues dans UdpOutputChannel.cs et UdpInputChannel.cs.  
   
 ### <a name="the-udp-channel-factory"></a>Fabrication de canal UDP  
- `UdpChannelFactory` dérive de <xref:System.ServiceModel.Channels.ChannelFactoryBase>. L'exemple substitue <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> pour fournir un accès à la version du message de l'encodeur de message. L'exemple substitue également <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> afin de nous permettre de détruire notre instance de <xref:System.ServiceModel.Channels.BufferManager> lors des transitions de la machine d'état.  
+ 
+  `UdpChannelFactory` dérive de <xref:System.ServiceModel.Channels.ChannelFactoryBase>. L'exemple substitue <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> pour fournir un accès à la version du message de l'encodeur de message. L'exemple substitue également <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> afin de nous permettre de détruire notre instance de <xref:System.ServiceModel.Channels.BufferManager> lors des transitions de la machine d'état.  
   
 #### <a name="the-udp-output-channel"></a>Canal de sortie UDP  
  `UdpOutputChannel` implémente <xref:System.ServiceModel.Channels.IOutputChannel>. Le constructeur valide les arguments et construit un objet <xref:System.Net.EndPoint> de destination reposant sur le <xref:System.ServiceModel.EndpointAddress> qui est passé.  
@@ -121,7 +122,7 @@ message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffe
  Le `UdpInputChannel` la classe implémente `IInputChannel`. Elle se compose d'une file d'attente de messages entrants remplie par le socket de `UdpChannelListener`. Ces messages sont extraits de la file d'attente par la méthode `IInputChannel.Receive`.  
   
 <a name="AddingABindingElement"></a>   
-## <a name="adding-a-binding-element"></a>Ajout d’un élément de liaison  
+## <a name="adding-a-binding-element"></a>Ajout d'un élément de liaison  
  Maintenant que les fabrications de canaux sont construites, nous devons les exposer à l’exécution de ServiceModel via une liaison. Une liaison est une collection d’éléments de liaison qui représente la pile de communication associée à une adresse de service. Chaque élément dans la pile est représenté par un [ \<liaison >](../../../../docs/framework/misc/binding.md) élément.  
   
  Dans notre exemple, l'élément de liaison est `UdpTransportBindingElement`, lequel dérive de <xref:System.ServiceModel.Channels.TransportBindingElement>. Il substitue les méthodes suivantes pour générer les fabrications associées à notre liaison.  
@@ -144,7 +145,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Pour intégrer notre transport dans le système de métadonnées, nous devons prendre à la fois en charge l'importation et l'exportation de stratégie. Cela nous permet de générer des clients de notre liaison via le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ### <a name="adding-wsdl-support"></a>Ajout de la prise en charge WSDL  
- L'élément de liaison de transport d'une liaison est chargé d'exporter et d'importer les informations d'adressage dans les métadonnées. Lors de l'utilisation d'une liaison SOAP, l'élément de liaison de transport doit également exporter un URI de transport correct dans les métadonnées.  
+ L’élément de liaison de transport d’une liaison est chargé d’exporter et d’importer les informations d’adressage dans les métadonnées. Lors de l'utilisation d'une liaison SOAP, l'élément de liaison de transport doit également exporter un URI de transport correct dans les métadonnées.  
   
 #### <a name="wsdl-export"></a>Exportation WSDL  
  Pour exporter des informations d'adressage, `UdpTransportBindingElement` implémente l'interface `IWsdlExportExtension`. La méthode `ExportEndpoint` ajoute les informations d'adressage correctes au port WSDL.  
@@ -156,7 +157,7 @@ if (context.WsdlPort != null)
 }  
 ```  
   
- L'implémentation `UdpTransportBindingElement` de la méthode `ExportEndpoint` exporte également un URI de transport lorsque le point de terminaison utilise une liaison SOAP.  
+ L’implémentation `UdpTransportBindingElement` de la méthode `ExportEndpoint` exporte également un URI de transport lorsque le point de terminaison utilise une liaison SOAP.  
   
 ```csharp
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
@@ -204,7 +205,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  L’élément de liaison personnalisé peut exporter des assertions de stratégie dans la liaison WSDL d’un point de terminaison de service pour exprimer les fonctionnalités de cet élément de liaison.  
   
 #### <a name="policy-export"></a>Exportation de stratégie  
- Le `UdpTransportBindingElement` type implémente `IPolicyExportExtension` pour ajouter la prise en charge pour l’exportation de stratégie. En conséquence, `System.ServiceModel.MetadataExporter` inclut `UdpTransportBindingElement` dans la génération de stratégie des liaisons qui l'incluent.  
+ Le `UdpTransportBindingElement` type implémente `IPolicyExportExtension` pour ajouter la prise en charge pour l’exportation de stratégie. En conséquence, `System.ServiceModel.MetadataExporter` inclut `UdpTransportBindingElement` dans la génération de stratégie des liaisons qui l’incluent.  
   
  Dans `IPolicyExportExtension.ExportPolicy`, nous ajoutons une assertion pour UDP et une autre si nous sommes en mode multicast. Cela est dû au fait que le mode multicast affecte la manière dont la pile est construite, et doit donc être coordonné entre les deux côtés.  
   
@@ -222,7 +223,7 @@ if (Multicast)
 }  
 ```  
   
- Les éléments de liaison de transport personnalisés étant chargés de gérer l'adressage, l'implémentation `IPolicyExportExtension` sur `UdpTransportBindingElement` doit également gérer l'exportation des assertions de stratégie WS-Addressing appropriées pour indiquer la version de WS-Addressing utilisée.  
+ Les éléments de liaison de transport personnalisés étant chargés de gérer l’adressage, l’implémentation `IPolicyExportExtension` sur `UdpTransportBindingElement` doit également gérer l’exportation des assertions de stratégie WS-Addressing appropriées pour indiquer la version de WS-Addressing utilisée.  
   
 ```csharp
 AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
@@ -252,14 +253,15 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 2.  Ajoutez la section de configuration à Svcutil.exe.config dans le répertoire où se trouve Svcutil.exe.  
   
 <a name="AddingAStandardBinding"></a>   
-## <a name="adding-a-standard-binding"></a>Ajout d'une liaison standard  
+## <a name="adding-a-standard-binding"></a>Ajout d’une liaison standard  
  Notre élément de liaison peut être utilisé des deux façons suivantes :  
   
--   Via une liaison personnalisée : une liaison personnalisée permet à l'utilisateur de créer sa propre la liaison en fonction d'un ensemble arbitraire d'éléments de liaison.  
+-   Via une liaison personnalisée : Une liaison personnalisée permet à l’utilisateur créer leur propres liaison basée sur un ensemble arbitraire d’éléments de liaison.  
   
 -   En utilisant une liaison fournie par le système qui inclut notre élément de liaison. WCF fournit un nombre de ces liaisons définies par le système, tel que `BasicHttpBinding`, `NetTcpBinding`, et `WsHttpBinding`. Chacune de ces liaisons est associée à un profil bien défini.  
   
- L'exemple implémente la liaison de profil dans `SampleProfileUdpBinding`, lequel dérive de <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` contient jusqu'à quatre éléments de liaison : `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` et `ReliableSessionBindingElement`.  
+ L'exemple implémente la liaison de profil dans `SampleProfileUdpBinding`, lequel dérive de <xref:System.ServiceModel.Channels.Binding>. 
+  `SampleProfileUdpBinding` contient jusqu'à quatre éléments de liaison : `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` et `ReliableSessionBindingElement`.  
   
 ```csharp
 public override BindingElementCollection CreateBindingElements()  
@@ -276,8 +278,8 @@ public override BindingElementCollection CreateBindingElements()
 }  
 ```  
   
-### <a name="adding-a-custom-standard-binding-importer"></a>Ajout d’un importateur de liaison standard personnalisé  
- Par défaut, Svcutil.exe et le type `WsdlImporter` reconnaissent et importent les liaisons définies par le système. Sinon, la liaison est importée en tant qu'instance `CustomBinding`. Pour permettre à Svcutil.exe et `WsdlImporter` d'importer `SampleProfileUdpBinding`, `UdpBindingElementImporter` agit également comme un importateur de liaison standard personnalisé.  
+### <a name="adding-a-custom-standard-binding-importer"></a>Ajout d'un importateur de liaison standard personnalisé  
+ Par défaut, Svcutil.exe et le type `WsdlImporter` reconnaissent et importent les liaisons définies par le système. Sinon, la liaison est importée en tant qu'instance `CustomBinding`. Pour permettre à Svcutil.exe et `WsdlImporter` d’importer `SampleProfileUdpBinding`, `UdpBindingElementImporter` agit également comme un importateur de liaison standard personnalisé.  
   
  Un importateur de liaison standard personnalisé implémente la méthode `ImportEndpoint` sur l'interface `IWsdlImportExtension` pour examiner l'instance `CustomBinding` importée à partir des métadonnées afin de vérifier si elle peut avoir été générée par une liaison standard spécifique.  
   
@@ -299,7 +301,7 @@ if (context.Endpoint.Binding is CustomBinding)
 }  
 ```  
   
- En général, l'implémentation d'un importateur de liaison standard personnalisé implique la vérification des propriétés des éléments de liaison importés afin de s'assurer que seules les propriétés pouvant avoir été définies par la liaison standard ont été modifiées et que toutes les autres ont été définies à leurs valeurs par défaut. L'une des stratégies de base permettant d'implémenter un importateur de liaison standard consiste à créer une instance de la liaison standard, à propager les propriétés des éléments de liaison vers l'instance de liaison standard que la liaison standard prend en charge, et à comparer les éléments de liaison de la liaison standard avec les éléments de liaison importés.  
+ En général, l’implémentation d’un importateur de liaison standard personnalisé implique la vérification des propriétés des éléments de liaison importés afin de s’assurer que seules les propriétés pouvant avoir été définies par la liaison standard ont été modifiées et que toutes les autres ont été définies à leurs valeurs par défaut. L’une des stratégies de base permettant d’implémenter un importateur de liaison standard consiste à créer une instance de la liaison standard, à propager les propriétés des éléments de liaison vers l’instance de liaison standard que la liaison standard prend en charge, et à comparer les éléments de liaison de la liaison standard avec les éléments de liaison importés.  
   
 <a name="AddingConfigurationSupport"></a>   
 ## <a name="adding-configuration-support"></a>Ajout de la prise en charge de la configuration  
@@ -394,7 +396,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Client et service de test UDP  
- Le code de test permettant d'utiliser cet exemple de transport est disponible dans les répertoires UdpTestService et UdpTestClient. Le code de service se compose de deux tests : le premier définit les liaisons et les points de terminaison à partir du code, et le deuxième le fait via la configuration. Ces deux tests utilisent deux points de terminaison. Un point de terminaison utilise le `SampleUdpProfileBinding` avec [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) défini sur `true`. L'autre utilise une liaison personnalisée avec `UdpTransportBindingElement`. Cela revient à utiliser `SampleUdpProfileBinding` avec [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) défini sur `false`. Ces deux tests créent un service, ajoutent  un point de terminaison pour chaque liaison, ouvrent le service, puis attendent que l’utilisateur tape ENTER avant de fermer le service.  
+ Le code de test permettant d'utiliser cet exemple de transport est disponible dans les répertoires UdpTestService et UdpTestClient. Le code de service se compose de deux tests : le premier définit les liaisons et les points de terminaison à partir du code, et le deuxième le fait via la configuration. Ces deux tests utilisent deux points de terminaison. Un point de terminaison utilise le `SampleUdpProfileBinding` avec [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) défini sur `true`. L'autre utilise une liaison personnalisée avec `UdpTransportBindingElement`. Cela revient à utiliser `SampleUdpProfileBinding` avec [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) défini sur `false`. Ces deux tests créent un service, ajoutent  un point de terminaison pour chaque liaison, ouvrent le service, puis attendent que l'utilisateur tape ENTER avant de fermer le service.  
   
  Lorsque vous démarrez l'application de test de service, la sortie suivante doit s'afficher.  
   
@@ -449,7 +451,7 @@ Press <ENTER> to terminate the service and exit...
 svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
 ```  
   
- Svcutil.exe ne générant pas de configuration d'extension de liaison pour `SampleProfileUdpBinding`, vous devez donc l'ajouter manuellement.  
+ Svcutil.exe ne générant pas de configuration d’extension de liaison pour `SampleProfileUdpBinding`, vous devez donc l’ajouter manuellement.  
   
 ```xml
 <configuration>  
