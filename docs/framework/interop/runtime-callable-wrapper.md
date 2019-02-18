@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0832489d74abc3aec78218f87d2bce72e6e68f75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3abce6ef7cb1d3287d9c8b7ceb9333f209e75ad
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632788"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219520"
 ---
 # <a name="runtime-callable-wrapper"></a>Wrapper pouvant être appelé par le runtime
 Le common language runtime expose les objets COM via un proxy appelé wrapper RCW. Même si le wrapper RCW est un objet ordinaire pour les clients .NET, sa fonction principale est de marshaler les appels entre un client .NET et un objet COM.  
@@ -27,9 +27,9 @@ Accès aux objets COM via le wrapper RCW
   
  À l'aide de métadonnées dérivées d'une bibliothèque de types, le runtime crée l'objet COM appelé, ainsi qu'un wrapper pour celui-ci. Chaque wrapper RCW gère un cache de pointeurs d'interface sur l'objet COM qu'il encapsule et libère sa référence à l'objet COM quand le wrapper RCW n'est plus utile. Le runtime exécute le garbage collection du wrapper RCW.  
   
- Entre autres activités, le wrapper RCW marshale les données entre code managé et non managé, pour le compte de l'objet encapsulé. Plus précisément, le wrapper RCW fournit le marshaling pour les arguments de méthode et les valeurs de retour de méthode chaque fois que le client et le serveur ont des représentations différentes des données circulant entre eux.  
+ Entre autres activités, le wrapper RCW marshale les données entre code managé et non managé, pour le compte de l’objet encapsulé. Plus précisément, le wrapper RCW fournit le marshaling pour les arguments de méthode et les valeurs de retour de méthode chaque fois que le client et le serveur ont des représentations différentes des données circulant entre eux.  
   
- Le wrapper standard applique les règles de marshaling intégrées. Par exemple, quand un client .NET passe un type String dans le cadre d'un argument à un objet non managé, le wrapper convertit la chaîne en un type BSTR. Si l'objet COM retourne un BSTR à son appelant managé, l'appelant reçoit une chaîne (String). Le client et le serveur envoient et reçoivent des données qui leur sont familières. Les autres types ne nécessitent pas de conversion. Par exemple, un wrapper standard passera toujours un entier de 4 octets d'un code managé à un code non managé sans convertir le type.  
+ Le wrapper standard applique les règles de marshaling intégrées. Par exemple, quand un client .NET passe un type String dans le cadre d’un argument à un objet non managé, le wrapper convertit la chaîne en un type BSTR. Si l'objet COM retourne un BSTR à son appelant managé, l'appelant reçoit une chaîne (String). Le client et le serveur envoient et reçoivent des données qui leur sont familières. Les autres types ne nécessitent pas de conversion. Par exemple, un wrapper standard passera toujours un entier de 4 octets d'un code managé à un code non managé sans convertir le type.  
   
 ## <a name="marshaling-selected-interfaces"></a>Marshaling d’interfaces sélectionnées  
  L’objectif principal du [wrapper RCW](runtime-callable-wrapper.md) est de masquer les différences entre les modèles de programmation managé et non managé. Pour créer une transition transparente, le wrapper RCW consomme les interfaces COM sélectionnées sans les exposer au client .NET, comme indiqué dans l'illustration suivante.  
@@ -54,11 +54,10 @@ Les interfaces COM et le wrapper RCW
 |---------------|-----------------|  
 |**IConnectionPoint** et **IConnectionPointContainer**|Le wrapper RCW convertit les objets qui exposent le style d'événement point de connexion en événements basés sur le délégué.|  
 |**IDispatchEx**|Si la classe implémente **IDispatchEx**, le wrapper RCW implémente **IExpando**. L’interface **IDispatchEx** est une extension de l’interface **IDispatch** qui, contrairement à l’interface **IDispatch**, permet l’énumération, l’ajout, la suppression et l’appel sensible à la casse des membres.|  
-|**IEnumVARIANT**|Permet aux types COM qui prennent en charge les énumérations d’être traités comme des collections.|  
+|**IEnumVARIANT**|Permet aux types COM qui prennent en charge les énumérations d'être traités comme des collections.|  
   
 ## <a name="see-also"></a>Voir aussi
 - [Wrappers COM](com-wrappers.md)
-- [Marshaling d’interfaces sélectionnées](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))
 - [Wrapper CCW (COM Callable Wrapper)](com-callable-wrapper.md)
-- [Récapitulatif de la conversion d’une bibliothèque de types en assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Récapitulatif de la conversion d’une bibliothèque de types en assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Importation d'une bibliothèque de types sous la forme d'un assembly](importing-a-type-library-as-an-assembly.md)

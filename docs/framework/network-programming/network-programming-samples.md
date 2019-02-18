@@ -2,12 +2,12 @@
 title: Exemples de programmation réseau
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: f2ed40eae2ef49964d80978f4a4c20c0d85fa3d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b74de4b9b7ef6a505b0f6f986ffe5152b60e7956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694761"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220294"
 ---
 # <a name="network-programming-samples"></a>Exemples de programmation réseau
 Cette section contient des descriptions et des liens vers des exemples de programmation réseau téléchargeables qui utilisent des classes dans les espaces de noms <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security> et <xref:System.Net.Sockets>, et dans des espaces de noms associés. 
@@ -16,40 +16,40 @@ Cette section contient des descriptions et des liens vers des exemples de progra
 > Tous les exemples sont disponibles en téléchargement dans le [fichier d’exemples pour le SDK .NET Framework version 2.0](https://www.microsoft.com/download/confirmation.aspx?id=22181) (qui a été publié pour le .NET Framework 2.0 et qui peut être obsolète).
 
 ## <a name="in-this-section"></a>Dans cette section  
- [Exemple de technologie d’indicateur de progression de téléchargement](https://msdn.microsoft.com/library/t8w6294a(v=vs.85).aspx)  
+ [Exemple de technologie d’indicateur de progression de téléchargement](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/t8w6294a(v=vs.85))  
  Montre comment afficher la progression du téléchargement d’un fichier.  
   
- [Exemple de technologie cliente FTP](https://msdn.microsoft.com/library/b7810t5c(v=vs.85).aspx)  
+ [Exemple de technologie cliente FTP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/b7810t5c(v=vs.85))  
  Montre comment charger et télécharger des fichiers vers et à partir d’un serveur FTP.  
   
- [Exemple de technologie HttpListener](https://msdn.microsoft.com/library/y7cbb2y2(v=vs.85).aspx)  
+ [Exemple de technologie HttpListener](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
  Montre comment traiter les requêtes HTTP à partir d’une application.  
  
  [Exemple d’application hôte ASPX HttpListener](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
  Montre comment utiliser les fonctionnalités de la classe <xref:System.Net.HttpListener?displayProperty=nameWithType> pour créer un serveur HTTP qui route les appels vers une application ASP.NET hébergée.
   
- [Exemple de technologie de messagerie](https://msdn.microsoft.com/library/whw7xbk2(v=vs.85).aspx)  
+ [Exemple de technologie de messagerie](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  Montre comment envoyer des e-mails à partir d’une application cliente.  
   
- [Exemple de technologie NetStat](https://msdn.microsoft.com/library/ks32hs88(v=vs.85).aspx)  
+ [Exemple de technologie NetStat](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ks32hs88(v=vs.85))  
  Explique l’utilisation de l’outil d’informations réseau NCLNetStat.  
   
- [Exemple de technologie d’informations réseau](https://msdn.microsoft.com/library/2xatedhd(v=vs.85).aspx)  
+ [Exemple de technologie d’informations réseau](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/2xatedhd(v=vs.85))  
  Montre comment surveiller et afficher des informations réseau.  
   
- [Exemple de technologie de test ping à partir d’une application cliente](https://msdn.microsoft.com/library/5253acs7(v=vs.85).aspx)  
+ [Exemple de technologie de test ping à partir d’une application cliente](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/5253acs7(v=vs.85))  
  Montre une application cliente qui peut effectuer un test ping sur un hôte distant.  
   
- [Exemple de technologie WebClient](https://msdn.microsoft.com/library/fxk992zc(v=vs.85).aspx)  
+ [Exemple de technologie WebClient](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/fxk992zc(v=vs.85))  
  Montre comment effectuer des opérations courantes, telles que le chargement ou le téléchargement de fichiers ou de données.  
   
- [Exemple de flux sécurisés](https://msdn.microsoft.com/library/ms180980(v=vs.85).aspx)  
+ [Exemple de flux sécurisés](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180980(v=vs.85))  
  Montre comment utiliser un flux sécurisé pour la communication entre un client et un serveur.  
   
- [Exemple de sockets IPv6](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  
+ [Exemple de sockets IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981(v=vs.85))  
  Montre comment utiliser des sockets lorsqu’IPv6 est activé.  
   
- [Exemple de technologie de l’explorateur FTP](https://msdn.microsoft.com/library/ms233623(v=vs.85).aspx)  
+ [Exemple de technologie de l’explorateur FTP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms233623(v=vs.85))  
  Montre comment répertorier le contenu d’un serveur FTP.  
   
   

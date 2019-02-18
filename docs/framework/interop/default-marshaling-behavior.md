@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688998"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221288"
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
-Le marshaling d’interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu'un appelant puisse modifier les données transmises et renvoyer ces modifications à l'appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  
+Le marshaling d'interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu’un appelant puisse modifier les données transmises et renvoyer ces modifications à l’appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  
   
  Cette section aborde les caractéristiques de comportement par défaut du service de marshaling d'interopérabilité. Elle présente des informations détaillées sur le marshaling des tableaux, des types booléens, des types char, des délégués, des classes, des objets, des chaînes et des structures.  
   
 > [!NOTE]
->  Le marshaling des types génériques n’est pas pris en charge. Pour plus d’informations, consultez [Interopérabilité à l’aide de types génériques](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100)).  
+>  Le marshaling des types génériques n'est pas pris en charge. Pour plus d’informations, consultez [Interopérabilité à l’aide de types génériques](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
-## <a name="memory-management-with-the-interop-marshaler"></a>Gestion de la mémoire avec le marshaleur d’interopérabilité  
+## <a name="memory-management-with-the-interop-marshaler"></a>Gestion de la mémoire avec le marshaleur d'interopérabilité  
  Le marshaleur d'interopérabilité tente toujours de libérer de la mémoire allouée par du code non managé. Ce comportement est conforme aux règles de gestion de mémoire COM, mais pas à celles qui régissent le code C++ natif.  
   
- Vous pouvez créer une confusion si vous anticipez le comportement du C++ natif (aucune libération de mémoire) lors d'un appel de code non managé qui libère automatiquement de la mémoire pour les pointeurs. Par exemple, l'appel de la méthode non managée suivante à partir d'une DLL C++ ne libère pas automatiquement de la mémoire.  
+ Vous pouvez créer une confusion si vous anticipez le comportement du C++ natif (aucune libération de mémoire) lors d‘un appel de code non managé qui libère automatiquement de la mémoire pour les pointeurs. Par exemple, l'appel de la méthode non managée suivante à partir d'une DLL C++ ne libère pas automatiquement de la mémoire.  
   
 ### <a name="unmanaged-signature"></a>Signature non managée  
   
@@ -41,22 +41,22 @@ BSTR MethodOne (BSTR b) {
   
  Toutefois, si vous définissez la méthode comme un prototype d’appel de code non managé, puis remplacez chaque type **BSTR** par un type <xref:System.String> et appelez `MethodOne`, le common language runtime tentera de libérer `b` deux fois. Vous pouvez modifier le comportement de marshaling en utilisant les types <xref:System.IntPtr> plutôt que les types **String**.  
   
- Le runtime utilise toujours la méthode **CoTaskMemFree** pour libérer de la mémoire. Si la mémoire que vous utilisez n’a pas été allouée avec la méthode **CoTaskMemAlloc**, vous devez utiliser un **IntPtr** et libérer la mémoire manuellement à l’aide de la méthode appropriée. De même, vous pouvez éviter la libération automatique de mémoire dans les cas où celle-ci ne doit jamais être libérée, par exemple quand vous utilisez la fonction **GetCommandLine** depuis Kernel32.dll qui retourne un pointeur à la mémoire du noyau. Pour plus d’informations sur la libération manuelle de mémoire, consultez [Mémoires tampons, exemple](https://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
+ Le runtime utilise toujours la méthode **CoTaskMemFree** pour libérer de la mémoire. Si la mémoire que vous utilisez n’a pas été allouée avec la méthode **CoTaskMemAlloc**, vous devez utiliser un **IntPtr** et libérer la mémoire manuellement à l’aide de la méthode appropriée. De même, vous pouvez éviter la libération automatique de mémoire dans les cas où celle-ci ne doit jamais être libérée, par exemple quand vous utilisez la fonction **GetCommandLine** depuis Kernel32.dll qui retourne un pointeur à la mémoire du noyau. Pour plus d’informations sur la libération manuelle de mémoire, consultez [Mémoires tampons, exemple](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshaling par défaut pour les classes  
- Les classes ne peuvent être marshalées que par COM Interop et sont toujours marshalées en tant qu'interfaces. Dans certains cas, l’interface utilisée pour marshaler la classe est appelée interface de classe. Pour plus d’informations sur la substitution de l’interface de classe par une interface de votre choix, consultez [Présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
+ Les classes ne peuvent être marshalées que par COM Interop et sont toujours marshalées en tant qu’interfaces. Dans certains cas, l’interface utilisée pour marshaler la classe est appelée interface de classe. Pour plus d’informations sur la substitution de l’interface de classe par une interface de votre choix, consultez [Présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Passage de classes à COM  
- Quand une classe managée est passée à COM, le marshaleur d'interopérabilité encapsule automatiquement la classe avec un proxy COM et passe l'interface de classe produite par le proxy à l'appel de méthode COM. Le proxy délègue ensuite tous les appels sur l'interface de classe vers l'objet managé. Le proxy expose également d'autres interfaces qui ne sont pas explicitement implémentées par la classe. Le proxy implémente automatiquement les interfaces telles que **IUnknown** et **IDispatch** pour le compte de la classe.  
+ Quand une classe managée est passée à COM, le marshaleur d’interopérabilité encapsule automatiquement la classe avec un proxy COM et passe l’interface de classe produite par le proxy à l’appel de méthode COM. Le proxy délègue ensuite tous les appels sur l'interface de classe vers l'objet managé. Le proxy expose également d'autres interfaces qui ne sont pas explicitement implémentées par la classe. Le proxy implémente automatiquement les interfaces telles que **IUnknown** et **IDispatch** pour le compte de la classe.  
   
 ### <a name="passing-classes-to-net-code"></a>Passage de classes à du code .NET  
- Les coclasses ne sont généralement pas utilisées en tant qu'arguments de méthode dans COM. Au lieu d'une coclasse, c'est une interface par défaut qui est généralement passée.  
+ Les coclasses ne sont généralement pas utilisées en tant qu'arguments de méthode dans COM. Au lieu d’une coclasse, c’est une interface par défaut qui est généralement passée.  
   
- Quand une interface est passée dans du code managé, le marshaleur d'interopérabilité est responsable de l'encapsulation de l'interface avec le wrapper approprié et du passage du wrapper à la méthode managée. Savoir quel wrapper utiliser peut s'avérer difficile. Chaque instance d'un objet COM possède un seul et unique wrapper, quel que soit le nombre d'interfaces qu'implémente l'objet. Par exemple, un objet COM qui implémente cinq interfaces différentes n'a qu'un seul wrapper. Le même wrapper expose les cinq interfaces. Si deux instances de l'objet COM sont créées, deux instances du wrapper sont créées.  
+ Quand une interface est passée dans du code managé, le marshaleur d’interopérabilité est responsable de l’encapsulation de l’interface avec le wrapper approprié et du passage du wrapper à la méthode managée. Savoir quel wrapper utiliser peut s'avérer difficile. Chaque instance d'un objet COM possède un seul et unique wrapper, quel que soit le nombre d'interfaces qu'implémente l'objet. Par exemple, un objet COM qui implémente cinq interfaces différentes n'a qu'un seul wrapper. Le même wrapper expose les cinq interfaces. Si deux instances de l'objet COM sont créées, deux instances du wrapper sont créées.  
   
- Pour que le wrapper conserve le même type durant toute sa durée de vie, le marshaleur d'interopérabilité doit identifier le bon wrapper la première fois qu'une interface exposée par l'objet est passée via le marshaleur. Le marshaleur identifie l'objet en examinant l'une des interfaces implémentées par l'objet.  
+ Pour que le wrapper conserve le même type durant toute sa durée de vie, le marshaleur d’interopérabilité doit identifier le bon wrapper la première fois qu’une interface exposée par l’objet est passée via le marshaleur. Le marshaleur identifie l’objet en examinant l’une des interfaces implémentées par l’objet.  
   
- Par exemple, le marshaleur détermine que le wrapper de classe doit être utilisé pour encapsuler l'interface qui a été passée dans le code managé. Quand l'interface est initialement passée via le marshaleur, celui-ci vérifie si l'interface provient d'un objet connu. Cette vérification se produit dans deux situations :  
+ Par exemple, le marshaleur détermine que le wrapper de classe doit être utilisé pour encapsuler l’interface qui a été passée dans le code managé. Quand l'interface est initialement passée via le marshaleur, celui-ci vérifie si l'interface provient d'un objet connu. Cette vérification se produit dans deux situations :  
   
 -   Une interface est implémentée par un autre objet managé qui a été passé à COM à un autre endroit. Le marshaleur peut facilement identifier les interfaces exposées par les objets managés. De plus, il est capable de faire correspondre l'interface avec l'objet managé qui fournit l'implémentation. L'objet managé est ensuite passé à la méthode sans qu'aucun wrapper ne soit nécessaire.  
   
@@ -71,7 +71,7 @@ BSTR MethodOne (BSTR b) {
 3.  Si le marshaleur ne peut toujours pas identifier la classe, il enveloppe l’interface avec une classe wrapper générique appelée **System.__ComObject**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Marshaling par défaut pour les délégués  
- Un délégué managé est marshalé comme une interface COM ou comme un pointeur fonction, en fonction du mécanisme d'appel :  
+ Un délégué managé est marshalé comme une interface COM ou comme un pointeur fonction, en fonction du mécanisme d’appel :  
   
 -   Pour un appel de code non managé, un délégué est marshalé en tant que pointeur fonction non managé par défaut.  
   
@@ -251,7 +251,7 @@ class Win32API {
  Les classes peuvent également être marshalées vers du code non managé en tant que structures de style C, du moment que la disposition des membres est fixe. Les informations de disposition des membres des classes sont également fournies avec l'attribut <xref:System.Runtime.InteropServices.StructLayoutAttribute>. La principale différence entre les types valeur à disposition fixe et les classes à disposition fixe est la manière dont ils sont marshalés vers le code non managé. Les types valeur sont passés par valeur (dans la pile). Toutes les modifications apportées par l'appelé aux membres du type ne sont donc pas vues par l'appelant. Les types référence sont passés par référence (une référence au type est passée sur la pile). Toutes les modifications apportées par l'appelé aux membres d'un type blittable sont donc vues par l'appelant.  
   
 > [!NOTE]
->  Si un type référence possède des membres de type non blittable, la conversion est requise deux fois : la première fois quand un argument est passé du côté non managé, la seconde fois lors du retour de l'appel. En raison de cette charge mémoire supplémentaire, les paramètres In/Out doivent être explicitement appliqués à un argument si l’appelant veut voir les modifications apportées par l’appelé.  
+>  Si un type référence possède des membres de type non blittable, la conversion est requise deux fois : la première fois quand un argument est passé du côté non managé, la seconde fois lors du retour de l'appel. En raison de cette charge mémoire supplémentaire, les paramètres In/Out doivent être explicitement appliqués à un argument si l'appelant veut voir les modifications apportées par l'appelé.  
   
  Dans l’exemple suivant, la classe `SystemTime` a une disposition séquentielle des membres et peut être passée à la fonction **GetSystemTime** de l’API Win32.  
   
@@ -304,7 +304,7 @@ class Win32API {
 }  
 ```  
   
- Notez que l’argument `SystemTime` n’est pas typé comme un argument de référence, car `SystemTime` est une classe et non un type valeur. Contrairement aux types valeur, les classes sont toujours passées par référence.  
+ Notez que l'argument `SystemTime` n'est pas typé comme un argument de référence, car `SystemTime` est une classe et non un type valeur. Contrairement aux types valeur, les classes sont toujours passées par référence.  
   
  L'exemple de code suivant montre une autre classe `Point` qui possède une méthode appelée `SetXY`. Étant donné que le type a une disposition séquentielle, il peut être passé au code non managé et marshalé comme une structure. Toutefois, le membre `SetXY` ne peut pas être appelé depuis du code non managé, même si l'objet est passé par référence.  
   

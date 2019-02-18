@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564290"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219566"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Création de prototypes dans du code managé
 Cette rubrique décrit comment accéder aux fonctions non managées et présente plusieurs champs d’attribut qui permettent d’annoter les définitions de méthode dans du code managé. Pour afficher des exemples montrant comment construire des déclarations .NET à utiliser avec l’appel de code non managé, consultez [Marshaling de données à l’aide de l’appel de code non managé](marshaling-data-with-platform-invoke.md).  
@@ -82,7 +82,7 @@ using namespace System::Runtime::InteropServices;
 |Champ|Description|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Active ou désactive le mappage ajusté.|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Spécifie la convention d’appel à utiliser lors du passage des arguments de méthode. La valeur par défaut est `WinAPI`, ce qui correspond à `__stdcall` pour les plateformes 32 bits Intel.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Spécifie la convention d'appel à utiliser lors du passage des arguments de méthode. La valeur par défaut est `WinAPI`, ce qui correspond à `__stdcall` pour les plateformes 32 bits Intel.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Contrôle le troncage des noms et la façon dont les arguments de chaîne doivent être marshalés vers la fonction. La valeur par défaut est `CharSet.Ansi`.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|Spécifie le point d'entrée de DLL à appeler.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|Détermine si un point d'entrée doit être modifié pour correspondre au jeu de caractères. La valeur par défaut varie en fonction du langage de programmation.|  
@@ -226,7 +226,7 @@ interface IDemandStubsItf
 - [Spécification d'un point d'entrée](specifying-an-entry-point.md)
 - [Spécification d'un jeu de caractères](specifying-a-character-set.md)
 - [Exemples d'appel de code non managé](platform-invoke-examples.md)
-- [Considérations relatives à la sécurité des appels de code non managé](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))
+- [Considérations relatives à la sécurité des appels de code non managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identification des fonctions des DLL](identifying-functions-in-dlls.md)
 - [Création d’une classe pour contenir des fonctions DLL](creating-a-class-to-hold-dll-functions.md)
 - [Appel à une fonction DLL](calling-a-dll-function.md)

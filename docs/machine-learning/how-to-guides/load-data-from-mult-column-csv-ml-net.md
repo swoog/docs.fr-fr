@@ -1,14 +1,14 @@
 ---
 title: Charger des données avec de nombreuses colonnes à partir d’un fichier CSV pour le traitement Machine Learning ML.NET
 description: Découvrez comment charger des données à partir de plusieurs colonnes d’un fichier CSV pour les utiliser lors de la création, l’entraînement et le scoring de modèles Machine Learning avec ML.NET.
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a06d7edfb4746a39377116b15903b68f8723cb02
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479709"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091966"
 ---
 # <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a>Charger des données avec de nombreuses colonnes à partir d’un fichier CSV pour le traitement Machine Learning ML.NET
 
@@ -33,7 +33,7 @@ Lecture de ce fichier à l’aide de `TextLoader`:
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
     // We read the first 10 values as a single float vector.

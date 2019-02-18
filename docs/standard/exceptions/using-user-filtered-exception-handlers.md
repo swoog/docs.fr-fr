@@ -8,25 +8,26 @@ helpviewer_keywords:
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 228bae8db833abfa3c8c906d57e2177cde644548
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261418"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304607"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Utilisation de gestionnaires filtrés par l'utilisateur
+
 Visual Basic prend actuellement en charge les exceptions filtrées par l’utilisateur. Les gestionnaires d’exceptions filtrés par l’utilisateur interceptent et gèrent les exceptions selon des critères que vous définissez pour l’exception. Ces gestionnaires utilisent l’instruction **Catch** avec le mot clé **When**.  
   
  Cette technique est utile lorsqu’un objet d’exception particulier correspond à plusieurs erreurs. Dans ce cas, l’objet possède généralement une propriété qui contient le code d’erreur associé à l’erreur. Vous pouvez utiliser la propriété de code d’erreur dans l’expression pour sélectionner uniquement l’erreur particulière que vous souhaitez gérer dans cette clause **Catch**.  
   
  L’exemple Visual Basic suivant illustre l’instruction **Catch/When**.  
   
-```  
+```vb
 Try  
-      'Try statements.  
-   Catch When Err = VBErr_ClassLoadException  
-      'Catch statements.  
+    'Try statements.  
+    Catch When Err = VBErr_ClassLoadException
+    'Catch statements.
 End Try  
 ```  
   
@@ -37,11 +38,11 @@ End Try
   
  L’exemple Visual Basic suivant illustre l’exception spécifique `ClassLoadException` dans l’instruction **Catch** ainsi que la clause filtrée par l’utilisateur à l’aide du mot clé **When**.  
   
-```  
+```vb
 Try  
-      'Try statements.  
-   Catch cle As ClassLoadException When cle.IsRecoverable()  
-      'Catch statements.  
+    'Try statements.
+    Catch cle As ClassLoadException When cle.IsRecoverable()  
+    'Catch statements.
 End Try  
 ```  
 

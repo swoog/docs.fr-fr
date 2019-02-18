@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50ff6e2baaee683674f82cff178eeef7b7e43de4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486210"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219592"
 ---
 # <a name="using-the-codedom"></a>Utilisation du CodeDOM
 CodeDOM fournit des types qui représentent de nombreux types courants d’éléments du code source. Vous pouvez concevoir un programme qui génère un modèle de code source à l’aide d’éléments CodeDOM pour assembler un graphique d’objet. Ce graphique d’objet peut être rendu sous forme de code source à l’aide d’un générateur de code CodeDOM pour un langage de programmation pris en charge. CodeDOM permet également de compiler du code source dans un assembly binaire.  
@@ -127,4 +127,4 @@ CodeDOM fournit des types qui représentent de nombreux types courants d’élé
   
  Pour plus d’informations sur chacun des types CodeDOM, consultez la documentation de référence pour l’espace de noms <xref:System.CodeDom>.  
   
- Pour obtenir un graphique permettant de retrouver rapidement l’élément CodeDOM à utiliser pour représenter un type d’élément de code particulier, consultez [Aide-mémoire de CodeDOM](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524).
+ Pour obtenir un graphique permettant de retrouver rapidement l’élément CodeDOM à utiliser pour représenter un type d’élément de code particulier, consultez [Aide-mémoire de CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)).

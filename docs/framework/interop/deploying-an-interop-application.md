@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e74e4784d295e46972e10c5b9e1d4cc4bafa944
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c265b583b74ac9d7df128e3343bbc368e3cf9c4e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496765"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220809"
 ---
 # <a name="deploying-an-interop-application"></a>Déploiement d'une application d'interopérabilité
 Une application d’interopérabilité comporte généralement un assembly client .NET, un ou plusieurs assemblys d’interopérabilité représentant des bibliothèques de types COM distinctes, et un ou plusieurs composants COM inscrits. Visual Studio et le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fournissent des outils pour importer et convertir une bibliothèque de types vers un assembly d’interopérabilité, comme décrit dans [Importation d’une bibliothèque de types sous la forme d’un assembly](importing-a-type-library-as-an-assembly.md). Il existe deux façons de déployer une application d’interopérabilité :  
   
 -   En utilisant des types d’interopérabilité : à compter de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez demander au compilateur d’incorporer les informations de type à partir d’un assembly d’interopérabilité dans votre fichier exécutable. Le compilateur incorpore uniquement les informations de type que votre application utilise. Vous n’avez pas à déployer l’assembly d’interopérabilité avec votre application. Il s'agit de la technique recommandée.  
   
--   En déployant des assemblys d’interopérabilité : vous pouvez créer une référence standard à un assembly d’interopérabilité. Dans ce cas, l’assembly d’interopérabilité doit être déployé avec votre application. Si vous utilisez cette technique et que vous n’utilisez pas un composant COM privé, référencez toujours l’assembly PIA (Primary Interop Assembly) publié par l’auteur du composant COM que vous prévoyez d’incorporer dans votre code managé. Pour plus d’informations sur la production et l’utilisation d’assemblys PIA, consultez [Assemblys PIA (Primary Interop Assembly)](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
+-   En déployant des assemblys d’interopérabilité : vous pouvez créer une référence standard à un assembly d’interopérabilité. Dans ce cas, l’assembly d’interopérabilité doit être déployé avec votre application. Si vous utilisez cette technique et que vous n’utilisez pas un composant COM privé, référencez toujours l’assembly PIA (Primary Interop Assembly) publié par l’auteur du composant COM que vous prévoyez d’incorporer dans votre code managé. Pour plus d’informations sur la production et l’utilisation d’assemblys PIA, consultez [Assemblys PIA (Primary Interop Assembly)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Si vous utilisez des types interop incorporés, le déploiement est simple et direct. Vous n’avez rien de spécial à faire. Le reste de cet article décrit les scénarios de déploiement des assemblys d’interopérabilité avec votre application.  
   
@@ -44,10 +44,10 @@ Structure de répertoires et entrées du Registre pour un déploiement privé
  Tous les composants COM associés à l’application doivent être installés dans le Registre Windows. Si les fichiers Client1.exe et Client2.exe de l’illustration sont installés sur des ordinateurs différents, vous devez inscrire les composants COM sur les deux ordinateurs.  
   
 ### <a name="shared-assemblies"></a>Assemblys partagés  
- Les assemblys qui sont partagés par plusieurs applications doivent être installés dans un référentiel centralisé appelé le Global Assembly Cache. Les clients .NET peuvent accéder à la même copie de l’assembly d’interopérabilité, qui est signé et installé dans le Global Assembly Cache. Pour plus d’informations sur la production et l’utilisation d’assemblys PIA, consultez [Assemblys PIA (Primary Interop Assembly)](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
+ Les assemblys qui sont partagés par plusieurs applications doivent être installés dans un référentiel centralisé appelé le Global Assembly Cache. Les clients .NET peuvent accéder à la même copie de l’assembly d’interopérabilité, qui est signé et installé dans le Global Assembly Cache. Pour plus d’informations sur la production et l’utilisation d’assemblys PIA, consultez [Assemblys PIA (Primary Interop Assembly)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>Voir aussi
 - [Exposition de composants COM au .NET Framework](exposing-com-components.md)
 - [Importation d'une bibliothèque de types sous la forme d'un assembly](importing-a-type-library-as-an-assembly.md)
-- [Utilisation de types COM dans du code managé](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [Utilisation de types COM dans du code managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilation d'un projet d'interopérabilité](compiling-an-interop-project.md)

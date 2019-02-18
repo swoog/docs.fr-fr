@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c2ae67b79559b0966ba0b36bbf420febbcb1672
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74d2f9df5f9a9d34baa6a487730d5a1614d2d142
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693316"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219930"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (outil Stratégie de sécurité d'accès du code)
 L'outil Stratégie de sécurité d'accès du code (CAS) (Caspol.exe) permet aux utilisateurs et aux administrateurs de modifier la stratégie de sécurité au niveau de l'ordinateur, de l'utilisateur et de l'entreprise.  
@@ -102,10 +102,10 @@ caspol [options]
 |**-levelfinal** {**on**&#124;**off**}|Quand cette option est définie sur **on**, cela indique qu’aucun des niveaux de stratégie inférieurs au niveau du groupe de codes ajouté ou modifié n'est pris en compte. Cette option est généralement utilisée au niveau de la stratégie de l'ordinateur. Par exemple, si vous définissez cet indicateur pour un groupe de codes au niveau de l'ordinateur et qu'il existe un code satisfaisant à la condition d'appartenance de ce groupe de codes, Caspol.exe ne calcule pas (ni n'applique) la stratégie de niveau utilisateur pour ce code.|  
 |**-name** "*nom*"|S’il est utilisé avec l'option **–addgroup**, spécifie le nom de script d'un groupe de codes à ajouter. S’il est utilisé avec l'option **–chggroup**, spécifie le nom de script d'un groupe de codes à modifier. L’argument *name* doit être entouré de guillemets doubles. L’argument *name* ne doit pas commencer par un chiffre et ne peut contenir que les lettres de A à Z, les chiffres de 0 à 9 et le caractère de soulignement. Vous pouvez faire référence aux groupes de codes par cet argument *name* au lieu d'utiliser leur étiquette numérique. L'argument *name* est également très utile dans les scripts.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La stratégie de sécurité se définit sur trois niveaux : ordinateur, utilisateur et entreprise. Le jeu d'autorisations dont bénéficie un assembly est déterminé par l'intersection entre les jeux d'autorisations accordés par ces trois niveaux de stratégie. Chaque niveau de stratégie est représenté par une structure hiérarchique de groupes de codes. Chaque groupe de codes possède une condition d'appartenance qui détermine quel code est membre de ce groupe. Un jeu d'autorisations nommé est également associé à chaque groupe de codes. Ce jeu d'autorisations spécifie les autorisations que peut accorder le runtime au code qui satisfait à la condition d'appartenance. Une hiérarchie de groupes de codes et les jeux d'autorisations nommés associés définissent et gèrent chaque niveau de la stratégie de sécurité. Vous pouvez utiliser les options **–user**, **-customuser**, **–machine** et **-enterprise** pour définir le niveau de stratégie de sécurité.  
   
- Pour plus d'informations sur les stratégies de sécurité et sur la manière dont le runtime détermine les autorisations à accorder au code, consultez [Gestion de la stratégie de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Pour plus d'informations sur les stratégies de sécurité et sur la manière dont le runtime détermine les autorisations à accorder au code, consultez [Gestion de la stratégie de sécurité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Références aux groupes de codes et aux jeux d'autorisations  
  Pour faciliter les références aux groupes de codes d'une hiérarchie, l'option **-list** affiche une liste des groupes de codes avec des retraits et les étiquettes numériques correspondantes (1, 1.1, 1.1.1, etc.). Les autres opérations effectuées depuis la ligne de commande qui ciblent les groupes de codes utilisent également les étiquettes numériques pour faire référence à des groupes de codes particuliers.  
