@@ -27,7 +27,7 @@ L'outil XML Schema Definition (Xsd.exe) vous permet de générer un schéma XM
     xsd mySchema.xsd  
     ```  
   
-     L'outil ne peut traiter que les schémas qui référencent la spécification XML du W3C (World Wide Web Consortium) du 16 mars 2001. En d’autres termes, l’espace de noms du schéma XML doit être « http://www.w3.org/2001/XMLSchema» comme indiqué dans l’exemple suivant.  
+     L'outil ne peut traiter que les schémas qui référencent la spécification XML du W3C (World Wide Web Consortium) du 16 mars 2001. En d’autres termes, l’espace de noms du schéma XML doit être "http://www.w3.org/2001/XMLSchema" comme indiqué dans l’exemple suivant.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
