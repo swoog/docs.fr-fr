@@ -1,24 +1,24 @@
 ---
 title: Former un modèle de régression pour prédire une valeur à l’aide de ML.NET
 description: Découvrez comment former un modèle de régression Machine Learning pour prédire une valeur à l’aide de ML.NET.
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: febf12565b9ae5509efec9f350f413df99ba1c05
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739447"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092902"
 ---
-# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="01cf9-103">Former un modèle de régression pour prédire une valeur à l’aide de ML.NET</span><span class="sxs-lookup"><span data-stu-id="01cf9-103">Train a regression model to predict a value using ML.NET</span></span>
+# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="a2d3d-103">Former un modèle de régression pour prédire une valeur à l’aide de ML.NET</span><span class="sxs-lookup"><span data-stu-id="a2d3d-103">Train a regression model to predict a value using ML.NET</span></span>
 
-<span data-ttu-id="01cf9-104">En règle générale, il existe trois étapes pour l’apprentissage du modèle dans ML.NET :</span><span class="sxs-lookup"><span data-stu-id="01cf9-104">Generally, there are three steps for model training in ML.NET:</span></span>
+<span data-ttu-id="a2d3d-104">En règle générale, il existe trois étapes pour l’apprentissage du modèle dans ML.NET :</span><span class="sxs-lookup"><span data-stu-id="a2d3d-104">Generally, there are three steps for model training in ML.NET:</span></span>
 
-1. <span data-ttu-id="01cf9-105">Obtenir les données d’apprentissage dans un formulaire d’un `IDataView`.</span><span class="sxs-lookup"><span data-stu-id="01cf9-105">Get the training data in a form of an `IDataView`</span></span>
-2. <span data-ttu-id="01cf9-106">Créer le pipeline d’apprentissage sous forme d’une séquence d’opérateurs élémentaires (estimateurs).</span><span class="sxs-lookup"><span data-stu-id="01cf9-106">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
-3. <span data-ttu-id="01cf9-107">Appeler `Fit` sur le pipeline pour obtenir le modèle formé.</span><span class="sxs-lookup"><span data-stu-id="01cf9-107">Call `Fit` on the pipeline to obtain the trained model.</span></span>
+1. <span data-ttu-id="a2d3d-105">Obtenir les données d’apprentissage dans un formulaire d’un `IDataView`.</span><span class="sxs-lookup"><span data-stu-id="a2d3d-105">Get the training data in a form of an `IDataView`</span></span>
+2. <span data-ttu-id="a2d3d-106">Créer le pipeline d’apprentissage sous forme d’une séquence d’opérateurs élémentaires (estimateurs).</span><span class="sxs-lookup"><span data-stu-id="a2d3d-106">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
+3. <span data-ttu-id="a2d3d-107">Appeler `Fit` sur le pipeline pour obtenir le modèle formé.</span><span class="sxs-lookup"><span data-stu-id="a2d3d-107">Call `Fit` on the pipeline to obtain the trained model.</span></span>
 
-<span data-ttu-id="01cf9-108">Dans cet [exemple de fichier](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv), l’étiquette prédite (`target`) est la dernière colonne (12) et les autres représentent des fonctionnalités :</span><span class="sxs-lookup"><span data-stu-id="01cf9-108">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
+<span data-ttu-id="a2d3d-108">Dans cet [exemple de fichier](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv), l’étiquette prédite (`target`) est la dernière colonne (12) et les autres représentent des fonctionnalités :</span><span class="sxs-lookup"><span data-stu-id="a2d3d-108">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
 
 ```console
 feature_0;feature_1;feature_2;feature_3;feature_4;feature_5;feature_6;feature_7;feature_8;feature_9;feature_10;target
@@ -35,7 +35,7 @@ var mlContext = new MLContext();
 // Step one: read the data as an IDataView.
 
 // First, we define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
         columns: new TextLoader.Column[]
         {
             // We read the first 11 values as a single float vector.
