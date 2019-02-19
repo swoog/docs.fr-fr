@@ -48,8 +48,7 @@ Les fonctionnalités suivantes sont nouvelles dans [!INCLUDE[vstecado](../../../
 -   L'assembly Microsoft.SqlServer.Types.dll, contenant les types de données spatiales, a été mis à niveau de la version 10.0 vers la version 11.0. Les applications qui référencent cet assembly peuvent échouer. Pour plus d’informations, consultez [modifications avec rupture des fonctionnalités du moteur de base de données](https://go.microsoft.com/fwlink/?LinkId=224367).  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- 
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] ajoute des API qui permettent d’ajouter de nouveaux scénarios lorsque vous utilisez Entity Framework 5.0. Pour plus d’informations sur les améliorations et fonctionnalités qui ont été ajoutées à Entity Framework 5.0, consultez les rubriques suivantes : [Quelles sont les nouveautés](https://go.microsoft.com/fwlink/?LinkID=251106) et [versions et Entity Framework le contrôle de version](https://go.microsoft.com/fwlink/?LinkId=234899).  
+ [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] ajoute des API qui permettent d’ajouter de nouveaux scénarios lorsque vous utilisez Entity Framework 5.0. Pour plus d’informations sur les améliorations et fonctionnalités qui ont été ajoutées à Entity Framework 5.0, consultez les rubriques suivantes : [Quelles sont les nouveautés](https://go.microsoft.com/fwlink/?LinkID=251106) et [versions et Entity Framework le contrôle de version](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
 ## <a name="see-also"></a>Voir aussi
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
