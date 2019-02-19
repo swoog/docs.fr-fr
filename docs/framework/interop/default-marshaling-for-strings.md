@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a91fd9d06e93813d440d6243ad42ea6dd70e739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523088"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221067"
 ---
 # <a name="default-marshaling-for-strings"></a>Marshaling par défaut pour les chaînes
 Les classes <xref:System.String?displayProperty=nameWithType> et <xref:System.Text.StringBuilder?displayProperty=nameWithType> ont un comportement de marshaling semblable.  
@@ -39,7 +39,8 @@ Les classes <xref:System.String?displayProperty=nameWithType> et <xref:System.Te
   
 |Type d'énumération|Description du format non managé|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (par défaut)|`BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
+|`UnmanagedType.BStr` (valeur par défaut)|
+  `BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
 |`UnmanagedType.LPStr`|Pointeur vers un tableau de caractères ANSI terminé par un caractère Null.|  
 |`UnmanagedType.LPWStr`|Pointeur vers un tableau de caractères Unicode terminé par un caractère null.|  
   
@@ -85,12 +86,15 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
   
 |Type d'énumération|Description du format non managé|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.AnsiBStr`|`BSTR` de style COM avec une longueur prédéfinie et des caractères ANSI.|  
-|`UnmanagedType.BStr`|`BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
+|`UnmanagedType.AnsiBStr`|
+  `BSTR` de style COM avec une longueur prédéfinie et des caractères ANSI.|  
+|`UnmanagedType.BStr`|
+  `BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
 |`UnmanagedType.LPStr`|Pointeur vers un tableau de caractères ANSI terminé par un caractère Null.|  
 |`UnmanagedType.LPTStr`|Pointeur vers un tableau de caractères dépendant de la plateforme se terminant par un caractère Null.|  
 |`UnmanagedType.LPWStr`|Pointeur vers un tableau de caractères Unicode terminé par un caractère null.|  
-|`UnmanagedType.TBStr`|`BSTR` de style COM de longueur fixe avec des caractères dépendant de la plateforme.|  
+|`UnmanagedType.TBStr`|
+  `BSTR` de style COM de longueur fixe avec des caractères dépendant de la plateforme.|  
 |`VBByRefStr`|Valeur qui permet à Visual Basic .NET de changer une chaîne dans du code non managé et de répercuter les résultats dans du code managé. Cette valeur est prise en charge uniquement pour l'appel de code non managé. Il s’agit de la valeur par défaut dans Visual Basic pour les chaînes `ByVal`.|  
   
  Ce tableau s'applique aux chaînes. Toutefois, pour <xref:System.Text.StringBuilder>, les seules options autorisées sont `LPStr`, `LPTStr` et `LPWStr`.  
@@ -143,7 +147,8 @@ String s);
   
 |Type d'énumération|Description du format non managé|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`|`BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
+|`UnmanagedType.BStr`|
+  `BSTR` de style COM avec une longueur prédéfinie et des caractères Unicode.|  
 |`UnmanagedType.LPStr`|Pointeur vers un tableau de caractères ANSI terminé par un caractère Null.|  
 |`UnmanagedType.LPTStr`|Pointeur vers un tableau de caractères dépendant de la plateforme se terminant par un caractère Null.|  
 |`UnmanagedType.LPWStr`|Pointeur vers un tableau de caractères Unicode terminé par un caractère null.|  
@@ -151,7 +156,7 @@ String s);
   
  Le type `ByValTStr` est utilisé pour les tableaux de caractères inline de longueur fixe qui sont situés dans une structure. D'autres types s'appliquent aux références de chaîne contenues au sein de structures qui contiennent des pointeurs vers des chaînes.  
   
- L'argument `CharSet` de l'attribut <xref:System.Runtime.InteropServices.StructLayoutAttribute> qui est appliqué à la structure contenante détermine le format de caractères des chaînes des structures. Les exemples de structures suivants contiennent des références de chaîne et des chaînes inline, ainsi que des caractères ANSI, Unicode et dépendant de la plateforme.  
+ L’argument `CharSet` de l’attribut <xref:System.Runtime.InteropServices.StructLayoutAttribute> qui est appliqué à la structure contenante détermine le format de caractères des chaînes des structures. Les exemples de structures suivants contiennent des références de chaîne et des chaînes inline, ainsi que des caractères ANSI, Unicode et dépendant de la plateforme.  
   
 ### <a name="type-library-representation"></a>Représentation d'une bibliothèque de types  
   
@@ -266,5 +271,5 @@ public class Window {
 ## <a name="see-also"></a>Voir aussi
 - [Comportement de marshaling par défaut](default-marshaling-behavior.md)
 - [Types blittable et non blittable](blittable-and-non-blittable-types.md)
-- [Attributs directionnels](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Attributs directionnels](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copie et épinglage](copying-and-pinning.md)

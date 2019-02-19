@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540566"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220976"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Vue d'ensemble du Dynamic Language Runtime
 
@@ -80,7 +80,7 @@ Voici quelques exemples de langages développés à l’aide du DLR :
 
  Le DLR ajoute un ensemble de services au CLR pour une meilleure prise en charge des langages dynamiques. Il s’agit des services suivants :
 
--   Arborescences de l’expression. Le DLR utilise des arborescences de l’expression pour représenter la syntaxe de langage. À cette fin, le DLR a étendu les arborescences de l’expression LINQ pour inclure le flux de contrôle, l’assignation et d’autres nœuds de modélisation de langage. Pour plus d’informations, consultez [Arborescences de l’expression](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).
+-   Arborescences de l’expression. Le DLR utilise des arborescences de l’expression pour représenter la syntaxe de langage. À cette fin, le DLR a étendu les arborescences de l’expression LINQ pour inclure le flux de contrôle, l’assignation et d’autres nœuds de modélisation de langage. Pour plus d’informations, consultez [Arborescences d’expressions (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) ou [Arborescences d’expressions (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
 -   Mise en cache dans le site d’appel. Un *site d’appel dynamique* est un emplacement dans le code où vous exécutez une opération comme `a + b` ou `a.b()` sur des objets dynamiques. Le DLR met en cache les caractéristiques de `a` et `b` (en général, les types de ces objets) et les informations sur l’opération. Si une opération de ce type a été exécutée précédemment, le DLR extrait toutes les informations nécessaires du cache pour une distribution rapide.
 
@@ -96,5 +96,6 @@ Le DLR utilise des classeurs dans les sites d’appel pour communiquer non seule
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Common Language Runtime](../../../docs/standard/clr.md)
-- [Arborescences d’expressions](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [Arborescences d’expressions (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Arborescences d’expressions (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [Procédure pas à pas : Création et utilisation d’objets dynamiques](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

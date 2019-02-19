@@ -3,15 +3,15 @@ title: Prédire des prix en utilisant un apprenant de régression avec ML.NET
 description: Prédisez des prix en utilisant un apprenant de régression avec ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 01/15/2019
+ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828395"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092538"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutoriel : Prédire des prix en utilisant un apprenant de régression avec ML.NET
 
@@ -122,9 +122,9 @@ Créez une variable appelée `mlContext` et initialisez-la avec une nouvelle ins
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-Ensuite, pour configurer le chargement des données, initialisez variable globale `_textLoader` afin de la réutiliser.  Notez que nous utilisons un élément `TextReader`. Lorsque vous créez un `TextLoader` à l’aide d’un `TextReader`, vous passez le contexte nécessaire et la classe <xref:Microsoft.ML.Data.TextLoader.Arguments> qui permet la personnalisation. Spécifiez le schéma de données en passant un tableau d’objets <xref:Microsoft.ML.Data.TextLoader.Column> au `TextReader` contenant tous les noms de colonne et leurs types. Nous avons défini précédemment le schéma de données en créant notre classe `TaxiTrip`.
+Ensuite, pour configurer le chargement des données, initialisez variable globale `_textLoader` afin de la réutiliser. Quand vous créez un `TextLoader`, vous passez le contexte nécessaire et la classe <xref:Microsoft.ML.Data.TextLoader.Arguments> qui permet la personnalisation. Spécifiez le schéma de données en passant un tableau d’objets <xref:Microsoft.ML.Data.TextLoader.Column> au `TextLoader` contenant tous les noms de colonne et leurs types. Nous avons défini précédemment le schéma de données en créant notre classe `TaxiTrip`.
 
-La classe `TextReader` retourne une variable <xref:Microsoft.ML.Data.TextLoader> totalement initialisée  
+La classe `TextLoader` retourne une variable <xref:Microsoft.ML.Data.TextLoader> totalement initialisée  
 
 Pour initialiser la variable globale `_textLoader` afin de la réutiliser pour les jeux de données nécessaires, ajoutez le code suivant après l’initialisation de `mlContext` :
 
@@ -155,7 +155,7 @@ Nous passons deux paramètres à la méthode `Train` ; un paramètre `MLContext
 
 ## <a name="load-and-transform-data"></a>Charger et transformer les données
 
-Nous allons charger les données en utilisant la variable globale `_textLoader` et le paramètre `dataPath`. Cette méthode retourne un <xref:Microsoft.ML.Data.IDataView>. En tant qu’entrée et sortie de Transforms, un `DataView` est le type de pipeline de données fondamental, similaire à `IEnumerable` pour `LINQ`.
+Nous allons charger les données en utilisant la variable globale `_textLoader` et le paramètre `dataPath`. Cette méthode retourne un <xref:Microsoft.Data.DataView.IDataView>. Comme entrée et sortie de transformations, un `IDataView` est le type de pipeline de données fondamental, similaire à `IEnumerable` pour `LINQ`.
 
 Dans ML.NET, les données sont semblables à une vue SQL. Elles sont évaluées tardivement, schématisées et hétérogènes. L’objet est la première partie du pipeline, et charge les données. Pour ce tutoriel, il charge un jeu de données avec des informations sur les courses de taxi, utiles pour en prédire le prix. Cette méthode permet de créer puis de former le modèle.
 

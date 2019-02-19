@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 33ad1f4e260d90125d260e2ada0898be7f820b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572966"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219761"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (outil Manifest Generation and Editing, client graphique)
 
@@ -128,7 +128,7 @@ MageUI.exe prend en charge les mêmes fonctionnalités que l'outil de ligne de c
   
 |Élément d'interface utilisateur|Description|  
 |----------------|-----------------|  
-|**Type de jeu d’autorisations**|Spécifie le jeu d'autorisations minimum requis par l'application pour s'exécuter sur un client. Pour obtenir une description des jeux d’autorisations et des autorisations qu’ils exigent ou non, consultez [NIB : jeux d’autorisations nommés](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Type de jeu d’autorisations**|Spécifie le jeu d'autorisations minimum requis par l'application pour s'exécuter sur un client. Pour obtenir une description des jeux d’autorisations et des autorisations qu’ils exigent ou non, consultez [Jeux d’autorisations nommés](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Détails**|Code XML créé pour le manifeste d'application pour représenter le jeu d'autorisations. À moins d'avoir une bonne compréhension du manifeste d'application au format XML, vous ne devez pas modifier ce code XML manuellement. Pour plus d’informations, consultez [Manifeste d’application ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Onglet Manifeste de déploiement  

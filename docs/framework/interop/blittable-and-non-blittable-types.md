@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce1c944257a1a11287b751d9a0f9eb5a88d744f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596889"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093032"
 ---
 # <a name="blittable-and-non-blittable-types"></a>types blittable et non blittable
 La plupart des types de données ont une représentation commune à la fois dans la mémoire managée et non managée, et ne nécessitent pas de traitement particulier par le marshaleur d’interopérabilité. Ces types sont appelés *types blittables*, car ils ne nécessitent pas de conversion quand ils transitent entre le code managé et le code non managé.  
@@ -49,7 +49,7 @@ La plupart des types de données ont une représentation commune à la fois dans
   
 -   Tableaux unidimensionnels de types blittables, comme un tableau d’entiers. Toutefois, un type qui contient un tableau de variables de types blittables n’est pas lui-même blittable.  
   
--   Types valeur mis en forme qui ne contiennent que des types blittables (et des classes s’ils sont marshalés comme types mis en forme). Pour plus d’informations sur les types valeur mis en forme, consultez [Marshaling par défaut pour les types valeur](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100)).  
+-   Types valeur mis en forme qui ne contiennent que des types blittables (et des classes s’ils sont marshalés comme types mis en forme). Pour plus d’informations sur les types valeur mis en forme, consultez [Marshaling par défaut pour les types valeur](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Les références d’objets ne sont pas blittables. Cela inclut un tableau de références aux objets qui sont blittables en eux-mêmes. Par exemple, vous pouvez définir une structure blittable, mais vous ne pouvez pas définir un type blittable contenant un tableau de références à ces structures.  
   
@@ -57,7 +57,7 @@ La plupart des types de données ont une représentation commune à la fois dans
   
  Certains types de données managés requièrent une représentation différente dans un environnement non managé. Ces types de données non blittables doivent être convertis sous une forme qui peut être marshalée. Par exemple, les chaînes managées sont des types non blittables parce qu’elles doivent être converties en objets String avant de pouvoir être marshalées.  
   
- Le tableau suivant répertorie des types non blittables issus de l’espace de noms <xref:System>. Les [délégués](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)), qui sont des structures de données qui réfèrent à une méthode statique ou à une instance de classe, sont également non blittables.  
+ Le tableau suivant répertorie des types non blittables issus de l’espace de noms <xref:System>. Les [délégués](default-marshaling-behavior.md#default-marshaling-for-delegates), qui sont des structures de données qui réfèrent à une méthode statique ou à une instance de classe, sont également non blittables.  
   
 |Type non blittable|Description|  
 |-------------------------|-----------------|  

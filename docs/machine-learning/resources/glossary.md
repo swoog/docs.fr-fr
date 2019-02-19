@@ -3,12 +3,12 @@ title: Glossaire Machine Learning - ML.NET
 description: La liste suivante est une compilation des principaux termes Machine Learning, utiles lorsque vous générez vos modèles personnalisés.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415375"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092434"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossaire Machine Learning des principaux termes
 
@@ -16,7 +16,7 @@ La liste suivante est une compilation des principaux termes Machine Learning, ut
 
 ## <a name="accuracy"></a>Précision
 
-Dans la [classification](#classification), la précision correspond au nombre d’éléments correctement classifiés, divisé par le nombre total d’éléments dans le jeu de test. Cette valeur est comprise entre 0 (la moins précise) et 1 (la plus précise). La précision est une des métriques d’évaluation des performances de votre modèle. Utilisez-la conjointement avec les options [précision](#precision), [rappel](#recall) et [F-score](#f-score).
+Dans la [classification](#classification), la précision correspond au nombre d’éléments correctement classifiés, divisé par le nombre total d’éléments dans le jeu de test. Cette valeur est comprise entre 0 (la moins précise) et 1 (la plus précise). La précision est une des métriques d’évaluation des performances du modèle. Utilisez-la conjointement avec les options [précision](#precision), [rappel](#recall) et [F-score](#f-score).
 
 ## <a name="area-under-the-curve-auc"></a>Zone sous la courbe (AUC)
 

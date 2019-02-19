@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453253"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221249"
 ---
 # <a name="interop-marshaling"></a>Marshaling d’interopérabilité
-<a name="top"></a> Le marshaling d’interopérabilité détermine la façon dont les données sont transmises dans les arguments de méthode et les valeurs de retour entre la mémoire managée et non managée lors des appels. Le marshaling d’interopérabilité est une activité d’exécution effectuée par le service de marshaling du common language runtime.  
+<a name="top"></a> Le marshaling d’interopérabilité détermine la façon dont les données sont transmises dans les arguments de méthode et les valeurs de retour entre la mémoire managée et non managée lors des appels. Le marshaling d'interopérabilité est une activité d'exécution effectuée par le service de marshaling du common language runtime.  
   
- La plupart des types de données ont des représentations communes dans la mémoire managée et la mémoire non managée. Le marshaleur d'interopérabilité gère ces types à votre place. D'autres types peuvent être ambigus ou non représentés dans la mémoire managée.  
+ La plupart des types de données ont des représentations communes dans la mémoire managée et la mémoire non managée. Le marshaleur d’interopérabilité gère ces types à votre place. D'autres types peuvent être ambigus ou non représentés dans la mémoire managée.  
   
  Un type ambigu peut avoir plusieurs représentations non managées qui correspondent à un seul type managé ou bien ne pas avoir d'informations de type (par exemple, la taille d'un tableau). Pour les types ambigus, le marshaleur fournit une représentation par défaut et des représentations alternatives où plusieurs représentations existent. Vous pouvez fournir des instructions explicites au marshaleur sur la façon de marshaler un type ambigu.  
   
@@ -53,7 +53,7 @@ Flux des appels de code non managé et des appels COM Interop
   
 <a name="marshaling_and_com_apartments"></a>   
 ## <a name="marshaling-and-com-apartments"></a>Marshaling et cloisonnements COM  
- Le marshaleur d'interopérabilité marshale les données entre le tas du common langage runtime et le tas non managé. Le marshaling se produit chaque fois que l'appelant et l'appelé ne peuvent pas agir sur une même instance de données. Le marshaleur d'interopérabilité permet à l'appelant et à l'appelé d'utiliser les mêmes données, même s'ils possèdent chacun leur propre copie des données.  
+ Le marshaleur d'interopérabilité marshale les données entre le tas du common langage runtime et le tas non managé. Le marshaling se produit chaque fois que l’appelant et l’appelé ne peuvent pas agir sur une même instance de données. Le marshaleur d'interopérabilité permet à l'appelant et à l'appelé d'utiliser les mêmes données, même s'ils possèdent chacun leur propre copie des données.  
   
  COM possède également un marshaleur qui marshale les données entre des cloisonnements COM ou différents processus COM. Lors d'un appel entre du code managé et du code non managé au sein d'un même cloisonnement COM, le marshaleur d'interopérabilité est le seul marshaleur impliqué. Lors d'un appel entre du code managé et du code non managé au sein de cloisonnements COM (ou autres processus) différents, le marshaleur d'interopérabilité et le marshaleur COM sont tous les deux impliqués.  
   
@@ -65,7 +65,7 @@ Flux des appels de code non managé et des appels COM Interop
 |STA|`Both` deviennent un STA.|Marshaling dans un même cloisonnement.|  
 |MTA|`Both` deviennent un MTA.|Marshaling dans un même cloisonnement.|  
   
- Étant donné que le client et le serveur se trouvent dans le même cloisonnement, le service de marshaling d'interopérabilité gère automatiquement tout le marshaling de données. L’illustration suivante montre le service de marshaling d’interopérabilité agissant entre les tas managés et non managés au sein du même cloisonnement de style COM.  
+ Étant donné que le client et le serveur se trouvent dans le même cloisonnement, le service de marshaling d’interopérabilité gère automatiquement tout le marshaling de données. L'illustration suivante montre le service de marshaling d'interopérabilité agissant entre les tas managés et non managés au sein du même cloisonnement de style COM.  
   
  ![Marshaling d’interopérabilité](./media/interopheap.gif "interopheap")  
 Processus de marshaling dans un même cloisonnement.  
@@ -79,7 +79,7 @@ Processus de marshaling dans un même cloisonnement.
   
 |Client .NET|Serveur COM|Configuration requise|  
 |-----------------|----------------|-----------------------------|  
-|MTA (par défaut)|MTA<br /><br /> STA|Marshaling d'interopérabilité.<br /><br /> Marshaling COM et marshaling d'interopérabilité.|  
+|MTA (par défaut)|MTA<br /><br /> STA|Marshaling d’interopérabilité.<br /><br /> Marshaling COM et marshaling d’interopérabilité.|  
 |STA|MTA<br /><br /> STA|Marshaling COM et marshaling d’interopérabilité.<br /><br /> Marshaling d’interopérabilité.|  
   
  Quand un client managé et un serveur non managé se trouvent dans un même cloisonnement, le service de marshaling d'interopérabilité gère tout le marshaling de données. Toutefois, quand le client et le serveur sont initialisés dans des cloisonnements différents, le marshaling COM est également requis. L'illustration suivante montre les éléments d'un appel intercloisonnements.  
@@ -102,7 +102,7 @@ Appel intercloisonnements entre un client .NET et un objet COM
   
 <a name="marshaling_remote_calls"></a>   
 ## <a name="marshaling-remote-calls"></a>Marshaling des appels distants  
- Comme pour le marshaling intercloisonnements, le marshaling COM est impliqué dans chaque appel effectué entre du code managé et du code non managé chaque fois que les objets résident dans des processus distincts. Exemple :  
+ Comme pour le marshaling intercloisonnements, le marshaling COM est impliqué dans chaque appel effectué entre du code managé et du code non managé chaque fois que les objets résident dans des processus distincts. Par exemple :  
   
 -   Un client COM qui appelle un serveur managé sur un hôte distant utilise le modèle DCOM (Distributed COM).  
   
@@ -148,12 +148,12 @@ Appels distants traversant des pare-feu à l'aide de SOAP ou de la classe TcpCha
 |[Comportement de marshaling par défaut](default-marshaling-behavior.md)|Décrit les règles utilisées par le service de marshaling d’interopérabilité pour marshaler des données.|  
 |[Marshaling de données à l’aide de l’appel de code managé](marshaling-data-with-platform-invoke.md)|Décrit comment déclarer des paramètres de méthode et passer des arguments à des fonctions exportées par des bibliothèques non managées.|  
 |[Marshaler des données avec COM Interop](marshaling-data-with-com-interop.md)|Décrit comment personnaliser des wrappers COM pour modifier le comportement de marshaling.|  
-|[Guide pratique pour migrer le modèle DCOM de code managé vers WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Décrit comment effectuer une migration de DCOM à WCF.|  
+|[Guide pratique pour migrer du code DCOM managé vers WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Décrit comment effectuer une migration de DCOM à WCF.|  
 |[Guide pratique pour mapper des HRESULT et des exceptions](how-to-map-hresults-and-exceptions.md)|Décrit comment mapper des exceptions personnalisées aux HRESULT et fournit le mappage complet de chaque HRESULT à sa classe d'exception comparable dans .NET Framework.|  
-|[Interopérabilité à l’aide de types génériques](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Décrit les actions prises en charge lors de l'utilisation de types génériques pour l'interopérabilité COM.|  
+|[Interopérabilité à l’aide de types génériques](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Décrit les actions prises en charge lors de l'utilisation de types génériques pour l'interopérabilité COM.|  
 |[Interopération avec du code non managé](index.md)|Décrit les services d'interopérabilité fournis par le common language runtime.|  
 |[Interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Fournit des liens vers des informations sur l'incorporation de composants COM dans une application .NET Framework.|  
-|[Considérations de design pour l’interopérabilité](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Fournit des conseils pour l'écriture de composants COM intégrés.|  
+|[Considérations de design pour l’interopérabilité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Fournit des conseils pour l'écriture de composants COM intégrés.|  
   
  [Retour au début](#top)  
   

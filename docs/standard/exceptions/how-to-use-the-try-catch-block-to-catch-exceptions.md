@@ -1,11 +1,10 @@
 ---
 title: Guide pratique pour utiliser le bloc try/catch pour intercepter des exceptions
-ms.date: 03/30/2017
+ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - exceptions, try/catch blocks
 - try blocks
@@ -14,28 +13,32 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842383"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092746"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Guide pratique pour utiliser le bloc try/catch pour intercepter des exceptions
 
-Placez les sections de code qui peuvent lever des exceptions dans un bloc `try` et placez le code qui gère les exceptions dans un bloc `catch`. Le bloc `catch` est une série d’instructions qui commencent par le mot clé `catch`, suivi d’un type d’exception et d’une action à effectuer.
+Placez les instructions de code qui peuvent déclencher ou lever une exception dans un bloc `try` et placez les instructions utilisées pour gérer l’exception ou les exceptions dans un ou plusieurs blocs `catch` sous le bloc `try`. Chaque bloc `catch` inclut le type d’exception et peut contenir des instructions supplémentaires nécessaires pour gérer ce type d’exception.
 
-L’exemple de code suivant utilise un bloc `try`/`catch` pour intercepter une exception possible. La méthode `Main` contient un bloc `try` avec une instruction <xref:System.IO.StreamReader> qui ouvre un fichier de données appelé `data.txt` et écrit une chaîne à partir du fichier. À la suite du bloc `try`, un bloc `catch` intercepte toute exception qui résulte du bloc `try`.
+Dans l’exemple suivant, un <xref:System.IO.StreamReader> ouvre un fichier appelé *data.txt* et récupère une ligne de ce fichier. Étant donné que le code peut lever une des trois exceptions, il est placé dans un bloc `try`. Trois blocs `catch` interceptent les exceptions et les gèrent en affichant les résultats dans la console.
 
- [!code-cpp[CatchException#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception2.cpp#3)]
- [!code-csharp[CatchException#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
- [!code-vb[CatchException#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
 
-Le Common Language Runtime intercepte les exceptions qui ne sont pas interceptées par un bloc catch. Selon la configuration du runtime, une boîte de dialogue de débogage s’affiche, le programme s’arrête et une boîte de dialogue s’affiche avec des informations sur l’exception, ou une erreur est imprimée dans STDERR.
+Le Common Language Runtime (CLR) intercepte les exceptions non gérées par les blocs `catch`. Si une exception est interceptée par le CLR, il peut se produire l’un des résultats suivants selon la configuration du CLR :
 
-> [!NOTE] 
-> Presque toutes les lignes de code peuvent provoquer une exception, en particulier les exceptions levées par le Common Language Runtime lui-même, comme <xref:System.OutOfMemoryException>. La plupart des applications n’ont pas à traiter ces exceptions, mais vous devez être conscient de cette possibilité quand vous écrivez des bibliothèques destinées à d’autres utilisateurs. Afin d’obtenir des suggestions pour savoir quand définir du code dans un bloc Try, consultez les [Bonnes pratiques pour les exceptions](best-practices-for-exceptions.md).
+- Une boîte de dialogue **Débogage** s’affiche.
+- Le programme s’arrête et une boîte de dialogue d’information sur l’exception s’affiche.
+- Une erreur s’affiche dans le [flux de sortie d’erreur standard](xref:System.Console.Error).
+
+> [!NOTE]
+> La plupart du code peut lever une exception, et quelques exceptions comme <xref:System.OutOfMemoryException> peuvent être levées par le CLR lui-même à tout moment. L’utilisation d’applications n’est pas obligatoire pour traiter ces exceptions, mais envisagez cette possibilité quand vous écrivez des bibliothèques destinées à l’usage d’autres utilisateurs. Si vous souhaitez des conseils sur la définition de code dans un bloc `try`, consultez [Bonnes pratiques pour les exceptions](best-practices-for-exceptions.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Exceptions](index.md)
+[Exceptions](index.md)  
+[Gestion des erreurs E/S dans .NET](../io/handling-io-errors.md)

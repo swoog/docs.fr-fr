@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e1227cbf85e72570bcb08f7f13168392b7c7b60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592573"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093682"
 ---
 # <a name="overview-of-the-net-framework"></a>Vue d’ensemble du .NET Framework
 
@@ -87,7 +87,7 @@ Comme pour toute bibliothèque de classes orientée objet, les types .NET Framew
 
 - Applications orientées service qui utilisent Windows Communication Foundation (WCF). Consultez [Applications orientées service avec WCF](../../../docs/framework/wcf/index.md).
 
-- Applications prenant en charge les flux de travail et qui utilisent Windows Workflow Foundation (WF). Consultez [Génération de flux de travail dans le .NET Framework](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Applications prenant en charge les flux de travail et qui utilisent Windows Workflow Foundation (WF). Consultez [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
 Les classes Windows Forms sont un ensemble complet de types réutilisables qui simplifient grandement le développement GUI Windows. Si vous écrivez une application Web Form ASP.NET, vous pouvez utiliser les classes Web Forms.
 
@@ -97,5 +97,5 @@ Les classes Windows Forms sont un ensemble complet de types réutilisables qui s
 - [Guide d’installation](../../../docs/framework/install/index.md)
 - [Guide de développement](../../../docs/framework/development-guide.md)
 - [Outils](../../../docs/framework/tools/index.md)
-- [Exemples .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)
+- [Exemples et tutoriels .NET](../../samples-and-tutorials/index.md)
 - [Bibliothèque de classes .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

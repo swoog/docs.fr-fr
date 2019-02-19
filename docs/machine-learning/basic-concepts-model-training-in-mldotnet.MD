@@ -1,15 +1,15 @@
 ---
 title: Concepts de base pour l’entraînement de modèles dans ML.NET
 description: Cet article explique les concepts de base couvrant les scénarios d’*entraînement de modèles* dans ML.NET. Tous les concepts ne sont pas pertinents pour le scénario le plus simple de *prédiction avec un modèle existant*.
-ms.date: 11/06/2018
+ms.date: 02/13/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: cff833b45583bc752bb42616820a95ca6c5c6b12
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "55252438"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303658"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>Concepts de base pour l’entraînement de modèles dans ML.NET
 
@@ -28,11 +28,11 @@ Ce document aborde les concepts suivants liés à l’entraînement de modèles 
   - Autre exemple : le générateur de jetons de texte prend une colonne de textes unique et génère une colonne de vecteurs avec des mots individuels extraits des textes.
 - [*Lecteur de données*](#data-reader) représenté sous la forme d’une interface `IDataReader<T>`.
   - Le lecteur de données est un composant ML.NET servant à créer des données. Il prend une instance de `T` et retourne des données. 
-  - Par exemple, un *TextLoader* est un `IDataReader<FileSource>`. Il prend le fichier source et génère des données. 
+  - Par exemple, un *TextLoader* est un `IDataReader<IMultiStreamSource>`. Il prend la source et génère des données. 
 - [*Estimateur*](#estimator) représenté sous la forme d’une interface `IEstimator<T>`.
   - Il s’agit d’un objet qui apprend à partir des données. Le résultat de l’entraînement est un *transformateur*.
   - Vous pouvez considérer un *algorithme* de machine learning comme un estimateur qui apprend à partir de données et génère un *modèle* Machine Learning.
-- [*Fonction de prédiction*](#prediction-function) représentée sous la forme d’une classe `PredictionFunction<TSrc, TDst>`.
+- [*Fonction de prédiction*](#prediction-function) représentée sous la forme d’une classe `PredictionEngine<TSrc, TDst>`.
   - La fonction de prédiction peut être considérée comme une machine qui applique un transformateur à une seule ligne, comme au moment de la prédiction.
 
 ## <a name="data"></a>Données
@@ -50,11 +50,11 @@ Dans ML.NET, les données sont semblables à une vue SQL : il s’agit d’un j
 
 Un transformateur est un composant qui prend des données, les manipule, puis retourne de nouvelles données transformées.
 
-La plupart des transformateurs dans ML.NET ont tendance à opérer sur une *colonne d’entrée* à la fois et à produire la *colonne de sortie*. Par exemple, un `new HashTransformer("foo", "bar")` prend les valeurs de la colonne « foo », les hache et les place dans la colonne « bar ». 
+La plupart des transformateurs dans ML.NET ont tendance à opérer sur une *colonne d’entrée* à la fois et à produire la *colonne de sortie*. Par exemple, un `new HashTransformer("bar", "foo")` prend les valeurs de la colonne « foo », les hache et les place dans la colonne « bar ». 
 
-Il est également courant que les noms de colonnes d’entrée et de sortie soient identiques. Dans ce cas, l’ancienne colonne est remplacée par la nouvelle. Par exemple, un `new HashTransformer("foo")` prend les valeurs de la colonne « foo », les hache et les place dans « foo ». 
+Il est également courant que les noms de colonnes d’entrée et de sortie soient identiques. Dans ce cas, l’ancienne colonne est remplacée par la nouvelle. Par exemple, un `new HashTransformer("foo")` prend les valeurs de la colonne « foo », les hache et les remet dans « foo ». 
 
-Naturellement, tout transformateur génère une nouvelle vue de données quand `Transform` est appelé. N’oubliez pas que les vues de données sont immuables.
+Tout transformateur génère une nouvelle vue de données quand `Transform` est appelé. N’oubliez pas que les vues de données sont immuables.
 
 Un autre élément important est que, les données étant évaluées tardivement, les *transformateurs sont tardifs également*. Essentiellement, une fois que vous avez appelé
 
@@ -62,29 +62,29 @@ Un autre élément important est que, les données étant évaluées tardivement
 var newData = transformer.Transform(oldData)
 ```
 
-aucun calcul réel ne se produit. C’est seulement une fois que vous obtenez un curseur à partir de `newData` et que vous commencez à utiliser la valeur que `newData` appelle la logique de transformation `transformer` (sous réserve que le `transformer` en question soit nécessaire pour produire les colonnes demandées).
+aucun calcul réel ne se produit. C’est seulement une fois que vous obtenez un curseur à partir de `newData` et que vous commencez à utiliser la valeur que `newData` appelle la logique de transformation `transformer` (et même là, cela se produit uniquement si le `transformer` en question est nécessaire pour générer les colonnes demandées).
 
 ### <a name="transformer-chains"></a>Chaînes de transformateur
 
-Une propriété utile d’un transformateur est que *vous pouvez formuler une application séquentielle de transformateurs sous la forme d’un autre transformateur* :
+Une propriété utile d’un transformateur est que *vous pouvez générer une application séquentielle de transformateurs sous la forme d’un autre transformateur* :
 
 ```csharp
 var fullTransformer = transformer1.Append(transformer2).Append(transformer3);
 ```
 
-Cette propriété est couramment utilisée dans ML.NET : en règle générale, le modèle ML.NET entraîné est une chaîne de transformateurs, qui est, à toutes fins pratiques, un *transformateur*. 
+Cette propriété est couramment utilisée dans ML.NET : en règle générale, le modèle ML.NET entraîné est une chaîne de transformateurs, qui est, à toutes fins pratiques, un *transformateur*.
 
 ## <a name="data-reader"></a>Lecteur de données
 
-Le lecteur de données est le composant ML.NET servant à « créer » des données : il prend une instance de `T` et retourne des données.
+Le lecteur de données est un composant ML.NET servant à « créer » des données : il prend une instance de `T` et retourne des données.
 
 Une propriété intéressante est que vous pouvez créer un lecteur de données en attachant un transformateur à un lecteur de données existant. De cette façon, vous pouvez avoir un lecteur intégrant un comportement de transformation :
 
-```c#
+```csharp
 var newReader = reader.Append(transformer1).Append(transformer2)
 ```
 
-Une autre similarité avec les transformateurs est que, dans la mesure où les données sont évaluées tardivement, les *lecteurs sont tardifs* : aucune (ou pratiquement aucune) « lecture » réelle ne se produit quand vous appelez `dataReader.Read()` ; le lecteur ne commence à travailler que quand un curseur est demandé sur les données résultantes.
+Une autre similarité avec les transformateurs est que, dans la mesure où les données sont évaluées tardivement, les *lecteurs sont tardifs* : aucune (ou pratiquement aucune) « lecture » réelle ne se produit quand vous appelez `reader.Read()` ; le lecteur ne commence à travailler que quand un curseur est demandé sur les données résultantes.
 
 ## <a name="estimator"></a>Estimateur
 
@@ -95,12 +95,12 @@ Dans ML.NET, utilisez cette propriété pour créer des pipelines d’entraînem
 ```csharp
 MLContext mlContext = new MLContext(seed: 0);
 
-var pipeline = new CopyColumnsEstimator(mlContext, "FareAmount", "Label")
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "VendorId"))
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "RateCode"))
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "PaymentType"))
-.Append(new ColumnConcatenatingEstimator(mlContext, "Features", "VendorId", "RateCode", "PassengerCount", "TripTime", "TripDistance", "PaymentType"))
-.Append(mlContext.Regression.Trainers.FastTree("Label", "Features"));
+var pipeline = mlContext.Transforms.CopyColumns("Label","FareAmount")
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("VendorId"))
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("RateCode"))
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("PaymentType"))
+    .Append(mlContext.Transforms.Concatenate("Features","VendorId","RateCode","PassengerCount","TripTime","TripDistance","PaymentType"))
+    .Append(mlContext.Regression.Trainers.FastTree("Label","Features"));
 
 var model = pipeline.Fit(dataView);
 ```
@@ -109,7 +109,7 @@ Une des propriétés importantes des estimateurs est que *les estimateurs sont h
 
 ## <a name="prediction-function"></a>Fonction de prédiction
 
-La fonction de prédiction peut être considérée comme une machine qui applique un transformateur à une seule ligne.
+La fonction de prédiction peut être considérée comme un composant qui applique un transformateur à une seule ligne.
 
 Une fois que vous obtenez le modèle (un *transformateur* entraîné par le biais de `Fit()` ou chargé), vous pouvez l’utiliser pour effectuer des prédictions à l’aide d’appels normaux à `model.Transform(data)`. Toutefois, quand vous utilisez ce modèle dans un scénario réel, vous n’avez souvent pas de nombreux exemples à partir desquels effectuer la prédiction. Au lieu de cela, vous disposez d’un exemple à la fois, et vous devez faire des prédictions en temps voulu sur ces derniers immédiatement.
 
@@ -123,17 +123,17 @@ Bien sûr, vous pouvez réduire la procédure à une prédiction par lot :
 
 L’algorithme précédent peut être implémenté à l’aide de la [compréhension du schéma](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md), avec deux objets définis par l’utilisateur `InputExample` et `OutputPrediction` comme suit :
 
-```c#
-var inputData = env.CreateDataView(new InputExample[] { example });
+```csharp
+var inputData = mlContext.Data.ReadFromEnumerable(new InputExample[] { example });
 var outputData = model.Transform(inputData);
-var output = outputData.AsDynamic.AsEnumerable<OutputPrediction>(env, reuseRowObject: false).Single();
+var output = mlContext.CreateEnumerable<OutputPrediction>(outputData,reuseRowObject:false).First();
 ```
 
-Mais cela est fastidieux et entraîne des coûts de performances. À la place, un objet de fonction de prédiction effectue le même travail, mais de façon plus rapide et pratique, par le biais d’une méthode d’extension `MakePredictionFunction` :
+Mais cela est fastidieux et entraîne des coûts de performances. À la place, un objet de fonction de prédiction effectue le même travail, mais de façon plus rapide et pratique, par le biais d’une méthode d’extension `CreatePredictionEngine` :
 
-```c#
-var predictionFunc = model.MakePredictionFunction<InputExample, OutputPrediction>(env);
-var output = predictionFunc.Predict(example);
+```csharp
+var predictionEngine = model.CreatePredictionEngine<InputExample,OutputPrediction>(mlContext);
+var prediction = predictionEngine.Predict(example);
 ```
 
 La fonction de prédiction est *non réentrante/thread-safe*. Si vous souhaitez effectuer des prédictions simultanément avec plusieurs threads, vous devez disposer d’une fonction de prédiction par thread.
