@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427a865bc9550fe489d1a1f22ea4a07b421de1fe
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525534"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442709"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Développement de contrôles Windows Forms personnalisés avec le .NET Framework
 Les contrôles Windows Forms sont des composants réutilisables qui encapsulent des fonctionnalités d'interface utilisateur et sont utilisés dans des applications Windows côté client. Windows Forms fournit non seulement de nombreux contrôles prêts à l'emploi, mais également l'infrastructure pour le développement de vos propres contrôles. Vous pouvez combiner ou étendre des contrôles existants, ou encore créer vos propres contrôles personnalisés. Cette section fournit des informations générales et des exemples pour vous aider à développer des contrôles Windows Forms.  
@@ -51,13 +51,13 @@ Les contrôles Windows Forms sont des composants réutilisables qui encapsulent 
  Décrit cette classe et propose des liens vers tous ses membres.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Attributs en mode design pour les composants](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [Attributs en mode design pour les composants](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  Répertorie les attributs de métadonnées à appliquer aux composants et aux contrôles pour qu'ils s'affichent correctement au moment du design dans les concepteurs visuels.  
   
- [Extension de la prise en charge au moment du design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Extension de la prise en charge au moment du design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))  
  Décrit comment implémenter des classes telles que les éditeurs et concepteurs qui fournissent la prise en charge au moment du design.  
   
- [Guide pratique : accorder la licence d’utilisation de composants et de contrôles](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [Guide pratique pour Contrôles et composants de la licence](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))  
  Décrit comment implémenter la gestion des licences dans votre contrôle ou composant.  
   
- Voir aussi [Développement de contrôles Windows Forms au moment du design](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).
+ Voir aussi [Développement de contrôles Windows Forms au moment du design](developing-windows-forms-controls-at-design-time.md).

@@ -2,12 +2,12 @@
 title: Service Trace Viewer Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510596"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442891"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d’analyser des traces de diagnostic sont générées par WCF. Service Trace Viewer permet facilement de fusion, afficher et filtrer les messages de trace dans le journal afin que vous pouvez diagnostiquer, réparer et vérifier les problèmes de service WCF.  
@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 </system.diagnostics>  
 ```  
   
- Dans cet exemple, le nom et le type de l'écouteur de suivi sont spécifiés. L'écouteur est nommé `sdt` et l'écouteur de suivi standard de .NET Framework (System.Diagnostics.XmlWriterTraceListener) est ajouté comme type. Le `initializeData` attribut est utilisé pour définir le nom du fichier journal pour cet écouteur sur `SdrConfigExample.e2e`. Pour le fichier journal, vous pouvez substituer un chemin d’accès complet par un nom de fichier simple.  
+ Dans cet exemple, le nom et le type de l'écouteur de suivi sont spécifiés. L'écouteur est nommé `sdt` et l'écouteur de suivi standard de .NET Framework (System.Diagnostics.XmlWriterTraceListener) est ajouté comme type. Le `initializeData` attribut est utilisé pour définir le nom du fichier journal pour cet écouteur sur `SdrConfigExample.e2e`. Pour le fichier journal, vous pouvez substituer un chemin d'accès complet par un nom de fichier simple.  
   
  Cet exemple crée un fichier dans le répertoire racine appelé SdrConfigExample.e2e. Lorsque vous utilisez la visionneuse de Trace pour ouvrir le fichier, comme décrit dans la section « Ouverture et affichage des fichiers de Trace WCF », vous pouvez voir tous les messages qui ont été envoyés.  
   
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
   
 -   Les fichiers de suivi Crimson  
   
- Service Trace Viewer permet d'ouvrir tout fichier de suivi pris en charge, d'ajouter et d'intégrer des fichiers de suivi supplémentaires ou d'ouvrir et de fusionner simultanément un groupe de fichiers de suivi.  
+ Service Trace Viewer permet d’ouvrir tout fichier de suivi pris en charge, d’ajouter et d’intégrer des fichiers de suivi supplémentaires ou d’ouvrir et de fusionner simultanément un groupe de fichiers de suivi.  
   
 ##### <a name="to-open-a-trace-file"></a>Pour ouvrir un fichier de suivi  
   
@@ -73,7 +73,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 >   
 >  /register : inscrire l’association des extensions de fichier .svclog et .stvproj avec SvcTraceViewer.exe  
 >   
->  /unregister : supprimer l’inscription de l’association des extensions de fichier .svclog et .stvproj avec SvcTraceViewer.exe  
+>  /unregister : supprimer l'inscription de l'association des extensions de fichier .svclog et .stvproj avec SvcTraceViewer.exe  
   
 1.  Démarrage du Service Trace Viewer, cliquez sur **fichier** , puis pointez sur **Open**. Naviguez jusqu'à l'emplacement où vos fichiers de suivi sont stockés.  
   
@@ -157,7 +157,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 ###### <a name="expanding-or-collapsing-activity-transfers"></a>Développement ou réduction de transferts d’activité  
  Vous pouvez développer les transferts d’activité lors du transfert de l’activité sélectionnée vers une autre activité. Cela vous permet de suivre les transferts.  
   
- Pour développer ou réduire des transferts d’activité  
+ Pour développer ou réduire des transferts d‘activité  
   
 1.  Localisez le suivi de transfert avec un signe « + » sur la gauche de l’icône de transfert.  
   
@@ -168,10 +168,10 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 4.  Un «- » apparaît à gauche de l’icône de transfert. Cliquez sur le «- » signer ou appuyez sur Ctrl et «- », le transfert d’activité est réduit.  
   
 > [!NOTE]
->  Lorsqu’une activité se compose de plusieurs transferts et que vous développez l’un des transferts, les activités entre l’activité racine et la nouvelle activité s’affichent. Ces nouvelles activités apparaissent sous forme réduite. Si vous souhaitez consulter les détails de ces activités, développez-les verticalement en cliquant sur l'icône de développement dans l'en-tête du graphique.  
+>   Lorsqu'une activité se compose de plusieurs transferts et que vous développez l'un des transferts, les activités entre l'activité racine et la nouvelle activité s'affichent. Ces nouvelles activités apparaissent sous forme réduite. Si vous souhaitez consulter les détails de ces activités, développez-les verticalement en cliquant sur l’icône de développement dans l’en-tête du graphique.  
   
 ###### <a name="expanding-or-collapsing-activities-vertically"></a>Développement ou réduction verticaux des activités  
- La visionneuse masque les détails inutiles dans le graphique d'activité en réduisant les activités. Dans une activité réduite, les suivis individuels ne sont pas affichés. Seuls les transferts de suivi apparaissent. Si vous souhaitez consulter tous les suivis d'une activité, développez l'activité verticalement en cliquant sur l'icône de développement de l'activité dans l'en-tête du graphique.  
+ La visionneuse masque les détails inutiles dans le graphique d'activité en réduisant les activités. Dans une activité réduite, les suivis individuels ne sont pas affichés. Seuls les transferts de suivi apparaissent. Si vous souhaitez consulter tous les suivis d’une activité, développez l’activité verticalement en cliquant sur l’icône de développement de l’activité dans l’en-tête du graphique.  
   
  Pour développer ou réduire verticalement des activités :  
   
@@ -243,7 +243,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
  Les paramètres de ce filtre sont définis dans le **Options de filtre** sous-menu sous **vue** menu.  
   
 #### <a name="custom-filters"></a>Filtres personnalisés  
- Si vous connaissez le langage XML XPath, vous pouvez l’utiliser pour créer des filtres personnalisés et rechercher des éléments XML intéressants dans les données de suivi. Vous pouvez accéder aux filtres par la barre d'outils de filtre.  
+ Si vous connaissez le langage XML XPath, vous pouvez l'utiliser pour créer des filtres personnalisés et rechercher des éléments XML intéressants dans les données de suivi. Vous pouvez accéder aux filtres par la barre d'outils de filtre.  
   
  Les filtres personnalisés peuvent inclure des paramètres. Vous pouvez également importer des filtres préexistants personnalisés.  
   
@@ -259,14 +259,14 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
   
 3.  Dans la boîte de dialogue qui s'affiche, entrez un nom pour votre filtre. Dans cet exemple, entrez `Thread ID`. Vous pouvez également fournir une description de votre filtre.  
   
-4.  L'arborescence sur la gauche affiche la structure de l'enregistrement de suivi que vous avez sélectionné lors de la première étape. Naviguez jusqu'à l'élément pour lequel vous souhaitez créer une condition. Dans cet exemple, naviguez jusqu’au ThreadID se trouver dans le XPath : /E2ETraceEvent/System/Execution/@ThreadID nœud. Double-cliquez sur l’attribut ThreadID dans l’arborescence. Cela crée à droite de la boîte de dialogue une expression pour l'attribut.  
+4.  L’arborescence sur la gauche affiche la structure de l’enregistrement de suivi que vous avez sélectionné lors de la première étape. Naviguez jusqu'à l'élément pour lequel vous souhaitez créer une condition. Dans cet exemple, naviguez jusqu’au ThreadID se trouver dans le XPath : /E2ETraceEvent/System/Execution/@ThreadID nœud. Double-cliquez sur l'attribut ThreadID dans l'arborescence. Cela crée à droite de la boîte de dialogue une expression pour l'attribut.  
   
 5.  Modifiez le champ de paramètre pour la condition ThreadID d’aucun à '{0}'. Cette étape permet de configurer la valeur de ThreadID lorsque le filtre est appliqué (voir la section Comment appliquer un filtre). Vous pouvez définir jusqu'à quatre paramètres. Les conditions sont associées à l'aide de l'opérateur OR.  
   
 6.  Cliquez sur **Ok** pour créer le filtre.  
   
 > [!NOTE]
->  Une fois qu'un filtre a été créé à l'aide de l'Assistant Modèle, il peut être modifié uniquement manuellement. Il n'est pas possible d'activer l'Assistant pour un filtre qui a été créé précédemment. De plus, les conditions d’un filtre XPath créé dans l’Assistant Modèle sont associées à l’aide de l’opérateur OR. Si vous avez besoin d'une opération AND, vous pouvez modifier l'expression de filtre une fois qu'elle a été créée.  
+>  Une fois qu'un filtre a été créé à l'aide de l'Assistant Modèle, il peut être modifié uniquement manuellement. Il n'est pas possible d'activer l'Assistant pour un filtre qui a été créé précédemment. De plus, les conditions d'un filtre XPath créé dans l'Assistant Modèle sont associées à l'aide de l'opérateur OR. Si vous avez besoin d'une opération AND, vous pouvez modifier l'expression de filtre une fois qu'elle a été créée.  
   
 ###### <a name="creating-a-custom-filter-manually"></a>Création manuelle d'un filtre personnalisé  
  Le menu Filtres personnalisés vous permet d’entrer des filtres XPath manuellement.  
@@ -437,13 +437,13 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 |![Activité d’écoute](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Activité d’écoute : Une activité qui enregistre les suivis relatifs à un écouteur. À l'intérieur de cette activité, vous pouvez consulter des informations et des demandes de connexion relatives à l'écouteur.|  
 |![Activité recevoir des octets](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Activité Recevoir des octets : activité qui regroupe tous les suivis en rapport avec la réception des octets entrants sur une connexion entre deux points de terminaison. Cette activité est essentielle pour la corrélation avec les activités de transport qui propagent leur ID d'activité tel que http.sys. Cette activité est essentielle pour la corrélation avec les activités de transport qui propagent leur ID d'activité tel que http.sys. Les erreurs de connexion telles que les abandons apparaîtront dans cette activité.|  
 |![Activité traiter le Message](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Activité traiter le Message : Activité qui regroupe les suivis relatifs à la création d’un message WCF. Les erreurs dues à une mauvaise enveloppe ou à un message erroné apparaîtront dans cette activité. À l'intérieur de cette activité, vous pouvez contrôler les en-têtes de message à afficher si un ID d'activité a été propagé à partir de l'appelant. Si cela se vérifie, lors du transfert vers l'activité Traiter l'action (l'icône suivante), vous pouvez également assigner à cette activité l'ID d'activité propagé pour la corrélation entre l'appelant et les suivis d'appelé.|  
-|![Suivi du journal des messages](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Activité traiter l’Action : Activité qui regroupe tous les suivis relatifs à une demande WCF entre deux points de terminaison. Si `propagateActivity` a la valeur `true` sur les deux points de terminaison de la configuration, tous les suivis des deux points de terminaison sont fusionnés au sein d’une activité, à des fins de corrélation directe. Cette activité contiendra des erreurs en raison du traitement du transport ou de la sécurité, au niveau de la limite du code utilisateur (si une réponse existe).|  
+|![Suivi du journal des messages](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Activité traiter l’Action : Activité qui regroupe tous les suivis relatifs à une demande WCF entre deux points de terminaison. Si `propagateActivity` a la valeur `true` sur les deux points de terminaison de la configuration, tous les suivis des deux points de terminaison sont fusionnés au sein d'une activité, à des fins de corrélation directe. Cette activité contiendra des erreurs en raison du traitement du transport ou de la sécurité, au niveau de la limite du code utilisateur (si une réponse existe).|  
 |![Activité traiter le Message](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Exécution de l’activité de Code utilisateur : Activité qui regroupe les suivis dans du code utilisateur pour le traitement d’une requête.|  
   
 ## <a name="troubleshooting"></a>Résolution des problèmes  
  Si vous n’êtes pas autorisé à écrire dans le Registre, vous obtenez le message d’erreur « Le Microsoft Service Trace Viewer n’était pas enregistré dans le système » lorsque vous utilisez le «`svctraceviewer /register`« commande pour enregistrer l’outil. Si cela se produit, vous devez vous connecter en utilisant un compte qui possède un accès en écriture au registre.  
   
- De plus, l’outil Service Trace Viewer écrit certains paramètres (par exemple, filtres personnalisés et options du filtre) dans le fichier SvcTraceViewer.exe., dans son dossier assembly. Si vous ne disposez pas d'une autorisation de lecture pour le fichier, vous pouvez malgré tout lancer l'outil, mais vous ne pouvez pas charger les paramètres.  
+ De plus, l'outil Service Trace Viewer écrit certains paramètres (par exemple, filtres personnalisés et options du filtre) dans le fichier SvcTraceViewer.exe., dans son dossier assembly. Si vous ne disposez pas d'une autorisation de lecture pour le fichier, vous pouvez malgré tout lancer l'outil, mais vous ne pouvez pas charger les paramètres.  
   
  Si le message d'erreur « Une erreur inconnue s'est produite lors du traitement d'un ou de plusieurs suivis. » lors de l'ouverture du fichier .etl, cela signifie que le format du fichier .etl n'est pas valide.  
   
@@ -452,4 +452,4 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 ## <a name="see-also"></a>Voir aussi
 - [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Configuration du suivi](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Le suivi des activités et Propagation pour la corrélation de suivi de bout en bout](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+- [Suivi de bout en bout](./diagnostics/tracing/end-to-end-tracing.md)

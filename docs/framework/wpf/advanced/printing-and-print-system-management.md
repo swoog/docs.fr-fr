@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 637911b3-0c78-4493-a4fb-91db56d767cd
-ms.openlocfilehash: 06defe024d7ae9b5a1486188594e05ffdd4e74b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f3617dfe7857f1e8ebd2ef5e29675699487f5ab
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725608"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441626"
 ---
 # <a name="printing-and-print-system-management"></a>Impression et gestion du système d'impression
 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] et Microsoft .NET Framework introduit un nouveau chemin d’impression — une alternative à [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] d’impression — et un ensemble beaucoup plus complet de gestion de système d’impression [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
@@ -27,4 +27,4 @@ ms.locfileid: "54725608"
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>
 - [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [XPS](https://www.microsoft.com/xps)
+- [Documents XPS](/windows/desktop/printdocs/documents)

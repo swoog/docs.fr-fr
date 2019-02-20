@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e35f097380272822e9dbcda01617cce9fed8fc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676846"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442969"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Prise en charge bidirectionnelle pour les applications Windows Forms
 Vous pouvez utiliser Visual Studio pour créer des applications Windows qui prennent en charge bidirectionnelle (de droite à gauche) langues comme l’arabe et hébreu. Cela comprend les formulaires standard, les boîtes de dialogue, les formulaires MDI et tous les contrôles que vous pouvez utiliser dans ces formulaires, c'est-à-dire tous les objets de l'espace de noms <xref:System.Windows.Forms.Control>.  
   
 ## <a name="culture-support"></a>Prise en charge de la culture  
- La culture et les paramètres de culture d'interface utilisateur déterminent comment une application gère les dates, heures, devises et autres informations. La prise en charge de la culture et de la culture d'interface utilisateur pour les langues bidirectionnelles est identique à celle des autres langues.   Consultez également [Classes spécifiques à la culture pour les Windows Forms et les Web Forms](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) ou [Classes spécifiques à la culture pour les Windows Forms et les Web Forms globaux](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
+ La culture et les paramètres de culture d'interface utilisateur déterminent comment une application gère les dates, heures, devises et autres informations. La prise en charge de la culture et de la culture d'interface utilisateur pour les langues bidirectionnelles est identique à celle des autres langues. Pour plus d’informations, consultez [des classes spécifiques à la Culture pour les Windows forms et web forms globaux](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms).  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Propriétés RightToLeft et RightToLeftLayout  
- La classe de base <xref:System.Windows.Forms.Control>, à partir de laquelle les formulaires dérivent, comprend une propriété <xref:System.Windows.Forms.Control.RightToLeft%2A> que vous pouvez définir pour modifier l'ordre de lecture d'un formulaire et de ses contrôles. Si vous définissez la propriété <xref:System.Windows.Forms.Control.RightToLeft%2A> du formulaire, par défaut les contrôles sur le formulaire héritent de ce paramètre. Toutefois, vous pouvez également définir la propriété <xref:System.Windows.Forms.Control.RightToLeft%2A> individuellement sur la plupart des contrôles. Voir également [Guide pratique pour Afficher le texte de droite à gauche dans les Windows Forms pour la globalisation](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ La classe de base <xref:System.Windows.Forms.Control>, à partir de laquelle les formulaires dérivent, comprend une propriété <xref:System.Windows.Forms.Control.RightToLeft%2A> que vous pouvez définir pour modifier l'ordre de lecture d'un formulaire et de ses contrôles. Si vous définissez la propriété <xref:System.Windows.Forms.Control.RightToLeft%2A> du formulaire, par défaut les contrôles sur le formulaire héritent de ce paramètre. Toutefois, vous pouvez également définir la propriété <xref:System.Windows.Forms.Control.RightToLeft%2A> individuellement sur la plupart des contrôles. Voir également [Guide pratique pour Afficher le texte de droite à gauche dans les Windows Forms pour la globalisation](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100)).  
   
  L'effet de la propriété <xref:System.Windows.Forms.Control.RightToLeft%2A> peut varier d'un contrôle à un autre. Dans certains contrôles, la propriété définit uniquement l'ordre de lecture, comme dans les contrôles <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> et <xref:System.Windows.Forms.ToolTip>. Dans d'autres, la propriété <xref:System.Windows.Forms.Control.RightToLeft%2A> modifie à la fois l'ordre de lecture et la disposition. Cela comprend les contrôles <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> et <xref:System.Windows.Forms.CheckBox> D'autres contrôles exigent que la propriété <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> soit appliquée pour refléter sa disposition de droite à gauche. Le tableau suivant fournit des détails sur la manière dont les propriétés <xref:System.Windows.Forms.Control.RightToLeft%2A> et <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> affectent les différents contrôles Windows Forms.  
   
@@ -119,5 +119,5 @@ Vous pouvez utiliser Visual Studio pour créer des applications Windows qui pren
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Prise en charge bidirectionnelle pour les applications web ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)
+- [Prise en charge bidirectionnelle pour les applications web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6eedwbtt(v=vs.100))
 - [Globalisation d’applications Windows Forms](globalizing-windows-forms.md)

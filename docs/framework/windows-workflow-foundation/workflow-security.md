@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 2979f8e50b7fc0d0fab419a89e708517fd271be8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 25cdd90250f256588d8ac72c0f98464eeae35938
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199199"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441752"
 ---
 # <a name="workflow-security"></a>Sécurité de workflow
 Windows Workflow Foundation (WF) est intégré à plusieurs technologies différentes, telles que Microsoft SQL Server et Windows Communication Foundation (WCF). L'interaction avec ces technologies peut poser des problèmes de sécurité dans votre workflow si elle est effectuée de façon incorrecte.
@@ -40,12 +40,12 @@ Windows Workflow Foundation (WF) est intégré à plusieurs technologies différ
 
 -   Points de terminaison Windows Communication Foundation (WCF) utilisés dans les workflows doivent être sécurisés. Pour plus d’informations, consultez [vue d’ensemble de la sécurité WCF](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   L'autorisation au niveau hôte peut être implémentée à l'aide de <xref:System.ServiceModel.ServiceAuthorizationManager>. Consultez [Comment : créer un gestionnaire d’autorisation personnalisé pour un Service](https://go.microsoft.com/fwlink/?LinkId=192228) pour plus d’informations.
+-   L'autorisation au niveau hôte peut être implémentée à l'aide de <xref:System.ServiceModel.ServiceAuthorizationManager>. Consultez [Comment : Créer un gestionnaire d’autorisation personnalisé pour un Service](https://go.microsoft.com/fwlink/?LinkId=192228) pour plus d’informations.
 
 -   Le ServiceSecurityContext pour le message entrant est également disponible dans le workflow en accédant à OperationContext.
 
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
- Microsoft WF Security Pack CTP 1 est la première version community technology preview (CTP) d’un ensemble d’activités et de leur implémentation basée sur [Windows Workflow Foundation](https://msdn.microsoft.com/netframework/aa663328.aspx)dans [.NET Framework 4](https://msdn.microsoft.com/netframework/default.aspx) (WF (4) et [Windows Identity Foundation (WIF)](https://msdn.microsoft.com/security/aa570351.aspx).  Microsoft WF Security Pack CTP 1 contient les deux activités et leurs concepteurs qui expliquent comment vérifier facilement plusieurs scénarios liés à la sécurité en utilisant un workflow, notamment :
+ Microsoft WF Security Pack CTP 1 est la première version community technology preview (CTP) d’un ensemble d’activités et de leur implémentation basée sur [Windows Workflow Foundation](index.md) dans [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF (4) et [Windows Identity Foundation (WIF)](../security/index.md).  Microsoft WF Security Pack CTP 1 contient les deux activités et leurs concepteurs qui expliquent comment vérifier facilement plusieurs scénarios liés à la sécurité en utilisant un workflow, notamment :
 
 1.  Emprunter l'identité d'un client dans le workflow
 

@@ -4,12 +4,12 @@ description: Découvrez le flux de travail « boucle intérieure » pour le d�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2d592f92153040d910dcf529ec21770693f5973c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219086"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442319"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flux de travail de développement de la boucle interne pour les applications Docker
 
@@ -120,7 +120,7 @@ Dans le fichier DockerFile, vous devez également indiquer à Docker d’écoute
 
 Il existe des autres lignes de configuration que vous pouvez ajouter dans le fichier DockerFile en fonction de la langue/infrastructure que vous utilisez, pour que Docker sache comment exécuter l’application. Par exemple, vous devez la ligne ENTRYPOINT avec \[« dotnet », « MyCustomMicroservice.dll »\] pour exécuter une application .NET Core, bien que vous pouvez avoir plusieurs variantes selon l’approche pour générer et exécuter votre service. Si vous utilisez le Kit de développement logiciel et l’interface CLI dotnet pour générer et exécuter l’application .NET, il serait légèrement différente. L’essentiel est que la ligne ENTRYPOINT ainsi que des lignes supplémentaires sera différents selon la langue/plateforme que vous choisissez pour votre application.
 
-**Plus d’informations** pour plus d’informations sur la création d’images Docker pour les applications .NET Core, accédez à <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
+**Plus d’informations** pour plus d’informations sur la création d’images Docker pour les applications .NET Core, accédez à [ https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images ](../../../core/docker/building-net-docker-images.md).
 
 Pour en savoir plus sur la création de vos propres images, accédez à [ https://docs.docker.com/engine/\ didacticiels/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 

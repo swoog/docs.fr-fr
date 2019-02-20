@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms]
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
-ms.openlocfilehash: 714613253c5d3e90750f4ffad1cab34064995877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c6d2156b23965175bafe8f32ccf2fa325ff7e3d3
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418050"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441396"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel, contrôle (Windows Forms)
 Le contrôle `FlowLayoutPanel` réorganise son contenu dans un sens de flux horizontal ou vertical. Vous pouvez encapsuler son contenu d'une ligne à la suivante ou d'une colonne à la suivante. Vous pouvez également découper son contenu au lieu de l'encapsuler.  
@@ -22,11 +22,11 @@ Le contrôle `FlowLayoutPanel` réorganise son contenu dans un sens de flux hori
  [Vue d’ensemble du contrôle FlowLayoutPanel](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)  
  Présente les concepts généraux de lu contrôle `FlowLayoutPanel`, qui vous permet de créer une disposition qui se déroule horizontalement ou verticalement.  
   
- [Guide pratique pour ancrer des contrôles enfants dans un contrôle FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
+ [Guide pratique pour Ancrer et arrimer des contrôles enfants dans un contrôle FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
  Explique comment utiliser les propriétés <xref:System.Windows.Forms.Control.Anchor%2A> et <xref:System.Windows.Forms.Control.Dock%2A> pour ancrer des contrôles enfants dans un contrôle <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
- Consultez également [procédure pas à pas : organisation des contrôles dans Windows Forms à l’aide un FlowLayoutPanel](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
+ Consultez également [procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
- Fournit la documentation de référence pour le contrôle <xref:System.Windows.Forms.FlowLayoutPanel>.
+ Fournit une documentation de référence pour le contrôle <xref:System.Windows.Forms.FlowLayoutPanel>.

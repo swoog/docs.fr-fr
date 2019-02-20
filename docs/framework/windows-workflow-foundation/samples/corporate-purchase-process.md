@@ -2,19 +2,19 @@
 title: Processus d'achat d'entreprise
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837181"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442241"
 ---
 # <a name="corporate-purchase-process"></a>Processus d'achat d'entreprise
 Cet exemple montre comment créer un processus d'achat basé sur des appels d'offres très simples avec sélection automatique de la meilleure proposition. Il combine <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> et <xref:System.Activities.Statements.ForEach%601> ainsi qu'une activité personnalisée pour créer un workflow qui représente le processus.
 
  Cet exemple contient une application cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] qui permet l'interaction avec le processus en tant que participants différents (en tant que demandeur d'origine ou fournisseur particulier).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 -   Visual Studio 2012.
 
@@ -108,7 +108,7 @@ Cet exemple montre comment créer un processus d'achat basé sur des appels d'of
 |RequestForProposal|Un appel d'offres est une invitation pour les fournisseurs à soumettre des propositions sur une marchandise ou un service spécifique.|  
 |VendorProposal|Proposition soumise par un fournisseur dans un appel d'offres concret.|  
 |VendorRepository|Référentiel de fournisseurs. Cette implémentation contient une collection en mémoire d'instances de Fournisseur et de méthodes pour l'exposition de ces instances.|  
-|RfpRepository|Référentiel d'appels d'offres. Cette implémentation contient des utilisations de LINQ to XML pour interroger le fichier XML d'appels d'offres généré par la persistance schématisée. Cette classe implémente [System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx).|  
+|RfpRepository|Référentiel d'appels d'offres. Cette implémentation contient des utilisations de LINQ to XML pour interroger le fichier XML d'appels d'offres généré par la persistance schématisée. |  
 |IOHelper|Cette classe gère tous les problèmes liés aux E/S (dossiers, chemins d'accès, et ainsi de suite).|  
   
 ### <a name="web-client"></a>Client web  
@@ -127,7 +127,7 @@ Cet exemple montre comment créer un processus d'achat basé sur des appels d'of
 |Formulaire|Description|  
 |-|-|  
 |NewRfp|Crée et soumet un nouvel appel d'offres.|  
-|ShowProposals|Affiche tous les appels d'offres actifs et terminés. **Remarque :** vous devrez peut-être cliquer sur le **Actualiser** bouton dans l’interface utilisateur pour voir les modifications dans cet écran une fois que vous créez ou modifiez une demande de proposition.|  
+|ShowProposals|Affiche tous les appels d'offres actifs et terminés. **Remarque :**  Vous devrez peut-être cliquer sur le **Actualiser** bouton dans l’interface utilisateur pour voir les modifications dans cet écran une fois que vous créez ou modifiez une demande de proposition.|  
 |SubmitProposal|Obtient une proposition d'un fournisseur dans un appel d'offres concret. Cette fenêtre est utilisée uniquement par les fournisseurs.|  
 |ViewRfp|Affiche toutes les informations sur un appel d'offres (propositions reçues, dates, valeurs et autres informations). Cette fenêtre est utilisée uniquement par le créateur de l'appel d'offres.|  
   
@@ -155,20 +155,20 @@ Cet exemple montre comment créer un processus d'achat basé sur des appels d'of
   
 ### <a name="web-client-options"></a>Options de Web Client  
   
--   **Créer un nouvel appel d’offres**: crée une nouvelle demande (offres) et démarre un workflow de processus d’achat.  
+-   **Créer un nouvel appel d’offres**: Crée une nouvelle demande (offres) et démarre un workflow de processus d’achat.  
   
--   **Actualiser**: actualise la liste des actifs et terminés dans la fenêtre principale.  
+-   **Actualiser**: Actualise la liste des actifs et terminés dans la fenêtre principale.  
   
--   **Vue**: affiche le contenu d’un appel d’offres existant. Les fournisseurs peuvent soumettre leurs propositions (s'ils y sont invités ou si l'appel d'offres n'est pas terminé).  
+-   **Vue** : Affiche le contenu d’un appel d’offres existant. Les fournisseurs peuvent soumettre leurs propositions (s'ils y sont invités ou si l'appel d'offres n'est pas terminé).  
   
--   Vue en tant que : L’utilisateur peut accéder à l’appel d’offres à l’aide de différentes identités en sélectionnant le participant voulu dans la **afficher en tant que** zone de liste déroulante dans la grille des appels d’offres actifs.  
+-   Afficher en tant que : L’utilisateur peut accéder à l’appel d’offres à l’aide de différentes identités en sélectionnant le participant voulu dans la **afficher en tant que** zone de liste déroulante dans la grille des appels d’offres actifs.  
   
 ### <a name="winforms-client-options"></a>Options de WinForms Client  
   
--   **Créer l’appel d’offres**: crée une nouvelle demande (offres) et démarre un workflow de processus d’achat.  
+-   **Créer l’appel d’offres**: Crée une nouvelle demande (offres) et démarre un workflow de processus d’achat.  
   
--   **Actualiser**: actualise la liste des actifs et terminés dans la fenêtre principale.  
+-   **Actualiser**: Actualise la liste des actifs et terminés dans la fenêtre principale.  
   
--   **Afficher l’appel d’offres**: affiche le contenu d’un appel d’offres existant. Les fournisseurs peuvent soumettre leurs propositions (s'ils y sont invités ou si l'appel d'offres n'est pas terminé).  
+-   **Afficher l’appel d’offres**: Affiche le contenu d’un appel d’offres existant. Les fournisseurs peuvent soumettre leurs propositions (s'ils y sont invités ou si l'appel d'offres n'est pas terminé).  
   
--   **Se connecter en tant que**: l’utilisateur peut accéder à l’appel d’offres à l’aide de différentes identités en sélectionnant le participant voulu dans la **afficher en tant que** zone de liste déroulante dans la grille des appels d’offres actifs.
+-   **Se connecter en tant que**: L’utilisateur peut accéder à l’appel d’offres à l’aide de différentes identités en sélectionnant le participant voulu dans la **afficher en tant que** zone de liste déroulante dans la grille des appels d’offres actifs.

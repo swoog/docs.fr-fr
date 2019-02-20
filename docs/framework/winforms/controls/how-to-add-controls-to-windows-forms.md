@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611356"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443170"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procédure : Ajouter des contrôles aux Windows Forms
 La plupart des formulaires sont conçus en ajoutant des contrôles à la surface du formulaire pour définir une interface utilisateur (IU). Un *contrôle* est un composant d’un formulaire utilisé pour afficher des informations ou accepter l’entrée d’utilisateur. Pour plus d’informations sur les contrôles, consultez [des contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
@@ -24,7 +24,7 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
   
 ### <a name="to-draw-a-control-on-a-form"></a>Pour dessiner un contrôle sur un formulaire  
   
-1.  Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  Dans le **boîte à outils**, cliquez sur le contrôle que vous souhaitez ajouter à votre formulaire.  
   
@@ -37,7 +37,7 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
   
 ### <a name="to-drag-a-control-to-a-form"></a>Pour faire glisser un contrôle à un formulaire  
   
-1.  Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Ouvrez le formulaire. Pour plus d'informations, voir [Procédure : Afficher des Windows Forms dans le concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  Dans le **boîte à outils**, cliquez sur le contrôle souhaité et faites-le glisser vers votre formulaire.  
   

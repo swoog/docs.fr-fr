@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558954"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441357"
 ---
 # <a name="how-to-create-application-settings"></a>Procédure : Créer des paramètres d’Application
 À l'aide de code managé, vous pouvez créer des paramètres d'application et les lier à des propriétés ou des contrôles sur votre formulaire, pour que ces paramètres soient chargés et enregistrés automatiquement au moment de l'exécution.  
   
  Dans la procédure suivante, vous allez créer manuellement une classe wrapper qui dérive de <xref:System.Configuration.ApplicationSettingsBase>. Vous ajouterez à cette classe une propriété accessible publiquement pour chaque paramètre d'application que vous souhaitez exposer.  
   
- Vous pouvez également appliquer cette procédure avec un minimum de code dans le concepteur Visual Studio.  Voir également [Guide pratique pour Créer des paramètres d’Application à l’aide du concepteur](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Vous pouvez également appliquer cette procédure avec un minimum de code dans le concepteur Visual Studio.  Voir également [Guide pratique pour Créer des paramètres d’Application à l’aide du concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/wabtadw6(v=vs.100)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Pour créer des paramètres d'application par programmation  
   

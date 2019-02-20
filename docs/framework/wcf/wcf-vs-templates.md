@@ -2,12 +2,12 @@
 title: Modèles Visual Studio WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: a7529b14c3c83f0df7b41581ef18e5192209bc5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624936"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443235"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modèles Visual Studio WCF
 Modèles Visual Studio de Windows Communication Foundation (WCF) sont prédéfinis et des modèles d’élément que vous pouvez utiliser dans Visual Studio pour créer rapidement des services WCF et les applications s’y rapportant.  
@@ -44,7 +44,7 @@ Modèles Visual Studio de Windows Communication Foundation (WCF) sont prédéfin
   
  Le modèle crée automatiquement un site Web (à déployer dans un répertoire virtuel) et y héberge un service.  
   
-### <a name="wcf-web-site-template"></a>Modèle de site web WCF  
+### <a name="wcf-web-site-template"></a>Modèle de site Web WCF  
  Le modèle de Site Web de WCF est disponible dans la boîte de dialogue Nouveau projet sous **Visual C# \Web Site\WCF Service** et **Visual Basic\Web Site\WCF Service**. Cela crée les mêmes fichiers que ceux du modèle d’application de service WCF, mais les classe comme s’il s’agissait d’un site web ASP.NET. Les dossiers App_Code et App_Data sont créés.  
   
 ### <a name="wcf-service-item-template"></a>Modèle d'élément de service WCF  
@@ -52,14 +52,14 @@ Modèles Visual Studio de Windows Communication Foundation (WCF) sont prédéfin
   
  Pour utiliser ce modèle, accédez à la **l’Explorateur de solutions** volet, cliquez sur le nom de votre projet, pointez sur **ajouter**, puis cliquez sur **un nouvel élément** pour lancer le **Ajouter nouveau Élément** boîte de dialogue.  
   
- L’interface de service et les fichiers d’implémentation sont placés dans le dossier du projet racine.  
+ L'interface de service et les fichiers d'implémentation sont placés dans le dossier du projet racine.  
   
  Le modèle tente de fusionner la section de configuration du nouveau service avec le fichier de configuration existant, si leurs types sont compatibles.  
   
  Un fichier d'hôte de service (service1.svc) est également créé si le projet existant est un projet Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Modèles d'élément et de projet de service WF WCF.  
- Ces modèles créent des services WCF qui hébergent un Service de Workflow, qui est un flux de travail qui est accessible comme un service web. Différents modèles existent pour les XAML et les modèles de programmation impératifs. À l'aide des modèles, vous pouvez créer des workflows séquentiels ou des workflows de l'ordinateur d'état. Pour plus d’informations sur ces types de flux de travail, consultez [Windows Workflow Foundation didacticiels](https://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). Pour plus d’informations sur la création de projets de workflow, consultez [création de projets de flux de travail hérité](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Ces modèles créent des services WCF qui hébergent un Service de Workflow, qui est un flux de travail qui est accessible comme un service web. Différents modèles existent pour les XAML et les modèles de programmation impératifs. À l'aide des modèles, vous pouvez créer des workflows séquentiels ou des workflows de l'ordinateur d'état. Pour plus d’informations sur ces types de flux de travail, consultez [Comment : Créer un flux de travail](../windows-workflow-foundation/how-to-create-a-workflow.md). Pour plus d’informations sur la création de projets de workflow, consultez [création de projets de flux de travail hérité](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Concepteur de Visual Studio est plus réactif lorsque type XOML workflows sont utilisés à la place du code en fonction ceux. Le workflow XOML est le type de workflow par défaut à créer.  
   

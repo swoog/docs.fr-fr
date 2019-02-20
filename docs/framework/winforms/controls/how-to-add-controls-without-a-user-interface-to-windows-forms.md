@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 442a6175b1b378cf3489314e190c58312a327c01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26685ff0ff67ac3b7f1b9837cc71cfc0e683b292
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738587"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442111"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procédure : Ajouter des contrôles sans Interface utilisateur à des Windows Forms
 Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre application. Contrairement à d’autres contrôles, composants ne fournissent pas d’une interface utilisateur à l’utilisateur et n’avez donc pas besoin doit être affiché sur l’aire du Concepteur de formulaires Windows. Lorsqu’un composant est ajouté à un formulaire, le Concepteur de formulaires Windows affiche une barre d’état redimensionnable en bas de l’écran où tous les composants sont affichés. Une fois qu’un contrôle a été ajouté à la barre d’état du composant, vous pouvez sélectionner le composant et définissez ses propriétés comme vous le feriez pour tout autre contrôle sur le formulaire.  
@@ -29,13 +29,13 @@ Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre 
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Pour ajouter un composant à un formulaire Windows  
   
-1.  Ouvrez le formulaire. Pour plus d’informations, consultez [Comment : Afficher des Windows Forms dans le concepteur](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Ouvrez le formulaire. Pour plus d’informations, consultez [Guide pratique pour Afficher des Windows Forms dans le concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  Dans le **boîte à outils**, cliquez sur un composant et faites-le glisser vers votre formulaire.  
   
      Votre composant s’affiche dans la barre d’état du composant.  
   
- En outre, les composants peuvent être ajoutés à un formulaire au moment de l’exécution. Il s’agit d’un scénario courant, notamment parce que les composants n’ont pas une expression visual, contrairement aux contrôles qui ont une interface utilisateur. Dans l’exemple ci-dessous, un <xref:System.Windows.Forms.Timer> composant est ajouté au moment de l’exécution. (Notez que Visual Studio contient un nombre de différents minuteurs ; dans ce cas, utiliser des formulaires Windows <xref:System.Windows.Forms.Timer> composant. Pour plus d’informations sur les différents minuteurs dans Visual Studio, consultez [Introduction aux minuteurs serveur](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
+ En outre, les composants peuvent être ajoutés à un formulaire au moment de l’exécution. Il s’agit d’un scénario courant, notamment parce que les composants n’ont pas une expression visual, contrairement aux contrôles qui ont une interface utilisateur. Dans l’exemple ci-dessous, un <xref:System.Windows.Forms.Timer> composant est ajouté au moment de l’exécution. (Notez que Visual Studio contient un nombre de différents minuteurs ; dans ce cas, utiliser des formulaires Windows <xref:System.Windows.Forms.Timer> composant. Pour plus d’informations sur les différents minuteurs dans Visual Studio, consultez [Introduction aux minuteurs serveur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)  
   
 > [!CAUTION]
 >  Composants possèdent souvent des propriétés spécifiques au contrôle qui doivent être définies pour le composant de fonctionner efficacement. Dans le cas de la <xref:System.Windows.Forms.Timer> composant ci-dessous, vous définissez le `Interval` propriété. Veillez, lorsque vous ajoutez des composants à votre projet, définissez les propriétés nécessaires pour ce composant.  
