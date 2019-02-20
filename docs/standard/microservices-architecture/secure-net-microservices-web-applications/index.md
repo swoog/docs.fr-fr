@@ -1,15 +1,9 @@
 ---
 title: Sécurisation des microservices .NET et des applications web
-description: 'Sécurité dans les microservices .NET et les applications web : Découvrez les options d’authentification dans les applications web ASP.NET Core.'
+description: "Sécurité dans les microservices .NET et les applications web\_: Découvrez les options d’authentification dans les applications web ASP.NET Core."
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: e53e6a50c1fdfaff6839a0a1e328047562a47824
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333495"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Sécuriser les microservices .NET et les applications web
 
@@ -53,7 +47,7 @@ L’utilisation d’ASP.NET Core Identity autorise plusieurs scénarios :
 
 - Authentification des utilisateurs à l’aide du type SignInManager. Vous pouvez utiliser `signInManager.SignInAsync` pour vous connecter directement, ou `signInManager.PasswordSignInAsync` pour confirmer que le mot de passe utilisateur est correct avant de vous connecter.
 
-- Identification d’un utilisateur en fonction des informations stockées dans un cookie (qui est lu par le middleware ASP.NET Core Identity) de telle sorte que les requêtes suivantes d’un navigateur incluent l’identité et les revendications de l’utilisateur connecté.
+- Identification d’un utilisateur en fonction des informations stockées dans un cookie (qui est lu par l’intergiciel ASP.NET Core Identity) de telle sorte que les requêtes suivantes d’un navigateur incluent l’identité et les revendications de l’utilisateur connecté.
 
 Par ailleurs, ASP.NET Core Identity prend en charge l’[authentification à deux facteurs](/aspnet/core/security/authentication/2fa).
 
@@ -63,7 +57,7 @@ Pour les scénarios d’authentification qui utilisent un magasin de données ut
 
 ASP.NET Core prend aussi en charge l’utilisation de [fournisseurs d’authentification externes](/aspnet/core/security/authentication/social/) pour permettre aux utilisateurs de se connecter via des flux [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2). Cela signifie que les utilisateurs peuvent se connecter en utilisant les processus d’authentification existants de certains fournisseurs, tels que Microsoft, Google, Facebook ou Twitter, et associer ces identités à une identité ASP.NET Core dans votre application.
 
-Pour utiliser l’authentification externe, vous devez intégrer le middleware d’authentification approprié au pipeline de traitement des requêtes HTTP de votre application. Ce middleware est chargé de gérer les requêtes pour retourner les itinéraires d’URI du fournisseur d’authentification, capturant ainsi les informations d’identité et les mettant à disposition via la méthode SignInManager.GetExternalLoginInfo.
+Pour utiliser l’authentification externe, vous devez intégrer l’intergiciel (middleware) d’authentification approprié au pipeline de traitement des requêtes HTTP de votre application. Cet intergiciel est chargé de gérer les requêtes pour retourner les itinéraires d’URI du fournisseur d’authentification, capturant ainsi les informations d’identité et les mettant à disposition via la méthode SignInManager.GetExternalLoginInfo.
 
 Les fournisseurs d’authentification externes courants et les packages NuGet qui leur sont associés vous sont présentés dans le tableau suivant :
 
@@ -125,7 +119,7 @@ Si vous optez pour l’option d’authentification **Compte d’utilisateur indi
 
 **Figure 9-3**. sélection d’une option visant à utiliser l’authentification externe pendant la création d’un projet d’application web
 
-Outre les fournisseurs d’authentification externe mentionnés ci-dessus, il existe des packages tiers qui proposent un middleware permettant l’utilisation d’un nombre bien plus important de fournisseurs d’authentification externe. Pour obtenir la liste, consultez le dépôt [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) sur GitHub.
+Outre les fournisseurs d’authentification externe mentionnés ci-dessus, il existe des packages tiers qui proposent un intergiciel permettant l’utilisation d’un nombre bien plus important de fournisseurs d’authentification externe. Pour obtenir la liste, consultez le dépôt [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) sur GitHub.
 
 Vous pouvez également créer votre propre middleware d’authentification externe pour répondre à des besoins particuliers.
 
@@ -248,8 +242,6 @@ public void ConfigureServices(IServiceCollection services)
 
     // Add Authentication services
 
-    var identityUrl = configuration.GetValue<string>("IdentityUrl");
-
     services.AddAuthentication(options =>
     {
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -268,13 +260,13 @@ Les paramètres utilisés dans ce cas sont les suivants :
 
 - `Audience` représente le récepteur du jeton entrant ou la ressource à laquelle le jeton accorde l’accès. Si la valeur spécifiée dans ce paramètre ne correspond pas à celle du paramètre du jeton, celui-ci est rejeté.
 
-- `Authority` est l’adresse du serveur d’authentification émetteur de jetons. Le middleware d’authentification du porteur de jeton JWT utilise cet URI pour obtenir la clé publique qui permet de valider la signature du jeton. Par ailleurs, le middleware vérifie que la valeur du paramètre `iss` du jeton correspond à cet URI.
+- `Authority` est l’adresse du serveur d’authentification émetteur de jetons. L’intergiciel d’authentification du porteur de jeton JWT utilise cet URI pour obtenir la clé publique qui permet de valider la signature du jeton. Par ailleurs, le middleware vérifie que la valeur du paramètre `iss` du jeton correspond à cet URI.
 
 Un autre paramètre, `RequireHttpsMetadata`, est utile pour les tests ; vous définissez ce paramètre avec la valeur false pour effectuer des tests dans des environnements où vous n’avez pas de certificats. Dans les déploiements réels, les jetons du porteur JWT doivent toujours être transmis uniquement sur HTTPS.
 
-Quand ce middleware est en place, les jetons JWT sont automatiquement extraits des en-têtes d’autorisation. Ils sont ensuite désérialisés, validés (en utilisant les valeurs des paramètres `Audience` et `Authority`) puis stockés en tant qu’informations utilisateur pour être référencées par la suite par des actions MVC ou des filtres d’autorisation.
+Quand cet intergiciel est en place, les jetons JWT sont automatiquement extraits des en-têtes d’autorisation. Ils sont ensuite désérialisés, validés (en utilisant les valeurs des paramètres `Audience` et `Authority`) puis stockés en tant qu’informations utilisateur pour être référencées par la suite par des actions MVC ou des filtres d’autorisation.
 
-Le middleware d’authentification du porteur JWT peut aussi prendre en charge des scénarios plus avancés, tels que l’utilisation d’un certificat local pour valider un jeton si l’autorité n’est pas disponible. Pour ce scénario, vous pouvez spécifier un objet `TokenValidationParameters` dans l’objet `JwtBearerOptions`.
+L’intergiciel d’authentification du porteur JWT peut aussi prendre en charge des scénarios plus avancés, tels que l’utilisation d’un certificat local pour valider un jeton si l’autorité n’est pas disponible. Pour ce scénario, vous pouvez spécifier un objet `TokenValidationParameters` dans l’objet `JwtBearerOptions`.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
