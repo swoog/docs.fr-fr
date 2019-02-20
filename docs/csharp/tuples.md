@@ -3,12 +3,12 @@ title: Types tuple - Guide C#
 description: En savoir plus sur les types tuple nommés et sans nom en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155130"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332752"
 ---
 # <a name="c-tuple-types"></a>Types tuple C# #
 
@@ -82,7 +82,7 @@ Il existe deux conditions où les noms de champ de candidat ne sont pas projeté
 
 Ces conditions évitent toute ambiguïté. Ces noms provoqueraient une ambiguïté s’ils étaient utilisés comme noms de champ pour un champ dans un tuple. Aucune de ces conditions n’entraîne d’erreur au moment de la compilation. Au lieu de cela, les éléments sans noms projetés n’ont pas de noms sémantiques projetés.  Les exemples suivants illustrent ces conditions :
 
-[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 Ces cas de figure n’entraînent aucune erreur du compilateur, car ce serait une modification avec rupture du code écrit en C# 7.0 si les projections de nom de champ de tuple n’étaient pas disponibles.
 
@@ -90,29 +90,31 @@ Ces cas de figure n’entraînent aucune erreur du compilateur, car ce serait un
 
 À compter de C# 7.3, les types tuple prennent en charge les opérateurs `==` et `!=`. Ces opérateurs fonctionnent en comparant, dans l’ordre, chaque membre de l’argument de gauche à chaque membre de l’argument de droite. Ces comparaisons se court-circuitent. Elles arrêtent l’évaluation des membres dès qu’une paire n’est pas égale. Les exemples de code suivants utilisent `==`, mais toutes les règles de comparaison s’appliquent à `!=`. L’exemple de code suivant montre une comparaison d’égalité pour deux paires d’entiers :
 
-[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
 Il existe plusieurs règles qui rendent les tests d’égalité de tuple plus pratiques. L’égalité de tuple effectue des [conversions de type «lifted»](~/_csharplang/spec/conversions.md#lifted-conversion-operators) si un des tuples est un tuple nullable, comme indiqué dans le code suivant :
 
-
-[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 L’égalité de tuple effectue également des conversions implicites sur chaque membre de deux tuples. Cela inclut les conversions « lifted », les conversions étendues ou d’autres conversions implicites. Les exemples suivants montrent qu'un tuple entier à 2 éléments peut être comparé à un tuple long à 2 éléments en raison de la conversion implicite d'entier à long :
 
-[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 Les noms des membres du tuple ne participent pas aux tests d'égalité. Cependant, si l'un des opérandes est un tuple littéral avec des noms explicites, le compilateur génère une alerte CS8383 si ces noms ne correspondent pas aux noms des autres opérandes.
 Si les deux opérandes sont des tuples littéraux, l'avertissement est généré pour l'opérande de droite, comme le montre l'exemple ci-dessous :
 
-[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 Enfin, les tuples peuvent contenir des tuples imbriqués. L’égalité de tuple compare la « forme » de chaque opérande via des tuples imbriqués, comme le montre l’exemple suivant :
 
-[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
+Comparer deux tuples pour vérifier leur égalité (ou leur inégalité) lorsqu’ils ont des formes différentes est une erreur de compilation. Le compilateur ne tentera pas de déconstruire des tuples imbriqués afin de les comparer.
 
 ## <a name="assignment-and-tuples"></a>Affectation et tuples
 
-Le langage prend en charge l’affectation entre les types de tuples ayant le même nombre d’éléments, où chaque élément de la partie droite peut être converti implicitement en son élément correspondant de la partie gauche. Les autres conversions ne sont pas prises en compte pour les affectations. Examinons les types d’affectation qui sont autorisés entre les types tuple.
+Le langage prend en charge l’affectation entre les types de tuples ayant le même nombre d’éléments, où chaque élément de la partie droite peut être converti implicitement en son élément correspondant de la partie gauche. D’autres conversions ne sont pas prises en compte pour les affectations. Affecter un tuple à un autre lorsqu’ils ont des formes différentes est une erreur de compilation. Le compilateur ne tentera pas de déconstruire des tuples imbriqués afin de les affecter.
+Examinons les types d’affectation qui sont autorisés entre les types tuple.
 
 Prenez en compte les variables utilisées dans les exemples suivants :
 
@@ -146,7 +148,7 @@ L’une des utilisations les plus courantes des tuples est en tant que valeur de
 > Ces exemples calculent l’écart-type empirique non corrigé.
 > La formule de l’écart-type empirique corrigé diviserait la somme des écarts au carré par rapport à la moyenne par (N-1) au lieu de N, comme avec la méthode d’extension `Average`. Pour plus d’informations sur les différences entre ces formules de calcul d’écart-type, consultez un texte de statistiques.
 
-Le code précédent utilise la formule classique de calcul de l’écart-type. Elle génère la réponse correcte, mais constitue une implémentation peu efficace. Cette méthode énumère deux fois la suite : une fois pour générer la moyenne et une fois pour générer la moyenne quadratique des écarts par rapport à la moyenne.
+Le code précédent utilise la formule classique de calcul de l’écart-type. Elle génère la réponse correcte, mais constitue une implémentation peu efficace. Cette méthode énumère deux fois la séquence : une fois pour générer la moyenne et une fois pour générer la moyenne quadratique des écarts par rapport à la moyenne.
 (Souvenez-vous que les requêtes LINQ sont évaluées de manière différée, de sorte que le calcul des écarts par rapport à la moyenne et de la moyenne de ces écarts effectue une seule énumération.)
 
 Il existe une formule alternative qui calcule l’écart-type à l’aide d’une seule énumération de la suite.  Ce calcul génère deux valeurs en énumérant la suite : la somme de tous les éléments de la suite et la somme de chaque valeur au carré :

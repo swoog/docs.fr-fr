@@ -1,16 +1,16 @@
 ---
 title: in, modificateur de paramètre - Référence C#
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 02/12/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631406"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219553"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in, modificateur de paramètre (référence C#)
 
@@ -20,11 +20,14 @@ Le mot clé `in` entraîne le passage des arguments par référence. Il est simi
 
 L’exemple précédent montre que le modificateur `in` n’est généralement pas nécessaire sur le site d’appel. Il l’est uniquement dans la déclaration de méthode.
 
+
 > [!NOTE] 
 > Le mot clé `in` peut également être utilisé avec un paramètre de type générique pour spécifier que le paramètre de type est contravariant, dans le cadre d’une instruction `foreach` ou d’une clause `join` dans une requête LINQ. Pour plus d’informations sur l’utilisation du mot clé `in` dans ces contextes, consultez [in](in.md), qui fournit des liens vers toutes ces utilisations.
   
  Les variables passées comme des arguments `in` doivent être initialisées avant d’être passées dans un appel de méthode. Toutefois, la méthode appelée ne peut pas attribuer de valeur ou modifier l’argument.  
-  
+
+Le modificateur de paramètre `in` est disponible dans C# 7.2 et versions ultérieures. Les versions précédentes génèrent une erreur de compilateur `CS8107` (« La fonctionnalité "références en lecture seule" n’est pas disponible dans C# 7.0. Utilisez la version 7.2 ou supérieure du langage. » Pour configurer la version du langage du compilateur, consultez [Sélectionner la version du langage C#](../configure-language-version.md).
+
  Bien que les mots clés `in`, `ref` et `out` entraînent un comportement différent au moment de l’exécution, ils ne sont pas considérés comme faisant partie de la signature de la méthode au moment de la compilation. Par conséquent, les méthodes ne peuvent pas être surchargées si la seule différence est que l’une d’elles accepte un argument `ref` ou `in` et que l’autre accepte un argument `out`. Le code suivant, par exemple, ne se compilera pas :  
   
 ```csharp

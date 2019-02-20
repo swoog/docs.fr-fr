@@ -1,44 +1,55 @@
 ---
 title: <<, opérateur - Référence C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - <<_CSharpKeyword
 helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: 0271c97bc624a8946b90508e9ce39d217a128c05
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: deea2d0f720ba7f096e65c67378586bc88f24673
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261748"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219435"
 ---
 # <a name="-operator-c-reference"></a>\<\<, opérateur (référence C#)
 
-L’opérateur de décalage vers la gauche (`<<`) décale son premier opérande vers la gauche du nombre de bits spécifié par son deuxième opérande. Le deuxième opérande doit être de type [int](../keywords/int.md) ou d’un type pour lequel une conversion numérique implicite vers `int` est prédéfinie.
+L’opérateur de décalage vers la gauche `<<` décale son premier opérande vers la gauche du nombre de bits défini par son deuxième opérande. Tous les types d’entiers acceptent l’opérateur `<<`. Cependant, le deuxième opérande doit être de type [int](../keywords/int.md) ou d’un type pour lequel une [conversion numérique implicite](../keywords/implicit-numeric-conversions-table.md) vers `int` est prédéfinie.
 
-## <a name="remarks"></a>Notes
+Les bits d’ordre supérieur qui sont en dehors de la plage du type de résultat sont ignorés, et les positions de bits vides d’ordre inférieur sont définies sur zéro, comme le montre l’exemple suivant :
 
-Si le premier opérande est de type [int](../keywords/int.md) ou [uint](../keywords/uint.md) (quantité de 32 bits), la valeur du décalage est donnée par les cinq bits de poids faible du second opérande. Autrement dit, la valeur réelle du décalage est comprise entre 0 et 31 bits.
+[!code-csharp-interactive[left shift example](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#LeftShift)]
 
-Si le premier opérande est de type [long](../keywords/long.md) ou [ulong](../keywords/ulong.md) (quantité de 64 bits), la valeur du décalage est donnée par les six bits de poids faible du second opérande. Autrement dit, la valeur réelle du décalage est comprise entre 0 et 63 bits.
+## <a name="shift-count"></a>Valeur du décalage
 
-Les bits de poids fort qui ne se trouvent pas dans la plage du type du premier opérande après le décalage sont ignorés, et les bits vides de poids faible sont remplis de zéros. Les opérations de décalage ne provoquent jamais de dépassements de capacité.
+Pour l’expression `x << count`, la valeur réelle du décalage varie selon le type de `x` comme suit :
 
-Les types définis par l’utilisateur peuvent surcharger l’opérateur `<<` (consultez [operator](../keywords/operator.md)) ; le type du premier opérande doit être le type défini par l’utilisateur, et le type du second opérande doit être `int`. Quand un opérateur binaire est surchargé, l’opérateur d’assignation correspondant, le cas échéant, est aussi implicitement surchargé.
+- si le type `x` est [int ](../keywords/int.md) ou [uint](../keywords/uint.md), la valeur du décalage est donnée par les *cinq* bits d’ordre inférieur du deuxième opérande. La valeur de décalage est donc calculée à partir de `count & 0x1F` (ou de `count & 0b_1_1111`).
 
-## <a name="example"></a>Exemple
+- si le type `x` est [long ](../keywords/long.md) ou [ulong](../keywords/ulong.md), la valeur du décalage est donnée par les *six* bits d’ordre inférieur du deuxième opérande. La valeur de décalage est donc calculée à partir de `count & 0x3F` (ou de `count & 0b_11_1111`).
 
-[!code-csharp[csRefOperators#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#14)]
+L’exemple suivant illustre ce comportement :
 
-## <a name="comments"></a>Commentaires
+[!code-csharp-interactive[shift count example](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#LeftShiftByLargeCount)]
 
-Notez que `i<<1` et `i<<33` donnent le même résultat, car 1 et 33 possèdent les cinq mêmes bits de poids faible.
+## <a name="remarks"></a>Remarques
+
+Les opérations de décalage ne provoquent jamais de dépassements de capacité et donnent les mêmes résultats dans des contextes [checked and unchecked](../keywords/checked-and-unchecked.md).
+
+## <a name="operator-overloadability"></a>Capacité de surcharge de l’opérateur
+
+Les types définis par l’utilisateur peuvent [surcharger](../keywords/operator.md) l’opérateur `<<`. Si un type `T` défini par l’utilisateur surcharge l’opérateur `<<`, le premier opérande doit être de type `T` et le deuxième de type `int`. Quand l’opérateur `<<` est surchargé, [l’opérateur d’assignation de décalage vers la gauche](left-shift-assignment-operator.md) `<<=` est aussi implicitement surchargé.
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour plus d’informations, voir la section [Opérateurs de décalage](~/_csharplang/spec/expressions.md#shift-operators) de la [spécification du langage C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Référence C#](../index.md)
 - [Guide de programmation C#](../../programming-guide/index.md)
 - [Opérateurs C#](index.md)
+- [>> opérateur](right-shift-operator.md)
