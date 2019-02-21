@@ -3,19 +3,13 @@ title: Nouveautés du .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- what's new [.NET Framework]
+  - 'what''s new [.NET Framework]'
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416025"
 ---
 # Nouveautés du .NET Framework <a name="introduction"></a>
 
@@ -612,7 +606,7 @@ Vous pouvez désormais utiliser une fonction tactile ou stylet basée sur les [m
 
 **Nouvelle implémentation pour l’impression d’API WPF**
 
-Les API d’impression de WPF de la classe <xref:System.Printing.PrintQueue?displayProperty=nameWithType> appellent l’[API Print Document Package](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx) de Windows au lieu de l’[API d’impression XPS](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx) dépréciée. Pour connaître l’impact de cette modification sur la compatibilité des applications, consultez [Reciblage des modifications dans le .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Les API d’impression de WPF de la classe <xref:System.Printing.PrintQueue?displayProperty=nameWithType> appellent l’[API Print Document Package](/windows/desktop/printdocs/tailored-app-printing-api) de Windows au lieu de l’[API d’impression XPS](/windows/desktop/printdocs/xps-printing) dépréciée. Pour connaître l’impact de cette modification sur la compatibilité des applications, consultez [Reciblage des modifications dans le .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="v462" />
 
@@ -1168,7 +1162,7 @@ Désormais, SqlClient fournit automatiquement une connexion plus rapide à un gr
 
 **Exemples**
 
- Plusieurs [exemples WPF](https://msdn.microsoft.com/library/ms771633.aspx) sont disponibles sur MSDN. Plus de 200 des exemples les plus populaires (en fonction de leur utilisation) seront déplacés vers un [référentiel Open Source GitHub](https://github.com/Microsoft/WPF-Samples). Aidez-nous à améliorer nos exemples en nous envoyant une requête d’extraction ou en ouvrant un [problème GitHub](https://github.com/Microsoft/WPF-Samples/issues).
+ Vous trouverez des exemples WPF dans le dépôt GitHub [Microsoft/WPF-Samples](https://github.com/Microsoft/WPF-Samples). Aidez-nous à améliorer nos exemples en nous envoyant une requête d’extraction ou en ouvrant un [problème GitHub](https://github.com/Microsoft/WPF-Samples/issues).
 
  **Extensions DirectX**
 
@@ -1316,7 +1310,7 @@ L’API de profilage non managée a été améliorée comme suit :
 
     - **Mises à jour du chiffrement**
 
-         L’API <xref:System.Security.Cryptography?displayProperty=nameWithType> est mise à jour pour prendre en charge les [API de chiffrement CNG de Windows](/windows/desktop/SecCNG/cng-reference). Jusqu’à présent, le .NET Framework reposait entièrement sur une [version antérieure des API de chiffrement Windows](/windows/desktop/SecCrypto/cryptography-portal) comme base d’implémentation de <xref:System.Security.Cryptography?displayProperty=nameWithType>. Nous avons reçu des demandes pour la prise en charge de l’API CNG, car elle prend en charge les [algorithmes de chiffrement modernes](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support), qui sont importants pour certaines catégories d’applications.
+         L’API <xref:System.Security.Cryptography?displayProperty=nameWithType> est mise à jour pour prendre en charge les [API de chiffrement CNG de Windows](/windows/desktop/SecCNG/cng-reference). Jusqu’à présent, le .NET Framework reposait entièrement sur une [version antérieure des API de chiffrement Windows](/windows/desktop/SecCrypto/cryptography-portal) comme base d’implémentation de <xref:System.Security.Cryptography?displayProperty=nameWithType>. Nous avons reçu des demandes pour la prise en charge de l’API CNG, car elle prend en charge les [algorithmes de chiffrement modernes](/windows/desktop/SecCNG/cng-features#suite-b-support), qui sont importants pour certaines catégories d’applications.
 
          Le .NET Framework 4.6 inclut les améliorations suivantes pour prendre en charge l'API de chiffrement CNG de Windows :
 
@@ -1765,7 +1759,7 @@ L’API de profilage non managée a été améliorée comme suit :
 
 ASP.NET 4.5 et 4.5.1 ajoutent la liaison de modèle pour Web Forms, la prise en charge de WebSocket, les gestionnaires asynchrones, les améliorations de performances et de nombreuses autres fonctionnalités. Pour plus d'informations, reportez-vous aux ressources suivantes :
 
-- [ASP.NET 4.5 et Visual Studio 2012](https://msdn.microsoft.com/library/hh420390(v=vs.110).aspx)
+- [ASP.NET 4.5 et Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [ASP.NET et Web Tools pour Visual Studio 2013 - Notes de publication](/aspnet/visual-studio/overview/2013/release-notes)
 
