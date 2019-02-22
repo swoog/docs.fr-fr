@@ -1,13 +1,13 @@
 ---
 title: Séquences
 description: Découvrez comment utiliser F# séquences, lorsque vous avez une grande collection ordonnée de données mais pas nécessairement utiliser tous les éléments.
-ms.date: 05/16/2016
-ms.openlocfilehash: a86d22c834b377d4e92cfa610cdd3b498dd86dfa
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/19/2019
+ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611995"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583925"
 ---
 # <a name="sequences"></a>Séquences
 
@@ -98,7 +98,7 @@ Vous pouvez définir des séquences infinies à l’aide de la [Seq.initInfinite
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) génère une séquence à partir d’une fonction de calcul qui prend un état et le transforme pour produire chaque élément suivant dans la séquence. L’état est simplement une valeur qui est utilisée pour calculer chaque élément et pouvez modifier chaque élément est calculée. Le deuxième argument de `Seq.unfold` est la valeur initiale est utilisée pour démarrer la séquence. `Seq.unfold` utilise un type d’option pour l’état, ce qui vous permet de terminer la séquence en retournant la `None` valeur. Le code suivant montre deux exemples de séquences, `seq1` et `fib`, qui sont générés par une `unfold` opération. La première, `seq1`, est simplement une séquence simple avec des nombres jusqu'à 100. La seconde, `fib`, utilise `unfold` pour calculer la séquence de Fibonacci. Étant donné que chaque élément dans la séquence de Fibonacci est la somme des deux nombres de Fibonacci précédents, la valeur d’état est un tuple qui se compose de deux nombres précédents dans la séquence. La valeur initiale est `(1,1)`, les deux premiers nombres dans la séquence.
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) génère une séquence à partir d’une fonction de calcul qui prend un état et le transforme pour produire chaque élément suivant dans la séquence. L’état est simplement une valeur qui est utilisée pour calculer chaque élément et pouvez modifier chaque élément est calculée. Le deuxième argument de `Seq.unfold` est la valeur initiale est utilisée pour démarrer la séquence. `Seq.unfold` utilise un type d’option pour l’état, ce qui vous permet de terminer la séquence en retournant la `None` valeur. Le code suivant montre deux exemples de séquences, `seq1` et `fib`, qui sont générés par une `unfold` opération. La première, `seq1`, est juste une séquence simple avec des nombres jusqu'à 20. La seconde, `fib`, utilise `unfold` pour calculer la séquence de Fibonacci. Étant donné que chaque élément dans la séquence de Fibonacci est la somme des deux nombres de Fibonacci précédents, la valeur d’état est un tuple qui se compose de deux nombres précédents dans la séquence. La valeur initiale est `(1,1)`, les deux premiers nombres dans la séquence.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 

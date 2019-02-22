@@ -2,12 +2,12 @@
 title: Paramètres et arguments
 description: En savoir plus sur F# prise en charge de langage de définition de paramètres et en transmettant des arguments aux fonctions, méthodes et propriétés.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612476"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583496"
 ---
 # <a name="parameters-and-arguments"></a>Paramètres et arguments
 
@@ -140,7 +140,17 @@ type C =
         printfn "%s" message
 ```
 
-La valeur donnée en tant qu’argument à `DefaultParameterValue` doit correspondre au type du paramètre, par exemple, ce qui suit n’est pas autorisé :
+Vous pouvez également spécifier un nouvel objet en tant que valeur de paramètre par défaut. Par exemple, le `Foo` membre peut avoir un facultatif `CanceallationToken` comme entrée à la place :
+
+```fsharp
+open System.Threading
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
+        printfn "%A" ct
+```
+
+La valeur donnée en tant qu’argument à `DefaultParameterValue` doit correspondre au type du paramètre. Par exemple, les éléments suivants sont interdit :
 
 ```fsharp
 type C =
