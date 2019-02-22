@@ -19,7 +19,7 @@ Dans les scénarios de microservice, l’authentification est généralement gé
 
 **Figure 9-1**. authentification centralisée avec une passerelle d’API
 
-Si les services sont directement accessibles, il est possible d’authentifier les utilisateurs à l’aide d’un service d’authentification comme Azure Active Directory ou un microservice d’authentification dédié faisant office de service d’émission jeton de sécurité (STS). Les décisions d’approbation sont partagées entre les services au moyen de jetons de sécurité ou de cookies. (Ces jetons peuvent être partagés entre applications, si nécessaire, dans ASP.NET Core avec les [services de protection des données](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications).) Ce modèle est illustré dans la figure 9-2.
+Si les services sont directement accessibles, il est possible d’authentifier les utilisateurs à l’aide d’un service d’authentification comme Azure Active Directory ou un microservice d’authentification dédié faisant office de service d’émission jeton de sécurité (STS). Les décisions d’approbation sont partagées entre les services au moyen de jetons de sécurité ou de cookies. (Ces jetons peuvent être partagés entre des applications ASP.NET Core, si nécessaire, via l’implémentation du [partage de cookie](/aspnet/core/security/cookie-sharing).) Ce modèle est illustré dans la figure 9-2.
 
 ![Quand les microservices sont accessibles directement, l’approbation, qui comprend l’authentification et l’autorisation, est gérée par un jeton de sécurité émis par un microservice dédié et partagé entre les microservices.](./media/image2.png)
 
@@ -271,7 +271,7 @@ L’intergiciel d’authentification du porteur JWT peut aussi prendre en charge
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Partage des cookies entre les applications** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
 
 - **Présentation d’Identity** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
@@ -285,7 +285,7 @@ L’intergiciel d’authentification du porteur JWT peut aussi prendre en charge
 - **Michell Anicas. Présentation d’OAuth 2** \
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers** (dépôt GitHub pour fournisseurs d’autorisation OAuth ASP.NET : \
+- **AspNet.Security.OAuth.Providers** (référentiel GitHub pour fournisseurs d’autorisation OAuth ASP.NET) \
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 - **Danny Strockis. Intégration d’Azure AD dans une application web ASP.NET Core** \
