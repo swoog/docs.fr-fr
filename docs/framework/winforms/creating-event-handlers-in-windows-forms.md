@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c77a004d52afc67a3811ff98e9a62c788c001803
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197109"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664781"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Création de gestionnaires d'événements dans les Windows Forms
 Un gestionnaire d'événements est une procédure de votre code qui détermine les actions à effectuer quand un événement se produit, par exemple, quand un utilisateur clique sur un bouton ou une file d'attente reçoit un message. Au déclenchement de l'événement, le ou les gestionnaires d'événements qui reçoivent l'événement sont exécutés. Des événements peuvent être affectés à plusieurs gestionnaires et les méthodes qui gèrent des événements particuliers peuvent être modifiées de façon dynamique. Vous pouvez également utiliser le Concepteur Windows Forms pour créer des gestionnaires d'événements.  
@@ -25,16 +25,16 @@ Un gestionnaire d'événements est une procédure de votre code qui détermine l
  [Vue d'ensemble des gestionnaires d'événements](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
  Explique comment gérer les événements.  
   
- [Comment : créer des gestionnaires d'événements pour les Windows Forms au moment de l'exécution](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
+ [Guide pratique pour Créer des gestionnaires d’événements en cours d’exécution pour les Windows Forms](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
  Explique comment répondre dynamiquement aux événements système ou utilisateur.  
   
- [Comment : connecter plusieurs événements à un même gestionnaire d'événements dans les Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
+ [Guide pratique pour Connecter plusieurs événements à un seul gestionnaire d’événements dans les Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
  Explique comment assigner la même fonctionnalité à plusieurs contrôles par le biais d'événements.  
   
  [Ordre des événements dans les Windows Forms](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Décrit l'ordre dans lequel les événements sont déclenchés dans les contrôles Windows Forms.  
   
- [Comment : créer des gestionnaires d'événements à l'aide du concepteur](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Guide pratique pour Créer des gestionnaires d’événements à l’aide du Concepteur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))  
  Décrit comment utiliser le Concepteur Windows Forms pour créer des gestionnaires d'événements.  
   
 ## <a name="related-sections"></a>Rubriques connexes  

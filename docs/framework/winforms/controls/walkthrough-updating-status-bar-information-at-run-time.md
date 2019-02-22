@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 3de554d4c8c3963948159bc6b8c2196f9ebc10ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745881"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665145"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Procédure pas à pas : La mise à jour des informations de barre d’état en cours d’exécution
 > [!IMPORTANT]
@@ -30,16 +30,16 @@ ms.locfileid: "54745881"
   
 1.  Créez un nouveau Windows Form.  
   
-2.  Ajoutez un contrôle <xref:System.Windows.Forms.StatusBar> à votre formulaire. Pour plus d’informations, consultez [Comment : Ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+2.  Ajoutez un contrôle <xref:System.Windows.Forms.StatusBar> à votre formulaire. Pour plus d’informations, consultez [Guide pratique pour Ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
-3.  Ajoutez un panneau de barre d’état à votre <xref:System.Windows.Forms.StatusBar> contrôle. Pour plus d’informations, consultez [Comment : Ajouter des panneaux à un contrôle StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
+3.  Ajoutez un panneau de barre d’état à votre <xref:System.Windows.Forms.StatusBar> contrôle. Pour plus d’informations, consultez [Guide pratique pour Ajouter des panneaux à un contrôle StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
   
 4.  Pour le <xref:System.Windows.Forms.StatusBar> contrôle que vous avez ajouté à votre formulaire, définissez la <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriété `true`.  
   
 5.  Ajouter un formulaire Windows <xref:System.Windows.Forms.Timer> composant au formulaire.  
   
     > [!NOTE]
-    >  Les formulaires Windows <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> composant est conçu pour un environnement Windows Forms. Si vous avez besoin d’un minuteur adapté à un environnement de serveur, consultez l’article [Introduction aux minuteurs serveur](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+    >  Les formulaires Windows <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> composant est conçu pour un environnement Windows Forms. Si vous avez besoin d’un minuteur adapté à un environnement de serveur, consultez l’article [Introduction aux minuteurs serveur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 6.  Affectez à la propriété <xref:System.Windows.Forms.Timer.Enabled%2A> la valeur `true`.  
   

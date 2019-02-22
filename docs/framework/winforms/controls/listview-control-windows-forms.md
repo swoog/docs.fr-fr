@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 4472d2a46b27c75d06c5e4cd6fbab18842ed111c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591940"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664885"
 ---
 # <a name="listview-control-windows-forms"></a>ListView, contrôle (Windows Forms)
 Le contrôle `ListView` Windows Forms affiche une liste d'éléments avec des icônes. Vous pouvez utiliser un affichage de liste pour créer une interface utilisateur comme le volet droit de l'Explorateur Windows.  
@@ -51,7 +51,7 @@ Le contrôle `ListView` Windows Forms affiche une liste d'éléments avec des ic
  Cette fonctionnalité est disponible uniquement pour [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
  [Guide pratique pour Afficher une marque d’Insertion dans un contrôle de ListView Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- Décrit comment implémenter les commentaires utilisateur pour les opérations de glisser-déplacer dans lesquelles une marque d’insertion indique l’emplacement de dépôt pour chaque position du pointeur de la souris.  
+ Décrit comment implémenter les commentaires utilisateur pour les opérations de glisser-déplacer dans lesquelles une marque d'insertion indique l'emplacement cible pour chaque position du pointeur de la souris.  
   
  Cette fonctionnalité est disponible uniquement pour [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
@@ -77,13 +77,10 @@ Le contrôle `ListView` Windows Forms affiche une liste d'éléments avec des ic
  Décrit comment hériter d’un élément dans un affichage de liste ou d’un nœud dans une arborescence pour ajouter des champs, des méthodes ou des constructeurs dont vous avez besoin.  
   
  [ImageList, composant](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- Explique ce qu’est une liste d’images et ses principales fonctionnalités et propriétés.  
+ Explique ce qu'est une liste d'images et ses principales fonctionnalités et propriétés.  
   
  [Guide pratique pour Créer une Interface utilisateur à plusieurs volets avec des Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Fournit des instructions pour disposer un Windows Form avec plusieurs volets.  
-  
- [Fonctionnalités de Windows XP et contrôles Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- Explique comment tirer parti des fonctionnalités spécifiques à Windows XP qui s’appliquent au contrôle <xref:System.Windows.Forms.ListView>.  
   
 ## <a name="see-also"></a>Voir aussi
 - [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

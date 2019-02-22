@@ -2,12 +2,12 @@
 title: Sécurité SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: a767f4c3f862b3b7442e1455bf086bdba7042062
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091615"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664248"
 ---
 # <a name="sql-server-express-security"></a>Sécurité SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) repose sur Microsoft SQL Server et prend en charge la plupart des fonctionnalités du moteur de base de données. Il est conçu de telle manière que les fonctionnalités non essentielles et la connectivité réseau sont désactivées par défaut afin de réduire la surface d'exposition susceptible d'être attaquée par un utilisateur malveillant.  
@@ -31,7 +31,6 @@ Microsoft SQL Server Express Edition (SQL Server Express) repose sur Microsoft 
   
 |||  
 |-|-|  
-|[Connexion à SQL Server Express](https://msdn.microsoft.com/library/ms165679.aspx) dans la documentation en ligne de SQL Server|Décrit comment utiliser SQL Server Express Edition sur un réseau.|  
 |[Documentation en ligne de Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentation complète relative à SQL Server 2005 Express Edition.|  
 |[Instances d’utilisateur pour les non-administrateurs](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) dans la documentation en ligne de SQL Server|Décrit comment créer et déployer des instances utilisateur.|  
 |[Instances utilisateur SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Décrit les fonctionnalités des instances utilisateur dans une application ADO.NET. Fournit des informations sur l'activation d'une interface utilisateur, la connexion à une instance utilisateur à l'aide d'un <xref:System.Data.SqlClient.SqlConnection>, la durée de vie d'une instance utilisateur et des scénarios d'instance utilisateur.|  

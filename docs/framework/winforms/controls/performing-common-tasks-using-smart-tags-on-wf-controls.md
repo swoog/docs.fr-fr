@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: b17fbaea48660a47630dd310c74be9cd3cc78609
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93a477bcaed8ebdc2c7cb4daaa1dce1651cccd12
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579314"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664313"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Procédure pas à pas : Exécution de tâches courantes à l'aide de balises actives dans les contrôles Windows Forms
 Lorsque vous construisez des formulaires et contrôles pour votre application Windows Forms, il existe de nombreuses tâches que vous allez effectuer à plusieurs reprises. Il existe quelques tâches courantes que vous rencontrerez :  
@@ -70,4 +70,4 @@ Lorsque vous construisez des formulaires et contrôles pour votre application Wi
 - <xref:System.Windows.Forms.TabControl>
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.ComponentModel.Design.DesignerActionList>
-- [Procédure pas à pas : Ajout de balises actives à un composant de formulaires Windows](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)
+- [Procédure pas à pas : Ajout de balises actives à un composant de formulaires Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171829(v=vs.120))
