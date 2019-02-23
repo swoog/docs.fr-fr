@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 9db511579e273a19c18800f2e0861ef4e9c00ab0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5378744ea43b72bafb77c9d58c1a8d848c3a8fc9
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700570"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745513"
 ---
 # <a name="tooltip-overview"></a>Vue d'ensemble de l'info-bulle
 Une info-bulle est une petite fenêtre contextuelle qui s’affiche lorsqu’un utilisateur place le pointeur de la souris au-dessus d’un élément, tel qu’un <xref:System.Windows.Controls.Button>. Cette rubrique présente l’info-bulle et explique comment créer et personnaliser son contenu.  
@@ -67,7 +67,7 @@ Une info-bulle est une petite fenêtre contextuelle qui s’affiche lorsqu’un 
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Utilisation des propriétés d’intervalle de temps de ToolTipService  
  Le <xref:System.Windows.Controls.ToolTipService> classe fournit les propriétés suivantes pour vous permettent de définir des info-bulle affichent des heures : <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, et <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Utilisez le <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> et <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propriétés pour spécifier un délai, généralement bref, avant qu’un <xref:System.Windows.Controls.ToolTip> s’affiche et également de spécifier la durée pendant laquelle un <xref:System.Windows.Controls.ToolTip> reste visible. Pour plus d'informations, voir [Procédure : Différer l’affichage d’une info-bulle](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Utilisez le <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> et <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propriétés pour spécifier un délai, généralement bref, avant qu’un <xref:System.Windows.Controls.ToolTip> s’affiche et également de spécifier la durée pendant laquelle un <xref:System.Windows.Controls.ToolTip> reste visible. Pour plus d'informations, voir [Procédure : Différer l’affichage d’une info-bulle](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms747264(v=vs.90)).  
   
  Le <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriété détermine si les info-bulles des différents contrôles apparaissent sans délai initial lorsque vous déplacez rapidement le pointeur de la souris entre eux. Pour plus d’informations sur la <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriété, consultez [utiliser la propriété BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   

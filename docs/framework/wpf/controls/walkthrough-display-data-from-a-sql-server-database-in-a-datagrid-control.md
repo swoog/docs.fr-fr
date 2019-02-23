@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : affichage de données d'une base de données SQL Server dans un contrôle DataGrid"
+title: 'Procédure pas à pas : Afficher des données à partir d’une base de données SQL Server dans un contrôle DataGrid'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: e3db65c91e53ee0ed7b5e520bbc4989cd7404816
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197134"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748412"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Procédure pas à pas : Afficher des données à partir d’une base de données SQL Server dans un contrôle DataGrid
 
@@ -75,7 +75,7 @@ Pour exécuter cette procédure pas à pas, vous devez disposer des composants s
 
 4.  Sélectionnez le contrôle <xref:System.Windows.Window>.
 
-5.  À l’aide de la fenêtre Propriétés ou l’éditeur XAML, créez un gestionnaire d’événements pour le <xref:System.Windows.Window> nommé `Window_Loaded` pour le <xref:System.Windows.FrameworkElement.Loaded> événement. Pour plus d’informations, consultez [Comment : créer un gestionnaire d’événements Simple](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+5.  À l’aide de la fenêtre Propriétés ou l’éditeur XAML, créez un gestionnaire d’événements pour le <xref:System.Windows.Window> nommé `Window_Loaded` pour le <xref:System.Windows.FrameworkElement.Loaded> événement. Pour plus d'informations, voir [Procédure : Créez un gestionnaire d’événements Simple](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
      L’exemple suivant montre le XAML pour MainWindow.xaml.
 
@@ -100,4 +100,4 @@ Pour exécuter cette procédure pas à pas, vous devez disposer des composants s
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Controls.DataGrid>
-- [Comment : comment pour démarrer avec Entity Framework dans les Applications WPF ?](https://go.microsoft.com/fwlink/?LinkId=159868)
+- [Comment faire Bien démarrer avec Entity Framework dans les Applications WPF ?](https://go.microsoft.com/fwlink/?LinkId=159868)

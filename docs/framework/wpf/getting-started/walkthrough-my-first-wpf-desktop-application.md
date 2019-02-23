@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150743"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748373"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procédure pas à pas : Ma première application de bureau WPF
 
@@ -66,7 +66,7 @@ La première étape consiste à créer l’infrastructure d’application, qui i
       Visual Studio crée le projet et ouvre le concepteur pour la fenêtre d’application par défaut nommé **MainWindow.xaml**.
 
    > [!NOTE]
-   > Cette procédure pas à pas utilise le <xref:System.Windows.Controls.DataGrid> contrôle qui est disponible dans le .NET Framework 4 et versions ultérieures. Être sûr que votre projet cible le .NET Framework 4 ou version ultérieure. Pour plus d'informations, voir [Procédure : Cibler une Version du .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+   > Cette procédure pas à pas utilise le <xref:System.Windows.Controls.DataGrid> contrôle qui est disponible dans le .NET Framework 4 et versions ultérieures. Être sûr que votre projet cible le .NET Framework 4 ou version ultérieure. Pour plus d'informations, voir [Procédure : Cibler une version du .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 2. Ouvrez *Application.xaml* (Visual Basic) ou *App.xaml* (c#).
 
@@ -327,7 +327,7 @@ L’illustration suivante montre les résultats de ce que vous venez d’ajouter
 
 1. Ouvrez *`ExpenseItHome.xaml`*.
 
-2. Ajouter un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Gestionnaire d’événements à la <xref:System.Windows.Controls.Button> élément. Pour plus d'informations, voir [Procédure : Créez un gestionnaire d’événements simple](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+2. Ajouter un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Gestionnaire d’événements à la <xref:System.Windows.Controls.Button> élément. Pour plus d'informations, voir [Procédure : Créez un gestionnaire d’événements simple](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ L’illustration suivante montre les résultats de ce que vous venez d’ajouter
 3. Générez et exécutez l’application.
 
     > [!NOTE]
-    > Si vous obtenez une erreur le <xref:System.Windows.Controls.DataGrid> est introuvable ou n’existe pas, vérifiez que votre projet cible le .NET Framework 4 ou version ultérieur. Pour plus d'informations, voir [Procédure : Cibler une Version du .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+    > Si vous obtenez une erreur le <xref:System.Windows.Controls.DataGrid> est introuvable ou n’existe pas, vérifiez que votre projet cible le .NET Framework 4 ou version ultérieur. Pour plus d'informations, voir [Procédure : Cibler une version du .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 4. Sélectionnez le **vue** bouton.
 
@@ -475,7 +475,7 @@ Dans cette section, vous allez mettre à jour l’interface utilisateur pour cha
 
 L’illustration suivante montre les deux pages de le `ExpenseIt` application avec des contrôles, styles, la disposition, liaison de données et modèles de données appliqués :
 
-![Captures d’écran, exemple ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure5.png)
+![Captures d'écran : exemple ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure5.png)
 
 > [!NOTE]
 > Cet exemple montre une fonctionnalité spécifique de WPF et ne respecte pas toutes les meilleures pratiques pour les éléments tels que la sécurité, la localisation et d’accessibilité. Pour une couverture complète de WPF et les .NET Framework application meilleures pratiques de développement, consultez les rubriques suivantes :

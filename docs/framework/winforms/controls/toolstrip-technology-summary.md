@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: a06b8831c862706f9607e95950b81a6bb6e8b7ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94b061b6c403c22fc7eed4ca3632f3165693e868
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736013"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747137"
 ---
 # <a name="toolstrip-technology-summary"></a>Résumé de la technologie ToolStrip
 Cette rubrique rassemble des informations sur le contrôle `ToolStrip` et les classes qui prennent en charge son utilisation.  
@@ -61,28 +61,28 @@ Cette rubrique rassemble des informations sur le contrôle `ToolStrip` et les cl
  La famille de contrôles <xref:System.Windows.Forms.ToolStrip> fournit un ensemble complet d'outils et de modèles permettant de définir et de modifier sur place les bases de l'interface utilisateur pour que vous puissiez créer rapidement une application prête à l'emploi.  
   
 ### <a name="task-dialog-boxes"></a>Boîtes de dialogue de tâches  
- Dans Visual Studio, le fait de cliquer sur le Smart Tag d’un contrôle du concepteur affiche une liste de tâches pour accéder facilement à de nombreuses commandes fréquemment utilisées.  
+ Dans Visual Studio, le fait de cliquer sur le Smart Tag d'un contrôle du concepteur affiche une liste de tâches pour accéder facilement à de nombreuses commandes fréquemment utilisées.  
   
--   [Tâches MenuStrip, boîte de dialogue](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [Tâches MenuStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [Tâches ToolStrip, boîte de dialogue](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [Tâches ToolStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [Tâches ContextMenuStrip, boîte de dialogue](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   [Tâches ContextMenuStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [Tâches StatusStrip, boîte de dialogue](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   [Tâches StatusStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [Tâches ToolStripContainer, boîte de dialogue](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   [Tâches ToolStripContainer, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Éditeurs de collections Items  
  Dans Visual Studio, lorsque vous cliquez sur **modifier les éléments** sur la tâche de liste ou cliquez sur le contrôle et sélectionnez **modifier les éléments** dans le menu contextuel, l’éditeur de collections pour le contrôle est affiché. Les éditeurs de collections vous permettent d’ajouter, de supprimer et de réorganiser les éléments que contient le contrôle. Vous pouvez également afficher et modifier les propriétés du contrôle et de ses éléments.  
   
--   [Éditeur de collections d’éléments MenuStrip](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [Éditeur de collections d’éléments MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Éditeur de collections d’éléments StatusStrip](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   [Éditeur de collections d’éléments StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [Éditeur de collections d’éléments ContextMenuStrip](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   [Éditeur de collections d’éléments ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [Éditeur de collections d’éléments ToolStrip](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [Éditeur de collections d’éléments ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Hébergement des contrôles  
  La classe <xref:System.Windows.Forms.ToolStripControlHost> fournit des wrappers intégrés pour les contrôles <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> et <xref:System.Windows.Forms.ToolStripProgressBar>. Vous pouvez également héberger tout autre contrôle existant ou contrôle COM dans un <xref:System.Windows.Forms.ToolStripControlHost>.  
@@ -106,7 +106,7 @@ Cette rubrique rassemble des informations sur le contrôle `ToolStrip` et les cl
   
  *Rafting* est la capacité des barres d’outils à partager l’espace horizontal ou vertical. Un formulaire Windows peut avoir un <xref:System.Windows.Forms.ToolStripContainer> qui contient des panneaux gauche, droit, haut et bas pour le positionnement, ainsi que les contrôles <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> et <xref:System.Windows.Forms.StatusStrip> pour le rafting. Plusieurs contrôles <xref:System.Windows.Forms.ToolStrip> s'empilent verticalement si vous les placez dans le <xref:System.Windows.Forms.ToolStripContainer> de gauche ou de droite. Ils s'empilent horizontalement si vous les placez dans le <xref:System.Windows.Forms.ToolStripContainer> du haut ou du bas. Vous pouvez utiliser le <xref:System.Windows.Forms.ToolStripContentPanel> central du <xref:System.Windows.Forms.ToolStripContainer> pour positionner les contrôles traditionnels sur le formulaire.  
   
- Tous les contrôles <xref:System.Windows.Forms.ToolStripContainer> sont directement sélectionnables au moment du design et peuvent être supprimés. Un <xref:System.Windows.Forms.ToolStripContainer> peut être développé et réduit, et peut être redimensionné avec les contrôles qu’il contient.  
+ Tous les contrôles <xref:System.Windows.Forms.ToolStripContainer> sont directement sélectionnables au moment du design et peuvent être supprimés. Un <xref:System.Windows.Forms.ToolStripContainer> est extensible et réductible, et peut être redimensionné avec les contrôles qu'il contient.  
   
  *Ancrage* consiste à spécifier d’emplacement simple d’un contrôle sur la gauche, droite, haut ou côté inférieur du formulaire.  
   

@@ -2,12 +2,12 @@
 title: 'Procédure pas à pas : Incorporation de Types provenant d’assemblys managés dans Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245467"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747542"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Procédure pas à pas : Incorporation de Types provenant d’assemblys managés dans Visual Studio (Visual Basic)
 Si vous incorporez des informations de type d’un assembly managé avec nom fort, vous pouvez coupler faiblement des types dans une application pour obtenir une indépendance de version. Autrement dit, votre programme peut être écrit de façon à ce qu’il utilise des types de plusieurs versions d’une bibliothèque managée sans que vous n’ayez à effectuer de recompilation pour chaque version.  
@@ -222,8 +222,8 @@ End Function
   
 6.  Dans l’Explorateur de fichiers, ouvrez le dossier du chemin de sortie (par exemple, C:\TypeEquivalenceSample). Double-cliquez sur le fichier TypeEquivalenceClient.exe pour exécuter le programme. Le programme reflète la nouvelle version de l’assembly TypeEquivalenceRuntime sans aucune recompilation.  
   
-## <a name="see-also"></a>Voir aussi  
- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [Concepts de programmation](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Programmation à l’aide d’assemblys](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Assemblys et le Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Voir aussi
+- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [Concepts de programmation](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Programmation à l’aide d’assemblys](../../../../framework/app-domains/programming-with-assemblies.md)
+- [Assemblys dans .NET](../../../../standard/assembly/index.md)

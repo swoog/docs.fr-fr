@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 24899d8a2184c73b50902de4a30c39327576ded1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441201"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747354"
 ---
 # <a name="printing-how-to-topics"></a>Rubriques "Comment" relatives à l'impression
 Les rubriques de cette section montrent comment utiliser l’impression et les fonctionnalités de gestion de système d’impression inclus avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , ainsi que la nouvelle [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] chemin d’impression.  
@@ -30,9 +30,6 @@ Les rubriques de cette section montrent comment utiliser l’impression et les f
   
  [Énumérer un sous-ensemble de files d'attente à l'impression](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Instructions pour la génération d’une liste des imprimantes présentant certaines caractéristiques.  
-  
- [NOT IN BUILD : Procédure : Étendre le schéma d’impression et de créer de nouvelles Classes de système d’impression](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- Discussion prolongée sur comment le code managé, les programmeurs peuvent étendre le schéma d’impression pour les périphériques d’impression spécialisée ou des imprimantes à l’aide des fonctionnalités nouvelles ou rares.  
   
  [Obtenir les propriétés de l'objet de système d'impression sans réflexion](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
  Instructions pour savoir comment découvrir lors de l’exécution d’impression leurs types et propriétés de l’objet système.  

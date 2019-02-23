@@ -15,15 +15,15 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: a2d88b9094a6168989360102a25ef7ce6e0a918a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554962"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747312"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Présentation de WPF dans Visual Studio
-Windows Presentation Foundation (WPF) dans Visual Studio fournit aux développeurs un modèle de programmation unifié pour créer des applications de bureau line-of-business sur Windows.  
+Windows Presentation Foundation (WPF) dans Visual Studio fournit aux développeurs un modèle de programmation unifié pour créer des applications de bureau line of business sur Windows.  
   
  [Créer des Applications de bureau avec Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
@@ -31,6 +31,6 @@ Windows Presentation Foundation (WPF) dans Visual Studio fournit aux développeu
   
  [Présentation de WPF](/visualstudio/designers/introduction-to-wpf)  
   
- [WPF dans le .NET Framework](https://msdn.microsoft.com/library/ms754130\(v=vs.100\).aspx)  
+ [WPF dans le .NET Framework](../index.md)  
   
  [Obtenir Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

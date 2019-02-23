@@ -2,12 +2,6 @@
 title: Concepts de programmation (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147240"
 ---
 # <a name="programming-concepts-visual-basic"></a>Concepts de programmation (Visual Basic)
 Cette section explique les concepts de programmation en langage Visual Basic.  
@@ -16,7 +10,7 @@ Cette section explique les concepts de programmation en langage Visual Basic.
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Assemblys et le Global Assembly Cache (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Explique comment créer et utiliser des assemblys.|  
+|[Assemblys dans .NET](../../../standard/assembly/index.md)|Explique comment créer et utiliser des assemblys.|  
 |[Programmation asynchrone avec Async et Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Explique comment écrire des solutions asynchrones à l’aide des mots clés [Async](../../../visual-basic/language-reference/modifiers/async.md) et [Await](../../../visual-basic/language-reference/operators/await-operator.md). Comprend une procédure pas à pas.|  
 |[Vue d’ensemble des attributs (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Explique comment fournir des informations supplémentaires sur des éléments de programmation tels que les types, les champs, les méthodes et les propriétés à l’aide d’attributs.|  
 |[Informations relatives à l’appelant (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Explique comment obtenir des informations sur l’appelant d’une méthode. Parmi ces informations figurent le chemin d’accès du fichier, le numéro de ligne dans le code source et le nom de membre de l’appelant.|  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685527"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745918"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps, méthode
 Obtient les valeurs de métadonnées pour le paramètre référencé par le jeton ParamDef spécifié.  
@@ -64,7 +64,7 @@ HRESULT GetParamProps (
  [out] La taille retournée en caractères larges de `szName`.  
   
  `pdwAttr`  
- [out] Pointeur vers les indicateurs d’attribut associé au paramètre.  
+ [out] Pointeur vers les indicateurs d’attribut associé au paramètre. Il s’agit d’un masque de bits de `CorParamAttr` valeurs.  
   
  `pdwCPlusTypeFlag`  
  [out] Un pointeur vers un indicateur spécifiant que le paramètre est un <xref:System.ValueType>.  
@@ -75,6 +75,10 @@ HRESULT GetParamProps (
  `pcchValue`  
  [out] La taille de `ppValue` en caractères larges, ou zéro si `ppValue` ne contient pas de chaîne.  
   
+## <a name="remarks"></a>Notes
+
+Les valeurs de séquence dans `pulSequence` commencent par 1 pour les paramètres. Une valeur de retour a un numéro de séquence 0.
+
 ## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   

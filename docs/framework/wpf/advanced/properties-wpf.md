@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 1d6d9ac86ccc15ccc55d27e4222864c4cda92ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546027"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745571"
 ---
 # <a name="properties-wpf"></a>Propriétés (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un ensemble de services qui peuvent être utilisés pour étendre la fonctionnalité d’une propriété [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Ces services sont généralement regroupés sous le nom « système de propriétés WPF ». Une propriété stockée par le système de propriétés [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] est appelée « propriété de dépendance ».  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Vue d'ensemble des propriétés jointes](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Validation et rappels de propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
- [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Métadonnées de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Métadonnées de propriété de framework](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
- [Priorité de la valeur de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [Propriétés de dépendance en lecture seule](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [Héritage de la valeur de propriété](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [Sécurité de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [Modèles de constructeur sécurisé pour DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
- [Propriétés de dépendance de type collection](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [Propriétés de dépendance et chargement XAML](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+- [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Vue d'ensemble des propriétés jointes](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Métadonnées de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [Validation et rappels de propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+- [Métadonnées de propriété de framework](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
+- [Priorité de la valeur de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [Propriétés de dépendance en lecture seule](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [Héritage de la valeur de propriété](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [Sécurité de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [Modèles de constructeur sécurisé pour DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+- [Propriétés de dépendance de type collection](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
+- [Propriétés de dépendance et chargement XAML](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.DependencyProperty>  

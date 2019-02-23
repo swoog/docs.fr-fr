@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662736"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746560"
 ---
 # <a name="wpf-add-ins-overview"></a>Vue d'ensemble des compléments WPF
 <a name="Introduction"></a> Le .NET Framework inclut un modèle de complément, qui permet aux développeurs de créer des applications qui prennent en charge d’extensibilité des compléments. Ce modèle de complément permet de créer des compléments qui s’intègrent aux applications et étendent leurs fonctionnalités. Dans certains scénarios, les applications doivent également afficher les interfaces utilisateur qui sont fournies par des compléments. Cette rubrique montre comment WPF étend le modèle de complément .NET Framework pour activer ces scénarios, l’architecture sous-jacente, ses avantages et ses limitations.  
@@ -100,7 +100,7 @@ ms.locfileid: "54662736"
 -   A la <xref:System.SerializableAttribute> attribut appliqué.  
   
 > [!NOTE]
->  Pour plus d’informations sur la création d’objets de .NET Framework accessibles à distance, consultez [rendre objets accessibles à distance](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Pour plus d’informations sur la création d’objets de .NET Framework accessibles à distance, consultez [rendre objets accessibles à distance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
   
  Les types WPF UI ne sont pas accessibles à distance. Pour résoudre ce problème, WPF étend le modèle de complément .NET Framework pour activer UI WPF créés par des compléments à afficher à partir d’applications hôtes. Cette prise en charge est fournie par WPF par deux types : les <xref:System.AddIn.Contract.INativeHandleContract> interface et deux méthodes statiques implémentées par le <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe : <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> et <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. À un niveau élevé, ces types et méthodes sont utilisés de la manière suivante :  
   
@@ -286,6 +286,6 @@ ms.locfileid: "54662736"
 - <xref:System.LoaderOptimizationAttribute>
 - [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domaines d’application](../../../../docs/framework/app-domains/application-domains.md)
-- [Vue d’ensemble de .NET framework Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [Objets accessibles à distance](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Vue d’ensemble de .NET framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Objets accessibles à distance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Rubriques de guide pratique](../../../../docs/framework/wpf/app-development/how-to-topics.md)

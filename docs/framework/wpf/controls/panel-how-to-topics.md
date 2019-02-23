@@ -7,18 +7,17 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.openlocfilehash: 309a5df174a2366fda411678d95a9701dcebb9cc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493515"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747916"
 ---
 # <a name="panel-how-to-topics"></a>Rubriques "Comment utiliser le Panel"
 Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.Panel> élément et connexes [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Comment : appliquer un LayoutTransform à un élément](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [Créer un élément Panel personnalisé](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [Substituer la méthode OnRender de Panel](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [Définir les propriétés Height d’un élément](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
@@ -42,6 +41,6 @@ Les rubriques de cette section décrivent comment utiliser le <xref:System.Windo
 ## <a name="related-sections"></a>Rubriques connexes  
  [Disposition](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [Procédure pas à pas : ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procédure pas à pas : Ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
  [Vue d’ensemble de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
