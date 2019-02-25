@@ -81,7 +81,7 @@ ms.locfileid: "55204884"
 |`\w`|Correspond à n'importe quel caractère alphabétique.|`\w`|"I", "D", "A", "1", "3" dans "ID A1.3"|  
 |`\W`|Correspond à tout caractère autre qu'un caractère de mot.|`\W`|" ", "." dans "ID A1.3"|  
 |`\s`|Correspond à tout caractère espace blanc.|`\w\s`|"D " dans "ID A1.3"|  
-|`\S`|Correspond à tout caractère autre qu'un espace blanc.|`\s\S`|" _" dans "int \__ctr"|  
+|`\S`|Correspond à tout caractère autre qu'un espace blanc.|`\s\S`|" _" dans "int \___ctr"|  
 |`\d`|Correspond à n'importe quel chiffre décimal.|`\d`|"4" dans "4 = IV"|  
 |`\D`|Correspond à n'importe quel caractère autre qu'un chiffre décimal.|`\D`|" ", "=", " ", "I", "V" dans "4 = IV"|  
   
