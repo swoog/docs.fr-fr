@@ -3,12 +3,12 @@ title: Documentation de votre code avec des commentaires XML
 description: Découvrez comment documenter votre code avec des commentaires de documentation XML et générer un fichier de documentation XML au moment de la compilation.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271354"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583704"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentation de votre code avec des commentaires XML
 
@@ -194,9 +194,9 @@ Maintenant que vous avez vos commentaires XML dans un fichier distinct, voyons c
 
 Et voilà : notre code est à nouveau lisible, et aucune information de documentation n’a été perdue.
 
-L’attribut `filename` représente le nom du fichier XML contenant la documentation.
+L’attribut `file` représente le nom du fichier XML contenant la documentation.
 
-L’attribut `path` représente une requête [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) au `tag name` présent dans le `filename` spécifié.
+L’attribut `path` représente une requête [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) au `tag name` présent dans le `file` spécifié.
 
 L’attribut `name` représente le spécificateur de nom dans la balise qui précède les commentaires.
 

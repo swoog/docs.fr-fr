@@ -6,16 +6,16 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207171"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745766"
 ---
 # <a name="net-class-libraries"></a>Bibliothèques de classes .NET
 
-Les bibliothèques de classes représentent le concept de [bibliothèque partagée](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) pour .NET. Elles vous permettent d’inclure des fonctionnalités utiles dans des modules utilisables par plusieurs applications. Elles peuvent également servir à charger des fonctionnalités qui ne sont pas nécessaires ou connues au démarrage de l’application. Les bibliothèques de classes sont décrites à l’aide du [format de fichier d’assembly .NET](assembly-format.md).
+Les bibliothèques de classes représentent le concept de [bibliothèque partagée](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) pour .NET. Elles vous permettent d’inclure des fonctionnalités utiles dans des modules utilisables par plusieurs applications. Elles peuvent également servir à charger des fonctionnalités qui ne sont pas nécessaires ou connues au démarrage de l’application. Les bibliothèques de classes sont décrites à l’aide du [format de fichier d’assembly .NET](assembly/file-format.md).
 
 Il existe trois types de bibliothèques de classes que vous pouvez utiliser :
 

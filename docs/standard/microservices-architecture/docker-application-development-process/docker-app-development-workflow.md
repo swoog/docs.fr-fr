@@ -4,12 +4,12 @@ description: Découvrez les détails du workflow de développement des applicati
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c34d49307408520afc6223a43d1c347dd6cffb97
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480099"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584302"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Workflow de développement des applications Docker
 
@@ -489,7 +489,7 @@ Le point important ici est que, comme indiqué dans la figure 5-12, Visual Studi
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Note sur le test et le déploiement avec des orchestrateurs
 
-Les commandes docker-compose up et docker run (ou l’exécution et le débogage des conteneurs dans Visual Studio) sont une approche appropriée pour tester les conteneurs dans votre environnement de développement. Toutefois, vous ne devez pas utiliser cette approche pour les déploiements de production, où vous devez cibler des orchestrateurs comme [Kubernetes](https://kubernetes.io/) ou [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Si vous utilisez Kubernetes, vous devez utiliser des [pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) pour organiser les conteneurs et des [services](https://kubernetes.io/docs/concepts/services-networking/service/) pour les mettre en réseau. Vous utilisez également des [déploiements](https://kubernetes.io/docs/tutorials/k8s201/#deployments) pour organiser la création et la modification des pods.
+Les commandes docker-compose up et docker run (ou l’exécution et le débogage des conteneurs dans Visual Studio) sont une approche appropriée pour tester les conteneurs dans votre environnement de développement. Toutefois, vous ne devez pas utiliser cette approche pour les déploiements de production, où vous devez cibler des orchestrateurs comme [Kubernetes](https://kubernetes.io/) ou [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Si vous utilisez Kubernetes, vous devez utiliser des [pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) pour organiser les conteneurs et des [services](https://kubernetes.io/docs/concepts/services-networking/service/) pour les mettre en réseau. Vous utilisez également des [déploiements](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) pour organiser la création et la modification des pods.
 
 ![6 - Tester votre application ou vos microservices](./media/image17.png)
 
