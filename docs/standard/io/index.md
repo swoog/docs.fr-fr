@@ -3,23 +3,17 @@ title: E/S de fichiers et de flux - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- IO namespace
-- files, I/O
-- System.IO namespace
-- I/O [.NET Framework]
-- streams, I/O
-- data streams, I/O
+  - IO namespace
+  - 'files, I/O'
+  - System.IO namespace
+  - 'I/O [.NET Framework]'
+  - 'streams, I/O'
+  - 'data streams, I/O'
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07ea22fcd76a9f52fd9fd0b00c58d6d3b9b906d9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279472"
 ---
-# <a name="file-and-stream-io"></a>E/S de fichiers et de flux
+# <a name="file-and-stream-io"></a>Fichier et flux de données E/S
 
 E/S de fichier et de flux (entrées/sorties) fait référence au transfert de données vers ou depuis un support de stockage. Dans le .NET Framework, les espaces de noms `System.IO` contiennent des types qui permettent la lecture et l'écriture, de façon synchrone ou asynchrone, sur les flux de données et les fichiers. Ces espaces de noms contiennent également les types qui exécutent la compression et la décompression sur les fichiers, et ceux qui permettent la communication via des canaux et des ports série.
 
@@ -47,7 +41,7 @@ Vous devez toujours fournir une gestion des exceptions robuste lors de l’appel
 
 En plus d'utiliser ces classes, les utilisateurs de Visual Basic peuvent utiliser les méthodes et les propriétés fournies par la classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> pour l'E/S de fichier.
 
-Voir [Guide pratique pour copier des répertoires](how-to-copy-directories.md), [Guide pratique pour créer un listing de répertoires](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) et [Guide pratique pour énumérer des répertoires et des fichiers](how-to-enumerate-directories-and-files.md).
+Voir [Guide pratique pour copier des répertoires](how-to-copy-directories.md), [Guide pratique pour créer un listing de répertoires](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) et [Guide pratique pour énumérer des répertoires et des fichiers](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Flux
 
