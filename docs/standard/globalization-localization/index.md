@@ -16,7 +16,7 @@ ms.author: ronpet
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Internationalisation et localisation d’applications .NET
 
-Le développement d'une [application mondialisable](https://msdn.microsoft.com/goglobal/bb978433.aspx), notamment une application qui peut être localisée dans une ou plusieurs langues, implique trois étapes : la globalisation, l'examen de la faisabilité de localisation et la localisation.
+Le développement d’une application mondialisable, notamment une application qui peut être localisée dans une ou plusieurs langues, implique trois étapes : la mondialisation, l’étude de la localisabilité et la localisation.
 
 [Globalisation](globalization.md)
 
