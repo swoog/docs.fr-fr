@@ -1,6 +1,6 @@
 ---
 title: Écrire un programme parallèle simple à l’aide de Parallel.ForEach
-ms.date: 09/12/2018
+ms.date: 02/14/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdf4aeb6de027e26687d41d6311b6d7da49e7948
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 3bde7ebcc73c5e9e2d87074b78d78bb63cd441ad
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562214"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583639"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Comment : écrire une boucle Parallel.ForEach simple
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procédure : écrire une boucle Parallel.ForEach simple
 
 Cet exemple montre comment utiliser une boucle <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pour activer le parallélisme des données sur n’importe quelle source de données <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.
 
@@ -27,14 +27,16 @@ Cet exemple montre comment utiliser une boucle <xref:System.Threading.Tasks.Para
 
 ## <a name="example"></a>Exemple
 
+Cet exemple part du principe que vous disposez de plusieurs fichiers .jpg dans un dossier *C:\Users\Public\Pictures\Sample Pictures*, et crée un sous-dossier nommé *Modified* (Modifié). Lorsque vous exécutez l’exemple, il fait pivoter chaque image .jpg dans *Sample Pictures* (Exemples d’images) et les enregistre dans le sous-dossier *Modified*. Vous pouvez modifier les deux chemins d’accès en fonction des besoins.
+
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]
 
-Une boule <xref:System.Threading.Tasks.Parallel.ForEach%2A> fonctionne comme une boucle <xref:System.Threading.Tasks.Parallel.For%2A>. La collection source est partitionnée et le travail est planifié sur plusieurs threads en fonction de l’environnement système. Plus il y a de processeurs sur le système, plus la méthode parallèle s’exécute rapidement. Pour certaines collections sources, une boucle séquentielle peut être plus rapide, selon la taille de la source et le type de travail exécuté. Pour plus d’informations sur les performances, consultez [Pièges potentiels dans le parallélisme des données et des tâches](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)
+Une boule <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> fonctionne comme une boucle <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Les boucles partitionnent la collection source et planifient le travail sur plusieurs threads en fonction de l’environnement système. Plus il y a de processeurs sur le système, plus la méthode parallèle s’exécute rapidement. Pour certaines collections sources, une boucle séquentielle peut être plus rapide, selon la taille de la source et le type de travail exécuté par la boucle. Pour plus d’informations sur les performances, consultez [Pièges potentiels dans le parallélisme des données et des tâches](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)
 
 Pour plus d’informations sur les boucles parallèles, consultez [Guide pratique : écrire une boucle Parallel.For simple](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
 
-Pour utiliser <xref:System.Threading.Tasks.Parallel.ForEach%2A> avec une collection non générique, vous pouvez utiliser la méthode d’extension <xref:System.Linq.Enumerable.Cast%2A> pour convertir la collection en une collection générique, comme indiqué dans l’exemple suivant :
+Pour utiliser <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> avec une collection non générique, vous pouvez utiliser la méthode d’extension <xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType> pour convertir la collection en une collection générique, comme indiqué dans l’exemple suivant :
 
 [!code-csharp[TPL_Parallel#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/nongeneric.cs#07)]
 [!code-vb[TPL_Parallel#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/nongeneric.vb#07)]
@@ -43,11 +45,23 @@ Vous pouvez également utiliser PLINQ (Parallel LINQ) pour paralléliser le trai
 
 ## <a name="compile-and-run-the-code"></a>Compiler et exécuter le code
 
-- Copiez et collez ce code dans un projet **d’application console** Visual Studio.
+Vous pouvez compiler le code en tant qu’application de console pour .NET Framework ou en tant qu’application de console pour .NET Core.
 
-- Ajoutez une référence à System.Drawing.dll
+Dans Visual Studio, il existe des modèles d’application de console Visual Basic et C# pour Windows Desktop et .NET Core.
 
-- Appuyez sur **F5**
+À partir de la ligne de commande, vous pouvez utiliser .NET Core et ses outils de ligne de commande (par exemple, `dotnet new console` ou `dotnet new console -lang vb`), ou bien créer le fichier et utiliser le compilateur de ligne de commande d’une application .NET Framework.
+
+Pour un projet .NET Core, vous devez référencer le package NuGet **System.Drawing.Common**. Dans Visual Studio, utilisez le gestionnaire de package NuGet pour installer le package. Vous pouvez aussi ajouter une référence au package dans votre fichier *.* csproj* ou *.* vbproj* :
+ 
+```xml
+<ItemGroup>
+     <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+</ItemGroup>
+```
+
+Pour exécuter une application de console .NET Core depuis la ligne de commande, utilisez `dotnet run` depuis le dossier qui contient votre application.
+
+Pour exécuter votre application de console depuis Visual Studio, appuyez sur **F5**.
 
 ## <a name="see-also"></a>Voir aussi
 

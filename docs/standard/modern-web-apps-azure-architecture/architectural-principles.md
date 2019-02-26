@@ -3,13 +3,13 @@ title: Principes de l’architecture
 description: Architecturer des applications web modernes avec ASP.NET Core et Azure | Principes de l’architecture
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828096"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442982"
 ---
 # <a name="architectural-principles"></a>Principes de l’architecture
 
@@ -99,21 +99,10 @@ Les **contextes délimités** sont un modèle essentiel dans la conception pilot
 
 Au minimum, les applications web individuelles doivent s’efforcer d’être leur propre contexte délimité, avec leur propre magasin de persistance pour leur modèle métier, au lieu de partager une base de données avec d’autres applications. La communication entre des contextes délimités se fait via des interfaces de programmation et non pas via une base de données partagée, ce qui permet à la logique métier et aux événements de se dérouler en réponse aux modifications qui se produisent. Les contextes délimités correspondent étroitement aux microservices, qui dans l’idéal sont également implémentés sous la forme de leurs propre contexte délimité individuel.
 
-> ### <a name="references--modern-web-applications"></a>Informations de référence sur les applications web modernes
-> - **Séparation des responsabilités**  
-> <https://deviq.com/separation-of-concerns/>
-> - **Encapsulation**  
-> <https://deviq.com/encapsulation/>
-> - **Principe d’inversion des dépendances**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **Principe des dépendances explicites**  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **Ne vous répétez pas**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **Ignorance de la persistance**  
-> <https://deviq.com/persistence-ignorance/>
-> - **Contexte délimité**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>Ressources supplémentaires
+
+* [Modèles de conception JAVA : principes](https://java-design-patterns.com/principles/)
+* [Contexte délimité](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Précédent](choose-between-traditional-web-and-single-page-apps.md)

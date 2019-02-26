@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c75f9ffe17d04ad4b8e41a6e1402a3cf4be7e07f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0681ff9c59e77650654495ecd6e6d9f9ded82517
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722710"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665093"
 ---
 # <a name="custom-timespan-format-strings"></a>Chaînes de format TimeSpan personnalisées
 
@@ -54,7 +54,7 @@ Les chaînes de format <xref:System.TimeSpan> standard sont également utilisée
 |"s", "%s"|Nombre de secondes entières dans l’intervalle de temps qui ne sont pas incluses dans des jours, heures ou minutes. Les secondes à un chiffre n’ont pas de zéro non significatif.<br /><br /> Informations complémentaires : [Spécificateur de format personnalisé "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
 |"ss"|Nombre de secondes entières dans l’intervalle de temps qui ne sont pas incluses dans des jours, heures ou minutes.  Les secondes à un chiffre ont un zéro non significatif.<br /><br /> Informations complémentaires : [Spécificateur de format personnalisé "ss"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|
 |"f", "%f"|Dixièmes de seconde dans un intervalle de temps.<br /><br /> Informations complémentaires : [Spécificateur de format personnalisé "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|
-|"ff"|Centièmes de seconde dans un intervalle de temps.<br /><br /> Informations supplémentaires : [Spécificateur de format personnalisé "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
+|"ff"|Centièmes de seconde dans un intervalle de temps.<br /><br /> Informations complémentaires : [Spécificateur de format personnalisé "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
 |"fff"|Millisecondes dans un intervalle de temps.<br /><br /> Informations complémentaires : [Spécificateur de format personnalisé "fff"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|
 |"ffff"|Dix millièmes de seconde dans un intervalle de temps.<br /><br /> Informations complémentaires : [Spécificateur de format personnalisé "ffff"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --> 8954<br /><br /> `ss\.ffff` --> 06.8954|
 |"fffff"|Cent millièmes de seconde dans un intervalle de temps.<br /><br /> Informations complémentaires : [Spécificateur de format personnalisé "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|
@@ -68,7 +68,7 @@ Les chaînes de format <xref:System.TimeSpan> standard sont également utilisée
 |"FFFFFF"|Millionièmes de seconde dans un intervalle de temps. Tous les zéros de fin fractionnaires ne sont pas affichés.<br /><br /> Informations complémentaires : [Spécificateur de format personnalisé "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|Dix millionièmes de seconde dans un intervalle de temps. Tous les zéros de fin fractionnaires ou sept zéros ne sont pas affichés.<br /><br /> Informations complémentaires : [Spécificateur de format personnalisé "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
 |'*chaîne*'|Délimiteur de chaîne littérale.<br /><br /> Informations complémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
-|\\|Caractère d’échappement .<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|&#92;|Caractère d'échappement.<br /><br /> Informations complémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |N'importe quel autre caractère|Tout autre caractère sans séquence d’échappement est interprété comme un spécificateur de format personnalisé.<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
 <a name="dSpecifier"></a> 
