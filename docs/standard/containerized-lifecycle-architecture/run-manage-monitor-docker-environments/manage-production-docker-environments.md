@@ -3,13 +3,13 @@ title: Gérer les environnements de production Docker
 description: Découvrez les points clés de gestion d’un environnement de production basées sur le conteneur.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 54e2b999f744600d3b6853442bb9ccca004f4e76
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219488"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836615"
 ---
 # <a name="manage-production-docker-environments"></a>Gérer les environnements de production Docker
 
@@ -23,26 +23,24 @@ Vous déployez ces clusters à l’aide d’Azure Virtual Machine Scale Sets, et
 
 Tableau 6-1 répertorie les outils de gestion courants liés à leurs orchestrateurs, planificateurs et de plateforme de clustering.
 
-Tableau 6-1 : Outils de gestion de docker
+**Tableau 6-1**. Outils de gestion de docker
 
-
-| Outils de gestion      | Description           | Orchestrateurs connexes |
-|-----------------------|-----------------------|-----------------------|
-| Service de conteneur\(gestion de l’interface utilisateur dans le portail Azure) | [Service de conteneur](https://azure.microsoft.com/services/container-service/) fournit un permet d’obtenir facilement démarré de façon à [déployer un cluster de conteneur dans Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) basée sur des orchestrateurs populaires comme Mesosphere DC/OS, Kubernetes et Docker Swarm. <br /><br /> Container Service optimise la configuration de ces plateformes. Vous devez simplement sélectionner la taille, le nombre d’hôtes et le choix d’outils d’orchestrateur et Container Service gère tout le reste. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
-| Plan de contrôle universel docker\(en local ou cloud) | [Plan de contrôle universel docker](https://docs.docker.com/v1.11/ucp/overview/) est la solution de gestion du cluster de niveau entreprise à partir de Docker. Il vous permet de gérer votre cluster à partir d’un emplacement unique. <br /><br /> Plan de contrôle universel docker est inclus dans le produit commercial nommé Docker Datacenter, qui propose Docker Swarm, plan de contrôle universel de Docker et Docker Trusted Registry. <br /><br /> Centre de données de docker peut être installé en local ou configuré à partir d’un cloud public comme Azure. | Docker Swarm\(pris en charge par le Service de conteneur) |
-| Docker Cloud\(également appelé Tutum ; cloud SaaS) | [Docker Cloud](https://docs.docker.com/docker-cloud/) est un service hébergé de gestion (SaaS) qui fournit des capacités d’orchestration et d’un Registre Docker avec la build et des fonctions de test pour les images d’application Dockerisée, outils pour vous aider à configurer et gérer votre infrastructure de l’hôte, fonctionnalités et de déploiement pour vous aider à automatiser le déploiement de vos images à votre infrastructure concrète. Vous pouvez vous connecter à votre compte Docker SaaS Cloud à votre infrastructure dans Container Service exécutant un cluster Docker Swarm. | Docker Swarm\(pris en charge par le Service de conteneur) |
-| Mesosphere Marathon\(en local ou cloud) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) est un conteneur d’orchestration et le Planificateur de plateforme de production pour de Mesosphere DC/OS et Apache Mesos. <br /><br /> Il fonctionne avec Mesos (DC/OS est basé sur Apache Mesos) à long terme de contrôle des services et fournit un [l’interface utilisateur web pour la gestion des processus et conteneur](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Il fournit un outil de gestion de l’interface utilisateur web | Mesosphere DC/OS\(basé sur Apache Mesos ; pris en charge par le Service de conteneur) |
-| Google Kubernetes | [Kubernetes](https://kubernetes.io/docs/user-guide/ui/#dashboard-access) couvre l’orchestration, la planification et infrastructure de cluster. Il est une plateforme open source pour l’automatisation des opérations de conteneurs d’applications, de mise à l’échelle et de déploiement sur des clusters d’hôtes, en fournissant une infrastructure orientée conteneur. | Google Kubernetes\(pris en charge par le Service de conteneur) |
+| Outils de gestion | Description | Orchestrateurs connexes |
+|------------------|-------------|-----------------------|
+| [Azure Monitor pour les conteneurs](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Outil de gestion dédié Kubernetes Azure | Services de Azure Kubernetes (AKS) |
+| [Interface utilisateur Web Kubernetes (tableau de bord)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Outil de gestion de Kubernetes, peut surveiller et gérer des clusters Kubernetes local | Azure Kubernetes Service (AKS)<br/>Kubernetes local |
+| [Portail Azure pour Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Version en ligne et de bureau pour la gestion des clusters Service Fabric, sur Azure, sur site, de développement local et d’autres clouds | Azure Service Fabric |
+| [Conteneur de surveillance (Analytique de journal)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Conteneur général gestion y est solution de surveillance. Peut gérer des clusters Kubernetes via [Azure Monitor pour les conteneurs](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS et autres utilisateurs. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
-Un autre choix pour la gestion et de déploiement de cluster est Azure Service Fabric. [Service Fabric](https://azure.microsoft.com/services/service-fabric/) est une plateforme de microservices de Microsoft qui inclut l’orchestration de conteneur, ainsi que des développeurs programmation de modèles pour créer des applications de microservices hautement évolutif. Service Fabric prend en charge Docker dans les versions Linux en version préliminaire actuelles, comme dans le [en version préliminaire de Service Fabric sur Linux](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere)et pour les conteneurs Windows [dans la prochaine version](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Un autre choix pour la gestion et de déploiement de cluster est Azure Service Fabric. [Service Fabric](https://azure.microsoft.com/services/service-fabric/) est une plateforme de microservices de Microsoft qui inclut l’orchestration de conteneur, ainsi que des développeurs programmation de modèles pour créer des applications de microservices hautement évolutif. Service Fabric prend en charge de Docker dans des conteneurs Linux et Windows et peuvent s’exécuter dans les serveurs Windows et Linux.
 
 Voici les outils de gestion de Service Fabric :
 
--   [Portail Azure pour Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) associés au cluster operations (création/mise à jour/suppression) un cluster ou de configurer son infrastructure (machines virtuelles, équilibrage de charge, la mise en réseau, etc.)
+- [Portail Azure pour Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) associés au cluster operations (création/mise à jour/suppression) un cluster ou de configurer son infrastructure (machines virtuelles, équilibrage de charge, la mise en réseau, etc.)
 
--   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) est un outil d’interface utilisateur web spécialisées qui fournit des insights et certaines opérations sur le cluster Service Fabric à partir du point de vue de nœuds/machines virtuelles et à partir de l’application et les services de point de vue.
+- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) est spécialisé UI et outil de bureau multiplateforme qui fournit des insights et certaines opérations sur le cluster Service Fabric, à partir du point de vue de nœuds/machines virtuelles et à partir du point de vue application et les services web.
 
 >[!div class="step-by-step"]
 >[Précédent](run-microservices-based-applications-in-production.md)

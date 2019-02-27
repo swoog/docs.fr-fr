@@ -45,5 +45,4 @@ Cette section fournit des instructions pour la conception de bibliothèques qui 
 ## <a name="see-also"></a>Voir aussi
 
 - [Vue d’ensemble](../../../docs/framework/get-started/overview.md)
-- [Feuille de route pour le .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [Guide de développement](../../../docs/framework/development-guide.md)

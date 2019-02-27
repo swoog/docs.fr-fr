@@ -1,6 +1,6 @@
 ---
 title: IMetaDataImport::GetInterfaceImplProps, méthode
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataImport.GetInterfaceImplProps
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91cb42a5bf1115de82b5fe28693cb77b66915c9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600555"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835718"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps, méthode
-Obtient un pointeur vers les jetons de métadonnées pour le <xref:System.Type> qui implémente la méthode spécifiée, et pour l’interface qui déclare cette méthode.  
+Obtient un pointeur vers les jetons de métadonnées pour le <xref:System.Type> qui implémente la méthode spécifiée, et pour l’interface qui déclare cette méthode.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,6 +46,33 @@ HRESULT GetInterfaceImplProps (
   
  `ptkIface`  
  [out] Le jeton de métadonnées qui représente l’interface qui définit la méthode implémentée.  
+
+## <a name="remarks"></a>Notes
+
+ Vous obtenez la valeur de `iImpl` en appelant le [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) (méthode).
+ 
+ Par exemple, supposons qu’une classe a un `mdTypeDef` jeton la valeur de 0 x 02000007 et qu’elle implémente trois interfaces dont les types ont des jetons : 
+
+- 0x02000003 (TypeDef)
+- 0x0100000A (TypeRef)
+- 0x0200001C (TypeDef)
+
+Conceptuellement, ces informations sont stockées dans une table de mise en œuvre d’interface en tant que :
+
+| Numéro de ligne | Jeton de classe | Jeton de l’interface |
+|------------|-------------|-----------------|
+| 4          |             |                 |
+| 5          | 02000007    | 02000003        |
+| 6          | 02000007    | 0100000A        |
+| 7          |             |                 |
+| 8          | 02000007    | 0200001C        |
+
+Rappelez-vous, le jeton est une valeur de 4 octets :
+
+- Les 3 octets contenant le nombre de lignes ou RID.
+- L’octet de poids fort conserve le type de jeton : 0 x 09 pour `mdtInterfaceImpl`.
+
+`GetInterfaceImplProps` Retourne les informations contenues dans la ligne dont le jeton que vous fournissez dans le `iImpl` argument. 
   
 ## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

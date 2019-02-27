@@ -3,15 +3,15 @@ title: Créer des applications ASP.NET Core 2.1 déployées en tant que conteneu
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: b03b6fab9dcd53e97c2bc4d7e5c958ca4b931077
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/25/2019
+ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221467"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835510"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-akskubernetes-orchestrator"></a>Créer des applications ASP.NET Core 2.1 déployées comme conteneurs Linux dans ACS/Kubernetes orchestrator
+# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Créer des applications ASP.NET Core 2.1 déployées comme conteneurs Linux dans un orchestrateur AKS/Kubernetes
 
 Azure Kubernetes service (AKS) est Kubernetes orchestrations services gérés d’Azure qui simplifient la gestion et le déploiement de conteneur.
 
@@ -35,11 +35,11 @@ Cet exemple utilise un projet simple qui repose basé sur un modèle API Web de 
 
 **Figure 4-36**. Création d’Application ASP.NET Core
 
-Pour créer l’exemple de projet, vous devez sélectionner **fichier** > **New** > **projet** sur Visual Studio. Puis vous verrez une liste de modèles pour plusieurs types de projets, où vous avez besoin de rechercher **Web** > **.NET Core** dans le volet gauche. Pour cet exemple, sélectionnez **Application Web ASP.NET Core**.
+Pour créer l’exemple de projet dans Visual Studio, sélectionnez **fichier** > **New** > **projet**, sélectionnez le **Web**types de projets dans le volet gauche, suivie de **Application Web ASP.NET Core**.
 
-Dans la boîte de dialogue suivante, assurez-vous que vous avez sélectionné .NET Core et ASP.NET Core 2.1 comme framework cible dans les triceps supérieurs, comme indiqué dans la figure 4-37 et puis sélectionnez l’option de l’API, pour créer une application API Web ASP.NET Core.
+Répertorie les modèles pour les projets web Visual Studio. Dans notre exemple, sélectionnez **API** pour créer une Application de l’API Web ASP.NET.
 
-Le .NET Core 2.1 est inclus dans Visual Studio 2017 version 15.7.0 ou une version ultérieure et est automatiquement installé et configuré pour vous lorsque vous sélectionnez le **.NET Core le développement multiplateforme** charge de travail lors de l’installation.
+Vérifiez que vous avez sélectionné ASP.NET Core 2.1 en tant que l’infrastructure. .NET core 2.1 est inclus dans la dernière version de Visual Studio 2017 et est automatiquement installé et configuré pour vous lorsque vous installez Visual Studio 2017.
 
 ![Visual Studio boîte de dialogue Choisir le type d’une Application Web ASP.NET Core avec l’option API sélectionnée.](media/create-web-api-application.png)
 
@@ -47,25 +47,25 @@ Le .NET Core 2.1 est inclus dans Visual Studio 2017 version 15.7.0 ou une versio
 
 Si vous avez des versions précédentes de .NET Core, vous pouvez télécharger et installer la version 2.1 à partir de <https://www.microsoft.com/net/download/core#/sdk>.
 
-Vous pouvez ajouter la prise en charge Docker lors de la création du projet à l’étape précédente, ou version ultérieure, en cas de besoin après avoir démarré le projet. Pour ajouter la prise en charge de Docker après la création du projet, cliquez sur le fichier projet dans le **l’Explorateur de solutions** et sélectionnez **ajouter** > **prise en charge Docker** sur le menu contextuel.
+Vous pouvez ajouter la prise en charge Docker lors de la création du projet ou par la suite, par conséquent, vous pouvez « Dockerisez » votre projet à tout moment. Pour ajouter la prise en charge Docker après la création du projet, avec le bouton droit sur le nœud de projet dans l’Explorateur de solutions et sélectionnez **ajouter** > **prise en charge Docker** dans le menu contextuel.
 
 ![Option de menu contextuel pour ajouter la prise en charge Docker à un projet existant : Cliquez avec le bouton droit (sur le projet) > Ajouter > prise en charge Docker.](media/add-docker-support-to-project.png)
 
 **Figure 4-38**. Ajout de prise en charge Docker à un projet existant
 
-Pour effectuer un ajout prise en charge de Docker, vous avez le choix de Windows ou Linux. Dans ce cas, sélectionnez **Linux**, car ACS ne prend pas en charge les conteneurs Windows (comme de fin 2018).
+Pour effectuer un ajout prise en charge de Docker, vous pouvez choisir Windows ou Linux. Dans ce cas, sélectionnez **Linux**, car ACS ne prend pas en charge les conteneurs Windows (comme de fin 2018).
 
 ![Boîte de dialogue Options pour sélectionner le système d’exploitation cible pour le fichier Dockerfile.](media/select-linux-docker-support.png)
 
 **Figure 4-39**. Sélection des conteneurs Linux.
 
-Avec ces étapes simples, vous devez exécuter sur un conteneur Linux de votre application ASP.NET Core 2.1.
+Avec ces étapes simples, vous disposez de votre application ASP.NET Core 2.1 en cours d’exécution sur un conteneur Linux.
 
 Comme vous pouvez le voir, l’intégration entre Visual Studio 2017 et Docker est entièrement orientée vers la productivité du développeur.
 
-Maintenant vous pouvez appuyer sur **F5** pour générer et exécuter votre application.
+Vous pouvez maintenant exécuter votre application avec le **F5** clé ou en utilisant le **lire** bouton.
 
-Après avoir exécuté le projet, vous pouvez répertorier les images à l’aide de la `docker images` commande. Vous devez voir le `mssampleapplication` image créée avec le déploiement automatique de notre projet avec Visual Studio 2017.
+Après avoir exécuté le projet, vous pouvez répertorier les images à l’aide de la `docker images` commande. Vous devez voir le `mssampleapplication` image créée par le déploiement automatique de notre projet avec Visual Studio 2017.
 
 ```console
 docker images
@@ -77,17 +77,17 @@ docker images
 
 ## <a name="register-the-solution-in-the-azure-container-registry"></a>Enregistrez la Solution dans le Registre de conteneurs Azure
 
-Télécharger l’image à n’importe quel Registre Docker, comme [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) ou sur Docker Hub pour les images peuvent être déployées sur le cluster AKS à partir de ce Registre. Dans ce cas, nous allons charger l’image dans Azure Container Registry.
+Télécharger l’image à n’importe quel Registre Docker, comme [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) ou sur Docker Hub, afin des images peuvent être déployées sur le cluster AKS à partir de ce Registre. Dans ce cas, nous allons charger l’image dans Azure Container Registry.
 
 ### <a name="create-the-image-in-release-mode"></a>Créer l’image en mode de mise en production
 
-Créer l’image dans **version** (prêt pour la production) en Mode modification à la mise en production comme indiqué ici et appuyez sur F5 pour réexécuter l’application.
+Nous allons maintenant créer l’image dans **version** mode (prêt pour la production) en remplaçant par **version**, comme illustré dans la Figure 4-41 et exécution de l’application comme avant.
 
 ![Option de la barre d’outils dans Visual Studio pour générer en mode release.](media/select-release-mode.png)
 
 **Figure 4-41**. Sélection du Mode de mise en production
 
-Si vous exécutez le `docker image` commande, vous verrez les deux images créées. L’autre pour `debug` et l’autre pour `release` mode.
+Si vous exécutez le `docker image` commande, vous verrez les deux images créés, un pour `debug` et l’autre pour `release` mode.
 
 ### <a name="create-a-new-tag-for-the-image"></a>Créer une balise pour l’Image
 
@@ -111,13 +111,13 @@ az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:l
 
 Dans les deux cas, vous devez obtenir le nom. Dans notre exemple, `mssampleacr.azurecr.io`.
 
-Vous pouvez désormais marquer l’image, en prenant la dernière image (image de mise en production), avec la commande suivante :
+Maintenant vous pouvez marquer l’image, en prenant la dernière image (l’image de la mise en production), avec la commande :
 
 ```console
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-Après avoir exécuté le `docker tag` de commande, de répertorier les images avec le `docker images` commande. Vous devez voir l’image avec la nouvelle balise.
+Après l’exécution du `docker tag` de commande, de répertorier les images avec le `docker images` commande et vous devez voir l’image avec la nouvelle balise.
 
 ![Console de sortie à partir de la commande d’images docker.](media/tagged-docker-images-list.png)
 
@@ -143,7 +143,7 @@ Vous pouvez le voir ci-dessous le résultat que vous devez obtenir lorsque le pr
 
 **Figure 4-46**. Affichage de nœuds
 
-L’étape suivante consiste à déployer votre conteneur dans votre cluster ACS Kubernetes. Pour que vous avez besoin d’un fichier (**.yml déployer le fichier**), dans ce cas, contenant :
+L’étape suivante consiste à déployer votre conteneur dans votre cluster ACS Kubernetes. Pour ce faire, vous avez besoin d’un fichier (**.yml déployer le fichier**) qui contient les éléments suivants :
 
 ```yml
 apiVersion: apps/v1beta1

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21d70b2702a754b554f06de5dad776ae98ae918d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603766"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836264"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls, méthode
-Énumère les jetons MethodDef représentant des implémentations d'interface.  
+Énumère toutes les interfaces implémentées par le `TypeDef`. 
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +39,7 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `phEnum`  
  [in, out] Pointeur vers l’énumérateur.  
   
@@ -61,6 +61,10 @@ HRESULT EnumInterfaceImpls (
 |-------------|-----------------|  
 |`S_OK`|`EnumInterfaceImpls` retourné avec succès.|  
 |`S_FALSE`|Il n’y a aucune jetons MethodDef à énumérer. Dans ce cas, `pcImpls` est défini à zéro.|  
+
+## <a name="remarks"></a>Notes
+
+L’énumération retourne une collection de `mdInterfaceImpl` jetons pour chaque interface implémentée par le `TypeDef`. Interface jetons sont retournés dans l’ordre les interfaces ont été spécifiés (via `DefineTypeDef` ou `SetTypeDefProps`). Propriétés de retourné `mdInterfaceImpl` jetons peuvent être interrogées à l’aide de [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

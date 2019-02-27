@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 6006024f29c37545ce95e579c7b93727d8c6bc67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ab6981b85d5b0663fd8e464a840bfbe55f6d3b0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547746"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836589"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Stratégie de sécurité de WPF - ingénierie de sécurité
 Trustworthy Computing (informatique de confiance) est une initiative de Microsoft qui vise à garantir la production de code sécurisé. Un élément clé de l'initiative Trustworthy Computing est [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] est une pratique d’ingénierie utilisée en association avec des processus d’ingénierie standard pour faciliter la livraison de code sécurisé. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] se compose de dix phases qui associent les meilleures pratiques à la formalisation, à la mesurabilité et à une structure supplémentaire qui comprend les aspects suivants :  
@@ -94,5 +94,4 @@ Trustworthy Computing (informatique de confiance) est une initiative de Microsof
 - [Sécurité de confiance partielle de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
 - [Stratégie de sécurité de WPF - sécurité de la plateforme](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
 - [Trustworthy Computing](https://www.microsoft.com/mscorp/twc/default.mspx)
-- [Modélisation des menaces de l’application](https://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)
-- [Recommandations en matière de sécurité : .NET Framework 2.0](https://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)
+- [Sécurité dans .NET](../../standard/security/index.md)

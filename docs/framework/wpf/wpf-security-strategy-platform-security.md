@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640444"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836342"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Stratégie de sécurité de WPF - sécurité de la plateforme
 Bien que Windows Presentation Foundation (WPF) offre une variété de services de sécurité, il s’appuie également sur les fonctionnalités de sécurité de la plateforme sous-jacente, qui inclut le système d’exploitation, le [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], et [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Ces couches se combinent pour fournir à [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modèle de sécurité de défense en profondeur renforcé qui essaie d'éviter le moindre point de défaillance, comme cela est illustré dans l'image suivante :  
@@ -50,7 +50,7 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
   
  Historiquement, les dépassements de mémoire tampon ont été la cause de nombreuses attaques de sécurité à fort impact. Un dépassement de mémoire tampon se produit quand un intrus tire parti d'une vulnérabilité de code qui autorise l'injection de code malveillant qui écrit au-delà des limites d'une mémoire tampon. Cela permet ensuite à un intrus de détourner le processus dans lequel s'exécute le code en remplaçant l'adresse de retour d'une fonction pour provoquer l'exécution du code de l'intrus. Le résultat est un code malveillant qui exécute du code arbitraire avec les mêmes privilèges que le processus détourné.  
   
- À un niveau élevé, l'indicateur de compilateur /GS protège contre quelques dépassements de mémoire tampon potentiels en injectant un cookie de sécurité spécial pour protéger l'adresse de retour d'une fonction qui a des mémoires tampon de chaînes locales. Après le retour d'une fonction, le cookie de sécurité est comparé à sa valeur précédente. Si la valeur a changé, cela signifie qu'un dépassement de mémoire tampon a pu se produire et le processus est arrêté avec une condition d'erreur. L'arrêt du processus empêche l'exécution de code potentiellement malveillant. Consultez [/GS (vérification de la sécurité de la mémoire tampon)](https://msdn.microsoft.com/library/8dbf701c.aspx) pour plus d’informations.  
+ À un niveau élevé, l'indicateur de compilateur /GS protège contre quelques dépassements de mémoire tampon potentiels en injectant un cookie de sécurité spécial pour protéger l'adresse de retour d'une fonction qui a des mémoires tampon de chaînes locales. Après le retour d'une fonction, le cookie de sécurité est comparé à sa valeur précédente. Si la valeur a changé, cela signifie qu'un dépassement de mémoire tampon a pu se produire et le processus est arrêté avec une condition d'erreur. L'arrêt du processus empêche l'exécution de code potentiellement malveillant. Consultez [/GS (vérification de la sécurité de la mémoire tampon)](/cpp/build/reference/gs-buffer-security-check) pour plus d’informations.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] est compilé avec l'indicateur /GS pour ajouter encore une autre couche de défense aux applications [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].  
   
@@ -174,7 +174,7 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>déploiement ClickOnce  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] est une technologie de déploiement complète qui est inclus avec le .NET Framework et s’intègre avec [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (consultez [vue d’ensemble du déploiement ClickOnce](https://msdn.microsoft.com/library/142dbbz4.aspx) pour plus d’informations). Les applications [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonomes peuvent être déployées à l'aide de [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], tandis que les applications hébergées par un navigateur doivent être déployées avec [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] est une technologie de déploiement complète qui est inclus avec le .NET Framework et s’intègre avec [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (consultez [ClickOnce sécurité et déploiement](/visualstudio/deployment/clickonce-security-and-deployment) pour plus d’informations). Les applications [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonomes peuvent être déployées à l'aide de [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], tandis que les applications hébergées par un navigateur doivent être déployées avec [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
  Les applications déployées à l'aide de [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] bénéficient d'une couche de sécurité supplémentaire par rapport à [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ; en fait, les applications [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] déployées demandent les autorisations dont elles ont besoin. Seules ces autorisations leur sont accordées si elles ne dépassent pas le jeu d'autorisations pour la zone à partir de laquelle l'application est déployée. En limitant le jeu d'autorisations à celles qui sont uniquement nécessaires, même si elles sont moins nombreuses que celles fournies par le jeu d'autorisations de la zone de lancement, le nombre de ressources auxquelles a accès l'application est réduite au strict minimum. Par conséquent, si l'application est détournée, les risques de dommages sur l'ordinateur client sont réduits.  
   
@@ -210,9 +210,6 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
   
 ## <a name="see-also"></a>Voir aussi
 - [Présentation de la sécurité dans Microsoft Internet Explorer 6 dans Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [Présentation et utilisation d’Internet Explorer en Mode protégé](https://msdn.microsoft.com/library/bb250462.aspx)
-- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
-- [Guide de sécurité de Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
 - [Sécurité d’accès du code](../../../docs/framework/misc/code-access-security.md)
 - [Sécurité](../../../docs/framework/wpf/security-wpf.md)
 - [Sécurité de confiance partielle de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
