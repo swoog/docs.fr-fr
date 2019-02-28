@@ -16,7 +16,7 @@ Le guide de F# fournit de nombreuses ressources pour apprendre le langage F#.
 
 ## <a name="learning-f"></a>Formation F# #
 
-[What ' s F#](what-is-fsharp.md) décrit le langage F# et quelles programmation qu’il contient est like, avec des exemples de code courts. Cela est recommandé si vous débutez avec F#.
+[Qu’est F#](what-is-fsharp.md) décrit le langage F# et quelles programmation qu’il contient est like, avec des exemples de code courts. Cela est recommandé si vous débutez avec F#.
 
 [Visite guidée de F#](tour.md) donne une vue d’ensemble des fonctionnalités de langage principaux avec un grand nombre d’exemples de code. Cela est recommandé si vous souhaitez voir les fonctionnalités de base F# en action.
 
