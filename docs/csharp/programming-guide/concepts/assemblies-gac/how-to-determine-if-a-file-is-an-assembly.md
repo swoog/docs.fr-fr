@@ -2,12 +2,12 @@
 title: 'Procédure : Déterminer si un fichier est un assembly (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 474cc4622e9444cab8e9d611dd9481d5358e10f0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681766"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745248"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Procédure : Déterminer si un fichier est un assembly (C#)
 Un fichier est un assembly si et seulement s’il est managé et s’il contient une entrée d’assembly dans ses métadonnées. Pour plus d’informations sur les assemblys et les métadonnées, consultez la rubrique [Manifeste d’assembly](../../../../../docs/framework/app-domains/assembly-manifest.md).  
@@ -70,4 +70,4 @@ class TestAssembly
 
 - <xref:System.Reflection.AssemblyName>
 - [Guide de programmation C#](../../../../csharp/programming-guide/index.md)
-- [Assemblys et le Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblys dans .NET](../../../../standard/assembly/index.md)

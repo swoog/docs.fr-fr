@@ -2,12 +2,12 @@
 title: 'Procédure : Charger et décharger des assemblys (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: eadab1d0e5ddd22fb5c0e92f45162548c9bfd76c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ff3c494b40650da1e30e111b2e7f916e249d78a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509348"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748750"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Procédure : Charger et décharger des assemblys (C#)
 Les assemblys référencés par votre programme sont chargés automatiquement au moment de la génération, mais il est également possible de charger des assemblys spécifiques dans le domaine d’application actif au moment de l’exécution. Pour plus d'informations, voir [Procédure : Charger des assemblys dans un domaine d’application](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -27,5 +27,5 @@ Les assemblys référencés par votre programme sont chargés automatiquement au
 ## <a name="see-also"></a>Voir aussi
 
 - [Guide de programmation C#](../../../../csharp/programming-guide/index.md)
-- [Assemblys et le Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblys dans .NET](../../../../standard/assembly/index.md)
 - [Guide pratique pour charger des assemblys dans un domaine d’application](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

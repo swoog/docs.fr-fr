@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635662"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663897"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (Options du compilateur C#)
 Spécifie la version du CLR (Common Language Runtime) qui peut exécuter l’assembly.  
@@ -28,7 +28,7 @@ Spécifie la version du CLR (Common Language Runtime) qui peut exécuter l’ass
  `string`  
  anycpu (valeur par défaut), anycpu32bitpreferred, ARM, x64, x86 ou Itanium.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 -   **anycpu** (valeur par défaut) compile votre assembly pour qu’il s’exécute sur n’importe quelle plateforme. Votre application s’exécute en tant que processus 64 bits dans la mesure du possible et repasse en 32 bits quand seul ce mode est disponible.  
   
@@ -36,6 +36,8 @@ Spécifie la version du CLR (Common Language Runtime) qui peut exécuter l’ass
   
 -   **ARM** compile votre assembly pour qu’il s’exécute sur un ordinateur doté d’un processeur ARM (Advanced RISC Machine).  
   
+-   **ARM64** compile votre assembly pour s’exécuter par le CLR 64 bits sur un ordinateur qui dispose d’un processeur Advanced RISC Machine (ARM) qui prend en charge le jeu d’instructions A64.  
+
 -   **x64** compile votre assembly pour qu’il soit exécuté par le CLR 64 bits sur un ordinateur qui prend en charge le jeu d’instructions AMD64 ou EM64T.  
   
 -   **x86** compile votre assembly pour qu’il soit exécuté par le CLR 32 bits x86.  

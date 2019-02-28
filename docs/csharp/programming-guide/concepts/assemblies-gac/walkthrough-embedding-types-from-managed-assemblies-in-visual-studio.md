@@ -2,12 +2,12 @@
 title: 'Procédure pas à pas : Incorporation de types provenant d’assemblys managés dans Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd03154f9f4defdedd0694fe10398c6f62d920df
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500627"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746926"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Procédure pas à pas : Incorporation de types provenant d’assemblys managés dans Visual Studio (C#)
 Si vous incorporez des informations de type d’un assembly managé avec nom fort, vous pouvez coupler faiblement des types dans une application pour obtenir une indépendance de version. Autrement dit, votre programme peut être écrit de façon à ce qu’il utilise des types de plusieurs versions d’une bibliothèque managée sans que vous n’ayez à effectuer de recompilation pour chaque version.  
@@ -237,4 +237,4 @@ Si vous incorporez des informations de type d’un assembly managé avec nom for
 - [/link (Options du compilateur C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [Guide de programmation C#](../../../../csharp/programming-guide/index.md)
 - [Programmation à l’aide d’assemblys](../../../../framework/app-domains/programming-with-assemblies.md)
-- [Assemblys et le Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblys dans .NET](../../../../standard/assembly/index.md)

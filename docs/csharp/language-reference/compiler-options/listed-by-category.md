@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2b0668b1d55afc331484339d579752646ffa88b
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546986"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442410"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Options du compilateur C# par catégorie
 
@@ -34,7 +34,7 @@ Les options du compilateur suivantes sont triées par catégorie. Pour en obteni
 |[-pathmap](pathmap-compiler-option.md)|Spécifie un mappage pour la sortie de noms de chemin d’accès source par le compilateur.|
 |[/pdb](pdb-compiler-option.md)|Spécifie le nom et l'emplacement du fichier .pdb.|
 |[-platform](platform-compiler-option.md)|Spécifie la plateforme de sortie.|
-|[/preferreduilang](preferreduilang-compiler-option.md)|Spécifiez un langage pour les résultats de la compilation.|
+|[/preferreduilang](preferreduilang-compiler-option.md)|Spécifie un langage pour les résultats de la compilation.|
 |[/refout](refout-compiler-option.md)|Génère un assembly de référence en plus de l’assembly principal.|
 |[-refonly](refonly-compiler-option.md)|Génère un assembly de référence au lieu d’un assembly principal.|
 |[-target](target-compiler-option.md)|Spécifie le format du fichier de sortie en utilisant l’une des cinq options suivantes : [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) ou [-target:winmdobj](target-winmdobj-compiler-option.md).|
@@ -54,7 +54,8 @@ Les options du compilateur suivantes sont triées par catégorie. Pour en obteni
 |[-reference](reference-compiler-option.md)|Importe des métadonnées à partir d'un fichier qui contient un assembly.|
 |-analyzer|Exécutez les analyseurs à partir de cet assembly (forme abrégée : /a).|
 |-additionalfile|Nomme des fichiers supplémentaires qui n'affectent pas directement la génération de code, mais peuvent être utilisés par des analyseurs pour produire des erreurs ou des avertissements.|
-
+|-embed|Incorporer tous les fichiers sources du PDB.|
+|-embed:\<file list>|Incorporer des fichiers spécifiques dans le PDB.|
 ## <a name="debuggingerror-checking"></a>Débogage/vérification des erreurs
 
 |Option|Objectif|
@@ -63,7 +64,7 @@ Les options du compilateur suivantes sont triées par catégorie. Pour en obteni
 |[/checked](checked-compiler-option.md)|Indique si l'arithmétique sur les entiers qui dépasse les limites du type de données entraîne une exception au moment de l'exécution.|
 |[-debug](debug-compiler-option.md)|Indique au compilateur d'émettre des informations de débogage.|
 |[-errorreport](errorreport-compiler-option.md)|Définit le comportement de signalement d'erreurs.|
-|[/fullpaths](fullpaths-compiler-option.md)|Spécifie le chemin d’accès absolu au fichier de sortie du compilateur.|
+|[/fullpaths](fullpaths-compiler-option.md)|Spécifie le chemin d'accès absolu au fichier de sortie du compilateur.|
 |[-nowarn](nowarn-compiler-option.md)|Supprime la génération par le compilateur des avertissements spécifiés.|
 |[/warn](warn-compiler-option.md)|Définit le niveau d'avertissement.|
 |[-warnaserror](warnaserror-compiler-option.md)|Transforme les avertissements en erreurs.|

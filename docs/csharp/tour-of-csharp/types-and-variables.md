@@ -3,12 +3,12 @@ title: Variables et types C# - Visite guidée du langage C#
 description: En savoir plus sur la définition des types et la déclaration de variables en C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129517"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583951"
 ---
 # <a name="types-and-variables"></a>Types et variables
 
@@ -57,20 +57,20 @@ Le traitement des caractères et chaînes dans le langage C# utilise l’encodag
 Ce qui suit résume les types numériques de C#.
 
 * Entier signé
-    - `sbyte` : 8 bits, entre -128 et 127
-    - `short` : 16 bits, entre -32 768 et 32 767
-    - `int` : 32 bits, entre -2 147 483 647 et 2 147 483 648
-    - `long` : 64 bits, plage de –9 223 372 036 854 775 808 à 9 223 372 036 854 775 807
+    - `sbyte`:  8 bits, entre -128 et 127
+    - `short`: 16 bits, entre -32 768 et 32 767
+    - `int`  : 32 bits, entre -2 147 483 648 et 2 147 483 647
+    - `long` : 64 bits, entre -9 223 372 036 854 775 808 et 9 223 372 036 854 775 807
 * Entier non signé
-    - `byte` : 8 bits, plage de 0 à 255
-    - `ushort` : 16 bits, plage de 0 à 65 535
-    - `uint` : 32 bits, plage de 0 à 4 294 967 295
-    - `ulong` : 64 bits, plage de 0 à 18 446 744 073 709 551 615
+    - `byte`   :  8 bits, entre 0 et 255
+    - `ushort` : 16 bits, entre 0 et 65 535
+    - `uint`   : 32 bits, entre 0 et 4 294 967 295
+    - `ulong`  : 64 bits, entre 0 et 18 446 744 073 709 551 615
 * Virgule flottante
-    - `float` : 32 bits, entre 1,5 × 10<sup>−45</sup> et -3,4 × 10<sup>38</sup>, avec une précision de 7 chiffres
-    - `double` : 64 bits, entre 5,0 × 10<sup>−324</sup> et -1,7 × 10<sup>308</sup>, avec une précision de 15 chiffres
+    - `float`  : 32 bits, entre 1,5 × 10<sup>-45</sup> et 3,4 × 10<sup>38</sup>,    précision de 7 chiffres
+    - `double` : 64 bits, entre 5,0 × 10<sup>-324</sup> et 1,7 × 10<sup>308</sup>, précision à 15 chiffres
 * Decimal
-    - `decimal` : 128 bits, la plage est au moins –7,9 × 10<sup>−28</sup> -  7,9 × 10<sup>28</sup>, avec une précision d’au moins 28 chiffres
+    - `decimal` : 128 bits, entre au moins -7,9 × 10<sup>-28</sup> et 7,9 × 10<sup>28</sup>, avec au moins une précision à 28 chiffres
     
 Les programmes C# utilisent les *déclarations de type* pour créer de nouveaux types. Une déclaration de type spécifie le nom et les membres du nouveau type. Cinq catégories de types C# sont définies par l’utilisateur : les types de classes, les types struct, les types d’interfaces, les types enum et les types délégués.
 

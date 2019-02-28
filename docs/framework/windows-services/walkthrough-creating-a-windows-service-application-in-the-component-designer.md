@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123668"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665028"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a>Procédure pas à pas : Créer une application de service Windows
+# <a name="walkthrough-create-a-windows-service-app"></a>Procédure pas à pas : Créer une application de service Windows
 
 Cet article explique comment créer, dans Visual Studio, une application de service Windows simple qui écrit des messages dans un journal des événements.
 
@@ -86,7 +86,7 @@ Dans l’éditeur de code, localisez la méthode <xref:System.ServiceProcess.Ser
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-Une application de service est conçue pour s'exécuter sur une longue durée, et elle interroge ou surveille généralement quelque chose dans le système. La surveillance est configurée dans la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Toutefois, la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> n'effectue pas elle-même la surveillance. La méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> doit retourner au système d'exploitation dès que le service est en cours d'exécution. Elle ne doit pas s'exécuter indéfiniment en boucle ni se bloquer. Pour définir un mécanisme d’interrogation simple, vous pouvez utiliser le composant <xref:System.Timers.Timer?displayProperty=nameWithType> comme suit : dans la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> , définissez des paramètres sur le composant, puis affectez à la propriété <xref:System.Timers.Timer.Enabled%2A> la valeur `true`. La minuterie déclenche périodiquement des événements dans votre code, lesquels indiquent au service qu'il peut effectuer son analyse. Pour cela, vous pouvez utiliser le code suivant :
+Une application de service est conçue pour s'exécuter sur une longue durée, et elle interroge ou surveille généralement quelque chose dans le système. La surveillance est configurée dans la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Toutefois, la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> n'effectue pas elle-même la surveillance. La méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> doit retourner au système d'exploitation dès que le service est en cours d'exécution. Elle ne doit pas s'exécuter indéfiniment en boucle ni se bloquer. Pour définir un mécanisme d'interrogation simple, vous pouvez utiliser le composant <xref:System.Timers.Timer?displayProperty=nameWithType>, comme suit : Dans la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, définissez des paramètres sur le composant, puis attribuez à la propriété <xref:System.Timers.Timer.Enabled%2A> la valeur `true`. La minuterie déclenche périodiquement des événements dans votre code, lesquels indiquent au service qu'il peut effectuer son analyse. Pour cela, vous pouvez utiliser le code suivant :
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -294,7 +294,7 @@ Avant de pouvoir exécuter un service Windows, vous devez l'installer, ce qui l'
 9. Dans le concepteur, choisissez **serviceProcessInstaller1** pour un projet Visual C# ou **ServiceProcessInstaller1** pour un projet Visual Basic. Affectez à la propriété <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> la valeur <xref:System.ServiceProcess.ServiceAccount.LocalSystem>. Ainsi, le service est installé et exécuté à l’aide du compte système local.
 
     > [!IMPORTANT]
-    > Le compte <xref:System.ServiceProcess.ServiceAccount.LocalSystem> dispose d'autorisations générales, y compris la possibilité d'écrire dans le journal des événements. Utilisez ce compte avec précaution car il peut augmenter le risque d'attaques par des logiciels malveillants. Pour les autres tâches, utilisez le compte <xref:System.ServiceProcess.ServiceAccount.LocalService>, qui se comporte comme un utilisateur non privilégié de l'ordinateur local et présente des informations d'identification anonymes à tout serveur distant. Cet exemple échoue si vous essayez d'utiliser le compte <xref:System.ServiceProcess.ServiceAccount.LocalService> , car il doit disposer d'une autorisation pour écrire dans le journal des événements.
+    > Le compte <xref:System.ServiceProcess.ServiceAccount.LocalSystem> dispose d'autorisations générales, y compris la possibilité d'écrire dans le journal des événements. Utilisez ce compte avec précaution car il peut augmenter le risque d'attaques par des logiciels malveillants. Pour les autres tâches, utilisez le compte <xref:System.ServiceProcess.ServiceAccount.LocalService> , qui se comporte comme un utilisateur non privilégié de l'ordinateur local et présente des informations d'identification anonymes à tout serveur distant. Cet exemple échoue si vous essayez d'utiliser le compte <xref:System.ServiceProcess.ServiceAccount.LocalService> , car il doit disposer d'une autorisation pour écrire dans le journal des événements.
 
 Pour plus d’informations sur les programmes d’installation, consultez [Guide pratique pour ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
 
@@ -431,7 +431,7 @@ Maintenant que vous avez généré le service Windows, vous pouvez l'installer. 
 
     Si le processus **installutil.exe** signale un échec, examinez le journal d’installation pour en connaître la raison. Par défaut, le journal se trouve dans le même dossier que l’exécutable du service. L’installation peut échouer si la classe <xref:System.ComponentModel.RunInstallerAttribute> n’est pas présente sur la classe `ProjectInstaller`, si l’attribut n’a pas la valeur **true** ou si la classe `ProjectInstaller` n’est pas **publique**.
 
-Pour plus d'informations, consultez [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+Pour plus d'informations, voir [Procédure : Installer et désinstaller des services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Démarrer et exécuter le service
 
@@ -452,7 +452,7 @@ Pour plus d'informations, consultez [How to: Install and Uninstall Services](../
 1. Ouvrez **l’Observateur d’événements** en commençant à taper **Observateur d’événements** dans la zone de recherche de la barre des tâches Windows, puis en sélectionnant **Observateur d’événements** dans les résultats de recherche.
 
    > [!TIP]
-   > Dans Visual Studio, vous pouvez accéder aux journaux des événements en ouvrant **l’Explorateur de serveurs** (clavier : **Ctrl**+**Alt**+**S**) et en développant le nœud **Journaux des événements** pour l’ordinateur local.
+   > Dans Visual Studio, vous pouvez accéder aux journaux des événements en ouvrant **Explorateur de serveurs** (clavier : **Ctrl**+**Alt**+**S**) et en développant le nœud **Journaux des événements** pour l’ordinateur local.
 
 2. Dans **l’Observateur d’événements**, développez **Journaux des applications et services**.
 
@@ -472,11 +472,11 @@ Pour plus d'informations, consultez [How to: Install and Uninstall Services](../
     installutil.exe /u MyNewService.exe
     ```
 
-   Si le service est désinstallé avec succès, **installutil.exe** le signale. Pour plus d'informations, consultez [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+   Si le service est désinstallé avec succès, **installutil.exe** le signale. Pour plus d'informations, voir [Procédure : Installer et désinstaller des services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous avez créé le service, vous pouvez créer un programme d'installation autonome que d'autres peuvent utiliser pour installer votre service Windows. ClickOnce ne prend pas en charge les services Windows, mais vous pouvez utiliser [WiX Toolset](http://wixtoolset.org/) pour créer un programme d’installation pour un service Windows. Pour d’autres idées, consultez [Créer un package de programme d’installation](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
+Maintenant que vous avez créé le service, vous pouvez créer un programme d'installation autonome que d'autres peuvent utiliser pour installer votre service Windows. ClickOnce ne prend pas en charge les services Windows, mais vous pouvez utiliser [WiX Toolset](http://wixtoolset.org/) pour créer un programme d’installation pour un service Windows. Pour d’autres idées, consultez [Créer un package de programme d’installation](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 Vous pouvez également opter pour l'utilisation d'un composant <xref:System.ServiceProcess.ServiceController>, ce qui vous permet d'envoyer des commandes au service que vous avez installé.
 
@@ -487,4 +487,4 @@ Vous pouvez utiliser un programme d'installation pour créer un journal des év�
 - [Applications de service Windows](../../../docs/framework/windows-services/index.md)
 - [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Guide pratique pour déboguer les applications de service Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Services (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [Services (Windows)](/windows/desktop/Services/services)

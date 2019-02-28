@@ -1,6 +1,6 @@
 ---
 title: Spécification des noms de types qualifiés complets
-ms.date: 03/14/2018
+ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - reflection, fully qualified type names
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d73cad94e0e4343c5dd09a3b12131afeabef873
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628537"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747247"
 ---
-# <a name="specifying-fully-qualified-type-names"></a>Spécification des noms de types qualifiés complets
+# <a name="specifying-fully-qualified-type-names"></a>Spécification des noms de types complets
 Vous devez spécifier des noms de types pour pouvoir valider l’entrée servant aux diverses opérations de réflexion. Un nom de type complet se compose d’une spécification de nom d’assembly, d’une spécification d’espace de noms et d’un nom de type. Les spécifications de noms de types sont utilisées par les méthodes telles que <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> et <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
 ## <a name="grammar-for-type-names"></a>Grammaire pour les noms de types  
@@ -41,9 +41,12 @@ ReferenceTypeSpec
 
 SimpleTypeSpec
     : PointerTypeSpec
-    | ArrayTypeSpec
+    | GenericTypeSpec
     | TypeName
     ;
+
+GenericTypeSpec
+   : SimpleTypeSpec ` NUMBER
 
 PointerTypeSpec
     : SimpleTypeSpec '*'
@@ -177,7 +180,10 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
     Version=1.0.0.0  
 ```  
-  
+## <a name="specifying-generic-types"></a>Spécification de types génériques
+
+SimpleTypeSpec\`NUMBER représente un type générique ouvert avec entre 1 et *n* paramètres de type générique. Par exemple, pour obtenir la référence au type générique ouvert Liste\<T> ou au type générique fermé Liste\<Chaîne>, utilisez ``Type.GetType("System.Collections.Generic.List`1")`` Pour obtenir une référence au type générique Dictionnaire\<TKey, TValue>, utilisez ``Type.GetType("System.Collections.Generic.Dictionary`2")``. 
+
 ## <a name="specifying-pointers"></a>Spécification des pointeurs  
  SimpleTypeSpec* représente un pointeur non managé. Par exemple, pour obtenir un pointeur vers le type MyType, utilisez `Type.GetType("MyType*")`. Pour obtenir un pointeur vers un autre pointeur vers le type MyType, utilisez `Type.GetType("MyType**")`.  
   
@@ -192,7 +198,6 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 -   `Type.GetType("MyArray[]")` obtient un tableau unidimensionnel dont la limite inférieure est égale à 0.  
   
 -   `Type.GetType("MyArray[*]")` obtient un tableau unidimensionnel dont la limite inférieure est inconnue.  
-  
 -   `Type.GetType("MyArray[][]")` obtient un tableau contenant un tableau à deux dimensions.  
   
 -   `Type.GetType("MyArray[*,*]")` et`Type.GetType("MyArray[,]")` obtiennent un tableau rectangulaire à deux dimensions dont les limites inférieures sont inconnues.  

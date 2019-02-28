@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7be62b3a97614faea14eb874be58c79246754903
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653747"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583652"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Options du compilateur C# par ordre alphabétique
 
@@ -36,6 +36,10 @@ Les options du compilateur suivantes sont triées par ordre alphabétique. Pour 
 |[-delaysign](delaysign-compiler-option.md)|Diffère la signature de l'assembly en utilisant uniquement la partie publique de la clé de nom fort.|
 |[-deterministic](deterministic-compiler-option.md)|Indique au compilateur de générer un assembly dont le contenu binaire est identique dans les compilations si les entrées sont identiques.|
 |[-doc](doc-compiler-option.md)|Spécifie un fichier de documentation XML à générer.|
+|-embed|Incorporer tous les fichiers sources du PDB.|
+|-embed:\<file list>|Incorporer des fichiers spécifiques dans le PDB.|
+|-errorendlocation|Ligne et colonne de sortie de l'emplacement de fin de chaque erreur.|
+|-errorlog:\<file>|Spécifier un fichier pour journaliser tous les diagnostics du compilateur et de l’analyseur.|
 |[-errorreport](errorreport-compiler-option.md)|Spécifie comment gérer les erreurs internes du compilateur : invite, envoi et aucune gestion. La valeur par défaut est aucune gestion.|
 |[-filealign](filealign-compiler-option.md)|Spécifie l'alignement utilisé pour les sections du fichier de sortie.|
 |[/fullpaths](fullpaths-compiler-option.md)|Indique au compilateur de générer des chemins d’accès complets.|
@@ -68,12 +72,14 @@ Les options du compilateur suivantes sont triées par ordre alphabétique. Pour 
 |[-reference](reference-compiler-option.md)|Référence les métadonnées à partir des fichiers d'assembly spécifiés.|
 |[/refout](refout-compiler-option.md)|Génère un assembly de référence en plus de l’assembly principal.|
 |[-refonly](refonly-compiler-option.md)|Génère un assembly de référence au lieu d’un assembly principal.|
+|-reportanalyzer|Créer un rapport sur les informations supplémentaires de l’analyseur, comme l’heure d’exécution.|
 |[-resource](resource-compiler-option.md)|Incorpore la ressource spécifiée.|
 |-ruleset:\<file>|Spécifiez un fichier ruleset qui désactive des diagnostics spécifiques.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Spécifie la version minimale du sous-système utilisable par le fichier exécutable.|
 |[-target](target-compiler-option.md)|Spécifie le format du fichier de sortie en utilisant l’une des quatre options suivantes :[-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md), [-target:winmdobj](target-winmdobj-compiler-option.md).|
 |[unsafe](unsafe-compiler-option.md)|Autorise le code [unsafe](../../../csharp/language-reference/keywords/unsafe.md).|
 |[-utf8output](utf8output-compiler-option.md)|Génère des messages du compilateur encodés en UTF-8.|
+|-version|Afficher le numéro de version du compilateur et quitter.|
 |[/warn](warn-compiler-option.md)|Définit le niveau d'avertissement (entre 0 et 4).|
 |[-warnaserror](warnaserror-compiler-option.md)|Signale des avertissements spécifiques en tant qu'erreurs.|
 |[-win32icon](win32icon-compiler-option.md)|Utilise cette icône pour la sortie.|

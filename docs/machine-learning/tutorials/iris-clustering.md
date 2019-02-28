@@ -3,15 +3,15 @@ title: Créer un cluster de fleurs d’iris à l’aide d’un apprenant de clus
 description: Découvrez comment utiliser ML.NET dans un scénario de clustering
 author: pkulikov
 ms.author: johalex
-ms.date: 01/11/2019
+ms.date: 02/19/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fcbd75597d6fdce8dceffc9d47d06cc13dd11570
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093604"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664469"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutoriel : créer un cluster de fleurs d’iris à l’aide d’un apprenant de clustering avec ML.NET
 
@@ -84,7 +84,7 @@ Supprimez la définition de classe existante et ajoutez le code suivant, qui dé
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` est la classe des données d’entrée et a des définitions pour chaque caractéristique du jeu de données. Utilisez l’attribut [Column](xref:Microsoft.ML.Data.ColumnAttribute) pour spécifier les index des colonnes sources dans le fichier de jeu de données.
+`IrisData` est la classe des données d’entrée et a des définitions pour chaque caractéristique du jeu de données. Utilisez l’attribut [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) pour spécifier les index des colonnes sources dans le fichier de jeu de données.
 
 La classe `ClusterPrediction` représente la sortie du modèle de clustering appliqué à une instance `IrisData`. Utilisez l’attribut [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) pour lier les champs `PredictedClusterId` et `Distances` aux colonnes **PredictedLabel** et **Score** respectivement. Dans le cas de la tâche de clustering, ces colonnes ont la signification suivante :
 
@@ -127,7 +127,7 @@ Ajoutez le code suivant à la méthode `Main` pour configurer la façon de charg
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Notez que les noms de colonnes et les indices correspondent au schéma défini par la classe `IrisData`. La valeur <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> spécifie le type `float`.
+Utilisez la méthode [générique `CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) pour déduire le schéma du jeu de données à partir de la définition de classe `IrisData`.
 
 Utilisez l’instance <xref:Microsoft.ML.Data.TextLoader> pour créer une instance <xref:Microsoft.Data.DataView.IDataView>, qui représente la source de données du jeu de données d’apprentissage :
 
