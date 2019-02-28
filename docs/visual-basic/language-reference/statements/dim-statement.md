@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 487e2ff55f256bc06a463043dd2849a404eb82cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567735"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975197"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim, instruction (Visual Basic)
 Déclare et alloue de l’espace de stockage pour une ou plusieurs variables.  
@@ -196,7 +196,7 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 ```  
   
 ## <a name="arrays"></a>Tableaux  
- Vous pouvez déclarer une variable qui doit contenir un *tableau*, qui peut contenir plusieurs valeurs. Pour spécifier qu’une variable contient un tableau, suivez son `variablename` immédiatement avec des parenthèses. Pour plus d’informations sur les tableaux, consultez [tableaux](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Vous pouvez déclarer une variable qui doit contenir un *tableau*, qui peut contenir plusieurs valeurs. Pour spécifier qu’une variable contient un tableau, suivez son `variablename` immédiatement avec des parenthèses. Pour plus d’informations sur les tableaux, consultez [Tableaux](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
  Vous pouvez spécifier la limite inférieure et supérieure de chaque dimension du tableau. Pour ce faire, vous devez inclure un `boundslist` dans les parenthèses. Pour chaque dimension, le `boundslist` spécifie la limite supérieure et éventuellement la limite inférieure. La limite inférieure est toujours égal à zéro, que vous spécifiiez ou non. Chaque index peut varier de zéro à sa valeur de limite supérieure.  
   
@@ -299,19 +299,19 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ## <a name="example"></a>Exemple  
  L’exemple suivant déclare les variables à l’aide de la `Dim` instruction avec diverses options.  
   
- [!code-vb[VbVbalrStatements#141](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant répertorie les nombres premiers entre 1 et 30. La portée des variables locales est décrite dans les commentaires de code.  
   
- [!code-vb[VbVbalrStatements#142](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]  
   
 ## <a name="example"></a>Exemple  
  Dans l’exemple suivant, le `speedValue` variable est déclarée au niveau de la classe. Le `Private` mot clé est utilisé pour déclarer la variable. La variable est accessible par n’importe quelle procédure dans le `Car` classe.  
   
- [!code-vb[VbVbalrStatements#144](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]  
   
- [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [Const (instruction)](../../../visual-basic/language-reference/statements/const-statement.md)

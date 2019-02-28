@@ -2,12 +2,12 @@
 title: Jeu de caractères en entrée (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bed10f6e4a9fb01abe825e5eb798da2d866ca84
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641198"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976757"
 ---
 # <a name="input-character-set-entity-sql"></a>Jeu de caractères en entrée (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] accepte les caractères UNICODE encodés en UTF-16.  
@@ -24,9 +24,9 @@ ms.locfileid: "54641198"
   
  Les mots clés, les expressions et la ponctuation peuvent être tout caractère UTF-16 qui est normalisé en latin. Par exemple, SELECT dans une page de codes pour le japonais est un mot clé valide.  
   
- Les mots clés, les expressions et la ponctuation peuvent être uniquement des caractères latins. `SELECT` dans une page de codes japonaise n'est pas un mot clé. +, -, *, /, =, (, ), ‘, [, ] et toute autre construction de langage non citée ici ne peuvent être que des caractères latins.  
+ Les mots clés, les expressions et la ponctuation peuvent être uniquement des caractères latins. `SELECT` dans une page de codes japonaise n'est pas un mot clé. +,-, \*, /, =, (,), ', [,] et toute autre construction de langage non citée ici ne peut être que des caractères latins.  
   
- Les identificateurs simples ne peuvent être que des caractères latins. Cela évite l'ambiguïté pendant la comparaison, car les valeurs d'origine sont comparées. Par exemple, ABC est différent dans la page de code du japonais et celle du latin.  
+ Les identificateurs simples ne peuvent être que des caractères latins. Cela évite l'ambiguïté pendant la comparaison, car les valeurs d'origine sont comparées. Par exemple, ABC est différent dans les pages de codes Latin et japonais.  
   
 ## <a name="see-also"></a>Voir aussi
 - [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

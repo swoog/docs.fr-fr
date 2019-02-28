@@ -2,12 +2,12 @@
 title: Tranches (F#)
 description: En savoir plus sur l’utilisation des tranches pour existant F# types de données et comment définir vos propres sections pour les autres types de données.
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746706"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970105"
 ---
 # <a name="slices"></a>Tranches
 
@@ -95,7 +95,7 @@ Le F# ne définit pas de bibliothèque principale `GetSlice`pour les tableaux 3D
 
 Le F# bibliothèque principale définit les tranches pour un ensemble limité de types. Si vous souhaitez définir des coupes de plusieurs types de données, vous pouvez le faire dans la définition de type ou dans une extension de type.
 
-Par exemple, voici comment vous pouvez définir des tranches pour la <xref:System.ArraySegment`1> classe permettant d’autoriser pour la manipulation des données pratique :
+Par exemple, voici comment vous pouvez définir des tranches pour la <xref:System.ArraySegment%601> classe permettant d’autoriser pour la manipulation des données pratique :
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Utilisez cette fonctionnalité pour éviter le boxing s’il est nécessaire
 
-Si vous définissez des tranches pour un type qui est en fait un struct, il est recommandé que vous `inline` le `GetSlice` membre. Le F# compilateur optimise les arguments facultatifs, en évitant les allocations de tas à la suite de découpage. Cela est extrêmement important de découpage tel que les constructions <xref:System.Span`1> qui ne peut pas être être alloués sur le tas.
+Si vous définissez des tranches pour un type qui est en fait un struct, il est recommandé que vous `inline` le `GetSlice` membre. Le F# compilateur optimise les arguments facultatifs, en évitant les allocations de tas à la suite de découpage. Cela est extrêmement important de découpage tel que les constructions <xref:System.Span%601> qui ne peut pas être alloué sur le tas.
 
 ```fsharp
 open System

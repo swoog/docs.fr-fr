@@ -15,12 +15,12 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: c2af3864ef19dbf835397968af0913cd62994305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbfc94ad70695e9a785375f2460f9f9d8f3a20c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494429"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977537"
 ---
 # <a name="or-operator-visual-basic"></a>Or, opérateur (Visual Basic)
 Effectue une disjonction logique sur deux `Boolean` expressions ou une disjonction au niveau du bit sur deux expressions numériques.  
@@ -77,14 +77,14 @@ result = expression1 Or expression2
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise le `Or` opérateur effectue une disjonction logique inclusive sur deux expressions. Le résultat est un `Boolean` valeur qui représente si une des deux expressions est `True`.  
   
- [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
  L’exemple précédent produit des résultats de `True`, `True`, et `False`, respectivement.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise le `Or` opérateur effectue une disjonction logique inclusive sur les bits individuels de deux expressions numériques. Le bit du modèle de résultat est défini si un des bits correspondants dans les opérandes est défini sur 1.  
   
- [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
  L’exemple précédent produit les résultats de 10, 14 et 14, respectivement.  
   

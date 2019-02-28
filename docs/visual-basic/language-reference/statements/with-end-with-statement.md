@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: a3762e3bf0978feeb1155f8cc8249a77f0a497df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9d2ce983398f34747f09d4ffd2cc8fa9e6b2b53
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535267"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968255"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With, instruction (Visual Basic)
 Exécute une série d'instructions qui font référence à plusieurs reprises à un objet ou une structure unique afin que ces instructions puissent utiliser une syntaxe simplifiée lors de l'accès aux membres de l'objet ou de la structure.  Lorsque vous utilisez une structure, vous ne pouvez lire que les valeurs des membres ou des méthodes invoke. En outre, vous obtenez une erreur si vous tentez d'assigner des valeurs aux membres d'une structure utilisée dans une instruction `With...End With`.  
@@ -54,13 +54,14 @@ End With
   
  Le type de données de `objectExpression` peut être un type de classe ou de structure, ou même un type élémentaire Visual Basic, tel que `Integer`.  Si `objectExpression` est autre chose qu'un objet, vous ne pouvez lire que les valeurs de ses membres ou de ses méthodes invoke. En outre, vous obtenez une erreur si vous tentez d'assigner des valeurs aux membres d'une structure utilisée dans une instruction `With...End With`.  Il s'agit de la même erreur que celle que vous obtenez si vous appelez une méthode qui a retourné une structure et qui a immédiatement accédé à une valeur pour l'assigner à un membre du résultat de la fonction, par exemple `GetAPoint().x = 1`.  Dans les deux cas, le problème vient du fait que la structure existe uniquement dans la pile des appels. Par ailleurs, il n'existe aucun moyen dans ce cas pour qu'un membre de structure modifié puisse écrire dans un emplacement de manière à ce qu'une autre partie du code du programme puisse observer la modification.  
   
- `objectExpression` est évalué une seule fois, à l'entrée dans le bloc. Vous ne pouvez pas réassigner `objectExpression` à partir de l'intérieur du bloc `With`.  
+ 
+  `objectExpression` est évalué une seule fois, à l'entrée dans le bloc. Vous ne pouvez pas réassigner `objectExpression` à partir de l'intérieur du bloc `With`.  
   
  Dans un bloc `With`, vous pouvez accéder aux méthodes et propriétés de l'objet spécifié uniquement sans les qualifier. Vous pouvez utiliser les méthodes et propriétés des autres objets, mais vous devez les qualifier par leurs noms d'objets.  
   
  Vous pouvez placer une instruction `With...End With` dans une autre. Les instructions `With...End With` imbriquées peuvent prêter à confusion si les objets référencés ne sont pas clairs d'après le contexte. Vous devez fournir une référence qualifiée complète à un objet qui se trouve dans un bloc `With` externe lorsque l'objet est référencé à partir de l'intérieur d'un bloc `With`.  
   
- Vous ne pouvez pas créer de branche dans un bloc d'instructions `With` à partir de l'extérieur du bloc.  
+ Vous ne pouvez pas créer de branche dans un bloc d’instructions `With` à partir de l’extérieur du bloc.  
   
  À moins que le bloc ne contienne une boucle, les instructions ne sont exécutées qu'une seule fois. Vous pouvez imbriquer différentes sortes de structures de contrôle. Pour plus d’informations, consultez [Structures de contrôle imbriquées](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
@@ -72,12 +73,12 @@ End With
 ## <a name="example"></a>Exemple  
  Dans l'exemple suivant, chaque bloc `With` exécute une série d'instructions sur un seul objet.  
   
- [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
+ [!code-vb[VbVbalrWithStatement#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#2)]  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant imbrique les instructions `With…End With`. Dans l'instruction `With` imbriquée, la syntaxe fait référence à l'objet interne.  
   
- [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
+ [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Collections.Generic.List%601>

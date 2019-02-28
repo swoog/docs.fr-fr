@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543446"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980943"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Comment les informations de culture affectent les chaînes dans Visual Basic
 Cette page d’aide décrit comment Visual Basic utilise les informations de culture pour effectuer des comparaisons et les conversions de chaînes.  
@@ -44,7 +44,7 @@ Cette page d’aide décrit comment Visual Basic utilise les informations de cul
   
  Pour convertir une date à la chaîne de culture, passez le <xref:System.Globalization.CultureInfo> objet à l’objet date <xref:System.DateTime.ToString%28System.IFormatProvider%29> (méthode). Par exemple, le code suivant affiche « 07/04/2005 00:00:00 », indépendamment des paramètres de culture de l’application.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Littéraux de date sont toujours interprétées selon la culture.  
@@ -60,11 +60,11 @@ Cette page d’aide décrit comment Visual Basic utilise les informations de cul
   
  Le `StrComp` fonction retourne un entier qui indique la relation entre les deux chaînes comparées selon l’ordre de tri. Une valeur positive pour le résultat indique que la première chaîne est supérieure à la seconde chaîne. Un résultat négatif indique la première chaîne est plus petite et la valeur zéro indique l’égalité entre les chaînes.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  Vous pouvez également utiliser le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] partenaire de la `StrComp` (fonction), le <xref:System.String.Compare%2A?displayProperty=nameWithType> (méthode). Il s’agit d’une méthode statique, la surcharge de la classe string de base. L’exemple suivant illustre comment cette méthode est utilisée :  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  Pour un contrôle plus précis sur la façon dont les comparaisons sont effectuées, vous pouvez utiliser des surcharges supplémentaires de la <xref:System.String.Compare%2A> (méthode). Avec le <xref:System.String.Compare%2A?displayProperty=nameWithType> (méthode), vous pouvez utiliser le `comparisonType` argument pour spécifier le type de comparaison à utiliser.  
   

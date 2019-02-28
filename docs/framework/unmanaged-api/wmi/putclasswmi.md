@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614508"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972805"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi function
 Crée une classe ou met à jour une classe existante.  
@@ -49,7 +49,7 @@ HRESULT PutClassWmi (
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si le jeu, WMI ne stocke pas les qualificateurs avec la version modifiée. </br> Si ce n’est pas ensemble, il est supposé que cet objet n’est pas localisé, et tous les qualificateurs sont storedwith cette instance. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si le jeu, WMI ne stocke pas les qualificateurs avec la version modifiée. <br> Si ce n’est pas ensemble, il est supposé que cet objet n’est pas localisé, et tous les qualificateurs sont storedwith cette instance. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Créer la classe si elle n’existe pas, ou remplacer si elle existe déjà. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Mettre à jour de la classe. La classe doit exister pour l’appel réussisse. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Créer la classe. L’appel échoue si la classe existe déjà. |

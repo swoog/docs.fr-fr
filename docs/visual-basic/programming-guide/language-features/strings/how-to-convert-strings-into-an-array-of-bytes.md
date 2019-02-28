@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], string conversion
 - arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
-ms.openlocfilehash: 83efc9e6b4d4433d5416f2f8b2612c76581586e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a96664f308a711d440f063627665283c5b7fc264
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648480"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967501"
 ---
 # <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>Procédure : Convertir des chaînes en un tableau d’octets en Visual Basic
 Cette rubrique montre comment convertir une chaîne en un tableau d’octets.  
@@ -21,7 +21,7 @@ Cette rubrique montre comment convertir une chaîne en un tableau d’octets.
 ## <a name="example"></a>Exemple  
  Cet exemple utilise le <xref:System.Text.Encoding.GetBytes%2A> méthode de la <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> classe pour convertir une chaîne en un tableau d’octets d’encodage.  
   
- [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-strings-into-an-array-of-bytes_1.vb)]  
+ [!code-vb[VbVbalrStrings#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#74)]  
   
  Vous pouvez choisir parmi plusieurs options d’encodage pour convertir une chaîne en tableau d’octets :  
   

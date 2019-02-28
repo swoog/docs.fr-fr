@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: e686b3e371b24f14637476f9a7fd5455f1b2b86c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580796"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981541"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limite les conversions de type de données implicites aux seules conversions étendues, interdit les liaisons tardives et interdit le typage implicite qui aboutit à un `Object` type.  
@@ -137,19 +137,19 @@ Option Strict { On | Off }
 ## <a name="example"></a>Exemple  
  Les exemples suivants montrent des erreurs de compilation provoquées par les conversions de types implicites qui sont des conversions restrictives. Cette catégorie d’erreurs correspond à la **conversion implicite** condition sur la **Page Compiler**.  
   
- [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre une erreur de compilation due à liaison tardive. Cette catégorie d’erreurs correspond à la **Late binding ; appel peut échouer au moment de l’exécution** condition sur la **Page Compiler**.  
   
- [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>Exemple  
  Les exemples suivants illustrent des erreurs provoquées par des variables qui sont déclarées avec un type implicite de `Object`. Cette catégorie d’erreurs correspond à la **type implicite ; objet pris par défaut** condition sur la **Page Compiler**.  
   
- [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   
- [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#164](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#164)]  
   
 ## <a name="see-also"></a>Voir aussi
 

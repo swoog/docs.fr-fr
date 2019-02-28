@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 329b4f68874d29d141001800ed326a454a878ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18e35bab219003439136bc5d88f4b2f0ea6cdd1c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502896"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965746"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Provoque la classe en cours ou interface hérite des attributs, variables, propriétés, procédures et événements d’une autre classe ou ensemble d’interfaces.  
@@ -54,12 +54,12 @@ Inherits basetypenames
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise le `Inherits` instruction pour montrer comment une classe nommée `thisClass` peut hériter de tous les membres d’une classe de base nommée `anotherClass`.  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre l’héritage de plusieurs interfaces.  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
  L’interface nommée `thisInterface` inclut désormais toutes les définitions dans le <xref:System.IComparable>, <xref:System.IDisposable>, et <xref:System.IFormattable> interfaces que les membres hérités fournissent respectivement pour comparaison spécifique au type de deux objets, libérer les ressources allouées. et l’expression de la valeur d’un objet comme un `String`. Une classe qui implémente `thisInterface` doit implémenter chaque membre de chaque interface de base.  
   

@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18bf03fee1a95c898e8273fa839e41a86b2d1c32
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828369"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965226"
 ---
 # <a name="debugging-structures"></a>Structures de débogage
+
 Cette section décrit les structures non managées utilisées par l'API de débogage.
 
 ## <a name="in-this-section"></a>Dans cette section
@@ -25,7 +26,7 @@ Cette section décrit les structures non managées utilisées par l'API de débo
 
  [CLR_DEBUGGING_VERSION, Structure](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) définit la version de produit du common language runtime (CLR) pour le débogage.
 
- [CodeChunkInfo Structure1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) représente un bloc de code en mémoire unique.
+ [CodeChunkInfo (Structure)](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) représente un bloc de code en mémoire unique.
 
  [COR_ACTIVE_FUNCTION](cor-active-function-structure.md) contient des informations sur les fonctions qui sont actuellement actives dans les frames d’un thread.
 
@@ -71,9 +72,8 @@ Cette section décrit les structures non managées utilisées par l'API de débo
 
  [StackTrace_SimpleContext (Structure)](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) fournit un contexte simple qui peut être utilisé à la place d’un intégral `CONTEXT` structure.
 
-
-
 ## <a name="related-sections"></a>Rubriques connexes
+
  [Coclasses de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 
  [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

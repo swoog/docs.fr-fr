@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730735"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981268"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Opérateurs arithmétiques en Visual Basic
 Opérateurs arithmétiques sont utilisés pour effectuer la plupart des opérations arithmétiques familières qui impliquent le calcul de valeurs numériques représentées par des littéraux, des variables, autres expressions, fonction et les appels de propriété et constantes. Également classés avec des opérateurs arithmétiques sont les opérateurs de décalage de bits, qui agissent au niveau des bits individuels des opérandes- and -shift de leurs modèles binaires vers la gauche ou droite.  
@@ -26,29 +26,29 @@ Opérateurs arithmétiques sont utilisés pour effectuer la plupart des opérati
 ## <a name="arithmetic-operations"></a>Opérations arithmétiques  
  Vous pouvez ajouter deux valeurs dans une expression avec le [opérateur +](../../../../visual-basic/language-reference/operators/addition-operator.md), ou soustraire une valeur d’une autre avec la [-, opérateur (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), comme le montre l’exemple suivant.  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
  Négation utilise également le [-, opérateur (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), mais avec un seul opérande, comme dans l’exemple suivant montre.  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
  Multiplication et division utilisent le [* opérateur](../../../../visual-basic/language-reference/operators/multiplication-operator.md) et [/, opérateur (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), respectivement, comme le montre l’exemple suivant.  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
  Exponentiation utilise le [^ opérateur](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), comme le montre l’exemple suivant.  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
  Division d’entier est effectuée à l’aide de la [\, opérateur (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Division d’entier retourne le quotient, autrement dit, l’entier qui représente le nombre de fois où le diviseur peut diviser le dividende sans tenir compte de tout élément restant. Le diviseur et le dividende doivent être de types intégraux (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, et `ULong`) pour cet opérateur. Tous les autres types doivent tout d’abord être convertis en un type intégral. L’exemple suivant montre la division d’entier.  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
  Modulo arithmétique est effectué à l’aide de la [opérateur Mod](../../../../visual-basic/language-reference/operators/mod-operator.md). Cet opérateur retourne le reste après que le diviseur par le dividende un nombre entier d’heures. Si le diviseur et le dividende sont des types intégraux, la valeur retournée est intégral. Si le diviseur et le dividende sont des types à virgule flottante, la valeur retournée est également à virgule flottante. L’exemple suivant illustre ce comportement.  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Tentative de Division par zéro  
  Division par zéro a des résultats différents selon les types de données impliqués. Dans les divisions intégrales (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] lève un <xref:System.DivideByZeroException> exception. Dans les opérations de division sur la `Decimal` ou `Single` type de données, le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] lève également une <xref:System.DivideByZeroException> exception.  
@@ -80,7 +80,7 @@ Opérateurs arithmétiques sont utilisés pour effectuer la plupart des opérati
   
  L’exemple suivant Décale une `Integer` valeur gauche et droite.  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
  Les décalages arithmétiques ne génèrent jamais des exceptions de dépassement de capacité.  
   

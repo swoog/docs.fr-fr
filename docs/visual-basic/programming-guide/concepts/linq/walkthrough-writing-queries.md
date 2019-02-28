@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c1087f1ea260b61a51126f42703a32075884e54
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666577"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971284"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Procédure pas à pas : Écriture de requêtes dans Visual Basic
 Cette procédure pas à pas montre comment vous pouvez utiliser des fonctionnalités du langage Visual Basic pour écrire [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions de requête. La procédure pas à pas montre comment créer des requêtes sur une liste d’objets Student, comment exécuter des requêtes et comment les modifier. Les requêtes incorporent plusieurs fonctionnalités, y compris les initialiseurs d’objets, l’inférence de type local et les types anonymes.  
@@ -56,11 +56,11 @@ Cette procédure pas à pas montre comment vous pouvez utiliser des fonctionnali
   
 1.  Trouver l’emplacement dans le `Main` méthode du projet qui est marqué comme suit :  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]  
   
      Copiez le code suivant et collez-le dans.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]  
   
 2.  Placez le pointeur de la souris sur `studentQuery` dans votre code pour vérifier que le type du compilateur affectée est `IEnumerable(Of Student)`.  
   
@@ -71,7 +71,7 @@ Cette procédure pas à pas montre comment vous pouvez utiliser des fonctionnali
   
 1.  Ajoutez le code suivant `For Each` boucle sous la requête dans votre projet.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]  
   
 2.  Placez le pointeur de la souris sur la variable de contrôle de boucle `studentRecord` pour voir son type de données. Le type de `studentRecord` est déduite comme étant `Student`, car `studentQuery` retourne une collection de `Student` instances.  
   
@@ -102,7 +102,7 @@ Cette procédure pas à pas montre comment vous pouvez utiliser des fonctionnali
   
 1.  Ajoutez le code dans cette section pour introduire un identificateur local dans l’expression de requête. L’identificateur local contiendra un résultat intermédiaire. Dans l’exemple suivant, `name` est un identificateur qui contient une concaténation de l’étudiant et du nom de famille. Un identificateur local peut être utilisé pour des raisons pratiques, ou il peut améliorer les performances en stockant les résultats d’une expression qui serait sinon soient calculés plusieurs fois.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]  
   
 2.  Générez et exécutez l’application en appuyant sur CTRL + F5. Notez que les résultats dans la fenêtre de console.  
   
@@ -110,7 +110,7 @@ Cette procédure pas à pas montre comment vous pouvez utiliser des fonctionnali
   
 1.  Ajoutez la requête et `For Each` boucle à partir de cette section pour créer une requête qui produit une séquence dont les éléments diffèrent des éléments dans la source. Dans l’exemple suivant, la source est une collection de `Student` objets, mais qu’un seul membre de chaque objet est retourné : le prénom des étudiants dont le nom est Garcia. Étant donné que `currentStudent.First` est une chaîne, le type de données de la séquence retournée par `studentQuery3` est `IEnumerable(Of String)`, une séquence de chaînes. Comme dans les exemples précédents, l’attribution d’une donnée de type pour `studentQuery3` est laissées au compilateur pour déterminer à l’aide de l’inférence de type local.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]  
   
 2.  Placez le pointeur de la souris sur `studentQuery3` dans votre code pour vérifier que le type assigné est `IEnumerable(Of String)`.  
   
@@ -122,14 +122,14 @@ Cette procédure pas à pas montre comment vous pouvez utiliser des fonctionnali
   
      L’exemple suivant crée une requête qui retourne le nom et le rang de garantiront dont le rang universitaire est compris entre 1 et 10, dans l’ordre de classement. Dans cet exemple, le type de `studentQuery4` doit être déduit, car le `Select` clause retourne une instance d’un type anonyme, et un type anonyme n’a pas de nom utilisable.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]  
   
 2.  Générez et exécutez l’application en appuyant sur CTRL + F5. Notez que les résultats dans la fenêtre de console.  
   
 ## <a name="additional-examples"></a>Obtenir des exemples supplémentaires  
  Maintenant que vous comprenez les notions de base, voici une liste d’exemples supplémentaires pour illustrer la flexibilité et la puissance de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] requêtes. Chaque exemple est précédé d’une brève description de ce qu’il fait. Placez le pointeur de la souris sur la variable de résultat de requête pour chaque requête afficher le type déduit. Utilisez un `For Each` boucle pour produire les résultats.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]  
   
 ## <a name="additional-information"></a>Informations supplémentaires  
  Une fois que vous êtes familiarisé avec les concepts de base de l’utilisation de requêtes, vous êtes prêt à lire la documentation et les exemples pour le type spécifique de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fournisseur qui vous intéresse :  

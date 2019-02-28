@@ -11,12 +11,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: d0260e53be421d36cdc8d351d30d7f8a4ac4fa84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aa3219cb613082545c0a417ed6972bb51c8815f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684169"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975405"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Procédure : Filtrer les résultats de la requête à l’aide de LINQ (Visual Basic)
 Language-Integrated Query (LINQ) facilite l’accès aux informations de base de données et exécuter des requêtes.  
@@ -69,13 +69,13 @@ Language-Integrated Query (LINQ) facilite l’accès aux informations de base de
   
      Ajoutez le code suivant à la `Load` événement à interroger les tables qui sont exposées en tant que propriétés de votre contexte de données. La requête filtre les résultats et retourne uniquement les clients qui sont trouvent dans `London`.  
   
-     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]  
   
 4.  Appuyez sur F5 pour exécuter votre projet et afficher les résultats.  
   
 5.  Voici quelques autres filtres que vous pouvez essayer.  
   
-     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 54ad162a1a720a1645a3b413e6518d2ccfd37bbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595914"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979921"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Littéral d'élément XML (Visual Basic)
 
@@ -119,7 +119,7 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment créer un élément XML simple qui a deux éléments vides imbriqués.  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]  
   
  L’exemple affiche le texte suivant. Notez que le littéral conserve la structure des éléments vides.  
   
@@ -133,7 +133,7 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser des expressions incorporées pour nommer un élément et de créer des attributs.  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]  
   
  Ce code affiche le texte suivant :  
   
@@ -144,7 +144,7 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
 ## <a name="example"></a>Exemple  
  L'exemple suivant déclare `ns` en tant que préfixe d'espace de noms XML. Ensuite, il utilise le préfixe de l’espace de noms pour créer un littéral XML et affiche le formulaire final de l’élément.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  Ce code affiche le texte suivant :  
   

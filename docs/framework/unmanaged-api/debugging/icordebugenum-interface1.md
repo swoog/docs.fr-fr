@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum, Interface1
+title: ICorDebugEnum, interface
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38aaa21b655136c63a45a7d36c097769882d8c37
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732750"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969308"
 ---
-# <a name="icordebugenum-interface1"></a>ICorDebugEnum, Interface1
+# <a name="icordebugenum-interface"></a>ICorDebugEnum, interface
+
 Sert de l’interface de base abstraite pour les énumérateurs qui sont utilisés par une application de débogage.  
   
 ## <a name="methods"></a>Méthodes  

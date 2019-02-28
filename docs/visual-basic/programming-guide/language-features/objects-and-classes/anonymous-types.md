@@ -8,29 +8,29 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: d6aa3685fc4aa6b51dc45b82f315f13a23b1c332
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562529"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968016"
 ---
 # <a name="anonymous-types-visual-basic"></a>Types anonymes (Visual Basic)
 Visual Basic prend en charge les types anonymes, qui vous permettent de créer des objets sans écrire de définition de classe pour le type de données. À la place, le compilateur se charge de générer une classe. La classe n’a aucun nom utilisable, hérite directement de <xref:System.Object>et contient les propriétés que vous spécifiez dans la déclaration de l’objet. Étant donné que le nom du type de données n’est pas spécifié, il est appelé un *type anonyme*.  
   
  L’exemple suivant déclare et crée la variable `product` en tant qu’instance d’un type anonyme qui a deux propriétés, `Name` et `Price`.  
   
- [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
  Un *expression de requête* utilise des types anonymes pour combiner des colonnes de données sélectionnées par une requête. Vous ne pouvez pas définir le type du résultat à l’avance, car vous ne pouvez pas prédire les colonnes de qu'une requête particulière. Les types anonymes permettent d’écrire une requête qui sélectionne n’importe quel nombre de colonnes, dans n’importe quel ordre. Le compilateur crée un type de données qui correspond aux propriétés spécifiées et l’ordre spécifié.  
   
  Dans les exemples suivants, `products` est une liste d’objets de produit, chacun d’eux a de nombreuses propriétés. Variable `namePriceQuery` contient la définition d’une requête qui, lorsqu’elle est exécutée, retourne une collection d’instances d’un type anonyme qui a deux propriétés, `Name` et `Price`.  
   
- [!code-vb[VbVbalrAnonymousTypes#2](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_2.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#2)]  
   
  Variable `nameQuantityQuery` contient la définition d’une requête qui, lorsqu’elle est exécutée, retourne une collection d’instances d’un type anonyme qui a deux propriétés, `Name` et `OnHand`.  
   
- [!code-vb[VbVbalrAnonymousTypes#3](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_3.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#3)]  
   
  Pour plus d’informations sur le code créé par le compilateur pour un type anonyme, consultez [définition de Type anonyme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
@@ -40,13 +40,13 @@ Visual Basic prend en charge les types anonymes, qui vous permettent de créer d
 ## <a name="declaring-an-anonymous-type"></a>Déclaration d’un Type anonyme  
  La déclaration d’une instance d’un type anonyme utilise une liste d’initialiseurs pour spécifier les propriétés du type. Vous pouvez spécifier uniquement des propriétés lorsque vous déclarez un type anonyme, pas autres éléments de classe tels que les méthodes ou événements. Dans l’exemple suivant, `product1` est une instance d’un type anonyme qui a deux propriétés : `Name` et `Price`.  
   
- [!code-vb[VbVbalrAnonymousTypes#4](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_4.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#4)]  
   
  Si vous désignez des propriétés comme propriétés de clé, vous pouvez les utiliser pour comparer deux instances de type anonyme pour l’égalité. Toutefois, les valeurs des propriétés de clé ne peut pas être modifiés. Consultez la section Propriétés de clé plus loin dans cette rubrique pour plus d’informations.  
   
  Notez que la déclaration d’une instance d’un type anonyme est comme la déclaration d’une instance d’un type nommé à l’aide d’un initialiseur d’objet :  
   
- [!code-vb[VbVbalrAnonymousTypes#5](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_5.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#5)]  
   
  Pour plus d’informations sur les autres façons de spécifier les propriétés de type anonyme, consultez [Comment : Déduire les Types dans les déclarations de types anonymes et les noms de propriété](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
@@ -72,11 +72,11 @@ Visual Basic prend en charge les types anonymes, qui vous permettent de créer d
   
  Une instance d’un type anonyme qui ne possède aucune propriété de clé est uniquement égale à elle-même.  
   
- [!code-vb[VbVbalrAnonymousTypes#6](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_6.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#6)]  
   
  Deux instances du même type anonyme sont égales si les valeurs de leurs propriétés de clé sont égales. Les exemples suivants illustrent la façon dont l’égalité est testée.  
   
- [!code-vb[VbVbalrAnonymousTypes#7](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_7.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
 ### <a name="read-only-values"></a>Valeurs en lecture seule  
  Les valeurs des propriétés de clé ne peut pas être modifiés. Par exemple, dans `prod8` dans l’exemple précédent, le `Name` et `Price` sont des champs `read-only`, mais `OnHand` peut être modifié.  
@@ -88,19 +88,19 @@ Visual Basic prend en charge les types anonymes, qui vous permettent de créer d
   
 -   `custs1` contient une collection de chaînes, car `cust.Name` est une chaîne.  
   
-     [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
 -   `custs2` contient une collection de `Customer` objets, étant donné que chaque élément de `customers` est un `Customer` objet et l’élément entier est sélectionné par la requête.  
   
-     [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   
  Toutefois, les types nommés appropriés ne sont pas toujours disponibles. Vous souhaiterez peut-être sélectionner les noms des clients et des adresses pour un objectif, les numéros d’ID de client et les emplacements pour un autre et les noms des clients, les adresses et historiques de commande pour un tiers. Les types anonymes permettent de sélectionner n’importe quelle combinaison de propriétés, dans n’importe quel ordre, sans déclarer d’abord un nouveau type nommé pour contenir le résultat. Au lieu de cela, le compilateur crée un type anonyme pour chaque compilation de propriétés. La requête suivante sélectionne uniquement le nom du client et numéro d’identification à partir de chaque `Customer` dans l’objet `customers`. Par conséquent, le compilateur crée un type anonyme qui contient uniquement ces deux propriétés.  
   
- [!code-vb[VbVbalrAnonymousTYpes#32](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_11.vb)]  
+ [!code-vb[VbVbalrAnonymousTYpes#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#32)]  
   
  Les noms et les types de données des propriétés du type anonyme sont effectuées à partir des arguments à `Select`, `cust.Name` et `cust.ID`. Les propriétés dans un type anonyme qui est créé par une requête sont toujours les propriétés de clé. Lorsque `custs3` est exécutée dans l’exemple suivant `For Each` boucle, le résultat est une collection d’instances d’un type anonyme avec deux propriétés de clé, `Name` et `ID`.  
   
- [!code-vb[VbVbalrAnonymousTypes#33](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_12.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#33)]  
   
  Les éléments dans la collection représentée par `custs3` sont fortement typés, et vous pouvez utiliser IntelliSense pour naviguer dans les propriétés disponibles et vérifier leurs types.  
   
@@ -109,11 +109,11 @@ Visual Basic prend en charge les types anonymes, qui vous permettent de créer d
 ## <a name="deciding-whether-to-use-anonymous-types"></a>S’il faut utiliser des Types anonymes  
  Avant de créer un objet en tant qu’instance d’une classe anonyme, considérez si c’est la meilleure option. Par exemple, si vous souhaitez créer un objet temporaire pour contenir les données associées, et vous n’avez pas besoin d’autres champs et les méthodes susceptibles de contenir une classe complète, un type anonyme est une bonne solution. Les types anonymes sont également pratiques si vous souhaitez une autre sélection de propriétés pour chaque déclaration, ou si vous souhaitez modifier l’ordre des propriétés. Toutefois, si votre projet comprend plusieurs objets qui ont les mêmes propriétés, dans un ordre fixe, vous pouvez les déclarer plus facilement à l’aide d’un type nommé avec un constructeur de classe. Par exemple, avec un constructeur approprié, il est plus facile de déclarer plusieurs instances d’un `Product` classe plutôt que de déclarer plusieurs instances d’un type anonyme.  
   
- [!code-vb[VbVbalrAnonymousTypes#9](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_13.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#9)]  
   
  Un autre avantage des types nommés est que le compilateur peut intercepter une erreur de frappe accidentelle d’un nom de propriété. Dans les exemples précédents, `firstProd2`, `secondProd2`, et `thirdProd2` sont destinées à être des instances du même type anonyme. Toutefois, si vous avez accidentellement déclarer `thirdProd2` dans une des manières suivantes, son type serait différent de celui du `firstProd2` et `secondProd2`.  
   
- [!code-vb[VbVbalrAnonymousTypes#10](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_14.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#10)]  
   
  Plus important encore, il existe des limitations sur l’utilisation de types anonymes qui ne s’appliquent pas aux instances de types nommés. `firstProd2`, `secondProd2`, et `thirdProd2` sont des instances du même type anonyme. Toutefois, le nom du type anonyme partagé n’est pas disponible et ne peut pas apparaître dans lequel un nom de type est attendu dans votre code. Par exemple, un type anonyme ne peut pas être utilisé pour définir une signature de méthode, pour déclarer une autre variable ou champ ou dans une déclaration de type. Par conséquent, les types anonymes ne sont pas appropriés lorsque vous devez partager des informations sur les méthodes.  
   

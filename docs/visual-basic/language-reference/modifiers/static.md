@@ -7,12 +7,12 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: 1205d620fb5b6ec6af14cdeb7c6d78439f9e6b97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ee2c6eb123907a9e25092224a1f45578717a8c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627627"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977147"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 Spécifie qu’une ou plusieurs variables locales déclarées doivent continuer à exister et conservent leurs valeurs les plus récentes après l’arrêt de la procédure dans laquelle elles sont déclarées.  
@@ -38,7 +38,7 @@ Spécifie qu’une ou plusieurs variables locales déclarées doivent continuer 
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre l'utilisation de `Static`.  
   
- [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
+ [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
  Le `Static` variable `totalSales` est initialisée à 0 qu’une seule fois. Chaque fois que vous entrez `updateSales`, `totalSales` a toujours la valeur la plus récente que vous avez calculé pour lui.  
   

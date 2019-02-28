@@ -13,12 +13,12 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 522450e4efcecaf74968ddb492b536aa98dc0b13
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8964b34d94daf18e078e515b65588f5273c76199
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260287"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970183"
 ---
 # <a name="list-visual-basic"></a>\<liste > (Visual Basic)
 Définit une liste ou une table.  
@@ -60,7 +60,7 @@ Définit une liste ou une table.
 ## <a name="example"></a>Exemple  
  Cet exemple utilise le `<list>` balise pour définir une liste à puces dans la section Notes.  
   
- [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)
