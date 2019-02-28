@@ -1,6 +1,6 @@
 ---
 title: 'Procédure : déterminer les versions du .NET Framework installées'
-ms.date: 04/10/2018
+ms.date: 02/20/2019
 dev_langs:
 - csharp
 - vb
@@ -11,38 +11,41 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31200b72cb551c91791e2e14332aacab8e7f0519
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7661b3ebaa8f29d6d3b2adbc56c405c8f0945f3
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672004"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584172"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procédure : déterminer les versions du .NET Framework installées
 
 Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Framework sur leurs ordinateurs. Quand vous développez ou déployez votre application, vous pouvez avoir besoin de savoir quelles versions de .NET Framework sont installées sur l'ordinateur de l'utilisateur. Notez que .NET Framework comporte deux principaux composants, dont les versions sont définies séparément :  
   
--   Un jeu d'assemblys, qui correspondent aux collections de types et de ressources qui fournissent les fonctionnalités de vos applications. .NET Framework et les assemblys partagent le même numéro de version.  
+- Un jeu d'assemblys, qui correspondent aux collections de types et de ressources qui fournissent les fonctionnalités de vos applications. .NET Framework et les assemblys partagent le même numéro de version.  
   
--   Le Common Language Runtime (CLR), qui gère et exécute le code de votre application. Le CLR est identifié par son propre numéro de version (consultez [Versions et dépendances](~/docs/framework/migration-guide/versions-and-dependencies.md)).  
+- Le Common Language Runtime (CLR), qui gère et exécute le code de votre application. Le CLR est identifié par son propre numéro de version (consultez [Versions et dépendances](~/docs/framework/migration-guide/versions-and-dependencies.md)).  
   
- Pour obtenir la liste précise des versions de .NET Framework installées sur un ordinateur, vous pouvez consulter le Registre ou l'interroger en utilisant du code :  
+Pour obtenir la liste précise des versions de .NET Framework installées sur un ordinateur, vous pouvez consulter le Registre ou l'interroger en utilisant du code :  
   
- [Affichage du Registre (versions 1-4)](#net_a)  
- [Affichage du Registre (version 4.5 et ultérieure)](#net_b)  
+ [Identifier les versions 1-4 de .NET Framework dans le Registre](#net_a)  
+ [Identifier les versions 4.5 et ultérieures de .NET Framework dans le Registre](#net_b)  
  [Utilisation de code pour interroger le Registre (versions 1-4)](#net_c)  
  [Utilisation de code pour interroger le Registre (version 4.5 et ultérieure)](#net_d)  
  [Utilisation de PowerShell pour interroger le Registre (version 4.5 et ultérieure)](#ps_a)  
-  
+
  Pour rechercher la version CLR, vous pouvez utiliser un outil ou du code :  
   
  [Utilisation de l’outil Clrver](#clr_a)  
  [Utilisation de code pour interroger la classe System.Environment](#clr_b)  
-  
+
+> [!NOTE]
+> Il existe une différence entre la version de .NET Framework et celle du common language runtime (CLR). Les versions de .NET Framework dépendent du jeu d’assemblys qui constituent la bibliothèque de classes .NET Framework. Par exemple, 4.5, 4.6.1 et 4.7.2 sont des versions de .NET Framework. Les versions du CLR sont créées selon le runtime sur lequel s’exécutent les applications .NET Framework ; une même version du CLR prend généralement en charge plusieurs versions de .NET Framework. Le CLR version 4.30319.*xxxxx* prend en charge les versions 4 à 4.5.2 de .NET Framework ; le CLR version 4.30319.42000 prend en charge toutes les versions de .NET Framework à partir de .NET Framework 4.6. Pour plus d'informations, consultez la propriété <xref:System.Environment.Version?displayProperty=nameWithType>.
+
  Pour plus d’informations sur la détection des mises à jour installées pour chaque version de .NET Framework, consultez [Guide pratique pour déterminer les mises à jour .NET Framework installées](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Pour plus d’informations sur l’installation du .NET Framework, consultez [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md).  
   
 <a name="net_a"></a>   
-## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Pour déterminer les versions du .NET Framework en affichant le Registre (.NET Framework 1-4)  
+## <a name="find-net-framework-versions-1-4-in-the-registry"></a>Identifier les versions 1-4 de .NET Framework dans le Registre 
   
 1.  Dans le menu **Démarrer**, choisissez **Exécuter**.  
   
@@ -54,14 +57,19 @@ Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Frame
   
      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP`  
   
-     Les versions installées sont répertoriées sous la sous-clé NDP. Le numéro de version est stocké dans l’entrée **Version**. Pour [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], l’entrée **Version** se trouve sous la sous-clé Client ou Full (sous NDP), ou sous les deux sous-clés.  
-  
+     Pour les versions 1.1 à 3.5 de .NET Framework, les versions installées sont présentées sous la forme de sous-clés sous la sous-clé `NDP`. Le numéro de version est stocké dans l’entrée **Version** de la sous-clé de version. 
+     
+     Pour .NET Framework 4, l’entrée **Version** se trouve sous la sous-clé `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4.0\Client`, `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4.0\Full` ou les deux.
 
     > [!NOTE]
     > Le dossier d’installation « NET Framework Setup » dans le Registre ne commence pas par un point.
 
+    L’illustration suivante montre la sous-clé de .NET Framework 3.5 avec son entrée **Version**.
+
+     ![Entrée de Registre pour .NET Framework 3.5](../../../docs/framework/migration-guide/media/net-4-and-earlier.png ".NET Framework 4 et versions antérieures")
+
 <a name="net_b"></a> 
-## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-45-and-later"></a>Pour déterminer les versions de .NET Framework en affichant le Registre (.NET Framework 4.5 et ultérieur)
+## <a name="find-net-framework-versions-45-and-later-in-the-registry"></a>Identifier les versions 4.5 et ultérieures de .NET Framework dans le Registre
 
 1. Dans le menu **Démarrer**, choisissez **Exécuter**.
 
@@ -78,95 +86,67 @@ Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Frame
     > [!NOTE]
     > Si la sous-clé `Full` n'est pas disponible, le .NET Framework 4.5 ou version ultérieure n'est pas installé.
 
-     Recherchez une valeur DWORD nommée `Release`. L'existence de la valeur DWORD `Release` indique que [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou une version plus récente a été installé sur cet ordinateur.
+     Recherchez une valeur DWORD nommée `Release`. La présence du DWORD `Release` indique que .NET Framework 4.5 (ou une version ultérieure) est installé sur l’ordinateur. Sa valeur est une clé de version correspondant à une version particulière de .NET Framework. Dans l’illustration suivante, par exemple, la valeur DWORD `Release` est 378389, à savoir la clé de version de .NET Framework 4.5. 
 
      ![L’entrée du Registre du .NET Framework 4.5.](../../../docs/framework/migration-guide/media/clr-installdir.png "CLR_InstallDir")
 
-     La valeur du paramètre DWORD `Release` indique quelle version du .NET Framework est installée.
+Le tableau suivant présente la valeur minimale de la valeur DWORD `Release` pour chaque version de .NET Framework. Vous pouvez utiliser ces valeurs de différentes manières :
 
-    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+- Pour déterminer si une version minimale de .NET Framework est présente, testez si la valeur DWORD `Release` trouvée dans le Registre est *supérieure ou égale à* la valeur figurant dans le tableau. Par exemple, si votre application exige .NET Framework 4.7 ou une version ultérieure, vérifiez que la valeur de clé de version est au minimum 460798.
 
-    |Valeur du paramètre DWORD Release|Version|
-    |--------------------------------|-------------|
-    |378389|.NET Framework 4.5|
-    |378675|.NET Framework 4.5.1 installé avec Windows 8.1 ou Windows Server 2012 R2|
-    |378758|.NET Framework 4.5.1 installé sur Windows 8, Windows 7 SP1, ou Windows Vista SP2|
-    |379893|.NET Framework 4.5.2|
-    |Sur les systèmes Windows 10 uniquement : 393295<br /><br /> Sur toutes les autres versions de système d’exploitation : 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |Sur les systèmes Windows 10 avec la mise à jour de novembre uniquement : 394254<br /><br /> Sur toutes les autres versions de système d’exploitation : 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Sur les systèmes Mise à jour anniversaire Windows 10 et Windows Server 2016 : 394802<br /><br /> Sur toutes les autres versions de système d’exploitation : 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |Sur les systèmes Windows 10 Creators Update uniquement : 460798<br/><br/> Sur toutes les autres versions de système d’exploitation : 460805 | .NET Framework 4.7 |
-    |Sur les systèmes Windows 10 Fall Creators Update uniquement : 461308<br/><br/> Sur toutes les autres versions de système d’exploitation : 461310 | .NET Framework 4.7.1 |
-    |Sur les systèmes Windows 10 avec la mise à jour d’avril 2018 uniquement : 461808<br/><br/> Sur toutes les autres versions de système d’exploitation, y compris Windows 10 avec la mise à jour d’octobre 2018 : 461814| .NET Framework 4.7.2 |
-    
+- Pour tester plusieurs versions, commencez par la dernière version de .NET Framework, puis passez successivement à des versions de plus en plus anciennes.
+
+[!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+
+|Version du .NET Framework|Valeur du paramètre DWORD Release|
+|--------------------------------|-------------|
+|.NET Framework 4.5|378389|
+|.NET Framework 4.5.1|378675|
+|.NET Framework 4.5.2|379893|
+|.NET Framework 4.6|393295|
+|.NET Framework 4.6.1|394254|
+|.NET Framework 4.6.2|394802|
+|.NET Framework 4.7|460798|
+|.NET Framework 4.7.1|461308|
+|.NET Framework 4.7.2|461808|
+
+Pour un tableau complet des clés de version de .NET Framework sur des versions spécifiques du système d’exploitation Windows, voir [Clés de version de .NET Framework et versions du système d’exploitation Windows](release-keys-and-os-versions.md).
+
 <a name="net_c"></a> 
-## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Pour déterminer les versions de .NET Framework en interrogeant le Registre à l'aide de code (.NET Framework 1-4)
+## <a name="find-net-framework-versions-1-4-with-code"></a>Identifier les versions 1-4 de .NET Framework avec du code
 
-- Utilisez la classe <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> pour accéder à la sous-clé Software\Microsoft\NET Framework Setup\NDP\ sous HKEY_LOCAL_MACHINE, dans le Registre Windows.
+- Utilisez la classe <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> pour accéder à la sous-clé `Software\Microsoft\NET Framework Setup\NDP\` sous la branche `HKEY_LOCAL_MACHINE` dans le Registre Windows.
 
      Le code ci-dessous est un exemple de cette requête.
 
     > [!NOTE]
-    > Ce code ne montre pas comment détecter le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou version ultérieure. Examinez la valeur de DWORD `Release` pour détecter ces versions, comme décrit dans la section précédente. Pour le code qui détecte le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et versions ultérieures, consultez la section suivante de cet article.
+    > Ce code ne montre pas comment détecter .NET Framework 4.5 et les versions ultérieures. Examinez la valeur de DWORD `Release` pour détecter ces versions, comme décrit dans la section précédente. Pour passer au code qui détecte .NET Framework 4.5 et les versions ultérieures, voir la section suivante de cet article.
 
      [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
      [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-     Cet exemple produit un résultat semblable au suivant :
-
-    ```
-    v2.0.50727  2.0.50727.4016  SP2
-    v3.0  3.0.30729.4037  SP2
-    v3.5  3.5.30729.01  SP1
-    v4
-      Client  4.0.30319
-      Full  4.0.30319
-    ```
-
 <a name="net_d"></a> 
-## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>Pour déterminer les versions de .NET Framework en interrogeant le Registre à l'aide de code (.NET Framework 4.5 et ultérieur)
+## <a name="find-net-framework-versions-45-and-later-with-code"></a>Identifier les versions 4.5 et ultérieures de .NET Framework avec du code
 
-1. L'existence de la valeur DWORD `Release` indique que le .NET Framework 4.5 ou une version ultérieure a été installé sur un ordinateur. La valeur du mot clé indique la version installée. Pour vérifier ce mot clé, utilisez les méthodes <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> et <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> de la classe <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> pour accéder à la sous-clé Software\Microsoft\NET Framework Setup\NDP\v4\Full, sous HKEY_LOCAL_MACHINE, dans le Registre Windows.
+1. L'existence de la valeur DWORD `Release` dans la clé `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` indique que .NET Framework 4.5 (ou une version ultérieure) est installé sur l’ordinateur. La valeur du mot clé indique la version installée. Pour vérifier ce mot clé, utilisez les méthodes <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType> et <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> afin d’accéder à la sous-clé dans le Registre Windows.
 
-2. Vérifiez la valeur du mot clé `Release` pour déterminer la version installée. Pour une compatibilité ascendante, vérifiez que votre valeur est supérieure ou égale à celles répertoriées dans le tableau ci-dessous. Voici les versions du .NET Framework et les mots clés `Release` associés.
+2. Vérifiez la valeur du mot clé `Release` pour déterminer la version installée. Dans une optique de compatibilité ascendante, vous pouvez vérifier la présence d’une valeur supérieure ou égale à celle du tableau de la section [Identifier les versions 4.5 et ultérieures de .NET Framework dans le Registre](#net_b).
 
-    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+L’exemple suivant vérifie la valeur `Release` dans le Registre pour déterminer si .NET Framework 4.5 ou une version ultérieure est installée.
 
-    |Version|Valeur du paramètre DWORD Release|
-    |-------------|--------------------------------|
-    |.NET Framework 4.5|378389|
-    |.NET Framework 4.5.1 installé avec Windows 8.1|378675|
-    |.NET Framework 4.5.1 installé sur Windows 8, Windows 7 SP1, ou Windows Vista SP2|378758|
-    |.NET Framework 4.5.2|379893|
-    |.NET Framework 4.6 installé avec Windows 10|393295|
-    |.NET Framework 4.6 installé sur toutes les autres versions du système d’exploitation Windows|393297|
-    |.NET Framework 4.6.1 installé sur Windows 10|394254|
-    |.NET Framework 4.6.1 installé sur toutes les autres versions du système d’exploitation Windows|394271|
-    |.NET Framework 4.6.2 installé sur la Mise à jour anniversaire Windows 10 et sur Windows Server 2016|394802|
-    |.NET Framework 4.6.2 installé sur toutes les autres versions du système d’exploitation Windows|394806|
-    |.NET Framework 4.7 est installé sur Windows 10 Creators Update|460798|
-    |.NET Framework 4.7 installé sur toutes les autres versions du système d’exploitation Windows|460805|
-    |.NET Framework 4.7.1 installé sur Windows 10 Fall Creators Update|461308|
-    |.NET Framework 4.7.1 installé sur toutes les autres versions du système d’exploitation Windows|461310|
-    |.NET Framework 4.7.2 installé sur Windows 10 avec la mise à jour d’octobre 2018|461814|
-    |.NET Framework 4.7.2 installé sur Windows 10 avec la mise à jour d’avril 2018|461808|
-    |.NET Framework 4.7.2 installé sur Windows 10 Fall Creators Update et les versions antérieures du système d’exploitation|461814|
-    
-     L’exemple suivant vérifie la valeur `Release` dans le Registre pour déterminer si le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou version ultérieure du .NET Framework est installée.
+[!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
+[!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
 
-     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
-     [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
+Cet exemple suit la pratique recommandée concernant la vérification de version :
 
-     Cet exemple suit la pratique recommandée concernant la vérification de version :
+- Il vérifie si la valeur de l’entrée `Release` est *supérieure ou égale à* la valeur des clés de version connues.
 
-    - Il vérifie si la valeur de l’entrée `Release` est *supérieure ou égale à* la valeur des clés de version connues.
-
-    - Il effectue sa vérification en partant de la version la plus récente vers la version la plus ancienne.
+- Il effectue sa vérification en partant de la version la plus récente vers la version la plus ancienne.
 
 <a name="ps_a"></a> 
-## <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>Pour rechercher une version minimale requise du .NET Framework en interrogeant le Registre dans PowerShell (.NET Framework 4.5 et versions ultérieures)
+## <a name="check-for-a-minimum-required-net-framework-version-45-and-later-with-powershell"></a>Rechercher une version minimale requise de .NET Framework (4.5 ou ultérieure) avec PowerShell
 
-- L’exemple suivant vérifie la valeur du mot clé `Release` pour déterminer si .NET Framework 4.6.2 ou version ultérieure est installé, indépendamment de la version du système d’exploitation Windows (retourne `True` si la condition est vérifiée, `False` dans le cas contraire).
+L’exemple suivant vérifie la valeur du mot clé `Release` pour déterminer si .NET Framework 4.6.2 ou une version ultérieure est installé (retourne `True` si la condition est vérifiée, `False` sinon).
 
     ```PowerShell
     # PowerShell 5
@@ -178,55 +158,37 @@ Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Frame
     (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
     ```
 
-    Vous pouvez remplacer `394802` dans l’exemple précédent par une autre valeur du tableau suivant pour rechercher une autre version minimale requise du .NET Framework.
+    You can replace `394802` in the previous example with another value from the following table in the [Find .NET Framework versions 4.5 and later in the registry](#net_b) section to check for a different minimum required .NET Framework version.
   
-    |Version|Valeur minimale du paramètre DWORD Release|
-    |-------------|--------------------------------|
-    |.NET Framework 4.5|378389|
-    |.NET Framework 4.5.1|378675|
-    |.NET Framework 4.5.2|379893|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|393295|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
-    |.NET Framework 4.7|460798|
-    |.NET Framework 4.7.1|461308|
-    |.NET Framework 4.7.2|461808|
-
 <a name="clr_a"></a> 
-## <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Pour déterminer la version actuelle du runtime à l'aide de l'outil Clrver
+## <a name="find-the-current-clr-version-with-clrverexe"></a>Identifier la version actuelle du CLR avec Clrver.exe
 
-- Utilisez l'outil de version CLR (Clrver.exe) pour déterminer quelles versions du CLR (Common Language Runtime) sont installées sur un ordinateur.
+Utilisez l'outil de version CLR (Clrver.exe) pour déterminer quelles versions du CLR (Common Language Runtime) sont installées sur un ordinateur.
 
-     À partir d’une invite de commandes développeur pour Visual Studio, entrez `clrver`. Cette commande produit un résultat similaire au suivant :
+À partir d’une invite de commandes développeur pour Visual Studio, entrez `clrver`. Cette commande produit un résultat similaire au suivant :
 
-    ```
-    Versions installed on the machine:
-    v2.0.50727
-    v4.0.30319
-    ```
+```console
+Versions installed on the machine:
+v2.0.50727
+v4.0.30319
+```
 
-     Pour plus d’informations sur l’utilisation de cet outil, consultez [Clrver.exe (CLR Version Tool)](~/docs/framework/tools/clrver-exe-clr-version-tool.md).
+Pour plus d’informations sur l’utilisation de cet outil, consultez [Clrver.exe (CLR Version Tool)](~/docs/framework/tools/clrver-exe-clr-version-tool.md).
 
 <a name="clr_b"></a> 
-## <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>Pour rechercher la version actuelle du runtime en interrogeant la classe Environment dans le code
+## <a name="find-the-current-clr-version-with-the-environment-class"></a>Identifier la version actuelle du CLR avec la classe Environment
 
-- Interrogez la propriété <xref:System.Environment.Version%2A?displayProperty=nameWithType> pour récupérer un objet <xref:System.Version> identifiant la version du runtime qui exécute actuellement le code. Vous pouvez utiliser la propriété <xref:System.Version.Major%2A?displayProperty=nameWithType> pour obtenir l'identificateur de la version principale (par exemple, « 4 » pour la version 4,0), la propriété <xref:System.Version.Minor%2A?displayProperty=nameWithType> pour obtenir l'identificateur de la version secondaire (par exemple, « 0 » pour la version 4,0) ou la méthode <xref:System.Object.ToString%2A?displayProperty=nameWithType> pour obtenir la chaîne de version entière (par exemple, « 4.0.30319.18010 », comme indiqué dans le code suivant). Cette propriété retourne une valeur unique qui reflète la version du runtime exécutant actuellement le code. Elle ne retourne pas les versions d'assembly ou les autres versions du runtime qui ont pu être installées sur l'ordinateur.
+Vous pouvez récupérer la valeur de la propriété <xref:System.Environment.Version?displayProperty=nameWithType> pour obtenir un objet <xref:System.Version> identifiant la version du runtime. Cette propriété retourne une valeur unique reflétant la version du runtime qui exécute actuellement le code, et non les versions d’assembly ou d’autres versions du runtime qui peuvent avoir été installées sur l’ordinateur. Vous pouvez utiliser la propriété <xref:System.Version.Major%2A?displayProperty=nameWithType> pour obtenir l’identificateur de version majeure (par exemple, « 4 » pour la version 4.0), la propriété <xref:System.Version.Minor%2A?displayProperty=nameWithType> pour l’identificateur de version mineure (par exemple, « 0 » pour la version 4.0) ou la méthode <xref:System.Version.ToString%2A?displayProperty=nameWithType> pour la totalité de la chaîne de version (par exemple, « 4.0.30319.18010 », comme dans le code suivant). 
 
-     Pour .NET Framework versions 4, 4.5, 4.5.1 et 4.5.2, la propriété <xref:System.Environment.Version%2A?displayProperty=nameWithType> retourne un objet <xref:System.Version> dont la représentation sous forme de chaîne se présente sous la forme `4.0.30319.xxxxx`. Pour .NET Framework 4.6 et versions ultérieures, le format est `4.0.30319.42000`.
+Pour .NET Framework versions 4, 4.5, 4.5.1 et 4.5.2, la propriété <xref:System.Environment.Version%2A?displayProperty=nameWithType> retourne un objet <xref:System.Version> dont la représentation sous forme de chaîne se présente sous la forme `4.0.30319.xxxxx`. Pour .NET Framework 4.6 et versions ultérieures, le format est `4.0.30319.42000`.
 
-    > [!IMPORTANT]
-    > Pour [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et versions ultérieures, nous déconseillons l’utilisation de la propriété <xref:System.Environment.Version%2A?displayProperty=nameWithType> pour détecter la version du runtime. Nous recommandons plutôt d’interroger le Registre, comme décrit dans la section [Pour déterminer les versions de .NET Framework en interrogeant le Registre à l’aide de code (.NET Framework 4.5 et ultérieur)](#net_d), plus haut dans cet article.
+> [!IMPORTANT]
+> Avec .NET Framework 4.5 et les versions ultérieures, nous déconseillons d’utiliser la propriété <xref:System.Environment.Version%2A?displayProperty=nameWithType> pour détecter la version du runtime. Nous recommandons plutôt d’interroger le Registre, comme décrit dans la section [Pour déterminer les versions de .NET Framework en interrogeant le Registre à l’aide de code (.NET Framework 4.5 et ultérieur)](#net_d), plus haut dans cet article.
 
-     Voici un exemple illustrant l'interrogation de la propriété <xref:System.Environment.Version%2A?displayProperty=nameWithType> pour obtenir les informations de version du runtime :
+L’exemple suivant utilise la propriété <xref:System.Environment.Version%2A?displayProperty=nameWithType> pour récupérer les informations de version du runtime :
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
-     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
-
-     Cet exemple produit un résultat semblable au suivant :
-
-    ```
-    Version: 4.0.30319.18010
-    ```
+[!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
+[!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
 ## <a name="see-also"></a>Voir aussi
 

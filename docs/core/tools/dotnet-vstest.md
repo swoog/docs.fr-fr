@@ -3,12 +3,12 @@ title: Commande dotnet vstest
 description: La commande dotnet vstest permet de générer un projet et l’ensemble de ses dépendances.
 author: guardrex
 ms.date: 05/30/2018
-ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d41e901f70b4a3d0647c693fdd8076f771466073
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169015"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747727"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -43,7 +43,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="description"></a>Description
 
-La commande `dotnet-vstest` exécute l’application en ligne de commande `VSTest.Console` pour exécuter des tests unitaires automatisés et des tests d’application de l’interface utilisateur codée.
+La commande `dotnet-vstest` exécute l’application en ligne de commande `VSTest.Console` pour effectuer des tests unitaires automatisés.
 
 ## <a name="arguments"></a>Arguments
 
@@ -73,11 +73,11 @@ Architecture de plateforme cible utilisée pour l’exécution des tests. Les va
 
 `--Framework|/Framework:<Framework Version>`
 
-Version .NET Framework cible utilisée pour l’exécution des tests. Les valeurs valides sont, par exemple, `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Les valeurs `Framework35`, `Framework40`, `Framework45`, `FrameworkCore10` et `FrameworkUap10` sont également prises en charge.
+Version .NET Framework cible utilisée pour l’exécution des tests. Les valeurs valides sont, par exemple, `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Les valeurs `Framework40`, `Framework45`, `FrameworkCore10` et `FrameworkUap10` sont également prises en charge.
 
 `--Parallel|/Parallel`
 
-Exécutez des tests en parallèle. Par défaut, tous les cœurs disponibles sur l’ordinateur sont utilisables. Définissez un nombre de cœurs explicite avec un fichier de paramètres.
+Exécutez des tests en parallèle. Par défaut, tous les cœurs disponibles sur l’ordinateur sont utilisables. Spécifiez un nombre de cœurs explicite en définissant la propriété MaxCpuCount sous le nœud RunConfiguration du fichier runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -162,11 +162,11 @@ Architecture de plateforme cible utilisée pour l’exécution des tests. Les va
 
 `--Framework|/Framework:<Framework Version>`
 
-Version .NET Framework cible utilisée pour l’exécution des tests. Les valeurs valides sont, par exemple, `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Les valeurs `Framework35`, `Framework40`, `Framework45` et `FrameworkCore10` sont également prises en charge.
+Version .NET Framework cible utilisée pour l’exécution des tests. Les valeurs valides sont, par exemple, `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Les valeurs `Framework40`, `Framework45` et `FrameworkCore10` sont également prises en charge.
 
 `--Parallel|/Parallel`
 
-Exécutez des tests en parallèle. Par défaut, tous les cœurs disponibles sur l’ordinateur sont utilisables. Définissez un nombre de cœurs explicite avec un fichier de paramètres.
+Exécutez des tests en parallèle. Par défaut, tous les cœurs disponibles sur l’ordinateur sont utilisables. Spécifiez un nombre de cœurs explicite en définissant la propriété MaxCpuCount sous le nœud RunConfiguration du fichier runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -238,11 +238,11 @@ Architecture de plateforme cible utilisée pour l’exécution des tests. Les va
 
 `--Framework|/Framework:<Framework Version>`
 
-Version .NET Framework cible utilisée pour l’exécution des tests. Les valeurs valides sont, par exemple, `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Les valeurs `Framework35`, `Framework40`, `Framework45` et `FrameworkCore10` sont également prises en charge.
+Version .NET Framework cible utilisée pour l’exécution des tests. Les valeurs valides sont, par exemple, `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Les valeurs `Framework40`, `Framework45` et `FrameworkCore10` sont également prises en charge.
 
 `--Parallel|/Parallel`
 
-Exécutez des tests en parallèle. Par défaut, tous les cœurs disponibles sur l’ordinateur sont utilisables. Définissez un nombre de cœurs explicite avec un fichier de paramètres.
+Exécutez des tests en parallèle. Par défaut, tous les cœurs disponibles sur l’ordinateur sont utilisables. Spécifiez un nombre de cœurs explicite en définissant la propriété MaxCpuCount sous le nœud RunConfiguration du fichier runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 

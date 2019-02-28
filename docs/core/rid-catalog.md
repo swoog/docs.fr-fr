@@ -1,13 +1,13 @@
 ---
 title: Catalogue d’identificateurs de runtime (RID) .NET Core
 description: Découvrez plus en détails l’identificateur de runtime (RID) et la façon dont les identificateurs RID sont utilisés dans .NET Core.
-ms.date: 07/19/2018
-ms.openlocfilehash: 5a6dda260b4be85e54f4075f3edf12210b385289
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 02/22/2019
+ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534540"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745740"
 ---
 # <a name="net-core-rid-catalog"></a>Catalogue RID .NET Core
 
@@ -35,7 +35,7 @@ Les RID qui représentent des systèmes d’exploitation concrets suivent géné
 
 - `[architecture]` représente l’architecture de processeur. Par exemple : `x86`, `x64`, `arm` ou `arm64`.
 
-- `[additional qualifiers]` permet de distinguer davantage les plateformes. Par exemple : `aot` ou `corert`.
+- `[additional qualifiers]` permet de distinguer davantage les plateformes. Par exemple : `aot`.
 
 ## <a name="rid-graph"></a>Graphe RID
 
@@ -82,22 +82,22 @@ Lorsque vous utilisez les RID, il existe quelques remarques que vous devez garde
 Pour utiliser des RID, vous devez savoir lesquels existent. De nouvelles valeurs sont régulièrement ajoutées à la plateforme.
 Pour en connaître la version complète la plus récente, consultez le fichier [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) dans le référentiel CoreFX.
 
-Le kit SDK .NET Core 2.0 introduit le concept d’identificateurs RID portables. Il s’agit de nouvelles valeurs ajoutées au graphe RID qui ne sont liées à aucune version ou distribution du système d’exploitation spécifique. Elles sont particulièrement utiles lors du traitement de plusieurs distributions Linux.
+Le kit SDK .NET Core 2.0 introduit le concept d’identificateurs RID portables. Il s’agit de nouvelles valeurs ajoutées au graphe RID qui ne sont liées à aucune version ou distribution du système d’exploitation spécifique. Elles sont recommandées avec .NET Core 2.0 et les versions ultérieures. Elles sont particulièrement utiles pour gérer plusieurs distributions Linux, car la plupart des RID de distribution correspondent aux RID portables.
 
-La liste suivante présente les RID les plus courants utilisés pour chaque système d’exploitation. Elle ne traite pas les valeurs `arm` ou `corert`.
+La liste suivante présente un petit sous-ensemble des RID les plus courants utilisés pour chaque système d’exploitation.
 
 ## <a name="windows-rids"></a>RID Windows
 
-- Portable
-  - `win-x86`
+Seules les valeurs courantes sont présentées. Pour en connaître la version complète la plus récente, consultez le fichier [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) dans le référentiel CoreFX.
+
+- Portable (.NET Core 2.0 ou versions ultérieures)
   - `win-x64`
+  - `win-x86`
+  - `win-arm`
+  - `win-arm64`
 - Windows 7 / Windows Server 2008 R2
   - `win7-x64`
   - `win7-x86`
-- Windows 8 / Windows Server 2012
-  - `win8-x64`
-  - `win8-x86`
-  - `win8-arm`
 - Windows 8.1 / Windows Server 2012 R2
   - `win81-x64`
   - `win81-x86`
@@ -112,87 +112,40 @@ Pour plus d’informations, consultez [Configuration requise pour .NET Core sur 
 
 ## <a name="linux-rids"></a>RID Linux
 
-- Portable
-  - `linux-x64`
-- CentOS
-  - `centos-x64`
-  - `centos.7-x64`
-- Debian
-  - `debian-x64`
-  - `debian.8-x64`
-  - `debian.9-x64` (.NET Core 1.1 ou versions ultérieures)
-- Fedora
-  - `fedora-x64`
-  - `fedora.27-x64`
-  - `fedora.28-x64` (.NET Core 1.1 ou versions ultérieures)
-- Gentoo (.NET Core 2.0 ou versions ultérieures)
-  - `gentoo-x64`
-- openSUSE
-  - `opensuse-x64`
-  - `opensuse.42.3-x64`
-- Oracle Linux
-  - `ol-x64`
-  - `ol.7-x64`
-  - `ol.7.0-x64`
-  - `ol.7.1-x64`
-  - `ol.7.2-x64`
-  - `ol.7.3-x64`
-  - `ol.7.4-x64`
+Seules les valeurs courantes sont présentées. Pour en connaître la version complète la plus récente, consultez le fichier [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) dans le référentiel CoreFX. Les appareils dont la distribution ne figure pas ci-dessous sont susceptibles de fonctionner avec l’un des RID portables. Par exemple, les appareils Raspberry Pi exécutant une distribution Linux non listée peuvent être ciblés avec `linux-arm`.
+
+- Portable (.NET Core 2.0 ou versions ultérieures)
+  - `linux-x64` (la plupart des distributions pour ordinateurs de bureau, comme CentOS, Debian, Fedora, Ubuntu et dérivés)
+  - `linux-musl-x64` (distributions légères utilisant [musl](https://wiki.musl-libc.org/projects-using-musl.html), comme Linux Alpine)
+  - `linux-arm` (distributions Linux qui s’exécutent sur ARM, comme Raspberry Pi)
 - Red Hat Enterprise Linux
-  - `rhel-x64`
+  - `rhel-x64` (remplacé par `linux-x64` pour RHEL après la version 6)
   - `rhel.6-x64` (.NET Core 2.0 ou versions ultérieures)
-  - `rhel.7-x64`
-  - `rhel.7.1-x64`
-  - `rhel.7.2-x64`
-  - `rhel.7.3-x64` (.NET Core 2.0 ou versions ultérieures)
-  - `rhel.7.4-x64` (.NET Core 2.0 ou versions ultérieures)
 - Tizen (.NET Core 2.0 ou versions ultérieures)
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
-- Ubuntu
-  - `ubuntu-x64`
-  - `ubuntu.14.04-x64`
-  - `ubuntu.16.04-x64`
-  - `ubuntu.17.10-x64`
-  - `ubuntu.18.04-x64`
-- Dérivés d’Ubuntu
-  - `linuxmint.17-x64`
-  - `linuxmint.17.1-x64`
-  - `linuxmint.17.2-x64`
-  - `linuxmint.17.3-x64`
-  - `linuxmint.18-x64` (.NET Core 2.0 ou versions ultérieures)
-  - `linuxmint.18.1-x64` (.NET Core 2.0 ou versions ultérieures)
-  - `linuxmint.18.2-x64` (.NET Core 2.0 ou versions ultérieures)
-  - `linuxmint.18.3-x64` (.NET Core 2.0 ou versions ultérieures)
-- SUSE Enterprise Linux (SLES) (.NET Core 2.0 ou version ultérieure)
-  - `sles-x64`
-  - `sles.12-x64`
-  - `sles.12.1-x64`
-  - `sles.12.2-x64`
-  - `sles.12.3-x64`
-- Alpine Linux (.NET Core 2.1 ou version ultérieure)
-  - `alpine-x64`
-  - `alpine.3.7-x64`
 
 Pour plus d’informations, consultez [Configuration requise pour .NET Core sur Linux](linux-prerequisites.md).
 
 ## <a name="macos-rids"></a>RID macOS
 
-Les RID macOS utilisent l’ancien logo « OSX ».
+Les RID macOS utilisent l’ancien logo « OSX ». Seules les valeurs courantes sont présentées. Pour en connaître la version complète la plus récente, consultez le fichier [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) dans le référentiel CoreFX.
 
-- `osx-x64` (.NET Core 2.0 ou versions ultérieures, la version minimale est `osx.10.12-x64`)
-- `osx.10.10-x64`
-- `osx.10.11-x64`
-- `osx.10.12-x64` (.NET Core 1.1 ou versions ultérieures)
-- `osx.10.13-x64`
+- Portable (.NET Core 2.0 ou versions ultérieures)
+  - `osx-x64` (la version minimale du système d’exploitation est macOS 10.12 Sierra)
+- macOS 10.10  Yosemite
+  - `osx.10.10-x64`
+- macOS 10.11 El Capitan
+  - `osx.10.11-x64`
+- macOS 10.12 Sierra (.NET Core 1.1 ou versions ultérieures)
+  - `osx.10.12-x64`
+- macOS 10.13 High Sierra (.NET Core 1.1 ou versions ultérieures)
+  - `osx.10.13-x64`
+- macOS 10.14 Mojave (.NET Core 1.1 ou versions ultérieures)
+  - `osx.10.14-x64`
 
 Pour plus d’informations, consultez [Configuration requise pour .NET Core sur macOS](macos-prerequisites.md).
-
-## <a name="android-rids-net-core-20-or-later-versions"></a>RID Android (.NET Core 2.0 ou versions ultérieures)
-
-- `android`
-- `android.21`
 
 ## <a name="see-also"></a>Voir aussi
 
