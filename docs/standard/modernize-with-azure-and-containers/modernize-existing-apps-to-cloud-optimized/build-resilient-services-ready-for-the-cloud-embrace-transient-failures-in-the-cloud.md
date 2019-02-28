@@ -4,12 +4,12 @@ description: Moderniser des applications .NET existantes avec des conteneurs de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128854"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971830"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Build services résilients prêts pour le cloud : Gérer les défaillances transitoires dans le cloud
 
@@ -35,7 +35,7 @@ Une application résiliente comme celui illustré dans la Figure 4-9 doit implé
 
 Vous pouvez utiliser ces techniques à la fois dans les ressources HTTP et les ressources de base de données. Dans la Figure 4-9, l’application est basée sur une architecture à 3 couches, donc vous avez besoin de ces techniques au niveau des services (HTTP) et au niveau de la couche données (TCP). Dans une application monolithique qui utilise uniquement un niveau d’application unique en plus de la base de données (sans les services supplémentaires ou microservices), traitement des défaillances temporaires au niveau de la connexion de base de données peuvent être suffisante. Dans ce scénario, simplement une configuration particulière de la connexion de base de données est nécessaire.
 
-Lors de l’implémentation des communications souples qui accèdent à la base de données, selon la version de .NET que vous utilisez, il peut être simple (par exemple, [avec Entity Framework 6 ou version ultérieure](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx), c’est juste une question de la configuration de la connexion de base de données). Ou, vous devrez peut-être utiliser des bibliothèques supplémentaires telles que la [bloc applicatif de pannes gestion](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx) (pour les versions antérieures de .NET), ou même implémenter votre propre bibliothèque.
+Lors de l’implémentation des communications souples qui accèdent à la base de données, selon la version de .NET que vous utilisez, il peut être simple (par exemple, [avec Entity Framework 6 ou version ultérieure](/ef/ef6/fundamentals/connection-resiliency/retry-logic). Il est simplement une question de la configuration de la connexion de base de données). Ou, vous devrez peut-être utiliser des bibliothèques supplémentaires telles que la [bloc applicatif de pannes gestion](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (pour les versions antérieures de .NET), ou même implémenter votre propre bibliothèque.
 
 Lors de l’implémentation de nouvelles tentatives HTTP et coupe-circuits, la recommandation pour .NET consiste à utiliser le [Polly](https://github.com/App-vNext/Polly) bibliothèque qui cible .NET Framework 4.0, .NET Framework 4.5 et .NET Standard 1.1, qui inclut la prise en charge .NET Core.
 
@@ -49,11 +49,11 @@ Pour savoir comment implémenter des stratégies pour la gestion des défaillanc
 
 -   **Entity Framework la résilience et nouvelle tentative logique de connexion (version 6 et versions ultérieure)**
 
-    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
 -   **Le bloc d’Application de gestion des erreurs temporaires**
 
--   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+-   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
 -   **Bibliothèque Polly pour les communications HTTP résilientes**
 

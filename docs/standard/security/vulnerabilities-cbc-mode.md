@@ -4,12 +4,12 @@ description: Apprenez à détecter et atténuer les vulnérabilités de minutage
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066172"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974287"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnérabilités de minutage avec déchiffrement symétrique en mode CBC à l’aide de la marge intérieure
 
@@ -92,7 +92,7 @@ Les applications qui ne peuvent pas modifier leur format de messagerie mais effe
   - Cela n’empêche également pas récupération en texte clair dans les situations où l’attaquant peut forcer le même texte en clair à chiffrer plusieurs fois avec un décalage de message différent.
 - L’évaluation d’un appel de déchiffrement à mouiller le signal de minutage de la grille :
   - Le calcul de la durée de conservation doit avoir un minimum dépassant la quantité maximale de temps que l’opération de déchiffrement serait nécessaire pour n’importe quel segment de données qui contient le remplissage.
-  - Calculs de temps doivent être effectuées selon les instructions de [l’acquisition des horodatages haute résolution](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), ne pas à l’aide <xref:System.Environment.TickCount?displayProperty=nameWithType> (susceptibles d’être roll-over/dépassement de capacité) ou la soustraction de deux horodatages système (susceptibles d’être modifiés de NTP erreurs).
+  - Calculs de temps doivent être effectuées selon les instructions de [l’acquisition des horodatages haute résolution](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), ne pas à l’aide <xref:System.Environment.TickCount?displayProperty=nameWithType> (susceptibles d’être roll-over/dépassement de capacité) ou la soustraction de deux horodatages système (susceptibles d’être modifiés de NTP erreurs).
   - Calculs de temps doivent être qui inclut l’opération de déchiffrement, y compris toutes les exceptions potentielles dans géré ou des applications C++, pas seulement complétées à la fin.
   - Si la réussite ou l’échec a encore été déterminé, la porte de minutage doit renvoient une erreur lorsqu’il arrive à expiration.
 - Les services qui effectuent de déchiffrement non authentifié doivent avoir en place pour détecter qu’un flux de messages « non valides » est venue par le biais du contrôle.
@@ -103,7 +103,7 @@ Les applications qui ne peuvent pas modifier leur format de messagerie mais effe
 Pour les programmes basées sur la cryptographie de Windows : Bibliothèque de génération (CNG) suivante :
 
 - L’appel de déchiffrement concerne [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), en spécifiant le `BCRYPT_BLOCK_PADDING` indicateur.
-- Le handle de clé a été initialisé en appelant [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) avec [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) défini sur `BCRYPT_CHAIN_MODE_CBC`.
+- Le handle de clé a été initialisé en appelant [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) avec [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) défini sur `BCRYPT_CHAIN_MODE_CBC`.
   - Dans la mesure où `BCRYPT_CHAIN_MODE_CBC` est la valeur par défaut, affectée code a ne peut-être pas attribué la valeur de `BCRYPT_CHAINING_MODE`.
 
 Pour les programmes développés à l’API de chiffrement Windows plus anciens :

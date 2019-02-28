@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612019"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981450"
 ---
 # <a name="string-functions-visual-basic"></a>Fonctions de chaîne (Visual Basic)
 Le tableau suivant répertorie les fonctions fournies par Visual Basic pour rechercher et manipuler des chaînes.  
@@ -51,27 +51,27 @@ Le tableau suivant répertorie les fonctions fournies par Visual Basic pour rech
 ## <a name="example"></a>Exemple  
  Cet exemple utilise le `UCase` fonction pour retourner une version en majuscules d’une chaîne.  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Exemple  
  Cet exemple utilise le `LTrim` fonction pour supprimer les espaces de début et la `RTrim` des espaces à partir d’une variable de chaîne de fonction à la fin de la frange. Il utilise le `Trim` (fonction) pour supprimer les deux types d’espaces.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Exemple  
  Cet exemple utilise le `Mid` fonction pour retourner un nombre spécifié de caractères à partir d’une chaîne.  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
 ## <a name="example"></a>Exemple  
  Cet exemple utilise `Len` pour retourner le nombre de caractères dans une chaîne.  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example"></a>Exemple  
  Cet exemple utilise le `InStr` fonction pour retourner la position de la première occurrence d’une chaîne dans une autre.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Exemple  
  Cet exemple illustre différentes utilisations de la `Format` fonction des valeurs de format à l’aide de deux `String` formats et les formats définis par l’utilisateur. Pour le séparateur de date (`/`), séparateur d’heure (`:`) et les indicateurs AM/PM (`t` et `tt`), la sortie mise en forme réelle affichée par votre système dépend des paramètres régionaux utilisés par le code. Lorsque heures et dates sont affichées dans l’environnement de développement, le format d’heure courte et le format de date courte des paramètres régionaux de code sont utilisés.  
@@ -79,7 +79,7 @@ Le tableau suivant répertorie les fonctions fournies par Visual Basic pour rech
 > [!NOTE]
 >  Pour les paramètres régionaux qui utilisent une horloge de 24 heures, les indicateurs AM/PM (`t` et `tt`) n’affichent rien.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [Mots clés](../../../visual-basic/language-reference/keywords/index.md)

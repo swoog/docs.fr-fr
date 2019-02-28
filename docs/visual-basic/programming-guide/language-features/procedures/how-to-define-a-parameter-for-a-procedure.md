@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 3893b87f50b37116b596b35b32c61ca81e47b3e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660799"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971791"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procédure : Définir un paramètre pour une procédure (Visual Basic)
 Un *paramètre* permet au code appelant de passer une valeur à la procédure lorsqu’il l’appelle. Vous déclarez chaque paramètre pour une procédure de la même façon que vous déclarez une variable, en spécifiant son nom et type de données. Vous spécifiez également le mécanisme de passage et indique si le paramètre est facultatif.  
@@ -36,7 +36,7 @@ Un *paramètre* permet au code appelant de passer une valeur à la procédure lo
   
      L’exemple suivant définit le contour d’un `Sub` procédure avec trois paramètres. Les deux premiers sont requis et le troisième est facultatif. Les déclarations de paramètre sont séparées dans la liste de paramètres par des virgules.  
   
-     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
      Le premier paramètre accepte une `customer` objet, et `updateCustomer` peut mettre à jour directement la variable transmise à `c` , car l’argument est passé [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). La procédure ne peut pas modifier les valeurs des deux derniers arguments, car ils sont passés [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   

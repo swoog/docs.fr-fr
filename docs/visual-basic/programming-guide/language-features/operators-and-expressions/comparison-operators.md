@@ -15,12 +15,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: db9eef215b16c95a40dfc622bb29443dd1736943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd7ee90e749be76012cf7143787bc6f1d096da03
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552032"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969373"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Opérateurs de comparaison en Visual Basic
 Opérateurs de comparaison comparent deux expressions et retournent un `Boolean` valeur qui représente la relation de leurs valeurs. Il existe des opérateurs pour comparer des valeurs numériques, des opérateurs de comparaison de chaînes et des opérateurs pour comparer des objets. Les trois types d’opérateurs sont abordées dans cet article.  
@@ -61,17 +61,17 @@ Opérateurs de comparaison comparent deux expressions et retournent un `Boolean`
 ## <a name="comparing-objects"></a>Comparaison d’objets  
  Visual Basic compare deux variables de référence d’objet avec la [opérateur Is](../../../../visual-basic/language-reference/operators/is-operator.md) et [opérateur IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md). Vous pouvez utiliser un de ces opérateurs pour déterminer si deux variables de référence font référence à la même instance d’objet. L'exemple suivant illustre ce comportement.  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
   
  Dans l’exemple précédent, `x Is y` prend la valeur `True`, car les deux variables font référence à la même instance. Comparez ce résultat à l’exemple suivant.  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#66)]  
   
  Dans l’exemple précédent, `x Is y` prend la valeur `False`, car bien que les variables font référence aux objets du même type, ils font référence à différentes instances de ce type.  
   
  Lorsque vous souhaitez tester deux objets ne pointe ne pas vers la même instance, le `IsNot` opérateur vous permet d’éviter une combinaison grammaticalement maladroite de `Not` et `Is`. L'exemple suivant illustre ce comportement.  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#67)]  
   
  Dans l’exemple précédent, `If a IsNot b` équivaut à `If Not a Is b`.  
   
@@ -82,7 +82,7 @@ Opérateurs de comparaison comparent deux expressions et retournent un `Boolean`
   
  Lorsque `typename` spécifie un type d’interface, puis le `TypeOf`... `Is` expression retourne `True` si l’objet implémente le type d’interface. Lorsque `typename` est un type de classe, l’expression retourne `True` si l’objet est une instance de la classe spécifiée ou d’une classe qui dérive de la classe spécifiée. L'exemple suivant illustre ce comportement.  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#68)]  
   
  Dans l’exemple précédent, le `TypeOf x Is Control` expression prend la valeur `True` , car le type de `x` est `Button`, qui hérite de `Control`.  
   

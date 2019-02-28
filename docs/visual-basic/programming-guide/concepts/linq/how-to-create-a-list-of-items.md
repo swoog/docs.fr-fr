@@ -5,12 +5,12 @@ helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-ms.openlocfilehash: 9b491d7bf5bf7dd0f15aa43f8721c245a97cc093
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69c20ac07a1e21371edae333d6ccbd7364995767
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717088"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971804"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Procédure : Créer une liste d’éléments
 Le code fourni dans cette rubrique définit une classe `Student` et crée une liste d'instances de la classe. La liste est conçue pour prendre en charge de la rubrique [procédure pas à pas : Écriture de requêtes dans Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Elle peut également être utilisée pour toute application qui requiert une liste d'objets. Le code définit les éléments de la liste d'étudiants en utilisant des initialiseurs d'objets.  
@@ -18,7 +18,7 @@ Le code fourni dans cette rubrique définit une classe `Student` et crée une li
 ## <a name="example"></a>Exemple  
  Si vous travaillez sur la procédure pas à pas, vous pouvez utiliser ce code pour le fichier Module1.vb du projet créé. Remplacez simplement les lignes marquées de *** dans la méthode `Main` par les requêtes et les exécutions de requête qui sont fournies dans la procédure pas à pas.  
   
- [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
+ [!code-vb[VbLINQHowToCreateList#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowToCreateList/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [Procédure pas à pas : Écriture de requêtes dans Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)

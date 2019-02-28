@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 0f7f7910b5e19c3e1a22598c1a987aa2b02e256e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d128e4647930044e24eb544ec92213b481417cb0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552227"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965759"
 ---
 # <a name="optional-parameters-visual-basic"></a>Paramètres facultatifs (Visual Basic)
 Vous pouvez spécifier qu’un paramètre de procédure est facultatif et qu’il n’est pas nécessaire de fournir un argument lorsque la procédure est appelée. *Paramètres facultatifs* sont indiquées par le `Optional` mot clé dans la définition de procédure. Les règles suivantes s'appliquent :  
@@ -35,7 +35,7 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 ```  
   
 ## <a name="calling-procedures-with-optional-parameters"></a>Appel de procédures à l'aide de paramètres facultatifs  
- Lorsque vous appelez une procédure à l’aide d’un paramètre facultatif, vous pouvez choisir de fournir l’argument ou non. Dans le cas contraire, la procédure utilise la valeur par défaut déclarée pour ce paramètre.  
+ Lorsque vous appelez une procédure à l'aide d'un paramètre facultatif, vous pouvez choisir de fournir l'argument ou non. Dans le cas contraire, la procédure utilise la valeur par défaut déclarée pour ce paramètre.  
   
  Pour omettre un ou plusieurs arguments facultatifs dans la liste des arguments, utilisez des virgules successives afin de marquer leurs positions. L’exemple d’appel suivant fournit le premier et le quatrième argument, mais pas le deuxième ni le troisième :  
   
@@ -47,12 +47,12 @@ Sub name(argument 1, , , argument 4)
   
  Le premier appel à `MsgBox` fournit les trois arguments dans l'ordre dans lequel `MsgBox` les définit. Le deuxième appel fournit uniquement l’argument requis. Le troisième et le quatrième appel fournissent le premier et le troisième argument. Le troisième appel le fait par position et le quatrième appel le fait par nom.  
   
- [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Détermination de la présence d’un argument facultatif  
- Une procédure ne peut pas détecter au moment de l'exécution si un argument donné a été omis ou si le code appelant a explicitement fourni la valeur par défaut. Pour établir cette distinction, vous pouvez définir une valeur improbable comme valeur par défaut. La procédure suivante définit le paramètre facultatif `office`et teste sa valeur par défaut, `QJZ`, pour voir s’il a été omis dans l’appel :  
+ Une procédure ne peut pas détecter au moment de l’exécution si un argument donné a été omis ou si le code appelant a explicitement fourni la valeur par défaut. Pour établir cette distinction, vous pouvez définir une valeur improbable comme valeur par défaut. La procédure suivante définit le paramètre facultatif `office`et teste sa valeur par défaut, `QJZ`, pour voir s’il a été omis dans l’appel :  
   
- [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
  Si le paramètre facultatif est un type référence tel que `String`, vous pouvez utiliser `Nothing` comme valeur par défaut, à condition qu’il ne s’agisse pas d’une valeur attendue pour l’argument.  
   

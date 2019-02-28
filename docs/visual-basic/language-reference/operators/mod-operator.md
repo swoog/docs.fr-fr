@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: d74e1f7aaaa22d68c49f4e40ca557511a48e0554
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bb34eb810f6e2d0b0d631f5891e3e65aa0b170f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525025"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981398"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod, opérateur (Visual Basic)
 Divise deux nombres et retourne uniquement le reste.  
@@ -36,7 +36,7 @@ number1 Mod number2
  Obligatoire. Toute expression numérique.  
   
 ## <a name="supported-types"></a>Types pris en charge  
- Tous les types numériques. Cela inclut les types non signés et à virgule flottante et `Decimal`.  
+ tous les types numériques Cela inclut les types non signés et à virgule flottante et `Decimal`.  
   
 ## <a name="result"></a>Résultat
 
@@ -93,12 +93,12 @@ End Module
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise le `Mod` opérateur diviser deux nombres et retourner uniquement le reste. Si des nombres sont un nombre à virgule flottante, le résultat est un nombre à virgule flottante qui représente le reste.  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre l’imprécision potentielle des opérandes à virgule flottante. Dans la première instruction, les opérandes sont `Double`, et 0,2 représente une fraction binaire se répétant avec une valeur stockée de 0,20000000000000001. Dans la deuxième instruction, le littéral de type caractère `D` force les deux opérandes de `Decimal`, et 0,2 a une représentation précise.  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 64ded285c74d61206618695c1d0bb6f158ce860d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d312bc14cf4df3825586de0eba5cba64856268
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704902"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977511"
 ---
 # <a name="structure-statement"></a>Structure, instruction
 Déclare le nom d’une structure et introduit la définition des variables, des propriétés, des événements et des procédures qui comprend la structure.  
@@ -102,7 +102,7 @@ End Structure
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise la `Structure` instruction pour définir un jeu de données associées pour un employé. Il illustre l’utilisation de `Public`, `Friend`, et `Private` membres pour refléter la sensibilité des éléments de données. Il montre également la procédure, propriétés et événements membres.  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)

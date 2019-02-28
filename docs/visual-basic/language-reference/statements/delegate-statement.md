@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 1ed2dc91d1a2ea9bade11902aac553e24c0607ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0fb524961cd04b73a8b83094880d5eaa206fe9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583663"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965798"
 ---
 # <a name="delegate-statement"></a>Delegate, instruction
 Utilisé pour déclarer un délégué. Un délégué est un type référence qui fait référence à un `Shared` méthode d’un type ou à une méthode d’instance d’un objet. Toute procédure ayant des types de paramètre et de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué.  
@@ -57,12 +57,12 @@ Utilisé pour déclarer un délégué. Un délégué est un type référence qui
   
  La signature de la fonction doit correspondre à celle du type délégué. Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- Pour plus d’informations sur les délégués, consultez [délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
+ Pour plus d’informations sur les délégués, consultez [Délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise la `Delegate` instruction pour déclarer un délégué pour fonctionner sur deux nombres et de retourner un nombre. Le `DelegateTest` méthode prend une instance d’un délégué de ce type et l’utilise pour fonctionner sur les paires de numéros.  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [AddressOf (opérateur)](../../../visual-basic/language-reference/operators/addressof-operator.md)

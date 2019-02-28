@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a78189a6b82100665ac07b9d7c89590613ec1e1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4b23bb2d81d1f5272a5813123681da7406c3368
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745621"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980336"
 ---
 # <a name="is-operator-visual-basic"></a>Is, opérateur (Visual Basic)
 Compare deux variables de référence d’objet.  
@@ -46,7 +46,7 @@ result = object1 Is object2
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise le `Is` opérateur pour comparer des paires de références d’objet. Les résultats sont affectés à un `Boolean` valeur indiquant si les deux objets sont identiques.  
   
- [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
  Comme illustré dans l’exemple précédent, vous pouvez utiliser le `Is` opérateur pour tester les deux à liaison anticipée et tardive des objets.  
   

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
-ms.openlocfilehash: 1a838d9d156ad9c05a70a4d4d72db1a288731c9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a3f14354e36dec91aca3afbe8470eff7146318
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685397"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970402"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Procédure : Valider des chaînes qui représentent des Dates ou des heures (Visual Basic)
 Le code suivant exemple définit un `Boolean` valeur qui indique si une chaîne représente une date ou heure valide.  
   
 ## <a name="example"></a>Exemple  
- [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-strings-that-represent-dates-or-times_1.vb)]  
+ [!code-vb[VbVbcnRegEx#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  Remplacez `("01/01/03")` et `"9:30 PM"` avec la date et l’heure que vous souhaitez valider. Vous pouvez remplacer la chaîne par une autre chaîne codée en dur, avec un `String` variable, ou avec une méthode qui retourne une chaîne, tel que `InputBox`.  

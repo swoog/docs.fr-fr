@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ae6124db6103554e16b1f2d39a9a9c875d97d6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592429"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980241"
 ---
 # <a name="cryptographic-services"></a>services de chiffrement
 <a name="top"></a> Les réseaux publics, tels qu'Internet, n'offrent aucun moyen de sécuriser les communications entre les entités. Les communications qui transitent par ces réseaux sont susceptibles d'être lues voire modifiées par des tiers non autorisés. Le chiffrement permet de prévenir la consultation des données, offre des moyens de détecter si les données ont été modifiées et fournit un mode de communication sécurisé via des canaux qui autrement ne sont pas sécurisés. Par exemple, les données peuvent être chiffrées à l'aide d'un algorithme de chiffrement, transmises dans un état chiffré et par la suite déchiffrées par le destinataire prévu. Si un tiers intercepte les données chiffrées, il lui sera difficile de les déchiffrer.  
@@ -68,13 +68,13 @@ ms.locfileid: "33592429"
   
  Le chiffrement vise à atteindre les objectifs suivants :  
   
--   Confidentialité : pour empêcher la lecture de l'identité ou des données d'un utilisateur.  
+-   Confidentialité : Pour protéger les identités d’un utilisateur ou de données soit lu.  
   
--   Intégrité des données : pour empêcher la modification des données.  
+-   Intégrité des données : Pour aider à protéger les données contre toute modification.  
   
--   Authentification : pour s'assurer que les données viennent bien d'un tiers donné.  
+-   Authentification : Pour vous assurer que les données proviennent d’un tiers donné.  
   
--   Non-répudiation : pour empêcher un tiers donné de nier qu'il a envoyé un message.  
+-   Non-répudiation : Pour empêcher un tiers donné de nier qu’il a envoyé un message.  
   
  Pour atteindre ces objectifs, vous pouvez utiliser une combinaison d'algorithmes et de pratiques appelés primitives de chiffrement pour créer un modèle de chiffrement. Le tableau suivant répertorie les primitives de chiffrement et leurs fonctions.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33592429"
   
  L'inconvénient du chiffrement à clé secrète est qu'il suppose que les deux parties se sont mises d'accord sur une clé et un vecteur d'initialisation et qu'elles se sont communiqué leurs valeurs. Le vecteur d'initialisation n'est pas considéré comme un secret et peut être transmis en texte en clair avec le message. Cependant, la clé doit être tenue secrète des utilisateurs non autorisés. Du fait de ces problèmes, le chiffrement à clé secrète est souvent employé conjointement avec le chiffrement à clé publique pour communiquer de manière confidentielle les valeurs de la clé et du vecteur d'initialisation.  
   
- Si l'on considère qu'Alice et Jean sont deux parties qui désirent communiquer sur un canal non sécurisé, ils peuvent utiliser le chiffrement à clé secrète comme suit : Alice et Jean conviennent ensemble d'utiliser un certain algorithme (AES, par exemple) avec une clé et un vecteur d'initialisation déterminés. Alice compose un message et crée un flux de réseau (par exemple un e-mail nommé canal ou de réseau) sur lequel envoyer le message. Ensuite, elle chiffre le texte à l'aide de la clé et du vecteur d'initialisation, puis envoie le message chiffré et le vecteur d'initialisation à Jean via l'intranet. Jean reçoit le texte chiffré et le déchiffre à l'aide du vecteur d'initialisation et de la clé convenue précédemment. Si la transmission est interceptée, l'intercepteur ne peut pas récupérer le message d'origine, car il ne connaît pas la clé. Dans ce scénario, seule la clé doit rester secrète. Dans un scénario réel, Alice ou Jean génère une clé secrète et utilise un chiffrement (asymétrique) à clé publique pour transférer la clé (symétrique) secrète à l'autre partie. Pour plus d'informations sur le chiffrement à clé publique, consultez la section suivante.  
+ En supposant que Alice et Bob est deux parties qui désirent communiquer sur un canal non sécurisé, ils peuvent utiliser le chiffrement de clé secrète comme suit : Alice et Jean conviennent utiliser un algorithme particulier (par exemple, AES) avec une clé et un vecteur d’initialisation. Alice compose un message et crée un flux de réseau (par exemple un e-mail nommé canal ou de réseau) sur lequel envoyer le message. Ensuite, elle chiffre le texte à l'aide de la clé et du vecteur d'initialisation, puis envoie le message chiffré et le vecteur d'initialisation à Jean via l'intranet. Jean reçoit le texte chiffré et le déchiffre à l'aide du vecteur d'initialisation et de la clé convenue précédemment. Si la transmission est interceptée, l'intercepteur ne peut pas récupérer le message d'origine, car il ne connaît pas la clé. Dans ce scénario, seule la clé doit rester secrète. Dans un scénario réel, Alice ou Jean génère une clé secrète et utilise un chiffrement (asymétrique) à clé publique pour transférer la clé (symétrique) secrète à l'autre partie. Pour plus d'informations sur le chiffrement à clé publique, consultez la section suivante.  
   
  Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit les classes suivantes, qui implémentent des algorithmes de chiffrement à clé secrète :  
   
@@ -127,7 +127,7 @@ ms.locfileid: "33592429"
 ## <a name="public-key-encryption"></a>Chiffrement à clé publique  
  Le chiffrement à clé publique fait appel à une clé privée qui doit être tenue secrète des utilisateurs non autorisés et à une clé publique qui peut être divulguée à n'importe qui. La clé publique et la clé privée sont liées mathématiquement ; les données chiffrées avec la clé publique ne peuvent être déchiffrées qu'avec la clé privée, tandis que les données signées avec la clé privée ne peuvent être vérifiées qu'avec la clé publique. La clé publique peut être divulguée à n'importe qui ; elle sert à chiffrer les données à envoyer au détenteur de la clé privée. Les algorithmes de chiffrement à clé publique sont aussi appelés algorithmes asymétriques, car ils font appel à une clé pour chiffrer les données et à une autre clé pour les déchiffrer. Il existe une règle de base en matière de chiffrement qui interdit la réutilisation d'une clé. Par ailleurs, les deux clés doivent être uniques pour chaque session de communication. Or, dans la pratique, les clés asymétriques ont généralement une longue durée de vie.  
   
- Les deux parties (Alice et Jean) peuvent utiliser le chiffrement à clé publique comme suit : dans un premier temps, Alice génère une paire de clés publique/privée. Si Jean veut envoyer un message chiffré à Alice, il lui réclame sa clé publique. Alice envoie sa clé publique à Jean via un réseau non sécurisé et Jean utilise cette clé pour chiffrer un message. Jean envoie le message chiffré à Alice, qui le déchiffre à l'aide de sa clé privée. Si Jean a reçu la clé d'Alice via un canal non sécurisé, tel qu'un réseau public, il est exposé à une « attaque de l'intercepteur ». Par conséquent, Jean doit vérifier auprès d'Alice que la copie dont il dispose de sa clé publique est correcte.  
+ Deux parties (Alice et Jean) peuvent utiliser le chiffrement de clé publique comme suit : Tout d’abord, Alice génère une paire de clés publique/privée. Si Jean veut envoyer un message chiffré à Alice, il lui réclame sa clé publique. Alice envoie sa clé publique à Jean via un réseau non sécurisé et Jean utilise cette clé pour chiffrer un message. Jean envoie le message chiffré à Alice, qui le déchiffre à l'aide de sa clé privée. Si Jean a reçu la clé d'Alice via un canal non sécurisé, tel qu'un réseau public, il est exposé à une « attaque de l'intercepteur ». Par conséquent, Jean doit vérifier auprès d'Alice que la copie dont il dispose de sa clé publique est correcte.  
   
  Pendant la transmission de la clé publique d'Alice, le risque existe qu'un agent non autorisé intercepte la clé. De plus, ce même agent pourrait intercepter le message chiffré de Jean. En revanche, l'agent ne peut pas déchiffrer le message avec la clé publique. Le message ne peut être déchiffré qu'avec la clé privée d'Alice, qui n'a pas été transmise. Alice n'utilise pas sa clé privée pour chiffrer un message de réponse à Jean, car quiconque en possession de la clé publique pourrait déchiffrer le message. Si Alice souhaite envoyer une réponse à Bob, elle réclame à Jean sa clé publique et chiffre son message à l'aide de cette clé publique. Jean déchiffre ensuite le message à l'aide de sa clé privée associée.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "33592429"
   
 -   Alice envoie le message de texte en clair et le message haché (signature numérique) à Jean. Jean reçoit et hache le message et compare sa valeur de hachage à celle qu'il a reçue d'Alice. Si les valeurs de hachage sont identiques, cela signifie que le message n'a pas été modifié. Si les valeurs ne sont pas identiques, le message a été modifié après avoir été rédigé par Alice.  
   
-     Malheureusement, cette méthode ne permet pas d'établir l'authenticité de l'expéditeur. N'importe qui peut emprunter l'identité d'Alice et envoyer un message à Jean. L'usurpateur peut utiliser le même algorithme de hachage pour signer son message et tout ce que Jean pourra constater, c'est que le message présente la même signature. Il s'agit d'une forme d'attaque de l'intercepteur. Consultez [NIB : exemple de Communication sécurisée Cryptography Next Generation (CNG)](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) pour plus d’informations.  
+     Malheureusement, cette méthode ne permet pas d'établir l'authenticité de l'expéditeur. N'importe qui peut emprunter l'identité d'Alice et envoyer un message à Jean. L'usurpateur peut utiliser le même algorithme de hachage pour signer son message et tout ce que Jean pourra constater, c'est que le message présente la même signature. Il s'agit d'une forme d'attaque de l'intercepteur. Pour plus d’informations, consultez [exemple de Communication sécurisée génération CNG (Cryptography Next)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).  
   
 -   Alice envoie le message de texte en clair à Jean via un canal public non sécurisé. Elle envoie le message haché à Jean via un canal privé sécurisé. Jean reçoit le message de texte en clair, le hache et compare le hachage à celui échangé en privé. Si les hachages correspondent, Jean peut en déduire deux choses :  
   
@@ -212,7 +212,7 @@ ms.locfileid: "33592429"
   
  Aucune des méthodes précédentes n'empêchera quiconque de lire les messages d'Alice, car ils sont transmis sous forme de texte en clair. Pour bénéficier d'une sécurité complète, les signatures numériques (signature des messages) et le chiffrement s'avèrent nécessaires.  
   
- Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit les classes suivantes, qui implémentent des algorithmes de hachage :  
+ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit les classes suivantes, qui implémentent des algorithmes de hachage :  
   
 -   <xref:System.Security.Cryptography.HMACSHA1>.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "33592429"
   
 -   <xref:System.Security.Cryptography.SHA512Managed>.  
   
--   Variantes HMAC de tous les algorithmes SHA (Secure Hash Algorithm), MD5 (Message Digest 5) et RIPEMD-160.  
+-   Variantes HMAC de tous les algorithmes SHA (Secure Hash Algorithm), MD5 (Message Digest 5) et RIPEMD-160.  
   
 -   Implémentations CryptoServiceProvider (wrappers de code managé) de tous les algorithmes SHA.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "33592429"
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Prise en charge de Suite B  
- Le [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] prend en charge le jeu d'algorithmes de chiffrement Suite B publié par la NSA (National Security Agency). Pour plus d’informations sur Suite B, consultez le [NSA Suite B Cryptography Fact Sheet](https://www.nsa.gov/what-we-do/information-assurance/).  
+ Le [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] prend en charge le jeu d'algorithmes de chiffrement Suite B publié par la NSA (National Security Agency). Pour plus d’informations sur Suite B, consultez le [descriptif de la NSA sur le chiffrement Suite B](https://www.nsa.gov/what-we-do/information-assurance/).  
   
  Les algorithmes inclus sont les suivants :  
   
@@ -291,7 +291,7 @@ ms.locfileid: "33592429"
   
 <a name="cng"></a>   
 ## <a name="cryptography-next-generation-cng-classes"></a>Classes CNG (Cryptography Next Generation)  
- Les classes CNG fournissent un wrapper managé autour des fonctions CNG natives. (CNG remplac CryptoAPI.) Le nom de ces classes comporte « Cng ». Au cœur des classes du wrapper CNG se trouve la classe de conteneur de clés <xref:System.Security.Cryptography.CngKey>, qui s'approprie le stockage et l'utilisation des clés CNG. Cette classe vous permet de stocker une paire de clés ou une clé publique en toute sécurité et d'y faire référence en utilisant un nom de chaîne simple. La classe de signature <xref:System.Security.Cryptography.ECDsaCng> à courbe elliptique et la classe de chiffrement <xref:System.Security.Cryptography.ECDiffieHellmanCng> peuvent utiliser des objets <xref:System.Security.Cryptography.CngKey> .  
+ Les classes CNG fournissent un wrapper managé autour des fonctions CNG natives. (CNG remplac CryptoAPI.) Le nom de ces classes comporte « Cng ». Au cœur des classes du wrapper CNG se trouve la classe de conteneur de clés <xref:System.Security.Cryptography.CngKey> , qui s'approprie le stockage et l'utilisation des clés CNG. Cette classe vous permet de stocker une paire de clés ou une clé publique en toute sécurité et d'y faire référence en utilisant un nom de chaîne simple. La classe de signature <xref:System.Security.Cryptography.ECDsaCng> à courbe elliptique et la classe de chiffrement <xref:System.Security.Cryptography.ECDiffieHellmanCng> peuvent utiliser des objets <xref:System.Security.Cryptography.CngKey> .  
   
  La classe <xref:System.Security.Cryptography.CngKey> sert à diverses autres opérations, notamment à ouvrir, créer, supprimer et exporter des clés. Elle permet aussi d'accéder au handle de clé sous-jacent à utiliser quand il s'agit d'appeler des fonctions natives directement.  
   
@@ -311,5 +311,5 @@ ms.locfileid: "33592429"
 |Titre|Description|  
 |-----------|-----------------|  
 |[Modèle de chiffrement](../../../docs/standard/security/cryptography-model.md)|Explique comment le chiffrement est implémenté dans la bibliothèque de classes de base.|  
-|[Procédure pas à pas : création d’une application de chiffrement](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Présente des tâches de chiffrement et de déchiffrement de base.|  
+|[Procédure pas à pas : Création d’une Application de chiffrement](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Présente des tâches de chiffrement et de déchiffrement de base.|  
 |[Configuration des classes de chiffrement](../../../docs/framework/configure-apps/configure-cryptography-classes.md)|Explique comment mapper des noms d'algorithmes à des classes de chiffrement et comment mapper des identificateurs d'objets à un algorithme de chiffrement.|

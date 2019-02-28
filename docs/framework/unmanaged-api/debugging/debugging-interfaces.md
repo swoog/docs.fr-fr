@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afa4e6cd4e99540030d3a9e151da4bbe711d973a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219826"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981606"
 ---
 # <a name="debugging-interfaces"></a>Interfaces de débogage
 Cette section décrit les interfaces non managées qui gèrent le débogage d'un programme s'exécutant dans le Common Language Runtime (CLR).  
@@ -46,10 +46,10 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [ICorDebug, Interface](icordebug-interface.md)\
  Fournit des méthodes qui permettent aux développeurs de déboguer des applications dans l'environnement du CLR.  
   
- [ICorDebugAppDomain Interface1](icordebugappdomain-interface.md)\
+ [ICorDebugAppDomain Interface](icordebugappdomain-interface.md)\
  Fournit des méthodes pour le débogage de domaines d'application.  
   
- [ICorDebugAppDomain2 Interface1](icordebugappdomain2-interface.md)\
+ [ICorDebugAppDomain2 Interface](icordebugappdomain2-interface.md)\
  Fournit des méthodes destinées au travail avec les tableaux, les pointeurs, les pointeurs fonction et les types ByRef. Cette interface est une extension de l'interface `ICorDebugAppDomain`.  
   
  [Icordebugappdomain3, Interface](icordebugappdomain3-interface.md)\
@@ -58,52 +58,52 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [Icordebugappdomain4, Interface](icordebugappdomain4-interface.md)\
  Étend logiquement le [ICorDebugAppDomain](icordebugappdomain-interface.md) interface permettant d’obtenir un objet managé à partir d’un wrapper CCW.  
   
- [ICorDebugAppDomainEnum Interface1](icordebugappdomainenum-interface.md)\
+ [ICorDebugAppDomainEnum Interface](icordebugappdomainenum-interface.md)\
  Fournit une méthode qui retourne un nombre spécifié de valeurs `ICorDebugAppDomain` qui démarrent à l'emplacement suivant dans l'énumération.  
   
- [ICorDebugArrayValue Interface1](icordebugarrayvalue-interface.md)\
+ [ICorDebugArrayValue (Interface)](icordebugarrayvalue-interface.md)\
  Sous-classe de `ICorDebugHeapValue` qui représente un tableau unidimensionnel ou multidimensionnel.  
   
- [ICorDebugAssembly Interface1](icordebugassembly-interface.md)\
+ [ICorDebugAssembly (Interface)](icordebugassembly-interface.md)\
  Représente un assembly.  
   
- [ICorDebugAssembly2 Interface1](icordebugassembly2-interface.md)\
+ [ICorDebugAssembly2 Interface](icordebugassembly2-interface.md)\
  Représente un assembly. Cette interface est une extension de l'interface `ICorDebugAssembly`.  
   
  [ICorDebugAssembly3 Interface](icordebugassembly3-interface.md)\
  Étend logiquement le [ICorDebugAssembly](icordebugassembly-interface.md) interface pour fournir la prise en charge pour les assemblys conteneurs et leurs assemblys de relation contenant-contenus. **Disponible sur .NET Native uniquement.**  
   
- [ICorDebugAssemblyEnum Interface1](icordebugassemblyenum-interface.md)\
+ [ICorDebugAssemblyEnum Interface](icordebugassemblyenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugAssembly`.  
   
  [ICorDebugBlockingObjectEnum Interface](icordebugblockingobjectenum-interface.md)\
  Fournit un énumérateur pour une liste de [CorDebugBlockingObject](cordebugblockingobject-structure.md) structures.  
   
- [ICorDebugBoxValue Interface1](icordebugboxvalue-interface.md)\
+ [ICorDebugBoxValue (Interface)](icordebugboxvalue-interface.md)\
  Sous-classe de `ICorDebugHeapValue` qui représente un objet classe de valeur boxed.  
   
- [ICorDebugBreakpoint, Interface1](icordebugbreakpoint-interface.md)\
+ [ICorDebugBreakpoint (Interface)](icordebugbreakpoint-interface.md)\
  Représente un point d'arrêt dans une fonction ou un point de contrôle sur une valeur.  
   
- [ICorDebugBreakpointEnum, Interface1](icordebugbreakpointenum-interface.md)\
+ [ICorDebugBreakpointEnum (Interface)](icordebugbreakpointenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugBreakpoint`.  
   
- [ICorDebugChain, Interface1](icordebugchain-interface.md)\
+ [ICorDebugChain (Interface)](icordebugchain-interface.md)\
  Représente un segment d'une pile des appels physique ou logique.  
   
- [ICorDebugChainEnum, Interface1](icordebugchainenum-interface.md)\
+ [ICorDebugChainEnum (Interface)](icordebugchainenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugChain`.  
   
- [ICorDebugClass, Interface1](icordebugclass-interface.md)\
+ [ICorDebugClass (Interface)](icordebugclass-interface.md)\
  Représente un type, qui peut être de base ou complexe (c'est-à-dire défini par l'utilisateur). Si le type est générique, `ICorDebugClass` représente le type générique non instancié.  
   
- [ICorDebugClass2 Interface1](icordebugclass2-interface.md)\
+ [ICorDebugClass2 Interface](icordebugclass2-interface.md)\
  Représente une classe générique ou une classe avec un paramètre de méthode de type <xref:System.Type>. Cette interface étend `ICorDebugClass`.  
   
- [ICorDebugCode, Interface1](icordebugcode-interface1.md)\
+ [ICorDebugCode (Interface)](icordebugcode-interface1.md)\
  Représente un segment de code MSIL ou de code natif.  
   
- [ICorDebugCode2 Interface1](icordebugcode2-interface.md)\
+ [ICorDebugCode2 Interface](icordebugcode2-interface.md)\
  Fournit des méthodes qui étendent les fonctions de `ICorDebugCode`.  
   
  [Icordebugcode3, Interface](icordebugcode3-interface.md)\
@@ -112,16 +112,16 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [ICorDebugCode4 Interface](icordebugcode4-interface.md)\
  Fournit une méthode qui permet à un débogueur énumérer les variables locales et les arguments dans une fonction.  
   
- [ICorDebugCodeEnum Interface1](icordebugcodeenum-interface.md)\
+ [ICorDebugCodeEnum Interface](icordebugcodeenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugCode`.  
   
  [Interface ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)\
  Fournit des méthodes pour récupérer des objets d'interface mis en cache.  
   
- [ICorDebugContext Interface1](icordebugcontext-interface.md)\
+ [ICorDebugContext (Interface)](icordebugcontext-interface.md)\
  Représente un objet de contexte. Cette interface n'a pas encore été implémentée.  
   
- [ICorDebugController, Interface1](icordebugcontroller-interface.md)\
+ [ICorDebugController (Interface)](icordebugcontroller-interface.md)\
  Représente une portée, un <xref:System.Diagnostics.Process> ou un <xref:System.AppDomain>, où le contexte d'exécution du code peut être contrôlé.  
   
  [ICorDebugDataTarget, Interface](icordebugdatatarget-interface.md)\
@@ -139,19 +139,19 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [ICorDebugEditAndContinueErrorInfo Interface](icordebugeditandcontinueerrorinfo-interface.md)\
  Obsolète. N'utilisez pas cette interface.  
   
- [ICorDebugEditAndContinueSnapshot Interface1](icordebugeditandcontinuesnapshot-interface.md)\
+ [ICorDebugEditAndContinueSnapshot Interface](icordebugeditandcontinuesnapshot-interface.md)\
  Obsolète. N'utilisez pas cette interface.  
   
- [ICorDebugEnum, Interface1](icordebugenum-interface1.md)\
+ [ICorDebugEnum (Interface)](icordebugenum-interface1.md)\
  Sert d’interface de base abstraite pour déboguer des énumérateurs.  
   
- [ICorDebugErrorInfoEnum, Interface1](icordebugerrorinfoenum-interface.md)\
+ [ICorDebugErrorInfoEnum (Interface)](icordebugerrorinfoenum-interface.md)\
  Obsolète. N'utilisez pas cette interface.  
   
- [ICorDebugEval, Interface1](icordebugeval-interface.md)\
+ [ICorDebugEval (Interface)](icordebugeval-interface.md)\
  Fournit des méthodes pour permettre au débogueur d'exécuter le code à l'intérieur du contexte du code en cours de débogage.  
   
- [ICorDebugEval2, Interface1](icordebugeval2-interface.md)\
+ [ICorDebugEval2 (Interface)](icordebugeval2-interface.md)\
  Étend `ICorDebugEval` pour offrir une prise en charge pour les types génériques.  
   
  [Icordebugexceptiondebugevent, Interface](icordebugexceptiondebugevent-interface.md)\
@@ -163,34 +163,34 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [Icordebugexceptionobjectvalue, Interface](icordebugexceptionobjectvalue-interface.md)\
  Étend la [ICorDebugObjectValue](icordebugobjectvalue-interface.md) interface pour fournir des informations de trace de pile à partir d’un objet d’exception géré.  
   
- [ICorDebugFrame, Interface1](icordebugframe-interface.md)\
+ [ICorDebugFrame (Interface)](icordebugframe-interface.md)\
  Représente un frame sur la pile en cours.  
   
- [ICorDebugFrameEnum Interface1](icordebugframeenum-interface.md)\
+ [ICorDebugFrameEnum Interface](icordebugframeenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugFrame`.  
   
- [ICorDebugFunction, Interface1](icordebugfunction-interface1.md)\
+ [ICorDebugFunction (Interface)](icordebugfunction-interface1.md)\
  Représente une fonction ou une méthode managée.  
   
- [ICorDebugFunction2, Interface1](icordebugfunction2-interface.md)\
+ [ICorDebugFunction2 (Interface)](icordebugfunction2-interface.md)\
  Étend logiquement `ICorDebugFunction` pour prendre en charge le débogage pas à pas pour « Uniquement mon code ».  
   
  [Icordebugfunction3, Interface](icordebugfunction3-interface.md)\
  Étend logiquement le [ICorDebugFunction](icordebugfunction-interface1.md) interface pour fournir l’accès au code à partir d’une demande ReJIT.  
   
- [ICorDebugFunctionBreakpoint, Interface1](icordebugfunctionbreakpoint-interface.md)\
+ [ICorDebugFunctionBreakpoint (Interface)](icordebugfunctionbreakpoint-interface.md)\
  Étend `ICorDebugBreakpoint` pour prendre en charge les points d'arrêt au sein de fonctions.  
   
  [ICorDebugGCReferenceEnum Interface](icordebuggcreferenceenum-interface.md)\
  Fournit un énumérateur pour les objets qui sont récupérés par le récupérateur de mémoire.  
   
- [ICorDebugGenericValue, Interface1](icordebuggenericvalue-interface.md)\
+ [ICorDebugGenericValue (Interface)](icordebuggenericvalue-interface.md)\
  Sous-classe de `ICorDebugValue` qui s'applique à toutes les valeurs. Cette interface fournit les méthodes Get et Set pour la valeur.  
   
  [ICorDebugGuidToTypeEnum Interface](icordebugguidtotypeenum-interface.md)\
  Fournit un énumérateur pour un objet qui mappe les GUID et leurs objets `ICorDebugType` correspondants.  
   
- [ICorDebugHandleValue, Interface1](icordebughandlevalue-interface.md)\
+ [ICorDebugHandleValue (Interface)](icordebughandlevalue-interface.md)\
  Sous-classe de `ICorDebugReferenceValue` qui représente une valeur de référence dans laquelle le débogueur a créé un handle pour le garbage collection.  
   
  [ICorDebugHeapEnum Interface](icordebugheapenum-interface.md)\
@@ -199,10 +199,10 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [ICorDebugHeapSegmentEnum Interface](icordebugheapsegmentenum-interface.md)\
  Fournit un énumérateur pour les régions de mémoire du tas managé.  
   
- [ICorDebugHeapValue, Interface1](icordebugheapvalue-interface.md)\
+ [ICorDebugHeapValue (Interface)](icordebugheapvalue-interface.md)\
  Sous-classe de `ICorDebugValue` qui représente un objet qui a été collecté par le garbage collector du CLR.  
   
- [ICorDebugHeapValue2 Interface1](icordebugheapvalue2-interface1.md)\
+ [ICorDebugHeapValue2 Interface](icordebugheapvalue2-interface1.md)\
  Extension de `ICorDebugHeapValue` qui fournit la prise en charge des handles d’exécution.  
   
  [ICorDebugHeapValue3 Interface](icordebugheapvalue3-interface.md)\
@@ -214,10 +214,10 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [Icordebugilcode2, Interface](icordebugilcode2-interface.md)\
  Étend logiquement le [ICorDebugILCode](icordebugilcode-interface.md) interface pour fournir des méthodes qui retournent le jeton de signature de variable locale d’une fonction, et qui correspondent le langage intermédiaire instrumenté (IL) d’un profileur aux offsets intermédiaire de la méthode d’origine décalages.  
   
- [ICorDebugILFrame, Interface1](icordebugilframe-interface.md)\
+ [ICorDebugILFrame (Interface)](icordebugilframe-interface.md)\
  Représente un frame de pile de code MSIL.  
   
- [ICorDebugILFrame2 Interface1](icordebugilframe2-interface.md)\
+ [ICorDebugILFrame2 Interface](icordebugilframe2-interface.md)\
  Extension logique de `ICorDebugILFrame`.  
   
  [Icordebugilframe3, Interface](icordebugilframe3-interface.md)\
@@ -229,7 +229,7 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [Icordebuginstancefieldsymbol, Interface](icordebuginstancefieldsymbol-interface.md)\
  Représente les informations sur les symboles de débogage pour un champ d’instance. **Disponible sur .NET Native uniquement.**  
   
- [ICorDebugInternalFrame Interface1](icordebuginternalframe-interface.md)\
+ [ICorDebugInternalFrame Interface](icordebuginternalframe-interface.md)\
  Identifie les types de frame pour le débogueur.  
   
  [ICorDebugInternalFrame2 Interface](icordebuginternalframe2-interface.md)\
@@ -259,46 +259,46 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [ICorDebugMetaDataLocator, Interface](icordebugmetadatalocator-interface.md)\
  Fournit des informations de métadonnées au débogueur.  
   
- [ICorDebugModule Interface1](icordebugmodule-interface.md)\
+ [ICorDebugModule Interface](icordebugmodule-interface.md)\
  Représente un module CLR qui est un fichier exécutable ou une bibliothèque de liens dynamiques (DLL).  
   
- [ICorDebugModule2 Interface1](icordebugmodule2-interface.md)\
+ [ICorDebugModule2 Interface](icordebugmodule2-interface.md)\
  Sert d’extension logique de `ICorDebugModule`.  
   
  [ICorDebugModule3 Interface](icordebugmodule3-interface.md)\
  Crée un lecteur de symboles pour un module dynamique.  
   
- [ICorDebugModuleBreakpoint Interface1](icordebugmodulebreakpoint-interface.md)\
+ [ICorDebugModuleBreakpoint Interface](icordebugmodulebreakpoint-interface.md)\
  Étend `ICorDebugBreakpoint` pour fournir l'accès aux modules spécifiques.  
   
  [ICorDebugModuleDebugEvent Interface](icordebugmoduledebugevent-interface.md)\
  Étend la [ICorDebugDebugEvent](icordebugdebugevent-interface.md) interface pour prendre en charge les événements au niveau du module. **Disponible sur .NET Native uniquement.**  
   
- [ICorDebugModuleEnum Interface1](icordebugmoduleenum-interface.md)\
+ [ICorDebugModuleEnum Interface](icordebugmoduleenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugModule`.  
   
  [ICorDebugMutableDataTarget Interface](icordebugmutabledatatarget-interface.md)\
  Étend la [ICorDebugDataTarget](icordebugdatatarget-interface.md) interface pour prendre en charge des cibles de données mutables.  
   
- [ICorDebugNativeFrame, Interface1](icordebugnativeframe-interface.md)\
+ [ICorDebugNativeFrame (Interface)](icordebugnativeframe-interface.md)\
  Implémentation spécialisée de `ICorDebugFrame` utilisée pour les frames natifs.  
   
  [ICorDebugNativeFrame2 Interface](icordebugnativeframe2-interface.md)\
  Fournit des méthodes qui testent les relations entre frames enfant et parent.  
   
- [ICorDebugObjectEnum Interface1](icordebugobjectenum-interface.md)\
+ [ICorDebugObjectEnum Interface](icordebugobjectenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux d'objets par leurs adresses virtuelles relatives.  
   
- [ICorDebugObjectValue Interface1](icordebugobjectvalue-interface.md)\
+ [ICorDebugObjectValue (Interface)](icordebugobjectvalue-interface.md)\
  Sous-classe de `ICorDebugValue` qui représente une valeur contenant un objet.  
   
- [ICorDebugObjectValue2 Interface1](icordebugobjectvalue2-interface.md)\
+ [ICorDebugObjectValue2 Interface](icordebugobjectvalue2-interface.md)\
  Étend `ICorDebugObjectValue` pour prendre en charge l'héritage et les substitutions.  
   
- [ICorDebugProcess, Interface1](icordebugprocess-interface.md)\
+ [ICorDebugProcess (Interface)](icordebugprocess-interface.md)\
  Représente un processus qui exécute le code managé.  
   
- [ICorDebugProcess2 Interface1](icordebugprocess2-interface1.md)\
+ [ICorDebugProcess2 Interface](icordebugprocess2-interface1.md)\
  Extension logique de `ICorDebugProcess`.  
   
  [ICorDebugProcess3 Interface](icordebugprocess3-interface.md)\
@@ -319,10 +319,10 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [ICorDebugProcess8 Interface](icordebugprocess8-interface.md)\
  Étend logiquement le [ICorDebugProcess](icordebugprocess-interface.md) interface pour activer ou désactiver certains types de [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) rappels d’exception.  
   
- [ICorDebugProcessEnum Interface1](icordebugprocessenum-interface.md)\
+ [ICorDebugProcessEnum Interface](icordebugprocessenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugProcess`.  
   
- [ICorDebugReferenceValue, Interface1](icordebugreferencevalue-interface.md)\
+ [ICorDebugReferenceValue (Interface)](icordebugreferencevalue-interface.md)\
  Sous-classe de `ICorDebugValue` qui prend en charge les types référence.  
   
  [ICorDebugRegisterSet, Interface](icordebugregisterset-interface.md)\
@@ -346,16 +346,16 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [Icordebugstaticfieldsymbol, Interface](icordebugstaticfieldsymbol-interface.md)\
  Représente les informations sur les symboles de débogage pour un champ static. **Disponible sur .NET Native uniquement.**  
   
- [ICorDebugStepper, Interface1](icordebugstepper-interface.md)\
+ [ICorDebugStepper (Interface)](icordebugstepper-interface.md)\
  Représente dans l'exécution du code une étape qui est effectuée par un débogueur, et qui sert d'identificateur entre l'émission et l'achèvement d'une commande tout en offrant un moyen d'annuler une étape.  
   
- [ICorDebugStepper2 Interface1](icordebugstepper2-interface1.md)\
+ [ICorDebugStepper2 Interface](icordebugstepper2-interface1.md)\
  Prend en charge le débogage « Uniquement mon code ».  
   
- [ICorDebugStepperEnum Interface1](icordebugstepperenum-interface.md)\
+ [ICorDebugStepperEnum Interface](icordebugstepperenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugStepper`.  
   
- [ICorDebugStringValue, Interface1](icordebugstringvalue-interface.md)\
+ [ICorDebugStringValue (Interface)](icordebugstringvalue-interface.md)\
  Sous-classe de `ICorDebugHeapValue` qui s'applique aux valeurs de chaîne.  
   
  [ICorDebugSymbolProvider Interface](icordebugsymbolprovider-interface.md)\
@@ -364,10 +364,10 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [ICorDebugSymbolProvider2 Interface](icordebugsymbolprovider2-interface.md)\
  Étend logiquement le [ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md) interface pour récupérer des informations symboliques de débogage supplémentaires. **Disponible sur .NET Native uniquement.**  
   
- [ICorDebugThread, Interface1](icordebugthread-interface.md)\
+ [ICorDebugThread (Interface)](icordebugthread-interface.md)\
  Représente un thread de processus. La durée de vie d'une instance `ICorDebugThread` est la même que la durée de vie du thread qu'elle représente.  
   
- [ICorDebugThread2 Interface1](icordebugthread2-interface.md)\
+ [ICorDebugThread2 Interface](icordebugthread2-interface.md)\
  Sert d’extension logique de `ICorDebugThread`.  
   
  [ICorDebugThread3 Interface](icordebugthread3-interface.md)\
@@ -376,16 +376,16 @@ Cette section décrit les interfaces non managées qui gèrent le débogage d'un
  [ICorDebugThread4 Interface](icordebugthread4-interface.md)\
  Fournit des informations sur le blocage des threads.  
   
- [ICorDebugThreadEnum Interface1](icordebugthreadenum-interface1.md)\
+ [ICorDebugThreadEnum Interface](icordebugthreadenum-interface1.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugThread`.  
   
- [ICorDebugType, Interface1](icordebugtype-interface.md)\
+ [ICorDebugType (Interface)](icordebugtype-interface.md)\
  Représente un type, qui peut être de base ou complexe (c'est-à-dire défini par l'utilisateur). Si le type est générique, `ICorDebugType` représente le type générique instancié.  
   
  [Icordebugtype2, Interface](icordebugtype2-interface.md)\
  Étend la [ICorDebugType](icordebugtype-interface.md) interface pour récupérer l’identificateur de type d’un type de base ou complexe (défini par l’utilisateur).  
   
- [ICorDebugTypeEnum Interface1](icordebugtypeenum-interface.md)\
+ [ICorDebugTypeEnum Interface](icordebugtypeenum-interface.md)\
  Implémente les méthodes `ICorDebugEnum` et énumère des tableaux `ICorDebugType`.  
   
  [ICorDebugUnmanagedCallback, Interface](icordebugunmanagedcallback-interface.md)\

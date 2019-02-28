@@ -1,15 +1,9 @@
 ---
-title: Prise en mainF#
-description: Découvrez comment bien démarrer avec le F# langage de programmation.
+title: 'Prise en mainF#'
+description: 'Découvrez comment bien démarrer avec le F# langage de programmation.'
 ms.date: 12/08/2018
-ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170819"
 ---
-# <a name="get-started-with-f"></a>Prise en mainF# #
+# <a name="get-started-with-f"></a>Bien démarrer avec F\#
 
 Vous pouvez commencer avec F# sur votre ordinateur ou en ligne.
 

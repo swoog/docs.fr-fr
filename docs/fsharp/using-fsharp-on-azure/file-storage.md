@@ -1,16 +1,16 @@
 ---
-title: Bien démarrer avec stockage fichier Azure en F#
+title: Prise en main à l’aide du stockage de fichiers AzureF#
 description: Store les données de fichier dans le cloud avec stockage fichier Azure et monter votre partage de fichiers cloud à partir d’une machine virtuelle (VM) ou à partir d’une application locale exécutant Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e772da5f81d2e6827295d0dfe150934a415eb3bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fa6dadc863bb9116cfac5afd7cd22a724bc7afe2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569341"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969594"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Bien démarrer avec stockage fichier Azure en F# #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Bien démarrer avec stockage fichier Azure en F\#
 
 Stockage fichier Azure est un service qui offre des partages de fichiers dans le cloud à l’aide de la norme [les protocole Server Message Block (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). SMB 2.1 et SMB 3.0 sont pris en charge. Avec stockage fichier Azure, vous pouvez migrer des applications héritées qui s’appuient sur des partages de fichiers vers Azure rapidement et sans réécritures onéreuses. Les applications en cours d’exécution dans les machines virtuelles ou services cloud ou à partir de clients locaux peuvent monter un partage de fichiers dans le cloud, tout comme une application de bureau monte un partage SMB standard. N’importe quel nombre de composants d’application peut ensuite monter et accéder au partage de stockage de fichier simultanément.
 
@@ -21,9 +21,9 @@ Pour obtenir une vue d’ensemble conceptuelle de stockage de fichiers, consulte
 Pour utiliser ce guide, vous devez d’abord [créer un compte de stockage Azure](/azure/storage/storage-create-storage-account).
 Vous devez également votre clé d’accès de stockage pour ce compte.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Créer de Script F# et démarrer F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Créer un F# de Script et démarrer F# Interactive
 
-Les exemples de cet article peuvent être utilisés dans une application F# ou un script F#. Pour créer un script F#, créez un fichier avec le `.fsx` extension, par exemple `files.fsx`, dans votre environnement de développement F#.
+Les exemples de cet article peuvent être utilisées dans un F# application ou un F# script. Pour créer un F# de script, créez un fichier avec le `.fsx` extension, par exemple `files.fsx`, dans votre F# environnement de développement.
 
 Ensuite, utilisez un [Gestionnaire de package](package-management.md) comme [Paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) pour installer le `WindowsAzure.Storage` package et référence `WindowsAzure.Storage.dll` dans votre script à l’aide d’un `#r`directive.
 

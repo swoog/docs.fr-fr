@@ -22,17 +22,17 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: dc05b3acda5183ddc9a7c0bdddf08a3934c298f6
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738914"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979461"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Durée de vie d’objet : Comment les objets sont créés et détruits (Visual Basic)
 Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâches d'initialisation doivent souvent être exécutées sur les nouveaux objets préalablement à leur utilisation. Ces tâches d’initialisation consistent généralement à ouvrir des fichiers, à se connecter à des bases de données et à lire des valeurs de clés de Registre. Visual Basic contrôle l’initialisation des nouveaux objets à l’aide de procédures appelées *constructeurs* (méthodes spéciales permettant de contrôler l’initialisation).  
   
- Dès lors qu’un objet est hors de portée, il est libéré par le CLR (Common Language Runtime). Visual Basic contrôle la libération des ressources système à l’aide de procédures appelées *destructeurs*. Ensemble, constructeurs et destructeurs facilitent la création de bibliothèques de classes robustes et prévisibles.  
+ Dès lors qu'un objet est hors de portée, il est libéré par le CLR (Common Language Runtime). Visual Basic contrôle la libération des ressources système à l’aide de procédures appelées *destructeurs*. Ensemble, constructeurs et destructeurs facilitent la création de bibliothèques de classes robustes et prévisibles.  
   
 ## <a name="using-constructors-and-destructors"></a>Utilisation des constructeurs et des destructeurs  
  Les constructeurs et les destructeurs contrôlent la création et la destruction d'objets. Le `Sub New` et `Sub Finalize` procédures dans Visual Basic, initialiser et détruisent les objets ; elles remplacent la `Class_Initialize` et `Class_Terminate` méthodes utilisées dans Visual Basic 6.0 et versions antérieures.  
@@ -42,18 +42,18 @@ Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâc
   
  Pour créer un constructeur pour une classe, créez une procédure nommée `Sub New` n'importe où dans la définition de la classe. Pour créer un constructeur paramétrable, spécifiez les noms et les types de données des arguments de `Sub New` comme vous le feriez pour spécifier les arguments d'une autre procédure, comme dans le code suivant :  
   
- [!code-vb[VbVbalrOOP#42](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_1.vb)]  
+ [!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]  
   
  Les constructeurs sont souvent surchargés, comme dans le code suivant :  
   
- [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
+ [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]  
   
  Quand vous définissez une classe dérivée d'une autre classe, la première ligne d'un constructeur doit être un appel au constructeur de la classe de base, à moins que celle-ci contienne un constructeur accessible qui n'accepte aucun paramètre. Un appel à la classe de base contenant le constructeur ci-dessus, par exemple, serait `MyBase.New(s)`. Sinon, `MyBase.New` est facultatif, et le runtime Visual Basic appelle implicitement.  
   
  Une fois que vous avez écrit le code destiné à appeler le constructeur de l'objet parent, vous pouvez ajouter du code d'initialisation supplémentaire à la procédure `Sub New`. `Sub New` peut accepter des arguments quand elle est appelée en tant que constructeur paramétrable. Ces paramètres sont passés à partir de la procédure appelant le constructeur, par exemple, `Dim AnObject As New ThisClass(X)`.  
   
 ### <a name="sub-finalize"></a>Sub Finalize  
- Avant de libérer des objets, le CLR appelle automatiquement la méthode `Finalize` pour les objets qui définissent une procédure `Sub Finalize`. La méthode `Finalize` peut contenir du code qui doit s'exécuter juste avant la destruction d'un objet. Tel est le cas du code destiné à fermer les fichiers et à enregistrer les informations d'état. L’exécution de `Sub Finalize` pouvant occasionner une légère baisse des performances, ne définissez une méthode `Sub Finalize` que si vous avez besoin de libérer des objets explicitement.  
+ Avant de libérer des objets, le CLR appelle automatiquement la méthode `Finalize` pour les objets qui définissent une procédure `Sub Finalize`. La méthode `Finalize` peut contenir du code qui doit s'exécuter juste avant la destruction d'un objet. Tel est le cas du code destiné à fermer les fichiers et à enregistrer les informations d'état. L'exécution de `Sub Finalize` pouvant occasionner une légère baisse des performances, ne définissez une méthode `Sub Finalize` que si vous avez besoin de libérer des objets explicitement.  
   
 > [!NOTE]
 >  Le garbage collector dans le CLR ne pas (et ne peut pas) supprimer *unmanaged objets*, les objets que le système d’exploitation exécute directement, en dehors de l’environnement du CLR. Ceci s'explique par le fait que la méthode de suppression des objets non managés varie en fonction de leur type. Ces informations ne sont pas directement associées à l'objet non managé ; elles doivent se trouver dans la documentation relative à l'objet. Une classe qui utilise des objets non managés doit les supprimer dans sa méthode `Finalize`.  
@@ -142,7 +142,7 @@ End Sub
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>Garbage collection et destructeur Finalize  
  Le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] utilise le *nettoyage du suivi des références* système pour libérer périodiquement les ressources inutilisées. Visual Basic 6.0 et les versions antérieures utilisaient un autre système appelé *décompte* pour gérer les ressources. Même si les deux systèmes remplissent la même fonction automatiquement, des différences importantes existent entre les deux.  
   
- Le CLR détruit périodiquement des objets quand le système considère qu'ils ne sont plus nécessaires. Les objets sont libérés plus rapidement quand les ressources système viennent à manquer et moins souvent dans le cas contraire. Compte tenu du décalage qui existe entre le moment où un objet est hors de portée et le moment où le CLR le libère, contrairement aux objets dans Visual Basic 6.0 et les versions antérieures, il est impossible de déterminer exactement à quel moment l’objet sera détruit. Dans ce cas, les objets sont dits avoir *durée de vie non déterministe*. Dans la plupart des cas, la durée de vie non déterministe ne change pas la façon dont vous écrivez les applications, à condition de ne pas perdre de vue que le destructeur `Finalize` ne peut pas s'exécuter immédiatement à partir du moment où un objet est hors de portée.  
+ Le CLR détruit périodiquement des objets quand le système considère qu'ils ne sont plus nécessaires. Les objets sont libérés plus rapidement quand les ressources système viennent à manquer et moins souvent dans le cas contraire. Compte tenu du décalage qui existe entre le moment où un objet est hors de portée et le moment où le CLR le libère, contrairement aux objets dans Visual Basic 6.0 et les versions antérieures, il est impossible de déterminer exactement à quel moment l'objet sera détruit. Dans ce cas, les objets sont dits avoir *durée de vie non déterministe*. Dans la plupart des cas, la durée de vie non déterministe ne change pas la façon dont vous écrivez les applications, à condition de ne pas perdre de vue que le destructeur `Finalize` ne peut pas s'exécuter immédiatement à partir du moment où un objet est hors de portée.  
   
  Les systèmes de récupération de mémoire se distinguent aussi en ce qui concerne l'utilisation de `Nothing`. Pour tirer parti du comptage de références dans Visual Basic 6.0 et les versions antérieures, les programmeurs attribuaient parfois aux variables objets la valeur `Nothing` pour libérer les références contenues dans ces variables. Si la variable contenait la dernière référence à l'objet, les ressources de l'objet étaient libérées immédiatement. Dans les versions ultérieures de Visual Basic, même si dans certains cas cette procédure est toujours utile, son exécution ne conduit jamais l'objet référencé à libérer immédiatement ses ressources. Pour libérer immédiatement des ressources, utilisez la méthode <xref:System.IDisposable.Dispose%2A> de l'objet, si elle est disponible. Le seul cas où vous devez affecter la valeur `Nothing` à une variable est quand sa durée de vie est plus longue que le temps dont a besoin le récupérateur de mémoire pour détecter les objets orphelins.  
   

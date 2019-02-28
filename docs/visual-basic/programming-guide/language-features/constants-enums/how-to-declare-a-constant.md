@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678835"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964918"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Procédure : Déclarer une constante (Visual Basic)
 Vous utilisez la `Const` instruction pour déclarer une constante et définir sa valeur. En déclarant une constante, vous affectez un nom explicite à une valeur. Une fois qu’une constante est déclarée, il ne peut pas être modifié ou attribuer une nouvelle valeur.  
@@ -43,7 +43,7 @@ Vous utilisez la `Const` instruction pour déclarer une constante et définir sa
   
 -   Écrivez une déclaration qui inclut un spécificateur d’accès, le `Const` mot clé et une expression, comme dans les exemples suivants :  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
+     [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
      Lorsque [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) est `Off` et [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) est `On`, vous devez déclarer explicitement une constante en spécifiant un type de données (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, ou `String`).  
   
@@ -53,7 +53,7 @@ Vous utilisez la `Const` instruction pour déclarer une constante et définir sa
   
 -   Écrivez une déclaration qui inclut le `As` mot clé et une explicites type de données, comme dans les exemples suivants :  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
+     [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
      Vous pouvez déclarer plusieurs constantes sur une seule ligne, bien que votre code est plus lisible si vous ne déclarez qu’une seule constante par ligne. Si vous déclarez plusieurs constantes sur une seule ligne, ils doivent tous avoir le même niveau d’accès (`Public`, `Private`, `Friend`, `Protected`, ou `Protected Friend`).  
   

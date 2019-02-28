@@ -5,17 +5,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 160d4a9f560479b3a66b2cf4d7712b24551fabee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c936adb6d4d80032b862994c21178a505da6789b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558700"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964244"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Procédure : Créer un nouveau paramètre au moment du Design
 Vous pouvez créer un nouveau paramètre au moment du design à l’aide du Concepteur de paramètres. Le Concepteur de paramètres est une interface de style de la grille qui vous permet de créer de nouveaux paramètres et de spécifier des propriétés pour ces paramètres. Vous devez spécifier le nom, valeur, Type et l’étendue pour vos nouveaux paramètres. Une fois un paramètre est créé, il est accessible dans le code.  
   
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>Pour créer un nouveau paramètre au moment du design dansC#  
+### <a name="to-create-a-new-setting-at-design-time-in-c"></a>Pour créer un nouveau paramètre au moment du design en C\#
   
 1.  Dans **l’Explorateur de solutions**, développez le **propriétés** nœud de votre projet.  
   
