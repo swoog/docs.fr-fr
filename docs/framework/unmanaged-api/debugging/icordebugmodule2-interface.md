@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModule2 Interface1
+title: ICorDebugModule2, interface
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModule2
@@ -16,39 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c65d2da485664691ff71044eb4e44f12108ce5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 192f2476aff91d3a8302d070852ab2a3722d137c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707594"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970127"
 ---
-# <a name="icordebugmodule2-interface1"></a><span data-ttu-id="0eb63-102">ICorDebugModule2 Interface1</span><span class="sxs-lookup"><span data-stu-id="0eb63-102">ICorDebugModule2 Interface1</span></span>
-<span data-ttu-id="0eb63-103">Sert d’extension logique à l’interface ICorDebugModule.</span><span class="sxs-lookup"><span data-stu-id="0eb63-103">Serves as a logical extension to the ICorDebugModule interface.</span></span>  
+# <a name="icordebugmodule2-interface"></a><span data-ttu-id="f304e-102">ICorDebugModule2, interface</span><span class="sxs-lookup"><span data-stu-id="f304e-102">ICorDebugModule2 Interface</span></span>
+
+<span data-ttu-id="f304e-103">Sert d’extension logique à l’interface ICorDebugModule.</span><span class="sxs-lookup"><span data-stu-id="f304e-103">Serves as a logical extension to the ICorDebugModule interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0eb63-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="0eb63-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f304e-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="f304e-104">Methods</span></span>  
   
-|<span data-ttu-id="0eb63-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="0eb63-105">Method</span></span>|<span data-ttu-id="0eb63-106">Description</span><span class="sxs-lookup"><span data-stu-id="0eb63-106">Description</span></span>|  
+|<span data-ttu-id="f304e-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="f304e-105">Method</span></span>|<span data-ttu-id="f304e-106">Description</span><span class="sxs-lookup"><span data-stu-id="f304e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0eb63-107">ApplyChanges, méthode</span><span class="sxs-lookup"><span data-stu-id="0eb63-107">ApplyChanges Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|<span data-ttu-id="0eb63-108">Applique les modifications dans les métadonnées et les modifications dans le code de Microsoft intermediate language (MSIL) pour le processus en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="0eb63-108">Applies the changes in the metadata and the changes in the Microsoft intermediate language (MSIL) code to the running process.</span></span>|  
-|[<span data-ttu-id="0eb63-109">GetJITCompilerFlags, méthode</span><span class="sxs-lookup"><span data-stu-id="0eb63-109">GetJITCompilerFlags Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|<span data-ttu-id="0eb63-110">Obtient les indicateurs qui contrôlent la compilation juste-à-temps (JIT) pour ce `ICorDebugModule2`.</span><span class="sxs-lookup"><span data-stu-id="0eb63-110">Gets the flags that control the just-in-time (JIT) compilation for this `ICorDebugModule2`.</span></span>|  
-|[<span data-ttu-id="0eb63-111">ResolveAssembly, méthode</span><span class="sxs-lookup"><span data-stu-id="0eb63-111">ResolveAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|<span data-ttu-id="0eb63-112">Résout l’assembly référencé par le jeton de métadonnées spécifié.</span><span class="sxs-lookup"><span data-stu-id="0eb63-112">Resolves the assembly referenced by the specified metadata token.</span></span>|  
-|[<span data-ttu-id="0eb63-113">SetJITCompilerFlags, méthode</span><span class="sxs-lookup"><span data-stu-id="0eb63-113">SetJITCompilerFlags Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|<span data-ttu-id="0eb63-114">Définit les indicateurs qui contrôlent la compilation JIT pour ce `ICorDebugModule2`.</span><span class="sxs-lookup"><span data-stu-id="0eb63-114">Sets the flags that control the JIT compilation for this `ICorDebugModule2`.</span></span>|  
-|[<span data-ttu-id="0eb63-115">SetJMCStatus, méthode</span><span class="sxs-lookup"><span data-stu-id="0eb63-115">SetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|<span data-ttu-id="0eb63-116">Définit l’état uniquement mon Code (JMC) de toutes les méthodes de toutes les classes dans ce `ICorDebugModule2` à la valeur spécifiée, à l’exception de celles figurant dans le `pTokens` tableau, il définit la valeur opposée.</span><span class="sxs-lookup"><span data-stu-id="0eb63-116">Sets the Just My Code (JMC) status of all methods of all the classes in this `ICorDebugModule2` to the specified value, except those in the `pTokens` array, which it sets to the opposite value.</span></span>|  
+|[<span data-ttu-id="f304e-107">ApplyChanges, méthode</span><span class="sxs-lookup"><span data-stu-id="f304e-107">ApplyChanges Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|<span data-ttu-id="f304e-108">Applique les modifications dans les métadonnées et les modifications dans le code de Microsoft intermediate language (MSIL) pour le processus en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="f304e-108">Applies the changes in the metadata and the changes in the Microsoft intermediate language (MSIL) code to the running process.</span></span>|  
+|[<span data-ttu-id="f304e-109">GetJITCompilerFlags, méthode</span><span class="sxs-lookup"><span data-stu-id="f304e-109">GetJITCompilerFlags Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|<span data-ttu-id="f304e-110">Obtient les indicateurs qui contrôlent la compilation juste-à-temps (JIT) pour ce `ICorDebugModule2`.</span><span class="sxs-lookup"><span data-stu-id="f304e-110">Gets the flags that control the just-in-time (JIT) compilation for this `ICorDebugModule2`.</span></span>|  
+|[<span data-ttu-id="f304e-111">ResolveAssembly, méthode</span><span class="sxs-lookup"><span data-stu-id="f304e-111">ResolveAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|<span data-ttu-id="f304e-112">Résout l’assembly référencé par le jeton de métadonnées spécifié.</span><span class="sxs-lookup"><span data-stu-id="f304e-112">Resolves the assembly referenced by the specified metadata token.</span></span>|  
+|[<span data-ttu-id="f304e-113">SetJITCompilerFlags, méthode</span><span class="sxs-lookup"><span data-stu-id="f304e-113">SetJITCompilerFlags Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|<span data-ttu-id="f304e-114">Définit les indicateurs qui contrôlent la compilation JIT pour ce `ICorDebugModule2`.</span><span class="sxs-lookup"><span data-stu-id="f304e-114">Sets the flags that control the JIT compilation for this `ICorDebugModule2`.</span></span>|  
+|[<span data-ttu-id="f304e-115">SetJMCStatus, méthode</span><span class="sxs-lookup"><span data-stu-id="f304e-115">SetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|<span data-ttu-id="f304e-116">Définit l’état uniquement mon Code (JMC) de toutes les méthodes de toutes les classes dans ce `ICorDebugModule2` à la valeur spécifiée, à l’exception de celles figurant dans le `pTokens` tableau, il définit la valeur opposée.</span><span class="sxs-lookup"><span data-stu-id="f304e-116">Sets the Just My Code (JMC) status of all methods of all the classes in this `ICorDebugModule2` to the specified value, except those in the `pTokens` array, which it sets to the opposite value.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0eb63-117">Notes</span><span class="sxs-lookup"><span data-stu-id="0eb63-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f304e-117">Notes</span><span class="sxs-lookup"><span data-stu-id="f304e-117">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0eb63-118">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="0eb63-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="f304e-118">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="f304e-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0eb63-119">Spécifications</span><span class="sxs-lookup"><span data-stu-id="0eb63-119">Requirements</span></span>  
- <span data-ttu-id="0eb63-120">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0eb63-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f304e-119">Spécifications</span><span class="sxs-lookup"><span data-stu-id="f304e-119">Requirements</span></span>  
+ <span data-ttu-id="f304e-120">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f304e-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0eb63-121">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0eb63-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f304e-121">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f304e-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0eb63-122">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0eb63-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f304e-122">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f304e-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0eb63-123">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0eb63-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f304e-123">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f304e-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0eb63-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0eb63-124">See also</span></span>
-- [<span data-ttu-id="0eb63-125">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="0eb63-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f304e-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f304e-124">See also</span></span>
+- [<span data-ttu-id="f304e-125">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="f304e-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

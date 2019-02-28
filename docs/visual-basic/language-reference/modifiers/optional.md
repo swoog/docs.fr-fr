@@ -8,39 +8,39 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 7db5f8afdfe61709aba9569bcee8c0d3aa6ee44f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b55252e774e744b7318f480b264aa3f7fae9abfc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527040"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969640"
 ---
-# <a name="optional-visual-basic"></a><span data-ttu-id="30949-102">Optional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="30949-102">Optional (Visual Basic)</span></span>
-<span data-ttu-id="30949-103">Spécifie qu’un argument de procédure peut être omis lorsque la procédure est appelée.</span><span class="sxs-lookup"><span data-stu-id="30949-103">Specifies that a procedure argument can be omitted when the procedure is called.</span></span>  
+# <a name="optional-visual-basic"></a><span data-ttu-id="4bb4c-102">Optional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bb4c-102">Optional (Visual Basic)</span></span>
+<span data-ttu-id="4bb4c-103">Spécifie qu’un argument de procédure peut être omis lorsque la procédure est appelée.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-103">Specifies that a procedure argument can be omitted when the procedure is called.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="30949-104">Notes</span><span class="sxs-lookup"><span data-stu-id="30949-104">Remarks</span></span>  
- <span data-ttu-id="30949-105">Pour chaque paramètre facultatif, vous devez spécifier une expression constante comme valeur par défaut de ce paramètre.</span><span class="sxs-lookup"><span data-stu-id="30949-105">For each optional parameter, you must specify a constant expression as the default value of that parameter.</span></span> <span data-ttu-id="30949-106">Si l’expression prend la valeur [rien](../../../visual-basic/language-reference/nothing.md), la valeur par défaut la valeur du type de données est utilisée comme valeur par défaut du paramètre.</span><span class="sxs-lookup"><span data-stu-id="30949-106">If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4bb4c-104">Notes</span><span class="sxs-lookup"><span data-stu-id="4bb4c-104">Remarks</span></span>  
+ <span data-ttu-id="4bb4c-105">Pour chaque paramètre facultatif, vous devez spécifier une expression constante comme valeur par défaut de ce paramètre.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-105">For each optional parameter, you must specify a constant expression as the default value of that parameter.</span></span> <span data-ttu-id="4bb4c-106">Si l’expression prend la valeur [rien](../../../visual-basic/language-reference/nothing.md), la valeur par défaut la valeur du type de données est utilisée comme valeur par défaut du paramètre.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-106">If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.</span></span>  
   
- <span data-ttu-id="30949-107">Si la liste de paramètres contient un paramètre facultatif, chaque paramètre qui le suit doit également être facultatif.</span><span class="sxs-lookup"><span data-stu-id="30949-107">If the parameter list contains an optional parameter, every parameter that follows it must also be optional.</span></span>  
+ <span data-ttu-id="4bb4c-107">Si la liste de paramètres contient un paramètre facultatif, chaque paramètre qui le suit doit également être facultatif.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-107">If the parameter list contains an optional parameter, every parameter that follows it must also be optional.</span></span>  
   
- <span data-ttu-id="30949-108">Le modificateur `Optional` peut être utilisé dans les contextes suivants :</span><span class="sxs-lookup"><span data-stu-id="30949-108">The `Optional` modifier can be used in these contexts:</span></span>  
+ <span data-ttu-id="4bb4c-108">Le modificateur `Optional` peut être utilisé dans les contextes suivants :</span><span class="sxs-lookup"><span data-stu-id="4bb4c-108">The `Optional` modifier can be used in these contexts:</span></span>  
   
--   [<span data-ttu-id="30949-109">Declare (instruction)</span><span class="sxs-lookup"><span data-stu-id="30949-109">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [<span data-ttu-id="4bb4c-109">Declare (instruction)</span><span class="sxs-lookup"><span data-stu-id="4bb4c-109">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [<span data-ttu-id="30949-110">Function (instruction)</span><span class="sxs-lookup"><span data-stu-id="30949-110">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [<span data-ttu-id="4bb4c-110">Function (instruction)</span><span class="sxs-lookup"><span data-stu-id="4bb4c-110">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [<span data-ttu-id="30949-111">Property (instruction)</span><span class="sxs-lookup"><span data-stu-id="30949-111">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [<span data-ttu-id="4bb4c-111">Property (instruction)</span><span class="sxs-lookup"><span data-stu-id="4bb4c-111">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [<span data-ttu-id="30949-112">Sub (instruction)</span><span class="sxs-lookup"><span data-stu-id="30949-112">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
-> [!NOTE]
->  <span data-ttu-id="30949-113">Lorsque vous appelez une procédure avec ou sans paramètres facultatifs, vous pouvez passer des arguments par position ou par nom.</span><span class="sxs-lookup"><span data-stu-id="30949-113">When calling a procedure with or without optional parameters, you can pass arguments by position or by name.</span></span> <span data-ttu-id="30949-114">Pour plus d’informations, consultez [en passant les Arguments par Position et par nom](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span><span class="sxs-lookup"><span data-stu-id="30949-114">For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span></span>  
+-   [<span data-ttu-id="4bb4c-112">Sub (instruction)</span><span class="sxs-lookup"><span data-stu-id="4bb4c-112">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  <span data-ttu-id="30949-115">Vous pouvez également définir une procédure avec des paramètres facultatifs à l’aide de la surcharge.</span><span class="sxs-lookup"><span data-stu-id="30949-115">You can also define a procedure with optional parameters by using overloading.</span></span> <span data-ttu-id="30949-116">Si vous avez un seul paramètre facultatif, vous pouvez définir deux versions surchargées de la procédure, un autre qui accepte le paramètre et une qui ne fait pas.</span><span class="sxs-lookup"><span data-stu-id="30949-116">If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t.</span></span> <span data-ttu-id="30949-117">Pour plus d'informations, consultez [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="30949-117">For more information, see [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span></span>  
+>  <span data-ttu-id="4bb4c-113">Lorsque vous appelez une procédure avec ou sans paramètres facultatifs, vous pouvez passer des arguments par position ou par nom.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-113">When calling a procedure with or without optional parameters, you can pass arguments by position or by name.</span></span> <span data-ttu-id="4bb4c-114">Pour plus d’informations, consultez [en passant les Arguments par Position et par nom](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span><span class="sxs-lookup"><span data-stu-id="4bb4c-114">For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="30949-118">Exemple</span><span class="sxs-lookup"><span data-stu-id="30949-118">Example</span></span>  
- <span data-ttu-id="30949-119">L’exemple suivant définit une procédure qui possède un paramètre facultatif.</span><span class="sxs-lookup"><span data-stu-id="30949-119">The following example defines a procedure that has an optional parameter.</span></span>  
+> [!NOTE]
+>  <span data-ttu-id="4bb4c-115">Vous pouvez également définir une procédure avec des paramètres facultatifs à l’aide de la surcharge.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-115">You can also define a procedure with optional parameters by using overloading.</span></span> <span data-ttu-id="4bb4c-116">Si vous avez un seul paramètre facultatif, vous pouvez définir deux versions surchargées de la procédure, un autre qui accepte le paramètre et une qui ne fait pas.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-116">If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t.</span></span> <span data-ttu-id="4bb4c-117">Pour plus d'informations, consultez [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="4bb4c-117">For more information, see [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="4bb4c-118">Exemple</span><span class="sxs-lookup"><span data-stu-id="4bb4c-118">Example</span></span>  
+ <span data-ttu-id="4bb4c-119">L’exemple suivant définit une procédure qui possède un paramètre facultatif.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-119">The following example defines a procedure that has an optional parameter.</span></span>  
   
 ```  
 Public Function FindMatches(ByRef values As List(Of String),  
@@ -61,12 +61,12 @@ Public Function FindMatches(ByRef values As List(Of String),
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="30949-120">Exemple</span><span class="sxs-lookup"><span data-stu-id="30949-120">Example</span></span>  
- <span data-ttu-id="30949-121">L’exemple suivant montre comment appeler une procédure avec des arguments passés par position et avec les arguments passés par nom.</span><span class="sxs-lookup"><span data-stu-id="30949-121">The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name.</span></span> <span data-ttu-id="30949-122">La procédure comporte deux paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="30949-122">The procedure has two optional parameters.</span></span>  
+## <a name="example"></a><span data-ttu-id="4bb4c-120">Exemple</span><span class="sxs-lookup"><span data-stu-id="4bb4c-120">Example</span></span>  
+ <span data-ttu-id="4bb4c-121">L’exemple suivant montre comment appeler une procédure avec des arguments passés par position et avec les arguments passés par nom.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-121">The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name.</span></span> <span data-ttu-id="4bb4c-122">La procédure comporte deux paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="4bb4c-122">The procedure has two optional parameters.</span></span>  
   
- [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]  
   
-## <a name="see-also"></a><span data-ttu-id="30949-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="30949-123">See also</span></span>
-- [<span data-ttu-id="30949-124">Liste de paramètres</span><span class="sxs-lookup"><span data-stu-id="30949-124">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [<span data-ttu-id="30949-125">Paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="30949-125">Optional Parameters</span></span>](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [<span data-ttu-id="30949-126">Mots clés</span><span class="sxs-lookup"><span data-stu-id="30949-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="4bb4c-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4bb4c-123">See also</span></span>
+- [<span data-ttu-id="4bb4c-124">Liste de paramètres</span><span class="sxs-lookup"><span data-stu-id="4bb4c-124">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [<span data-ttu-id="4bb4c-125">Paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="4bb4c-125">Optional Parameters</span></span>](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [<span data-ttu-id="4bb4c-126">Mots clés</span><span class="sxs-lookup"><span data-stu-id="4bb4c-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
