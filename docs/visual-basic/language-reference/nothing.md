@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b4a9acb5a43898ef616bbc6bb97f2f4f96d206b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496947"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981424"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Représente la valeur par défaut de n’importe quel type de données. Pour les types référence, la valeur par défaut est le `null` référence. Pour les types de valeur, la valeur par défaut varie selon que le type de valeur est nullable.  
@@ -30,11 +30,11 @@ Représente la valeur par défaut de n’importe quel type de données. Pour les
   
  Si une variable est d’un type valeur qui n’est pas nullable, affectez `Nothing` à elle lui affecte la valeur par défaut pour son type déclaré. Si ce type contient des variables membres, ils sont prêts à leurs valeurs par défaut. L’exemple suivant illustre cela pour les types scalaires.  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
   
  Si une variable est de type référence, affectez `Nothing` à la variable lui affecte un `null` référence de type de la variable. Une variable qui est définie sur une `null` référence n’est pas associée à n’importe quel objet. Cela est illustré par l'exemple suivant.  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
   
  Lors de la vérification si une référence (ou un type de valeur nullable) est variable `null`, n’utilisez pas `= Nothing` ou `<> Nothing`. Utilisez toujours `Is Nothing` ou `IsNot Nothing`.  
   
@@ -42,7 +42,7 @@ Représente la valeur par défaut de n’importe quel type de données. Pour les
   
  L’exemple suivant montre les comparaisons qui utilisent la `Is` et `IsNot` opérateurs.  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
   
  Si vous déclarez une variable sans utiliser un `As` clause et affectez-lui la valeur `Nothing`, la variable a un type de `Object`. Est un exemple `Dim something = Nothing`. Une erreur de compilation se produit dans ce cas lorsque `Option Strict` se trouve sur et `Option Infer` est désactivé.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: 4130dfbe70682e28b6bb15db633ede2790e20aa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d13671f284863fa7bf56964c2b9b963c25e8ea52
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595550"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977446"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Procédure : Tester si deux objets sont du même (Visual Basic)
 Si vous avez deux variables qui font référence aux objets, vous pouvez utiliser la `Is` ou `IsNot` opérateur, ou les deux, pour déterminer s’ils font référence à la même instance.  
@@ -23,7 +23,7 @@ Si vous avez deux variables qui font référence aux objets, vous pouvez utilise
   
 -   Utilisez le [opérateur Is](../../../../visual-basic/language-reference/operators/is-operator.md) ou le [opérateur IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) avec les deux variables comme opérandes.  
   
-     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-test-whether-two-objects-are-the-same_1.vb)]  
+     [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   
  Vous souhaiterez peut-être prendre une certaine action selon si les deux objets font référence à la même instance. L’exemple précédent compare le contrôle `c` contre le contrôle actif sur le formulaire `f`. Si aucun contrôle n’est active, ou s’il existe et qu’il n’est pas la même instance de contrôle que `c`, puis la `If` instruction échoue et la procédure renvoie sans traitement supplémentaire.  
   

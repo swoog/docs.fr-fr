@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 7bbc3bcadb318203688a3b8ecae18e723e82c8ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560733"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974300"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Procédure : Calculer des valeurs numériques (Visual Basic)
 Vous pouvez calculer des valeurs numériques via l’utilisation d’expressions numériques. Un *expression numérique* est une expression qui contient des littéraux, des constantes et des variables représentant des valeurs numériques et les opérateurs qui agissent sur ces valeurs.  
@@ -43,7 +43,7 @@ Vous pouvez calculer des valeurs numériques via l’utilisation d’expressions
   
 -   Vous pouvez utiliser une instruction d’assignation pour assigner la valeur représentée par une expression numérique à une variable, comme le montre l’exemple suivant.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
      Dans l’exemple précédent, la valeur de l’expression située à droite de l’opérateur égal (`=`) est affectée à la variable `j` sur le côté gauche de l’opérateur, donc `j` 276 prend la valeur.  
   
@@ -56,7 +56,7 @@ Vous pouvez calculer des valeurs numériques via l’utilisation d’expressions
   
 -   Utilisez des parenthèses pour encadrer les opérations que vous souhaitez être exécutées en premier. L’exemple suivant montre deux résultats différents avec les mêmes opérandes et opérateurs.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
      Dans l’exemple précédent, le calcul pour `j` effectue l’opérateur d’addition (`+`) première parce que les parenthèses autour de `(67 + i)` substituer la priorité normale et la valeur affectée à `j` est 276 (4 fois 69). Le calcul pour `k` exécute les opérateurs dans leur priorité normale (`*` avant `+`) et la valeur affectée à `k` est 270 (268 plus 2).  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 92aadfe851514dcba713455664cf8f7b0aa1c17b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19cd2dbaa055ab6e927ef1ddc9623723ea8c5f2f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597539"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977498"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commentaires dans le code (Visual Basic)
 Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de commentaire (`'`). Ce symbole indique au compilateur de Visual Basic d’ignorer le texte suivant, ou le *commentaire*. Les commentaires sont de courtes explications destinées à éclairer ceux qui lisent le code.  
@@ -28,11 +28,11 @@ Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de c
   
  Les commentaires peuvent soit suivre une instruction sur la même ligne, soit occuper une ligne entière. Ces deux cas sont illustrés par le code suivant :  
   
- [!code-vb[VbVbcnConventions#16](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#16)]  
   
  Si votre commentaire doit occuper plusieurs lignes, utilisez le symbole de commentaire sur chacune d'elles, comme l'exemple ci-dessous l'illustre.  
   
- [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>Recommandations sur le commentaire  
  Le tableau suivant fournit des recommandations générales sur les types de commentaires qui peuvent précéder une section de code. Il s’agit de suggestions ; Visual Basic n’applique pas les règles pour l’ajout de commentaires. Procédez de la façon que vous jugez la plus efficace pour vous et toute personne amenée à lire votre code.  
@@ -43,7 +43,7 @@ Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de c
 |Objectif|Décrit ce que fait la procédure (et non comment elle le fait)|  
 |Assumptions (Hypothèses)|Répertorie chaque variable externe, contrôle, fichier ouvert ou autre élément auquel la procédure accède.|  
 |Effects (Effets)|Répertorie chaque variable externe, contrôle ou fichier affecté, ainsi que ses effets (uniquement si ce n'est pas évident)|  
-|Inputs (Entrées)|Spécifie l'objectif attaché à l'argument|  
+|Inputs (Entrées)|Spécifie l’objectif attaché à l’argument|  
 |Returns (Retours)|Explique les valeurs retournées par la procédure.|  
   
  N'oubliez pas :  

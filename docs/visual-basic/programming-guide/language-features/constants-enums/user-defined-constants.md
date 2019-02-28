@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: dc940105bbeb5e54819b8df5d5b3c831c7a6e145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527313"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975938"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Constantes définies par l'utilisateur (Visual Basic)
 Une constante est un nom significatif qui prend la place d’un nombre ou une chaîne qui ne change pas. Les constantes stockent des valeurs qui, comme leur nom l’indique, demeurent constantes tout au long de l’exécution d’une application. Vous pouvez utiliser des constantes qui sont définies par les contrôles ou les composants que vous utilisez, ou vous pouvez créer vos propres. Les constantes que vous créez vous-même sont décrites en tant que *défini par l’utilisateur*.  
@@ -24,15 +24,15 @@ Une constante est un nom significatif qui prend la place d’un nombre ou une ch
 ## <a name="const-statement-usage"></a>Utilisation de l’instruction const  
  Un `Const` instruction peut représenter une valeur mathématique ou date/heure :  
   
- [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_1.vb)]  
+ [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
  Elle peut également définir `String` constantes :  
   
- [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_2.vb)]  
+ [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
  L’expression située à droite du signe égal ( `=` ) est souvent un nombre ou une chaîne littérale, mais elle peut également être une expression qui aboutit à un nombre ou une chaîne (bien que cette expression ne peut pas contenir des appels aux fonctions). Vous pouvez même définir des constantes en termes de constantes définies précédemment :  
   
- [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_3.vb)]  
+ [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
 ## <a name="scope-of-user-defined-constants"></a>Portée des constantes définies par l’utilisateur  
  Un `Const` étendue de l’instruction est identique à celui d’une variable déclarée dans le même emplacement. Vous pouvez spécifier l’étendue dans une des manières suivantes :  
@@ -50,8 +50,8 @@ Une constante est un nom significatif qui prend la place d’un nombre ou une ch
 ### <a name="avoiding-circular-references"></a>Éviter les références circulaires  
  Étant donné que les constantes peuvent être définies en termes d’autres constantes, il est possible de créer par inadvertance un *cycle*, ou une référence circulaire entre deux ou plusieurs constantes. Un cycle se produit lorsque vous avez deux ou plusieurs constantes publiques, chacun d’eux est défini en termes de l’autre, comme dans l’exemple suivant :  
   
- [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
-[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
+ [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
+[!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
  Si un cycle se produit, Visual Basic génère une erreur du compilateur.  
   

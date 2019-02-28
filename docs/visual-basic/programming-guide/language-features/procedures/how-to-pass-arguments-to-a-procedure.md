@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 6d9daf47b8d9300e9de8add1423fa1824fc62d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691227"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974391"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procédure : Passer des Arguments à une procédure (Visual Basic)
 Lorsque vous appelez une procédure, vous suivez le nom de la procédure avec une liste d’arguments entre parenthèses. Vous fournissez un argument correspondant à chaque paramètre requis de la procédure définit et vous pouvez éventuellement fournir des arguments à la `Optional` paramètres. Si vous ne fournissez pas un `Optional` paramètre dans l’appel, vous devez inclure une virgule pour marquer sa place dans la liste d’arguments si vous fournissez des arguments suivants.  
@@ -39,7 +39,7 @@ Lorsque vous appelez une procédure, vous suivez le nom de la procédure avec un
   
      L’exemple suivant appelle le Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> (fonction).  
   
-     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
      L’exemple précédent fournit le premier argument obligatoire, qui est la chaîne de message à afficher. Elle omet un argument pour le deuxième paramètre facultatif qui spécifie les boutons à afficher sur la boîte de message. Étant donné que l’appel ne fournit pas de valeur, `MsgBox` utilise la valeur par défaut, `MsgBoxStyle.OKOnly`, qui affiche uniquement un **OK** bouton.  
   
