@@ -3,16 +3,10 @@ title: Programmation parallèle en .NET
 ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- parallel programming
+  - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112718"
 ---
 # <a name="parallel-programming-in-net"></a>Programmation parallèle en .NET
 
@@ -33,7 +27,7 @@ L’illustration suivante fournit une vue d’ensemble générale de l’archite
 |[Structures de données pour la programmation parallèle](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|Fournit des liens vers la documentation pour les classes de collection thread-safe, les types de synchronisation légers et les types pour l’initialisation tardive.|
 |[Outils de diagnostic parallèle](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Fournit des liens vers la documentation relative aux fenêtres du débogueur Visual Studio pour les tâches et les piles parallèles, et au [Visualiseur concurrentiel](/visualstudio/profiling/concurrency-visualizer).|
 |[Partitionneurs personnalisés pour PLINQ et la bibliothèque parallèle de tâches (TPL)](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|Décrit le fonctionnement des partitionneurs et comment configurer les partitionneurs par défaut ou en créer.|
-|[Planificateurs de tâches](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Décrit le fonctionnement des planificateurs et comment les planificateurs par défaut peuvent être configurés.|
+|[Planificateurs de tâches](xref:System.Threading.Tasks.TaskScheduler)|Décrit le fonctionnement des planificateurs et comment les planificateurs par défaut peuvent être configurés.|
 |[Expressions lambda en PLINQ et dans la bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|Fournit une vue d’ensemble d’expressions lambda en C#  et Visual Basic, et affiche comment elles sont utilisées dans PLINQ et la bibliothèque parallèle de tâches.|
 |[Pour aller plus loin](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Fournit des liens vers des informations supplémentaires et des exemples de ressources pour la programmation parallèle dans .NET.|
 

@@ -1,16 +1,10 @@
 ---
 title: Didacticiels .NET Core
-description: Suivez les didacticiels pour apprendre .NET Core et générer des applications et des bibliothèques sur Mac, Linux et Windows.
+description: 'Suivez les didacticiels pour apprendre .NET Core et générer des applications et des bibliothèques sur Mac, Linux et Windows.'
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168741"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Découvrez les outils .NET Core et SDK .NET Core en explorant ces didacticiels
 
@@ -25,7 +19,6 @@ Les didacticiels disponibles pour découvrir .NET Core sont les suivants.
 - [Création d’une bibliothèque de classes avec Visual Basic](vb-library-with-visual-studio.md)
 - [Test d’une bibliothèque de classes](testing-library-with-visual-studio.md)
 - [Utilisation d’une bibliothèque de classes](consuming-library-with-visual-studio.md)
-- [Génération d’une solution C# .NET Core complète sur Windows](using-on-windows-full-solution.md)
 - [Azure Cosmos DB : bien démarrer avec l’API SQL et .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Création d’applications avec Visual Studio Code
@@ -48,7 +41,6 @@ Les didacticiels disponibles pour découvrir .NET Core sont les suivants.
 - [Effectuer des tests unitaires dans .NET Core à l’aide de dotnet test](../testing/unit-testing-with-dotnet-test.md)
 - [Tests unitaires avec MSTest et .NET Core](../testing/unit-testing-with-mstest.md)
 - [Développement de bibliothèques avec des outils multiplateformes](libraries.md)
-- [Guide pratique pour gérer les versions de dépendances de package pour .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hébergement .NET Core à partir du code natif](netcore-hosting.md)
 - [Créer un modèle personnalisé pour dotnet new](create-custom-template.md)
 
