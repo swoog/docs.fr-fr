@@ -1,16 +1,16 @@
 ---
-title: Prise en main Azure Queue storage à l’aide de F#
+title: Prise en main stockage file d’attente Azure à l’aideF#
 description: Files d’attente Azure fournissent une messagerie fiable et asynchrone entre les composants de l’application. Messagerie cloud permet de composants de votre application à l’échelle indépendamment.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 14bbc657f965fc262d2a83b1fdf982fe5e75d55e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 58a46dfe905a32be77a13d11df8f0544546ea0ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569412"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974274"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>Prise en main Azure Queue storage à l’aide de F# #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>Prise en main Azure Queue storage à l’aide de F\#
 
 Stockage de file d’attente Azure fournit la messagerie cloud entre les composants d’application. Dans la conception d’applications à grande échelle, les composants d’application sont souvent découplés, afin qu’ils peuvent mettre à l’échelle indépendamment. Stockage file d’attente offre une messagerie asynchrone pour la communication entre les composants d’application, qu’ils soient exécutés dans le cloud, sur le bureau, sur un serveur local ou sur un appareil mobile. Stockage file d’attente prend également en charge la gestion des tâches asynchrones et la création de flux de travail de processus.
 
@@ -25,9 +25,9 @@ Pour obtenir une vue d’ensemble conceptuelle de stockage de file d’attente, 
 Pour utiliser ce guide, vous devez d’abord [créer un compte de stockage Azure](/azure/storage/storage-create-storage-account).
 Vous devez également votre clé d’accès de stockage pour ce compte.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Créer de Script F# et démarrer F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Créer un F# de Script et démarrer F# Interactive
 
-Les exemples de cet article peuvent être utilisés dans une application F# ou un script F#. Pour créer un script F#, créez un fichier avec le `.fsx` extension, par exemple `queues.fsx`, dans votre environnement de développement F#.
+Les exemples de cet article peuvent être utilisées dans un F# application ou un F# script. Pour créer un F# de script, créez un fichier avec le `.fsx` extension, par exemple `queues.fsx`, dans votre F# environnement de développement.
 
 Ensuite, utilisez un [Gestionnaire de package](package-management.md) comme [Paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) pour installer le `WindowsAzure.Storage` package et référence `WindowsAzure.Storage.dll` dans votre script à l’aide d’un `#r`directive.
 

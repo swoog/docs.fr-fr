@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506249"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975145"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Écriture de votre première requête LINQ (Visual Basic)
 Une *requête* est une expression qui récupère des données d’une source de données. Les requêtes sont exprimées dans un langage de requête dédié. Au fil du temps, différents langages ont été développées pour différents types de sources de données, par exemple, SQL pour les bases de données relationnelles et XQuery pour XML. Cela rend nécessaire pour le développeur d’applications à apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qui est pris en charge.  
@@ -34,7 +34,7 @@ Une *requête* est une expression qui récupère des données d’une source de 
 > [!NOTE]
 >  Sur le [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), vérifiez que **Option infer** a la valeur **sur**.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  Sortie :  
   
@@ -47,7 +47,7 @@ Une *requête* est une expression qui récupère des données d’une source de 
   
  Si la source de données n’implémente pas déjà <xref:System.Collections.Generic.IEnumerable%601>, un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fournisseur est nécessaire pour implémenter les fonctionnalités de la *opérateurs de requête standard* pour cette source de données. Par exemple, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gère les tâches de chargement d’un document XML dans un requêtable <xref:System.Xml.Linq.XElement> type, comme illustré dans l’exemple suivant. Pour plus d’informations sur les opérateurs de requête standard, consultez [présentation des opérateurs de requête Standard (Visual Basic)](standard-query-operators-overview.md).  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
  Avec [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], vous créez tout d’abord un mappage objet / relationnel au moment du design, manuellement ou en utilisant le [outils LINQ to SQL dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) dans Visual Studio. Vous écrivez vos requêtes pour des objets. Ensuite, au moment de l’exécution, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] gère la communication avec la base de données. Dans l’exemple suivant, `customers` représente une table spécifique dans la base de données, et <xref:System.Data.Linq.Table%601> prend en charge générique <xref:System.Linq.IQueryable%601>.  
   
@@ -67,7 +67,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Lorsqu’elle est exécutée, la requête dans l’exemple suivant retourne tous les nombres pairs à partir d’un tableau d’entiers, `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  L’expression de requête contient trois clauses : `From`, `Where`, et `Select`. La fonction spécifique et l’objectif de chaque clause d’expression de requête est abordée dans [opérations de requête de base (Visual Basic)](basic-query-operations.md). Pour plus d’informations, consultez [requêtes](../../../../visual-basic/language-reference/queries/index.md). Notez que dans [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], une définition de requête est souvent stockée dans une variable et exécutée ultérieurement. La requête variable, comme `evensQuery` dans l’exemple précédent, doit être un type requêtable. Le type de `evensQuery` est `IEnumerable(Of Integer)`, attribué par le compilateur à l’aide de l’inférence de type local.  
   
@@ -79,13 +79,13 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 ### <a name="deferred-execution"></a>Exécution différée  
  Classique [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] requête ressemble à celui de l’exemple précédent, dans lequel `evensQuery` est défini. Il crée la requête, mais sans l’exécuter immédiatement. Au lieu de cela, la définition de la requête est stockée dans la variable de requête `evensQuery`. Vous exécutez la requête ultérieurement, généralement en utilisant un `For Each` boucle, ce qui retourne une séquence de valeurs, ou en appliquant un opérateur de requête standard, tels que `Count` ou `Max`. Ce processus est appelé *exécution différée*.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
  Pour une séquence de valeurs, vous accédez aux données récupérées à l’aide de la variable d’itération dans le `For Each` boucle (`number` dans l’exemple précédent). Étant donné que la variable de requête, `evensQuery`, conserve la définition de requête plutôt que les résultats de requête, vous pouvez exécuter une requête aussi souvent que vous le souhaitez à l’aide de la variable de requête plusieurs fois. Par exemple, vous pouvez avoir une base de données dans votre application en cours de mise à jour en permanence par une application distincte. Une fois que vous avez créé une requête qui Récupère des données à partir de cette base de données, vous pouvez utiliser un `For Each` boucle pour exécuter la requête à plusieurs reprises, la récupération des données les plus récentes chaque fois.  
   
  L’exemple suivant montre comment l’exécution fonctionne. Après avoir `evensQuery2` est définie et exécutée avec un `For Each` boucle, comme dans les exemples précédents, certains éléments dans la source de données `numbers` sont modifiés. Ensuite, une deuxième `For Each` s’exécute en boucle `evensQuery2` à nouveau. Les résultats sont différents la deuxième fois, étant donné que le `For Each` boucle s’exécute la requête à nouveau, en utilisant les nouvelles valeurs dans `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
  Sortie :  
   
@@ -102,15 +102,15 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  La requête suivante retourne un nombre de chiffres pairs dans un tableau d’entiers. La définition de requête n’est pas enregistrée, et `numEvens` est un simple `Integer`.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#4)]  
   
  Vous pouvez obtenir le même résultat à l’aide de la `Aggregate` (méthode).  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#5)]  
   
  Vous pouvez également forcer l’exécution d’une requête en appelant le `ToList` ou `ToArray` méthode sur une requête (immédiat) ou d’une variable de requête (différé), comme indiqué dans le code suivant.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#6)]  
   
  Dans les exemples précédents, `evensQuery3` est une requête, mais `evensList` est une liste et `evensArray` est un tableau.  
   

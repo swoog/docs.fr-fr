@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667386"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976042"
 ---
 # <a name="lifetime-in-visual-basic"></a>Durée de vie dans Visual Basic
 Le *durée de vie* d’un élément déclaré est la période de temps pendant laquelle il est disponible pour utilisation. Les variables sont les seuls éléments qui ont la durée de vie. À cet effet, le compilateur traite les paramètres de procédure et retours de fonction comme des cas spéciaux de variables. La durée de vie d’une variable représente la période de temps pendant lequel il peut contenir une valeur. Sa valeur peut évoluer au fil de sa durée de vie, mais elle contient toujours une valeur.  
@@ -58,7 +58,7 @@ Le *durée de vie* d’un élément déclaré est la période de temps pendant l
  L’exemple suivant déclare une variable avec le [statique](../../../../visual-basic/language-reference/modifiers/static.md) mot clé. (Notez que vous n’avez pas besoin du `Dim` mot clé lors de la [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) utilise un modificateur, telles que `Static`.)  
   
 ### <a name="code"></a>Code  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Commentaires  
  Dans l’exemple précédent, la variable `applesSold` continue d’exister après la procédure `runningTotal` retourne au code appelant. La prochaine fois `runningTotal` est appelée, `applesSold` conserve sa valeur précédemment calculée.  

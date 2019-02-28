@@ -3,14 +3,14 @@ title: Prise en main stockage Blob Azure à l’aideF#
 description: Store les données non structurées dans le cloud avec stockage Blob Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664989"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981905"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Prise en main stockage Blob Azure à l’aideF# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Prise en main stockage Blob Azure avec F\#
 
 Le stockage Blob Azure est un service qui stocke les données non structurées dans le cloud en tant qu’objets/objets blob. Le stockage Blob permet de stocker n’importe quel type de données texte ou binaires, par exemple un document, un fichier multimédia ou un programme d’installation d’application. Le stockage Blob est également appelé stockage d’objets.
 

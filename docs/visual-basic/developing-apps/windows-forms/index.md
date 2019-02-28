@@ -1,18 +1,12 @@
 ---
-title: Concepts de base de l’application Windows Forms (Visual Basic)
+title: Concepts de base de l'application Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 3db3c49427765249f7d6c5ac394f8b239cd40fa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592521"
 ---
-# <a name="windows-forms-application-basics-visual-basic"></a>Concepts de base de l’application Windows Forms (Visual Basic)
+# <a name="windows-forms-application-basics-visual-basic"></a>Concepts de base de l'application Windows Forms (Visual Basic)
 Une partie importante de Visual Basic est la possibilité de créer des applications Windows Forms qui s’exécutent localement sur les ordinateurs des utilisateurs. Vous pouvez utiliser Visual Studio pour créer l’interface utilisateur et d’applications à l’aide de Windows Forms. Une application Windows Forms repose sur les classes de le <xref:System.Windows.Forms> espace de noms.  
   
 ## <a name="designing-windows-forms-applications"></a>Conception de Windows Forms Applications  
@@ -46,7 +40,7 @@ Une partie importante de Visual Basic est la possibilité de créer des applicat
   
 |À|Voir|  
 |--------|---------|  
-|Créer une application Windows Forms avec Visual Studio|[Procédure pas à pas : Création d’un formulaire Windows Simple](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Créer une application Windows Forms avec Visual Studio|[Didacticiel 1 : Créer une visionneuse d’images](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |Utiliser des contrôles sur des formulaires|[Guide pratique pour Ajouter des contrôles aux Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Créer des graphismes avec <xref:System.Drawing>|[Mise en route de la programmation graphique](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Créer des contrôles personnalisés|[Guide pratique pour Hériter de la classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: c34108b9eb53da77a48afb5d270dce9a32289c99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731112"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970543"
 ---
 # <a name="extension-methods-visual-basic"></a>Méthodes d'extension (Visual Basic)
 Méthodes d’extension permettent aux développeurs d’ajouter des fonctionnalités personnalisées aux types de données qui sont déjà définis sans créer un nouveau type dérivé. Méthodes d’extension permettent d’écrire une méthode qui peut être appelée comme s’il s’agissait d’une méthode d’instance du type existant.  
@@ -27,17 +27,17 @@ Méthodes d’extension permettent aux développeurs d’ajouter des fonctionnal
 ### <a name="description"></a>Description  
  L’exemple suivant définit un `Print` extension pour le <xref:System.String> type de données. Utilise la méthode `Console.WriteLine` pour afficher une chaîne. Le paramètre de la `Print` (méthode), `aString`, indique que la méthode étend la <xref:System.String> classe.  
   
- [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
   
  Notez que la définition de méthode d’extension est marquée avec l’attribut d’extension `<Extension()>`. Le marquage du module dans lequel la méthode est définie est facultatif, mais chaque méthode d’extension doit être marqué. <xref:System.Runtime.CompilerServices> doit être importé afin d’accéder à l’attribut d’extension.  
   
  Méthodes d’extension peuvent être déclarées que dans les modules. En règle générale, le module dans lequel une méthode d’extension est définie n’est pas le même module que celui dans lequel elle est appelée. Au lieu de cela, le module qui contient la méthode d’extension est importé, s’il a besoin être placé dans la portée. Une fois le module qui contient `Print` est dans la portée, la méthode peut être appelée comme s’il s’agissait d’une méthode d’instance ordinaire qui n’accepte aucun argument, tel que `ToUpper`:  
   
- [!code-vb[VbVbalrExtensionMethods#2](./codesnippet/VisualBasic/extension-methods_2.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]  
   
  L’exemple suivant, `PrintAndPunctuate`, est également une extension à <xref:System.String>, cette fois définie avec deux paramètres. Le premier paramètre, `aString`, indique que la méthode d’extension étend <xref:System.String>. Le deuxième paramètre, `punc`, est destinée à être une chaîne de signes de ponctuation qui est passée comme un argument lorsque la méthode est appelée. La méthode affiche la chaîne suivie de la ponctuation.  
   
- [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]  
   
  La méthode est appelée en envoyant un argument de chaîne pour `punc`: `example.PrintAndPunctuate(".")`  
   
@@ -111,7 +111,7 @@ End Module
   
  Méthodes d’extension ne sont pas considérés comme dans la liaison tardive. Dans l’exemple suivant, l’instruction `anObject.PrintMe()` déclenche un <xref:System.MissingMemberException> exception, la même exception qu’elle apparaîtrait si la seconde `PrintMe` définition de méthode d’extension ont été supprimés.  
   
- [!code-vb[VbVbalrExtensionMethods#9](./codesnippet/VisualBasic/extension-methods_4.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]  
   
 ## <a name="best-practices"></a>Meilleures pratiques  
  Méthodes d’extension fournissent un moyen pratique et puissant d’étendre un type existant. Toutefois, pour les utiliser avec succès, il existe quelques points à prendre en compte. Ces considérations s’appliquent principalement aux auteurs de bibliothèques de classes, mais elles peuvent affecter n’importe quelle application qui utilise des méthodes d’extension.  
@@ -131,23 +131,23 @@ End Module
 ## <a name="extension-methods-instance-methods-and-properties"></a>Méthodes d’extension, les propriétés et les méthodes d’Instance  
  Lorsqu’une méthode d’instance dans la portée a une signature qui est compatible avec les arguments d’une instruction appelante, la méthode d’instance est choisie dans la préférence n’importe quelle méthode d’extension. La méthode d’instance est prioritaire même si la méthode d’extension est une meilleure correspondance. Dans l’exemple suivant, `ExampleClass` contient une méthode d’instance nommée `ExampleMethod` qui a un paramètre de type `Integer`. Méthode d’extension `ExampleMethod` étend `ExampleClass`, et a un paramètre de type `Long`.  
   
- [!code-vb[VbVbalrExtensionMethods#4](./codesnippet/VisualBasic/extension-methods_5.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]  
   
  Le premier appel à `ExampleMethod` dans le code suivant appelle la méthode d’extension, car `arg1` est `Long` et est compatible uniquement avec le `Long` paramètre dans la méthode d’extension. Le deuxième appel à `ExampleMethod` a un `Integer` argument, `arg2`, et il appelle la méthode d’instance.  
   
- [!code-vb[VbVbalrExtensionMethods#5](./codesnippet/VisualBasic/extension-methods_6.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]  
   
  Maintenant inversez les types de données des paramètres dans les deux méthodes :  
   
- [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]  
   
  Cette fois, le code dans `Main` appelle la méthode d’instance les deux fois. Il s’agit, car les deux `arg1` et `arg2` avoir une conversion étendue vers `Long`, et la méthode d’instance est prioritaire sur la méthode d’extension dans les deux cas.  
   
- [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]  
   
  Par conséquent, une méthode d’extension ne peut pas remplacer une méthode d’instance existante. Toutefois, lorsqu’une méthode d’extension a le même nom qu’une méthode d’instance, mais les signatures d’éviter les conflits, les deux méthodes sont accessibles. Par exemple, si classe `ExampleClass` contient une méthode nommée `ExampleMethod` qui n’accepte aucun arguments, méthodes d’extension portant le même nom mais des signatures différentes sont autorisées, comme indiqué dans le code suivant.  
   
- [!code-vb[VbVbalrExtensionMethods#8](./codesnippet/VisualBasic/extension-methods_9.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]  
   
  La sortie de ce code est comme suit :  
   

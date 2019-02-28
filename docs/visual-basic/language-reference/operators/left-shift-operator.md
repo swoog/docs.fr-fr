@@ -8,12 +8,12 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 494a56ec186bdb82d6794fb5c225789b23cddd0c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 329cdf1aea9ca97db000bb5ced8d9e8d6b7a4f58
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259980"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970556"
 ---
 # <a name="-operator-visual-basic"></a>\<\< Opérateur (Visual Basic)
 Effectue un décalage arithmétique vers la gauche sur un modèle binaire.  
@@ -56,7 +56,7 @@ result = pattern << amount
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise le `<<` opérateur pour effectuer une opération arithmétique gauche décale sur des valeurs intégrales. Le résultat a toujours les données de mêmes type que celui de l’expression décalée.  
   
- [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
  Les résultats de l’exemple précédent sont les suivantes :  
   

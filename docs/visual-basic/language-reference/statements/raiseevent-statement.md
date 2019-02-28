@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655008"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973299"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent, instruction
 Déclenche un événement déclaré au niveau du module dans une classe, un formulaire ou un document.  
@@ -38,7 +38,7 @@ RaiseEvent eventname[( argumentlist )]
   
  Si l’événement n’a pas été déclaré dans le module dans lequel il est déclenché, une erreur se produit. Le fragment de code suivant illustre une déclaration d’événement et d’une procédure dans laquelle l’événement est déclenché.  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
  Vous ne pouvez pas utiliser `RaiseEvent` pour déclencher des événements qui ne sont pas explicitement déclarés dans le module. Par exemple, tous les formulaires héritent un <xref:System.Windows.Forms.Control.Click> événement à partir de <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, il ne peut pas être déclenché à l’aide de `RaiseEvent` dans un formulaire dérivé. Si vous déclarez un `Click` événement dans le module du formulaire, elle occulte du formulaire propre <xref:System.Windows.Forms.Control.Click> événement. Vous pouvez toujours appeler le formulaire <xref:System.Windows.Forms.Control.Click> événement en appelant le <xref:System.Windows.Forms.Control.OnClick%2A> (méthode).  
   
@@ -63,12 +63,12 @@ RaiseEvent eventname[( argumentlist )]
   
  Ajouter un `WithEvents` à la section des déclarations de variable le `Form1` classe.  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Exemple  
  Ajoutez le code suivant au code pour `Form1`. Remplacez toute procédure en double qui peut-être exister, telles que `Form_Load`, ou `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  Appuyez sur F5 pour exécuter l’exemple précédent, puis cliquez sur le bouton intitulé **Démarrer**. La première zone de texte commence à décompter les secondes. Quand la durée totale (10 secondes) s'est écoulée, la première zone de texte affiche « Terminé ».  
   

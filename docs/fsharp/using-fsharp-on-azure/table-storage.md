@@ -3,14 +3,14 @@ title: Prise en main à l’aide du stockage Table AzureF#
 description: Store données structurées dans le cloud à l’aide du stockage Table Azure ou Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152071"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966006"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Bien démarrer avec stockage Table Azure et l’API de Table Azure Cosmos DB à l’aideF# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Bien démarrer avec stockage Table Azure et l’API de Table Azure Cosmos DB à l’aide de F\#
 
 Stockage Table Azure est un service qui stocke des données NoSQL structurées dans le cloud. Stockage de table est un magasin de clés/attributs doté d’une conception sans schéma. Étant donné que le stockage de tables est sans schéma, il est facile d’adapter vos données en tant que l’évolution des besoins de votre application. Accès aux données est rapide et économique pour toutes sortes d’applications. Stockage table est généralement beaucoup moins coûteux que le SQL traditionnel pour des volumes de données similaires.
 

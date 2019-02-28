@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67f395069c98d8b60eca8c3663fb180a8dd5a2be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678783"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978161"
 ---
 # <a name="from-clause-visual-basic"></a>From, clause (Visual Basic)
 Spécifie une ou plusieurs variables de plage et une collection à interroger.  
@@ -40,11 +40,11 @@ From element [ As type ] In collection [ _ ]
   
  Vous pouvez spécifier plusieurs `From` clauses dans une requête pour identifier plusieurs collections à joindre. Lorsque plusieurs collections sont spécifiées, ils sont itérés indépendamment, ou vous pouvez les joindre si elles sont liées. Vous pouvez joindre des collections implicitement à l’aide de la `Select` clause, ou explicitement en utilisant la `Join` ou `Group Join` clauses. Comme alternative, vous pouvez spécifier plusieurs variables de portée et des collections dans un seul `From` clause, avec chaque variable de portée et une collection séparée des autres par une virgule. L’exemple de code suivant montre les deux options de syntaxe pour le `From` clause.  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
  Le `From` clause définit la portée d’une requête, qui est semblable à la portée d’un `For` boucle. Par conséquent, chaque `element` variable de portée dans l’étendue d’une requête doit avoir un nom unique. Étant donné que vous pouvez spécifier plusieurs `From` clauses pour une requête, suivante `From` clauses peuvent faire référence à des variables de plage dans le `From` clause, ou ils peuvent faire référence à des variables de plage dans une précédente `From` clause. Par exemple, l’exemple suivant montre une liste imbriquée `From` clause où la collection dans la deuxième clause est basée sur une propriété de la variable de portée dans la première clause.  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
  Chaque `From` clause peut être suivie de n’importe quelle combinaison de clauses de requête supplémentaires pour affiner la requête. Vous pouvez affiner la requête comme suit :  
   
@@ -67,7 +67,7 @@ From element [ As type ] In collection [ _ ]
 ## <a name="example"></a>Exemple  
  La requête suivante expression utilise un `From` clause pour déclarer une variable de portée `cust` pour chaque `Customer` de l’objet dans le `customers` collection. Le `Where` clause utilise la variable de portée pour restreindre la sortie aux clients à partir de la région spécifiée. Le `For Each` boucle affiche le nom de société pour chaque client dans le résultat de la requête.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [Requêtes](../../../visual-basic/language-reference/queries/index.md)

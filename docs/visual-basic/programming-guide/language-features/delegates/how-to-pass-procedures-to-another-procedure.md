@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: cf5a8447cbedcd8071da98ac6763ff06eb608199
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9e6165414db00e7d7182e204d86d23debfbf4f6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506756"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967735"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Procédure : Passer des procédures à une autre procédure en Visual Basic
 Cet exemple montre comment utiliser des délégués pour passer d’une procédure à une autre procédure.  
@@ -23,25 +23,25 @@ Cet exemple montre comment utiliser des délégués pour passer d’une procédu
   
 1.  Créez un délégué nommé `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
+     [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
 2.  Créez une procédure nommée `AddNumbers` avec des paramètres et la valeur de retour qui correspondent à celles de `MathOperator`, de sorte que les signatures correspondent.  
   
-     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
+     [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
 3.  Créez une procédure nommée `SubtractNumbers` avec une signature qui correspond à `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
+     [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
 4.  Créez une procédure nommée `DelegateTest` qui prend un délégué en tant que paramètre.  
   
      Cette procédure peut accepter une référence à `AddNumbers` ou `SubtractNumbers`, car leurs signatures correspondent à la `MathOperator` signature.  
   
-     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
+     [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
 5.  Créez une procédure nommée `Test` qui appelle `DelegateTest` une autre fois avec le délégué pour `AddNumbers` en tant que paramètre, puis à nouveau avec le délégué pour `SubtractNumbers` en tant que paramètre.  
   
-     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
+     [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
      Lorsque `Test` est appelée, elle affiche d’abord le résultat de `AddNumbers` agissant sur `5` et `3`, qui est 8. Puis le résultat de `SubtractNumbers` agissant sur `9` et `3` s’affiche, qui est 6.  
   

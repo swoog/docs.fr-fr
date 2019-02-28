@@ -10,19 +10,19 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b5cbe0dfa8053a93cde9c92ffe87f0eae15d3efd
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739291"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969321"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procédures récursives (Visual Basic)
 Un *récursive* procédure est une qui s’appelle elle-même. En règle générale, cela n’est pas le moyen le plus efficace pour écrire du code Visual Basic.  
   
  La procédure suivante utilise la récursivité pour calculer la factorielle de son argument d’origine.  
   
- [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
 ## <a name="considerations-with-recursive-procedures"></a>Considérations sur les procédures récursives  
  **Conditions de limitation**. Vous devez concevoir une procédure récursive à tester pour au moins une condition qui peut s’arrêter la récursivité, et vous devez également gérer le cas où aucune de ces conditions n’est satisfaite au sein d’un nombre raisonnable d’appels récurrents. Au moins une condition qui peut être satisfaite sans erreur, votre procédure s’exécute à un risque élevé de l’exécution dans une boucle infinie.  

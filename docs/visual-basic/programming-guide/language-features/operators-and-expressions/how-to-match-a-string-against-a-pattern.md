@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: a4d5f12c5cf1ba89f7b505fb44c3f8fb19cb09d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 884c5ddf15deb49719915f10e107ba6a3431c4bc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669157"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965941"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Procédure : Faire correspondre une chaîne à un modèle (Visual Basic)
 Si vous souhaitez savoir si une expression de la [Type de données String](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfait à un modèle, vous pouvez ensuite utiliser le [opérateur Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -33,7 +33,7 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
      L’exemple suivant teste si `myString` se compose exactement du caractère `H`.  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
+     [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]  
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Pour mettre en correspondance un caractère de l’expression de chaîne avec un caractère générique  
   
@@ -41,7 +41,7 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
      L’exemple suivant teste si `myString` se compose du caractère `W` suivi exactement deux caractères de toutes les valeurs.  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
+     [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]  
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Pour mettre en correspondance un caractère dans l’expression de chaîne par rapport à une liste de caractères  
   
@@ -49,7 +49,7 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
      L’exemple suivant teste si `myString` se compose de n’importe quel caractère valid, suivi par une seule des caractères `A`, `C`, ou `E`.  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
+     [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]  
   
      Notez que cette correspondance respecte la casse.  
   
@@ -59,7 +59,7 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
      L’exemple suivant teste si `myString` se compose des caractères `num` suivie exactement un des caractères `i`, `j`, `k`, `l`, `m`, ou `n`.  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
+     [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]  
   
      Notez que cette correspondance respecte la casse.  
   
@@ -76,7 +76,7 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
      L’exemple suivant teste le numéro de téléphone à sept chiffres `phoneNum` pour exactement trois chiffres, suivis d’un espace, un trait d’union (`–`), une période (`.`), ou aucun caractère, ne suivi par exactement quatre chiffres.  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
+     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [Opérateurs de comparaison](../../../../visual-basic/language-reference/operators/comparison-operators.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue Interface1
+title: ICorDebugHeapValue, interface
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a87790647ed8896f072aa8e943e31fa1980e3f62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5263474b7b5001d561652291c23220da0a942bd1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622856"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980566"
 ---
-# <a name="icordebugheapvalue-interface1"></a>ICorDebugHeapValue Interface1
+# <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue, interface
+
 Une sous-classe de « ICorDebugValue » qui représente un objet qui a été collecté par le garbage collector du common language runtime (CLR).  
   
 ## <a name="methods"></a>Méthodes  

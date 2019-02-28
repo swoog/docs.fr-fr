@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21781db637c71abbbe9366bc95b6ee4c89ac2246
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547090"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981957"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate, clause (Visual Basic)
 Applique une ou plusieurs fonctions d’agrégation à une collection.  
@@ -54,25 +54,25 @@ Les éléments suivants sont les fonctions d’agrégation standards qui peuvent
 
 Retourne `true` si tous les éléments dans la collection satisfont une condition spécifiée ; sinon, retourne `false`. Voici un exemple :
 
-[!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]
+ [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>Any
 
 Retourne `true` si un élément de la collection satisfait une condition spécifiée ; sinon, retourne `false`. Voici un exemple :
 
-[!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]
+ [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>Average
 
 Calcule la moyenne de tous les éléments dans la collection, ou une expression fournie pour tous les éléments dans la collection. Voici un exemple :
 
-[!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]
+ [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Nombre
 
 Compte le nombre d’éléments dans la collection. Vous pouvez fournir un texte facultatif `Boolean` expression pour compter uniquement le nombre d’éléments dans la collection qui satisfont une condition. Voici un exemple :
 
-[!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]
+ [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>Regrouper
 
@@ -86,25 +86,25 @@ Compte le nombre d’éléments dans la collection. Vous pouvez fournir un texte
 
 Calcule la valeur maximale de la collection, ou une expression fournie pour tous les éléments dans la collection. Voici un exemple :
 
-[!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]
+ [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>Min
 
 Calcule la valeur minimale de la collection, ou une expression fournie pour tous les éléments dans la collection. Voici un exemple :
 
-[!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]
+ [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Sum
 
 Calcule la somme de tous les éléments dans la collection, ou une expression fournie pour tous les éléments dans la collection. Voici un exemple :
 
-[!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]
+ [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>Exemple  
 
 L’exemple suivant montre comment utiliser le `Aggregate` clause pour appliquer des fonctions d’agrégation à un résultat de requête.  
   
- [!code-vb[VbSimpleQuerySamples#4](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_8.vb)]  
+ [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
 ## <a name="creating-user-defined-aggregate-functions"></a>Création de fonctions d’agrégation définies par l’utilisateur
 
@@ -112,11 +112,11 @@ L’exemple suivant montre comment utiliser le `Aggregate` clause pour appliquer
   
  Par exemple, l’exemple suivant montre une fonction d’agrégation personnalisée qui calcule la valeur médiane d’une collection de nombres. Il existe deux surcharges de la `Median` méthode d’extension. La première surcharge accepte comme entrée, une collection de type `IEnumerable(Of Double)`. Si le `Median` fonction d’agrégation est appelée pour un champ de requête de type `Double`, cette méthode est appelée. La deuxième surcharge de la `Median` méthode peut être passée à n’importe quel type générique. La surcharge générique de la `Median` méthode prend un deuxième paramètre qui référence le `Func(Of T, Double)` expression lambda pour projeter une valeur pour un type (à partir d’une collection) en tant que la valeur correspondante de type `Double`. Elle délègue ensuite le calcul de la valeur médiane à l’autre surcharge de la `Median` (méthode). Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbSimpleQuerySamples#18](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_9.vb)]  
+ [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
  L’exemple suivant montre des exemples de requêtes qui appellent le `Median` fonction sur une collection de type d’agrégation `Integer`et une collection de type `Double`. La requête qui appelle la `Median` fonction sur la collection de type d’agrégation `Double` appelle la surcharge de la `Median` méthode qui accepte comme entrée, une collection de type `Double`. La requête qui appelle la `Median` fonction sur la collection de type d’agrégation `Integer` appelle la surcharge générique de la `Median` (méthode).  
   
- [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
+ [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
 ## <a name="see-also"></a>Voir aussi
 

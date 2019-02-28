@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: a3ad63472f6a3f7ae1ec13742185790667c7bcf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b25910f5215585914094b7bc4420f537a400934b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699049"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967996"
 ---
 # <a name="rem-statement-visual-basic"></a>REM, instruction (Visual Basic)
 Permet d’inclure des notes explicatives dans le code source d’un programme.  
@@ -45,7 +45,7 @@ REM comment
 ## <a name="example"></a>Exemple  
  L’exemple suivant illustre la `REM` instruction, qui est utilisée pour inclure des notes explicatives dans un programme. Il montre également d’utiliser le caractère guillemet simple (`'`) au lieu de `REM`.  
   
- [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/rem-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Voir aussi
 - [Commentaires dans le code](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
