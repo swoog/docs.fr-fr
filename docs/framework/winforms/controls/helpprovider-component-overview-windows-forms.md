@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 9d6360358b08dc0602cbdfe352bb69caee25c7bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fc447e00ca46f251a895f0de82118a11310a8d9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591973"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972649"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Vue d'ensemble du composant HelpProvider (Windows Forms)
 Les formulaires Windows [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) composant est utilisé pour associer un fichier d’aide HTML Help 1.x (fichier .chm généré par HTML Help Workshop ou fichier .htm) à votre application Windows. Vous pouvez fournir une aide de plusieurs façons :  
@@ -34,7 +34,7 @@ Les formulaires Windows [HelpProvider](../../../../docs/framework/winforms/contr
  Si <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> n’a pas été défini, vous devez utiliser <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> pour fournir le texte d’aide. Si vous avez défini les deux <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> et la chaîne d’aide, l’aide basée sur <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> est prioritaire.  
   
 > [!NOTE]
->  Vous pouvez rencontrer des problèmes à l’aide du chemin d’accès relatif lorsque spécifiant le chemin d’accès au fichier d’aide dans le <xref:System.Windows.Forms.Help.ShowHelp%2A> méthode ou <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propriété de la <xref:System.Windows.Forms.HelpProvider> contrôle. Par conséquent, veillez à utiliser le chemin d’accès absolu pour spécifier le fichier d’aide.  
+>  Vous pouvez rencontrer des problèmes à l’aide du chemin d’accès relatif lorsque vous spécifiez le chemin d’accès au fichier d’aide dans le <xref:System.Windows.Forms.Help.ShowHelp%2A> méthode ou <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propriété de la <xref:System.Windows.Forms.HelpProvider> contrôle. Par conséquent, veillez à utiliser le chemin d’accès absolu pour spécifier le fichier d’aide.  
   
 ## <a name="see-also"></a>Voir aussi
 - [Systèmes d’aide dans les applications Windows Forms](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)

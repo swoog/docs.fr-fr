@@ -1,19 +1,13 @@
 ---
-title: Didacticiels C#
-description: Explorez ces didacticiels C# pour savoir comment générer des programmes C# et découvrez les fonctionnalités du langage C#.
+title: 'Didacticiels C#'
+description: 'Explorez ces didacticiels C# pour savoir comment générer des programmes C# et découvrez les fonctionnalités du langage C#.'
 ms.date: 10/25/2018
-ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084665"
 ---
 # <a name="c-tutorials"></a>Didacticiels C#
 
 Bienvenue dans les tutoriels pour C#. Ceux-ci commencent par des leçons interactives que vous pouvez exécuter dans votre navigateur. Les tutoriels suivants et d’autres plus avancés vous aident à utiliser les outils de développement .NET pour créer des programmes en C# sur votre ordinateur.
 
-## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriels interactifs de présentation de C# #
+## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriels interactifs de présentation de C#
 
 Les premières leçons expliquent les concepts de C# à l’aide de petits extraits de code. Vous apprendrez les bases de la syntaxe C# et comment utiliser des types de données tels que des chaînes, des nombres et des valeurs booléennes. Tout est interactif, vous allez écrire et exécuter du code en quelques minutes. Ces premières leçons prennent pour acquis que vous n’avez aucune connaissance préalable de la programmation ou du langage C#.
 
@@ -47,7 +41,7 @@ Ce tutoriel part du principe que vous avez fini les leçons listées ci-dessus.
 
 Tous les tutoriels de présentation proposés après la leçon Hello World sont disponibles dans votre propre environnement de développement local. À la fin de chaque tutoriel, vous décidez si vous souhaitez effectuer la leçon suivante en ligne ou sur votre propre ordinateur. Vous trouverez également des liens pour vous aider à configurer votre environnement et passer au tutoriel suivant sur votre ordinateur.
 
-## <a name="explore-new-features-in-c"></a>Explorer les nouvelles fonctionnalités dans C# #
+## <a name="explore-new-features-in-c"></a>Explorer les nouvelles fonctionnalités du langage C\#
 
 Essayez les nouvelles fonctionnalités dans [C# 6](../whats-new/csharp-6.md) grâce à cette [exploration interactive](exploration/csharp-6.yml).
 

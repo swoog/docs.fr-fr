@@ -33,7 +33,7 @@ Quand une classe ou un struct implémentent une interface, la classe ou le struc
   
 L'exemple suivant illustre une implémentation de l'interface <xref:System.IEquatable%601>. La classe d'implémentation, `Car`, doit fournir une implémentation de la méthode <xref:System.IEquatable%601.Equals%2A>.  
   
-[!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
 Les propriétés et indexeurs d’une classe peuvent définir des accesseurs supplémentaires pour une propriété ou un indexeur qui est défini dans une interface. Par exemple, une interface peut déclarer une propriété qui a un accesseur [get](../../language-reference/keywords/get.md). La classe qui implémente l’interface peut déclarer la même propriété avec à la fois un accesseur `get` et un accesseur [set](../../language-reference/keywords/set.md). Toutefois, si la propriété ou l’indexeur utilisent une implémentation explicite, les accesseurs doivent correspondre. Pour plus d'informations sur l'implémentation explicite, consultez les pages [Implémentation d'interface explicite](explicit-interface-implementation.md) et [Propriétés d'interface](../classes-and-structs/interface-properties.md).  
 

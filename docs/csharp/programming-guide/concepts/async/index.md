@@ -1,13 +1,7 @@
 ---
-title: Programmation asynchrone avec Async et Await (C#)
+title: 'Programmation asynchrone avec Async et Await (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 011ddf8e9769471f37f073b4440a909afc5e404f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759507"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programmation asynchrone avec async et await (C#)
 Vous pouvez éviter des goulots d'étranglement de performance et améliorer la réactivité globale de votre application à l'aide de la programmation asynchrone. Toutefois, les techniques traditionnelles pour écrire des applications asynchrones peuvent être complexes et rendre ces applications difficiles à écrire, déboguer et mettre à jour.  
@@ -230,7 +224,7 @@ Les API asynchrones dans la programmation Windows Runtime ont l’un des types d
    
   
 ##  <a name="BKMK_NamingConvention"></a> Convention d’affectation de noms  
- Par convention, on ajoute « Async » aux noms des méthodes qui possèdent un modificateur `async`.  
+Par convention, les méthodes qui retournent généralement des types awaitable (par exemple, `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`) doivent avoir des noms qui se terminent par « Async ». Les méthodes qui démarrent une opération asynchrone, mais qui ne retournent pas un type awaitable ne doivent pas avoir un nom qui se termine par « Async ». Cependant, leur nom peut commencer par « Begin », « Start » ou un autre mot suggérant que cette méthode ne retourne pas ou ne lève pas le résultat de l’opération.
   
  Vous pouvez ignorer la convention où un événement, une classe de base, ou un contrat d'interface suggère un nom différent. Par exemple, vous ne devez pas renommer les gestionnaires d'événements communs, tels que `Button1_Click`.  
   

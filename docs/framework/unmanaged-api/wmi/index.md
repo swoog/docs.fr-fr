@@ -4,12 +4,6 @@ description: Fournit une synthèse de l’API .NET Framework non managée pour l
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069509"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>WMI (Windows Management Instrumentation) et compteurs de performances (référence des API non managées)
 
@@ -73,5 +67,6 @@ L’API comprend les fonctions suivantes :
 | [VerifyClient, fonction](verifyclientkey.md) | Garantit que la clé du client offre une sécurité correcte. |
 | [WritePropertyValue, fonction](writepropertyvalue.md) | Écrit un nombre spécifié d’octets dans une propriété identifiée par un descripteur de propriété. |
 
- ## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
+
 [Informations de référence sur les API non managées](../index.md) 

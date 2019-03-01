@@ -1,16 +1,10 @@
 ---
-title: Présentation de C# - Tutoriels interactifs
-description: Découvrez C# dans votre navigateur et prenez en main votre propre environnement de développement
+title: 'Présentation de C# - Tutoriels interactifs'
+description: 'Découvrez C# dans votre navigateur et prenez en main votre propre environnement de développement'
 ms.date: 01/30/2018
 ms.custom: mvc
-ms.openlocfilehash: bfd08c0885351cebb0b2d7a45e93de20fa1bc97f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186167"
 ---
-# <a name="introduction-to-c"></a>Présentation de C# #
+# <a name="introduction-to-c"></a>Présentation de C\#
 
 Bienvenue dans les tutoriels de présentation de C#. Ceux-ci commencent par des leçons interactives que vous pouvez exécuter dans votre navigateur.
 
