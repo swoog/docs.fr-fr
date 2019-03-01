@@ -13,7 +13,7 @@
 ### [Quand déployer des conteneurs Windows sur Service Fabric](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md)
 ### [Quand déployer des conteneurs Windows sur Azure Container Service (ACS-Kubernetes)](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
 ### [Choix des plateformes de calcul Azure pour les applications basées sur des conteneurs](./modernize-existing-apps-to-cloud-optimized/choosing-azure-compute-options-for-container-based-applications.md)
-### [Créer des services résilients prêts pour le cloud : gérer les défaillances transitoires dans le cloud](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+### [Créer des services résilients compatibles avec le cloud : gérer les échecs passagers dans le cloud](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
 ### [Moderniser vos applications avec la surveillance et la télémétrie](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md)
 ### [Moderniser le cycle de vie de votre application avec les pipelines d’intégration continue/de déploiement continu et les outils DevOps dans le cloud](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
 ### [Scénarios de migration vers le cloud hybride](./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
