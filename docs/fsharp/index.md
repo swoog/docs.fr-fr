@@ -10,7 +10,7 @@ Le F# guide fournit de nombreuses ressources pour en savoir plus la F# langage.
 
 ## <a name="learning-f"></a>Formation F\#
 
-[What ' s F# ](what-is-fsharp.md) décrit ce que le F# langage correspond et quelles programmation qu’il contient, avec des exemples de code courts. Ceci est recommandé si vous ne connaissez pas F#.
+[Qu’est F# ](what-is-fsharp.md) décrit ce que le F# langage correspond et quelles programmation qu’il contient, avec des exemples de code courts. Ceci est recommandé si vous ne connaissez pas F#.
 
 [Visite guidée de F# ](tour.md) donne une vue d’ensemble des fonctionnalités de langage principaux avec un grand nombre d’exemples de code. Ceci est recommandé si vous ne souhaitez afficher core F# fonctionnalités en action.
 
