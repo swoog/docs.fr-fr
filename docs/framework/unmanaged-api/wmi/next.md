@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaebf06c63d7022c9798824097cd722a2ffadde5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c6e39c1bc4c2860e400e2708e588416eb5769bd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584608"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971882"
 ---
 # <a name="next-function"></a>Fonction Next
 Récupère la propriété suivante dans une énumération qui commence par un appel à [BeginEnumeration](beginenumeration.md).  
@@ -92,8 +92,8 @@ Si `plFlavor` n’est pas `null`, le `LONG` valeur reçoit des informations sur 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | La propriété est une propriété système standard. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Pour une classe : La propriété est héritée de la classe parente. </br> Pour une instance : La propriété, tandis que héritée de la classe parente, n’a pas été modifiée par l’instance.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Pour une classe : La propriété appartient à la classe dérivée. </br> Pour une instance : Cette propriété est modifiée par l’instance ; Autrement dit, une valeur a été fournie, ou un qualificateur a été ajouté ou modifié. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Pour une classe : La propriété est héritée de la classe parente. <br> Pour une instance : La propriété, tandis que héritée de la classe parente, n’a pas été modifiée par l’instance.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Pour une classe : La propriété appartient à la classe dérivée. <br> Pour une instance : Cette propriété est modifiée par l’instance ; Autrement dit, une valeur a été fournie, ou un qualificateur a été ajouté ou modifié. |
 
 ## <a name="requirements"></a>Spécifications  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
