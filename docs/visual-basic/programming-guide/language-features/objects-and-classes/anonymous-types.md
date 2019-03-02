@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968016"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203439"
 ---
 # <a name="anonymous-types-visual-basic"></a>Types anonymes (Visual Basic)
 Visual Basic prend en charge les types anonymes, qui vous permettent de créer des objets sans écrire de définition de classe pour le type de données. À la place, le compilateur se charge de générer une classe. La classe n’a aucun nom utilisable, hérite directement de <xref:System.Object>et contient les propriétés que vous spécifiez dans la déclaration de l’objet. Étant donné que le nom du type de données n’est pas spécifié, il est appelé un *type anonyme*.  
@@ -81,7 +81,7 @@ Visual Basic prend en charge les types anonymes, qui vous permettent de créer d
 ### <a name="read-only-values"></a>Valeurs en lecture seule  
  Les valeurs des propriétés de clé ne peut pas être modifiés. Par exemple, dans `prod8` dans l’exemple précédent, le `Name` et `Price` sont des champs `read-only`, mais `OnHand` peut être modifié.  
   
- [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>Types anonymes à partir d’Expressions de requête  
  Expressions de requête ne nécessitent pas toujours de la création de types anonymes. Lorsque cela est possible, ils utilisent un type existant pour contenir les données de colonne. Cela se produit lorsque la requête retourne des enregistrements entiers à partir de la source de données, ou qu’un seul champ de chaque enregistrement. Dans les exemples de code suivants, `customers` est une collection d’objets d’un `Customer` classe. La classe comporte plusieurs propriétés, et vous pouvez inclure une ou plusieurs d'entre eux dans le résultat de requête, dans n’importe quel ordre. Dans les deux premiers exemples, aucun des types anonymes ne sont requis, car les requêtes sélectionnent des éléments de types nommés :  

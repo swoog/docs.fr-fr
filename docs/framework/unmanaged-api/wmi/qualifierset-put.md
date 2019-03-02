@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694137"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201158"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put (fonction)
 Écrit la valeur et le qualificateur nommés. Le nouveau qualificateur remplace la valeur précédente du même nom. Si le qualificateur n’existe pas, il est créé. 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Le qualificateur peut être substitué dans une classe dérivée ou une instance. **Il s’agit de la valeur par défaut.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Le qualificateur est propagé aux instances. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Le qualificateur est propagé aux classes dérivées. |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Le qualificateur ne peut pas être écrasé dans une classe ou une instance dérivée. |
-| `WBEM_FLAVOR_AMENDED | 0x80 | Le qualificateur est localisé. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Le qualificateur ne peut pas être écrasé dans une classe ou une instance dérivée. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | Le qualificateur est localisé. |
 
 ## <a name="return-value"></a>Valeur de retour
 

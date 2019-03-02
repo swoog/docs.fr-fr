@@ -1,61 +1,86 @@
 ---
 title: 'Procédure : Afficher les certificats avec le composant logiciel enfichable MMC'
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521580"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200284"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Procédure : Afficher les certificats avec le composant logiciel enfichable MMC
-Le certificat X.509 est un type courant d'information d'identification. Lorsque vous créez des clients ou des services sécurisés, vous pouvez spécifier l'utilisation d'un certificat comme informations d'identification de client ou de service en utilisant des méthodes telles que <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>. Cette méthode requiert divers paramètres, tels que le magasin dans lequel le certificat est stocké ainsi qu'une valeur à utiliser lorsque vous recherchez ce certificat. La procédure suivante montre comment rechercher un certificat approprié dans les magasins d'un ordinateur. Pour obtenir un exemple de recherche de l’empreinte de certificat, consultez [Comment : Récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+Lorsque vous créez un client sécurisé ou un service, vous pouvez utiliser un [certificat](working-with-certificates.md) en tant que les informations d’identification. Par exemple, un type commun des informations d’identification est le certificat X.509, que vous créez avec le <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> (méthode). 
+
+Il existe trois types différents de magasins de certificats que vous pouvez examiner avec la Console MMC (Microsoft Management) sur les systèmes de Windows :
+
+- Ordinateur local : Le magasin est local sur l’appareil et pour tous les utilisateurs sur l’appareil.
+
+- Utilisateur actuel : Le magasin est local pour le compte d’utilisateur actuel sur l’appareil.
+
+- Compte de service : Le magasin est local à un service particulier sur l’appareil.
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a>Pour afficher des certificats dans le composant logiciel enfichable MMC  
+## <a name="view-certificates-in-the-mmc-snap-in"></a>Afficher les certificats dans le composant logiciel enfichable MMC 
+
+La procédure suivante montre comment les magasins sur votre appareil local pour rechercher un certificat approprié : 
   
-1.  Ouvrez une fenêtre Invite de commandes.  
+1. Sélectionnez **exécuter** à partir de la **Démarrer** menu, puis entrez *mmc*. 
+
+    La console MMC s’affiche. 
   
-2.  Type `mmc` et appuyez sur la touche ENTRÉE. Notez que pour afficher des certificats dans le magasin de l'ordinateur local, vous devez être dans le rôle Administrateur.  
+2. À partir de la **fichier** menu, sélectionnez **ajouter/supprimer un composant logiciel enfichable**. 
+    
+    Le **ajouter ou supprimer des composants logiciel enfichables** fenêtre s’affiche.
   
-3.  Sur le **fichier** menu, cliquez sur **ajouter/supprimer un composant logiciel enfichable**.  
+3. À partir de la **des composants logiciels enfichables disponibles** , choisissez **certificats**, puis sélectionnez **ajouter**.  
+
+    ![Ajouter le composant logiciel enfichable Certificats](./media/mmc-add-certificate-snap-in.png)
   
-4.  Cliquez sur **Ajouter**.  
+4. Dans le **enfichable Certificats** fenêtre, sélectionnez **compte d’ordinateur**, puis sélectionnez **suivant**. 
   
-5.  Dans le **ajouter Standalone Snap-in** boîte de dialogue, sélectionnez **certificats**.  
+    Si vous le souhaitez, vous pouvez sélectionner **mon compte d’utilisateur** pour l’utilisateur actuel ou **compte de Service** pour un service particulier. 
+
+    > [!NOTE]
+    > Si vous n’êtes pas un administrateur pour votre appareil, vous pouvez gérer des certificats uniquement pour votre compte d’utilisateur.
   
-6.  Cliquez sur **Ajouter**.  
+5. Dans le **sélectionner un ordinateur** fenêtre, laissez le champ **ordinateur Local** sélectionné, puis sélectionnez **Terminer**.  
   
-7.  Dans le **enfichable Certificats** boîte de dialogue, sélectionnez **compte d’ordinateur** et cliquez sur **suivant**. Si vous le souhaitez, vous pouvez sélectionner **mon compte d’utilisateur** ou **compte de Service**. Si vous n'êtes pas administrateur de l'ordinateur, vous pouvez uniquement gérer les certificats de votre compte d'utilisateur.  
+6. Dans le **ajouter ou supprimer des Snap-in** fenêtre, sélectionnez **OK**.  
   
-8.  Dans le **sélectionner un ordinateur** boîte de dialogue, cliquez sur **Terminer**.  
+    ![Ajouter le composant logiciel enfichable Certificats](./media/mmc-certificate-snap-in-selected.png)
+
+7. Facultatif : À partir de la **fichier** menu, sélectionnez **enregistrer** ou **Enregistrer sous** pour enregistrer le fichier de la console MMC pour une utilisation ultérieure.  
+
+8. Pour afficher vos certificats dans le composant logiciel enfichable MMC, sélectionnez **racine de la Console** dans le volet gauche, puis développez **certificats (ordinateur Local)**.
+
+    Une liste de répertoires pour chaque type de certificat s’affiche. À partir de chaque répertoire du certificat, vous pouvez afficher, exporter, importer et supprimer ses certificats.
   
-9. Dans le **ajouter Standalone Snap-in** boîte de dialogue, cliquez sur **fermer**.  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a>Afficher les certificats avec l’outil Certificate Manager
+
+Vous pouvez également afficher, exporter, importer et supprimer des certificats à l’aide de l’outil Certificate Manager.
+
+### <a name="to-view-certificates-for-the-local-device"></a>Pour afficher les certificats de l’appareil local
+
+1. Sélectionnez **exécuter** à partir de la **Démarrer** menu, puis entrez *certlm.msc*. 
+
+    L’outil Gestionnaire de certificats pour l’appareil local s’affiche. 
   
-10. Sur le **ajouter/supprimer un composant logiciel enfichable** boîte de dialogue, cliquez sur **OK**.  
+2. Pour afficher vos certificats, sous **certificats - ordinateur Local** dans le volet gauche, développez le répertoire pour le type de certificat que vous souhaitez afficher.
+
+### <a name="to-view-certificates-for-the-current-user"></a>Pour afficher des certificats pour l’utilisateur actuel
+
+1. Sélectionnez **exécuter** à partir de la **Démarrer** menu, puis entrez *certmgr.msc*. 
+
+    L’outil Gestionnaire de certificats pour l’utilisateur actuel s’affiche. 
   
-11. Dans le **racine de la Console** fenêtre, cliquez sur **certificats (ordinateur Local)** pour afficher le certificat stocke pour l’ordinateur.  
-  
-12. Facultatif. Pour consulter des certificats pour votre compte, répétez les étapes 3 à 6. À l’étape 7, au lieu de sélectionner **compte d’ordinateur**, cliquez sur **mon compte d’utilisateur** et répétez les étapes 8 à 10.  
-  
-13. Facultatif. Sur le **fichier** menu, cliquez sur **enregistrer** ou **Enregistrer sous**. Enregistrez le fichier de console pour une utilisation ultérieure.  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a>Affichage de certificats à l'aide d'Internet Explorer  
- Vous pouvez également afficher, exporter, importer et supprimer des certificats à l'aide d'Internet Explorer.  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a>Pour afficher des certificats à l'aide d'Internet Explorer  
-  
-1.  Dans Internet Explorer, cliquez sur **outils**, puis cliquez sur **Options Internet** pour afficher le **Options Internet** boîte de dialogue.  
-  
-2.  Cliquez sur le **contenu** onglet.  
-  
-3.  Sous **certificats**, cliquez sur **certificats**.  
-  
-4.  Pour afficher les détails d’un certificat, sélectionnez le certificat, puis cliquez sur **vue**.  
+2. Pour afficher vos certificats, sous **certificats - utilisateur actuel** dans le volet gauche, développez le répertoire pour le type de certificat que vous souhaitez afficher.
+
   
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Guide pratique pour Créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
-- [Guide pratique pour Récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Utilisation des certificats](working-with-certificates.md)
+- [Guide pratique pour Créer des certificats temporaires à utiliser pendant le développement](how-to-create-temporary-certificates-for-use-during-development.md)
+- [Guide pratique pour Récupérer l’empreinte numérique d’un certificat](how-to-retrieve-the-thumbprint-of-a-certificate.md)

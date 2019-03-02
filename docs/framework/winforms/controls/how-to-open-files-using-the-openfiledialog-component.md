@@ -1,178 +1,45 @@
 ---
-title: 'Procédure : Fichiers ouverts à l’aide du composant OpenFileDialog'
-ms.date: 03/30/2017
+title: 'Procédure : Ouvrir des fichiers avec le composant OpenFileDialog'
+ms.date: 02/11/2019
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], opening files
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: 87e7640da76205341b9e95310314800ac9dbfe30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f297b557e86c13c00a57a2033ba4cd61753b3d0b
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678809"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202650"
 ---
-# <a name="how-to-open-files-using-the-openfiledialog-component"></a>Procédure : Fichiers ouverts à l’aide du composant OpenFileDialog
-Le <xref:System.Windows.Forms.OpenFileDialog> composant permet aux utilisateurs de parcourir les dossiers de leur ordinateur ou n’importe quel ordinateur sur le réseau et de sélectionner un ou plusieurs fichiers à ouvrir. La boîte de dialogue retourne le chemin et le nom du fichier que l’utilisateur a sélectionné dans la boîte de dialogue.  
+# <a name="how-to-open-files-with-the-openfiledialog"></a>Procédure : Ouvrir des fichiers du composant OpenFileDialog 
+
+Le <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> composant ouvre la boîte de dialogue Windows pour parcourir et sélectionner des fichiers. Pour ouvrir et lire les fichiers sélectionnés, vous pouvez utiliser la <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> (méthode), ou créez une instance de la <xref:System.IO.StreamReader?displayProperty=nameWithType> classe. Les exemples suivants illustrent les deux approches. 
+
+Dans .NET Framework, pour obtenir ou définir le <xref:System.Windows.Forms.FileDialog.FileName%2A> propriété nécessite un niveau de privilège accordé par la <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe. Les exemples exécutent un <xref:System.Security.Permissions.FileIOPermission> autorisation vérifier et peut lever une exception en raison de privilèges insuffisants s’exécuter dans un contexte de confiance partielle. Pour plus d’informations, consultez [notions fondamentales du Code access security](../../../../docs/framework/misc/code-access-security-basics.md).
+
+Vous pouvez générer et exécuter ces exemples en tant qu’applications .NET Framework à partir de la C# ou ligne de commande de Visual Basic. Pour plus d’informations, consultez [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) ou [construire à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md). 
+
+À compter de .NET Core 3.0, vous pouvez également générer et exécuter les exemples comme des applications .NET Core de Windows à partir d’un dossier qui a un .NET Core Windows Forms  *\<nom du dossier > .csproj* fichier projet. 
+
+## <a name="example-read-a-file-as-a-stream-with-streamreader"></a>Exemple : Lire un fichier en tant que flux avec un StreamReader  
   
- Une fois que l’utilisateur a sélectionné le fichier à ouvrir, vous avez le choix entre deux approches du mécanisme d’ouverture. Si vous préférez travailler avec des flux de fichier, vous pouvez créer une instance de la <xref:System.IO.StreamReader> classe. Vous pouvez également utiliser le <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> méthode pour ouvrir le fichier sélectionné.  
-  
- Le premier exemple ci-dessous implique une <xref:System.Security.Permissions.FileIOPermission> vérification d’autorisation (comme décrit dans la « Note de sécurité » ci-dessous), mais vous donne accès au nom de fichier. Vous pouvez utiliser cette technique dans les zones Ordinateur Local, Intranet et Internet. La seconde méthode effectue également une <xref:System.Security.Permissions.FileIOPermission> vérification d’autorisation, mais elle est mieux adapté aux applications dans les zones Intranet ou Internet.  
-  
-### <a name="to-open-a-file-as-a-stream-using-the-openfiledialog-component"></a>Pour ouvrir des fichiers à l’aide du composant OpenFileDialog  
-  
-1.  Affichez la boîte de dialogue **Ouvrir un fichier** et appelez une méthode pour ouvrir le fichier sélectionné par l’utilisateur.  
-  
-     Une approche consiste à utiliser le <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> méthode pour afficher la boîte de dialogue Ouvrir un fichier et utiliser une instance de la <xref:System.IO.StreamReader> classe pour ouvrir le fichier.  
-  
-     L’exemple ci-dessous utilise la <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements pour ouvrir une instance de la <xref:System.Windows.Forms.OpenFileDialog> composant. Quand un fichier est sélectionné et que l’utilisateur clique sur **OK**, le fichier sélectionné dans la boîte de dialogue s’ouvre. Dans ce cas, le contenu est affiché dans une boîte de message, uniquement pour montrer que le flux de fichier a été lu.  
-  
-    > [!IMPORTANT]
-    >  Pour obtenir ou définir le <xref:System.Windows.Forms.FileDialog.FileName%2A> propriété, votre assembly nécessite un niveau de privilège accordé par la <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe. Si vous l’exécutez dans un contexte de confiance partielle, le processus peut lever une exception en raison de privilèges insuffisants. Pour plus d’informations, consultez [Notions fondamentales de la sécurité d’accès du code](../../../../docs/framework/misc/code-access-security-basics.md).  
-  
-     L’exemple suppose que votre formulaire contient un <xref:System.Windows.Forms.Button> contrôle et un <xref:System.Windows.Forms.OpenFileDialog> composant.  
-  
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles Button1.Click  
-       If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
-         Dim sr As New System.IO.StreamReader(OpenFileDialog1.FileName)  
-         MessageBox.Show(sr.ReadToEnd)  
-         sr.Close()  
-       End If  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
-       {  
-          System.IO.StreamReader sr = new   
-             System.IO.StreamReader(openFileDialog1.FileName);  
-          MessageBox.Show(sr.ReadToEnd());  
-          sr.Close();  
-       }  
-    }  
-    ```  
-  
-    ```cpp  
-    private:  
-       void button1_Click(System::Object ^ sender,  
-          System::EventArgs ^ e)  
-       {  
-          if(openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
-          {  
-             System::IO::StreamReader ^ sr = gcnew  
-                System::IO::StreamReader(openFileDialog1->FileName);  
-             MessageBox::Show(sr->ReadToEnd());  
-             sr->Close();  
-          }  
-       }  
-    ```  
-  
-     (Visual c# et [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) placez le code suivant dans le constructeur du formulaire pour inscrire le Gestionnaire d’événements.  
-  
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
-  
-    ```cpp  
-    this->button1->Click += gcnew  
-       System::EventHandler(this, &Form1::button1_Click);  
-    ```  
-  
-    > [!NOTE]
-    >  Pour plus d’informations sur la lecture à partir de flux de fichier, consultez <xref:System.IO.FileStream.BeginRead%2A> et <xref:System.IO.FileStream.Read%2A>.  
-  
-### <a name="to-open-a-file-as-a-file-using-the-openfiledialog-component"></a>Pour ouvrir un fichier en tant que fichier à l’aide du composant OpenFileDialog  
-  
-1.  Utilisez le <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> méthode pour afficher la boîte de dialogue et le <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> méthode pour ouvrir le fichier.  
-  
-     Le <xref:System.Windows.Forms.OpenFileDialog> du composant <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> méthode retourne les octets qui composent le fichier. Ces octets vous donnent un flux que vous lisez. Dans l’exemple ci-dessous, un <xref:System.Windows.Forms.OpenFileDialog> composant est instancié avec un filtre « curseur », qui permet à l’utilisateur de choisir uniquement les fichiers avec l’extension de nom de fichier`.cur`. Si un fichier `.cur` est sélectionné, le curseur du formulaire est défini sur le curseur sélectionné.  
-  
-    > [!IMPORTANT]
-    >  Pour appeler le <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> (méthode), votre assembly nécessite un niveau de privilège accordé par la <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> classe. Si vous l’exécutez dans un contexte de confiance partielle, le processus peut lever une exception en raison de privilèges insuffisants. Pour plus d’informations, consultez [Notions fondamentales de la sécurité d’accès du code](../../../../docs/framework/misc/code-access-security-basics.md).  
-  
-     L’exemple suppose que votre formulaire contient un <xref:System.Windows.Forms.Button> contrôle.  
-  
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles Button1.Click  
-       ' Displays an OpenFileDialog so the user can select a Cursor.  
-       Dim openFileDialog1 As New OpenFileDialog()  
-       openFileDialog1.Filter = "Cursor Files|*.cur"  
-       openFileDialog1.Title = "Select a Cursor File"  
-  
-       ' Show the Dialog.  
-       ' If the user clicked OK in the dialog and   
-       ' a .CUR file was selected, open it.  
-       If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
-         ' Assign the cursor in the Stream to the Form's Cursor property.  
-         Me.Cursor = New Cursor(openFileDialog1.OpenFile())  
-       End If  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       // Displays an OpenFileDialog so the user can select a Cursor.  
-       OpenFileDialog openFileDialog1 = new OpenFileDialog();  
-       openFileDialog1.Filter = "Cursor Files|*.cur";  
-       openFileDialog1.Title = "Select a Cursor File";  
-  
-       // Show the Dialog.  
-       // If the user clicked OK in the dialog and  
-       // a .CUR file was selected, open it.  
-        if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
-       {  
-          // Assign the cursor in the Stream to the Form's Cursor property.  
-          this.Cursor = new Cursor(openFileDialog1.OpenFile());  
-       }  
-    }  
-    ```  
-  
-    ```cpp  
-    private:  
-       void button1_Click(System::Object ^ sender,  
-          System::EventArgs ^ e)  
-       {  
-          // Displays an OpenFileDialog so the user can select a Cursor.  
-          OpenFileDialog ^ openFileDialog1 = new OpenFileDialog();  
-          openFileDialog1->Filter = "Cursor Files|*.cur";  
-          openFileDialog1->Title = "Select a Cursor File";  
-  
-          // Show the Dialog.  
-          // If the user clicked OK in the dialog and  
-          // a .CUR file was selected, open it.  
-          if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
-          {  
-             // Assign the cursor in the Stream to  
-             // the Form's Cursor property.  
-             this->Cursor = gcnew  
-                System::Windows::Forms::Cursor(  
-                openFileDialog1->OpenFile());  
-          }  
-       }  
-    ```  
-  
-     (Visual c# et [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) placez le code suivant dans le constructeur du formulaire pour inscrire le Gestionnaire d’événements.  
-  
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
-  
-    ```cpp  
-    this->button1->Click += gcnew  
-       System::EventHandler(this, &Form1::button1_Click);  
-    ```  
-  
+L’exemple suivant utilise les formulaires Windows <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements pour ouvrir le <xref:System.Windows.Forms.OpenFileDialog> avec la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (méthode). Une fois que l’utilisateur choisit un fichier et sélectionne **OK**, une instance de la <xref:System.IO.StreamReader> classe lit le fichier et affiche son contenu dans la zone de texte du formulaire. Pour plus d’informations sur la lecture à partir de flux de fichier, consultez <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> et <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>.  
+
+ [!code-csharp[OpenFileDialog#1](../../../../samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#1](../../../../samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
+
+## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>Exemple : Ouvrir un fichier à partir d’une sélection filtrée avec OpenFile 
+
+L’exemple suivant utilise le <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements pour ouvrir le <xref:System.Windows.Forms.OpenFileDialog> avec un filtre qui affiche uniquement les fichiers texte. Une fois que l’utilisateur choisit un fichier texte et sélectionne **OK**, le <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> méthode est utilisée pour ouvrir le fichier dans le bloc-notes.
+
+ [!code-csharp[OpenFileDialog#2](../../../../samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#2](../../../../samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
+
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [OpenFileDialog, composant](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+- [Composant OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)

@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ace9e339a65c14e69e1a672880e392c7e09d36e8
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748373"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212376"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procédure pas à pas : Ma première application de bureau WPF
 
@@ -205,9 +205,9 @@ Dans cette section, vous allez ajouter deux pages et une image à l’applicatio
 
 10. Ajouter une image nommée *watermark.png* au projet. Vous pouvez créer votre propre image, copiez le fichier à partir de l’exemple de code ou obtenez-le [ici](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png).
 
-   1. Avec le bouton droit sur le nœud du projet et sélectionnez **ajouter** > **élément existant**, ou appuyez sur **MAJ**+**Alt** + **A**.
+    1. Avec le bouton droit sur le nœud du projet et sélectionnez **ajouter** > **élément existant**, ou appuyez sur **MAJ**+**Alt** + **A**.
 
-   2. Dans le **ajouter un élément existant** boîte de dialogue, accédez au fichier image que vous souhaitez utiliser, puis sélectionnez **ajouter**.
+    2. Dans le **ajouter un élément existant** boîte de dialogue, accédez au fichier image que vous souhaitez utiliser, puis sélectionnez **ajouter**.
 
 ## <a name="build-and-run-the-application"></a>Générez et exécutez l'application.
 

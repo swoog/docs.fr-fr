@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704652"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203624"
 ---
 # <a name="access-levels-in-visual-basic"></a>Niveaux d'accès dans Visual Basic
 Le *niveau d’accès* d’un élément déclaré est l’étendue de la capacité à y accéder, autrement dit, ce que le code est autorisé à lire ou écrire dedans. Cela est déterminé par la façon dont vous déclarez l’élément lui-même, mais également le niveau d’accès du conteneur de l’élément. Code qui ne peut pas accéder à un élément conteneur ne peut pas accéder à un de ses éléments de relation contenant-contenus, y compris ceux déclarés comme `Public`. Par exemple, un `Public` variable dans un `Private` structure est accessible à partir de la classe qui contient la structure, mais pas de l’extérieur de celle-ci.  
@@ -101,8 +101,9 @@ Pour utiliser le `Private Protected` modificateur d’accès, vous devez ajouter
 
 Pour plus d’informations, consultez [définition de la version de langage Visual Basic](../../../language-reference/configure-language-version.md).
 
- ## <a name="access-modifiers"></a>Modificateurs d’accès  
- Les mots clés qui spécifient le niveau d’accès sont appelés *modificateurs d’accès*. Le tableau suivant compare les modificateurs d’accès.  
+## <a name="access-modifiers"></a>Modificateurs d’accès  
+
+Les mots clés qui spécifient le niveau d’accès sont appelés *modificateurs d’accès*. Le tableau suivant compare les modificateurs d’accès.  
   
 |Modificateur d’accès|Niveau d’accès accordé|Éléments que vous pouvez déclarer avec ce niveau d’accès|Contexte de déclaration dans lequel vous pouvez utiliser ce modificateur|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  

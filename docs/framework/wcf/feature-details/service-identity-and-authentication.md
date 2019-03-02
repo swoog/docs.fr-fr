@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: def49bc4264f2cae8e17d5f00ff12ad41674da2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540609"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212519"
 ---
 # <a name="service-identity-and-authentication"></a>Identité du service et authentification
-D’un service *identité de point de terminaison*est une valeur générée à partir du service Web Services Description Language (WSDL). Cette valeur, propagée à tout client, est utilisée pour authentifier le service. Une fois que le client a initialisé une communication à un point de terminaison et le service s'authentifie au client, le client compare la valeur de l'identité du point de terminaison avec la valeur réelle que le processus d'authentification du point de terminaison a retournée. Si elles correspondent, le client est assuré qu'il a contacté le point de terminaison du service attendu. Cela fonctionne comme une protection contre *anti-hameçonnage* en empêchant un client soit redirigé à un point de terminaison hébergé par un service malveillant.  
+D’un service *identité de point de terminaison* est une valeur générée à partir du service Web Services Description Language (WSDL). Cette valeur, propagée à tout client, est utilisée pour authentifier le service. Une fois que le client a initialisé une communication à un point de terminaison et le service s'authentifie au client, le client compare la valeur de l'identité du point de terminaison avec la valeur réelle que le processus d'authentification du point de terminaison a retournée. Si elles correspondent, le client est assuré qu'il a contacté le point de terminaison du service attendu. Cela fonctionne comme une protection contre *anti-hameçonnage* en empêchant un client soit redirigé à un point de terminaison hébergé par un service malveillant.  
   
  Pour un exemple d’application qui illustre la définition de l’identité, consultez [Service Identity, exemple](../../../../docs/framework/wcf/samples/service-identity-sample.md). Pour plus d’informations sur les points de terminaison et adresses de point de terminaison, consultez [adresses](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   
@@ -38,7 +38,7 @@ D’un service *identité de point de terminaison*est une valeur générée à p
 >  Les métadonnées contiennent l'identité attendue du service, il est par conséquent recommandé d'exposer les métadonnées du service de manière sécurisée, par exemple, en créant un point de terminaison HTTPS. Pour plus d'informations, voir [Procédure : Sécuriser des points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Types d'identité  
- Un service peut fournir des six types d’identités. Chaque type d'identité correspond à un élément qui peut être contenu à l'intérieur de l'élément `<identity>` dans la configuration. Le type utilisé dépend du scénario et des spécifications de sécurité du service. Le tableau suivant décrit chaque type d'identité.  
+ Un service peut fournir des six types d’identités. Chaque type d'identité correspond à un élément qui peut être contenu à l'intérieur de l'élément `<identity>` dans la configuration. Le type utilisé dépend du scénario et des exigences de sécurité du service. Le tableau suivant décrit chaque type d'identité.  
   
 |Type d'identité|Description|Scénario typique|  
 |-------------------|-----------------|----------------------|  
@@ -105,7 +105,7 @@ D’un service *identité de point de terminaison*est une valeur générée à p
  La spécification de l'identité par programmation (à l'aide de la propriété <xref:System.ServiceModel.EndpointAddress.Identity%2A> ) est facultative. Si aucune identité n'est spécifiée et si le type d'information d'identification du client est Windows, la valeur par défaut est SPN et la valeur définie dans la partie correspondant au nom d'hôte de l'adresse du point de terminaison du service est préfixée avec la valeur littérale "host/". Si aucune identité n'est spécifiée et si le type d'information d'identification du client est un certificat, la valeur par défaut est `Certificate`. Cela s'applique à la fois à la sécurité au niveau du message et au niveau du transport.  
   
 ## <a name="identity-and-custom-bindings"></a>Identité et liaisons personnalisées  
- Parce que l’identité d’un service dépend du type de liaison utilisé, assurez-vous qu’une identité appropriée est exposée lors de la création d’une liaison personnalisée. Par exemple, dans l’exemple de code suivant, l’identité exposée n’est pas compatible avec le type de sécurité parce que l’identité de la liaison de démarrage de conversation sécurisée ne correspond pas à l’identité de la liaison sur le point de terminaison. La liaison de conversation sécurisée définit l’identité DNS, tandis que <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> définit l’identité UPN ou SPN.  
+ Parce que l'identité d'un service dépend du type de liaison utilisé, assurez-vous qu'une identité appropriée est exposée lors de la création d'une liaison personnalisée. Par exemple, dans l’exemple de code suivant, l’identité exposée n’est pas compatible avec le type de sécurité parce que l’identité de la liaison de démarrage de conversation sécurisée ne correspond pas à l’identité de la liaison sur le point de terminaison. La liaison de conversation sécurisée définit l'identité DNS, tandis que <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> définit l'identité UPN ou SPN.  
   
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  

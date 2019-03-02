@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b7ba25795dd69e5bd978c77928f9b9797f4d4e19
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332245"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200882"
 ---
 # <a name="getting-started-tutorial"></a>Didacticiel de mise en route
 Les rubriques contenues dans cette section sont conçues pour vous permettre l’exposition rapide pour le Windows Communication Foundation (WCF) expérience de programmation. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. Ce didacticiel vous offre une compréhension de base des étapes requises pour créer des applications client et le service WCF. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fourni par le service à ses clients.
@@ -33,7 +33,7 @@ Pour plus d’informations sur la création de services et les clients, consulte
 
  [Guide pratique pour Implémenter un contrat de Service](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 
- Décrit comment implémenter un contrat de service. Une fois qu'un contrat est défini, il doit être implémenté avec une classe de service.
+ Décrit comment implémenter un contrat de service. Une fois qu’un contrat est défini, il doit être implémenté avec une classe de service.
 
  [Guide pratique pour Héberger et exécuter un Service de base](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
 

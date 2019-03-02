@@ -2,12 +2,12 @@
 title: 'Tutoriel : Créer un fournisseur de Type'
 description: Découvrez comment créer votre propre F# tapez fournisseurs dans F# 3.0 en examinant plusieurs fournisseurs de type simple pour illustrer les concepts de base.
 ms.date: 05/16/2016
-ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: bd19cfa4c8b64e429bbd3af87949b39cb78012ba
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223206"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203663"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutoriel : Créer un fournisseur de Type
 
@@ -702,7 +702,7 @@ type public CheckedRegexProvider() as this =
                     parameters = [ProvidedParameter("input", typeof<string>)], 
                     returnType = matchTy, 
                     invokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
-                matchMeth.AddXmlDoc "Searches the specified input string for the first occurence of this regular expression"
+                matchMeth.AddXmlDoc "Searches the specified input string for the first occurrence of this regular expression"
 
                 ty.AddMember matchMeth
 

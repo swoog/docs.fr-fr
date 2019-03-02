@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5048d48cc22ebe405ef54dc207ac96b6c274078a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968723"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202624"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next, instruction (Visual Basic)
 Répète un groupe d’instructions un nombre spécifié de fois.  
@@ -92,7 +92,7 @@ Next [ counter ]
   
  L’exemple suivant illustre l’utilisation de la `Continue For` et `Exit For` instructions.  
   
- [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]  
   
  Vous pouvez placer un nombre quelconque de `Exit For` instructions dans un `For`...`Next` Une boucle. Lorsqu’il est utilisé dans imbriqués `For`...`Next` boucles, `Exit For` quitte la boucle la plus profonde et transfère le contrôle au niveau d’imbrication supérieur suivant.  
   
