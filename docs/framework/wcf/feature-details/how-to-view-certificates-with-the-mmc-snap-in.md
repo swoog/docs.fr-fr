@@ -1,61 +1,86 @@
 ---
 title: 'Procédure : Afficher les certificats avec le composant logiciel enfichable MMC'
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521580"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200284"
 ---
-# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a><span data-ttu-id="5d251-102">Procédure : Afficher les certificats avec le composant logiciel enfichable MMC</span><span class="sxs-lookup"><span data-stu-id="5d251-102">How to: View Certificates with the MMC Snap-in</span></span>
-<span data-ttu-id="5d251-103">Le certificat X.509 est un type courant d'information d'identification.</span><span class="sxs-lookup"><span data-stu-id="5d251-103">A common type of credential is the X.509 certificate.</span></span> <span data-ttu-id="5d251-104">Lorsque vous créez des clients ou des services sécurisés, vous pouvez spécifier l'utilisation d'un certificat comme informations d'identification de client ou de service en utilisant des méthodes telles que <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>.</span><span class="sxs-lookup"><span data-stu-id="5d251-104">When creating secure services or clients, you can specify a certificate be used as the client or service credential by using methods such as the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method.</span></span> <span data-ttu-id="5d251-105">Cette méthode requiert divers paramètres, tels que le magasin dans lequel le certificat est stocké ainsi qu'une valeur à utiliser lorsque vous recherchez ce certificat.</span><span class="sxs-lookup"><span data-stu-id="5d251-105">The method requires various parameters, such as the store where the certificate is stored and a value to use when searching for the certificate.</span></span> <span data-ttu-id="5d251-106">La procédure suivante montre comment rechercher un certificat approprié dans les magasins d'un ordinateur.</span><span class="sxs-lookup"><span data-stu-id="5d251-106">The following procedure demonstrates how to examine the stores on a computer to find an appropriate certificate.</span></span> <span data-ttu-id="5d251-107">Pour obtenir un exemple de recherche de l’empreinte de certificat, consultez [Comment : Récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="5d251-107">For an example of finding the certificate thumbprint, see [How to: Retrieve the Thumbprint of a Certificate](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).</span></span>  
+# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a><span data-ttu-id="5952e-102">Procédure : Afficher les certificats avec le composant logiciel enfichable MMC</span><span class="sxs-lookup"><span data-stu-id="5952e-102">How to: View certificates with the MMC snap-in</span></span>
+<span data-ttu-id="5952e-103">Lorsque vous créez un client sécurisé ou un service, vous pouvez utiliser un [certificat](working-with-certificates.md) en tant que les informations d’identification.</span><span class="sxs-lookup"><span data-stu-id="5952e-103">When you create a secure client or service, you can use a [certificate](working-with-certificates.md) as the credential.</span></span> <span data-ttu-id="5952e-104">Par exemple, un type commun des informations d’identification est le certificat X.509, que vous créez avec le <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> (méthode).</span><span class="sxs-lookup"><span data-stu-id="5952e-104">For example, a common type of credential is the X.509 certificate, which you create with the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> method.</span></span> 
+
+<span data-ttu-id="5952e-105">Il existe trois types différents de magasins de certificats que vous pouvez examiner avec la Console MMC (Microsoft Management) sur les systèmes de Windows :</span><span class="sxs-lookup"><span data-stu-id="5952e-105">There are three different types of certificate stores that you can examine with the Microsoft Management Console (MMC) on Windows systems:</span></span>
+
+- <span data-ttu-id="5952e-106">Ordinateur local : Le magasin est local sur l’appareil et pour tous les utilisateurs sur l’appareil.</span><span class="sxs-lookup"><span data-stu-id="5952e-106">Local computer: The store is local to the device and global to all users on the device.</span></span>
+
+- <span data-ttu-id="5952e-107">Utilisateur actuel : Le magasin est local pour le compte d’utilisateur actuel sur l’appareil.</span><span class="sxs-lookup"><span data-stu-id="5952e-107">Current user: The store is local to the current user account on the device.</span></span>
+
+- <span data-ttu-id="5952e-108">Compte de service : Le magasin est local à un service particulier sur l’appareil.</span><span class="sxs-lookup"><span data-stu-id="5952e-108">Service account: The store is local to a particular service on the device.</span></span>
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a><span data-ttu-id="5d251-108">Pour afficher des certificats dans le composant logiciel enfichable MMC</span><span class="sxs-lookup"><span data-stu-id="5d251-108">To view certificates in the MMC snap-in</span></span>  
+## <a name="view-certificates-in-the-mmc-snap-in"></a><span data-ttu-id="5952e-109">Afficher les certificats dans le composant logiciel enfichable MMC</span><span class="sxs-lookup"><span data-stu-id="5952e-109">View certificates in the MMC snap-in</span></span> 
+
+<span data-ttu-id="5952e-110">La procédure suivante montre comment les magasins sur votre appareil local pour rechercher un certificat approprié :</span><span class="sxs-lookup"><span data-stu-id="5952e-110">The following procedure demonstrates how to examine the stores on your local device to find an appropriate certificate:</span></span> 
   
-1.  <span data-ttu-id="5d251-109">Ouvrez une fenêtre Invite de commandes.</span><span class="sxs-lookup"><span data-stu-id="5d251-109">Open a Command Prompt window.</span></span>  
+1. <span data-ttu-id="5952e-111">Sélectionnez **exécuter** à partir de la **Démarrer** menu, puis entrez *mmc*.</span><span class="sxs-lookup"><span data-stu-id="5952e-111">Select **Run** from the **Start** menu, and then enter *mmc*.</span></span> 
+
+    <span data-ttu-id="5952e-112">La console MMC s’affiche.</span><span class="sxs-lookup"><span data-stu-id="5952e-112">The MMC appears.</span></span> 
   
-2.  <span data-ttu-id="5d251-110">Type `mmc` et appuyez sur la touche ENTRÉE.</span><span class="sxs-lookup"><span data-stu-id="5d251-110">Type `mmc` and press the ENTER key.</span></span> <span data-ttu-id="5d251-111">Notez que pour afficher des certificats dans le magasin de l'ordinateur local, vous devez être dans le rôle Administrateur.</span><span class="sxs-lookup"><span data-stu-id="5d251-111">Note that to view certificates in the local machine store, you must be in the Administrator role.</span></span>  
+2. <span data-ttu-id="5952e-113">À partir de la **fichier** menu, sélectionnez **ajouter/supprimer un composant logiciel enfichable**.</span><span class="sxs-lookup"><span data-stu-id="5952e-113">From the **File** menu, select **Add/Remove Snap In**.</span></span> 
+    
+    <span data-ttu-id="5952e-114">Le **ajouter ou supprimer des composants logiciel enfichables** fenêtre s’affiche.</span><span class="sxs-lookup"><span data-stu-id="5952e-114">The **Add or Remove Snap-ins** window appears.</span></span>
   
-3.  <span data-ttu-id="5d251-112">Sur le **fichier** menu, cliquez sur **ajouter/supprimer un composant logiciel enfichable**.</span><span class="sxs-lookup"><span data-stu-id="5d251-112">On the **File** menu, click **Add/Remove Snap In**.</span></span>  
+3. <span data-ttu-id="5952e-115">À partir de la **des composants logiciels enfichables disponibles** , choisissez **certificats**, puis sélectionnez **ajouter**.</span><span class="sxs-lookup"><span data-stu-id="5952e-115">From the **Available snap-ins** list, choose **Certificates**, then select **Add**.</span></span>  
+
+    ![Ajouter le composant logiciel enfichable Certificats](./media/mmc-add-certificate-snap-in.png)
   
-4.  <span data-ttu-id="5d251-113">Cliquez sur **Ajouter**.</span><span class="sxs-lookup"><span data-stu-id="5d251-113">Click **Add**.</span></span>  
+4. <span data-ttu-id="5952e-117">Dans le **enfichable Certificats** fenêtre, sélectionnez **compte d’ordinateur**, puis sélectionnez **suivant**.</span><span class="sxs-lookup"><span data-stu-id="5952e-117">In the **Certificates snap-in** window, select **Computer account**, and then select **Next**.</span></span> 
   
-5.  <span data-ttu-id="5d251-114">Dans le **ajouter Standalone Snap-in** boîte de dialogue, sélectionnez **certificats**.</span><span class="sxs-lookup"><span data-stu-id="5d251-114">In the **Add Standalone Snap-in** dialog box, select **Certificates**.</span></span>  
+    <span data-ttu-id="5952e-118">Si vous le souhaitez, vous pouvez sélectionner **mon compte d’utilisateur** pour l’utilisateur actuel ou **compte de Service** pour un service particulier.</span><span class="sxs-lookup"><span data-stu-id="5952e-118">Optionally, you can select **My user account** for the current user or **Service account** for a particular service.</span></span> 
+
+    > [!NOTE]
+    > <span data-ttu-id="5952e-119">Si vous n’êtes pas un administrateur pour votre appareil, vous pouvez gérer des certificats uniquement pour votre compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="5952e-119">If you're not an administrator for your device, you can manage certificates only for your user account.</span></span>
   
-6.  <span data-ttu-id="5d251-115">Cliquez sur **Ajouter**.</span><span class="sxs-lookup"><span data-stu-id="5d251-115">Click **Add**.</span></span>  
+5. <span data-ttu-id="5952e-120">Dans le **sélectionner un ordinateur** fenêtre, laissez le champ **ordinateur Local** sélectionné, puis sélectionnez **Terminer**.</span><span class="sxs-lookup"><span data-stu-id="5952e-120">In the **Select Computer** window, leave **Local computer** selected, and then select **Finish**.</span></span>  
   
-7.  <span data-ttu-id="5d251-116">Dans le **enfichable Certificats** boîte de dialogue, sélectionnez **compte d’ordinateur** et cliquez sur **suivant**.</span><span class="sxs-lookup"><span data-stu-id="5d251-116">In the **Certificates snap-in** dialog box, select **Computer account** and click **Next**.</span></span> <span data-ttu-id="5d251-117">Si vous le souhaitez, vous pouvez sélectionner **mon compte d’utilisateur** ou **compte de Service**.</span><span class="sxs-lookup"><span data-stu-id="5d251-117">Optionally, you can select **My User account** or **Service account**.</span></span> <span data-ttu-id="5d251-118">Si vous n'êtes pas administrateur de l'ordinateur, vous pouvez uniquement gérer les certificats de votre compte d'utilisateur.</span><span class="sxs-lookup"><span data-stu-id="5d251-118">If you are not an administrator of the computer, you can manage certificates only for your user account.</span></span>  
+6. <span data-ttu-id="5952e-121">Dans le **ajouter ou supprimer des Snap-in** fenêtre, sélectionnez **OK**.</span><span class="sxs-lookup"><span data-stu-id="5952e-121">In the **Add or Remove Snap-in** window, select **OK**.</span></span>  
   
-8.  <span data-ttu-id="5d251-119">Dans le **sélectionner un ordinateur** boîte de dialogue, cliquez sur **Terminer**.</span><span class="sxs-lookup"><span data-stu-id="5d251-119">In the **Select Computer** dialog box, click **Finish**.</span></span>  
+    ![Ajouter le composant logiciel enfichable Certificats](./media/mmc-certificate-snap-in-selected.png)
+
+7. <span data-ttu-id="5952e-123">Facultatif : À partir de la **fichier** menu, sélectionnez **enregistrer** ou **Enregistrer sous** pour enregistrer le fichier de la console MMC pour une utilisation ultérieure.</span><span class="sxs-lookup"><span data-stu-id="5952e-123">Optional: From the **File** menu, select **Save** or **Save As** to save the MMC console file for later use.</span></span>  
+
+8. <span data-ttu-id="5952e-124">Pour afficher vos certificats dans le composant logiciel enfichable MMC, sélectionnez **racine de la Console** dans le volet gauche, puis développez **certificats (ordinateur Local)**.</span><span class="sxs-lookup"><span data-stu-id="5952e-124">To view your certificates in the MMC snap-in, select **Console Root** in the left pane, then expand **Certificates (Local Computer)**.</span></span>
+
+    <span data-ttu-id="5952e-125">Une liste de répertoires pour chaque type de certificat s’affiche.</span><span class="sxs-lookup"><span data-stu-id="5952e-125">A list of directories for each type of certificate appears.</span></span> <span data-ttu-id="5952e-126">À partir de chaque répertoire du certificat, vous pouvez afficher, exporter, importer et supprimer ses certificats.</span><span class="sxs-lookup"><span data-stu-id="5952e-126">From each certificate directory, you can view, export, import, and delete its certificates.</span></span>
   
-9. <span data-ttu-id="5d251-120">Dans le **ajouter Standalone Snap-in** boîte de dialogue, cliquez sur **fermer**.</span><span class="sxs-lookup"><span data-stu-id="5d251-120">In the **Add Standalone Snap-in** dialog box, click **Close**.</span></span>  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a><span data-ttu-id="5952e-127">Afficher les certificats avec l’outil Certificate Manager</span><span class="sxs-lookup"><span data-stu-id="5952e-127">View certificates with the Certificate Manager tool</span></span>
+
+<span data-ttu-id="5952e-128">Vous pouvez également afficher, exporter, importer et supprimer des certificats à l’aide de l’outil Certificate Manager.</span><span class="sxs-lookup"><span data-stu-id="5952e-128">You can also view, export, import, and delete certificates by using the Certificate Manager tool.</span></span>
+
+### <a name="to-view-certificates-for-the-local-device"></a><span data-ttu-id="5952e-129">Pour afficher les certificats de l’appareil local</span><span class="sxs-lookup"><span data-stu-id="5952e-129">To view certificates for the local device</span></span>
+
+1. <span data-ttu-id="5952e-130">Sélectionnez **exécuter** à partir de la **Démarrer** menu, puis entrez *certlm.msc*.</span><span class="sxs-lookup"><span data-stu-id="5952e-130">Select **Run** from the **Start** menu, and then enter *certlm.msc*.</span></span> 
+
+    <span data-ttu-id="5952e-131">L’outil Gestionnaire de certificats pour l’appareil local s’affiche.</span><span class="sxs-lookup"><span data-stu-id="5952e-131">The Certificate Manager tool for the local device appears.</span></span> 
   
-10. <span data-ttu-id="5d251-121">Sur le **ajouter/supprimer un composant logiciel enfichable** boîte de dialogue, cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="5d251-121">On the **Add/Remove Snap-in** dialog box, click **OK**.</span></span>  
+2. <span data-ttu-id="5952e-132">Pour afficher vos certificats, sous **certificats - ordinateur Local** dans le volet gauche, développez le répertoire pour le type de certificat que vous souhaitez afficher.</span><span class="sxs-lookup"><span data-stu-id="5952e-132">To view your certificates, under **Certificates - Local Computer** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
+
+### <a name="to-view-certificates-for-the-current-user"></a><span data-ttu-id="5952e-133">Pour afficher des certificats pour l’utilisateur actuel</span><span class="sxs-lookup"><span data-stu-id="5952e-133">To view certificates for the current user</span></span>
+
+1. <span data-ttu-id="5952e-134">Sélectionnez **exécuter** à partir de la **Démarrer** menu, puis entrez *certmgr.msc*.</span><span class="sxs-lookup"><span data-stu-id="5952e-134">Select **Run** from the **Start** menu, and then enter *certmgr.msc*.</span></span> 
+
+    <span data-ttu-id="5952e-135">L’outil Gestionnaire de certificats pour l’utilisateur actuel s’affiche.</span><span class="sxs-lookup"><span data-stu-id="5952e-135">The Certificate Manager tool for the current user appears.</span></span> 
   
-11. <span data-ttu-id="5d251-122">Dans le **racine de la Console** fenêtre, cliquez sur **certificats (ordinateur Local)** pour afficher le certificat stocke pour l’ordinateur.</span><span class="sxs-lookup"><span data-stu-id="5d251-122">In the **Console Root** window, click **Certificates (Local Computer)** to view the certificate stores for the computer.</span></span>  
+2. <span data-ttu-id="5952e-136">Pour afficher vos certificats, sous **certificats - utilisateur actuel** dans le volet gauche, développez le répertoire pour le type de certificat que vous souhaitez afficher.</span><span class="sxs-lookup"><span data-stu-id="5952e-136">To view your certificates, under **Certificates - Current User** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
+
   
-12. <span data-ttu-id="5d251-123">Facultatif.</span><span class="sxs-lookup"><span data-stu-id="5d251-123">Optional.</span></span> <span data-ttu-id="5d251-124">Pour consulter des certificats pour votre compte, répétez les étapes 3 à 6.</span><span class="sxs-lookup"><span data-stu-id="5d251-124">To view certificates for your account, repeat steps 3 to 6.</span></span> <span data-ttu-id="5d251-125">À l’étape 7, au lieu de sélectionner **compte d’ordinateur**, cliquez sur **mon compte d’utilisateur** et répétez les étapes 8 à 10.</span><span class="sxs-lookup"><span data-stu-id="5d251-125">In step 7, instead of selecting **Computer account**, click **My User account** and repeat steps 8 to 10.</span></span>  
-  
-13. <span data-ttu-id="5d251-126">Facultatif.</span><span class="sxs-lookup"><span data-stu-id="5d251-126">Optional.</span></span> <span data-ttu-id="5d251-127">Sur le **fichier** menu, cliquez sur **enregistrer** ou **Enregistrer sous**.</span><span class="sxs-lookup"><span data-stu-id="5d251-127">On the **File** menu, click **Save** or **Save As**.</span></span> <span data-ttu-id="5d251-128">Enregistrez le fichier de console pour une utilisation ultérieure.</span><span class="sxs-lookup"><span data-stu-id="5d251-128">Save the console file for later reuse.</span></span>  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a><span data-ttu-id="5d251-129">Affichage de certificats à l'aide d'Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="5d251-129">Viewing Certificates with Internet Explorer</span></span>  
- <span data-ttu-id="5d251-130">Vous pouvez également afficher, exporter, importer et supprimer des certificats à l'aide d'Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="5d251-130">You can also view, export, import, and delete certificates by using Internet Explorer.</span></span>  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a><span data-ttu-id="5d251-131">Pour afficher des certificats à l'aide d'Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="5d251-131">To view certificates with Internet Explorer</span></span>  
-  
-1.  <span data-ttu-id="5d251-132">Dans Internet Explorer, cliquez sur **outils**, puis cliquez sur **Options Internet** pour afficher le **Options Internet** boîte de dialogue.</span><span class="sxs-lookup"><span data-stu-id="5d251-132">In Internet Explorer, click **Tools**, then click **Internet Options** to display the **Internet Options** dialog box.</span></span>  
-  
-2.  <span data-ttu-id="5d251-133">Cliquez sur le **contenu** onglet.</span><span class="sxs-lookup"><span data-stu-id="5d251-133">Click the **Content** tab.</span></span>  
-  
-3.  <span data-ttu-id="5d251-134">Sous **certificats**, cliquez sur **certificats**.</span><span class="sxs-lookup"><span data-stu-id="5d251-134">Under **Certificates**, click **Certificates**.</span></span>  
-  
-4.  <span data-ttu-id="5d251-135">Pour afficher les détails d’un certificat, sélectionnez le certificat, puis cliquez sur **vue**.</span><span class="sxs-lookup"><span data-stu-id="5d251-135">To view details of any certificate, select the certificate and click **View**.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="5d251-136">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5d251-136">See also</span></span>
-- [<span data-ttu-id="5d251-137">Utilisation des certificats</span><span class="sxs-lookup"><span data-stu-id="5d251-137">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="5d251-138">Guide pratique pour Créer des certificats temporaires à utiliser pendant le développement</span><span class="sxs-lookup"><span data-stu-id="5d251-138">How to: Create Temporary Certificates for Use During Development</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
-- [<span data-ttu-id="5d251-139">Guide pratique pour Récupérer l’empreinte numérique d’un certificat</span><span class="sxs-lookup"><span data-stu-id="5d251-139">How to: Retrieve the Thumbprint of a Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+## <a name="see-also"></a><span data-ttu-id="5952e-137">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5952e-137">See also</span></span>
+- [<span data-ttu-id="5952e-138">Utilisation des certificats</span><span class="sxs-lookup"><span data-stu-id="5952e-138">Working with certificates</span></span>](working-with-certificates.md)
+- [<span data-ttu-id="5952e-139">Guide pratique pour Créer des certificats temporaires à utiliser pendant le développement</span><span class="sxs-lookup"><span data-stu-id="5952e-139">How to: Create temporary certificates for use during development</span></span>](how-to-create-temporary-certificates-for-use-during-development.md)
+- [<span data-ttu-id="5952e-140">Guide pratique pour Récupérer l’empreinte numérique d’un certificat</span><span class="sxs-lookup"><span data-stu-id="5952e-140">How to: Retrieve the thumbprint of a certificate</span></span>](how-to-retrieve-the-thumbprint-of-a-certificate.md)
