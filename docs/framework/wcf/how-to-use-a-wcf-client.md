@@ -1,5 +1,5 @@
 ---
-title: 'Comment : utiliser un client Windows Communication Foundation'
+title: 'Procédure : Utilisez un Client Windows Communication Foundation'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -7,14 +7,14 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 12e911fb899cb85121c129b762828cdda01e64f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 780a51e3e0f61f292c997202614e43a85dd90820
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193081"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57250921"
 ---
-# <a name="how-to-use-a-windows-communication-foundation-client"></a>Comment : utiliser un client Windows Communication Foundation
+# <a name="how-to-use-a-windows-communication-foundation-client"></a>Procédure : Utilisez un Client Windows Communication Foundation
 
 Il s’agit de la dernière des six tâches requises pour créer une application Windows Communication Foundation (WCF) de base. Pour une vue d’ensemble des six tâches, consultez la rubrique [Tutoriel Bien démarrer](../../../docs/framework/wcf/getting-started-tutorial.md).
 
@@ -135,22 +135,37 @@ Vous avez maintenant terminé le didacticiel. Vous avez défini un contrat de se
 La sortie de GettingStartedHost doit ressembler à ceci :
 
 ```text
-The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)Return: 115.99Received Subtract(145,76.54)Return: 68.46Received Multiply(9,81.25)Return: 731.25Received Divide(22,7)Return: 3.14285714285714
+The service is ready.
+Press <ENTER> to terminate service.
+
+Received Add(100,15.99)
+Return: 115.99
+Received Subtract(145,76.54)
+Return: 68.46
+Received Multiply(9,81.25)
+Return: 731.25
+Received Divide(22,7)
+Return: 3.14285714285714
 ```
 
 La sortie de GettingStartedClient doit ressembler à ceci :
 
 ```text
-Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.
+Add(100,15.99) = 115.99
+Subtract(145,76.54) = 68.46
+Multiply(9,81.25) = 731.25
+Divide(22,7) = 3.14285714285714
+
+Press <ENTER> to terminate client.
 ```
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Génération de clients](../../../docs/framework/wcf/building-clients.md)
-- [Guide pratique pour créer un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Guide pratique pour Créer un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [Didacticiel Bien démarrer](../../../docs/framework/wcf/getting-started-tutorial.md)
 - [Programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Guide pratique pour créer un contrat duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Guide pratique pour accéder aux services ayant un contrat duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Guide pratique pour Créer un contrat Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Guide pratique pour Access Services avec un contrat Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Prise en main](../../../docs/framework/wcf/samples/getting-started-sample.md)
 - [Auto-hébergement](../../../docs/framework/wcf/samples/self-host.md)
