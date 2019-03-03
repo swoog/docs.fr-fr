@@ -4,12 +4,12 @@ description: Découvrez comment créer des bibliothèques .NET Core à l’aide 
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169363"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212064"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Développement de bibliothèques avec des outils multiplateformes
 
@@ -58,9 +58,9 @@ Vous disposez de trois options principales quand vous ciblez .NET Standard, en f
     ```
 
 2. Vous pouvez utiliser une version inférieure ou supérieure de .NET Standard en modifiant la valeur dans le nœud `TargetFramework` de votre fichier projet.
-    
+
     Les versions .NET standard sont à compatibilité descendante. Cela signifie que les bibliothèques `netstandard1.0` s’exécutent sur les plateformes `netstandard1.1` et versions ultérieures. Toutefois, il n’existe pas de compatibilité ascendante : les plateformes .NET Standard antérieures ne peuvent pas référencer les plateformes ultérieures. Cela signifie que les bibliothèques `netstandard1.0` ne peuvent pas cibler des bibliothèques de référence ciblant `netstandard1.1` ou une version ultérieure. Sélectionnez la version Standard qui offre une bonne combinaison entre les API et la prise en charge de plateformes pour vos besoins. Nous vous recommandons d’utiliser `netstandard1.4` pour l’instant.
-    
+
 3. Si vous voulez cibler les versions .NET Framework 4.0 ou antérieures, ou que vous voulez utiliser une API disponible dans le .NET Framework, mais pas dans .NET Standard (par exemple, `System.Drawing`), lisez les sections suivantes et découvrez comment réaliser un multiciblage.
 
 ## <a name="how-to-target-the-net-framework"></a>Comment cibler le .NET Framework
@@ -131,7 +131,7 @@ Voici à quoi peut ressembler votre fichier projet :
 Notez trois changements majeurs ici :
 
 1. Le nœud `TargetFramework` a été remplacé par `TargetFrameworks`, et trois Monikers du Framework cible sont exprimés à l’intérieur.
-1. Un nœud `<ItemGroup>` est présent pour l’extraction de cible `net40 ` dans une référence .NET Framework.
+1. Un nœud `<ItemGroup>` est présent pour l’extraction de cible `net40` dans une référence .NET Framework.
 1. Un nœud `<ItemGroup>` est présent pour l’extraction de cible `net45` dans deux références .NET Framework.
 
 Le système de build est informé des symboles de préprocesseur suivants utilisés dans les directives `#if`:
@@ -256,7 +256,7 @@ Il est important de pouvoir effectuer des tests sur plusieurs plateformes. Vous 
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Exécutez la commande `dotnet test` pour vérifier que xUnit s’exécute. Si vous avez choisi d’utiliser MSTest, le Test Runner de console MSTest doit s’exécuter à la place.
-    
+
 Et voilà ! Vous pouvez maintenant tester votre bibliothèque sur toutes les plateformes à l’aide des outils en ligne de commande. Maintenant que vous avez tout configuré, le test de votre bibliothèque est très simple :
 
 1. Apportez des modifications à votre bibliothèque.
@@ -321,7 +321,7 @@ Cette opération ajoute les trois projets ci-dessus et un fichier solution qui l
 La meilleure façon de référencer un projet consiste à utiliser l’interface CLI .NET Core pour ajouter une référence de projet. À partir des répertoires de projet **AwesomeLibrary.CSharp** et de **AwesomeLibrary.FSharp**, vous pouvez exécuter la commande suivante :
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Les fichiers projet pour **AwesomeLibrary.CSharp** et **AwesomeLibrary.FSharp** référencent désormais **AwesomeLibrary.Core** comme cible de `ProjectReference`.  Pour le vérifier, confirmez la présence des éléments suivants dans les fichiers projet :

@@ -7,9 +7,6 @@
 | Xamarin.Mac                | 3.0    | 3.0    | 3.0   | 3.0   | 3.0   | 3.0                | 3.0                | 3.8                 |
 | Xamarin.Android            | 7.0    | 7.0    | 7.0   | 7.0   | 7.0   | 7.0                | 7.0                | 8.0                 |
 | Plateforme Windows universelle | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          |
-| Windows                    | 8.0    | 8.0    | 8.1   |       |       |                    |                    |                     |
-| Windows Phone              | 8.1    | 8.1    | 8.1   |       |       |                    |                    |                     |
-| Windows Phone Silverlight  | 8.0    |        |       |       |       |                    |                    |                     |
 | Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1             |  2018.1            | 2018.1              |
 
 <sup>1. Les versions listées pour .NET Framework s’appliquent au kit SDK .NET Core 2.0 et aux versions ultérieures des outils. Les versions antérieures utilisent un autre mappage pour .NET Standard 1.5 et versions ultérieures. Vous pouvez [télécharger les outils pour Outils .NET Core pour Visual Studio 2015](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) si vous ne pouvez pas mettre à niveau vers Visual Studio 2017.</sup>

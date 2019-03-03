@@ -4,16 +4,16 @@ description: Guide pratique pour utiliser une expression de filtre permettant d�
 author: smadala
 ms.date: 03/22/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2ec6dc770f33acc4acea79e60cf6f9c33f1077d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6160a8b9184d031fcc06356b5b489ee24b765e84
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239941"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201415"
 ---
 # <a name="running-selective-unit-tests"></a>Exécution de tests unitaires sélectifs
 
-La commande `dotnet test` dans .NET Core vous permet d’utiliser une expression de filtre pour exécuter des tests unitaires sélectifs. Cet article montre comment filtrer les tests exécutés. Les exemples suivants utilisent `dotnet test`. Si vous utilisez `vstest.console.exe`, remplacez `--filter ` par `--testcasefilter:`.
+La commande `dotnet test` dans .NET Core vous permet d’utiliser une expression de filtre pour exécuter des tests unitaires sélectifs. Cet article montre comment filtrer les tests exécutés. Les exemples suivants utilisent `dotnet test`. Si vous utilisez `vstest.console.exe`, remplacez `--filter` par `--testcasefilter:`.
 
 ## <a name="mstest"></a>MSTest
 

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: eaa2bd3327cf76522c74dad07a5a9e0e268a3b55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c57326f038eee4069de9064cb2798d2004b0dbdd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605953"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212168"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Bien démarrer avec .NET Core sur Windows/Linux/macOS à l’aide de la ligne de commande
 
@@ -30,13 +30,13 @@ Vous pouvez [afficher ou télécharger l’exemple de code](https://github.com/d
 Ouvrez une invite de commandes et créez un dossier nommé *Hello*. Accédez au dossier créé et tapez ce qui suit :
 
 ```console
-$ dotnet new console
-$ dotnet run
+dotnet new console
+dotnet run
 ```
 
 Suivons une procédure pas à pas rapide :
 
-1. `$ dotnet new console`
+1. `dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) crée un fichier projet `Hello.csproj` à jour avec les dépendances nécessaires pour générer une application console.  Il crée également `Program.cs`, un fichier de base contenant le point d’entrée pour l’application.
 
@@ -59,12 +59,12 @@ Suivons une procédure pas à pas rapide :
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new` appelle [`dotnet restore`](../tools/dotnet-restore.md) implicitement. `dotnet restore` appelle [NuGet](https://www.nuget.org/) (gestionnaire de package .NET) pour restaurer l’arborescence de dépendances. NuGet analyse le fichier *Hello.csproj*, télécharge les dépendances définies dans le fichier (ou les récupère dans un cache sur votre ordinateur) et écrit le fichier *obj/project.assets.json*, nécessaire pour compiler et exécuter l’exemple. 
-   
+   `dotnet new` appelle [`dotnet restore`](../tools/dotnet-restore.md) implicitement. `dotnet restore` appelle [NuGet](https://www.nuget.org/) (gestionnaire de package .NET) pour restaurer l’arborescence de dépendances. NuGet analyse le fichier *Hello.csproj*, télécharge les dépendances définies dans le fichier (ou les récupère dans un cache sur votre ordinateur) et écrit le fichier *obj/project.assets.json*, nécessaire pour compiler et exécuter l’exemple.
+
    > [!IMPORTANT]
    > Si vous utilisez une version .NET Core 1.x du SDK, vous devrez appeler `dotnet restore` vous-même après l’appel de `dotnet new`.
 
-2. `$ dotnet run`
+2. `dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) appelle [`dotnet build`](../tools/dotnet-build.md) pour garantir que les cibles de génération ont été générées, puis appelle `dotnet <assembly.dll>` pour exécuter l’application cible.
 
@@ -74,6 +74,7 @@ Suivons une procédure pas à pas rapide :
     ```
 
     Si vous préférez, vous pouvez exécuter [`dotnet build`](../tools/dotnet-build.md) pour compiler le code sans exécuter les applications console de la build. Il en résulte une application compilée sous forme de fichier DLL qui peut être exécutée avec `dotnet bin\Debug\netcoreapp2.1\Hello.dll` sur Windows (utilisez `/` sur les autres systèmes). Vous pouvez également spécifier des arguments pour l’application, comme nous le verrons par la suite dans la rubrique.
+
     ```console
     $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!

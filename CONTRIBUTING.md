@@ -107,7 +107,7 @@ Votre rubrique contiendra également des liens vers l’échantillon. Établisse
 
 Pour plus d’informations, consultez le [fichier readme des échantillons](https://github.com/dotnet/samples/blob/master/README.md).
 
-## <a name="the-c-interactive-experience"></a>L’expérience interactive C# #
+## <a name="the-c-interactive-experience"></a>L’expérience interactive C#
 
 De courts échantillons de code en C# peuvent utiliser la balise de langage `csharp-interactive` pour spécifier un échantillon C# qui s’exécute dans le navigateur. (Les échantillons de code inline utilisent la balise `csharp-interactive` ; pour les extraits de code inclus dans la source, utilisez le balise `code-csharp-interactive`.) Ces échantillons de code affichent une fenêtre de code et une fenêtre de sortie dans l’article. La fenêtre de sortie affiche le résultat de l’exécution du code interactif une fois que l’utilisateur a exécuté l’échantillon. 
 
