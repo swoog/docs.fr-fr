@@ -1041,6 +1041,7 @@ Pour plus d’informations sur la structure <xref:System.TimeZoneInfo> et les aj
 
 - Le Concepteur d’activités d’organigramme ou les autres Concepteurs d’activités de flux de travail peuvent afficher tous les objets à leurs emplacements par défaut plutôt que les valeurs de propriétés jointes.
 
+<a name="clickonce-1" />
 
 ### <a name="clickonce"></a>ClickOnce
 
@@ -1090,7 +1091,7 @@ Pour plus d’informations sur [!INCLUDE[net_v461](../../../includes/net-v461-md
 
 <a name="Crypto" />
 
-### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Chiffrement : Prise en charge des certificats X509 contenant l’algorithme ECDSA
+### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Chiffrement : Prise en charge des certificats X509 comportant l’algorithme ECDSA
  .NET Framework 4.6 a ajouté la prise en charge de l’algorithme RSACng pour les certificats X509. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ajoute la prise en charge des certificats X509 ECDSA (Elliptic Curve Digital Signature Algorithm).
 
  ECDSA offre de meilleures performances et constitue un algorithme de chiffrement plus sécurisé que RSA. Il constitue un excellent choix quand les performances et la scalabilité de la sécurité de la couche de transport (TLS) constituent une préoccupation. L’implémentation du .NET Framework encapsule les appels dans les fonctionnalités Windows existantes.
