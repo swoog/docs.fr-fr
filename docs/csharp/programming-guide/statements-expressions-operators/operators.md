@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 55b1829537224118de9870fa696ec2b1689d5066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603064"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981580"
 ---
 # <a name="operators-c-programming-guide"></a>Opérateurs (guide de programmation C#)
 
@@ -20,11 +20,11 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
   
  L'instruction C# suivante contient un seul opérateur unaire et un seul opérande. L'opérateur d'incrément, `++`, modifie la valeur de l'opérande `y`.  
   
- [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#5)]  
   
  L'instruction C# suivante contient deux opérateurs binaires, chacun avec deux opérandes. L'opérateur d'assignation, `=`, a la variable de type entier `y` et l'expression `2 + 3` comme opérandes. L'expression `2 + 3` elle-même se compose de l'opérateur Addition et de deux opérandes, `2` et `3`.  
   
- [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>Opérateurs, évaluation et priorité des opérateurs
 

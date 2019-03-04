@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 25ac904b848311639dda1ecf231f0d6565799733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2572599071fdddd15be620e1322d2e38614182c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620173"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972922"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaisons d'égalité (Guide de programmation C#)
 Il est parfois nécessaire de comparer l’égalité de deux valeurs. Dans certains cas, vous testez *l’égalité de valeur*, également appelée *équivalence*, qui signifie que les valeurs contenues dans les deux variables sont égales. Dans d’autres cas, vous devez déterminer si deux variables référencent le même objet sous-jacent en mémoire. Ce type d’égalité est appelée *l’égalité de référence* ou *identité*. Cette rubrique décrit ces deux genres d’égalité et fournit des liens vers d’autres rubriques pour obtenir plus d’informations.  
@@ -18,7 +18,7 @@ Il est parfois nécessaire de comparer l’égalité de deux valeurs. Dans certa
 ## <a name="reference-equality"></a>Égalité de référence  
  L’égalité de références signifie que deux références d’objets référencent le même objet sous-jacent. Cela peut se produire par simple assignation, comme illustré dans l’exemple suivant.  
   
- [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#18)]  
   
  Dans ce code, deux objets sont créés, mais après l’instruction d’assignation, les deux références référencent le même objet. Elles présentent donc une égalité de référence. Utilisez la méthode <xref:System.Object.ReferenceEquals%2A> pour déterminer si deux références référencent le même objet.  
   

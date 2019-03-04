@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564316"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978647"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Syntaxe de requête et syntaxe de méthode dans LINQ (C#)
 La plupart des requêtes de la documentation de présentation de Langage Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) sont écrites à l’aide de la syntaxe de requête déclarative de LINQ. Toutefois, la syntaxe de requête doit être traduite en appels de méthode pour le Common Langage Runtime (CLR) .NET lorsque le code est compilé. Ces appels de méthode appellent les opérateurs de requête standard, qui ont des noms tels que `Where`, `Select`, `GroupBy`, `Join`, `Max` et `Average`. Vous pouvez les appeler directement en utilisant la syntaxe de méthode à la place de la syntaxe de requête.  
@@ -20,7 +20,7 @@ La plupart des requêtes de la documentation de présentation de Langage Integra
 ## <a name="standard-query-operator-extension-methods"></a>Méthodes d’extension d’opérateur de requête standard  
  L’exemple suivant présente une *expression de requête* simple et la requête sémantiquement équivalente écrite en tant que *requête fondée sur une méthode*.  
   
- [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#22)]  
   
  La sortie des deux exemples est identique. Vous pouvez voir que le type de la variable de requête est le même dans les deux formes : <xref:System.Collections.Generic.IEnumerable%601>.  
   

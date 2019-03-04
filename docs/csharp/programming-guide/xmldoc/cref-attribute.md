@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: e2909040cc0cd38494ef0ffa16a4f361ca73925c
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 9352718371226279f0a468913040e48cbeed984d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204286"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971362"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref, attribut (Guide de programmation C#)
 L’attribut `cref` dans une balise de documentation XML signifie « référence de code ». Il indique que le texte interne de la balise est un élément de code tel qu’un type, une méthode ou une propriété. Les outils de documentation comme [DocFX](https://dotnet.github.io/docfx/) et [Sandcastle](https://github.com/EWSoftware/SHFB) utilisent les attributs `cref` pour générer automatiquement des liens hypertexte vers la page où le type ou le membre est documenté.  
@@ -18,7 +18,7 @@ L’attribut `cref` dans une balise de documentation XML signifie « référenc
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre les attributs `cref` utilisés dans des balises [\<see>](../../../csharp/programming-guide/xmldoc/see.md).  
   
- [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
  Une fois compilé, le programme produit le fichier XML suivant. Notez que l’attribut `cref` pour la méthode `GetZero`, par exemple, a été transformé par le compilateur en `"M:TestNamespace.TestClass.GetZero"`. Le préfixe « M: » signifie « méthode » et représente une convention reconnue par les outils de documentation tels que DocFX et Sandcastle. Pour obtenir une liste complète de préfixes, consultez [Traitement du fichier XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
   

@@ -3,12 +3,12 @@ title: Exécution d’arborescences d’expressions
 description: En savoir plus sur l’exécution des arborescences d’expressions en les convertissant en instructions de langage intermédiaire exécutables.
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207389"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201844"
 ---
 # <a name="executing-expression-trees"></a>Exécution d’arborescences d’expressions
 
@@ -109,7 +109,7 @@ private static Func<int, int> CreateBoundResource()
 
 Le délégué retourné par cette méthode a fermé l’objet `constant`, qui a été supprimé. (Il a été supprimé car il a été déclaré dans une instruction `using`.) 
 
-Désormais, quand vous exécuterez le délégué retourné par cette méthode, une `ObjecctDisposedException` sera levée au moment de l’exécution.
+Désormais, quand vous exécuterez le délégué retourné par cette méthode, une `ObjectDisposedException` sera levée au moment de l’exécution.
 
 Cela semble étrange d’avoir une erreur d’exécution qui représente une construction de compilation, mais cela fait partie des éventualités quand nous travaillons avec des arborescences d’expressions.
 

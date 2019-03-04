@@ -7,12 +7,12 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 77673256caba640f1340fc8218bea020f5fc04f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcba1651c736b58b2c95bac21f086c46417629df
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696371"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980748"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Procédure : Déterminer si une chaîne représente une valeur numérique (Guide de programmation C#)
 Pour déterminer si une chaîne est une représentation valide d’un type numérique spécifié, utilisez la méthode statique `TryParse` implémentée par tous les types numériques primitifs et par les types tels que <xref:System.DateTime> et <xref:System.Net.IPAddress>. L’exemple suivant montre comment déterminer si « 108 » est une chaîne [int](../../../csharp/language-reference/keywords/int.md) valide.  
@@ -31,7 +31,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## <a name="example"></a>Exemple  
  Les exemples suivants montrent comment utiliser `TryParse` avec des représentations sous forme de chaîne de valeurs `long`, `byte` et `decimal`.  
   
- [!code-csharp[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
+ [!code-csharp[csProgGuideStrings#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#14)]  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Les types numériques primitifs implémentent également la méthode statique `Parse`, qui lève une exception si la chaîne n’est pas un nombre valide. `TryParse` est généralement plus efficace, car elle retourne simplement false si le nombre n’est pas valide.  

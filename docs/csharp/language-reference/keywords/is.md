@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710350"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977051"
 ---
-# <a name="is-c-reference"></a>is (référence C#) #
+# <a name="is-c-reference"></a>is (référence C#)
 
 Vérifie si un objet est compatible avec un type donné, ou (avec C# 7.0) teste une expression par rapport à un modèle.
 
-## <a name="testing-for-type-compatibility"></a>Test de compatibilité de type ##
+## <a name="testing-for-type-compatibility"></a>Test de compatibilité de type
 
 Le mot clé `is` évalue la compatibilité de type au moment de l’exécution. Il détermine si une instance d’objet ou le résultat d’une expression peuvent être convertis en un type spécifié. Sa syntaxe est
 
@@ -56,7 +56,7 @@ Le mot clé `is` génère un avertissement au moment de la compilation si l’ex
 
 Avec C# 7.0, vous pouvez utiliser les critères spéciaux avec le [modèle de type](#type) pour écrire du code plus concis qui utilise l’instruction `is`.
 
-## <a name="pattern-matching-with-is"></a>Utilisation des critères spéciaux avec `is` ##
+## <a name="pattern-matching-with-is"></a>Utilisation des critères spéciaux avec `is`
 
 À compter de C# 7.0, les instructions `is` et [switch](../../../csharp/language-reference/keywords/switch.md) prennent en charge les critères spéciaux. Le mot clé `is` prend en charge les modèles suivants :
 
@@ -104,7 +104,7 @@ Le code équivalent sans critères spéciaux nécessite une attribution distinct
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Modèle de constante ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Modèle de constante
 
 Lorsque vous utilisez des critères spéciaux avec le modèle de constante, `is` teste si une expression est égale à une constante spécifiée. Avec C# 6 et les versions antérieures, le modèle de constante est pris en charge par l’instruction [switch](switch.md). À compter de C# 7.0, ce modèle est également pris en charge par l’instruction `is`. Sa syntaxe est la suivante :
 

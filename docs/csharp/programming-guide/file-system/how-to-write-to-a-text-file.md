@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: ce0321d91835fbdf6c37f4b7736f0de900e9f838
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da1526afe48a0d4bda63274380dcf59ee30c480e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666798"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968801"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Procédure : Écrire dans un fichier texte (Guide de programmation C#)
 Ces exemples montrent différentes manières d'écrire du texte dans un fichier. Les deux premiers exemples utilisent des méthodes pratiques statiques au niveau de la classe <xref:System.IO.File?displayProperty=nameWithType> pour écrire chaque élément de tout `IEnumerable<string>` et une chaîne dans un fichier texte. L'exemple 3 indique comment ajouter du texte à un fichier quand vous devez traiter chaque ligne individuellement pendant que vous écrivez dans le fichier. Les exemples 1 à 3 remplacent tout le contenu existant dans le fichier, alors que l'exemple 4 montre comment ajouter du texte à un fichier existant.  
@@ -22,7 +22,7 @@ Ces exemples montrent différentes manières d'écrire du texte dans un fichier.
  Ces exemples écrivent tous des littéraux de chaîne dans des fichiers. Pour mettre en forme le texte écrit dans un fichier, utilisez la méthode <xref:System.String.Format%2A> ou la fonctionnalité d’[interpolation de chaîne](../../../csharp/language-reference/tokens/interpolated.md) C#.  
   
 ## <a name="example"></a>Exemple  
- [!code-csharp[csFilesandFolders#3](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-write-to-a-text-file_1.cs)]  
+ [!code-csharp[csFilesandFolders#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#3)]  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  

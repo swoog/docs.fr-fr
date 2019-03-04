@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc04d9a0504e7cd79703b97441caa5ac84eda94
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655671"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978109"
 ---
 # <a name="fields-c-programming-guide"></a>Champs (Guide de programmation C#)
 Un *champ* est une variable de tout type qui est déclarée directement dans une [classe](../../../csharp/language-reference/keywords/class.md) ou un [struct](../../../csharp/language-reference/keywords/struct.md). Les champs sont *membres* de leur type contenant.  
@@ -23,15 +23,15 @@ Un *champ* est une variable de tout type qui est déclarée directement dans une
   
  Les champs sont déclarés dans le bloc Class en spécifiant le niveau d’accès du champ, suivi du type du champ, puis du nom du champ. Par exemple :  
   
- [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
  Pour accéder à un champ dans un objet, ajoutez un point après le nom de l’objet, suivi du nom du champ, comme dans `objectname.fieldname`. Par exemple :  
   
- [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
  Une valeur initiale peut être attribuée à un champ à l’aide de l’opérateur d’assignation, lorsque le champ est déclaré. Pour assigner automatiquement le champ `day` à `"Monday"`, par exemple, vous devez déclarer `day`, comme dans l’exemple suivant :  
   
- [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]  
   
  Les champs sont initialisés juste avant le constructeur pour l’instance d’objet qui est appelée. Si le constructeur assigne la valeur d’un champ, la valeur assignée pendant la déclaration du champ sera remplacée. Pour plus d’informations, consultez [Utilisation de constructeurs](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
   

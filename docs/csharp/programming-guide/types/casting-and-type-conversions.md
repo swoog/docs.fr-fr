@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: d16841afda1f1f434d86a6e5572272123c007df8
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 80ff658774c776545eb7d5158b4abd451f7fcf7d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674813"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201116"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast et conversions de types (guide de programmation C#)
 
@@ -40,7 +40,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 
  Pour les types numériques intégrés, une conversion implicite peut être effectuée quand la valeur à stocker peut tenir dans la variable sans être tronquée ni arrondie. Par exemple, une variable de type [long](../../../csharp/language-reference/keywords/long.md) (entier sur 64 bits) peut stocker n’importe quelle valeur pouvant être stockée par un [int](../../../csharp/language-reference/keywords/int.md) (entier sur 32 bits). Dans l’exemple suivant, le compilateur convertit implicitement la valeur de `num` à droite en type `long` avant de l’assigner à `bigNum`.  
   
- [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
+ [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
  Pour obtenir la liste complète de toutes les conversions numériques implicites, consultez [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -55,7 +55,7 @@ Base b = d; // Always OK.
 
  Toutefois, si une conversion ne peut pas être réalisée sans risque de perte d’informations, le compilateur exige une conversion explicite, aussi appelée *cast*. Un cast est une façon d’informer explicitement le compilateur que vous prévoyez de faire la conversion et que vous savez qu’une perte de données peut se produire. Pour effectuer un cast, spécifiez le type voulu entre parenthèses devant la valeur ou la variable à convertir. Le programme suivant effectue un cast d’un [double](../../../csharp/language-reference/keywords/double.md) en [int](../../../csharp/language-reference/keywords/int.md). Le programme ne se compile pas sans le cast.  
   
- [!code-csharp[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
+ [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
  Pour obtenir la liste des conversions numériques explicites autorisées, consultez [Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
   
@@ -81,7 +81,7 @@ Giraffe g2 = (Giraffe) a;
 
  Dans certaines conversions de types référence, le compilateur ne peut pas déterminer si un cast sera valide. Il est possible qu’une opération cast dont la compilation fonctionne échoue au moment de l’exécution. Comme l’illustre l’exemple suivant, un cast de type qui échoue au moment de l’exécution provoque la levée d’une exception <xref:System.InvalidCastException>.  
   
- [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
+ [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
  C# fournit les opérateurs [is](../../../csharp/language-reference/keywords/is.md) et [as](../../../csharp/language-reference/keywords/as.md) pour vous permettre de tester la compatibilité avant d’effectuer réellement un cast. Pour plus d'informations, voir [Procédure : Caster de manière sécurisée avec les critères spéciaux, ainsi que les opérateurs is et as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   

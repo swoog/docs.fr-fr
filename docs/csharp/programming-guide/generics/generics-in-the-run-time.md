@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: f68dbec16a82b6504d2fb93581d9d52ddf614c0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d45d64d608c117ef5f1477ac55a39c192374d7ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587266"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981476"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Génériques dans le runtime (Guide de programmation C#)
 Quand une méthode ou un type générique est compilé dans le langage intermédiaire Microsoft (MSIL), il ou elle contient des métadonnées qui l’identifient comme ayant des paramètres de type. La façon dont le langage MSIL d’un type générique est utilisé diffère selon que le paramètre de type fourni est un type valeur ou référence.  
@@ -19,11 +19,11 @@ Quand une méthode ou un type générique est compilé dans le langage interméd
   
  Par exemple, supposons que votre code de programme ait déclaré une pile construite d’entiers :  
   
- [!code-csharp[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#42)]  
   
  À ce stade, le runtime génère une version spécialisée de la classe <xref:System.Collections.Generic.Stack%601> dont l’entier a été substitué correctement à son paramètre. Maintenant, chaque fois que le code de programme utilise une pile d’entiers, le runtime réutilise la classe <xref:System.Collections.Generic.Stack%601> spécialisée générée. Dans l’exemple suivant, deux instances d’une pile d’entiers sont créées, et elles partagent une instance unique du code `Stack<int>` :  
   
- [!code-csharp[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#43)]  
   
  Toutefois, supposons qu’une autre classe <xref:System.Collections.Generic.Stack%601> avec un type valeur différent tel qu’un type `long` ou une structure définie par l’utilisateur comme son paramètre est créée à un autre endroit dans votre code. Le runtime génère alors une autre version du type générique et substitue un type `long` aux emplacements appropriés dans le langage MSIL. Les conversions ne sont plus nécessaires parce que chaque classe générique spécialisée contient le type valeur en mode natif.  
   
@@ -31,17 +31,17 @@ Quand une méthode ou un type générique est compilé dans le langage interméd
   
  Par exemple, supposons que vous ayez deux types référence, une classe `Customer` et une classe `Order`, et supposons également que vous ayez créé une pile de types `Customer` :  
   
- [!code-csharp[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#47)]  
   
- [!code-csharp[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#44)]  
   
  À ce stade, le runtime génère une version spécialisée de la classe <xref:System.Collections.Generic.Stack%601> qui stocke des références d’objet qui seront remplies ultérieurement au lieu de stocker des données. Supposons que la ligne de code suivante crée une pile d’un autre type référence, qui est nommé `Order` :  
   
- [!code-csharp[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#45)]  
   
  Contrairement aux types valeur, une autre version spécialisée de la classe <xref:System.Collections.Generic.Stack%601> n’est pas créée pour le type `Order`. À la place, une instance de la version spécialisée de la classe <xref:System.Collections.Generic.Stack%601> est créée et la variable `orders` est définie pour la référencer. Supposons que vous ayez rencontré ensuite une ligne de code pour créer une pile d’un type `Customer` :  
   
- [!code-csharp[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#46)]  
   
  Comme avec l’utilisation précédente de la classe <xref:System.Collections.Generic.Stack%601> créée à l’aide du type `Order`, une autre instance de la classe <xref:System.Collections.Generic.Stack%601> spécialisée est créée. Les pointeurs contenus ici sont configurés pour référencer une zone de mémoire de la taille d’un type `Customer`. Dans la mesure où le nombre de types référence peut varier de manière importante d’un programme à l’autre, l’implémentation C# de génériques réduit sensiblement le volume du code en ramenant à une unité le nombre de classes spécialisées créées par le compilateur pour les classes génériques de types référence.  
   

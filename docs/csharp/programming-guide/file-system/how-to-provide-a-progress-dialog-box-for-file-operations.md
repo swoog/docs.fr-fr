@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: ab268c30af6b5eefe84ade852c679535c1e48068
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 462da68313fea19e5b89a9e2f5221f6659338e98
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597266"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975041"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Procédure : Fournir une boîte de dialogue de progression pour les opérations sur les fichiers (Guide de programmation C#)
 Vous pouvez fournir une boîte de dialogue standard qui montre la progression des opérations sur les fichiers dans Windows si vous utilisez la méthode <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> de l’espace de noms <xref:Microsoft.VisualBasic?displayProperty=nameWithType>.  
@@ -30,7 +30,7 @@ Vous pouvez fournir une boîte de dialogue standard qui montre la progression de
 ## <a name="example"></a>Exemple  
  Le code suivant copie le répertoire spécifié par `sourcePath` dans le répertoire spécifié par `destinationPath`. Ce code fournit également une boîte de dialogue standard qui affiche une estimation du temps restant avant la fin de l’opération.  
   
- [!code-csharp[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-provide-a-progress-dialog-box-for-file-operations_1.cs)]  
+ [!code-csharp[csFilesandFolders#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#11)]  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600490"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972194"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressions (Guide de programmation C#)
 Une *expression* est une séquence d’un ou plusieurs opérandes et de zéro, un ou plusieurs opérateurs qui peuvent être évalués à une valeur, un objet, une méthode ou un espace de noms unique. Elle peut être constituée d’une valeur littérale, d’un appel de méthode, d’un opérateur et de ses opérandes, ou d’un *nom simple*. Un nom simple peut être le nom d'une variable, d'un membre de type, d'un paramètre de méthode, d'un espace de noms ou d'un type.  
@@ -40,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>Littéraux et noms simples  
  Les deux types d’expressions les plus simples sont les littéraux et les noms simples. Un littéral est une valeur constante qui n’a aucun nom. Par exemple, dans l’exemple de code suivant, `5` et `"Hello World"` sont des valeurs littérales :  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  Pour plus d’informations sur les littéraux, consultez [Types](../../../csharp/language-reference/keywords/types.md).  
   
  Dans l’exemple précédent, `i` et `s` sont des noms simples qui identifient des variables locales. Quand ces variables sont utilisées dans une expression, le nom de la variable prend la valeur qui est stockée actuellement à l’emplacement de la variable en mémoire. Ceci est illustré dans l'exemple suivant :  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>Appel d’expressions  
  Dans l’exemple de code suivant, l’appel à `DoWork` est une expression d’appel.  
   
@@ -70,7 +70,7 @@ Les arborescences de l’expression permettent de représenter des expressions e
 
 C# prend en charge les *membres expression-bodied*, qui vous permettent de fournir une définition de corps d’expression concise pour des méthodes, des constructeurs, des finaliseurs, des propriétés et des indexeurs. Pour plus d’informations, consultez [Membres expression-bodied](expression-bodied-members.md).
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Chaque fois qu’un accès à un indexeur d’objet, une variable ou une propriété d’objet est identifié à partir d’une expression, la valeur de cet élément est utilisée comme valeur de l’expression. Une expression peut être placée n’importe où en C# où une valeur ou un objet est obligatoire, tant que l’expression correspond finalement au type obligatoire.  
 
 ## <a name="see-also"></a>Voir aussi

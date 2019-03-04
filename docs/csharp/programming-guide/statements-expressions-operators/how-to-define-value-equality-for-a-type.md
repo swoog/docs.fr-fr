@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589315"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203108"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procédure : Définir une égalité de valeurs pour un type (Guide de programmation C#)
 Quand vous définissez une classe ou un struct, vous décidez s’il est judicieux de créer une définition personnalisée de l’égalité des valeurs (ou équivalence) pour le type. En général, vous implémentez l’égalité des valeurs quand des objets du type sont supposés être ajoutés à une collection quelconque, ou quand leur objectif principal est de stocker un ensemble de champs ou propriétés. Vous pouvez baser votre définition de l’égalité des valeurs sur une comparaison de tous les champs et propriétés du type, ou vous pouvez la baser sur un sous-ensemble. Dans les deux cas, et dans les classes et les structs, votre implémentation doit respecter les cinq garanties d’équivalence :  
@@ -48,7 +48,7 @@ Quand vous définissez une classe ou un struct, vous décidez s’il est judicie
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment implémenter l’égalité des valeurs dans une classe (type référence).  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  Sur les classes (types référence), l’implémentation par défaut des deux méthodes <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> effectue une comparaison d’égalité de référence, et non une vérification de l’égalité des valeurs. Quand un implémenteur substitue la méthode virtuelle, l’objectif est de lui donner une sémantique d’égalité des valeurs.  
   
@@ -57,7 +57,7 @@ Quand vous définissez une classe ou un struct, vous décidez s’il est judicie
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment implémenter l’égalité des valeurs dans un struct (type valeur) :  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  Pour les structs, l’implémentation par défaut de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (qui est la version substituée dans <xref:System.ValueType?displayProperty=nameWithType>) effectue une vérification de l’égalité des valeurs à l’aide de la réflexion pour comparer les valeurs de chaque champ dans le type. Quand un implémenteur substitue la méthode `Equals` virtuelle dans un struct, l’objectif est de fournir un moyen plus efficace d’effectuer la vérification de l’égalité des valeurs, et éventuellement de baser la comparaison sur un sous-ensemble des propriétés ou du champ du struct.  
   

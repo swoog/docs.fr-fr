@@ -6,17 +6,17 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 74932c9a080a077a60ecbc45c997108afa176956
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a990dbf26ac1a6bdc642442b9f4b75c05ee9635
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676885"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200115"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Constructeurs statiques (Guide de programmation C#)
 Un constructeur statique est utilisé pour initialiser des données [statiques](../../../csharp/language-reference/keywords/static.md) ou pour effectuer une action particulière qui ne doit être effectuée qu’une seule fois. Il est automatiquement appelé avant la création de la première instance ou le référencement d’un membre statique.  
   
- [!code-csharp[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
   
  Les constructeurs statiques ont les propriétés suivantes :  
   
@@ -37,7 +37,7 @@ Un constructeur statique est utilisé pour initialiser des données [statiques](
 ## <a name="example"></a>Exemple  
  Dans cet exemple, la classe `Bus` possède un constructeur statique. Quand la première instance de `Bus` est créée (`bus1`), le constructeur statique est appelé pour initialiser la classe. L’exemple de sortie vérifie que le constructeur statique s’exécute une seule fois, même si deux instances de `Bus` sont créées, et qu’il s’exécute avant le constructeur d’instance.  
   
- [!code-csharp[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]  
   
 ## <a name="see-also"></a>Voir aussi
 

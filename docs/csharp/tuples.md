@@ -3,14 +3,14 @@ title: Types tuple - Guide C#
 description: En savoir plus sur les types tuple nommés et sans nom en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332752"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971404"
 ---
-# <a name="c-tuple-types"></a>Types tuple C# #
+# <a name="c-tuple-types"></a>Types tuple C#
 
 Les tuples C# sont des types que vous définissez à l’aide d’une syntaxe simplifiée. Les avantages incluent une syntaxe simplifiée, des règles de conversion basées sur le nombre (appelé « cardinalité ») et les types d’éléments, ainsi que des règles cohérentes pour les copies, les tests d’égalité et les affectations. En échange, les tuples ne prennent pas en charge certains idiomes orientés objet associés à l’héritage. Vous pouvez bénéficier d’une présentation des tuples dans la section correspondante de l’article [Nouveautés de C# 7.0](whats-new/csharp-7.md#tuples).
 

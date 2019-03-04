@@ -8,12 +8,12 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: 834aff6e4673a306559daa1b9517e11538e90ad0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ee9e3571ab601f56ddee2fd9a02bb19f50bac62
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273346"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967358"
 ---
 # <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (Guide de programmation C#)
 ## <a name="syntax"></a>Syntaxe  
@@ -26,7 +26,7 @@ ms.locfileid: "55273346"
  `name`  
  Nom du paramètre de type. Mettez le nom entre guillemets doubles (" ").  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour plus d’informations sur les paramètres de type dans les types et méthodes génériques, consultez [Génériques](../../../csharp/programming-guide/generics/index.md).  
   
  Utilisez cette balise pour permettre aux consommateurs du fichier de documentation d’appliquer une mise en forme particulière au mot, par exemple l’italique.  
@@ -34,7 +34,7 @@ ms.locfileid: "55273346"
  Compilez avec [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
 ## <a name="example"></a>Exemple  
- [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparamref_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]  
   
 ## <a name="see-also"></a>Voir aussi
 

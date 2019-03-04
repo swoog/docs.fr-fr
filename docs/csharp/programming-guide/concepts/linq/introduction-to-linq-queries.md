@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2202641d56a151de2eebe08d4c100c37fb399e5d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605131"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201662"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introduction aux requêtes LINQ (C#)
 Une *requête* est une expression qui récupère des données d’une source de données. Les requêtes sont généralement exprimées dans un langage de requête spécialisé. Les différents langages ont été développés au fil du temps pour les différents types de sources de données, par exemple, SQL pour les bases de données relationnelles et XQuery pour XML. Les développeurs devaient donc apprendre un nouveau langage de requête pour chaque nouveau type de source de données ou format de données qu’ils devaient prendre en charge. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifie cette situation en proposant un même modèle pour les différents types de sources données et les différents formats de données. Dans une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous travaillez toujours avec des objets. Vous utilisez les mêmes modèles d’encodage de base pour interroger et transformer les données en documents XML, bases de données SQL, datasets [!INCLUDE[vstecado](~/includes/vstecado-md.md)], collections .NET, et tout autre format pour lequel un fournisseur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] est disponible.  
@@ -28,7 +28,7 @@ Une *requête* est une expression qui récupère des données d’une source de 
   
  L’exemple suivant montre comment les trois parties d’une opération de requête sont exprimées dans le code source. Cet exemple utilise un tableau d’entiers comme source de données pour des raisons pratiques. Toutefois, ces mêmes concepts s’appliquent également aux autres sources de données. Le reste de la rubrique fait référence à cet exemple.  
   
- [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
  L’illustration suivante montre l’intégralité de l’opération de requête. Dans [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], l’exécution de la requête est distincte de la requête elle-même. En d’autres termes, le fait de créer une variable de requête ne permet pas d’extraire de données.  
   
@@ -39,7 +39,7 @@ Une *requête* est une expression qui récupère des données d’une source de 
   
  Un type requêtable ne nécessite aucune modification ni traitement spécial pour être utilisé comme une source de données [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Si la source de données n’est pas déjà en mémoire comme un type requêtable, le fournisseur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] doit la représenter comme telle. Par exemple, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] charge un document XML dans un type <xref:System.Xml.Linq.XElement> requêtable :  
   
- [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
  Avec [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], vous commencez par créer un mappage O/R au moment du design, manuellement ou à l’aide des [Outils LINQ to SQL de Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). Vous écrivez vos requêtes pour des objets. Ensuite, au moment de l’exécution, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] gère la communication avec la base de données. Dans l’exemple suivant, `Customers` représente une table spécifique de la base de données et le type du résultat de la requête, <xref:System.Linq.IQueryable%601>, dérive de <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -71,7 +71,7 @@ IQueryable<Customer> custQuery =
 ### <a name="deferred-execution"></a>Exécution différée  
  Comme indiqué précédemment, la variable de requête stocke uniquement les commandes de requête. L’exécution de la requête est différée jusqu’à ce que vous itériez au sein de la variable de requête dans une instruction `foreach`. Ce concept est appelé *exécution différée* et est illustré dans l’exemple suivant :  
   
- [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
+ [!code-csharp[csLinqGettingStarted#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#4)]  
   
  C’est dans l’instruction `foreach` que les résultats de requête sont récupérés. Par exemple, dans la requête précédente, la variable d’itération `num` contient chaque valeur (une à la fois) de la séquence retournée.  
   
@@ -80,11 +80,11 @@ IQueryable<Customer> custQuery =
 ### <a name="forcing-immediate-execution"></a>Forcer l’exécution immédiate  
  Les requêtes qui exécutent des fonctions d’agrégation sur une plage d’éléments sources doivent d’abord itérer au sein de ces éléments. Ces requêtes sont par exemple `Count`, `Max`, `Average` et `First`. Elles s’exécutent sans instruction `foreach` explicite, car les requêtes doivent utiliser `foreach` pour retourner un résultat. Notez également que ces types de requêtes retournent une seule valeur, et non une collection `IEnumerable`. La requête suivante retourne un nombre de chiffres pairs du tableau source :  
   
- [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
+ [!code-csharp[csLinqGettingStarted#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#5)]  
   
  Pour forcer l’exécution immédiate de n’importe quelle requête et mettre en cache ses résultats, vous pouvez appeler les méthodes <xref:System.Linq.Enumerable.ToList%2A> ou <xref:System.Linq.Enumerable.ToArray%2A>.  
   
- [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
+ [!code-csharp[csLinqGettingStarted#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#6)]  
   
  Vous pouvez également forcer l’exécution en plaçant la boucle `foreach` immédiatement après l’expression de requête. Toutefois, en appelant `ToList` ou `ToArray`, vous mettez également en cache toutes les données dans un même objet de collection.  
   

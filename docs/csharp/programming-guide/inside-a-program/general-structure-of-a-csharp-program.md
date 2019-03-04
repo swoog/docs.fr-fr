@@ -5,17 +5,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 53908a21e573b7ac7d8347ebfe7f11202612fae1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: a60a03d0f88b6176dc22e850c8a84b605078c657
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675099"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967326"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Structure générale d'un programme C# (guide de programmation C#)
 Les programmes C# se composent d’un ou plusieurs fichiers. Chaque fichier peut contenir zéro ou plusieurs espaces de noms. Un espace de noms peut contenir des types tels que des classes, des structs, des interfaces, des énumérations et des délégués, en plus d’autres espaces de noms. Voici la structure d’un programme C# qui contient tous ces éléments.  
   
- [!code-csharp[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/general-structure-of-a-csharp-program_1.cs)]  
+ [!code-csharp[csProgGuide#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/class2.cs#34)]  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  Pour plus d'informations :  

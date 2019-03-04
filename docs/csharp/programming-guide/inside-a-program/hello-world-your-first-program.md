@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: e84baf2513f6eb96ad1819b995b765a66ad5c263
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 7ff65867f9f81118cad30852c439f8b3491bf1aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222322"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969724"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- Votre premier programme (Guide de programmation C#)
 
@@ -42,7 +42,7 @@ Pour plus d’exemples concernant les concepts de base, consultez [Bien démarre
 
 6. Remplacez le contenu de Program.cs par le code suivant.
 
-     [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]
+     [!code-csharp[csProgGuide#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#21)]
 
 7. Appuyez sur la touche F5 pour exécuter le projet. Une fenêtre d’invite de commandes s’affiche avec la ligne `Hello World!`
 
@@ -52,11 +52,11 @@ Ensuite, les parties importantes de ce programme sont examinées.
 
 La première ligne contient un commentaire. Les caractères `//` convertissent le reste de la ligne en un commentaire.
 
-[!code-csharp[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]
+ [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
 Vous pouvez également créer un commentaire à partir d’un bloc de texte en le plaçant entre les caractères `/*` et `*/`. L'exemple suivant le démontre.
 
-[!code-csharp[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]
+ [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
 ## <a name="main-method"></a>Main (méthode)
 
@@ -66,19 +66,19 @@ La méthode `Main` est une méthode [static](../../../csharp/language-reference/
 
 - Elle peut retourner `void`.
 
-     [!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]
+     [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
 - Elle peut également retourner un entier.
 
-     [!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]
+     [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
 - Elle peut accepter des arguments avec n’importe quel type de retour.
 
-     [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]
+     [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
      - ou -
 
-     [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]
+     [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
 Le paramètre `args` de la méthode `Main` est un tableau `string` qui contient les arguments de la ligne de commande utilisés pour appeler le programme. Contrairement au langage C++, le tableau n’inclut pas le nom du fichier exécutable (exe).
 
@@ -90,9 +90,9 @@ L’appel à <xref:System.Console.ReadKey%2A> à la fin de la méthode `Main` em
 
 Les programmes C# utilisent généralement les services d’entrée/sortie fournis par la bibliothèque runtime du .NET Framework. L’instruction `System.Console.WriteLine("Hello World!");` utilise la méthode <xref:System.Console.WriteLine%2A>. C’est l’une des méthodes de sortie de la classe <xref:System.Console> de la bibliothèque runtime. Elle affiche son paramètre de chaîne dans le flux de sortie standard suivi d’une nouvelle ligne. D’autres méthodes <xref:System.Console> sont disponibles pour différentes opérations d’entrée et de sortie. Si vous incluez la directive `using System;` au début du programme, vous pouvez utiliser directement les classes et les méthodes <xref:System> sans les qualifier complètement. Par exemple, vous pouvez appeler `Console.WriteLine` au lieu de `System.Console.WriteLine` :
 
-[!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]
+ [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
-[!code-csharp[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]
+ [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
 Pour plus d’informations sur les méthodes d’entrée/sortie, consultez <xref:System.IO>.
 

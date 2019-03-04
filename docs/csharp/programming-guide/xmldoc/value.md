@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 1a1a4beb4a3412fe7739a69ecd0fed650b332fb2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3495a6c88d340342362d84d6ea3f12048d42b21f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263938"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982152"
 ---
 # <a name="value-c-programming-guide"></a>\<value> (Guide de programmation C#)
 ## <a name="syntax"></a>Syntaxe  
@@ -26,13 +26,13 @@ ms.locfileid: "55263938"
  `property-description`  
  Description de la propriété.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La balise \<value> vous permet de décrire la valeur représentée par une propriété. Notez que lorsque vous ajoutez une propriété via l’Assistant Code de l’environnement de développement Visual Studio .NET, il ajoute une balise [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) pour la nouvelle propriété. Vous devez ensuite ajouter manuellement une balise \<value> pour décrire la valeur représentée par la propriété.  
   
  Compilez avec [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
 ## <a name="example"></a>Exemple  
- [!code-csharp[csProgGuideDocComments#14](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/value_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#14)]  
   
 ## <a name="see-also"></a>Voir aussi
 

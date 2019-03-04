@@ -3,12 +3,12 @@ title: Variables et types C# - Visite guidée du langage C#
 description: En savoir plus sur la définition des types et la déclaration de variables en C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 6880fa51ca30dadac901d2b86de189b59658d164
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583951"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211999"
 ---
 # <a name="types-and-variables"></a>Types et variables
 
@@ -71,7 +71,7 @@ Ce qui suit résume les types numériques de C#.
     - `double` : 64 bits, entre 5,0 × 10<sup>-324</sup> et 1,7 × 10<sup>308</sup>, précision à 15 chiffres
 * Decimal
     - `decimal` : 128 bits, entre au moins -7,9 × 10<sup>-28</sup> et 7,9 × 10<sup>28</sup>, avec au moins une précision à 28 chiffres
-    
+
 Les programmes C# utilisent les *déclarations de type* pour créer de nouveaux types. Une déclaration de type spécifie le nom et les membres du nouveau type. Cinq catégories de types C# sont définies par l’utilisateur : les types de classes, les types struct, les types d’interfaces, les types enum et les types délégués.
 
 Un type `class` définit une structure de données qui contient des données membres (champs) et des fonctions membres (méthodes, propriétés, etc.). Les types de classes prennent en charge l’héritage unique et le polymorphisme, des mécanismes par lesquels les classes dérivées peuvent étendre et spécialiser les classes de base.
@@ -115,6 +115,6 @@ Il existe plusieurs types de *variables* en C#, y compris les champs, les élém
 * Type délégué
     - Une référence `null` ou une référence à une instance d’un type délégué compatible
 
->[!div class="step-by-step"]
->[Précédent](program-structure.md)
->[Suivant](expressions.md)
+> [!div class="step-by-step"]
+> [Précédent](program-structure.md)
+> [Suivant](expressions.md)

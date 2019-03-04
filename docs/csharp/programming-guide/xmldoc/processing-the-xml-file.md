@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: d834cfaf566868d7fee280b613a6ef15dc7f0b1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1015e5b69f7701f772bc853bba53873fd065a996
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576913"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967930"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Traitement du fichier XML (Guide de programmation C#)
 Le compilateur génère une chaîne d’ID pour chaque construction de votre code qui est marquée pour générer la documentation. (Pour plus d’informations sur la façon de baliser votre code, consultez [Balises recommandées pour les commentaires de documentation](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) La chaîne d’ID identifie de façon unique la construction. Les programmes qui traitent le fichier XML peuvent utiliser la chaîne d’identification pour identifier l’élément de métadonnées/réflexion .NET Framework correspondant auquel s’applique la documentation.  
@@ -79,7 +79,7 @@ Le compilateur génère une chaîne d’ID pour chaque construction de votre cod
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent comment les chaînes d’ID pour une classe et ses membres seraient générées :  
   
- [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
+ [!code-csharp[csProgGuidePointers#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#21)]  
   
 ## <a name="see-also"></a>Voir aussi
 

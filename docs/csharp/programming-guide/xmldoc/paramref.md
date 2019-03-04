@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: 4fd0770bfe6c15c0e9b10239019ec265550dc372
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e6d6c62c97179d74bdb6bdd88eeb1ee129226fed
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262833"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201402"
 ---
 # <a name="paramref-c-programming-guide"></a>\<paramref> (Guide de programmation C#)
 ## <a name="syntax"></a>Syntaxe  
@@ -27,13 +27,13 @@ ms.locfileid: "55262833"
  `name`  
  Nom du paramètre auquel faire référence. Mettez le nom entre guillemets doubles (" ").  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La balise \<paramref> vous offre un moyen d’indiquer qu’un mot dans les commentaires du code, par exemple dans un bloc \<summary> ou \<remarks>, fait référence à un paramètre. Le fichier XML peut être traité de manière à mettre en forme ce mot d’une façon particulière, par exemple en gras ou en italique.  
   
  Compilez avec [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
 ## <a name="example"></a>Exemple  
- [!code-csharp[csProgGuideDocComments#7](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/paramref_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#7)]  
   
 ## <a name="see-also"></a>Voir aussi
 

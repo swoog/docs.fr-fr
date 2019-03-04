@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 12c31db32b2b3ff3da7ed0972ea2cf090701f3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e028ecd6e448237d192894c4a02233c1e0dd4c0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491740"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201493"
 ---
 # <a name="objects-c-programming-guide"></a>Objets (Guide de programmation C#)
 Une définition de classe ou de struct s’apparente à un plan qui spécifie ce que le type peut faire. Un objet est fondamentalement un bloc de mémoire qui a été alloué et configuré selon le plan. Un programme peut créer de nombreux objets de la même classe. Les objets sont également appelés instances. Ils peuvent être stockés dans une variable nommée, dans un tableau ou dans une collection. Le code client est le code qui utilise ces variables pour appeler les méthodes et accéder aux propriétés publiques de l’objet. Dans un langage orienté objet tel que C#, un programme classique se compose de plusieurs objets qui interagissent de façon dynamique.  
@@ -24,11 +24,11 @@ Une définition de classe ou de struct s’apparente à un plan qui spécifie ce
   
  Les instances de classes sont créées à l’aide de l’[opérateur new](../../../csharp/language-reference/keywords/new-operator.md). Dans l’exemple suivant, `Person` est le type, et `person1` et `person 2` sont des instances, ou objets, de ce type.  
   
- [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
+ [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
  Étant donné que les structs sont des types valeur, une variable d’un objet de struct conserve une copie de l’objet entier. Les instances de structs peuvent également être créées à l’aide de l’opérateur `new`, mais cela n’est pas obligatoire, comme illustré dans l’exemple suivant :  
   
- [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
+ [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
  La mémoire pour `p1` et `p2` est allouée sur la pile de threads. Cette mémoire est récupérée avec le type ou la méthode où elle est déclarée. C’est l’une des raisons pour lesquelles les structs sont copiés au moment de l’assignation. En revanche, la mémoire allouée pour une instance de classe est récupérée automatiquement (garbage collection) par le common language runtime quand toutes les références à l’objet sont hors de la portée. Il n’est pas possible de détruire de façon déterministe un objet de classe comme vous pouvez le faire dans C++. Pour plus d’informations sur l’opération de garbage collection dans le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], consultez [Garbage collection](../../../standard/garbage-collection/index.md).  
   
@@ -42,7 +42,7 @@ Une définition de classe ou de struct s’apparente à un plan qui spécifie ce
   
 -   Pour déterminer si les champs d’instance dans deux instances de struct ont les mêmes valeurs, utilisez la méthode <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>. Comme tous les structs héritent implicitement de <xref:System.ValueType?displayProperty=nameWithType>, vous appelez directement la méthode sur votre objet, comme indiqué dans l’exemple suivant :  
   
- [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
+ [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  L’implémentation <xref:System.ValueType?displayProperty=nameWithType> de `Equals` utilise la réflexion, car elle doit être en mesure de déterminer la nature des champs dans chaque struct. Quand vous créez vos propres structs, substituez la méthode `Equals` pour fournir un algorithme d’égalité efficace qui est propre à votre type.  
   

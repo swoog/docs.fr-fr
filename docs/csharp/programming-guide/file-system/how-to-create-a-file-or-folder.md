@@ -8,18 +8,18 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 8f0b375a2e2ed7304c43a27309dbdde5a2f5a476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731879"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970712"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Procédure : Créer un fichier ou un dossier (Guide de programmation C#)
 Vous pouvez par programmation créer un dossier sur votre ordinateur, créer un sous-dossier, créer un fichier dans le sous-dossier et écrire des données dans le fichier.  
   
 ## <a name="example"></a>Exemple  
- [!code-csharp[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
+ [!code-csharp[csFilesandFolders#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#10)]  
   
  Si le dossier existe déjà, <xref:System.IO.Directory.CreateDirectory%2A> est sans effet et aucune exception n’est levée. Toutefois, <xref:System.IO.File.Create%2A?displayProperty=nameWithType> remplace un fichier existant par un nouveau fichier. L’exemple utilise une instruction `if`-`else` pour éviter qu’un fichier existant soit pas remplacé.  
   

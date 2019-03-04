@@ -6,19 +6,19 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 12c4561e9e2c2a9e3a211351b70fd83b8ca7bccd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640847"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971505"
 ---
 # <a name="statements-c-programming-guide"></a>Instructions (Guide de programmation C#)
 Les actions qu’un programme effectue sont exprimées dans les instructions. Les actions courantes incluent la déclaration de variables, l’assignation de valeurs, l’appel de méthodes, l’exécution de boucles dans les collections et la création de branches sur des blocs de code, selon une condition donnée. L’ordre dans lequel les instructions sont exécutées dans un programme est appelé le flux de contrôle ou le flux d’exécution. Le flux de contrôle peut varier chaque fois qu’un programme est exécuté, selon la manière dont le programme réagit à l’entrée qu’il reçoit au moment de l’exécution.  
   
  Une instruction peut comporter une seule ligne de code terminée par un point-virgule ou une série d’instructions d’une ligne dans un bloc. Un bloc d’instructions est placé entre des accolades ({}) et peut contenir des blocs imbriqués. Le code suivant illustre deux exemples d’instructions d’une ligne, et un bloc d’instructions multiligne :  
   
- [!code-csharp[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
+ [!code-csharp[csProgGuideStatements#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#1)]  
   
 ## <a name="types-of-statements"></a>Types d’instructions  
  Le tableau suivant répertorie les différents types d’instructions en C# et leurs mots clés associés, avec des liens vers des rubriques contenant plus d’informations :  
@@ -43,43 +43,43 @@ Les actions qu’un programme effectue sont exprimées dans les instructions. Le
 
 Le code suivant montre des exemples de déclarations de variables avec et sans assignation initiale, ainsi qu’une déclaration de constante avec l’initialisation nécessaire.
 
-[!code-csharp[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]
+ [!code-csharp[csProgGuideStatements#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#23)]
 
 ## <a name="expression-statements"></a>Instructions d’expression
 
 Le code suivant montre des exemples d’instructions d’expression, y compris l’assignation, la création d’objets avec assignation et l’appel de méthode.
 
-[!code-csharp[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]
+ [!code-csharp[csProgGuideStatements#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#24)]
 
 ## <a name="the-empty-statement"></a>Instruction vide
 
 Les exemples suivants illustrent deux utilisations d’une instruction vide :
 
-[!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]
+ [!code-csharp[csProgGuideStatements#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#25)]
 
 ## <a name="embedded-statements"></a>Instructions incorporées
 
  Certaines instructions, y compris [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) et [foreach](../../../csharp/language-reference/keywords/foreach-in.md), sont toujours suivies d’une instruction incorporée. Cette instruction incorporée peut être une seule instruction ou plusieurs instructions placées entre des accolades ({}) dans un bloc d’instructions. Même les instructions incorporées d’une seule ligne peuvent être placées entre des accolades ({}), comme illustré dans l’exemple suivant :  
   
- [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
+ [!code-csharp[csProgGuideStatements#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#26)]  
   
  Une instruction incorporée qui n’est pas placée entre des accolades ({}) ne peut pas être une instruction de déclaration ni une instruction étiquetée. Ceci est illustré dans l'exemple suivant :  
   
- [!code-csharp[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
+ [!code-csharp[csProgGuideStatements#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#27)]  
   
  Placez l’instruction incorporée dans un bloc pour corriger l’erreur :  
   
- [!code-csharp[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
+ [!code-csharp[csProgGuideStatements#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#28)]  
   
 ## <a name="nested-statement-blocks"></a>Blocs d’instructions imbriqués  
  Les blocs d’instructions peuvent être imbriqués, comme illustré dans le code suivant :  
   
- [!code-csharp[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
+ [!code-csharp[csProgGuideStatements#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#29)]  
   
 ## <a name="unreachable-statements"></a>Instructions inaccessibles  
  Si le compilateur détermine que le flux de contrôle ne peut jamais atteindre une instruction particulière, il génère l’avertissement CS0162, comme illustré dans l’exemple suivant :  
   
- [!code-csharp[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
+ [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
 ## <a name="related-sections"></a>Rubriques connexes  
   

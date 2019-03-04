@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8884f2ae230a92f48e93d9b5408ff241f874f92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728357"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968190"
 ---
 # <a name="basic-linq-query-operations-c"></a>Opérations de requête LINQ de base (C#)
 Cette rubrique présente brièvement les expressions de requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] et quelques-uns des types d’opérations classiques que vous effectuez dans une requête. Vous trouverez des informations plus détaillées dans les rubriques suivantes :  
@@ -39,7 +39,7 @@ Cette rubrique présente brièvement les expressions de requête [!INCLUDE[vbtec
 ## <a name="obtaining-a-data-source"></a>Obtention d’une source de données  
  Dans une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la première étape consiste à spécifier la source de données. Dans C#, comme dans la plupart des langages de programmation, une variable doit être déclarée avant de pouvoir être utilisée. Dans une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la clause `from` apparaît en premier pour introduire la source de données (`customers`) et la *variable de portée* (`cust`).  
   
- [!code-csharp[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  La variable de portée est similaire à la variable d’itération dans une boucle `foreach`, à la différence qu’aucune itération réelle ne se produit dans une expression de requête. Quand la requête est exécutée, la variable de portée sert de référence à chaque élément consécutif dans `customers`. Comme le compilateur déduit le type de `cust`, vous n’avez pas à le spécifier explicitement. Des variables de portée supplémentaires peuvent être introduites par une clause `let`. Pour plus d’informations, consultez [let, clause](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -49,22 +49,22 @@ Cette rubrique présente brièvement les expressions de requête [!INCLUDE[vbtec
 ## <a name="filtering"></a>Filtrage  
  L'opération de requête la plus courante est probablement l'application d'un filtre sous forme d'expression booléenne. Du fait du filtre, la requête retourne uniquement les éléments pour lesquels l’expression a la valeur true. Le résultat est produit à l'aide de la clause `where`. En effet, le filtre spécifie les éléments à exclure de la séquence source. Dans l’exemple suivant, seuls les clients (`customers`) qui ont une adresse à Londres sont retournés.  
   
- [!code-csharp[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
   
  Vous pouvez utiliser les opérateurs logiques C# `AND` et `OR` habituels pour appliquer le nombre d’expressions de filtre nécessaire dans la clause `where`. Par exemple, pour retourner uniquement les clients situés à « Londres » ET (`AND`) dont le nom est « Devon », vous devez écrire le code suivant :  
   
- [!code-csharp[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_3.cs)]  
+ [!code-csharp[csLINQGettingStarted#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#25)]  
   
  Pour retourner les clients situés à Londres ou à Paris, vous devez écrire le code suivant :  
   
- [!code-csharp[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_4.cs)]  
+ [!code-csharp[csLINQGettingStarted#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#26)]  
   
  Pour plus d’informations, consultez [where, clause](../../../../csharp/language-reference/keywords/where-clause.md).  
   
 ## <a name="ordering"></a>Classement  
  Il est souvent utile de trier les données retournées. La clause `orderby` permet de trier les éléments de la séquence retournée en fonction du comparateur par défaut pour le type qui est trié. Par exemple, la requête suivante peut être étendue pour trier les résultats selon la propriété `Name`. Comme `Name` est une chaîne, le comparateur par défaut effectue un tri alphabétique de A à Z.  
   
- [!code-csharp[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_5.cs)]  
+ [!code-csharp[csLINQGettingStarted#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#27)]  
   
  Pour trier les résultats dans l’ordre inverse, de Z à A, utilisez la clause `orderby…descending`.  
   
@@ -73,20 +73,20 @@ Cette rubrique présente brièvement les expressions de requête [!INCLUDE[vbtec
 ## <a name="grouping"></a>Regroupement  
  La clause `group` vous permet de grouper vos résultats selon une clé que vous spécifiez. Par exemple, vous pouvez spécifier un regroupement des résultats par ville (`City`) pour que tous les clients de Londres ou Paris soient dans des groupes individuels. Dans ce cas, utilisez la clé `cust.City`.  
   
- [!code-csharp[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_6.cs)]  
+ [!code-csharp[csLINQGettingStarted#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#28)]  
   
  Quand vous terminez une requête avec une clause `group`, les résultats sont présentés sous la forme d’une liste de listes. Chaque élément de la liste est un objet qui a un membre `Key` et une liste d’éléments qui sont regroupés sous cette clé. Quand vous itérez une requête qui produit une séquence de groupes, vous devez utiliser une boucle `foreach` imbriquée. La boucle externe itère chaque groupe et la boucle interne itère les membres de chaque groupe.  
   
  Si vous devez faire référence aux résultats d’une opération de regroupement, utilisez le mot clé `into` pour créer un identificateur susceptible d’être interrogé ultérieurement. La requête suivante retourne uniquement les groupes qui contiennent plus de deux clients :  
   
- [!code-csharp[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_7.cs)]  
+ [!code-csharp[csLINQGettingStarted#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#29)]  
   
  Pour plus d’informations, consultez [group, clause](../../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Jointure  
  Les opérations de jointure créent des associations entre les séquences qui ne sont pas explicitement modélisées dans les sources de données. Par exemple, effectuez une jointure pour rechercher tous les clients et distributeurs qui se trouvent au même endroit. Dans [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la clause `join` fonctionne toujours par rapport à des collections d’objets plutôt que directement par rapport à des tables de base de données.  
   
- [!code-csharp[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
+ [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
  Dans [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous n’avez pas à utiliser `join` aussi souvent que vous le faites dans SQL, car les clés étrangères dans [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sont représentées dans le modèle objet comme des propriétés qui contiennent une collection d’éléments. Par exemple, un objet `Customer` contient une collection d’objets `Order`. Au lieu d’effectuer une jointure, accédez aux commandes en utilisant la notation par points :  
   

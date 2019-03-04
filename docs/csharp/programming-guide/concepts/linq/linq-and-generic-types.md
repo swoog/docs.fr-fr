@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 02540db02d8e413ec254c0642d106ca41b263376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe29bb14b85b74c249a5d9b7f8c2802ef991b13d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662515"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977810"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ et types génériques (C#)
 Les requêtes [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sont basées sur des types génériques, qui ont été introduits dans la version 2.0 du [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Vous ne devez pas avoir une connaissance approfondie des génériques avant de commencer à écrire des requêtes. Il peut cependant être important de comprendre deux concepts de base :  
@@ -25,14 +25,14 @@ Les requêtes [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sont basées sur
 ## <a name="ienumerablet-variables-in-linq-queries"></a>Variables IEnumerable<T\> dans les requêtes LINQ  
  Les variables de requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sont de type <xref:System.Collections.Generic.IEnumerable%601> ou d’un type dérivé tel que <xref:System.Linq.IQueryable%601>. Quand vous voyez une variable de requête typée en `IEnumerable<Customer>`, cela signifie simplement que la requête génère à l’exécution une séquence de zéro ou plusieurs objets `Customer`.  
   
- [!code-csharp[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#34)]  
   
  Pour plus d’informations, consultez [Relations des types dans des opérations de requête LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
 ## <a name="letting-the-compiler-handle-generic-type-declarations"></a>Laisser le compilateur gérer les déclarations de types génériques  
  Si vous préférez, vous pouvez éviter une syntaxe générique en utilisant le mot clé [var](../../../../csharp/language-reference/keywords/var.md). Le mot clé `var` indique au compilateur d’inférer le type d’une variable de requête en examinant la source de données spécifiée dans la clause `from`. L’exemple suivant génère le même code compilé que l’exemple précédent :  
   
- [!code-csharp[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#35)]  
   
  Le mot clé `var` est utile quand le type de la variable est évident ou quand il n'est pas particulièrement important de spécifier explicitement des types génériques imbriqués, comme ceux qui sont produits par des requêtes de groupe. D’une façon générale, si vous utilisez `var`, sachez qu’il peut rendre votre code plus difficile à lire par d’autres développeurs. Pour plus d’informations, consultez [Variables locales implicitement typées](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

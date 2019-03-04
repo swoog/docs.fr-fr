@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 47bd7184e26a643aa8ff17b3e0a0507ab7978216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfd0602ef92f9b0f84a8e1434ef834a328d60f03
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540280"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200271"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Procédure : Implémenter des événements d'interface (Guide de programmation C#)
 Une [interface](../../../csharp/language-reference/keywords/interface.md) peut déclarer un [événement](../../../csharp/language-reference/keywords/event.md). L’exemple suivant montre comment implémenter des événements d’interface dans une classe. En gros, les règles sont les mêmes que quand vous implémentez une propriété ou une méthode d’interface.  
@@ -56,7 +56,7 @@ L’exemple suivant montre comment gérer la situation peu courante dans laquell
   
 En fournissant vos propres accesseurs, vous pouvez spécifier si les deux événements sont représentés par le même événement dans votre classe ou par des événements différents. Par exemple, si les événements doivent être déclenchés à des moments différents en fonction des spécifications de l’interface, vous pouvez associer chaque événement à une implémentation distincte dans votre classe. Dans l’exemple suivant, les abonnés déterminent l’événement `OnDraw` qu’il recevront en effectuant un cast de la référence de la forme en `IShape` ou `IDrawingObject`.  
   
- [!code-csharp[WrapTwoInterfaceEvents](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs#everything)]
+ [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
 ## <a name="see-also"></a>Voir aussi
 

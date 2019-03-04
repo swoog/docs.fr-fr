@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: 6d6e84861ec48be5bccbc050624b0843947cb727
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc968ea9c6f60ea6efda807bf254f595c61f8d4a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539862"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976081"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Procédure : Déclencher les événements de la classe de base dans les classes dérivées (Guide de programmation C#)
 L’exemple suivant montre la méthode standard employée pour déclarer des événements dans une classe de base pour qu’ils puissent être déclenchés à partir de classes dérivées. Ce modèle est largement utilisé dans les classes Windows Forms de la bibliothèque de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -21,7 +21,7 @@ L’exemple suivant montre la méthode standard employée pour déclarer des év
 >  Ne déclarez pas les événements virtuels dans une classe de base et substituez-les dans une classe dérivée. Le compilateur C# ne gère pas correctement ce type d’événement et il n’est pas possible de prévoir si un abonné de l’événement dérivé s’abonnera à l’événement de classe de base.  
   
 ## <a name="example"></a>Exemple  
- [!code-csharp[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
+ [!code-csharp[csProgGuideEvents#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#1)]  
   
 ## <a name="see-also"></a>Voir aussi
 

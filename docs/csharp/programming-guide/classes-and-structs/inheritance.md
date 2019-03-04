@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607015"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202351"
 ---
 # <a name="inheritance-c-programming-guide"></a>Héritage (Guide de programmation C#)
 
@@ -35,7 +35,7 @@ Héritage de classe
   
  L’exemple suivant montre comment les relations de classe de l’illustration précédente sont exprimées en langage C#. L’exemple montre également comment `WorkItem` substitue la méthode virtuelle <xref:System.Object.ToString%2A?displayProperty=nameWithType>, et comment la classe `ChangeRequest` hérite de l’implémentation `WorkItem` de la méthode.  
   
- [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Méthodes abstraites et virtuelles  
  Lorsqu’une classe de base déclare une méthode comme étant [virtual](../../../csharp/language-reference/keywords/virtual.md) (virtuelle), une classe dérivée peut [substituer](../../../csharp/language-reference/keywords/override.md) la méthode avec sa propre implémentation. Si une classe de base déclare un membre comme étant [abstract](../../../csharp/language-reference/keywords/abstract.md) (abstraite), la méthode doit être substituée dans toutes les classes non abstraites qui héritent directement de cette classe. Si une classe dérivée est abstraite, elle hérite des membres abstraits sans les implémenter. Les membres virtuels et abstraits sont la base du polymorphisme, qui est la deuxième caractéristique principale de la programmation orientée objet. Pour plus d’informations, consultez [Polymorphisme](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  

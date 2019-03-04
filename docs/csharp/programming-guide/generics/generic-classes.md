@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 2115b0be2ee2e989b10d2d1834a51efb0b7e2ebb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651784"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970218"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classes génériques (guide de programmation C#)
 Les classes génériques encapsulent des opérations qui ne sont pas spécifiques à un type de données particulier. Les classes génériques sont le plus souvent utilisées avec les collections telles que les listes liées, les tables de hachage, les piles, les files d’attente, les arborescences, etc. Les opérations telles que l’ajout et la suppression d’éléments dans la collection sont exécutées fondamentalement de la même manière quel que soit le type des données stockées.  
@@ -40,27 +40,27 @@ Les classes génériques encapsulent des opérations qui ne sont pas spécifique
   
  Les règles pour les paramètres de type et les contraintes ont plusieurs conséquences sur le comportement de classe générique, surtout en ce qui concerne l’héritage et l’accessibilité des membres. Avant de continuer, vous devez comprendre quelques termes. Pour une classe générique `Node<T>,`, le code client peut référencer la classe soit en spécifiant un argument de type, pour créer un type construit fermé (`Node<int>`), soit en laissant le paramètre de type non spécifié, par exemple quand vous spécifiez une classe de base générique, pour créer un type construit ouvert (`Node<T>`). Les classes génériques peuvent hériter de classes de base concrètes, construites fermées ou construites ouvertes :  
   
- [!code-csharp[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#16)]  
   
  Les classes non génériques, également appelées concrètes, peuvent hériter des classes de base construites fermées, mais pas des classes construites ouvertes ni des paramètres de type parce que le code client ne peut en aucune façon fournir au moment de l’exécution l’argument de type requis pour instancier la classe de base.  
   
- [!code-csharp[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#17)]  
   
  Les classes génériques qui héritent de types construits ouverts doivent fournir des arguments de type pour tout paramètre de type de classe de base qui n’est pas partagé par la classe qui hérite, comme cela est indiqué dans le code suivant :  
   
- [!code-csharp[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#18)]  
   
  Les classes génériques qui héritent des types construits ouverts doivent spécifier des contraintes qui sont un sur-ensemble, ou qui impliquent, des contraintes sur le type de base :  
   
- [!code-csharp[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#19)]  
   
  Les types génériques peuvent utiliser plusieurs paramètres de type et contraintes, comme suit :  
   
- [!code-csharp[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#20)]  
   
  Les types construits ouverts et les types construits fermés peuvent être utilisés comme paramètres de méthode :  
   
- [!code-csharp[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#21)]  
   
  Si une classe générique implémente une interface, toutes les instances de cette classe peuvent être castées à cette interface.  
   

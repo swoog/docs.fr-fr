@@ -5,17 +5,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 16a8c1c9534e121c24289fbbfff14485b0338f63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe7cf3cf1982060d22f648c5e17d002b1a695ac0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743944"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978525"
 ---
 # <a name="using-structs-c-programming-guide"></a>Utilisation de structs (Guide de programmation C#)
 Le type `struct` est approprié pour représenter des objets légers tels que `Point`, `Rectangle`et `Color`. Bien qu’il soit aussi pratique de représenter un point comme [classe](../../../csharp/language-reference/keywords/class.md) avec des [propriétés implémentées automatiquement](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), un [struct](../../../csharp/language-reference/keywords/struct.md) peut être plus efficace dans certains scénarios. Par exemple, si vous déclarez un tableau de 1 000 objets `Point` , vous devez allouer de la mémoire supplémentaire pour faire référence à chacun des objets. Dans ce cas, un struct est moins onéreux. Étant donné que le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contient un objet nommé <xref:System.Drawing.Point>, le struct dans cet exemple est nommé à la place « Coords ».  
   
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
  Définir un constructeur par défaut (sans paramètre) pour un struct constitue une erreur. Vous ne devez pas non plus initialiser un champ d'instance dans le corps d'un struct. Vous pouvez initialiser des membres de struct accessibles en externe seulement en utilisant un constructeur paramétrable, le constructeur par défaut implicite ou un [initialiseur d’objet](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), ou en accédant individuellement aux membres après la déclaration du struct. Tout membre privé ou inaccessible nécessite exclusivement l’utilisation de constructeurs.
   
@@ -37,9 +37,9 @@ Le type `struct` est approprié pour représenter des objets légers tels que `P
  Cet exemple illustre l’initialisation du type `struct` à l’aide des constructeurs par défaut et des constructeurs paramétrables.  
   
 ### <a name="code"></a>Code  
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
- [!code-csharp[csProgGuideObjects#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_2.cs)]  
+ [!code-csharp[csProgGuideObjects#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#2)]  
   
 ## <a name="example-2"></a>Exemple 2  
   
@@ -47,9 +47,9 @@ Le type `struct` est approprié pour représenter des objets légers tels que `P
  Cet exemple montre une caractéristique propre aux structs. Il crée un objet Coords sans utiliser l’opérateur `new`. Si vous remplacez le mot `struct` par le mot `class`, le programme ne peut pas se compiler.  
   
 ### <a name="code"></a>Code  
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
- [!code-csharp[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_3.cs)]  
+ [!code-csharp[csProgGuideObjects#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#3)]  
   
 ## <a name="see-also"></a>Voir aussi
 

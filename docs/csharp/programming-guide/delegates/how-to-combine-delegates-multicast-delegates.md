@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], combining
 - multicast delegates [C#]
 ms.assetid: 4e689450-6d0c-46de-acfd-f961018ae5dd
-ms.openlocfilehash: ebfcba4d2ebebe2697aa01b7109bbf50b8f144e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 426b9f91d3e3328522ec5c7ab043d5074ececc43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631553"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970106"
 ---
 # <a name="how-to-combine-delegates-multicast-delegatesc-programming-guide"></a>Procédure : Combiner des délégués (délégués multicast) (Guide de programmation C#)
 Cet exemple explique comment créer des délégués multicast. Une propriété utile des objets [délégués](../../../csharp/language-reference/keywords/delegate.md) est que plusieurs objets peuvent être assignés à une instance de délégué à l’aide de l’opérateur `+`. Le délégué multicast contient une liste des délégués assignés. Quand le délégué multicast est appelé, il appelle les délégués dans la liste, dans l’ordre. Seuls des délégués de même type peuvent être combinés.  
@@ -19,7 +19,7 @@ Cet exemple explique comment créer des délégués multicast. Une propriété u
  Vous pouvez utiliser l’opérateur `-` pour supprimer un délégué de composant d’un délégué multicast.  
   
 ## <a name="example"></a>Exemple  
- [!code-csharp[csProgGuideDelegates#11](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-combine-delegates-multicast-delegates_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#11)]  
   
 ## <a name="see-also"></a>Voir aussi
 

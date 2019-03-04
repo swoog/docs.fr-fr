@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 07986ac0c49387422aa334711b6997b159151e79
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d5fd244ea22fd48bf5b81d2cdf55127f745c145b
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244959"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835016"
 ---
 # <a name="new-modifier-c-reference"></a>new, modificateur (référence C#)
 
@@ -24,11 +24,11 @@ Dans cet exemple, `BaseC.Invoke` est masqué par `DerivedC.Invoke`. Le champ `x`
 
 Le masquage de noms par le biais de l'héritage peut prendre l'une des formes suivantes :
 
-En général, une constante, un champ, une propriété ou un type qui est introduit dans une classe ou une structure masque tous les membres de la classe de base qui partagent son nom.  Il existe des cas spéciaux.  Par exemple, si vous déclarez un nouveau champ avec le nom `N` pour avoir un type qui n'est pas invocable, et qu'un type de base déclare `N` en tant que méthode, le nouveau champ ne masquera pas la déclaration de base dans la syntaxe d'appel.  Pour plus d’informations, consultez la [spécification du langage C# 5.0](https://www.microsoft.com/download/details.aspx?id=7029) (section « Recherche de membres » dans « Expressions »).
+- En général, une constante, un champ, une propriété ou un type qui est introduit dans une classe ou une structure masque tous les membres de la classe de base qui partagent son nom.  Il existe des cas spéciaux.  Par exemple, si vous déclarez un nouveau champ avec le nom `N` pour avoir un type qui n'est pas invocable, et qu'un type de base déclare `N` en tant que méthode, le nouveau champ ne masquera pas la déclaration de base dans la syntaxe d'appel.  Pour plus d’informations, consultez la [spécification du langage C# 5.0](https://www.microsoft.com/download/details.aspx?id=7029) (section « Recherche de membres » dans « Expressions »).
 
-Une méthode introduite dans une classe ou une structure masque les propriétés, les champs et les types qui partagent ce nom, dans la classe de base. Cela masque également toutes les méthodes de la classe de base ayant la même signature.
+- Une méthode introduite dans une classe ou une structure masque les propriétés, les champs et les types qui partagent ce nom, dans la classe de base. Cela masque également toutes les méthodes de la classe de base ayant la même signature.
 
-Un indexeur introduit dans une classe ou un struct masque tous les indexeurs de la classe de base ayant la même signature.
+- Un indexeur introduit dans une classe ou un struct masque tous les indexeurs de la classe de base ayant la même signature.
 
 L’utilisation des opérateurs `new` et [override](override.md) sur le même membre est une erreur, car ces deux modificateurs ont des significations qui s’excluent mutuellement. Le modificateur `new` crée un nouveau membre avec le même nom et entraîne le masquage du membre d'origine. Le modificateur `override` étend l'implémentation pour un membre hérité.
 

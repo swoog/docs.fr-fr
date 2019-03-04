@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493416"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202221"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Méthodes d’extension (Guide de programmation C#)
 Les méthodes d'extension vous permettent d'« ajouter » des méthodes à des types existants sans créer un type dérivé, ni recompiler ou modifier le type d'origine. Les méthodes d'extension sont un type particulier de méthode statique appelées comme s'il s'agissait de méthodes d'instance sur le type étendu. Pour le code client écrit en C#, F# et Visual Basic, il n’y a aucune différence apparente lors de l’appel entre une méthode d’extension et les méthodes qui sont réellement définies dans un type.  
@@ -21,13 +21,13 @@ Les méthodes d'extension vous permettent d'« ajouter » des méthodes à des
   
  L'exemple suivant indique comment appeler la méthode `OrderBy` d'opérateur de requête standard sur un tableau d'entiers. L'expression entre parenthèses est une expression lambda. De nombreux opérateurs de requête standard prennent des expressions lambda comme paramètres, mais ce n’est pas requis pour les méthodes d’extension. Pour plus d’informations, consultez [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]  
   
  Les méthodes d’extension sont définies comme méthodes statiques mais sont appelées en utilisant la syntaxe de méthode d’instance. Leur premier paramètre spécifie les types sur lesquels la méthode s’applique et le paramètre est précédé du modificateur [this](../../../csharp/language-reference/keywords/this.md). Les méthodes d'extension sont uniquement dans la portée lorsque vous importez explicitement l'espace de noms dans votre code source avec une directive `using`.  
   
  L'exemple suivant présente une méthode d'extension définie pour la classe <xref:System.String?displayProperty=nameWithType>. Notez qu'elle est définie à l'intérieur d'une classe statique, non imbriquée et non générique :  
   
- [!code-csharp[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#4)]  
   
  La méthode d'extension `WordCount` peut être mise à portée avec cette directive `using` :  
   
@@ -64,7 +64,7 @@ using System.Linq;
   
  Lorsque le compilateur ne trouve pas de méthode d’instance avec une signature correspondante, il crée une liaison avec une méthode d’extension correspondante, s’il en existe une.  
   
- [!code-csharp[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]  
   
 ## <a name="general-guidelines"></a>Indications générales  
  En général, nous vous recommandons d'implémenter des méthodes d'extension modérément et uniquement lorsque cela est nécessaire. Dès que cela est possible, le code client qui doit étendre un type existant doit le faire en créant un type dérivé du type existant. Pour plus d’informations, consultez [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  

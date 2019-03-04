@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 948ff6e752b3f5cce870b483340cbbf9f4e78b01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7018afa1272f4ae092863de6b7f9ef783001244
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607713"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965590"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Procédure : Afficher les arguments de ligne de commande (Guide de programmation C#)
 Les arguments fournis à un fichier exécutable sur la ligne de commande sont accessibles à `Main` par l’intermédiaire d’un paramètre facultatif. Les arguments sont fournis sous la forme d’un tableau de chaînes. Chaque élément du tableau contient un argument. Les espaces blancs entre arguments sont supprimés. Par exemple, considérez ces appels de ligne de commande d’un fichier exécutable fictif :  
@@ -27,7 +27,7 @@ Les arguments fournis à un fichier exécutable sur la ligne de commande sont ac
 ## <a name="example"></a>Exemple  
  Cet exemple affiche les arguments de ligne de commande passés à une application de ligne de commande. La sortie présentée concerne la première entrée du tableau ci-dessus.  
   
- [!code-csharp[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-display-command-line-arguments_1.cs)]  
+ [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  
   
 ## <a name="see-also"></a>Voir aussi
 

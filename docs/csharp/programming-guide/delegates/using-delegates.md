@@ -5,33 +5,33 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 77c30db3e59461340ea6ac92f4769de87f4271dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb5721d1c04ad761821bcdae03159f290a802ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570133"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979838"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilisation de délégués (guide de programmation C#)
 Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un type qui encapsule sans risque une méthode ; il est similaire à un pointeur de fonction en C et C++. Toutefois, à la différence des pointeurs de fonction C, les délégués sont orientés objet, de type sécurisé et sûrs. Le type d'un délégué est défini par le nom du délégué. L’exemple suivant déclare un délégué nommé `Del` qui peut encapsuler une méthode acceptant une chaîne ([string](../../../csharp/language-reference/keywords/string.md)) comme argument et qui retourne [void](../../../csharp/language-reference/keywords/void.md) :  
   
- [!code-csharp[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
  Un objet de délégué est normalement construit en fournissant le nom de la méthode que le délégué encapsule, ou avec une [méthode anonyme](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md). Une fois qu'un délégué est instancié, un appel de méthode fait au délégué est transmis par le délégué à cette méthode. Les paramètres passés au délégué par l'appelant sont passés à la méthode et la valeur de retour de la méthode, le cas échéant, est retournée à l'appelant par le délégué. Cette opération est connue sous le nom d'appel du délégué. Un délégué instancié peut être appelé comme s'il s'agissait de la méthode encapsulée elle-même. Par exemple :  
   
- [!code-csharp[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_2.cs)]  
+ [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
- [!code-csharp[csProgGuideDelegates#23](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_3.cs)]  
+ [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]  
   
  Les types délégués sont dérivés de la classe <xref:System.Delegate> du .NET Framework. Les types délégués sont scellés ([sealed](../../../csharp/language-reference/keywords/sealed.md)), c’est-à-dire qu’ils ne peuvent pas être faire l’objet d’une dérivation, et il n’est pas possible de dériver des classes personnalisées à partir de <xref:System.Delegate>. Étant donné que le délégué instancié est un objet, il peut être passé comme paramètre ou assigné à une propriété. Cela permet à une méthode d'accepter un délégué comme paramètre et d'appeler le délégué ultérieurement. Cette opération est connue sous le nom de rappel asynchrone et constitue une méthode courante pour notifier un appelant quand un long processus s'est achevé. Lorsqu'un délégué est ainsi utilisé, le code qui utilise le délégué n'a pas besoin de connaître l'implémentation de la méthode utilisée. La fonctionnalité est semblable à l'encapsulation que fournissent les interfaces.  
   
  Une autre utilisation courante des rappels consiste à définir une méthode de comparaison personnalisée et à passer ce délégué à une méthode de tri. Le code de l'appelant peut ainsi faire partie de l'algorithme de tri. L'exemple de méthode suivant utilise le type `Del` comme paramètre :  
   
- [!code-csharp[csProgGuideDelegates#24](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_4.cs)]  
+ [!code-csharp[csProgGuideDelegates#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#24)]  
   
  Vous pouvez ensuite passer le délégué créé ci-dessus à cette méthode :  
   
- [!code-csharp[csProgGuideDelegates#25](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_5.cs)]  
+ [!code-csharp[csProgGuideDelegates#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#25)]  
   
  et vous recevez le résultat suivant sur la console :  
   
@@ -41,21 +41,21 @@ Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un 
   
  Quand un délégué est construit pour encapsuler une méthode d'instance, le délégué fait référence à l'instance et à la méthode. Un délégué n'ayant aucune connaissance du type d'instance hormis la méthode qu'il encapsule, un délégué peut faire référence à n'importe quel type d'objet tant qu'il existe une méthode sur l'objet correspondant à la signature du délégué. Quand un délégué est construit pour encapsuler une méthode statique, il fait uniquement référence à la méthode. Prenons les déclarations suivantes :  
   
- [!code-csharp[csProgGuideDelegates#26](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_6.cs)]  
+ [!code-csharp[csProgGuideDelegates#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#26)]  
   
  Avec la méthode statique `DelegateMethod` montrée précédemment, nous avons désormais trois méthodes pouvant être encapsulées par une instance `Del`.  
   
  Un délégué peut appeler plusieurs méthodes quand il est appelé. Cette opération se nomme multidiffusion. L'ajout d'une méthode supplémentaire à la liste des méthodes du délégué – la liste d'invocation – nécessite simplement l'ajout de deux délégués à l'aide des opérateurs d'addition ou d'assignation d'addition (« + » ou « += »). Par exemple :  
   
- [!code-csharp[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
+ [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]  
   
  À ce stade, `allMethodsDelegate` contient trois méthodes dans sa liste d'invocation : `Method1`, `Method2` et `DelegateMethod`. Les trois délégués initiaux, `d1`, `d2` et `d3`, restent inchangés. Lors de l'appel de `allMethodsDelegate`, les trois méthodes sont appelées dans l'ordre. Si le délégué utilise des paramètres de référence, la référence est passée séquentiellement à chacune des trois méthodes et toute modification apportée par une méthode est visible dans la méthode suivante. Quand l'une des méthodes lève une exception qui n'est pas interceptée dans la méthode, cette exception est passée à l'appelant du délégué et aucune des méthodes suivantes dans la liste d'invocation n'est appelée. Si le délégué a une valeur de retour et/ou des paramètres out, il retourne la valeur de retour et les paramètres de la dernière méthode appelée. Pour supprimer une méthode de la liste d'invocation, utilisez l'opérateur de décrémentation ou d'assignation de décrémentation (« - » ou « -= »). Par exemple :  
   
- [!code-csharp[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_8.cs)]  
+ [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]  
   
  Étant donné que les types délégués sont dérivés de `System.Delegate`, les méthodes et les propriétés définies par cette classe peuvent être appelées sur le délégué. Par exemple, pour rechercher le nombre de méthodes dans la liste d'invocation d'un délégué, vous pouvez écrire :  
   
- [!code-csharp[csProgGuideDelegates#29](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_9.cs)]  
+ [!code-csharp[csProgGuideDelegates#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#29)]  
   
  Les délégués ayant plusieurs méthodes dans leur liste d'invocation dérivent de <xref:System.MulticastDelegate>, qui est une sous-classe de `System.Delegate`. Le code ci-dessus fonctionne dans les deux cas, car les deux classes prennent en charge `GetInvocationList`.  
   
@@ -63,7 +63,7 @@ Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un 
   
  La comparaison de délégués de deux types différents assignés au moment de la compilation provoque une erreur de compilation. Si les instances de délégué sont statiquement du type `System.Delegate`, la comparaison est alors autorisée, mais retourne la valeur false à l'exécution. Par exemple :  
   
- [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
+ [!code-csharp[csProgGuideDelegates#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#30)]  
   
 ## <a name="see-also"></a>Voir aussi
 

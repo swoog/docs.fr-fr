@@ -10,14 +10,14 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: ca61ee323d98ece1236d9072e14d02385fbdf9f8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c3c875cf5b8d1b5e69cd76cb0ee4df0a989a35a0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241786"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202897"
 ---
-# <a name="-operator-c-reference"></a>?: , opérateur (référence C#)
+# <a name="-operator-c-reference"></a>?: Opérateur (référence C#)
 
 L’opérateur conditionnel `?:`, souvent appelé opérateur conditionnel ternaire, évalue une expression booléenne et retourne le résultat de l’évaluation d’une des deux expressions, selon que l’expression booléenne donne `true` ou `false`. À partir de C# 7.2, [l’expression ref conditionnelle](#conditional-ref-expression) retourne la référence au résultat d’une des deux expressions.
 
@@ -45,7 +45,7 @@ a ? b : (c ? d : e)
 
 L’exemple suivant illustre l’utilisation de l’opérateur conditionnel :
 
-[!code-csharp[non ref condtional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
+[!code-csharp[non ref conditional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>Expression ref conditionnelle
 

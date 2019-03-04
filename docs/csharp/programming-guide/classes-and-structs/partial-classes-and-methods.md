@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 5fdb3de03eaa60a4d29d5a0c7e4082a6806b0ec9
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7e91d77393c4d2980cce73a92589b752124e8077
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441669"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965200"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes et méthodes partielles (Guide de programmation C#)
 Il est possible de fractionner la définition d’une [classe](../../../csharp/language-reference/keywords/class.md), d’un [struct](../../../csharp/language-reference/keywords/struct.md), d’une [interface](../../../csharp/language-reference/keywords/interface.md) ou d’une méthode entre plusieurs fichiers sources. Chaque fichier source contient une section de la définition de méthode ou de type, et toutes les parties sont combinées au moment où l’application est compilée.  
@@ -26,7 +26,7 @@ Il est possible de fractionner la définition d’une [classe](../../../csharp/l
   
 -   Pour fractionner une définition de classe, utilisez le modificateur de mot clé [partial](../../../csharp/language-reference/keywords/partial-type.md), comme ci-dessous :  
   
- [!code-csharp[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]  
   
  Le mot clé `partial` indique que d’autres parties de la classe, du struct ou de l’interface peuvent être définies dans l’espace de noms. Toutes les parties doivent utiliser le mot clé `partial`. Toutes les parties doivent être disponibles à la compilation pour former le type final. Toutes les parties doivent avoir la même accessibilité : `public`, `private`, etc.  
   
@@ -39,15 +39,15 @@ Il est possible de fractionner la définition d’une [classe](../../../csharp/l
   
  L’exemple suivant montre que les types imbriqués peuvent être partiels, même si le type dans lequel ils sont imbriqués n’est pas partiel lui-même.  
   
- [!code-csharp[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#25)]  
   
  Au moment de la compilation, les attributs de définitions de type partiel sont fusionnés. Observez, par exemple, les déclarations suivantes :  
   
- [!code-csharp[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#23)]  
   
  Elles sont équivalentes aux déclarations suivantes :  
   
- [!code-csharp[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#24)]  
   
  Les éléments suivants sont fusionnés à partir de toutes les définitions de type partiel :  
   
@@ -63,24 +63,24 @@ Il est possible de fractionner la définition d’une [classe](../../../csharp/l
   
  Observez, par exemple, les déclarations suivantes :  
   
- [!code-csharp[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#21)]  
   
  Elles sont équivalentes aux déclarations suivantes :  
   
- [!code-csharp[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]  
   
 ### <a name="restrictions"></a>Restrictions  
  Il y a plusieurs règles à respecter quand vous utilisez des définitions de classe partielle :  
   
 -   Toutes les définitions de type partiel conçues comme des parties du même type doivent être modifiées avec `partial`. Par exemple, les déclarations de classe suivantes génèrent une erreur :  
   
-     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+     [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]  
   
 -   Le modificateur `partial` peut uniquement être placé juste avant les mots clés `class`, `struct` ou `interface`.  
   
 -   Les types partiels imbriqués sont autorisés dans les définitions de type partiel, comme illustré dans l’exemple suivant :  
   
-     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+     [!code-csharp[csProgGuideObjects#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#19)]  
   
 -   Toutes les définitions de type partiel conçues comme des parties du même type doivent être définies dans le même assembly et dans le même module (fichier .exe ou .dll). Les définitions partielles ne peuvent pas être fractionnées entre plusieurs modules.  
   
@@ -114,7 +114,7 @@ Il est possible de fractionner la définition d’une [classe](../../../csharp/l
  Dans l’exemple suivant, les champs et le constructeur de la classe `Coords` sont déclarés dans une définition de classe partielle, et le membre `PrintCoords` est déclaré dans une autre définition de classe partielle.  
   
 ### <a name="code"></a>Code  
- [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
+ [!code-csharp[csProgGuideObjects#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#17)]  
   
 ## <a name="example-2"></a>Exemple 2  
   
@@ -122,7 +122,7 @@ Il est possible de fractionner la définition d’une [classe](../../../csharp/l
  L’exemple suivant montre que vous pouvez également développer des interfaces et des structs partiels.  
   
 ### <a name="code"></a>Code  
- [!code-csharp[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
+ [!code-csharp[csProgGuideObjects#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#18)]  
   
 ## <a name="partial-methods"></a>Méthodes partielles  
  Une classe partielle ou un struct partiel peut contenir une méthode partielle. Une partie de la classe contient la signature de la méthode. Une implémentation facultative peut être définie dans la même partie ou dans une autre partie. Si l’implémentation n’est pas fournie, la méthode et tous les appels à cette méthode sont supprimés au moment de la compilation.  
