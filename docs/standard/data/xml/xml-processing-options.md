@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c316ec79b519e1580f1d5dc7e122d770fb5b82e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 585a6e568bde6e6eca15477eaa10b5c91c91c5a4
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583156"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835549"
 ---
 # <a name="xml-processing-options"></a>Options de traitement XML
 Reportez-vous aux tableaux suivants pour obtenir une liste des technologies Microsoft que vous pouvez utiliser pour traiter des données XML.  
@@ -19,7 +19,7 @@ Reportez-vous aux tableaux suivants pour obtenir une liste des technologies Micr
   
 |**Option**|**Type de traitement**|**Description**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(espace de noms <xref:System.Xml.Linq>)|En mémoire|-   Basé sur la technologie LINQ (Langage-Integrated Query) du .NET Framework.<br />-   Fournit une expérience de requête similaire à SQL pour les objets, les données relationnelles et les données XML.<br />-   Fournit des fonctionnalités de création et de transformation de documents intuitives.<br />-   Utilisez cette option si vous écrivez un nouveau code.|  
+|[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) <br/> [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br />(espace de noms <xref:System.Xml.Linq>)|En mémoire|-   Basé sur la technologie LINQ (Langage-Integrated Query) du .NET Framework.<br />-   Fournit une expérience de requête similaire à SQL pour les objets, les données relationnelles et les données XML.<br />-   Fournit des fonctionnalités de création et de transformation de documents intuitives.<br />-   Utilisez cette option si vous écrivez un nouveau code.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Basé sur les flux|-   Fournit un accès rapide, en avant seulement et non mis en cache aux données XML.<br />-   Vous pouvez créer des objets à l’aide de la méthode <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> et spécifier l’ensemble de fonctionnalités à activer sur l’objet avec la classe <xref:System.Xml.XmlReaderSettings>.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Basé sur les flux|-   Fournit un moyen rapide, en avant seulement et non mis en cache de générer des données XML.<br />-   Vous pouvez créer des objets à l’aide de la méthode <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> et spécifier l’ensemble de fonctionnalités à activer sur l’objet avec la classe <xref:System.Xml.XmlWriterSettings>.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|En mémoire|-   Implémente les recommandations du [W3C relatives aux modèles objet de document (DOM), niveaux 1](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) et [2 (noyau)](https://www.w3.org/TR/DOM-Level-2-Core/).<br />-   Vous pouvez créer, insérer, supprimer et modifier des nœuds à l'aide de méthodes et de propriétés basées sur le modèle DOM habituel.<br />-   Utilisez cette option si vous modifiez du code existant qui implémente le modèle W3C DOM.|  
@@ -30,8 +30,8 @@ Reportez-vous aux tableaux suivants pour obtenir une liste des technologies Micr
   
 |**Option**|**Description**|  
 |----------------|---------------------|  
-|[XmlLite](https://msdn.microsoft.com/library/ms752872.aspx)|-   Analyseur XML rapide, sécurisé, sans mise en cache et avant uniquement qui vous permet de créer des applications XML hautes performances.<br />-   Fonctionne avec n'importe quel langage capable d'utiliser des bibliothèques de liens dynamiques (DLL). Nous recommandons l'utilisation de C++.|  
-|[MSXML](https://msdn.microsoft.com/library/ms763742.aspx)|-   Technologie compatible COM pour le traitement du code XML, qui est fournie avec le système d'exploitation Windows.<br />-   Fournit une implémentation native du modèle DOM avec prise en charge de XPath et XSLT.<br />-   Inclut l'analyseur basé sur les événements SAX2.|  
+|[XmlLite](https://docs.microsoft.com/previous-versions/windows/desktop/ms752872(v=vs.85))|-   Analyseur XML rapide, sécurisé, sans mise en cache et avant uniquement qui vous permet de créer des applications XML hautes performances.<br />-   Fonctionne avec n'importe quel langage capable d'utiliser des bibliothèques de liens dynamiques (DLL). Nous recommandons l'utilisation de C++.|  
+|[MSXML](https://docs.microsoft.com/previous-versions/windows/desktop/ms763742(v=vs.85))|-   Technologie compatible COM pour le traitement du code XML, qui est fournie avec le système d'exploitation Windows.<br />-   Fournit une implémentation native du modèle DOM avec prise en charge de XPath et XSLT.<br />-   Inclut l'analyseur basé sur les événements SAX2.|  
   
 ## <a name="see-also"></a>Voir aussi
 

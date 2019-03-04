@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555178"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970569"
 ---
 # <a name="net-class-library-overview"></a>Présentation des bibliothèques de classes .NET
 
@@ -76,7 +76,7 @@ Les implémentations .NET incluent des classes, des interfaces, des délégués 
   
  Par exemple, l’espace de noms `Microsoft.Word` est conforme à cette indication.  
   
- L’utilisation de modèles d’affectation de noms pour regrouper des types associés en espaces de noms est très utile pour générer et documenter les bibliothèques de classes. Cependant, ce schéma d’affectation de noms n’a pas d’effet sur la visibilité, l’accès aux membres, l’héritage, la sécurité ou la liaison. Un espace de noms peut être partitionné en plusieurs assemblys et un seul assembly peut contenir des types provenant de plusieurs espaces de noms. L'assembly fournit la structure formelle pour le versioning, le déploiement, la sécurité, le chargement et la visibilité dans le Common Language Runtime.  
+ L'utilisation de modèles d'affectation de noms pour regrouper des types associés en espaces de noms est très utile pour générer et documenter les bibliothèques de classes. Cependant, ce schéma d’affectation de noms n’a pas d’effet sur la visibilité, l’accès aux membres, l’héritage, la sécurité ou la liaison. Un espace de noms peut être partitionné en plusieurs assemblys et un seul assembly peut contenir des types provenant de plusieurs espaces de noms. L'assembly fournit la structure formelle pour le versioning, le déploiement, la sécurité, le chargement et la visibilité dans le Common Language Runtime.  
   
  Pour plus d’informations sur les espaces de noms et les noms des types, consultez [Système de type commun (CTS, Common Type System)](../../docs/standard/base-types/common-type-system.md).  
   
@@ -96,8 +96,8 @@ Les implémentations .NET incluent des classes, des interfaces, des délégués 
 ||<xref:System.UInt16>|Entier non signé 16 bits.<br /><br /> Non conforme CLS.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|Entier non signé 32 bits.<br /><br /> Non conforme CLS.|**UInteger**|**uint**|**unsigned int**<br /> - ou -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Entier 64 bits non signé.<br /><br /> Non conforme CLS.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|Virgule flottante|<xref:System.Single>|Nombre à virgule flottante (32 bits) simple précision.|**Single**|**float**|**float**|**float32**</br> ou</br>**single**|  
-||<xref:System.Double>|Nombre à virgule flottante (64 bits) double précision.|**Double**|**double**|**double**|**float**</br> ou </br> **double**|  
+|Virgule flottante|<xref:System.Single>|Nombre à virgule flottante (32 bits) simple précision.|**Single**|**float**|**float**|**float32**<br> ou<br>**single**|  
+||<xref:System.Double>|Nombre à virgule flottante (64 bits) double précision.|**Double**|**double**|**double**|**float**<br> ou <br> **double**|  
 |Logique|<xref:System.Boolean>|Valeur booléenne (true ou false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Autre|<xref:System.Char>|Caractère Unicode (16 bits).|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Valeur décimale (128 bits).|**Decimal**|**decimal**|**Decimal**|**decimal**|  

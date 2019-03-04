@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 4b41d05a1394e009541bed47fa4d2d8ccadd4bb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ae01057f2f2caa7ce07731c3a38f2496484713
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585940"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971760"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Procédure : créer une clé de Registre et définir sa valeur en Visual Basic
 Vous pouvez utiliser la méthode `CreateSubKey` de l’objet `My.Computer.Registry` pour créer une clé de Registre.  
@@ -27,22 +27,22 @@ Vous pouvez utiliser la méthode `CreateSubKey` de l’objet `My.Computer.Regist
   
 -   Utilisez la méthode `CreateSubKey`, en spécifiant le nom de la clé et sous quelle ruche la placer. Le paramètre `Subkey` ne respecte pas la casse. Cet exemple crée la clé de Registre `MyTestKey` sous HKEY_CURRENT_USER.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
+     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Pour créer une clé de Registre et définir sa valeur  
   
 1.  Utilisez la méthode `CreateSubkey`, en spécifiant le nom de la clé et sous quelle ruche la placer. Cet exemple crée la clé de Registre `MyTestKey` sous HKEY_CURRENT_USER.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
+     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
 2.  Définissez la valeur avec la méthode `SetValue`. Cet exemple définit « This is a test value » comme valeur de chaîne « MyTestKeyValue ».  
   
-     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_2.vb)]  
+     [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Exemple  
  Cet exemple crée la clé de Registre `MyTestKey` sous HKEY_CURRENT_USER, puis affecte `This is a test value` comme valeur de chaîne `MyTestKeyValue`.  
   
- [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_3.vb)]  
+ [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Examinez la structure du Registre pour rechercher un emplacement approprié pour votre clé. Par exemple, vous souhaiterez peut-être ouvrir la clé HKEY_CURRENT_USER\Software de l’utilisateur actuel et créer une clé avec le nom de votre société. Ensuite, ajoutez les valeurs de Registre à la clé de votre société.  

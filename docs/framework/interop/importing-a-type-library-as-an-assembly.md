@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218905"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835237"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importation d'une bibliothèque de types sous la forme d'un assembly
 Les définitions des types COM résident généralement dans une bibliothèque de types. Les compilateurs conformes CLS produisent quant à eux les métadonnées des types dans un assembly. Ces deux sources d’informations sur les types sont assez différentes. Cette rubrique décrit des techniques permettant de générer des métadonnées à partir d’une bibliothèque de types. L’assembly résultant est appelé assembly d’interopérabilité, et les informations de type qu’il contient permettent aux applications .NET Framework d’utiliser des types COM.  
@@ -44,7 +44,7 @@ Les définitions des types COM résident généralement dans une bibliothèque d
   
 -   Visual Studio  
   
-     Visual Studio convertit automatiquement des types COM dans une bibliothèque de types en métadonnées dans un assembly. Pour obtenir des instructions, consultez [Guide pratique pour ajouter des références aux bibliothèques de types](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md), [Procédure pas à pas : Incorporation d’informations de type provenant d’assemblys Microsoft Office dans Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md) et [Procédure pas à pas : Incorporation d’informations de type provenant d’assemblys Microsoft Office dans Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md).  
+     Visual Studio convertit automatiquement des types COM dans une bibliothèque de types en métadonnées dans un assembly. Pour obtenir des instructions, consultez [Guide pratique pour ajouter des références aux bibliothèques de types](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 -   [Tlbimp.exe (importateur de bibliothèques de types)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -81,5 +81,3 @@ Les définitions des types COM résident généralement dans une bibliothèque d
 - [Déploiement d'une application d'interopérabilité](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [Guide pratique pour ajouter des références aux bibliothèques de types](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [Guide pratique pour générer des assemblys d’interopérabilité à partir de bibliothèques de types](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [Procédure pas à pas : Incorporation d’informations de type provenant d’assemblys Microsoft Office dans Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [Procédure pas à pas : Incorporation d’informations de type provenant d’assemblys Microsoft Office dans Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

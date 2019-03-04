@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b764febc17258bc6d929c6d988a02b58f3e2351
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0d6ff9ced6fe8cb730c755579722e59c07dac5c
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664549"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836498"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migration depuis la classe XslTransform
 
@@ -30,7 +30,7 @@ L’architecture XSLT a été repensée dans la version 2005 de Visual Studio. L
 >  Bien que les performances globales de la classe <xref:System.Xml.Xsl.XslCompiledTransform> soient meilleures que celles de la classe <xref:System.Xml.Xsl.XslTransform>, la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> de la classe <xref:System.Xml.Xsl.XslCompiledTransform> peut s'exécuter plus lentement que la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A> de la classe <xref:System.Xml.Xsl.XslTransform> la première fois qu'elle est appelée pour une transformation. C'est parce que le fichier XSLT doit être compilé avant d'être chargé. Pour plus d’informations, consultez le billet de blog suivant : [XslCompiledTransform plus lent que XslTransform ?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
 
 ## <a name="security"></a>Sécurité
- Par défaut, la classe <xref:System.Xml.Xsl.XslCompiledTransform> désactive la prise en charge de la fonction XSLT `document()` et les scripts intégrés par défaut. Ces fonctions peuvent être activées en créant un objet <xref:System.Xml.Xsl.XsltSettings> où les fonctions sont activées et en le passant à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. L'exemple suivant montre comment activer les scripts et effectuer une transformation XSLT.
+ Par défaut, la classe <xref:System.Xml.Xsl.XslCompiledTransform> désactive la prise en charge de la fonction XSLT `document()` et les scripts intégrés par défaut. Ces fonctionnalités peuvent être activées en créant un objet <xref:System.Xml.Xsl.XsltSettings> où les fonctionnalités sont activées et en le passant à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. L'exemple suivant montre comment activer les scripts et effectuer une transformation XSLT.
 
  [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
  [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
@@ -81,7 +81,7 @@ XmlDocument doc = new XmlDocument();
 doc.Load(xslt.Transform(input, (XsltArgumentList)null));  
 ```  
   
- La classe <xref:System.Xml.Xsl.XslCompiledTransform> ne prend pas en charge la transformation vers un objet <xref:System.Xml.XmlReader>. Vous pouvez cependant effectuer une opération similaire en utilisant la méthode <xref:System.Xml.XPath.XPathNavigator.CreateNavigator%2A> pour charger directement l’arborescence XML résultante à partir d’un <xref:System.Xml.XmlWriter>. Le code C# suivant montre comment exécuter la même tâche à l'aide de <xref:System.Xml.Xsl.XslCompiledTransform>.  
+ La classe <xref:System.Xml.Xsl.XslCompiledTransform> ne prend pas en charge la transformation vers un objet <xref:System.Xml.XmlReader>. Vous pouvez cependant effectuer une opération similaire en utilisant la méthode <xref:System.Xml.XPath.XPathNavigator.CreateNavigator%2A> pour charger directement l’arborescence XML résultante à partir d’un <xref:System.Xml.XmlWriter>. Le code C# suivant montre comment exécuter la même tâche à l’aide de <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ```  
 // Transform input document to XmlDocument for additional processing  
@@ -99,7 +99,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 -   Seules les méthodes publiques peuvent être appelées à partir des expressions XPath.  
   
--   Il est possible de différencier les surcharges en fonction du nombre d'arguments. Si plusieurs surcharges ont le même nombre d'arguments, une exception est levée.  
+-   Il est possible de différencier les surcharges en fonction du nombre d’arguments. Si plusieurs surcharges ont le même nombre d'arguments, une exception est levée.  
   
  Dans <xref:System.Xml.Xsl.XslCompiledTransform>, une liaison (recherche de nom de méthode) vers des fonctions de script se produit au moment de la compilation, et les feuilles de style qui fonctionnaient avec XslTranform peuvent déclencher une exception lorsqu'elles sont chargées avec <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
@@ -110,11 +110,11 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 ### <a name="msxml-functions"></a>Fonctions MSXML  
  La prise en charge de fonctions MSXML supplémentaires a été ajoutée à la classe <xref:System.Xml.Xsl.XslCompiledTransform>. La liste suivante décrit les fonctionnalités nouvelles ou améliorées :  
   
--   msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> avait besoin que l'argument de la fonction [node-set Function](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) soit un fragment de l'arborescence de résultats. La classe <xref:System.Xml.Xsl.XslCompiledTransform> n’impose pas cette exigence.  
+-   msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> avait besoin que l'argument de la fonction [node-set Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) soit un fragment de l'arborescence de résultats. La classe <xref:System.Xml.Xsl.XslCompiledTransform> n’impose pas cette exigence.  
   
 -   msxsl:version: cette fonction est prise en charge dans <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   Fonctions d’extension XPath : les fonctions [ms:string-compare Function](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc Function](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri Function](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name Function](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number Function](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date Function](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) et [ms:format-time Function](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) sont maintenant prises en charge.  
+-   Fonctions d’extension XPath : les fonctions [ms:string-compare Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) et [ms:format-time Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) sont maintenant prises en charge.  
   
 -   Fonctions d’extension XPath liées au schéma : ces fonctions ne sont pas prises en charge en mode natif par <xref:System.Xml.Xsl.XslCompiledTransform>. Toutefois, elles peuvent être implémentées en tant que fonctions d’extension.  
   

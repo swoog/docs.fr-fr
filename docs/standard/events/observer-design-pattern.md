@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578111"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836563"
 ---
 # <a name="observer-design-pattern"></a>Modèle de design observateur
 Le modèle de design Observateur permet à un abonné de s’inscrire auprès d’un fournisseur et d’en recevoir des notifications. Il convient pour les scénarios nécessitant des notifications selon le modèle push. Le modèle définit un *fournisseur* (également appelé un *sujet* ou un *observable*) et zéro, un ou plusieurs *observateurs*. Les observateurs s'inscrivent auprès du fournisseur et, chaque fois qu'une condition prédéfinie, un événement ou un changement d'état se produit, le fournisseur notifie automatiquement tous les observateurs en appelant l'une de leurs méthodes. Dans cet appel de méthode, le fournisseur peut également fournir des informations sur l'état actuel aux observateurs. Dans le .NET Framework, le modèle de design Observateur est appliqué en implémentant les interfaces génériques <xref:System.IObservable%601?displayProperty=nameWithType> et <xref:System.IObserver%601?displayProperty=nameWithType>. Le paramètre de type générique représente le type qui fournit les informations de notification.  
   
 ## <a name="applying-the-pattern"></a>Application du modèle  
- Le modèle de design Observateur convient pour les notifications push distribuées, car il prend en charge une séparation nette entre deux composants différents ou deux couches applicatives différentes, comme une couche de source de données (logique métier) et une couche d'interface utilisateur (affichage). Le modèle peut être implémenté chaque fois qu'un fournisseur utilise des rappels pour fournir les informations actuelles à ses clients.  
+ Le modèle de design Observateur convient pour les notifications push distribuées, car il prend en charge une séparation nette entre deux composants différents ou deux couches applicatives différentes, comme une couche de source de données (logique métier) et une couche d'interface utilisateur (affichage). Le modèle peut être implémenté chaque fois qu’un fournisseur utilise des rappels pour fournir les informations actuelles à ses clients.  
   
- Vous devez fournir les éléments suivants pour l'implémentation du modèle :  
+ Vous devez fournir les éléments suivants pour l’implémentation du modèle :  
   
 -   Un fournisseur ou un sujet, qui est l'objet qui envoie les notifications aux observateurs. Un fournisseur est une classe ou une structure qui implémente l'interface <xref:System.IObservable%601>. Le fournisseur doit implémenter une seule méthode, <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, qui est appelée par les observateurs qui veulent recevoir des notifications du fournisseur.  
   
@@ -46,7 +46,7 @@ Le modèle de design Observateur permet à un abonné de s’inscrire auprès d�
 -   Un objet qui contient les données que le fournisseur envoie à ses observateurs. Le type de cet objet correspond au paramètre de type générique des interfaces <xref:System.IObservable%601> et <xref:System.IObserver%601>. Bien que cet objet puisse être le même que l'implémentation de <xref:System.IObservable%601>, il s'agit généralement d'un type distinct.  
   
 > [!NOTE]
->  En plus d'implémenter le modèle de design Observateur, vous pouvez être intéressé par l'exploration des bibliothèques générées à l'aide des interfaces <xref:System.IObservable%601> et <xref:System.IObserver%601>. Par exemple, les [Extensions réactives pour .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) se composent d’un ensemble de méthodes d’extension et d’opérateurs de séquence standard LINQ pour prendre en charge la programmation asynchrone.  
+>  En plus d’implémenter le modèle de design Observateur, vous pouvez être intéressé par l’exploration des bibliothèques générées à l’aide des interfaces <xref:System.IObservable%601> et <xref:System.IObserver%601>. Par exemple, les [Extensions réactives pour .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) se composent d’un ensemble de méthodes d’extension et d’opérateurs de séquence standard LINQ pour prendre en charge la programmation asynchrone.  
   
 ## <a name="implementing-the-pattern"></a>Implémentation du modèle  
  L'exemple suivant utilise le modèle de design Observateur pour implémenter un système de restitution des bagages d'un aéroport. Une classe `BaggageInfo` fournit des informations sur les vols arrivés et sur les tapis roulants où les bagages de chaque vol peuvent être récupérés. Elle est montrée dans l'exemple suivant.  
@@ -67,11 +67,11 @@ Le modèle de design Observateur permet à un abonné de s’inscrire auprès d�
   
  Les clients qui veulent recevoir des informations mises à jour appellent la méthode `BaggageHandler.Subscribe`. Si le client ne s'est pas auparavant abonné aux notifications, une référence à l'implémentation de <xref:System.IObserver%601> du client est ajoutée à la collection `observers`.  
   
- La méthode `BaggageHandler.BaggageStatus` surchargée peut être appelée pour indiquer que les bagages d'un vol sont en cours de déchargement ou que leur déchargement est terminé. Dans le premier cas, les informations suivantes sont passées à la méthode : un numéro de vol, l'aéroport de provenance du vol et le tapis roulant où les bagages sont déchargés. Dans le deuxième cas, seul un numéro de vol est passé à la méthode. Pour les bagages en cours de déchargement, la méthode vérifie si les informations `BaggageInfo` passées à la méthode existent dans la collection `flights`. Si elles n'y existent pas, la méthode ajoute les informations et appelle la méthode `OnNext` de chaque observateur. Pour les vols dont le déchargement des bagages est terminé, la méthode vérifie si les informations de ce vol sont stockées dans la collection `flights`. Si c'est le cas, la méthode appelle la méthode `OnNext` de chaque observateur et supprime l'objet `BaggageInfo` de la collection `flights`.  
+ La méthode `BaggageHandler.BaggageStatus` surchargée peut être appelée pour indiquer que les bagages d'un vol sont en cours de déchargement ou que leur déchargement est terminé. Dans le premier cas, les informations suivantes sont passées à la méthode : un numéro de vol, l'aéroport de provenance du vol et le tapis roulant où les bagages sont déchargés. Dans le deuxième cas, seul un numéro de vol est passé à la méthode. Pour les bagages en cours de déchargement, la méthode vérifie si les informations `BaggageInfo` passées à la méthode existent dans la collection `flights`. Si elles n'y existent pas, la méthode ajoute les informations et appelle la méthode `OnNext` de chaque observateur. Pour les vols dont le déchargement des bagages est terminé, la méthode vérifie si les informations de ce vol sont stockées dans la collection `flights`. Si c’est le cas, la méthode appelle la méthode `OnNext` de chaque observateur et supprime l’objet `BaggageInfo` de la collection `flights`.  
   
  Quand le dernier vol de la journée a atterri et que ses bagages ont été traités, la méthode `BaggageHandler.LastBaggageClaimed` est appelée. Cette méthode appelle la méthode `OnCompleted` de chaque observateur pour indiquer que toutes les notifications ont été effectuées, puis supprime la collection `observers`.  
   
- La méthode <xref:System.IObservable%601.Subscribe%2A> du fournisseur retourne une implémentation de <xref:System.IDisposable> qui permet aux observateurs d'arrêter de recevoir des notifications avant que la méthode <xref:System.IObserver%601.OnCompleted%2A> soit appelée. Le code source de cette classe `Unsubscriber(Of BaggageInfo)` est montré dans l'exemple suivant. Quand la classe est instanciée dans la méthode `BaggageHandler.Subscribe`, deux références lui sont passées : une référence à la collection `observers` et une référence à l'observateur qui est ajouté à la collection. Ces références sont affectées à des variables locales. Quand la méthode `Dispose` de l'objet est appelée, elle vérifie si l'observateur existe toujours dans la collection `observers` et, le cas échéant, elle supprime l'observateur.  
+ La méthode <xref:System.IObservable%601.Subscribe%2A> du fournisseur retourne une implémentation de <xref:System.IDisposable> qui permet aux observateurs d'arrêter de recevoir des notifications avant que la méthode <xref:System.IObserver%601.OnCompleted%2A> soit appelée. Le code source de cette classe `Unsubscriber(Of BaggageInfo)` est montré dans l'exemple suivant. Quand la classe est instanciée dans la méthode `BaggageHandler.Subscribe`, deux références lui sont passées : une référence à la collection `observers` et une référence à l’observateur qui est ajouté à la collection. Ces références sont affectées à des variables locales. Quand la méthode `Dispose` de l’objet est appelée, elle vérifie si l’observateur existe toujours dans la collection `observers` et, le cas échéant, elle supprime l’observateur.  
   
  [!code-csharp[Conceptual.ObserverDesignPattern#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/provider.cs#3)]
  [!code-vb[Conceptual.ObserverDesignPattern#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/provider.vb#3)]  
@@ -92,6 +92,6 @@ Le modèle de design Observateur permet à un abonné de s’inscrire auprès d�
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Meilleures pratiques du modèle de design observateur](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Décrit les meilleures pratiques à adopter lors du développement d’applications qui implémentent le modèle de design Observateur.|  
+|[Meilleures pratiques du modèle de design observateur](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Décrit les meilleures pratiques à adopter lors du développement d'applications qui implémentent le modèle de design Observateur.|  
 |[Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)|Fournit une implémentation pas à pas d'un fournisseur pour une application de surveillance de la température.|  
-|[Guide pratique pour implémenter une méthode Observer](../../../docs/standard/events/how-to-implement-an-observer.md)|Fournit une implémentation pas à pas d'un observateur pour une application de surveillance de la température.|
+|[Guide pratique pour implémenter un observateur](../../../docs/standard/events/how-to-implement-an-observer.md)|Fournit une implémentation pas à pas d'un observateur pour une application de surveillance de la température.|

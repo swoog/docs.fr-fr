@@ -4,19 +4,19 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827472"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202104"
 ---
 # <a name="development-process-for-azure"></a>Processus de développement pour Azure
 
 > _« Avec le cloud, particuliers et petites entreprises peuvent configurer des services d’entreprise en un clin d’œil. »_  
 > _- Roy Stephan_
 
- ## <a name="vision"></a>Vision
+## <a name="vision"></a>Vision
 
 > *Développez comme vous voulez des applications ASP .NET Core bien conçues avec Visual Studio ou l’interface CLI dotnet et Visual Studio Code ou l’éditeur de votre choix.*
 

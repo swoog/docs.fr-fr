@@ -5,18 +5,18 @@ helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: e9eedb6dafdd181b254610331899b5df7ac0823f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 397db70cc8f5977bd861e9e6d6df2f0c8f884db2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661371"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967008"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Procédure : créer un fichier en Visual Basic
 Cet exemple crée un fichier texte vide à l’emplacement spécifié à l’aide de la méthode <xref:System.IO.File.Create%2A> de la classe <xref:System.IO.File>.  
   
 ## <a name="example"></a>Exemple  
- [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
+ [!code-vb[VbFileIOMisc#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/class2.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  Utilisez la variable `file` pour écrire dans le fichier.  
