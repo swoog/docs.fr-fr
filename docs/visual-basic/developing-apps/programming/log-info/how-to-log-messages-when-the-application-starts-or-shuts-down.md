@@ -9,58 +9,58 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: 20eabd08db0763ec08bb28add41ff63fa3196dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40236a1ab5daea0003fce0ad6e35e258a42cc405
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585628"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973923"
 ---
-# <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a><span data-ttu-id="e9ea6-102">Procédure : enregistrer des messages lorsque l’application démarre ou s’arrête (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9ea6-102">How to: Log Messages When the Application Starts or Shuts Down (Visual Basic)</span></span>
-<span data-ttu-id="e9ea6-103">Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistrer des informations sur les événements qui se produisent dans votre application.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="e9ea6-104">Cet exemple montre comment utiliser la méthode `My.Application.Log.WriteEntry` avec les événements `Startup` et `Shutdown` pour enregistrer des informations de traçage.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-104">This example shows how to use the `My.Application.Log.WriteEntry` method with the `Startup` and `Shutdown` events to write tracing information.</span></span>  
+# <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a><span data-ttu-id="4d966-102">Procédure : enregistrer des messages lorsque l’application démarre ou s’arrête (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4d966-102">How to: Log Messages When the Application Starts or Shuts Down (Visual Basic)</span></span>
+<span data-ttu-id="4d966-103">Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistrer des informations sur les événements qui se produisent dans votre application.</span><span class="sxs-lookup"><span data-stu-id="4d966-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="4d966-104">Cet exemple montre comment utiliser la méthode `My.Application.Log.WriteEntry` avec les événements `Startup` et `Shutdown` pour enregistrer des informations de traçage.</span><span class="sxs-lookup"><span data-stu-id="4d966-104">This example shows how to use the `My.Application.Log.WriteEntry` method with the `Startup` and `Shutdown` events to write tracing information.</span></span>  
   
-### <a name="to-access-the-applications-event-handler-code"></a><span data-ttu-id="e9ea6-105">Pour accéder au code du gestionnaire d’événements de l’application</span><span class="sxs-lookup"><span data-stu-id="e9ea6-105">To access the application's event-handler code</span></span>  
+### <a name="to-access-the-applications-event-handler-code"></a><span data-ttu-id="4d966-105">Pour accéder au code du gestionnaire d’événements de l’application</span><span class="sxs-lookup"><span data-stu-id="4d966-105">To access the application's event-handler code</span></span>  
   
-1.  <span data-ttu-id="e9ea6-106">Sélectionnez un projet dans l' **Explorateur de solutions**.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-106">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="e9ea6-107">Dans le menu **Projet** , choisissez **Propriétés**.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-107">On the **Project** menu, choose **Properties**.</span></span>  
+1.  <span data-ttu-id="4d966-106">Sélectionnez un projet dans l' **Explorateur de solutions**.</span><span class="sxs-lookup"><span data-stu-id="4d966-106">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="4d966-107">Dans le menu **Projet** , choisissez **Propriétés**.</span><span class="sxs-lookup"><span data-stu-id="4d966-107">On the **Project** menu, choose **Properties**.</span></span>  
   
-2.  <span data-ttu-id="e9ea6-108">Cliquez sur l’onglet **Application** .</span><span class="sxs-lookup"><span data-stu-id="e9ea6-108">Click the **Application** tab.</span></span>  
+2.  <span data-ttu-id="4d966-108">Cliquez sur l’onglet **Application** .</span><span class="sxs-lookup"><span data-stu-id="4d966-108">Click the **Application** tab.</span></span>  
   
-3.  <span data-ttu-id="e9ea6-109">Cliquez sur le bouton **Afficher les événements de l’application** pour ouvrir l’éditeur de code.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-109">Click the **View Application Events** button to open the Code Editor.</span></span>  
+3.  <span data-ttu-id="4d966-109">Cliquez sur le bouton **Afficher les événements de l’application** pour ouvrir l’éditeur de code.</span><span class="sxs-lookup"><span data-stu-id="4d966-109">Click the **View Application Events** button to open the Code Editor.</span></span>  
   
-     <span data-ttu-id="e9ea6-110">Le fichier ApplicationEvents.vb s’ouvre.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-110">This opens the ApplicationEvents.vb file.</span></span>  
+     <span data-ttu-id="4d966-110">Le fichier ApplicationEvents.vb s’ouvre.</span><span class="sxs-lookup"><span data-stu-id="4d966-110">This opens the ApplicationEvents.vb file.</span></span>  
   
-### <a name="to-log-messages-when-the-application-starts"></a><span data-ttu-id="e9ea6-111">Pour enregistrer des messages quand l’application démarre</span><span class="sxs-lookup"><span data-stu-id="e9ea6-111">To log messages when the application starts</span></span>  
+### <a name="to-log-messages-when-the-application-starts"></a><span data-ttu-id="4d966-111">Pour enregistrer des messages quand l’application démarre</span><span class="sxs-lookup"><span data-stu-id="4d966-111">To log messages when the application starts</span></span>  
   
-1.  <span data-ttu-id="e9ea6-112">Ouvrez le fichier ApplicationEvents.vb dans l’éditeur de code.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-112">Have the ApplicationEvents.vb file open in the Code Editor.</span></span> <span data-ttu-id="e9ea6-113">Dans le menu **Général** , choisissez **Événements MyApplication**.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-113">On the **General** menu, choose **MyApplication Events**.</span></span>  
+1.  <span data-ttu-id="4d966-112">Ouvrez le fichier ApplicationEvents.vb dans l’éditeur de code.</span><span class="sxs-lookup"><span data-stu-id="4d966-112">Have the ApplicationEvents.vb file open in the Code Editor.</span></span> <span data-ttu-id="4d966-113">Dans le menu **Général** , choisissez **Événements MyApplication**.</span><span class="sxs-lookup"><span data-stu-id="4d966-113">On the **General** menu, choose **MyApplication Events**.</span></span>  
   
-2.  <span data-ttu-id="e9ea6-114">Dans le menu **Déclarations** , choisissez **Démarrage**.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-114">On the **Declarations** menu, choose **Startup**.</span></span>  
+2.  <span data-ttu-id="4d966-114">Dans le menu **Déclarations** , choisissez **Démarrage**.</span><span class="sxs-lookup"><span data-stu-id="4d966-114">On the **Declarations** menu, choose **Startup**.</span></span>  
   
-     <span data-ttu-id="e9ea6-115">L’application déclenche l’événement <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> avant l’exécution de l’application principale.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-115">The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> event before the main application runs.</span></span>  
+     <span data-ttu-id="4d966-115">L’application déclenche l’événement <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> avant l’exécution de l’application principale.</span><span class="sxs-lookup"><span data-stu-id="4d966-115">The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> event before the main application runs.</span></span>  
   
-3.  <span data-ttu-id="e9ea6-116">Ajoutez la méthode `My.Application.Log.WriteEntry` au gestionnaire d’événements `Startup` .</span><span class="sxs-lookup"><span data-stu-id="e9ea6-116">Add the `My.Application.Log.WriteEntry` method to the `Startup` event handler.</span></span>  
+3.  <span data-ttu-id="4d966-116">Ajoutez la méthode `My.Application.Log.WriteEntry` au gestionnaire d’événements `Startup` .</span><span class="sxs-lookup"><span data-stu-id="4d966-116">Add the `My.Application.Log.WriteEntry` method to the `Startup` event handler.</span></span>  
   
-     [!code-vb[VbVbalrMyApplicationLog#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#1)]  
   
-### <a name="to-log-messages-when-the-application-shuts-down"></a><span data-ttu-id="e9ea6-117">Pour enregistrer des messages quand l’application s’arrête</span><span class="sxs-lookup"><span data-stu-id="e9ea6-117">To log messages when the application shuts down</span></span>  
+### <a name="to-log-messages-when-the-application-shuts-down"></a><span data-ttu-id="4d966-117">Pour enregistrer des messages quand l’application s’arrête</span><span class="sxs-lookup"><span data-stu-id="4d966-117">To log messages when the application shuts down</span></span>  
   
-1.  <span data-ttu-id="e9ea6-118">Ouvrez le fichier ApplicationEvents.vb dans l’éditeur de code.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-118">Have the ApplicationEvents.vb file open in the Code Editor.</span></span> <span data-ttu-id="e9ea6-119">Dans le menu **Général** , choisissez **Événements MyApplication**.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-119">On the **General** menu, choose **MyApplication Events**.</span></span>  
+1.  <span data-ttu-id="4d966-118">Ouvrez le fichier ApplicationEvents.vb dans l’éditeur de code.</span><span class="sxs-lookup"><span data-stu-id="4d966-118">Have the ApplicationEvents.vb file open in the Code Editor.</span></span> <span data-ttu-id="4d966-119">Dans le menu **Général** , choisissez **Événements MyApplication**.</span><span class="sxs-lookup"><span data-stu-id="4d966-119">On the **General** menu, choose **MyApplication Events**.</span></span>  
   
-2.  <span data-ttu-id="e9ea6-120">Dans le menu **Déclarations** , choisissez **Arrêt**.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-120">On the **Declarations** menu, choose **Shutdown**.</span></span>  
+2.  <span data-ttu-id="4d966-120">Dans le menu **Déclarations** , choisissez **Arrêt**.</span><span class="sxs-lookup"><span data-stu-id="4d966-120">On the **Declarations** menu, choose **Shutdown**.</span></span>  
   
-     <span data-ttu-id="e9ea6-121">L’application déclenche l’événement <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> après l’exécution de l’application principale, mais avant qu’elle s’arrête.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-121">The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> event after the main application runs, but before it shuts down.</span></span>  
+     <span data-ttu-id="4d966-121">L’application déclenche l’événement <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> après l’exécution de l’application principale, mais avant qu’elle s’arrête.</span><span class="sxs-lookup"><span data-stu-id="4d966-121">The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> event after the main application runs, but before it shuts down.</span></span>  
   
-3.  <span data-ttu-id="e9ea6-122">Ajoutez la méthode `My.Application.Log.WriteEntry` au gestionnaire d’événements `Shutdown` .</span><span class="sxs-lookup"><span data-stu-id="e9ea6-122">Add the `My.Application.Log.WriteEntry` method to the `Shutdown` event handler.</span></span>  
+3.  <span data-ttu-id="4d966-122">Ajoutez la méthode `My.Application.Log.WriteEntry` au gestionnaire d’événements `Shutdown` .</span><span class="sxs-lookup"><span data-stu-id="4d966-122">Add the `My.Application.Log.WriteEntry` method to the `Shutdown` event handler.</span></span>  
   
-     [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_2.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#2)]  
   
-## <a name="example"></a><span data-ttu-id="e9ea6-123">Exemple</span><span class="sxs-lookup"><span data-stu-id="e9ea6-123">Example</span></span>  
- <span data-ttu-id="e9ea6-124">Vous pouvez utiliser le **Concepteur de projets** pour accéder aux événements de l’application dans l’éditeur de code.</span><span class="sxs-lookup"><span data-stu-id="e9ea6-124">You can use the **Project Designer** to access the application events in the Code Editor.</span></span> <span data-ttu-id="e9ea6-125">Pour plus d’informations, consultez [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="e9ea6-125">For more information, see [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span></span>  
+## <a name="example"></a><span data-ttu-id="4d966-123">Exemple</span><span class="sxs-lookup"><span data-stu-id="4d966-123">Example</span></span>  
+ <span data-ttu-id="4d966-124">Vous pouvez utiliser le **Concepteur de projets** pour accéder aux événements de l’application dans l’éditeur de code.</span><span class="sxs-lookup"><span data-stu-id="4d966-124">You can use the **Project Designer** to access the application events in the Code Editor.</span></span> <span data-ttu-id="4d966-125">Pour plus d’informations, consultez [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="4d966-125">For more information, see [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span></span>  
   
- [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_3.vb)]  
+ [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="e9ea6-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e9ea6-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d966-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4d966-126">See also</span></span>
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [<span data-ttu-id="e9ea6-127">Page Application, Concepteur de projets (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9ea6-127">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [<span data-ttu-id="e9ea6-128">Utilisation des journaux des applications</span><span class="sxs-lookup"><span data-stu-id="e9ea6-128">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="4d966-127">Page Application, Concepteur de projets (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4d966-127">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [<span data-ttu-id="4d966-128">Utilisation des journaux des applications</span><span class="sxs-lookup"><span data-stu-id="4d966-128">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
