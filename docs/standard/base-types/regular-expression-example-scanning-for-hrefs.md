@@ -1,5 +1,5 @@
 ---
-title: "Exemple d'expression régulière : recherche de valeurs HREF"
+title: 'Exemple d’expression régulière : Recherche de valeurs HREF'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582838"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975964"
 ---
-# <a name="regular-expression-example-scanning-for-hrefs"></a>Exemple d'expression régulière : recherche de valeurs HREF
+# <a name="regular-expression-example-scanning-for-hrefs"></a>Exemple d’expression régulière : Recherche de valeurs HREF
 L’exemple suivant recherche une chaîne d’entrée et affiche toutes les valeurs href="…" et leurs emplacements dans la chaîne.  
   
 ## <a name="the-regex-object"></a>Objet Regex  
@@ -44,7 +44,7 @@ L’exemple suivant recherche une chaîne d’entrée et affiche toutes les vale
 |`\s*`|Correspond à zéro, un ou plusieurs espaces blancs.|  
 |`=`|Correspond au signe égal.|  
 |`\s*`|Correspond à zéro, un ou plusieurs espaces blancs.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Correspond à l’un des éléments suivants sans assigner le résultat à un groupe capturé :<br /> <ul><li><p>Un guillemet ou une apostrophe, suivi(e) de zéro, une ou plusieurs occurrences de tout caractère autre qu’un guillemet ou une apostrophe, suivie(s) d’un guillemet ou d’une apostrophe. Le groupe nommé `1` est inclus dans ce modèle.</p></li><li><p>Un ou plusieurs caractères autres que des espaces. Le groupe nommé `1` est inclus dans ce modèle.</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|Correspond à l’un des éléments suivants sans assigner le résultat à un groupe capturé :<br /> <ul><li><p>Un guillemet ou une apostrophe, suivi(e) de zéro, une ou plusieurs occurrences de tout caractère autre qu’un guillemet ou une apostrophe, suivie(s) d’un guillemet ou d’une apostrophe. Le groupe nommé `1` est inclus dans ce modèle.</p></li><li><p>Un ou plusieurs caractères autres que des espaces. Le groupe nommé `1` est inclus dans ce modèle.</p></li></ul>|  
 |`(?<1>[^"']*)`|Affecte zéro, une ou plusieurs occurrences de tout caractère autre qu’un guillemet ou une apostrophe au groupe de capture nommé `1`.|  
 |`(?<1>\S+)`|Affecte un ou plusieurs caractères non espace blanc au groupe de capture nommé `1`.|  
   

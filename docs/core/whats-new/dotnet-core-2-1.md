@@ -7,19 +7,19 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e28ff83d673951a978e24d9c89621fbbe950f50e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066348"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975210"
 ---
 # <a name="whats-new-in-net-core-21"></a>Nouveautés de .NET Core 2.1
 
 .NET Core 2.1 inclut les nouvelles fonctionnalités et améliorations dans les domaines suivants :
 
 - [Outillage](#tooling)
-- [Extrapolation](#roll-forward)
+- [Restauration par progression](#roll-forward)
 - [Déploiement](#deployment)
 - [Pack de compatibilité Windows](#windows-compatibility-pack)
 - [Améliorations de la compilation JIT](#jit-compiler-improvements)
@@ -89,14 +89,14 @@ Dans le SDK .NET Core 2.1, toutes les opérations avec les outils utilisent la c
 
 - [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) pour désinstaller des outils actuellement installés.
 
-## <a name="roll-forward"></a>Extrapolation
+## <a name="roll-forward"></a>Restauration par progression
 
 Toutes les applications .NET Core depuis .NET Core 2.0 extrapolent automatiquement vers la dernière *version mineure* installée sur un système.
 
 À compter de .NET Core 2.0, si la version de .NET Core avec laquelle une application a été créée n’est pas présente lors de l’exécution, l’application s’exécute automatiquement avec la dernière *version mineure* installée de .NET Core. En d’autres termes, si une application est générée avec .NET Core 2.0 et que .NET Core 2.0 n’est pas présent sur le système hôte, mais que .NET Core 2.1 l’est, l’application s’exécute avec .NET Core 2.1.
 
 > [!IMPORTANT]
-> Ce comportement d’extrapolation ne s’applique pas aux préversions, Par défaut, il ne s’applique pas non plus aux versions majeures, mais vous pouvez changer ce comportement avec les paramètres ci-dessous.
+> Ce comportement de restauration par progression ne s’applique pas aux préversions, Par défaut, il ne s’applique pas non plus aux versions majeures, mais vous pouvez changer ce comportement avec les paramètres ci-dessous.
 
 Vous pouvez modifier ce comportement en changeant le paramètre d’extrapolation en cas d’absence de framework partagé candidat. Les paramètres disponibles sont :
 - `0` : désactiver le comportement d’extrapolation de version mineure. Avec ce paramètre, une application conçue pour .NET Core 2.0.0 extrapole vers .NET Core 2.0.1, mais pas vers .NET Core 2.2.0 ou .NET Core 3.0.0.
@@ -131,7 +131,7 @@ La publication autonome s’appuie sur les versions de runtime de NuGet.org. Vou
 
 À l’aide du Kit de développement logiciel .NET Core 2.0, les applications autonomes sont publiées avec le runtime .NET Core 2.0.0, sauf si une version différente est spécifiée via la propriété `RuntimeFrameworkVersion`. Avec ce nouveau comportement, vous n’aurez plus besoin de définir cette propriété afin de sélectionner une version de runtime ultérieure pour une application autonome. Dorénavant, l’approche la plus simple consiste à toujours publier avec le Kit de développement .NET Core 2.1 (2.1.300).
 
-Pour plus d’informations, consultez [Extrapolation du runtime de déploiement autonome](../deploying/runtime-patch-selection.md).
+Pour plus d’informations, voir [Restauration par progression du runtime de déploiement autonome](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Pack de compatibilité Windows
 
 Lorsque vous portez du code existant de .NET Framework vers .NET Core, vous pouvez utiliser le [pack de compatibilité Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Il permet d’accéder aux plus de 20 000 API disponibles dans .NET Core. Ces API incluent les types dans l’espace de noms <xref:System.Drawing?displayProperty=nameWithType>, la classe <xref:System.Diagnostics.EventLog>, WMI, les compteurs de performances, les services Windows, ainsi que les types et membres de registre Windows.

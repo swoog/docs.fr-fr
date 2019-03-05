@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 585bbd9a9fbc78029911dac8af4c1ad3eebe35b0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339317"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970699"
 ---
-# <a name="getting-started-with-linq-in-c"></a>Mise en route de LINQ en C#
+# <a name="getting-started-with-linq-in-c"></a>Bien démarrer avec LINQ en C\#
 Cette section contient des informations de base qui vous aideront à comprendre le reste de la documentation LINQ et les exemples fournis.  
   
 ## <a name="in-this-section"></a>Dans cette section  
@@ -39,7 +39,7 @@ Cette section contient des informations de base qui vous aideront à comprendre 
  [Fonctionnalités C# qui prennent en charge LINQ](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
  Décrit les nouvelles constructions de langage du C# 3.0 qui prennent en charge LINQ.  
   
- [Procédure pas à pas : écriture de requêtes en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Procédure pas à pas : Écriture de requêtes en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  Instructions pas à pas pour créer un projet LINQ en C#, en ajoutant une source de données et en effectuant des opérations de requête de base.  
   
 ## <a name="related-sections"></a>Rubriques connexes  

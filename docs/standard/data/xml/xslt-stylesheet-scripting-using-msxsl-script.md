@@ -1,5 +1,5 @@
 ---
-title: Écriture de scripts de feuille de style XSLT à l'aide de <msxsl:script>
+title: Écriture de feuilles de style XSLT avec msxsl:script>
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267298"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835250"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Écriture de feuilles de style XSLT avec \<msxsl:script>
 La classe <xref:System.Xml.Xsl.XslTransform> prend en charge les scripts incorporés en utilisant l'élément `script`.  
@@ -31,7 +31,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> prend en charge les scripts incorpo
   
  où `msxsl` est un préfixe lié à l'espace de noms `urn:schemas-microsoft-com:xslt`.  
   
- L'attribut `language` n'est pas obligatoire mais, s'il est spécifié, sa valeur doit être l'une des suivantes : C#, VB, JScript, JavaScript, VisualBasic ou CSharp. Lorsqu'il n'est pas spécifié, le langage par défaut est JScript. Le `language-name` ne respecte pas la casse : les termes « JavaScript » et « javascript » sont équivalents.  
+ L’attribut `language` n’est pas obligatoire mais, s’il est spécifié, sa valeur doit être l’une des suivantes : C#, VB, JScript, JavaScript, VisualBasic ou CSharp. Lorsqu'il n'est pas spécifié, le langage par défaut est JScript. Le `language-name` ne respecte pas la casse : les termes « JavaScript » et « javascript » sont équivalents.  
   
  L'attribut `implements-prefix` est obligatoire. Cet attribut est utilisé pour déclarer un espace de noms et l'associer au bloc de script. La valeur de cet attribut est le préfixe qui représente l'espace de noms. Cet espace de noms peut être défini à un endroit d'une feuille de style.  
   
@@ -45,7 +45,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> prend en charge les scripts incorpo
   
  Pour obtenir la preuve de votre assembly, utilisez `this.GetType().Assembly.Evidence`. Pour obtenir la preuve d'un URI (Uniform Resource Identifier), utilisez `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Si vous utilisez les méthodes <xref:System.Xml.Xsl.XslTransform.Load%2A> qui prennent un objet <xref:System.Xml.XmlResolver> mais aucun `Evidence`, la zone de sécurité pour l'assembly prend la valeur Confiance totale par défaut. Pour plus d'informations, consultez les pages <xref:System.Security.SecurityZone> et [Ensemble d'autorisations nommés](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Si vous utilisez les méthodes <xref:System.Xml.Xsl.XslTransform.Load%2A> qui prennent un objet <xref:System.Xml.XmlResolver> mais aucun `Evidence`, la zone de sécurité pour l'assembly prend la valeur Confiance totale par défaut. Pour plus d'informations, consultez les pages <xref:System.Security.SecurityZone> et [Ensemble d'autorisations nommés](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Les fonctions peuvent être déclarées dans l'élément `msxsl:script`. Le tableau suivant montre les espaces de noms qui sont pris en charge par défaut. Vous pouvez utiliser des classes en dehors des espaces de noms répertoriés. Toutefois, ces classes doivent être qualifiées complètes.  
   
@@ -62,17 +62,17 @@ La classe <xref:System.Xml.Xsl.XslTransform> prend en charge les scripts incorpo
   
  Lorsqu'une fonction est déclarée, elle est contenue dans un bloc de script. Les feuilles de style peuvent contenir plusieurs blocs de scripts, chacun fonctionnant indépendamment des autres. Ainsi, si vous êtes en cours d'exécution dans un bloc de script, vous ne pouvez pas appeler une fonction que vous avez définie dans un autre bloc de script, sauf si elle est déclarée comme possédant le même espace de noms et le même langage de script. Puisque chaque bloc de script peut être écrit dans son propre langage et que le bloc est analysé en fonction des règles grammaticales de cet analyseur de langage, vous devez utiliser la syntaxe correcte pour la langue utilisée. Par exemple, il n'est pas correct d'utiliser un nœud de commentaire XML `<!-- an XML comment -->` dans un bloc de script C#.  
   
- Les arguments fournis et les valeurs de retour définies par les fonctions du script doivent être l’un des types définis par le World Wide Web Consortium (W3C), XPath ou XSLT. Le tableau suivant illustre les types W3C correspondants, les classes .NET Framework équivalentes (Type), et précise si le type W3C est un XPath ou XSLT.  
+ Les arguments fournis et les valeurs de retour définies par les fonctions du script doivent être l'un des types définis par le World Wide Web Consortium (W3C), XPath ou XSLT. Le tableau suivant illustre les types W3C correspondants, les classes .NET Framework équivalentes (Type), et précise si le type W3C est un XPath ou XSLT.  
   
 |Type|Classe .NET Framework équivalente (Type)|Type XPath ou type XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
 |Chaîne|System.String|XPath|  
 |Booléen|System.Boolean|XPath|  
 |nombre|System.Double|XPath|  
-|Fragment d'arborescence résultat|System.Xml.XPath.XPathNavigator|XSLT|  
+|Fragment d’arborescence résultat|System.Xml.XPath.XPathNavigator|XSLT|  
 |Collection de nœuds|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- La fonction de script utilise l'un des types numériques suivants : Int16, UInt16, Int32, UInt32, Int64, UInt64, Single ou Decimal, ils deviennent Double, ce qui effectue un mappage sur le nombre de type XPath W3C. Tous les autres types deviennent une chaîne à l'aide de la méthode `ToString`.  
+ Si la fonction de script utilise l’un des types numériques suivants : Int16, UInt16, Int32, UInt32, Int64, UInt64, Single ou Decimal, ils deviennent Double, ce qui effectue un mappage sur le nombre de type XPath W3C. Tous les autres types deviennent une chaîne à l'aide de la méthode `ToString`.  
   
  Si la fonction de script utilise un type différent de ceux mentionnés ci-avant ou si la fonction ne se compile pas lorsque la feuille de style est chargée dans l'objet <xref:System.Xml.Xsl.XslTransform>, une exception est levée.  
   
@@ -98,7 +98,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> prend en charge les scripts incorpo
 </msxsl:script>  
 ```  
   
- Cela lève une exception car les signes & ne font pas l'objet d'un échappement. Le document est chargé en tant que XML et aucun traitement spécial n’est appliqué au texte qui se trouve entre les étiquettes d’élément `msxsl:script`.  
+ Cela lève une exception car les signes &amp; ne font pas l'objet d'un échappement. Le document est chargé en tant que XML et aucun traitement spécial n’est appliqué au texte qui se trouve entre les étiquettes d’élément `msxsl:script`.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant utilise un script incorporé pour calculer la circonférence d'un cercle en fonction de son rayon.  

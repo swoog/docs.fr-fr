@@ -1,43 +1,47 @@
 ---
 title: '* opérateur - Référence C#'
 ms.custom: seodec18
-ms.date: 04/04/2018
+ms.date: 02/26/2019
 f1_keywords:
 - '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: f4490c4632d9344eb879ea55c20787b838781d91
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: a5e120d26614f1e38cc2f2db02949552140b594e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333731"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977342"
 ---
 # <a name="-operator-c-reference"></a>*, opérateur (référence C#)
 
-L’opérateur de multiplication (`*`) calcule le produit de ses opérandes. Tous les types numériques ont des opérateurs de multiplication prédéfinis.
+L’opérateur `*` est pris en charge sous deux formes : un opérateur d’indirection de pointeur unaire et un opérateur de multiplication binaire.
 
-Par ailleurs, `*` sert d’opérateur de déréférencement qui permet de lire un pointeur et d’écrire sur celui-ci.
+## <a name="pointer-indirection-operator"></a>Opérateur d’indirection de pointeur
 
-## <a name="remarks"></a>Notes
+Utilisez l’opérateur `*` unaire pour récupérer la variable vers laquelle pointe un opérande de type pointeur. Pour plus d’informations, voir [Guide pratique : Récupérer la valeur d’une variable de pointeur](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md).
 
-L’opérateur `*` est aussi utilisé pour déclarer des types pointeur et déréférencer des pointeurs. Cet opérateur ne peut être utilisé que dans des contextes unsafe signalés par l’utilisation du mot clé [unsafe](../keywords/unsafe.md). Il nécessite l’option de compilateur [/unsafe](../compiler-options/unsafe-compiler-option.md).  L’opérateur de déréférencement est également appelé opérateur d’indirection.
+L’opérateur d’indirection de pointeur `*` réclame un contexte [unsafe](../keywords/unsafe.md).
 
-Les types définis par l’utilisateur peuvent surcharger l’opérateur `*` binaire (voir [operator](../keywords/operator.md)). Quand un opérateur binaire est surchargé, l’opérateur d’assignation correspondant, le cas échéant, est aussi implicitement surchargé.
+## <a name="multiplication-operator"></a>Opérateur de multiplication
 
-## <a name="example"></a>Exemple
+Pour les types numériques, l’opérateur `*` calcule le produit de ses opérandes :
 
-[!code-csharp-interactive[csRefOperators#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#50)]
+[!code-csharp-interactive[multiplication](~/samples/snippets/csharp/language-reference/operators/MultiplicationExamples.cs#Multiply)]
 
-## <a name="example"></a>Exemple
+## <a name="operator-overloadability"></a>Capacité de surcharge de l’opérateur
 
-[!code-csharp[csRefOperators#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#51)]
+Les types définis par l’utilisateur peuvent [surcharger](../keywords/operator.md) un opérateur `*` binaire. En cas de surcharge d’un opérateur `*` binaire, [l’opérateur d’assignation de multiplication](multiplication-assignment-operator.md) `*=` est aussi implicitement surchargé.
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour plus d’informations, voir les sections [Indirection de pointeur](~/_csharplang/spec/unsafe-code.md#pointer-indirection) et [Opérateur de multiplication](~/_csharplang/spec/expressions.md#multiplication-operator) de la [spécification du langage C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Référence C#](../index.md)
 - [Guide de programmation C#](../../programming-guide/index.md)
-- [Pointeurs et code unsafe](../../programming-guide/unsafe-code-pointers/index.md)
 - [Opérateurs C#](index.md)
+- [Types de pointeur](../../programming-guide/unsafe-code-pointers/pointer-types.md)

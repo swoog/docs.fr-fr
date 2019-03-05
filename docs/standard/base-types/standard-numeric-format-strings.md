@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506717"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979955"
 ---
 # <a name="standard-numeric-format-strings"></a>Chaînes de format numériques standard
 
@@ -46,7 +46,7 @@ Les chaînes de format numériques standard sont prises en charge par :
  
 - La [fonctionnalité de mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) .NET, utilisée par certaines méthodes `Write` et `WriteLine` des classes <xref:System.Console> et <xref:System.IO.StreamWriter>, la méthode <xref:System.String.Format%2A?displayProperty=nameWithType> et la méthode <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La fonctionnalité de mise en forme composite vous permet d’inclure la représentation sous forme de chaîne de plusieurs éléments de données dans une même chaîne, de spécifier la largeur d’un champ et d’aligner les nombres dans un champ. Pour plus d’informations, consultez [Mise en forme composite](../../../docs/standard/base-types/composite-formatting.md).  
 
-- Les [chaînes interpolées](../../csharp/language-reference/tokens/interpolated.md) en C# et Visual Basic, qui fournissent une syntaxe simplifiée par rapport aux de chaînes de format composite.
+- Les [chaînes interpolées](../../csharp/language-reference/tokens/interpolated.md) en C# et Visual Basic, qui fournissent une syntaxe simplifiée par rapport aux chaînes de format composite.
  
 > [!TIP]
 >  Vous pouvez télécharger l’ [utilitaire de formatage](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
@@ -62,7 +62,7 @@ Les chaînes de format numériques standard sont prises en charge par :
 |"G" ou "g"|Général|Résultat :  format le plus compact (notation à virgule fixe ou scientifique).<br /><br /> Pris en charge par : tous les types numériques<br /><br /> Spécificateur de précision : nombre de chiffres significatifs.<br /><br /> Spécificateur de précision par défaut : dépend du type numérique.<br /><br /> Informations complémentaires : [Spécificateur de format général ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |"N" ou "n"|nombre|Résultat :  chiffres intégraux et décimaux, séparateurs de groupes et séparateur décimal avec un signe négatif facultatif.<br /><br /> Pris en charge par : tous les types numériques<br /><br /> Spécificateur de précision : nombre souhaité de décimales.<br /><br /> Spécificateur de précision par défaut : défini par <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Informations complémentaires : [Spécificateur de format numérique ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" ou "p"|Pourcentage|Résultat :  nombre multiplié par 100 et affiché avec un symbole de pourcentage.<br /><br /> Pris en charge par : tous les types numériques<br /><br /> Spécificateur de précision : nombre souhaité de décimales.<br /><br /> Spécificateur de précision par défaut : défini par <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Informations complémentaires : [Spécificateur de format pourcentage ("P")](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" ou "r"|Aller-retour|Résultat :  chaîne qui peut effectuer un aller-retour vers un nombre identique.<br /><br /> Pris en charge par : <xref:System.Single>, <xref:System.Double> et <xref:System.Numerics.BigInteger>.<br /><br /> Remarque : recommandé pour le type <xref:System.Numerics.BigInteger> uniquement. Pour les types <xref:System.Double>, utilisez "G17" ; pour les types <xref:System.Single>, utilisez "G9". </br> Spécificateur de précision : Ignoré.<br /><br /> Informations complémentaires : [Spécificateur de format aller-retour ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"R" ou "r"|Aller-retour|Résultat :  chaîne qui peut effectuer un aller-retour vers un nombre identique.<br /><br /> Pris en charge par : <xref:System.Single>, <xref:System.Double> et <xref:System.Numerics.BigInteger>.<br /><br /> Remarque : recommandé pour le type <xref:System.Numerics.BigInteger> uniquement. Pour les types <xref:System.Double>, utilisez "G17" ; pour les types <xref:System.Single>, utilisez "G9". <br> Spécificateur de précision : Ignoré.<br /><br /> Informations complémentaires : [Spécificateur de format aller-retour ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" ou "x"|Hexadécimal|Résultat :  chaîne hexadécimale.<br /><br /> Pris en charge par : les types intégraux uniquement.<br /><br /> Spécificateur de précision : nombre de chiffres dans la chaîne de résultat.<br /><br /> Informations complémentaires : [Spécificateur de format hexadécimal ("X")](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |N'importe quel caractère|Spécificateur inconnu|Résultat :  lève un <xref:System.FormatException> au moment de l’exécution.||  
   

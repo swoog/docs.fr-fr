@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour applications .NET conteneu
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148897"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969360"
 ---
 # <a name="asynchronous-message-based-communication"></a>Communication basée sur des messages asynchrones
 
@@ -77,7 +77,7 @@ L’implémentation d’une architecture pilotée par les événements sur plusi
 
 - Utilisation de [l’exploration des données du journal des transactions](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Utilisation de la version complète du [modèle d’approvisionnement en événements](https://msdn.microsoft.com/library/dn589792.aspx).
+- Utilisation de la version complète du [modèle d’approvisionnement en événements](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
 - Utilisation du [modèle Outbox](http://gistlabs.com/2014/05/the-outbox/) : table de base de données transactionnelle définie comme file d’attente de messages qui sert de base à un composant créateur d’événement qui crée l’événement et le publie.
 
@@ -103,7 +103,7 @@ Si vous envisagez d’utiliser la communication asynchrone, veillez également �
 - **Cohérence à terme** \
   [*https://en.wikipedia.org/wiki/Eventual_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \
+- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactorisation vers la résilience : évaluation du couplage)
   [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 >[!div class="step-by-step"]

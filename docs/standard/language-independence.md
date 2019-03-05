@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188181"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203650"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indépendance du langage et composants indépendants du langage
 
@@ -21,7 +21,7 @@ ms.locfileid: "50188181"
 > [!NOTE]
 > La première partie de cet article décrit la création de composants indépendants du langage, c’est-à-dire de composants qui peuvent être utilisés par des applications écrites dans n’importe quel langage. Vous pouvez également créer un composant ou une application unique à partir de code source écrit dans plusieurs langages. Consultez [Interopérabilité multilingue](#cross-language-interoperability) dans la deuxième partie de cet article. 
 
-Pour interagir entièrement avec d’autres objets écrits dans un langage quelconque, les objets ne doivent exposer aux appelants que les fonctionnalités communes à tous les langages. Cet ensemble commun de fonctionnalités est défini par la spécification CLS (Common Language Specification), qui est un ensemble de règles qui s’appliquent aux assemblys générés. La spécification CLS (Common Language Specification) est définie dans la Partition I, clauses 7 à 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
+Pour interagir entièrement avec d’autres objets écrits dans un langage quelconque, les objets ne doivent exposer aux appelants que les fonctionnalités communes à tous les langages. Cet ensemble commun de fonctionnalités est défini par la spécification CLS (Common Language Specification), qui est un ensemble de règles qui s’appliquent aux assemblys générés. La spécification CLS (Common Language Specification) est définie dans la Partition I, clauses 7 à 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (Standard ECMA-335 : Common Language Infrastructure). 
 
 Si votre composant est conforme à la spécification CLS, il est garanti d'être conforme CLS et accessible à partir du code dans les assemblys écrits dans n'importe quel langage de programmation qui prend en charge la spécification CLS. Vous pouvez déterminer si votre composant est conforme à la spécification CLS (Common Language Specification) au moment de la compilation en appliquant l’attribut [CSLCompliantAttribute](xref:System.CLSCompliantAttribute) à votre code source. Pour plus d’informations, consultez [Attribut CLSCompliantAttribute](#the-clscompliantattribute-attribute).
 
@@ -65,7 +65,7 @@ Dans cet article :
 
 ## <a name="cls-compliance-rules"></a>Règles de conformité CLS
 
-Cette section présente les règles de création d'un composant conforme à CLS. Pour obtenir une liste complète des règles, consultez la Partition I, clause 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Cette section présente les règles de création d'un composant conforme à CLS. Pour obtenir une liste complète des règles, consultez la Partition I, clause 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (Standard ECMA-335 : Common Language Infrastructure).
 
 > [!NOTE]
 > La spécification CLS (Common Language Specification) présente chaque règle de conformité CLS telle qu'elle s'applique aux consommateurs (les développeurs qui accèdent par programme à un composant conforme CLS), aux infrastructures (les développeurs qui utilisent un compilateur de langage pour créer des bibliothèques conformes CLS) et aux extendeurs (les développeurs qui créent un outil tel qu'un compilateur de langage ou un analyseur de code qui crée des composants conformes CLS). Cet article se concentre sur les règles applicables aux infrastructures. Notez, toutefois, qu’une partie des règles qui s’appliquent aux extendeurs peut également s’appliquer aux assemblys créés à l’aide de [Reflection.Emit](xref:System.Reflection.Emit). 
@@ -150,7 +150,7 @@ L'interface publique d'une bibliothèque inclut les éléments suivants :
 
 * Paramètres et types de retour des méthodes publiques des classes publiques, et paramètres et types de retour des méthodes accessibles aux classes dérivées. 
 
-Les règles de conformité CLS sont répertoriées dans le tableau suivant. Le texte des règles est repris mot pour mot du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), qui est protégé par copyright 2012 par Ecma International. Vous trouverez des informations plus détaillées sur ces règles dans les sections suivantes. 
+Les règles de conformité CLS sont répertoriées dans le tableau suivant. Le texte des règles est repris mot pour mot du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (Standard ECMA-335 : Common Language Infrastructure) qui est protégé par les droits d’auteur d’Ecma International de 2012. Vous trouverez des informations plus détaillées sur ces règles dans les sections suivantes. 
 
 Category | Voir | Règle | Numéro de règle
 -------- | --- | ---- | -----------
@@ -158,7 +158,7 @@ Accessibilité | [Accessibilité des membres](#member-accessibility) | L'accessi
 Accessibilité | [Accessibilité des membres](#member-accessibility) | La visibilité et l'accessibilité des types et des membres seront déterminées de telle sorte que les types utilisés dans la signature d'un membre seront visibles et accessibles lorsque le membre proprement dit est visible et accessible. Par exemple, une méthode publique qui est visible à l'extérieur de son assembly n'aura pas d'argument dont le type est visible uniquement dans l'assembly. La visibilité et l'accessibilité des types composant un type générique instancié utilisé dans la signature d'un membre seront visibles et accessibles lorsque le membre proprement dit est visible et accessible. Par exemple, un type générique instancié présent dans la signature d'un membre qui est visible à l'extérieur de l'assembly n'aura pas d'argument générique dont le type est visible uniquement dans l'assembly. | 12
 Tableaux | [Tableaux](#arrays) | Les tableaux auront des éléments avec un type conforme à CLS, et toutes les dimensions du tableau auront des limites inférieures égales à zéro. Seul le fait qu'un élément soit un tableau et le type d'élément du tableau seront requis pour distinguer les surcharges. Lorsque la surcharge est basée sur deux ou plusieurs types de tableau, les types d'élément seront des types nommés. | 16
 Attributs | [Attributs](#attributes) | Les attributs doivent être de type [System.Attribute](xref:System.Attribute) ou d’un type hérité de celui-ci. | 41
-Attributs | [Attributs](#attributes) | La spécification CLS autorise uniquement un sous-ensemble des encodages d'attributs personnalisés. Les seuls types qui doivent apparaître dans ces codages sont (voir Partition IV) : [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) et tout type d’énumération reposant sur un type entier de base conforme CLS. | 34
+Attributs | [Attributs](#attributes) | La spécification CLS autorise uniquement un sous-ensemble des encodages d'attributs personnalisés. Les seuls types qui doivent apparaître dans ces codages sont (voir Partition IV) : [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) et tout type d’énumération reposant sur un type entier de base conforme CLS. | 34
 Attributs | [Attributs](#attributes) | La spécification CLS n'autorise pas les modificateurs obligatoires visibles publiquement (`modreq`, voir Partition II), mais autorise les modificateurs facultatifs (`modopt`, voir Partition II) qu'elle ne comprend pas. | 35
 Constructeurs | [Constructeurs](#constructors) | Un constructeur d'objet appellera un constructeur d'instance de sa classe de base avant tout accès aux données d'instance héritées. (Cela ne s'applique pas aux types de valeurs, qui n'ont pas besoin de constructeurs.)  | 21
 Constructeurs | [Constructeurs](#constructors) | Un constructeur d'objet ne sera pas appelé sauf dans le cadre de la création d'un objet, et un objet ne sera pas initialisé deux fois. | 22
@@ -2058,7 +2058,7 @@ Les constructeurs des classes et structures conformes à CLS doivent suivre ces 
 
 Les propriétés dans les types conformes à CLS doivent suivre ces règles :
 
-* Une propriété doit posséder une méthode setter, getter ou les deux. Dans un assembly, celles-ci sont implémentées comme des méthodes spéciales, ce qui signifie qu’elles apparaissent comme des méthodes distinctes (la méthode getter est nommée `get`\_*propertyname* et la méthode setter est nommée `set*\_*propertyname*) marked as `SpecialName` dans les métadonnées de l’assembly. Le compilateur C# applique automatiquement cette règle sans qu’il soit nécessaire d’appliquer l’attribut [CLSCompliantAttribute](xref:System.CLSCompliantAttribute). 
+* Une propriété doit posséder une méthode setter, getter ou les deux. Dans un assembly, celles-ci sont implémentées comme des méthodes spéciales, ce qui signifie qu’elles apparaîtront comme des méthodes distinctes (la méthode getter est nommée `get`\_*propertyname* et la méthode setter est nommée `set`\_*propertyname*) marquées comme `SpecialName` dans les métadonnées de l’assembly. Le compilateur C# applique automatiquement cette règle sans qu’il soit nécessaire d’appliquer l’attribut <xref:System.CLSCompliantAttribute>. 
 
 * Le type d’une propriété correspond au type de retour de la méthode getter de la propriété et du dernier argument de la méthode setter. Ces types doivent être conformes à CLS et les arguments ne peuvent pas être assignés à la propriété par référence (autrement dit, ils ne peuvent pas être des pointeurs managés). 
 

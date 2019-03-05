@@ -3,12 +3,12 @@ title: Interprétation des expressions
 description: Découvrez comment écrire du code pour analyser la structure d’une arborescence d’expressions.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506417"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201974"
 ---
 # <a name="interpreting-expressions"></a>Interprétation des expressions
 
@@ -353,7 +353,7 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-Il représente une implémentation possible de la fonction mathématique *factorial*. La façon dont j’ai écrit ce code met en évidence deux limitations de la création d’arborescences d’expressions en assignant des expressions lambda à des expressions. Tout d’abord, les lambda-instructions ne sont pas autorisées. Cela signifie que je ne peux pas utiliser de boucles, de blocs, d’instructions if / else et d’autres structures de contrôle courantes en C#. Je suis limité à l’utilisation d’expressions. Ensuite, je ne peux pas appeler la même expression de manière récursive.
+Il représente une implémentation possible de la fonction mathématique *factorial*. La façon dont ce code est écrit met en évidence deux limitations concernant la méthode de création d’arborescences d’expressions qui consiste à assigner des expressions lambda à Expression. Tout d’abord, les lambda-instructions ne sont pas autorisées. Cela signifie que je ne peux pas utiliser de boucles, de blocs, d’instructions if / else et d’autres structures de contrôle courantes en C#. Je suis limité à l’utilisation d’expressions. Ensuite, je ne peux pas appeler la même expression de manière récursive.
 Je le pourrais s’il s’agissait déjà d’un délégué, mais je ne peux pas l’appeler sous sa forme d’arborescence d’expressions. Dans la section sur la [génération d’arborescences d’expressions](expression-trees-building.md), vous découvrirez des techniques pour surmonter ces restrictions.
 
 

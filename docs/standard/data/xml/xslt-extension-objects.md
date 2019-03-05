@@ -1,30 +1,30 @@
 ---
-title: Objets d’extension XSLT
+title: Objets d'extension XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab96d5bdefee0cd85d98174f8f7410e940cb12b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b662ca537bf33dc9702e99f279bd068f92de6664
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498370"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836446"
 ---
-# <a name="xslt-extension-objects"></a>Objets d’extension XSLT
+# <a name="xslt-extension-objects"></a>Objets d'extension XSLT
 Les objets d’extension permettent d’étendre les fonctionnalités des feuilles de style. Ils sont gérés par la classe <xref:System.Xml.Xsl.XsltArgumentList>.  
   
- L'utilisation d'un objet d'extension plutôt que d'un script intégré présente les avantages suivants :  
+ L’utilisation d’un objet d’extension plutôt que d’un script intégré présente les avantages suivants :  
   
 -   Offre une meilleure encapsulation et réutilisation des classes.  
   
 -   Permet aux feuilles de styles d'être plus petites et plus faciles à gérer.  
   
- Des objets d'extension XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentList> à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Un nom qualifié et un URI d’espace de noms sont associés à l’objet d’extension à ce stade.  
+ Des objets d’extension XSLT sont ajoutés à l’objet <xref:System.Xml.Xsl.XsltArgumentList> à l’aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Un nom qualifié et un URI d'espace de noms sont associés à l'objet d'extension à ce stade.  
   
 > [!NOTE]
->  Le jeu d'autorisations FullTrust est requis pour appeler la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Pour plus d’informations, consultez [Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md) et [NIB : jeux d’autorisations nommés](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+>  Le jeu d'autorisations FullTrust est requis pour appeler la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Pour plus d’informations, consultez les pages [Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md) et [Jeux d’autorisations nommés](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Les types de données retournés par les objets d’extension correspondent à l’un des quatre types de données de base XPath : `number`, `string`, `Boolean` et `node set`.  
   

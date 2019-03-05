@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842825"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836550"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indépendance du langage et composants indépendants du langage
 Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que développeur, vous pouvez développer dans l'un des nombreux langages qui ciblent le .NET Framework, tels que C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL et Windows PowerShell. Vous pouvez accéder aux types et aux membres des bibliothèques de classes développées pour le .NET Framework sans avoir à connaître le langage dans lequel ils ont été initialement écrits ni à suivre les conventions du langage d'origine. Si vous développez des composants, votre composant est accessible par toute application .NET Framework, indépendamment de son langage.  
@@ -28,7 +28,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 > [!NOTE]
 >  La première partie de cet article décrit la création de composants indépendants du langage, c'est-à-dire de composants qui peuvent être utilisés par des applications écrites dans n'importe quel langage. Vous pouvez également créer un composant ou une application unique à partir de code source écrit dans plusieurs langages. Consultez [Interopérabilité multilingue](#CrossLang) dans la deuxième partie de cet article.  
   
- Pour interagir entièrement avec d’autres objets écrits dans un langage quelconque, les objets ne doivent exposer aux appelants que les fonctionnalités communes à tous les langages. Cet ensemble commun de fonctionnalités est défini par la spécification CLS (Common Language Specification), qui est un ensemble de règles qui s’appliquent aux assemblys générés. La spécification CLS (Common Language Specification) est définie dans la Partition I, clauses 7 à 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Pour interagir entièrement avec d’autres objets écrits dans un langage quelconque, les objets ne doivent exposer aux appelants que les fonctionnalités communes à tous les langages. Cet ensemble commun de fonctionnalités est défini par la spécification CLS (Common Language Specification), qui est un ensemble de règles qui s’appliquent aux assemblys générés. La spécification CLS (Common Language Specification) est définie dans la Partition I, clauses 7 à 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (Standard ECMA-335 : Common Language Infrastructure).  
   
  Si votre composant est conforme à la spécification CLS, il est garanti d'être conforme CLS et accessible à partir du code dans les assemblys écrits dans n'importe quel langage de programmation qui prend en charge la spécification CLS. Vous pouvez déterminer si votre composant est conforme à la spécification CLS (Common Language Specification) au moment de la compilation en appliquant l'attribut <xref:System.CLSCompliantAttribute> à votre code source. Pour plus d’informations, consultez [Attribut CLSCompliantAttribute](#CLSAttribute).  
   
@@ -72,7 +72,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>Règles de conformité CLS  
- Cette section présente les règles de création d'un composant conforme à CLS. Pour obtenir une liste complète des règles, consultez la Partition I, clause 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Cette section présente les règles de création d'un composant conforme à CLS. Pour obtenir une liste complète des règles, consultez la Partition I, clause 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (Standard ECMA-335 : Common Language Infrastructure).  
   
 > [!NOTE]
 >  La spécification CLS (Common Language Specification) présente chaque règle de conformité CLS telle qu'elle s'applique aux consommateurs (les développeurs qui accèdent par programme à un composant conforme CLS), aux infrastructures (les développeurs qui utilisent un compilateur de langage pour créer des bibliothèques conformes CLS) et aux extendeurs (les développeurs qui créent un outil tel qu'un compilateur de langage ou un analyseur de code qui crée des composants conformes CLS). Cet article se concentre sur les règles applicables aux infrastructures. Notez, toutefois, qu'une partie des règles qui s'appliquent aux extendeurs peut également s'appliquer aux assemblys créés à l'aide de Reflection.Emit.  
@@ -100,7 +100,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
 -   Paramètres et types de retour des méthodes publiques des classes publiques, et paramètres et types de retour des méthodes accessibles aux classes dérivées.  
   
- Les règles de conformité CLS sont répertoriées dans le tableau suivant. Le texte des règles est repris mot pour mot du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), qui est protégé par copyright 2012 par Ecma International. Vous trouverez des informations plus détaillées sur ces règles dans les sections suivantes.  
+ Les règles de conformité CLS sont répertoriées dans le tableau suivant. Le texte des règles est repris mot pour mot du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (Standard ECMA-335 : Common Language Infrastructure) qui est protégé par les droits d’auteur d’Ecma International de 2012. Vous trouverez des informations plus détaillées sur ces règles dans les sections suivantes.  
   
 |Category|Voir|Règle|Numéro de règle|  
 |--------------|---------|----------|-----------------|  
@@ -209,7 +209,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
  [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
  [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
   
- Pour supprimer les avertissements du compilateur, remplacez les types non conforme à CLS de l'interface publique `InvoiceItem` par des types conformes :  
+ Pour supprimer les avertissements du compilateur, remplacez les types non conformes à CLS de l'interface publique `InvoiceItem` par des types conformes :  
   
  [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)]
  [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]  
@@ -305,7 +305,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
      En raison de cette règle, pour implémenter des membres non conformes à CLS, il n'est pas nécessaire d'utiliser des types conformes à CLS. Si une infrastructure conforme à CLS expose une classe qui implémente une interface non conforme à CLS, elle doit également fournir des implémentations concrètes de tous les membres non conformes.  
   
- Les compilateurs de langages conformes à CLS doivent également permettre à une classe de fournir des implémentations séparées des membres qui ont les mêmes nom et signature dans plusieurs interfaces.  C# et Visual Basic prennent en charge des [implémentations d’interface explicites](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md) pour fournir des implémentations différentes de méthodes portant le même nom. Visual Basic prend également en charge le mot clé `Implements`, qui vous permet de désigner explicitement l'interface et le membre implémentés par un membre particulier. L'exemple suivant illustre ce scénario en définissant une classe `Temperature` qui implémente les interfaces `ICelsius` et `IFahrenheit` en tant qu'implémentations d'interface explicites.  
+ Les compilateurs de langages conformes à CLS doivent également permettre à une classe de fournir des implémentations séparées des membres qui ont les mêmes nom et signature dans plusieurs interfaces.  C# et Visual Basic prennent en charge des [implémentations d’interface explicites](../csharp/programming-guide/interfaces/explicit-interface-implementation.md) pour fournir des implémentations différentes de méthodes portant le même nom. Visual Basic prend également en charge le mot clé `Implements`, qui vous permet de désigner explicitement l'interface et le membre implémentés par un membre particulier. L'exemple suivant illustre ce scénario en définissant une classe `Temperature` qui implémente les interfaces `ICelsius` et `IFahrenheit` en tant qu'implémentations d'interface explicites.  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -337,7 +337,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 ### <a name="type-members-in-general"></a>Membres de types en général  
  La spécification CLS (Common Language Specification) nécessite que tous les champs et toutes les méthodes soient accessibles en tant que membres d'une classe particulière. Par conséquent, les méthodes et les champs statiques globaux (autrement dit, les méthodes ou les champs statiques définis en dehors d'un type) ne sont pas conformes à CLS. Si vous essayez d'inclure un champ global ou une méthode globale dans votre code source, les compilateurs C# et Visual Basic génèrent une erreur de compilateur.  
   
- La spécification CLS (Common Language Specification) prend uniquement en charge la convention d'appel managée standard. Elle ne prend pas en charge les conventions d'appel non managées ni les méthodes avec des listes d'arguments variables marquées avec le mot clé `varargs`. Pour les listes d'arguments variables compatibles avec la convention d'appel managée standard, utilisez l'attribut <xref:System.ParamArrayAttribute> ou l'implémentation de chaque langage, telle que le mot clé `params` en C# et le mot clé `ParamArray` en Visual Basic.  
+ La spécification CLS (Common Language Specification) prend uniquement en charge la convention d'appel managée standard. Elle ne prend pas en charge les conventions d'appel non managées ni les méthodes avec des listes d'arguments variables marquées avec le mot clé `varargs`. Pour les listes d’arguments variables compatibles avec la convention d’appel managée standard, utilisez l’attribut <xref:System.ParamArrayAttribute> ou l’implémentation de chaque langage, telle que le mot clé `params` en C# et le mot clé `ParamArray` en Visual Basic.  
   
 <a name="MemberAccess"></a>   
 ### <a name="member-accessibility"></a>Accessibilité des membres  
@@ -511,7 +511,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
  La valeur de l'attribut <xref:System.CLSCompliantAttribute> est héritée par les éléments de programme contenus. Par exemple, si un assembly est marqué comme étant conforme à CLS, ses types sont également conformes à CLS. Si un type est marqué comme étant conforme à CLS, ses membres et types imbriqués seront également conformes à CLS.  
   
- Vous pouvez remplacer explicitement la conformité héritée en appliquant l'attribut <xref:System.CLSCompliantAttribute> à un élément de programme contenu. Par exemple, vous pouvez utiliser l'attribut <xref:System.CLSCompliantAttribute> avec une valeur `isCompliant` `false` pour définir un type non conforme dans un assembly conforme et vous pouvez utiliser l'attribut avec une valeur `isCompliant` `true` pour définir un type conforme dans un assembly non conforme. Vous pouvez également définir des membres non conformes dans un type conforme. Toutefois, un type non conforme ne peut pas avoir de membres conformes, vous ne pouvez pas utiliser l'attribut avec une valeur `isCompliant` `true` pour remplacer l'héritage d'un type non conforme.  
+ Vous pouvez remplacer explicitement la conformité héritée en appliquant l'attribut <xref:System.CLSCompliantAttribute> à un élément de programme contenu. Par exemple, vous pouvez utiliser l'attribut <xref:System.CLSCompliantAttribute> avec une valeur `isCompliant``false` pour définir un type non conforme dans un assembly conforme et vous pouvez utiliser l'attribut avec une valeur `isCompliant``true` pour définir un type conforme dans un assembly non conforme. Vous pouvez également définir des membres non conformes dans un type conforme. Toutefois, un type non conforme ne peut pas avoir de membres conformes, vous ne pouvez pas utiliser l'attribut avec une valeur `isCompliant` `true` pour remplacer l'héritage d'un type non conforme.  
   
  Lorsque vous développez des composants, vous devez toujours utiliser l'attribut <xref:System.CLSCompliantAttribute> pour indiquer si votre assembly, ses types et ses membres sont conformes à CLS.  
   
@@ -548,23 +548,23 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
  Pour placer les deux classes dans un même assembly, vous devez les compiler dans des modules. Pour compiler le fichier de code source Visual Basic dans un module, utilisez cette commande :  
   
-```  
+```console  
 vbc /t:module StringUtil.vb   
 ```  
   
- Pour plus d’informations sur la syntaxe de la ligne de commande du compilateur Visual Basic, consultez [Génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Pour plus d’informations sur la syntaxe de la ligne de commande du compilateur Visual Basic, consultez [Génération à partir de la ligne de commande](../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
  Pour compiler le fichier de code source C# dans un module, utilisez cette commande :  
   
-```  
+```console  
 csc /t:module NumberUtil.cs  
 ```  
   
- Pour plus d’informations sur la syntaxe de la ligne de commande du compilateur C#, consultez [Génération à partir de la ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ Pour plus d’informations sur la syntaxe de la ligne de commande du compilateur C#, consultez [Génération à partir de la ligne de commande avec csc.exe](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Vous utilisez ensuite l’[outil de liaison (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) pour compiler les deux modules en un assembly :  
+ Vous utilisez ensuite les [options de l’éditeur de liens](/cpp/build/reference/linker-options) pour compiler les deux modules en un assembly :  
   
-```  
+```console  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
@@ -575,13 +575,13 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  Pour compiler le code Visual Basic, utilisez cette commande :  
   
-```  
+```console  
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
  Pour compiler avec C#, changez le nom du compilateur **vbc** en **csc** et changez l’extension de fichier .vb en .cs :  
   
-```  
+```console  
 csc example.cs /r:UtilityLib.dll  
 ```  
   

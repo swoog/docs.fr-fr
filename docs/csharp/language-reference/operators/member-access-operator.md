@@ -1,7 +1,7 @@
 ---
 title: . opérateur - Référence C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/25/2019
 f1_keywords:
 - ._CSharpKeyword
 helpviewer_keywords:
@@ -9,47 +9,46 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: a59f69d0349a054c8c2a5b701b8f63df113a6580
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2661676d53deb874c5e5a90b4443b301730e09df
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333718"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836459"
 ---
-# <a name="-operator-c-reference"></a>. opérateur (référence C#)
+# <a name="-operator-c-reference"></a>. operator (référence C#)
 
-L’opérateur point (`.`) est l’opérateur d’accès aux membres . L’opérateur point spécifie un membre d’un type ou d’espace de noms. Par exemple, l’opérateur point est utilisé pour accéder aux méthodes spécifiques figurant dans les bibliothèques de classes du .NET Framework :
+Le point, `.`, est en général utilisé pour l’accès aux membres.
 
-[!code-csharp[csRefOperators#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#16)]
+Le jeton `.` sert à accéder à l’un des membres d’un espace de noms ou d’un type, comme le montrent les exemples suivants :
 
-Par exemple, considérons la classe suivante :
+- Utilisez `.` pour accéder à un espace de noms imbriqué dans un autre, comme le montre l’exemple suivant avec la [directive `using`](../keywords/using-directive.md) :
 
-[!code-csharp[csRefOperators#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#17)]
+  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#NestedNamespace)]
 
-[!code-csharp[csRefOperators#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#18)]
+- Utilisez `.` pour former un *nom qualifié* permettant d’accéder à un type dans un espace de noms, comme le montre le code suivant :
 
-La variable `s` a deux membres, `a` et `b` ; pour y accéder, utilisez l’opérateur point :
+  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#QualifiedName)]
 
-[!code-csharp[csRefOperators#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#19)]
+  Utiliser la [directive `using`](../keywords/using-directive.md) pour rendre facultative l’utilisation de noms qualifiés.
 
-Le point est aussi utilisé pour former des noms qualifiés, c’est-à-dire des noms qui spécifient par exemple l’espace de noms ou une interface auquel ils appartiennent.
+- Utilisez `.` pour accéder aux [membres de type](../../programming-guide/classes-and-structs/index.md#members), statiques et non statiques, comme le montre le code suivant :
 
-[!code-csharp[csRefOperators#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#20)]
+  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#TypeMemberAccess)]
 
-La directive using rend la qualification de certains noms facultative :
+Vous pouvez également utiliser `.` pour appeler une [méthode d’extension](../../programming-guide/classes-and-structs/extension-methods.md).
 
-[!code-csharp[csRefOperators#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#21)]
+## <a name="operator-overloadability"></a>Capacité de surcharge de l’opérateur
 
-Cependant, quand un identificateur est ambigu, il doit être qualifié :
-
-[!code-csharp[csRefOperators#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#22)]
+L’opérateur `.` ne peut pas être surchargé.
 
 ## <a name="c-language-specification"></a>spécification du langage C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Pour plus d’informations, voir la section [Accès au membre](~/_csharplang/spec/expressions.md#member-access) de la [spécification du langage C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Référence C#](../index.md)
 - [Guide de programmation C#](../../programming-guide/index.md)
 - [Opérateurs C#](index.md)
+- [Opérateurs ?. et ?[]](null-conditional-operators.md)

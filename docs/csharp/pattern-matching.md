@@ -3,14 +3,14 @@ title: Critères spéciaux - Guide C#
 description: En savoir plus sur les expressions de critères spéciaux en langage C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522024"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969973"
 ---
-# <a name="pattern-matching"></a>Critères spéciaux #
+# <a name="pattern-matching"></a>Critères spéciaux
 
 Les modèles vérifient qu’une valeur a une certaine *forme* et peuvent *extraire* des informations de la valeur quand celle-ci a la forme correspondante. Les critères spéciaux offrent une syntaxe plus concise pour les algorithmes que vous utilisez déjà aujourd’hui. Vous pouvez déjà créer des algorithmes de critères spéciaux à l’aide de la syntaxe existante. Pour cela, vous écrivez des instructions `if` ou `switch` qui testent une valeur. Ensuite, quand ces instructions correspondent, vous extrayez et utilisez les informations de cette valeur. Les nouveaux éléments de syntaxe étendent les instructions que vous connaissez déjà : `is` et `switch`. Ces nouvelles extensions permettent à la fois de tester une valeur et d’extraire les informations de cette valeur.
 
@@ -36,7 +36,7 @@ Avant C# 7.0, vous deviez tester chaque type dans une série d’instructions `
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-Le code ci-dessus est une expression standard du *modèle de type* : vous testez une variable pour déterminer son type et vous effectuez une action différente en fonction de ce type.
+Le code ci-dessus est une expression classique du *modèle de type* : vous testez une variable pour déterminer son type et effectuez une certaine action en fonction de ce type.
 
 Vous pouvez simplifier ce code en ajoutant des extensions à l’expression `is` pour assigner une variable si le test réussit :
 
@@ -111,7 +111,7 @@ Le comportement spécial pour le modèle `null` est intéressant, car la constan
 
 L’introduction de `var` comme l’une des expressions de correspondance fournit de nouvelles règles pour les critères spéciaux.
 
-La première règle est que la déclaration `var` suit les règles standard d’inférence de type, à savoir que le type est supposé être le type statique de l’expression switch. Avec cette règle, il y a toujours correspondance du type.
+La première règle est que la déclaration `var` doit suivre les règles d’inférence de type normales : le type est considéré comme le type statique de l’expression switch. Avec cette règle, il y a toujours correspondance du type.
 
 La deuxième règle est qu’une déclaration `var` n’a pas la vérification de valeur Null que d’autres expressions de modèle de type incluent. La variable peut donc être Null, et une vérification de valeur Null est alors nécessaire.
 

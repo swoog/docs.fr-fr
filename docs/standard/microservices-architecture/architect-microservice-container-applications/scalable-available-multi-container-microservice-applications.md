@@ -4,12 +4,12 @@ description: Découvrez les options qui permettent d’orchestrer des microservi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307433"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980228"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestration des microservices et des applications à plusieurs conteneurs pour une grande scalabilité et une haute disponibilité
 
@@ -137,9 +137,11 @@ Comme indiqué sur la figure 4-26, la fonctionnalité la plus différenciée da
 
 Vous pouvez configurer un espace de développement partagé dans Azure. Chaque développeur peut se concentrer simplement sur sa partie de l’application et développer de manière itérative du code de prévalidation dans un espace de développement qui contient déjà tous les autres services et ressources cloud dont dépendent leurs scénarios. Les dépendances sont toujours à jour, et les développeurs travaillent comme en production.
 
-Le concept d’espace propre à Azure Dev Spaces vous permet de travailler de manière isolée sans craindre de perturber les membres de votre équipe. Cette fonctionnalité est basée sur des préfixes d’URL. Ainsi, si un préfixe d’espace de développement est utilisé dans l’URL, à chaque requête du conteneur, une version spéciale du conteneur est déployée pour cet espace, s’il existe. Sinon, la version globale/regroupée est exécutée.
+Le concept d’espace propre à Azure Dev Spaces vous permet de travailler de manière relativement isolée sans craindre de perturber les membres de votre équipe. Chaque espace de développement fait partie d’une structure hiérarchique qui vous permet de remplacer un microservice (ou plusieurs), à partir de l’espace de développement principal « en haut », par votre microservice en cours d’élaboration.
 
-Vous pouvez voir la [page wiki d’eShopOnContainers sur Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS) pour obtenir un exemple concret.
+Cette fonctionnalité est basée sur les préfixes d’URL. Par conséquent, lorsque vous utilisez un préfixe d’espace de développement dans l’URL, une requête est envoyée à partir du microservice cible s’il existe dans l’espace de développement. Dans le cas contraire, cette requête est transférée à la première instance du microservice cible trouvée dans la hiérarchie, pour éventuellement atteindre l’espace de développement principal en haut.
+
+Vous pouvez voir la [page wiki d’eShopOnContainers sur Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS) pour obtenir un exemple concret.
 
 Pour plus d’informations, consultez l’article sur le [développement en équipe avec Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 

@@ -1,16 +1,16 @@
 ---
-title: 'Tutoriel : Écrire votre premier analyseur et correctif de code'
+title: 'Tutoriel : Créer son premier analyseur et correctif de code'
 description: Ce tutoriel fournit des instructions détaillées pour générer un analyseur et un correctif de code à l’aide du SDK .NET Compiler (API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397996"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201896"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutoriel : Écrire votre premier analyseur et correctif de code
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutoriel : Créer son premier analyseur et correctif de code
 
 Le SDK .NET Compiler Platform fournit les outils nécessaires pour créer des avertissements personnalisés qui ciblent C# ou le code Visual Basic. Votre **analyseur** contient le code qui reconnaît les violations de votre règle. Votre **correctif de code** contient le code qui résout la violation. Les règles que vous implémentez peuvent aller de la structure du code au style de codage et aux conventions d’affectation de noms, et bien plus encore. .NET Compiler Platform fournit le framework permettant d’exécuter l’analyse alors que les développeurs écrivent du code, et toutes les fonctionnalités de l’IU Visual Studio pour corriger le code : afficher des tildes dans l’éditeur, renseigner la liste d’erreurs Visual Studio, créer des suggestions « ampoule » et afficher un aperçu détaillé des corrections suggérées.
 
@@ -215,7 +215,7 @@ private async Task<Document> MakeConstAsync(Document document,
 
 Votre nouvelle méthode `MakeConstAsync` transformera <xref:Microsoft.CodeAnalysis.Document> qui représente le fichier source de l’utilisateur en un nouveau <xref:Microsoft.CodeAnalysis.Document> qui contient à présent une déclaration `const`.
 
-Vous créez un nouveau jeton de mot clé `const` à insérer au début de l’instruction de déclaration. Veillez tout d’abord à supprimer les trivia de début dans le premier jeton de l’instruction de déclaration et à les associer au jeton `const`. Ajoutez le code suivant à la méthode `MakeConstAsync` :
+Vous créez un nouveau jeton de mot clé `const` à insérer au début de l’instruction de déclaration. Veillez tout d’abord à supprimer les trivia de début dans le premier jeton de l’instruction de déclaration et à les associer au jeton `const`. Ajoutez le code suivant à la méthode `MakeConstAsync` :
 
 [!code-csharp[Create a new const keyword token](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
 
@@ -282,7 +282,7 @@ Ensuite, remplacez `TestMethod2` par ce test qui garantit qu’un diagnostic est
 ```csharp
 [DataTestMethod]
 [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagosticIsRaisedFixUpdatesCode(
+public void WhenDiagnosticIsRaisedFixUpdatesCode(
     string test,
     string fixTest,
     int line,

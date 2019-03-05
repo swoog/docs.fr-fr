@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8b2372ab5d58898b7a5730e118cc710d09a9bf92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130492"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981879"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Conception d’une application orientée microservices
 
@@ -61,7 +61,7 @@ Les microservices sont développés et déployés en tant que conteneurs indépe
 
 Chaque microservice dispose de sa propre base de données, ce qui le découple entièrement des autres microservices. Quand elle est nécessaire, la cohérence entre les bases de données des différents microservices est obtenue à travers l’utilisation d’événements d’intégration au niveau de l’application (via un bus d’événements logiques), à l’instar de la séparation des responsabilités dans les commandes et les requêtes (CQRS, Command and Query Responsibility Segregation). Compte tenu de cela, les contraintes métier doivent accepter la cohérence à terme entre les différents microservices et les bases de données associées.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers : une application de référence pour .NET Core et des microservices déployés à l’aide de conteneurs
+### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers : une application de référence pour .NET Core et des microservices déployés à l’aide de conteneurs
 
 Pour vous éviter d’avoir à réfléchir sur un domaine d’activité hypothétique que vous ne connaissez peut-être pas et ainsi vous concentrer sur l’architecture et les technologies, nous avons choisi un domaine d’activité bien connu, à savoir, une application de commerce électronique simplifiée (boutique en ligne) qui présente un catalogue de produits, accepte les commandes des clients, vérifie les stocks et effectue d’autres fonctions opérationnelles. Le code source de cette application basée sur des conteneurs est disponible sur le dépôt GitHub [eShopOnContainers](https://aka.ms/MicroservicesArchitecture).
 
@@ -77,7 +77,7 @@ L’application est constituée de divers sous-systèmes, notamment de plusieurs
 
 - Communication de client à microservice HTTP via des passerelles d’API. ce type de communication est utilisé pour les requêtes et quand il s’agit d’accepter les commandes de mise à jour ou les commandes transactionnelles des applications clientes. L’approche utilisant des passerelles d’API est expliquée en détail dans des sections ultérieures.
 
-- Communication asynchrone basé sur les événements : celle-ci emprunte un bus d’événements pour propager des mises aux microservices ou pour s’intégrer avec des applications externes. Le bus d’événements peut être implémenté avec n’importe quelle technologie d’infrastructure de répartiteur de messagerie comme RabbitMQ ou en utilisant des Service Bus (de niveau d’abstraction) plus généralistes comme Azure Service Bus, NServiceBus, MassTransit ou Brighter.
+- Communication asynchrone basée sur les événements : celle-ci emprunte un bus d’événements pour propager des mises aux microservices ou pour s’intégrer avec des applications externes. Le bus d’événements peut être implémenté avec n’importe quelle technologie d’infrastructure de répartiteur de messagerie comme RabbitMQ ou en utilisant des Service Bus (de niveau d’abstraction) plus généralistes comme Azure Service Bus, NServiceBus, MassTransit ou Brighter.
 
 L’application est déployée comme un ensemble de microservices sous forme de conteneurs. Les applications clientes peuvent communiquer avec ces microservices exécutés en tant que conteneurs via les URL publiques publiées par les passerelles d’API.
 
@@ -158,7 +158,7 @@ Les architectes logiciels et les développeurs font appel à divers modèles d�
 
 - CRUD simple, un seul niveau, une seule couche
 
-- [Traditionnel en couches (N-Layered)](https://msdn.microsoft.com/library/ee658109.aspx#Layers)
+- [Traditionnel en couches (N-Layered)](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10))
 
 - [Conception pilotée par le domaine (DDD) en couches (N-Layered)](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/)
 

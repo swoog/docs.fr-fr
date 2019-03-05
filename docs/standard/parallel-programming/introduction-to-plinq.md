@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a1cf3ea782752f750f3545a28699a8bc325e4a5
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9227d10e2c12f88d33b283d1f1328d628b64afa0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903895"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975730"
 ---
 # <a name="introduction-to-plinq"></a>Introduction à PLINQ
 ## <a name="what-is-a-parallel-query"></a>Qu’est une requête parallèle ?  
@@ -33,7 +33,7 @@ ms.locfileid: "55903895"
 ## <a name="the-parallelenumerable-class"></a>Classe ParallelEnumerable  
  La classe <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> expose presque toutes les fonctionnalités de PLINQ.  Celle-ci et le reste des types d’espaces de noms <xref:System.Linq?displayProperty=nameWithType> sont compilés dans l’assembly System.Core.dll. Les projets C# et Visual Basic par défaut de Visual Studio font tous deux référence à l’assembly et importent l’espace de noms.  
   
- <xref:System.Linq.ParallelEnumerable> inclut les implémentations de tous les opérateurs de requête standard pris en charge par LINQ to Objects, bien qu’il ne tente pas de paralléliser chacun d’eux. Si [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] ne vous est pas familier, consultez [Introduction to LINQ](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e) (Présentation de LINQ).  
+ <xref:System.Linq.ParallelEnumerable> inclut les implémentations de tous les opérateurs de requête standard pris en charge par LINQ to Objects, bien qu’il ne tente pas de paralléliser chacun d’eux. Si vous n’êtes pas familiarisé avec [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], consultez [Présentation de LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md) et [Présentation de LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).  
   
  Outre les opérateurs de requête standard, la classe <xref:System.Linq.ParallelEnumerable> contient un ensemble de méthodes qui activent des comportements spécifiques à l’exécution parallèle. Ces méthodes spécifiques de PLINQ sont répertoriées dans le tableau suivant.  
   

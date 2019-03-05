@@ -5,16 +5,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: a6e2ea41c463d5e6959ce7f05a3547ef24f08765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b129177e6eb916982a27ba76aca517b0642344c
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601933"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203296"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Utiliser des indexeurs (Guide de programmation C#)
 
-Les indexeurs simplifient, d’un point de vue syntaxique, la création d’une [classe](../../../csharp/language-reference/keywords/class.md), d’un [struct](../../../csharp/language-reference/keywords/struct.md) ou d’une [interface](../../../csharp/language-reference/keywords/interface.md) auxquels les applications clientes peuvent accéder exactement comme à un tableau. Le plus souvent, les indexeurs sont implémentés dans les types dont l’objectif premier est d’encapsuler une collection ou un tableau interne. Prenons l’exemple d’une classe `TempRecord` qui représente la température, en Farenheit, enregistrée à 10 moments différents sur une période de 24 heures. Elle contient un tableau `temps` de type `float[]` pour stocker les valeurs de température. En implémentant un indexeur dans cette classe, les clients peuvent accéder aux températures dans une instance `TempRecord` sous la forme `float temp = tr[4]` et non sous la forme `float temp = tr.temps[4]`. La notation d’indexeur simplifie non seulement la syntaxe pour les applications clientes, mais elle permet également aux autres développeurs de comprendre de façon plus intuitive l’objectif de la classe.  
+Les indexeurs simplifient, d’un point de vue syntaxique, la création d’une [classe](../../../csharp/language-reference/keywords/class.md), d’un [struct](../../../csharp/language-reference/keywords/struct.md) ou d’une [interface](../../../csharp/language-reference/keywords/interface.md) auxquels les applications clientes peuvent accéder exactement comme à un tableau. Le plus souvent, les indexeurs sont implémentés dans les types dont l’objectif premier est d’encapsuler une collection ou un tableau interne. Prenons l’exemple d’une classe `TempRecord` qui représente la température, en Fahrenheit, enregistrée à 10 moments différents sur une période de 24 heures. Elle contient un tableau `temps` de type `float[]` pour stocker les valeurs de température. En implémentant un indexeur dans cette classe, les clients peuvent accéder aux températures dans une instance `TempRecord` sous la forme `float temp = tr[4]` et non sous la forme `float temp = tr.temps[4]`. La notation d’indexeur simplifie non seulement la syntaxe pour les applications clientes, mais elle permet également aux autres développeurs de comprendre de façon plus intuitive l’objectif de la classe.  
   
 Pour déclarer un indexeur sur une classe ou un struct, utilisez le mot clé [this](../../../csharp/language-reference/keywords/this.md), comme dans l’exemple suivant :
 
@@ -25,7 +25,7 @@ public int this[int index]    // Indexer declaration
 }  
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Le type d’un indexeur et le type de ses paramètres doivent être au moins aussi accessibles que l’indexeur lui-même. Pour plus d’informations sur les niveaux d’accessibilité, consultez [Modificateurs d’accès](../../../csharp/language-reference/keywords/access-modifiers.md).  
   
@@ -53,7 +53,7 @@ L’exemple suivant montre comment déclarer un champ de tableau privé `temps`,
   
  Notez que quand l’accès à un indexeur est évalué, par exemple dans une instruction `Console.Write`, l’accesseur [get](../../../csharp/language-reference/keywords/get.md) est appelé. C’est pourquoi une erreur de compilation se produit s’il n’existe aucun accesseur `get`.  
   
-[!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
 ## <a name="indexing-using-other-values"></a>Indexation avec d’autres valeurs
 
@@ -63,7 +63,7 @@ C# ne limite pas le type de paramètre d’indexeur au type entier. Par exemple,
   
 L’exemple suivant déclare une classe qui stocke les jours de la semaine. Un accesseur `get` prend une chaîne, le nom d’un jour, et retourne l’entier correspondant. Par exemple, « Sunday » retourne 0, « Monday » retourne 1 et ainsi de suite.  
   
-[!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#2)]  
   
 ## <a name="robust-programming"></a>Programmation fiable
 

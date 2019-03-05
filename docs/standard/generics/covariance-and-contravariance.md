@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692962"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836420"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariance et contravariance dans les génériques
 <a name="top"></a> La covariance et la contravariance sont des termes qui font référence à la possibilité d’utiliser un type plus dérivé (plus spécifique) ou moins dérivé (moins spécifique) que celui spécifié à l’origine. Les paramètres de type générique prennent en charge la covariance et la contravariance afin de fournir une meilleure flexibilité dans l'assignation et l'utilisation des types génériques. Lorsque vous faites référence à un système de type, la covariance, la contravariance et l'invariance ont les définitions suivantes. Les exemples supposent qu'une classe de base est nommée `Base` et qu'une classe dérivée est nommée `Derived`.  
@@ -135,7 +135,7 @@ ms.locfileid: "54692962"
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Variance dans les délégués génériques et non génériques  
  Dans le code précédent, la signature de `MyMethod` correspond exactement à la signature du délégué générique construit : `Func<Base, Derived>` (`Func(Of Base, Derived)` en Visual Basic). L'exemple montre que ce délégué générique peut être stocké dans des variables ou des paramètres de méthode qui ont des types de paramètres plus dérivés et des types de retour moins dérivés, tant que tous les types délégués sont construits à partir du type délégué générique <xref:System.Func%602>.  
   
- Ceci est un point important. Les effets de la covariance et de la contravariance dans les paramètres de type des délégués génériques sont semblables aux effets de la covariance et de la contravariance dans la liaison de délégués ordinaire (consultez [Variance dans les délégués](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Toutefois, la variance dans la liaison de délégués fonctionne avec tous les types délégués, et pas seulement les types délégués génériques qui ont des paramètres de type variant. En outre, la variance dans la liaison de délégués permet de lier une méthode à tout délégué disposant de types de paramètres plus restrictifs et d'un type de retour moins restrictif, alors que l'assignation de délégués génériques fonctionne uniquement si les deux types délégués sont construits à partir de la même définition de type générique.  
+ Ceci est un point important. Les effets de la covariance et de la contravariance dans les paramètres de type des délégués génériques sont semblables aux effets de la covariance et de la contravariance dans la liaison de délégués ordinaire (consultez [Variance dans les délégués (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) et [Variance dans les délégués (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)). Toutefois, la variance dans la liaison de délégués fonctionne avec tous les types délégués, et pas seulement les types délégués génériques qui ont des paramètres de type variant. En outre, la variance dans la liaison de délégués permet de lier une méthode à tout délégué disposant de types de paramètres plus restrictifs et d'un type de retour moins restrictif, alors que l'assignation de délégués génériques fonctionne uniquement si les deux types délégués sont construits à partir de la même définition de type générique.  
   
  L'exemple suivant indique les effets combinés de la variance dans la liaison de délégués et de la variance dans les paramètres de type générique. L'exemple définit une hiérarchie de type qui inclut trois types, du moins dérivé (`Type1`) au plus dérivé (`Type3`). La variance dans la liaison de délégués ordinaire est utilisée pour lier une méthode avec le type de paramètre `Type1` et le type de retour `Type3` à un délégué générique avec le type de paramètre `Type2` et le type de retour `Type2`. Le délégué générique résultant est ensuite assigné à une autre variable dont le type délégué générique a un paramètre de type `Type3` et le type de retour `Type1`, à l'aide de la covariance et de la contravariance de paramètres de type générique. La deuxième assignation requiert que le type de variable et le type délégué soient construits à partir de la même définition de type générique, dans ce cas, <xref:System.Func%602>.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54692962"
   
  Visual Basic et Visual C# ne vous permettent pas de violer les règles d'utilisation des paramètres de type covariant et contravariant ou d'ajouter des annotations de covariance et de contravariance aux paramètres qui diffèrent des types d'interfaces et des types délégués. L' [assembleur MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md) n'exécute pas ce type de contrôle, mais une exception <xref:System.TypeLoadException> est levée si vous essayez de charger un type qui viole les règles.  
   
- Pour obtenir des informations et un exemple de code, consultez [Variance dans les interfaces génériques](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
+ Pour obtenir des informations et un exemple de code, consultez [Variance dans les interfaces génériques (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) et [Variance dans les interfaces génériques (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
  [Retour au début](#top)  
   
@@ -192,4 +192,5 @@ ms.locfileid: "54692962"
 
 - [Covariance et contravariance (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Covariance et contravariance (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [Variance dans les délégués](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+- [Variance dans les délégués (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Variance dans les délégués (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

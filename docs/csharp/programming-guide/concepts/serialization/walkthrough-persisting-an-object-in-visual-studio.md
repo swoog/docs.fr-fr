@@ -1,14 +1,14 @@
 ---
 title: 'Procédure pas à pas : Rendre un objet persistant avec C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512448"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975821"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>Procédure pas à pas : rendre un objet persistant avec C# #
+# <a name="walkthrough-persisting-an-object-using-c"></a>Procédure pas à pas : Rendre un objet persistant avec C\#
 
 Vous pouvez utiliser la sérialisation pour rendre les données d’un objet persistantes entre les instances, ce qui vous permet de stocker des valeurs et de les récupérer lors de la prochaine instanciation de l’objet.
 

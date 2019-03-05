@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 373d1e4e5089b23ecaeffd10fd167b701b75760c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbc45d2c6587f5ff94c5cfbe0251d4b0ebca4231
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702897"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835497"
 ---
 # <a name="xpath-namespace-navigation"></a>Navigation entre espaces de noms XPath
 Pour utiliser les requêtes XPath avec des documents XML, vous devez adresser correctement les espaces de noms XML et les éléments contenus dans ces espaces de noms. Les espaces de noms empêchent toute ambiguïté pouvant survenir lorsque des noms sont utilisés dans plusieurs contextes ; par exemple, le nom `ID` peut faire référence à plusieurs identificateurs associés à différents éléments d'un document XML. La syntaxe des espaces de noms spécifie des URI, des noms et des préfixes qui distinguent les éléments d'un document XML.  
   
- L'exemple fourni dans cette rubrique illustre l'utilisation des préfixes pour la navigation dans un document XML avec <xref:System.Xml.XPath.XPathNavigator>. Pour plus d'informations sur les espaces de noms et la syntaxe, consultez [Présentation des espaces de noms XML](https://msdn.microsoft.com/library/aa468565.aspx).  
+ L'exemple fourni dans cette rubrique illustre l'utilisation des préfixes pour la navigation dans un document XML avec <xref:System.Xml.XPath.XPathNavigator>. Pour plus d’informations sur les espaces de noms et la syntaxe, consultez [XML Files: Understanding XML Namespaces](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)) (Fichiers XML : présentation des espaces de noms XML).  
   
 ## <a name="namespace-declarations"></a>Déclarations d'espaces de noms  
  Les déclarations d'espaces de noms permettent de distinguer et d'adresser les éléments d'un document XML lors de l'utilisation d'une instance de <xref:System.Xml.XPath.XPathNavigator>. Les préfixes d'espaces de noms fournissent une syntaxe courte pour l'adressage des espaces de noms.  
@@ -38,7 +38,7 @@ Pour utiliser les requêtes XPath avec des documents XML, vous devez adresser co
 ```  
   
 ## <a name="navigation-by-namespace-prefix"></a>Navigation par préfixe d'espace de noms  
- Le code fourni dans cette section utilise les objets <xref:System.Xml.XPath.XPathNavigator> et <xref:System.Xml.XmlNamespaceManager> pour sélectionner l'élément `Search` à partir du document XML dans la section précédente. La requête `xpath` inclut des préfixes d'espaces de noms dans chaque élément du chemin d'accès. La spécification de l'identité précise des espaces de noms qui contiennent chaque élément permet d'assurer une navigation correcte jusqu'à l'élément `Search` par la méthode <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>.  
+ Le code fourni dans cette section utilise les objets <xref:System.Xml.XPath.XPathNavigator> et <xref:System.Xml.XmlNamespaceManager> pour sélectionner l'élément `Search` à partir du document XML dans la section précédente. La requête `xpath` inclut des préfixes d’espaces de noms dans chaque élément du chemin d’accès. La spécification de l'identité précise des espaces de noms qui contiennent chaque élément permet d'assurer une navigation correcte jusqu'à l'élément `Search` par la méthode <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>.  
   
 ```  
 using (XmlReader reader = XmlReader.Create("response.xml"))  

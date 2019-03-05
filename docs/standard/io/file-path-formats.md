@@ -11,16 +11,16 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144856"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835822"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formats de chemin de fichier sur les systèmes Windows
 
-Dans l’espace de noms <xref:System.IO>, les membres de nombreux types incluent un paramètre `path` qui vous permet de spécifier un chemin absolu ou relatif à une ressource de système de fichiers. Ce chemin est ensuite passé aux [API de système de fichiers Windows](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx). Cette rubrique décrit les formats de chemins de fichier que vous pouvez utiliser dans les systèmes Windows.
+Dans l’espace de noms <xref:System.IO>, les membres de nombreux types incluent un paramètre `path` qui vous permet de spécifier un chemin absolu ou relatif à une ressource de système de fichiers. Ce chemin est ensuite passé aux [API de système de fichiers Windows](/windows/desktop/fileio/file-systems). Cette rubrique décrit les formats de chemins de fichier que vous pouvez utiliser dans les systèmes Windows.
 
 ## <a name="traditional-dos-paths"></a>Chemins DOS traditionnels
 
@@ -37,7 +37,7 @@ Si les trois composants sont présents, le chemin est absolu. Si aucune lettre d
 | `C:\Documents\Newsletters\Summer2018.pdf` | Chemin de fichier absolu à partir de la racine du lecteur C:. |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Chemin absolu à partir de la racine du lecteur actif. |
 | `2018\January.xlsx` | Chemin relatif à un fichier dans un sous-répertoire du répertoire actif. |
-| `..\Publications\TravelBrochure.pdf` | Chemin relatif à un fichier dans répertoire qui est un pair du répertoire actif. |
+| `..\Publications\TravelBrochure.pdf` | Chemin relatif à un fichier dans un répertoire qui est un pair du répertoire actif. |
 | `C:\Projects\apilibrary\apilibrary.sln` | Chemin absolu à un fichier à partir de la racine du lecteur C:. |
 | `C:Projects\apilibrary\apilibrary.sln` | Chemin relatif à partir du répertoire actif du lecteur C:. |
 
@@ -67,7 +67,7 @@ Voici quelques exemples de chemins UNC :
 | `\\system07\C$\` | Répertoire racine du lecteur C: sur `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | Fichier Foo.txt dans le répertoire Test du volume \\\\Server2\\Share.|
 
-Les chemins UNC doivent toujours être complets. Ils peuvent inclure des segments de répertoire relatifs (`.` et `..`), mais il doivent faire partie d’un chemin complet. Pour utiliser des chemins relatifs, vous devez impérativement mapper un chemin UNC à une lettre de lecteur.
+Les chemins UNC doivent toujours être complets. Ils peuvent inclure des segments de répertoire relatifs (`.` et `..`), mais ils doivent faire partie d’un chemin complet. Pour utiliser des chemins relatifs, vous devez impérativement mapper un chemin UNC à une lettre de lecteur.
 
 ## <a name="dos-device-paths"></a>Chemins de périphérique DOS
 

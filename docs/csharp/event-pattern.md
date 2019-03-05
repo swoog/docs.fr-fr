@@ -3,12 +3,12 @@ title: Modèles d’événement .NET standard
 description: En savoir plus sur les modèles d’événement .NET et comment créer des sources d’événements standard, vous abonner à des événements standard dans votre code et traiter ces événements.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129400"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201246"
 ---
 # <a name="standard-net-event-patterns"></a>Modèles d’événement .NET standard
 
@@ -47,7 +47,7 @@ Ensuite, nous devons créer la déclaration d’événement dans la classe FileS
 
 Nous allons remplir la classe FileSearcher pour rechercher les fichiers qui correspondent à un modèle et déclencher l’événement approprié quand une correspondance est détectée.
 
-[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>Définition et déclenchement d’événements de type champ
 
