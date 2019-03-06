@@ -7,30 +7,30 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555427"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361926"
 ---
-# <a name="toolbar"></a><span data-ttu-id="fc452-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="fc452-102">ToolBar</span></span>
-<span data-ttu-id="fc452-103">Le <xref:System.Windows.Controls.ToolBar> contrôle est un conteneur pour un groupe de commandes ou des contrôles qui sont généralement associés dans leur fonction.</span><span class="sxs-lookup"><span data-stu-id="fc452-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
+# <a name="toolbar"></a><span data-ttu-id="e0592-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="e0592-102">ToolBar</span></span>
+<span data-ttu-id="e0592-103">Le <xref:System.Windows.Controls.ToolBar> contrôle est un conteneur pour un groupe de commandes ou des contrôles qui sont généralement associées dans leur fonction.</span><span class="sxs-lookup"><span data-stu-id="e0592-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
   
- <span data-ttu-id="fc452-104">Les illustrations suivantes montrent horizontal et vertical <xref:System.Windows.Controls.ToolBar> contrôles.</span><span class="sxs-lookup"><span data-stu-id="fc452-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
+ <span data-ttu-id="e0592-104">Les illustrations suivantes montrent horizontales et verticales <xref:System.Windows.Controls.ToolBar> contrôles.</span><span class="sxs-lookup"><span data-stu-id="e0592-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
   
- <span data-ttu-id="fc452-105">![Barre d’outils horizontale](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="fc452-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
-<span data-ttu-id="fc452-106">Barre d’outils horizontale</span><span class="sxs-lookup"><span data-stu-id="fc452-106">Horizontal Toolbar</span></span>  
+ <span data-ttu-id="e0592-105">![Barre d’outils horizontale](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="e0592-105">![Horizontal ToolBar](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
+<span data-ttu-id="e0592-106">Barre d’outils horizontale</span><span class="sxs-lookup"><span data-stu-id="e0592-106">Horizontal Toolbar</span></span>  
   
- <span data-ttu-id="fc452-107">![Barre d’outils verticale](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="fc452-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
-<span data-ttu-id="fc452-108">Barre d’outils verticale</span><span class="sxs-lookup"><span data-stu-id="fc452-108">Vertical Toolbar</span></span>  
+ <span data-ttu-id="e0592-107">![Barre d’outils verticale](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="e0592-107">![Vertical ToolBar](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
+<span data-ttu-id="e0592-108">Barre d’outils verticale</span><span class="sxs-lookup"><span data-stu-id="e0592-108">Vertical Toolbar</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fc452-109">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="fc452-109">In This Section</span></span>  
- [<span data-ttu-id="fc452-110">Vue d'ensemble de ToolBar</span><span class="sxs-lookup"><span data-stu-id="fc452-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [<span data-ttu-id="fc452-111">Donner un style aux contrôles d'une barre d'outils</span><span class="sxs-lookup"><span data-stu-id="fc452-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e0592-109">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="e0592-109">In This Section</span></span>  
+ [<span data-ttu-id="e0592-110">Vue d'ensemble de ToolBar</span><span class="sxs-lookup"><span data-stu-id="e0592-110">ToolBar Overview</span></span>](toolbar-overview.md)  
+  [<span data-ttu-id="e0592-111">Donner un style aux contrôles d'une barre d'outils</span><span class="sxs-lookup"><span data-stu-id="e0592-111">Style Controls on a ToolBar</span></span>](how-to-style-controls-on-a-toolbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="fc452-112">Référence</span><span class="sxs-lookup"><span data-stu-id="fc452-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e0592-112">Référence</span><span class="sxs-lookup"><span data-stu-id="e0592-112">Reference</span></span>  
  <xref:System.Windows.Controls.ToolBar>  
   <xref:System.Windows.Controls.ToolBarTray>  
   
-## <a name="related-sections"></a><span data-ttu-id="fc452-113">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="fc452-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="e0592-113">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="e0592-113">Related Sections</span></span>

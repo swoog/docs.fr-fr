@@ -7,30 +7,30 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: afc39b0d079bf273170a649f03a3756953c29eea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2f46a548f28cffb1824ffbdc51f8d4d79c4c9d02
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836394"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363694"
 ---
-# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="157a5-102">Rubriques "Comment" relatives à l'audio et à la vidéo</span><span class="sxs-lookup"><span data-stu-id="157a5-102">Audio and Video How-to Topics</span></span>
-<span data-ttu-id="157a5-103">Les rubriques suivantes montrent comment utiliser le <xref:System.Windows.Controls.MediaElement> pour intégrer du contenu audio et vidéo dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="157a5-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
+# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="6b437-102">Rubriques "Comment" relatives à l'audio et à la vidéo</span><span class="sxs-lookup"><span data-stu-id="6b437-102">Audio and Video How-to Topics</span></span>
+<span data-ttu-id="6b437-103">Les rubriques suivantes montrent comment utiliser le <xref:System.Windows.Controls.MediaElement> pour intégrer du contenu audio et vidéo dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="6b437-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="157a5-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="157a5-104">In This Section</span></span>  
- [<span data-ttu-id="157a5-105">Contrôler un MediaElement (lecture, pause, arrêt, volume et vitesse)</span><span class="sxs-lookup"><span data-stu-id="157a5-105">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [<span data-ttu-id="157a5-106">Contrôler un MediaElement à l'aide d'un storyboard</span><span class="sxs-lookup"><span data-stu-id="157a5-106">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [<span data-ttu-id="157a5-107">Déclencher la lecture du média avec un événement utilisateur</span><span class="sxs-lookup"><span data-stu-id="157a5-107">Trigger Media Playback with a User Event</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [<span data-ttu-id="157a5-108">Répéter la lecture du média</span><span class="sxs-lookup"><span data-stu-id="157a5-108">Repeat Media Playback</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [<span data-ttu-id="157a5-109">Lire le média avec des animations</span><span class="sxs-lookup"><span data-stu-id="157a5-109">Play Media with Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [<span data-ttu-id="157a5-110">Utiliser des transformations sur un objet MediaElement</span><span class="sxs-lookup"><span data-stu-id="157a5-110">Use Transforms on a MediaElement</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6b437-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="6b437-104">In This Section</span></span>  
+ [<span data-ttu-id="6b437-105">Contrôler un MediaElement (lecture, pause, arrêt, volume et vitesse)</span><span class="sxs-lookup"><span data-stu-id="6b437-105">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [<span data-ttu-id="6b437-106">Contrôler un MediaElement à l'aide d'un storyboard</span><span class="sxs-lookup"><span data-stu-id="6b437-106">Control a MediaElement by Using a Storyboard</span></span>](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [<span data-ttu-id="6b437-107">Déclencher la lecture du média avec un événement utilisateur</span><span class="sxs-lookup"><span data-stu-id="6b437-107">Trigger Media Playback with a User Event</span></span>](how-to-trigger-media-playback-with-a-user-event.md)  
+ [<span data-ttu-id="6b437-108">Répéter la lecture du média</span><span class="sxs-lookup"><span data-stu-id="6b437-108">Repeat Media Playback</span></span>](how-to-repeat-media-playback.md)  
+ [<span data-ttu-id="6b437-109">Lire le média avec des animations</span><span class="sxs-lookup"><span data-stu-id="6b437-109">Play Media with Animations</span></span>](how-to-play-media-with-animations.md)  
+ [<span data-ttu-id="6b437-110">Utiliser des transformations sur un objet MediaElement</span><span class="sxs-lookup"><span data-stu-id="6b437-110">Use Transforms on a MediaElement</span></span>](how-to-use-transforms-on-a-mediaelement.md)  
   
-## <a name="reference"></a><span data-ttu-id="157a5-111">Référence</span><span class="sxs-lookup"><span data-stu-id="157a5-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6b437-111">Référence</span><span class="sxs-lookup"><span data-stu-id="6b437-111">Reference</span></span>  
  <xref:System.Windows.Controls.MediaElement>  
   
  <xref:System.Windows.Media.MediaPlayer>  
   
  <xref:System.Windows.Media.MediaTimeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="157a5-112">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="157a5-112">Related Sections</span></span>  
- [<span data-ttu-id="157a5-113">Graphiques et multimédia</span><span class="sxs-lookup"><span data-stu-id="157a5-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="6b437-112">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="6b437-112">Related Sections</span></span>  
+ [<span data-ttu-id="6b437-113">Graphiques et multimédia</span><span class="sxs-lookup"><span data-stu-id="6b437-113">Graphics and Multimedia</span></span>](index.md)

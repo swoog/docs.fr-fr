@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545816"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372202"
 ---
-# <a name="resources-wpf"></a><span data-ttu-id="041dd-102">Ressources (WPF)</span><span class="sxs-lookup"><span data-stu-id="041dd-102">Resources (WPF)</span></span>
-<span data-ttu-id="041dd-103">Une ressource est un objet pouvant être réutilisé à plusieurs endroits de votre application.</span><span class="sxs-lookup"><span data-stu-id="041dd-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="041dd-104">WPF prend en charge différents types de ressources.</span><span class="sxs-lookup"><span data-stu-id="041dd-104">WPF supports different types of resources.</span></span> <span data-ttu-id="041dd-105">Ces ressources sont principalement deux types de ressources : XAML ressources et les fichiers de données de ressources.</span><span class="sxs-lookup"><span data-stu-id="041dd-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="041dd-106">Pinceaux et styles sont des exemples de ressources XAML.</span><span class="sxs-lookup"><span data-stu-id="041dd-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="041dd-107">Fichiers de données de ressources sont des fichiers de données non exécutables qui a besoin d’une application.</span><span class="sxs-lookup"><span data-stu-id="041dd-107">Resource data files are non-executable data files that an application needs.</span></span>  
+# <a name="resources-wpf"></a><span data-ttu-id="2adad-102">Ressources (WPF)</span><span class="sxs-lookup"><span data-stu-id="2adad-102">Resources (WPF)</span></span>
+<span data-ttu-id="2adad-103">Une ressource est un objet pouvant être réutilisé à plusieurs endroits de votre application.</span><span class="sxs-lookup"><span data-stu-id="2adad-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="2adad-104">WPF prend en charge différents types de ressources.</span><span class="sxs-lookup"><span data-stu-id="2adad-104">WPF supports different types of resources.</span></span> <span data-ttu-id="2adad-105">Ces ressources sont principalement deux types de ressources : Ressources XAML et les fichiers de données de ressources.</span><span class="sxs-lookup"><span data-stu-id="2adad-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="2adad-106">Styles et les pinceaux sont des exemples de ressources XAML.</span><span class="sxs-lookup"><span data-stu-id="2adad-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="2adad-107">Fichiers de données de ressources sont des fichiers de données non exécutables nécessaires à une application.</span><span class="sxs-lookup"><span data-stu-id="2adad-107">Resource data files are non-executable data files that an application needs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="041dd-108">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="041dd-108">In This Section</span></span>  
- [<span data-ttu-id="041dd-109">Ressources XAML</span><span class="sxs-lookup"><span data-stu-id="041dd-109">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [<span data-ttu-id="041dd-110">Fichiers de ressources, de contenu et de données d’une application WPF</span><span class="sxs-lookup"><span data-stu-id="041dd-110">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [<span data-ttu-id="041dd-111">URI à en-tête pack dans WPF</span><span class="sxs-lookup"><span data-stu-id="041dd-111">Pack URIs in WPF</span></span>](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2adad-108">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="2adad-108">In This Section</span></span>  
+ [<span data-ttu-id="2adad-109">Ressources XAML</span><span class="sxs-lookup"><span data-stu-id="2adad-109">XAML Resources</span></span>](xaml-resources.md)  
+ [<span data-ttu-id="2adad-110">Fichiers de ressources, de contenu et de données d’une application WPF</span><span class="sxs-lookup"><span data-stu-id="2adad-110">WPF Application Resource, Content, and Data Files</span></span>](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [<span data-ttu-id="2adad-111">URI à en-tête pack dans WPF</span><span class="sxs-lookup"><span data-stu-id="2adad-111">Pack URIs in WPF</span></span>](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a><span data-ttu-id="041dd-112">Référence</span><span class="sxs-lookup"><span data-stu-id="041dd-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2adad-112">Référence</span><span class="sxs-lookup"><span data-stu-id="2adad-112">Reference</span></span>  
  <xref:System.Windows.ResourceDictionary>  
   
- [<span data-ttu-id="041dd-113">StaticResource, extension de balisage</span><span class="sxs-lookup"><span data-stu-id="041dd-113">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [<span data-ttu-id="2adad-113">StaticResource, extension de balisage</span><span class="sxs-lookup"><span data-stu-id="2adad-113">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
   
- [<span data-ttu-id="041dd-114">Extension de balisage DynamicResource</span><span class="sxs-lookup"><span data-stu-id="041dd-114">DynamicResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [<span data-ttu-id="2adad-114">Extension de balisage DynamicResource</span><span class="sxs-lookup"><span data-stu-id="2adad-114">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
   
- [<span data-ttu-id="041dd-115">x:Key, directive</span><span class="sxs-lookup"><span data-stu-id="041dd-115">x:Key Directive</span></span>](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [<span data-ttu-id="2adad-115">x:Key, directive</span><span class="sxs-lookup"><span data-stu-id="2adad-115">x:Key Directive</span></span>](../../xaml-services/x-key-directive.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="041dd-116">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="041dd-116">Related Sections</span></span>  
- [<span data-ttu-id="041dd-117">Intégration du format XAML au format WPF</span><span class="sxs-lookup"><span data-stu-id="041dd-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="2adad-116">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="2adad-116">Related Sections</span></span>  
+ [<span data-ttu-id="2adad-117">Intégration du format XAML au format WPF</span><span class="sxs-lookup"><span data-stu-id="2adad-117">XAML in WPF</span></span>](xaml-in-wpf.md)

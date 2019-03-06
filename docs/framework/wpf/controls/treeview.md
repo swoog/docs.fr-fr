@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: 392e59ca7bfa4c0fe8eb85b085a27b7c03df1c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d041c287fe88a2d44920848bc14cae97a70b3f0d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556251"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355114"
 ---
-# <a name="treeview"></a><span data-ttu-id="10e24-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="10e24-102">TreeView</span></span>
-<span data-ttu-id="10e24-103">Le <xref:System.Windows.Controls.TreeView> contrôle affiche des informations dans une structure hiérarchique à l’aide de nœuds réductibles.</span><span class="sxs-lookup"><span data-stu-id="10e24-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
+# <a name="treeview"></a><span data-ttu-id="018e3-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="018e3-102">TreeView</span></span>
+<span data-ttu-id="018e3-103">Le <xref:System.Windows.Controls.TreeView> contrôle affiche des informations dans une structure hiérarchique à l’aide de nœuds réductibles.</span><span class="sxs-lookup"><span data-stu-id="018e3-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
   
- <span data-ttu-id="10e24-104">L’illustration suivante est un exemple d’un <xref:System.Windows.Controls.TreeView> contrôle a imbriqué <xref:System.Windows.Controls.TreeViewItem> contrôles.</span><span class="sxs-lookup"><span data-stu-id="10e24-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls.</span></span>  
+ <span data-ttu-id="018e3-104">L’illustration suivante est un exemple d’un <xref:System.Windows.Controls.TreeView> contrôle comporte des imbriqués <xref:System.Windows.Controls.TreeViewItem> contrôles.</span><span class="sxs-lookup"><span data-stu-id="018e3-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls.</span></span>  
   
- <span data-ttu-id="10e24-105">![Illustration de TreeView](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")</span><span class="sxs-lookup"><span data-stu-id="10e24-105">![TreeView illustration](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")</span></span>  
+ <span data-ttu-id="018e3-105">![Illustration de TreeView](./media/treeviewillustration.JPG "TreeViewIllustration")</span><span class="sxs-lookup"><span data-stu-id="018e3-105">![TreeView illustration](./media/treeviewillustration.JPG "TreeViewIllustration")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="10e24-106">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="10e24-106">In This Section</span></span>  
- [<span data-ttu-id="10e24-107">Vue d'ensemble de TreeView</span><span class="sxs-lookup"><span data-stu-id="10e24-107">TreeView Overview</span></span>](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [<span data-ttu-id="10e24-108">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="10e24-108">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="018e3-106">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="018e3-106">In This Section</span></span>  
+ [<span data-ttu-id="018e3-107">Vue d'ensemble de TreeView</span><span class="sxs-lookup"><span data-stu-id="018e3-107">TreeView Overview</span></span>](treeview-overview.md)  
+ [<span data-ttu-id="018e3-108">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="018e3-108">How-to Topics</span></span>](treeview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="10e24-109">Référence</span><span class="sxs-lookup"><span data-stu-id="10e24-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="018e3-109">Référence</span><span class="sxs-lookup"><span data-stu-id="018e3-109">Reference</span></span>  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="10e24-110">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="10e24-110">Related Sections</span></span>  
- [<span data-ttu-id="10e24-111">Vue d’ensemble de la liaison de données</span><span class="sxs-lookup"><span data-stu-id="10e24-111">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [<span data-ttu-id="10e24-112">Vue d’ensemble des modèles de données</span><span class="sxs-lookup"><span data-stu-id="10e24-112">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="018e3-110">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="018e3-110">Related Sections</span></span>  
+ [<span data-ttu-id="018e3-111">Vue d’ensemble de la liaison de données</span><span class="sxs-lookup"><span data-stu-id="018e3-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
+  [<span data-ttu-id="018e3-112">Vue d’ensemble des modèles de données</span><span class="sxs-lookup"><span data-stu-id="018e3-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
