@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562591"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377043"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>FocusVisualStyle et application d'un style au focus dans les contrôles
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose deux mécanismes parallèles permettant de changer l’apparence visuelle d’un contrôle lorsqu’il reçoit le focus clavier. Le premier mécanisme consiste à utiliser des accesseurs Set de propriété pour les propriétés telles que <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dans le style ou le modèle est appliqué au contrôle. Le deuxième mécanisme consiste à fournir un style distinct comme valeur de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propriété ; le « style de focus visuel » crée une arborescence d’éléments visuels distincte pour un ornement qui est dessiné sur le contrôle, plutôt que d’en modifier l’arborescence visuelle du contrôle ou toute autre interface utilisateur élément en la remplaçant. Cette rubrique décrit les scénarios où chacun de ces mécanismes convient.  
@@ -25,7 +25,7 @@ ms.locfileid: "54562591"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>Comportement du style de focus visuel par défaut  
- Les styles de focus visuels agissent uniquement lorsque l’action du focus a été démarrée par le clavier. Une action de la souris ou un changement de focus par programmation désactive le mode de style de focus visuel. Pour plus d’informations sur les différences entre les modes de focus, consultez [Vue d’ensemble du focus](../../../../docs/framework/wpf/advanced/focus-overview.md).  
+ Les styles de focus visuels agissent uniquement lorsque l’action du focus a été démarrée par le clavier. Une action de la souris ou un changement de focus par programmation désactive le mode de style de focus visuel. Pour plus d’informations sur les différences entre les modes de focus, consultez [Vue d’ensemble du focus](focus-overview.md).  
   
  Les thèmes des contrôles proposent un comportement de style de focus visuel par défaut qui devient celui de tous les contrôles du thème. Ce style de thème est identifié par la valeur de la clé statique <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>. Lorsque vous déclarez votre propre style de focus visuel au niveau de l’application, vous remplacez ce comportement de style par défaut dans les thèmes. Si vous définissez l’ensemble du thème, vous devez utiliser cette même clé pour définir le style du comportement par défaut à appliquer à l’ensemble du thème.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54562591"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>Alternatives à l’utilisation des styles de focus visuels  
  Lorsque l’utilisation d’un style de focus visuel n’est pas adaptée, soit parce que vous appliquez un style différent à chaque contrôle, soit parce que vous souhaitez contrôler davantage le modèle de contrôle, il existe plusieurs autres propriétés et techniques accessibles qui peuvent créer un comportement visuel en réponse aux changements du focus.  
   
- Les déclencheurs, les setters et les setters d’événement sont tous abordés en détail dans [Styles et modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md). La gestion des événements routés est abordée dans [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Les déclencheurs, les setters et les setters d’événement sont tous abordés en détail dans [Styles et modèles](../controls/styling-and-templating.md). La gestion des événements routés est abordée dans [Vue d’ensemble des événements routés](routed-events-overview.md).  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  Si vous vous intéressez particulièrement au focus clavier, la <xref:System.Windows.UIElement.IsKeyboardFocused%2A> propriété de dépendance peut être utilisée pour une propriété <xref:System.Windows.Trigger>. L’utilisation d’un déclencheur de propriété dans un style ou un modèle convient mieux à la définition d’un comportement de focus clavier qui est propre à un seul contrôle, et qui peut ne pas correspondre visuellement au comportement de focus clavier des autres contrôles.  
@@ -78,6 +78,6 @@ ms.locfileid: "54562591"
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Vue d’ensemble du focus](../../../../docs/framework/wpf/advanced/focus-overview.md)
-- [Vue d’ensemble des entrées](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
+- [Vue d’ensemble du focus](focus-overview.md)
+- [Vue d’ensemble des entrées](input-overview.md)

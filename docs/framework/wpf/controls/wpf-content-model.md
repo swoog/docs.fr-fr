@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 751cbcc3a3b70f0937a8fe84c0fad5d8771a32ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd9dc7a441987b2089f0f21c81311a628ae3cdfa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718154"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373086"
 ---
 # <a name="wpf-content-model"></a>Modèle de contenu WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est une plateforme de présentation qui fournit de nombreux contrôles et des éléments de type contrôle dont le principal objectif est d’afficher différents types de contenu. Pour déterminer le contrôle à utiliser ou le contrôle d’où dériver, vous devez comprendre les types d’objets qu’un contrôle donné peut afficher de manière optimale.  
@@ -40,7 +40,7 @@ ms.locfileid: "54718154"
   
  Les contrôles qui héritent de ces classes peuvent contenir le même type de contenu et traiter le contenu de la même façon. L’illustration suivante montre un contrôle dérivé de chaque modèle de contenu qui contient une image et du texte.  
   
- ![Button, GroupBox, Listbax, TreeViewItem](../../../../docs/framework/wpf/controls/media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
+ ![Button, GroupBox, Listbax, TreeViewItem](./media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>Contrôles qui contiennent un objet arbitraire unique  
  Le <xref:System.Windows.Controls.ContentControl> classe contient un seul élément de contenu arbitraire. Sa propriété de contenu est <xref:System.Windows.Controls.ContentControl.Content%2A>. Les contrôles suivants héritent <xref:System.Windows.Controls.ContentControl> et utilisent son modèle de contenu :  
@@ -87,7 +87,7 @@ ms.locfileid: "54718154"
   
  L’illustration suivante montre quatre boutons dont <xref:System.Windows.Controls.ContentControl.Content%2A> est définie sur une chaîne, un <xref:System.DateTime> objet, un <xref:System.Windows.Shapes.Rectangle>et un <xref:System.Windows.Controls.Panel> qui contient un <xref:System.Windows.Shapes.Ellipse> et un <xref:System.Windows.Controls.TextBlock>.  
   
- ![Quatre boutons](../../../../docs/framework/wpf/controls/media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
+ ![Quatre boutons](./media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
 Quatre boutons ayant différents types de contenu  
   
  Pour obtenir un exemple montrant comment définir le <xref:System.Windows.Controls.ContentControl.Content%2A> propriété, consultez <xref:System.Windows.Controls.ContentControl>.  
@@ -105,7 +105,7 @@ Quatre boutons ayant différents types de contenu
   
  L’illustration suivante montre deux <xref:System.Windows.Controls.TabItem> objets. La première <xref:System.Windows.Controls.TabItem> a <xref:System.Windows.UIElement> objets comme les <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> et <xref:System.Windows.Controls.ContentControl.Content%2A>. Le <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> est définie sur une <xref:System.Windows.Controls.StackPanel> qui contient un <xref:System.Windows.Shapes.Ellipse> et un <xref:System.Windows.Controls.TextBlock>. Le <xref:System.Windows.Controls.ContentControl.Content%2A> est définie sur une <xref:System.Windows.Controls.StackPanel> qui contient un <xref:System.Windows.Controls.TextBlock> et un <xref:System.Windows.Controls.Label>. La seconde <xref:System.Windows.Controls.TabItem> a une chaîne le <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> et un <xref:System.Windows.Controls.TextBlock> dans le <xref:System.Windows.Controls.ContentControl.Content%2A>.  
   
- ![TabControl](../../../../docs/framework/wpf/controls/media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
+ ![TabControl](./media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
 TabControl qui utilise différents types dans la propriété d’en-tête  
   
  Pour obtenir un exemple montrant comment créer <xref:System.Windows.Controls.TabItem> , consultez <xref:System.Windows.Controls.HeaderedContentControl>.  
@@ -147,7 +147,7 @@ TabControl qui utilise différents types dans la propriété d’en-tête
   
 -   Un <xref:System.Windows.Controls.Panel> qui contient un <xref:System.Windows.Shapes.Ellipse> et un <xref:System.Windows.Controls.TextBlock>.  
   
- ![ListBox avec quatre types de contenu](../../../../docs/framework/wpf/controls/media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
+ ![ListBox avec quatre types de contenu](./media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
 ListBox contenant plusieurs types de contenu  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>Contrôles qui contiennent un en-tête et une collection d’objets arbitraires  
@@ -189,7 +189,7 @@ ListBox contenant plusieurs types de contenu
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
- Pour plus d’informations, consultez la page [Vue d’ensemble de Panel](../../../../docs/framework/wpf/controls/panels-overview.md).  
+ Pour plus d’informations, consultez la page [Vue d’ensemble de Panel](panels-overview.md).  
   
 <a name="classes_that_affects_the_appearance_of_a_uielement"></a>   
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>Classes qui affectent l’apparence d’un UIElement  
@@ -215,12 +215,12 @@ ListBox contenant plusieurs types de contenu
   
  L’illustration suivante montre un <xref:System.Windows.Controls.TextBox> qui a (est décoré avec) un <xref:System.Windows.Controls.Border> autour d’elle.  
   
- ![TextBox avec bordure noire](../../../../docs/framework/wpf/controls/media/layout-border-around-textbox.png "Layout_Border_around_TextBox")  
+ ![TextBox avec bordure noire](./media/layout-border-around-textbox.png "Layout_Border_around_TextBox")  
 TextBlock avec une bordure  
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>Classes qui fournissent des commentaires visuels sur un UIElement  
- Le <xref:System.Windows.Documents.Adorner> classe fournit des signaux visuels à un utilisateur. Par exemple, utiliser un <xref:System.Windows.Documents.Adorner> pour ajouter des descripteurs fonctionnels à des éléments ou fournir des informations d’état sur un contrôle. Le <xref:System.Windows.Documents.Adorner> classe fournit une infrastructure afin que vous pouvez créer vos propres ornements. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne fournit aucun ornement implémenté. Pour plus d’informations, consultez [Vue d’ensemble des ornements](../../../../docs/framework/wpf/controls/adorners-overview.md).  
+ Le <xref:System.Windows.Documents.Adorner> classe fournit des signaux visuels à un utilisateur. Par exemple, utiliser un <xref:System.Windows.Documents.Adorner> pour ajouter des descripteurs fonctionnels à des éléments ou fournir des informations d’état sur un contrôle. Le <xref:System.Windows.Documents.Adorner> classe fournit une infrastructure afin que vous pouvez créer vos propres ornements. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne fournit aucun ornement implémenté. Pour plus d’informations, consultez [Vue d’ensemble des ornements](adorners-overview.md).  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>Classes qui permettent aux utilisateurs d’entrer du texte  
@@ -250,7 +250,7 @@ TextBlock avec une bordure
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>Classes de mise en forme du texte  
- <xref:System.Windows.Documents.TextElement> et ses classes connexes vous permettent de mettre en forme texte. <xref:System.Windows.Documents.TextElement> les objets contiennent et mettre en forme le texte dans <xref:System.Windows.Controls.TextBlock> et <xref:System.Windows.Documents.FlowDocument> objets. Les deux principaux types de <xref:System.Windows.Documents.TextElement> sont des objets <xref:System.Windows.Documents.Block> éléments et <xref:System.Windows.Documents.Inline> éléments. Un <xref:System.Windows.Documents.Block> élément représente un bloc de texte, tel qu’un paragraphe ou d’une liste. Un <xref:System.Windows.Documents.Inline> élément représente une partie du texte dans un bloc. Nombreux <xref:System.Windows.Documents.Inline> classes spécifient la mise en forme du texte à laquelle ils sont appliqués. Chaque <xref:System.Windows.Documents.TextElement> possède son propre modèle de contenu. Pour plus d’informations, consultez la page [Vue d’ensemble du modèle de contenu de TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
+ <xref:System.Windows.Documents.TextElement> et ses classes connexes vous permettent de mettre en forme texte. <xref:System.Windows.Documents.TextElement> les objets contiennent et mettre en forme le texte dans <xref:System.Windows.Controls.TextBlock> et <xref:System.Windows.Documents.FlowDocument> objets. Les deux principaux types de <xref:System.Windows.Documents.TextElement> sont des objets <xref:System.Windows.Documents.Block> éléments et <xref:System.Windows.Documents.Inline> éléments. Un <xref:System.Windows.Documents.Block> élément représente un bloc de texte, tel qu’un paragraphe ou d’une liste. Un <xref:System.Windows.Documents.Inline> élément représente une partie du texte dans un bloc. Nombreux <xref:System.Windows.Documents.Inline> classes spécifient la mise en forme du texte à laquelle ils sont appliqués. Chaque <xref:System.Windows.Documents.TextElement> possède son propre modèle de contenu. Pour plus d’informations, consultez la page [Vue d’ensemble du modèle de contenu de TextElement](../advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Avancé](../../../../docs/framework/wpf/advanced/index.md)
+- [Avancé](../advanced/index.md)

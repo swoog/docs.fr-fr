@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608860"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356714"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Considérations sur les performances de l'interopérabilité entre Direct3D9 et WPF
 Vous pouvez héberger les contenu Direct3D9 à l’aide de la <xref:System.Windows.Interop.D3DImage> classe. Hébergement de contenu de Direct3D9 peut affecter les performances de votre application. Cette rubrique décrit les meilleures pratiques pour optimiser les performances lors de l’hébergement de contenu Direct3D9 dans une application Windows Presentation Foundation (WPF). Ces meilleures pratiques incluent l’utilisation de <xref:System.Windows.Interop.D3DImage> et meilleures pratiques lorsque vous utilisez Windows Vista, Windows XP, et affiche des écrans multiples.  
   
 > [!NOTE]
->  Pour obtenir des exemples de code qui illustrent ces meilleures pratiques, consultez [interopérabilité WPF et Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+>  Pour obtenir des exemples de code qui illustrent ces meilleures pratiques, consultez [interopérabilité WPF et Direct3D9](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="use-d3dimage-sparingly"></a>Utilisez D3DImage avec parcimonie  
  Direct3D9 contenu hébergé dans un <xref:System.Windows.Interop.D3DImage> instance ne rend pas aussi rapide que dans une application Direct3D pure. Copie de la surface et de vider le tampon de commande peuvent être des opérations coûteuses. Comme le nombre de <xref:System.Windows.Interop.D3DImage> augmente d’instances, de consommation plus se produit et dégradent les performances. Par conséquent, vous devez utiliser <xref:System.Windows.Interop.D3DImage> avec parcimonie.  
@@ -47,7 +47,7 @@ Vous pouvez héberger les contenu Direct3D9 à l’aide de la <xref:System.Windo
 ## <a name="best-practices-for-multi-monitor-displays"></a>Meilleures pratiques pour l’affichage sur plusieurs écrans  
  Si vous utilisez un ordinateur qui dispose de plusieurs moniteurs, vous devez suivre les meilleures pratiques décrites précédemment. Il existe également certaines considérations de performances supplémentaires pour une configuration de plusieurs écran.  
   
- Lorsque vous créez la mémoire tampon d’arrière-plan, il est créé sur un appareil spécifique et l’adaptateur, mais WPF peut afficher le tampon d’affichage sur n’importe quelle carte. Copie pour des adaptateurs pour mettre à jour le tampon d’affichage peut être très coûteux. Sur Windows Vista est configuré pour utiliser le WDDM avec plusieurs cartes vidéo et un `IDirect3DDevice9Ex` appareil, si le tampon d’affichage est sur un autre adaptateur mais toujours sur la même carte vidéo, il n’y a aucune altération des performances. Toutefois, sur Windows XP et le XDDM avec plusieurs cartes vidéo, il est sensiblement les performances lorsque le tampon d’affichage est affiché sur un autre adaptateur que la mémoire tampon d’arrière-plan. Pour plus d’informations, consultez [interopérabilité WPF et Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+ Lorsque vous créez la mémoire tampon d’arrière-plan, il est créé sur un appareil spécifique et l’adaptateur, mais WPF peut afficher le tampon d’affichage sur n’importe quelle carte. Copie pour des adaptateurs pour mettre à jour le tampon d’affichage peut être très coûteux. Sur Windows Vista est configuré pour utiliser le WDDM avec plusieurs cartes vidéo et un `IDirect3DDevice9Ex` appareil, si le tampon d’affichage est sur un autre adaptateur mais toujours sur la même carte vidéo, il n’y a aucune altération des performances. Toutefois, sur Windows XP et le XDDM avec plusieurs cartes vidéo, il est sensiblement les performances lorsque le tampon d’affichage est affiché sur un autre adaptateur que la mémoire tampon d’arrière-plan. Pour plus d’informations, consultez [interopérabilité WPF et Direct3D9](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="performance-summary"></a>Résumé des performances  
  Le tableau suivant montre les performances de la mise à jour du tampon d’affichage en fonction du système d’exploitation, le format de pixel et verrouillabilité de la surface. Le tampon d’affichage et de la mémoire tampon d’arrière-plan sont supposées pour être sur la même carte. Selon la configuration de l’adaptateur, les mises à jour matérielles sont généralement beaucoup plus rapides que les mises à jour logicielles.  
@@ -61,6 +61,6 @@ Vous pouvez héberger les contenu Direct3D9 à l’aide de la <xref:System.Windo
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Interop.D3DImage>
-- [Interopérabilité WPF et Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [Procédure pas à pas : Création de contenu Direct3D9 à héberger dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Procédure pas à pas : Hébergement de contenu Direct3D9 dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Interopérabilité WPF et Direct3D9](wpf-and-direct3d9-interoperation.md)
+- [Procédure pas à pas : Création de contenu Direct3D9 à héberger dans WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Procédure pas à pas : Hébergement de contenu Direct3D9 dans WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

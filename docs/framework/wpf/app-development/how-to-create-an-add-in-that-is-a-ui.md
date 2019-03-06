@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366385"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procédure : Créer un complément qui est une interface utilisateur
 Cet exemple montre comment créer un complément qui est un Windows Presentation Foundation (WPF) qui est hébergé par une application autonome WPF.  
@@ -27,7 +27,7 @@ Cet exemple montre comment créer un complément qui est un Windows Presentation
   
 -   Base de connaissances du .NET Framework dans modèle, y compris le pipeline de complément et développement de l’hôte. Si vous n’êtes pas familiarisé avec ces concepts, consultez [des compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Pour obtenir un didacticiel qui montre l’implémentation d’un pipeline, un complément et une application hôte, consultez [procédure pas à pas : Création d’une Application Extensible](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Connaissance des extensions de WPF pour le modèle de complément .NET Framework. Consultez [vue d’ensemble des compléments WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+-   Connaissance des extensions de WPF pour le modèle de complément .NET Framework. Consultez [vue d’ensemble des compléments WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Exemple  
  Pour créer un complément qui est une UI WPF nécessite du code spécifique pour chaque segment de pipeline, le complément et l’application hôte.  
@@ -37,13 +37,13 @@ Cet exemple montre comment créer un complément qui est un Windows Presentation
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implémentation du segment de pipeline de contrat  
  Lorsqu’un complément est une interface utilisateur, le contrat pour le complément doit implémenter <xref:System.AddIn.Contract.INativeHandleContract>. Dans l’exemple, `IWPFAddInContract` implémente <xref:System.AddIn.Contract.INativeHandleContract>, comme illustré dans le code suivant.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implémentation du segment de pipeline de vue de complément  
  Étant donné que le complément est implémenté comme une sous-classe de la <xref:System.Windows.FrameworkElement> type, la vue de complément doit également sous-classer <xref:System.Windows.FrameworkElement>. Le code suivant montre la vue de complément du contrat, implémentée en tant que la `WPFAddInView` classe.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  Ici, la vue de complément est dérivée de <xref:System.Windows.Controls.UserControl>. Par conséquent, l’interface utilisateur complément doit également dériver de <xref:System.Windows.Controls.UserControl>.  
   
@@ -51,12 +51,12 @@ Cet exemple montre comment créer un complément qui est un Windows Presentation
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implémentation du segment de pipeline d’adaptateur côté complément  
  Bien que le contrat soit un <xref:System.AddIn.Contract.INativeHandleContract>, le complément est une <xref:System.Windows.FrameworkElement> (comme spécifié par le segment de pipeline de vue complément). Par conséquent, le <xref:System.Windows.FrameworkElement> doit être converti en un <xref:System.AddIn.Contract.INativeHandleContract> avant de traverser la limite d’isolation. Cette opération est exécutée par l’adaptateur côté complément en appelant <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, comme illustré dans le code suivant.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- Dans le modèle de complément où un complément retourne une interface utilisateur (consultez [créer un complément que retourne une interface utilisateur](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), l’adaptateur de complément converti le <xref:System.Windows.FrameworkElement> à un <xref:System.AddIn.Contract.INativeHandleContract> en appelant <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> doit également être appelée dans ce modèle, bien que vous devez implémenter une méthode à partir de laquelle écrire le code pour l’appeler. Pour cela, substituez <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> et implémentez le code qui appelle <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> si le code qui appelle <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> attend un <xref:System.AddIn.Contract.INativeHandleContract>. Dans ce cas, l’appelant sera l’adaptateur côté hôte, ce qui est traité dans une sous-section ultérieure.  
+ Dans le modèle de complément où un complément retourne une interface utilisateur (consultez [créer un complément que retourne une interface utilisateur](how-to-create-an-add-in-that-returns-a-ui.md)), l’adaptateur de complément converti le <xref:System.Windows.FrameworkElement> à un <xref:System.AddIn.Contract.INativeHandleContract> en appelant <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> doit également être appelée dans ce modèle, bien que vous devez implémenter une méthode à partir de laquelle écrire le code pour l’appeler. Pour cela, substituez <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> et implémentez le code qui appelle <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> si le code qui appelle <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> attend un <xref:System.AddIn.Contract.INativeHandleContract>. Dans ce cas, l’appelant sera l’adaptateur côté hôte, ce qui est traité dans une sous-section ultérieure.  
   
 > [!NOTE]
->  Vous devez également substituer <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> dans ce modèle pour permettre la tabulation entre l’interface utilisateur d’application hôte et l’interface utilisateur du complément. Pour plus d’informations, consultez « Limitations des Add-In WPF » dans [vue d’ensemble des compléments WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+>  Vous devez également substituer <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> dans ce modèle pour permettre la tabulation entre l’interface utilisateur d’application hôte et l’interface utilisateur du complément. Pour plus d’informations, consultez « Limitations des Add-In WPF » dans [vue d’ensemble des compléments WPF](wpf-add-ins-overview.md).  
   
  Étant donné que l’adaptateur côté complément implémente une interface qui dérive de <xref:System.AddIn.Contract.INativeHandleContract>, vous devez également implémenter <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, bien que cela soit ignoré quand <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> est remplacée.  
   
@@ -106,4 +106,4 @@ Cet exemple montre comment créer un complément qui est un Windows Presentation
   
 ## <a name="see-also"></a>Voir aussi
 - [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Vue d’ensemble des compléments WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [Vue d’ensemble des compléments WPF](wpf-add-ins-overview.md)

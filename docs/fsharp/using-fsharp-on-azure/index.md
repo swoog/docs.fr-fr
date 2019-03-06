@@ -4,6 +4,7 @@ description: 'Guide d’utilisation des services Azure avecF#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>Utilisation de F# dans Azure
 
 F# est un excellent langage pour la programmation dans le cloud. Fréquemment utilisé pour écrire des applications web, des services cloud et des microservices hébergés dans le cloud, il permet aussi de traiter des données scalables.
@@ -87,7 +88,7 @@ Vous pouvez utiliser Azure Notification Hubs avec F# de deux manières :
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Implémentation de WebHooks sur Azure avec F\#
 
-Un [Webhook](https://en.wikipedia.org/wiki/Webhook) est un rappel déclenché au moyen d’une requête web. Les Webhooks sont utilisés par des sites tels que GitHub pour signaler des événements. 
+Un [Webhook](https://en.wikipedia.org/wiki/Webhook) est un rappel déclenché au moyen d’une requête web. Les Webhooks sont utilisés par des sites tels que GitHub pour signaler des événements.
 
 Vous pouvez implémenter des Webhooks en F# et les héberger sur Azure par le biais d’une [fonction Azure Functions en F# avec une liaison Webhook](/azure/azure-functions/functions-bindings-http-webhook).
 
@@ -109,7 +110,7 @@ Vous pouvez déployer et gérer des machines virtuelles Azure par programmation 
 
 De même, vous pouvez déployer et gérer d’autres ressources Azure à partir de scripts F# à l’aide des mêmes composants. Par exemple, vous pouvez créer des comptes de stockage, déployer des Services Cloud Azure, créer des instances d’Azure Cosmos DB et gérer Azure Notifcation Hubs par programmation à partir F# scripts.
 
-Il est généralement inutile d’utiliser des scripts F# pour déployer et gérer des ressources. Par exemple, vous pouvez déployer des ressources Azure directement à partir de descriptions de modèles JSON paramétrables. Consultez [Modèles Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices), en particulier les exemples fournis tels que les [modèles de démarrage rapide Azure](https://azure.microsoft.com/resources/templates/).
+Il est généralement inutile d’utiliser des scripts F# pour déployer et gérer des ressources. Par exemple, les ressources Azure peuvent également être déployées directement à partir des descriptions des modèles JSON, qui peuvent être paramétrées. Consultez [Modèles Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices), en particulier les exemples fournis tels que les [modèles de démarrage rapide Azure](https://azure.microsoft.com/resources/templates/).
 
 ## <a name="other-resources"></a>Autres ressources
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b636842b1d41e17b09f02b7b9a6f7aa47eb4cdd1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694085"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365410"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procédure : Trier une colonne GridView lors d'un clic sur un en-tête
 Cet exemple montre comment créer un <xref:System.Windows.Controls.ListView> contrôle qui implémente un <xref:System.Windows.Controls.GridView> afficher en mode trie le contenu des données lorsqu’un utilisateur clique sur un en-tête de colonne.  
@@ -226,6 +226,6 @@ End Sub
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Vue d’ensemble de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Vue d’ensemble de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Vue d’ensemble de ListView](listview-overview.md)
+- [Vue d’ensemble de GridView](gridview-overview.md)
+- [Rubriques de guide pratique](listview-how-to-topics.md)

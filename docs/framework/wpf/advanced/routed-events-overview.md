@@ -15,19 +15,19 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 637cb6cfb343352561708a7d94e76e84e2ca7ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535813"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379209"
 ---
 # <a name="routed-events-overview"></a>Vue d'ensemble des événements routés
 Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Elle définit les termes utilisés pour les événements routés, elle explique comment ces événements sont routés via une arborescence d’éléments, elle résume la façon dont sont gérés les événements routés et elle explique comment créer ses propres événements routés personnalisés.
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique suppose que vous avez une connaissance élémentaire du [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et de la programmation orientée objet, ainsi que de la façon dont les relations entre les éléments [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] peuvent être conceptualisées sous forme d’arborescence. Pour pouvoir suivre les exemples de cette rubrique, vous devez également connaître le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] et savoir écrire des applications ou des pages [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rudimentaires. Pour plus d’informations, consultez [Procédure pas à pas : Ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) et [vue d’ensemble de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Cette rubrique suppose que vous avez une connaissance élémentaire du [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et de la programmation orientée objet, ainsi que de la façon dont les relations entre les éléments [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] peuvent être conceptualisées sous forme d’arborescence. Pour pouvoir suivre les exemples de cette rubrique, vous devez également connaître le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] et savoir écrire des applications ou des pages [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rudimentaires. Pour plus d’informations, consultez [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md) et [vue d’ensemble de XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="routing"></a>   
 ## <a name="what-is-a-routed-event"></a>Qu’est-ce qu’un événement routé ?  
@@ -41,11 +41,11 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
   
  Prenons l’arborescence d’éléments suivante :  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
  Cette arborescence d’éléments produit ce qui suit :  
   
- ![Boutons Oui, Non et Annuler](../../../../docs/framework/wpf/advanced/media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
+ ![Boutons Oui, Non et Annuler](./media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
   
  Dans cette arborescence d’éléments simplifiée, la source d’un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement est un de la <xref:System.Windows.Controls.Button> éléments et selon la <xref:System.Windows.Controls.Button> utilisateur a cliqué sur est le premier élément qui a la possibilité de gérer l’événement. Toutefois, si aucun gestionnaire n’attaché à la <xref:System.Windows.Controls.Button> agit sur l’événement, puis l’événement se propage vers le haut à la <xref:System.Windows.Controls.Button> parent dans l’arborescence d’éléments, qui est le <xref:System.Windows.Controls.StackPanel>. Potentiellement, à l’événement se propage à <xref:System.Windows.Controls.Border>et au-delà de la racine de la page de l’arborescence d’éléments (non illustré).  
   
@@ -60,8 +60,8 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
   
  **Points d’attachement de gestionnaire :** Dans [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], vous seriez obligé d’attacher le même gestionnaire plusieurs fois pour traiter les événements qui peuvent être déclenchés à partir de plusieurs éléments. Les événements routés vous permettent d’attacher ce gestionnaire une seule fois, comme dans l’exemple précédent, et d’utiliser la logique du gestionnaire pour déterminer d’où provient l’événement, si nécessaire. Par exemple, ceci pourrait être le gestionnaire du [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] présenté précédemment :  
   
- [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
- [!code-vb[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
+ [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
+ [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
   
  **Gestion de classe :** Acheminé permis un gestionnaire statique qui est défini par la classe d’événements. Ce gestionnaire de classe a l’opportunité de gérer un événement avant les autres gestionnaires d’instance attachés.  
   
@@ -72,15 +72,15 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
   
  L’exemple suivant illustre la déclaration personnalisé `Tap` événement routé, y compris l’inscription et l’exposition de la <xref:System.Windows.RoutedEvent> champ d’identificateur et le `add` et `remove` implémentations pour les `Tap` [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] événement.  
   
- [!code-csharp[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
- [!code-vb[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
+ [!code-csharp[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
+ [!code-vb[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
   
 ### <a name="routed-event-handlers-and-xaml"></a>Gestionnaires d’événements routés et XAML  
  Pour ajouter un gestionnaire à un événement à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], déclarez le nom de l’événement en tant qu’attribut sur l’élément qui joue le rôle d’écouteur d’événements. La valeur de l’attribut est le nom de votre méthode de gestionnaire implémentée, qui doit se trouver dans la classe partielle du fichier code-behind.  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- La syntaxe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] permettant d’ajouter des gestionnaires d’événements [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard est identique à celle utilisée pour ajouter des gestionnaires d’événements routés, car vous ajoutez des gestionnaires au wrapper d’événement [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], sous lequel se trouve une implémentation d’événement routé. Pour plus d’informations sur l’ajout de gestionnaires d’événements dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consultez [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ La syntaxe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] permettant d’ajouter des gestionnaires d’événements [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard est identique à celle utilisée pour ajouter des gestionnaires d’événements routés, car vous ajoutez des gestionnaires au wrapper d’événement [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], sous lequel se trouve une implémentation d’événement routé. Pour plus d’informations sur l’ajout de gestionnaires d’événements dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consultez [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="routing_strategies"></a>   
 ## <a name="routing-strategies"></a>Stratégies de routage  
@@ -114,30 +114,30 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
 ## <a name="adding-and-implementing-an-event-handler-for-a-routed-event"></a>Ajout et implémentation d’un gestionnaire d’événements pour un événement routé  
  Pour ajouter un gestionnaire d’événements dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ajoutez le nom de l’événement à un élément en tant qu’attribut, et définissez la valeur de l’attribut sur le nom du gestionnaire d’événements qui implémente un délégué, comme dans l’exemple suivant.  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
  `b1SetColor` est le nom du gestionnaire implémenté qui contient le code qui gère la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement. `b1SetColor` doit avoir la même signature que le <xref:System.Windows.RoutedEventHandler> délégué, qui est le délégué de gestionnaire d’événements pour le <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement. Le premier paramètre de tous les délégués de gestionnaires d’événements routés spécifie l’élément auquel le gestionnaire d’événements est ajouté, et le deuxième paramètre spécifie les données de l’événement.  
   
-[!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
-[!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
+[!code-csharp[EventOvwSupport#SimpleHandlerA](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
+[!code-vb[EventOvwSupport#SimpleHandlerA](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
  <xref:System.Windows.RoutedEventHandler> est le délégué de gestionnaire d’événements routés de base. Pour les événements routés qui conviennent spécialement à certains contrôles ou scénarios, les délégués à utiliser avec les gestionnaires d’événements routés peuvent également devenir plus spécialisés, de manière à pouvoir transmettre des données d’événement spécialisées. Par exemple, dans un scénario d’entrée courant, vous pouvez gérer un <xref:System.Windows.UIElement.DragEnter> événement routé. Le gestionnaire doit implémenter le <xref:System.Windows.DragEventHandler> déléguer. À l’aide du délégué le plus spécifique, vous pouvez traiter la <xref:System.Windows.DragEventArgs> dans le gestionnaire et lire le <xref:System.Windows.DragEventArgs.Data%2A> propriété, qui contient la charge utile de Presse-papiers de l’opération glisser.  
   
- Pour un exemple complet montrant comment ajouter un gestionnaire d’événements à un élément à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consultez [Gérer un événement routé](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
+ Pour un exemple complet montrant comment ajouter un gestionnaire d’événements à un élément à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consultez [Gérer un événement routé](how-to-handle-a-routed-event.md).  
   
  L’ajout d’un gestionnaire pour un événement routé dans une application créée dans du code est une opération simple. Gestionnaires d’événements routés peuvent toujours être ajoutés via une méthode d’assistance <xref:System.Windows.UIElement.AddHandler%2A> (qui est la même méthode que le stockage appelle pour `add`.) Toutefois, les événements routés [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existants disposent généralement d’implémentations de stockage de logique `add` et `remove` qui permettent aux gestionnaires d’événements routés d’être ajoutés à une syntaxe d’événement spécifique au langage, qui est une syntaxe plus intuitive que celle de la méthode d’assistance. Voici un exemple d’utilisation de la méthode d’assistance :  
   
- [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
- [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
+ [!code-csharp[EventOvwSupport#AddHandlerCode](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
+ [!code-vb[EventOvwSupport#AddHandlerCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
  L’exemple suivant montre le C# syntaxe d’opérateur (Visual Basic a une syntaxe d’opérateur légèrement différente en raison de la gestion du déréférencement) :  
   
- [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
- [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
+ [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
+ [!code-vb[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
- Pour obtenir un exemple montrant comment ajouter un gestionnaire d’événements dans le code, consultez [Ajouter un gestionnaire d’événements à l’aide de code](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md).  
+ Pour obtenir un exemple montrant comment ajouter un gestionnaire d’événements dans le code, consultez [Ajouter un gestionnaire d’événements à l’aide de code](how-to-add-an-event-handler-using-code.md).  
   
- Si vous utilisez Visual Basic, vous pouvez également utiliser le `Handles` mot clé pour ajouter des gestionnaires dans le cadre des déclarations du gestionnaire. Pour plus d’informations, consultez [Gestion des événements Visual Basic et WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Si vous utilisez Visual Basic, vous pouvez également utiliser le `Handles` mot clé pour ajouter des gestionnaires dans le cadre des déclarations du gestionnaire. Pour plus d’informations, consultez [Gestion des événements Visual Basic et WPF](visual-basic-and-wpf-event-handling.md).  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>Concept du Handled  
@@ -165,7 +165,7 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
   
  Cette étude conceptuelle est renforcée par le comportement de routage mentionné précédemment : il est plus difficile (bien que possible dans le code ou les styles) pour joindre des gestionnaires pour les événements routés qui sont appelés même si un gestionnaire précédent le long de l’itinéraire a déjà défini <xref:System.Windows.RoutedEventArgs.Handled%2A>à `true`.  
   
- Pour plus d’informations sur <xref:System.Windows.RoutedEventArgs.Handled%2A>, classe qui gère les événements routés, et des recommandations sur le moment où il est approprié pour marquer un événement routé comme <xref:System.Windows.RoutedEventArgs.Handled%2A>, consultez [marquage des événements routés comme gérés et gestion de classe](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Pour plus d’informations sur <xref:System.Windows.RoutedEventArgs.Handled%2A>, classe qui gère les événements routés, et des recommandations sur le moment où il est approprié pour marquer un événement routé comme <xref:System.Windows.RoutedEventArgs.Handled%2A>, consultez [marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md).  
   
  Dans les applications, il est assez courant de gérer un événement routé par propagation sur l’objet qui l’a déclenché, sans se soucier des caractéristiques de routage de l’événement. Toutefois, il est recommandé de toujours marquer l’événement routé comme géré (handled) dans les données d’événement, afin d’éviter des effets secondaires si un élément situé plus haut dans l’arborescence d’éléments comportait également un gestionnaire attaché pour le même événement routé.  
   
@@ -173,7 +173,7 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
 ## <a name="class-handlers"></a>Gestionnaires de classe  
  Si vous définissez une classe qui dérive d’une certaine façon à partir de <xref:System.Windows.DependencyObject>, vous pouvez également définir et attacher un gestionnaire de classe pour un événement routé qui est un membre d’événement déclaré ou hérité de votre classe. Les gestionnaires de classe sont appelés avant les gestionnaires d’écouteur d’instance qui sont attachés à une instance de cette classe, chaque fois qu’un événement routé atteint une instance d’élément sur son itinéraire.  
   
- Certains contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] disposent d’une gestion de classe inhérente pour certains événements routés. Ceci peut donner l’apparence que l’événement routé n’a même pas été déclenché, alors qu’en réalité il est géré par la classe, et peut encore potentiellement être géré par vos gestionnaires d’instance si vous utilisez certaines techniques. En outre, plusieurs classes et contrôles de base exposent des méthodes virtuelles qui peuvent être utilisées pour substituer le comportement de gestion de classe. Pour plus d’informations sur la façon de contourner la gestion de classe et sur la définition de votre propre gestion de classe dans une classe personnalisée, consultez [Marquage des événements routés comme gérés et gestion de classe](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Certains contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] disposent d’une gestion de classe inhérente pour certains événements routés. Ceci peut donner l’apparence que l’événement routé n’a même pas été déclenché, alors qu’en réalité il est géré par la classe, et peut encore potentiellement être géré par vos gestionnaires d’instance si vous utilisez certaines techniques. En outre, plusieurs classes et contrôles de base exposent des méthodes virtuelles qui peuvent être utilisées pour substituer le comportement de gestion de classe. Pour plus d’informations sur la façon de contourner la gestion de classe et sur la définition de votre propre gestion de classe dans une classe personnalisée, consultez [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events-in-wpf"></a>Événements attachés dans WPF  
@@ -181,15 +181,15 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
   
  Le système d’entrée [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilise largement les événements attachés. Cependant, presque tous ces événements attachés sont transférés via des éléments de base. Les événements d’entrée apparaissent alors comme des événements routés non attachés équivalents qui sont membres de la classe d’élément de base. Par exemple, de la sous-jacent d’un événement attaché <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> peuvent être plus facilement géré sur n’importe quel donné <xref:System.Windows.UIElement> à l’aide de <xref:System.Windows.UIElement.MouseDown> sur qui <xref:System.Windows.UIElement> plutôt que le traitement soit avec la syntaxe de l’événement attaché dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ou du code.  
   
- Pour plus d’informations sur les événements attachés dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consultez [Vue d’ensemble des événements attachés](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Pour plus d’informations sur les événements attachés dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consultez [Vue d’ensemble des événements attachés](attached-events-overview.md).  
   
 <a name="Qualifying_Event_Names_in_XAML_for_Anticipated_Routing"></a>   
 ## <a name="qualified-event-names-in-xaml"></a>Noms qualifiés d’événements en XAML  
  Une autre utilisation de la syntaxe qui ressemble à la syntaxe d’événement attaché *typename*.*eventname*, mais qui n’est pas à proprement parler une utilisation d’événement attaché est lorsque vous attachez des gestionnaires pour les événements routés qui sont déclenchés par des éléments enfants. Vous attachez les gestionnaires à un parent commun pour tirer parti du routage d’événements, même si le parent commun ne dispose pas de l’événement routé nécessaire comme membre. Regardons de nouveau cet exemple :  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- Ici, l’écouteur d’élément parent dans lequel le gestionnaire est ajouté est un <xref:System.Windows.Controls.StackPanel>. Toutefois, il ajoute un gestionnaire pour un événement routé qui a été déclaré et sera déclenché par la <xref:System.Windows.Controls.Button> classe (<xref:System.Windows.Controls.Primitives.ButtonBase> en réalité, mais disponible pour <xref:System.Windows.Controls.Button> par héritage). <xref:System.Windows.Controls.Button> « possède » l’événement, mais les système d’événements routés autorise des gestionnaires pour tout événement routé d’être attaché à aucun <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> écouteur d’instance qui pourrait attacher des écouteurs pour un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] événement. L’espace de noms xmlns par défaut pour ces noms d’attributs d’événement qualifiés est généralement l’espace de noms xmlns [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] par défaut. Cependant, vous pouvez spécifier des espaces de noms avec préfixe pour les événements routés personnalisés. Pour plus d’informations sur xmlns, consultez [Espaces de noms XAML et mappage d’espace de noms pour XAML WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Ici, l’écouteur d’élément parent dans lequel le gestionnaire est ajouté est un <xref:System.Windows.Controls.StackPanel>. Toutefois, il ajoute un gestionnaire pour un événement routé qui a été déclaré et sera déclenché par la <xref:System.Windows.Controls.Button> classe (<xref:System.Windows.Controls.Primitives.ButtonBase> en réalité, mais disponible pour <xref:System.Windows.Controls.Button> par héritage). <xref:System.Windows.Controls.Button> « possède » l’événement, mais les système d’événements routés autorise des gestionnaires pour tout événement routé d’être attaché à aucun <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> écouteur d’instance qui pourrait attacher des écouteurs pour un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] événement. L’espace de noms xmlns par défaut pour ces noms d’attributs d’événement qualifiés est généralement l’espace de noms xmlns [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] par défaut. Cependant, vous pouvez spécifier des espaces de noms avec préfixe pour les événements routés personnalisés. Pour plus d’informations sur xmlns, consultez [Espaces de noms XAML et mappage d’espace de noms pour XAML WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>Événements d’entrée WPF  
@@ -199,7 +199,7 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
   
  En guise d’illustration du traitement des événements d’entrée, prenez l’exemple d’événement d’entrée suivant. Dans l’arborescence suivante, `leaf element #2` est la source d’un événement `PreviewMouseDown`, puis d’un événement `MouseDown`.  
   
- ![Diagramme de routage d’événement](../../../../docs/framework/wpf/advanced/media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
+ ![Diagramme de routage d’événement](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
 Propagation et tunneling des événements d’entrée  
   
  L’ordre de traitement des événements est le suivant :  
@@ -222,35 +222,35 @@ Propagation et tunneling des événements d’entrée
   
  En règle générale, une fois que l’événement d’entrée est marqué comme <xref:System.Windows.RoutedEventArgs.Handled%2A>, plus les gestionnaires ne sont pas appelés. En outre, vous devez marquer les événements d’entrée comme gérés dès qu’un gestionnaire est appelé pour traiter votre gestion logique (et spécifique à l’application) de la signification de l’événement d’entrée.  
   
- L’exception à cette déclaration générale sur <xref:System.Windows.RoutedEventArgs.Handled%2A> état est que les gestionnaires d’événements qui sont inscrits pour ignorer délibérément l’entrée <xref:System.Windows.RoutedEventArgs.Handled%2A> état des données d’événement peuvent encore être appelé sur l’itinéraire. Pour plus d’informations, consultez [Événements Preview](../../../../docs/framework/wpf/advanced/preview-events.md) ou [Marquage des événements routés comme gérés et gestion de classe](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ L’exception à cette déclaration générale sur <xref:System.Windows.RoutedEventArgs.Handled%2A> état est que les gestionnaires d’événements qui sont inscrits pour ignorer délibérément l’entrée <xref:System.Windows.RoutedEventArgs.Handled%2A> état des données d’événement peuvent encore être appelé sur l’itinéraire. Pour plus d’informations, consultez [Événements Preview](preview-events.md) ou [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md).  
   
  Le modèle de données d’événement partagé entre les événements de tunneling et de propagation, avec le déclenchement séquentiel de l’événement de tunneling puis de l’événement de propagation, est un concept qui n’est pas valable pour tous les événements routés. Ce comportement est implémenté selon la manière dont les périphériques d’entrée [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] choisissent de déclencher et de connecter les paires d’événements d’entrée. L’implémentation de vos propres événements d’entrée est un scénario avancé. Toutefois, vous pouvez choisir de suivre ce modèle pour vos propres événements d’entrée.  
   
- Certaines classes choisissent de gérer la classe de certains événements d’entrée, généralement dans le but de redéfinir la signification d’un événement d’entrée piloté par l’utilisateur dans le contrôle, et dans le but de déclencher un nouvel événement. Pour plus d’informations, consultez [Marquage des événements routés comme gérés et gestion de classe](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Certaines classes choisissent de gérer la classe de certains événements d’entrée, généralement dans le but de redéfinir la signification d’un événement d’entrée piloté par l’utilisateur dans le contrôle, et dans le but de déclencher un nouvel événement. Pour plus d’informations, consultez [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md).  
   
- Pour plus d’informations sur les entrées et la façon dont elles interagissent avec les événements dans des scénarios d’application standard, consultez [Vue d’ensemble des entrées](../../../../docs/framework/wpf/advanced/input-overview.md).  
+ Pour plus d’informations sur les entrées et la façon dont elles interagissent avec les événements dans des scénarios d’application standard, consultez [Vue d’ensemble des entrées](input-overview.md).  
   
 <a name="events_styles"></a>   
 ## <a name="eventsetters-and-eventtriggers"></a>EventSetters et EventTriggers  
  Dans les styles, vous pouvez inclure certains prédéclarés [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] gestion de syntaxe dans le balisage à l’aide d’événements un <xref:System.Windows.EventSetter>. Lorsque le style est appliqué, le gestionnaire référencé est ajouté à l’instance à laquelle est appliqué le style. Vous pouvez déclarer un <xref:System.Windows.EventSetter> uniquement pour un événement routé. Voici un exemple. Notez que la méthode `b1SetColor` référencée ici se trouve dans un fichier code-behind.  
   
- [!code-xaml[EventOvwSupport#XAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
+ [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
   
  L’avantage est que le style est susceptible de contenir un grand nombre d’autres informations qui peuvent s’appliquer à n’importe quel bouton dans votre application, et avoir le <xref:System.Windows.EventSetter> faire partie de ce style favorise la réutilisation de code même au niveau du balisage. En outre, un <xref:System.Windows.EventSetter> isole les noms de méthode pour les gestionnaires encore plus loin en dehors de la balise d’application et de la page générale.  
   
- Une autre syntaxe spéciale qui combine les fonctionnalités d’animation et les événements routées de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est un <xref:System.Windows.EventTrigger>. Comme avec <xref:System.Windows.EventSetter>, uniquement les événements routés peuvent être utilisés pour un <xref:System.Windows.EventTrigger>. En règle générale, un <xref:System.Windows.EventTrigger> est déclaré en tant que partie d’un style, mais un <xref:System.Windows.EventTrigger> peuvent également être déclarées sur des éléments de page dans le cadre de la <xref:System.Windows.FrameworkElement.Triggers%2A> collection, ou dans un <xref:System.Windows.Controls.ControlTemplate>. Un <xref:System.Windows.EventTrigger> vous permet de spécifier un <xref:System.Windows.Media.Animation.Storyboard> que s’exécute chaque fois qu’un événement routé atteint un élément sur son itinéraire qui déclare un <xref:System.Windows.EventTrigger> pour cet événement. L’avantage d’un <xref:System.Windows.EventTrigger> sur simplement gérant l’événement et au démarrage un storyboard existant qui est un <xref:System.Windows.EventTrigger> offre un meilleur contrôle sur la table de montage séquentiel et son comportement au moment de l’exécution. Pour plus d’informations, consultez [Utiliser des déclencheurs d’événements pour contrôler un storyboard après son démarrage](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+ Une autre syntaxe spéciale qui combine les fonctionnalités d’animation et les événements routées de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est un <xref:System.Windows.EventTrigger>. Comme avec <xref:System.Windows.EventSetter>, uniquement les événements routés peuvent être utilisés pour un <xref:System.Windows.EventTrigger>. En règle générale, un <xref:System.Windows.EventTrigger> est déclaré en tant que partie d’un style, mais un <xref:System.Windows.EventTrigger> peuvent également être déclarées sur des éléments de page dans le cadre de la <xref:System.Windows.FrameworkElement.Triggers%2A> collection, ou dans un <xref:System.Windows.Controls.ControlTemplate>. Un <xref:System.Windows.EventTrigger> vous permet de spécifier un <xref:System.Windows.Media.Animation.Storyboard> que s’exécute chaque fois qu’un événement routé atteint un élément sur son itinéraire qui déclare un <xref:System.Windows.EventTrigger> pour cet événement. L’avantage d’un <xref:System.Windows.EventTrigger> sur simplement gérant l’événement et au démarrage un storyboard existant qui est un <xref:System.Windows.EventTrigger> offre un meilleur contrôle sur la table de montage séquentiel et son comportement au moment de l’exécution. Pour plus d’informations, consultez [Utiliser des déclencheurs d’événements pour contrôler un storyboard après son démarrage](../graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
 <a name="more_about"></a>   
 ## <a name="more-about-routed-events"></a>Informations complémentaires sur les événements routés  
- Cette rubrique traite principalement des concepts de base relatifs aux événements routés, et explique comment et à quel moment répondre aux événements routés qui sont déjà présents dans les différents éléments et contrôles de base. Toutefois, vous pouvez créer vos propres événements routés dans votre classe personnalisée, ainsi que toute la prise en charge nécessaire, telle que les classes et les délégués spécialisés de données d’événement. Le propriétaire de l’événement routé peut être n’importe quelle classe, mais les événements routés doivent être déclenchés par et gérées par <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> classes dérivées pour pouvoir être utiles. Pour plus d’informations sur les événements personnalisés, consultez [Créer un événement routé personnalisé](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ Cette rubrique traite principalement des concepts de base relatifs aux événements routés, et explique comment et à quel moment répondre aux événements routés qui sont déjà présents dans les différents éléments et contrôles de base. Toutefois, vous pouvez créer vos propres événements routés dans votre classe personnalisée, ainsi que toute la prise en charge nécessaire, telle que les classes et les délégués spécialisés de données d’événement. Le propriétaire de l’événement routé peut être n’importe quelle classe, mais les événements routés doivent être déclenchés par et gérées par <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> classes dérivées pour pouvoir être utiles. Pour plus d’informations sur les événements personnalisés, consultez [Créer un événement routé personnalisé](how-to-create-a-custom-routed-event.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [Marquage des événements routés comme gérés et gestion de classe](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)
-- [Vue d’ensemble des entrées](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Vue d’ensemble des commandes](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Arborescences dans WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [Modèles d’événement faible](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)
+- [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
+- [Vue d’ensemble des entrées](input-overview.md)
+- [Vue d’ensemble des commandes](commanding-overview.md)
+- [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
+- [Arborescences dans WPF](trees-in-wpf.md)
+- [Modèles d’événement faible](weak-event-patterns.md)

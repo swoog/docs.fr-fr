@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503207"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364825"
 ---
 # <a name="data-binding-overview"></a>Vue d’ensemble de la liaison de données
 La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un moyen simple et cohérent aux applications de présenter et d’interagir avec les données. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s comme <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.ItemsControl>s comme <xref:System.Windows.Controls.ListBox> et <xref:System.Windows.Controls.ListView> possèdent des fonctionnalités intégrées permettant de style flexible des éléments de données uniques ou des collections d’éléments de données. Des vues de tri, filtrage et groupage peuvent être générées sur la base des données.  
@@ -33,7 +33,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Pour obtenir un exemple de liaison de données, examinons l’application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] suivante de la [Démonstration de la liaison de données](https://go.microsoft.com/fwlink/?LinkID=163703) :  
   
- ![Capture d’écran : exemple de liaison de données](../../../../docs/framework/wpf/data/media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
+ ![Capture d’écran : exemple de liaison de données](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
   
  Ce qui précède est le [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] d’une application qui affiche une liste d’éléments de vente aux enchères. L’application illustre les fonctionnalités suivantes de la liaison de données :  
   
@@ -49,7 +49,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Lorsque l’utilisateur clique sur le bouton *Ajouter un produit*, le formulaire suivant s’affiche :  
   
- ![Page Ajouter la liste de produits](../../../../docs/framework/wpf/data/media/databinding-demo-addproductlisting.png "DataBinding_Demo_AddProductListing")  
+ ![Page Ajouter la liste de produits](./media/databinding-demo-addproductlisting.png "DataBinding_Demo_AddProductListing")  
   
  L’utilisateur peut modifier les champs dans le formulaire, consulter la liste de produits à l’aide de l’aperçu court et des volets d’aperçu plus détaillés, puis cliquer sur *Envoyer* pour ajouter la nouvelle liste de produits. Tout regroupement, filtrage ou tri existant sera appliqué à la nouvelle entrée. Dans ce cas particulier, l’élément entré dans l’image ci-dessus s’affichera comme deuxième élément dans la catégorie *Computer*.  
   
@@ -61,7 +61,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Quels que soient l’élément que vous liez et la nature de votre source de données, chaque liaison suit toujours le modèle illustré par l’illustration suivante :  
   
- ![Diagramme de liaison de données de base](../../../../docs/framework/wpf/data/media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![Diagramme de liaison de données de base](./media/databindingmostbasic.png "DataBindingMostBasic")  
   
  Comme présenté sur l’illustration ci-dessus, la liaison de données est essentiellement la passerelle entre votre cible de liaison et de votre source de liaison. L’illustration présente les concepts de liaison de données [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] essentiels suivants :  
   
@@ -69,7 +69,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
 -   La propriété cible doit être une propriété de dépendance. La plupart des <xref:System.Windows.UIElement> propriétés sont des propriétés de dépendance et la plupart des propriétés de dépendance, sauf celles qui sont en lecture seule, prennent en charge la liaison de données par défaut. (Uniquement <xref:System.Windows.DependencyObject> les types peuvent définir des propriétés de dépendance et tous les <xref:System.Windows.UIElement>s dérivent <xref:System.Windows.DependencyObject>.)  
   
--   Bien que cela n’est pas spécifié sur l’illustration, il convient de noter que l’objet de source de liaison n’est pas limité à un objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personnalisé. La liaison de données [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge les données sous forme d’objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] et [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Pour fournir des exemples, votre source de liaison peut être un <xref:System.Windows.UIElement>, n’importe quel objet de liste, un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objet auquel est associé [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] données ou Services Web ou un XmlNode qui contient votre [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de ressources](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Bien que cela n’est pas spécifié sur l’illustration, il convient de noter que l’objet de source de liaison n’est pas limité à un objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personnalisé. La liaison de données [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge les données sous forme d’objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] et [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Pour fournir des exemples, votre source de liaison peut être un <xref:System.Windows.UIElement>, n’importe quel objet de liste, un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objet auquel est associé [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] données ou Services Web ou un XmlNode qui contient votre [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de ressources](binding-sources-overview.md).  
   
  Lorsque vous lisez les autres rubriques [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)], il est important de vous rappeler que lorsque vous établissez une liaison, vous liez une cible de liaison *à* une source de liaison. Par exemple, si vous affichez des sous-jacent [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] les données dans un <xref:System.Windows.Controls.ListBox> à l’aide de la liaison de données, vous liez votre <xref:System.Windows.Controls.ListBox> à la [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données.  
   
@@ -81,7 +81,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Vous souhaiterez peut-être que votre application permette aux utilisateurs de modifier les données et les propager à nouveau vers l’objet source. Ou vous souhaitez peut-être ne pas permettre aux utilisateurs de mettre à jour la source de données. Vous pouvez contrôler ceci en définissant le <xref:System.Windows.Data.Binding.Mode%2A> propriété de votre <xref:System.Windows.Data.Binding> objet. L’exemple suivant illustre les différents types de flux de données :  
   
- ![Flux de données de liaison de données](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
+ ![Flux de données de liaison de données](./media/databinding-dataflow.png "DataBinding_DataFlow")  
   
 -   <xref:System.Windows.Data.BindingMode.OneWay> liaison de toute modification apportée à la propriété source pour automatiquement mettre à jour la propriété cible, mais les modifications apportées à la propriété cible ne sont pas propagées à la propriété source. Ce type de liaison est approprié si le contrôle lié est implicitement en lecture seule. Par exemple, vous pouvez lier à une source comme un affichage de cotations boursières, ou il se peut que votre propriété cible ne possède aucune interface de contrôle pour apporter des modifications, comme une couleur d’arrière-plan liée aux données d’une table. S’il n’est pas nécessaire de surveiller les modifications de la propriété cible, l’utilisation du mode de liaison <xref:System.Windows.Data.BindingMode.OneWay> permet d’éviter la surcharge du mode de liaison <xref:System.Windows.Data.BindingMode.TwoWay>.  
   
@@ -91,7 +91,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
 -   Ne pas illustré dans la figure est <xref:System.Windows.Data.BindingMode.OneTime> de liaison, ce qui entraîne la propriété source initialiser la propriété cible, mais les modifications ultérieures apportées ne se propagent pas. Cela signifie que si le contexte de données subit une modification ou que l’objet dans le contexte des données change, la modification n'est pas répercutée dans la propriété cible. Ce type de liaison est approprié si vous utilisez des données réellement statiques ou qui se prêtent à l’utilisation d’un instantané de l’état actuel. Ce type de liaison est également utile si vous souhaitez initialiser votre propriété cible avec une valeur d’une propriété source et que le contexte de données n’est pas connu à l’avance. Il s’agit essentiellement d’une forme simplifiée de la liaison <xref:System.Windows.Data.BindingMode.OneWay> qui offre de meilleures performances dans les cas où la valeur source ne change pas.  
   
- Notez que pour détecter les modifications de source (applicables à <xref:System.Windows.Data.BindingMode.OneWay> et <xref:System.Windows.Data.BindingMode.TwoWay> liaisons), la source doit implémenter un mécanisme de notification de modification de propriété approprié tel que <xref:System.ComponentModel.INotifyPropertyChanged>. Consultez [Notification de modification de propriété implémenter](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md) pour obtenir un exemple d’un <xref:System.ComponentModel.INotifyPropertyChanged> implémentation.  
+ Notez que pour détecter les modifications de source (applicables à <xref:System.Windows.Data.BindingMode.OneWay> et <xref:System.Windows.Data.BindingMode.TwoWay> liaisons), la source doit implémenter un mécanisme de notification de modification de propriété approprié tel que <xref:System.ComponentModel.INotifyPropertyChanged>. Consultez [Notification de modification de propriété implémenter](how-to-implement-property-change-notification.md) pour obtenir un exemple d’un <xref:System.ComponentModel.INotifyPropertyChanged> implémentation.  
   
  Le <xref:System.Windows.Data.Binding.Mode%2A> page de propriétés fournit plus d’informations sur les modes de liaison et un exemple montrant comment spécifier la direction d’une liaison.  
   
@@ -101,7 +101,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Toutefois, est-ce que votre valeur source est mise à jour lorsque vous modifiez le texte ou après avoir fini de modifier le texte et pointé votre souris en dehors de la zone de texte ? Le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriété de la liaison détermine ce qui déclenche la mise à jour de la source. Les points des flèches droites dans l’illustration suivante montrent le rôle de la <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriété :  
   
- ![Diagramme UpdateSourceTrigger](../../../../docs/framework/wpf/data/media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![Diagramme UpdateSourceTrigger](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
   
  Si le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur est <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, puis la valeur vers laquelle pointe la flèche droite de <xref:System.Windows.Data.BindingMode.TwoWay> ou <xref:System.Windows.Data.BindingMode.OneWayToSource> liaisons est mis à jour dès que la propriété cible change. Toutefois, si le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur est <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, puis cette valeur uniquement est mis à jour avec la nouvelle valeur lorsque la propriété cible perd le focus.  
   
@@ -117,7 +117,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 |PropertyChanged|À mesure que vous tapez dans la <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> contrôles dans une fenêtre de salle de conversation|  
 |Explicit|Lorsque l’application appelle <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> contrôles dans un formulaire modifiable (met à jour les valeurs source uniquement lorsque l’utilisateur clique sur le bouton Envoyer)|  
   
- Pour un exemple, consultez [Contrôler quand le texte TextBox met à jour la source](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
+ Pour un exemple, consultez [Contrôler quand le texte TextBox met à jour la source](how-to-control-when-the-textbox-text-updates-the-source.md).  
   
 <a name="creating_a_binding"></a>   
 ## <a name="creating-a-binding"></a>Création d’une liaison  
@@ -126,13 +126,13 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Prenons l’exemple suivant, dans lequel l’objet de source de liaison est une classe nommée *MyData* qui est définie dans l’espace de noms *SDKSample*. À des fins de démonstration, la classe *MyData* a une propriété de chaîne nommée *ColorName*, dont la valeur est définie sur « Rouge ». Par conséquent, cet exemple génère un bouton avec un arrière-plan rouge.  
   
- [!code-xaml[BindNonTextProperty#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page1.xaml#1)]  
+ [!code-xaml[BindNonTextProperty#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page1.xaml#1)]  
   
- Pour plus d’informations sur la syntaxe de déclaration de liaison et pour obtenir des exemples montrant comment définir une liaison dans le code, consultez [Vue d'ensemble des déclarations de liaison](../../../../docs/framework/wpf/data/binding-declarations-overview.md).  
+ Pour plus d’informations sur la syntaxe de déclaration de liaison et pour obtenir des exemples montrant comment définir une liaison dans le code, consultez [Vue d'ensemble des déclarations de liaison](binding-declarations-overview.md).  
   
  Si nous appliquons cet exemple à notre diagramme de base, l’illustration qui en résulte ressemble à ce qui suit. Il s’agit d’un <xref:System.Windows.Data.BindingMode.OneWay> , car la propriété Background prend en charge la liaison <xref:System.Windows.Data.BindingMode.OneWay> liaison par défaut.  
   
- ![Diagramme de liaison de données](../../../../docs/framework/wpf/data/media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![Diagramme de liaison de données](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
   
  Vous vous demanderez peut-être pourquoi cela fonctionne même si le *ColorName* propriété est de type chaîne alors que le <xref:System.Windows.Controls.Control.Background%2A> propriété est de type <xref:System.Windows.Media.Brush>. Il s’agit de la conversion de type par défaut en action, et nous l’évoquons dans la section [Conversion de données](#data_conversion).  
   
@@ -142,9 +142,9 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Il existe plusieurs façons de spécifier l’objet de source de liaison. À l’aide de la <xref:System.Windows.FrameworkElement.DataContext%2A> propriété sur un élément parent est utile lorsque vous liez plusieurs propriétés à la même source. Cependant, il peut parfois être plus approprié de spécifier la source de liaison sur des déclarations de liaison individuelles. Pour l’exemple précédent, au lieu d’utiliser le <xref:System.Windows.FrameworkElement.DataContext%2A> propriété, vous pouvez spécifier la source de liaison en définissant le <xref:System.Windows.Data.Binding.Source%2A> propriété directement sur la déclaration de liaison du bouton, comme dans l’exemple suivant :  
   
- [!code-xaml[BindNonTextProperty#BackgroundBindingCompact](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page2.xaml#backgroundbindingcompact)]  
+ [!code-xaml[BindNonTextProperty#BackgroundBindingCompact](~/samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page2.xaml#backgroundbindingcompact)]  
   
- Paramètre autre que le <xref:System.Windows.FrameworkElement.DataContext%2A> propriété sur un élément directement, héritant la <xref:System.Windows.FrameworkElement.DataContext%2A> valeur à partir d’un ancêtre (par exemple, le bouton dans le premier exemple) et en spécifiant explicitement la source de liaison en définissant le <xref:System.Windows.Data.Binding.Source%2A> propriété sur le <xref:System.Windows.Data.Binding> (par exemple, le bouton de l’exemple précédent), vous pouvez également utiliser le <xref:System.Windows.Data.Binding.ElementName%2A> propriété ou le <xref:System.Windows.Data.Binding.RelativeSource%2A> propriété pour spécifier la source de liaison. Le <xref:System.Windows.Data.Binding.ElementName%2A> propriété est utile lorsque vous liez à d’autres éléments dans votre application, comme lorsque vous utilisez un curseur pour ajuster la largeur d’un bouton. Le <xref:System.Windows.Data.Binding.RelativeSource%2A> propriété est utile lorsque la liaison est spécifiée dans un <xref:System.Windows.Controls.ControlTemplate> ou un <xref:System.Windows.Style>. Pour plus d’informations, consultez [Spécifier la source de liaison](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md).  
+ Paramètre autre que le <xref:System.Windows.FrameworkElement.DataContext%2A> propriété sur un élément directement, héritant la <xref:System.Windows.FrameworkElement.DataContext%2A> valeur à partir d’un ancêtre (par exemple, le bouton dans le premier exemple) et en spécifiant explicitement la source de liaison en définissant le <xref:System.Windows.Data.Binding.Source%2A> propriété sur le <xref:System.Windows.Data.Binding> (par exemple, le bouton de l’exemple précédent), vous pouvez également utiliser le <xref:System.Windows.Data.Binding.ElementName%2A> propriété ou le <xref:System.Windows.Data.Binding.RelativeSource%2A> propriété pour spécifier la source de liaison. Le <xref:System.Windows.Data.Binding.ElementName%2A> propriété est utile lorsque vous liez à d’autres éléments dans votre application, comme lorsque vous utilisez un curseur pour ajuster la largeur d’un bouton. Le <xref:System.Windows.Data.Binding.RelativeSource%2A> propriété est utile lorsque la liaison est spécifiée dans un <xref:System.Windows.Controls.ControlTemplate> ou un <xref:System.Windows.Style>. Pour plus d’informations, consultez [Spécifier la source de liaison](how-to-specify-the-binding-source.md).  
   
 <a name="specifying_the_path_to_the_value"></a>   
 ### <a name="specifying-the-path-to-the-value"></a>Spécification du chemin vers la valeur  
@@ -154,7 +154,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Notez que bien que nous avons souligné que le <xref:System.Windows.Data.Binding.Path%2A> à la valeur à utiliser est un des quatre composants nécessaires d’une liaison, dans les scénarios où vous souhaitez lier à un objet entier, la valeur à utiliser est le même que l’objet de source de liaison. Dans ce cas, il convient de ne pas spécifier un <xref:System.Windows.Data.Binding.Path%2A>. Prenons l'exemple suivant :  
   
- [!code-xaml[MasterDetail#EmptyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetail/CSharp/Page1.xaml#emptybinding)]  
+ [!code-xaml[MasterDetail#EmptyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetail/CSharp/Page1.xaml#emptybinding)]  
   
  L’exemple ci-dessus utilise la syntaxe de liaison vide : {Binding}. Dans ce cas, le <xref:System.Windows.Controls.ListBox> hérite du DataContext d’un élément de DockPanel parent (non illustré dans cet exemple). Lorsque le chemin d’accès n’est pas spécifié, le comportement par défaut consiste à lier à l’objet entier. En d’autres termes, dans cet exemple, le chemin d’accès a été omis parce que nous effectuons une liaison le <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriété à l’objet entier. (Voir la section [Lier à des collections](#binding_to_collections) pour une discussion détaillée.)  
   
@@ -168,16 +168,16 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Par exemple, considérez la commande suivante, où *myDataObject* est une instance de *MyData* (classe), *myBinding* est la source <xref:System.Windows.Data.Binding> objet et *MyData* classe est une classe définie qui contient une propriété de chaîne nommée *MyDataProperty*. Cet exemple lie le contenu textuel de *mytext*, une instance de <xref:System.Windows.Controls.TextBlock>à *MyDataProperty*.  
   
- [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
- [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
+ [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
+ [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
  Vous pouvez utiliser le même objet *myBinding* pour créer d’autres liaisons. Par exemple, vous pouvez utiliser l’objet *myBinding* pour lier le contenu textuel d’une case à cocher à *MyDataProperty*. Dans ce scénario, il y aura deux instances de <xref:System.Windows.Data.BindingExpression> partage le *myBinding* objet.  
   
  Un <xref:System.Windows.Data.BindingExpression> objet peut être obtenu via la valeur de retour de l’appel <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> sur un objet lié aux données. Les rubriques suivantes montrent quelques-unes des utilisations de la <xref:System.Windows.Data.BindingExpression> classe :  
   
--   [Obtenir l'objet de liaison d'une propriété cible liée aux données](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
+-   [Obtenir l'objet de liaison d'une propriété cible liée aux données](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [Contrôler quand le texte TextBox met à jour la source](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
+-   [Contrôler quand le texte TextBox met à jour la source](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>Conversion de données  
@@ -185,18 +185,18 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Pour ajouter ces informations à l’illustration dans la section [Création d’une liaison](#creating_a_binding), le diagramme présente l’aspect suivant :  
   
- ![Diagramme de liaison de données](../../../../docs/framework/wpf/data/media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![Diagramme de liaison de données](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
   
  Toutefois, que se passe-t-il si, au lieu d’avoir une propriété de type chaîne, votre objet de source de liaison a un *couleur* propriété de type <xref:System.Windows.Media.Color>? Dans ce cas, afin que la liaison fonctionne vous devrez premier tour le *couleur* valeur de propriété en quelque chose qui le <xref:System.Windows.Controls.Control.Background%2A> accepte de propriété. Vous devez créer un convertisseur personnalisé en implémentant le <xref:System.Windows.Data.IValueConverter> interface, comme dans l’exemple suivant :  
   
- [!code-csharp[ColorPicker_snip#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/ColorPicker.cs#16)]
- [!code-vb[ColorPicker_snip#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_snip/visualbasic/colorpickerlib/colorpicker.vb#16)]  
+ [!code-csharp[ColorPicker_snip#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/ColorPicker.cs#16)]
+ [!code-vb[ColorPicker_snip#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_snip/visualbasic/colorpickerlib/colorpicker.vb#16)]  
   
  Le <xref:System.Windows.Data.IValueConverter> page de référence fournit des informations supplémentaires.  
   
  Maintenant, le convertisseur personnalisé est utilisé au lieu de la conversion par défaut, et notre diagramme ressemble à ceci :  
   
- ![Diagramme de liaison de données](../../../../docs/framework/wpf/data/media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![Diagramme de liaison de données](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
   
  Pour rappel, des conversions par défaut peuvent être disponibles si des convertisseurs de type sont présents dans le type lié. Ce comportement dépendra des convertisseurs de type sont disponibles dans la cible. En cas de doute, créez votre propre convertisseur.  
   
@@ -217,7 +217,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Heureusement, notre diagramme de base est toujours applicable. Si vous liez un <xref:System.Windows.Controls.ItemsControl> à une collection, le diagramme ressemble à ceci :  
   
- ![Diagramme ItemsControl de liaison de données](../../../../docs/framework/wpf/data/media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![Diagramme ItemsControl de liaison de données](./media/databindingitemscontrol.png "DataBindingItemsControl")  
   
  Comme illustré dans ce diagramme, pour lier un <xref:System.Windows.Controls.ItemsControl> à un objet de collection, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriété est la propriété à utiliser. Vous pouvez considérer <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriété en tant que le contenu de la <xref:System.Windows.Controls.ItemsControl>. Notez que la liaison est <xref:System.Windows.Data.BindingMode.OneWay> , car le <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> prend en charge de la propriété <xref:System.Windows.Data.BindingMode.OneWay> liaison par défaut.  
   
@@ -225,7 +225,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ### <a name="how-to-implement-collections"></a>Guide d’implémentation des collections  
  Vous pouvez énumérer toute collection qui implémente le <xref:System.Collections.IEnumerable> interface. Toutefois, pour définir des liaisons dynamiques afin que les insertions ou les suppressions dans la collection de mettre à jour le [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] automatiquement, la collection doit implémenter le <xref:System.Collections.Specialized.INotifyCollectionChanged> interface. Cette interface expose un événement qui doit être déclenché chaque fois que la collection sous-jacente est modifiée.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit le <xref:System.Collections.ObjectModel.ObservableCollection%601> (classe), qui est une implémentation intégrée d’une collection de données qui expose le <xref:System.Collections.Specialized.INotifyCollectionChanged> interface. Notez que pour prendre en charge le transfert des valeurs de données à partir d’objets de source aux cibles, chaque objet dans votre collection qui prend en charge des propriétés pouvant être liées doit aussi implémenter le <xref:System.ComponentModel.INotifyPropertyChanged> interface. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de ressources](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit le <xref:System.Collections.ObjectModel.ObservableCollection%601> (classe), qui est une implémentation intégrée d’une collection de données qui expose le <xref:System.Collections.Specialized.INotifyCollectionChanged> interface. Notez que pour prendre en charge le transfert des valeurs de données à partir d’objets de source aux cibles, chaque objet dans votre collection qui prend en charge des propriétés pouvant être liées doit aussi implémenter le <xref:System.ComponentModel.INotifyPropertyChanged> interface. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de ressources](binding-sources-overview.md).  
   
  Avant d’implémenter votre propre collection, envisagez d’utiliser <xref:System.Collections.ObjectModel.ObservableCollection%601> ou une des collections existantes classes, telles que <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, et <xref:System.ComponentModel.BindingList%601>, entre autres. Si vous avez un scénario avancé et que vous souhaitez implémenter votre propre collection, envisagez d’utiliser <xref:System.Collections.IList>, qui fournit une collection non générique d’objets accessibles séparément par index et assure donc les meilleures performances.  
   
@@ -243,14 +243,14 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 #### <a name="how-to-create-a-view"></a>Guide de création d’une vue  
  Un moyen de créer et utiliser une vue consiste à instancier l’objet de vue directement et de l’utiliser comme source de liaison. Par exemple, considérez l’application [Démonstration de liaison de données](https://go.microsoft.com/fwlink/?LinkID=163703) présentée dans la section [Qu’est-ce que la liaison de données ?](#what_is_data_binding). L’application est implémentée telles que le <xref:System.Windows.Controls.ListBox> se lie à une vue directement au-dessus de la collecte de données au lieu de la collecte de données. L’exemple suivant est extrait de l’application [Démonstration de liaison de données](https://go.microsoft.com/fwlink/?LinkID=163703). Le <xref:System.Windows.Data.CollectionViewSource> classe est la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] proxy d’une classe qui hérite de <xref:System.Windows.Data.CollectionView>. Dans cet exemple particulier, le <xref:System.Windows.Data.CollectionViewSource.Source%2A> de la vue est liée à la *AuctionItems* collection (de type <xref:System.Collections.ObjectModel.ObservableCollection%601>) de l’objet d’application actuel.  
   
- [!code-xaml[DataBindingLab#WindowResources1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources1)]  
-[!code-xaml[DataBindingLab#CollectionViewSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#collectionviewsource)]  
-[!code-xaml[DataBindingLab#WindowResources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources2)]  
+ [!code-xaml[DataBindingLab#WindowResources1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources1)]  
+[!code-xaml[DataBindingLab#CollectionViewSource](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#collectionviewsource)]  
+[!code-xaml[DataBindingLab#WindowResources2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources2)]  
   
  La ressource *listingDataView* sert ensuite de la source de liaison pour les éléments dans l’application, telles que le <xref:System.Windows.Controls.ListBox>:  
   
- [!code-xaml[DataBindingLab#Master1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
-[!code-xaml[DataBindingLab#Master2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
+ [!code-xaml[DataBindingLab#Master1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
+[!code-xaml[DataBindingLab#Master2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
   
  Pour créer une autre vue pour la même collection, vous pouvez créer un autre <xref:System.Windows.Data.CollectionViewSource> de l’instance et lui donner un autre `x:Key` nom.  
   
@@ -265,44 +265,44 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ##### <a name="using-a-default-view"></a>Utilisation d’une vue par défaut  
  La spécification d’une vue de collection comme source de liaison est un moyen de créer et utiliser une vue de collection. WPF crée également une vue de collection par défaut pour chaque collection utilisée comme source de liaison. Si vous liez directement à une collection, WPF crée une liaison sur sa vue par défaut. Notez que cette vue par défaut est partagée par toutes les liaisons à la même collection, ainsi une modification apportée à une vue par défaut par un code ou contrôle lié (par exemple avec un tri ou une modification du pointeur d’élément actuel, dont nous parlons plus loin) se répercute dans toutes les autres liaisons à la même collection.  
   
- Pour obtenir la vue par défaut, vous utilisez le <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> (méthode). Pour un exemple, consultez [Obtenir la vue par défaut d'une collection de données](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md).  
+ Pour obtenir la vue par défaut, vous utilisez le <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> (méthode). Pour un exemple, consultez [Obtenir la vue par défaut d'une collection de données](how-to-get-the-default-view-of-a-data-collection.md).  
   
 ##### <a name="collection-views-with-adonet-datatables"></a>Vues de collection avec ADO.NET DataTables  
  Pour améliorer les performances, les vues de collection pour ADO.NET <xref:System.Data.DataTable> ou <xref:System.Data.DataView> objets délèguent le tri et filtrage pour le <xref:System.Data.DataView>. Cela entraîne le partage du tri et du filtrage sur toutes les vues de collection de la source de données. Pour permettre à chaque vue de collection trier et filtrer indépendamment, initialisez chaque vue de collection avec son propre <xref:System.Data.DataView> objet.  
   
 #### <a name="sorting"></a>Tri  
- Comme mentionné précédemment, les vues peuvent appliquer un ordre de tri à une collection. Comme cela existe dans la collection sous-jacente, vos données peuvent avoir ou non un ordre inhérent pertinent. La vue sur la collection vous permet d’imposer un ordre, ou de modifier l’ordre par défaut, en fonction de critères de comparaison que vous fournissez. Comme il s’agit d’une vue de données côté client, un scénario courant est que l’utilisateur peut souhaiter trier les colonnes des données tabulaires par la valeur à laquelle la colonne correspond. À l’aide de vues, ce tri défini par l’utilisateur peut être appliqué, à nouveau sans apporter de modifications à la collection sous-jacente ou même avoir à redemander le contenu de la collection. Pour un exemple, consultez [Trier une colonne GridView lors d'un clic sur un en-tête](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md).  
+ Comme mentionné précédemment, les vues peuvent appliquer un ordre de tri à une collection. Comme cela existe dans la collection sous-jacente, vos données peuvent avoir ou non un ordre inhérent pertinent. La vue sur la collection vous permet d’imposer un ordre, ou de modifier l’ordre par défaut, en fonction de critères de comparaison que vous fournissez. Comme il s’agit d’une vue de données côté client, un scénario courant est que l’utilisateur peut souhaiter trier les colonnes des données tabulaires par la valeur à laquelle la colonne correspond. À l’aide de vues, ce tri défini par l’utilisateur peut être appliqué, à nouveau sans apporter de modifications à la collection sous-jacente ou même avoir à redemander le contenu de la collection. Pour un exemple, consultez [Trier une colonne GridView lors d'un clic sur un en-tête](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md).  
   
  L’exemple suivant illustre la logique de tri de la « trier par catégorie et date » <xref:System.Windows.Controls.CheckBox> de l’application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dans le [qu’est la liaison de données ?](#what_is_data_binding) section :  
   
- [!code-csharp[DataBindingLab#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#8)]
- [!code-vb[DataBindingLab#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#8)]  
+ [!code-csharp[DataBindingLab#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#8)]
+ [!code-vb[DataBindingLab#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#8)]  
   
 #### <a name="filtering"></a>Filtrage  
  Les vues peuvent également appliquer un filtre à une collection. Cela signifie que même si un élément peut exister dans la collection, cette vue particulière est destinée à afficher uniquement un sous-ensemble spécifique de la collection complète. Vous pouvez filtrer sur une condition dans les données. Par exemple, comme le fait par l’application dans le [qu’est la liaison de données ?](#what_is_data_binding) section, « Afficher uniquement coûtant » <xref:System.Windows.Controls.CheckBox> contient la logique permettant de filtrer les articles coûtant 25 $ ou plus. Le code suivant est exécuté pour définir *ShowOnlyBargainsFilter* en tant que le <xref:System.Windows.Data.CollectionViewSource.Filter> Gestionnaire d’événements lorsque que <xref:System.Windows.Controls.CheckBox> est sélectionné :  
   
- [!code-csharp[DataBindingLab#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
- [!code-vb[DataBindingLab#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
+ [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
+ [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
   
  Le gestionnaire d’événements *ShowOnlyBargainsFilter* présente l’implémentation suivante :  
   
- [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
- [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
+ [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
+ [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
- Si vous utilisez l’une de le <xref:System.Windows.Data.CollectionView> classes directement au lieu de <xref:System.Windows.Data.CollectionViewSource>, vous utiliseriez le <xref:System.Windows.Data.CollectionView.Filter%2A> propriété pour spécifier un rappel. Pour obtenir un exemple, consultez [Filtrer les données d'une vue](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md).  
+ Si vous utilisez l’une de le <xref:System.Windows.Data.CollectionView> classes directement au lieu de <xref:System.Windows.Data.CollectionViewSource>, vous utiliseriez le <xref:System.Windows.Data.CollectionView.Filter%2A> propriété pour spécifier un rappel. Pour obtenir un exemple, consultez [Filtrer les données d'une vue](how-to-filter-data-in-a-view.md).  
   
 #### <a name="grouping"></a>Regroupement  
  À l’exception de la classe interne qui affiche une <xref:System.Collections.IEnumerable> collection, toutes les vues de collection prennent en charge la fonctionnalité de regroupement, ce qui permet à l’utilisateur de partitionner la collection dans la vue de collection en groupes logiques. Les groupes peuvent être explicites, si l’utilisateur fournit une liste de groupes, ou implicites, si les groupes sont générés dynamiquement en fonction des données.  
   
  L’exemple suivant illustre la logique de « Grouper par catégorie » <xref:System.Windows.Controls.CheckBox>:  
   
- [!code-csharp[DataBindingLab#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#6)]
- [!code-vb[DataBindingLab#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#6)]  
+ [!code-csharp[DataBindingLab#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#6)]
+ [!code-vb[DataBindingLab#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#6)]  
   
- Pour un autre exemple de groupement, consultez [Grouper des éléments dans un ListView implémentant un GridView](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md).  
+ Pour un autre exemple de groupement, consultez [Grouper des éléments dans un ListView implémentant un GridView](../controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md).  
   
 #### <a name="current-item-pointers"></a>Pointeurs d’élément actuel  
- Les vues prennent également en charge la notion d’élément actuel. Vous pouvez naviguer parmi les objets dans une vue de collection. Lorsque vous naviguez, vous déplacez un pointeur d’élément qui vous permet de récupérer l’objet qui existe à cet emplacement précis de la collection. Pour un exemple, consultez [Naviguer dans les objets d'un CollectionView de données](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
+ Les vues prennent également en charge la notion d’élément actuel. Vous pouvez naviguer parmi les objets dans une vue de collection. Lorsque vous naviguez, vous déplacez un pointeur d’élément qui vous permet de récupérer l’objet qui existe à cet emplacement précis de la collection. Pour un exemple, consultez [Naviguer dans les objets d'un CollectionView de données](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
  Étant donné que WPF crée une liaison à une collection à l’aide d’une vue (une vue que vous spécifiez, ou la vue par défaut de la collection), toutes les liaisons à des collections ont un pointeur d’élément actuel. Lors de la liaison à une vue, la barre oblique (« / ») dans une valeur `Path` désigne l’élément actuel de la vue. Dans l’exemple suivant, le contexte de données est une vue de collection. La première ligne lie à la collection. La deuxième ligne lie à l’élément actuel dans la collection. La troisième ligne lie à la propriété `Description` de l’élément actuel dans la collection.  
   
@@ -326,13 +326,13 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Vous pouvez implémenter le scénario maître/détail simplement en ayant deux contrôles ou plus liés à la même vue. L’exemple suivant tiré le [démonstration de liaison de données](https://go.microsoft.com/fwlink/?LinkID=163703) affiche le balisage de la <xref:System.Windows.Controls.ListBox> et le <xref:System.Windows.Controls.ContentControl> vous voyez dans l’application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dans le [qu’est la liaison de données ?](#what_is_data_binding) section :  
   
- [!code-xaml[DataBindingLab#Master1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
-[!code-xaml[DataBindingLab#Master2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
-[!code-xaml[DataBindingLab#Detail](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#detail)]  
+ [!code-xaml[DataBindingLab#Master1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
+[!code-xaml[DataBindingLab#Master2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
+[!code-xaml[DataBindingLab#Detail](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#detail)]  
   
  Notez que les deux contrôles sont liés à la même source, la ressource statique *listingDataView* (voir la définition de cette ressource dans [la section Guide de création d’une vue](#how_to_create_a_view)). Cela fonctionne car lorsqu’un objet singleton (le <xref:System.Windows.Controls.ContentControl> dans ce cas) est lié à une vue de collection, il se lie automatiquement à la <xref:System.Windows.Data.CollectionView.CurrentItem%2A> de la vue. Notez que <xref:System.Windows.Data.CollectionViewSource> objets à synchroniser automatiquement la sélection et la devise. Si votre contrôle de liste n’est pas lié à un <xref:System.Windows.Data.CollectionViewSource> objet comme dans cet exemple, vous devez définir ses <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> propriété `true` pour ce faire.  
   
- Pour obtenir des exemples, consultez [Effectuer une liaison à une collection et afficher des informations basées sur la sélection](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md) et [Utiliser le modèle maître/détail avec des données hiérarchiques](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md).  
+ Pour obtenir des exemples, consultez [Effectuer une liaison à une collection et afficher des informations basées sur la sélection](how-to-bind-to-a-collection-and-display-information-based-on-selection.md) et [Utiliser le modèle maître/détail avec des données hiérarchiques](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).  
   
  Vous avez peut-être remarqué que l’exemple ci-dessus utilisait un modèle. En fait, les données ne seraient pas affichées comme nous le souhaitons sans l’utilisation de modèles (celui utilisé explicitement par le <xref:System.Windows.Controls.ContentControl> et celui utilisé implicitement par la <xref:System.Windows.Controls.ListBox>). Nous passons maintenant aux modèles de données dans la section suivante.  
   
@@ -340,17 +340,17 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ## <a name="data-templating"></a>Modèles de données  
  Sans l’utilisation de modèles de données, notre application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dans la section [Qu’est-ce que la liaison de données ?](#what_is_data_binding) se présente comme suit :  
   
- ![Démo de liaison de données sans modèles de données](../../../../docs/framework/wpf/data/media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![Démo de liaison de données sans modèles de données](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
   
  Comme indiqué dans l’exemple dans la section précédente, à la fois le <xref:System.Windows.Controls.ListBox> contrôle et le <xref:System.Windows.Controls.ContentControl> sont liés à l’objet de collection entier (ou plus spécifiquement, la vue sur l’objet de collection) de *AuctionItem*s. Sans instructions spécifiques afficher la collecte de données, le <xref:System.Windows.Controls.ListBox> affiche une représentation de chaîne de chaque objet dans la collection sous-jacente et le <xref:System.Windows.Controls.ContentControl> affiche une représentation de chaîne de l’objet auquel il est lié.  
   
  Pour résoudre ce problème, l’application définit <xref:System.Windows.DataTemplate>s. Comme indiqué dans l’exemple dans la section précédente, le <xref:System.Windows.Controls.ContentControl> utilise explicitement le *detailsProductListingTemplate*<xref:System.Windows.DataTemplate>. Le <xref:System.Windows.Controls.ListBox> contrôle utilise implicitement les éléments suivants <xref:System.Windows.DataTemplate> lors de l’affichage le *AuctionItem* objets dans la collection :  
   
- [!code-xaml[DataBindingLab#AuctionItemDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
+ [!code-xaml[DataBindingLab#AuctionItemDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
   
  Avec l’utilisation de ces deux <xref:System.Windows.DataTemplate>s, l’interface utilisateur obtenue est celle représentée dans le [qu’est la liaison de données ?](#what_is_data_binding) section. Comme vous pouvez le voir dans cette capture d’écran, en plus de vous permettant de placer des données dans vos contrôles, <xref:System.Windows.DataTemplate>vous permettent de définir des éléments visuels agréables pour vos données. Par exemple, <xref:System.Windows.DataTrigger>s sont utilisés dans l’exemple ci-dessus <xref:System.Windows.DataTemplate> afin que *AuctionItem*s avec *SpecialFeatures* valeur *mettre en surbrillance* s’affichent avec un bordure orange et une étoile.  
   
- Pour plus d’informations sur les modèles de données, consultez [Vue d’ensemble des modèles de données](../../../../docs/framework/wpf/data/data-templating-overview.md).  
+ Pour plus d’informations sur les modèles de données, consultez [Vue d’ensemble des modèles de données](data-templating-overview.md).  
   
 <a name="data_validation"></a>   
 ## <a name="data-validation"></a>Validation de données  
@@ -360,7 +360,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ### <a name="associating-validation-rules-with-a-binding"></a>Associer des règles de validation à une liaison  
  Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modèle de liaison de données vous permet d’associer <xref:System.Windows.Data.Binding.ValidationRules%2A> avec votre <xref:System.Windows.Data.Binding> objet. Par exemple, l’exemple suivant lie un <xref:System.Windows.Controls.TextBox> à une propriété nommée `StartPrice` et ajoute un <xref:System.Windows.Controls.ExceptionValidationRule> de l’objet à le <xref:System.Windows.Data.Binding.ValidationRules%2A?displayProperty=nameWithType> propriété.  
   
- [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
+ [!code-xaml[DataBindingLab#DefaultValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
  Un <xref:System.Windows.Controls.ValidationRule> objet vérifie si la valeur d’une propriété est valide. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a les deux types suivants d’intégré <xref:System.Windows.Controls.ValidationRule> objets :  
   
@@ -370,12 +370,12 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  Vous pouvez également créer vos propres règles de validation en dérivant le <xref:System.Windows.Controls.ValidationRule> classe et implémenter la <xref:System.Windows.Controls.ValidationRule.Validate%2A> (méthode). L’exemple suivant montre la règle utilisée par le *ajouter une liste de produits* « Date de début » <xref:System.Windows.Controls.TextBox> à partir de la [qu’est la liaison de données ?](#what_is_data_binding) section :  
   
- [!code-csharp[DataBindingLab#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
- [!code-vb[DataBindingLab#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
+ [!code-csharp[DataBindingLab#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
+ [!code-vb[DataBindingLab#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
   
  Le *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> utilise cette *FutureDateRule*, comme illustré dans l’exemple suivant :  
   
- [!code-xaml[DataBindingLab#CustomValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
+ [!code-xaml[DataBindingLab#CustomValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
   
  Notez que, comme le <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur est <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, le moteur de liaison met à jour la valeur source après chaque frappe au clavier, ce qui signifie qu’il vérifie également chaque règle dans le <xref:System.Windows.Data.Binding.ValidationRules%2A> collecte sur chaque frappe au clavier. Nous reviendrons plus tard là-dessus dans la section Processus de validation.  
   
@@ -383,23 +383,23 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ### <a name="providing-visual-feedback"></a>Fourniture de commentaires visuels  
  Si l’utilisateur entre une valeur non valide, vous souhaiterez peut-être fournir des commentaires sur l’erreur sur l’application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Une façon de fournir de tels commentaires consiste à définir le <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> propriété jointe sur personnalisé <xref:System.Windows.Controls.ControlTemplate>. Comme indiqué dans la section précédente, le *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> utilise un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> appelé *validationTemplate*. L’exemple suivant montre la définition de *validationTemplate* :  
   
- [!code-xaml[DataBindingLab#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#1)]  
+ [!code-xaml[DataBindingLab#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#1)]  
   
  Le <xref:System.Windows.Controls.AdornedElementPlaceholder> élément spécifie où le contrôle orné doit être placé.  
   
  En outre, vous pouvez également utiliser un <xref:System.Windows.Controls.ToolTip> pour afficher le message d’erreur. Les deux le *StartDateEntryForm* et le *StartPriceEntryForm*<xref:System.Windows.Controls.TextBox>es utilisent le style *textStyleTextBox*, ce qui crée un <xref:System.Windows.Controls.ToolTip> qui Affiche le message d’erreur. L’exemple suivant montre la définition de *textStyleTextBox*. La propriété jointe <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> est `true` lorsqu’un ou plusieurs des liaisons sur les propriétés de l’élément lié sont dans l’erreur.  
   
- [!code-xaml[DataBindingLab#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#14)]  
+ [!code-xaml[DataBindingLab#14](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#14)]  
   
  Avec personnalisé <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> et <xref:System.Windows.Controls.ToolTip>, le *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> ressemble à ceci lorsqu’il existe une erreur de validation :  
   
- ![Erreur de validation de liaison de données](../../../../docs/framework/wpf/data/media/databindingdemo-validation.PNG "DataBindingDemo_Validation")  
+ ![Erreur de validation de liaison de données](./media/databindingdemo-validation.PNG "DataBindingDemo_Validation")  
   
  Si votre <xref:System.Windows.Data.Binding> est associé à des règles de validation, mais vous ne spécifiez pas un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> sur le contrôle lié, une valeur par défaut <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> sera utilisé pour informer les utilisateurs lorsqu’il existe une erreur de validation. La valeur par défaut <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> est un modèle de contrôle qui définit une bordure rouge dans la couche d’ornement. Avec la valeur par défaut <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> et <xref:System.Windows.Controls.ToolTip>, le [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de la *StartPriceEntryForm* <xref:System.Windows.Controls.TextBox> ressemble à ceci lorsqu’il existe une erreur de validation :  
   
- ![Erreur de validation de liaison de données](../../../../docs/framework/wpf/data/media/databindingdemo-validationdefault.PNG "DataBindingDemo_ValidationDefault")  
+ ![Erreur de validation de liaison de données](./media/databindingdemo-validationdefault.PNG "DataBindingDemo_ValidationDefault")  
   
- Pour obtenir un exemple montrant comment fournir une logique pour valider tous les contrôles dans une boîte de dialogue, consultez la section Boîtes de dialogue personnalisées dans [Vue d'ensemble des boîtes de dialogue](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
+ Pour obtenir un exemple montrant comment fournir une logique pour valider tous les contrôles dans une boîte de dialogue, consultez la section Boîtes de dialogue personnalisées dans [Vue d'ensemble des boîtes de dialogue](../app-development/dialog-boxes-overview.md).  
   
 ### <a name="validation-process"></a>Processus de validation  
  La validation se produit généralement lorsque la valeur d’une cible est transférée à la propriété de source de liaison. Cela se produit sur <xref:System.Windows.Data.BindingMode.TwoWay> et <xref:System.Windows.Data.BindingMode.OneWayToSource> liaisons. Pour rappel, ce qui entraîne une mise à jour de la source dépend de la valeur de la <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriété, comme décrit dans la [les déclencheurs les mises à jour de la Source](#what_triggers_source_updates) section.  
@@ -431,9 +431,9 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [Nouveautés de WPF version 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)
-- [Effectuer une liaison avec les résultats d'une requête LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
-- [Liaison de données](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Nouveautés de WPF version 4.5](../getting-started/whats-new.md)
+- [Effectuer une liaison avec les résultats d'une requête LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
+- [Liaison de données](../advanced/optimizing-performance-data-binding.md)
 - [Démonstration de liaison de données](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [Effectuer une liaison à une source de données ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Effectuer une liaison à une source de données ADO.NET](how-to-bind-to-an-ado-net-data-source.md)

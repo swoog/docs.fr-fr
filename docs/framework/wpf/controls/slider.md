@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Slider
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
-ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554406"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353983"
 ---
 # <a name="slider"></a>Curseur
 Le <xref:System.Windows.Controls.Slider> vous permet de sélectionner à partir d’une plage de valeurs en déplaçant un <xref:System.Windows.Controls.Primitives.Thumb> le long d’un <xref:System.Windows.Controls.Primitives.Track>.  
   
- L’illustration suivante montre un exemple d’un bouton horizontal <xref:System.Windows.Controls.Slider> contrôle.  
+ L’illustration suivante montre un exemple d’un horizontal <xref:System.Windows.Controls.Slider> contrôle.  
   
- ![Curseur horizontal avec graduations](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
+ ![Curseur horizontal avec graduations](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Personnaliser les graduations sur un curseur](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+ [Personnaliser les graduations sur un curseur](how-to-customize-the-ticks-on-a-slider.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Slider>  

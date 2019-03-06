@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
-ms.openlocfilehash: ba81f8e2d603ee2e734e5afd14182e95804fe69e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550083"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359248"
 ---
 # <a name="adorners-how-to-topics"></a>Rubriques "Comment" relatives aux ornements
 Les exemples suivants montrent comment accomplir des tâches courantes à l’aide de la [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] infrastructure d’ornement.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Implémenter un ornement](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [Lier un ornement à un élément](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [Orner les enfants d’un Panel](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [Supprimer un ornement d’un élément](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [Supprimer tous les ornements d’un élément](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+ [Implémenter un ornement](how-to-implement-an-adorner.md)  
+ [Lier un ornement à un élément](how-to-bind-an-adorner-to-an-element.md)  
+ [Orner les enfants d’un Panel](how-to-adorn-the-children-of-a-panel.md)  
+ [Supprimer un ornement d’un élément](how-to-remove-an-adorner-from-an-element.md)  
+ [Supprimer tous les ornements d’un élément](how-to-remove-all-adorners-from-an-element.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557262"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366723"
 ---
 # <a name="brushes"></a>Pinceaux
-Les rubriques suivantes décrivent comment utiliser [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceaux pour « peindre » le contenu à l’écran  
+Les rubriques suivantes décrivent comment utiliser [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceaux sur lequel « peindre » contenu à l’écran  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble des pinceaux WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Vue d'ensemble des transformations du pinceau](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [Vue d'ensemble des masques d'opacité](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Peinture avec des images, des dessins et des objets visuels](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Vue d’ensemble de TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [Vue d’ensemble des pinceaux WPF](wpf-brushes-overview.md)  
+ [Vue d'ensemble des transformations du pinceau](brush-transformation-overview.md)  
+ [Vue d'ensemble des masques d'opacité](opacity-masks-overview.md)  
+ [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](painting-with-solid-colors-and-gradients-overview.md)  
+ [Peinture avec des images, des dessins et des objets visuels](painting-with-images-drawings-and-visuals.md)  
+ [Vue d’ensemble de TileBrush](tilebrush-overview.md)  
+ [Rubriques de guide pratique](brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Media.Brush>  
@@ -41,6 +41,6 @@ Les rubriques suivantes décrivent comment utiliser [!INCLUDE[TLA#tla_winclient]
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Graphiques et multimédia](index.md)  
   
- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)

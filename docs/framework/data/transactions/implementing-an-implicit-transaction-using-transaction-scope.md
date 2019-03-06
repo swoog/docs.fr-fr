@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645845"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375244"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implémentation d'une transaction implicite à l'aide de l'étendue de transaction
 La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour indiquer qu'un bloc de code participe à une transaction, sans avoir à intervenir sur la transaction même. Une étendue de transaction peut sélectionner et gérer automatiquement la transaction ambiante. En raison de sa facilité d'utilisation et de son efficacité, il est recommandé d'utiliser la classe <xref:System.Transactions.TransactionScope> lors du développement d'une application de transaction.  
@@ -32,7 +32,7 @@ La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour
   
  Ne pas appeler cette méthode d’abandonne la transaction, parce que le Gestionnaire de transactions l’interprète comme une défaillance du système, ou équivalent à une exception levée dans l’étendue de la transaction. Toutefois, l'appel à cette méthode ne garantit pas la validation de la transaction. Il s'agit simplement d'un moyen d'informer le gestionnaire de transactions de votre état. Après avoir appelé la méthode <xref:System.Transactions.TransactionScope.Complete%2A>, vous ne pouvez plus accéder à la transaction ambiante via la propriété <xref:System.Transactions.Transaction.Current%2A> sous peine de lever une exception.  
   
- Si le <xref:System.Transactions.TransactionScope> de l’objet a créé la transaction au départ, le travail réel de la validation de la transaction par le Gestionnaire de transactions se produit après la dernière ligne de code dans le **à l’aide de** bloc. S’il n’a pas créé la transaction, la validation se produit chaque fois que <xref:System.Transactions.CommittableTransaction.Commit%2A> est appelé par le propriétaire de l’objet <xref:System.Transactions.CommittableTransaction>. À ce stade le Gestionnaire de transactions appelle des gestionnaires de la ressource et les informe de commit ou rollback, selon que le <xref:System.Transactions.TransactionScope.Complete%2A> méthode a été appelée sur le <xref:System.Transactions.TransactionScope> objet.  
+ Si le <xref:System.Transactions.TransactionScope> de l’objet a créé la transaction au départ, le travail réel de la validation de la transaction par le Gestionnaire de transactions se produit après la dernière ligne de code dans le **à l’aide de** bloc. S'il n'a pas créé la transaction, la validation se produit chaque fois que <xref:System.Transactions.CommittableTransaction.Commit%2A> est appelé par le propriétaire de l'objet <xref:System.Transactions.CommittableTransaction>. À ce stade le Gestionnaire de transactions appelle des gestionnaires de la ressource et les informe de commit ou rollback, selon que le <xref:System.Transactions.TransactionScope.Complete%2A> méthode a été appelée sur le <xref:System.Transactions.TransactionScope> objet.  
   
  Le **à l’aide de** instruction garantit que le <xref:System.Transactions.TransactionScope.Dispose%2A> méthode de la <xref:System.Transactions.TransactionScope> objet est appelé même si une exception se produit. La méthode <xref:System.Transactions.TransactionScope.Dispose%2A> marque la fin de l'étendue de transaction. Il est possible que les exceptions qui se produisent après l'appel à cette méthode n'affectent pas la transaction. Cette méthode restaure également la transaction ambiante à son état précédent.  
   
@@ -41,7 +41,7 @@ La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour
 ## <a name="rolling-back-a-transaction"></a>Restauration d'une transaction  
  Pour restaurer une transaction, n'appelez pas la méthode <xref:System.Transactions.TransactionScope.Complete%2A> dans l'étendue de transaction. Par exemple, vous pouvez lever une exception dans l'étendue. La transaction à laquelle il participe est restaurée.  
   
-##  <a name="ManageTxFlow"></a> La gestion des flux de transaction à l’aide de TransactionScopeOption  
+## <a name="ManageTxFlow"></a> La gestion des flux de transaction à l’aide de TransactionScopeOption  
  L'étendue de transaction peut être imbriquée en appelant une méthode qui utilise une <xref:System.Transactions.TransactionScope> à partir d'une méthode utilisant sa propre étendue, comme la méthode `RootMethod` de l'exemple suivant,  
   
 ```csharp  

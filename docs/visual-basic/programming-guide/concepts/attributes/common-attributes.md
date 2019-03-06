@@ -2,12 +2,12 @@
 title: Attributs courants (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690902"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375400"
 ---
 # <a name="common-attributes-visual-basic"></a>Attributs courants (Visual Basic)
 Cette rubrique décrit les attributs qui sont couramment utilisés dans les programmes Visual Basic.  
@@ -22,7 +22,7 @@ Cette rubrique décrit les attributs qui sont couramment utilisés dans les prog
   
 -   [Attributs (Visual Basic)](#VB)  
   
-##  <a name="Global"></a> Attributs globaux  
+## <a name="Global"></a> Attributs globaux  
  La plupart des attributs sont appliqués à des éléments de langage spécifiques, tels que les classes ou les méthodes. Toutefois, certains attributs sont globaux : ils s’appliquent à la totalité d’un assembly ou d’un module. Par exemple, l’attribut <xref:System.Reflection.AssemblyVersionAttribute> peut être utilisé pour incorporer des informations de version dans un assembly, de la manière suivante :  
   
 ```vb  
@@ -74,7 +74,7 @@ Cette rubrique décrit les attributs qui sont couramment utilisés dans les prog
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Définit un attribut personnalisé qui spécifie une configuration d’assembly (telles que retail ou debug) pour un manifeste d’assembly.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Définit un alias par défaut convivial pour un manifeste d’assembly.|  
   
-##  <a name="Obsolete"></a> Attribut Obsolete  
+## <a name="Obsolete"></a> Attribut Obsolete  
  L’attribut `Obsolete` est utilisé pour marquer une entité de programme comme étant une entité dont l’utilisation n’est plus recommandée. Chaque utilisation d’une entité marquée comme obsolète génère par la suite un avertissement ou une erreur, selon la façon dont l’attribut est configuré. Exemple :  
   
 ```vb  
@@ -116,7 +116,7 @@ b.NewMethod()
   
  `Obsolete` est un attribut à usage unique et peut être appliqué à toute entité qui autorise des attributs. `Obsolete` est un alias pour <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a> Attribut Conditional  
+## <a name="Conditional"></a> Attribut Conditional  
  Avec l’attribut `Conditional`, l’exécution d’une méthode dépend d’un identificateur de prétraitement. L’attribut `Conditional` est un alias pour <xref:System.Diagnostics.ConditionalAttribute>, et peut être appliqué à une méthode ou une classe d’attributs.  
   
  Dans cet exemple, `Conditional` est appliqué à une méthode pour activer ou désactiver l’affichage d’informations de diagnostic spécifiques au programme :  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a> Attributs d’informations de l’appelant  
+## <a name="CallerInfo"></a> Attributs d’informations de l’appelant  
  À l'aide des attributs d'informations de l'appelant, vous pouvez obtenir des informations sur l'appelant d'une méthode. Vous pouvez obtenir le chemin du fichier de code source, le numéro de ligne dans le code source, ainsi que le nom de membre de l’appelant.  
   
  Pour obtenir des informations de membre de l’appelant, vous utilisez les attributs qui sont appliqués aux paramètres facultatifs. Chaque paramètre facultatif spécifie une valeur par défaut. Le tableau suivant répertorie les attributs d'informations de l'appelant définis dans l'espace de noms <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> :  
@@ -222,7 +222,7 @@ End Class
   
  Pour plus d’informations sur les attributs d’informations de l’appelant, consultez [les informations de l’appelant (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
-##  <a name="VB"></a> Attributs (Visual Basic)  
+## <a name="VB"></a> Attributs (Visual Basic)  
  Le tableau suivant répertorie les attributs qui sont spécifiques à Visual Basic.  
   
 |Attribut|Objectif|  

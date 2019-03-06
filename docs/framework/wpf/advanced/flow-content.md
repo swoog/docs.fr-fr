@@ -7,21 +7,21 @@ helpviewer_keywords:
 - documents [WPF], flow content reference
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
-ms.openlocfilehash: c41270bc09dfefb282a3c0e0ee0308e22e1af446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542335"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373541"
 ---
 # <a name="flow-content"></a>Contenu de flux
-Éléments de flux de contenu fournissent les blocs de construction pour la création de contenu de flux approprié pour l’hébergement dans un <xref:System.Windows.Documents.FlowDocument>.  
+Éléments de contenu dynamique fournissent les blocs de construction pour créer du contenu de flux approprié pour l’hébergement dans un <xref:System.Windows.Documents.FlowDocument>.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble des documents dynamiques](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Vue d'ensemble du modèle de contenu de TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [Vue d’ensemble de Table](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Vue d’ensemble des documents dynamiques](flow-document-overview.md)  
+ [Vue d'ensemble du modèle de contenu de TextElement](textelement-content-model-overview.md)  
+ [Vue d’ensemble de Table](table-overview.md)  
+ [Rubriques de guide pratique](flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -39,4 +39,4 @@ ms.locfileid: "33542335"
   <xref:System.Windows.Documents.ListItem>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [Documents dans WPF](documents-in-wpf.md)

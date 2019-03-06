@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 08fb3b7a6d2af4ede27ebeb1454b040d2bd3eb43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719220"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355153"
 ---
 # <a name="cleartype-overview"></a>Vue d'ensemble de ClearType
 Cette rubrique propose une vue d’ensemble de la technologie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] rencontrée dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -28,12 +28,12 @@ Cette rubrique propose une vue d’ensemble de la technologie [!INCLUDE[TLA#tla_
   
  Les deux exemples suivants montrent de quelle manière les glyphes peuvent commencer sur une limite de sous-pixel quand le positionnement du sous-pixel est utilisé. L’exemple de gauche est restitué à l’aide de la version antérieure du convertisseur [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], qui n’utilisait pas le positionnement du sous-pixel. L’exemple de droite est restitué à l’aide de la nouvelle version du convertisseur [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], qui utilise le positionnement du sous-pixel. Comme vous pouvez le constater, les lettres **e** et **l** de l’image de droite sont restituées de manière légèrement différente car elles démarrent toutes sur un sous-pixel différent. Quand vous affichez le texte à sa taille normale sur l’écran, cette différence n’est pas visible en raison du contraste élevé de l’image de glyphe. Ce résultat est uniquement possible grâce au filtrage de couleur sophistiqué incorporé dans [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Texte affiché avec deux versions de ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![Texte affiché avec deux versions de ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 Texte affiché avec l’ancienne et la nouvelle version de ClearType  
   
  Les deux exemples suivants comparent la sortie de l’ancien convertisseur [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] et à celle de la nouvelle version du convertisseur [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Le positionnement du sous-pixel, illustré à droite, améliore considérablement l’espacement de type sur l’écran, en particulier à de petites tailles, quand la différence entre un sous-pixel et un pixel entier représente une proportion importante de la largeur du glyphe. Notez que l’espacement entre les lettres est plus régulier dans la deuxième image. L’avantage cumulatif du positionnement du sous-pixel sur l’apparence générale d’un écran de texte est considérablement renforcé et constitue une évolution significative de la technologie [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Texte affiché avec une version antérieure de ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![Texte affiché avec une version antérieure de ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 Texte avec l’ancienne et la nouvelle version de ClearType  
   
 <a name="y-direction_antialiasing"></a>   
@@ -42,14 +42,14 @@ Texte avec l’ancienne et la nouvelle version de ClearType
   
  L’exemple suivant montre le résultat obtenu en l’absence d’anticrénelage de direction y. Dans ce cas, les bords dentelés sur le haut et le bas de la lettre sont apparents.  
   
- ![Texte avec bords dentelés sur les courbes marquées](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![Texte avec bords dentelés sur les courbes marquées](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Texte avec bords dentelés sur les courbes marquées  
   
  La version de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] utilisée dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] utilise l’anticrénelage de direction y pour lisser les bords dentelés. Cette fonctionnalité est particulièrement importante pour améliorer la lisibilité des langues d’Extrême-Orient, dont les idéogrammes comptent quasiment autant de courbes marquées horizontales que verticales.  
   
  L’exemple suivant montre le résultat de l’anticrénelage de direction y. Dans ce cas, le haut et le bas de la lettre affichent une courbe lissée.  
   
- ![Texte avec ClearType y&#45;direction anti&#45;alias](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![Texte avec ClearType y&#45;direction anti&#45;alias](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 Texte avec anticrénelage ClearType dans la direction y  
   
 <a name="hardware_acceleration"></a>   
@@ -67,4 +67,4 @@ Texte avec anticrénelage ClearType dans la direction y
  [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Paramètres du Registre ClearType](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+- [Paramètres du Registre ClearType](cleartype-registry-settings.md)

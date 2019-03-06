@@ -8,28 +8,28 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: 9b382ec6d4be5023649565d411e8c65b5dee5213
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9257414a90cd3d4f64653893c5fa6e19963ad3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661150"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369550"
 ---
 # <a name="typography"></a>Typographie
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prend en charge la présentation enrichie du contenu de texte. Le texte dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est affiché à l’aide de [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], ce qui améliore sa clarté et sa lisibilité. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend également en charge [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices qui fournissent des fonctionnalités supplémentaires au-delà de celles définies par le [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Typographie dans WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Vue d’ensemble ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [Paramètres du Registre ClearType](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)  
- [Dessin du texte mis en forme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [Mise en forme de texte avancée](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [Polices](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
- [Glyphes](../../../../docs/framework/wpf/advanced/glyphs.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
+ [Typographie dans WPF](typography-in-wpf.md)  
+ [Vue d’ensemble ClearType](cleartype-overview.md)  
+ [Paramètres du Registre ClearType](cleartype-registry-settings.md)  
+ [Dessin du texte mis en forme](drawing-formatted-text.md)  
+ [Mise en forme de texte avancée](advanced-text-formatting.md)  
+ [Polices](fonts-wpf.md)  
+ [Glyphes](glyphs.md)  
+ [Rubriques de guide pratique](typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Documents.Typography>
-- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Fonctionnalités des polices OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
-- [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Documents dans WPF](documents-in-wpf.md)
+- [Fonctionnalités des polices OpenType](opentype-font-features.md)
+- [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)

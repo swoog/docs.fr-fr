@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d8e2306a2a63e567b156449caa9741e1028f017f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545223"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359404"
 ---
 # <a name="calendar"></a>Calendrier
 Un calendrier permet à un utilisateur de sélectionner une date en affichant un calendrier visuel.  
@@ -19,7 +19,7 @@ Un calendrier permet à un utilisateur de sélectionner une date en affichant un
   
  L’illustration suivante montre deux <xref:System.Windows.Controls.Calendar> des contrôles, un avec des sélections et des dates d’arrêt complet et l’autre sans.  
   
- ![Les contrôles de calendrier](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
+ ![Les contrôles de calendrier](./media/ndp-calendarcontrols.png "NDP_CalendarControls")  
 Contrôles Calendar  
   
  Le tableau suivant fournit des informations sur les tâches qui sont généralement associés à la <xref:System.Windows.Controls.Calendar>.  
@@ -52,5 +52,5 @@ Contrôles Calendar
 |ESPACE ou entrée|<xref:System.Windows.Controls.CalendarMode.Year> ou <xref:System.Windows.Controls.CalendarMode.Decade>|Commutateurs <xref:System.Windows.Controls.Calendar.DisplayMode%2A> à la <xref:System.Windows.Controls.CalendarMode.Month> ou <xref:System.Windows.Controls.CalendarMode.Year> représenté par l’élément ayant le focus.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Contrôles](../../../../docs/framework/wpf/controls/index.md)
-- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Contrôles](index.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)

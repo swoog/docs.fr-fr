@@ -8,19 +8,19 @@ helpviewer_keywords:
 - creating add-ins [WPF]
 - add-ins [WPF], returns a UI
 ms.assetid: c33980e8-36e7-45ce-a485-8c826dd29009
-ms.openlocfilehash: 2dcddc42ec1f9f3b16e5b4465be2e4194819a736
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27eb7acbab7d9c90f0c0c311ef6331a16b7896e8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546001"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358585"
 ---
 # <a name="how-to-topics"></a>Rubriques Comment
 Les rubriques suivantes montrent comment créer des compléments de Windows Presentation Foundation (WPF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Créer un complément qui retourne une interface utilisateur](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [Créer un complément qui est une interface utilisateur](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+ [Créer un complément qui retourne une interface utilisateur](how-to-create-an-add-in-that-returns-a-ui.md)  
+ [Créer un complément qui est une interface utilisateur](how-to-create-an-add-in-that-is-a-ui.md)  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Vue d’ensemble des compléments WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+ [Vue d’ensemble des compléments WPF](wpf-add-ins-overview.md)

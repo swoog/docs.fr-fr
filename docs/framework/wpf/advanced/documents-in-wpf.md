@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 00e983c907c0376b45d2342f393569d045cbf98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517732"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361367"
 ---
 # <a name="documents-in-wpf"></a>Documents dans WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre une large gamme de fonctionnalités liées aux documents qui permettent de créer du contenu haute fidélité conçu pour être accessible et lu plus facilement que sur les générations précédentes de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. En plus d’une amélioration des capacités et de la qualité, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit également des services intégrés pour l’affichage, le packaging et la sécurité des documents. Cette rubrique fournit une introduction aux types et au packaging des documents [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "54517732"
   
  Les documents fixes sont prévus pour les applications qui requièrent une présentation [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] précise, indépendamment du matériel d’affichage ou d’impression utilisé. Les documents fixes sont principalement utilisés pour la PAO (Publication Assistée par Ordinateur), le traitement de texte et la présentation d’un formulaire, où le respect de la conception de la page d’origine est essentiel. Dans le cadre de sa disposition, un document fixe conserve l’emplacement précis des éléments de contenu, indépendamment de l’écran d’affichage ou de l’appareil d’impression utilisé. Par exemple, une page de document fixe affichée en 96 ppp (points par pouce) apparaît de la même manière que lorsqu’elle est imprimée sur une imprimante laser 600 ppp ou une photocomposeuse 4800 ppp. Dans tous les cas, la disposition de la page reste la même, tandis que la qualité du document s’optimise selon les capacités de chaque appareil.  
   
- En comparaison, les documents dynamiques sont conçus pour optimiser l’affichage et la lisibilité. Ils trouvent leur meilleure exploitation quand la facilité de lecture est le scénario principal d’utilisation du document. Au lieu d’avoir une disposition prédéfinie, ces documents dynamiques ajustent et refluent dynamiquement leur contenu en fonction des variables d’exécution telles que la taille de la fenêtre, la résolution de l’appareil et les préférences facultatives de l’utilisateur. Une page web est un exemple simple de document dynamique où le contenu est mis en forme dynamiquement pour s’adapter à la fenêtre active. Les documents dynamiques optimisent l’expérience d’affichage et de lecture de l’utilisateur, en fonction de l’environnement d’exécution. Par exemple, le même document dynamique se remet en forme dynamiquement pour une lisibilité optimale sur un écran haute résolution de 19 pouces ou un petit écran de PDA de 2x3 pouces. En outre, les documents dynamiques possèdent plusieurs fonctionnalités intégrées, notamment la recherche, les modes d’affichage qui optimisent la lisibilité et la possibilité de changer la taille et l’apparence des polices.  Pour obtenir des illustrations, des exemples et des informations complètes sur les documents dynamiques, consultez [Vue d’ensemble des documents dynamiques](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+ En comparaison, les documents dynamiques sont conçus pour optimiser l’affichage et la lisibilité. Ils trouvent leur meilleure exploitation quand la facilité de lecture est le scénario principal d’utilisation du document. Au lieu d’avoir une disposition prédéfinie, ces documents dynamiques ajustent et refluent dynamiquement leur contenu en fonction des variables d’exécution telles que la taille de la fenêtre, la résolution de l’appareil et les préférences facultatives de l’utilisateur. Une page web est un exemple simple de document dynamique où le contenu est mis en forme dynamiquement pour s’adapter à la fenêtre active. Les documents dynamiques optimisent l’expérience d’affichage et de lecture de l’utilisateur, en fonction de l’environnement d’exécution. Par exemple, le même document dynamique se remet en forme dynamiquement pour une lisibilité optimale sur un écran haute résolution de 19 pouces ou un petit écran de PDA de 2x3 pouces. En outre, les documents dynamiques possèdent plusieurs fonctionnalités intégrées, notamment la recherche, les modes d’affichage qui optimisent la lisibilité et la possibilité de changer la taille et l’apparence des polices.  Pour obtenir des illustrations, des exemples et des informations complètes sur les documents dynamiques, consultez [Vue d’ensemble des documents dynamiques](flow-document-overview.md).  
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>Contrôles de document et disposition du texte  
@@ -40,7 +40,7 @@ ms.locfileid: "54517732"
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>Contrôles de document dynamique  
- **Remarque :** Pour plus d’informations sur les fonctionnalités de document de flux et comment les créer, consultez [vue d’ensemble du Document de flux](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+ **Remarque :** Pour plus d’informations sur les fonctionnalités de document de flux et comment les créer, consultez [vue d’ensemble du Document de flux](flow-document-overview.md).  
   
  Affichage du contenu de document dynamique est pris en charge par trois contrôles : <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, et <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54517732"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Texte dans l’interface utilisateur  
- En plus d’ajouter du texte à des documents, vous pouvez bien évidemment utiliser du texte dans l’interface utilisateur de l’application, notamment dans des formulaires. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclut plusieurs contrôles pour dessiner le texte à l’écran. Chaque contrôle cible un scénario différent et dispose de sa propre liste de fonctionnalités et limitations. En règle générale, le <xref:System.Windows.Controls.TextBlock> élément doit être utilisé lors de la prise en charge de texte limitée est requis, par exemple, une courte phrase dans un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> peut être utilisé lors de la prise en charge de texte minimale est requise. Pour plus d’informations, consultez [Vue d’ensemble de TextBlock](../../../../docs/framework/wpf/controls/textblock-overview.md).  
+ En plus d’ajouter du texte à des documents, vous pouvez bien évidemment utiliser du texte dans l’interface utilisateur de l’application, notamment dans des formulaires. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclut plusieurs contrôles pour dessiner le texte à l’écran. Chaque contrôle cible un scénario différent et dispose de sa propre liste de fonctionnalités et limitations. En règle générale, le <xref:System.Windows.Controls.TextBlock> élément doit être utilisé lors de la prise en charge de texte limitée est requis, par exemple, une courte phrase dans un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> peut être utilisé lors de la prise en charge de texte minimale est requise. Pour plus d’informations, consultez [Vue d’ensemble de TextBlock](../controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Packaging de documents  
@@ -142,7 +142,7 @@ ms.locfileid: "54517732"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Vue d’ensemble des documents dynamiques](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [Vue d’ensemble de l’impression](../../../../docs/framework/wpf/advanced/printing-overview.md)
-- [Sérialisation et stockage de documents](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Text](optimizing-performance-text.md)
+- [Vue d’ensemble des documents dynamiques](flow-document-overview.md)
+- [Vue d’ensemble de l’impression](printing-overview.md)
+- [Sérialisation et stockage de documents](document-serialization-and-storage.md)

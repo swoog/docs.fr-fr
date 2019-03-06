@@ -5,23 +5,23 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: e50714e8cf50f42aad41ffa77fda34c55f9adb4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502982"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360509"
 ---
 # <a name="animation-and-timing-system-overview"></a>Vue d'ensemble de l'animation et du système de minutage
 Cette rubrique décrit comment le système de minutage utilise l’animation, <xref:System.Windows.Media.Animation.Timeline>, et <xref:System.Windows.Media.Animation.Clock> classes pour animer des propriétés.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Pour comprendre cette rubrique, vous devez être en mesure d’utiliser des animations [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pour animer des propriétés, comme décrit dans la [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Il est également conseillé de vous familiariser avec les propriétés de dépendance. Pour plus d’informations, consultez [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Pour comprendre cette rubrique, vous devez être en mesure d’utiliser des animations [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pour animer des propriétés, comme décrit dans la [Vue d’ensemble de l’animation](animation-overview.md). Il est également conseillé de vous familiariser avec les propriétés de dépendance. Pour plus d’informations, consultez [Vue d’ensemble des propriétés de dépendance](../advanced/dependency-properties-overview.md).  
   
 <a name="timelinesandclocks"></a>   
 ## <a name="timelines-and-clocks"></a>Chronologies et horloges  
- Le [vue d’ensemble de l’Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) décrit comment un <xref:System.Windows.Media.Animation.Timeline> représente un segment de temps et d’une animation est un type de <xref:System.Windows.Media.Animation.Timeline> qui produit des valeurs de sortie. En soi, un <xref:System.Windows.Media.Animation.Timeline>, ne fait rien d’autre que décrire un segment de temps. Il s’agit de la chronologie <xref:System.Windows.Media.Animation.Clock> objet qui effectue le travail réel. De même, l’animation n’anime pas réellement propriétés : une classe d’animation décrit comment les valeurs de sortie doivent être calculées, mais il est le <xref:System.Windows.Media.Animation.Clock> qui a été créé pour l’animation qui achemine la sortie d’animation et l’applique aux propriétés.  
+ Le [vue d’ensemble de l’Animation](animation-overview.md) décrit comment un <xref:System.Windows.Media.Animation.Timeline> représente un segment de temps et d’une animation est un type de <xref:System.Windows.Media.Animation.Timeline> qui produit des valeurs de sortie. En soi, un <xref:System.Windows.Media.Animation.Timeline>, ne fait rien d’autre que décrire un segment de temps. Il s’agit de la chronologie <xref:System.Windows.Media.Animation.Clock> objet qui effectue le travail réel. De même, l’animation n’anime pas réellement propriétés : une classe d’animation décrit comment les valeurs de sortie doivent être calculées, mais il est le <xref:System.Windows.Media.Animation.Clock> qui a été créé pour l’animation qui achemine la sortie d’animation et l’applique aux propriétés.  
   
  Un <xref:System.Windows.Media.Animation.Clock> est un type spécial d’objet qui conserve l’état d’exécution de temporisation pour la <xref:System.Windows.Media.Animation.Timeline>. Il fournit trois éléments d’information qui sont essentielles à l’animation et le système de minutage : <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A>, <xref:System.Windows.Media.Animation.Clock.CurrentProgress%2A>, et <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>. Un <xref:System.Windows.Media.Animation.Clock> détermine l’heure actuelle, sa progression et l’état en utilisant les comportements de minutage décrits par sa <xref:System.Windows.Media.Animation.Timeline>: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, et ainsi de suite.  
   
@@ -46,7 +46,7 @@ Cette rubrique décrit comment le système de minutage utilise l’animation, <x
   
  L’illustration suivante montre la relation entre le Gestionnaire de temps, et <xref:System.Windows.Media.Animation.AnimationClock>et une propriété de dépendance animée.  
   
- ![Composants du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
+ ![Composants du système de minutage](./media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
 Animation d’une propriété  
   
  Lorsque le Gestionnaire de temps effectue un battement, il met à jour l’heure de chaque <xref:System.Windows.Media.Animation.ClockState.Active> <xref:System.Windows.Media.Animation.Clock> dans l’application. Si le <xref:System.Windows.Media.Animation.Clock> est un <xref:System.Windows.Media.Animation.AnimationClock>, il utilise le <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> méthode de la <xref:System.Windows.Media.Animation.AnimationTimeline> à partir duquel il a été créé pour calculer actuelle à la valeur de sortie. Le <xref:System.Windows.Media.Animation.AnimationClock> fournit le <xref:System.Windows.Media.Animation.AnimationTimeline> avec l’heure locale actuelle, une valeur d’entrée, qui est généralement la valeur de la propriété de base et une valeur de destination par défaut. Lorsque vous récupérez la valeur animée par propriété à l’aide du <xref:System.Windows.DependencyObject.GetValue%2A> méthode ou son accesseur CLR, vous obtenez la sortie de son <xref:System.Windows.Media.Animation.AnimationClock>.  
@@ -54,13 +54,13 @@ Animation d’une propriété
 #### <a name="clock-groups"></a>Groupes d’horloges  
  La section précédente a décrit les différents types de <xref:System.Windows.Media.Animation.Clock> objets pour différents types de chronologies. L’illustration suivante montre la relation entre le Gestionnaire de temps, un <xref:System.Windows.Media.Animation.ClockGroup>, un <xref:System.Windows.Media.Animation.AnimationClock>et une propriété de dépendance animée. Un <xref:System.Windows.Media.Animation.ClockGroup> est créé pour les chronologies qui groupent d’autres chronologies, telles que le <xref:System.Windows.Media.Animation.Storyboard> (classe), qui regroupe des animations et autres chronologies.  
   
- ![Composants du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
+ ![Composants du système de minutage](./media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
 Un groupe d’horloges  
   
 #### <a name="composition"></a>Composition  
  Il est possible d’associer plusieurs horloges à une seule propriété, auquel cas chaque l’horloge utilise la valeur de sortie de l’exemple d’horloge précédent comme valeur de base. L’illustration suivante montre trois <xref:System.Windows.Media.Animation.AnimationClock> objets appliqués à la même propriété. Clock1 utilise la valeur de base de la propriété animée comme entrée et l’utilise pour générer la sortie. Clock2 prend la sortie de Clock1 comme entrée et l’utilise pour générer la sortie. Clock3 prend la sortie de Clock2 comme entrée et l’utilise pour générer la sortie. Lorsque plusieurs horloges affectent la même propriété simultanément, on dit qu’elles font partie d’une chaîne de composition.  
   
- ![Composants du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
+ ![Composants du système de minutage](./media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
 Une chaîne de composition  
   
  Notez que même si une relation est créée entre l’entrée et la sortie de la <xref:System.Windows.Media.Animation.AnimationClock> des objets dans la chaîne de composition, leurs comportements de minutage ne sont pas affectées ; <xref:System.Windows.Media.Animation.Clock> objets (y compris <xref:System.Windows.Media.Animation.AnimationClock> objets) ont une dépendance hiérarchique sur leur parent <xref:System.Windows.Media.Animation.Clock> objets.  
@@ -74,7 +74,7 @@ Une chaîne de composition
   
  Quand un <xref:System.Windows.Media.Animation.Clock> change d’état et revient à son état d’origine entre les battements (telles que la modification de <xref:System.Windows.Media.Animation.ClockState.Active> à <xref:System.Windows.Media.Animation.ClockState.Stopped> , puis vers <xref:System.Windows.Media.Animation.ClockState.Active>), l’événement associé se produit toujours.  
   
- Pour plus d'informations sur les événements de minuterie, consultez [Vue d'ensemble des événements de minuterie](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
+ Pour plus d'informations sur les événements de minuterie, consultez [Vue d'ensemble des événements de minuterie](timing-events-overview.md).  
   
 <a name="currentvaluesbasevaluesofproperties"></a>   
 ## <a name="current-values-and-base-values-of-properties"></a>Valeurs actuelles et les valeurs de base des propriétés  
@@ -83,6 +83,6 @@ Une chaîne de composition
  Lorsque vous animez une propriété, le <xref:System.Windows.Media.Animation.AnimationClock> définit la propriété *actuel* valeur. Récupération de la valeur de propriété via son accesseur CLR ou la <xref:System.Windows.DependencyObject.GetValue%2A> méthode retourne la sortie de la <xref:System.Windows.Media.Animation.AnimationClock> lorsque le <xref:System.Windows.Media.Animation.AnimationClock> est <xref:System.Windows.Media.Animation.ClockState.Active> ou <xref:System.Windows.Media.Animation.ClockState.Filling>. Vous pouvez récupérer la valeur de base de la propriété à l’aide de la <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> (méthode).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Vue d'ensemble des événements de minuterie](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
-- [Vue d’ensemble des comportements de minutage](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble des événements de minuterie](timing-events-overview.md)
+- [Vue d’ensemble des comportements de minutage](timing-behaviors-overview.md)

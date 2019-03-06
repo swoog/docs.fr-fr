@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4f4297fdc5c49270ac97513295fc5aa2e0f2213
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543576"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353710"
 ---
 # <a name="typography-how-to-topics"></a>Rubriques "Comment" relatives à la typographie
 Les rubriques de cette section décrivent comment utiliser [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prise en charge pour la présentation enrichie du texte dans vos applications.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Créer une décoration de texte](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [Spécifier si un lien hypertexte est souligné ou non](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [Appliquer des transformations à du texte](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [Guide pratique pour appliquer des animations à du texte](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [Créer du texte avec une ombre](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [Créer du texte avec contour](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [Dessiner du texte sur l’arrière-plan d’un contrôle](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [Ajouter du texte à un Visual](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [Utiliser des caractères spéciaux en XAML](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+ [Créer une décoration de texte](how-to-create-a-text-decoration.md)  
+ [Spécifier si un lien hypertexte est souligné ou non](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [Appliquer des transformations à du texte](how-to-apply-transforms-to-text.md)  
+ [Guide pratique pour appliquer des animations à du texte](how-to-apply-animations-to-text.md)  
+ [Créer du texte avec une ombre](how-to-create-text-with-a-shadow.md)  
+ [Créer du texte avec contour](how-to-create-outlined-text.md)  
+ [Dessiner du texte sur l’arrière-plan d’un contrôle](how-to-draw-text-to-a-control-background.md)  
+ [Ajouter du texte à un Visual](how-to-draw-text-to-a-visual.md)  
+ [Utiliser des caractères spéciaux en XAML](how-to-use-special-characters-in-xaml.md)  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Documents.Typography>
-- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Fonctionnalités des polices OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Documents dans WPF](documents-in-wpf.md)
+- [Fonctionnalités des polices OpenType](opentype-font-features.md)

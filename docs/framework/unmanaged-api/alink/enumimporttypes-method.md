@@ -17,47 +17,52 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e437868138d7ae31d233853ecc0f709de3ee39d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d0aefea7345bc3bf37bdb8d13cb2cda19cfe527
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512721"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355738"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes, méthode
-Énumère chaque type dans chaque étendue.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-HRESULT EnumImportTypes(  
-    HALINKENUM   hEnum,  
-    DWORD        dwMax,  
-    mdTypeDef    aTypeDefs[],  
-    DWORD*       pdwCount  
-) PURE;  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `hEnum`  
- Handle pour l’énumérateur.  
-  
- `dwMax`  
- Nombre maximal de types à récupérer.  
-  
- `aTypeDefs`  
- Reçoit des jetons, ne pouvant excéder type `dwMax`.  
-  
- `pdwCount`  
- Reçoit le nombre réel de type dans `aTypeDefs`.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne S_OK si la méthode réussit.  
-  
-## <a name="requirements"></a>Spécifications  
- Nécessite alink.h  
-  
+
+Énumère chaque type dans chaque étendue.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT EnumImportTypes(
+    HALINKENUM   hEnum,
+    DWORD        dwMax,
+    mdTypeDef    aTypeDefs[],
+    DWORD*       pdwCount
+) PURE;
+```
+
+## <a name="parameters"></a>Paramètres
+
+`hEnum`\
+Handle pour l’énumérateur.
+
+`dwMax`\
+Nombre maximal de types à récupérer.
+
+`aTypeDefs`\
+Reçoit des jetons de type, ne pouvant excéder `dwMax`.
+
+`pdwCount`\
+Reçoit le nombre réel de type dans `aTypeDefs`.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne S_OK si la méthode réussit.
+
+## <a name="requirements"></a>Spécifications
+
+Nécessite alink.h
+
 ## <a name="see-also"></a>Voir aussi
-- [IALink, interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interface](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink, interface](ialink-interface.md)
+- [IALink2, interface](ialink2-interface.md)
+- [API ALink](index.md)

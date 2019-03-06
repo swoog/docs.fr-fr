@@ -8,27 +8,27 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: 39a3cd059c0fa9aad1ef2c1ae50fa37b95df52d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40a37542d6151d05910bc033657d85c6a9f5483b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650442"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362758"
 ---
 # <a name="fromtoby-animations-overview"></a>Vue d'ensemble des animations From/To/By
 Cette rubrique explique comment utiliser des animations From/To/By pour animer des propriétés de dépendance. Une animation From/To/By crée une transition entre deux valeurs.  
   
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Pour comprendre cette rubrique, vous devez être familiarisé avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fonctionnalités d’animations. Pour une introduction aux fonctionnalités d’animation, consultez le [vue d’ensemble de l’Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Pour comprendre cette rubrique, vous devez être familiarisé avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fonctionnalités d’animations. Pour une introduction aux fonctionnalités d’animation, consultez le [vue d’ensemble de l’Animation](animation-overview.md).  
   
 <a name="whatisanimation"></a>   
 ## <a name="what-is-a-fromtoby-animation"></a>Qu’est-ce qu’une animation From/To/By ?  
  Un From/To/By animation est un type de <xref:System.Windows.Media.Animation.AnimationTimeline> qui crée une transition entre une valeur de départ et une valeur de fin. La quantité de temps pour effectuer la transition est déterminée par la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de cette animation.  
   
- Vous pouvez appliquer un From/To/By animation à une propriété à l’aide un <xref:System.Windows.Media.Animation.Storyboard> dans le balisage et le code, ou en utilisant le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode dans le code. Vous pouvez également utiliser une Animation From/To/By pour créer un <xref:System.Windows.Media.Animation.AnimationClock> et l’appliquer à une ou plusieurs propriétés. Pour plus d’informations sur les différentes façons d’appliquer des animations, consultez la [Vue d’ensemble des techniques d’animation de propriétés](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ Vous pouvez appliquer un From/To/By animation à une propriété à l’aide un <xref:System.Windows.Media.Animation.Storyboard> dans le balisage et le code, ou en utilisant le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode dans le code. Vous pouvez également utiliser une Animation From/To/By pour créer un <xref:System.Windows.Media.Animation.AnimationClock> et l’appliquer à une ou plusieurs propriétés. Pour plus d’informations sur les différentes façons d’appliquer des animations, consultez la [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md).  
   
- Les animations From/To/By ne peuvent pas avoir plus de deux valeurs cibles. Si vous avez besoin d’une animation comportant plus de deux valeurs cibles, utilisez une animation d’image clé. Animations d’image clé sont décrites dans le [vue d’ensemble des Animations image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+ Les animations From/To/By ne peuvent pas avoir plus de deux valeurs cibles. Si vous avez besoin d’une animation comportant plus de deux valeurs cibles, utilisez une animation d’image clé. Animations d’image clé sont décrites dans le [vue d’ensemble des Animations image clé](key-frame-animations-overview.md).  
   
 <a name="animation_types"></a>   
 ## <a name="fromtoby-animation-types"></a>Types d’animation From/To/By  
@@ -83,15 +83,15 @@ Cette rubrique explique comment utiliser des animations From/To/By pour animer d
   
  Les exemples de cette section utilisent chacun un <xref:System.Windows.Media.Animation.DoubleAnimation>, qui est un type d’animation From/To/By, pour animer la <xref:System.Windows.FrameworkElement.Width%2A> propriété d’un <xref:System.Windows.Shapes.Rectangle> qui est 10 pixels indépendants du périphérique haute et 100 pixels indépendants du périphérique larges.  
   
- Bien que chaque exemple utilise un <xref:System.Windows.Media.Animation.DoubleAnimation>, From, To et By les propriétés de tous les From/To/By animations ont un comportement identique. Bien que chacun de ces exemples utilise un <xref:System.Windows.Media.Animation.Storyboard>, vous pouvez utiliser des animations From/To/By par d’autres moyens. Pour plus d’informations, consultez [vue d’ensemble des Techniques d’Animation propriété](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ Bien que chaque exemple utilise un <xref:System.Windows.Media.Animation.DoubleAnimation>, From, To et By les propriétés de tous les From/To/By animations ont un comportement identique. Bien que chacun de ces exemples utilise un <xref:System.Windows.Media.Animation.Storyboard>, vous pouvez utiliser des animations From/To/By par d’autres moyens. Pour plus d’informations, consultez [vue d’ensemble des Techniques d’Animation propriété](property-animation-techniques-overview.md).  
   
 ### <a name="fromto"></a>De/À  
  Lorsque vous définissez la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> et <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> valeurs ensemble, l’animation passe de la valeur spécifiée par le <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> , valeur à la propriété spécifiée par le <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété.  
   
  L’exemple suivant définit la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété de la <xref:System.Windows.Media.Animation.DoubleAnimation> à 50 et sa <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété sur 300. Par conséquent, le <xref:System.Windows.FrameworkElement.Width%2A> de la <xref:System.Windows.Shapes.Rectangle> est animé de 50 à 300.  
   
- [!code-csharp[basicvalues_snip#FromToAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromtoanimationinline)]
- [!code-vb[basicvalues_snip#FromToAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromtoanimationinline)]  
+ [!code-csharp[basicvalues_snip#FromToAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromtoanimationinline)]
+ [!code-vb[basicvalues_snip#FromToAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromtoanimationinline)]  
   
 ### <a name="to"></a>À  
  Lorsque vous définissez uniquement la <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété, l’animation passe de la valeur de base de la propriété animée ou de la sortie d’une animation de composition précédemment appliquée à la même propriété, à la valeur spécifiée par la <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété.  
@@ -100,32 +100,32 @@ Cette rubrique explique comment utiliser des animations From/To/By pour animer d
   
  L’exemple suivant définit simplement la <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété de la <xref:System.Windows.Media.Animation.DoubleAnimation> sur 300. Comme aucune valeur de départ a été spécifiée, le <xref:System.Windows.Media.Animation.DoubleAnimation> utilise la valeur de base (100) de la <xref:System.Windows.FrameworkElement.Width%2A> propriété comme valeur de départ. Le <xref:System.Windows.FrameworkElement.Width%2A> de la <xref:System.Windows.Shapes.Rectangle> est animé de 100 à la valeur de l’animation cible de 300.  
   
- [!code-csharp[basicvalues_snip#ToAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#toanimationinline)]
- [!code-vb[basicvalues_snip#ToAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#toanimationinline)]  
+ [!code-csharp[basicvalues_snip#ToAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#toanimationinline)]
+ [!code-vb[basicvalues_snip#ToAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#toanimationinline)]  
   
 ### <a name="by"></a>Par  
  Lorsque vous définissez uniquement la <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété d’une animation, l’animation passe à partir de la valeur de base de la propriété qui est animée, ou à partir de la sortie d’une animation de composition à la somme de cette valeur et la valeur spécifiée par la <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété.  
   
  L’exemple suivant définit simplement la <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété de la <xref:System.Windows.Media.Animation.DoubleAnimation> sur 300. Étant donné que l’exemple ne spécifie pas une valeur de départ, le <xref:System.Windows.Media.Animation.DoubleAnimation> utilise la valeur de base de la <xref:System.Windows.FrameworkElement.Width%2A> propriété, 100, comme valeur de départ. La valeur de fin est déterminée en ajoutant la <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> valeur de l’animation, 300, à sa valeur de départ, 100 : 400. Par conséquent, le <xref:System.Windows.FrameworkElement.Width%2A> de la <xref:System.Windows.Shapes.Rectangle> est animé de 100 à 400.  
   
- [!code-csharp[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
- [!code-vb[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
+ [!code-csharp[basicvalues_snip#ByAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
+ [!code-vb[basicvalues_snip#ByAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
   
 ### <a name="fromby"></a>From/By  
  Lorsque vous définissez la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> et <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriétés d’une animation, l’animation passe de la valeur spécifiée par le <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> , valeur à la propriété spécifiée par la somme de la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> et <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriétés.  
   
  L’exemple suivant définit la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété de la <xref:System.Windows.Media.Animation.DoubleAnimation> à 50 et sa <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété sur 300. La valeur de fin est déterminée en ajoutant la <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> valeur de l’animation, 300, à sa valeur de départ, 50 : 350. Par conséquent, le <xref:System.Windows.FrameworkElement.Width%2A> de la <xref:System.Windows.Shapes.Rectangle> est animé de 50 à 350.  
   
- [!code-csharp[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
- [!code-vb[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
+ [!code-csharp[basicvalues_snip#FromByAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
+ [!code-vb[basicvalues_snip#FromByAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
   
 ### <a name="from"></a>From  
  Lorsque vous spécifiez uniquement le <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> valeur d’une animation, l’animation passe de la valeur spécifiée par le <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété, la valeur de base de la propriété qui est animée ou à la sortie d’une animation de composition.  
   
  L’exemple suivant définit simplement la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété de la <xref:System.Windows.Media.Animation.DoubleAnimation> à 50. Comme aucune valeur de fin a été spécifiée, le <xref:System.Windows.Media.Animation.DoubleAnimation> utilise la valeur de base de la <xref:System.Windows.FrameworkElement.Width%2A> propriété, 100, comme valeur de fin. Le <xref:System.Windows.FrameworkElement.Width%2A> de la <xref:System.Windows.Shapes.Rectangle> est animé de 50 à la valeur de base de la <xref:System.Windows.FrameworkElement.Width%2A> propriété, 100.  
   
- [!code-csharp[basicvalues_snip#FromAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromanimationinline)]
- [!code-vb[basicvalues_snip#FromAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromanimationinline)]  
+ [!code-csharp[basicvalues_snip#FromAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromanimationinline)]
+ [!code-vb[basicvalues_snip#FromAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromanimationinline)]  
   
 ### <a name="toby"></a>To/By  
  Si vous définissez à la fois le <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> et <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriétés d’une animation, la <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété est ignorée.  
@@ -134,18 +134,18 @@ Cette rubrique explique comment utiliser des animations From/To/By pour animer d
 ## <a name="other-animation-types"></a>Autres types d’animations  
  Animations From/To/By ne sont pas le seul type d’animations qui [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit : il fournit également des animations d’image clé et des animations de tracés.  
   
--   Une animation d’image clé est animée avec n’importe quel nombre de valeurs de destination et décrite à l’aide d’images clés. Pour plus d’informations, consultez le [vue d’ensemble des Animations image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+-   Une animation d’image clé est animée avec n’importe quel nombre de valeurs de destination et décrite à l’aide d’images clés. Pour plus d’informations, consultez le [vue d’ensemble des Animations image clé](key-frame-animations-overview.md).  
   
--   Une animation de tracés génère des valeurs de sortie à partir d’un <xref:System.Windows.Media.PathGeometry>. Pour plus d’informations, consultez le [vue d’ensemble des Animations de tracés](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+-   Une animation de tracés génère des valeurs de sortie à partir d’un <xref:System.Windows.Media.PathGeometry>. Pour plus d’informations, consultez le [vue d’ensemble des Animations de tracés](path-animations-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet également de créer vos propres types d’animations personnalisées. Pour plus d’informations, consultez le [vue d’ensemble des Animations personnalisées](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet également de créer vos propres types d’animations personnalisées. Pour plus d’informations, consultez le [vue d’ensemble des Animations personnalisées](custom-animations-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Vue d'ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
-- [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Vue d'ensemble des animations de tracés](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [Vue d'ensemble des animations personnalisées](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
+- [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)
+- [Vue d'ensemble des animations de tracés](path-animations-overview.md)
+- [Vue d'ensemble des animations personnalisées](custom-animations-overview.md)
 - [Exemple de valeurs cibles d’animation From, To et By](https://go.microsoft.com/fwlink/?LinkID=159988)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577124"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356719"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Procédure : Spécifier la source de liaison
 Dans la liaison de données, l’objet de source de liaison fait référence à l’objet à partir duquel vous obtenez vos données. Cette rubrique décrit les différentes façons de spécifier la source de liaison.  
@@ -24,16 +24,16 @@ Dans la liaison de données, l’objet de source de liaison fait référence à 
   
  Dans l’exemple suivant, le contexte de données est établi sur l’élément racine de l’application. Ainsi, tous les éléments enfants vont hériter de ce contexte de données. Les données de la liaison proviennent d’une classe de données personnalisée, `NetIncome`, qui est référencée directement via un mappage et qui est affectée à la clé de ressource de `incomeDataSource`.  
   
- [!code-xaml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
-[!code-xaml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
+ [!code-xaml[DirectionalBinding#DataContext1](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
+[!code-xaml[DirectionalBinding#DataContext2](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
   
  L’exemple suivant montre la définition de la classe `NetIncome`.  
   
- [!code-csharp[DirectionalBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
- [!code-vb[DirectionalBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
+ [!code-csharp[DirectionalBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
+ [!code-vb[DirectionalBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
   
 > [!NOTE]
->  L’exemple ci-dessus instancie l’objet dans le balisage et l’utilise en tant que ressource. Si vous souhaitez effectuer une liaison à un objet qui a déjà été instancié dans le code, vous devez définir la propriété `DataContext` par programmation. Pour obtenir un exemple, consultez la page [Rendre des données disponibles pour la liaison en XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).  
+>  L’exemple ci-dessus instancie l’objet dans le balisage et l’utilise en tant que ressource. Si vous souhaitez effectuer une liaison à un objet qui a déjà été instancié dans le code, vous devez définir la propriété `DataContext` par programmation. Pour obtenir un exemple, consultez la page [Rendre des données disponibles pour la liaison en XAML](how-to-make-data-available-for-binding-in-xaml.md).  
   
  Sinon, si vous souhaitez spécifier explicitement la source sur vos liaisons individuelles, vous disposez des options suivantes. Celles-ci ont priorité sur le contexte de données hérité.  
   
@@ -46,7 +46,7 @@ Dans la liaison de données, l’objet de source de liaison fait référence à 
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
-- [Héritage de la valeur de propriété](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Vue d'ensemble des déclarations de liaison](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Héritage de la valeur de propriété](../advanced/property-value-inheritance.md)
+- [Vue d’ensemble de la liaison de données](data-binding-overview.md)
+- [Vue d'ensemble des déclarations de liaison](binding-declarations-overview.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)
