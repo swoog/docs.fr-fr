@@ -7,30 +7,30 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665849"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373476"
 ---
-# <a name="path-animation-how-to-topics"></a><span data-ttu-id="ec75f-102">Rubriques "Comment" relatives aux animations de tracés</span><span class="sxs-lookup"><span data-stu-id="ec75f-102">Path Animation How-to Topics</span></span>
-<span data-ttu-id="ec75f-103">Les rubriques de cette section montrent comment animer un objet sur un chemin d’accès.</span><span class="sxs-lookup"><span data-stu-id="ec75f-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
+# <a name="path-animation-how-to-topics"></a><span data-ttu-id="41ca1-102">Rubriques "Comment" relatives aux animations de tracés</span><span class="sxs-lookup"><span data-stu-id="41ca1-102">Path Animation How-to Topics</span></span>
+<span data-ttu-id="41ca1-103">Les rubriques de cette section montrent comment animer un objet sur un chemin d’accès.</span><span class="sxs-lookup"><span data-stu-id="41ca1-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ec75f-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="ec75f-104">In This Section</span></span>  
- [<span data-ttu-id="ec75f-105">Animer un objet sur un tracé (animation double)</span><span class="sxs-lookup"><span data-stu-id="ec75f-105">Animate an Object Along a Path (Double Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [<span data-ttu-id="ec75f-106">Animer un objet sur un tracé (animation de point)</span><span class="sxs-lookup"><span data-stu-id="ec75f-106">Animate an Object Along a Path (Point Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [<span data-ttu-id="ec75f-107">Animer un objet sur un tracé (animation de matrice)</span><span class="sxs-lookup"><span data-stu-id="ec75f-107">Animate an Object Along a Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [<span data-ttu-id="ec75f-108">Animer un objet sur un tracé (animation de matrice avec accumulation d'offsets)</span><span class="sxs-lookup"><span data-stu-id="ec75f-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [<span data-ttu-id="ec75f-109">Faire pivoter un objet à l’aide d’un tracé géométrique (animation de matrice)</span><span class="sxs-lookup"><span data-stu-id="ec75f-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [<span data-ttu-id="ec75f-110">Faire pivoter un objet à l’aide d’un tracé géométrique</span><span class="sxs-lookup"><span data-stu-id="ec75f-110">Rotate an Object by Using a Geometric Path</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+## <a name="in-this-section"></a><span data-ttu-id="41ca1-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="41ca1-104">In This Section</span></span>  
+ [<span data-ttu-id="41ca1-105">Animer un objet sur un tracé (animation double)</span><span class="sxs-lookup"><span data-stu-id="41ca1-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [<span data-ttu-id="41ca1-106">Animer un objet sur un tracé (animation de point)</span><span class="sxs-lookup"><span data-stu-id="41ca1-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [<span data-ttu-id="41ca1-107">Animer un objet sur un tracé (animation de matrice)</span><span class="sxs-lookup"><span data-stu-id="41ca1-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [<span data-ttu-id="41ca1-108">Animer un objet sur un tracé (animation de matrice avec accumulation d'offsets)</span><span class="sxs-lookup"><span data-stu-id="41ca1-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [<span data-ttu-id="41ca1-109">Faire pivoter un objet à l’aide d’un tracé géométrique (animation de matrice)</span><span class="sxs-lookup"><span data-stu-id="41ca1-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [<span data-ttu-id="41ca1-110">Faire pivoter un objet à l’aide d’un tracé géométrique</span><span class="sxs-lookup"><span data-stu-id="41ca1-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
-## <a name="reference"></a><span data-ttu-id="ec75f-111">Référence</span><span class="sxs-lookup"><span data-stu-id="ec75f-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="41ca1-111">Référence</span><span class="sxs-lookup"><span data-stu-id="41ca1-111">Reference</span></span>  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a><span data-ttu-id="ec75f-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ec75f-112">See also</span></span>
-- [<span data-ttu-id="ec75f-113">Graphiques et multimédia</span><span class="sxs-lookup"><span data-stu-id="ec75f-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="ec75f-114">Vue d’ensemble de l’animation</span><span class="sxs-lookup"><span data-stu-id="ec75f-114">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [<span data-ttu-id="ec75f-115">Vue d'ensemble des animations d'image clé</span><span class="sxs-lookup"><span data-stu-id="ec75f-115">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="41ca1-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="41ca1-112">See also</span></span>
+- [<span data-ttu-id="41ca1-113">Graphiques et multimédia</span><span class="sxs-lookup"><span data-stu-id="41ca1-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="41ca1-114">Vue d’ensemble de l’animation</span><span class="sxs-lookup"><span data-stu-id="41ca1-114">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="41ca1-115">Vue d'ensemble des animations d'image clé</span><span class="sxs-lookup"><span data-stu-id="41ca1-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

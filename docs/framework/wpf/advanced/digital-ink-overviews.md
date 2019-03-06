@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: 5ddb23a6-7813-4058-b59d-29ff3341638c
-ms.openlocfilehash: 0793e1b500449b2da0442e306aba9deb8e719a60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57473d0a22bc7441e4c32506f57f402bab963c2d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536103"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355751"
 ---
-# <a name="digital-ink-overviews"></a><span data-ttu-id="8a660-102">Vues d'ensemble de l'encre numérique</span><span class="sxs-lookup"><span data-stu-id="8a660-102">Digital Ink Overviews</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="8a660-103">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="8a660-103">In This Section</span></span>  
- [<span data-ttu-id="8a660-104">Débuter avec l'encre</span><span class="sxs-lookup"><span data-stu-id="8a660-104">Getting Started with Ink</span></span>](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
-  [<span data-ttu-id="8a660-105">Collecte d'encre</span><span class="sxs-lookup"><span data-stu-id="8a660-105">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
-  [<span data-ttu-id="8a660-106">Reconnaissance d'écriture manuscrite</span><span class="sxs-lookup"><span data-stu-id="8a660-106">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
-  [<span data-ttu-id="8a660-107">Stockage de l’encre</span><span class="sxs-lookup"><span data-stu-id="8a660-107">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)  
-  [<span data-ttu-id="8a660-108">Modèle objet encre : Windows Forms et COM ou WPF</span><span class="sxs-lookup"><span data-stu-id="8a660-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [<span data-ttu-id="8a660-109">Gestion avancée de l’encre</span><span class="sxs-lookup"><span data-stu-id="8a660-109">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+# <a name="digital-ink-overviews"></a><span data-ttu-id="f454e-102">Vues d'ensemble de l'encre numérique</span><span class="sxs-lookup"><span data-stu-id="f454e-102">Digital Ink Overviews</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="f454e-103">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="f454e-103">In This Section</span></span>  
+ [<span data-ttu-id="f454e-104">Débuter avec l'encre</span><span class="sxs-lookup"><span data-stu-id="f454e-104">Getting Started with Ink</span></span>](getting-started-with-ink.md)  
+  [<span data-ttu-id="f454e-105">Collecte d'encre</span><span class="sxs-lookup"><span data-stu-id="f454e-105">Collecting Ink</span></span>](collecting-ink.md)  
+  [<span data-ttu-id="f454e-106">Reconnaissance d'écriture manuscrite</span><span class="sxs-lookup"><span data-stu-id="f454e-106">Handwriting Recognition</span></span>](handwriting-recognition.md)  
+  [<span data-ttu-id="f454e-107">Stockage de l’encre</span><span class="sxs-lookup"><span data-stu-id="f454e-107">Storing Ink</span></span>](storing-ink.md)  
+  [<span data-ttu-id="f454e-108">Le modèle objet encre : Windows Forms et COM ou WPF</span><span class="sxs-lookup"><span data-stu-id="f454e-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [<span data-ttu-id="f454e-109">Gestion avancée de l’encre</span><span class="sxs-lookup"><span data-stu-id="f454e-109">Advanced Ink Handling</span></span>](advanced-ink-handling.md)

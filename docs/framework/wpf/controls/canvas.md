@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
-ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553272"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351042"
 ---
-# <a name="canvas"></a><span data-ttu-id="ec473-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="ec473-102">Canvas</span></span>
-<span data-ttu-id="ec473-103"><xref:System.Windows.Controls.Canvas> est un contrôle de disposition qui permet le positionnement absolu d’éléments enfants.</span><span class="sxs-lookup"><span data-stu-id="ec473-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
+# <a name="canvas"></a><span data-ttu-id="ccef6-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="ccef6-102">Canvas</span></span>
+<span data-ttu-id="ccef6-103"><xref:System.Windows.Controls.Canvas> est un contrôle de disposition qui permet le positionnement absolu d’éléments enfants.</span><span class="sxs-lookup"><span data-stu-id="ccef6-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ec473-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="ec473-104">In This Section</span></span>  
- [<span data-ttu-id="ec473-105">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="ec473-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ccef6-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="ccef6-104">In This Section</span></span>  
+ [<span data-ttu-id="ccef6-105">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="ccef6-105">How-to Topics</span></span>](canvas-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="ec473-106">Référence</span><span class="sxs-lookup"><span data-stu-id="ec473-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ccef6-106">Référence</span><span class="sxs-lookup"><span data-stu-id="ccef6-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "33553272"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="ec473-107">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="ec473-107">Related Sections</span></span>  
- [<span data-ttu-id="ec473-108">Disposition</span><span class="sxs-lookup"><span data-stu-id="ec473-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="ccef6-107">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="ccef6-107">Related Sections</span></span>  
+ [<span data-ttu-id="ccef6-108">Disposition</span><span class="sxs-lookup"><span data-stu-id="ccef6-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="ec473-109">Procédure pas à pas : ma première application de bureau WPF</span><span class="sxs-lookup"><span data-stu-id="ec473-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="ccef6-109">Procédure pas à pas : Ma première application de bureau WPF</span><span class="sxs-lookup"><span data-stu-id="ccef6-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="ec473-110">Vue d’ensemble de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ec473-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="ccef6-110">Vue d’ensemble de ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ccef6-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentReader
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
-ms.openlocfilehash: 61d6b4f066d2bac03092e0418eded34cc604810e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0d7adc127c593176ec7b60bf55a8f903c8b6ab7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551980"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364084"
 ---
-# <a name="flowdocumentreader"></a><span data-ttu-id="7943b-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="7943b-102">FlowDocumentReader</span></span>
-<span data-ttu-id="7943b-103">Le <xref:System.Windows.Controls.FlowDocumentReader> contrôle sert à afficher <xref:System.Windows.Documents.FlowDocument> contenu.</span><span class="sxs-lookup"><span data-stu-id="7943b-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="7943b-104">Il prend en charge plusieurs modes d’affichage.</span><span class="sxs-lookup"><span data-stu-id="7943b-104">It supports multiple viewing modes.</span></span>  
+# <a name="flowdocumentreader"></a><span data-ttu-id="95849-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="95849-102">FlowDocumentReader</span></span>
+<span data-ttu-id="95849-103">Le <xref:System.Windows.Controls.FlowDocumentReader> contrôle sert à afficher <xref:System.Windows.Documents.FlowDocument> contenu.</span><span class="sxs-lookup"><span data-stu-id="95849-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="95849-104">Il prend en charge plusieurs modes d’affichage.</span><span class="sxs-lookup"><span data-stu-id="95849-104">It supports multiple viewing modes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7943b-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7943b-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95849-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="95849-105">See also</span></span>
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
-- [<span data-ttu-id="7943b-106">Documents dans WPF</span><span class="sxs-lookup"><span data-stu-id="7943b-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [<span data-ttu-id="7943b-107">Vue d’ensemble des documents dynamiques</span><span class="sxs-lookup"><span data-stu-id="7943b-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [<span data-ttu-id="95849-106">Documents dans WPF</span><span class="sxs-lookup"><span data-stu-id="95849-106">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="95849-107">Vue d’ensemble des documents dynamiques</span><span class="sxs-lookup"><span data-stu-id="95849-107">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
