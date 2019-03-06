@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219839"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358169"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Conception d'applications .NET Framework complexes et réactives
 Cet article fournit des conseils pour améliorer les performances d'applications .NET Framework volumineuses ou d'applications qui traitent de grandes quantités de données, telles que des fichiers ou des bases de données. Ces conseils proviennent de la réécriture des compilateurs C# et Visual Basic en code managé, et cet article inclut plusieurs exemples réels issus du compilateur C#. 
@@ -467,7 +467,6 @@ class Compilation { /*...*/
 - [Guide du débutant en profilage des performances](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Performances](../../../docs/framework/performance/index.md)
 - [Conseils sur les performances de .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
-- [Windows Phone Performance Analysis Tool](https://msdn.microsoft.com/magazine/hh781024.aspx)
 - [Channel 9 didacticiels PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [Le kit SDK .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
 - [dépôt GitHub dotnet/roslyn](https://github.com/dotnet/roslyn)

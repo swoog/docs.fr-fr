@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8013bacf6c4d33ce89fc287e625ce8c8fb6c3ef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683019"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369940"
 ---
 # <a name="tilebrush-overview"></a>Vue d'ensemble de TileBrush
 <xref:System.Windows.Media.TileBrush> objets vous permettent de bien contrôler la peinture d’une zone avec une image, <xref:System.Windows.Media.Drawing>, ou <xref:System.Windows.Media.Visual>. Cette rubrique explique comment utiliser <xref:System.Windows.Media.TileBrush> fonctionnalités pour mieux contrôler comment faire un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> peint une zone.  
@@ -21,7 +21,7 @@ ms.locfileid: "54683019"
   
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Pour comprendre cette rubrique, il est utile de comprendre comment utiliser les fonctionnalités de base de la <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> classe. Pour une introduction à ces types, consultez le [peinture avec des Images, de dessin et visuels](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Pour comprendre cette rubrique, il est utile de comprendre comment utiliser les fonctionnalités de base de la <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> classe. Pour une introduction à ces types, consultez le [peinture avec des Images, de dessin et visuels](painting-with-images-drawings-and-visuals.md).  
   
 <a name="tilebrush"></a>   
 ## <a name="painting-an-area-with-tiles"></a>Peindre une zone avec des mosaïques  
@@ -29,10 +29,10 @@ ms.locfileid: "54683019"
   
  Peindre une zone avec un pinceau mosaïque implique trois composants : un contenu, une mosaïque de base et une zone de sortie.  
   
- ![TileBrush components](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
+ ![TileBrush components](./media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
 Composants d’un TileBrush avec une seule mosaïque  
   
- ![Composants d’un TileBrush en mosaïque](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
+ ![Composants d’un TileBrush en mosaïque](./media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
 Composants d’un TileBrush avec un TileMode de mosaïque  
   
  La zone de sortie est la zone peinte, comme le <xref:System.Windows.Shapes.Shape.Fill%2A> d’un <xref:System.Windows.Shapes.Ellipse> ou le <xref:System.Windows.Controls.Control.Background%2A> d’un <xref:System.Windows.Controls.Button>. Les sections suivantes décrivent les deux autres composants d’un <xref:System.Windows.Media.TileBrush>.  
@@ -63,14 +63,14 @@ Composants d’un TileBrush avec un TileMode de mosaïque
   
  L’image suivante illustre les différentes <xref:System.Windows.Media.TileBrush.Stretch%2A> paramètres.  
   
- ![Différents paramètres d’étirement TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![Différents paramètres d’étirement TileBrush](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
   
  Dans l’exemple suivant, le contenu d’un <xref:System.Windows.Media.ImageBrush> est défini afin qu’il ne s’étire pas pour remplir la zone de sortie.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
   
  Par défaut, un <xref:System.Windows.Media.TileBrush> génère une seule mosaïque (la mosaïque de base) et étire cette mosaïque afin de remplir complètement la zone de sortie. Vous pouvez modifier la taille et la position de la mosaïque de base en définissant le <xref:System.Windows.Media.TileBrush.Viewport%2A> et <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriétés.  
   
@@ -80,21 +80,21 @@ Composants d’un TileBrush avec un TileMode de mosaïque
   
  L’illustration suivante montre la différence des sorties entre une <xref:System.Windows.Media.TileBrush> relative ou absolue <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>. Notez que chaque illustration représente un motif en mosaïque ; la section suivante décrit comment spécifier un tel motif.  
   
- ![Unités de fenêtre d'affichage absolues et relatives](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")  
+ ![Unités de fenêtre d'affichage absolues et relatives](./media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")  
   
  Dans l’exemple suivant, une image est utilisée pour créer une mosaïque ayant une largeur et une hauteur de 50 %. La mosaïque de base se trouve au point (0,0) de la zone de sortie.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
   
  L’exemple suivant définit les vignettes d’un <xref:System.Windows.Media.ImageBrush> à 25 x 25 pixels indépendants du périphérique. Étant donné que le <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> sont absolues, les <xref:System.Windows.Media.ImageBrush> vignettes sont toujours 25 x 25 pixels, indépendamment de la taille de la zone peinte.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmabsoluteviewportunitsexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmabsoluteviewportunitsexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmabsoluteviewportunitsexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmabsoluteviewportunitsexample1)]  
   
 <a name="tilingbehavior"></a>   
 ### <a name="tiling-behavior"></a>Comportement des mosaïques  
@@ -112,22 +112,22 @@ Composants d’un TileBrush avec un TileMode de mosaïque
   
  Les images suivantes illustrent les différents modes de mosaïque.  
   
- ![Different paramètres TileMode du TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
+ ![Different paramètres TileMode du TileBrush](./media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
   
  Dans l’exemple suivant, une image est utilisée pour peindre un rectangle de 100 pixels de large et 100 pixels de haut. En définissant le pinceau <xref:System.Windows.Media.TileBrush.Viewport%2A> a été défini sur 0,0,0.25,0.25, la mosaïque de base du pinceau est effectuée à 1/4 de la zone de sortie. Le pinceau <xref:System.Windows.Media.TileBrush.TileMode%2A> est défini sur <xref:System.Windows.Media.TileMode.FlipXY>. afin qu’il remplisse le rectangle de lignes de mosaïques.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Peinture avec des images, des dessins et des objets visuels](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
-- [Vue d’ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Peinture avec des images, des dessins et des objets visuels](painting-with-images-drawings-and-visuals.md)
+- [Rubriques de guide pratique](brushes-how-to-topics.md)
+- [Vue d’ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
 - [ImageBrush, exemple](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049) (Exemple de VisualBrush)

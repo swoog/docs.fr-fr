@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], with AnimationClocks
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-ms.openlocfilehash: 7940d65c61d57ec9c6a2a6e02e3b1e3e0bb2795f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d93f1eb352aef4f5e74512a8deeb0ec3fe7943c0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610472"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357181"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Procédure : Animer une propriété à l'aide d'un AnimationClock
 Cet exemple montre comment utiliser <xref:System.Windows.Media.Animation.Clock> objets à animer une propriété.  
@@ -26,17 +26,17 @@ Cet exemple montre comment utiliser <xref:System.Windows.Media.Animation.Clock> 
   
 -   Créer un <xref:System.Windows.Media.Animation.AnimationClock> à partir d’un <xref:System.Windows.Media.Animation.AnimationTimeline> et appliquez-le à une propriété.  
   
- <xref:System.Windows.Media.Animation.Storyboard> objets et le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> activer la méthode vous permet d’animer des propriétés sans créer et distribuer des horloges directement (pour obtenir des exemples, consultez [animer une propriété à l’aide d’un Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) et [animer une propriété sans À l’aide d’un Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)) ; horloges sont créées et distribuées automatiquement pour vous.  
+ <xref:System.Windows.Media.Animation.Storyboard> objets et le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> activer la méthode vous permet d’animer des propriétés sans créer et distribuer des horloges directement (pour obtenir des exemples, consultez [animer une propriété à l’aide d’un Storyboard](how-to-animate-a-property-by-using-a-storyboard.md) et [animer une propriété sans À l’aide d’un Storyboard](how-to-animate-a-property-without-using-a-storyboard.md)) ; horloges sont créées et distribuées automatiquement pour vous.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment créer un <xref:System.Windows.Media.Animation.AnimationClock> et l’appliquer à deux propriétés similaires.  
   
- [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
- [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
+ [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
+ [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
- Pour obtenir un exemple montrant comment contrôler de manière interactive un <xref:System.Windows.Media.Animation.Clock> après son démarrage, consultez [contrôler une horloge de façon interactive](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md).  
+ Pour obtenir un exemple montrant comment contrôler de manière interactive un <xref:System.Windows.Media.Animation.Clock> après son démarrage, consultez [contrôler une horloge de façon interactive](how-to-interactively-control-a-clock.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Animer une propriété à l’aide d’une table de montage séquentiel](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)
-- [Animer une propriété sans utiliser de storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)
-- [Vue d’ensemble des techniques d’animation de propriétés](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Animer une propriété à l’aide d’une table de montage séquentiel](how-to-animate-a-property-by-using-a-storyboard.md)
+- [Animer une propriété sans utiliser de storyboard](how-to-animate-a-property-without-using-a-storyboard.md)
+- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)

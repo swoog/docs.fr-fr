@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], TextBox
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: c04c1386f4663f5893915a07a1e0896a69c5412a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16f087051e438fa0dbe248c46b0ec555c07cc06c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663672"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367906"
 ---
 # <a name="textbox-styles-and-templates"></a>Styles et modèles TextBox
-Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.TextBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.TextBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="textbox-parts"></a>Parties de la zone de texte  
  Le tableau suivant répertorie les composants nommés pour le <xref:System.Windows.Controls.TextBox> contrôle.  
@@ -44,18 +44,18 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 ## <a name="textbox-controltemplate-example"></a>Exemple de ControlTemplate de zone de texte  
  L’exemple suivant montre comment définir un <xref:System.Windows.Controls.ControlTemplate> pour la <xref:System.Windows.Controls.TextBox> contrôle.  
   
- [!code-xaml[ControlTemplateExamples#TextBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#textbox)]  
+ [!code-xaml[ControlTemplateExamples#TextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#textbox)]  
   
  L’exemple précédent utilise une ou plusieurs des ressources suivantes.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)
-- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Styles et modèles Control](control-styles-and-templates.md)
+- [Personnalisation des contrôles](control-customization.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

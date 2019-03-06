@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706230"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370122"
 ---
 # <a name="attached-properties-overview"></a>Vue d'ensemble des propriétés jointes
 
@@ -20,7 +20,7 @@ Une propriété jointe est un concept défini par XAML. Elle est conçue pour ê
 
 ## Conditions préalables <a name="prerequisites"></a>
 
-Cette rubrique part du principe que vous savez ce que sont les propriétés de dépendance du point de vue d’un consommateur de propriétés de dépendance existantes sur les classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] et que vous avez lu [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Pour suivre les exemples dans cette rubrique, vous devez également comprendre XAML et savoir comment écrire des applications WPF.
+Cette rubrique part du principe que vous savez ce que sont les propriétés de dépendance du point de vue d’un consommateur de propriétés de dépendance existantes sur les classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] et que vous avez lu [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md). Pour suivre les exemples dans cette rubrique, vous devez également comprendre XAML et savoir comment écrire des applications WPF.
 
 ## Pourquoi utiliser des propriétés jointes <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ En XAML, vous définissez des propriétés jointes à l’aide de la syntaxe *Fo
 
 Voici un exemple de comment vous pouvez définir <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> dans XAML :
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 Notez que l’utilisation est quelque peu semblable à une propriété statique ; vous référencez toujours le type <xref:System.Windows.Controls.DockPanel> qui possède et enregistre la propriété jointe, plutôt qu’à une instance quelconque spécifiée par nom.
 
-En outre, comme une propriété jointe en XAML est un attribut que vous définissez dans le balisage, seule l’opération définie est pertinente. Vous ne pouvez pas obtenir directement une propriété en XAML, bien que des mécanismes indirects permettent de comparer des valeurs, telles que les déclencheurs dans les styles (pour plus d’informations, consultez [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)).
+En outre, comme une propriété jointe en XAML est un attribut que vous définissez dans le balisage, seule l’opération définie est pertinente. Vous ne pouvez pas obtenir directement une propriété en XAML, bien que des mécanismes indirects permettent de comparer des valeurs, telles que les déclencheurs dans les styles (pour plus d’informations, consultez [Application d’un style et création de modèles](../controls/styling-and-templating.md)).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Implémentation des propriétés jointes dans WPF
 
@@ -64,8 +64,8 @@ Propriétés jointes dans WPF n’ont pas le standard [!INCLUDE[TLA2#tla_clr](..
 
 L’exemple suivant illustre la définition d’une propriété jointe dans le code. Dans cet exemple, `myCheckBox` est une instance de la <xref:System.Windows.Controls.CheckBox> classe.
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 Comme dans le XAML le cas, `myCheckBox` n’a pas déjà été ajouté en tant qu’élément enfant de `myDockPanel` par la troisième ligne de code, la quatrième ligne du code ne déclenchera pas d’exception, mais la valeur de propriété n’interagirait pas avec un <xref:System.Windows.Controls.DockPanel> parent et par conséquent ne fait rien. Uniquement une <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> a sur un élément enfant combiné à la présence de valeur un <xref:System.Windows.Controls.DockPanel> élément parent entraîne un comportement effectif dans l’application rendue. (Dans ce cas, vous pourriez définir la propriété jointe, puis la joindre à l’arborescence. Vous pourriez également joindre la propriété à l’arborescence, puis la définir. Le résultat est le même, quel que soit l’ordre des actions.)
 
@@ -73,7 +73,7 @@ Comme dans le XAML le cas, `myCheckBox` n’a pas déjà été ajouté en tant q
 
 Lors de l’inscription de la propriété, <xref:System.Windows.FrameworkPropertyMetadata> est défini pour spécifier les caractéristiques de la propriété, par exemple si la propriété affecte le rendu, de mesure et ainsi de suite. Les métadonnées d’une propriété jointe sont en général identiques à celles d’une propriété de dépendance. Si vous spécifiez une valeur par défaut dans une substitution des métadonnées d’une propriété jointe, cette valeur devient la valeur par défaut de la propriété jointe implicite sur les instances de la classe de substitution. Spécifiquement, votre valeur par défaut est signalée si un processus demande la valeur d’une propriété jointe par le biais de l’accesseur de méthode `Get` de cette propriété, en spécifiant une instance de la classe dans laquelle vous avez indiqué les métadonnées, et si la valeur de cette propriété jointe n’était autrement pas définie.
 
-Si vous souhaitez activer l’héritage des valeurs de propriété sur une propriété, vous devez utiliser des propriétés jointes plutôt que des propriétés de dépendance non jointes. Pour plus d’informations, consultez [Héritage de la valeur de propriété](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).
+Si vous souhaitez activer l’héritage des valeurs de propriété sur une propriété, vous devez utiliser des propriétés jointes plutôt que des propriétés de dépendance non jointes. Pour plus d’informations, consultez [Héritage de la valeur de propriété](property-value-inheritance.md).
 
 ## Propriétés jointes personnalisées <a name="custom"></a>
 
@@ -83,7 +83,7 @@ Vous pouvez créer une propriété jointe si un mécanisme de définition de pro
 
 Un autre scénario illustrant l’utilisation d’une propriété jointe s’applique quand votre classe représente un service et que vous voulez que les classes soient en mesure d’intégrer le service avec une plus grande transparence.
 
-Encore un autre scénario consiste à recevoir un support de Visual Studio WPF Designer, tel que **propriétés** édition de la fenêtre. Pour plus d’informations, consultez [Vue d’ensemble de la création de contrôles](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
+Encore un autre scénario consiste à recevoir un support de Visual Studio WPF Designer, tel que **propriétés** édition de la fenêtre. Pour plus d’informations, consultez [Vue d’ensemble de la création de contrôles](../controls/control-authoring-overview.md).
 
 Comme mentionné précédemment, vous devez enregistrer une propriété jointe si vous souhaitez utiliser l’héritage des valeurs de propriété.
 
@@ -118,8 +118,8 @@ La signature pour le **Set_PropertyName_** accesseur doit être :
 
 L’exemple suivant montre l’inscription de propriété de dépendance (à l’aide de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> méthode), ainsi que le **Get_PropertyName_** et **Set_PropertyName_** accesseurs. Dans cet exemple, le nom de la propriété jointe est `IsBubbleSource`. Les accesseurs doivent donc être nommés `GetIsBubbleSource` et `SetIsBubbleSource`.
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>Attributs des propriétés jointes
 
@@ -135,16 +135,16 @@ WPF définit plusieurs [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../inc
 
 ## En savoir plus sur les propriétés jointes <a name="more"></a>
 
--   Pour plus d’informations sur la création d’une propriété jointe, consultez [Enregistrer une propriété jointe](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md).
+-   Pour plus d’informations sur la création d’une propriété jointe, consultez [Enregistrer une propriété jointe](how-to-register-an-attached-property.md).
 
--   Pour obtenir des scénarios d’usage avancés des propriétés de dépendance et des propriétés jointes, consultez [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).
+-   Pour obtenir des scénarios d’usage avancés des propriétés de dépendance et des propriétés jointes, consultez [Propriétés de dépendance personnalisées](custom-dependency-properties.md).
 
 -   Vous pouvez également enregistrer une propriété en tant que propriété jointe et que propriété de dépendance ; mais dans cette situation, vous exposez encore les implémentations de « wrapper ». Dans ce cas, vous pouvez définir la propriété soit sur cet élément, soit sur tout élément par le biais de la syntaxe de propriété jointe XAML. Est un exemple d’une propriété avec un scénario approprié pour utilisations standard et jointe <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.DependencyProperty>
-- [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Enregistrer une propriété jointe](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)
+- [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
+- [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
+- [Enregistrer une propriété jointe](how-to-register-an-attached-property.md)

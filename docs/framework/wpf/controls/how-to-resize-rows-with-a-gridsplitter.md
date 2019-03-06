@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: 93a04ce55a10f54a6770c279f1773491d7aa463f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740136"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370044"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Procédure : Redimensionner des lignes avec un GridSplitter
 Cet exemple montre comment utiliser un horizontal <xref:System.Windows.Controls.GridSplitter> pour redistribuer l’espace entre les deux lignes dans un <xref:System.Windows.Controls.Grid> sans modifier les dimensions de la <xref:System.Windows.Controls.Grid>.  
@@ -23,9 +23,9 @@ Cet exemple montre comment utiliser un horizontal <xref:System.Windows.Controls.
   
  L’exemple suivant montre comment définir un horizontal <xref:System.Windows.Controls.GridSplitter> qui redimensionne les lignes adjacentes.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
   
- Un <xref:System.Windows.Controls.GridSplitter> qui n’occupe pas sa propre ligne peut être masqué par d’autres contrôles dans le <xref:System.Windows.Controls.Grid>. Pour plus d’informations sur la manière d’éviter ce problème, consultez la page [Vérifier qu’un GridSplitter est visible](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ Un <xref:System.Windows.Controls.GridSplitter> qui n’occupe pas sa propre ligne peut être masqué par d’autres contrôles dans le <xref:System.Windows.Controls.Grid>. Pour plus d’informations sur la manière d’éviter ce problème, consultez la page [Vérifier qu’un GridSplitter est visible](how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
  **Comment créer un GridSplitter qui occupe une ligne**  
   
@@ -33,9 +33,9 @@ Cet exemple montre comment utiliser un horizontal <xref:System.Windows.Controls.
   
  L’exemple suivant montre comment définir un horizontal <xref:System.Windows.Controls.GridSplitter> qui occupe une ligne et redimensionne les lignes de chaque côté de celui-ci.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Controls.GridSplitter>
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [Rubriques de guide pratique](gridsplitter-how-to-topics.md)

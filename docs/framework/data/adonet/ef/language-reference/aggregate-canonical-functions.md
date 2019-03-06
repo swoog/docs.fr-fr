@@ -2,18 +2,18 @@
 title: Fonctions d'agrégation canoniques
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f65557703070a43f586a668903d049a374ef70d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708972"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372800"
 ---
 # <a name="aggregate-canonical-functions"></a>Fonctions d'agrégation canoniques
 
 Les agrégats sont des expressions qui réduisent une série de valeurs d'entrée en, par exemple, une seule valeur. Ils sont normalement utilisés avec la clause GROUP BY de l'expression SELECT et leur utilisation est sujette à certaines contraintes.
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Fonctions canoniques Aggegate Entity SQL
+## <a name="aggregate-entity-sql-canonical-functions"></a>Fonctions d’agrégation canoniques Entity SQL
 
 Les fonctions canoniques Entity SQL d’agrégation sont les suivantes :
 
@@ -31,7 +31,7 @@ Le type de `expression`, ou `null` si toutes les valeurs d’entrée sont `null`
 
 **Exemple**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount(expression)
@@ -48,10 +48,10 @@ N'importe quel type.
 
 **Exemple**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count(expression) 
+### <a name="countexpression"></a>Count(expression)
 
 Retourne la taille de l'agrégat, y compris les valeurs Null et dupliquées.
 
@@ -74,7 +74,8 @@ Retourne la valeur maximale des valeurs non-Null.
 
 **Arguments**
 
-`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
+
+  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
 
 **Valeur de retour**
 
@@ -91,7 +92,8 @@ Retourne la valeur minimale des valeurs non Null.
 
 **Arguments**
 
-`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
+
+  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
 
 **Valeur de retour**
 
@@ -108,7 +110,8 @@ Retourne l'écart type des valeurs non Null.
 
 **Arguments**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 
@@ -125,7 +128,8 @@ Retourne l'écart type pour le remplissage de toutes les valeurs.
 
 **Arguments**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 
@@ -142,7 +146,8 @@ Retourne la somme des valeurs non-Null.
 
 **Arguments**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 
@@ -159,7 +164,8 @@ Retourne la variance de toutes les valeurs non-Null.
 
 **Arguments**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 
@@ -176,7 +182,8 @@ Retourne la variance pour le remplissage de toutes les valeurs non-Null.
 
 **Arguments**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 
@@ -185,7 +192,7 @@ Un `Double`, ou `null` si toutes les valeurs d’entrée sont `null` valeurs.
 **Exemple**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 Des fonctionnalités équivalentes sont disponibles dans le fournisseur managé Client Microsoft SQL. Pour plus d’informations, consultez [fonctions SqlClient pour Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).
 
@@ -206,7 +213,7 @@ Les agrégats basés sur des groupes sont calculés sur un groupe défini par la
 L'exemple suivant calcule la quantité moyenne commandée pour chaque produit :
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -224,7 +231,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 Les expressions figurant dans des agrégats basés sur des groupes sont évalués dans la résolution de noms de portée qui serait visible pour l’expression de la clause WHERE.
 
-Comme dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agrégats basés sur le groupe peuvent également spécifier un ALL ou modificateur DISTINCT. Si le modificateur DISTINCT est spécifié, les doublons sont éliminés de la collection d’entrée de l’agrégat, avant que celui-ci ne soit calculé. Si le modificateur ALL est spécifié (ou si aucun modificateur ne l'est), les doublons ne sont pas éliminés.  
+Comme dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agrégats basés sur le groupe peuvent également spécifier un ALL ou modificateur DISTINCT. Si le modificateur DISTINCT est spécifié, les doublons sont éliminés de la collection d’entrée de l’agrégat, avant que celui-ci ne soit calculé. Si le modificateur ALL est spécifié (ou si aucun modificateur ne l'est), les doublons ne sont pas éliminés.
 
 ## <a name="see-also"></a>Voir aussi
 

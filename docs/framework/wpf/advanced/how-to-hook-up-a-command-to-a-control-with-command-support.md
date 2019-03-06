@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663204"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364435"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Procédure : Raccorder une commande à un contrôle avec prise en charge de commande
 L’exemple suivant montre comment raccorder <xref:System.Windows.Input.RoutedCommand> à un <xref:System.Windows.Controls.Control> qui a une prise en charge intégrée de la commande.  Pour obtenir un exemple complet qui raccorde des commandes à plusieurs sources, consultez l’exemple [Créer un exemple RoutedCommand personnalisé](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
@@ -31,11 +31,11 @@ L’exemple suivant montre comment raccorder <xref:System.Windows.Input.RoutedCo
   
  <xref:System.Windows.Controls.MenuItem> est créé, et sa propriété <xref:System.Windows.Controls.MenuItem.Command%2A> a la valeur de la commande <xref:System.Windows.Input.ApplicationCommands.Paste%2A>.  <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> n’est pas explicitement défini en fonction de l’objet <xref:System.Windows.Controls.TextBox>.  Quand <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> n’est pas défini, la cible de la commande est l’élément qui a le focus clavier.  Si l’élément qui a le focus clavier ne prend pas en charge la commande <xref:System.Windows.Input.ApplicationCommands.Paste%2A> ou ne peut pas exécuter la commande de collage (le Presse-papiers est vide, par exemple), <xref:System.Windows.Controls.MenuItem> est grisé.  
   
- [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
+ [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
   
- [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
- [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
+ [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
+ [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des commandes](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Raccorder une commande à un contrôle sans prise en charge de commande](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+- [Vue d’ensemble des commandes](commanding-overview.md)
+- [Raccorder une commande à un contrôle sans prise en charge de commande](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

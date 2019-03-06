@@ -2,26 +2,27 @@
 title: Transacted MSMQ Binding
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: 9574320478741f71c7c98d7e21a24c80a31b72a2
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066049"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359877"
 ---
 # <a name="transacted-msmq-binding"></a>Transacted MSMQ Binding
+
 Cet exemple montre comment effectuer la communication de messages mis en file d'attente avec transactions à l'aide de MSMQ (Message Queuing).
 
 > [!NOTE]
->  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.
+> La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.
 
- Dans le cadre d'une communication en file d'attente, le client communique avec le service à l'aide d'une file d'attente. Cela signifie que le client envoie ses messages à cette file d'attente. Le service reçoit des messages de la file d'attente. Par conséquent, il n'est pas nécessaire que le service et le client s'exécutent simultanément pour communiquer à l'aide d'une file d'attente.
+Dans le cadre d'une communication en file d'attente, le client communique avec le service à l'aide d'une file d'attente. Cela signifie que le client envoie ses messages à cette file d'attente. Le service reçoit des messages de la file d'attente. Par conséquent, il n'est pas nécessaire que le service et le client s'exécutent simultanément pour communiquer à l'aide d'une file d'attente.
 
- Lorsque des transactions sont utilisées pour envoyer et recevoir des messages, il y a en fait 2 transactions distinctes. Lorsque le client envoie des messages dans l’étendue d’une transaction, la transaction est locale au client et au gestionnaire de files d’attente client. Lorsque le service reçoit des messages dans l'étendue de la transaction, la transaction est locale au service et au gestionnaire de files d'attente de réception. N’oubliez pas que le client et le service ne participent pas à la même transaction : ils utilisent des transactions différentes lorsqu’ils effectuent leurs opérations (telles que l’envoi et la réception) avec la file d’attente.
+Lorsque des transactions sont utilisées pour envoyer et recevoir des messages, il y a en fait 2 transactions distinctes. Lorsque le client envoie des messages dans l’étendue d’une transaction, la transaction est locale au client et au gestionnaire de files d’attente client. Lorsque le service reçoit des messages dans l'étendue de la transaction, la transaction est locale au service et au gestionnaire de files d'attente de réception. N’oubliez pas que le client et le service ne participent pas à la même transaction : ils utilisent des transactions différentes lorsqu’ils effectuent leurs opérations (telles que l’envoi et la réception) avec la file d’attente.
 
- Dans cet exemple, le client envoie un lot de messages au service à partir de l'étendue d'une transaction. Les messages envoyés à la file d'attente sont ensuite reçus par le service dans l'étendue de la transaction définie par le service.
+Dans cet exemple, le client envoie un lot de messages au service à partir de l’étendue d’une transaction. Les messages envoyés à la file d’attente sont ensuite reçus par le service dans l’étendue de la transaction définie par le service.
 
- Le contrat de service est `IOrderProcessor`, tel qu'indiqué dans l'exemple de code suivant. L'interface définit un service monodirectionnel utilisable avec les files d'attente.
+Le contrat de service est `IOrderProcessor`, tel qu'indiqué dans l'exemple de code suivant. L'interface définit un service monodirectionnel utilisable avec les files d'attente.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -32,7 +33,7 @@ public interface IOrderProcessor
 }
 ```
 
- Le comportement de service définit un comportement d'opération avec la valeur `TransactionScopeRequired` affectée à `true`. Ainsi, l’étendue de transaction qui est utilisée pour récupérer le message de la file d’attente est utilisée par tous les gestionnaires des ressources auxquels accède la méthode. Si, par ailleurs, la méthode lève une exception, le message est retourné à la file d'attente. Si ce comportement d'opération n'est pas défini, un canal mis en file d'attente crée une transaction pour lire le message à partir de la file d'attente et le valide automatiquement avant sa distribution de sorte qu'en cas d'échec de l'opération, le message est perdu. Le scénario le plus courant est l’inscription des opérations de service dans la transaction utilisée pour lire le message à partir de la file d’attente, tel qu’indiqué dans le code suivant.
+Le comportement de service définit un comportement d'opération avec la valeur `TransactionScopeRequired` affectée à `true`. Ainsi, l’étendue de transaction qui est utilisée pour récupérer le message de la file d’attente est utilisée par tous les gestionnaires des ressources auxquels accède la méthode. Si, par ailleurs, la méthode lève une exception, le message est retourné à la file d'attente. Si ce comportement d’opération n’est pas défini, un canal mis en file d’attente crée une transaction pour lire le message à partir de la file d’attente et le valide automatiquement avant sa distribution de sorte qu’en cas d’échec de l’opération, le message est perdu. Le scénario le plus courant est l’inscription des opérations de service dans la transaction utilisée pour lire le message à partir de la file d’attente, tel qu’indiqué dans le code suivant.
 
 ```csharp
  // This service class that implements the service contract.
@@ -49,7 +50,7 @@ public interface IOrderProcessor
 }
 ```
 
- Le service est auto-hébergé. Lors de l'utilisation du transport MSMQ, la file d'attente utilisée doit être créée au préalable. Cela peut s'effectuer manuellement ou via le code. Dans cet exemple, le service contient du code permettant de vérifier l'existence de la file d'attente et de la créer en cas d'absence. Le nom de la file d'attente est lu depuis le fichier de configuration. L’adresse de base est utilisée par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le proxy au service.
+Le service est auto-hébergé. Lors de l'utilisation du transport MSMQ, la file d'attente utilisée doit être créée au préalable. Cela peut s'effectuer manuellement ou via le code. Dans cet exemple, le service contient du code permettant de vérifier l'existence de la file d'attente et de la créer en cas d'absence. Le nom de la file d'attente est lu depuis le fichier de configuration. L’adresse de base est utilisée par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le proxy au service.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -80,7 +81,7 @@ public static void Main()
 }
 ```
 
- Le nom de file d'attente MSMQ est spécifié dans une section appSettings du fichier de configuration, tel qu'indiqué dans l'exemple de configuration suivant.
+Le nom de file d'attente MSMQ est spécifié dans une section appSettings du fichier de configuration, tel qu'indiqué dans l'exemple de configuration suivant.
 
 ```xml
 <appSettings>
@@ -89,9 +90,9 @@ public static void Main()
 ```
 
 > [!NOTE]
->  Le nom de la file d’attente comporte un point (.) pour l’ordinateur local et des barres obliques inverses comme séparateur dans son chemin d’accès lors de la création de la file d’attente à l’aide de <xref:System.Messaging>. Le point de terminaison Windows Communication Foundation (WCF) utilise l’adresse de la file d’attente avec le modèle net.msmq, « localhost » pour désigner l’ordinateur local et utilise des barres obliques dans son chemin d’accès.
+> Le nom de la file d’attente comporte un point (.) pour l’ordinateur local et des barres obliques inverses comme séparateur dans son chemin d’accès lors de la création de la file d’attente à l’aide de <xref:System.Messaging>. Le point de terminaison Windows Communication Foundation (WCF) utilise l’adresse de la file d’attente avec le modèle net.msmq, « localhost » pour désigner l’ordinateur local et utilise des barres obliques dans son chemin d’accès.
 
- Le client crée une étendue de transaction. La communication avec la file d'attente a lieu dans l'étendue de la transaction, entraînant son traitement en tant qu'une unité atomique dans laquelle tous les messages sont envoyés à la file d'attente ou aucun des messages n'est envoyé à la file d'attente. La transaction est validée par l’appel de la méthode <xref:System.Transactions.TransactionScope.Complete%2A> sur l’étendue de la transaction.
+Le client crée une étendue de transaction. La communication avec la file d'attente a lieu dans l'étendue de la transaction, entraînant son traitement en tant qu'une unité atomique dans laquelle tous les messages sont envoyés à la file d'attente ou aucun des messages n'est envoyé à la file d'attente. La transaction est validée par l'appel de la méthode <xref:System.Transactions.TransactionScope.Complete%2A> sur l'étendue de la transaction.
 
 ```csharp
 // Create a client.
@@ -133,15 +134,15 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();
 ```
 
- Pour vérifier que les transactions fonctionnent, modifiez le client en commentant l'étendue de la transaction tel qu'indiqué dans l'exemple de code suivant, reconstruisez la solution et exécutez le client.
+Pour vérifier que les transactions fonctionnent, modifiez le client en commentant l'étendue de la transaction tel qu'indiqué dans l'exemple de code suivant, reconstruisez la solution et exécutez le client.
 
 ```csharp
 //scope.Complete();
 ```
 
- La transaction n'étant pas terminée, les messages ne sont pas envoyés à la file d'attente.
+La transaction n'étant pas terminée, les messages ne sont pas envoyés à la file d'attente.
 
- Lorsque vous exécutez l'exemple, les activités du client et du service s'affichent dans leurs fenêtres de console respectives. Vous pouvez voir le service recevoir des messages du client. Appuyez sur ENTER dans chaque fenêtre de console pour arrêter le service et le client. Notez qu'en raison de l'utilisation de la mise en file d'attente, il n'est pas nécessaire que le service et le client s'exécutent simultanément. Vous pouvez exécuter le client, l'arrêter, puis démarrer le service et il recevra toujours les messages.
+Lorsque vous exécutez l'exemple, les activités du client et du service s'affichent dans leurs fenêtres de console respectives. Vous pouvez voir le service recevoir des messages du client. Appuyez sur ENTER dans chaque fenêtre de console pour arrêter le service et le client. Notez qu'en raison de l'utilisation de la mise en file d'attente, il n'est pas nécessaire que le service et le client s'exécutent simultanément. Vous pouvez exécuter le client, l'arrêter, puis démarrer le service et il recevra toujours les messages.
 
 ```
 The service is ready.
@@ -158,29 +159,29 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple
 
-1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Si le service est exécuté en premier, il vérifie que la file d'attente existe. Si la file d'attente n'existe pas, le service en crée une. Vous pouvez exécuter le service en premier pour créer la file d'attente, ou en créer une à l'aide du Gestionnaire de files d'attente MSMQ. Procédez comme suit pour créer une file d'attente dans Windows 2008 :
+2. Si le service est exécuté en premier, il vérifie que la file d'attente existe. Si la file d'attente n'existe pas, le service en crée une. Vous pouvez exécuter le service en premier pour créer la file d'attente, ou en créer une à l'aide du Gestionnaire de files d'attente MSMQ. Procédez comme suit pour créer une file d'attente dans Windows 2008 :
 
-    1.  Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.
+    1. Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.
 
-    2.  Développez le **fonctionnalités** onglet.
+    2. Développez le **fonctionnalités** onglet.
 
-    3.  Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.
+    3. Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.
 
-    4.  Vérifier le **transactionnel** boîte.
+    4. Vérifier le **transactionnel** boîte.
 
-    5.  Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.
+    5. Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.
 
-3.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Avec <xref:System.ServiceModel.NetMsmqBinding>, la sécurité du transport est activée par défaut. La sécurité du transport MSMQ inclut deux propriétés pertinentes : <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> et <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Par défaut, le mode d'authentification a la valeur `Windows` et le niveau de protection a la valeur `Sign`. Pour que MSMQ fournisse la fonctionnalité d'authentification et de signature, il doit faire partie d'un domaine et l'option d'intégration Active Directory pour MSMQ doit être installée. Si vous exécutez cet exemple sur un ordinateur qui ne satisfait pas ces critères, vous recevez une erreur.
+Avec <xref:System.ServiceModel.NetMsmqBinding>, la sécurité du transport est activée par défaut. La sécurité du transport MSMQ inclut deux propriétés pertinentes : <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> et <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Par défaut, le mode d'authentification a la valeur `Windows` et le niveau de protection a la valeur `Sign`. Pour que MSMQ fournisse la fonctionnalité d’authentification et de signature, il doit faire partie d’un domaine et l’option d’intégration Active Directory pour MSMQ doit être installée. Si vous exécutez cet exemple sur un ordinateur qui ne satisfait pas ces critères, vous recevez une erreur.
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Pour exécuter l'exemple sur un ordinateur associé à un groupe de travail ou sans intégration Active Directory
 
-1.  Si votre ordinateur ne fait pas partie d'un domaine ou ne dispose pas de l'intégration Active Directory, désactivez la sécurité du transport en affectant `None` au mode d'authentification et au niveau de protection, tel qu'indiqué dans l'exemple de code de configuration suivant.
+1. Si votre ordinateur ne fait pas partie d'un domaine ou ne dispose pas de l'intégration Active Directory, désactivez la sécurité du transport en affectant `None` au mode d'authentification et au niveau de protection, tel qu'indiqué dans l'exemple de code de configuration suivant.
 
     ```xml
     <system.serviceModel>
@@ -198,7 +199,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
               binding="netMsmqBinding"
               bindingConfiguration="Binding1"
            contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />
-          <!-- The mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex. -->
+          <!-- The mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex. -->
           <endpoint address="mex"
                     binding="mexHttpBinding"
                     contract="IMetadataExchange" />
@@ -224,18 +225,16 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
       </system.serviceModel>
     ```
 
-2.  Assurez-vous de modifier la configuration sur le serveur et le client avant d'exécuter l'exemple.
+2. Assurez-vous de modifier la configuration sur le serveur et le client avant d'exécuter l'exemple.
 
     > [!NOTE]
-    >  L'affectation de `security mode` à `None` revient à affecter <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> à la sécurité <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, `Message` et `None`.
+    > L'affectation de `security mode` à `None` revient à affecter <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> à la sécurité <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, `Message` et `None`.
 
 > [!IMPORTANT]
->  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
-  
-## <a name="see-also"></a>Voir aussi
+> Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`

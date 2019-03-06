@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
 ms.openlocfilehash: 1f79bd421d4c504556074468f8ab7e032d3eca43
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288156"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372859"
 ---
 # <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Procédure : Implémenter CopyToDataTable\<T > où le Type générique T n’est pas un DataRow
-L’objet <xref:System.Data.DataTable> est souvent utilisé pour la liaison de données. La méthode <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> prend les résultats d'une requête et copie les données dans un objet <xref:System.Data.DataTable> qui peut ensuite être utilisé pour la liaison de données. Toutefois, les méthodes <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> ne fonctionneront que sur une source <xref:System.Collections.Generic.IEnumerable%601> où le paramètre générique `T` est de type <xref:System.Data.DataRow>. Bien qu'utile, cela ne permet pas de créer des tables à partir d'une séquence de types scalaires, de requêtes qui projettent des types anonymes ou de requêtes qui effectuent des jointures de tables.  
+L'objet <xref:System.Data.DataTable> est souvent utilisé pour la liaison de données. La méthode <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> prend les résultats d'une requête et copie les données dans un objet <xref:System.Data.DataTable> qui peut ensuite être utilisé pour la liaison de données. Toutefois, les méthodes <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> ne fonctionneront que sur une source <xref:System.Collections.Generic.IEnumerable%601> où le paramètre générique `T` est de type <xref:System.Data.DataRow>. Bien qu'utile, cela ne permet pas de créer des tables à partir d'une séquence de types scalaires, de requêtes qui projettent des types anonymes ou de requêtes qui effectuent des jointures de tables.  
   
  Cette rubrique décrit comment implémenter deux classes d'extension `CopyToDataTable<T>` personnalisées qui acceptent un paramètre générique `T` d'un type autre que <xref:System.Data.DataRow>. La logique pour créer un objet <xref:System.Data.DataTable> à partir d'une source <xref:System.Collections.Generic.IEnumerable%601> est contenue dans la classe `ObjectShredder<T>`, laquelle est ensuite encapsulée dans deux méthodes d'extension `CopyToDataTable<T>` surchargées. La méthode `Shred` de la classe `ObjectShredder<T>` retourne les objets <xref:System.Data.DataTable> remplis et accepte trois paramètres d'entrée : une source <xref:System.Collections.Generic.IEnumerable%601>, un objet <xref:System.Data.DataTable> et une énumération <xref:System.Data.LoadOption>. Le schéma initial de l'objet <xref:System.Data.DataTable> retourné est basé sur le schéma du type `T`. Si une table existante est fournie comme paramètre d'entrée, le schéma doit être cohérent avec le schéma du type `T`. Chaque propriété publique et champ public du type `T` est converti en objet <xref:System.Data.DataColumn> dans la table retournée. Si la séquence source contient un type dérivé de `T`, le schéma de table retourné est développé pour toute propriété publique ou tout champ public supplémentaire.  
   

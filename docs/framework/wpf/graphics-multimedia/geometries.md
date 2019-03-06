@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605797"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363650"
 ---
 # <a name="geometries"></a>Géométries
 <xref:System.Windows.Media.Geometry> est une classe flexible, permettant de restituer [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphiques, les objets de test de positionnement et définir des régions de découpage  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Syntaxe XAML pour les tracés](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Vue d’ensemble de Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [Syntaxe XAML pour les tracés](path-markup-syntax.md)  
+ [Vue d’ensemble de Geometry](geometry-overview.md)  
+ [Rubriques de guide pratique](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Vue d’ensemble des formes et dessins de base dans WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Graphiques 2D et acquisition d'images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Graphiques et multimédia](index.md)

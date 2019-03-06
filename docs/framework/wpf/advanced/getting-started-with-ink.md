@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: eaaa8ad5273331941bc6915231460100e8ac24b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646238"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365566"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Bien démarrer avec l’encre dans WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) possède une fonctionnalité de l’encre 
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour utiliser les exemples suivants, tout d’abord [installer Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Cela permet également de savoir comment écrire des applications WPF de base. Pour bien démarrer avec WPF, consultez [procédure pas à pas : Ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Pour utiliser les exemples suivants, tout d’abord [installer Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Cela permet également de savoir comment écrire des applications WPF de base. Pour bien démarrer avec WPF, consultez [procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Guide de démarrage rapide
 
@@ -42,7 +42,7 @@ Pour créer une application WPF qui prend en charge de l’encre :
 
 3. Type `<InkCanvas/>` entre le `<Grid>` balises.
 
-   ![Concepteur XAML avec la balise de InkCanvas](media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![Concepteur XAML avec la balise de InkCanvas](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
 4. Appuyez sur **F5** pour lancer votre application dans le débogueur.
 
@@ -70,7 +70,7 @@ Tirez parti de certaines fonctionnalités de WPF. Remplacez tous les éléments 
 
 Ce XAML crée un arrière-plan de pinceau de dégradé sur votre surface d’entrée manuscrite.
 
-![Couleurs de dégradé sur l’écriture manuscrite surface dans une application WPF](media/getting-started-with-ink/gradient-colors.png)
+![Couleurs de dégradé sur l’écriture manuscrite surface dans une application WPF](./media/getting-started-with-ink/gradient-colors.png)
 
 ### <a name="add-some-code-behind-the-xaml"></a>Ajouter du Code derrière le XAML
 
@@ -78,12 +78,12 @@ Bien que XAML rend très facile de concevoir l’interface utilisateur, n’impo
 
 1. Définir le `MouseRightButtonUp` gestionnaire dans votre XAML :
 
-   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+   [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
 1. Dans **l’Explorateur de solutions**, développez MainWindow.xaml et ouvrez le fichier code-behind (MainWindow.xaml.cs ou MainWindow.xaml.vb). Ajoutez le code de gestionnaire d’événements suivantes :
 
-   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
-   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+   [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
 1. Exécutez l'application. Ajouter du contenu de texte, puis le bouton droit de la souris ou effectuer un équivalent d’appuyer et maintenir un stylet.
 
@@ -99,18 +99,18 @@ Vous pouvez accéder à toutes les fonctionnalités WPF à partir de code procé
 
 1. Collez le code suivant dans le fichier Program.cs ou Program.vb :
 
-   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
-   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+   [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
 1. Ajouter des références aux assemblys PresentationCore, PresentationFramework et WindowsBase en cliquant sur **références** dans **l’Explorateur de solutions** et en choisissant **ajouter une référence**.
 
-   ![Gestionnaire de références montrant PresentationCore et PresentationFramework](media/getting-started-with-ink/references.png)
+   ![Gestionnaire de références montrant PresentationCore et PresentationFramework](./media/getting-started-with-ink/references.png)
 
 1. Générez l’application en appuyant sur **F5**.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Encre numérique](../../../../docs/framework/wpf/advanced/digital-ink.md)
-- [Collecte d'encre](../../../../docs/framework/wpf/advanced/collecting-ink.md)
-- [Reconnaissance d'écriture manuscrite](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
-- [Stockage de l’encre](../../../../docs/framework/wpf/advanced/storing-ink.md)
+- [Encre numérique](digital-ink.md)
+- [Collecte d'encre](collecting-ink.md)
+- [Reconnaissance d'écriture manuscrite](handwriting-recognition.md)
+- [Stockage de l’encre](storing-ink.md)

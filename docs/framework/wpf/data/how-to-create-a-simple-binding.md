@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: 3e38fa5fd1c7d0a635efd93de6ebe551f1eb1b82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 157060e784e4169ac8e31c6028ed65f0a9568e0f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594835"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373580"
 ---
 # <a name="how-to-create-a-simple-binding"></a>Procédure : Créer une liaison simple
 Cet exemple vous montre comment créer un simple <xref:System.Windows.Data.Binding>.  
@@ -21,10 +21,10 @@ Cet exemple vous montre comment créer un simple <xref:System.Windows.Data.Bindi
   
  La ligne en surbrillance qui contient le `<src>` élément dans l’exemple suivant instancie le `Person` de l’objet avec un `PersonName` valeur de propriété `Joe`. Cette opération est effectuée le `Resources` section et affecté un `x:Key`.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
  La ligne en surbrillance qui contient le `<TextBlock>` élément lie ensuite le <xref:System.Windows.Controls.TextBlock> le contrôle à la `PersonName` propriété. Par conséquent, le <xref:System.Windows.Controls.TextBlock> apparaît avec la valeur « Joe ».  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Vue d’ensemble de la liaison de données](data-binding-overview.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

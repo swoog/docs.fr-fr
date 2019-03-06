@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545816"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372202"
 ---
 # <a name="resources-wpf"></a>Ressources (WPF)
-Une ressource est un objet pouvant être réutilisé à plusieurs endroits de votre application. WPF prend en charge différents types de ressources. Ces ressources sont principalement deux types de ressources : XAML ressources et les fichiers de données de ressources. Pinceaux et styles sont des exemples de ressources XAML. Fichiers de données de ressources sont des fichiers de données non exécutables qui a besoin d’une application.  
+Une ressource est un objet pouvant être réutilisé à plusieurs endroits de votre application. WPF prend en charge différents types de ressources. Ces ressources sont principalement deux types de ressources : Ressources XAML et les fichiers de données de ressources. Styles et les pinceaux sont des exemples de ressources XAML. Fichiers de données de ressources sont des fichiers de données non exécutables nécessaires à une application.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Fichiers de ressources, de contenu et de données d’une application WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [URI à en-tête pack dans WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [Ressources XAML](xaml-resources.md)  
+ [Fichiers de ressources, de contenu et de données d’une application WPF](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [URI à en-tête pack dans WPF](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.ResourceDictionary>  
   
- [StaticResource, extension de balisage](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [StaticResource, extension de balisage](staticresource-markup-extension.md)  
   
- [Extension de balisage DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [Extension de balisage DynamicResource](dynamicresource-markup-extension.md)  
   
- [x:Key, directive](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [x:Key, directive](../../xaml-services/x-key-directive.md)  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Intégration du format XAML au format WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+ [Intégration du format XAML au format WPF](xaml-in-wpf.md)

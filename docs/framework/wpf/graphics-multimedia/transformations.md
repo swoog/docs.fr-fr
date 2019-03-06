@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0f663cd95c979ec9f2b81ccf173b4418321228f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570523"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352449"
 ---
 # <a name="transformations"></a>Transformations
 Les transformations sont utilisées pour faire pivoter, mettre à l’échelle, traduire ou incliner <xref:System.Windows.FrameworkElement> objets.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble des transformations](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [Vue d’ensemble des transformations](transforms-overview.md)  
+ [Rubriques de guide pratique](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.Transform>
-- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)
+- [Graphiques et multimédia](index.md)
+- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Disposition](../advanced/layout.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 7cc758760075746971dd0d397568c64e7baf8b67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e5cf8a8b280a539feb73a54defbb0cd8c2c0f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590901"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366645"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Vue d'ensemble des modèles et styles d'en-tête de colonne GridView
 Cette présentation traite de l’ordre de priorité des propriétés que vous utilisez pour personnaliser un en-tête de colonne dans la <xref:System.Windows.Controls.GridView> mode d’affichage d’un <xref:System.Windows.Controls.ListView> contrôle.  
@@ -36,6 +36,6 @@ Cette présentation traite de l’ordre de priorité des propriétés que vous u
  <sup>1</sup>pour **propriétés de modèle d’en-tête**, si vous affectez à la fois le modèle et les propriétés du sélecteur de modèle, la propriété de modèle est prioritaire. Par exemple, si vous définissez à la fois le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> et <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriétés, le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propriété est prioritaire.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [Vue d’ensemble de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Vue d’ensemble de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Rubriques de guide pratique](listview-how-to-topics.md)
+- [Vue d’ensemble de ListView](listview-overview.md)
+- [Vue d’ensemble de GridView](gridview-overview.md)

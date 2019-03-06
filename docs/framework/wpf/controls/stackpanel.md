@@ -8,18 +8,18 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553739"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361227"
 ---
 # <a name="stackpanel"></a>StackPanel
 Le <xref:System.Windows.Controls.StackPanel> élément est utilisé pour empiler des éléments enfants horizontalement ou verticalement.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [Rubriques de guide pratique](stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ Le <xref:System.Windows.Controls.StackPanel> élément est utilisé pour empiler
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Disposition](../advanced/layout.md)  
   
- [Procédure pas à pas : ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Vue d’ensemble de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Vue d’ensemble de ScrollViewer](scrollviewer-overview.md)

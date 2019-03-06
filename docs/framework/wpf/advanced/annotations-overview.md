@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: e88383126c1fb618b2a2a96bdf5998560864af50
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746440"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355179"
 ---
 # <a name="annotations-overview"></a>Vue d'ensemble des annotations
 Écrire des notes ou des commentaires sur des documents papier est une activité si banale que nous pensons qu’elle va de soi. Ces notes ou commentaires sont des « annotations » que nous ajoutons à un document pour marquer des informations ou mettre en évidence des éléments présentant un intérêt particulier afin de nous y référer plus tard. Bien que la rédaction de notes sur des documents imprimés soit une tâche simple et banale, la possibilité d’ajouter des commentaires personnels à des documents électroniques, quand cette fonctionnalité est disponible, est généralement très limitée.  
@@ -28,12 +28,12 @@ ms.locfileid: "56746440"
   
  L’illustration suivante montre quelques exemples d’annotations sous forme de mises en surbrillance, de pense-bêtes ou de notes manuscrites.  
   
- ![Pense-bêtes de type mise en surbrillance, note tapée et note manuscrite.](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Pense-bêtes de type mise en surbrillance, note tapée et note manuscrite.](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  L’exemple suivant illustre la méthode que vous pouvez utiliser pour activer la prise en charge des annotations dans votre application.  
   
- [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
- [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Mises en surbrillance  
@@ -41,17 +41,17 @@ ms.locfileid: "56746440"
   
  L’illustration suivante montre un exemple d’annotation en surbrillance.  
   
- ![Annotation en surbrillance](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
+ ![Annotation en surbrillance](./media/caf-callouts.png "CAF_Callouts")  
   
  Les utilisateurs créent généralement des annotations en sélectionnant du texte ou un élément d’intérêt, puis en cliquant pour afficher un <xref:System.Windows.Controls.ContextMenu> des options d’annotation.  L’exemple suivant montre le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] vous pouvez utiliser pour déclarer un <xref:System.Windows.Controls.ContextMenu> avec les commandes routées auxquelles les utilisateurs peuvent accéder pour créer et gérer des annotations.  
   
- [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>Ancrage des données  
  [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] lie les annotations aux données que l’utilisateur sélectionne, pas seulement à une position dans l’affichage. Ainsi, en cas de changement de l’affichage du document, par exemple si l’utilisateur fait défiler ou redimensionne la fenêtre d’affichage, l’annotation suit la sélection de données à laquelle elle est liée. Le graphique suivant illustre une annotation que l’utilisateur a faite sur une sélection de texte. En cas de changement de l’affichage du document (défilements, redimensionnements, mises à l’échelle ou tout autre type de déplacement), l’annotation en surbrillance se déplace avec la sélection de données d’origine.  
   
- ![Ancrage des données d’annotation](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")  
+ ![Ancrage des données d’annotation](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
 ## <a name="matching-annotations-with-annotated-objects"></a>Mise en correspondance des annotations avec les objets annotés  
@@ -59,8 +59,8 @@ ms.locfileid: "56746440"
   
  L’exemple ci-dessous montre comment implémenter le gestionnaire d’événements de ce type de zone de liste pour servir de volet de commentaires.  
   
- [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
- [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
  Un autre exemple de scénario implique des applications qui permettent l’échange d’annotations et de pense-bêtes entre des lecteurs de document par courrier électronique. Grâce à cette fonctionnalité, les applications peuvent amener le lecteur à la page qui contient l’annotation échangée.  
   
@@ -71,8 +71,8 @@ ms.locfileid: "56746440"
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Annotations.IAnchorInfo>
-- [Schéma d'annotations](../../../../docs/framework/wpf/advanced/annotations-schema.md)
-- [Vue d’ensemble de ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
-- [Vue d’ensemble des commandes](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Vue d’ensemble des documents dynamiques](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Schéma d'annotations](annotations-schema.md)
+- [Vue d’ensemble de ContextMenu](../controls/contextmenu-overview.md)
+- [Vue d’ensemble des commandes](commanding-overview.md)
+- [Vue d’ensemble des documents dynamiques](flow-document-overview.md)
 - [Guide pratique pour Ajouter une commande à un MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], StatusBar
 - StatusBar control [WPF]
 ms.assetid: aba45aed-7953-4b2c-bc29-315a9be6c440
-ms.openlocfilehash: 5b61255d19340152cd17d12eb60224dc90231607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8998eba8a713cada62c8defc8d7500bf3bc036a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554474"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352521"
 ---
 # <a name="statusbar"></a>StatusBar
-A <xref:System.Windows.Controls.Primitives.StatusBar> est une zone horizontale au bas d’une fenêtre dans laquelle une application peut afficher des informations d’état.  
+Un <xref:System.Windows.Controls.Primitives.StatusBar> est une zone horizontale en bas d’une fenêtre dans laquelle une application peut afficher des informations d’état.  
   
  L’illustration suivante montre un exemple d’un <xref:System.Windows.Controls.Primitives.StatusBar>.  
   
- ![Barre d’état](../../../../docs/framework/wpf/controls/media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")  
+ ![Barre d’état](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

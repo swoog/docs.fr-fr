@@ -16,50 +16,53 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 0e42cf3440bef030f5c7bec71ed1b4b875b79a61
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201158"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378823"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put (fonction)
-Écrit la valeur et le qualificateur nommés. Le nouveau qualificateur remplace la valeur précédente du même nom. Si le qualificateur n’existe pas, il est créé. 
+
+Écrit la valeur et le qualificateur nommés. Le nouveau qualificateur remplace la valeur précédente du même nom. Si le qualificateur n’existe pas, il est créé.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 HRESULT QualifierSet_Put (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LPCWSTR              wszName,
    [in] VARIANT*             pVal,
    [in] LONG                 lFlavor
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Paramètres
 
-`vFunc`   
+`vFunc`\
 [in] Ce paramètre n’est pas utilisé.
 
-`ptr`   
+`ptr`\
 [in] Un pointeur vers un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.
 
-`wszName`   
+`wszName`\
 [in] Le nom du qualificateur à écrire.
 
-`pVal` [in] Un pointeur vers une valide `VARIANT` qui contient le qualificateur à écrire. Ce paramètre ne peut pas être `null`.
+`pVal`\
+[in] Un pointeur vers une valide `VARIANT` qui contient le qualificateur à écrire. Ce paramètre ne peut pas être `null`.
 
-`lFlavor` [in] Une des constantes suivantes qui définit les types de qualificateurs souhaitée pour ce qualificateur. La valeur par défaut est `WBEM_FLAVOR_OVERRIDABLE` (0).
+`lFlavor`\
+[in] Une des constantes suivantes qui définit les types de qualificateurs souhaitée pour ce qualificateur. La valeur par défaut est `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Le qualificateur peut être substitué dans une classe dérivée ou une instance. **Il s’agit de la valeur par défaut.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Le qualificateur est propagé aux instances. |
-| `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Le qualificateur est propagé aux classes dérivées. |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Le qualificateur est propagé aux classes dérivées. |
 | `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Le qualificateur ne peut pas être écrasé dans une classe ou une instance dérivée. |
 | `WBEM_FLAVOR_AMENDED` | 0x80 | Le qualificateur est localisé. |
 
@@ -74,17 +77,19 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Le `pVal` paramètre n’est pas un type de qualificateur conforme. |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Il n’est pas possible d’appeler le `QualifierSet_Put` substitutions des méthodes sur le qualificateur parce que l’objet propriétaire n’autorise pas. |
 | `WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
-  
+
 ## <a name="remarks"></a>Notes
 
 Cette fonction encapsule un appel à la [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) (méthode).
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **En-tête :** WMINet_Utils.idl  
-  
- **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Spécifications
+
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
+
+**En-tête :** WMINet_Utils.idl
+
+**Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

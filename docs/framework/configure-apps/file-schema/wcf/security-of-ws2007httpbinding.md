@@ -3,11 +3,11 @@ title: <security> de <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
 ms.openlocfilehash: 8d7df6f50c389e7b7a7766a18ee722159a6b1835
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275091"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361250"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<sécurité > de \<ws2007HttpBinding >
 Représente les paramètres de sécurité utilisés avec la [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) élément.  
@@ -69,7 +69,7 @@ Représente les paramètres de sécurité utilisés avec la [ \<ws2007HttpBindin
 |[\<ws2007HttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Liaison sécurisée pour les applications de transport HTTP.|  
   
 ## <a name="remarks"></a>Notes  
- Cet élément est conçu pour interagir avec les services qui implémentent les spécifications WS-*. La sécurité de transport de cette liaison correspond à Secure Sockets Layer (SSL) sur HTTP, c’est-à-dire à HTTPS.  
+ Cet élément est conçu pour interagir avec les services qui implémentent les spécifications WS-*. La sécurité de transport de cette liaison correspond à Secure Sockets Layer (SSL) sur HTTP, c'est-à-dire à HTTPS.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.ServiceModel.WSHttpSecurity>

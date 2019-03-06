@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DockPanel control [WPF], how-to topics
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
-ms.openlocfilehash: f5cac5055ed3d60f37955b20de923fe1735c3900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550652"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355537"
 ---
 # <a name="dockpanel-how-to-topics"></a>Rubriques "Comment utiliser le DockPanel"
 Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.DockPanel> élément pour positionner des éléments enfants le long du bord d’un conteneur de disposition.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Obtenir ou définir une valeur Dock](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
- [Créer un DockPanel](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [Partitionner l'espace à l'aide de l'élément DockPanel](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+ [Obtenir ou définir une valeur Dock](how-to-get-or-set-a-dock-value.md)  
+ [Créer un DockPanel](how-to-create-a-dockpanel.md)  
+ [Partitionner l'espace à l'aide de l'élément DockPanel](how-to-partition-space-by-using-the-dockpanel-element.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ Les rubriques de cette section décrivent comment utiliser le <xref:System.Windo
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Disposition](../advanced/layout.md)  
   
- [Procédure pas à pas : ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Vue d’ensemble de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Vue d’ensemble de ScrollViewer](scrollviewer-overview.md)

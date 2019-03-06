@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 52fc542996f2fe691b62aeff5296e045643fcc7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498344"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366749"
 ---
 # <a name="wpf-xaml-namescopes"></a>Portées de nom XAML WPF
 Les portées de nom XAML correspondent à un concept qui identifie des objets définis en XAML. Les noms dans une portée de nom XAML peuvent être utilisés pour établir des relations entre les noms définis en XAML des objets et leurs instances équivalentes dans une arborescence d’objets. En règle générale, les portées de nom XAML dans du code managé [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont créées lors du chargement des racines d’une page XAML spécifique pour une application XAML. Portées de nom XAML en tant qu’objet de programmation sont définies par le <xref:System.Windows.Markup.INameScope> interface et sont également implémentées par la classe pratique <xref:System.Windows.NameScope>.  
@@ -36,7 +36,7 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
 ### <a name="adding-objects-to-runtime-object-trees"></a>Ajout d’objets à des arborescences d’objets d’exécution  
  Le moment où le XAML est analysé correspond au moment une portée de nom XAML WPF est créée et définie. Si vous ajoutez un objet à une arborescence d’objets après l’analyse du code XAML ayant généré cette arborescence, une valeur `Name` ou `x:Name` sur le nouvel objet ne met pas automatiquement à jour les informations contenues dans une portée de nom XAML. Pour ajouter un nom d’un objet dans une portée de nom WPF XAML après le chargement de XAML, vous devez appeler l’implémentation appropriée de <xref:System.Windows.Markup.INameScope.RegisterName%2A> sur l’objet qui définit la portée de nom XAML, qui est généralement la racine de la page XAML. Si le nom n’est pas inscrit, l’objet ajouté ne peut pas être référencé par nom via des méthodes telles que <xref:System.Windows.FrameworkElement.FindName%2A>, et vous ne pouvez pas utiliser ce nom pour le ciblage d’animation.  
   
- Le scénario le plus courant pour les développeurs d’applications est que vous allez utiliser <xref:System.Windows.FrameworkElement.RegisterName%2A> pour enregistrer les noms dans la portée de nom XAML sur la racine de la page actuelle. <xref:System.Windows.FrameworkElement.RegisterName%2A> fait partie d’un scénario important pour les plans conceptuels qui ciblent des objets pour les animations. Pour plus d’informations, consultez [Vue d’ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Le scénario le plus courant pour les développeurs d’applications est que vous allez utiliser <xref:System.Windows.FrameworkElement.RegisterName%2A> pour enregistrer les noms dans la portée de nom XAML sur la racine de la page actuelle. <xref:System.Windows.FrameworkElement.RegisterName%2A> fait partie d’un scénario important pour les plans conceptuels qui ciblent des objets pour les animations. Pour plus d’informations, consultez [Vue d’ensemble des plans conceptuels](../graphics-multimedia/storyboards-overview.md).  
   
  Si vous appelez <xref:System.Windows.FrameworkElement.RegisterName%2A> sur un objet autre que l’objet qui définit la portée de nom XAML, le nom est toujours enregistré dans la portée de nom XAML que l’objet appelant est conservé, comme si vous aviez appelé <xref:System.Windows.FrameworkElement.RegisterName%2A> sur la portée de nom XAML définissant l’objet.  
   
@@ -49,7 +49,7 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
   
  Si l’objet fourni en tant que `dependencyObject` pour <xref:System.Windows.NameScope.SetNameScope%2A> n’est pas un <xref:System.Windows.Markup.INameScope> implémentation, <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>, l’appel <xref:System.Windows.FrameworkElement.RegisterName%2A> sur n’importe quel enfant éléments n’a aucun effet. Si vous échouez à créer la nouvelle portée de nom XAML explicitement, les appels à <xref:System.Windows.FrameworkElement.RegisterName%2A> lève une exception.  
   
- Pour obtenir un exemple d’utilisation des API de portée de nom XAML dans du code, consultez [Définir une portée de nom](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md).  
+ Pour obtenir un exemple d’utilisation des API de portée de nom XAML dans du code, consultez [Définir une portée de nom](../graphics-multimedia/how-to-define-a-name-scope.md).  
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>Portées de nom XAML dans les styles et les modèles  
@@ -57,7 +57,7 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
   
  Prenons l'exemple suivant :  
   
- [!code-xaml[XamlOvwSupport#NameScopeTemplates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
+ [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
  Ici, le même modèle est appliqué à deux boutons différents. Si les modèles n’avaient pas de portées de nom XAML discrètes, le nom `TheBorder` utilisé dans le modèle provoquerait un conflit de noms dans la portée de nom XAML. Chaque instanciation du modèle a sa propre portée de nom XAML. Ainsi, dans cet exemple, la portée de nom XAML de chaque modèle instancié contient un et un seul nom.  
   
@@ -97,5 +97,5 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Voir aussi
-- [Espaces de noms XAML et mappage d'espace de noms pour XAML WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [x:Name, directive](../../../../docs/framework/xaml-services/x-name-directive.md)
+- [Espaces de noms XAML et mappage d'espace de noms pour XAML WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
+- [x:Name, directive](../../xaml-services/x-name-directive.md)

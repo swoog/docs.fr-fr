@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 4aa646ab27044bc26f3787d3edb5f0f15a15bd2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635584"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362628"
 ---
 # <a name="custom-rendering-ink"></a>Encre de rendu personnalisé
 Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trait vous permet de spécifier l’apparence d’un trait, telles que sa taille, la couleur et la forme, mais il peut arriver que vous souhaitez personnaliser l’apparence au-delà de ce que <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> autoriser. Vous souhaiterez peut-être personnaliser l’apparence de l’encre en appliquant des effets tels qu’aérographe, peinture à l’huile et autres. Permet à Windows Presentation Foundation (WPF) vous permettent de personnaliser l’encre de rendu en implémentant un personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> et <xref:System.Windows.Ink.Stroke> objet.  
@@ -37,7 +37,7 @@ Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trai
   
  Vous devez implémenter trois classes lors du rendu dynamique de l’encre.  
   
-1.  **DynamicRenderer**: Implémentez une classe qui dérive de <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ; Cette classe est spécialisé <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> qui restitue le trait comme il est dessiné. Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> effectue le rendu sur un thread distinct, afin de la surface d’entrée manuscrite semble collecter l’encre même quand le thread d’interface (UI) applications utilisateur est bloqué. Pour plus d’informations sur le modèle de thread, consultez [Modèle de thread de l’encre](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md). Pour personnaliser le rendu dynamique d’un trait, substituez le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> (méthode).  
+1.  **DynamicRenderer**: Implémentez une classe qui dérive de <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ; Cette classe est spécialisé <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> qui restitue le trait comme il est dessiné. Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> effectue le rendu sur un thread distinct, afin de la surface d’entrée manuscrite semble collecter l’encre même quand le thread d’interface (UI) applications utilisateur est bloqué. Pour plus d’informations sur le modèle de thread, consultez [Modèle de thread de l’encre](the-ink-threading-model.md). Pour personnaliser le rendu dynamique d’un trait, substituez le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> (méthode).  
   
 2.  **Trait**: Implémentez une classe qui dérive de <xref:System.Windows.Ink.Stroke> ; Cette classe est responsable du rendu statique de la <xref:System.Windows.Input.StylusPoint> données une fois qu’il a été converti en un <xref:System.Windows.Ink.Stroke> objet. Remplacer le <xref:System.Windows.Ink.Stroke.DrawCore%2A> pour s’assurer que le rendu statique du trait est cohérent avec le rendu dynamique.  
   
@@ -49,10 +49,10 @@ Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trai
   
  L’exemple suivant montre un texte personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> qui dessine l’encre avec un effet de pinceau de dégradé linéaire.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
-[!code-vb[AdvancedInkTopicsSamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
+[!code-vb[AdvancedInkTopicsSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
 <a name="ImplementingCustomStrokes"></a>   
 ## <a name="implementing-custom-strokes"></a>Implémentation de traits personnalisés  
@@ -64,10 +64,10 @@ Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trai
   
  Ce qui suit C# code illustre un personnalisé <xref:System.Windows.Ink.Stroke> classe restitue <xref:System.Windows.Input.StylusPoint> données sous la forme d’un trait en 3D.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
-[!code-vb[AdvancedInkTopicsSamples#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
+[!code-vb[AdvancedInkTopicsSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
 <a name="ImplementingACustomInkCanvas"></a>   
 ## <a name="implementing-a-custom-inkcanvas"></a>Implémentation d’un InkCanvas personnalisé  
@@ -83,7 +83,7 @@ Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trai
   
  Ce qui suit C# code illustre un personnalisé <xref:System.Windows.Controls.InkCanvas> classe qui utilise un personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> et collecte des traits personnalisés.  
   
- [!code-csharp[AdvancedInkTopicsSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
+ [!code-csharp[AdvancedInkTopicsSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
  Un <xref:System.Windows.Controls.InkCanvas> peut avoir plusieurs <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Vous pouvez ajouter plusieurs <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> des objets sur le <xref:System.Windows.Controls.InkCanvas> en les ajoutant à la <xref:System.Windows.UIElement.StylusPlugIns%2A> propriété.  
   
@@ -92,4 +92,4 @@ Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trai
  Vous pouvez personnaliser l’apparence de l’encre en dérivant vos propres <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, et <xref:System.Windows.Controls.InkCanvas> classes. Ensemble, ces classes garantissent que l’apparence du trait est cohérente quand l’utilisateur dessine le trait et après que celui-ci a été recueilli.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Gestion avancée de l’encre](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Gestion avancée de l’encre](advanced-ink-handling.md)

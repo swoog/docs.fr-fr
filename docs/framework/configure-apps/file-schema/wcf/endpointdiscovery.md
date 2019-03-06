@@ -3,11 +3,11 @@ title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
 ms.openlocfilehash: effceee30abdaa1725b8c8718df22632961871e8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266414"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358572"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
 Spécifie les différents paramètres de découverte d’un point de terminaison, tels que la fonctionnalité de découverte, les portées et toutes les extensions personnalisées de ses métadonnées.  
@@ -48,9 +48,9 @@ Spécifie les différents paramètres de découverte d’un point de terminaison
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Collection d’URI de portée pour le point de terminaison. Plusieurs URI de portée peuvent être associés au même point de terminaison.|  
-|[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]|Collection d’éléments XML qui vous permet de spécifier des métadonnées personnalisées à publier pour un point de terminaison.|  
-|\<types>|Collection d’interfaces à rechercher.|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Collection d'URI de portée pour le point de terminaison. Plusieurs URI de portée peuvent être associés au même point de terminaison.|  
+|[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]|Collection d'éléments XML qui vous permet de spécifier des métadonnées personnalisées à publier pour un point de terminaison.|  
+|\<types>|Collection d'interfaces à rechercher.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -65,7 +65,7 @@ Spécifie les différents paramètres de découverte d’un point de terminaison
  Cet élément de configuration dépend de la [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) élément qui fournit le contrôle au niveau du service de découverte. Cela signifie que les paramètres de cet élément sont ignorés si [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) n’est pas présent dans la configuration.  
   
 ## <a name="example"></a>Exemple  
- L’exemple de configuration suivant spécifie des portées de filtrage et des métadonnées d’extension à publier pour un point de terminaison.  
+ L'exemple de configuration suivant spécifie des portées de filtrage et des métadonnées d'extension à publier pour un point de terminaison.  
   
 ```xml  
 <services>

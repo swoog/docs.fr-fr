@@ -16,37 +16,38 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0590c639e7cc6622c2283bfa609ccb31d7ce7e2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1a26db7785a8a378fa541308ecc6aee30fa87ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720572"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367118"
 ---
 # <a name="delete-function"></a>Supprimer (fonction)
+
 Supprime la propriété spécifiée et toutes ses qualificateurs d’une définition de classe CIM.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 HRESULT Delete (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
-   [in] LPCWSTR           wszName 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
+   [in] LPCWSTR           wszName
+);
+```
 
 ## <a name="parameters"></a>Paramètres
 
-`vFunc`  
+`vFunc`\
 [in] Ce paramètre n’est pas utilisé.
 
-`ptr`  
+`ptr`\
 [in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
-`wszName`  
+`wszName`\
 [in] Le nom de la propriété à supprimer. `wszName` doit être un pointeur désignant une valide `LPCWSTR`.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -57,24 +58,26 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Une erreur non spécifiée s’est produite. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | La propriété ne peut pas être supprimée. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszzName` n'est pas valide. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` n'est pas valide. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | La propriété spécifiée n’existe pas. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Il n’est pas suffisamment de mémoire pour terminer l’opération. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | La propriété est héritée d’une classe de base. |
 | `WBEM_E_SYSTEM_PROPERTY` | | La propriété est une propriété système. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La fonction supprimée d’une valeur par défaut de remplacement pour la classe en cours. La valeur par défaut pour cette propriété dans la classe parente a été reactiviated. | 
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La fonction supprimée d’une valeur par défaut de remplacement pour la classe en cours. La valeur par défaut pour cette propriété dans la classe parente a été réactivée. |
 
 ## <a name="remarks"></a>Notes
 
 Cette fonction encapsule un appel à la [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) (méthode).
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **En-tête :** WMINet_Utils.idl  
-  
- **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Spécifications
+
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
+
+**En-tête :** WMINet_Utils.idl
+
+**Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

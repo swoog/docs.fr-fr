@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: ad9f3265ae1358387487ac760ddd5bdb2aca6283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75d891052abffe3362c13aa09fe880404564639a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713273"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377182"
 ---
 # <a name="navigation-overview"></a>Vue d'ensemble de la navigation
 Windows Presentation Foundation (WPF) prend en charge la navigation de style navigateur qui peut être utilisée dans les deux types d’applications : applications autonomes et [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Pour le contenu du package pour la navigation, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit le <xref:System.Windows.Controls.Page> classe. Vous pouvez naviguer parmi <xref:System.Windows.Controls.Page> à l’autre de façon déclarative, à l’aide un <xref:System.Windows.Documents.Hyperlink>, ou par programmation, en utilisant le <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] utilise le journal pour se souvenir des pages visitées et y revenir.  
@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
  Cette rubrique fournit une vue d’ensemble des fonctionnalités de navigation de clé dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Ces fonctionnalités sont disponibles pour les applications autonomes et [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], bien que cette rubrique les présente dans le contexte d’un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
   
 > [!NOTE]
->  Cette rubrique n’explique pas comment générer et déployer [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Pour plus d’informations sur [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], consultez [présentation des Applications de navigateur XAML WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+>  Cette rubrique n’explique pas comment générer et déployer [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Pour plus d’informations sur [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], consultez [présentation des Applications de navigateur XAML WPF](wpf-xaml-browser-applications-overview.md).  
   
  Cette section explique et illustre les aspects suivants de la navigation :  
   
@@ -80,32 +80,32 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  À l’aide de <xref:System.Windows.Controls.Page>, vous pouvez implémenter de façon déclarative une page navigable de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] contenu en utilisant un balisage semblable à la suivante.  
   
- [!code-xaml[NavigationOverviewSnippets#Page1XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]  
+ [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]  
   
  Un <xref:System.Windows.Controls.Page> qui est implémenté dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] balisage a `Page` comme élément racine et nécessite le [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] déclaration d’espace de noms. Le `Page` élément contient le contenu que vous souhaitez naviguer et d’afficher. Vous ajoutez du contenu en définissant le `Page.Content` élément de propriété, comme indiqué dans le balisage suivant.  
   
- [!code-xaml[NavigationOverviewSnippets#Page2XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]  
+ [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]  
   
- `Page.Content` ne peut contenir qu’un seul élément enfant. Dans l’exemple précédent, le contenu est une chaîne unique, « Hello, Page! » Dans la pratique, vous utiliserez généralement un contrôle de disposition comme élément enfant (consultez [disposition](../../../../docs/framework/wpf/advanced/layout.md)) pour renfermer et composer votre contenu.  
+ `Page.Content` ne peut contenir qu’un seul élément enfant. Dans l’exemple précédent, le contenu est une chaîne unique, « Hello, Page! » Dans la pratique, vous utiliserez généralement un contrôle de disposition comme élément enfant (consultez [disposition](../advanced/layout.md)) pour renfermer et composer votre contenu.  
   
  Les éléments enfants d’un `Page` élément sont considérés comme le contenu d’un <xref:System.Windows.Controls.Page> et, par conséquent, vous n’avez pas besoin d’utiliser l’explicite `Page.Content` déclaration. Le balisage suivant est l’équivalent déclaratif de l’exemple précédent.  
   
- [!code-xaml[NavigationOverviewSnippets#Page3XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page3.xaml#page3xaml)]  
+ [!code-xaml[NavigationOverviewSnippets#Page3XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page3.xaml#page3xaml)]  
   
- Dans ce cas, `Page.Content` est défini automatiquement avec les éléments enfants de le `Page` élément. Pour plus d’informations, consultez [Modèle de contenu WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
+ Dans ce cas, `Page.Content` est défini automatiquement avec les éléments enfants de le `Page` élément. Pour plus d’informations, consultez [Modèle de contenu WPF](../controls/wpf-content-model.md).  
   
  Balisage seule <xref:System.Windows.Controls.Page> est utile pour afficher le contenu. Toutefois, un <xref:System.Windows.Controls.Page> peut également les contrôles d’affichage qui permettent aux utilisateurs d’interagir avec la page et répondre à une interaction utilisateur en gérant des événements et en appelant la logique d’application. Interactif <xref:System.Windows.Controls.Page> est implémenté à l’aide d’une combinaison de balisage et code-behind, comme illustré dans l’exemple suivant.  
   
- [!code-xaml[XBAPAppDefSnippets#HomePageMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/HomePage.xaml#homepagemarkup)]  
+ [!code-xaml[XBAPAppDefSnippets#HomePageMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/HomePage.xaml#homepagemarkup)]  
   
- [!code-csharp[XBAPAppDefSnippets#HomePageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/HomePage.xaml.cs#homepagecodebehind)]
- [!code-vb[XBAPAppDefSnippets#HomePageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppDefSnippets/VisualBasic/HomePage.xaml.vb#homepagecodebehind)]  
+ [!code-csharp[XBAPAppDefSnippets#HomePageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/HomePage.xaml.cs#homepagecodebehind)]
+ [!code-vb[XBAPAppDefSnippets#HomePageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppDefSnippets/VisualBasic/HomePage.xaml.vb#homepagecodebehind)]  
   
  Pour permettre à un fichier de balisage et un fichier code-behind de fonctionner ensemble, la configuration suivante est nécessaire :  
   
 -   Dans le balisage, la `Page` élément doit inclure le `x:Class` attribut. Lorsque l’application est générée, l’existence de `x:Class` dans le balisage fichier amène [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] pour créer un `partial` classe qui dérive de <xref:System.Windows.Controls.Page> et porte le nom spécifié par le `x:Class` attribut. Cela nécessite l’ajout d’un [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] déclaration d’espace de noms pour le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] schéma ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Le texte généré `partial` la classe implémente `InitializeComponent`, qui est appelé pour enregistrer les événements et définir les propriétés qui sont implémentées dans le balisage.  
   
--   Dans le code-behind, la classe doit être un `partial` classe portant le même nom que celui qui est spécifié par le `x:Class` attribut dans le balisage et elle doit dériver de <xref:System.Windows.Controls.Page>. Cela permet au fichier code-behind à associer à la `partial` classe qui est généré pour le fichier de balisage quand l’application est générée (consultez [création d’une Application WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
+-   Dans le code-behind, la classe doit être un `partial` classe portant le même nom que celui qui est spécifié par le `x:Class` attribut dans le balisage et elle doit dériver de <xref:System.Windows.Controls.Page>. Cela permet au fichier code-behind à associer à la `partial` classe qui est généré pour le fichier de balisage quand l’application est générée (consultez [création d’une Application WPF](building-a-wpf-application-wpf.md)).  
   
 -   Dans le code-behind, la <xref:System.Windows.Controls.Page> classe doit implémenter un constructeur qui appelle le `InitializeComponent` (méthode). `InitializeComponent` est implémenté par le balisage généré de fichier `partial` classe pour inscrire les événements et définir des propriétés qui sont définies dans le balisage.  
   
@@ -116,30 +116,30 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
 <a name="Configuring_a_Start_Page"></a>   
 ### <a name="configuring-a-start-page"></a>Configuration d’une page de démarrage  
- Les applications [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] nécessitent l’hébergement d’une certaine quantité d’infrastructure d’application dans un navigateur. Dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], le <xref:System.Windows.Application> classe fait partie d’une définition d’application qui établit l’infrastructure d’application requise (consultez [vue d’ensemble de la gestion des Application](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Les applications [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] nécessitent l’hébergement d’une certaine quantité d’infrastructure d’application dans un navigateur. Dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], le <xref:System.Windows.Application> classe fait partie d’une définition d’application qui établit l’infrastructure d’application requise (consultez [vue d’ensemble de la gestion des Application](application-management-overview.md)).  
   
  Une définition d’application est généralement implémentée à l’aide de balisage et code-behind, avec le fichier de balisage configuré comme un [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition` élément. Voici une définition d’application pour un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
   
- [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]  
+ [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]  
   
- [!code-csharp[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml.cs#xbapapplicationdefinitioncodebehind)]
- [!code-vb[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppDefSnippets/VisualBasic/Application.xaml.vb#xbapapplicationdefinitioncodebehind)]  
+ [!code-csharp[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml.cs#xbapapplicationdefinitioncodebehind)]
+ [!code-vb[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppDefSnippets/VisualBasic/Application.xaml.vb#xbapapplicationdefinitioncodebehind)]  
   
  Un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] peut utiliser sa définition d’application pour spécifier un début <xref:System.Windows.Controls.Page>, qui est la <xref:System.Windows.Controls.Page> qui est automatiquement chargé lorsque le [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] est lancée. Pour cela, définissez la <xref:System.Windows.Application.StartupUri%2A> propriété avec le [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] pour souhaité <xref:System.Windows.Controls.Page>.  
   
 > [!NOTE]
->  Dans la plupart des cas, le <xref:System.Windows.Controls.Page> compilé ou déployé avec une application. Dans ce cas, le [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] qui identifie un <xref:System.Windows.Controls.Page> est un pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], qui est un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] qui est conforme à la *pack* schéma. Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] sont abordées plus en détail dans [URI à en-tête Pack dans WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md). Vous pouvez également naviguer vers du contenu à l’aide du schéma http, comme indiqué ci-dessous.  
+>  Dans la plupart des cas, le <xref:System.Windows.Controls.Page> compilé ou déployé avec une application. Dans ce cas, le [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] qui identifie un <xref:System.Windows.Controls.Page> est un pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], qui est un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] qui est conforme à la *pack* schéma. Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] sont abordées plus en détail dans [URI à en-tête Pack dans WPF](pack-uris-in-wpf.md). Vous pouvez également naviguer vers du contenu à l’aide du schéma http, comme indiqué ci-dessous.  
   
  Vous pouvez définir <xref:System.Windows.Application.StartupUri%2A> façon déclarative dans le balisage, comme illustré dans l’exemple suivant.  
   
- [!code-xaml[NavigationOverviewSnippets#XBAPApplicationDefinitionMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]  
+ [!code-xaml[NavigationOverviewSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]  
   
  Dans cet exemple, le `StartupUri` attribut est défini avec un pack relatif [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] qui identifie HomePage.xaml. Lorsque le [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] est lancé, HomePage.xaml est automatiquement cible de la navigation et affiché. Cela est illustré par la figure suivante, qui affiche un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] qui a été lancé à partir d’un serveur Web.  
   
- ![Page XBAP](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure9.png "NavigationOverviewFigure9")  
+ ![Page XBAP](./media/navigationoverviewfigure9.png "NavigationOverviewFigure9")  
   
 > [!NOTE]
->  Pour plus d’informations sur le développement et le déploiement de [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], consultez [présentation des Applications de navigateur XAML WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md) et [déploiement d’une Application WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md).  
+>  Pour plus d’informations sur le développement et le déploiement de [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], consultez [présentation des Applications de navigateur XAML WPF](wpf-xaml-browser-applications-overview.md) et [déploiement d’une Application WPF](deploying-a-wpf-application-wpf.md).  
   
 <a name="ConfiguringAXAMLPage"></a>   
 ### <a name="configuring-the-host-windows-title-width-and-height"></a>Configuration du titre, de la largeur et de la hauteur de la fenêtre hôte  
@@ -147,19 +147,19 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  <xref:System.Windows.Controls.Page.WindowTitle%2A>, <xref:System.Windows.Controls.Page.WindowWidth%2A>, et <xref:System.Windows.Controls.Page.WindowHeight%2A> peut être défini de façon déclarative dans le balisage, comme illustré dans l’exemple suivant.  
   
- [!code-xaml[NavigationOverviewSnippets#HomePageMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/HomePage.xaml#homepagemarkup)]  
+ [!code-xaml[NavigationOverviewSnippets#HomePageMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/HomePage.xaml#homepagemarkup)]  
   
  Le résultat est affiché dans l’illustration suivante.  
   
- ![Titre, hauteur, largeur de la fenêtre](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure2.png "NavigationOverviewFigure2")  
+ ![Titre, hauteur, largeur de la fenêtre](./media/navigationoverviewfigure2.png "NavigationOverviewFigure2")  
   
 <a name="NavigatingBetweenXAMLPages"></a>   
 ### <a name="hyperlink-navigation"></a>Navigation par lien hypertexte  
  Classique [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] comprend plusieurs pages. Le plus simple pour naviguer d’une page à l’autre consiste à utiliser un <xref:System.Windows.Documents.Hyperlink>. Vous pouvez ajouter de façon déclarative un <xref:System.Windows.Documents.Hyperlink> à un <xref:System.Windows.Controls.Page> à l’aide de la `Hyperlink` élément, qui est indiqué dans le balisage suivant.  
   
- [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]  
-[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]  
-[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]  
+ [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]  
+[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]  
+[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]  
   
  Un `Hyperlink` élément requiert les éléments suivants :  
   
@@ -169,11 +169,11 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  L’illustration suivante montre un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] avec un <xref:System.Windows.Controls.Page> qui a un <xref:System.Windows.Documents.Hyperlink>.  
   
- ![Page avec lien hypertexte](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure3.png "NavigationOverviewFigure3")  
+ ![Page avec lien hypertexte](./media/navigationoverviewfigure3.png "NavigationOverviewFigure3")  
   
  Comme vous pouvez l’imaginer, en cliquant sur le <xref:System.Windows.Documents.Hyperlink> provoque la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] pour accéder à la <xref:System.Windows.Controls.Page> qui est identifié par le `NavigateUri` attribut. En outre, le [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ajoute une entrée pour le précédent <xref:System.Windows.Controls.Page> à la liste Pages récentes dans [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Ce cas est illustré dans la figure suivante.  
   
- ![Boutons Précédent et Suivant](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![Boutons Précédent et Suivant](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
   
  Ainsi que la prise en charge de la navigation à partir d’un <xref:System.Windows.Controls.Page> vers un autre, <xref:System.Windows.Documents.Hyperlink> également prend en charge la navigation vers un fragment.  
   
@@ -181,9 +181,9 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
 ### <a name="fragment-navigation"></a>Navigation vers un fragment  
  *Navigation vers un fragment* est la navigation vers un fragment de contenu dans le cours <xref:System.Windows.Controls.Page> ou un autre <xref:System.Windows.Controls.Page>. Dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], un fragment de contenu est le contenu qui est contenu dans un élément nommé. Un élément nommé est un élément qui a son `Name` ensemble d’attributs. Le balisage suivant montre une nommée `TextBlock` élément qui contient un fragment de contenu.  
   
- [!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup1)]  
-[!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup2)]  
-[!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup3)]  
+ [!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup1)]  
+[!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup2)]  
+[!code-xaml[NavigationOverviewSnippets#PageWithContentFragmentsMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithFragments.xaml#pagewithcontentfragmentsmarkup3)]  
   
  Pour un <xref:System.Windows.Documents.Hyperlink> pour accéder à un fragment de contenu, le `NavigateUri` attribut doit inclure les éléments suivants :  
   
@@ -199,9 +199,9 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  L’exemple suivant montre un exemple d’un `Hyperlink` qui est configuré pour naviguer vers un fragment de contenu.  
   
- [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml1)]  
-[!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml2)]  
-[!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml3)]  
+ [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml1)]  
+[!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml2)]  
+[!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml3)]  
   
 > [!NOTE]
 >  Cette section décrit l’implémentation de navigation de fragment par défaut dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] vous permet également d’implémenter votre propre schéma de navigation de fragment qui, en partie, nécessite un traitement le <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> événement.  
@@ -237,15 +237,15 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
 #### <a name="getting-a-reference-to-the-navigationservice"></a>Obtention d’une référence à NavigationService  
  Pour des raisons qui sont traités dans le [hôtes de Navigation](#Navigation_Hosts) section, un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application peut avoir plusieurs <xref:System.Windows.Navigation.NavigationService>. Cela signifie que votre code a besoin d’un moyen pour rechercher un <xref:System.Windows.Navigation.NavigationService>, ce qui est généralement le <xref:System.Windows.Navigation.NavigationService> ayant navigué vers actuel <xref:System.Windows.Controls.Page>. Vous pouvez obtenir une référence à un <xref:System.Windows.Navigation.NavigationService> en appelant le `static` <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType> (méthode). Pour obtenir le <xref:System.Windows.Navigation.NavigationService> ayant navigué vers un particulier <xref:System.Windows.Controls.Page>, vous passez une référence à la <xref:System.Windows.Controls.Page> comme argument de la <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> (méthode). Le code suivant montre comment obtenir le <xref:System.Windows.Navigation.NavigationService> actif <xref:System.Windows.Controls.Page>.  
   
- [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind1)]  
-[!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind2)]
-[!code-vb[NavigationOverviewSnippets#GetNSCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/GetNSPage.xaml.vb#getnscodebehind2)]  
+ [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind1)]  
+[!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind2)]
+[!code-vb[NavigationOverviewSnippets#GetNSCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/GetNSPage.xaml.vb#getnscodebehind2)]  
   
  En tant que raccourci pour trouver le <xref:System.Windows.Navigation.NavigationService> pour un <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.Page> implémente le <xref:System.Windows.Controls.Page.NavigationService%2A> propriété. L'exemple suivant le démontre.  
   
- [!code-csharp[NavigationOverviewSnippets#GetNSShortcutCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPageShortCut.xaml.cs#getnsshortcutcodebehind1)]  
-[!code-csharp[NavigationOverviewSnippets#GetNSShortcutCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPageShortCut.xaml.cs#getnsshortcutcodebehind2)]
-[!code-vb[NavigationOverviewSnippets#GetNSShortcutCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/GetNSPageShortCut.xaml.vb#getnsshortcutcodebehind2)]  
+ [!code-csharp[NavigationOverviewSnippets#GetNSShortcutCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPageShortCut.xaml.cs#getnsshortcutcodebehind1)]  
+[!code-csharp[NavigationOverviewSnippets#GetNSShortcutCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPageShortCut.xaml.cs#getnsshortcutcodebehind2)]
+[!code-vb[NavigationOverviewSnippets#GetNSShortcutCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/GetNSPageShortCut.xaml.vb#getnsshortcutcodebehind2)]  
   
 > [!NOTE]
 >  Un <xref:System.Windows.Controls.Page> peut obtenir uniquement une référence à son <xref:System.Windows.Navigation.NavigationService> lorsque <xref:System.Windows.Controls.Page> déclenche le <xref:System.Windows.FrameworkElement.Loaded> événement.  
@@ -253,37 +253,37 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
 #### <a name="programmatic-navigation-to-a-page-object"></a>Navigation par programmation vers un objet Page  
  L’exemple suivant montre comment utiliser le <xref:System.Windows.Navigation.NavigationService> pour naviguer par programmation vers un <xref:System.Windows.Controls.Page>. Navigation par programmation est nécessaire, car le <xref:System.Windows.Controls.Page> qui est accédée à ne peut être instanciée à l’aide d’un constructeur unique, non défini par défaut. Le <xref:System.Windows.Controls.Page> avec le constructeur par défaut est indiqué dans le balisage suivant et le code.  
   
- [!code-xaml[NavigationOverviewSnippets#PageWithNonDefaultConstructorXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithNonDefaultConstructor.xaml#pagewithnondefaultconstructorxaml)]  
+ [!code-xaml[NavigationOverviewSnippets#PageWithNonDefaultConstructorXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithNonDefaultConstructor.xaml#pagewithnondefaultconstructorxaml)]  
   
- [!code-csharp[NavigationOverviewSnippets#PageWithNonDefaultConstructorCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithNonDefaultConstructor.xaml.cs#pagewithnondefaultconstructorcodebehind)]
- [!code-vb[NavigationOverviewSnippets#PageWithNonDefaultConstructorCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/PageWithNonDefaultConstructor.xaml.vb#pagewithnondefaultconstructorcodebehind)]  
+ [!code-csharp[NavigationOverviewSnippets#PageWithNonDefaultConstructorCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithNonDefaultConstructor.xaml.cs#pagewithnondefaultconstructorcodebehind)]
+ [!code-vb[NavigationOverviewSnippets#PageWithNonDefaultConstructorCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/PageWithNonDefaultConstructor.xaml.vb#pagewithnondefaultconstructorcodebehind)]  
   
  Le <xref:System.Windows.Controls.Page> qui accède à la <xref:System.Windows.Controls.Page> avec le constructeur par défaut est indiqué dans le balisage suivant et le code.  
   
- [!code-xaml[NavigationOverviewSnippets#NSNavigationPageXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml#nsnavigationpagexaml)]  
+ [!code-xaml[NavigationOverviewSnippets#NSNavigationPageXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml#nsnavigationpagexaml)]  
   
- [!code-csharp[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml.cs#nsnavigationpagecodebehind)]
- [!code-vb[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSNavigationPage.xaml.vb#nsnavigationpagecodebehind)]  
+ [!code-csharp[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml.cs#nsnavigationpagecodebehind)]
+ [!code-vb[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSNavigationPage.xaml.vb#nsnavigationpagecodebehind)]  
   
  Lorsque le <xref:System.Windows.Documents.Hyperlink> sur ce <xref:System.Windows.Controls.Page> est activé, la navigation est lancée en instanciant la <xref:System.Windows.Controls.Page> pour accéder à l’aide du constructeur par défaut et en appelant le <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> (méthode). <xref:System.Windows.Navigation.NavigationService.Navigate%2A> accepte une référence à l’objet qui le <xref:System.Windows.Navigation.NavigationService> permet d’accéder à, au lieu d’un pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
 #### <a name="programmatic-navigation-with-a-pack-uri"></a>Navigation par programmation avec un URI à en-tête pack  
  Si vous avez besoin construire un pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] par programmation (lorsque vous ne pouvez déterminer le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] au moment de l’exécution, par exemple), vous pouvez utiliser le <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> (méthode). L'exemple suivant le démontre.  
   
- [!code-xaml[NavigationOverviewSnippets#NSUriNavigationPageXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSUriNavigationPage.xaml#nsurinavigationpagexaml)]  
+ [!code-xaml[NavigationOverviewSnippets#NSUriNavigationPageXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSUriNavigationPage.xaml#nsurinavigationpagexaml)]  
   
- [!code-csharp[NavigationOverviewSnippets#NSUriNavigationPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSUriNavigationPage.xaml.cs#nsurinavigationpagecodebehind)]
- [!code-vb[NavigationOverviewSnippets#NSUriNavigationPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSUriNavigationPage.xaml.vb#nsurinavigationpagecodebehind)]  
+ [!code-csharp[NavigationOverviewSnippets#NSUriNavigationPageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSUriNavigationPage.xaml.cs#nsurinavigationpagecodebehind)]
+ [!code-vb[NavigationOverviewSnippets#NSUriNavigationPageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSUriNavigationPage.xaml.vb#nsurinavigationpagecodebehind)]  
   
 #### <a name="refreshing-the-current-page"></a>Actualisation de la page active  
  Un <xref:System.Windows.Controls.Page> n’est pas téléchargé s’il a le même pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] que le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] qui est stocké dans le <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType> propriété. Pour forcer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pour télécharger à nouveau la page actuelle, vous pouvez appeler la <xref:System.Windows.Navigation.NavigationService.Refresh%2A?displayProperty=nameWithType> méthode, comme indiqué dans l’exemple suivant.  
   
- [!code-xaml[NavigationOverviewSnippets#NSRefreshNavigationPageXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSRefreshNavigationPage.xaml#nsrefreshnavigationpagexaml1)]  
+ [!code-xaml[NavigationOverviewSnippets#NSRefreshNavigationPageXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSRefreshNavigationPage.xaml#nsrefreshnavigationpagexaml1)]  
   
- [!code-csharp[NavigationOverviewSnippets#NSRefreshNavigationPageCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSRefreshNavigationPage.xaml.cs#nsrefreshnavigationpagecodebehind1)]
- [!code-vb[NavigationOverviewSnippets#NSRefreshNavigationPageCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSRefreshNavigationPage.xaml.vb#nsrefreshnavigationpagecodebehind1)]  
-[!code-csharp[NavigationOverviewSnippets#NSRefreshNavigationPageCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSRefreshNavigationPage.xaml.cs#nsrefreshnavigationpagecodebehind2)]
-[!code-vb[NavigationOverviewSnippets#NSRefreshNavigationPageCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSRefreshNavigationPage.xaml.vb#nsrefreshnavigationpagecodebehind2)]  
+ [!code-csharp[NavigationOverviewSnippets#NSRefreshNavigationPageCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSRefreshNavigationPage.xaml.cs#nsrefreshnavigationpagecodebehind1)]
+ [!code-vb[NavigationOverviewSnippets#NSRefreshNavigationPageCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSRefreshNavigationPage.xaml.vb#nsrefreshnavigationpagecodebehind1)]  
+[!code-csharp[NavigationOverviewSnippets#NSRefreshNavigationPageCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSRefreshNavigationPage.xaml.cs#nsrefreshnavigationpagecodebehind2)]
+[!code-vb[NavigationOverviewSnippets#NSRefreshNavigationPageCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSRefreshNavigationPage.xaml.vb#nsrefreshnavigationpagecodebehind2)]  
   
 <a name="Navigation_Lifetime"></a>   
 ### <a name="navigation-lifetime"></a>Durée de vie de la navigation  
@@ -309,7 +309,7 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  Les événements de navigation sont générés dans l’ordre indiqué sur la figure suivante.  
   
- ![Organigramme de la navigation entre les pages](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure11.png "NavigationOverviewFigure11")  
+ ![Organigramme de la navigation entre les pages](./media/navigationoverviewfigure11.png "NavigationOverviewFigure11")  
   
  En règle générale, un <xref:System.Windows.Controls.Page> n’est pas concerné sur ces événements. Il est plus probable qu’ils concernent une application et, pour cette raison, ces événements sont également déclenchés par la <xref:System.Windows.Application> classe :  
   
@@ -331,10 +331,10 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  Dans certains cas, un <xref:System.Windows.Controls.Page> peut être intéressé par ces événements. Par exemple, un <xref:System.Windows.Controls.Page> peut gérer le <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType> événement pour déterminer s’il faut annuler la navigation s’en éloigne. L'exemple suivant le démontre.  
   
- [!code-xaml[NavigationOverviewSnippets#CancelNavigationPageXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/CancelNavigationPage.xaml#cancelnavigationpagexaml)]  
+ [!code-xaml[NavigationOverviewSnippets#CancelNavigationPageXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/CancelNavigationPage.xaml#cancelnavigationpagexaml)]  
   
- [!code-csharp[NavigationOverviewSnippets#CancelNavigationPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/CancelNavigationPage.xaml.cs#cancelnavigationpagecodebehind)]
- [!code-vb[NavigationOverviewSnippets#CancelNavigationPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/CancelNavigationPage.xaml.vb#cancelnavigationpagecodebehind)]  
+ [!code-csharp[NavigationOverviewSnippets#CancelNavigationPageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/CancelNavigationPage.xaml.cs#cancelnavigationpagecodebehind)]
+ [!code-vb[NavigationOverviewSnippets#CancelNavigationPageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/CancelNavigationPage.xaml.vb#cancelnavigationpagecodebehind)]  
   
  Si vous inscrivez un gestionnaire avec un événement de navigation à partir d’un <xref:System.Windows.Controls.Page>, comme dans l’exemple précédent, vous devez également désinscrire le Gestionnaire d’événements. Si vous n’est pas le cas, il peut y avoir des effets secondaires en ce qui concerne la [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] mémorise la navigation <xref:System.Windows.Controls.Page> navigation à l’aide de la feuille.  
   
@@ -345,7 +345,7 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
 #### <a name="navigating-the-journal-from-internet-explorer"></a>Navigation dans le journal à partir d’Internet Explorer  
  Sur le plan conceptuel, le journal fonctionne de la même façon que le **retour** et **transférer** boutons [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] faire. Ces boutons sont représentés dans la figure suivante.  
   
- ![Boutons Précédent et Suivant](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![Boutons Précédent et Suivant](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
   
  Pour [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] qui sont hébergées par [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] intègre le journal dans le volet de navigation [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Cela permet aux utilisateurs de parcourir des pages dans un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] à l’aide de la **retour**, **transférer**, et **Pages récentes** boutons dans [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Le journal n’est pas intégré dans [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] de la même façon qu’il s’agit pour [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] ou Internet Explorer 8. Au lieu de cela, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] restitue une navigation de substitution [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -366,23 +366,23 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  L’exemple suivant utilise le `Page.Title` attribut pour modifier le texte qui s’affiche pour une entrée de journal.  
   
- [!code-xaml[NavigationOverviewSnippets#PageTitleMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml#pagetitlemarkup1)]  
-[!code-xaml[NavigationOverviewSnippets#PageTitleMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml#pagetitlemarkup2)]  
+ [!code-xaml[NavigationOverviewSnippets#PageTitleMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml#pagetitlemarkup1)]  
+[!code-xaml[NavigationOverviewSnippets#PageTitleMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml#pagetitlemarkup2)]  
   
- [!code-csharp[NavigationOverviewSnippets#PageTitleCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml.cs#pagetitlecodebehind1)]
- [!code-vb[NavigationOverviewSnippets#PageTitleCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/PageWithTitle.xaml.vb#pagetitlecodebehind1)]  
-[!code-csharp[NavigationOverviewSnippets#PageTitleCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml.cs#pagetitlecodebehind2)]
-[!code-vb[NavigationOverviewSnippets#PageTitleCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/PageWithTitle.xaml.vb#pagetitlecodebehind2)]  
+ [!code-csharp[NavigationOverviewSnippets#PageTitleCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml.cs#pagetitlecodebehind1)]
+ [!code-vb[NavigationOverviewSnippets#PageTitleCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/PageWithTitle.xaml.vb#pagetitlecodebehind1)]  
+[!code-csharp[NavigationOverviewSnippets#PageTitleCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithTitle.xaml.cs#pagetitlecodebehind2)]
+[!code-vb[NavigationOverviewSnippets#PageTitleCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/PageWithTitle.xaml.vb#pagetitlecodebehind2)]  
   
 #### <a name="navigating-the-journal-using-wpf"></a>Navigation dans le journal à l’aide de WPF  
  Bien qu’un utilisateur peut naviguer dans le journal à l’aide de la **retour**, **transférer**, et **Pages récentes** dans [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)], vous pouvez également parcourir le journal à l’aide des mécanismes déclaratifs et de programmation fournis par [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Une des raisons pour ce faire consiste à fournir une navigation personnalisée [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] dans vos pages.  
   
  Vous pouvez ajouter de façon déclarative prise en charge de navigation de journal en utilisant les commandes de navigation exposées par <xref:System.Windows.Input.NavigationCommands>. L’exemple suivant montre comment utiliser le `BrowseBack` commande de navigation.  
   
- [!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml1)]  
-[!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml2)]  
-[!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml3)]  
-[!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml4)]  
+ [!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml1)]  
+[!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml2)]  
+[!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml3)]  
+[!code-xaml[NavigationOverviewSnippets#NavigationCommandsPageXAML4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NavigationCommandsPage.xaml#navigationcommandspagexaml4)]  
   
  Vous pouvez naviguer par programmation le journal à l’aide d’un des membres suivants de la <xref:System.Windows.Navigation.NavigationService> classe :  
   
@@ -402,17 +402,17 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  Pour cette raison, le comportement par défaut du journal consiste à stocker <xref:System.Windows.Controls.Page> métadonnées dans chaque entrée de journal plutôt qu’une référence à un <xref:System.Windows.Controls.Page> objet. Lorsqu’une entrée de journal est accédée, son <xref:System.Windows.Controls.Page> métadonnées sont utilisées pour créer une nouvelle instance du type spécifié <xref:System.Windows.Controls.Page>. Par conséquent, chaque <xref:System.Windows.Controls.Page> cible de la navigation a la durée de vie est illustrée par la figure suivante.  
   
- ![Durée de vie de la page](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure10.PNG "NavigationOverviewFigure10")  
+ ![Durée de vie de la page](./media/navigationoverviewfigure10.PNG "NavigationOverviewFigure10")  
   
  Bien que le comportement de journalisation par défaut permet d’enregistrer la consommation de mémoire, les performances de rendu par page peuvent être réduit ; réinstanciation un <xref:System.Windows.Controls.Page> peut prendre beaucoup de temps, en particulier si elle a beaucoup de contenu. Si vous avez besoin de conserver un <xref:System.Windows.Controls.Page> instance dans le journal, vous pouvez dessiner sur les deux techniques pour y parvenir. Tout d’abord, vous pouvez naviguer par programmation vers un <xref:System.Windows.Controls.Page> objet en appelant le <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> (méthode).  
   
  Ensuite, vous pouvez spécifier que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] conserve une instance d’un <xref:System.Windows.Controls.Page> dans le journal en définissant le <xref:System.Windows.Controls.Page.KeepAlive%2A> propriété `true` (la valeur par défaut est `false`). Comme indiqué dans l’exemple suivant, vous pouvez définir <xref:System.Windows.Controls.Page.KeepAlive%2A> façon déclarative dans le balisage.  
   
- [!code-xaml[NavigationOverviewSnippets#KeepAlivePageXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/KeepAlivePage.xaml#keepalivepagexaml)]  
+ [!code-xaml[NavigationOverviewSnippets#KeepAlivePageXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/KeepAlivePage.xaml#keepalivepagexaml)]  
   
  La durée de vie d’un <xref:System.Windows.Controls.Page> qui est maintenu actif est légèrement différente de l’autre non. La première fois un <xref:System.Windows.Controls.Page> maintenu actif cible, il est instancié comme un <xref:System.Windows.Controls.Page> qui n’est pas maintenu actif. Toutefois, car une instance de la <xref:System.Windows.Controls.Page> est conservée dans le journal, il est jamais réinstanciée tant qu’il reste dans le journal. Par conséquent, si un <xref:System.Windows.Controls.Page> possède une logique d’initialisation qui doit être appelée chaque fois que le <xref:System.Windows.Controls.Page> est accédé, vous devez la déplacer à partir du constructeur dans un gestionnaire pour le <xref:System.Windows.FrameworkElement.Loaded> événement. Comme indiqué dans l’illustration suivante, le <xref:System.Windows.FrameworkElement.Loaded> et <xref:System.Windows.FrameworkElement.Unloaded> sont toujours déclenchés chaque fois qu’un <xref:System.Windows.Controls.Page> navigué vers et à partir, respectivement.  
   
- ![Quand les événements Loaded et Unloaded sont déclenchés](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure17.png "NavigationOverviewFigure17")  
+ ![Quand les événements Loaded et Unloaded sont déclenchés](./media/navigationoverviewfigure17.png "NavigationOverviewFigure17")  
   
  Quand un <xref:System.Windows.Controls.Page> est ne pas maintenu actif, vous n’effectuez aucune des opérations suivantes :  
   
@@ -474,7 +474,7 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  Si un <xref:System.Windows.Controls.Page> utilise ces contrôles, les données entrées sont mémorisées sur <xref:System.Windows.Controls.Page> navigations, comme illustré par la **couleur Favorite** <xref:System.Windows.Controls.ListBox> dans la figure suivante.  
   
- ![Page avec contrôles mémorisant l’état](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure13.png "NavigationOverviewFigure13")  
+ ![Page avec contrôles mémorisant l’état](./media/navigationoverviewfigure13.png "NavigationOverviewFigure13")  
   
  Quand un <xref:System.Windows.Controls.Page> a des contrôles autres que ceux dans la liste précédente, ou lorsque l’état est stocké dans des objets personnalisés, vous devez écrire du code pour permettre au journal de mémoriser l’état entre <xref:System.Windows.Controls.Page> navigations.  
   
@@ -522,7 +522,7 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
 ### <a name="structured-navigation"></a>Navigation structurée  
  Si vous avez besoin passer des données à partir d’un <xref:System.Windows.Controls.Page> vers un autre, vous pouvez passer les données en tant qu’arguments à un constructeur non défini par défaut de la <xref:System.Windows.Controls.Page>. Notez que si vous utilisez cette technique, vous devez conserver le <xref:System.Windows.Controls.Page> actif ; si non, la prochaine fois que vous accédez à la <xref:System.Windows.Controls.Page>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] réinstancie la <xref:System.Windows.Controls.Page> à l’aide du constructeur par défaut.  
   
- Vous pouvez également votre <xref:System.Windows.Controls.Page> peuvent implémenter des propriétés qui sont définies avec les données devant être passés. Cela se complique, cependant, quand un <xref:System.Windows.Controls.Page> a besoin pour passer des données dans le <xref:System.Windows.Controls.Page> ayant navigué vers elle. Le problème est que navigation ne prend en charge des mécanismes pour garantir qu’un <xref:System.Windows.Controls.Page> s’affichera à après qu’il est accédé à partir de. Pour l’essentiel, la navigation ne prend pas en charge la sémantique d’appel/de retour. Pour résoudre ce problème, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit le <xref:System.Windows.Navigation.PageFunction%601> classe que vous pouvez utiliser pour vous assurer qu’un <xref:System.Windows.Controls.Page> revient de manière prévisible et structurée. Pour plus d’informations, consultez [vue d’ensemble de Navigation structurée](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md).  
+ Vous pouvez également votre <xref:System.Windows.Controls.Page> peuvent implémenter des propriétés qui sont définies avec les données devant être passés. Cela se complique, cependant, quand un <xref:System.Windows.Controls.Page> a besoin pour passer des données dans le <xref:System.Windows.Controls.Page> ayant navigué vers elle. Le problème est que navigation ne prend en charge des mécanismes pour garantir qu’un <xref:System.Windows.Controls.Page> s’affichera à après qu’il est accédé à partir de. Pour l’essentiel, la navigation ne prend pas en charge la sémantique d’appel/de retour. Pour résoudre ce problème, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit le <xref:System.Windows.Navigation.PageFunction%601> classe que vous pouvez utiliser pour vous assurer qu’un <xref:System.Windows.Controls.Page> revient de manière prévisible et structurée. Pour plus d’informations, consultez [vue d’ensemble de Navigation structurée](structured-navigation-overview.md).  
   
 <a name="The_NavigationWindow_Class"></a>   
 ## <a name="the-navigationwindow-class"></a>NavigationWindow, classe  
@@ -538,42 +538,42 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  Pour implémenter un <xref:System.Windows.Navigation.NavigationWindow>, comme avec la plupart des classes de niveau supérieur dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, et ainsi de suite), vous utilisez une combinaison de balisage et code-behind. L'exemple suivant le démontre.  
   
- [!code-xaml[IntroToNavNavigationWindowSnippets#NavigationWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/MainWindow.xaml#navigationwindowmarkup)]  
+ [!code-xaml[IntroToNavNavigationWindowSnippets#NavigationWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/MainWindow.xaml#navigationwindowmarkup)]  
   
- [!code-csharp[IntroToNavNavigationWindowSnippets#NavigationWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/MainWindow.xaml.cs#navigationwindowcodebehind)]
- [!code-vb[IntroToNavNavigationWindowSnippets#NavigationWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/VisualBasic/MainWindow.xaml.vb#navigationwindowcodebehind)]  
+ [!code-csharp[IntroToNavNavigationWindowSnippets#NavigationWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/MainWindow.xaml.cs#navigationwindowcodebehind)]
+ [!code-vb[IntroToNavNavigationWindowSnippets#NavigationWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/VisualBasic/MainWindow.xaml.vb#navigationwindowcodebehind)]  
   
  Ce code crée un <xref:System.Windows.Navigation.NavigationWindow> qui navigue automatiquement vers un <xref:System.Windows.Controls.Page> (HomePage.xaml) lorsque le <xref:System.Windows.Navigation.NavigationWindow> est ouvert. Si le <xref:System.Windows.Navigation.NavigationWindow> est la fenêtre principale de l’application, vous pouvez utiliser le `StartupUri` attribut pour le lancer. Ce cas de figure est illustré dans le balisage suivant.  
   
- [!code-xaml[IntroToNavNavigationWindowSnippets#AppLaunchNavWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/App.xaml#applaunchnavwindow)]  
+ [!code-xaml[IntroToNavNavigationWindowSnippets#AppLaunchNavWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/App.xaml#applaunchnavwindow)]  
   
  L’illustration suivante montre le <xref:System.Windows.Navigation.NavigationWindow> que la fenêtre principale d’une application autonome.  
   
- ![Fenêtre principale](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure18.png "NavigationOverviewFigure18")  
+ ![Fenêtre principale](./media/navigationoverviewfigure18.png "NavigationOverviewFigure18")  
   
  À partir de la figure, vous pouvez voir que le <xref:System.Windows.Navigation.NavigationWindow> a un titre, bien qu’il n’a pas été défini le <xref:System.Windows.Navigation.NavigationWindow> code d’implémentation de l’exemple précédent. Au lieu de cela, le titre est défini à l’aide de la <xref:System.Windows.Controls.Page.WindowTitle%2A> propriété, qui est indiquée dans le code suivant.  
   
- [!code-xaml[IntroToNavNavigationWindowSnippets#HomePageMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/HomePage.xaml#homepagemarkup1)]  
-[!code-xaml[IntroToNavNavigationWindowSnippets#HomePageMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/HomePage.xaml#homepagemarkup2)]  
+ [!code-xaml[IntroToNavNavigationWindowSnippets#HomePageMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/HomePage.xaml#homepagemarkup1)]  
+[!code-xaml[IntroToNavNavigationWindowSnippets#HomePageMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/HomePage.xaml#homepagemarkup2)]  
   
  Définition de la <xref:System.Windows.Controls.Page.WindowWidth%2A> et <xref:System.Windows.Controls.Page.WindowHeight%2A> propriétés affecte également la <xref:System.Windows.Navigation.NavigationWindow>.  
   
  En règle générale, vous implémentez votre propre <xref:System.Windows.Navigation.NavigationWindow> lorsque vous avez besoin personnaliser son comportement ou son apparence. Si vous ne faites ni l’un, ni l’autre, vous pouvez utiliser un raccourci. Si vous spécifiez le pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] d’un <xref:System.Windows.Controls.Page> en tant que le <xref:System.Windows.Application.StartupUri%2A> dans une application autonome, <xref:System.Windows.Application> crée automatiquement un <xref:System.Windows.Navigation.NavigationWindow> pour héberger le <xref:System.Windows.Controls.Page>. Le balisage suivant montre comment y parvenir.  
   
- [!code-xaml[IntroToNavNavigationWindowSnippets#AppLaunchPage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/AnotherApp.xaml#applaunchpage)]  
+ [!code-xaml[IntroToNavNavigationWindowSnippets#AppLaunchPage](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/AnotherApp.xaml#applaunchpage)]  
   
  Si vous souhaitez une fenêtre d’application secondaire telle qu’une boîte de dialogue soit un <xref:System.Windows.Navigation.NavigationWindow>, vous pouvez utiliser le code dans l’exemple suivant pour l’ouvrir.  
   
- [!code-csharp[IntroToNavNavigationWindowSnippets#CreateNWDialogBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/DialogOwnerWindow.xaml.cs#createnwdialogbox)]
- [!code-vb[IntroToNavNavigationWindowSnippets#CreateNWDialogBox](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/VisualBasic/DialogOwnerWindow.xaml.vb#createnwdialogbox)]  
+ [!code-csharp[IntroToNavNavigationWindowSnippets#CreateNWDialogBox](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/DialogOwnerWindow.xaml.cs#createnwdialogbox)]
+ [!code-vb[IntroToNavNavigationWindowSnippets#CreateNWDialogBox](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/VisualBasic/DialogOwnerWindow.xaml.vb#createnwdialogbox)]  
   
  L’illustration suivante affiche le résultat.  
   
- ![Boîte de dialogue](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure19.png "NavigationOverviewFigure19")  
+ ![Boîte de dialogue](./media/navigationoverviewfigure19.png "NavigationOverviewFigure19")  
   
  Comme vous pouvez le voir, <xref:System.Windows.Navigation.NavigationWindow> affiche [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]-style **retour** et **transférer** boutons qui permettent aux utilisateurs de naviguer dans le journal. Ces boutons fournissent la même expérience utilisateur, comme le montre la figure suivante.  
   
- ![Boutons Précédent et Suivant dans NavigationWindow](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure20.png "NavigationOverviewFigure20")  
+ ![Boutons Précédent et Suivant dans NavigationWindow](./media/navigationoverviewfigure20.png "NavigationOverviewFigure20")  
   
  Si vos pages fournissent leur propre interface utilisateur et prise en charge de navigation de journal, vous pouvez masquer la **retour** et **transférer** boutons affichés par <xref:System.Windows.Navigation.NavigationWindow> en définissant la valeur de la <xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A> propriété `false`.  
   
@@ -585,29 +585,29 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  L’exemple suivant montre comment ajouter un <xref:System.Windows.Controls.Frame> à un <xref:System.Windows.Controls.Page> de façon déclarative en utilisant le `Frame` élément.  
   
- [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml1)]  
-[!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml2)]  
-[!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml3)]  
+ [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml1)]  
+[!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml2)]  
+[!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml3)]  
   
  Ce balisage définit le `Source` attribut de la `Frame` élément avec un pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] pour le <xref:System.Windows.Controls.Page> qui le <xref:System.Windows.Controls.Frame> doit naviguer initialement. L’illustration suivante montre un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] avec un <xref:System.Windows.Controls.Page> qui a un <xref:System.Windows.Controls.Frame> a navigué entre plusieurs pages.  
   
- ![Frame ayant navigué entre plusieurs pages](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure5.png "NavigationOverviewFigure5")  
+ ![Frame ayant navigué entre plusieurs pages](./media/navigationoverviewfigure5.png "NavigationOverviewFigure5")  
   
  Vous n’êtes pas obligé uniquement utiliser <xref:System.Windows.Controls.Frame> dans le contenu d’un <xref:System.Windows.Controls.Page>. Il est également courant d’héberger un <xref:System.Windows.Controls.Frame> dans le contenu d’un <xref:System.Windows.Window>.  
   
  Par défaut, <xref:System.Windows.Controls.Frame> utilise seulement son propre journal en l’absence d’un autre journal. Si un <xref:System.Windows.Controls.Frame> fait partie du contenu hébergé dans un <xref:System.Windows.Navigation.NavigationWindow> ou un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame> utilise le journal qui appartienne à la <xref:System.Windows.Navigation.NavigationWindow> ou [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Parfois, cependant, un <xref:System.Windows.Controls.Frame> devra peut-être être responsable de son propre journal. Une des raisons pour ce faire consiste à permettre la navigation de journal dans les pages qui sont hébergées par un <xref:System.Windows.Controls.Frame>. Cela est illustré par la figure suivante.  
   
- ![Diagramme de frame et de page](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure7.png "NavigationOverviewFigure7")  
+ ![Diagramme de frame et de page](./media/navigationoverviewfigure7.png "NavigationOverviewFigure7")  
   
  Dans ce cas, vous pouvez configurer le <xref:System.Windows.Controls.Frame> à utiliser son propre journal en définissant le <xref:System.Windows.Controls.Frame.JournalOwnership%2A> propriété de la <xref:System.Windows.Controls.Frame> à <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>. Ce cas de figure est illustré dans le balisage suivant.  
   
- [!code-xaml[NavigationOverviewSnippets#FrameHostPageOwnJournalXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnJournal.xaml#framehostpageownjournalxaml1)]  
-[!code-xaml[NavigationOverviewSnippets#FrameHostPageOwnJournalXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnJournal.xaml#framehostpageownjournalxaml2)]  
-[!code-xaml[NavigationOverviewSnippets#FrameHostPageOwnJournalXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnJournal.xaml#framehostpageownjournalxaml3)]  
+ [!code-xaml[NavigationOverviewSnippets#FrameHostPageOwnJournalXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnJournal.xaml#framehostpageownjournalxaml1)]  
+[!code-xaml[NavigationOverviewSnippets#FrameHostPageOwnJournalXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnJournal.xaml#framehostpageownjournalxaml2)]  
+[!code-xaml[NavigationOverviewSnippets#FrameHostPageOwnJournalXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnJournal.xaml#framehostpageownjournalxaml3)]  
   
  L’exemple suivant illustre l’effet de la navigation dans un <xref:System.Windows.Controls.Frame> qui utilise son propre journal.  
   
- ![Frame utilisant son propre journal](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure8.png "NavigationOverviewFigure8")  
+ ![Frame utilisant son propre journal](./media/navigationoverviewfigure8.png "NavigationOverviewFigure8")  
   
  Notez que les entrées de journal sont affichées par le volet de navigation [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dans le <xref:System.Windows.Controls.Frame>, plutôt que par [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)].  
   
@@ -616,27 +616,27 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  Si votre expérience utilisateur requiert un <xref:System.Windows.Controls.Frame> pour fournir son propre journal sans afficher le volet de navigation [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], vous pouvez masquer le volet de navigation [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] en définissant le <xref:System.Windows.Controls.Frame.NavigationUIVisibility%2A> à <xref:System.Windows.Visibility.Hidden>. Ce cas de figure est illustré dans le balisage suivant.  
   
- [!code-xaml[NavigationOverviewSnippets#FrameHostPageHidesUIXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnHiddenJournal.xaml#framehostpagehidesuixaml1)]  
-[!code-xaml[NavigationOverviewSnippets#FrameHostPageHidesUIXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnHiddenJournal.xaml#framehostpagehidesuixaml2)]  
-[!code-xaml[NavigationOverviewSnippets#FrameHostPageHidesUIXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnHiddenJournal.xaml#framehostpagehidesuixaml3)]  
+ [!code-xaml[NavigationOverviewSnippets#FrameHostPageHidesUIXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnHiddenJournal.xaml#framehostpagehidesuixaml1)]  
+[!code-xaml[NavigationOverviewSnippets#FrameHostPageHidesUIXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnHiddenJournal.xaml#framehostpagehidesuixaml2)]  
+[!code-xaml[NavigationOverviewSnippets#FrameHostPageHidesUIXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnHiddenJournal.xaml#framehostpagehidesuixaml3)]  
   
 <a name="Navigation_Hosts"></a>   
 ## <a name="navigation-hosts"></a>Hôtes de navigation  
  <xref:System.Windows.Controls.Frame> et <xref:System.Windows.Navigation.NavigationWindow> sont des classes appelées hôtes de navigation. Un *hôte de navigation* est une classe qui peut naviguer vers et afficher le contenu. Pour ce faire, chaque hôte de navigation utilise son propre <xref:System.Windows.Navigation.NavigationService> et journal. La construction de base d’un hôte de navigation est illustrée dans la figure suivante.  
   
- ![Diagrammes du navigateur](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
+ ![Diagrammes du navigateur](./media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
   
  Cela permet essentiellement <xref:System.Windows.Navigation.NavigationWindow> et <xref:System.Windows.Controls.Frame> de fournir la même navigation prend pas en charge un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] fournit lorsqu’il est hébergé dans le navigateur.  
   
  Outre l’utilisation de <xref:System.Windows.Navigation.NavigationService> et d’un journal, hôtes de navigation implémentent les mêmes membres que <xref:System.Windows.Navigation.NavigationService> implémente. Cela est illustré par la figure suivante.  
   
- ![Journal dans un frame et un NavigationWindow](../../../../docs/framework/wpf/app-development/media/naivgationoverviewfigure24.png "NaivgationOverviewFigure24")  
+ ![Journal dans un frame et un NavigationWindow](./media/naivgationoverviewfigure24.png "NaivgationOverviewFigure24")  
   
  Cela vous permet de programmer la prise en charge de la navigation directement par rapport à eux. Vous pouvez envisager cela si vous avez besoin fournir une navigation personnalisée [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pour un <xref:System.Windows.Controls.Frame> qui est hébergé dans un <xref:System.Windows.Window>. En outre, les deux types implémentent des membres supplémentaires, liés à la navigation, y compris `BackStack` (<xref:System.Windows.Navigation.NavigationWindow.BackStack%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Frame.BackStack%2A?displayProperty=nameWithType>) et `ForwardStack` (<xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Frame.ForwardStack%2A?displayProperty=nameWithType>), qui vous permettent d’énumérer les entrées de journal, la restauration automatique pile et avant de la pile, respectivement.  
   
  Comme cela a déjà été mentionné, plusieurs journaux peuvent exister dans une application. L’exemple suivant illustre ce cas de figure.  
   
- ![Plusieurs journaux dans une application](../../../../docs/framework/wpf/app-development/media/naivgationoverviewfigure25.png "NaivgationOverviewFigure25")  
+ ![Plusieurs journaux dans une application](./media/naivgationoverviewfigure25.png "NaivgationOverviewFigure25")  
   
 <a name="Navigating_to_Content_Other_than_Pages"></a>   
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>Navigation vers un autre contenu que des pages XAML  
@@ -656,11 +656,11 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
   
  Par exemple, considérez le contenu suivant est stocké comme un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de fichiers, Person.xaml.  
   
- [!code-xaml[NavigationOverviewSnippets#LooseXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Person.xaml#loosexaml)]  
+ [!code-xaml[NavigationOverviewSnippets#LooseXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Person.xaml#loosexaml)]  
   
  Quand vous double-cliquez sur le fichier, le navigateur s’ouvre et navigue vers le contenu, qu’il affiche. Ce cas est illustré dans la figure suivante.  
   
- ![Affichage du contenu du fichier Person.XAML](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure21.png "NavigationOverviewFigure21")  
+ ![Affichage du contenu du fichier Person.XAML](./media/navigationoverviewfigure21.png "NavigationOverviewFigure21")  
   
  Vous pouvez afficher un texte libre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichier dans la liste suivante :  
   
@@ -673,68 +673,68 @@ Windows Presentation Foundation (WPF) prend en charge la navigation de style nav
  Libre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichier peut être ajouté aux Favoris du navigateur, ou être la page d’accueil du navigateur.  
   
 > [!NOTE]
->  Pour plus d’informations sur la publication et le lancement en vrac [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages, consultez [déploiement d’une Application WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md).  
+>  Pour plus d’informations sur la publication et le lancement en vrac [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages, consultez [déploiement d’une Application WPF](deploying-a-wpf-application-wpf.md).  
   
- Une limitation relative au libre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est que vous pouvez uniquement héberger du contenu qui est sécurisé pour s’exécuter en mode de confiance partielle. Par exemple, `Window` ne peut pas être l’élément racine d’un libre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichier. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ Une limitation relative au libre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est que vous pouvez uniquement héberger du contenu qui est sécurisé pour s’exécuter en mode de confiance partielle. Par exemple, `Window` ne peut pas être l’élément racine d’un libre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichier. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../wpf-partial-trust-security.md).  
   
 <a name="Navigating_to_HTML_Files_Using_Frame"></a>   
 ### <a name="navigating-to-html-files-by-using-frame"></a>Navigation vers des fichiers HTML à l’aide d’un Frame  
  Comme vous pouvez l’imaginer, vous pouvez également accéder à [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]. Vous devez simplement fournir un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] qui utilise le schéma http. Par exemple, ce qui suit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] montre un <xref:System.Windows.Controls.Frame> qui accède à un [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] page.  
   
- [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]  
+ [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]  
   
- Navigation vers [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] nécessite des autorisations spéciales. Par exemple, vous ne pouvez pas naviguer d’un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] qui s’exécute dans le sandbox de sécurité de confiance partielle de zone Internet. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ Navigation vers [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] nécessite des autorisations spéciales. Par exemple, vous ne pouvez pas naviguer d’un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] qui s’exécute dans le sandbox de sécurité de confiance partielle de zone Internet. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../wpf-partial-trust-security.md).  
   
 <a name="Navigating_to_HTML_Files_Using_WebBrowser"></a>   
 ### <a name="navigating-to-html-files-by-using-the-webbrowser-control"></a>Navigation vers des fichiers HTML à l’aide du contrôle WebBrowser  
  Le <xref:System.Windows.Controls.WebBrowser> contrôle prend en charge [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] hébergement de documents, la navigation et le script/géré l’interopérabilité du code. Pour plus d’informations concernant la <xref:System.Windows.Controls.WebBrowser> du contrôle, consultez <xref:System.Windows.Controls.WebBrowser>.  
   
- Comme <xref:System.Windows.Controls.Frame>, la navigation vers [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] à l’aide de <xref:System.Windows.Controls.WebBrowser> nécessite des autorisations spéciales. Par exemple, à partir d’une application de confiance partielle, vous pouvez accéder uniquement aux [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] situé sur le site d’origine. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ Comme <xref:System.Windows.Controls.Frame>, la navigation vers [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] à l’aide de <xref:System.Windows.Controls.WebBrowser> nécessite des autorisations spéciales. Par exemple, à partir d’une application de confiance partielle, vous pouvez accéder uniquement aux [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] situé sur le site d’origine. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../wpf-partial-trust-security.md).  
   
 <a name="Navigating_to_Objects"></a>   
 ### <a name="navigating-to-custom-objects"></a>Navigation vers des objets personnalisés  
- Si vous avez des données qui sont stockées sous la forme d’objets personnalisés, vous pouvez afficher ces données consiste à créer un <xref:System.Windows.Controls.Page> avec du contenu qui est lié à ces objets (consultez [vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)). En revanche, si vous n’avez pas besoin de la charge de traitement supplémentaire liée à la création d’une page entière juste pour afficher les objets, vous pouvez naviguer directement vers ces derniers.  
+ Si vous avez des données qui sont stockées sous la forme d’objets personnalisés, vous pouvez afficher ces données consiste à créer un <xref:System.Windows.Controls.Page> avec du contenu qui est lié à ces objets (consultez [vue d’ensemble de la liaison de données](../data/data-binding-overview.md)). En revanche, si vous n’avez pas besoin de la charge de traitement supplémentaire liée à la création d’une page entière juste pour afficher les objets, vous pouvez naviguer directement vers ces derniers.  
   
  Prendre en compte la `Person` classe est implémentée dans le code suivant.  
   
- [!code-csharp[NavigateToObjectSnippets#PersonClassCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/Person.cs#personclasscode)]
- [!code-vb[NavigateToObjectSnippets#PersonClassCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigateToObjectSnippets/VisualBasic/Person.vb#personclasscode)]  
+ [!code-csharp[NavigateToObjectSnippets#PersonClassCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/Person.cs#personclasscode)]
+ [!code-vb[NavigateToObjectSnippets#PersonClassCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigateToObjectSnippets/VisualBasic/Person.vb#personclasscode)]  
   
  Pour y accéder, vous appelez le <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A?displayProperty=nameWithType> (méthode), comme illustré dans le code suivant.  
   
- [!code-xaml[NavigateToObjectSnippets#PageThatNavsToObject1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/HomePage.xaml#pagethatnavstoobject1)]  
-[!code-xaml[NavigateToObjectSnippets#PageThatNavsToObject2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/HomePage.xaml#pagethatnavstoobject2)]  
-[!code-xaml[NavigateToObjectSnippets#PageThatNavsToObject3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/HomePage.xaml#pagethatnavstoobject3)]  
+ [!code-xaml[NavigateToObjectSnippets#PageThatNavsToObject1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/HomePage.xaml#pagethatnavstoobject1)]  
+[!code-xaml[NavigateToObjectSnippets#PageThatNavsToObject2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/HomePage.xaml#pagethatnavstoobject2)]  
+[!code-xaml[NavigateToObjectSnippets#PageThatNavsToObject3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/HomePage.xaml#pagethatnavstoobject3)]  
   
- [!code-csharp[NavigateToObjectSnippets#PageThatNavsToObjectCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/HomePage.xaml.cs#pagethatnavstoobjectcodebehind)]
- [!code-vb[NavigateToObjectSnippets#PageThatNavsToObjectCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigateToObjectSnippets/VisualBasic/HomePage.xaml.vb#pagethatnavstoobjectcodebehind)]  
+ [!code-csharp[NavigateToObjectSnippets#PageThatNavsToObjectCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/HomePage.xaml.cs#pagethatnavstoobjectcodebehind)]
+ [!code-vb[NavigateToObjectSnippets#PageThatNavsToObjectCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigateToObjectSnippets/VisualBasic/HomePage.xaml.vb#pagethatnavstoobjectcodebehind)]  
   
  L’illustration suivante affiche le résultat.  
   
- ![Page de navigation vers une classe](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure22.png "NavigationOverviewFigure22")  
+ ![Page de navigation vers une classe](./media/navigationoverviewfigure22.png "NavigationOverviewFigure22")  
   
  Dans cette illustration, vous pouvez voir que rien d’utile n’est affiché. En fait, la valeur affichée est la valeur de retour de la `ToString` méthode pour le **personne** objet ; par défaut, c’est la seule valeur qui [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] peut utiliser pour représenter votre objet. Vous pourriez substituer les `ToString` méthode pour retourner des informations plus explicites, bien qu’il est toujours être uniquement une valeur de chaîne. Vous pouvez utiliser une technique qui tire parti des fonctionnalités de présentation de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consiste à utiliser un modèle de données. Vous pouvez implémenter un modèle de données qui [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] peut associer à un objet d’un type particulier. Le code suivant montre un modèle de données pour le `Person` objet.  
   
- [!code-xaml[NavigateToObjectSnippets#DataTemplateMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/App.xaml#datatemplatemarkup)]  
+ [!code-xaml[NavigateToObjectSnippets#DataTemplateMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigateToObjectSnippets/CSharp/App.xaml#datatemplatemarkup)]  
   
  Ici, le modèle de données est associé le `Person` type à l’aide de la `x:Type` extension de balisage dans le `DataType` attribut. Le modèle de données lie ensuite `TextBlock` éléments (consultez <xref:System.Windows.Controls.TextBlock>) aux propriétés de la `Person` classe. La figure suivante montre l’apparence mise à jour de la `Person` objet.  
   
- ![Navigation vers une classe comportant un modèle de données](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure23.png "NavigationOverviewFigure23")  
+ ![Navigation vers une classe comportant un modèle de données](./media/navigationoverviewfigure23.png "NavigationOverviewFigure23")  
   
  Cette technique présente un avantage, elle vous permet d’afficher vos objets de manière cohérente dans la totalité de votre application grâce à la réutilisation du modèle de données.  
   
- Pour plus d’informations sur les modèles de données, consultez [vue d’ensemble de la création de modèles de données](../../../../docs/framework/wpf/data/data-templating-overview.md).  
+ Pour plus d’informations sur les modèles de données, consultez [vue d’ensemble de la création de modèles de données](../data/data-templating-overview.md).  
   
 <a name="Security"></a>   
 ## <a name="security"></a>Sécurité  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] prise en charge de la navigation permet [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] permet de naviguer sur Internet et il permet aux applications pour héberger le contenu tiers. Pour protéger les applications et les utilisateurs des comportements dangereux, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit un éventail de fonctionnalités de sécurité qui sont abordées dans [sécurité](../../../../docs/framework/wpf/security-wpf.md) et [sécurité de confiance partielle de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] prise en charge de la navigation permet [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] permet de naviguer sur Internet et il permet aux applications pour héberger le contenu tiers. Pour protéger les applications et les utilisateurs des comportements dangereux, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit un éventail de fonctionnalités de sécurité qui sont abordées dans [sécurité](../security-wpf.md) et [sécurité de confiance partielle de WPF](../wpf-partial-trust-security.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Application.SetCookie%2A>
 - <xref:System.Windows.Application.GetCookie%2A>
-- [Vue d’ensemble de la gestion d’applications](../../../../docs/framework/wpf/app-development/application-management-overview.md)
-- [URI à en-tête pack dans WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Vue d’ensemble de la navigation structurée](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
-- [Vue d’ensemble des topologies de navigation](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)
-- [Déploiement d’une application WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Vue d’ensemble de la gestion d’applications](application-management-overview.md)
+- [URI à en-tête pack dans WPF](pack-uris-in-wpf.md)
+- [Vue d’ensemble de la navigation structurée](structured-navigation-overview.md)
+- [Vue d’ensemble des topologies de navigation](navigation-topologies-overview.md)
+- [Rubriques de guide pratique](navigation-how-to-topics.md)
+- [Déploiement d’une application WPF](deploying-a-wpf-application-wpf.md)

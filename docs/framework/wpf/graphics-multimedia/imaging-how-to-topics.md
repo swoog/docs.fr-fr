@@ -7,34 +7,34 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 872eb510e3e85046818987fc6aaf761fca21b320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493610"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359534"
 ---
 # <a name="imaging-how-to-topics"></a>Rubriques "Comment" relatives à l'acquisition d'images
 Les rubriques de cette section montrent comment utiliser [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] afin d’afficher ou modifier des images bitmap.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Utiliser un BitmapImage en XAML](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [Charger une image en tant que miniature](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [Appliquer une transformation à un BitmapImage](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [Créer une image bitmap à partir d'un Visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [Encoder un Visual dans un fichier image](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [Créer un BitmapSource](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [Enchaîner des objets BitmapSource](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [Convertir un BitmapSource en PixelFormat différent](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [Convertir un BitmapSource au format de pixel indexé](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [Encoder et décoder une image JPEG](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [Encoder et décoder une image BMP](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [Encoder et décoder une image PNG](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [Encoder et décoder une image WDP](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [Encoder et décoder une image GIF](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [Encoder et décoder une image TIFF](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [Écrire des métadonnées dans un bitmap](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [Lire des métadonnée à partir d’un bitmap](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+ [Utiliser un BitmapImage en XAML](how-to-use-a-bitmapimage.md)  
+ [Charger une image en tant que miniature](how-to-load-an-image-as-a-thumbnail.md)  
+ [Appliquer une transformation à un BitmapImage](how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [Créer une image bitmap à partir d'un Visual](how-to-create-a-bitmap-from-a-visual.md)  
+ [Encoder un Visual dans un fichier image](how-to-encode-a-visual-to-an-image-file.md)  
+ [Créer un BitmapSource](how-to-create-a-new-bitmapsource.md)  
+ [Enchaîner des objets BitmapSource](how-to-chain-bitmapsource-objects-together.md)  
+ [Convertir un BitmapSource en PixelFormat différent](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [Convertir un BitmapSource au format de pixel indexé](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [Encoder et décoder une image JPEG](how-to-encode-and-decode-a-jpeg-image.md)  
+ [Encoder et décoder une image BMP](how-to-encode-and-decode-a-bmp-image.md)  
+ [Encoder et décoder une image PNG](how-to-encode-and-decode-a-png-image.md)  
+ [Encoder et décoder une image WDP](how-to-encode-and-decode-a-wdp-image.md)  
+ [Encoder et décoder une image GIF](how-to-encode-and-decode-a-gif-image.md)  
+ [Encoder et décoder une image TIFF](how-to-encode-and-decode-a-tiff-image.md)  
+ [Écrire des métadonnées dans un bitmap](how-to-write-metadata-to-a-bitmap.md)  
+ [Lire des métadonnée à partir d’un bitmap](how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Image>  
@@ -44,4 +44,4 @@ Les rubriques de cette section montrent comment utiliser [!INCLUDE[TLA#tla_wincl
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la création d’images](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Vue d’ensemble de la création d’images](imaging-overview.md)

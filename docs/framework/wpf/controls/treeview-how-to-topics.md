@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555398"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357753"
 ---
 # <a name="treeview-how-to-topics"></a>Rubriques "Comment utiliser le TreeView"
 Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.TreeView> contrôle pour afficher des informations dans une structure hiérarchique.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Créer des arborescences simples ou complexes](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [Utiliser SelectedValue, SelectedValuePath et SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [Lier un TreeView à des données dont la profondeur ne peut pas être déterminée](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [Améliorer les performances d'un contrôle TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [Trouver un TreeViewItem dans un TreeView](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [Créer des arborescences simples ou complexes](how-to-create-simple-or-complex-treeviews.md)  
+  [Utiliser SelectedValue, SelectedValuePath et SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [Lier un TreeView à des données dont la profondeur ne peut pas être déterminée](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [Améliorer les performances d'un contrôle TreeView](how-to-improve-the-performance-of-a-treeview.md)  
+  [Trouver un TreeViewItem dans un TreeView](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.TreeView>  

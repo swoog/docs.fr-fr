@@ -4,16 +4,16 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: 70f725712d52ad055ff69046096da10b8edfb67c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701142"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376388"
 ---
 # <a name="private-protected-visual-basic"></a>Private protégé (Visual Basic)
 
-La combinaison de mots clés `Private Protected` est un modificateur d’accès de membre. Un `Private Protected` membre est accessible par tous les membres de sa classe conteneur, ainsi que par les types dérivés de la classe conteneur, mais uniquement si elles sont trouvent dans son assembly conteneur. 
+La combinaison de mots clés `Private Protected` est un modificateur d’accès de membre. Un `Private Protected` membre est accessible par tous les membres de sa classe conteneur, ainsi que par les types dérivés de la classe conteneur, mais uniquement si elles sont trouvent dans son assembly conteneur.
 
 Vous pouvez spécifier `Private Protected` uniquement sur les membres de classes ; vous ne pouvez pas appliquer `Private Protected` aux membres d’une structure, car les structures ne peuvent pas être héritées.
 
@@ -39,33 +39,33 @@ Pour plus d’informations, consultez [définition de la version de langage Visu
 - **Niveau d’accès.** Tout le code dans une classe peut accéder à ses éléments. Code dans toute classe qui dérive d’une classe de base et est contenue dans le même assembly peut accéder à tous les `Private Protected` éléments de la classe de base. Toutefois, le code dans toute classe qui dérive d’une classe de base et est contenue dans un autre assembly ne peut pas accéder à la classe de base `Private Protected` éléments.
 
 - **Modificateurs d’accès.** Les mots clés qui spécifient le niveau d’accès sont appelés *modificateurs d’accès*. Pour obtenir une comparaison des modificateurs d’accès, consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
-  
- Le modificateur `Private Protected` peut être utilisé dans les contextes suivants :  
-  
- [Class, instruction](../../../visual-basic/language-reference/statements/class-statement.md) d’une classe imbriquée  
-  
- [Const (instruction)](../../../visual-basic/language-reference/statements/const-statement.md)  
-  
- [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)  
-  
- [Delegate, instruction](../../../visual-basic/language-reference/statements/delegate-statement.md) d’un délégué imbriqué dans une classe  
-  
- [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Enum, instruction](../../../visual-basic/language-reference/statements/enum-statement.md) d’une eumeration imbriquée dans une classe 
-  
- [Event (instruction)](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Interface, instruction](../../../visual-basic/language-reference/statements/interface-statement.md) d’une interface imbriquée dans une classe 
-  
- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Structure instruction](../../../visual-basic/language-reference/statements/structure-statement.md) d’une structure imbriquée dans une classe 
-  
- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+
+Le modificateur `Private Protected` peut être utilisé dans les contextes suivants :
+
+- [Class, instruction](../../../visual-basic/language-reference/statements/class-statement.md) d’une classe imbriquée
+
+- [Const (instruction)](../../../visual-basic/language-reference/statements/const-statement.md)
+
+- [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)
+
+- [Delegate, instruction](../../../visual-basic/language-reference/statements/delegate-statement.md) d’un délégué imbriqué dans une classe
+
+- [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)
+
+- [Enum, instruction](../../../visual-basic/language-reference/statements/enum-statement.md) d’une énumération imbriquée dans une classe
+
+- [Event (instruction)](../../../visual-basic/language-reference/statements/event-statement.md)
+
+- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [Interface, instruction](../../../visual-basic/language-reference/statements/interface-statement.md) d’une interface imbriquée dans une classe
+
+- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [Structure instruction](../../../visual-basic/language-reference/statements/structure-statement.md) d’une structure imbriquée dans une classe
+
+- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 67978e49a8c23c4b25234ecbb3639c696c7232f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 072e775d11d44dfbca27f1616889e388ae61d467
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655645"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365995"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::EndEnumMethodInstancesByAddress (méthode)
 
@@ -36,9 +36,10 @@ HRESULT EndEnumMethodInstancesByAddress(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
+## <a name="parameters"></a>Paramètres
 
-`handle` [out] Un handle pour énumérer les instances de la méthode.
+`handle`\
+[out] Un handle pour énumérer les instances de la méthode.
 
 ## <a name="remarks"></a>Notes
 
@@ -53,6 +54,6 @@ La méthode fournie fait partie de la `IXCLRDataProcess` interface et correspond
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Énumération de CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interface de IXCLRDataProcess](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Énumération de CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Débogage](index.md)
+- [Interface de IXCLRDataProcess](ixclrdataprocess-interface.md)

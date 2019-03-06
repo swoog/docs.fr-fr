@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 156d248921499aa78c3638e45af113c5698bdacd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668013"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352020"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optimisation des performances : Liaison de données
 La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un moyen simple et cohérent pour les applications de présenter les données et d’interagir avec elles. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
@@ -74,14 +74,14 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous autorise à lier des données à du contenu [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] ; or, lier des données à du contenu [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] s’avère plus lent que de lier des données à des objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Ne convertissez pas des données d’objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] en XML si l’unique but est la liaison de données.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planification des performances des applications](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Tirer parti du matériel](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Disposition et conception](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportement de l’objet](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Ressources d'application](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Autres recommandations relatives aux performances](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Procédure pas à pas : La mise en cache des données d’Application dans une Application WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)
+- [Planification des performances des applications](planning-for-application-performance.md)
+- [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
+- [Disposition et conception](optimizing-performance-layout-and-design.md)
+- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportement de l’objet](optimizing-performance-object-behavior.md)
+- [Ressources d'application](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)
+- [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
+- [Procédure pas à pas : La mise en cache des données d’Application dans une Application WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

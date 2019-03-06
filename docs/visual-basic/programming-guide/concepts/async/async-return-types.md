@@ -2,12 +2,12 @@
 title: Types de retour Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 6fffd94a4b9ca531af58138b7613e0b3c5364c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498409"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352579"
 ---
 # <a name="async-return-types-visual-basic"></a>Types de retour Async (Visual Basic)
 Les méthodes async ont trois types de retour possibles : <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> et void. En Visual Basic, le type de retour void est écrit sous forme de procédure [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Pour plus d’informations sur les méthodes async, consultez [programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -17,7 +17,7 @@ Les méthodes async ont trois types de retour possibles : <xref:System.Threadin
 > [!NOTE]
 >  Pour exécuter l’exemple, vous devez avoir Visual Studio version 2012 ou ultérieure et .NET Framework version 4.5 ou ultérieure installés sur votre ordinateur.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Type de retour Task(T)  
+## <a name="BKMK_TaskTReturnType"></a> Type de retour Task(T)  
  Le <xref:System.Threading.Tasks.Task%601> type de retour est utilisé pour une méthode async qui contient un [retourner](../../../../visual-basic/language-reference/statements/return-statement.md) instruction dans laquelle l’opérande est de type `TResult`.  
   
  Dans l’exemple suivant, la méthode async `TaskOfT_MethodAsync` contient une instruction return qui retourne un entier. La déclaration de méthode doit donc spécifier un type de retour `Task(Of Integer)`.  
@@ -79,7 +79,7 @@ textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, resu
 textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)  
 ```  
   
-##  <a name="BKMK_TaskReturnType"></a> Type de retour Task  
+## <a name="BKMK_TaskReturnType"></a> Type de retour Task  
  Les méthodes async qui ne contiennent pas d’instruction return ou qui en contiennent une qui ne retourne pas d’opérande ont généralement un type de retour <xref:System.Threading.Tasks.Task>. Ces méthodes seraient [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procédures si elles étaient écrites pour exécuter de façon synchrone. Si vous utilisez un type de retour `Task` pour une méthode async, une méthode d’appel peut utiliser un opérateur `Await` pour suspendre l’achèvement de l’appelant jusqu’à ce que la méthode async soit terminée.  
   
  Dans l’exemple suivant, la méthode async `Task_MethodAsync` ne contient pas d’instruction return. Par conséquent, vous spécifiez le type de retour `Task` pour la méthode, ce qui permet à `Task_MethodAsync` d’être attendu. La définition du type `Task` n’inclut pas de propriété `Result` pour stocker une valeur de retour.  
@@ -121,7 +121,7 @@ textBox1.Text &= String.Format(vbCrLf & "Application can continue working while 
 Await simpleTask  
 ```  
   
-##  <a name="BKMK_VoidReturnType"></a> Type de retour void  
+## <a name="BKMK_VoidReturnType"></a> Type de retour void  
  La principale utilisation de `Sub` procédures est dans les gestionnaires d’événements, où il n’existe aucun type de retour (également appelé un type de retour void dans d’autres langages). Le retour de type void peut aussi être utilisé pour remplacer les méthodes qui retournent void ou pour les méthodes qui effectuent des activités considérées comme autonomes après activation (« Fire and Forget ». Toutefois, vous devez retourner un type `Task` dans la mesure du possible, car une méthode async qui retourne un type void ne peut pas être attendue. Tout appelant d’une telle méthode doit pouvoir continuer jusqu’à l’achèvement sans attendre que la méthode async soit terminée, et l’appelant doit être indépendant des valeurs ou des exceptions générées par la méthode async.  
   
  L’appelant d’une méthode async qui retourne une valeur void ne peut pas intercepter les exceptions levées à partir de la méthode, et ces exceptions non gérées peuvent entraîner l’échec de votre application. Si une exception se produit dans une méthode asyn qui retourne <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>, l’exception est stockée dans la tâche retournée et est à nouveau levée pendant l’attente de la tâche. Par conséquent, veillez à ce qu’une méthode async capable de générer une exception ait le type de retour <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> et que les appels à la méthode soient attendus.  
@@ -145,7 +145,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub  
 ```  
   
-##  <a name="BKMK_Example"></a> Exemple complet  
+## <a name="BKMK_Example"></a> Exemple complet  
  Le projet Windows Presentation Foundation (WPF) suivant contient les exemples de code de cette rubrique.  
   
  Pour exécuter le projet, procédez comme suit :  

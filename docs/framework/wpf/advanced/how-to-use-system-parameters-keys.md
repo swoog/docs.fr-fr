@@ -5,12 +5,12 @@ helpviewer_keywords:
 - resource keys [WPF], SystemParameters class
 - classes [WPF], SystemParameters
 ms.assetid: 77571283-d16c-45bb-9f69-cafbbf72b21e
-ms.openlocfilehash: 13658b0bb97d842eecc8679ee64db68ae780a917
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a71551c5d539d7009fb9a052c81928a009fc4c35
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728351"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357194"
 ---
 # <a name="how-to-use-system-parameters-keys"></a>Procédure : Utiliser les clés des paramètres système
 Les ressources système exposent plusieurs métriques système en tant que ressources pour aider les développeurs à créer des visuels cohérents avec les paramètres système. <xref:System.Windows.SystemParameters> est une classe qui contient les valeurs de paramètre système et des clés de ressources liées aux valeurs, par exemple, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> et <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>. Les métriques de paramètres système peuvent être utilisées en tant que ressources statiques ou dynamiques. Utilisez une ressource dynamique si vous souhaitez que les métriques de paramètres soient mises à jour automatiquement pendant que l’application s’exécute ; sinon, utilisez une ressource statique.  
@@ -21,9 +21,9 @@ Les ressources système exposent plusieurs métriques système en tant que resso
  L’exemple suivant montre comment accéder à des ressources dynamiques de paramètres système et comment les utiliser pour personnaliser un bouton ou lui appliquer un style. Cela [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemple dimensionne un bouton en assignant <xref:System.Windows.SystemParameters> valeurs à la largeur et la hauteur du bouton.  
   
 ## <a name="example"></a>Exemple  
- [!code-xaml[SystemRes_snip#ParameterDynamicResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  
+ [!code-xaml[SystemRes_snip#ParameterDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Peindre une zone avec un pinceau système](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [Utiliser des SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
-- [Utiliser SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)
+- [Peindre une zone avec un pinceau système](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [Utiliser des SystemFonts](how-to-use-systemfonts.md)
+- [Utiliser SystemParameters](how-to-use-systemparameters.md)

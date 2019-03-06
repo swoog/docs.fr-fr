@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545028"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352982"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Recommandations pour la conception de contrôles auxquels un style peut être appliqué
 Ce document récapitule un ensemble de meilleures pratiques à envisager lors de la conception d’un contrôle auquel vous souhaitez appliquer facilement un style et un modèle. Ces meilleures pratiques sont issues d’un long processus d’essais et d’erreurs lors de notre travail sur les styles de contrôles de thème pour le jeu de contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] intégré. Nous avons appris qu’un style réussi constitue tout autant une fonction d’un modèle d’objet bien conçu que du style lui-même. Ce document concerne l’auteur du contrôle et non l’auteur du style.  
@@ -27,7 +27,7 @@ Ce document récapitule un ensemble de meilleures pratiques à envisager lors de
   
 -   Modèles de données.  
   
- Pour obtenir une présentation de l’application d’un style et la création de modèles, consultez [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Pour obtenir une présentation de l’application d’un style et la création de modèles, consultez [Application d’un style et création de modèles](styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>Avant de commencer : Présentation de votre contrôle  
@@ -119,5 +119,5 @@ Ce document récapitule un ensemble de meilleures pratiques à envisager lors de
 -   **Les styles de thème ne requièrent pas que la sémantique de « disposition » soit cohérente entre tous les thèmes**. Par exemple, le style par défaut n’a pas besoin de garantir qu’un contrôle occupera le même espace dans tous les thèmes ou qu’un contrôle aura les mêmes marges de contenu / marges intérieures dans tous les thèmes.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Vue d’ensemble de la création de contrôles](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Vue d’ensemble de la création de contrôles](control-authoring-overview.md)

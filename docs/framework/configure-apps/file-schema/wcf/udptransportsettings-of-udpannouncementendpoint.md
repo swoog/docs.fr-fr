@@ -2,15 +2,15 @@
 title: <udpTransportSettings> de <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 349cf7bde8a0fbe76a1a4b22d3eddec93191a20b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1e7cdff1b26afcbea94424ecad5d8d0d9438b54d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262151"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375697"
 ---
 # <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> of \<udpAnnouncementEndpoint>
-Cet élément de configuration expose les paramètres de transport UDP pour [ \<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md).  
+Cet élément de configuration expose les paramètres de transport UDP pour [ \<udpAnnouncementEndpoint >](udpannouncementendpoint.md).  
   
 \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -62,7 +62,7 @@ Cet élément de configuration expose les paramètres de transport UDP pour [ \<
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<udpAnnoucementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)|Point de terminaison standard qui a un contrat d’annonce fixe et une liaison de transport UDP.|  
+|[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|Point de terminaison standard qui a un contrat d’annonce fixe et une liaison de transport UDP.|  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.ServiceModel.Discovery.UdpTransportSettings>

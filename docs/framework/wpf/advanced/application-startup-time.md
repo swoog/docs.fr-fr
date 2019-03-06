@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527326"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379105"
 ---
 # <a name="application-startup-time"></a>Temps de démarrage d'une application
 La quantité de temps nécessaire pour démarrer une application WPF peut varier considérablement. Cette rubrique décrit les différentes techniques permettant de réduire le temps de démarrage (perçu et réel) pour une application Windows Presentation Foundation (WPF).  
@@ -24,7 +24,7 @@ La quantité de temps nécessaire pour démarrer une application WPF peut varier
  Le démarrage à chaud se produit lorsque la plupart des pages pour les principaux composants du common language runtime (CLR) sont déjà chargés en mémoire, ce qui réduit le temps d’accès disque coûteux. C’est pourquoi une application managée démarre plus vite lorsqu’elle s’exécute une deuxième fois.  
   
 ## <a name="implement-a-splash-screen"></a>Implémentation d’un écran de démarrage  
- Dans les cas où il y a un délai notable et inévitable entre le démarrage d’une application et l’affichage de la première interface utilisateur, optimisez le temps de démarrage perçu à l’aide un *écran de démarrage*. Cette approche affiche une image presque immédiatement après que l’utilisateur démarre l’application. Lorsque l’application est prête à afficher sa première interface utilisateur, l’écran de démarrage disparaît en fondu. À compter de la [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], vous pouvez utiliser la <xref:System.Windows.SplashScreen> classe pour implémenter un écran de démarrage. Pour plus d’informations, consultez [Ajouter un écran de démarrage dans une application WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Dans les cas où il y a un délai notable et inévitable entre le démarrage d’une application et l’affichage de la première interface utilisateur, optimisez le temps de démarrage perçu à l’aide un *écran de démarrage*. Cette approche affiche une image presque immédiatement après que l’utilisateur démarre l’application. Lorsque l’application est prête à afficher sa première interface utilisateur, l’écran de démarrage disparaît en fondu. À compter de la [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], vous pouvez utiliser la <xref:System.Windows.SplashScreen> classe pour implémenter un écran de démarrage. Pour plus d’informations, consultez [Ajouter un écran de démarrage dans une application WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  Vous pouvez également implémenter votre propre écran de démarrage à l’aide des graphiques Win32 natifs. Affichez votre implémentation avant le <xref:System.Windows.Application.Run%2A> méthode est appelée.  
   
@@ -53,7 +53,7 @@ La quantité de temps nécessaire pour démarrer une application WPF peut varier
  Envisagez d’éviter la configuration de l’application. Par exemple, si une application a des exigences de configuration simples et des objectifs de temps de démarrage stricts, des entrées de registre ou un fichier INI simple peuvent être une alternative de démarrage plus rapide.  
   
 ## <a name="utilize-the-gac"></a>Utiliser le GAC  
- Si un assembly n’est pas installé dans le Global Assembly Cache (GAC), des retards sont causés par la vérification du hachage des assemblys avec nom fort et la validation des images Ngen si une image native de cet assembly est disponible sur l’ordinateur. La vérification des noms forts est ignorée pour tous les assemblys installés dans le GAC. Pour plus d'informations, consultez [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+ Si un assembly n’est pas installé dans le Global Assembly Cache (GAC), des retards sont causés par la vérification du hachage des assemblys avec nom fort et la validation des images Ngen si une image native de cet assembly est disponible sur l’ordinateur. La vérification des noms forts est ignorée pour tous les assemblys installés dans le GAC. Pour plus d'informations, consultez [Gacutil.exe (Global Assembly Cache Tool)](../../tools/gacutil-exe-gac-tool.md).  
   
 ## <a name="use-ngenexe"></a>Utiliser Ngen.exe  
  Envisagez d’utiliser Native Image Generator (Ngen.exe) sur votre application. L’utilisation de Ngen.exe signifie que vous remplacez une partie de la consommation d’UC par plus d’accès au disque, car l’image native générée par Ngen.exe est susceptible d’être plus grande que l’image MSIL.  
@@ -67,14 +67,14 @@ La quantité de temps nécessaire pour démarrer une application WPF peut varier
 ### <a name="ngen-and-clickonce"></a>ClickOnce et Ngen  
  La façon dont vous prévoyez de déployer votre application peut également faire une différence dans le temps de chargement. Le déploiement d’applications [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] ne prend pas en charge Ngen. Si vous décidez d’utiliser Ngen.exe pour votre application, vous devez utiliser un autre mécanisme de déploiement, comme Windows Installer.  
   
- Pour plus d’informations, consultez [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Pour plus d’informations, consultez [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md).  
   
 ### <a name="rebasing-and-dll-address-collisions"></a>Relocalisation et collisions d’adresses DLL  
  Si vous utilisez Ngen.exe, sachez que la relocalisation peut se produire lorsque des images natives sont chargées en mémoire. Si une DLL n’est pas chargée à son adresse de base préférée car cette plage d’adresses est déjà allouée, le chargeur Windows la chargera à une autre adresse, ce qui peut prendre beaucoup de temps.  
   
  Vous pouvez utiliser l’outil Virtual Address Dump (Vadump.exe) pour vérifier s’il existe des modules dans lesquels toutes les pages sont privées. Si c’est le cas, le module a peut-être été relocalisé à une adresse différente. Par conséquent, ses pages ne peuvent pas être partagées.  
   
- Pour plus d’informations sur la définition de l’adresse de base, consultez [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Pour plus d’informations sur la définition de l’adresse de base, consultez [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="optimize-authenticode"></a>Optimiser Authenticode  
  La vérification Authenticode ajoute au temps de démarrage. Les assemblys signés par Authenticode doivent être vérifiés avec l’autorité de certification (CA). Cette vérification peut prendre du temps, car elle peut requérir la connexion au réseau à plusieurs reprises pour télécharger les listes de révocation de certificats actuelles. Cela garantit également qu’il existe une chaîne complète de certificats valides sur le chemin d’accès à une racine approuvée. Cela peut se traduire par plusieurs secondes de délai lors du chargement de l’assembly.  
@@ -91,7 +91,7 @@ La quantité de temps nécessaire pour démarrer une application WPF peut varier
 </configuration>  
 ```  
   
- Pour plus d’informations, consultez [\<generatePublisherEvidence> Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Pour plus d’informations, consultez [\<generatePublisherEvidence> Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
 ## <a name="compare-performance-on-windows-vista"></a>Comparaison des performances sur Windows Vista  
  Le gestionnaire de mémoire dans Windows Vista possède une technologie appelée SuperFetch. SuperFetch analyse les modèles d’utilisation de la mémoire au fil du temps pour déterminer le contenu de mémoire optimal pour un utilisateur spécifique. Il fonctionne en continu pour conserver ce contenu à tout moment.  
@@ -127,6 +127,6 @@ La quantité de temps nécessaire pour démarrer une application WPF peut varier
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [Ajouter un écran de démarrage dans une application WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (générateur d’images natives)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [Ajouter un écran de démarrage dans une application WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (générateur d’images natives)](../../tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence> Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

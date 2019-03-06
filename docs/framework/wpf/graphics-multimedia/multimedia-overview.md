@@ -5,12 +5,12 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: aa8d1a33fb415b986bc5e058f5d198c221f9f489
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493168"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352763"
 ---
 # <a name="multimedia-overview"></a>Vue d'ensemble du multimédia
 Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permettent d’intégrer des données audio et vidéo dans vos applications afin d’améliorer l’expérience utilisateur. Cette rubrique présente les fonctionnalités multimédias de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -21,9 +21,9 @@ Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../in
 ## <a name="media-api"></a>API Media  
  Le <xref:System.Windows.Controls.MediaElement> et <xref:System.Windows.Media.MediaPlayer> classes sont utilisées pour présenter du contenu audio ou vidéo. Ces classes peuvent être contrôlées interactivement ou par une horloge. Ces classes peuvent être utilisées sur le contrôle [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 pour la lecture multimédia. La classe que vous allez utiliser dépend du scénario.  
   
- <xref:System.Windows.Controls.MediaElement> est un <xref:System.Windows.UIElement> qui est pris en charge par le [disposition](../../../../docs/framework/wpf/advanced/layout.md) et peuvent être utilisées en tant que le contenu de nombreux contrôles. Il est également utilisable en langage [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ainsi que dans du code. <xref:System.Windows.Media.MediaPlayer>, en revanche, est conçu pour <xref:System.Windows.Media.Drawing> des objets et ne dispose pas de prise en charge de la mise en page. Média chargé à l’aide un <xref:System.Windows.Media.MediaPlayer> peuvent uniquement être présentés à l’aide un <xref:System.Windows.Media.VideoDrawing> ou en interagissant directement avec un <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer> ne peut pas être utilisé dans XAML.  
+ <xref:System.Windows.Controls.MediaElement> est un <xref:System.Windows.UIElement> qui est pris en charge par le [disposition](../advanced/layout.md) et peuvent être utilisées en tant que le contenu de nombreux contrôles. Il est également utilisable en langage [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ainsi que dans du code. <xref:System.Windows.Media.MediaPlayer>, en revanche, est conçu pour <xref:System.Windows.Media.Drawing> des objets et ne dispose pas de prise en charge de la mise en page. Média chargé à l’aide un <xref:System.Windows.Media.MediaPlayer> peuvent uniquement être présentés à l’aide un <xref:System.Windows.Media.VideoDrawing> ou en interagissant directement avec un <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer> ne peut pas être utilisé dans XAML.  
   
- Pour plus d’informations sur les objets de dessin et le contexte de dessin, consultez [Vue d’ensemble des objets Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Pour plus d’informations sur les objets de dessin et le contexte de dessin, consultez [Vue d’ensemble des objets Drawing](drawing-objects-overview.md).  
   
 > [!NOTE]
 >  Lorsque vous distribuez un contenu multimédia avec votre application, vous ne pouvez pas utiliser de fichier multimédia comme ressource de projet. Dans votre fichier projet, vous devez plutôt définir le type de média sur `Content` et définir `CopyToOutputDirectory` sur `PreserveNewest` ou `Always`.  
@@ -49,7 +49,7 @@ Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../in
   
  Pour contrôler la lecture du média en mode indépendant, les méthodes de contrôle de l’objet média peuvent être utilisées. Les méthodes de contrôle disponibles sont <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, et <xref:System.Windows.Controls.MediaElement.Stop%2A>. Pour <xref:System.Windows.Controls.MediaElement>, le contrôle interactif à l’aide de ces méthodes est disponible uniquement lorsque le <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> est défini sur <xref:System.Windows.Controls.MediaState.Manual>. Ces méthodes ne sont pas disponibles lorsque l’objet média est en mode horloge.  
   
- Consultez la page [Contrôler un MediaElement (lecture, pause, arrêt, volume et vitesse)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md) pour obtenir un exemple de mode indépendant.  
+ Consultez la page [Contrôler un MediaElement (lecture, pause, arrêt, volume et vitesse)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md) pour obtenir un exemple de mode indépendant.  
   
 ### <a name="clock-mode"></a>Mode horloge  
  En mode horloge, un <xref:System.Windows.Media.MediaTimeline> la lecture du média lecteurs. Le mode horloge présente les caractéristiques suivantes :  
@@ -62,15 +62,15 @@ Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../in
   
  Pour contrôler la lecture média en mode horloge, la <xref:System.Windows.Media.Animation.ClockController> doivent utiliser les méthodes de contrôle. Un <xref:System.Windows.Media.Animation.ClockController> est obtenu à partir de la <xref:System.Windows.Media.Animation.ClockController> propriété de la <xref:System.Windows.Media.MediaClock>. Si vous essayez d’utiliser les méthodes de contrôle d’un <xref:System.Windows.Controls.MediaElement> ou <xref:System.Windows.Media.MediaPlayer> de l’objet en mode horloge, une <xref:System.InvalidOperationException> sera levée.  
   
- Pour plus d’informations sur les horloges et les chronologies, consultez l’article [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Pour plus d’informations sur les horloges et les chronologies, consultez l’article [Vue d’ensemble de l’animation](animation-overview.md).  
   
- Pour obtenir un exemple du mode horloge, consultez la page [Contrôler un MediaElement à l’aide d’un Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md).  
+ Pour obtenir un exemple du mode horloge, consultez la page [Contrôler un MediaElement à l’aide d’un Storyboard](how-to-control-a-mediaelement-by-using-a-storyboard.md).  
   
 <a name="mediaelement"></a>   
 ## <a name="mediaelement-class"></a>Classe MediaElement  
  Ajouter des médias à une application est aussi simple que l’ajout d’un <xref:System.Windows.Controls.MediaElement> le contrôle à la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de l’application et en fournissant un <xref:System.Uri> sur le support que vous souhaitez inclure. Tous les types de média pris en charge par [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 sont pris en charge dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. L’exemple suivant montre une utilisation simple du <xref:System.Windows.Controls.MediaElement> dans [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
- [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
+ [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
   
  Dans cet exemple, le média est lu automatiquement dès qu’il est chargé. Une fois la lecture du média terminée, le média est fermé et toutes les ressources du média sont libérées (y compris la mémoire vidéo). Il s’agit du comportement par défaut de la <xref:System.Windows.Controls.MediaElement> de l’objet et est contrôlé par le <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> et <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> propriétés.  
   
@@ -108,11 +108,11 @@ Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../in
 ### <a name="displaying-a-mediaplayer"></a>Afficher un MediaPlayer  
  Techniquement, un <xref:System.Windows.Media.MediaPlayer> ne peut pas être affichée dans la mesure où il n’a aucune représentation physique. Toutefois, il peut être utilisé pour présenter le média dans un <xref:System.Windows.Media.Drawing> à l’aide de la <xref:System.Windows.Media.VideoDrawing> classe. L’exemple suivant illustre l’utilisation d’un <xref:System.Windows.Media.VideoDrawing> pour afficher le média.  
   
- [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
+ [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- Consultez le [vue d’ensemble des objets Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md) pour plus d’informations sur <xref:System.Windows.Media.Drawing> objets.  
+ Consultez le [vue d’ensemble des objets Drawing](drawing-objects-overview.md) pour plus d’informations sur <xref:System.Windows.Media.Drawing> objets.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.DrawingGroup>
-- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)
+- [Disposition](../advanced/layout.md)
+- [Rubriques de guide pratique](audio-and-video-how-to-topics.md)

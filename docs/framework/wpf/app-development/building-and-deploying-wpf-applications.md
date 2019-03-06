@@ -8,33 +8,33 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 874a184939f95f155ddaee053c33fe66c4db15d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547139"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368049"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Génération et déploiement d'applications WPF
-Le modèle de build et de déploiement permet de générer et déployer des applications localement et à distance, notamment les suivantes :  
+Le modèle de génération et de déploiement fournit la capacité à créer et déployer des applications localement et à distance, y compris les éléments suivants :  
   
--   MSBuild : .NET générer système situé dans l’espace de noms Microsoft.Build.Tasks.Windows.  
+-   MSBuild : .NET build système situé dans l’espace de noms Microsoft.Build.Tasks.Windows.  
   
 -   Ressources : utilisation des ressources de l’interface utilisateur.  
   
 -   Déploiement ClickOnce : la publication et déploiement système .NET.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Génération d’une application WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Déploiement d’une application WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [Génération d’une application WPF](building-a-wpf-application-wpf.md)  
+ [Déploiement d’une application WPF](deploying-a-wpf-application-wpf.md)  
+ [Rubriques de guide pratique](build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  MSBuild  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Vue d’ensemble de la gestion d’applications](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Fenêtres dans les applications WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Vue d’ensemble de la navigation](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Vue d’ensemble des applications du navigateur XAML WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-  [Hébergement](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)
+ [Vue d’ensemble de la gestion d’applications](application-management-overview.md)  
+  [Fenêtres dans les applications WPF](windows-in-wpf-applications.md)  
+  [Vue d’ensemble de la navigation](navigation-overview.md)  
+  [Vue d’ensemble des applications du navigateur XAML WPF](wpf-xaml-browser-applications-overview.md)  
+  [Hébergement](hosting-wpf-applications.md)

@@ -7,27 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555427"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361926"
 ---
 # <a name="toolbar"></a>ToolBar
-Le <xref:System.Windows.Controls.ToolBar> contrôle est un conteneur pour un groupe de commandes ou des contrôles qui sont généralement associés dans leur fonction.  
+Le <xref:System.Windows.Controls.ToolBar> contrôle est un conteneur pour un groupe de commandes ou des contrôles qui sont généralement associées dans leur fonction.  
   
- Les illustrations suivantes montrent horizontal et vertical <xref:System.Windows.Controls.ToolBar> contrôles.  
+ Les illustrations suivantes montrent horizontales et verticales <xref:System.Windows.Controls.ToolBar> contrôles.  
   
- ![Barre d’outils horizontale](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
+ ![Barre d’outils horizontale](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
 Barre d’outils horizontale  
   
- ![Barre d’outils verticale](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
+ ![Barre d’outils verticale](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
 Barre d’outils verticale  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble de ToolBar](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [Donner un style aux contrôles d'une barre d'outils](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [Vue d'ensemble de ToolBar](toolbar-overview.md)  
+  [Donner un style aux contrôles d'une barre d'outils](how-to-style-controls-on-a-toolbar.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.ToolBar>  

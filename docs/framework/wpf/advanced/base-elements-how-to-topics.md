@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 09f3a88d-b132-4505-a8bb-55cbfc6bb55a
-ms.openlocfilehash: df9628fab80faf6431290bbc4176a6e0d148dc8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f0d53d1ec37d200c20ed1b0053b8992cf89c4e0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540460"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370941"
 ---
 # <a name="base-elements-how-to-topics"></a>Rubriques "Comment" relatives aux éléments de base
 Les rubriques de cette section décrivent comment utiliser les quatre éléments de base WPF : <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, et <xref:System.Windows.FrameworkContentElement>.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Rendre un UIElement transparent ou semi-transparent](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [Animer la taille d'un FrameworkElement](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [Déterminer si un Freezable est gelé](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [Gérer un événement chargé](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [Définir les marges d'éléments et de contrôles](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [Mettre un Freezable en lecture seule](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [Obtenir une copie en écriture d'un Freezable en lecture seule](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [Retourner un UIElement horizontalement ou verticalement](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [Utiliser un objet ThicknessConverter](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [Gérer l’événement ContextMenuOpening](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+ [Rendre un UIElement transparent ou semi-transparent](how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [Animer la taille d'un FrameworkElement](how-to-animate-the-size-of-a-frameworkelement.md)  
+ [Déterminer si un Freezable est gelé](how-to-determine-whether-a-freezable-is-frozen.md)  
+ [Gérer un événement chargé](how-to-handle-a-loaded-event.md)  
+ [Définir les marges d'éléments et de contrôles](how-to-set-margins-of-elements-and-controls.md)  
+ [Mettre un Freezable en lecture seule](how-to-make-a-freezable-read-only.md)  
+ [Obtenir une copie en écriture d'un Freezable en lecture seule](how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [Retourner un UIElement horizontalement ou verticalement](how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [Utiliser un objet ThicknessConverter](how-to-use-a-thicknessconverter-object.md)  
+ [Gérer l’événement ContextMenuOpening](how-to-handle-the-contextmenuopening-event.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.UIElement>  
@@ -38,4 +38,4 @@ Les rubriques de cette section décrivent comment utiliser les quatre éléments
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Éléments de base](../../../../docs/framework/wpf/advanced/base-elements.md)
+ [Éléments de base](base-elements.md)

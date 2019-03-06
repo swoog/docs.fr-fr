@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981541"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355127"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limite les conversions de type de données implicites aux seules conversions étendues, interdit les liaisons tardives et interdit le typage implicite qui aboutit à un `Object` type.  
@@ -113,7 +113,7 @@ Option Strict { On | Off }
   
 2.  Sur le **compiler** onglet, définissez la valeur dans le **Option Strict** boîte.  
   
-###  <a name="conditions"></a> Pour définir les configurations des avertissements dans l’IDE  
+### <a name="conditions"></a> Pour définir les configurations des avertissements dans l’IDE  
  Lorsque vous utilisez le [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) au lieu d’un `Option Strict` instruction, vous avez un contrôle supplémentaire sur les conditions qui génèrent des erreurs. Le **configurations des avertissements** section de la **Page Compiler** possède des paramètres qui correspondent aux trois conditions qui provoquent une erreur de compilation lorsque `Option Strict` est sur. Voici ces paramètres :  
   
 -   **Conversion implicite**  

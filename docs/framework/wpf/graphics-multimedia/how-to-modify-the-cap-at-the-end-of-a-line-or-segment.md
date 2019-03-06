@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Shape elements [WPF], caps
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-ms.openlocfilehash: 9476fad503cf761672ae8460fcffb860ff683310
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba61b30b4ff575bb504f792f8990bbfc64a6c33e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645013"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371474"
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Procédure : Modifier l'embout à la fin d'une ligne ou d'un segment
 Cet exemple montre comment modifier la forme au début ou à la fin d’une ouverture <xref:System.Windows.Shapes.Shape> élément. Pour modifier l’embout au début d’une ouverture <xref:System.Windows.Shapes.Shape>, utilisez son <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> propriété. Pour modifier l’embout à la fin d’une ouverture <xref:System.Windows.Shapes.Shape>, utilisez son <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> propriété. Pour afficher les embouts de ligne disponibles, consultez le <xref:System.Windows.Media.PenLineCap> énumération.  
@@ -22,7 +22,7 @@ Cet exemple montre comment modifier la forme au début ou à la fin d’une ouve
  L’exemple suivant dessine quatre <xref:System.Windows.Shapes.Polyline> éléments et utilise un autre ensemble de formes à la fin de chacun d’eux.  
   
 ## <a name="example"></a>Exemple  
- [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
+ [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
   
  Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037).  
   

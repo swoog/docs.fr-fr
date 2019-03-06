@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682954"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371669"
 ---
 # <a name="attached-events-overview"></a>Vue d'ensemble des événements attachés
 Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] définit un composant de langage et un type d’événement appelé *événement attaché*. Le concept d’un événement attaché vous permet d’ajouter un gestionnaire pour un événement particulier à un élément arbitraire plutôt qu’à un élément qui définit réellement l’événement ou qui en hérite. Dans ce cas, ni l’objet qui déclenche potentiellement l’événement, ni l’instance de gestion de destination ne définit ou ne « détient » l’événement.  
@@ -26,7 +26,7 @@ Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] défini
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique suppose que vous avez lu [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md) et [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Cette rubrique suppose que vous avez lu [Vue d’ensemble des événements routés](routed-events-overview.md) et [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>Syntaxe d’un événement attaché  
@@ -36,7 +36,7 @@ Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] défini
   
  Par exemple, vous trouverez ci-dessous la syntaxe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nécessaire pour attacher un gestionnaire à un événement attaché `NeedsCleaning` personnalisé :  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  Notez le préfixe `aqua:`. Ce préfixe est nécessaire dans le cas présent, car l’événement attaché est un événement personnalisé qui provient d’un fichier xmlns mappé personnalisé.  
   
@@ -58,7 +58,7 @@ Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] défini
   
  En général, un événement attaché [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’est pas très différent d’un événement routé [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Les différences portent sur la provenance de l’événement et sur la façon dont il est exposé par une classe en tant que membre (ce qui affecte également la syntaxe du gestionnaire [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]).  
   
- Toutefois, comme indiqué précédemment, les événements attachés [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existants ne sont pas particulièrement destinés à être gérés dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le plus souvent, le but de l’événement est de permettre à un élément composé de signaler un état à un élément parent au moment de la composition. Dans ce cas, l’événement est généralement déclenché dans du code et compte également sur une gestion de classe dans la classe parente appropriée. Par exemple, les éléments dans un <xref:System.Windows.Controls.Primitives.Selector> sont supposés déclencher le fichier joint <xref:System.Windows.Controls.Primitives.Selector.Selected> événement, qui est ensuite classe géré par le <xref:System.Windows.Controls.Primitives.Selector> classe et puis éventuellement converti en la <xref:System.Windows.Controls.Primitives.Selector> classe dans un événement routé différent, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Pour plus d’informations sur les événements routés et la gestion de classe, consultez [Marquage des événements routés comme gérés et gestion de classe](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Toutefois, comme indiqué précédemment, les événements attachés [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existants ne sont pas particulièrement destinés à être gérés dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le plus souvent, le but de l’événement est de permettre à un élément composé de signaler un état à un élément parent au moment de la composition. Dans ce cas, l’événement est généralement déclenché dans du code et compte également sur une gestion de classe dans la classe parente appropriée. Par exemple, les éléments dans un <xref:System.Windows.Controls.Primitives.Selector> sont supposés déclencher le fichier joint <xref:System.Windows.Controls.Primitives.Selector.Selected> événement, qui est ensuite classe géré par le <xref:System.Windows.Controls.Primitives.Selector> classe et puis éventuellement converti en la <xref:System.Windows.Controls.Primitives.Selector> classe dans un événement routé différent, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Pour plus d’informations sur les événements routés et la gestion de classe, consultez [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>Définition de vos propres événements attachés en tant qu’événements routés  
@@ -80,10 +80,10 @@ Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] défini
   
  Par exemple, le code suivant définit l’événement attaché `NeedsCleaning` sur la classe propriétaire `Aquarium` à l’aide de la stratégie d’événement attaché [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] qui consiste à déclarer l’événement attaché en tant qu’événement routé.  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Notez que la méthode utilisée pour établir le champ d’identificateur de l’événement attaché, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, est en fait la même méthode qui est utilisée pour inscrire un événement routé non attaché. Les événements attachés et les événements routés sont tous inscrits dans un magasin interne centralisé. Cette implémentation du magasin d’événements rend possible la considération conceptuelle des « événements en tant qu’interface » traitée dans [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Notez que la méthode utilisée pour établir le champ d’identificateur de l’événement attaché, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, est en fait la même méthode qui est utilisée pour inscrire un événement routé non attaché. Les événements attachés et les événements routés sont tous inscrits dans un magasin interne centralisé. Cette implémentation du magasin d’événements rend possible la considération conceptuelle des « événements en tant qu’interface » traitée dans [Vue d’ensemble des événements routés](routed-events-overview.md).  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>Déclenchement d’un événement attaché WPF  
@@ -92,6 +92,6 @@ Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] défini
  Toutefois, si vous définissez un événement attaché personnalisé basé sur le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modèle de baser les événements attachés sur <xref:System.Windows.RoutedEvent>, vous pouvez utiliser <xref:System.Windows.UIElement.RaiseEvent%2A> pour déclencher un événement attaché à partir d’un <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement>. Le déclenchement d’un événement routé (attaché ou non) nécessite que vous déclarez un élément particulier dans l’arborescence d’éléments comme la source d’événements ; Cette source est signalée comme le <xref:System.Windows.UIElement.RaiseEvent%2A> appelant. Votre service est chargé de déterminer quel est l’élément signalé en tant que source dans l’arborescence  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Syntaxe XAML en détail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [XAML et classes personnalisées pour WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Vue d’ensemble des événements routés](routed-events-overview.md)
+- [Syntaxe XAML en détail](xaml-syntax-in-detail.md)
+- [XAML et classes personnalisées pour WPF](xaml-and-custom-classes-for-wpf.md)

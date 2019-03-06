@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595108"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378833"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marquage des événements routés comme étant gérés et gestion de classe
 Les gestionnaires d’un événement routé peuvent marquer l’événement comme étant géré dans les données d’événement. La gestion de l’événement a pour effet de raccourcir efficacement l’itinéraire. La gestion de classe est un concept de programmation pris en charge par les événements routés. Un gestionnaire de classe peut gérer un événement routé particulier au niveau d’une classe à l’aide d’un gestionnaire appelé avant tout gestionnaire d’instance sur une instance de la classe.  
@@ -31,7 +31,7 @@ Les gestionnaires d’un événement routé peuvent marquer l’événement comm
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique décrit plus en détail les concepts introduits dans [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Cette rubrique décrit plus en détail les concepts introduits dans [Vue d’ensemble des événements routés](routed-events-overview.md).  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>Quand marquer des événements comme étant gérés  
@@ -47,7 +47,7 @@ Les gestionnaires d’un événement routé peuvent marquer l’événement comm
   
  La connexion entre les événements routés de tunneling et de propagation est établie par l’implémentation interne du mode de déclenchement des événements routés déclarés d’une classe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] donnée, et cela s’applique aux événements routés d’entrée associés. Cependant, à moins que cette implémentation au niveau de la classe existe, aucune connexion n’est établie entre un événement routé de tunneling et un événement routé de propagation qui partagent le modèle de nommage : sans cette implémentation, ils deviendraient deux événements routés totalement distincts et ne seraient pas déclenchés dans l’ordre, ni ne partageraient les données d’événement.  
   
- Pour plus d’informations sur l’implémentation des paires d’événements routés d’entrée de tunneling/propagation dans une classe personnalisée, consultez [Créer un événement routé personnalisé](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ Pour plus d’informations sur l’implémentation des paires d’événements routés d’entrée de tunneling/propagation dans une classe personnalisée, consultez [Créer un événement routé personnalisé](how-to-create-a-custom-routed-event.md).  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Gestionnaires de classe et gestionnaires d’instance  
@@ -100,6 +100,6 @@ Les gestionnaires d’un événement routé peuvent marquer l’événement comm
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.EventManager>
-- [Événements Preview](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [Créer un événement routé personnalisé](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Événements Preview](preview-events.md)
+- [Créer un événement routé personnalisé](how-to-create-a-custom-routed-event.md)
+- [Vue d’ensemble des événements routés](routed-events-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: d460eac13b99a503244503bdc3bbcaccfe649205
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa7eca674bd2758358bec244f2a21a341526d4b8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600230"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377080"
 ---
 # <a name="sample-opentype-font-pack"></a>Exemple de pack de polices OpenType
 Cette rubrique fournit une vue d’ensemble des polices d’exemple [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] qui sont distribuées avec le [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Les exemples de polices prennent en charge des fonctionnalités [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] étendues qui peuvent être utilisées par les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -34,7 +34,7 @@ Cette rubrique fournit une vue d’ensemble des polices d’exemple [!INCLUDE[TL
   
  L’illustration suivante montre à quoi ressemblent les exemples de polices [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
- ![Liste de noms de polices dans l’exemple de pack de polices](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
+ ![Liste de noms de polices dans l’exemple de pack de polices](./media/samplefontpack01.gif "samplefontpack01")  
 Polices du pack de polices OpenType  
   
  Les exemples de polices sont fournis sous licence Ascender Corporation. Ascender est un fournisseur de polices avancées. Pour obtenir une licence des versions étendues ou personnalisées des exemples de polices, consultez le [site web d’Ascender Corporation](https://go.microsoft.com/fwlink/?LinkId=182627).  
@@ -46,14 +46,14 @@ Polices du pack de polices OpenType
 ## <a name="installing-the-fonts"></a>Installation des polices  
  Vous pouvez installer les exemples de polices [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] dans le répertoire de polices [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] par défaut **\WINDOWS\Fonts**. Utilisez le panneau de configuration des polices pour installer les polices. Une fois que les polices sont installées sur votre ordinateur, elles sont accessibles à toutes les applications qui référencent les polices [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] par défaut. Pour afficher un jeu de caractères représentatif dans plusieurs tailles de police, double-cliquez sur le fichier de police. La capture d’écran suivante montre le fichier de police Lindsey, Linds.ttf.  
   
- ![Police Lindsey &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Police Lindsey &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Affichage de la police Lindsey  
   
 <a name="using_the_fonts"></a>   
 ## <a name="using-the-fonts"></a>Utilisation des polices  
- Vous pouvez utiliser des polices dans votre application de deux manières. Vous pouvez ajouter des polices à votre application sous forme d’éléments de contenu de projet qui ne sont pas incorporés comme des ressources d’assembly. Vous pouvez également ajouter des polices à votre application sous forme d’éléments de ressource de projet incorporés qui sont incorporés dans les fichiers d’assembly de l’application. Pour plus d’informations, consultez [Empaquetage de polices avec des applications](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).  
+ Vous pouvez utiliser des polices dans votre application de deux manières. Vous pouvez ajouter des polices à votre application sous forme d’éléments de contenu de projet qui ne sont pas incorporés comme des ressources d’assembly. Vous pouvez également ajouter des polices à votre application sous forme d’éléments de ressource de projet incorporés qui sont incorporés dans les fichiers d’assembly de l’application. Pour plus d’informations, consultez [Empaquetage de polices avec des applications](packaging-fonts-with-applications.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Documents.Typography>
-- [Fonctionnalités des polices OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
-- [Empaquetage de polices avec des applications](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+- [Fonctionnalités des polices OpenType](opentype-font-features.md)
+- [Empaquetage de polices avec des applications](packaging-fonts-with-applications.md)

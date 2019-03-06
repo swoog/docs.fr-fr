@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 1a8eb1acf1143c31197ef12e4be3bd4451d98eaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 582179d8469cabc3551e1bed53c87e045f26e7cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685436"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366073"
 ---
 # <a name="datagrid-styles-and-templates"></a>Styles et modèles DataGrid
-Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.DataGrid> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.DataGrid> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner le contrôle une apparence unique. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="datagrid-parts"></a>Composants de DataGrid  
  Le tableau suivant répertorie les composants nommés pour le <xref:System.Windows.Controls.DataGrid> contrôle.  
@@ -28,7 +28,7 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
   
  Lorsque vous créez un <xref:System.Windows.Controls.ControlTemplate> pour un <xref:System.Windows.Controls.DataGrid>, votre modèle peut contenir un <xref:System.Windows.Controls.ItemsPresenter> au sein d’un <xref:System.Windows.Controls.ScrollViewer>. (Le <xref:System.Windows.Controls.ItemsPresenter> affiche chaque élément dans le <xref:System.Windows.Controls.DataGrid>; le <xref:System.Windows.Controls.ScrollViewer> permet le défilement dans le contrôle).  Si le <xref:System.Windows.Controls.ItemsPresenter> n’est pas l’enfant direct de la <xref:System.Windows.Controls.ScrollViewer>, vous devez donner le <xref:System.Windows.Controls.ItemsPresenter> le nom, `ItemsPresenter`.  
   
- Le modèle par défaut pour le <xref:System.Windows.Controls.DataGrid> contient un <xref:System.Windows.Controls.ScrollViewer> contrôle. Pour plus d’informations sur les composants définis par le <xref:System.Windows.Controls.ScrollViewer>, consultez [ScrollViewer Styles et modèles](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).  
+ Le modèle par défaut pour le <xref:System.Windows.Controls.DataGrid> contient un <xref:System.Windows.Controls.ScrollViewer> contrôle. Pour plus d’informations sur les composants définis par le <xref:System.Windows.Controls.ScrollViewer>, consultez [ScrollViewer Styles et modèles](scrollviewer-styles-and-templates.md).  
   
 ## <a name="datagrid-states"></a>États de DataGrid  
  Le tableau suivant répertorie les états visuels pour le <xref:System.Windows.Controls.DataGrid> contrôle.  
@@ -53,7 +53,7 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |MouseOver|CommonStates|Le pointeur de la souris est positionné sur la cellule.|  
 |Avec focus|FocusStates|La cellule a le focus.|  
 |Sans focus|FocusStates|La cellule n’a pas le focus|  
-|Actuel|CurrentStates|La cellule est la cellule active.|  
+|Actuelle|CurrentStates|La cellule est la cellule active.|  
 |Normale|CurrentStates|La cellule n’est pas la cellule active.|  
 |Afficher|InteractionStates|La cellule est en mode d’affichage.|  
 |Modification|InteractionStates|La cellule est en mode édition.|  
@@ -161,18 +161,18 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 ## <a name="datagrid-controltemplate-example"></a>Exemple de ControlTemplate de DataGrid  
  L’exemple suivant montre comment définir un <xref:System.Windows.Controls.ControlTemplate> pour la <xref:System.Windows.Controls.DataGrid> contrôle et ses types associés.  
   
- [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
  L’exemple précédent utilise une ou plusieurs des ressources suivantes.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Styles et modèles Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Personnalisation des contrôles](../../../../docs/framework/wpf/controls/control-customization.md)
-- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Styles et modèles Control](control-styles-and-templates.md)
+- [Personnalisation des contrôles](control-customization.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

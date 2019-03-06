@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 120e2ecdf5869200fa9280ce3fc0a2a3a76c667f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f0d01dffe0f8dad2b1e9af75d6642c68be3ee0f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748321"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379092"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Déploiement d'une application WPF (WPF)
 Une fois que les applications de Windows Presentation Foundation (WPF) sont créées, elles doivent être déployées. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] et le .NET Framework inclut plusieurs technologies de déploiement. La technologie de déploiement utilisée pour déployer une application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dépend du type d’application. Cette rubrique fournit une vue d’ensemble des différentes technologies de déploiement et explique leur utilisation avec les spécifications de déploiement de chaque type d’application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -80,11 +80,11 @@ Une fois que les applications de Windows Presentation Foundation (WPF) sont cré
 ### <a name="deploying-markup-only-xaml-applications"></a>Déploiement d’applications XAML à balisage  
  Les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] à balisage sont généralement publiées sur des serveurs web, comme des pages [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)], et peuvent être affichées avec [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]. Les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] à balisage sont exécutées dans un bac à sable (sandbox) de sécurité de confiance partielle en fonction de restrictions définies par le jeu d’autorisations de la zone Internet. Ainsi, les applications web [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] disposent d’un bac à sable (sandbox) de sécurité équivalent.  
   
- Pour plus d’informations sur la sécurité pour les applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], consultez [Sécurité](../../../../docs/framework/wpf/security-wpf.md).  
+ Pour plus d’informations sur la sécurité pour les applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], consultez [Sécurité](../security-wpf.md).  
   
  Les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] à balisage peuvent être installées sur le système de fichiers local à l’aide de XCopy ou de [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Ces pages peuvent être visualisés [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] ou de l’Explorateur Windows.  
   
- Pour plus d’informations sur XAML, consultez [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Pour plus d’informations sur XAML, consultez [Vue d’ensemble du langage XAML (WPF)](../advanced/xaml-overview-wpf.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Déploiement d’applications du navigateur XAML  
@@ -97,7 +97,7 @@ Une fois que les applications de Windows Presentation Foundation (WPF) sont cré
 -   *ApplicationName*. exe.manifest : Manifeste d’application.  
   
 > [!NOTE]
->  Pour plus d’informations sur les manifestes de déploiement et d’application, consultez [Génération d’une application WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+>  Pour plus d’informations sur les manifestes de déploiement et d’application, consultez [Génération d’une application WPF](building-a-wpf-application-wpf.md).  
   
  Ces fichiers sont produits quand une [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] est générée. Pour plus d'informations, voir [Procédure : Créer un nouveau projet d’Application de navigateur WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Comme les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] à balisage, les [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] sont généralement publiées sur un serveur web et affichées avec [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
@@ -109,7 +109,7 @@ Une fois que les applications de Windows Presentation Foundation (WPF) sont cré
   
  Par défaut, ClickOnce publie les fichiers d’application avec l’extension .deploy. Cela peut s’avérer problématique, mais peut être désactivé. Pour plus d’informations, consultez [Problèmes de configuration de serveur et de client lors de déploiements ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   
- Pour plus d’informations sur le déploiement des [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], consultez [Vue d’ensemble des applications de navigateur XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+ Pour plus d’informations sur le déploiement des [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], consultez [Vue d’ensemble des applications de navigateur XAML](wpf-xaml-browser-applications-overview.md).  
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Installation du .NET Framework  
@@ -121,8 +121,8 @@ Une fois que les applications de Windows Presentation Foundation (WPF) sont cré
   
  La détection automatique de .NET framework est disponible sur [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], et [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] les clients qui ont [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] ou version ultérieure.  
   
- Pour plus d’informations, consultez [Déploiement d’applications et du .NET Framework](../../../../docs/framework/deployment/index.md).  
+ Pour plus d’informations, consultez [Déploiement d’applications et du .NET Framework](../../deployment/index.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Génération d’une application WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
-- [Sécurité](../../../../docs/framework/wpf/security-wpf.md)
+- [Génération d’une application WPF](building-a-wpf-application-wpf.md)
+- [Sécurité](../security-wpf.md)

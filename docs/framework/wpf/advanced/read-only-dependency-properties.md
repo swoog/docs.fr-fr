@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 256790880e6fcf3bd2492d3f3f00b532f6a31eea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568129"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379002"
 ---
 # <a name="read-only-dependency-properties"></a>Propriétés de dépendance en lecture seule
 Cette rubrique décrit les propriétés de dépendance en lecture seule, y compris les propriétés de dépendance en lecture seule existantes, et les scénarios et techniques de création d’une propriété de dépendance en lecture seule personnalisée.  
@@ -19,7 +19,7 @@ Cette rubrique décrit les propriétés de dépendance en lecture seule, y compr
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique part du principe que vous comprenez les scénarios de base de l’implémentation d’une propriété de dépendance et que vous savez comment les métadonnées sont appliquées à une propriété de dépendance personnalisée. Pour plus d’informations sur le contexte, consultez [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) et [Métadonnées de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ Cette rubrique part du principe que vous comprenez les scénarios de base de l’implémentation d’une propriété de dépendance et que vous savez comment les métadonnées sont appliquées à une propriété de dépendance personnalisée. Pour plus d’informations sur le contexte, consultez [Propriétés de dépendance personnalisées](custom-dependency-properties.md) et [Métadonnées de propriété de dépendance](dependency-property-metadata.md).  
   
 <a name="existing"></a>   
 ## <a name="existing-read-only-dependency-properties"></a>Propriétés de dépendance en lecture seule existantes  
@@ -31,7 +31,7 @@ Cette rubrique décrit les propriétés de dépendance en lecture seule, y compr
 ## <a name="creating-custom-read-only-dependency-properties"></a>Création de propriétés de dépendance en lecture seule personnalisées  
  Lisez attentivement la section ci-dessus qui explique pourquoi les propriétés de dépendance en lecture seule ne fonctionnent pas dans de nombreux scénarios de propriété de dépendance classiques. Toutefois, si vous avez un scénario approprié, vous pouvez créer votre propre propriété de dépendance en lecture seule.  
   
- Une grande partie du processus de création d’une propriété de dépendance en lecture seule est identique à celui décrit dans les rubriques [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) et [Implémenter une propriété de dépendance](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md). Il existe trois différences majeures :  
+ Une grande partie du processus de création d’une propriété de dépendance en lecture seule est identique à celui décrit dans les rubriques [Propriétés de dépendance personnalisées](custom-dependency-properties.md) et [Implémenter une propriété de dépendance](how-to-implement-a-dependency-property.md). Il existe trois différences majeures :  
   
 -   Lorsque vous inscrivez votre propriété, appelez le <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> méthode au lieu de la normale <xref:System.Windows.DependencyProperty.Register%2A> méthode d’inscription de propriété.  
   
@@ -41,9 +41,9 @@ Cette rubrique décrit les propriétés de dépendance en lecture seule, y compr
   
  Indépendamment de la valeur ou champ privé que vous utilisez, le stockage de votre propriété de dépendance en lecture seule peut être entièrement inscriptible en utilisant la logique de votre choix. Toutefois, la méthode la plus simple pour définir la propriété initialement ou dans le cadre de la logique d’exécution est d’utiliser les [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] du système de propriétés plutôt que de contourner le système de propriétés et de définir directement le champ de stockage privé. En particulier, il existe une signature de <xref:System.Windows.DependencyObject.SetValue%2A> qui accepte un paramètre de type <xref:System.Windows.DependencyPropertyKey>. Comment et où vous définissez la valeur par programmation au sein de votre logique d’application affecteront la manière dont vous voulez définir l’accès sur le <xref:System.Windows.DependencyPropertyKey> créé quand vous avez inscrit la propriété de dépendance. Si vous gérez cette logique entièrement dans la classe, vous pouvez indiquer qu’elle est privée ou, si vous voulez qu’elle soit définie à partir d’autres parties de l’assembly, vous pouvez la définir en interne. Une approche consiste à appeler <xref:System.Windows.DependencyObject.SetValue%2A> au sein d’un gestionnaire d’événements de classe d’un événement pertinent qui indique à une instance de classe, la valeur de propriété stockée doit être modifiée. Une autre approche consiste à relier les propriétés de dépendance à l’aide associée <xref:System.Windows.PropertyChangedCallback> et <xref:System.Windows.CoerceValueCallback> rappels dans le cadre des métadonnées de ces propriétés lors de l’inscription.  
   
- Étant donné que le <xref:System.Windows.DependencyPropertyKey> est privé et n’est pas propagé par le système de propriétés en dehors de votre code, une propriété de dépendance en lecture seule a de mieux de la sécurité de paramétrage qu’une propriété de dépendance en lecture-écriture. Pour une propriété de dépendance en lecture-écriture, le champ d’identification est explicitement ou implicitement public et la propriété est donc largement définissable. Pour plus d’informations, consultez [Sécurité de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-security.md).  
+ Étant donné que le <xref:System.Windows.DependencyPropertyKey> est privé et n’est pas propagé par le système de propriétés en dehors de votre code, une propriété de dépendance en lecture seule a de mieux de la sécurité de paramétrage qu’une propriété de dépendance en lecture-écriture. Pour une propriété de dépendance en lecture-écriture, le champ d’identification est explicitement ou implicitement public et la propriété est donc largement définissable. Pour plus d’informations, consultez [Sécurité de propriété de dépendance](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)
+- [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)

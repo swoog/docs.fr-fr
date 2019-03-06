@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
 ms.openlocfilehash: b2023370ee248e999514090e57531eafb301c616
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759039"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377191"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding>
 Définit une liaison sécurisée, fiable et interopérable qui est appropriée pour les contrats de service ou les communications en duplex à travers des intermédiaires SOAP.  
@@ -91,7 +91,8 @@ Définit une liaison sécurisée, fiable et interopérable qui est appropriée p
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
- `WSDualHttpBinding` fournit la même prise en charge des protocoles de services Web que `WSHttpBinding`, mais pour des contrats duplex. `WSDualHttpBinding` prend uniquement en charge la sécurité SOAP et requiert une messagerie fiable. Dans le cadre de cette liaison, le client doit avoir un URI public servant de point de terminaison de rappel pour le service. Cet élément est fourni par l'attribut `clientBaseAddress`. Une liaison double expose l'adresse IP du client au service. Ce client doit utiliser un mode de sécurité qui vérifiera qu'il se connecte uniquement à des services de confiance.  
+ 
+  `WSDualHttpBinding` fournit la même prise en charge des protocoles de services Web que `WSHttpBinding`, mais pour des contrats duplex. `WSDualHttpBinding` prend uniquement en charge la sécurité SOAP et requiert une messagerie fiable. Dans le cadre de cette liaison, le client doit avoir un URI public servant de point de terminaison de rappel pour le service. Cet élément est fourni par l'attribut `clientBaseAddress`. Une liaison double expose l'adresse IP du client au service. Ce client doit utiliser un mode de sécurité qui vérifiera qu'il se connecte uniquement à des services de confiance.  
   
  Cette liaison peut être utilisée pour une communication fiable via un ou plusieurs intermédiaires SOAP.  
   

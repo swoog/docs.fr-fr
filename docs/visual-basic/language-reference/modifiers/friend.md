@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e6dbaa9201d5c9cd902412797b2427ec488d014
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967371"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371409"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Spécifie qu’un ou plusieurs éléments de programmation déclarés sont accessibles uniquement à partir de l’assembly qui contient leur déclaration.  
@@ -35,7 +35,7 @@ Spécifie qu’un ou plusieurs éléments de programmation déclarés sont acces
  Pour obtenir une comparaison de `Friend` et d’autres modificateurs d’accès, consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
->  Vous pouvez spécifier qu’un autre assembly est un assembly friend, ce qui permet d’accéder à tous les types et membres qui sont marqués comme `Friend`. Pour plus d’informations, consultez [Assemblys friend](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+>  Vous pouvez spécifier qu’un autre assembly est un assembly friend, ce qui permet d’accéder à tous les types et membres qui sont marqués comme `Friend`. Pour plus d’informations, consultez [Assemblys friend](../../../standard/assembly/friend-assemblies.md).  
   
 ## <a name="example"></a>Exemple  
  La classe suivante utilise le `Friend` modificateur pour autoriser d’autres éléments de programmation dans le même assembly pour accéder à certains membres.  

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: c0f31f753a45bf4c13280febb164324535b0fdeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715580"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355517"
 ---
 # <a name="timing-behaviors-overview"></a>Vue d'ensemble des comportements de minutage
 Cette rubrique décrit les comportements de minutage des animations et d’autres <xref:System.Windows.Media.Animation.Timeline> objets.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Pour comprendre cette rubrique, vous devez connaître les fonctionnalités de base utilisées pour l’animation. Pour plus d’informations, consultez le [vue d’ensemble de l’Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Pour comprendre cette rubrique, vous devez connaître les fonctionnalités de base utilisées pour l’animation. Pour plus d’informations, consultez le [vue d’ensemble de l’Animation](animation-overview.md).  
   
 <a name="timelinetypes"></a>   
 ## <a name="timeline-types"></a>Types de chronologie  
@@ -50,15 +50,15 @@ Cette rubrique décrit les comportements de minutage des animations et d’autre
   
  L’exemple suivant montre un <xref:System.Windows.Media.Animation.DoubleAnimation> avec un <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de cinq secondes.  
   
- [!code-xaml[animation_ovws_snippet#AnimationWith5SecondDurationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#animationwith5seconddurationinline)]  
+ [!code-xaml[animation_ovws_snippet#AnimationWith5SecondDurationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#animationwith5seconddurationinline)]  
   
  Les chronologies de conteneur, tel que <xref:System.Windows.Media.Animation.Storyboard> et <xref:System.Windows.Media.Animation.ParallelTimeline>, ont une durée par défaut de <xref:System.Windows.Duration.Automatic%2A>, ce qui signifie qu’elles se terminent automatiquement lorsque leur dernier enfant s’arrête. L’exemple suivant montre un <xref:System.Windows.Media.Animation.Storyboard> dont <xref:System.Windows.Media.Animation.Timeline.Duration%2A> se résout en cinq secondes, la durée pendant laquelle il faut tous ses enfants <xref:System.Windows.Media.Animation.DoubleAnimation> objets pour terminer.  
   
- [!code-xaml[animation_ovws_snippet#ContainerTimelineExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelineexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#ContainerTimelineExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelineexampleinline)]  
   
  En définissant le <xref:System.Windows.Media.Animation.Timeline.Duration%2A> d’une chronologie de conteneur à un <xref:System.Windows.Duration.TimeSpan%2A> valeur, vous pouvez forcer à jouer plus ou moins de son enfant <xref:System.Windows.Media.Animation.Timeline> objets. Si vous définissez la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> à une valeur qui est inférieure à la longueur de l’enfant de la chronologie de conteneur <xref:System.Windows.Media.Animation.Timeline> objets, l’enfant <xref:System.Windows.Media.Animation.Timeline> objets s’arrêtent en la chronologie de conteneur. L’exemple suivant définit la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de la <xref:System.Windows.Media.Animation.Storyboard> dans les exemples précédents à trois secondes. Par conséquent, le premier <xref:System.Windows.Media.Animation.DoubleAnimation> cesse de progresser après trois secondes, lorsqu’il a animé la largeur du rectangle cible à 60.  
   
- [!code-xaml[animation_ovws_snippet#ContainerTimelineWithShorterDurationExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelinewithshorterdurationexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#ContainerTimelineWithShorterDurationExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#containertimelinewithshorterdurationexampleinline)]  
   
 <a name="repeatinganimations"></a>   
 ### <a name="the-repeatbehavior-property"></a>La propriété RepeatBehavior  
@@ -66,39 +66,39 @@ Cette rubrique décrit les comportements de minutage des animations et d’autre
   
  L’exemple suivant utilise le <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriété afin de vous un <xref:System.Windows.Media.Animation.DoubleAnimation> joue deux fois sa durée simple en spécifiant un nombre d’itérations.  
   
- [!code-xaml[animation_ovws_snippet#TBRepeatBehavior2xExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior2xexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBRepeatBehavior2xExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior2xexampleinline)]  
   
  L’exemple suivant utilise le <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriété afin que le <xref:System.Windows.Media.Animation.DoubleAnimation> lire la moitié de sa durée simple.  
   
- [!code-xaml[animation_ovws_snippet#TBRepeatBehavior05xExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior05xexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBRepeatBehavior05xExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehavior05xexampleinline)]  
   
  Si vous définissez la <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriété d’un <xref:System.Windows.Media.Animation.Timeline> à <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, le <xref:System.Windows.Media.Animation.Timeline> se répète jusqu'à ce que s’est arrêté de façon interactive ou par le système de minutage. L’exemple suivant utilise le <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriété afin que le <xref:System.Windows.Media.Animation.DoubleAnimation> joue indéfiniment.  
   
- [!code-xaml[animation_ovws_snippet#TBRepeatBehaviorForeverExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehaviorforeverexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBRepeatBehaviorForeverExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehaviorforeverexampleinline)]  
   
- Pour obtenir un exemple supplémentaire, consultez [répéter une Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md).  
+ Pour obtenir un exemple supplémentaire, consultez [répéter une Animation](how-to-repeat-an-animation.md).  
   
 <a name="autoreverseproperty"></a>   
 ### <a name="the-autoreverse-property"></a>La propriété AutoReverse  
  Le <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> propriété spécifie si un <xref:System.Windows.Media.Animation.Timeline> repart en arrière à la fin de chaque itération en avant. L’exemple suivant affecte la <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> propriété d’un <xref:System.Windows.Media.Animation.DoubleAnimation> à `true`; par conséquent, elle s’anime de 0 à 100, puis de 100 à zéro. Elle s’exécute pendant 10 secondes au total.  
   
- [!code-xaml[animation_ovws_snippet#TBAutoReverseExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverseexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBAutoReverseExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverseexampleinline)]  
   
  Lorsque vous utilisez un <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> valeur à spécifier le <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> d’un <xref:System.Windows.Media.Animation.Timeline> et le <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> propriété cela <xref:System.Windows.Media.Animation.Timeline> est `true`, une répétition unique se compose d’une itération en avant suivie d’une descendante itération.  L’exemple suivant définit la <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> de la <xref:System.Windows.Media.Animation.DoubleAnimation> à partir de l’exemple précédent pour un <xref:System.Windows.Media.Animation.RepeatBehavior.Count%2A> de deux. Par conséquent, le <xref:System.Windows.Media.Animation.DoubleAnimation> est lue pendant 20 secondes : avant pendant cinq secondes, en arrière pendant cinq secondes, transférer les cinq secondes, puis en arrière pendant cinq secondes.  
   
- [!code-xaml[animation_ovws_snippet#TBAutoReverseRepeatExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverserepeatexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBAutoReverseRepeatExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverserepeatexampleinline)]  
   
- Si une chronologie de conteneur a des enfants <xref:System.Windows.Media.Animation.Timeline> objets, ceux-ci s’inversent en la chronologie de conteneur. Pour obtenir des exemples supplémentaires, consultez [spécifier une chronologie inversion automatique ou non](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md).  
+ Si une chronologie de conteneur a des enfants <xref:System.Windows.Media.Animation.Timeline> objets, ceux-ci s’inversent en la chronologie de conteneur. Pour obtenir des exemples supplémentaires, consultez [spécifier une chronologie inversion automatique ou non](how-to-specify-whether-a-timeline-automatically-reverses.md).  
   
 <a name="timelinebegin"></a>   
 ## <a name="the-begintime-property"></a>La propriété BeginTime  
- Le <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> propriété vous permet de spécifier quand une chronologie démarre.  Le temps de début d’une chronologie est relatif à la chronologie de son parent. Un temps de début de zéro seconde signifie que la chronologie démarre dès que son parent démarre ; toute autre valeur crée un décalage entre le démarrage de la chronologie parent et celui de la chronologie enfant. Par exemple, un temps de début de deux secondes signifie que la chronologie démarre quand son parent a atteint une durée de deux secondes. Par défaut, toutes les chronologies ont un temps de début de zéro seconde. Vous pouvez également définir une chronologie commencer temps `null`, ce qui empêche la chronologie de démarrer. Dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vous indiquez zéro en utilisant le [x : Null Markup Extension](../../../../docs/framework/xaml-services/x-null-markup-extension.md).  
+ Le <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> propriété vous permet de spécifier quand une chronologie démarre.  Le temps de début d’une chronologie est relatif à la chronologie de son parent. Un temps de début de zéro seconde signifie que la chronologie démarre dès que son parent démarre ; toute autre valeur crée un décalage entre le démarrage de la chronologie parent et celui de la chronologie enfant. Par exemple, un temps de début de deux secondes signifie que la chronologie démarre quand son parent a atteint une durée de deux secondes. Par défaut, toutes les chronologies ont un temps de début de zéro seconde. Vous pouvez également définir une chronologie commencer temps `null`, ce qui empêche la chronologie de démarrer. Dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vous indiquez zéro en utilisant le [x : Null Markup Extension](../../xaml-services/x-null-markup-extension.md).  
   
  Notez que l’heure de début n’est pas appliquée à chaque fois qu’une chronologie se répète raison de son <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> paramètre. Si vous deviez créer une animation avec un <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> de 10 secondes et un <xref:System.Windows.Media.Animation.RepeatBehavior> de <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, il y aurait un délai de 10 secondes avant l’animation lue pour la première fois, mais pas pour chaque répétition successive. Toutefois, si la chronologie du parent de l’animation devait redémarrer ou se répéter, le délai de 10 secondes se produirait.  
   
  Le <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> propriété est utile pour l’échelonnement des chronologies. L’exemple suivant crée un <xref:System.Windows.Media.Animation.Storyboard> qui a deux enfants <xref:System.Windows.Media.Animation.DoubleAnimation> objets. La première animation a un <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de cinq secondes, et la deuxième a un <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de 3 secondes. L’exemple définit le <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> du deuxième <xref:System.Windows.Media.Animation.DoubleAnimation> à 5 secondes, par conséquent, qu’elle démarre après la première <xref:System.Windows.Media.Animation.DoubleAnimation> se termine.  
   
- [!code-xaml[animation_ovws_snippet#TBBeginTimeExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbbegintimeexampleinline)]  
+ [!code-xaml[animation_ovws_snippet#TBBeginTimeExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbbegintimeexampleinline)]  
   
 <a name="fillbehaviorproperty"></a>   
 ## <a name="the-fillbehavior-property"></a>La propriété FillBehavior  
@@ -110,7 +110,7 @@ Cette rubrique décrit les comportements de minutage des animations et d’autre
   
 -   Le <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriété du deuxième <xref:System.Windows.Media.Animation.DoubleAnimation> est défini sur <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Par conséquent, le <xref:System.Windows.FrameworkElement.Width%2A> du deuxième <xref:System.Windows.Shapes.Rectangle> revient à 500 après le <xref:System.Windows.Media.Animation.DoubleAnimation> se termine.  
   
- [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
+ [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
 <a name="speedproperties"></a>   
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Propriétés qui contrôlent la vitesse d’une chronologie  
@@ -118,13 +118,13 @@ Cette rubrique décrit les comportements de minutage des animations et d’autre
   
 -   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> : Indique la vitesse, par rapport à son parent, à laquelle le temps s’écoule pour une <xref:System.Windows.Media.Animation.Timeline>. Valeurs supérieures à un augmentent la vitesse de la <xref:System.Windows.Media.Animation.Timeline> et son enfant <xref:System.Windows.Media.Animation.Timeline> objets ; les valeurs entre zéro et un la ralentissent. Une valeur d’un indique que <xref:System.Windows.Media.Animation.Timeline> progresse à la même vitesse que son parent. Le <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> paramètre d’une chronologie de conteneur affecte tous ses enfants <xref:System.Windows.Media.Animation.Timeline> des objets.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> : Indique le pourcentage de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> d’une chronologie consacré à l’accélération. Pour voir un exemple, consultez [Comment : Accélérer ou décélérer une Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> : Indique le pourcentage de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> d’une chronologie consacré à l’accélération. Pour voir un exemple, consultez [Comment : Accélérer ou décélérer une Animation](how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Spécifie le pourcentage de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> d’une chronologie consacré à la décélération. Pour voir un exemple, consultez [Comment : Accélérer ou décélérer une Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Spécifie le pourcentage de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> d’une chronologie consacré à la décélération. Pour voir un exemple, consultez [Comment : Accélérer ou décélérer une Animation](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Vue d'ensemble de l'animation et du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
-- [Vue d'ensemble des événements de minuterie](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble de l'animation et du système de minutage](animation-and-timing-system-overview.md)
+- [Vue d'ensemble des événements de minuterie](timing-events-overview.md)
+- [Rubriques de guide pratique](animation-and-timing-how-to-topics.md)
 - [Comportement de minuterie d’animation exemple](https://go.microsoft.com/fwlink/?LinkID=159970)

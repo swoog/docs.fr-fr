@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507367"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371370"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms Add, élément de Configuration
 
@@ -39,7 +39,7 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 
 ### <a name="key-attribute-names-and-associated-values"></a>`key` noms d’attributs et valeurs associées
 
-| Nom `key` | Valeurs | Description |
+| `key` Nom | Valeurs | Description |
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indique si les contrôles ancrés sont mis à l’échelle en un seul passage. « true » pour désactiver unique passer mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
 | « DpiAwareness » | "PerMonitorV2"&#124;"false" | Indique si une application prend en charge DPI. Définissez la clé à « PerMonitorV2 » pour prendre en charge de la prise en charge Dpi ; Sinon, affectez-lui la valeur « false ». Prise en charge DPI est une fonctionnalité d’abonnement ; Pour tirer parti de la prise en charge DPI élevée de Windows Forms, vous devez définir sa valeur à « PerMonitorV2 ». Consultez le [notes](#remarks) section pour plus d’informations. |
@@ -63,9 +63,9 @@ Aucun.
 
 ## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Remarques
 
-À compter du .NET Framework 4.7, l’élément `<System.Windows.Forms.ApplicationConfigurationSection>` vous permet de configurer des applications Windows Forms pour tirer parti des fonctionnalités ajoutées dans les dernières versions du .NET Framework. 
+À compter du .NET Framework 4.7, l’élément `<System.Windows.Forms.ApplicationConfigurationSection>` vous permet de configurer des applications Windows Forms pour tirer parti des fonctionnalités ajoutées dans les dernières versions du .NET Framework.
 
-Le `<System.Windows.Forms.ApplicationConfigurationSection>` élément vous permet d’ajouter un ou plusieurs enfants `<add>` éléments, chacun d’eux définit un paramètre de configuration spécifique.  
+Le `<System.Windows.Forms.ApplicationConfigurationSection>` élément vous permet d’ajouter un ou plusieurs enfants `<add>` éléments, chacun d’eux définit un paramètre de configuration spécifique.
 
 Pour une vue d’ensemble de la prise en charge Windows Forms haute résolution, consultez [prennent en charge DPI d’élevé dans les Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
 
@@ -75,7 +75,7 @@ Les applications Windows Forms qui fonctionnent sous les versions de Windows à 
 
 - Prise en charge pour les scénarios de résolution dynamiques dans lequel l’utilisateur modifie le facteur de PPP ou mise à l’échelle après le lancement d’une application Windows Forms.
 
-- Améliorations de la mise à l’échelle et la disposition d’un nombre de Windows Forms des contrôles, tels que le <xref:System.Windows.Forms.MonthCalendar> contrôle et le <xref:System.Windows.Forms.CheckedListBox> contrôle. 
+- Améliorations de la mise à l’échelle et la disposition d’un nombre de Windows Forms des contrôles, tels que le <xref:System.Windows.Forms.MonthCalendar> contrôle et le <xref:System.Windows.Forms.CheckedListBox> contrôle.
 
 Prise en charge DPI élevé est une fonctionnalité d’abonnement ; par défaut, la valeur de `DpiAwareness` est `false`. Vous pouvez opter pour prise en charge des Windows Forms pour la prise en charge DPI en définissant la valeur de cette clé à `PerMonitorV2` dans le fichier de configuration d’application. Si la prise en charge DPI est activée, toutes les fonctionnalités de PPP individuelles sont également activées. Elles incluent notamment :
 
@@ -83,11 +83,11 @@ Prise en charge DPI élevé est une fonctionnalité d’abonnement ; par défau
 
 - PPP prise en charge dynamique, qui est contrôlé par le `EnableWindowsFormsHighDpiAutoResizing` clé.
 
-- Seul passage mise à l’échelle du contrôle, qui est contrôlé par le `Form.DisableSinglePassControlScaling` de chaque <xref:System.Windows.Forms.Form> des contrôles, en le `AnchorLayout.DisableSinglePassControlScaling` clés pour les contrôles ancrés et par le `MonthCalendar.DisableSinglePassControlScaling` clés pour le <xref:System.Windows.Forms.MonthCalendar> contrôle 
+- Seul passage mise à l’échelle du contrôle, qui est contrôlé par le `Form.DisableSinglePassControlScaling` de chaque <xref:System.Windows.Forms.Form> des contrôles, en le `AnchorLayout.DisableSinglePassControlScaling` clés pour les contrôles ancrés et par le `MonthCalendar.DisableSinglePassControlScaling` clés pour le <xref:System.Windows.Forms.MonthCalendar> contrôle
 
-- Haute résolution mise à l’échelle et la disposition améliorations, qui est contrôlé par le `CheckListBox.DisableHighDpiImprovements` clés pour le <xref:System.Windows.Forms.CheckedListBox> contrôler, par le `DataGridView.DisableHighDpiImprovements` clés pour le <xref:System.Windows.Forms.DataGridView> contrôle et par le `Toolstrip.DisableHighDpiImprovements` clé pour la le <xref:System.Windows.Forms.ToolStrip> contrôle.  
+- Haute résolution mise à l’échelle et la disposition améliorations, qui est contrôlé par le `CheckListBox.DisableHighDpiImprovements` clés pour le <xref:System.Windows.Forms.CheckedListBox> contrôler, par le `DataGridView.DisableHighDpiImprovements` clés pour le <xref:System.Windows.Forms.DataGridView> contrôle et par le `Toolstrip.DisableHighDpiImprovements` clé pour la le <xref:System.Windows.Forms.ToolStrip> contrôle.
 
-Le paramètre de participer unique par défaut fourni par le paramètre `DpiAwareness` à `PerMonitorV2` est généralement suffisant pour les nouvelles applications Windows Forms. Toutefois, vous pouvez ensuite refuser individuelles améliorations PPP élevées en ajoutant la clé correspondante dans le fichier de configuration d’application. Par exemple, pour tirer parti de toutes les featuers PPP nouvelle à l’exception de prise en charge de résolution dynamique, vous devez ajouter les éléments suivants au fichier de configuration de votre application :
+Le paramètre de participer unique par défaut fourni par le paramètre `DpiAwareness` à `PerMonitorV2` est généralement suffisant pour les nouvelles applications Windows Forms. Toutefois, vous pouvez ensuite refuser individuelles améliorations PPP élevées en ajoutant la clé correspondante dans le fichier de configuration d’application. Par exemple, pour tirer parti de toutes les fonctionnalités de résolution nouveau à l’exception de prise en charge de résolution dynamique, vous devez ajouter les éléments suivants au fichier de configuration de votre application :
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -99,14 +99,14 @@ Le paramètre de participer unique par défaut fourni par le paramètre `DpiAwar
 En règle générale, vous refuser une fonctionnalité particulière, car vous avez choisi de le gérer par programmation.
 
 Pour plus d’informations en tirant profit de prise en charge de la haute résolution dans les applications Windows Forms, consultez [prennent en charge DPI d’élevé dans les Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
- 
+
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
-À compter de .NET Framework 4.7, contrôles Windows Forms déclenchent un nombre d’événements liés aux modifications dans la mise à l’échelle PPP. Ceux-ci incluent le <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, et <xref:System.Windows.Forms.Form.DpiChanged> événements. La valeur de la `DisableDpiChangedMessageHandling` clé détermine si ces événements sont déclenchés dans une application Windows Forms. 
+À compter de .NET Framework 4.7, contrôles Windows Forms déclenchent un nombre d’événements liés aux modifications dans la mise à l’échelle PPP. Ceux-ci incluent le <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, et <xref:System.Windows.Forms.Form.DpiChanged> événements. La valeur de la `DisableDpiChangedMessageHandling` clé détermine si ces événements sont déclenchés dans une application Windows Forms.
 
 ### <a name="single-pass-scaling"></a>Mise à l’échelle de transmission unique
 
-La mise à l’échelle unique ou multipasse influence la réactivité perçue de l’interface utilisateur et l’apparence visuelle des éléments d’interface utilisateur comme ils sont mis à l’échelle. À compter de .NET Framework 4.7, Windows Forms utilise mise à l’échelle d’une seule passe. Dans les versions précédentes du .NET Framework, la mise à l’échelle a été effectuée via plusieurs passes, ce qui a provoqué des contrôles à l’échelle plus de données nécessaires. Mise à l’échelle de transmission unique doit être désactivé uniquement si votre application dépend de l’ancien comportement.  
+La mise à l’échelle unique ou multipasse influence la réactivité perçue de l’interface utilisateur et l’apparence visuelle des éléments d’interface utilisateur comme ils sont mis à l’échelle. À compter de .NET Framework 4.7, Windows Forms utilise mise à l’échelle d’une seule passe. Dans les versions précédentes du .NET Framework, la mise à l’échelle a été effectuée via plusieurs passes, ce qui a provoqué des contrôles à l’échelle plus de données nécessaires. Mise à l’échelle de transmission unique doit être désactivé uniquement si votre application dépend de l’ancien comportement.
 
 ## <a name="see-also"></a>Voir aussi
 

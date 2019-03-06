@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: ed1f7781453503682648d740b57dd7af0a1715c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524128"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376367"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Initialisation d'éléments objet ne figurant pas dans une arborescence d'objets
 Certains aspects de l’initialisation [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sont différés à des processus qui reposent généralement sur le fait que cet élément est connecté à l’arborescence logique ou à l’arborescence d’éléments visuels. Cette rubrique décrit les étapes qui peuvent être nécessaires pour initialiser un élément qui n’est connecté à aucune de ces arborescences.  
@@ -39,10 +39,10 @@ Certains aspects de l’initialisation [!INCLUDE[TLA#tla_winclient](../../../../
   
  L’exemple illustre uniquement la fonction principale. Les fonctions `Rasterize` et `Save` (non illustrées) sont des fonctions utilitaires qui assurent le traitement d’image et les E/S.  
   
- [!code-csharp[InitializeElements#Main](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
- [!code-vb[InitializeElements#Main](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
+ [!code-csharp[InitializeElements#Main](~/samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
+ [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Arborescences dans WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Arborescences dans WPF](trees-in-wpf.md)
+- [Vue d’ensemble du rendu graphique de WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)

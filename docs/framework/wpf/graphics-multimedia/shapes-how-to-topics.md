@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620225"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358065"
 ---
 # <a name="shapes-how-to-topics"></a>Rubriques "Comment" relatives aux objets Shape
 Les rubriques de cette section montrent comment utiliser <xref:System.Windows.Shapes.Shape> objets pour dessiner des formes de base à l’écran.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Dessiner une forme fermée à l'aide de l'élément Polygon](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [Dessiner une ellipse ou un cercle](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [Dessiner une ligne](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [Dessiner une polyligne à l'aide de l'élément Polyline](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [Dessiner un rectangle](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [Modifier l'embout à la fin d'une ligne ou d'un segment](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+ [Dessiner une forme fermée à l'aide de l'élément Polygon](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [Dessiner une ellipse ou un cercle](how-to-draw-an-ellipse-or-a-circle.md)  
+ [Dessiner une ligne](how-to-draw-a-line.md)  
+ [Dessiner une polyligne à l'aide de l'élément Polyline](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [Dessiner un rectangle](how-to-draw-a-rectangle.md)  
+ [Modifier l'embout à la fin d'une ligne ou d'un segment](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Shapes.Shape>
-- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Graphiques et multimédia](index.md)

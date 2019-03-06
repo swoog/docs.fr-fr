@@ -8,19 +8,19 @@ helpviewer_keywords:
 - properties [WPF], how-to topics
 - dependency properties [WPF]
 ms.assetid: e16dd710-1530-4462-81a2-43719b973970
-ms.openlocfilehash: b2b9dffe1837df0e8daaf5526a59609db8efb7fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf1dbe9c9c95a3ae1afe2515adbd8bc65a7d44
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544483"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368491"
 ---
 # <a name="properties-how-to-topics"></a>Rubriques "Comment" relatives aux propriétés
 ## <a name="in-this-section"></a>Dans cette section  
- [Implémenter une propriété de dépendance](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [Ajouter un type propriétaire d'une propriété de dépendance](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [Enregistrer une propriété jointe](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [Substituer les métadonnées d'une propriété de dépendance](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+ [Implémenter une propriété de dépendance](how-to-implement-a-dependency-property.md)  
+ [Ajouter un type propriétaire d'une propriété de dépendance](how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [Enregistrer une propriété jointe](how-to-register-an-attached-property.md)  
+ [Substituer les métadonnées d'une propriété de dépendance](how-to-override-metadata-for-a-dependency-property.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.DependencyProperty>  
@@ -32,4 +32,4 @@ ms.locfileid: "33544483"
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Propriétés](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+ [Propriétés](properties-wpf.md)

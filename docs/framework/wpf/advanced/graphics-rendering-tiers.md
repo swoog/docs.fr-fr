@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748581"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357519"
 ---
 # <a name="graphics-rendering-tiers"></a>Couches de rendu graphiques
 Une couche de rendu définit un niveau des capacités et des performances du matériel graphique pour un appareil qui exécute une application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -107,7 +107,7 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
 |**Paramètre Date de pilote vidéo requise**|Spécifie si le système désactive l’accélération matérielle pour les pilotes commercialisés avant novembre 2004.|  
 |**Option Utiliser le rastériseur de référence**|Spécifie si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] doit utiliser le rastériseur de référence.|  
   
- Ces paramètres sont accessibles à tout utilitaire de configuration externe capable de référencer les paramètres du Registre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ces paramètres peuvent également être créés ou modifiés en accédant directement aux valeurs à l’aide de l’Éditeur du Registre [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Pour plus d’informations, consultez [Paramètres du Registre pour le rendu des graphiques](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md).  
+ Ces paramètres sont accessibles à tout utilitaire de configuration externe capable de référencer les paramètres du Registre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ces paramètres peuvent également être créés ou modifiés en accédant directement aux valeurs à l’aide de l’Éditeur du Registre [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Pour plus d’informations, consultez [Paramètres du Registre pour le rendu des graphiques](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Outils de profilage des performances WPF  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit une suite d’outils de profilage des performances qui vous permettent d’analyser le comportement au moment de l’exécution de votre application et de déterminer les types d’optimisations des performances que vous pouvez appliquer. Le tableau suivant répertorie les outils de profilage des performances qui sont inclus dans l’outil [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite :  
@@ -126,13 +126,13 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
   
  Quand vous exécutez l’outil de diagnostic [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], la fenêtre principale contient un jeu d’onglets qui vous permettent d’afficher et de diagnostiquer les problèmes liés à [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Par exemple, l’onglet **Système** fournit des informations système à propos de votre ordinateur et spécifie la version de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] installée sur votre ordinateur.  
   
- ![Capture d’écran : Outil de DirectX Diagnostic](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Capture d’écran : Outil de DirectX Diagnostic](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Fenêtre principale de l’outil de diagnostic DirectX  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
-- [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)
 - [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
-- [Paramètres du Registre pour le rendu des graphiques](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
-- [Conseils et astuces sur les animations](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Paramètres du Registre pour le rendu des graphiques](../graphics-multimedia/graphics-rendering-registry-settings.md)
+- [Conseils et astuces sur les animations](../graphics-multimedia/animation-tips-and-tricks.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503117"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355647"
 ---
 # <a name="transforms-overview"></a>Vue d'ensemble des transformations
 Cette rubrique explique comment utiliser le [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes pour faire pivoter, mettre à l’échelle, déplacer (translater) et incliner des <xref:System.Windows.FrameworkElement> objets.  
@@ -50,17 +50,17 @@ Cette rubrique explique comment utiliser le [!INCLUDE[TLA#tla_2d](../../../../in
   
 |Classe|Description|Exemple|Illustration|  
 |-----------|-----------------|-------------|------------------|  
-|<xref:System.Windows.Media.RotateTransform>|Fait pivoter un élément par le <xref:System.Windows.Media.RotateTransform.Angle%2A>.|[Faire pivoter un objet](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![Illustration de rotation](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
-|<xref:System.Windows.Media.ScaleTransform>|Met à l’échelle d’un élément par le <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> et <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> quantités.|[Mettre à l'échelle un élément](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![Illustration de mise à l’échelle](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
-|<xref:System.Windows.Media.SkewTransform>|Incline un élément spécifié <xref:System.Windows.Media.SkewTransform.AngleX%2A> et <xref:System.Windows.Media.SkewTransform.AngleY%2A> quantités.|[Incliner un élément](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![Illustration d’inclinaison](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
-|<xref:System.Windows.Media.TranslateTransform>|Déplace (Translate) un élément par le <xref:System.Windows.Media.TranslateTransform.X%2A> et <xref:System.Windows.Media.TranslateTransform.Y%2A> quantités.|[Translater un élément](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![Illustration de translation](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
+|<xref:System.Windows.Media.RotateTransform>|Fait pivoter un élément par le <xref:System.Windows.Media.RotateTransform.Angle%2A>.|[Faire pivoter un objet](how-to-rotate-an-object.md)|![Illustration de rotation](./media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
+|<xref:System.Windows.Media.ScaleTransform>|Met à l’échelle d’un élément par le <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> et <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> quantités.|[Mettre à l'échelle un élément](how-to-scale-an-element.md)|![Illustration de mise à l’échelle](./media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
+|<xref:System.Windows.Media.SkewTransform>|Incline un élément spécifié <xref:System.Windows.Media.SkewTransform.AngleX%2A> et <xref:System.Windows.Media.SkewTransform.AngleY%2A> quantités.|[Incliner un élément](how-to-skew-an-element.md)|![Illustration d’inclinaison](./media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
+|<xref:System.Windows.Media.TranslateTransform>|Déplace (Translate) un élément par le <xref:System.Windows.Media.TranslateTransform.X%2A> et <xref:System.Windows.Media.TranslateTransform.Y%2A> quantités.|[Translater un élément](how-to-translate-an-element.md)|![Illustration de translation](./media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
  Pour créer des transformations plus complexes, Windows Presentation Foundation (WPF) fournit les deux classes suivantes :  
   
 |Classe|Description|Exemple|  
 |-----------|-----------------|-------------|  
-|<xref:System.Windows.Media.TransformGroup>|Regroupe plusieurs <xref:System.Windows.Media.TransformGroup> objets en un seul <xref:System.Windows.Media.Transform> que vous pouvez ensuite appliquer pour transformer des propriétés.|[Apply Multiple Transforms to an Object](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md) (Appliquer plusieurs transformations à un objet)|  
-|<xref:System.Windows.Media.MatrixTransform>|Crée des transformations personnalisées qui ne sont pas fournies par les autres <xref:System.Windows.Media.Transform> classes. Lorsque vous utilisez un <xref:System.Windows.Media.MatrixTransform>, vous manipulez une matrice directement.|[Use a MatrixTransform to Create Custom Transforms](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md) (Utiliser la classe MatrixTransform pour créer des transformations personnalisées)|  
+|<xref:System.Windows.Media.TransformGroup>|Regroupe plusieurs <xref:System.Windows.Media.TransformGroup> objets en un seul <xref:System.Windows.Media.Transform> que vous pouvez ensuite appliquer pour transformer des propriétés.|[Apply Multiple Transforms to an Object](how-to-apply-multiple-transforms-to-an-object.md) (Appliquer plusieurs transformations à un objet)|  
+|<xref:System.Windows.Media.MatrixTransform>|Crée des transformations personnalisées qui ne sont pas fournies par les autres <xref:System.Windows.Media.Transform> classes. Lorsque vous utilisez un <xref:System.Windows.Media.MatrixTransform>, vous manipulez une matrice directement.|[Use a MatrixTransform to Create Custom Transforms](how-to-use-a-matrixtransform-to-create-custom-transforms.md) (Utiliser la classe MatrixTransform pour créer des transformations personnalisées)|  
   
  Windows Presentation Foundation (WPF) fournit également [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] transformations. Pour plus d'informations, consultez la classe <xref:System.Windows.Media.Media3D.Transform3D>.  
   
@@ -84,19 +84,19 @@ Cette rubrique explique comment utiliser le [!INCLUDE[TLA#tla_2d](../../../../in
   
  L’exemple suivant utilise un <xref:System.Windows.Media.RotateTransform> pour faire pivoter un <xref:System.Windows.Shapes.Rectangle> élément, un type de <xref:System.Windows.FrameworkElement>, de 45 degrés autour de son centre par défaut, (0, 0). L’illustration suivante montre l’effet de la rotation.  
   
- ![Un FrameworkElement pivoté de 45 degrés autour &#40;0,0&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
+ ![Un FrameworkElement pivoté de 45 degrés autour &#40;0,0&#41;](./media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
 Un élément rectangle pivoté de 45 degrés autour du point (0,0)  
   
- [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
   
  Par défaut, l’élément pivote autour de son coin supérieur gauche, (0, 0). Le <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.ScaleTransform>, et <xref:System.Windows.Media.SkewTransform> classes fournissent les propriétés CenterX et CenterY qui vous permettent de spécifier le point auquel la transformation est appliquée.  
   
  L’exemple suivant utilise également un <xref:System.Windows.Media.RotateTransform> pour faire pivoter un <xref:System.Windows.Shapes.Rectangle> élément de 45 degrés ; Toutefois, cette fois le <xref:System.Windows.Media.RotateTransform.CenterX%2A> et <xref:System.Windows.Media.RotateTransform.CenterY%2A> propriétés sont définies afin que le <xref:System.Windows.Media.RotateTransform> dispose d’un centre de (25, 25). L’illustration suivante montre l’effet de la rotation.  
   
- ![Geometry pivoté de 45 degrés autour &#40;25, 25&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
+ ![Geometry pivoté de 45 degrés autour &#40;25, 25&#41;](./media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
 Un élément rectangle pivoté de 45 degrés autour du point (25, 25)  
   
- [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
   
 <a name="layoutTransformsAndRenderTransformsSection"></a>   
 ## <a name="transforming-a-frameworkelement"></a>Transformation d’un élément FrameworkElement  
@@ -108,7 +108,7 @@ Un élément rectangle pivoté de 45 degrés autour du point (25, 25)
   
  Quelle propriété utiliser ? En raison des avantages de performances qu’offre cette solution, utilisez le <xref:System.Windows.UIElement.RenderTransform%2A> propriété chaque fois que possible, en particulier lorsque vous utilisez animée <xref:System.Windows.Media.Transform> objets. Utilisez le <xref:System.Windows.FrameworkElement.LayoutTransform%2A> propriété lors de la mise à l’échelle, faire pivoter ou incliner et que vous devez le parent de l’élément s’ajuste à la taille de l’élément. Notez que, lorsqu’ils sont utilisés avec la <xref:System.Windows.FrameworkElement.LayoutTransform%2A> propriété, <xref:System.Windows.Media.TranslateTransform> objets semblent n’ont aucun effet sur les éléments. Ceci est dû au fait que le système de disposition remet l’élément translaté dans sa position d’origine au cours de son traitement.  
   
- Pour plus d’informations sur la disposition dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], consultez l’article [Layout](../../../../docs/framework/wpf/advanced/layout.md) (Le système de disposition).  
+ Pour plus d’informations sur la disposition dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], consultez l’article [Layout](../advanced/layout.md) (Le système de disposition).  
   
 <a name="exampleRotateAnElement45degSection"></a>   
 ## <a name="example-rotate-a-frameworkelement-45-degrees"></a>Exemple : Faire pivoter un FrameworkElement de 45 degrés  
@@ -116,24 +116,24 @@ Un élément rectangle pivoté de 45 degrés autour du point (25, 25)
   
  Par défaut, un <xref:System.Windows.Media.RotateTransform> pivote autour du point (0, 0). L’exemple ne spécifie pas de valeur pour le centre donc le bouton pivote autour du point (0, 0), qui se trouve dans le coin supérieur gauche. Le <xref:System.Windows.Media.RotateTransform> est appliqué à la <xref:System.Windows.UIElement.RenderTransform%2A> propriété. L’illustration suivante montre les résultats de la transformation.  
   
- ![Bouton transformé à l’aide de RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![Bouton transformé à l’aide de RenderTransform](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 Rotation de 45 degrés dans le sens des aiguilles d’une montre à partir du coin supérieur gauche  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
  L’exemple suivant utilise également un <xref:System.Windows.Media.RotateTransform> pour faire pivoter un bouton de 45 degrés dans le sens horaire, mais également définit le <xref:System.Windows.UIElement.RenderTransformOrigin%2A> du bouton à (0,5, 0,5). La valeur de la <xref:System.Windows.UIElement.RenderTransformOrigin%2A> propriété est relative à la taille du bouton. Par conséquent, la rotation est appliquée au centre du bouton et non à partir de son coin supérieur gauche. L’illustration suivante montre les résultats de la transformation.  
   
- ![Bouton transformé autour de son centre](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![Bouton transformé autour de son centre](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 Une rotation de 45 degrés dans le sens des aiguilles d’une montre autour de centre  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
  L’exemple suivant utilise le <xref:System.Windows.FrameworkElement.LayoutTransform%2A> propriété au lieu du <xref:System.Windows.UIElement.RenderTransform%2A> propriété pour faire pivoter le bouton.  Ainsi, la transformation affecte la disposition du bouton, ce qui déclenche une passe entière par le système de disposition. Par conséquent, le bouton est pivoté, puis repositionné, car sa taille a changé. L’illustration suivante montre les résultats de la transformation.  
   
- ![Bouton transformé à l’aide de LayoutTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
+ ![Bouton transformé à l’aide de LayoutTransform](./media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
 Classe LayoutTransform utilisée pour faire pivoter le bouton  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
   
 <a name="animate_transforms"></a>   
 ## <a name="animating-transformations"></a>Animation de transformations  
@@ -141,16 +141,16 @@ Classe LayoutTransform utilisée pour faire pivoter le bouton
   
  L’exemple suivant utilise un <xref:System.Windows.Media.Animation.Storyboard> et un <xref:System.Windows.Media.Animation.DoubleAnimation> avec un <xref:System.Windows.Media.RotateTransform> pour rendre un <xref:System.Windows.Controls.Button> toupie (spin) en place lorsque vous cliquez dessus.  
   
- [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
+ [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- Pour voir l’exemple complet, consultez la page [2-D Transforms Sample](https://go.microsoft.com/fwlink/?LinkID=158252) (Exemple de transformations 2D). Pour plus d’informations sur les animations, consultez l’article [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Pour voir l’exemple complet, consultez la page [2-D Transforms Sample](https://go.microsoft.com/fwlink/?LinkID=158252) (Exemple de transformations 2D). Pour plus d’informations sur les animations, consultez l’article [Vue d’ensemble de l’animation](animation-overview.md).  
   
 <a name="freezable_features"></a>   
 ## <a name="freezable-features"></a>Fonctionnalités Freezable  
- Car il hérite de la <xref:System.Windows.Freezable> (classe), le <xref:System.Windows.Media.Transform> classe offrent plusieurs fonctionnalités spéciales : <xref:System.Windows.Media.Transform> objets peuvent être déclarés en tant que [ressources](../../../../docs/framework/wpf/advanced/xaml-resources.md), partagés entre plusieurs objets, définis en lecture seule pour améliorer performances, clonés et rendus thread-safe. Pour plus d’informations sur les différentes fonctionnalités fournies par <xref:System.Windows.Freezable> , voir la [vue d’ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Car il hérite de la <xref:System.Windows.Freezable> (classe), le <xref:System.Windows.Media.Transform> classe offrent plusieurs fonctionnalités spéciales : <xref:System.Windows.Media.Transform> objets peuvent être déclarés en tant que [ressources](../advanced/xaml-resources.md), partagés entre plusieurs objets, définis en lecture seule pour améliorer performances, clonés et rendus thread-safe. Pour plus d’informations sur les différentes fonctionnalités fournies par <xref:System.Windows.Freezable> , voir la [vue d’ensemble des objets Freezable](../advanced/freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Rubriques de guide pratique](transformations-how-to-topics.md)
 - [Exemple de transformations 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

@@ -2,12 +2,12 @@
 title: Désactiver RealTimeStylus pour les applications WPF
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: 7b97a451c52b72ee1ddcec5c58e1848a0b10fb7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af7ff3addfe2673ab73ff0f977770f89c6234bb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616908"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371125"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>Désactiver RealTimeStylus pour les applications WPF
 Prise en charge pour le traitement d’entrée tactile de Windows 7, Windows Presentation Foundation (WPF) a intégrée. La prise en charge est fournie par une entrée de stylet en temps réel de la plateforme Tablet PC en tant que <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, et <xref:System.Windows.UIElement.OnStylusMove%2A> événements. Windows 7 fournit également l’entrée multipoint sous forme de messages de fenêtre Win32 WM_TOUCH. Ces deux API s’excluent mutuellement sur le même HWND. L’activation d’entrée tactile par le biais de la plate-forme Tablet PC (la valeur par défaut pour les applications WPF) désactive les messages WM_TOUCH. Par conséquent, pour utiliser WM_TOUCH pour recevoir des messages tactiles à partir d’une fenêtre WPF, vous devez désactiver la prise en charge intégrée de stylet dans WPF. Cela s’applique dans un scénario telle qu’une fenêtre WPF hébergeant un composant qui utilise WM_TOUCH.  
@@ -53,4 +53,4 @@ public static void DisableWPFTabletSupport()
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Interception d'entrée à partir du stylet](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)
+- [Interception d'entrée à partir du stylet](intercepting-input-from-the-stylus.md)

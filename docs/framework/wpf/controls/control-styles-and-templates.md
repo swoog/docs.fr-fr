@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079725"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373195"
 ---
 # <a name="control-styles-and-templates"></a>Styles et modèles Control
 Les contrôles dans Windows Presentation Foundation (WPF) ont un <xref:System.Windows.Controls.ControlTemplate> qui contient l’arborescence visuelle de ce contrôle. Vous pouvez modifier la structure et l’apparence d’un contrôle en modifiant le <xref:System.Windows.Controls.ControlTemplate> de ce contrôle. Il n’existe aucun moyen de remplacer uniquement une partie de l’arborescence visuelle d’un contrôle ; Pour modifier l’arborescence visuelle d’un contrôle, vous devez définir le <xref:System.Windows.Controls.Control.Template%2A> propriété du contrôle à son nouveau et complète <xref:System.Windows.Controls.ControlTemplate>.  
@@ -34,38 +34,38 @@ Les contrôles dans Windows Presentation Foundation (WPF) ont un <xref:System.Wi
 |Aero.NormalColor.xaml|Thème par défaut sur le système d’exploitation Windows Vista|  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Styles et modèles Button](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
- [Styles et modèles Calendar](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
- [Styles et modèles CheckBox](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
- [Styles et modèles ComboBox](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
- [Styles et modèles ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [Styles et modèles DataGrid](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [Styles et modèles DatePicker](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
- [Styles et modèles DocumentViewer](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
- [Styles et modèles Expander](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
- [Styles et modèles Frame](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
- [Styles et modèles GroupBox](../../../../docs/framework/wpf/controls/groupbox-styles-and-templates.md)  
- [Styles et modèles Label](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
- [Styles et modèles ListBox](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
- [Styles et modèles ListView](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
- [Styles et modèles Menu](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
- [Styles et modèles NavigationWindow](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox Styles et modèles](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
- [Styles et modèles ProgressBar](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
- [Styles et modèles RadioButton](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [Styles et modèles RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
- [Styles et modèles ScrollBar](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [Styles et modèles ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
- [Styles et modèles Slider](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
- [Styles et modèles StatusBar](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
- [Styles et modèles TabControl](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
- [Styles et modèles TextBox](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Thumb Styles et modèles](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [Styles et modèles ToggleButton](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
- [Styles et modèles ToolBar](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
- [Styles et modèles ToolTip](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
- [Styles et modèles TreeView](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
- [Styles et modèles Window](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
+ [Styles et modèles Button](button-styles-and-templates.md)  
+ [Styles et modèles Calendar](calendar-styles-and-templates.md)  
+ [Styles et modèles CheckBox](checkbox-styles-and-templates.md)  
+ [Styles et modèles ComboBox](combobox-styles-and-templates.md)  
+ [Styles et modèles ContextMenu](contextmenu-styles-and-templates.md)  
+ [Styles et modèles DataGrid](datagrid-styles-and-templates.md)  
+ [Styles et modèles DatePicker](datepicker-styles-and-templates.md)  
+ [Styles et modèles DocumentViewer](documentviewer-styles-and-templates.md)  
+ [Styles et modèles Expander](expander-styles-and-templates.md)  
+ [Styles et modèles Frame](frame-styles-and-templates.md)  
+ [Styles et modèles GroupBox](groupbox-styles-and-templates.md)  
+ [Styles et modèles Label](label-styles-and-templates.md)  
+ [Styles et modèles ListBox](listbox-styles-and-templates.md)  
+ [Styles et modèles ListView](listview-styles-and-templates.md)  
+ [Styles et modèles Menu](menu-styles-and-templates.md)  
+ [Styles et modèles NavigationWindow](navigationwindow-styles-and-templates.md)  
+ [PasswordBox Styles et modèles](passwordbox-syles-and-templates.md)  
+ [Styles et modèles ProgressBar](progressbar-styles-and-templates.md)  
+ [Styles et modèles RadioButton](radiobutton-styles-and-templates.md)  
+ [Styles et modèles RepeatButton](repeatbutton-syles-and-templates.md)  
+ [Styles et modèles ScrollBar](scrollbar-styles-and-templates.md)  
+ [Styles et modèles ScrollViewer](scrollviewer-styles-and-templates.md)  
+ [Styles et modèles Slider](slider-styles-and-templates.md)  
+ [Styles et modèles StatusBar](statusbar-styles-and-templates.md)  
+ [Styles et modèles TabControl](tabcontrol-styles-and-templates.md)  
+ [Styles et modèles TextBox](textbox-styles-and-templates.md)  
+ [Thumb Styles et modèles](thumb-syles-and-templates.md)  
+ [Styles et modèles ToggleButton](togglebutton-syles-and-templates.md)  
+ [Styles et modèles ToolBar](toolbar-styles-and-templates.md)  
+ [Styles et modèles ToolTip](tooltip-styles-and-templates.md)  
+ [Styles et modèles TreeView](treeview-styles-and-templates.md)  
+ [Styles et modèles Window](window-styles-and-templates.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls>  
@@ -73,6 +73,6 @@ Les contrôles dans Windows Presentation Foundation (WPF) ont un <xref:System.Wi
  <xref:System.Windows.Controls.ControlTemplate>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Vue d’ensemble de la création de contrôles](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Vue d’ensemble de la création de contrôles](control-authoring-overview.md)  
   
- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Application d’un style et création de modèles](styling-and-templating.md)

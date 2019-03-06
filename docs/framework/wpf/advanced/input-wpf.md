@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544230"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350746"
 ---
 # <a name="input-wpf"></a>Entrée (WPF)
-Windows Presentation Foundation (WPF) prend en charge plusieurs types d’entrée. Cette entrée inclut le texte, tactile, la souris, les commandes, le focus, tactile, glisser-déplacer et encre numérique. Cette section décrit les rubriques relatives à l’entrée dans WPF.  
+Windows Presentation Foundation (WPF) prend en charge plusieurs types d’entrées. Cette entrée inclut le texte, tactile, souris, commandes, le focus, tactile, par glisser-déplacer et l’encre numérique. Cette section décrit les rubriques relatives à l’entrée dans WPF.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble des entrées](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Vue d’ensemble des commandes](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Vue d’ensemble du focus](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [FocusVisualStyle et application d'un style au focus dans les contrôles](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [Procédure pas à pas : création de votre première application Touch](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [Encre numérique](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [Vue d’ensemble des entrées](input-overview.md)  
+ [Vue d’ensemble des commandes](commanding-overview.md)  
+ [Vue d’ensemble du focus](focus-overview.md)  
+ [FocusVisualStyle et application d'un style au focus dans les contrôles](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [Procédure pas à pas : Créer votre première Application Touch](walkthrough-creating-your-first-touch-application.md)  
+ [Rubriques de guide pratique](input-and-commands-how-to-topics.md)  
+ [Encre numérique](digital-ink.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) prend en charge plusieurs types d’entré
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Contrôles](../../../../docs/framework/wpf/controls/index.md)  
-  [Événements](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [Contrôles](../controls/index.md)  
+  [Événements](events-wpf.md)

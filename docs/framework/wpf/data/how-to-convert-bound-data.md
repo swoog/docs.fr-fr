@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: 5069b6d6b7ded52011ec4c65ca2c47e41bba2ece
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c98f8e4e5c837e6fbbe836a9eb2f228d2d689542
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705718"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352294"
 ---
 # <a name="how-to-convert-bound-data"></a>Procédure : Convertir des données liées
 Cet exemple montre comment appliquer la conversion de données qui sont utilisées dans les liaisons.  
@@ -24,20 +24,20 @@ Cet exemple montre comment appliquer la conversion de données qui sont utilisé
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre l’implémentation d’un convertisseur de date qui convertit la valeur de date passée pour qu’il affiche uniquement l’année, mois et jour. Lorsque vous implémentez le <xref:System.Windows.Data.IValueConverter> interface, il est conseillé pour décorer l’implémentation avec un <xref:System.Windows.Data.ValueConversionAttribute> attribut pour indiquer au développement des outils les types de données impliqués dans la conversion, comme dans l’exemple suivant :  
   
- [!code-csharp[DataBindingLab#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
- [!code-vb[DataBindingLab#18](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
+ [!code-csharp[DataBindingLab#18](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
+ [!code-vb[DataBindingLab#18](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
   
  Une fois que vous avez créé un convertisseur, vous pouvez l’ajouter en tant que ressource dans votre [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichier. Dans l’exemple suivant, *src* est mappé à l’espace de noms dans lequel *convertisseur de date* est défini.  
   
- [!code-xaml[DataBindingLab#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
+ [!code-xaml[DataBindingLab#15](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
   
  Enfin, vous pouvez utiliser le convertisseur dans votre liaison à l’aide de la syntaxe suivante. Dans l’exemple suivant, le contenu textuel de la <xref:System.Windows.Controls.TextBlock> est lié à *StartDate*, qui est une propriété de source de données externe.  
   
- [!code-xaml[DataBindingLab#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
+ [!code-xaml[DataBindingLab#17](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
   
  Les ressources de style référencées dans l’exemple ci-dessus sont définies dans une section de ressources ne pas présentée dans cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Implémenter la validation de la liaison](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
-- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Implémenter la validation de la liaison](how-to-implement-binding-validation.md)
+- [Vue d’ensemble de la liaison de données](data-binding-overview.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

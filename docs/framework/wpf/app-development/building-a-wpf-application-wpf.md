@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 682563937de0bb907b97ee4237d33c76307493da
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745636"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364292"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Génération d'une application WPF (WPF)
 Applications Windows Presentation Foundation (WPF) peuvent être construites comme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] exécutables (.exe), des bibliothèques (.dll), ou une combinaison des deux types d’assemblys. Cette rubrique présente comment générer des applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] et décrit les principales étapes du processus de génération.  
@@ -32,7 +32,7 @@ Applications Windows Presentation Foundation (WPF) peuvent être construites com
 ## <a name="wpf-build-pipeline"></a>Pipeline de génération WPF  
  Quand un projet [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] est généré, la combinaison de cibles spécifiques au langage et spécifiques à [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] est appelée. Le processus d’exécution de ces cibles est appelé le pipeline de génération, et les principales étapes sont illustrées par la figure suivante.  
   
- ![Processus de génération WPF](../../../../docs/framework/wpf/app-development/media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
+ ![Processus de génération WPF](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
   
 <a name="Pre_Build_Initializations"></a>   
 ### <a name="pre-build-initializations"></a>Initialisations avant génération  
@@ -167,7 +167,7 @@ End Sub
 -   Rien n’est recompilé (si rien dans le projet n’a changé).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Déploiement d’une application WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Déploiement d’une application WPF](deploying-a-wpf-application-wpf.md)
 - [Informations de référence sur MSBuild WPF](/visualstudio/msbuild/wpf-msbuild-reference)
-- [URI à en-tête pack dans WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Fichiers de ressources, de contenu et de données d’une application WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [URI à en-tête pack dans WPF](pack-uris-in-wpf.md)
+- [Fichiers de ressources, de contenu et de données d’une application WPF](wpf-application-resource-content-and-data-files.md)

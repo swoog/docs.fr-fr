@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738824"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369849"
 ---
 # <a name="layout"></a>Mise en page
 Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Pour créer des interfaces utilisateur dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], il est essentiel de comprendre quand et comment interviennent les calculs de disposition.  
@@ -41,22 +41,22 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
   
  L’illustration suivante représente une disposition simple.  
   
- ![Grille classique, sans zone englobante superposée.](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boudingbox1")  
+ ![Grille classique, sans zone englobante superposée.](./media/boundingbox1.png "boudingbox1")  
   
  Cette disposition peut être obtenue en utilisant le code [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] suivant.  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  Un seul <xref:System.Windows.Controls.TextBlock> élément est hébergé dans un <xref:System.Windows.Controls.Grid>. Tandis que le texte remplit uniquement l’angle supérieur gauche de la première colonne, l’espace alloué pour le <xref:System.Windows.Controls.TextBlock> est en fait beaucoup plus important. La zone englobante de n’importe quel <xref:System.Windows.FrameworkElement> peuvent être récupérées à l’aide de la <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> (méthode). L’illustration suivante montre le cadre englobant pour le <xref:System.Windows.Controls.TextBlock> élément.  
   
- ![La zone englobante du TextBlock est maintenant visible.](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![La zone englobante du TextBlock est maintenant visible.](./media/boundingbox2.png "boundingbox2")  
   
  Comme indiqué par le rectangle jaune, l’espace alloué pour le <xref:System.Windows.Controls.TextBlock> élément est en fait bien plus important qu’il s’affiche. Comme les éléments supplémentaires sont ajoutés à la <xref:System.Windows.Controls.Grid>, cette allocation pourrait réduire ou développer, selon le type et la taille des éléments qui sont ajoutés.  
   
  L’emplacement de disposition de la <xref:System.Windows.Controls.TextBlock> est traduite en une <xref:System.Windows.Shapes.Path> à l’aide de la <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> (méthode). Cette technique peut s’avérer utile pour afficher la zone englobante d’un élément.  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>Système de disposition  
@@ -122,7 +122,7 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
   
 -   Identifiez les changements de valeurs de propriétés qui forceront le système de disposition à procéder à une mise à jour récursive.  
   
-     Les propriétés de dépendance dont les valeurs peuvent entraîner l’initialisation du système de disposition sont marquées avec des indicateurs publics. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> et <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> fournissent des indications utiles concernant la propriété des modifications de valeur forcera une récursive mettre à jour par le système de disposition. En règle générale, toute propriété qui peut affecter la taille du cadre englobant d’un élément doit avoir un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> l’indicateur est défini sur true. Pour plus d’informations, consultez [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Les propriétés de dépendance dont les valeurs peuvent entraîner l’initialisation du système de disposition sont marquées avec des indicateurs publics. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> et <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> fournissent des indications utiles concernant la propriété des modifications de valeur forcera une récursive mettre à jour par le système de disposition. En règle générale, toute propriété qui peut affecter la taille du cadre englobant d’un élément doit avoir un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> l’indicateur est défini sur true. Pour plus d’informations, consultez [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md).  
   
 -   Si possible, utilisez un <xref:System.Windows.UIElement.RenderTransform%2A> au lieu d’un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
@@ -146,11 +146,11 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Étapes suivantes  
- Pour bien comprendre en quoi consiste la disposition, il convient dans un premier temps de comprendre comment les éléments sont mesurés et organisés. Pour plus d’informations sur la disposition <xref:System.Windows.Controls.Panel> éléments, consultez [vue d’ensemble de panneaux](../../../../docs/framework/wpf/controls/panels-overview.md). Pour mieux comprendre les différentes propriétés de positionnement qui peuvent affecter la disposition, consultez [Vue d’ensemble de l’alignement, des marges et du remplissage](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Pour obtenir un exemple de personnalisé <xref:System.Windows.Controls.Panel> élément, consultez [exemple de panneau Radial personnalisé](https://go.microsoft.com/fwlink/?LinkID=159982). Lorsque vous êtes prêt à tout mettre ensemble dans une application légère, consultez [procédure pas à pas : Ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Pour bien comprendre en quoi consiste la disposition, il convient dans un premier temps de comprendre comment les éléments sont mesurés et organisés. Pour plus d’informations sur la disposition <xref:System.Windows.Controls.Panel> éléments, consultez [vue d’ensemble de panneaux](../controls/panels-overview.md). Pour mieux comprendre les différentes propriétés de positionnement qui peuvent affecter la disposition, consultez [Vue d’ensemble de l’alignement, des marges et du remplissage](alignment-margins-and-padding-overview.md). Pour obtenir un exemple de personnalisé <xref:System.Windows.Controls.Panel> élément, consultez [exemple de panneau Radial personnalisé](https://go.microsoft.com/fwlink/?LinkID=159982). Lorsque vous êtes prêt à tout mettre ensemble dans une application légère, consultez [procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Vue d’ensemble de Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Vue d'ensemble de l'alignement, des marges et du remplissage](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [Disposition et conception](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Vue d’ensemble de Panel](../controls/panels-overview.md)
+- [Vue d'ensemble de l'alignement, des marges et du remplissage](alignment-margins-and-padding-overview.md)
+- [Disposition et conception](optimizing-performance-layout-and-design.md)

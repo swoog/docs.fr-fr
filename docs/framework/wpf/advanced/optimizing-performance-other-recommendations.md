@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: fecb16592f3b3af78e329e095684b9c726f056f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703677"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358936"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimisation des performances : Autres recommandations
-<a name="introduction"></a> Cette rubrique fournit des recommandations pour améliorer les performances en plus de celles abordées dans les rubriques de la section [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).  
+<a name="introduction"></a> Cette rubrique fournit des recommandations pour améliorer les performances en plus de celles abordées dans les rubriques de la section [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md).  
   
  Cette rubrique contient les sections suivantes :  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54703677"
 ## <a name="navigation-to-object"></a>Navigation vers un objet  
  Le <xref:System.Windows.Navigation.NavigationWindow> objet dérive <xref:System.Windows.Window> et l’étend avec prise en charge de la navigation de contenu, principalement en combinant <xref:System.Windows.Navigation.NavigationService> et le journal. Vous pouvez mettre à jour la zone cliente de <xref:System.Windows.Navigation.NavigationWindow> en spécifiant un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ou un objet. L'exemple suivant illustre les deux méthodes :  
   
- [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
- [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
+ [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
+ [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
  Chaque <xref:System.Windows.Navigation.NavigationWindow> objet possède un journal qui enregistre l’historique de navigation de l’utilisateur dans cette fenêtre. Un des objectifs du journal est de permettre aux utilisateurs de retracer leurs étapes.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54703677"
   
  Quand vous naviguez à l’aide d’un objet, le journal stocke intégralement l’arborescence de visuels de l’objet. Cela signifie que chaque fois que vous visitez la page, elle s’affiche immédiatement sans avoir à être reconstruite. Dans ce cas, le coût de stockage du journal est élevé, mais le temps de reconstitution de la page est faible.  
   
- Lorsque vous utilisez la <xref:System.Windows.Navigation.NavigationWindow> de l’objet, vous devez garder à l’esprit l’impact de la journalisation sur les performances de votre application. Pour plus d’informations, consultez [Vue d’ensemble de la navigation](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+ Lorsque vous utilisez la <xref:System.Windows.Navigation.NavigationWindow> de l’objet, vous devez garder à l’esprit l’impact de la journalisation sur les performances de votre application. Pour plus d’informations, consultez [Vue d’ensemble de la navigation](../app-development/navigation-overview.md).  
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>Test de positionnement sur les grandes surfaces 3D  
@@ -73,12 +73,12 @@ ms.locfileid: "54703677"
  Le service de mise en cache de polices [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] partage les données de police entre les applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. La première application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que vous exécutez démarre ce service s’il n’est pas déjà en cours d’exécution. Si vous utilisez [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], vous pouvez définir le service « Windows Presentation Foundation (WPF) Font Cache 3.0.0.0 » à partir de « Manuel » (la valeur par défaut) sur « Automatique (début différé) » afin de réduire le temps de démarrage initial [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Planification des performances des applications](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Tirer parti du matériel](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Disposition et conception](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportement de l’objet](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Ressources d'application](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Liaison de données](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Conseils et astuces sur les animations](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Planification des performances des applications](planning-for-application-performance.md)
+- [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
+- [Disposition et conception](optimizing-performance-layout-and-design.md)
+- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportement de l’objet](optimizing-performance-object-behavior.md)
+- [Ressources d'application](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [Liaison de données](optimizing-performance-data-binding.md)
+- [Conseils et astuces sur les animations](../graphics-multimedia/animation-tips-and-tricks.md)

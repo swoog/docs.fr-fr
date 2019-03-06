@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539026"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367869"
 ---
 # <a name="advanced-ink-handling"></a>Gestion avancée de l'encre
-Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est fourni avec la <xref:System.Windows.Controls.InkCanvas>, et est un élément que vous pouvez placer dans votre application pour lancer immédiatement la collecte et l’affichage d’encre. Toutefois, si le <xref:System.Windows.Controls.InkCanvas> contrôle ne fournit pas un niveau assez de contrôle, vous pouvez garder le contrôle à un niveau supérieur en personnalisant votre propre collecte d’encre et les classes de rendu d’encre à l’aide de <xref:System.Windows.Input.StylusPlugIns>.  
+Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est livré avec la <xref:System.Windows.Controls.InkCanvas>, et est un élément que vous pouvez placer dans votre application pour commencer à collecter et afficher l’encre. Toutefois, si le <xref:System.Windows.Controls.InkCanvas> contrôle ne fournit pas un niveau de contrôle assez, vous pouvez conserver le contrôle à un niveau supérieur en personnalisant vos propres collecte d’encre et les classes de rendu de l’encre à l’aide de <xref:System.Windows.Input.StylusPlugIns>.  
   
- Le <xref:System.Windows.Input.StylusPlugIns> classes fournissent un mécanisme pour l’implémentation du contrôle de bas niveau sur <xref:System.Windows.Input.Stylus> d’entrée et de rendu dynamique de l’encre. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fournit un mécanisme vous permet d’implémenter un comportement personnalisé et l’appliquer au flux de données provenant du périphérique stylet pour des performances optimales. Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, spécialisé <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, vous permet de personnaliser les données en temps réel de l’encre rendu dynamique ce qui signifie que la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> dessine encre numérique immédiatement en tant que <xref:System.Windows.Input.StylusPoint> données sont générées, il semble « couler » du stylet périphérique.  
+ Le <xref:System.Windows.Input.StylusPlugIns> classes fournissent un mécanisme pour l’implémentation du contrôle de bas niveau sur <xref:System.Windows.Input.Stylus> d’entrée et de rendu dynamique de l’encre. Le <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fournit un mécanisme pour vous permettre d’implémenter un comportement personnalisé et l’appliquer au flux de données provenant du périphérique de stylet pour des performances optimales. Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, spécialisé <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, vous permet de personnaliser dynamiquement des données de l’encre de rendu en temps réel ce qui signifie que le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Dessine l’encre numérique immédiatement en tant que <xref:System.Windows.Input.StylusPoint> données sont générées pour qu’elle semble « couler » du stylet appareil.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Encre de rendu personnalisé](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [Interception d'entrée à partir du stylet](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [Création d'un contrôle d'entrée d'encre](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [Modèle de thread de l'encre](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [Encre de rendu personnalisé](custom-rendering-ink.md)  
+  [Interception d'entrée à partir du stylet](intercepting-input-from-the-stylus.md)  
+  [Création d'un contrôle d'entrée d'encre](creating-an-ink-input-control.md)  
+  [Modèle de thread de l'encre](the-ink-threading-model.md)

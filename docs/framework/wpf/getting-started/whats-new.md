@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 6dc833ce3dc88b61ed6966c7b5ca2756f5012308
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265348"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368166"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Nouveautés de WPF version 4.5
 <a name="introduction"></a> Cette rubrique contient des informations sur les fonctionnalités nouvelles et améliorées dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.  
@@ -115,15 +115,15 @@ ms.locfileid: "55265348"
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Amélioration de la prise en charge pour l’établissement d’une référence faible à un événement  
- L’implémentation du modèle d’événement faible est désormais plus facile car les abonnés aux événements peuvent y participer sans avoir à implémenter d’interface supplémentaire.  Le modèle générique <xref:System.Windows.WeakEventManager> classe permet également aux abonnés de participer au modèle d’événement faible si un dédié <xref:System.Windows.WeakEventManager> n’existe pas pour un événement donné.  Pour plus d’informations, consultez [Modèles d’événement faible](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ L’implémentation du modèle d’événement faible est désormais plus facile car les abonnés aux événements peuvent y participer sans avoir à implémenter d’interface supplémentaire.  Le modèle générique <xref:System.Windows.WeakEventManager> classe permet également aux abonnés de participer au modèle d’événement faible si un dédié <xref:System.Windows.WeakEventManager> n’existe pas pour un événement donné.  Pour plus d’informations, consultez [Modèles d’événement faible](../advanced/weak-event-patterns.md).  
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>Nouvelles méthodes pour la classe Dispatcher  
- La classe Dispatcher définit de nouvelles méthodes pour les opérations synchrones et asynchrones.  Synchrones <xref:System.Windows.Threading.Dispatcher.Invoke%2A> méthode définit des surcharges qui prennent un <xref:System.Action> ou <xref:System.Func%601> paramètre. La nouvelle méthode asynchrone, <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, accepte également un <xref:System.Action> ou <xref:System.Func%601> comme paramètre de rappel et retourne un <xref:System.Windows.Threading.DispatcherOperation> ou <xref:System.Windows.Threading.DispatcherOperation%601>.   Le <xref:System.Windows.Threading.DispatcherOperation> et <xref:System.Windows.Threading.DispatcherOperation%601> classes définissent un <xref:System.Threading.Tasks.Task> propriété.  Lorsque vous appelez <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, vous pouvez utiliser la `await` mot clé with soit le <xref:System.Windows.Threading.DispatcherOperation> ou associé <xref:System.Threading.Tasks.Task>. Si vous devez attendre de manière synchrone le <xref:System.Threading.Tasks.Task> qui est retourné par un <xref:System.Windows.Threading.DispatcherOperation> ou <xref:System.Windows.Threading.DispatcherOperation%601>, appelez le <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> méthode d’extension. Appel <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> entraîne un blocage si l’opération est en file d’attente sur un thread d’appel. Pour plus d’informations sur l’utilisation d’un <xref:System.Threading.Tasks.Task> pour effectuer des opérations asynchrones, consultez [parallélisme des tâches (Task Parallel Library)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).  
+ La classe Dispatcher définit de nouvelles méthodes pour les opérations synchrones et asynchrones.  Synchrones <xref:System.Windows.Threading.Dispatcher.Invoke%2A> méthode définit des surcharges qui prennent un <xref:System.Action> ou <xref:System.Func%601> paramètre. La nouvelle méthode asynchrone, <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, accepte également un <xref:System.Action> ou <xref:System.Func%601> comme paramètre de rappel et retourne un <xref:System.Windows.Threading.DispatcherOperation> ou <xref:System.Windows.Threading.DispatcherOperation%601>.   Le <xref:System.Windows.Threading.DispatcherOperation> et <xref:System.Windows.Threading.DispatcherOperation%601> classes définissent un <xref:System.Threading.Tasks.Task> propriété.  Lorsque vous appelez <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, vous pouvez utiliser la `await` mot clé with soit le <xref:System.Windows.Threading.DispatcherOperation> ou associé <xref:System.Threading.Tasks.Task>. Si vous devez attendre de manière synchrone le <xref:System.Threading.Tasks.Task> qui est retourné par un <xref:System.Windows.Threading.DispatcherOperation> ou <xref:System.Windows.Threading.DispatcherOperation%601>, appelez le <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> méthode d’extension. Appel <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> entraîne un blocage si l’opération est en file d’attente sur un thread d’appel. Pour plus d’informations sur l’utilisation d’un <xref:System.Threading.Tasks.Task> pour effectuer des opérations asynchrones, consultez [parallélisme des tâches (Task Parallel Library)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>Extensions de balisage pour les événements  
  WPF 4.5 prend en charge les extensions de balisage pour les événements.  Bien que WPF ne définisse pas d’extension de balisage à utiliser pour les événements, des tiers sont en mesure de créer une extension de balisage qui peut être utilisée avec les événements.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Nouveautés dans le .NET Framework](../../../../docs/framework/whats-new/index.md)
+- [Nouveautés dans le .NET Framework](../../whats-new/index.md)

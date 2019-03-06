@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], TextBlock
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
-ms.openlocfilehash: f032476326ac96edbfb7532f30dedd72b78f76fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555897"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358910"
 ---
 # <a name="textblock"></a>TextBlock
-Le <xref:System.Windows.Controls.TextBlock> contrôle prend en charge le texte flexible [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications. Cet élément est principalement destiné aux [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scénarios d’interface utilisateur de base qui ne nécessitent pas plus d’un paragraphe de texte.  
+Le <xref:System.Windows.Controls.TextBlock> contrôle prend en charge de texte flexible pour [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications. Cet élément est principalement destiné aux [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scénarios d’interface utilisateur de base qui ne nécessitent pas plus d’un paragraphe de texte.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble de TextBlock](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+ [Vue d’ensemble de TextBlock](textblock-overview.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Label>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Documents dans WPF](../advanced/documents-in-wpf.md)  
   
- [Vue d’ensemble des documents dynamiques](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Vue d’ensemble des documents dynamiques](../advanced/flow-document-overview.md)

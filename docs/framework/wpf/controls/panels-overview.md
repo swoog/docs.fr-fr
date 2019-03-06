@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 77f8fc5057b8f31e684941b742f2cf696afd6b07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525207"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377162"
 ---
 # <a name="panels-overview"></a>Vue d'ensemble de Panel
 <xref:System.Windows.Controls.Panel> les éléments sont des composants qui contrôlent le rendu des éléments : leur taille et dimensions, leur position et la disposition de leur contenu enfant. Le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un certain nombre de prédéfinis <xref:System.Windows.Controls.Panel> éléments, ainsi que la possibilité de construire personnalisé <xref:System.Windows.Controls.Panel> éléments.  
@@ -43,7 +43,7 @@ ms.locfileid: "54525207"
   
 <a name="Panels_declared_members"></a>   
 ## <a name="panel-common-members"></a>Membres communs aux éléments Panel  
- Tous les <xref:System.Windows.Controls.Panel> éléments prennent en charge de la base de dimensionnement et de propriétés de positionnement définies par <xref:System.Windows.FrameworkElement>, y compris <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, et <xref:System.Windows.FrameworkElement.LayoutTransform%2A>. Pour plus d’informations sur les propriétés de positionnement définies par <xref:System.Windows.FrameworkElement>, consultez [l’alignement, marges et remplissage de vue d’ensemble](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md).  
+ Tous les <xref:System.Windows.Controls.Panel> éléments prennent en charge de la base de dimensionnement et de propriétés de positionnement définies par <xref:System.Windows.FrameworkElement>, y compris <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, et <xref:System.Windows.FrameworkElement.LayoutTransform%2A>. Pour plus d’informations sur les propriétés de positionnement définies par <xref:System.Windows.FrameworkElement>, consultez [l’alignement, marges et remplissage de vue d’ensemble](../advanced/alignment-margins-and-padding-overview.md).  
   
  <xref:System.Windows.Controls.Panel> expose des propriétés supplémentaires qui sont très important de comprendre et à l’aide de la mise en page. Le <xref:System.Windows.Controls.Panel.Background%2A> propriété est utilisée pour remplir la zone entre les limites d’un élément panel dérivé avec un <xref:System.Windows.Media.Brush>. <xref:System.Windows.Controls.Panel.Children%2A> représente la collection enfant d’éléments qui le <xref:System.Windows.Controls.Panel> se compose de. <xref:System.Windows.Controls.Panel.InternalChildren%2A> représente le contenu de la <xref:System.Windows.Controls.Panel.Children%2A> collection ainsi que les membres générés par la liaison de données. Ces contrôles se composent d’un <xref:System.Windows.Controls.UIElementCollection> d’éléments enfants hébergés dans le parent <xref:System.Windows.Controls.Panel>.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54525207"
 #### <a name="attached-properties"></a>Propriétés jointes  
  Les éléments Panel dérivés utilisent beaucoup les propriétés jointes. Une propriété jointe constitue une forme spécialisée de la propriété de dépendance qui n’a pas le « wrapper » de propriété [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] classique. Les propriétés jointes présentent une syntaxe spécialisée dans [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], visible dans plusieurs des exemples qui suivent.  
   
- Une des finalités d’une propriété jointe est de permettre aux éléments enfants de stocker les valeurs uniques d’une propriété définie en fait par un élément parent. Une application de cette fonctionnalité est de faire en sorte que les éléments enfants informent le parent sur la manière dont ils doivent être présentés dans l’interface utilisateur (IU) [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], ce qui est extrêmement utile pour la disposition de l’application. Pour plus d’informations, consultez [Vue d’ensemble des propriétés jointes](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
+ Une des finalités d’une propriété jointe est de permettre aux éléments enfants de stocker les valeurs uniques d’une propriété définie en fait par un élément parent. Une application de cette fonctionnalité est de faire en sorte que les éléments enfants informent le parent sur la manière dont ils doivent être présentés dans l’interface utilisateur (IU) [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], ce qui est extrêmement utile pour la disposition de l’application. Pour plus d’informations, consultez [Vue d’ensemble des propriétés jointes](../advanced/attached-properties-overview.md).  
   
 <a name="Panels_derived_elements"></a>   
 ## <a name="derived-panel-elements"></a>Éléments Panel dérivés  
@@ -106,13 +106,13 @@ ms.locfileid: "54525207"
 #### <a name="defining-and-using-a-canvas"></a>Définition et utilisation d’un élément Canvas  
  Un <xref:System.Windows.Controls.Canvas> peut être instancié en utilisant simplement [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ou du code. L’exemple suivant montre comment utiliser <xref:System.Windows.Controls.Canvas> pour positionner le contenu absolument. Ce code génère trois carrés de 100 pixels de côté. Le premier carré est rouge, et la position de son angle supérieur gauche (*x, y*) est définie sur (0, 0). Le deuxième carré est vert, et la position de son angle supérieur gauche est définie sur (100, 100), juste en dessous et à droite du premier carré. Le troisième carré est bleu, et la position de son angle supérieur gauche est définie sur (50, 50). Il englobe ainsi le quart inférieur droit du premier carré et le quart supérieur gauche du deuxième. Comme le troisième carré est disposé en dernier, il apparaît au-dessus des deux autres carrés, c’est-à-dire que les parties qui se chevauchent prennent la couleur de ce troisième carré.  
   
- [!code-csharp[CanvasOvwSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasOvwSample/CSharp/Canvas_Ovw_Sample.cs#1)]
- [!code-vb[CanvasOvwSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasOvwSample/VisualBasic/canvas_vb.vb#1)]
- [!code-xaml[CanvasOvwSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/CanvasOvwSample/XAML/default.xaml#1)]  
+ [!code-csharp[CanvasOvwSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasOvwSample/CSharp/Canvas_Ovw_Sample.cs#1)]
+ [!code-vb[CanvasOvwSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasOvwSample/VisualBasic/canvas_vb.vb#1)]
+ [!code-xaml[CanvasOvwSample#1](~/samples/snippets/xaml/VS_Snippets_Wpf/CanvasOvwSample/XAML/default.xaml#1)]  
   
  L’application compilée produit une nouvelle [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]IU qui ressemble à ceci.  
   
- ![Élément Canvas classique.](../../../../docs/framework/wpf/controls/media/panel-intro-canvas.PNG "panel_intro_canvas")  
+ ![Élément Canvas classique.](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
   
 <a name="Panels_overview_DockPanel_subsection"></a>   
 ### <a name="dockpanel"></a>DockPanel  
@@ -129,21 +129,21 @@ ms.locfileid: "54525207"
 #### <a name="defining-and-using-a-dockpanel"></a>Définition et utilisation d’un élément DockPanel  
  L’exemple suivant montre comment partitionner l’espace à l’aide un <xref:System.Windows.Controls.DockPanel>. Cinq <xref:System.Windows.Controls.Border> éléments sont ajoutés en tant qu’enfants d’un parent <xref:System.Windows.Controls.DockPanel>. Chacun utilise une autre propriété de positionnement d’un <xref:System.Windows.Controls.DockPanel> pour partitionner l’espace. Le dernier élément « remplit » l’espace non alloué restant.  
   
- [!code-cpp[DockPanelOvwSample#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DockPanelOvwSample/CPP/DockPanel_Ovw_Sample.cpp#1)]
- [!code-csharp[DockPanelOvwSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DockPanelOvwSample/CSharp/DockPanel_Ovw_Sample.cs#1)]
- [!code-vb[DockPanelOvwSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelOvwSample/VisualBasic/dockpanel_vb.vb#1)]
- [!code-xaml[DockPanelOvwSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DockPanelOvwSample/XAML/default.xaml#1)]  
+ [!code-cpp[DockPanelOvwSample#1](~/samples/snippets/cpp/VS_Snippets_Wpf/DockPanelOvwSample/CPP/DockPanel_Ovw_Sample.cpp#1)]
+ [!code-csharp[DockPanelOvwSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DockPanelOvwSample/CSharp/DockPanel_Ovw_Sample.cs#1)]
+ [!code-vb[DockPanelOvwSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelOvwSample/VisualBasic/dockpanel_vb.vb#1)]
+ [!code-xaml[DockPanelOvwSample#1](~/samples/snippets/xaml/VS_Snippets_Wpf/DockPanelOvwSample/XAML/default.xaml#1)]  
   
  L’application compilée produit une nouvelle [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]IU qui ressemble à ceci.  
   
- ![Scénario classique d’utilisation de l’élément DockPanel.](../../../../docs/framework/wpf/controls/media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
+ ![Scénario classique d’utilisation de l’élément DockPanel.](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 <a name="Panels_overview_Grid_subsection"></a>   
 ### <a name="grid"></a>Grille  
  Le <xref:System.Windows.Controls.Grid> élément réunit les fonctionnalités d’un positionnement absolu et le contrôle de données tabulaires. Un <xref:System.Windows.Controls.Grid> vous permet de facilement position des éléments de style. <xref:System.Windows.Controls.Grid> vous permet de définir des regroupements de colonnes et de lignes flexibles et fournit même un mécanisme pour partager des informations de dimensionnement entre plusieurs <xref:System.Windows.Controls.Grid> éléments.  
   
 #### <a name="how-is-grid-different-from-table"></a>En quoi un élément Grid diffère-t-il d’un élément Table ?  
- <xref:System.Windows.Documents.Table> et <xref:System.Windows.Controls.Grid> partagent des fonctionnalités communes, mais chacun est idéale pour différents scénarios. Un <xref:System.Windows.Documents.Table> est conçu pour être utilisé dans du contenu dynamique (voir [vue d’ensemble du Document de flux](../../../../docs/framework/wpf/advanced/flow-document-overview.md) pour plus d’informations sur le contenu dynamique). Les éléments Grid sont mieux adaptés à une utilisation dans des formulaires (autrement dit, partout, sauf dans du contenu dynamique). Au sein d’un <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> les comportements de contenu tels que la pagination, Redisposition et lors de la sélection de contenu de flux prend en charge un <xref:System.Windows.Controls.Grid> pas. Un <xref:System.Windows.Controls.Grid> quant à eux, est mieux utilisées en dehors d’un <xref:System.Windows.Documents.FlowDocument> pour de nombreuses raisons, y compris <xref:System.Windows.Controls.Grid> ajoute des éléments basés sur un index de ligne et de colonne, <xref:System.Windows.Documents.Table> pas. Le <xref:System.Windows.Controls.Grid> élément autorise la superposition de contenu enfant, et plusieurs éléments d’exister dans une même « cellule ». <xref:System.Windows.Documents.Table> ne prend pas en charge la superposition. Éléments enfants d’un <xref:System.Windows.Controls.Grid> peuvent être positionnés par rapport à la zone de leurs limites de « cellule ». <xref:System.Windows.Documents.Table> ne prend pas en charge cette fonctionnalité. Enfin, un <xref:System.Windows.Controls.Grid> est plus légère qu’une <xref:System.Windows.Documents.Table>.  
+ <xref:System.Windows.Documents.Table> et <xref:System.Windows.Controls.Grid> partagent des fonctionnalités communes, mais chacun est idéale pour différents scénarios. Un <xref:System.Windows.Documents.Table> est conçu pour être utilisé dans du contenu dynamique (voir [vue d’ensemble du Document de flux](../advanced/flow-document-overview.md) pour plus d’informations sur le contenu dynamique). Les éléments Grid sont mieux adaptés à une utilisation dans des formulaires (autrement dit, partout, sauf dans du contenu dynamique). Au sein d’un <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> les comportements de contenu tels que la pagination, Redisposition et lors de la sélection de contenu de flux prend en charge un <xref:System.Windows.Controls.Grid> pas. Un <xref:System.Windows.Controls.Grid> quant à eux, est mieux utilisées en dehors d’un <xref:System.Windows.Documents.FlowDocument> pour de nombreuses raisons, y compris <xref:System.Windows.Controls.Grid> ajoute des éléments basés sur un index de ligne et de colonne, <xref:System.Windows.Documents.Table> pas. Le <xref:System.Windows.Controls.Grid> élément autorise la superposition de contenu enfant, et plusieurs éléments d’exister dans une même « cellule ». <xref:System.Windows.Documents.Table> ne prend pas en charge la superposition. Éléments enfants d’un <xref:System.Windows.Controls.Grid> peuvent être positionnés par rapport à la zone de leurs limites de « cellule ». <xref:System.Windows.Documents.Table> ne prend pas en charge cette fonctionnalité. Enfin, un <xref:System.Windows.Controls.Grid> est plus légère qu’une <xref:System.Windows.Documents.Table>.  
   
 #### <a name="sizing-behavior-of-columns-and-rows"></a>Comportement de dimensionnement des colonnes et des lignes  
  Colonnes et lignes définies dans un <xref:System.Windows.Controls.Grid> peuvent tirer parti de <xref:System.Windows.GridUnitType.Star> dimensionnement pour distribuer proportionnellement l’espace restant. Lorsque <xref:System.Windows.GridUnitType.Star> est sélectionné en tant que la hauteur ou la largeur d’une ligne ou une colonne, que la colonne ou ligne reçoit une proportion pondérée d’espace disponible restant. Il s’agit Contrairement à <xref:System.Windows.GridUnitType.Auto>, qui répartit l’espace uniformément en fonction de la taille du contenu au sein d’une colonne ou ligne. Cette valeur est exprimée en tant que `*` ou `2*` lorsque [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] est utilisé. Dans le premier cas, la ligne ou la colonne reçoit une fois l’espace disponible, dans le deuxième cas, deux fois, et ainsi de suite. En associant cette technique pour répartir proportionnellement l’espace avec une <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> et <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> valeur `Stretch` il est possible de l’espace de disposition de partition par pourcentage d’espace à l’écran. <xref:System.Windows.Controls.Grid> est le seul panneau de disposition qui peut distribuer l’espace de cette manière.  
@@ -151,12 +151,12 @@ ms.locfileid: "54525207"
 #### <a name="defining-and-using-a-grid"></a>Définition et utilisation d’un élément Grid  
  L’exemple suivant montre comment créer une IU [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] similaire à celle de la boîte de dialogue Exécuter disponible dans le menu Démarrer de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   
- [!code-csharp[GridRunDialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
- [!code-vb[GridRunDialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
+ [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
+ [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
  L’application compilée produit une nouvelle [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]IU qui ressemble à ceci.  
   
- ![Élément Grid classique.](../../../../docs/framework/wpf/controls/media/avalon-run-dialog.PNG "avalon_run_dialog")  
+ ![Élément Grid classique.](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
   
 <a name="Panels_overview_StackPanel_subsection"></a>   
 ### <a name="stackpanel"></a>StackPanel  
@@ -167,24 +167,24 @@ ms.locfileid: "54525207"
   
  L’exemple suivant illustre cette différence clé.  
   
- [!code-cpp[StackPanelOvw4#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
- [!code-csharp[StackPanelOvw4#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
- [!code-vb[StackPanelOvw4#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
- [!code-xaml[StackPanelOvw4#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
+ [!code-cpp[StackPanelOvw4#1](~/samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
+ [!code-csharp[StackPanelOvw4#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
+ [!code-vb[StackPanelOvw4#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
+ [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
  La différence de comportement du rendu peut être observée dans cette image.  
   
- ![Capture d’écran : Comparaison des éléments StackPanel et DockPanel](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![Capture d’écran : Comparaison des éléments StackPanel et DockPanel](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>Définition et utilisation d’un élément StackPanel  
  L’exemple suivant montre comment utiliser un <xref:System.Windows.Controls.StackPanel> pour créer un ensemble de boutons positionnés verticalement. Pour un positionnement horizontal, définissez la <xref:System.Windows.Controls.StackPanel.Orientation%2A> propriété <xref:System.Windows.Controls.Orientation.Horizontal>.  
   
- [!code-csharp[StackPanel_ovw2#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanel_ovw2/CSharp/StackPanel_Ovw_Sample2.cs#1)]
- [!code-vb[StackPanel_ovw2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanel_ovw2/VisualBasic/StackPanelOvw.vb#1)]  
+ [!code-csharp[StackPanel_ovw2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanel_ovw2/CSharp/StackPanel_Ovw_Sample2.cs#1)]
+ [!code-vb[StackPanel_ovw2#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanel_ovw2/VisualBasic/StackPanelOvw.vb#1)]  
   
  L’application compilée produit une nouvelle [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]IU qui ressemble à ceci.  
   
- ![Élément StackPanel standard.](../../../../docs/framework/wpf/controls/media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
+ ![Élément StackPanel standard.](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>Élément VirtualizingStackPanel  
@@ -194,7 +194,7 @@ ms.locfileid: "54525207"
   
  Le balisage suivant montre comment utiliser un <xref:System.Windows.Controls.VirtualizingStackPanel> comme un hôte d’éléments. Le <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizingProperty?displayProperty=nameWithType> propriété jointe doit être définie sur `true` (valeur par défaut) pour la virtualisation ait lieu.  
   
- [!code-xaml[VirtualizingStackPanel_Intro#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VirtualizingStackPanel_Intro/CS/default.xaml#1)]  
+ [!code-xaml[VirtualizingStackPanel_Intro#1](~/samples/snippets/csharp/VS_Snippets_Wpf/VirtualizingStackPanel_Intro/CS/default.xaml#1)]  
   
 <a name="Panels_overview_WrapPanel"></a>   
 ### <a name="wrappanel"></a>WrapPanel  
@@ -202,14 +202,14 @@ ms.locfileid: "54525207"
   
  L’exemple suivant montre comment créer un <xref:System.Windows.Controls.WrapPanel> à afficher <xref:System.Windows.Controls.Button> contrôles qui encapsulent lorsqu’ils atteignent le bord de leur conteneur.  
   
- [!code-cpp[WrapPanel_Intro#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WrapPanel_Intro/CPP/WrapPanel_Code.cpp#1)]
- [!code-csharp[WrapPanel_Intro#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WrapPanel_Intro/CSharp/WrapPanel_Code.cs#1)]
- [!code-vb[WrapPanel_Intro#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WrapPanel_Intro/VisualBasic/WrapPanel_vb.vb#1)]
- [!code-xaml[WrapPanel_Intro#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/WrapPanel_Intro/XAML/default.xaml#1)]  
+ [!code-cpp[WrapPanel_Intro#1](~/samples/snippets/cpp/VS_Snippets_Wpf/WrapPanel_Intro/CPP/WrapPanel_Code.cpp#1)]
+ [!code-csharp[WrapPanel_Intro#1](~/samples/snippets/csharp/VS_Snippets_Wpf/WrapPanel_Intro/CSharp/WrapPanel_Code.cs#1)]
+ [!code-vb[WrapPanel_Intro#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WrapPanel_Intro/VisualBasic/WrapPanel_vb.vb#1)]
+ [!code-xaml[WrapPanel_Intro#1](~/samples/snippets/xaml/VS_Snippets_Wpf/WrapPanel_Intro/XAML/default.xaml#1)]  
   
  L’application compilée produit une nouvelle [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]IU qui ressemble à ceci.  
   
- ![Élément WrapPanel standard.](../../../../docs/framework/wpf/controls/media/wrappanel-element.PNG "WrapPanel_Element")  
+ ![Élément WrapPanel standard.](./media/wrappanel-element.PNG "WrapPanel_Element")  
   
 <a name="Panels_nested_panel_elements"></a>   
 ## <a name="nested-panel-elements"></a>Éléments Panel imbriqués  
@@ -219,12 +219,12 @@ ms.locfileid: "54525207"
   
  L’exemple suivant montre comment créer un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que tire parti d’imbriqué <xref:System.Windows.Controls.Panel> éléments afin d’obtenir une disposition spécifique. Dans ce cas particulier, un <xref:System.Windows.Controls.DockPanel> élément est utilisé pour fournir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] structurer et imbriqués <xref:System.Windows.Controls.StackPanel> éléments, un <xref:System.Windows.Controls.Grid>et un <xref:System.Windows.Controls.Canvas> sont utilisés pour positionner des éléments enfants avec précision dans le parent <xref:System.Windows.Controls.DockPanel>.  
   
- [!code-csharp[Nested_Panels#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Nested_Panels/CSharp/nestedpanels.cs#1)]
- [!code-vb[Nested_Panels#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Nested_Panels/VisualBasic/nestedpanels.vb#1)]  
+ [!code-csharp[Nested_Panels#1](~/samples/snippets/csharp/VS_Snippets_Wpf/Nested_Panels/CSharp/nestedpanels.cs#1)]
+ [!code-vb[Nested_Panels#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Nested_Panels/VisualBasic/nestedpanels.vb#1)]  
   
  L’application compilée produit une nouvelle [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]IU qui ressemble à ceci.  
   
- ![IU tirant parti d’éléments Panel imbriqués.](../../../../docs/framework/wpf/controls/media/nested-panels.PNG "nested_panels")  
+ ![IU tirant parti d’éléments Panel imbriqués.](./media/nested-panels.PNG "nested_panels")  
   
 <a name="Panels_custom_panel_elements"></a>   
 ## <a name="custom-panel-elements"></a>Éléments Panel personnalisés  
@@ -234,9 +234,9 @@ ms.locfileid: "54525207"
   
  Le balisage suivant montre comment créer un personnalisé <xref:System.Windows.Controls.Panel> élément. Cette nouvelle <xref:System.Windows.Controls.Panel>, défini comme `PlotPanel`, prend en charge le positionnement des éléments enfants via l’utilisation de codées en dur *x -* et *y*coordonnées. Dans cet exemple, un <xref:System.Windows.Shapes.Rectangle> élément (non illustré) est positionné sur des points de tracé 50 (*x*) et 50 (*y*).  
   
- [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
- [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
- [!code-vb[PlotPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
+ [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
+ [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
+ [!code-vb[PlotPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
  Pour voir une implémentation d’élément Panel personnalisé plus complexe, consultez [Créer un exemple de panneau d’agencement de contenu personnalisé](https://go.microsoft.com/fwlink/?LinkID=159979).  
   
@@ -250,15 +250,15 @@ ms.locfileid: "54525207"
   
  <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Grid>, et <xref:System.Windows.Controls.StackPanel> sont tous des choix judicieux pour localisables [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. <xref:System.Windows.Controls.Canvas> n’est pas un bon choix, cependant, car il positionne le contenu de façon absolue, le rendant difficile à localiser.  
   
- Pour plus d’informations sur la création d’applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] avec des interfaces utilisateur (IU) localisables [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)], consultez [Vue d’ensemble de l’utilisation de la disposition automatique](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md).  
+ Pour plus d’informations sur la création d’applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] avec des interfaces utilisateur (IU) localisables [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)], consultez [Vue d’ensemble de l’utilisation de la disposition automatique](../advanced/use-automatic-layout-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Procédure pas à pas : Ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Galerie de dispositions WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=160054)
-- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)
+- [Disposition](../advanced/layout.md)
 - [Exemple de galerie de contrôles WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [Vue d'ensemble de l'alignement, des marges et du remplissage](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Vue d'ensemble de l'alignement, des marges et du remplissage](../advanced/alignment-margins-and-padding-overview.md)
 - [Créer un exemple de panneau d’agencement de contenu personnalisé](https://go.microsoft.com/fwlink/?LinkID=159979)
-- [Vue d'ensemble des propriétés jointes](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [Vue d’ensemble de l’utilisation de la disposition automatique](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
-- [Disposition et conception](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Vue d'ensemble des propriétés jointes](../advanced/attached-properties-overview.md)
+- [Vue d’ensemble de l’utilisation de la disposition automatique](../advanced/use-automatic-layout-overview.md)
+- [Disposition et conception](../advanced/optimizing-performance-layout-and-design.md)

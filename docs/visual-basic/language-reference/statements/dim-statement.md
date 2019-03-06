@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bee6bffcfe0660d1661cd2c8e2ddf0528e98620
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975197"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360262"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim, instruction (Visual Basic)
 Déclare et alloue de l’espace de stockage pour une ou plusieurs variables.  
@@ -246,7 +246,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Pour plus d’informations sur les littéraux de tableau, consultez [tableaux](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a> Valeurs et Types de données par défaut  
+## <a name="default"></a> Valeurs et Types de données par défaut  
  Le tableau suivant décrit les résultats des diverses combinaisons de spécification du type de données et d'un initialiseur dans une instruction `Dim`.  
   
 |Type de données spécifié ?|Initialiseur spécifié ?|Exemple|Résultat|  

@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e996a299de7b365a1513d5b1fb7ca0e758f6005b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7534d760f902f80d42c6c20c57a34d52012997a7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966058"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369654"
 ---
 # <a name="get-function"></a>Get, fonction
+
 Récupère la valeur de propriété spécifiée si elle existe.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+
+## <a name="syntax"></a>Syntaxe
+
+```
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -40,26 +41,30 @@ HRESULT Get (
    [out] CIMTYPE*         pvtType,
    [out] LONG*            plFlavor
 ); 
-```  
+```
 
 ## <a name="parameters"></a>Paramètres
 
-`vFunc`  
+`vFunc`\
 [in] Ce paramètre n’est pas utilisé.
 
-`ptr`  
+`ptr`\
 [in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
-`wszName`  
+`wszName`\
 [in] Le nom de la propriété.
 
-`lFlags` [in] Réservé. Ce paramètre doit être 0.
+`lFlags`\
+[in] Réservée. Ce paramètre doit être 0.
 
-`pVal` [out] Si la fonction a été retournée avec succès, contient la valeur de la `wszName` propriété. Le `pval` argument reçoit le type correct et la valeur du qualificateur.
+`pVal`\
+[out] Si la fonction a été retournée avec succès, contient la valeur de la `wszName` propriété. Le `pval` argument reçoit le type correct et la valeur du qualificateur.
 
-`pvtType` [out] Si la fonction a été retournée avec succès, contient un [constante de type CIM](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) qui indique le type de propriété. Sa valeur peut également être `null`. 
+`pvtType`\
+[out] Si la fonction a été retournée avec succès, contient un [constante de type CIM](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) qui indique le type de propriété. Sa valeur peut également être `null`. 
 
-`plFlavor` [out] Si la fonction a été retournée avec succès, reçoit des informations sur l’origine de la propriété. Sa valeur peut être `null`, ou l’une des constantes WBEM_FLAVOR_TYPE suivantes définies dans le *WbemCli.h* fichier d’en-tête : 
+`plFlavor`\
+[out] Si la fonction a été retournée avec succès, reçoit des informations sur l’origine de la propriété. Sa valeur peut être `null`, ou l’une des constantes WBEM_FLAVOR_TYPE suivantes définies dans le *WbemCli.h* fichier d’en-tête : 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
@@ -78,7 +83,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 |`WBEM_E_NOT_FOUND` | 0x80041002 | La propriété spécifiée est introuvable. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
-  
+
 ## <a name="remarks"></a>Notes
 
 Cette fonction encapsule un appel à la [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) (méthode).
@@ -87,12 +92,14 @@ Le `Get` fonction peut également retourner les propriétés système.
 
 Le `pVal` argument reçoit le type correct et la valeur pour le qualificateur et le modèle COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) (fonction)
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **En-tête :** WMINet_Utils.idl  
-  
- **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Spécifications
+
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
+
+ **En-tête :** WMINet_Utils.idl
+
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

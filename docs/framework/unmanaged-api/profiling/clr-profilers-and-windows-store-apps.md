@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188818"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358546"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profileurs CLR et les applications du Windows Store
 
@@ -126,7 +126,7 @@ Tout d’abord, vous souhaitez demander à votre utilisateur de profileur quelle
 
 Vous pouvez utiliser la <xref:Windows.Management.Deployment.PackageManager> classe pour générer cette liste. `PackageManager` est une classe Windows Runtime qui est disponible pour les applications de bureau, et il est en fait *uniquement* disponibles pour les applications de bureau.
 
-L’exemple de code suivant à partir d’une interface utilisateur du Profiler hypothétique écrit sous la forme d’une application de bureau dans c# yses le `PackageManager` pour générer une liste d’applications de Windows :
+L’exemple de code suivant à partir d’une interface utilisateur du Profiler hypothétique écrit sous la forme d’une application de bureau dans C# utilise le `PackageManager` pour générer une liste d’applications de Windows :
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ Examinez l’extrait de code suivant :
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ Il existe deux éléments, que vous devez obtenir le droit :
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ Vous devez donc faire quelque chose comme ceci :
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -384,7 +384,7 @@ Pour comprendre les conséquences de cela, il est important de comprendre les di
 
 Le point approprié est que les appels effectués sur les threads créés par votre profileur sont toujours considérés comme synchrones, même si ces appels sont effectués à partir en dehors d’une implémentation d’un de votre DLL Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) méthodes. Au moins, qui permet d’être le cas. Maintenant que le CLR a transformée thread de votre profileur par un thread managé en raison de votre appel à [ForceGC, méthode](icorprofilerinfo-forcegc-method.md), que thread ne soit plus considéré thread de votre profileur. Par conséquent, le CLR applique une définition plus stricte de qu’est-ce que synchrone pour ce thread, à savoir qui doit provenir d’un appel à l’intérieur d’un de votre DLL Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) méthodes pour qualifier comme synchrone.
 
-Que cela signifie dans la pratique ? La plupart des [ICorProfilerInfo](icorprofilerinfo-interface.md) méthodes permettent uniquement à être appelé de façon synchrone et immédiatement échoue dans le cas contraire. Par conséquent, si votre DLL de Profiler réutilise votre [ForceGC, méthode](icorprofilerinfo-forcegc-method.md) thread pour les autres appels effectués en général sur les threads créés par le profileur (par exemple, pour [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), vous allez rencontrer des difficultés. Même une fonction asynchrone safe telle que [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) possède des règles spéciales lorsqu’elle est appelée à partir de threads managés. (Consultez le blog [parcours de pile Profiler : principes de base et au-delà](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) pour plus d’informations.)
+Que cela signifie dans la pratique ? La plupart des [ICorProfilerInfo](icorprofilerinfo-interface.md) méthodes permettent uniquement à être appelé de façon synchrone et immédiatement échoue dans le cas contraire. Par conséquent, si votre DLL de Profiler réutilise votre [ForceGC, méthode](icorprofilerinfo-forcegc-method.md) thread pour les autres appels effectués en général sur les threads créés par le profileur (par exemple, pour [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), vous allez rencontrer des difficultés. Même une fonction asynchrone safe telle que [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) possède des règles spéciales lorsqu’elle est appelée à partir de threads managés. (Consultez le blog [parcours de pile Profiler : Principes de base et au-delà](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) pour plus d’informations.)
 
 Par conséquent, nous recommandons que n’importe quel thread de votre DLL de Profiler crée pour appeler [ForceGC, méthode](icorprofilerinfo-forcegc-method.md) doit être utilisé *uniquement* en vue de déclencher le catalogues globaux et de répondre aux rappels GC. Il ne doit pas appeler dans l’API de profilage pour effectuer d’autres tâches telles que pile d’échantillonnage ou de détachement.
 
