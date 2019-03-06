@@ -5,21 +5,21 @@ helpviewer_keywords:
 - TextBox control [WPF], enabling tab characters
 - tab characters [WPF], enabling
 ms.assetid: 14b1b064-61f7-4958-be63-88d85b868d03
-ms.openlocfilehash: de3336838ba35a70575ec2549c79faf04be2e7a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d134757c3c08e92e608a7ff868b2f3d28a69b27
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743606"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356544"
 ---
-# <a name="how-to-enable-tab-characters-in-a-textbox-control"></a><span data-ttu-id="51b07-102">Procédure : Activer des tabulations dans un contrôle TextBox</span><span class="sxs-lookup"><span data-stu-id="51b07-102">How to: Enable Tab Characters in a TextBox Control</span></span>
-<span data-ttu-id="51b07-103">Cet exemple montre comment activer l’acceptation de caractères de tabulation en tant qu’entrée normale dans un <xref:System.Windows.Controls.TextBox> contrôle.</span><span class="sxs-lookup"><span data-stu-id="51b07-103">This example shows how to enable the acceptance of tab characters as normal input in a <xref:System.Windows.Controls.TextBox> control.</span></span>  
+# <a name="how-to-enable-tab-characters-in-a-textbox-control"></a><span data-ttu-id="996a3-102">Procédure : Activer des tabulations dans un contrôle TextBox</span><span class="sxs-lookup"><span data-stu-id="996a3-102">How to: Enable Tab Characters in a TextBox Control</span></span>
+<span data-ttu-id="996a3-103">Cet exemple montre comment activer l’acceptation de caractères de tabulation en tant qu’entrée normale dans un <xref:System.Windows.Controls.TextBox> contrôle.</span><span class="sxs-lookup"><span data-stu-id="996a3-103">This example shows how to enable the acceptance of tab characters as normal input in a <xref:System.Windows.Controls.TextBox> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="51b07-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="51b07-104">Example</span></span>  
- <span data-ttu-id="51b07-105">Pour activer l’acceptation des caractères de tabulation en tant qu’entrée dans un <xref:System.Windows.Controls.TextBox> , affectez la <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> attribut **true**.</span><span class="sxs-lookup"><span data-stu-id="51b07-105">To enable the acceptance of tab characters as input in a <xref:System.Windows.Controls.TextBox> control, set the <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> attribute to **true**.</span></span>  
+## <a name="example"></a><span data-ttu-id="996a3-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="996a3-104">Example</span></span>  
+ <span data-ttu-id="996a3-105">Pour activer l’acceptation des caractères de tabulation en tant qu’entrée dans un <xref:System.Windows.Controls.TextBox> , affectez la <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> attribut **true**.</span><span class="sxs-lookup"><span data-stu-id="996a3-105">To enable the acceptance of tab characters as input in a <xref:System.Windows.Controls.TextBox> control, set the <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> attribute to **true**.</span></span>  
   
- [!code-xaml[TextBox_EnablingTab#_AcceptsTab](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_EnablingTab/CS/Window1.xaml#_acceptstab)]  
+ [!code-xaml[TextBox_EnablingTab#_AcceptsTab](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_EnablingTab/CS/Window1.xaml#_acceptstab)]  
   
-## <a name="see-also"></a><span data-ttu-id="51b07-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="51b07-106">See also</span></span>
-- [<span data-ttu-id="51b07-107">Vue d’ensemble de TextBox</span><span class="sxs-lookup"><span data-stu-id="51b07-107">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [<span data-ttu-id="51b07-108">Vue d’ensemble de RichTextBox</span><span class="sxs-lookup"><span data-stu-id="51b07-108">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="996a3-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="996a3-106">See also</span></span>
+- [<span data-ttu-id="996a3-107">Vue d’ensemble de TextBox</span><span class="sxs-lookup"><span data-stu-id="996a3-107">TextBox Overview</span></span>](textbox-overview.md)
+- [<span data-ttu-id="996a3-108">Vue d’ensemble de RichTextBox</span><span class="sxs-lookup"><span data-stu-id="996a3-108">RichTextBox Overview</span></span>](richtextbox-overview.md)

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Slider
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
-ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554406"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353983"
 ---
-# <a name="slider"></a><span data-ttu-id="41c03-102">Curseur</span><span class="sxs-lookup"><span data-stu-id="41c03-102">Slider</span></span>
-<span data-ttu-id="41c03-103">Le <xref:System.Windows.Controls.Slider> vous permet de sélectionner à partir d’une plage de valeurs en déplaçant un <xref:System.Windows.Controls.Primitives.Thumb> le long d’un <xref:System.Windows.Controls.Primitives.Track>.</span><span class="sxs-lookup"><span data-stu-id="41c03-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
+# <a name="slider"></a><span data-ttu-id="f73af-102">Curseur</span><span class="sxs-lookup"><span data-stu-id="f73af-102">Slider</span></span>
+<span data-ttu-id="f73af-103">Le <xref:System.Windows.Controls.Slider> vous permet de sélectionner à partir d’une plage de valeurs en déplaçant un <xref:System.Windows.Controls.Primitives.Thumb> le long d’un <xref:System.Windows.Controls.Primitives.Track>.</span><span class="sxs-lookup"><span data-stu-id="f73af-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
   
- <span data-ttu-id="41c03-104">L’illustration suivante montre un exemple d’un bouton horizontal <xref:System.Windows.Controls.Slider> contrôle.</span><span class="sxs-lookup"><span data-stu-id="41c03-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
+ <span data-ttu-id="f73af-104">L’illustration suivante montre un exemple d’un horizontal <xref:System.Windows.Controls.Slider> contrôle.</span><span class="sxs-lookup"><span data-stu-id="f73af-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
   
- <span data-ttu-id="41c03-105">![Curseur horizontal avec graduations](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="41c03-105">![Horizontal slider with tick marks](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
+ <span data-ttu-id="f73af-105">![Curseur horizontal avec graduations](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="f73af-105">![Horizontal slider with tick marks](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="41c03-106">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="41c03-106">In This Section</span></span>  
- [<span data-ttu-id="41c03-107">Personnaliser les graduations sur un curseur</span><span class="sxs-lookup"><span data-stu-id="41c03-107">Customize the Ticks on a Slider</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f73af-106">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="f73af-106">In This Section</span></span>  
+ [<span data-ttu-id="f73af-107">Personnaliser les graduations sur un curseur</span><span class="sxs-lookup"><span data-stu-id="f73af-107">Customize the Ticks on a Slider</span></span>](how-to-customize-the-ticks-on-a-slider.md)  
   
-## <a name="reference"></a><span data-ttu-id="41c03-108">Référence</span><span class="sxs-lookup"><span data-stu-id="41c03-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f73af-108">Référence</span><span class="sxs-lookup"><span data-stu-id="f73af-108">Reference</span></span>  
  <xref:System.Windows.Controls.Slider>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>
