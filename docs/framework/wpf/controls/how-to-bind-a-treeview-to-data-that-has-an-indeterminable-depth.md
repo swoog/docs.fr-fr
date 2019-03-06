@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 702a86f049635423a31e554d205dcc3cf4aa799d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c0361674c4f6f740784a7657e018d5257c6edac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605365"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377234"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Procédure : Lier un TreeView à des données dont la profondeur ne peut pas être déterminée
 Il peut arriver lorsque vous souhaitez lier un <xref:System.Windows.Controls.TreeView> à une source de données dont la profondeur n’est pas connue.  Cela peut se produire lorsque les données sont récursifs par nature, par exemple un système de fichiers, dont les dossiers peuvent contenir des dossiers, ou de la structure organisationnelle d’une entreprise, où les employés ont les collaborateurs directs d’autres employés.  
@@ -23,8 +23,8 @@ Il peut arriver lorsque vous souhaitez lier un <xref:System.Windows.Controls.Tre
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment lier un <xref:System.Windows.Controls.TreeView> à des données hiérarchiques et utiliser un <xref:System.Windows.HierarchicalDataTemplate> pour spécifier le <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> pour chaque <xref:System.Windows.Controls.TreeViewItem>.  Le <xref:System.Windows.Controls.TreeView> lie aux données XML qui représentent les employés dans une entreprise.  Chaque `Employee` élément peut contenir d’autres `Employee` éléments pour indiquer les employés auxquels. Les données étant récursive, le <xref:System.Windows.HierarchicalDataTemplate> peut être appliqué à chaque niveau.  
   
- [!code-xaml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Vue d’ensemble des modèles de données](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
+- [Vue d’ensemble des modèles de données](../data/data-templating-overview.md)

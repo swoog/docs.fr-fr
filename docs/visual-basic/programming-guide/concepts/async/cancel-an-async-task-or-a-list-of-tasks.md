@@ -2,12 +2,12 @@
 title: Annuler une tâche asynchrone ou une liste de tâches (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81676324145bcf8f6d9a13e757865fa86e6d2e23
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695891"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374451"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Annuler une tâche asynchrone ou une liste de tâches (Visual Basic)
 Vous pouvez créer un bouton permettant d’annuler une application asynchrone que vous souhaitez interrompre avant la fin de son exécution. Les exemples de cette rubrique vous montrent comment ajouter un bouton d’annulation à une application qui télécharge du contenu d’un site web ou une liste de sites web.  
@@ -17,11 +17,11 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
 > [!NOTE]
 >  Pour exécuter les exemples, Visual Studio version 2012 ou ultérieure et le .NET Framework version 4.5 ou ultérieure doivent être installés sur votre ordinateur.  
   
-##  <a name="BKMK_CancelaTask"></a> Annuler une tâche  
+## <a name="BKMK_CancelaTask"></a> Annuler une tâche  
  Le premier exemple associe le bouton **Annuler** à une tâche de téléchargement unique. Si vous appuyez sur le bouton pendant que l’application télécharge du contenu, le téléchargement est annulé.  
   
 ### <a name="downloading-the-example"></a>Téléchargement de l'exemple  
- Vous pouvez télécharger le projet Windows Presentation Foundation (WPF) complète à partir de [exemple Async : Affiner le réglage de votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , puis suivez ces étapes.  
+ Téléchargez l’intégralité des projets Windows Presentation Foundation (WPF) à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async  : Réglage précis de votre application), puis suivez ces étapes.  
   
 1.  Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
   
@@ -135,11 +135,11 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a> Annuler une liste de tâches  
+## <a name="BKMK_CancelaListofTasks"></a> Annuler une liste de tâches  
  Vous pouvez étendre l’exemple précédent pour annuler de nombreuses tâches à la fois en associant la même instance `CancellationTokenSource` à chaque tâche. Si vous choisissez le bouton **Annuler**, vous annulez toutes les tâches qui ne sont pas encore terminées.  
   
 ### <a name="downloading-the-example"></a>Téléchargement de l'exemple  
- Vous pouvez télécharger le projet Windows Presentation Foundation (WPF) complète à partir de [exemple Async : Affiner le réglage de votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , puis suivez ces étapes.  
+ Téléchargez l’intégralité des projets Windows Presentation Foundation (WPF) à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async  : Réglage précis de votre application), puis suivez ces étapes.  
   
 1.  Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
   
@@ -247,10 +247,10 @@ Vous pouvez créer un bouton permettant d’annuler une application asynchrone q
     Downloads canceled.  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a> Exemples complets  
+## <a name="BKMK_CompleteExamples"></a> Exemples complets  
  Les sections suivantes contiennent le code correspondant à chacun des exemples précédents. Notez que vous devez ajouter une référence pour <xref:System.Net.Http>.  
   
- Vous pouvez télécharger les projets à partir de [exemple Async : Affiner votre Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Vous pouvez télécharger les projets à partir de [exemple Async : Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async : Réglage précis de votre application).  
   
 ### <a name="cancel-a-task-example"></a>Exemple d’annulation d’une tâche  
  Le code suivant est le fichier MainWindow.xaml.vb complet pour l’exemple qui annule une seule tâche.  

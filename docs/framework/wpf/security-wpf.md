@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592683"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371981"
 ---
 # <a name="security-wpf"></a>Sécurité (WPF)
-<a name="introduction"></a> Lors du développement de Windows Presentation Foundation (WPF) applications autonomes et hébergées par un navigateur, vous devez prendre en compte le modèle de sécurité. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications autonomes avec des autorisations illimitées ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** jeu d’autorisations), qu’il soit déployé à l’aide de Windows Installer (.msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Le déploiement d’applications WPF autonomes de confiance partielle avec ClickOnce n’est pas pris en charge. Toutefois, une application hôte de confiance totale peut créer un niveau de confiance partiel <xref:System.AppDomain> à l’aide du modèle de complément .NET Framework. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> Lors du développement de Windows Presentation Foundation (WPF) applications autonomes et hébergées par un navigateur, vous devez prendre en compte le modèle de sécurité. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications autonomes avec des autorisations illimitées ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** jeu d’autorisations), qu’il soit déployé à l’aide de Windows Installer (.msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Le déploiement d’applications WPF autonomes de confiance partielle avec ClickOnce n’est pas pris en charge. Toutefois, une application hôte de confiance totale peut créer un niveau de confiance partiel <xref:System.AppDomain> à l’aide du modèle de complément .NET Framework. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](./app-development/wpf-add-ins-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applications hébergées par un navigateur sont hébergées par [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] ou Firefox, et peut être [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] ou libre [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] documents pour plus d’informations, consultez [présentation des Applications de navigateur XAML WPF](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applications hébergées par un navigateur sont hébergées par [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] ou Firefox, et peut être [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] ou libre [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] documents pour plus d’informations, consultez [présentation des Applications de navigateur XAML WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications hébergées par un navigateur dans un bac à sable de sécurité de confiance partielle, par défaut, ce qui est limité à la valeur par défaut [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** jeu d’autorisations de zone. Cela permet d’isoler efficacement [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] les applications hébergées par un navigateur à partir de l’ordinateur client de la même façon que vous pourriez l’exiger pour des applications Web classiques. Une application XBAP peut élever des privilèges jusqu’à la confiance totale, selon la zone de sécurité de l’URL de déploiement et la configuration de sécurité du client. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications hébergées par un navigateur dans un bac à sable de sécurité de confiance partielle, par défaut, ce qui est limité à la valeur par défaut [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** jeu d’autorisations de zone. Cela permet d’isoler efficacement [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] les applications hébergées par un navigateur à partir de l’ordinateur client de la même façon que vous pourriez l’exiger pour des applications Web classiques. Une application XBAP peut élever des privilèges jusqu’à la confiance totale, selon la zone de sécurité de l’URL de déploiement et la configuration de sécurité du client. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](wpf-partial-trust-security.md).  
   
  Cette rubrique décrit le modèle de sécurité pour Windows Presentation Foundation (WPF) applications autonomes et hébergées par un navigateur.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54592683"
   
  La *navigation dans une application* est la navigation entre les éléments de contenu dans une application hébergée par un navigateur. La *navigation dans un navigateur* est la navigation qui modifie l’URL de contenu et d’emplacement d’un navigateur lui-même. La relation entre la navigation dans une application (en général XAML) et la navigation dans un navigateur (en général HTML) est illustrée dans l’illustration suivante :
   
- ![Diagramme de navigation](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![Diagramme de navigation](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
   
  Le type de contenu qui est considérée comme sûre pour un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] à atteindre est déterminée principalement par indique si la navigation dans une application ou la navigation dans un navigateur est utilisée.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54592683"
 |Code de l’application|Ressources XAML avec un code-behind compilé.<br /><br /> ou<br /><br /> Les fichiers XAML qui sont ajoutés à un projet avec un type de build **Page**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  Pour plus d’informations sur les fichiers de données d’application et pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], consultez [ressource d’Application WPF, de contenu et de fichiers de données](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+>  Pour plus d’informations sur les fichiers de données d’application et pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], consultez [ressource d’Application WPF, de contenu et de fichiers de données](./app-development/wpf-application-resource-content-and-data-files.md).  
   
  Les fichiers ayant ces types de contenu sont accessibles par l’utilisateur et par programme :  
   
@@ -115,7 +115,7 @@ ms.locfileid: "54592683"
   
      Le **paramètres de sécurité** boîte de dialogue s’affiche et vous pouvez configurer les paramètres de sécurité pour la zone sélectionnée.  
   
-     ![Boîte de dialogue Paramètres de sécurité](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![Boîte de dialogue Paramètres de sécurité](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
   
 > [!NOTE]
 >  Vous pouvez également accéder à la boîte de dialogue Options Internet à partir d’Internet Explorer. Cliquez sur **outils** puis cliquez sur **Options Internet**.  
@@ -153,7 +153,7 @@ ms.locfileid: "54592683"
 > [!NOTE]
 >  Cette section s’applique également à la <xref:System.Windows.Controls.Frame> contrôler puisqu’il utilise le <xref:System.Windows.Controls.WebBrowser> pour accéder au contenu HTML.  
   
- Si le WPF <xref:System.Windows.Controls.WebBrowser> contrôle est utilisé pour héberger le contenu Web non fiable, votre application doit utiliser un niveau de confiance partiel <xref:System.AppDomain> pour permettre d’isoler votre code d’application à partir du code de script HTML potentiellement malveillant. Cela est particulièrement vrai si votre application interagit avec le script hébergé à l’aide de la <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> (méthode) et le <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> propriété. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+ Si le WPF <xref:System.Windows.Controls.WebBrowser> contrôle est utilisé pour héberger le contenu Web non fiable, votre application doit utiliser un niveau de confiance partiel <xref:System.AppDomain> pour permettre d’isoler votre code d’application à partir du code de script HTML potentiellement malveillant. Cela est particulièrement vrai si votre application interagit avec le script hébergé à l’aide de la <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> (méthode) et le <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> propriété. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](./app-development/wpf-add-ins-overview.md).  
   
  Si votre application utilise le WPF <xref:System.Windows.Controls.WebBrowser> contrôle, un autre pour renforcer la sécurité et d’atténuer les attaques consiste à activer les contrôles de fonctionnalités d’Internet Explorer. Contrôles de fonctionnalités sont des ajouts à Internet Explorer qui permettent aux administrateurs et aux développeurs de configurer les fonctionnalités d’Internet Explorer et les applications qui hébergent le contrôle WebBrowser ActiveX, ce qui le WPF <xref:System.Windows.Controls.WebBrowser> contrôler encapsule. Contrôles de fonctionnalités peuvent être configurés à l’aide de la [CoInternetSetFeatureEnabled](https://go.microsoft.com/fwlink/?LinkId=179394) (fonction) ou en modifiant les valeurs dans le Registre. Pour plus d’informations sur les contrôles de fonctionnalités, consultez [Introduction aux contrôles de fonctionnalités](https://go.microsoft.com/fwlink/?LinkId=179390) et [contrôles de fonctionnalités Internet](https://go.microsoft.com/fwlink/?LinkId=179392).  
   
@@ -251,9 +251,9 @@ ms.locfileid: "54592683"
   
  Dans les deux cas, le libres [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] fichier cible hérite des autorisations de son application hôte. Toutefois, ce comportement peut être pas souhaitable du point de vue de la sécurité, en particulier si libre [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] fichier a été généré par une entité qui est inconnu ou non fiable. Ce type de contenu est appelé *contenu externe*, alors que les <xref:System.Windows.Controls.Frame> et <xref:System.Windows.Navigation.NavigationWindow> peuvent être configurés pour l’isoler lorsqu’il y est. Isolation s’effectue en définissant le **SandboxExternalContent** propriété sur true, comme indiqué dans les exemples suivants pour <xref:System.Windows.Controls.Frame> et <xref:System.Windows.Navigation.NavigationWindow>:  
   
- [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
- [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
   
  Avec ce paramétrage, le contenu externe sera chargé dans un processus distinct du processus qui héberge l’application. Ce processus, limité au jeu d’autorisations de la zone Internet par défaut, l’isole efficacement de l’application d’hébergement et de l’ordinateur client.  
   
@@ -267,15 +267,15 @@ ms.locfileid: "54592683"
 |Domaine|Ressource|  
 |----------|--------------|  
 |Code managé|[Index des directives, conseils et procédures de sécurité pour les applications](https://go.microsoft.com/fwlink/?LinkId=117426)|  
-|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Sécurité d’accès du code](../../../docs/framework/misc/code-access-security.md)|  
+|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Sécurité d’accès du code](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Sécurité de confiance partielle de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
+|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Sécurité de confiance partielle de WPF](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Sécurité de confiance partielle de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [Stratégie de sécurité de WPF - sécurité de la plateforme](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
-- [Stratégie de sécurité de WPF - ingénierie de sécurité](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Sécurité de confiance partielle de WPF](wpf-partial-trust-security.md)
+- [Stratégie de sécurité de WPF - sécurité de la plateforme](wpf-security-strategy-platform-security.md)
+- [Stratégie de sécurité de WPF - ingénierie de sécurité](wpf-security-strategy-security-engineering.md)
 - [Index des directives, conseils et procédures de sécurité pour les applications](https://go.microsoft.com/fwlink/?LinkId=117426)
-- [Sécurité d’accès du code](../../../docs/framework/misc/code-access-security.md)
+- [Sécurité d’accès du code](../misc/code-access-security.md)
 - [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Vue d’ensemble du langage XAML (WPF)](./advanced/xaml-overview-wpf.md)

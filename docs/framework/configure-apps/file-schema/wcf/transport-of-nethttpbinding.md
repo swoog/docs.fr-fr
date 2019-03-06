@@ -3,11 +3,11 @@ title: <transport> de <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
 ms.openlocfilehash: 4d84d99660e4804a5eff2e343ba01c2983520b8f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280993"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379729"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<transport > de \<netHttpBinding >
 Définit les propriétés qui déterminent les paramètres d'authentification pour le transport HTTP.  
@@ -83,7 +83,7 @@ Définit les propriétés qui déterminent les paramètres d'authentification po
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|Définit les fonctionnalités de sécurité pour le [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md).|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre l’utilisation de la sécurité de transport SSL avec la liaison de base. Par défaut, la liaison de base prend en charge la communication HTTP.  
+ L'exemple suivant montre l'utilisation de la sécurité de transport SSL avec la liaison de base. Par défaut, la liaison de base prend en charge la communication HTTP.  
   
 ```xml  
 <system.serviceModel>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 505f4d6998b54f5b3af7613184d2cbac90cb8548
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d362767b92799fa54f46e71724284a92b5bf7e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656460"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358819"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Procédure : Configurer Visual Studio pour déboguer une application de navigateur XAML et appeler un service Web
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] s’exécutent dans un bac à sable de sécurité de confiance partielle qui est limité au jeu de la zone Internet d’autorisations. Ce jeu d’autorisations restreint les appels de service Web seulement services Web qui sont trouvent dans le [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] site de l’application d’origine. Quand un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] du débogage à partir de Visual Studio 2005, cependant, il n'est pas considérée comme ayant le même site d’origine que le service Web il références. Cette causes des exceptions de sécurité à déclencher lorsque la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] tente d’appeler le service Web. Toutefois, un Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] projet peut être configuré pour simuler le même site d’origine que le service Web qu’elle appelle pendant le débogage. Cela permet la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] à appeler en toute sécurité le service Web sans provoquer des exceptions de sécurité.
@@ -63,4 +63,4 @@ ms.locfileid: "54656460"
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 
 ## <a name="see-also"></a>Voir aussi
-- [Hôte WPF (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)
+- [Hôte WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md)

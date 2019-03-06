@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Expander control [WPF], creating
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
-ms.openlocfilehash: 8d21c7ec0172dca23f218a0d710c3976872f162c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e7c023ec371dd6695ffba3368502e5b593c4608
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681961"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369537"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Procédure : Créer un Expander avec un ScrollViewer
 Cet exemple montre comment créer un <xref:System.Windows.Controls.Expander> contrôle qui contient un contenu complexe, comme une image et le texte. L’exemple joint également le contenu de la <xref:System.Windows.Controls.Expander> dans un <xref:System.Windows.Controls.ScrollViewer> contrôle.  
@@ -22,11 +22,11 @@ Cet exemple montre comment créer un <xref:System.Windows.Controls.Expander> con
   
  Notez que l’exemple définit le <xref:System.Windows.FrameworkElement.Height%2A> propriété sur le <xref:System.Windows.Controls.ScrollViewer> au lieu de sur le contenu. Si le <xref:System.Windows.FrameworkElement.Height%2A> est défini sur le contenu, le <xref:System.Windows.Controls.ScrollViewer> n’autorise pas l’utilisateur à faire défiler le contenu. Le <xref:System.Windows.FrameworkElement.Width%2A> propriété est définie sur le <xref:System.Windows.Controls.Expander> contrôle et si ce paramètre s’applique à la <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> et le contenu développé.  
   
- [!code-xaml[ExpanderRichContent#CreateExpander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#createexpander)]  
+ [!code-xaml[ExpanderRichContent#CreateExpander](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#createexpander)]  
   
- [!code-csharp[ExpanderRichContent#CreateExpanderCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
+ [!code-csharp[ExpanderRichContent#CreateExpanderCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Controls.Expander>
-- [Vue d'ensemble de l'Expandeur](../../../../docs/framework/wpf/controls/expander-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [Vue d'ensemble de l'Expandeur](expander-overview.md)
+- [Rubriques de guide pratique](expander-how-to-topics.md)

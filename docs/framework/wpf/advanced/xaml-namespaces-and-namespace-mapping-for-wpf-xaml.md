@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: a484ba1e5d0c7a51e7e4c3edbf341bf40345fd2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633912"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366602"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Espaces de noms XAML et mappage d'espace de noms pour XAML WPF
 Cette rubrique explique plus en détail la présence et la finalité des deux mappages d’espace de noms XAML qui figurent souvent dans la balise racine de chaque fichier XAML WPF. Elle décrit également comment produire des mappages similaires pour utiliser des éléments définis dans votre propre code et/ou dans des assemblys distincts.  
@@ -40,7 +40,7 @@ Cette rubrique explique plus en détail la présence et la finalité des deux ma
   
  La relation entre ces déclarations est la suivante : le mappage du préfixe `x:` prend en charge les intrinsèques qui font partie de la définition de langage XAML ; [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est une implémentation qui utilise XAML comme langage et définit un vocabulaire de ses objets pour XAML. Étant donné que les utilisations du vocabulaire WPF sont beaucoup plus courantes que les utilisations des intrinsèques XAML, le vocabulaire WPF est mappé comme valeur par défaut.  
   
- La convention de préfixage `x:` pour le mappage de prise en charge des intrinsèques en langage XAML est suivie par des modèles de projet, des exemple de code et la documentation des fonctionnalités de langage de ce kit [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. L’espace de noms XAML définit de nombreuses fonctions courantes qui sont nécessaires, notamment pour les applications WPF de base. Par exemple, pour joindre tout code-behind à un fichier XAML par le biais d’une classe partielle, vous devez nommer cette classe comme attribut `x:Class` dans l’élément racine du fichier XAML approprié. Ou bien, tout élément tel qu’il est défini dans une page XAML à laquelle vous souhaitez accéder comme une ressource à clé doit avoir l’attribut `x:Key` défini par l’élément en question. Pour plus d’informations sur ces questions et d’autres aspects du langage XAML, consultez [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) ou [Syntaxe XAML en détail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ La convention de préfixage `x:` pour le mappage de prise en charge des intrinsèques en langage XAML est suivie par des modèles de projet, des exemple de code et la documentation des fonctionnalités de langage de ce kit [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. L’espace de noms XAML définit de nombreuses fonctions courantes qui sont nécessaires, notamment pour les applications WPF de base. Par exemple, pour joindre tout code-behind à un fichier XAML par le biais d’une classe partielle, vous devez nommer cette classe comme attribut `x:Class` dans l’élément racine du fichier XAML approprié. Ou bien, tout élément tel qu’il est défini dans une page XAML à laquelle vous souhaitez accéder comme une ressource à clé doit avoir l’attribut `x:Key` défini par l’élément en question. Pour plus d’informations sur ces questions et d’autres aspects du langage XAML, consultez [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md) ou [Syntaxe XAML en détail](xaml-syntax-in-detail.md).  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>Mappage aux classes et assemblys personnalisés  
@@ -115,7 +115,7 @@ End Namespace
   
  Le [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] utilise un espace de noms concepteur qui est généralement mappé au préfixe `d:`. Les modèles de projet plus récents pour WPF peuvent prémapper cet espace de noms XAML pour prendre en charge l’échange du XAML entre le [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] et d’autres environnements de conception. Cet espace de noms de conception XAML permet de perpétuer l’état de conception pendant les allers-retours de l’interface utilisateur basée sur XAML dans le concepteur. Il est également utilisé pour les fonctionnalités telles que `d:IsDataSource`, qui activent des sources de données du runtime dans un concepteur.  
   
- Un autre préfixe que vous pouvez voir mappé est `mc:`. `mc:` est destiné à la compatibilité du balisage et exploite un modèle de compatibilité du balisage qui n’est pas nécessairement spécifique au XAML. Dans une certaine mesure, les fonctionnalités de compatibilité du balisage peuvent être utilisées pour échanger XAML entre les frameworks ou sur d’autres limites d’implémentation de stockage pour travailler entre des contextes de schémas XAML, fournir la compatibilité pour des modes limités dans les concepteurs, etc. Pour plus d’informations sur les concepts de compatibilité du balisage et leurs relations avec WPF, consultez [compatibilité du balisage (mc :) Fonctionnalités de langage](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
+ Un autre préfixe que vous pouvez voir mappé est `mc:`. `mc:` est destiné à la compatibilité du balisage et exploite un modèle de compatibilité du balisage qui n’est pas nécessairement spécifique au XAML. Dans une certaine mesure, les fonctionnalités de compatibilité du balisage peuvent être utilisées pour échanger XAML entre les frameworks ou sur d’autres limites d’implémentation de stockage pour travailler entre des contextes de schémas XAML, fournir la compatibilité pour des modes limités dans les concepteurs, etc. Pour plus d’informations sur les concepts de compatibilité du balisage et leurs relations avec WPF, consultez [compatibilité du balisage (mc :) Fonctionnalités de langage](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF et chargement des assemblys  
  Le contexte de schéma XAML pour WPF s’intègre avec le modèle d’application WPF, qui à son tour utilise le concept défini par le CLR de <xref:System.AppDomain>. La séquence suivante décrit comment le contexte de schéma XAML interprète comment charger les assemblys ou rechercher des types au moment de l’exécution ou au moment du design, en fonction de l’utilisation WPF de <xref:System.AppDomain> et d’autres facteurs.  
@@ -138,4 +138,4 @@ End Namespace
   
 ## <a name="see-also"></a>Voir aussi
 - [Présentation des espaces de noms XML](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)

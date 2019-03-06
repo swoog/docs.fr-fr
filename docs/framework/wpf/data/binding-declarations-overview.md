@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704015"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363409"
 ---
 # <a name="binding-declarations-overview"></a>Vue d'ensemble des déclarations de liaison
 Cette rubrique décrit les différentes façons dont vous pouvez déclarer une liaison.  
@@ -26,9 +26,9 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Avant de lire cette rubrique, il est important de vous familiariser avec le concept et l’utilisation des extensions de balisage. Pour plus d’informations sur les extensions de balisage, consultez [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Avant de lire cette rubrique, il est important de vous familiariser avec le concept et l’utilisation des extensions de balisage. Pour plus d’informations sur les extensions de balisage, consultez [Extensions de balisage et XAML WPF](../advanced/markup-extensions-and-wpf-xaml.md).  
   
- Cette rubrique ne couvre pas les concepts de liaison de données. Pour une présentation des concepts de liaison de données, consultez la page [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Cette rubrique ne couvre pas les concepts de liaison de données. Pour une présentation des concepts de liaison de données, consultez la page [Vue d’ensemble de la liaison de données](data-binding-overview.md).  
   
 <a name="BindinginXAML"></a>   
 ## <a name="declaring-a-binding-in-xaml"></a>Déclarer une liaison en XAML  
@@ -40,9 +40,9 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
  Lorsque vous créez des chaînes de déclaration de liaison dans le balisage, elles doivent être jointes à la propriété de dépendance spécifique d’un objet cible. L’exemple suivant montre comment lier le <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> propriété à l’aide de l’extension de liaison, en spécifiant le <xref:System.Windows.Data.Binding.Source%2A> et <xref:System.Windows.Data.Binding.Path%2A> propriétés.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- Vous pouvez spécifier la plupart des propriétés de la <xref:System.Windows.Data.Binding> classe de cette façon. Pour plus d’informations sur l’extension de liaison, ainsi que la liste de <xref:System.Windows.Data.Binding> propriétés qui ne peut pas être définies à l’aide de l’extension de liaison, consultez la [Extension de balisage de liaison](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) vue d’ensemble.  
+ Vous pouvez spécifier la plupart des propriétés de la <xref:System.Windows.Data.Binding> classe de cette façon. Pour plus d’informations sur l’extension de liaison, ainsi que la liste de <xref:System.Windows.Data.Binding> propriétés qui ne peut pas être définies à l’aide de l’extension de liaison, consultez la [Extension de balisage de liaison](../advanced/binding-markup-extension.md) vue d’ensemble.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>Syntaxe de l’élément objet  
@@ -50,11 +50,11 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
  Voici un exemple d’utilisation de la syntaxe d’élément objet et de l’extension de balisage :  
   
- [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
  L’exemple lie la <xref:System.Windows.Controls.TextBlock.Foreground%2A> propriété en déclarant une liaison à l’aide de la syntaxe d’extension. La déclaration de liaison pour le <xref:System.Windows.Controls.TextBlock.Text%2A> propriété utilise la syntaxe d’élément objet.  
   
- Pour plus d’informations sur les différents termes, consultez [Syntaxe XAML en détail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Pour plus d’informations sur les différents termes, consultez [Syntaxe XAML en détail](../advanced/xaml-syntax-in-detail.md).  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding et PriorityBinding  
@@ -64,10 +64,10 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
 ## <a name="creating-a-binding-in-code"></a>Création d’une liaison dans le code  
  Un autre pour spécifier une liaison consiste à définir des propriétés directement sur un <xref:System.Windows.Data.Binding> objet dans le code. L’exemple suivant montre comment créer un <xref:System.Windows.Data.Binding> de l’objet et de spécifier les propriétés dans le code.  Dans cet exemple, `TheConverter` est un objet qui implémente le <xref:System.Windows.Data.IValueConverter> interface.  
   
- [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
- [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
+ [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- Si l’objet que vous liez est un <xref:System.Windows.FrameworkElement> ou un <xref:System.Windows.FrameworkContentElement> vous pouvez appeler la `SetBinding` méthode sur votre objet directement au lieu d’utiliser <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Pour un exemple, consultez [Créer une liaison dans du code](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ Si l’objet que vous liez est un <xref:System.Windows.FrameworkElement> ou un <xref:System.Windows.FrameworkContentElement> vous pouvez appeler la `SetBinding` méthode sur votre objet directement au lieu d’utiliser <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Pour un exemple, consultez [Créer une liaison dans du code](how-to-create-a-binding-in-code.md).  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>Syntaxe de chemin de liaison  
@@ -119,14 +119,14 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
 -   Si vous ne définissez pas <xref:System.Windows.Data.Binding.ConverterCulture%2A>, le moteur de liaison utilise le `Language` propriété de l’objet cible de liaison. En XAML, cette valeur par défaut est « en-US » ou hérite de la valeur de l’élément racine (ou tout élément) de la page, s’il a été défini explicitement.  
   
--   Tant que la liaison possède déjà un contexte de données (par exemple, le contexte de données hérité provenant d’un élément parent), et quelles que soient élément ou une collection qui est retournée par ce contexte est appropriée pour la liaison sans nécessiter de modification du chemin d’accès supplémentaire, une déclaration de liaison n’admet aucun clauses tout : `{Binding}` Il s’agit souvent la manière dont une liaison est spécifiée pour les styles de données, où la liaison agit sur une collection. Pour plus d’informations, consultez la section « Objets entiers utilisés comme source de liaison » dans la [Vue d’ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Tant que la liaison possède déjà un contexte de données (par exemple, le contexte de données hérité provenant d’un élément parent), et quelles que soient élément ou une collection qui est retournée par ce contexte est appropriée pour la liaison sans nécessiter de modification du chemin d’accès supplémentaire, une déclaration de liaison n’admet aucun clauses tout : `{Binding}` Il s’agit souvent la manière dont une liaison est spécifiée pour les styles de données, où la liaison agit sur une collection. Pour plus d’informations, consultez la section « Objets entiers utilisés comme source de liaison » dans la [Vue d’ensemble des sources de liaison](binding-sources-overview.md).  
   
 -   La valeur par défaut <xref:System.Windows.Data.Binding.Mode%2A> varie entre unidirectionnel ou bidirectionnel en fonction de la propriété de dépendance qui est liée. Vous pouvez toujours déclarer explicitement le mode de liaison pour garantir que votre liaison a le comportement souhaité. Dans les propriétés de contrôle général, modifiable par l’utilisateur, tel que <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> et <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, par défaut des liaisons bidirectionnelles, alors que la plupart des autres propriétés par défaut des liaisons unidirectionnelles.  
   
 -   La valeur par défaut <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valeur varie entre <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> et <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> en fonction de la propriété de dépendance liée. La valeur par défaut de la plupart des propriétés de dépendance est <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, tandis que celle de la propriété <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> a comme valeur par défaut <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [Liaison de données](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Syntaxe XAML PropertyPath](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+- [Vue d’ensemble de la liaison de données](data-binding-overview.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)
+- [Liaison de données](../advanced/optimizing-performance-data-binding.md)
+- [Syntaxe XAML PropertyPath](../advanced/propertypath-xaml-syntax.md)

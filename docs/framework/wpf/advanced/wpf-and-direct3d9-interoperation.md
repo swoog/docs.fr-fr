@@ -7,25 +7,25 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 9fd5cc270074a3a2845147bcad8baef8d1f8ba2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529409"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372683"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interopérabilité WPF et Direct3D9
 Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentation Foundation (WPF). Cette rubrique décrit la procédure créer un contenu Direct3D9 afin qu’il interagit efficacement avec WPF.  
   
 > [!NOTE]
->  Lorsque vous utilisez les contenu Direct3D9 dans WPF, vous devez également réfléchir aux performances. Pour plus d’informations sur comment optimiser les performances, consultez [Performance Considerations for Direct3D9 et WPF interopérabilité](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
+>  Lorsque vous utilisez les contenu Direct3D9 dans WPF, vous devez également réfléchir aux performances. Pour plus d’informations sur comment optimiser les performances, consultez [Performance Considerations for Direct3D9 et WPF interopérabilité](performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
   
 ## <a name="display-buffers"></a>Mémoires tampons d’affichage  
  Le <xref:System.Windows.Interop.D3DImage> classe gère deux mémoires tampons d’affichage, qui sont appelées les *mémoire tampon d’arrière-plan* et *tampon d’affichage*. La mémoire tampon d’arrière-plan est votre surface Direct3D9. Modifications apportées à la mémoire tampon d’arrière-plan sont copiées en avant dans le tampon d’affichage lorsque vous appelez le <xref:System.Windows.Interop.D3DImage.Unlock%2A> (méthode).  
   
  L’illustration suivante montre la relation entre la mémoire tampon d’arrière-plan et le tampon d’affichage.  
   
- ![Mémoires tampons d’affichage D3DImage](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage_buffers")  
+ ![Mémoires tampons d’affichage D3DImage](./media/d3dimage-buffers.png "D3DImage_buffers")  
   
 ## <a name="direct3d9-device-creation"></a>Création d’un appareil Direct3D9  
  Pour restituer le contenu Direct3D9, vous devez créer un périphérique Direct3D9. Il existe deux objets Direct3D9 que vous pouvez utiliser pour créer un appareil, `IDirect3D9` et `IDirect3D9Ex`. Permet de créer ces objets `IDirect3DDevice9` et `IDirect3DDevice9Ex` appareils, respectivement.  
@@ -39,14 +39,14 @@ Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentat
  Sur Windows Vista ou version ultérieure du système d’exploitation, utilisez la `Direct3DCreate9Ex` méthode avec un affichage qui est configuré pour utiliser le modèle de pilote d’affichage de Windows (WDDM). Utilisez le `Direct3DCreate9` méthode sur n’importe quelle autre plateforme.  
   
 ### <a name="availability-of-the-direct3dcreate9ex-method"></a>Disponibilité de la méthode Direct3DCreate9Ex  
- Le fichier d3d9.dll a la `Direct3DCreate9Ex` méthode uniquement sur Windows Vista ou version ultérieure du système d’exploitation. Si vous liez directement la fonction sur Windows XP, votre application ne parvient pas à charger. Pour déterminer si le `Direct3DCreate9Ex` méthode est prise en charge, de charger la DLL et recherchez l’adresse proc. Le code suivant montre comment tester la `Direct3DCreate9Ex` (méthode). Pour obtenir un exemple de code complet, consultez [procédure pas à pas : Création de contenu de Direct3D9 à héberger dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
+ Le fichier d3d9.dll a la `Direct3DCreate9Ex` méthode uniquement sur Windows Vista ou version ultérieure du système d’exploitation. Si vous liez directement la fonction sur Windows XP, votre application ne parvient pas à charger. Pour déterminer si le `Direct3DCreate9Ex` méthode est prise en charge, de charger la DLL et recherchez l’adresse proc. Le code suivant montre comment tester la `Direct3DCreate9Ex` (méthode). Pour obtenir un exemple de code complet, consultez [procédure pas à pas : Création de contenu de Direct3D9 à héberger dans WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
   
 ### <a name="hwnd-creation"></a>Création de HWND  
  Création d’un appareil nécessite un HWND. En règle générale, vous créez un HWND factice pour Direct3D9 à utiliser. L’exemple de code suivant montre comment créer un HWND factice.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
   
 ### <a name="present-parameters"></a>Paramètres présents  
  Création d’un appareil nécessite également un `D3DPRESENT_PARAMETERS` struct, mais seuls quelques paramètres sont importants. Ces paramètres sont choisis pour minimiser l’encombrement mémoire.  
@@ -57,7 +57,7 @@ Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentat
   
  Le code suivant montre comment initialiser le `D3DPRESENT_PARAMETERS` struct.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
   
 ## <a name="creating-the-back-buffer-render-target"></a>Création de la cible de rendu de mémoire tampon d’arrière-plan  
  Pour afficher le contenu Direct3D9 dans un <xref:System.Windows.Interop.D3DImage>, vous créez une surface Direct3D9 et affectez-le en appelant le <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> (méthode).  
@@ -67,14 +67,14 @@ Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentat
   
  L’exemple de code suivant montre comment vérifier toutes les cartes sur le système pour Direct3D9 prennent en charge.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
   
 ### <a name="creating-the-surface"></a>Création de la Surface  
- Avant de créer une surface, vérifiez que les fonctionnalités des appareils prennent en charge les bonnes performances sur le système d’exploitation cible. Pour plus d’informations, consultez [Performance Considerations for Direct3D9 et WPF interopérabilité](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
+ Avant de créer une surface, vérifiez que les fonctionnalités des appareils prennent en charge les bonnes performances sur le système d’exploitation cible. Pour plus d’informations, consultez [Performance Considerations for Direct3D9 et WPF interopérabilité](performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
   
  Lorsque vous avez vérifié les fonctionnalités des appareils, vous pouvez créer la surface. L’exemple de code suivant montre comment créer la cible de rendu.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
   
 ### <a name="wddm"></a>WDDM  
  Sur Windows Vista et versions ultérieures, qui sont configurés pour utiliser le WDDM, vous pouvez créer une texture de cible de rendu et passer la surface de niveau 0 pour le <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> (méthode). Cette approche n’est pas recommandée sur Windows XP, car vous ne pouvez pas créer une texture de cible de rendu verrouillable et performances seront réduit.  
@@ -125,7 +125,7 @@ Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentat
   
  L’exemple de code suivant montre comment rechercher le moniteur actuel.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
   
  Mettre à jour le moniteur lorsque les <xref:System.Windows.Interop.D3DImage> les modifications de taille ou la position du conteneur, ou la mise à jour le moniteur à l’aide un `DispatcherTimer` qui met à jour plusieurs fois par seconde.  
   
@@ -149,6 +149,6 @@ Vous pouvez inclure les contenu Direct3D9 dans une application Windows Presentat
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Interop.D3DImage>
-- [Considérations sur les performances de l'interopérabilité entre Direct3D9 et WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [Procédure pas à pas : Création de contenu Direct3D9 à héberger dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Procédure pas à pas : Hébergement de contenu Direct3D9 dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Considérations sur les performances de l'interopérabilité entre Direct3D9 et WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [Procédure pas à pas : Création de contenu Direct3D9 à héberger dans WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Procédure pas à pas : Hébergement de contenu Direct3D9 dans WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

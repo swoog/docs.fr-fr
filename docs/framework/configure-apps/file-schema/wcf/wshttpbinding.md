@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
 ms.openlocfilehash: d22065abcb04209ebd1ad51b41bfc9167af6d4c9
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758974"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352891"
 ---
 # <a name="wshttpbinding"></a>\<wsHttpBinding>
 Définit une liaison sécurisée, fiable, interopérable adaptée aux contrats de service non duplex. La liaison implémente les spécifications suivantes : WS-Reliable Messaging pour la fiabilité et WS-Security pour l’authentification et de sécurité de message. Le protocole de transport est HTTP et l'encodage de message est Text/XML.  
@@ -96,7 +96,8 @@ Définit une liaison sécurisée, fiable, interopérable adaptée aux contrats d
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
- `WSHttpBinding` est semblable à `BasicHttpBinding` mais fournit plus de fonctionnalités de service Web. Il utilise le transport HTTP et assure la sécurité des messages, comme BasicHttpBinding, mais il fournit également des transactions, une messagerie fiable et WS-Addressing, qu’il soit actif par défaut ou disponible par l’intermédiaire d’un paramètre de contrôle unique.  
+ 
+  `WSHttpBinding` est semblable à `BasicHttpBinding` mais fournit plus de fonctionnalités de service Web. Il utilise le transport HTTP et assure la sécurité des messages, comme BasicHttpBinding, mais il fournit également des transactions, une messagerie fiable et WS-Addressing, qu’il soit actif par défaut ou disponible par l’intermédiaire d’un paramètre de contrôle unique.  
   
 ## <a name="example"></a>Exemple  
   

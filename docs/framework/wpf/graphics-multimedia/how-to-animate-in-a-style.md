@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5fb18a2d927746c3437ec01d2a19327be373cae3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079393"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373957"
 ---
 # <a name="how-to-animate-in-a-style"></a>Comment animer dans un style
 
@@ -20,8 +20,8 @@ Dans l’exemple suivant, plusieurs animations sont définies dans un style et a
 
 ## <a name="example"></a>Exemple
 
-[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+[!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 
 Notez que lors de l’animation dans un style, il est possible de cibler des objets qui n’existent pas. Par exemple, supposons que votre style utilise un <xref:System.Windows.Media.SolidColorBrush> pour définir la propriété d’arrière-plan d’un bouton, mais à un moment donné le style est substituée et que l’arrière-plan du bouton est défini avec un <xref:System.Windows.Media.LinearGradientBrush>.  Essayez d’animer la <xref:System.Windows.Media.SolidColorBrush> ne lève pas d’exception ; l’animation échouent silencieusement.
 
-Pour plus d’informations sur la syntaxe de ciblage de plan conceptuel, consultez le [vue d’ensemble des Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Pour plus d’informations sur les animations, consultez le [vue d’ensemble de l’Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Pour plus d’informations sur les styles, consultez le [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+Pour plus d’informations sur la syntaxe de ciblage de plan conceptuel, consultez le [vue d’ensemble des Storyboards](storyboards-overview.md). Pour plus d’informations sur les animations, consultez le [vue d’ensemble de l’Animation](animation-overview.md). Pour plus d’informations sur les styles, consultez le [Styling and Templating](../controls/styling-and-templating.md).

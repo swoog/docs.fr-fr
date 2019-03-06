@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 7a1bfde401722333181b3c057b3f58aebd7811a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 960bc953345e3f6ed632b7a136b626978c8a9bce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713390"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379183"
 ---
 # <a name="binding-markup-extension"></a>Binding, extension de balisage
 Diffère d’une valeur de propriété une valeur liée aux données, création d’un objet d’expression et l’interprétation de contexte de données qui s’applique à l’élément et sa liaison au moment de l’exécution.  
@@ -41,10 +41,10 @@ Diffère d’une valeur de propriété une valeur liée aux données, création 
 |-|-|  
 |`bindProp1, bindPropN`|Le nom de la <xref:System.Windows.Data.Binding> ou <xref:System.Windows.Data.BindingBase> propriété à définir. Pas tous <xref:System.Windows.Data.Binding> propriétés peuvent être définies avec la `Binding` extension et certaines propriétés peuvent être définies au sein d’un `Binding` expression uniquement en utilisant davantage les extensions de balisage imbriquées. Consultez la section « Liaison propriétés que peut être définie avec l’Extension Binding ».|  
 |`value1, valueN`|Valeur à la propriété la valeur. La gestion de la valeur d’attribut est en définitive spécifique au type et à la logique spécifique <xref:System.Windows.Data.Binding> propriété qui est définie.|  
-|`path`|La chaîne de chemin d’accès qui définit le caractère implicite <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> propriété. Voir aussi [PropertyPath XAML syntaxe](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).|  
+|`path`|La chaîne de chemin d’accès qui définit le caractère implicite <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> propriété. Voir aussi [PropertyPath XAML syntaxe](propertypath-xaml-syntax.md).|  
   
 ## <a name="unqualified-binding"></a>{Binding} non qualifié  
- Le `{Binding}` utilisation indiquée dans « Utilisation de Expression de liaison » crée un <xref:System.Windows.Data.Binding> de l’objet avec les valeurs par défaut, qui comprend une initiale <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> de `null`. Ceci est encore utile dans de nombreux scénarios, étant donné que créé <xref:System.Windows.Data.Binding> peut reposer sur les propriétés de liaison de données essentielles telles que <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> et <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> définie dans le contexte de données d’exécution. Pour plus d’informations sur le concept de contexte de données, consultez [une liaison de données](../../../../docs/framework/wpf/data/data-binding-wpf.md).  
+ Le `{Binding}` utilisation indiquée dans « Utilisation de Expression de liaison » crée un <xref:System.Windows.Data.Binding> de l’objet avec les valeurs par défaut, qui comprend une initiale <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> de `null`. Ceci est encore utile dans de nombreux scénarios, étant donné que créé <xref:System.Windows.Data.Binding> peut reposer sur les propriétés de liaison de données essentielles telles que <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> et <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> définie dans le contexte de données d’exécution. Pour plus d’informations sur le concept de contexte de données, consultez [une liaison de données](../data/data-binding-wpf.md).  
   
 ## <a name="implicit-path"></a>Chemin d’accès implicite  
  Le `Binding` utilisations d’extension de balisage <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> comme un conceptuel « propriété par défaut », où `Path=` ne doivent pas apparaître dans l’expression. Si vous spécifiez un `Binding` expression avec un chemin d’accès implicite, le chemin d’accès implicite doit apparaître en premier dans l’expression, avant tout autre `bindProp` = `value` paires où le <xref:System.Windows.Data.Binding> propriété est spécifiée par nom. Par exemple : `{Binding PathString}`, où `PathString` est une chaîne qui a pour résultat la valeur de <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> dans le <xref:System.Windows.Data.Binding> créé par l’extension de balisage. Vous pouvez ajouter un chemin d’accès implicite à d’autres propriétés nommées après la virgule de séparation, par exemple, `{Binding LastName, Mode=TwoWay}`.  
@@ -58,15 +58,15 @@ Diffère d’une valeur de propriété une valeur liée aux données, création 
   
 -   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
   
--   <xref:System.Windows.Data.Binding.Converter%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais pour ce faire, requiert une référence d’objet pour la valeur, par exemple un [Extension de balisage StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md). Dans ce cas, la valeur est une instance d’une classe de convertisseur personnalisé.  
+-   <xref:System.Windows.Data.Binding.Converter%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais pour ce faire, requiert une référence d’objet pour la valeur, par exemple un [Extension de balisage StaticResource](staticresource-markup-extension.md). Dans ce cas, la valeur est une instance d’une classe de convertisseur personnalisé.  
   
 -   <xref:System.Windows.Data.Binding.ConverterCulture%2A>: peut être défini dans l’expression comme un identificateur de normes ; consultez la rubrique de référence <xref:System.Windows.Data.Binding.ConverterCulture%2A>.  
   
--   <xref:System.Windows.Data.Binding.ConverterParameter%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de paramètre passé. Si vous passez un type de référence pour la valeur, cette utilisation nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+-   <xref:System.Windows.Data.Binding.ConverterParameter%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de paramètre passé. Si vous passez un type de référence pour la valeur, cette utilisation nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](staticresource-markup-extension.md).  
   
--   <xref:System.Windows.Data.Binding.ElementName%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.RelativeSource%2A> et <xref:System.Windows.Data.Binding.Source%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   <xref:System.Windows.Data.Binding.ElementName%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.RelativeSource%2A> et <xref:System.Windows.Data.Binding.Source%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md).  
   
--   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de la valeur passée. Si vous passez un type référence, nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+-   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de la valeur passée. Si vous passez un type référence, nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](staticresource-markup-extension.md).  
   
 -   <xref:System.Windows.Data.Binding.IsAsync%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
   
@@ -78,15 +78,15 @@ Diffère d’une valeur de propriété une valeur liée aux données, création 
   
 -   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
   
--   <xref:System.Windows.Data.Binding.Path%2A>: chaîne qui décrit un chemin d’accès dans un objet de données ou un modèle objet général. Le format fournit plusieurs conventions différentes permettant de parcourir un modèle objet qui ne peut pas être correctement décrits dans cette rubrique. Consultez [PropertyPath XAML syntaxe](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).  
+-   <xref:System.Windows.Data.Binding.Path%2A>: chaîne qui décrit un chemin d’accès dans un objet de données ou un modèle objet général. Le format fournit plusieurs conventions différentes permettant de parcourir un modèle objet qui ne peut pas être correctement décrits dans cette rubrique. Consultez [PropertyPath XAML syntaxe](propertypath-xaml-syntax.md).  
   
--   <xref:System.Windows.Data.Binding.RelativeSource%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.ElementName%2A> et <xref:System.Windows.Data.Binding.Source%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md). Nécessite un imbriquée [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md) utilisation pour spécifier la valeur.  
+-   <xref:System.Windows.Data.Binding.RelativeSource%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.ElementName%2A> et <xref:System.Windows.Data.Binding.Source%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md). Nécessite un imbriquée [RelativeSource MarkupExtension](relativesource-markupextension.md) utilisation pour spécifier la valeur.  
   
--   <xref:System.Windows.Data.Binding.Source%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.RelativeSource%2A> et <xref:System.Windows.Data.Binding.ElementName%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md). Nécessite une utilisation de l’extension imbriquée, généralement une [Extension de balisage StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) qui fait référence à une objet source de données à partir d’un dictionnaire de ressources de clé.  
+-   <xref:System.Windows.Data.Binding.Source%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.RelativeSource%2A> et <xref:System.Windows.Data.Binding.ElementName%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md). Nécessite une utilisation de l’extension imbriquée, généralement une [Extension de balisage StaticResource](staticresource-markup-extension.md) qui fait référence à une objet source de données à partir d’un dictionnaire de ressources de clé.  
   
 -   <xref:System.Windows.Data.BindingBase.StringFormat%2A>: chaîne qui décrit une convention de format de chaîne pour les données liées. Il s’agit d’un concept de liaison relativement avancé ; consultez la page de référence de <xref:System.Windows.Data.BindingBase.StringFormat%2A>.  
   
--   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de paramètre passé. Si le passage d’un type de référence pour la valeur, nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+-   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de paramètre passé. Si le passage d’un type de référence pour la valeur, nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](staticresource-markup-extension.md).  
   
 -   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *valeur* est un nom de constante à partir de la <xref:System.Windows.Data.UpdateSourceTrigger> énumération. Par exemple, `{Binding UpdateSourceTrigger=LostFocus}`. Des contrôles spécifiques susceptibles d’avoir différentes valeurs par défaut pour cette propriété de liaison. Consultez <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
@@ -94,7 +94,7 @@ Diffère d’une valeur de propriété une valeur liée aux données, création 
   
 -   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`. Consultez la section Notes.  
   
--   <xref:System.Windows.Data.Binding.XPath%2A>: chaîne qui décrit un chemin d’accès vers le XMLDOM d’une source de données XML. Consultez [lier aux données XML à l’aide d’un XMLDataProvider et requêtes XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+-   <xref:System.Windows.Data.Binding.XPath%2A>: chaîne qui décrit un chemin d’accès vers le XMLDOM d’une source de données XML. Consultez [lier aux données XML à l’aide d’un XMLDataProvider et requêtes XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Les éléments suivants sont des propriétés de <xref:System.Windows.Data.Binding> qui ne peut pas être définie à l’aide de la `Binding` extension de balisage /`{Binding}` formulaire de l’expression.  
   
@@ -107,23 +107,23 @@ Diffère d’une valeur de propriété une valeur liée aux données, création 
 ## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]
->  En termes de priorité de propriété de dépendance, un `Binding` expression est équivalente à définie localement valeur. Si vous définissez une valeur locale pour une propriété qui avait précédemment un `Binding` expression, le `Binding` est totalement supprimé. Pour plus d’informations, consultez [Priorité de la valeur de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+>  En termes de priorité de propriété de dépendance, un `Binding` expression est équivalente à définie localement valeur. Si vous définissez une valeur locale pour une propriété qui avait précédemment un `Binding` expression, le `Binding` est totalement supprimé. Pour plus d’informations, consultez [Priorité de la valeur de propriété de dépendance](dependency-property-value-precedence.md).  
   
- Description de la liaison de données à un niveau de base n’est pas abordé dans cette rubrique. Consultez [vue d’ensemble de liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Description de la liaison de données à un niveau de base n’est pas abordé dans cette rubrique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md).  
   
 > [!NOTE]
 >  <xref:System.Windows.Data.MultiBinding> et <xref:System.Windows.Data.PriorityBinding> ne gèrent pas un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntaxe d’extension. Vous utiliseriez à la place des éléments de propriété. Consultez les rubriques de référence pour <xref:System.Windows.Data.MultiBinding> et <xref:System.Windows.Data.PriorityBinding>.  
   
  Les valeurs booléennes pour XAML respectent la casse. Par exemple, vous pourriez spécifier `{Binding NotifyOnValidationError=true}` ou `{Binding NotifyOnValidationError=True}`.  
   
- Les liaisons qui impliquent la validation des données sont généralement spécifiées par explicite `Binding` élément plutôt que comme un `{Binding ...}` expression et paramètre <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> ou <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> dans une expression est rare. Il s’agit, car la propriété compagnon <xref:System.Windows.Data.Binding.ValidationRules%2A> ne peut pas être définie facilement sous la forme expression. Pour plus d’informations, consultez [Implement Binding Validation](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+ Les liaisons qui impliquent la validation des données sont généralement spécifiées par explicite `Binding` élément plutôt que comme un `{Binding ...}` expression et paramètre <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> ou <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> dans une expression est rare. Il s’agit, car la propriété compagnon <xref:System.Windows.Data.Binding.ValidationRules%2A> ne peut pas être définie facilement sous la forme expression. Pour plus d’informations, consultez [Implement Binding Validation](../data/how-to-implement-binding-validation.md).  
   
- `Binding` est une extension de balisage. Extensions de balisage sont généralement implémentées quand il est nécessaire que les valeurs d’attribut soient autre que les valeurs littérales ou du Gestionnaire des noms et l’exigence est plus globale que les convertisseurs de type attribués sur certains types ou propriétés. Toutes les extensions de balisage en cours d’utilisation XAML le `{` et `}` caractères dans leur syntaxe d’attribut, qui est la convention selon laquelle un processeur XAML reconnaît qu’une extension de balisage doit traiter le contenu de chaîne. Pour plus d’informations, consultez [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `Binding` est une extension de balisage. Extensions de balisage sont généralement implémentées quand il est nécessaire que les valeurs d’attribut soient autre que les valeurs littérales ou du Gestionnaire des noms et l’exigence est plus globale que les convertisseurs de type attribués sur certains types ou propriétés. Toutes les extensions de balisage en cours d’utilisation XAML le `{` et `}` caractères dans leur syntaxe d’attribut, qui est la convention selon laquelle un processeur XAML reconnaît qu’une extension de balisage doit traiter le contenu de chaîne. Pour plus d’informations, consultez [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
  `Binding` est une extension de balisage atypique dans qui le <xref:System.Windows.Data.Binding> classe qui implémente la fonctionnalité d’extension pour l’implémentation de XAML de WPF implémente également plusieurs autres méthodes et propriétés qui ne sont pas liées au XAML. Les autres membres sont destinés à faire <xref:System.Windows.Data.Binding> une classe plus autonome et polyvalente qui permettre traiter de nombreux scénarios de liaison de données en plus de fonctionner comme une extension de balisage XAML.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Data.Binding>
-- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
+- [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
+- [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md)

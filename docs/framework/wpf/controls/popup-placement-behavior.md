@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 924d099a17390eeac61bd87a0c3ca0e05b1c8172
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f02fcef5c905e81808d76b71b45e0d010084268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672082"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360552"
 ---
 # <a name="popup-placement-behavior"></a>Comportement de positionnement de Popup
 Un <xref:System.Windows.Controls.Primitives.Popup> contrôle affiche le contenu dans une fenêtre distincte qui flotte au-dessus d’une application. Vous pouvez spécifier la position d’un <xref:System.Windows.Controls.Primitives.Popup> par rapport à un contrôle, la souris ou l’écran à l’aide de la <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, et <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propriétés.  Ces propriétés fonctionnent ensemble pour vous permettent une grande souplesse en spécifiant la position de la <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -26,11 +26,11 @@ Un <xref:System.Windows.Controls.Primitives.Popup> contrôle affiche le contenu 
 ## <a name="positioning-the-popup"></a>Positionnement de la fenêtre contextuelle  
  Le placement d’un <xref:System.Windows.Controls.Primitives.Popup> peut être relatif à un <xref:System.Windows.UIElement> ou à l’écran entier.  L’exemple suivant crée quatre <xref:System.Windows.Controls.Primitives.Popup> contrôles qui sont relatives à un <xref:System.Windows.UIElement>: dans ce cas, une image. Tous les <xref:System.Windows.Controls.Primitives.Popup> contrôles ont le <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> propriété définie sur `image1`, mais chaque <xref:System.Windows.Controls.Primitives.Popup> a une valeur différente pour la propriété de positionnement.  
   
- [!code-xaml[PopupPositionSnippet#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#3)]  
+ [!code-xaml[PopupPositionSnippet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#3)]  
   
  L’illustration suivante montre l’image et le <xref:System.Windows.Controls.Primitives.Popup> contrôles  
   
- ![Image avec quatre contrôles popup](../../../../docs/framework/wpf/controls/media/popupplacementintro.png "PopupPlacementIntro")  
+ ![Image avec quatre contrôles popup](./media/popupplacementintro.png "PopupPlacementIntro")  
 Image avec quatre contrôles Popup  
   
  Cet exemple simple montre comment définir le <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> et <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriétés, mais à l’aide de la <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, et <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propriétés, vous contrôlez davantage où le <xref:System.Windows.Controls.Primitives.Popup> est positionné.  
@@ -54,20 +54,20 @@ Image avec quatre contrôles Popup
   
  L’exemple suivant crée un <xref:System.Windows.Controls.Primitives.Popup> qui est l’enfant d’un <xref:System.Windows.Controls.Canvas>.  L’exemple ne définit pas le <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> propriété sur le <xref:System.Windows.Controls.Primitives.Popup>. La valeur par défaut <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> est <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom?displayProperty=nameWithType>, la <xref:System.Windows.Controls.Primitives.Popup> apparaît sous le <xref:System.Windows.Controls.Canvas>.  
   
- [!code-xaml[PopupPositionSnippet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#1)]  
+ [!code-xaml[PopupPositionSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#1)]  
   
  L’illustration suivante montre que le <xref:System.Windows.Controls.Primitives.Popup> est positionné par rapport à la <xref:System.Windows.Controls.Canvas>.  
   
- ![Contrôle Popup sans PlacementTarget](../../../../docs/framework/wpf/controls/media/popupplacementnoplacementtarget.PNG "PopupPlacementNoPlacementTarget")  
+ ![Contrôle Popup sans PlacementTarget](./media/popupplacementnoplacementtarget.PNG "PopupPlacementNoPlacementTarget")  
 Contrôle Popup sans PlacementTarget  
   
  L’exemple suivant crée un <xref:System.Windows.Controls.Primitives.Popup> qui est l’enfant d’un <xref:System.Windows.Controls.Canvas>, mais cette fois le <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> a la valeur `ellipse1`, de sorte que la fenêtre contextuelle apparaît sous le <xref:System.Windows.Shapes.Ellipse>.  
   
- [!code-xaml[PopupPositionSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#2)]  
+ [!code-xaml[PopupPositionSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#2)]  
   
  L’illustration suivante montre que le <xref:System.Windows.Controls.Primitives.Popup> est positionné par rapport à la <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Popup positionné par rapport à une ellipse](../../../../docs/framework/wpf/controls/media/popupplacementwithplacementtarget.PNG "PopupPlacementWithPlacementTarget")  
+ ![Popup positionné par rapport à une ellipse](./media/popupplacementwithplacementtarget.PNG "PopupPlacementWithPlacementTarget")  
 Fenêtre contextuelle avec PlacementTarget  
   
 > [!NOTE]
@@ -78,11 +78,11 @@ Fenêtre contextuelle avec PlacementTarget
   
  L’exemple suivant crée deux <xref:System.Windows.Controls.Canvas> d’objets, chacun d’eux contenant un <xref:System.Windows.Shapes.Rectangle> et un <xref:System.Windows.Controls.Primitives.Popup>.  Dans les deux cas, la cible de l’objet pour le <xref:System.Windows.Controls.Primitives.Popup> est le <xref:System.Windows.Controls.Canvas>. Le <xref:System.Windows.Controls.Primitives.Popup> dans la première <xref:System.Windows.Controls.Canvas> a le <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> défini, avec ses <xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>, <xref:System.Windows.Rect.Width%2A>, et <xref:System.Windows.Rect.Height%2A> propriétés la valeur 50, 50, 50 et 100, respectivement. Le <xref:System.Windows.Controls.Primitives.Popup> dans la seconde <xref:System.Windows.Controls.Canvas> n’a pas le <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> défini.  Par conséquent, la première <xref:System.Windows.Controls.Primitives.Popup> est positionnée au-dessous le <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> et le second <xref:System.Windows.Controls.Primitives.Popup> est positionnée au-dessous du <xref:System.Windows.Controls.Canvas>. Chaque <xref:System.Windows.Controls.Canvas> contient également un <xref:System.Windows.Shapes.Rectangle> qui a les mêmes limites que le <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> pour la première <xref:System.Windows.Controls.Primitives.Popup>.  Notez que le <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> ne crée pas d’élément visible dans l’application ; l’exemple crée un <xref:System.Windows.Shapes.Rectangle> pour représenter le <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>.  
   
- [!code-xaml[PopupPositionSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#4)]  
+ [!code-xaml[PopupPositionSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#4)]  
   
  L’illustration suivante montre le résultat de l’exemple précédent.  
   
- ![Popup avec et sans PlacementRectangle](../../../../docs/framework/wpf/controls/media/popupplacementplacementrectangle.PNG "PopupPlacementPlacementRectangle")  
+ ![Popup avec et sans PlacementRectangle](./media/popupplacementplacementrectangle.PNG "PopupPlacementPlacementRectangle")  
 Popup avec et sans PlacementRectangle  
   
 ### <a name="target-origin-and-popup-alignment-point"></a>Origine de la cible et point d’alignement de la fenêtre contextuelle  
@@ -90,11 +90,11 @@ Popup avec et sans PlacementRectangle
   
  L’exemple suivant crée un <xref:System.Windows.Controls.Primitives.Popup> et définit le <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> et <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 20 aux propriétés.  Le <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriété est définie sur <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> (la valeur par défaut), par conséquent, l’origine de la cible est l’angle inférieur gauche de la zone cible et le point d’alignement de fenêtre contextuelle est l’angle supérieur gauche de la <xref:System.Windows.Controls.Primitives.Popup>.  
   
- [!code-xaml[PopupPositionSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#5)]  
+ [!code-xaml[PopupPositionSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#5)]  
   
  L’illustration suivante montre le résultat de l’exemple précédent.  
   
- ![Positionnement Popup avec point d’alignement original cible](../../../../docs/framework/wpf/controls/media/popupplacementtargetoriginalignmentpoint.PNG "PopupPlacementTargetOriginAlignmentPoint")  
+ ![Positionnement Popup avec point d’alignement original cible](./media/popupplacementtargetoriginalignmentpoint.PNG "PopupPlacementTargetOriginAlignmentPoint")  
 Fenêtre contextuelle avec HorizontalOffset et VerticalOffset  
   
 <a name="How"></a>   
@@ -120,31 +120,31 @@ Fenêtre contextuelle avec HorizontalOffset et VerticalOffset
   
  Les illustrations suivantes montrent le <xref:System.Windows.Controls.Primitives.Popup>, zone cible, origine de la cible et l’alignement du menu contextuel point pour chaque <xref:System.Windows.Controls.Primitives.PlacementMode> valeur. Dans chacune des figures, la zone cible est jaune et le <xref:System.Windows.Controls.Primitives.Popup> est bleu.  
   
- ![Popup avec positionnement Absolute ou AbsolutePoint](../../../../docs/framework/wpf/controls/media/popupplacementabsolute.png "PopupPlacementAbsolute")  
+ ![Popup avec positionnement Absolute ou AbsolutePoint](./media/popupplacementabsolute.png "PopupPlacementAbsolute")  
 Le positionnement est Absolute ou AbsolutePoint  
   
- ![Popup avec positionnement Bottom](../../../../docs/framework/wpf/controls/media/popupplacementbottom.png "PopupPlacementBottom")  
+ ![Popup avec positionnement Bottom](./media/popupplacementbottom.png "PopupPlacementBottom")  
 Le positionnement est Bottom  
   
- ![Popup avec positionnement Center](../../../../docs/framework/wpf/controls/media/popupplacementcenter.png "PopupPlacementCenter")  
+ ![Popup avec positionnement Center](./media/popupplacementcenter.png "PopupPlacementCenter")  
 Le positionnement est Center  
   
- ![Popup avec positionnement Left](../../../../docs/framework/wpf/controls/media/popupplacementleft.png "PopupPlacementLeft")  
+ ![Popup avec positionnement Left](./media/popupplacementleft.png "PopupPlacementLeft")  
 Le positionnement est Left  
   
- ![Popup avec positionnement Mouse](../../../../docs/framework/wpf/controls/media/popupplacementmouse.png "PopupPlacementMouse")  
+ ![Popup avec positionnement Mouse](./media/popupplacementmouse.png "PopupPlacementMouse")  
 Le positionnement est Mouse  
   
- ![Fenêtre contextuelle avec positionnement MousePoint](../../../../docs/framework/wpf/controls/media/popupplacementmousepoint.png "PopupPlacementMousePoint")  
+ ![Fenêtre contextuelle avec positionnement MousePoint](./media/popupplacementmousepoint.png "PopupPlacementMousePoint")  
 Le positionnement est MousePoint  
   
- ![Popup avec positionnement Relative ou RelativePoint](../../../../docs/framework/wpf/controls/media/popupplacementrelative.png "PopupPlacementRelative")  
+ ![Popup avec positionnement Relative ou RelativePoint](./media/popupplacementrelative.png "PopupPlacementRelative")  
 Le positionnement est Relative ou RelativePoint  
   
- ![Popup avec positionnement Right](../../../../docs/framework/wpf/controls/media/popupplacementright.png "PopupPlacementRight")  
+ ![Popup avec positionnement Right](./media/popupplacementright.png "PopupPlacementRight")  
 Le positionnement est Right  
   
- ![Popup avec positionnement Top](../../../../docs/framework/wpf/controls/media/popupplacementtop.png "PopupPlacementTop")  
+ ![Popup avec positionnement Top](./media/popupplacementtop.png "PopupPlacementTop")  
 Le positionnement est Top  
   
 <a name="When"></a>   
@@ -178,7 +178,7 @@ Le positionnement est Top
 ### <a name="aligning-to-the-screen-edge"></a>Alignement sur le bord de l’écran  
  Un <xref:System.Windows.Controls.Primitives.Popup> peut s’aligner sur le bord de l’écran en se repositionnant donc l’intégralité de <xref:System.Windows.Controls.Primitives.Popup> est visible sur l’écran.  Lorsque cela se produit, la distance entre le point d’alignement origine et la fenêtre contextuelle cible peut-être différer des valeurs de <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> et <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>. Lorsque <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> est <xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>, <xref:System.Windows.Controls.Primitives.PlacementMode.Center>, ou <xref:System.Windows.Controls.Primitives.PlacementMode.Relative>, le <xref:System.Windows.Controls.Primitives.Popup> s’aligne sur chaque bord de l’écran.  Par exemple, supposons qu’un <xref:System.Windows.Controls.Primitives.Popup> a <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> définie sur <xref:System.Windows.Controls.Primitives.PlacementMode.Relative> et <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> défini à 100.  Si le bord inférieur de l’écran masque tout ou partie de la <xref:System.Windows.Controls.Primitives.Popup>, le <xref:System.Windows.Controls.Primitives.Popup> se repositionne le long du bord inférieur de l’écran et la distance verticale entre l’origine de la cible et la fenêtre contextuelle point d’alignement est inférieure à 100. L’illustration suivante démontre ce comportement.  
   
- ![Fenêtre contextuelle qui s’aligne sur le bord d’écran](../../../../docs/framework/wpf/controls/media/popupplacementrelativescreenedge.png "PopupPlacementRelativeScreenEdge")  
+ ![Fenêtre contextuelle qui s’aligne sur le bord d’écran](./media/popupplacementrelativescreenedge.png "PopupPlacementRelativeScreenEdge")  
 La fenêtre contextuelle s’aligne sur le bord de l’écran  
   
 ### <a name="changing-the-popup-alignment-point"></a>Modification du point d’alignement de la fenêtre contextuelle  
@@ -186,12 +186,12 @@ La fenêtre contextuelle s’aligne sur le bord de l’écran
   
  L’illustration suivante montre que lorsque le bord d’écran inférieur masque tout ou partie de la <xref:System.Windows.Controls.Primitives.Popup>, le point d’alignement de fenêtre contextuelle est l’angle inférieur gauche de la <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nouveau point d’alignement en raison du bord d’écran de bas](../../../../docs/framework/wpf/controls/media/popupplacementrelativepointscreenedge.png "PopupPlacementRelativePointScreenEdge")  
+ ![Nouveau point d’alignement en raison du bord d’écran de bas](./media/popupplacementrelativepointscreenedge.png "PopupPlacementRelativePointScreenEdge")  
 La fenêtre contextuelle est en contact avec le bord inférieur de l’écran et modifie son point d’alignement  
   
  L’illustration suivante montre que lorsque le <xref:System.Windows.Controls.Primitives.Popup> est masqué par le bord droit de l’écran, le point d’alignement de fenêtre contextuelle est l’angle supérieur droit de la <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nouvel alignement Popup en raison du bord de l’écran](../../../../docs/framework/wpf/controls/media/popupplacementrelativepointrightscreenedge.png "PopupPlacementRelativePointRightScreenEdge")  
+ ![Nouvel alignement Popup en raison du bord de l’écran](./media/popupplacementrelativepointrightscreenedge.png "PopupPlacementRelativePointRightScreenEdge")  
 La fenêtre contextuelle est en contact avec le bord droit de l’écran et modifie son point d’alignement  
   
  Si le <xref:System.Windows.Controls.Primitives.Popup> rencontre les bords inférieur et droit de l’écran, le point d’alignement de fenêtre contextuelle est l’angle inférieur droit de la <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -201,31 +201,31 @@ La fenêtre contextuelle est en contact avec le bord droit de l’écran et modi
   
  L’illustration suivante montre que lorsque <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> est <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> et <xref:System.Windows.Controls.Primitives.Popup> rencontre le bord inférieur de l’écran, l’origine de la cible est l’angle supérieur gauche de la zone cible et le point d’alignement de fenêtre contextuelle est l’angle inférieur gauche de la <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nouveau point d’alignement en raison du bord d’écran de bas](../../../../docs/framework/wpf/controls/media/popupplacementbottomscreenedge.png "PopupPlacementBottomScreenEdge")  
+ ![Nouveau point d’alignement en raison du bord d’écran de bas](./media/popupplacementbottomscreenedge.png "PopupPlacementBottomScreenEdge")  
 Le positionnement a la valeur Bottom et la fenêtre contextuelle est en contact avec le bord inférieur de l’écran  
   
  L’illustration suivante montre que lorsque <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> est <xref:System.Windows.Controls.Primitives.PlacementMode.Left> et <xref:System.Windows.Controls.Primitives.Popup> rencontre le bord gauche de l’écran, l’origine de la cible est l’angle supérieur droit de la zone cible et le point d’alignement de fenêtre contextuelle est l’angle supérieur gauche de la <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nouveau point d’alignement en raison du bord gauche de l’écran](../../../../docs/framework/wpf/controls/media/popupplacementleftscreenedge.png "PopupPlacementLeftScreenEdge")  
+ ![Nouveau point d’alignement en raison du bord gauche de l’écran](./media/popupplacementleftscreenedge.png "PopupPlacementLeftScreenEdge")  
 Le positionnement a la valeur Left et la fenêtre contextuelle est en contact avec le bord gauche de l’écran  
   
  L’illustration suivante montre que lorsque <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> est <xref:System.Windows.Controls.Primitives.PlacementMode.Right> et <xref:System.Windows.Controls.Primitives.Popup> rencontre le bord droit de l’écran, l’origine de la cible est l’angle supérieur gauche de la zone cible et le point d’alignement de fenêtre contextuelle est l’angle supérieur droit de la <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nouveau point d’alignement en raison du bord de droit de l’écran](../../../../docs/framework/wpf/controls/media/popupplacementrightscreenedge.png "PopupPlacementRightScreenEdge")  
+ ![Nouveau point d’alignement en raison du bord de droit de l’écran](./media/popupplacementrightscreenedge.png "PopupPlacementRightScreenEdge")  
 Le positionnement a la valeur Right et la fenêtre contextuelle est en contact avec le bord droit de l’écran  
   
  L’illustration suivante montre que lorsque <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> est <xref:System.Windows.Controls.Primitives.PlacementMode.Top> et <xref:System.Windows.Controls.Primitives.Popup> rencontre le bord supérieur de l’écran, l’origine de la cible est l’angle inférieur gauche de la zone cible et le point d’alignement de fenêtre contextuelle est l’angle supérieur gauche de la <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nouveau point d’alignement en raison du bord supérieur de l’écran](../../../../docs/framework/wpf/controls/media/popupplacementtopscreenedge.png "PopupPlacementTopScreenEdge")  
+ ![Nouveau point d’alignement en raison du bord supérieur de l’écran](./media/popupplacementtopscreenedge.png "PopupPlacementTopScreenEdge")  
 Le positionnement a la valeur Top et la fenêtre contextuelle est en contact avec le bord supérieur de l’écran  
   
  L’illustration suivante montre que lorsque <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> est <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> et <xref:System.Windows.Controls.Primitives.Popup> rencontre le bord inférieur de l’écran, l’origine de la cible est l’angle supérieur gauche de la zone cible (les limites du pointeur de la souris) et l’alignement de la fenêtre contextuelle point est l’angle inférieur gauche de la <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![nouveau point d’alignement en raison de la souris près de bord de l’écran](../../../../docs/framework/wpf/controls/media/popupplacementmousescreenedge.png "PopupPlacementMouseScreenEdge")  
+ ![nouveau point d’alignement en raison de la souris près de bord de l’écran](./media/popupplacementmousescreenedge.png "PopupPlacementMouseScreenEdge")  
 Le positionnement a la valeur Mouse et la fenêtre contextuelle est en contact avec le bord inférieur de l’écran  
   
 ### <a name="customizing-popup-placement"></a>Personnalisation du positionnement d’un contrôle Popup  
- Vous pouvez personnaliser le point d’alignement cible origine et la fenêtre contextuelle en définissant le <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriété <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Définissez ensuite un <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> délégué qui retourne un ensemble de points de positionnement possibles et les axes principaux (dans l’ordre de préférence) pour le <xref:System.Windows.Controls.Primitives.Popup>. Le point qui présente la plus grande partie de la <xref:System.Windows.Controls.Primitives.Popup> est sélectionnée.  La position de la <xref:System.Windows.Controls.Primitives.Popup> est ajustée automatiquement si le <xref:System.Windows.Controls.Primitives.Popup> est caché par le bord de l’écran. Pour obtenir un exemple, consultez [Spécifier une position de menu contextuel personnalisée](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
+ Vous pouvez personnaliser le point d’alignement cible origine et la fenêtre contextuelle en définissant le <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriété <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Définissez ensuite un <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> délégué qui retourne un ensemble de points de positionnement possibles et les axes principaux (dans l’ordre de préférence) pour le <xref:System.Windows.Controls.Primitives.Popup>. Le point qui présente la plus grande partie de la <xref:System.Windows.Controls.Primitives.Popup> est sélectionnée.  La position de la <xref:System.Windows.Controls.Primitives.Popup> est ajustée automatiquement si le <xref:System.Windows.Controls.Primitives.Popup> est caché par le bord de l’écran. Pour obtenir un exemple, consultez [Spécifier une position de menu contextuel personnalisée](how-to-specify-a-custom-popup-position.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - [Popup Placement Sample](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS) (Exemple de positionnement de fenêtre contextuelle)
