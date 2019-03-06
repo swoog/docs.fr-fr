@@ -113,7 +113,7 @@ string s = String.Empty;
   
  Dans cet exemple, un objet <xref:System.Text.StringBuilder> est utilisé pour créer une chaîne à partir d’un ensemble de types numériques :  
   
- [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Chaînes, méthodes d’extension et LINQ  
  Étant donné que le type <xref:System.String> implémente <xref:System.Collections.Generic.IEnumerable%601>, vous pouvez utiliser les méthodes d’extension définies dans la classe <xref:System.Linq.Enumerable> sur des chaînes. Pour éviter une surcharge visuelle, ces méthodes sont exclues d’IntelliSense pour le type <xref:System.String>, mais elles restent néanmoins disponibles. Vous pouvez également utiliser des expressions de requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sur les chaînes. Pour plus d’informations, consultez [LINQ et Strings](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  

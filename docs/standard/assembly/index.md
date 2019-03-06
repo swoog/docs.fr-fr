@@ -50,8 +50,7 @@ Les assemblys constituent l’unité fondamentale dans le déploiement, la gesti
 
  - [Format de fichier d’assembly .NET](file-format.md)
  - [Assemblys dans le Common Language Runtime](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- - [Assemblys friend (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- - [Assemblies Friend (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ - [Assemblys friend](friend-assemblies.md)  
  - [Guide pratique pour charger et décharger des assemblys (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Guide pratique pour charger et décharger des assemblys (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Guide pratique pour Utiliser et déboguer Assembly Unloadability dans .NET Core](unloadability-howto.md)

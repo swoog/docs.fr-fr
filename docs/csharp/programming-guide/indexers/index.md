@@ -48,7 +48,7 @@ Notez que `=>` introduit le corps de l’expression et que le mot clé `get` n�
   
 -   Les indexeurs peuvent avoir plusieurs paramètres formels, par exemple, quand vous accédez à un tableau à deux dimensions.  
   
-##  <a name="BKMK_RelatedSections"></a> Rubriques connexes  
+## <a name="BKMK_RelatedSections"></a> Rubriques connexes  
   
 -   [Utilisation d’indexeurs](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
