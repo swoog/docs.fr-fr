@@ -9,28 +9,28 @@ helpviewer_keywords:
 - page functions [WPF], calling
 - functions [WPF], calling
 ms.assetid: a4808397-c6d5-406a-83e0-0091f0c15ae4
-ms.openlocfilehash: 4cd839cc959c1e3730418d2feab80b9aef642161
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 288edec51a690be844aaa913c368496648a7811b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542819"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375166"
 ---
-# <a name="how-to-call-a-page-function"></a><span data-ttu-id="1fd3f-102">Procédure : Appeler une fonction de page</span><span class="sxs-lookup"><span data-stu-id="1fd3f-102">How to: Call a Page Function</span></span>
-<span data-ttu-id="1fd3f-103">Cet exemple montre comment appeler une fonction de page à partir d’un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page.</span><span class="sxs-lookup"><span data-stu-id="1fd3f-103">This example shows how to call a page function from a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page.</span></span>  
+# <a name="how-to-call-a-page-function"></a><span data-ttu-id="7596f-102">Procédure : Appeler une fonction de page</span><span class="sxs-lookup"><span data-stu-id="7596f-102">How to: Call a Page Function</span></span>
+<span data-ttu-id="7596f-103">Cet exemple montre comment appeler une fonction de page à partir d’un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page.</span><span class="sxs-lookup"><span data-stu-id="7596f-103">This example shows how to call a page function from a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1fd3f-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="1fd3f-104">Example</span></span>  
- <span data-ttu-id="1fd3f-105">Vous pouvez accéder à une fonction de page en utilisant un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], tout comme vous pouvez lorsque vous accédez à une page.</span><span class="sxs-lookup"><span data-stu-id="1fd3f-105">You can navigate to a page function using a [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], just as you can when you navigate to a page.</span></span> <span data-ttu-id="1fd3f-106">L'exemple suivant le démontre.</span><span class="sxs-lookup"><span data-stu-id="1fd3f-106">This is shown in the following example.</span></span>  
+## <a name="example"></a><span data-ttu-id="7596f-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="7596f-104">Example</span></span>  
+ <span data-ttu-id="7596f-105">Vous pouvez accéder à une fonction de page en utilisant un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], tout comme vous pouvez lorsque vous accédez à une page.</span><span class="sxs-lookup"><span data-stu-id="7596f-105">You can navigate to a page function using a [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], just as you can when you navigate to a page.</span></span> <span data-ttu-id="7596f-106">L'exemple suivant le démontre.</span><span class="sxs-lookup"><span data-stu-id="7596f-106">This is shown in the following example.</span></span>  
   
- [!code-csharp[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#navigatetoapagefunctionlikeapagecodebehind)]
- [!code-vb[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#navigatetoapagefunctionlikeapagecodebehind)]  
+ [!code-csharp[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#navigatetoapagefunctionlikeapagecodebehind)]
+ [!code-vb[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#navigatetoapagefunctionlikeapagecodebehind)]  
   
- <span data-ttu-id="1fd3f-107">Si vous devez passer des données à la fonction de page, vous pouvez créer une instance de celle-ci et passer les données en définissant une propriété.</span><span class="sxs-lookup"><span data-stu-id="1fd3f-107">If you need to pass data to the page function, you can create an instance of it and pass the data by setting a property.</span></span> <span data-ttu-id="1fd3f-108">Ou, comme le montre l’exemple suivant, vous pouvez passer les données à l’aide d’un constructeur autre que celui par défaut.</span><span class="sxs-lookup"><span data-stu-id="1fd3f-108">Or, as the following example shows, you can pass the data using a non-default constructor.</span></span>  
+ <span data-ttu-id="7596f-107">Si vous devez passer des données à la fonction de page, vous pouvez créer une instance de celle-ci et passer les données en définissant une propriété.</span><span class="sxs-lookup"><span data-stu-id="7596f-107">If you need to pass data to the page function, you can create an instance of it and pass the data by setting a property.</span></span> <span data-ttu-id="7596f-108">Ou, comme le montre l’exemple suivant, vous pouvez passer les données à l’aide d’un constructeur autre que celui par défaut.</span><span class="sxs-lookup"><span data-stu-id="7596f-108">Or, as the following example shows, you can pass the data using a non-default constructor.</span></span>  
   
- [!code-xaml[HOWTOPageFunctionSnippets#CallAPageFunctionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml#callapagefunctionxaml)]  
+ [!code-xaml[HOWTOPageFunctionSnippets#CallAPageFunctionXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml#callapagefunctionxaml)]  
   
- [!code-csharp[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#callapagefunctioncodebehind)]
- [!code-vb[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#callapagefunctioncodebehind)]  
+ [!code-csharp[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#callapagefunctioncodebehind)]
+ [!code-vb[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#callapagefunctioncodebehind)]  
   
-## <a name="see-also"></a><span data-ttu-id="1fd3f-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1fd3f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7596f-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7596f-109">See also</span></span>
 - <xref:System.Windows.Navigation.PageFunction%601>

@@ -7,25 +7,25 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550751"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377075"
 ---
-# <a name="checkbox"></a><span data-ttu-id="cba8f-102">Case à cocher</span><span class="sxs-lookup"><span data-stu-id="cba8f-102">CheckBox</span></span>
-<span data-ttu-id="cba8f-103">Vous pouvez utiliser un <xref:System.Windows.Controls.CheckBox> dans les [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de votre application pour représenter les options qu’un utilisateur peut sélectionner ou effacer.</span><span class="sxs-lookup"><span data-stu-id="cba8f-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="cba8f-104">Vous pouvez utiliser une case à cocher unique ou regrouper deux ou plusieurs cases à cocher.</span><span class="sxs-lookup"><span data-stu-id="cba8f-104">You can use a single check box or you can group two or more check boxes.</span></span>  
+# <a name="checkbox"></a><span data-ttu-id="86942-102">Case à cocher</span><span class="sxs-lookup"><span data-stu-id="86942-102">CheckBox</span></span>
+<span data-ttu-id="86942-103">Vous pouvez utiliser un <xref:System.Windows.Controls.CheckBox> dans le [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de votre application pour représenter les options qu’un utilisateur puisse sélectionner ou effacer.</span><span class="sxs-lookup"><span data-stu-id="86942-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="86942-104">Vous pouvez utiliser une case à cocher unique ou regrouper deux ou plusieurs cases à cocher.</span><span class="sxs-lookup"><span data-stu-id="86942-104">You can use a single check box or you can group two or more check boxes.</span></span>  
   
- <span data-ttu-id="cba8f-105">Le graphique suivant illustre les différents États d’un <xref:System.Windows.Controls.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="cba8f-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
+ <span data-ttu-id="86942-105">Le graphique suivant montre les différents États d’un <xref:System.Windows.Controls.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="86942-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
   
- <span data-ttu-id="cba8f-106">![États de case à cocher](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="cba8f-106">![CheckBox states](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
-<span data-ttu-id="cba8f-107">Contrôles de case à cocher dans différents États</span><span class="sxs-lookup"><span data-stu-id="cba8f-107">CheckBox controls in different states</span></span>  
+ <span data-ttu-id="86942-106">![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="86942-106">![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
+<span data-ttu-id="86942-107">Contrôles de case à cocher dans différents États</span><span class="sxs-lookup"><span data-stu-id="86942-107">CheckBox controls in different states</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="cba8f-108">Référence</span><span class="sxs-lookup"><span data-stu-id="cba8f-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="86942-108">Référence</span><span class="sxs-lookup"><span data-stu-id="86942-108">Reference</span></span>  
  <xref:System.Windows.Controls.CheckBox>  
   <xref:System.Windows.Controls.RadioButton>  
   <xref:System.Windows.Controls.Primitives.ButtonBase>  
   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="cba8f-109">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="cba8f-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="86942-109">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="86942-109">Related Sections</span></span>

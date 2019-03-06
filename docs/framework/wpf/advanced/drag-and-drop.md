@@ -8,23 +8,23 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 084354f2c567716c2ca083dddb4cd6628334d603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542572"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367464"
 ---
-# <a name="drag-and-drop"></a><span data-ttu-id="aa384-102">Glisser-déposer</span><span class="sxs-lookup"><span data-stu-id="aa384-102">Drag and Drop</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="aa384-103"> fournit un hautement flexible et l’infrastructure de dépôt qui prend en charge du glisser -déplacer des données à la fois dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications, ainsi que d’autres [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span><span class="sxs-lookup"><span data-stu-id="aa384-103"> provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
+# <a name="drag-and-drop"></a><span data-ttu-id="7f201-102">Glisser-déposer</span><span class="sxs-lookup"><span data-stu-id="7f201-102">Drag and Drop</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="7f201-103">fournit un hautement flexible et l’infrastructure de dépôt qui prend en charge du glisser -déplacer des données à la fois dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications, ainsi que d’autres [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span><span class="sxs-lookup"><span data-stu-id="7f201-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="aa384-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="aa384-104">In This Section</span></span>  
- [<span data-ttu-id="aa384-105">Vue d'ensemble du glisser-déplacer</span><span class="sxs-lookup"><span data-stu-id="aa384-105">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [<span data-ttu-id="aa384-106">Données et objets de données</span><span class="sxs-lookup"><span data-stu-id="aa384-106">Data and Data Objects</span></span>](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [<span data-ttu-id="aa384-107">Procédure pas à pas : activation de la fonction glisser-déplacer sur un contrôle utilisateur</span><span class="sxs-lookup"><span data-stu-id="aa384-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [<span data-ttu-id="aa384-108">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="aa384-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7f201-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="7f201-104">In This Section</span></span>  
+ [<span data-ttu-id="7f201-105">Vue d'ensemble du glisser-déplacer</span><span class="sxs-lookup"><span data-stu-id="7f201-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
+ [<span data-ttu-id="7f201-106">Données et objets de données</span><span class="sxs-lookup"><span data-stu-id="7f201-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
+ [<span data-ttu-id="7f201-107">Procédure pas à pas : L’activation de glisser-déplacer sur un contrôle utilisateur</span><span class="sxs-lookup"><span data-stu-id="7f201-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [<span data-ttu-id="7f201-108">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="7f201-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="aa384-109">Référence</span><span class="sxs-lookup"><span data-stu-id="aa384-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7f201-109">Référence</span><span class="sxs-lookup"><span data-stu-id="7f201-109">Reference</span></span>  
  <xref:System.Windows.DataFormat>  
   <xref:System.Windows.DataObject>  
   <xref:System.Windows.DragDrop>  
@@ -32,4 +32,4 @@ ms.locfileid: "33542572"
   <xref:System.Windows.DragEventHandler>  
   <xref:System.Windows.TextDataFormat>  
   
-## <a name="related-sections"></a><span data-ttu-id="aa384-110">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="aa384-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="7f201-110">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="7f201-110">Related Sections</span></span>
