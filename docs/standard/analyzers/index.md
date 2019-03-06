@@ -5,13 +5,8 @@ author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154331"
 ---
+
 # <a name="the-roslyn-based-analyzers"></a>Les analyseurs de Roslyn
 
 Les analyseurs de Roslyn utilisent le Kit de développement logiciel du compilateur .NET (API Roslyn) pour analyser le code source de votre projet pour détecter les problèmes et suggérer des corrections. Différents analyseurs recherchent différentes classes de problèmes, allant des pratiques susceptibles de provoquer des bogues à des problèmes de sécurité liés à la compatibilité avec les API.
@@ -27,12 +22,12 @@ Les analyseurs de roslyn signalent des problèmes potentiels sous forme d’erre
 Vous installez des analyseurs de Roslyn sous forme de packages NuGet dans votre projet. Les analyseurs configurés et tous les paramètres de chaque analyseur sont restaurés et s’exécutent sur l’ordinateur d’un développeur pour ce projet.
 
 > [!NOTE]
-> L’expérience utilisateur des analyseurs de Roslyn est différente de celle pour les bibliothèques d’analyse du code telles que les versions plus anciennes de FxCop et les outils d’analyse de sécurité.  Vous n’avez pas besoin exécuter explicitement les analyseurs de Roslyn. Il est inutile d’utiliser les éléments de menu « Exécuter l’analyse du code » dans le menu « Analyser » de Visual Studio. Les analyseurs de Roslyn s’exécutent de façon asynchrone lorsque vous travaillez. 
+> L’expérience utilisateur des analyseurs de Roslyn est différente de celle pour les bibliothèques d’analyse du code telles que les versions plus anciennes de FxCop et les outils d’analyse de sécurité.  Vous n’avez pas besoin exécuter explicitement les analyseurs de Roslyn. Il est inutile d’utiliser les éléments de menu « Exécuter l’analyse du code » dans le menu « Analyser » de Visual Studio. Les analyseurs de Roslyn s’exécutent de façon asynchrone lorsque vous travaillez.
 
 ## <a name="more-information-on-specific-analyzers"></a>En savoir plus sur les analyseurs spécifiques
 
 Les analyseurs suivants sont couverts dans la présente section :
 
-* [Analyseur d’API](api-analyzer.md) : cet analyseur examine votre code à la recherche de risques potentiels de compatibilité ou utilisations d’API déconseillées.    
-* [Analyseur d’infrastructure](framework-analyzer.md) : cet outil examine votre code pour s’assurer qu’il suit les instructions pour les applications .NET Framework. Ces règles incluent plusieurs recommandations de sécurité.
-* [.NET Portability Analyzer](portability-analyzer.md): cet analyseur examine votre code afin de déterminer la quantité de travail nécessaire pour rendre votre application compatible avec d’autres profils et implémentations .NET, notamment .NET Core, .NET Standard, UWP et Xamarin pour iOS, Android et Mac. 
+* [Analyseur d’API](api-analyzer.md) : Cet analyseur examine votre code à la recherche de risques potentiels de compatibilité ou d’utilisations d’API dépréciées.
+* [Analyseur de framework](framework-analyzer.md) : Cet outil examine votre code pour s’assurer qu’il suit les instructions pour les applications .NET Framework. Ces règles incluent plusieurs recommandations de sécurité.
+* [Analyseur de portabilité .NET](portability-analyzer.md) : Cet analyseur examine votre code afin de déterminer la quantité de travail nécessaire pour rendre votre application compatible avec d’autres profils et implémentations .NET, notamment .NET Core, .NET Standard, UWP et Xamarin pour iOS, Android et Mac.

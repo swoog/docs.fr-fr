@@ -5,12 +5,13 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
 ---
+
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>WMI (Windows Management Instrumentation) et compteurs de performances (référence des API non managées)
 
 L’API non managée .NET Framework WMI et compteurs de performances se compose d’un ensemble de fonctions qui wrappent les appels à l’[API Windows Management Instrumentation native](/windows/desktop/WmiSdk/com-api-for-wmi). Elle vous permet de développer des outils et des bibliothèques qui gèrent et analysent des systèmes informatiques distants.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
+
 L’API comprend les fonctions suivantes :
 
 | Fonction | Description |
@@ -24,30 +25,30 @@ L’API comprend les fonctions suivantes :
 | [CompareTo, fonction](compareto.md) | Compare un objet à un autre objet WMI. |
 | [ConnectServerWmi, fonction](connectserverwmi.md) | Crée une connexion via DCOM à un espace de noms WMI sur un ordinateur spécifié. |
 | [CreateClassEnumWmi, fonction](createclassenumwmi.md) | Retourne un énumérateur pour toutes les classes qui remplissent les critères de sélection spécifiés. |
-| [CreateInstanceEnumWmi, fonction](createinstanceenumwmi.md) | Retourne un énumérateur qui retourne les instances d’une classe spécifiée qui remplissent les critères de sélection spécifiés. |
+| [CreateInstanceEnumWmi, fonction](createinstanceenumwmi.md) | Retourne un énumérateur qui retourne les instances d’une classe spécifiée remplissant les critères de sélection spécifiés. |
 | [Delete, fonction](delete.md) | Supprime une propriété spécifiée d’une définition de classe et tous ses qualificateurs. |
 | [DeleteMethod, fonction](deletemethod.md) | Supprime une méthode spécifiée d’une définition de classe CIM. |
-| [EndEnumeration, fonction](endenumeration.md) | Met fin à une séquence d’énumération. | 
+| [EndEnumeration, fonction](endenumeration.md) | Met fin à une séquence d’énumération. |
 | [EndMethodEnumeration, fonction](endmethodenumeration.md) | Met fin à une séquence d’énumération lancée en appelant la [fonction BeginMethodEnumeration](beginmethodenumeration.md). |
 | [ExecNotificationQueryWmi, fonction](execnotificationquerywmi.md) | Exécute une requête pour recevoir des événements. |
 | [ExecQueryWmi, fonction](execquerywmi.md) | Exécute une requête pour récupérer des objets. |
-| [FormatFromRawValue, fonction](formatfromrawvalue.md) | Convertit une valeur de données de performances brute au format spécifié, ou deux valeurs de données de performances brutes si la conversion de format est basé sur l’heure. | 
+| [FormatFromRawValue, fonction](formatfromrawvalue.md) | Convertit une valeur de données de performances brute au format spécifié, ou deux valeurs de données de performances brutes si la conversion de format est basé sur l’heure. |
 | [Get, fonction](get.md) | Récupère une valeur de propriété spécifiée si elle existe. |
 | [GetCurrentApartmentType, fonction](getcurrentapartmenttype.md) | Récupère le type de cloisonnement dans lequel l’appelant s’exécute. |
 | [GetDemultiplexedStub, fonction](getdemultiplexedstub.md) | Crée un récepteur de redirecteur d’objet pour aider un client lors de la réception des appels asynchrones WMI. |
-| [GetErrorInfo, fonction](geterrorinfo.md) | Récupère les informations d’erreur à partir de l’appel de fonction précédent. | 
-| [GetMethod, fonction](getmethod.md) | Récupère les informations sur la méthode spécifiée. | 
+| [GetErrorInfo, fonction](geterrorinfo.md) | Récupère les informations d’erreur à partir de l’appel de fonction précédent. |
+| [GetMethod, fonction](getmethod.md) | Récupère les informations sur la méthode spécifiée. |
 | [GetMethodOrigin, fonction](getmethodorigin.md) | Détermine la classe dans laquelle une méthode est déclarée. |
 | [GetMethodQualifierSet, fonction](getmethodqualifierset.md) | Récupère le jeu de qualificateurs pour une méthode particulière. |
 | [GetNames, fonction](getnames.md) | Récupère une partie ou l’ensemble des noms des propriétés d’un objet. |
-| [GetObjectText, fonction](getobjecttext.md) | Retourne un rendu textuel d’un objet dans la syntaxe MOF. | 
+| [GetObjectText, fonction](getobjecttext.md) | Retourne un rendu textuel d’un objet dans la syntaxe MOF. |
 | [GetPropertyHandle, fonction](getpropertyhandle.md) | Retourne un handle unique qui identifie une propriété. |
 | [GetPropertyOrigin, fonction](getpropertyorigin.md) | Détermine la classe dans laquelle une propriété est déclarée. |
 | [GetPropertyQualifierSet, fonction](getpropertyqualifierset.md) | Récupère le jeu de qualificateurs pour une propriété particulière.  |
 | [GetQualifierSet, fonction](getqualifierset.md) | Récupère le jeu de qualificateurs pour une instance de classe ou une définition de classe. |
 | [InheritsFrom, fonction](inheritsfrom.md) | Détermine si l’instance ou la classe active dérive d’une classe parente spécifié. |
 | [Initialize, fonction](initialize.md) | Effectue l’initialisation WMI. |
-| [Next, fonction](next.md) | Récupère la propriété suivante dans une énumération. | 
+| [Next, fonction](next.md) | Récupère la propriété suivante dans une énumération. |
 | [NextMethod, fonction](nextmethod.md) | Récupère la méthode suivante dans une énumération. |
 | [Fonction Put](put.md) | Affecte une nouvelle valeur à une propriété nommée. |
 | [PutClassWmi, fonction](putclasswmi.md) | Crée une classe ou met à jour une classe existante. |
@@ -62,11 +63,11 @@ L’API comprend les fonctions suivantes :
 | [QualifierSet_Put, fonction](qualifierset-put.md) | Écrit la valeur et le qualificateur nommés. |
 | [ResetSecurity, fonction](resetsecurity.md) | Assigne le jeton d’emprunt d’identité fourni au thread actif. |
 | [SetSecurity, fonction](setsecurity.md) | Récupère le jeton d’emprunt d’identité associé au thread actif. |
-| [SpawnDerivedClass, fonction](spawnderivedclass.md) | Crée un objet de classe dérivé à partir d’un objet spécifié. | 
-| [SpawnInstance, fonction](spawninstance.md) | Crée une instance d’une classe. |   
+| [SpawnDerivedClass, fonction](spawnderivedclass.md) | Crée un objet de classe dérivé à partir d’un objet spécifié. |
+| [SpawnInstance, fonction](spawninstance.md) | Crée une instance d’une classe. |
 | [VerifyClient, fonction](verifyclientkey.md) | Garantit que la clé du client offre une sécurité correcte. |
 | [WritePropertyValue, fonction](writepropertyvalue.md) | Écrit un nombre spécifié d’octets dans une propriété identifiée par un descripteur de propriété. |
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les API non managées](../index.md) 
+- [Informations de référence sur les API non managées](../index.md)
