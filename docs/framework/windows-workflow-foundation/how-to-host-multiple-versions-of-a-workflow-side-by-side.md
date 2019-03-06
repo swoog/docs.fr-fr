@@ -1,18 +1,18 @@
 ---
-title: "Procédure : héberger plusieurs versions d'un workflow côte à côte"
+title: 'Procédure : Héberger plusieurs Versions d’un Workflow côte à côte'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181616"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366701"
 ---
-# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procédure : héberger plusieurs versions d'un workflow côte à côte
+# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procédure : Héberger plusieurs Versions d’un Workflow côte à côte
 `WorkflowIdentity` permet aux développeurs d'applications de workflow d'associer un nom et une version à une définition de workflow, et d'associer ces informations à une instance persistante de workflow. Ces informations d'identité peuvent être utilisées par les développeurs d'applications de workflow pour activer des scénarios tels que l'exécution côte à côte de plusieurs versions d'une définition de workflow, et fournir la base d'autres fonctionnalités telles que la mise à jour dynamique. Cette étape du didacticiel explique comment utiliser `WorkflowIdentity` pour héberger plusieurs versions de workflow en même temps.
 
 > [!NOTE]
@@ -36,12 +36,12 @@ ms.locfileid: "50181616"
 -   [Pour générer et exécuter l’application](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  Avant de suivre les étapes de cette rubrique, exécutez l'application, démarrez plusieurs workflows de chaque type et effectuez une ou deux propositions pour chacun. Ces workflows persistants sont utilisés dans cette étape et l’étape suivante, [Comment : mettre à jour la définition d’une Instance de Workflow en cours d’exécution](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+>  Avant de suivre les étapes de cette rubrique, exécutez l'application, démarrez plusieurs workflows de chaque type et effectuez une ou deux propositions pour chacun. Ces workflows persistants sont utilisés dans cette étape et l’étape suivante, [Comment : Mettre à jour la définition d’une Instance de Workflow en cours d’exécution](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 > [!NOTE]
 >  Chaque étape du didacticiel de mise en route dépend des étapes précédentes. Si vous n’avez pas effectué les étapes précédentes, vous pouvez télécharger une version terminée du didacticiel à partir de [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-###  <a name="BKMK_BackupCopy"></a> Pour effectuer une copie du projet NumberGuessWorkflowActivities  
+### <a name="BKMK_BackupCopy"></a> Pour effectuer une copie du projet NumberGuessWorkflowActivities  
   
 1.  Ouvrez le **WF45GettingStartedTutorial** solution dans Visual Studio 2012, si elle n’est pas ouverte.  
   
@@ -60,14 +60,14 @@ ms.locfileid: "50181616"
     > [!NOTE]
     >  Les étapes de cette rubrique illustrent une façon de gérer les assemblys utilisés pour contenir plusieurs versions de workflow. D'autres méthodes, telles que celles d'attribution de nom fort aux assemblys et d'inscription des assemblys dans le Global Assembly Cache peuvent également être utilisées.
 
-8.  Créez un dossier nommé **NumberGuessWorkflowActivities_du** dans le même dossier que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**et qui vient d’être ajouté **PreviousVersions** dossier, puis copiez tous les fichiers et sous-dossiers à partir de la **NumberGuessWorkflowActivities** dossier dans le nouvel  **NumberGuessWorkflowActivities_du** dossier. Cette copie de sauvegarde du projet pour la version initiale des activités est utilisée dans [Comment : mettre à jour la définition d’une Instance de Workflow en cours d’exécution](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+8.  Créez un dossier nommé **NumberGuessWorkflowActivities_du** dans le même dossier que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**et qui vient d’être ajouté **PreviousVersions** dossier, puis copiez tous les fichiers et sous-dossiers à partir de la **NumberGuessWorkflowActivities** dossier dans le nouvel  **NumberGuessWorkflowActivities_du** dossier. Cette copie de sauvegarde du projet pour la version initiale des activités est utilisée dans [Comment : Mettre à jour la définition d’une Instance de Workflow en cours d’exécution](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 9. Ouvrez à nouveau le **WF45GettingStartedTutorial** solution dans Visual Studio 2012.
 
-###  <a name="BKMK_UpdateWorkflows"></a> Pour mettre à jour les flux de travail
+### <a name="BKMK_UpdateWorkflows"></a> Pour mettre à jour les flux de travail
  Dans cette section, les définitions de workflow sont mises à jour. Les deux activités `WriteLine` qui fournissent des commentaires sur la proposition de l'utilisateur sont mises à jour, et une nouvelle activité `WriteLine`, qui fournit des informations supplémentaires sur le jeu une fois que le nombre est deviné, est ajoutée.
 
-####  <a name="BKMK_UpdateStateMachine"></a> Pour mettre à jour le flux de travail StateMachine
+#### <a name="BKMK_UpdateStateMachine"></a> Pour mettre à jour le flux de travail StateMachine
 
 1.  Dans **l’Explorateur de solutions**, sous le **NumberGuessWorkflowActivities** de projet, double-cliquez sur **StateMachineNumberGuessWorkflow.xaml**.
 
@@ -109,7 +109,7 @@ ms.locfileid: "50181616"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-####  <a name="BKMK_UpdateFlowchart"></a> Pour mettre à jour le workflow d’organigramme
+#### <a name="BKMK_UpdateFlowchart"></a> Pour mettre à jour le workflow d’organigramme
 
 1.  Dans **l’Explorateur de solutions**, sous le **NumberGuessWorkflowActivities** de projet, double-cliquez sur **FlowchartNumberGuessWorkflow.xaml**.
 
@@ -145,7 +145,7 @@ ms.locfileid: "50181616"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-####  <a name="BKMK_UpdateSequential"></a> Pour mettre à jour le workflow séquentiel
+#### <a name="BKMK_UpdateSequential"></a> Pour mettre à jour le workflow séquentiel
 
 1.  Dans **l’Explorateur de solutions**, sous le **NumberGuessWorkflowActivities** de projet, double-cliquez sur **SequentialNumberGuessWorkflow.xaml**.
 
@@ -181,7 +181,7 @@ ms.locfileid: "50181616"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Pour mettre à jour workflowversionmap de façon à inclure les versions précédentes de flux de travail
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> Pour mettre à jour workflowversionmap de façon à inclure les versions précédentes de flux de travail
 
 1.  Double-cliquez sur **WorkflowVersionMap.cs** (ou **WorkflowVersionMap.vb**) sous le **NumberGuessWorkflowHost** projet pour l’ouvrir.
 
@@ -549,7 +549,7 @@ ms.locfileid: "50181616"
     }
     ```
 
-###  <a name="BKMK_BuildAndRun"></a> Pour générer et exécuter l'application
+### <a name="BKMK_BuildAndRun"></a> Pour générer et exécuter l'application
 
 1.  Appuyez sur Ctrl+Maj+B pour générer l'application, puis sur Ctrl+F5 pour démarrer.
 
@@ -580,4 +580,4 @@ ms.locfileid: "50181616"
 
 4.  Revenez à l'application d'estimation de nombre et sélectionnez l'un des workflows qui a été démarré avant que les mises à jour n'aient été effectuées. Vous pouvez identifier la version du workflow actuellement sélectionné en examinant les informations de version qui s'affichent sous la fenêtre d'état. Entrez des propositions et notez que les mises à jour d'état correspondent à la sortie d'activité `WriteLine` de la version antérieure, et n'incluez pas l'estimation de l'utilisateur. Cela est dû au fait que ces workflows utilisent la définition de workflow précédente qui n'a pas les mises à jour de `WriteLine`.
 
-     Dans l’étape suivante, [Comment : mettre à jour la définition d’une Instance de Workflow en cours d’exécution](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), l’exécution `v1` les instances de flux de travail sont mis à jour afin qu’ils contiennent les nouvelles fonctionnalités comme la `v2` instances.
+     Dans l’étape suivante, [Comment : Mettre à jour la définition d’une Instance de Workflow en cours d’exécution](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), l’exécution `v1` les instances de flux de travail sont mis à jour afin qu’ils contiennent les nouvelles fonctionnalités comme la `v2` instances.

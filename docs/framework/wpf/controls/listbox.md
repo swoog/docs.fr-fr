@@ -7,23 +7,23 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551685"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362225"
 ---
 # <a name="listbox"></a>ListBox
-A <xref:System.Windows.Controls.ListBox> contrôle fournit aux utilisateurs une liste d’éléments sélectionnables.  
+Un <xref:System.Windows.Controls.ListBox> contrôle fournit aux utilisateurs une liste d’éléments sélectionnables.  
   
- La figure suivante illustre un type <xref:System.Windows.Controls.ListBox>.  
+ L’exemple suivant illustre un type <xref:System.Windows.Controls.ListBox>.  
   
- ![Capture d’écran : ListBox](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")  
+ ![Capture d’écran de ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")  
 ListBox classique  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+ [Rubriques de guide pratique](listbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.ListBox>  

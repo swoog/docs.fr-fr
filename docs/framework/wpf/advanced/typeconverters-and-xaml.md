@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748075"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352709"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters et XAML
 Cette rubrique présente l’objectif de la conversion de types de chaîne comme une fonctionnalité générale du langage XAML. Dans le .NET Framework, la <xref:System.ComponentModel.TypeConverter> classe sert un objectif particulier dans le cadre de l’implémentation pour une classe personnalisée managée qui peut être utilisée en tant que valeur de propriété dans l’utilisation d’attribut XAML. Si vous écrivez une classe personnalisée, et que les instances de la classe soient utilisables comme valeurs d’attribut définissables XAML, vous devrez peut-être appliquer un <xref:System.ComponentModel.TypeConverterAttribute> à votre classe, écrire une personnalisée <xref:System.ComponentModel.TypeConverter> classe, ou les deux.  
@@ -24,27 +24,22 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
  Un processeur XAML a besoin de deux types d’informations pour pouvoir traiter une valeur d’attribut. Le premier élément d'information est le type valeur de la propriété à définir. N'importe quelle chaîne qui définit une valeur d'attribut et qui est traitée en XAML doit au final être convertie ou résolue en une valeur de ce type. Si la valeur est une primitive comprise par l'analyseur XAML (telle qu'une valeur numérique), une conversion directe de la chaîne est tentée. Si la valeur est une énumération, la chaîne est utilisée pour rechercher une correspondance de nom à une constante nommée dans cette énumération. Si la valeur n’est ni une primitive comprise par l’analyseur, ni une énumération, le type en question doit pouvoir fournir une instance du type ou une valeur, en fonction d’une chaîne convertie. Pour cela, vous devez indiquer une classe de convertisseur de type. Le convertisseur de type est une classe d’assistance qui sert à fournir des valeurs d’une autre classe, pour le scénario XAML et éventuellement pour les appels de code dans le code .NET.  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>Utilisation du comportement de conversion de types existant en XAML  
- En fonction de votre connaissance des concepts XAML sous-jacents, il se peut que vous utilisiez déjà un comportement de conversion de types dans des applications XAML de base sans vous en rendre compte. Par exemple, WPF définit des centaines de propriétés qui prennent une valeur de type <xref:System.Windows.Point>. Un <xref:System.Windows.Point> est une valeur qui décrit une coordonnée dans un espace de coordonnées à deux dimensions, et il a deux propriétés importantes : <xref:System.Windows.Point.X%2A> et <xref:System.Windows.Point.Y%2A>. Lorsque vous spécifiez un point en XAML, vous le spécifiez sous forme de chaîne avec un séparateur (en général une virgule) entre le <xref:System.Windows.Point.X%2A> et <xref:System.Windows.Point.Y%2A> valeurs que vous fournissez. Par exemple : `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">`.  
+ En fonction de votre connaissance des concepts XAML sous-jacents, il se peut que vous utilisiez déjà un comportement de conversion de types dans des applications XAML de base sans vous en rendre compte. Par exemple, WPF définit des centaines de propriétés qui prennent une valeur de type <xref:System.Windows.Point>. Un <xref:System.Windows.Point> est une valeur qui décrit une coordonnée dans un espace de coordonnées à deux dimensions, et il a deux propriétés importantes : <xref:System.Windows.Point.X%2A> et <xref:System.Windows.Point.Y%2A>. Lorsque vous spécifiez un point en XAML, vous le spécifiez sous forme de chaîne avec un séparateur (en général une virgule) entre le <xref:System.Windows.Point.X%2A> et <xref:System.Windows.Point.Y%2A> valeurs que vous fournissez. Par exemple : `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>`.  
   
  Même ce type simple de <xref:System.Windows.Point> et son utilisation simple en XAML impliquent un convertisseur de type. Dans ce cas, c’est la classe <xref:System.Windows.PointConverter>.  
   
  Le convertisseur de type pour <xref:System.Windows.Point> défini à la rationalisation de niveau classe les utilisations de balisage de toutes les propriétés qui acceptent <xref:System.Windows.Point>. Sans un convertisseur de type ici, vous auriez besoin de la balise suivante beaucoup plus détaillée pour l’exemple indiqué précédemment :  
-  
- `<LinearGradientBrush>`  
-  
- `<LinearGradientBrush.StartPoint>`  
-  
- `<Point X="0" Y="0"/>`  
-  
- `</LinearGradientBrush.StartPoint>`  
-  
- `<LinearGradientBrush.EndPoint>`  
-  
- `<Point X="1" Y="1"/>`  
-  
- `</LinearGradientBrush.EndPoint>`  
-  
- `<LinearGradientBrush>`  
+
+```xaml
+<LinearGradientBrush>
+  <LinearGradientBrush.StartPoint>
+    <Point X="0" Y="0"/>
+  </LinearGradientBrush.StartPoint>
+  <LinearGradientBrush.EndPoint>
+    <Point X="1" Y="1"/>
+  </LinearGradientBrush.EndPoint>
+</LinearGradientBrush>
+ ```
   
  L’utilisation d’une chaîne de conversion de type ou d’une syntaxe équivalente plus détaillée est une question de style de codage. Votre workflow d’outils XAML peut également influencer la définition des valeurs. Certains outils XAML ont tendance à émettre la forme la plus détaillée du balisage, car il est plus facile de parcourir les vues du concepteur ou son propre mécanisme de sérialisation.  
   
@@ -53,7 +48,7 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
 ### <a name="type-converters-and-markup-extensions"></a>Convertisseurs de type et extensions de balisage  
  Les extensions de balisage et les convertisseurs de types remplissent des rôles orthogonaux quant au comportement du processeur XAML et aux scénarios auxquels ils s’appliquent. Bien que le contexte soit disponible pour les extensions de balisage, le comportement de la conversion de type des propriétés où une extension de balisage fournit une valeur n’est généralement pas vérifié dans les implémentations d’extension de balisage. En d’autres termes, même si une extension de balisage retourne une chaîne de texte comme sortie `ProvideValue`, le comportement de conversion de type associé à cette chaîne tel qu’il est appliqué à une propriété ou un type de valeur de propriété spécifique n’est pas appelé. En général, la fonction d’une extension de balisage consiste à traiter une chaîne et retourner un objet sans faire appel à un convertisseur de type.  
   
- Dans le cadre de la création d’une référence à un objet existant, il est courant d’utiliser une extension de balisage à la place d’un convertisseur de type. Au mieux, un convertisseur de type sans état générerait uniquement une nouvelle instance, ce qui peut ne pas être souhaitable. Pour plus d’informations sur les extensions de balisage, consultez [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Dans le cadre de la création d’une référence à un objet existant, il est courant d’utiliser une extension de balisage à la place d’un convertisseur de type. Au mieux, un convertisseur de type sans état générerait uniquement une nouvelle instance, ce qui peut ne pas être souhaitable. Pour plus d’informations sur les extensions de balisage, consultez [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ### <a name="native-type-converters"></a>Convertisseurs de type natif  
  Dans une implémentation WPF et .NET Framework de l’analyseur XAML, certains types gèrent nativement la conversion de type ; cependant, ces types ne sont pas traditionnellement considérés comme des primitives. Un exemple d'un tel type est <xref:System.DateTime>. La raison à cela est basée sur le fonctionne de l’architecture .NET Framework : le type <xref:System.DateTime> est défini dans mscorlib, la bibliothèque de base dans .NET. <xref:System.DateTime> ne peut pas être attribué avec un attribut qui provient d’un autre assembly qui présente une dépendance (<xref:System.ComponentModel.TypeConverterAttribute> vient de System) afin du mécanisme de découverte de convertisseur de type habituel par attribution ne peut pas être pris en charge. À la place, l’analyseur XAML dispose d’une liste des types qui doivent faire l’objet d’un traitement natif et traite ces types de la même façon que les véritables primitives. (Dans le cas de <xref:System.DateTime> cela implique un appel à <xref:System.DateTime.Parse%2A>.)  
@@ -116,6 +111,6 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.ComponentModel.TypeConverter>
-- [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Syntaxe XAML en détail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
+- [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md)
+- [Syntaxe XAML en détail](xaml-syntax-in-detail.md)

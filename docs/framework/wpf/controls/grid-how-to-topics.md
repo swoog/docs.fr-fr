@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550363"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377675"
 ---
 # <a name="grid-how-to-topics"></a>Rubriques "Comment utiliser le Grid"
-Les rubriques de cette section décrivent comment positionner des éléments à l’aide de la <xref:System.Windows.Controls.Grid> élément.  
+Les rubriques de cette section décrivent comment positionner les éléments à l’aide du <xref:System.Windows.Controls.Grid> élément.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Générer une boîte de dialogue d'interface utilisateur standard à l'aide de Grid](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [Créer une grille complexe](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [Créer un élément de grille](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [Créer et utiliser un objet GridLengthConverter](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [Manipuler des colonnes et des lignes à l'aide de ColumnDefinitionsCollections et RowDefinitionsCollections](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [Positionner les éléments enfants d'une grille](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [Partager des propriétés de dimensionnement entre grilles](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ [Générer une boîte de dialogue d'interface utilisateur standard à l'aide de Grid](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [Créer une grille complexe](how-to-create-a-complex-grid.md)  
+ [Créer un élément de grille](how-to-create-a-grid-element.md)  
+ [Créer et utiliser un objet GridLengthConverter](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [Manipuler des colonnes et des lignes à l'aide de ColumnDefinitionsCollections et RowDefinitionsCollections](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [Positionner les éléments enfants d'une grille](how-to-position-the-child-elements-of-a-grid.md)  
+ [Partager des propriétés de dimensionnement entre grilles](how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Panel>  
@@ -42,8 +42,8 @@ Les rubriques de cette section décrivent comment positionner des éléments à 
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Disposition](../advanced/layout.md)  
   
- [Procédure pas à pas : ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Vue d’ensemble de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Vue d’ensemble de ScrollViewer](scrollviewer-overview.md)

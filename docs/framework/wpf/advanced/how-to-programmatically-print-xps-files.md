@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 53cc58b3e30b91e8694a8090f3cc85cf0b3c0af6
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442917"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372722"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Procédure : Imprimer des fichiers XPS par programmation
 Vous pouvez utiliser une surcharge de la <xref:System.Printing.PrintQueue.AddJob%2A> méthode pour imprimer [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] fichiers sans ouvrir un <xref:System.Windows.Controls.PrintDialog> ou, en principe, n’importe quel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] du tout.  
@@ -43,8 +43,8 @@ Vous pouvez utiliser une surcharge de la <xref:System.Printing.PrintQueue.AddJob
   
  L’exemple se base principalement sur la méthode `static`**BatchXPSPrinter.PrintXPS**. Une fois que le serveur d’impression et la file d’attente ont été créés, la méthode invite l’utilisateur à spécifier un répertoire contenant les fichiers [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Après avoir vérifié l’existence du répertoire et la présence de \*.xps les fichiers qu’il contient, et la méthode ajoute chacun de ces fichiers à la file d’attente. L’exemple suppose que l’imprimante est non-XPSDrv, donc nous passons `false` au dernier paramètre de <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> (méthode). Pour cette raison, la méthode validera le balisage [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dans le fichier avant d’essayer de le convertir en langage de description de page de l’imprimante. Si la validation échoue, une exception est générée. L’exemple de code interceptera l’exception, en informera l’utilisateur et passera ensuite au fichier [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] suivant.  
   
- [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
- [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
+ [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
+ [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
   
  Si vous utilisez une imprimante XPSDrv, vous pouvez définir le paramètre final sur `true`. Dans ce cas, puisque [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] est le langage de description de page de l’imprimante, la méthode enverra le fichier à l’imprimante sans le valider ou le convertir dans un autre langage de description de page. Si vous n’êtes pas certain, au moment du design de l’application utilise une imprimante XPSDrv, vous pouvez modifier l’application pour qu’elle lise le <xref:System.Printing.PrintQueue.IsXpsDevice%2A> propriété et la branche en fonction de ce qu’il trouve.  
   

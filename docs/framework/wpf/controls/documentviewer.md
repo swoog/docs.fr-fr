@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: 19e3d70e378e1357f4a3b299ddfb504f5b85fd0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd87b81dbfc412168566f5b58bb2040c0e05b080
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682967"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365423"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 Le <xref:System.Windows.Controls.DocumentViewer> contrôle sert à afficher <xref:System.Windows.Documents.FixedDocument> contenu (tel que [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) dans un format paginé.  
@@ -23,6 +23,6 @@ Le <xref:System.Windows.Controls.DocumentViewer> contrôle sert à afficher <xre
  <xref:System.Windows.Documents.FixedDocument>  
   
 ## <a name="see-also"></a>Voir aussi
-- [Documents](../../../../docs/framework/wpf/advanced/documents.md)
-- [Sérialisation et stockage de documents](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
-- [Vue d’ensemble de l’impression](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documents](../advanced/documents.md)
+- [Sérialisation et stockage de documents](../advanced/document-serialization-and-storage.md)
+- [Vue d’ensemble de l’impression](../advanced/printing-overview.md)

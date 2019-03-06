@@ -8,24 +8,24 @@ helpviewer_keywords:
 - application hosting [WPF]
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
-ms.openlocfilehash: b0a334796cdb698f25f03f629785dae2ee732426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546889"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352268"
 ---
 # <a name="hosting-wpf-applications"></a>Hébergement d'applications WPF
-Applications de navigateur WPF XAML (XBAP) sont des applications clientes riches qui peuvent être déployées sur un serveur Web et démarrées dans un navigateur. L’hôte WPF (PresentationHost.exe) est inscrit en tant que l’interpréteur de commandes et le gestionnaire MIME pour les fichiers XBAP et XAML. Par conséquent, Internet Explorer sait pour démarrer l’hôte WPF lorsqu’une application XBAP est lancée. Les utilisateurs de Firefox peuvent installer des compléments additionnels Firefox permettant à Firefox d’hôte XBAP. Une application XBAP peut être hébergée dans d’autres navigateurs ou les applications autonomes à l’aide de l’API d’hébergement fourni aucun navigateur natif par WPF.  
+Applications de navigateur XAML (XBAP) WPF sont des applications client riche qui peuvent être déployées sur un serveur Web et démarrées dans un navigateur. L’hôte WPF (PresentationHost.exe) est inscrit en tant que l’interpréteur de commandes et le gestionnaire MIME pour les fichiers XBAP et XAML. Par conséquent, Internet Explorer sait qu’il doit pour démarrer l’hôte WPF lorsqu’une application XBAP est lancé. Les utilisateurs de Firefox peuvent installer des modules complémentaires de Firefox qui permettent de Firefox pour héberger les applications XBAP. Une application XBAP peut être hébergé dans d’autres navigateurs ou les applications autonomes en utilisant le navigateur natif API d’hébergement fournies par WPF.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble des applications du navigateur XAML WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-   [Hôte WPF (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
-  [Modules complémentaires de Firefox pour la prise en charge du déploiement d'applications .NET](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  
-  [API de prise en charge de l'hébergement de navigateur WPF natif](../../../../docs/framework/wpf/app-development/native-wpf-browser-hosting-support-apis.md)  
+ [Vue d’ensemble des applications du navigateur XAML WPF](wpf-xaml-browser-applications-overview.md)  
+   [Hôte WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md)  
+  [Modules complémentaires de Firefox pour la prise en charge du déploiement d'applications .NET](firefox-add-ons-to-support-net-application-deployment.md)  
+  [API de prise en charge de l'hébergement de navigateur WPF natif](native-wpf-browser-hosting-support-apis.md)  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Vue d’ensemble de la gestion d’applications](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Fenêtres dans les applications WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Vue d’ensemble de la navigation](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Génération et déploiement d’applications WPF](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Vue d’ensemble de la gestion d’applications](application-management-overview.md)  
+  [Fenêtres dans les applications WPF](windows-in-wpf-applications.md)  
+  [Vue d’ensemble de la navigation](navigation-overview.md)  
+  [Génération et déploiement d’applications WPF](building-and-deploying-wpf-applications.md)

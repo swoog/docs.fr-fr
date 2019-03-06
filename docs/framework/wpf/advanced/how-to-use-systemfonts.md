@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: bf99d716c5c41b7604244022d2e58423594a9cf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674870"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378897"
 ---
 # <a name="how-to-use-systemfonts"></a>Procédure : Utiliser des SystemFonts
 Cet exemple montre comment utiliser les ressources statiques de la <xref:System.Windows.SystemFonts> classe afin d’appliquer un style ou personnaliser un bouton.  
@@ -29,19 +29,19 @@ Cet exemple montre comment utiliser les ressources statiques de la <xref:System.
   
  L’exemple suivant montre comment accéder à et utiliser les propriétés de <xref:System.Windows.SystemFonts> en tant que valeurs statiques pour appliquer un style ou personnaliser un bouton. Cet exemple de balisage assigne <xref:System.Windows.SystemFonts> valeurs à un bouton.  
   
- [!code-xaml[SystemRes_snip#FontStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
+ [!code-xaml[SystemRes_snip#FontStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
   
  Pour utiliser les valeurs de <xref:System.Windows.SystemFonts> dans le code, vous n’avez pas à utiliser une valeur statique ou une référence de ressource dynamique. Au lieu de cela, utilisez les propriétés non-clé de la <xref:System.Windows.SystemFonts> classe. Bien que les propriétés non-clé soient apparemment définies en tant que propriétés statiques, le comportement au moment de l’exécution de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hébergé par le système réévaluera les propriétés en temps réel et tiendra compte des modifications utilisateur apportées aux valeurs système. L’exemple suivant montre comment spécifier les paramètres de police d’un bouton.  
   
- [!code-csharp[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
- [!code-vb[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
+ [!code-csharp[SystemRes_snip#FontResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
+ [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.SystemFonts>
-- [Peindre une zone avec un pinceau système](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [Utiliser SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)
-- [Utiliser des clés de polices système](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
-- [x:Static, extension de balisage](../../../../docs/framework/xaml-services/x-static-markup-extension.md)
-- [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Extension de balisage DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+- [Peindre une zone avec un pinceau système](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [Utiliser SystemParameters](how-to-use-systemparameters.md)
+- [Utiliser des clés de polices système](how-to-use-system-fonts-keys.md)
+- [Rubriques de guide pratique](resources-how-to-topics.md)
+- [x:Static, extension de balisage](../../xaml-services/x-static-markup-extension.md)
+- [Ressources XAML](xaml-resources.md)
+- [Extension de balisage DynamicResource](dynamicresource-markup-extension.md)

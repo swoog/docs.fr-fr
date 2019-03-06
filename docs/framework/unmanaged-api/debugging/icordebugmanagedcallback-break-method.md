@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83524b24fd05969fa4f45fd742d1df955c441d44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bab20301c5413f8bbe95d44b87e06d3b3870c9e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732386"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377701"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break, méthode
-Notifie le débogueur lorsqu’une <xref:System.Reflection.Emit.OpCodes.Break> instruction dans le flux de code est exécutée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-HRESULT Break (  
-    [in] ICorDebugAppDomain *pAppDomain,  
-    [in] ICorDebugThread    *thread  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `pAppDOmain`  
- [in] Pointeur vers un objet ICorDebugAppDomain qui représente le domaine d’application qui contient l’instruction de saut.  
-  
- `thread`  
- [in] Pointeur vers un objet ICorDebugThread qui représente le thread qui contient l’instruction de saut.  
-  
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **En-tête :** CorDebug.idl, CorDebug.h  
-  
- **Bibliothèque :** CorGuids.lib  
-  
- **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Notifie le débogueur lorsqu’une <xref:System.Reflection.Emit.OpCodes.Break> instruction dans le flux de code est exécutée.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT Break (
+    [in] ICorDebugAppDomain *pAppDomain,
+    [in] ICorDebugThread    *thread
+);
+```
+
+## <a name="parameters"></a>Paramètres
+
+`pAppDomain`\
+[in] Pointeur vers un objet ICorDebugAppDomain qui représente le domaine d’application qui contient l’instruction de saut.
+
+`thread`\
+[in] Pointeur vers un objet ICorDebugThread qui représente le thread qui contient l’instruction de saut.
+
+## <a name="requirements"></a>Spécifications
+
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
+
+**En-tête :** CorDebug.idl, CorDebug.h
+
+**Bibliothèque :** CorGuids.lib
+
+**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>Voir aussi
-- [ICorDebugManagedCallback, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+- [ICorDebugManagedCallback, interface](icordebugmanagedcallback-interface.md)

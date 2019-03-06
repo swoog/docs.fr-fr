@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377228"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Procédure pas à pas : Créer un bouton avec XAML
 L’objectif de cette procédure pas à pas est d’apprendre à créer un bouton animé pour une utilisation dans une application Windows Presentation Foundation (WPF). Cette procédure pas à pas utilise des styles et un modèle pour créer une ressource de bouton personnalisé qui permet la réutilisation du code et la séparation de la logique de bouton de la déclaration de bouton. Cette procédure pas à pas est écrite entièrement en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
->  Cette procédure pas à pas vous guide tout au long des étapes de création de l’application en tapant ou copiant et collant [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dans Microsoft Visual Studio. Si vous préférez apprendre à utiliser un outil de conception (Microsoft Expression Blend) pour créer la même application, consultez [créer un bouton à l’aide de Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
+>  Cette procédure pas à pas vous guide tout au long des étapes de création de l’application en tapant ou copiant et collant [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dans Microsoft Visual Studio. Si vous préférez apprendre à utiliser un outil de conception (Microsoft Expression Blend) pour créer la même application, consultez [créer un bouton à l’aide de Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
   
  La figure suivante montre les boutons terminés.  
   
- ![Boutons personnalisés qui ont été créés à l’aide de XAML](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+ ![Boutons personnalisés qui ont été créés à l’aide de XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-basic-buttons"></a>Créer des boutons de base  
  Nous allons commencer en créant un nouveau projet et en ajoutant quelques boutons à la fenêtre.  
@@ -49,12 +49,12 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Appuyez sur F5 pour exécuter l’application. Vous devriez voir un ensemble de boutons qui ressemble à la figure suivante.  
   
-     ![Trois boutons de base](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
+     ![Trois boutons de base](./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
   
      Maintenant que vous avez créé les boutons de base, vous avez terminé de travailler dans le fichier Window1.xaml. Le reste de la procédure pas à pas se concentre sur le fichier app.xaml, en définissant des styles et un modèle pour les boutons.  
   
 ## <a name="set-basic-properties"></a>Définir les propriétés de base  
- Ensuite, nous allons définir certaines propriétés sur ces boutons pour contrôler l’apparence du bouton et la disposition. Au lieu de définir des propriétés sur les boutons individuellement, vous allez utiliser des ressources pour définir les propriétés d’un bouton pour l’application entière. Ressources d’application sont conceptuellement semblables à externe [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)] pour les pages Web ; Cependant, les ressources sont beaucoup plus puissantes que [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)], comme vous le verrez par la fin de cette procédure pas à pas. Pour en savoir plus sur les ressources, consultez [XAML ressources](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Ensuite, nous allons définir certaines propriétés sur ces boutons pour contrôler l’apparence du bouton et la disposition. Au lieu de définir des propriétés sur les boutons individuellement, vous allez utiliser des ressources pour définir les propriétés d’un bouton pour l’application entière. Ressources d’application sont conceptuellement semblables à externe [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)] pour les pages Web ; Cependant, les ressources sont beaucoup plus puissantes que [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)], comme vous le verrez par la fin de cette procédure pas à pas. Pour en savoir plus sur les ressources, consultez [XAML ressources](../advanced/xaml-resources.md).  
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Pour utiliser des styles pour définir les propriétés de base sur les boutons  
   
@@ -72,7 +72,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
     </Application>  
     ```  
   
-     Étendue de la ressource est déterminée par où vous définissez la ressource. Définition des ressources dans `Application.Resources` du fichier App.XAML fichier permet à la ressource à utiliser à partir de n’importe où dans l’application. Pour en savoir plus sur la définition de la portée de vos ressources, consultez [XAML ressources](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+     Étendue de la ressource est déterminée par où vous définissez la ressource. Définition des ressources dans `Application.Resources` du fichier App.XAML fichier permet à la ressource à utiliser à partir de n’importe où dans l’application. Pour en savoir plus sur la définition de la portée de vos ressources, consultez [XAML ressources](../advanced/xaml-resources.md).  
   
 2.  **Créer un style et définir des valeurs de propriété de base avec celui-ci :** Ajoutez le balisage suivant à la `Application.Resources` bloc. Ce balisage crée un <xref:System.Windows.Style> qui s’applique à tous les boutons dans le paramètre d’application, le <xref:System.Windows.FrameworkElement.Width%2A> des boutons à 90 et le <xref:System.Windows.FrameworkElement.Margin%2A> à 10 :  
   
@@ -87,9 +87,9 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Le <xref:System.Windows.Style.TargetType%2A> propriété spécifie que le style s’applique à tous les objets de type <xref:System.Windows.Controls.Button>. Chaque <xref:System.Windows.Setter> définit une valeur de propriété différente pour le <xref:System.Windows.Style>. Par conséquent, à ce stade chaque bouton dans l’application a une largeur de 90 et une marge de 10.  Si vous appuyez sur F5 pour exécuter l’application, vous voyez la fenêtre suivante.  
   
-     ![Boutons avec une largeur de 90 et une marge de 10](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
+     ![Boutons avec une largeur de 90 et une marge de 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
   
-     Il est beaucoup plus, que vous pouvez effectuer avec des styles, incluant diverses méthodes permettant d’affiner quels objets sont ciblés, en spécifiant les valeurs de propriété complexes et même à l’aide de styles en tant qu’entrée pour d’autres styles. Pour plus d’informations, consultez [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+     Il est beaucoup plus, que vous pouvez effectuer avec des styles, incluant diverses méthodes permettant d’affiner quels objets sont ciblés, en spécifiant les valeurs de propriété complexes et même à l’aide de styles en tant qu’entrée pour d’autres styles. Pour plus d’informations, consultez [Application d’un style et création de modèles](styling-and-templating.md).  
   
 3.  **Définissez une valeur de propriété de style à une ressource :** Ressources activer un moyen simple de réutiliser des objets couramment définis et les valeurs. Il est particulièrement utile définir des valeurs complexes à l’aide de ressources pour rendre votre code plus modulaire. Ajoutez le balisage en surbrillance suivant à app.xaml.  
   
@@ -112,7 +112,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Appuyez sur F5 pour exécuter l'application. Il doit ressembler à ce qui suit.  
   
-     ![Boutons avec un arrière-plan dégradé](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
+     ![Boutons avec un arrière-plan dégradé](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
   
 ## <a name="create-a-template-that-defines-the-look-of-the-button"></a>Créer un modèle qui définit l’apparence du bouton  
  Dans cette section, vous créez un modèle qui personnalise l’apparence (présentation) du bouton. La présentation du bouton est composée de plusieurs objets, y compris des rectangles et autres composants à accorder au bouton un aspect unique.  
@@ -165,7 +165,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Appuyez sur F5 pour exécuter l'application. Il doit ressembler à ce qui suit.  
   
-     ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
+     ![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
 3.  **Ajouter un effet verre au modèle :** Ensuite, vous allez ajouter le verre. Tout d’abord, vous créez quelques ressources qui créent un effet de dégradé de transparence. Ajoutez ces ressources dégradés n’importe où dans le `Application.Resources` bloc :  
   
@@ -244,7 +244,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Notez que le <xref:System.Windows.UIElement.Opacity%2A> du rectangle avec le `x:Name` propriété de « glassCube » est 0, donc lorsque vous exécutez l’exemple, vous ne voyez pas la superposition en haut du rectangle de verre. Il s’agit, car nous ajouterons ultérieurement des déclencheurs du modèle pour quand l’utilisateur interagit avec le bouton. Toutefois, vous pouvez voir à quoi ressemble le bouton en modifiant la <xref:System.Windows.UIElement.Opacity%2A> valeur à 1 et à l’application en cours d’exécution. Voir l'illustration suivante. Avant de passer à l’étape suivante, modifiez le <xref:System.Windows.UIElement.Opacity%2A> à 0.  
   
-     ![Boutons personnalisés qui ont été créés à l’aide de XAML](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+     ![Boutons personnalisés qui ont été créés à l’aide de XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-button-interactivity"></a>Créer l’interactivité de bouton  
  Dans cette section, vous allez créer des déclencheurs de propriété et des déclencheurs d’événements pour modifier les valeurs de propriété et exécuter des animations en réponse aux actions utilisateur telles que le déplacement du pointeur de la souris sur le bouton et en cliquant sur.  
@@ -396,7 +396,7 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
      Il existe deux animations qui sont déclenchées lorsque le pointeur passe sur le bouton (<xref:System.Windows.UIElement.MouseEnter> événement est déclenché). Ces animations réduisent le rectangle de verre sur l’axe des X et Y. Notez les propriétés sur le <xref:System.Windows.Media.Animation.DoubleAnimation> éléments — <xref:System.Windows.Media.Animation.Timeline.Duration%2A> et <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>. Le <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Spécifie que l’animation se produit pendant une demi-seconde, et <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Spécifie que le verre se réduit de 10 %.  
   
-     Le second déclencheur d’événement (<xref:System.Windows.UIElement.MouseLeave>) arrête simplement le premier. Lorsque vous arrêtez un <xref:System.Windows.Media.Animation.Storyboard>, toutes les propriétés animées retournent leurs valeurs par défaut. Par conséquent, lorsque l’utilisateur déplace le pointeur hors du bouton, le bouton revient à la façon dont il avait avant le pointeur de la souris est déplacé sur le bouton. Pour plus d’informations sur les animations, consultez [vue d’ensemble de l’Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+     Le second déclencheur d’événement (<xref:System.Windows.UIElement.MouseLeave>) arrête simplement le premier. Lorsque vous arrêtez un <xref:System.Windows.Media.Animation.Storyboard>, toutes les propriétés animées retournent leurs valeurs par défaut. Par conséquent, lorsque l’utilisateur déplace le pointeur hors du bouton, le bouton revient à la façon dont il avait avant le pointeur de la souris est déplacé sur le bouton. Pour plus d’informations sur les animations, consultez [vue d’ensemble de l’Animation](../graphics-multimedia/animation-overview.md).  
   
 5.  **Ajouter une animation lorsque le bouton est cliqué :** L’étape finale consiste à ajouter un déclencheur pour lorsque l’utilisateur clique sur le bouton. Ajoutez le balisage suivant n’importe où à l’intérieur de la `ControlTemplate.Triggers` bloc :  
   
@@ -432,8 +432,8 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
 -   Personnaliser le comportement pour les boutons en réponse aux actions de l’utilisateur (tel que <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, et <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) incluant des effets d’animation.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Créer un bouton à l'aide de Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Vue d’ensemble des effets bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+- [Créer un bouton à l'aide de Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md)
+- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Vue d’ensemble des effets bitmap](../graphics-multimedia/bitmap-effects-overview.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: fa0457cd44304084355f3882d9fc5c82b29c4827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9764b995cea0ba5c93625495509b7ee2dd8393ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725466"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370031"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hébergement de contenu Win32 dans WPF
 ## <a name="prerequisites"></a>Prérequis  
- Consultez [interopérabilité WPF et Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ Consultez [interopérabilité WPF et Win32](wpf-and-win32-interoperation.md).  
   
 ## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Une procédure pas à pas de Win32 à l’intérieur de Windows Presentation Framework (HwndHost)  
  Pour réutiliser [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] contenu à l’intérieur de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications, utilisez <xref:System.Windows.Interop.HwndHost>, qui est un contrôle qui permet à HWND de ressembler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu.  Comme <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> est simple à utiliser : dérivent <xref:System.Windows.Interop.HwndHost> et implémenter `BuildWindowCore` et `DestroyWindowCore` méthodes, puis instanciez votre <xref:System.Windows.Interop.HwndHost> classe dérivée et placez-le à l’intérieur de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.  
@@ -357,7 +357,7 @@ public partial class Window1 : Window {
   
  Qui vous offre :  
   
- ![Capture d’écran : application WPF](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")  
+ ![Capture d’écran : application WPF](./media/interoparch09.PNG "InteropArch09")  
   
 ## <a name="see-also"></a>Voir aussi
-- [Interopérabilité WPF et Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [Interopérabilité WPF et Win32](wpf-and-win32-interoperation.md)

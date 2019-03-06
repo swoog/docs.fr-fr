@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: 0eb14b3f3859983ba4ba0436ab5a0fab9fda5006
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745303"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354594"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Procédure : Implémenter PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fonctionne en spécifiant une liste de liaisons. La liste des liaisons est classée de priorité la plus élevée à la priorité la plus basse. Si la liaison de priorité la plus élevée retourne une valeur avec succès lorsqu’il est traité puis il n’est jamais nécessaire de traiter les autres liaisons dans la liste. Il peut arriver que la liaison de priorité la plus élevée prend beaucoup de temps à évaluer, la priorité la plus élevée suivante qui retourne une valeur avec succès est utilisée jusqu'à ce qu’une liaison d’une priorité plus élevée retourne une valeur avec succès.  
@@ -29,12 +29,12 @@ ms.locfileid: "56745303"
 > [!NOTE]
 >  L’exemple est uniquement fourni à des fins de démonstration. Le [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] est recommandé de définir de propriétés qui sont beaucoup plus lent qu’un ensemble de champs serait. Pour plus d’informations, consultez [en choisissant entre les propriétés et méthodes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
- [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
- [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
+ [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
  Le <xref:System.Windows.Controls.TextBlock.Text%2A> propriété est liée à la méthode ci-dessus `AsyncDS` à l’aide de <xref:System.Windows.Data.PriorityBinding>:  
   
- [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
  Lorsque le moteur de liaison traite les <xref:System.Windows.Data.Binding> objets, il commence par la première <xref:System.Windows.Data.Binding>, qui est lié à la `SlowestDP` propriété. Lorsque cela <xref:System.Windows.Data.Binding> est traité, il ne retourne pas de valeur avec succès, car il est en veille pendant 5 secondes, par conséquent, la prochaine <xref:System.Windows.Data.Binding> élément est traité. La prochaine <xref:System.Windows.Data.Binding> ne retourne pas de valeur avec succès, car il est en état de veille pour 3 secondes. Le moteur de liaison se place ensuite sur la prochaine <xref:System.Windows.Data.Binding> élément, qui est lié à la `FastDP` propriété. Cela <xref:System.Windows.Data.Binding> retourne la valeur « Fast Value ». Le <xref:System.Windows.Controls.TextBlock> affiche désormais la valeur « Fast Value ».  
   
@@ -46,5 +46,5 @@ ms.locfileid: "56745303"
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
-- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Vue d’ensemble de la liaison de données](data-binding-overview.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

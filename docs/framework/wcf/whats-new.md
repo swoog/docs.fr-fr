@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
 ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280005"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358312"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Nouveautés dans Windows Communication Foundation 4.5
 
@@ -20,7 +20,7 @@ Cette rubrique traite des fonctionnalités de nouveau à la version 4.5 de Windo
  Beaucoup de travail a été effectué pour faciliter le développement et la gestion des applications WCF 4.5. Pour plus d’informations, consultez [les fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).
 
 ### <a name="task-based-async-support"></a>Prise en charge du modèle asynchrone basé sur les tâches
- Par défaut, la fonctionnalité Ajouter une référence de service génère des méthodes d'opération de service asynchrone retournant des tâches. Cette opération est effectuée pour les méthodes synchrones et asynchrones. Cela vous permet d’appeler les opérations de service de façon asynchrone à l’aide du modèle de programmation asynchrone basé sur les tâches. Lorsque vous appelez la méthode de proxy générée, WCF construit un objet Tâche pour représenter l’opération asynchrone et retourne cette tâche. La tâche se termine lorsque l’opération se termine.  Lors de l’implémentation d’une opération asynchrone, vous pouvez l’implémenter en tant qu’une opération asynchrone basé sur des tâches. Pour plus d’informations, consultez [synchrone et opérations asynchrones](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).
+ Par défaut, la fonctionnalité Ajouter une référence de service génère des méthodes d’opération de service asynchrone retournant des tâches. Cette opération est effectuée pour les méthodes synchrones et asynchrones. Cela vous permet d’appeler les opérations de service de façon asynchrone à l’aide du modèle de programmation asynchrone basé sur les tâches. Lorsque vous appelez la méthode de proxy générée, WCF construit un objet Tâche pour représenter l’opération asynchrone et retourne cette tâche. La tâche se termine lorsque l’opération se termine.  Lors de l’implémentation d’une opération asynchrone, vous pouvez l’implémenter en tant qu’une opération asynchrone basé sur des tâches. Pour plus d’informations, consultez [synchrone et opérations asynchrones](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).
 
 ### <a name="simplified-generated-configuration-files"></a>Fichiers de configuration générés simplifiés
  Lorsque vous ajoutez une référence de service dans Visual Studio ou utilisez l'outil SvcUtil.exe, un fichier de configuration client est généré. Dans les versions antérieures de WCF, ces fichiers de configuration contenaient la valeur de chaque propriété de liaison et ce, même si sa valeur était la valeur par défaut. Dans WCF 4.5, les fichiers de configuration générés contiennent uniquement les propriétés de liaison qui ont une valeur non définie par défaut.
@@ -31,10 +31,10 @@ Cette rubrique traite des fonctionnalités de nouveau à la version 4.5 de Windo
  WCF prend désormais en charge le développement Contrat en premier. L'outil svcutl.exe a un commutateur /serviceContract qui vous permet de générer le service et les contrats de données à partir d'un document WSDL.
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Ajouter une référence de service d'un projet de sous-ensemble portable
- Les projets portables du sous-ensemble permettent aux programmeurs d’assembly .NET de maintenir une arborescence source unique et le système de génération tout en prenant en charge plusieurs plateformes .NET (de bureau, Silverlight, Windows Phone et XBOX). Projets portables du sous-ensemble référencent uniquement des bibliothèques portables .NET qui sont un assemblage .NET framework qui peut être utilisé sur n’importe quelle plateforme .NET. L'expérience du développeur est identique à celle de l'ajout d'une référence de service dans une autre application cliente WCF. Pour plus d’informations, consultez [ajouter une référence de Service dans un projet de sous-ensemble Portable](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).
+ Les projets portables du sous-ensemble permettent aux programmeurs d'assembly .NET de maintenir une arborescence source unique et le système de génération tout en prenant en charge plusieurs plateformes .NET (de bureau, Silverlight, Windows Phone et XBOX). Projets portables du sous-ensemble référencent uniquement des bibliothèques portables .NET qui sont un assemblage .NET framework qui peut être utilisé sur n’importe quelle plateforme .NET. L'expérience du développeur est identique à celle de l'ajout d'une référence de service dans une autre application cliente WCF. Pour plus d’informations, consultez [ajouter une référence de Service dans un projet de sous-ensemble Portable](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Modification de la valeur par défaut pour le mode de compatibilité ASP.NET
- WCF fournit le mode de compatibilité ASP.NET pour accorder aux développeurs l’accès total aux fonctionnalités dans le pipeline HTTP ASP.NET lors de l’écriture des services WCF. Pour utiliser ce mode, vous devez définir le `aspNetCompatibilityEnabled` attribut sur true dans le [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) section du fichier web.config. De plus, la propriété `RequirementsMode` de tout service dans cet appDomain sur son <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> doit avoir la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> ou <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. Par défaut <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> a maintenant la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Pour plus d’informations, consultez [What ' s New in Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md) et [Services WCF et ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).
+ WCF fournit le mode de compatibilité ASP.NET pour accorder aux développeurs l'accès total aux fonctionnalités dans le pipeline HTTP ASP.NET lors de l'écriture des services WCF. Pour utiliser ce mode, vous devez définir le `aspNetCompatibilityEnabled` attribut sur true dans le [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) section du fichier web.config. De plus, la propriété `RequirementsMode` de tout service dans cet appDomain sur son <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> doit avoir la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> ou <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. Par défaut <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> a maintenant la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Pour plus d’informations, consultez [What ' s New in Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md) et [Services WCF et ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).
 
 ### <a name="new-transport-default-values"></a>Valeurs par défaut pour le nouveau transport
  Afin de simplifier la configuration, plusieurs valeurs de propriété de transport par défaut ont été modifiées. Pour plus d’informations, consultez [les fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).
@@ -52,7 +52,7 @@ Cette rubrique traite des fonctionnalités de nouveau à la version 4.5 de Windo
  Ajout de la prise en charge de la diffusion en continu asynchrone là où le côté expéditeur ne bloque pas les threads si le côté destinataire ne lit pas ou n'est pas lent dans la lecture, ce qui accroît l'extensibilité. Suppression de la limitation de mise en mémoire tampon des messages lorsqu'un client envoie un message transmis en continu à un service WCF hébergé par IIS. Pour plus d’informations, consultez [les fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).
 
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>Simplifier l'exposition d'un point de terminaison sur HTTPS avec IIS
- Un mappage de protocole HTTPS a été ajouté pour simplifier l'exposition d'un point de terminaison sur HTTPS. Pour activer un point de terminaison HTTPS, assurez-vous que votre site Web dispose d'une liaison HTTPS et d'un certificat SSL configurés, puis activez HTTPS pour le répertoire virtuel qui héberge le service. Si les métadonnées sont activées pour le service, elles seront également exposées via HTTPS.
+ Un mappage de protocole HTTPS a été ajouté pour simplifier l'exposition d'un point de terminaison sur HTTPS. Pour activer un point de terminaison HTTPS, assurez-vous que votre site web dispose d’une liaison HTTPS et d’un certificat SSL configurés, puis activez HTTPS pour le répertoire virtuel qui héberge le service. Si les métadonnées sont activées pour le service, elles seront également exposées via HTTPS.
 
 ## <a name="generating-a-single-wsdl-document"></a>Génération d'un seul document WSDL
  Certaines piles de traitement WSDL tierces ne peuvent pas traiter les documents WSDL qui dépendent d'autres documents via un xsd:import.  WCF vous permet maintenant de spécifier que toutes les informations WSDL doivent être retournées dans un document unique. Pour demander un document WSDL unique, ajoutez « ? singleWSDL » à l’URI lors de la demande de métadonnées à partir du service.
@@ -80,7 +80,7 @@ Cette rubrique traite des fonctionnalités de nouveau à la version 4.5 de Windo
 ## <a name="channelfactory-caching"></a>Mise en cache de ChannelFactory
  Les applications clientes WCF utilisent la classe <xref:System.ServiceModel.ChannelFactory%601> pour créer un canal de communication avec un service WCF.  La création d'instances <xref:System.ServiceModel.ChannelFactory%601> entraîne une certaine charge, car elle comporte les opérations suivantes :
 
-1.  Construction de l'arborescence <xref:System.ServiceModel.Description.ContractDescription>
+1.  Construction de l’arborescence <xref:System.ServiceModel.Description.ContractDescription>
 
 2.  Refléter tous les types CLR requis
 
@@ -97,7 +97,7 @@ Cette rubrique traite des fonctionnalités de nouveau à la version 4.5 de Windo
  Prise en charge a été ajoutée pour un transport UDP qui permet aux développeurs d’écrire des services qui utilisent des « fire and forget » de messagerie. Un client envoie un message à un service et n'attend aucune réponse de ce dernier.
 
 ## <a name="multiple-authentication-support"></a>Prise en charge de plusieurs authentifications
- La prise en charge a été ajoutée pour prendre en charge plusieurs modes d'authentification, tels que pris en charge par IIS, sur un point de terminaison unique WCF lorsque vous utilisez le transport et la sécurité de transport HTTP. IIS vous permet d’activer plusieurs modes d’authentification sur un répertoire virtuel, cette fonctionnalité permet à un seul point de terminaison WCF de prendre en charge plusieurs modes d’authentification activés pour le répertoire virtuel où le service WCF est hébergé.
+ La prise en charge a été ajoutée pour prendre en charge plusieurs modes d'authentification, tels que pris en charge par IIS, sur un point de terminaison unique WCF lorsque vous utilisez le transport et la sécurité de transport HTTP. IIS vous permet d'activer plusieurs modes d'authentification sur un répertoire virtuel, cette fonctionnalité permet à un seul point de terminaison WCF de prendre en charge plusieurs modes d'authentification activés pour le répertoire virtuel où le service WCF est hébergé.
 
 ## <a name="idn-support"></a>Prise en charge IDN
  La prise en charge a été ajoutée pour tenir compte des services WCF avec des noms IDN (Internationalized Domain Names). Pour plus d’informations, consultez [WCF et noms de domaine internationaux](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md).

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716076"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354607"
 ---
 # <a name="blessiwbemservices-function"></a>Blessiwbemservices, fonction
 Indique si les informations d’identification autorisent l’accès spécifié [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) classe.   
@@ -43,20 +43,23 @@ HRESULT BlessIWbemServices (
 
 ## <a name="parameters"></a>Paramètres
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in] Un pointeur vers le [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objet pour lequel les autorisations sont requises.
 
-`strUser`  
+`strUser`\
 [in] Le nom d’utilisateur.
 
-`strPassword`  
+`strPassword`\
 [in] Le mot de passe associé `strUser`.
 
-`strAuthority` [in] Le nom de domaine de l’utilisateur. Consultez le [ConnectServerWmi](connectserverwmi.md) (fonction) pour plus d’informations.
+`strAuthority`\
+[in] Le nom de domaine de l’utilisateur. Consultez le [ConnectServerWmi](connectserverwmi.md) (fonction) pour plus d’informations.
 
-`impLevel` [in] Le niveau d’emprunt d’identité.
+`impLevel`\
+[in] Le niveau d’emprunt d’identité.
 
-`authnLevel` [in] Le niveau d’autorisation.
+`authnLevel`\
+[in] Le niveau d’autorisation.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -71,6 +74,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 | `S_OK` | 0 | L’appel de fonction a réussi. | 
 
 ## <a name="requirements"></a>Spécifications  
+
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
@@ -78,4 +82,5 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

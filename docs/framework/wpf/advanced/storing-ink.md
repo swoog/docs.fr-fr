@@ -11,12 +11,12 @@ helpviewer_keywords:
 - retrieving ink [WPF]
 - Ink Serialized Format (ISF)
 ms.assetid: a3f6d16b-d682-4680-9965-907332b4d2b8
-ms.openlocfilehash: c115e31b73afc1532973be3db8e3e184e9a4253b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec89286cfac9b0a315dc2d00135543511b2d1ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492886"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353957"
 ---
 # <a name="storing-ink"></a>Stockage de l'encre
 Le <xref:System.Windows.Ink.StrokeCollection.Save%2A> méthodes fournissent la prise en charge pour le stockage de l’encre en tant que Ink Serialized Format (ISF). Les constructeurs pour la <xref:System.Windows.Ink.StrokeCollection> classe fournit la prise en charge pour la lecture des données d’entrée manuscrite.  
@@ -26,14 +26,14 @@ Le <xref:System.Windows.Ink.StrokeCollection.Save%2A> méthodes fournissent la p
   
  L’exemple suivant implémente un gestionnaire d’événements de clic de bouton qui présente à l’utilisateur avec une boîte de dialogue d’enregistrement de fichier et enregistre l’encre à partir d’un <xref:System.Windows.Controls.InkCanvas> dans un fichier.  
   
- [!code-csharp[DigitalInkTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#12)]
- [!code-vb[DigitalInkTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#12)]  
+ [!code-csharp[DigitalInkTopics#12](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#12)]
+ [!code-vb[DigitalInkTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#12)]  
   
  L’exemple suivant implémente un gestionnaire d’événements de clic de bouton qui présente à l’utilisateur avec une boîte de dialogue Ouvrir le fichier et lit l’encre à partir du fichier dans un <xref:System.Windows.Controls.InkCanvas> élément.  
   
- [!code-csharp[DigitalInkTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#13)]
- [!code-vb[DigitalInkTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
+ [!code-csharp[DigitalInkTopics#13](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#13)]
+ [!code-vb[DigitalInkTopics#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Controls.InkCanvas>
-- [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)
+- [Windows Presentation Foundation](../index.md)

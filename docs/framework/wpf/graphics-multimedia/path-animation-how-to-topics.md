@@ -7,23 +7,23 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665849"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373476"
 ---
 # <a name="path-animation-how-to-topics"></a>Rubriques "Comment" relatives aux animations de tracés
 Les rubriques de cette section montrent comment animer un objet sur un chemin d’accès.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Animer un objet sur un tracé (animation double)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [Animer un objet sur un tracé (animation de point)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [Animer un objet sur un tracé (animation de matrice)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [Animer un objet sur un tracé (animation de matrice avec accumulation d'offsets)](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [Faire pivoter un objet à l’aide d’un tracé géométrique (animation de matrice)](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [Faire pivoter un objet à l’aide d’un tracé géométrique](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [Animer un objet sur un tracé (animation double)](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [Animer un objet sur un tracé (animation de point)](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [Animer un objet sur un tracé (animation de matrice)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [Animer un objet sur un tracé (animation de matrice avec accumulation d'offsets)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [Faire pivoter un objet à l’aide d’un tracé géométrique (animation de matrice)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [Faire pivoter un objet à l’aide d’un tracé géométrique](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
@@ -31,6 +31,6 @@ Les rubriques de cette section montrent comment animer un objet sur un chemin d�
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>Voir aussi
-- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Graphiques et multimédia](index.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)

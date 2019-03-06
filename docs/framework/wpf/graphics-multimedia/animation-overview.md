@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 7a783f687dd8c9c21f796f2a8da7e0471a1f0d2b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cf95abc6780b1182582e567f78783388f1d377cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189470"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373736"
 ---
 # <a name="animation-overview"></a>Vue d'ensemble de l'animation
 <a name="introduction"></a>
@@ -49,135 +49,135 @@ ms.locfileid: "44189470"
   
 -   Il doit appartenir à une classe qui hérite de <xref:System.Windows.DependencyObject> et implémente la <xref:System.Windows.Media.Animation.IAnimatable> interface.  
   
--   Un type d’animation compatible doit être disponible. (Si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’en fournit pas, vous pouvez créer les vôtres. Consultez le [vue d’ensemble des Animations personnalisées](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).)  
+-   Un type d’animation compatible doit être disponible. (Si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’en fournit pas, vous pouvez créer les vôtres. Consultez le [vue d’ensemble des Animations personnalisées](custom-animations-overview.md).)  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contient de nombreux objets qui ont <xref:System.Windows.Media.Animation.IAnimatable> propriétés. Les contrôles tels que <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.TabControl>et également <xref:System.Windows.Controls.Panel> et <xref:System.Windows.Shapes.Shape> objets héritent <xref:System.Windows.DependencyObject>. La plupart de leurs propriétés sont des propriétés de dépendance.  
   
  Vous pouvez utiliser des animations presque n’importe où, y compris dans les styles et modèles de contrôle. Les animations n’ont pas à être visuelles. Vous pouvez animer des objets qui ne font pas partie de l’interface utilisateur s’ils répondent aux critères décrits dans cette section.  
   
 <a name="storyboardwalkthrough"></a>   
-## <a name="example-make-an-element-fade-in-and-out-of-view"></a>Exemple : Création d’un fondu hors de l’affichage pour un élément  
+## <a name="example-make-an-element-fade-in-and-out-of-view"></a>Exemple : Effectuer un fondu de l’élément hors de l’affichage  
  Cet exemple montre comment utiliser un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation pour animer la valeur d’une propriété de dépendance. Il utilise un <xref:System.Windows.Media.Animation.DoubleAnimation>, qui est un type d’animation qui génère <xref:System.Double> valeurs, pour animer la <xref:System.Windows.UIElement.Opacity%2A> propriété d’un <xref:System.Windows.Shapes.Rectangle>. Par conséquent, le <xref:System.Windows.Shapes.Rectangle> fondu dans et hors de vue.  
   
  La première partie de l’exemple crée un <xref:System.Windows.Shapes.Rectangle> élément. Les étapes qui suivent montrent comment créer une animation et l’appliquer à du rectangle <xref:System.Windows.UIElement.Opacity%2A> propriété.
   
  L’exemple suivant montre comment créer un <xref:System.Windows.Shapes.Rectangle> élément dans un <xref:System.Windows.Controls.StackPanel> dans XAML.  
   
- [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_1)]  
+ [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_1)]  
   
  L’exemple suivant montre comment créer un <xref:System.Windows.Shapes.Rectangle> élément dans un <xref:System.Windows.Controls.StackPanel> dans le code.  
   
- [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_1)]
- [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_1)]  
+ [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_1)]
+ [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_1)]  
   
 <a name="opacity_animation_step1"></a>   
-### <a name="part-1-create-a-doubleanimation"></a>Partie 1 : Création d’un objet DoubleAnimation  
+### <a name="part-1-create-a-doubleanimation"></a>Partie 1 : Créer un objet DoubleAnimation  
  Une façon de faire apparaître et disparaître un élément est d’animer sa <xref:System.Windows.UIElement.Opacity%2A> propriété. Étant donné que le <xref:System.Windows.UIElement.Opacity%2A> propriété est de type <xref:System.Double>, vous avez besoin d’une animation qui produit des valeurs doubles. A <xref:System.Windows.Media.Animation.DoubleAnimation> est de ce type. Un <xref:System.Windows.Media.Animation.DoubleAnimation> crée une transition entre deux valeurs double. Pour spécifier sa valeur de départ, vous définissez son <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété. Pour spécifier sa valeur finale, vous définissez son <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété.  
   
 1.  Une valeur d’opacité de `1.0` rend l’objet totalement opaque et une valeur d’opacité de `0.0` rend totalement invisible. Pour effectuer la transition de l’animation de `1.0` à `0.0` vous définissez son <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété `1.0` et son <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété `0.0`. L’exemple suivant montre comment créer un <xref:System.Windows.Media.Animation.DoubleAnimation> dans XAML.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_2)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_2)]  
   
      L’exemple suivant montre comment créer un <xref:System.Windows.Media.Animation.DoubleAnimation> dans le code.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_2)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_2)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_2)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_2)]  
   
 2.  Ensuite, vous devez spécifier un <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Le <xref:System.Windows.Media.Animation.Timeline.Duration%2A> d’une animation spécifie le temps nécessaire pour accéder à partir de sa valeur initiale à sa valeur de destination. L’exemple suivant montre comment définir le <xref:System.Windows.Media.Animation.Timeline.Duration%2A> sur cinq secondes dans XAML.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_3)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_3)]  
   
      L’exemple suivant montre comment définir le <xref:System.Windows.Media.Animation.Timeline.Duration%2A> à cinq secondes dans le code.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]  
   
 3.  Le code précédent montrait une animation qui effectue la transition à partir de `1.0` à `0.0`, ce qui entraîne l’élément cible pour le fondu de complètement opaque à complètement invisible. Pour que l’élément réapparaisse en fondu après avoir disparu, définissez le <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> propriété de l’animation à `true`. Pour répéter l’animation indéfiniment, définissez son <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriété <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. L’exemple suivant montre comment définir le <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> et <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriétés dans XAML.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]  
   
      L’exemple suivant montre comment définir le <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> et <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriétés dans le code.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_4)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_4)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_4)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_4)]  
   
 <a name="opacity_animation_step2"></a>   
-### <a name="part-2-create-a-storyboard"></a>Partie 2 : Création d’un storyboard  
- Pour appliquer une animation à un objet, vous créez un <xref:System.Windows.Media.Animation.Storyboard> et utiliser le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> et <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> attaché des propriétés pour spécifier l’objet et la propriété à animer.  
+### <a name="part-2-create-a-storyboard"></a>Partie 2 : Créer une table de montage séquentiel  
+ Pour appliquer une animation à un objet, vous créez un <xref:System.Windows.Media.Animation.Storyboard> et utiliser le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> et <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> attaché des propriétés pour spécifier l’objet et la propriété à animer.  
   
 1.  Créer le <xref:System.Windows.Media.Animation.Storyboard> et ajoutez-y l’animation en tant qu’enfant. L’exemple suivant montre comment créer le <xref:System.Windows.Media.Animation.Storyboard> dans XAML.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]    
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]    
   
      Pour créer le <xref:System.Windows.Media.Animation.Storyboard> dans le code, déclarez un <xref:System.Windows.Media.Animation.Storyboard> variable au niveau de la classe.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_100)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_100)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_100](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_100)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_100)]  
   
      Puis initialisez le <xref:System.Windows.Media.Animation.Storyboard> et ajoutez-y l’animation en tant qu’enfant.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_101)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_101)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_101)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_101)]  
   
 2.  Le <xref:System.Windows.Media.Animation.Storyboard> doit savoir où appliquer l’animation. Utilisez le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> propriété jointe pour spécifier l’objet à animer. L’exemple suivant montre comment définir le nom de la cible de la <xref:System.Windows.Media.Animation.DoubleAnimation> à `MyRectangle` dans XAML.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_6)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_6](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_6)]  
   
      L’exemple suivant montre comment définir le nom de la cible de la <xref:System.Windows.Media.Animation.DoubleAnimation> à `MyRectangle` dans le code.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_102)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_102)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_102)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_102)]  
   
-3.  Utilisez le <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> propriété jointe pour spécifier la propriété à animer. L’exemple suivant montre comment l’animation est configurée pour cibler la <xref:System.Windows.UIElement.Opacity%2A> propriété de la <xref:System.Windows.Shapes.Rectangle> dans XAML.
+3.  Utilisez le <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> propriété jointe pour spécifier la propriété à animer. L’exemple suivant montre comment l’animation est configurée pour cibler la <xref:System.Windows.UIElement.Opacity%2A> propriété de la <xref:System.Windows.Shapes.Rectangle> dans XAML.
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_7)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_7](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_7)]  
   
      L’exemple suivant montre comment l’animation est configurée pour cibler la <xref:System.Windows.UIElement.Opacity%2A> propriété de la <xref:System.Windows.Shapes.Rectangle> dans le code.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_103)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_103)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_103)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_103)]  
   
- Pour plus d’informations sur <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> syntaxe et pour obtenir des exemples supplémentaires, consultez le [vue d’ensemble des Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Pour plus d’informations sur <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> syntaxe et pour obtenir des exemples supplémentaires, consultez le [vue d’ensemble des Storyboards](storyboards-overview.md).  
   
 <a name="opacity_animation_step3"></a>   
-### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>Partie 3 (XAML) : Association du storyboard à un déclencheur  
+### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>Partie 3 (XAML) : Associer la table de montage séquentiel à un déclencheur  
  Le moyen le plus simple pour appliquer et de démarrer un <xref:System.Windows.Media.Animation.Storyboard> dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] consiste à utiliser un déclencheur d’événements. Cette section montre comment associer le <xref:System.Windows.Media.Animation.Storyboard> avec un déclencheur dans XAML.  
   
 1.  Créer un <xref:System.Windows.Media.Animation.BeginStoryboard> de l’objet et lui associer votre storyboard. Un <xref:System.Windows.Media.Animation.BeginStoryboard> est un type de <xref:System.Windows.TriggerAction> qui s’applique et démarre un <xref:System.Windows.Media.Animation.Storyboard>.  
   
-     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_3)]  
+     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_3)]  
   
-2.  Créer un <xref:System.Windows.EventTrigger> et ajoutez le <xref:System.Windows.Media.Animation.BeginStoryboard> à son <xref:System.Windows.EventTrigger.Actions%2A> collection. Définir le <xref:System.Windows.EventTrigger.RoutedEvent%2A> propriété de la <xref:System.Windows.EventTrigger> à l’événement routé que vous souhaitez démarrer la <xref:System.Windows.Media.Animation.Storyboard>. (Pour plus d’informations sur les événements routés, consultez le [vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md).)  
+2.  Créer un <xref:System.Windows.EventTrigger> et ajoutez le <xref:System.Windows.Media.Animation.BeginStoryboard> à son <xref:System.Windows.EventTrigger.Actions%2A> collection. Définir le <xref:System.Windows.EventTrigger.RoutedEvent%2A> propriété de la <xref:System.Windows.EventTrigger> à l’événement routé que vous souhaitez démarrer la <xref:System.Windows.Media.Animation.Storyboard>. (Pour plus d’informations sur les événements routés, consultez le [vue d’ensemble des événements routés](../advanced/routed-events-overview.md).)  
   
-     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_2)]  
+     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_2)]  
   
 3.  Ajouter le <xref:System.Windows.EventTrigger> à la <xref:System.Windows.FrameworkElement.Triggers%2A> collection du Rectangle.  
   
-     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_1)]  
+     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_1)]  
   
 <a name="opacity_animation_step3code"></a>   
-### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>Partie 3 (Code) : Association du storyboard à un gestionnaire d’événements  
+### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>Partie 3 (Code) : Associer la table de montage séquentiel à un gestionnaire d’événements  
  Le moyen le plus simple pour appliquer et de démarrer un <xref:System.Windows.Media.Animation.Storyboard> dans le code consiste à utiliser un gestionnaire d’événements. Cette section montre comment associer le <xref:System.Windows.Media.Animation.Storyboard> avec un gestionnaire d’événements dans le code.  
   
 1.  Inscrivez-vous à la <xref:System.Windows.FrameworkElement.Loaded> événement du rectangle.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_104)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_104)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_104)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_104)]  
   
 2.  Déclarez le gestionnaire d'événements. Dans le Gestionnaire d’événements, utilisez la <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> méthode pour appliquer le storyboard.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]  
   
 ### <a name="complete-example"></a>Exemple complet  
  Ce qui suit montre comment créer un rectangle avec fondu dans et hors de vue dans XAML.  
   
- [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml#rectangleopacityfadeexamplexaml)]  
+ [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml#rectangleopacityfadeexamplexaml)]  
   
  L’exemple suivant montre comment créer un rectangle avec un fondu dans et hors de l’affichage avec du code.  
   
- [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode)]
- [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode)]  
+ [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode)]
+ [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode)]  
   
 <a name="animationtypes"></a>   
 ## <a name="animation-types"></a>Types d’animation  
@@ -197,7 +197,7 @@ ms.locfileid: "44189470"
   
 -   \<*Type*>AnimationUsingKeyFrames  
   
-     Les animations d’image clé sont plus puissantes que les animations From/To/By, car vous pouvez spécifier n’importe quel nombre de valeurs cibles et même contrôler leur méthode d’interpolation. Certains types ne peuvent être animés qu’avec des animations d’image clé. Animations d’image clé sont décrites en détail dans le [vue d’ensemble des Animations image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+     Les animations d’image clé sont plus puissantes que les animations From/To/By, car vous pouvez spécifier n’importe quel nombre de valeurs cibles et même contrôler leur méthode d’interpolation. Certains types ne peuvent être animés qu’avec des animations d’image clé. Animations d’image clé sont décrites en détail dans le [vue d’ensemble des Animations image clé](key-frame-animations-overview.md).  
   
 -   \<*Type*>AnimationUsingPath  
   
@@ -253,22 +253,22 @@ ms.locfileid: "44189470"
 #### <a name="repeatbehavior"></a>RepeatBehavior  
  Le <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriété spécifie combien de fois une chronologie est lue. Par défaut, les chronologies ont un nombre d’itérations de `1.0`, ce qui signifie qu’ils exécutent une fois et ne se répètent pas du tout.  
   
- Pour plus d’informations sur ces propriétés et d’autres, consultez le [vue d’ensemble des comportements de minutage](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md).  
+ Pour plus d’informations sur ces propriétés et d’autres, consultez le [vue d’ensemble des comportements de minutage](timing-behaviors-overview.md).  
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>Application d’une animation à une propriété  
  Les sections précédentes décrivent les différents types d’animations et leurs propriétés de minuterie. Cette section montre comment appliquer l’animation à la propriété que vous souhaitez animer. <xref:System.Windows.Media.Animation.Storyboard> objets fournissent un moyen d’appliquer des animations aux propriétés. Un <xref:System.Windows.Media.Animation.Storyboard> est un *chronologie de conteneur* qui fournit des informations de ciblage pour les animations qu’il contient.  
   
 ### <a name="targeting-objects-and-properties"></a>Ciblage des objets et propriétés  
- Le <xref:System.Windows.Media.Animation.Storyboard> classe fournit le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> et <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> propriétés jointes. En définissant ces propriétés sur une animation, vous dites à l’animation ce qu’elle doit animer. Toutefois, avant qu’une animation puisse cibler un objet, l’objet doit généralement obtenir un nom.  
+ Le <xref:System.Windows.Media.Animation.Storyboard> classe fournit le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> et <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> propriétés jointes. En définissant ces propriétés sur une animation, vous dites à l’animation ce qu’elle doit animer. Toutefois, avant qu’une animation puisse cibler un objet, l’objet doit généralement obtenir un nom.  
   
  Affectation d’un nom à un <xref:System.Windows.FrameworkElement> diffère de l’affectation d’un nom à un <xref:System.Windows.Freezable> objet. La plupart des contrôles et panneaux sont des éléments de framework. Toutefois, les objets purement graphiques, comme les pinceaux, les transformations et les géométries, sont des objets Freezable. Si vous ne savez pas si un type est un <xref:System.Windows.FrameworkElement> ou un <xref:System.Windows.Freezable>, reportez-vous à la **hiérarchie d’héritage** section de sa documentation de référence.  
   
 -   Pour rendre un <xref:System.Windows.FrameworkElement> une cible d’animation, vous lui donnez un nom en définissant son <xref:System.Windows.FrameworkElement.Name%2A> propriété. Dans le code, vous devez également utiliser le <xref:System.Windows.FrameworkElement.RegisterName%2A> méthode pour inscrire le nom d’élément avec la page à laquelle il appartient.  
   
--   Pour rendre un <xref:System.Windows.Freezable> objet une cible d’animation dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous utilisez le [Directive x : Name](../../../../docs/framework/xaml-services/x-name-directive.md) pour lui attribuer un nom. Dans le code, utilisez simplement la <xref:System.Windows.FrameworkElement.RegisterName%2A> méthode pour enregistrer l’objet avec la page à laquelle il appartient.  
+-   Pour rendre un <xref:System.Windows.Freezable> objet une cible d’animation dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous utilisez le [Directive x : Name](../../xaml-services/x-name-directive.md) pour lui attribuer un nom. Dans le code, utilisez simplement la <xref:System.Windows.FrameworkElement.RegisterName%2A> méthode pour enregistrer l’objet avec la page à laquelle il appartient.  
   
- Les sections qui suivent fournissent un exemple de dénomination d’élément dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] et le code. Pour obtenir des informations plus détaillées sur le ciblage et d’affectation de noms, consultez le [vue d’ensemble des Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Les sections qui suivent fournissent un exemple de dénomination d’élément dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] et le code. Pour obtenir des informations plus détaillées sur le ciblage et d’affectation de noms, consultez le [vue d’ensemble des Storyboards](storyboards-overview.md).  
   
 ### <a name="applying-and-starting-storyboards"></a>Application et démarrage des storyboards  
  Pour démarrer un storyboard [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], associez-la à un <xref:System.Windows.EventTrigger>. Un <xref:System.Windows.EventTrigger> est un objet qui décrit les actions à entreprendre lorsqu’un événement spécifié se produit. L’une de ces actions peut être un <xref:System.Windows.Media.Animation.BeginStoryboard> action, ce qui vous permet de démarrer votre storyboard. Les déclencheurs d’événements sont un concept similaire aux gestionnaires d’événements, car ils vous permettent de spécifier la façon dont votre application répond à un événement particulier. Contrairement aux gestionnaires d’événements, les déclencheurs d’événements peuvent être entièrement décrits dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; aucun code n’est requis.  
@@ -277,7 +277,7 @@ ms.locfileid: "44189470"
   
 <a name="controllingstoryboards"></a>   
 ## <a name="interactively-control-a-storyboard"></a>Contrôler un storyboard de façon interactive  
- L’exemple précédent montrait comment démarrer un <xref:System.Windows.Media.Animation.Storyboard> lorsqu’un événement se produit. Vous pouvez contrôler également de manière interactive un <xref:System.Windows.Media.Animation.Storyboard> après son démarrage : vous pouvez suspendre, reprendre, arrêter, avancer à sa période de remplissage, rechercher et supprimer le <xref:System.Windows.Media.Animation.Storyboard>. Pour plus d’informations et un exemple qui montre comment contrôler de manière interactive un <xref:System.Windows.Media.Animation.Storyboard>, consultez le [vue d’ensemble des Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ L’exemple précédent montrait comment démarrer un <xref:System.Windows.Media.Animation.Storyboard> lorsqu’un événement se produit. Vous pouvez contrôler également de manière interactive un <xref:System.Windows.Media.Animation.Storyboard> après son démarrage : vous pouvez suspendre, reprendre, arrêter, avancer à sa période de remplissage, rechercher et supprimer le <xref:System.Windows.Media.Animation.Storyboard>. Pour plus d’informations et un exemple qui montre comment contrôler de manière interactive un <xref:System.Windows.Media.Animation.Storyboard>, consultez le [vue d’ensemble des Storyboards](storyboards-overview.md).  
   
 <a name="fillbehaviorsection"></a>   
 ## <a name="what-happens-after-an-animation-ends"></a>Que se passe-t-il après la fin d’une animation ?  
@@ -285,16 +285,16 @@ ms.locfileid: "44189470"
   
  Le <xref:System.Windows.Media.Animation.DoubleAnimation> dans l’exemple précédent ne se termine pas, car son <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriété est définie sur <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. L’exemple suivant anime un rectangle avec une animation semblable. Contrairement à l’exemple précédent, le <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> et <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> propriétés de cette animation conservent leurs valeurs par défaut. Par conséquent, l’animation passe de 1 à 0 en cinq secondes et s’arrête.  
   
- [!code-xaml[animation_ovws_snippet#FillBehaviorExampleRectangleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/FillBehaviorExample.xaml#fillbehaviorexamplerectangleinline)]  
+ [!code-xaml[animation_ovws_snippet#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/FillBehaviorExample.xaml#fillbehaviorexamplerectangleinline)]  
   
- [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
- [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]  
+ [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
+ [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]  
   
  Étant donné que son <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> n’a pas été modifié à partir de sa valeur par défaut, qui est <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, l’animation conserve sa valeur finale, 0, lorsqu’elle se termine. Par conséquent, le <xref:System.Windows.UIElement.Opacity%2A> du rectangle reste à 0 après l’animation se termine. Si vous définissez la <xref:System.Windows.UIElement.Opacity%2A> du rectangle à une autre valeur, votre code semble n’avoir aucun effet, car l’animation affectera toujours la <xref:System.Windows.UIElement.Opacity%2A> propriété.  
   
- Une façon de reprendre le contrôle d’une propriété animée dans le code consiste à utiliser le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> (méthode) et de spécifier null pour le <xref:System.Windows.Media.Animation.AnimationTimeline> paramètre. Pour plus d’informations et un exemple, consultez [définir une propriété après l’avoir animée avec un Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
+ Une façon de reprendre le contrôle d’une propriété animée dans le code consiste à utiliser le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> (méthode) et de spécifier null pour le <xref:System.Windows.Media.Animation.AnimationTimeline> paramètre. Pour plus d’informations et un exemple, consultez [définir une propriété après l’avoir animée avec un Storyboard](how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
   
- Notez que, bien que la définition d’une valeur de propriété qui a un <xref:System.Windows.Media.Animation.ClockState.Active> ou <xref:System.Windows.Media.Animation.ClockState.Filling> animation semble n’avoir aucun effet, la valeur de propriété ne change pas. Pour plus d’informations, consultez le [Animation et vue d’ensemble du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Notez que, bien que la définition d’une valeur de propriété qui a un <xref:System.Windows.Media.Animation.ClockState.Active> ou <xref:System.Windows.Media.Animation.ClockState.Filling> animation semble n’avoir aucun effet, la valeur de propriété ne change pas. Pour plus d’informations, consultez le [Animation et vue d’ensemble du système de minutage](animation-and-timing-system-overview.md).  
   
 <a name="databindingAndAnimatingAnimationsSection"></a>   
 ## <a name="data-binding-and-animating-animations"></a>Liaison de données et animation des animations  
@@ -302,17 +302,17 @@ ms.locfileid: "44189470"
   
  Consultez l’exemple dans la section précédente qui montrait comment animer la <xref:System.Windows.UIElement.Opacity%2A> d’un rectangle. Lorsque le rectangle dans l’exemple précédent est chargé, son déclencheur d’événements applique le <xref:System.Windows.Media.Animation.Storyboard>. Le système de minutage crée une copie de la <xref:System.Windows.Media.Animation.Storyboard> et son animation. Ces copies sont figées (en lecture seule) et <xref:System.Windows.Media.Animation.Clock> objets sont créés à partir de celles-ci. Ces horloges effectuent le travail réel de l’animation des propriétés ciblées.  
   
- Le système de minutage crée une horloge pour la <xref:System.Windows.Media.Animation.DoubleAnimation> et s’applique à l’objet et la propriété qui est spécifiée par le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> et <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> de la <xref:System.Windows.Media.Animation.DoubleAnimation>. Dans ce cas, le système de minutage applique l’horloge à le <xref:System.Windows.UIElement.Opacity%2A> propriété de l’objet qui est appelé « MyRectangle ».  
+ Le système de minutage crée une horloge pour la <xref:System.Windows.Media.Animation.DoubleAnimation> et s’applique à l’objet et la propriété qui est spécifiée par le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> et <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> de la <xref:System.Windows.Media.Animation.DoubleAnimation>. Dans ce cas, le système de minutage applique l’horloge à le <xref:System.Windows.UIElement.Opacity%2A> propriété de l’objet qui est appelé « MyRectangle ».  
   
  Bien qu’une horloge est également créée pour le <xref:System.Windows.Media.Animation.Storyboard>, l’horloge n’est pas appliquée à toutes les propriétés. Son objectif est de contrôler son horloge enfant, l’horloge créée pour le <xref:System.Windows.Media.Animation.DoubleAnimation>.  
   
  Pour qu’une animation reflète les modifications d’animation ou de liaison de données, son horloge doit être régénérée. Les horloges ne sont pas régénérées automatiquement pour vous. Pour qu’une animation reflète les modifications, appliquez son storyboard à l’aide un <xref:System.Windows.Media.Animation.BeginStoryboard> ou <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> (méthode). Lorsque vous utilisez une de ces méthodes, l’animation redémarre. Dans le code, vous pouvez utiliser le <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> retour de méthode pour déplacer la table de montage séquentiel à sa position précédente.  
   
- Pour un exemple de données lié à l’animation, consultez [Animation de Spline clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160011). Pour plus d’informations sur le fonctionnement du système d’animation et de minutage, consultez [Animation et vue d’ensemble du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Pour un exemple de données lié à l’animation, consultez [Animation de Spline clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160011). Pour plus d’informations sur le fonctionnement du système d’animation et de minutage, consultez [Animation et vue d’ensemble du système de minutage](animation-and-timing-system-overview.md).  
   
 <a name="otherWaysToAnimateSection"></a>   
 ## <a name="other-ways-to-animate"></a>Autres méthodes d’animation  
- Les exemples de cette vue d’ensemble montrent comment animer à l’aide de storyboards. Lorsque vous utilisez du code, vous pouvez animer de plusieurs autres façons. Pour plus d’informations, consultez le [vue d’ensemble des Techniques d’Animation propriété](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ Les exemples de cette vue d’ensemble montrent comment animer à l’aide de storyboards. Lorsque vous utilisez du code, vous pouvez animer de plusieurs autres façons. Pour plus d’informations, consultez le [vue d’ensemble des Techniques d’Animation propriété](property-animation-techniques-overview.md).  
   
 <a name="animation_samples"></a>   
 ## <a name="animation-samples"></a>Exemples d’animation  
@@ -331,21 +331,21 @@ ms.locfileid: "44189470"
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Vue d'ensemble de l'animation et du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)|Décrit comment le système de minutage utilise le <xref:System.Windows.Media.Animation.Timeline> et <xref:System.Windows.Media.Animation.Clock> les classes qui vous permettent de créer des animations.|  
-|[Conseils et astuces sur les animations](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)|Répertorie des conseils utiles pour résoudre les problèmes d’animation, tels que les performances.|  
-|[Vue d'ensemble des animations personnalisées](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)|Décrit comment étendre le système d’animation avec des images clés, des classes d’animation ou des rappels image par image.|  
+|[Vue d'ensemble de l'animation et du système de minutage](animation-and-timing-system-overview.md)|Décrit comment le système de minutage utilise le <xref:System.Windows.Media.Animation.Timeline> et <xref:System.Windows.Media.Animation.Clock> les classes qui vous permettent de créer des animations.|  
+|[Conseils et astuces sur les animations](animation-tips-and-tricks.md)|Répertorie des conseils utiles pour résoudre les problèmes d’animation, tels que les performances.|  
+|[Vue d'ensemble des animations personnalisées](custom-animations-overview.md)|Décrit comment étendre le système d’animation avec des images clés, des classes d’animation ou des rappels image par image.|  
 |Vue d'ensemble des animations From/To/By|Décrit comment créer une animation qui effectue la transition entre deux valeurs.|  
-|[Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)|Décrit comment créer une animation avec plusieurs valeurs cibles, notamment la possibilité de contrôler la méthode d’interpolation.|  
-|[Fonctions d'accélération](../../../../docs/framework/wpf/graphics-multimedia/easing-functions.md)|Explique comment appliquer des formules mathématiques à vos animations pour obtenir un comportement réaliste, tel que rebondissement.|  
-|[Vue d'ensemble des animations de tracés](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)|Décrit comment déplacer ou faire pivoter un objet sur un tracé complexe.|  
-|[Vue d'ensemble des techniques d'animation de propriétés](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)|Décrit des animations de propriété à l’aide de storyboards, animations locales, horloges et des animations image par image.|  
-|[Vue d'ensemble des storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)|Décrit comment utiliser les storyboards avec plusieurs chronologies pour créer des animations complexes.|  
-|[Vue d’ensemble des comportements de minutage](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)|Décrit le <xref:System.Windows.Media.Animation.Timeline> types et les propriétés utilisées dans les animations.|  
-|[Vue d'ensemble des événements de minuterie](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)|Décrit les événements disponibles sur le <xref:System.Windows.Media.Animation.Timeline> et <xref:System.Windows.Media.Animation.Clock> objets pour l’exécution de code à des points dans la chronologie, telles que begin, suspendre, reprendre, ignorer ou arrêter.|  
-|[Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)|Contient des exemples de code pour l’utilisation des animations et des chronologies dans votre application.|  
-|[Guides pratiques relatifs aux objets Clock](../../../../docs/framework/wpf/graphics-multimedia/clocks-how-to-topics.md)|Contient des exemples de code pour l’utilisation de la <xref:System.Windows.Media.Animation.Clock> objet dans votre application.|  
-|[Guides pratiques relatifs aux images clés](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)|Contient des exemples de code pour l’utilisation des animations d’image clé dans votre application.|  
-|[Guides pratiques relatifs aux animations de tracés](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)|Contient des exemples de code pour l’utilisation des animations de tracés dans votre application.|  
+|[Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)|Décrit comment créer une animation avec plusieurs valeurs cibles, notamment la possibilité de contrôler la méthode d’interpolation.|  
+|[Fonctions d'accélération](easing-functions.md)|Explique comment appliquer des formules mathématiques à vos animations pour obtenir un comportement réaliste, tel que rebondissement.|  
+|[Vue d'ensemble des animations de tracés](path-animations-overview.md)|Décrit comment déplacer ou faire pivoter un objet sur un tracé complexe.|  
+|[Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)|Décrit des animations de propriété à l’aide de storyboards, animations locales, horloges et des animations image par image.|  
+|[Vue d'ensemble des storyboards](storyboards-overview.md)|Décrit comment utiliser les storyboards avec plusieurs chronologies pour créer des animations complexes.|  
+|[Vue d’ensemble des comportements de minutage](timing-behaviors-overview.md)|Décrit le <xref:System.Windows.Media.Animation.Timeline> types et les propriétés utilisées dans les animations.|  
+|[Vue d'ensemble des événements de minuterie](timing-events-overview.md)|Décrit les événements disponibles sur le <xref:System.Windows.Media.Animation.Timeline> et <xref:System.Windows.Media.Animation.Clock> objets pour l’exécution de code à des points dans la chronologie, telles que begin, suspendre, reprendre, ignorer ou arrêter.|  
+|[Rubriques de guide pratique](animation-and-timing-how-to-topics.md)|Contient des exemples de code pour l’utilisation des animations et des chronologies dans votre application.|  
+|[Guides pratiques relatifs aux objets Clock](clocks-how-to-topics.md)|Contient des exemples de code pour l’utilisation de la <xref:System.Windows.Media.Animation.Clock> objet dans votre application.|  
+|[Guides pratiques relatifs aux images clés](key-frame-animation-how-to-topics.md)|Contient des exemples de code pour l’utilisation des animations d’image clé dans votre application.|  
+|[Guides pratiques relatifs aux animations de tracés](path-animation-how-to-topics.md)|Contient des exemples de code pour l’utilisation des animations de tracés dans votre application.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Référence  

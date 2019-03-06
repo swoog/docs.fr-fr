@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527638"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358520"
 ---
 # <a name="custom-animations-overview"></a>Vue d'ensemble des animations personnalisées
 Cette rubrique décrit comment et quand étendre le système d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en créant des images clés personnalisées et des classes d’animation, ou à l’aide du rappel image par image pour l’ignorer.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
- Pour comprendre cette rubrique, vous devez connaître les différents types d’animations offerts par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Pour plus d’informations, consultez la Vue d’ensemble des animations From/To/By, la [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) et la [Vue d'ensemble des animations de tracés](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+ Pour comprendre cette rubrique, vous devez connaître les différents types d’animations offerts par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Pour plus d’informations, consultez la Vue d’ensemble des animations From/To/By, la [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md) et la [Vue d'ensemble des animations de tracés](path-animations-overview.md).  
   
- Étant donné que les classes d’animation héritent le <xref:System.Windows.Freezable> (classe), vous devez être familiarisé avec <xref:System.Windows.Freezable> objets et comment hériter de <xref:System.Windows.Freezable>. Pour plus d’informations, consultez la [Vue d’ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Étant donné que les classes d’animation héritent le <xref:System.Windows.Freezable> (classe), vous devez être familiarisé avec <xref:System.Windows.Freezable> objets et comment hériter de <xref:System.Windows.Freezable>. Pour plus d’informations, consultez la [Vue d’ensemble des objets Freezable](../advanced/freezable-objects-overview.md).  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>Extension du système d’animation  
@@ -45,7 +45,7 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
   
 <a name="createacustomkeyframe"></a>   
 ## <a name="create-a-custom-key-frame"></a>Création d’une image clé personnalisée  
- La création d’une classe d’image clé personnalisée est la façon la plus simple d’étendre le système d’animation. Utilisez cette approche lorsque vous souhaitez une autre méthode d’interpolation pour une animation d’image clé.  Comme décrit dans la [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), une animation d’image clé utilise des objets d’images clés pour générer ses valeurs de sortie. Chaque objet d’image clé remplit trois fonctions :  
+ La création d’une classe d’image clé personnalisée est la façon la plus simple d’étendre le système d’animation. Utilisez cette approche lorsque vous souhaitez une autre méthode d’interpolation pour une animation d’image clé.  Comme décrit dans la [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md), une animation d’image clé utilise des objets d’images clés pour générer ses valeurs de sortie. Chaque objet d’image clé remplit trois fonctions :  
   
 -   Spécifie une valeur de cible à l’aide de son <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriété.  
   
@@ -57,7 +57,7 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
   
  Dérivez à partir de la classe abstraite *\<Type >* KeyFrame et implémentez la méthode InterpolateValueCore. La méthode InterpolateValueCore retourne la valeur actuelle de l’image clé. Elle accepte deux paramètres : la valeur de l’image clé précédente et une valeur de progression comprise entre 0 et 1. Une progression de 0 indique que l’image clé vient de démarrer, et une valeur de 1 indique que l’image clé vient de se terminer et doit retourner la valeur spécifiée par son <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriété.  
   
- Étant donné que le  *\<Type >* héritent des classes de l’image clé la <xref:System.Windows.Freezable> (classe), vous devez également substituer <xref:System.Windows.Freezable.CreateInstanceCore%2A> pour retourner une nouvelle instance de votre classe. Si la classe n’utilise pas de propriétés de dépendance pour stocker ses données ou si elle nécessite une initialisation supplémentaire après la création, vous devrez peut-être substituer d’autres méthodes. Consultez [Vue d'ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) pour plus d’informations.  
+ Étant donné que le  *\<Type >* héritent des classes de l’image clé la <xref:System.Windows.Freezable> (classe), vous devez également substituer <xref:System.Windows.Freezable.CreateInstanceCore%2A> pour retourner une nouvelle instance de votre classe. Si la classe n’utilise pas de propriétés de dépendance pour stocker ses données ou si elle nécessite une initialisation supplémentaire après la création, vous devrez peut-être substituer d’autres méthodes. Consultez [Vue d'ensemble des objets Freezable](../advanced/freezable-objects-overview.md) pour plus d’informations.  
   
  Une fois que vous avez créé votre propre animation *\<Type >* KeyFrame, vous pouvez l’utiliser avec *\<Type >* AnimationUsingKeyFrames pour ce type.  
   
@@ -72,7 +72,7 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
   
  Dérivez à partir d’une classe *\<Type >* Animation et implémentez la méthode GetCurrentValueCore. La méthode GetCurrentValueCore retourne la valeur actuelle de l’animation. Elle accepte trois paramètres : une valeur de départ suggérée, une valeur de fin suggérée et une <xref:System.Windows.Media.Animation.AnimationClock>, qui vous permet de déterminer la progression de l’animation.  
   
- Étant donné que le  *\<Type >* les classes AnimationBase héritent de la <xref:System.Windows.Freezable> (classe), vous devez également substituer <xref:System.Windows.Freezable.CreateInstanceCore%2A> pour retourner une nouvelle instance de votre classe. Si la classe n’utilise pas de propriétés de dépendance pour stocker ses données ou si elle nécessite une initialisation supplémentaire après la création, vous devrez peut-être substituer d’autres méthodes. Consultez [Vue d'ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) pour plus d’informations.  
+ Étant donné que le  *\<Type >* les classes AnimationBase héritent de la <xref:System.Windows.Freezable> (classe), vous devez également substituer <xref:System.Windows.Freezable.CreateInstanceCore%2A> pour retourner une nouvelle instance de votre classe. Si la classe n’utilise pas de propriétés de dépendance pour stocker ses données ou si elle nécessite une initialisation supplémentaire après la création, vous devrez peut-être substituer d’autres méthodes. Consultez [Vue d'ensemble des objets Freezable](../advanced/freezable-objects-overview.md) pour plus d’informations.  
   
  Pour plus d’informations, consultez la documentation sur la méthode GetCurrentValueCore pour la classe *\<Type >* AnimationBase du type que vous souhaitez animer. Pour obtenir un exemple, consultez [Exemple d’animation personnalisée](https://go.microsoft.com/fwlink/?LinkID=159981)  
   
@@ -95,7 +95,7 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> : Remplacez cette propriété pour indiquer la <xref:System.Type> de sortie de votre animation produit.  
   
- Si la classe n’utilise pas de propriétés de dépendance pour stocker ses données ou si elle nécessite une initialisation supplémentaire après la création, vous devrez peut-être substituer d’autres méthodes. Consultez [Vue d'ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) pour plus d’informations.  
+ Si la classe n’utilise pas de propriétés de dépendance pour stocker ses données ou si elle nécessite une initialisation supplémentaire après la création, vous devrez peut-être substituer d’autres méthodes. Consultez [Vue d'ensemble des objets Freezable](../advanced/freezable-objects-overview.md) pour plus d’informations.  
   
  Le paradigme recommandé (utilisé par les animations [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) consiste à utiliser deux niveaux d’héritage :  
   
@@ -126,10 +126,10 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Vue d’ensemble des techniques d’animation de propriétés](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
-- [Vue d’ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [Vue d'ensemble des animations d'image clé](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Vue d'ensemble des animations de tracés](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Vue d'ensemble de l'animation et du système de minutage](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)
+- [Vue d’ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
+- [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)
+- [Vue d'ensemble des animations de tracés](path-animations-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble de l'animation et du système de minutage](animation-and-timing-system-overview.md)
 - [Exemple d’animation personnalisée](https://go.microsoft.com/fwlink/?LinkID=159981)

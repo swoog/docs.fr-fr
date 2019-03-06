@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550122"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354633"
 ---
 # <a name="contextmenu"></a>ContextMenu
-Le <xref:System.Windows.Controls.ContextMenu> permet un contrôle afficher un <xref:System.Windows.Controls.Menu> qui est spécifique au contexte du contrôle. En règle générale, les <xref:System.Windows.Controls.ContextMenu> est exposée dans le [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] via le bouton droit de la souris ou via le bouton de menu du clavier.  
+Le <xref:System.Windows.Controls.ContextMenu> permet à un contrôle afficher un <xref:System.Windows.Controls.Menu> qui est spécifique au contexte du contrôle. En règle générale, le <xref:System.Windows.Controls.ContextMenu> est exposé dans le [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] via le bouton droit de la souris ou via le bouton de menu du clavier.  
   
- La figure suivante illustre un <xref:System.Windows.Controls.ContextMenu> dans deux états différents : l’état par défaut et l’état ouvert. Dans l’état par défaut, le contrôle est réduit. Lorsque le bouton droit de la souris est enfoncé sur le parent du menu, le contrôle se développe et affiche les éléments de menu.  
+ L’exemple suivant illustre un <xref:System.Windows.Controls.ContextMenu> dans deux états différents : l’état par défaut et l’état ouvert. Dans l’état par défaut, le contrôle est réduit. Lorsque le bouton droit de la souris est enfoncé sur le parent du menu, le contrôle se développe et affiche les éléments de menu.  
   
- ![États du menu contextuel](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ ![États du menu contextuel](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 ContextMenu dans différents États  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble de ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [Vue d’ensemble de ContextMenu](contextmenu-overview.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.ContextMenu>  

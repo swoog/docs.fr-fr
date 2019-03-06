@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-ms.openlocfilehash: 67d81c02ca7a207a48190a3bf09b6ab5dbec17de
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6c220bf7b06e6eaf4cf661c07a0a8c6c37ec333d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746401"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358260"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Procédure : Effectuer une liaison avec XDocument, XElement ou LINQ pour des résultats de requête XML
 Cet exemple montre comment lier des données XML à un <xref:System.Windows.Controls.ItemsControl> à l’aide de <xref:System.Xml.Linq.XDocument>.  
@@ -21,26 +21,26 @@ Cet exemple montre comment lier des données XML à un <xref:System.Windows.Cont
 ## <a name="example"></a>Exemple  
  Le code XAML suivant définit un <xref:System.Windows.Controls.ItemsControl> et inclut un modèle de données pour les données de type `Planet` dans le `http://planetsNS` espace de noms XML. Un type de données XML qui occupe un espace de noms doit inclure l’espace de noms entre accolades, et s’il s’affiche là où une extension de balisage XAML pourrait apparaître, il doit précéder l’espace de noms avec une séquence d’échappement d’accolades. Ce code lie aux propriétés dynamiques qui correspondent à la <xref:System.Xml.Linq.XContainer.Element%2A> et <xref:System.Xml.Linq.XElement.Attribute%2A> méthodes de la <xref:System.Xml.Linq.XElement> classe. Les propriétés dynamiques permettent à XAML de se lier aux propriétés dynamiques qui partagent les noms des méthodes. Pour en savoir plus, consultez [Propriétés dynamiques LINQ to XML](/visualstudio/designers/linq-to-xml-dynamic-properties). Notez comment la déclaration d’espace de noms par défaut pour XML ne s’applique pas aux noms d’attribut.  
   
- [!code-xaml[XLinqExample#StackPanelResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
-[!code-xaml[XLinqExample#ItemsControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#itemscontrol)]  
+ [!code-xaml[XLinqExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
+[!code-xaml[XLinqExample#ItemsControl](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#itemscontrol)]  
   
  Le code c# suivant appelle <xref:System.Xml.Linq.XDocument.Load%2A> et définit le contexte de données de panneau de configuration de pile sur tous les sous-éléments de l’élément nommé `SolarSystemPlanets` dans le `http://planetsNS` espace de noms XML.  
   
- [!code-csharp[XLinqExample#LoadDCFromFile](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromfile)]
- [!code-vb[XLinqExample#LoadDCFromFile](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromfile)]  
+ [!code-csharp[XLinqExample#LoadDCFromFile](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromfile)]
+ [!code-vb[XLinqExample#LoadDCFromFile](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromfile)]  
   
  Données XML peuvent être stockées comme une ressource XAML à l’aide <xref:System.Windows.Data.ObjectDataProvider>. Pour obtenir un exemple complet, consultez [code source L2DBForm.xaml](/visualstudio/designers/l2dbform-xaml-source-code). L’exemple suivant montre comment le code peut définir le contexte de données sur une ressource d’objet.  
   
- [!code-csharp[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromxaml)]
- [!code-vb[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromxaml)]  
+ [!code-csharp[XLinqExample#LoadDCFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromxaml)]
+ [!code-vb[XLinqExample#LoadDCFromXAML](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromxaml)]  
   
  Les propriétés dynamiques qui mappent aux <xref:System.Xml.Linq.XContainer.Element%2A> et <xref:System.Xml.Linq.XElement.Attribute%2A> fournissent une grande souplesse au XAML. Votre code peut également être lié aux résultats d’une requête LINQ to XML. Cet exemple se lie aux résultats de la requête triés par une valeur d’élément.  
   
- [!code-csharp[XLinqExample#BindToResults](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#bindtoresults)]
- [!code-vb[XLinqExample#BindToResults](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#bindtoresults)]  
+ [!code-csharp[XLinqExample#BindToResults](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#bindtoresults)]
+ [!code-vb[XLinqExample#BindToResults](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#bindtoresults)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d'ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [Vue d'ensemble des sources de liaison](binding-sources-overview.md)
 - [Vue d’ensemble de la liaison de données WPF avec LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
 - [Exemple de liaison de données WPF à l’aide de LINQ to XML](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)
 - [Propriétés dynamiques LINQ to XML](/visualstudio/designers/linq-to-xml-dynamic-properties)

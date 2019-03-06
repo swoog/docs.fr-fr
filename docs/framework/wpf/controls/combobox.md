@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: e3ca368f8b7b2b3cd956bdaac498874a806dd876
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d8684ac382fefa308b671d5459125bd755960142
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747030"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374841"
 ---
 # <a name="combobox"></a>ComboBox
 Le <xref:System.Windows.Controls.ComboBox> contrôle offre aux utilisateurs une liste d’options. La liste est affichée et masquée lorsque le contrôle se développe et réduit. Dans son état par défaut, la liste est réduite, affichage seul choix. L’utilisateur clique sur un bouton pour afficher la liste complète des options.  
   
  L’illustration suivante montre un <xref:System.Windows.Controls.ComboBox> dans différents états.  
   
- ![Liste déroulante zones par défaut et enfoncé](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+ ![Liste déroulante zones par défaut et enfoncé](./media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 Réduit et développé  
   
 ## <a name="reference"></a>Référence  

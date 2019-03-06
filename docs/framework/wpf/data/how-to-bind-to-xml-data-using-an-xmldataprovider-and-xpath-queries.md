@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 2d2b9e4dd817562a6b4de15edc51b428c397f29b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6869b84746081df7917aca32042002b8b044c5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509308"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371344"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Procédure : Effectuer une liaison à des données XML à l'aide d'un XMLDataProvider et de requêtes XPath
 Cet exemple montre comment lier à [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] données à l’aide un <xref:System.Windows.Data.XmlDataProvider>.  
@@ -24,13 +24,13 @@ Cet exemple montre comment lier à [!INCLUDE[TLA#tla_xml](../../../../includes/t
 > [!NOTE]
 >  Le nœud racine des données [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] est un attribut **xmlns** qui définit l’espace de noms [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] sur une chaîne vide. Il s’agit d’une condition requise pour appliquer des requêtes XPath à un îlot de données inline dans la page [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Dans ce cas inline, le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], et donc de l’îlot de données, le <xref:System.Windows> espace de noms. Pour cette raison, vous devez définir l’espace de noms vide pour conserver les requêtes XPath ne soient pas qualifiées par le <xref:System.Windows> espace de noms, ce qui risque de mal orienter les requêtes.  
   
- [!code-xaml[XMLDataSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
+ [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- Comme indiqué dans cet exemple, pour créer la même déclaration de liaison dans la syntaxe d’attribut, vous devez échapper les caractères spéciaux correctement. Pour plus d’informations, consultez [Entités de caractères XML et XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md).  
+ Comme indiqué dans cet exemple, pour créer la même déclaration de liaison dans la syntaxe d’attribut, vous devez échapper les caractères spéciaux correctement. Pour plus d’informations, consultez [Entités de caractères XML et XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
  Le <xref:System.Windows.Controls.ListBox> affichera les éléments suivants lors de l’exécution de cet exemple. Il s’agit de tous les objets *Title*s de tous les éléments sous *Books* ayant une valeur *Stock* de *« out »* ou une valeur *Number* de 3 ou supérieure ou égale à 8. Notez qu’aucun *CD* les éléments sont retournés, car le <xref:System.Windows.Data.XmlDataProvider.XPath%2A> a de valeur sur le <xref:System.Windows.Data.XmlDataProvider> indique que seul le *la documentation* éléments doivent être exposés (ce qui définit essentiellement un filtre).  
   
- ![Exemple XPath](../../../../docs/framework/wpf/data/media/xpathexample.PNG "XPathExample")  
+ ![Exemple XPath](./media/xpathexample.PNG "XPathExample")  
   
  Dans cet exemple, les titres des ouvrages sont affichés car le <xref:System.Windows.Data.Binding.XPath%2A> de la <xref:System.Windows.Controls.TextBlock> liaison dans le <xref:System.Windows.DataTemplate> a la valeur «*titre*». Si vous souhaitez afficher la valeur d’un attribut, tel que le *ISBN*, vous définiriez qui <xref:System.Windows.Data.Binding.XPath%2A> valeur «`@ISBN`».  
   
@@ -46,11 +46,11 @@ Cet exemple montre comment lier à [!INCLUDE[TLA#tla_xml](../../../../includes/t
   
  Lorsque vous exécutez un **XPath** de requête, elle retourne un <xref:System.Xml.XmlNode> ou une liste de XmlNodes. <xref:System.Xml.XmlNode> est un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objet, ce qui signifie que vous pouvez utiliser la <xref:System.Windows.Data.Binding.Path%2A> propriété à lier le [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propriétés. Regardez de nouveau l’exemple précédent. Si le reste de l’exemple reste le même et que vous modifiez le <xref:System.Windows.Controls.TextBlock> de liaison à ce qui suit, vous verrez les noms des XmlNodes retournés dans le <xref:System.Windows.Controls.ListBox>. Dans ce cas, le nom de tous les nœuds retournés est « *Book* ».  
   
- [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
+ [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
  Dans certaines applications, l’incorporation du [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] comme îlot de données dans la source de la page [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] peut être gênante, car le contenu exact des données doit être connu au moment de la compilation. Par conséquent, l’obtention de données à partir d’un fichier [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] externe est également prise en charge, comme dans l’exemple suivant :  
   
- [!code-xaml[XMLDataSource2#XmlFileExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
+ [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
  Si le [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données résident dans un référentiel distant [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] fichier, définissez l’accès aux données en assignant une approprié [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] à la <xref:System.Windows.Data.XmlDataProvider.Source%2A> attribut comme suit :  
   
@@ -60,8 +60,8 @@ Cet exemple montre comment lier à [!INCLUDE[TLA#tla_xml](../../../../includes/t
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Data.ObjectDataProvider>
-- [Effectuer une liaison avec XDocument, XElement ou LINQ pour des résultats de requête XML](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
-- [Utiliser le modèle maître/détail avec des données XML hiérarchiques](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Vue d'ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md)
-- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Effectuer une liaison avec XDocument, XElement ou LINQ pour des résultats de requête XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
+- [Utiliser le modèle maître/détail avec des données XML hiérarchiques](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [Vue d'ensemble des sources de liaison](binding-sources-overview.md)
+- [Vue d’ensemble de la liaison de données](data-binding-overview.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

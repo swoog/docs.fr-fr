@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 8e9e2f83e15e4e1703ed42dfb479efb8feed3bb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661280"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363980"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Modèles de constructeur sécurisé pour DependencyObjects
 En règle générale, les constructeurs de classe ne doivent pas appeler des rappels tels que les méthodes ou les délégués virtuels, étant donné que les constructeurs peuvent être appelés comme une initialisation de base des constructeurs d’une classe dérivée. L’utilisation de méthodes virtuelles peut se faire à un état d’initialisation incomplet d’un objet donné. Toutefois, le système de propriétés appelle et expose les rappels en interne, dans le cadre du système de propriétés de dépendance. Une opération aussi simple que la définition d’une valeur de propriété de dépendance avec <xref:System.Windows.DependencyObject.SetValue%2A> appel inclut potentiellement un rappel quelque part dans la détermination. Pour cette raison, vous devez être prudent lorsque vous définissez des valeurs de propriété dans le corps d’un constructeur, car cela peut devenir problématique si votre type est utilisé comme classe de base de dépendance. Il existe un modèle spécifique pour l’implémentation <xref:System.Windows.DependencyObject> constructeurs qui évite les problèmes liés aux États de propriété de dépendance et aux rappels inhérents, qui est décrite ici.  
@@ -20,7 +20,7 @@ En règle générale, les constructeurs de classe ne doivent pas appeler des rap
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Méthodes virtuelles de système de propriétés  
- Les méthodes virtuelles suivantes ou les rappels sont potentiellement appelés pendant les calculs de la <xref:System.Windows.DependencyObject.SetValue%2A> appel qui définit une valeur de propriété de dépendance : <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Chacune de ces méthodes virtuelles ou rappels sert une fonction spécifique pour étendre la souplesse du système de propriétés [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] et les dépendances de propriétés. Pour plus d’informations sur l’utilisation de ces virtuels en vue de personnaliser la détermination des valeurs de propriété, consultez [Validation et rappels de propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+ Les méthodes virtuelles suivantes ou les rappels sont potentiellement appelés pendant les calculs de la <xref:System.Windows.DependencyObject.SetValue%2A> appel qui définit une valeur de propriété de dépendance : <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Chacune de ces méthodes virtuelles ou rappels sert une fonction spécifique pour étendre la souplesse du système de propriétés [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] et les dépendances de propriétés. Pour plus d’informations sur l’utilisation de ces virtuels en vue de personnaliser la détermination des valeurs de propriété, consultez [Validation et rappels de propriétés de dépendance](dependency-property-callbacks-and-validation.md).  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Comparaison de l’utilisation des règles FXCop et des virtuels de système de propriétés  
  Si vous utilisez l’outil Microsoft FXCop dans le cadre de votre processus de génération, et si vous dérivez de certaines classes de framework [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en appelant le constructeur de base, ou si vous implémentez vos propres propriétés de dépendance sur les classes dérivées, un message indiquant la violation d’une règle FXCop peut s’afficher. La chaîne de nom de cette violation est la suivante :  
@@ -115,6 +115,6 @@ public MyClass : SomeBaseClass {
  Ces mêmes modèles s’appliquent si vous définissez une propriété qui ne pas avoir un wrapper pour faciliter la définition des propriétés et définissez les valeurs avec <xref:System.Windows.DependencyObject.SetValue%2A>. Vos appels à <xref:System.Windows.DependencyObject.SetValue%2A> qui traversent des paramètres de constructeur doit-elle également appeler le constructeur par défaut de la classe pour l’initialisation.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Sécurité de propriété de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [Propriétés de dépendance personnalisées](custom-dependency-properties.md)
+- [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)
+- [Sécurité de propriété de dépendance](dependency-property-security.md)
