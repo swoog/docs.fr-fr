@@ -7,23 +7,23 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546158"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356208"
 ---
 # <a name="resources-how-to-topics"></a>Rubriques "Comment" relatives aux ressources
 Les rubriques de cette section décrivent l’utilisation des ressources de Windows Presentation Foundation (WPF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Définir et référencer une ressource](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Utiliser des ressources d'application](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [Utiliser des SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [Utiliser des clés de polices système](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [Utiliser SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [Utiliser les clés des paramètres système](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [Définir et référencer une ressource](how-to-define-and-reference-a-resource.md)  
+ [Utiliser des ressources d'application](how-to-use-application-resources.md)  
+ [Utiliser des SystemFonts](how-to-use-systemfonts.md)  
+ [Utiliser des clés de polices système](how-to-use-system-fonts-keys.md)  
+ [Utiliser SystemParameters](how-to-use-systemparameters.md)  
+ [Utiliser les clés des paramètres système](how-to-use-system-parameters-keys.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
@@ -35,4 +35,4 @@ Les rubriques de cette section décrivent l’utilisation des ressources de Wind
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+ [Ressources XAML](xaml-resources.md)

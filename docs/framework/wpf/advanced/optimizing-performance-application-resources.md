@@ -9,17 +9,17 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: fa412a4f900179c22868b2ef3e7429e7dc2acc9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507549"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352397"
 ---
 # <a name="optimizing-performance-application-resources"></a>Optimisation des performances : Ressources d'application
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet de partager des ressources d’application afin que vous pouvez prendre en charge une apparence cohérente ou un comportement à travers des éléments similaires type. Cette rubrique fournit quelques recommandations dans ce domaine qui peut vous aider à améliorent les performances de vos applications.  
   
- Pour plus d’informations sur les ressources, consultez la page [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Pour plus d’informations sur les ressources, consultez la page [Ressources XAML](xaml-resources.md).  
   
 ## <a name="sharing-resources"></a>Partage de ressources  
  Si votre application utilise des contrôles personnalisés et définit des ressources dans un <xref:System.Windows.ResourceDictionary> (ou nœud de ressources de XAML), il est recommandé que vous définissiez les ressources sur le <xref:System.Windows.Application> ou <xref:System.Windows.Window> au niveau de l’objet, ou les définir dans le thème par défaut pour le contrôles personnalisés. Définition des ressources dans un contrôle personnalisé <xref:System.Windows.ResourceDictionary> impose un impact sur les performances pour chaque instance de ce contrôle. Par exemple, si vous avez des opérations exigeantes en performances pinceau définies en tant que partie de la définition de ressource d’un contrôle personnalisé et le nombre d’instances du contrôle personnalisé, plage de travail de l’application augmente considérablement.  
@@ -31,7 +31,7 @@ ms.locfileid: "54507549"
   
  L’exemple de balisage suivant illustre ce point :  
   
- [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
 ## <a name="use-static-resources-when-possible"></a>Utiliser des ressources statiques lorsque cela est Possible  
  Une ressource statique fournit une valeur pour n’importe quel attribut de propriété XAML en recherchant une référence à une ressource déjà définie. Le comportement de recherche pour cette ressource est analogue à la recherche au moment de la compilation.  
@@ -40,15 +40,15 @@ ms.locfileid: "54507549"
   
  L’exemple de balisage suivant illustre l’utilisation de ces deux types de ressources :  
   
- [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planification des performances des applications](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Tirer parti du matériel](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Disposition et conception](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportement de l’objet](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Liaison de données](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Autres recommandations relatives aux performances](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)
+- [Planification des performances des applications](planning-for-application-performance.md)
+- [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
+- [Disposition et conception](optimizing-performance-layout-and-design.md)
+- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportement de l’objet](optimizing-performance-object-behavior.md)
+- [Text](optimizing-performance-text.md)
+- [Liaison de données](optimizing-performance-data-binding.md)
+- [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)

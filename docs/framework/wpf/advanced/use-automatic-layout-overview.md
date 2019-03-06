@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af564c4ca865c47c7efdda6ed86732581f677218
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609601"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353593"
 ---
 # <a name="use-automatic-layout-overview"></a>Vue d'ensemble de l'utilisation de la disposition automatique
 Cette rubrique présente des instructions pour les développeurs sur la façon d’écrire [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications localisables [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Dans le passé, la localisation d’une interface utilisateur a été beaucoup de temps. Chaque langue de l’interface utilisateur était adaptée nécessitait un réglage de pixel par pixel. Aujourd'hui, grâce à la conception et des normes de codage, de droite [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] peut être construite afin que les traducteurs aient moins de redimensionnement et de repositionnement. L’approche à écrire des applications qui peuvent être plus facilement redimensionnées et repositionnées est appelée à la disposition automatique et peut être obtenue en utilisant [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] design de l’application.  
@@ -33,15 +33,15 @@ Cette rubrique présente des instructions pour les développeurs sur la façon d
 ## <a name="automatic-layout-and-controls"></a>Disposition automatique et contrôles  
  La disposition automatique permet à une application d’ajuster automatiquement la taille d’un contrôle. Par exemple, un contrôle peut changer pour accommoder la longueur d’une chaîne. Cette fonctionnalité permet aux responsables de la localisation de traduire la chaîne sans devoir redimensionner le contrôle pour que le texte traduit s’ajuste. L’exemple suivant crée un bouton avec un contenu en anglais.  
   
- [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
  Dans l’exemple, il vous suffit de changer le texte pour que le bouton soit en espagnol. Par exemple :  
   
- [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
  Le graphique suivant illustre la sortie des exemples de code.  
   
- ![Même bouton avec le texte dans différentes langues](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
+ ![Même bouton avec le texte dans différentes langues](./media/globalizationbutton.png "GlobalizationButton")  
 Bouton redimensionnable automatiquement  
   
 <a name="autolayout_coding"></a>   
@@ -54,13 +54,13 @@ Bouton redimensionnable automatiquement
 
 - Utilisez <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, et <xref:System.Windows.Controls.Grid> pour positionner les contrôles.
 
-Pour une discussion sur divers types de panneaux, consultez [vue d’ensemble de panneaux](../../../../docs/framework/wpf/controls/panels-overview.md).
+Pour une discussion sur divers types de panneaux, consultez [vue d’ensemble de panneaux](../controls/panels-overview.md).
 
 **Ne définissez pas une taille fixe pour une fenêtre**
 
 - Utilisez <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Exemple :
 
-   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+   [!code-xaml[LocalizationGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
 
 **Ajouter un <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
 
@@ -92,22 +92,22 @@ Pour une discussion sur divers types de panneaux, consultez [vue d’ensemble de
 ## <a name="automatic-layout-and-grids"></a>Disposition automatique et grilles  
  Le <xref:System.Windows.Controls.Grid> élément, est utile pour la disposition automatique car il permet à un développeur positionner des éléments. Un <xref:System.Windows.Controls.Grid> contrôle est capable de répartir l’espace disponible entre ses éléments enfants, à l’aide d’une disposition de ligne et de colonne. Les éléments d’interface utilisateur peuvent s’étendre sur plusieurs cellules, et il est possible d’avoir des grilles imbriquées. Les grilles sont utiles, car ils vous permettent de créer et de positionner une interface utilisateur complexe. L’exemple suivant illustre l’utilisation d’une grille pour positionner des boutons et du texte. Notez que la hauteur et la largeur des cellules sont définies sur <xref:System.Windows.GridUnitType.Auto>; par conséquent, la cellule qui contient le bouton avec une image s’ajuste à l’image.  
 
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  Le graphique suivant montre la grille produite par le code précédent.  
   
- ![Exemple de grille](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
+ ![Exemple de grille](./media/glob-grid.png "glob_grid")  
 Grille  
   
 <a name="autolay_grids_issharedsizescope"></a>   
 ## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>Disposition automatique et grilles avec la propriété IsSharedSizeScope  
  Un <xref:System.Windows.Controls.Grid> élément est utile dans des applications localisables pour créer des contrôles qui s’ajustent en fonction du contenu. Cependant, il peut parfois être nécessaire que les contrôles conservent une taille particulière quel que soit le contenu. Par exemple, pour les boutons « OK », « Annuler » et « Parcourir », vous n’avez probablement pas besoin que les boutons s’adaptent à la taille du contenu. Dans ce cas le <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> propriété jointe est utile pour partager le même dimensionnement entre plusieurs éléments de grille. L’exemple suivant montre comment partager des données entre plusieurs de dimensionnement de ligne et de colonne <xref:System.Windows.Controls.Grid> éléments.  
   
- [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
+ [!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- **Remarque** pour l’exemple de code complet, consultez [partage de propriétés de dimensionnement entre grilles](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ **Remarque** pour l’exemple de code complet, consultez [partage de propriétés de dimensionnement entre grilles](../controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Globalisation pour WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Utiliser la disposition automatique pour créer un bouton](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
-- [Utiliser une grille pour la disposition automatique](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [Globalisation pour WPF](globalization-for-wpf.md)
+- [Utiliser la disposition automatique pour créer un bouton](how-to-use-automatic-layout-to-create-a-button.md)
+- [Utiliser une grille pour la disposition automatique](how-to-use-a-grid-for-automatic-layout.md)

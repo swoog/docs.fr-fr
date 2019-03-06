@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a5836c60d5f0ea21b1373b2d9bbbb29e0b6cb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530400"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360026"
 ---
 # <a name="how-to-run-a-workflow"></a>Procédure : Exécuter un Workflow
 Cette rubrique est la suite du didacticiel le Guide de mise en route de Windows Workflow Foundation et explique comment créer un hôte de workflow et exécuter le workflow défini dans le précédent [Comment : Créer un flux de travail](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) rubrique.
@@ -137,7 +137,7 @@ Cette rubrique est la suite du didacticiel le Guide de mise en route de Windows 
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]
 
-##  <a name="BKMK_ToRunTheApplication"></a> Pour générer et exécuter l'application
+## <a name="BKMK_ToRunTheApplication"></a> Pour générer et exécuter l'application
 
 1.  Cliquez avec le bouton droit sur **NumberGuessWorkflowHost** dans l' **Explorateur de solutions** , puis sélectionnez **Définir comme projet de démarrage**.
 

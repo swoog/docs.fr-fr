@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 78031ed80fe83b736a351886457f9200534f470b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d5d23ec44d9fb7a244fc635ac174cf81ead173
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591511"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362186"
 ---
 # <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Fonction ForwardTranslateAccelerator (référence des API non managées WPF)
 Cette API prend en charge l’infrastructure Windows Presentation Foundation (WPF) et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -37,7 +37,7 @@ HRESULT ForwardTranslateAccelerator(
  `true` Lorsque l’application a déjà reçue une chance de traiter le message d’entrée, mais n’a pas gérée Sinon, `false`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** Consultez [requise du .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [requise du .NET Framework](../../get-started/system-requirements.md).  
   
  **DLL :**  
   
@@ -48,4 +48,4 @@ HRESULT ForwardTranslateAccelerator(
  **Version du .NET framework :** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Référence des API non managées WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [Référence des API non managées WPF](wpf-unmanaged-api-reference.md)

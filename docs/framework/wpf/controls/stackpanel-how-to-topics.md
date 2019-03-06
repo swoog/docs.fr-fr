@@ -7,20 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555118"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351266"
 ---
 # <a name="stackpanel-how-to-topics"></a>Rubriques "Comment utiliser le StackPanel"
-Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.StackPanel> élément à la pile de contenu horizontalement ou verticalement.  
+Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.StackPanel> élément pour empiler le contenu horizontalement ou verticalement.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Choisir entre StackPanel et DockPanel](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [Créer un StackPanel](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [Aligner horizontalement ou verticalement le contenu dans un StackPanel](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [Choisir entre StackPanel et DockPanel](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [Créer un StackPanel](how-to-create-a-stackpanel.md)  
+ [Aligner horizontalement ou verticalement le contenu dans un StackPanel](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ Les rubriques de cette section décrivent comment utiliser le <xref:System.Windo
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Disposition](../advanced/layout.md)  
   
- [Procédure pas à pas : ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Vue d’ensemble de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Vue d’ensemble de ScrollViewer](scrollviewer-overview.md)

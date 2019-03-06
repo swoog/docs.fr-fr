@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569952"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355404"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Vue d'ensemble de l'alignement, des marges et du remplissage
 Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés qui sont utilisées pour positionner des éléments enfants. Cette rubrique présente quatre des propriétés plus importantes : <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, et <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Il est important de comprendre les effets de ces propriétés, car elles servent de base au contrôle de la position des éléments dans les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -27,18 +27,18 @@ Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
   
  L’illustration suivante montre un scénario de disposition qui utilise plusieurs propriétés de positionnement.  
   
- ![Exemple de propriétés de positionnement WPF](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic1.PNG "layout_margins_padding_alignment_graphic1")  
+ ![Exemple de propriétés de positionnement WPF](./media/layout-margins-padding-alignment-graphic1.PNG "layout_margins_padding_alignment_graphic1")  
   
  À première vue, le <xref:System.Windows.Controls.Button> éléments dans cette illustration semblent placés de manière aléatoire. Toutefois, leurs positions sont contrôlées de manière précise à l’aide d’une combinaison d’informations relatives aux marges, aux alignements et au remplissage.  
   
  L’exemple suivant décrit comment créer la disposition de l’illustration précédente. Un <xref:System.Windows.Controls.Border> élément encapsule un parent <xref:System.Windows.Controls.StackPanel>, avec un <xref:System.Windows.Controls.Border.Padding%2A> valeur de 15 pixels indépendants du périphérique. Cela explique l’étroite <xref:System.Windows.Media.Brushes.LightBlue%2A> bande qui entoure l’enfant <xref:System.Windows.Controls.StackPanel>. Éléments enfants de la <xref:System.Windows.Controls.StackPanel> sont utilisés pour illustrer chacune des différentes propriétés de positionnement détaillées dans cette rubrique. Trois <xref:System.Windows.Controls.Button> éléments sont utilisés pour illustrer les deux le <xref:System.Windows.FrameworkElement.Margin%2A> et <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propriétés.  
   
- [!code-csharp[MPALayoutSampleIntro#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutSampleIntro/CSharp/MPA_Layout_Sample_Intro.cs#1)]
- [!code-vb[MPALayoutSampleIntro#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutSampleIntro/VisualBasic/MPALayoutIntro.vb#1)]  
+ [!code-csharp[MPALayoutSampleIntro#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutSampleIntro/CSharp/MPA_Layout_Sample_Intro.cs#1)]
+ [!code-vb[MPALayoutSampleIntro#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutSampleIntro/VisualBasic/MPALayoutIntro.vb#1)]  
   
  Le diagramme suivant fournit un gros plan de l’affichage des différentes propriétés de positionnement utilisées dans l’exemple précédent. Les sections suivantes de cette rubrique décrivent plus en détail la manière d’utiliser chaque propriété de positionnement.  
   
- ![Propriétés de positionnement avec légendes à l’écran](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic2.PNG "layout_margins_padding_alignment_graphic2")  
+ ![Propriétés de positionnement avec légendes à l’écran](./media/layout-margins-padding-alignment-graphic2.PNG "layout_margins_padding_alignment_graphic2")  
   
 <a name="wcpsdk_layout_amp_alignment_properties"></a>   
 ## <a name="understanding-alignment-properties"></a>Présentation des propriétés d’alignement  
@@ -60,12 +60,12 @@ Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
   
  L’exemple suivant montre comment appliquer le <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propriété <xref:System.Windows.Controls.Button> éléments. Chaque valeur d’attribut est présentée pour mieux illustrer les différents comportements de rendu.  
   
- [!code-csharp[MPALayoutHorizontalAlignment#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutHorizontalAlignment/CSharp/MPA_Layout_HorizontalAlignment.cs#2)]
- [!code-vb[MPALayoutHorizontalAlignment#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutHorizontalAlignment/VisualBasic/MPA_Layout_HorizontalAlignment.vb#2)]  
+ [!code-csharp[MPALayoutHorizontalAlignment#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutHorizontalAlignment/CSharp/MPA_Layout_HorizontalAlignment.cs#2)]
+ [!code-vb[MPALayoutHorizontalAlignment#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutHorizontalAlignment/VisualBasic/MPA_Layout_HorizontalAlignment.vb#2)]  
   
  Le code précédent permet d’obtenir une disposition semblable à l’image suivante. Les effets de positionnement de chaque <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> valeur sont visibles dans l’illustration.  
   
- ![Exemple HorizontalAlignment](../../../../docs/framework/wpf/advanced/media/layout-horizontal-alignment-graphic.PNG "layout_horizontal_alignment_graphic")  
+ ![Exemple HorizontalAlignment](./media/layout-horizontal-alignment-graphic.PNG "layout_horizontal_alignment_graphic")  
   
 <a name="wcpsdk_layout_amp_verticalalignment_properties"></a>   
 ### <a name="verticalalignment-property"></a>Propriété VerticalAlignment  
@@ -80,13 +80,13 @@ Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
   
  L’exemple suivant montre comment appliquer le <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriété <xref:System.Windows.Controls.Button> éléments. Chaque valeur d’attribut est présentée pour mieux illustrer les différents comportements de rendu. Pour les besoins de cet exemple, un <xref:System.Windows.Controls.Grid> élément avec un quadrillage visible est utilisé en tant que parent pour mieux illustrer le comportement de disposition de chaque valeur de propriété.  
   
- [!code-csharp[MPALayoutVerticalAlignment#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutVerticalAlignment/CSharp/MPA_Layout_VerticalAlignment.cs#2)]
- [!code-vb[MPALayoutVerticalAlignment#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutVerticalAlignment/VisualBasic/MPA_Layout_VerticalAlignment.vb#2)]
- [!code-xaml[MPALayoutVerticalAlignment#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MPALayoutVerticalAlignment/XAML/default.xaml#2)]  
+ [!code-csharp[MPALayoutVerticalAlignment#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutVerticalAlignment/CSharp/MPA_Layout_VerticalAlignment.cs#2)]
+ [!code-vb[MPALayoutVerticalAlignment#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutVerticalAlignment/VisualBasic/MPA_Layout_VerticalAlignment.vb#2)]
+ [!code-xaml[MPALayoutVerticalAlignment#2](~/samples/snippets/xaml/VS_Snippets_Wpf/MPALayoutVerticalAlignment/XAML/default.xaml#2)]  
   
  Le code précédent permet d’obtenir une disposition semblable à l’image suivante. Les effets de positionnement de chaque <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> valeur sont visibles dans l’illustration.  
   
- ![Exemple de propriété VerticalAlignment](../../../../docs/framework/wpf/advanced/media/layout-vertical-alignment-graphic.PNG "layout_vertical_alignment_graphic")  
+ ![Exemple de propriété VerticalAlignment](./media/layout-vertical-alignment-graphic.PNG "layout_vertical_alignment_graphic")  
   
 <a name="wcpsdk_layout_amp_margin_properties"></a>   
 ## <a name="understanding-margin-properties"></a>Présentation des propriétés de marge  
@@ -97,17 +97,17 @@ Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
   
  L’exemple suivant montre comment appliquer des marges uniformes autour d’un groupe de <xref:System.Windows.Controls.Button> éléments. Le <xref:System.Windows.Controls.Button> éléments sont espacés régulièrement avec une mémoire tampon de marge de dix pixels dans chaque direction.  
   
- [!code-cpp[MarginPaddingAlignmentSample#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#1)]
- [!code-csharp[MarginPaddingAlignmentSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#1)]
- [!code-vb[MarginPaddingAlignmentSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#1)]
- [!code-xaml[MarginPaddingAlignmentSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#1)]  
+ [!code-cpp[MarginPaddingAlignmentSample#1](~/samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#1)]
+ [!code-csharp[MarginPaddingAlignmentSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#1)]
+ [!code-vb[MarginPaddingAlignmentSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#1)]
+ [!code-xaml[MarginPaddingAlignmentSample#1](~/samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#1)]  
   
  Dans de nombreux cas, une marge uniforme n’est pas appropriée. Ainsi, il est possible d’appliquer un espacement non uniforme. L’exemple suivant montre comment appliquer un espacement de marge non uniforme aux éléments enfants. Les marges sont décrites dans cet ordre : gauche, haut, droite, bas.  
   
- [!code-cpp[MarginPaddingAlignmentSample#2](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#2)]
- [!code-csharp[MarginPaddingAlignmentSample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#2)]
- [!code-vb[MarginPaddingAlignmentSample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#2)]
- [!code-xaml[MarginPaddingAlignmentSample#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#2)]  
+ [!code-cpp[MarginPaddingAlignmentSample#2](~/samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#2)]
+ [!code-csharp[MarginPaddingAlignmentSample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#2)]
+ [!code-vb[MarginPaddingAlignmentSample#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#2)]
+ [!code-xaml[MarginPaddingAlignmentSample#2](~/samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#2)]  
   
 <a name="wcpsdk_layout_amp_padding_properties"></a>   
 ## <a name="understanding-the-padding-property"></a>Présentation de la propriété de remplissage  
@@ -115,10 +115,10 @@ Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
   
  L’exemple suivant montre comment appliquer <xref:System.Windows.Controls.Border.Padding%2A> à un parent <xref:System.Windows.Controls.Border> élément.  
   
- [!code-cpp[MarginPaddingAlignmentSample#3](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#3)]
- [!code-csharp[MarginPaddingAlignmentSample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#3)]
- [!code-vb[MarginPaddingAlignmentSample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#3)]
- [!code-xaml[MarginPaddingAlignmentSample#3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#3)]  
+ [!code-cpp[MarginPaddingAlignmentSample#3](~/samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#3)]
+ [!code-csharp[MarginPaddingAlignmentSample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#3)]
+ [!code-vb[MarginPaddingAlignmentSample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#3)]
+ [!code-xaml[MarginPaddingAlignmentSample#3](~/samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#3)]  
   
 <a name="wcpsdk_layout_amp_summary"></a>   
 ## <a name="using-alignment-margins-and-padding-in-an-application"></a>Utilisation de l’alignement, des marges et du remplissage dans une application  
@@ -126,26 +126,26 @@ Le <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
   
  L’exemple suivant illustre chacun des concepts détaillés dans cette rubrique. S’appuyant sur l’infrastructure trouvé dans le premier exemple dans cette rubrique, cet exemple ajoute un <xref:System.Windows.Controls.Grid> élément en tant qu’enfant de le <xref:System.Windows.Controls.Border> dans le premier exemple. <xref:System.Windows.Controls.Border.Padding%2A> est appliqué au parent <xref:System.Windows.Controls.Border> élément. Le <xref:System.Windows.Controls.Grid> est utilisé pour partitionner l’espace entre trois enfants <xref:System.Windows.Controls.StackPanel> éléments. <xref:System.Windows.Controls.Button> éléments sont encore utilisés pour afficher les différents effets de <xref:System.Windows.FrameworkElement.Margin%2A> et <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>. <xref:System.Windows.Controls.TextBlock> les éléments sont ajoutés à chaque <xref:System.Windows.Controls.ColumnDefinition> pour mieux définir les différentes propriétés appliquées à la <xref:System.Windows.Controls.Button> éléments dans chaque colonne.  
   
- [!code-cpp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#4)]
- [!code-csharp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#4)]
- [!code-vb[MarginPaddingAlignmentSample#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#4)]
- [!code-xaml[MarginPaddingAlignmentSample#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#4)]  
+ [!code-cpp[MarginPaddingAlignmentSample#4](~/samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#4)]
+ [!code-csharp[MarginPaddingAlignmentSample#4](~/samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#4)]
+ [!code-vb[MarginPaddingAlignmentSample#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#4)]
+ [!code-xaml[MarginPaddingAlignmentSample#4](~/samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#4)]  
   
  Une fois compilée, l’application précédente présente une [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] semblable à l’illustration suivante. Les effets des différentes valeurs de propriété sont évidents dans l’espacement entre les éléments et les valeurs de propriété significatives pour les éléments dans chaque colonne sont indiqués entre <xref:System.Windows.Controls.TextBlock> éléments.  
   
- ![Plusieurs propriétés de positionnement dans une application](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-aligment-graphic3.PNG "layout_margins_padding_aligment_graphic3")  
+ ![Plusieurs propriétés de positionnement dans une application](./media/layout-margins-padding-aligment-graphic3.PNG "layout_margins_padding_aligment_graphic3")  
   
 <a name="wcpsdk_layout_amp_alignment_whatsnext"></a>   
 ## <a name="whats-next"></a>Étapes suivantes  
  Propriétés de positionnement définies par le <xref:System.Windows.FrameworkElement> classe permettent un contrôle précis de l’emplacement des éléments au sein de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications. Vous disposez désormais de plusieurs techniques pour mieux positionner les éléments à l’aide de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Des ressources supplémentaires expliquent plus en détail la disposition [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le [vue d’ensemble de panneaux](../../../../docs/framework/wpf/controls/panels-overview.md) rubrique contient des détails supplémentaires sur les différents <xref:System.Windows.Controls.Panel> éléments. La rubrique [procédure pas à pas : Ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) présente des techniques avancées qui utilisent des éléments de disposition pour positionner des composants et lier leurs actions aux sources de données.  
+ Des ressources supplémentaires expliquent plus en détail la disposition [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le [vue d’ensemble de panneaux](../controls/panels-overview.md) rubrique contient des détails supplémentaires sur les différents <xref:System.Windows.Controls.Panel> éléments. La rubrique [procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md) présente des techniques avancées qui utilisent des éléments de disposition pour positionner des composants et lier leurs actions aux sources de données.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.Margin%2A>
-- [Vue d’ensemble de Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)
+- [Vue d’ensemble de Panel](../controls/panels-overview.md)
+- [Disposition](layout.md)
 - [Galerie de dispositions WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=160054)

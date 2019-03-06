@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746560"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365839"
 ---
 # <a name="wpf-add-ins-overview"></a>Vue d'ensemble des compléments WPF
 <a name="Introduction"></a> Le .NET Framework inclut un modèle de complément, qui permet aux développeurs de créer des applications qui prennent en charge d’extensibilité des compléments. Ce modèle de complément permet de créer des compléments qui s’intègrent aux applications et étendent leurs fonctionnalités. Dans certains scénarios, les applications doivent également afficher les interfaces utilisateur qui sont fournies par des compléments. Cette rubrique montre comment WPF étend le modèle de complément .NET Framework pour activer ces scénarios, l’architecture sous-jacente, ses avantages et ses limitations.  
@@ -56,7 +56,7 @@ ms.locfileid: "56746560"
   
 -   **Communication**: Ce qui permet des compléments et héberger des applications de communiquer entre eux sur des limites d’isolement en appelant des méthodes et de passer des données.  
   
--   **Gestion de la durée de vie**: Chargement et déchargement des domaines d’application et les processus de façon propre et prévisible (consultez [domaines d’Application](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Gestion de la durée de vie**: Chargement et déchargement des domaines d’application et les processus de façon propre et prévisible (consultez [domaines d’Application](../../app-domains/application-domains.md)).  
   
 -   **Le contrôle de version**: S’assurer que héberger des applications et des compléments peuvent toujours communiquer lors de la création de nouvelles versions des.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56746560"
   
 6.  L’application hôte affiche retourné <xref:System.Windows.FrameworkElement>.  
   
- Pour obtenir un exemple qui montre comment implémenter un complément qui retourne une interface utilisateur, consultez [créer un complément qui retourne une interface utilisateur](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ Pour obtenir un exemple qui montre comment implémenter un complément qui retourne une interface utilisateur, consultez [créer un complément qui retourne une interface utilisateur](how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>Le complément est une interface utilisateur  
@@ -148,7 +148,7 @@ ms.locfileid: "56746560"
   
 6.  L’application hôte affiche retourné <xref:System.Windows.FrameworkElement>.  
   
- Pour obtenir un exemple qui montre comment implémenter un complément qui est une interface utilisateur, consultez [créer un complément qui est une interface utilisateur](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ Pour obtenir un exemple qui montre comment implémenter un complément qui est une interface utilisateur, consultez [créer un complément qui est une interface utilisateur](how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Retour de plusieurs interfaces utilisateur à partir d’un complément  
@@ -219,7 +219,7 @@ ms.locfileid: "56746560"
   
 -   Du côté application hôte, WPF Repackage le <xref:System.Windows.Interop.HwndSource> en tant que classe WPF interne qui dérive de <xref:System.Windows.Interop.HwndHost> et consomme <xref:System.AddIn.Contract.INativeHandleContract>. Une instance de cette classe est retournée par <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> à l’application hôte.  
   
- <xref:System.Windows.Interop.HwndHost> existe pour afficher les interfaces utilisateur, identifiés par les handles de fenêtres, des interfaces utilisateur WPF. Pour plus d’informations, consultez [Interopérabilité WPF et Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> existe pour afficher les interfaces utilisateur, identifiés par les handles de fenêtres, des interfaces utilisateur WPF. Pour plus d’informations, consultez [Interopérabilité WPF et Win32](../advanced/wpf-and-win32-interoperation.md).  
   
  En résumé, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, et <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> existent pour permettre le handle de fenêtre pour une UI WPF à passer à partir d’un complément à une application hôte, où il est encapsulé par un <xref:System.Windows.Interop.HwndHost> et affiche l’interface utilisateur de l’application hôte.  
   
@@ -252,11 +252,11 @@ ms.locfileid: "56746560"
   
 -   Interfaces utilisateur de complément affichées à partir d’une application hôte ne respectent pas le comportement de découpage de l’application hôte.  
   
--   Le concept d’*espace de rendu* des scénarios d’interopérabilité s’applique également aux compléments (consultez [Vue d’ensemble des régions de technologie](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
+-   Le concept d’*espace de rendu* des scénarios d’interopérabilité s’applique également aux compléments (consultez [Vue d’ensemble des régions de technologie](../advanced/technology-regions-overview.md)).  
   
 -   Services de l’interface utilisateur d’une application hôte, tels que l’héritage de ressources, la liaison de données et leur exécution, ne sont pas automatiquement disponibles à ajouter dans les interfaces utilisateur. Pour fournir ces services au complément, vous devez mettre à jour le pipeline.  
   
--   Une interface utilisateur complément ne peut pas faire pivoter, mis à l’échelle, inclinée ou sinon affectée par une transformation (consultez [transforme la vue d’ensemble](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Une interface utilisateur complément ne peut pas faire pivoter, mis à l’échelle, inclinée ou sinon affectée par une transformation (consultez [transforme la vue d’ensemble](../graphics-multimedia/transforms-overview.md)).  
   
 -   Contenu à l’intérieur des interfaces utilisateur du complément qui est restitué en dessinant des opérations à partir de la <xref:System.Drawing> espace de noms peut inclure une fusion alpha. Toutefois, un complément, l’interface utilisateur et l’interface utilisateur qui le contient d’application hôte doivent être 100 % opaque ; en d’autres termes, le `Opacity` propriété sur les deux doit être définie sur 1.  
   
@@ -280,12 +280,12 @@ ms.locfileid: "56746560"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Optimisation des performances  
- Par défaut, lorsque plusieurs domaines d’application sont utilisés, les différents assemblys .NET Framework requises par chaque application sont tous chargés dans ce domaine d’application. Ainsi, le temps nécessaire à la création de domaines d’application et au démarrage des applications dans ces domaines peut affecter les performances. Toutefois, le .NET Framework fournit un moyen de réduire les heures de début en indiquant aux applications de partager des assemblages entre domaines d’application si ceux-ci sont déjà chargés. Pour cela, vous devez utiliser le <xref:System.LoaderOptimizationAttribute> attribut, qui doit être appliqué à la méthode de point d’entrée (`Main`). Dans ce cas, utilisez uniquement du code pour implémenter votre définition d’application (consultez [Vue d’ensemble de la gestion d’applications](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Par défaut, lorsque plusieurs domaines d’application sont utilisés, les différents assemblys .NET Framework requises par chaque application sont tous chargés dans ce domaine d’application. Ainsi, le temps nécessaire à la création de domaines d’application et au démarrage des applications dans ces domaines peut affecter les performances. Toutefois, le .NET Framework fournit un moyen de réduire les heures de début en indiquant aux applications de partager des assemblages entre domaines d’application si ceux-ci sont déjà chargés. Pour cela, vous devez utiliser le <xref:System.LoaderOptimizationAttribute> attribut, qui doit être appliqué à la méthode de point d’entrée (`Main`). Dans ce cas, utilisez uniquement du code pour implémenter votre définition d’application (consultez [Vue d’ensemble de la gestion d’applications](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.LoaderOptimizationAttribute>
 - [Compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Domaines d’application](../../../../docs/framework/app-domains/application-domains.md)
+- [Domaines d’application](../../app-domains/application-domains.md)
 - [Vue d’ensemble de .NET framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Objets accessibles à distance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [Rubriques de guide pratique](how-to-topics.md)

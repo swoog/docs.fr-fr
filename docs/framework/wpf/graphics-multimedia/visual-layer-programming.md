@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 3bf3e718b1253348030c0ddf3ac52ed8aa79b37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580783"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376856"
 ---
 # <a name="visual-layer-programming"></a>Programmation de la couche visuelle
 Le <xref:System.Windows.Media.Visual> objet est un cœur [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objet, dont le rôle principal consiste à fournir la prise en charge du rendu. Contrôles d’interface utilisateur, tel que <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.TextBox>, dérivent la <xref:System.Windows.Media.Visual> classe et l’utiliser pour rendre leurs données de rendu persistantes.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Test de positionnement dans la couche visuelle](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [Utilisation d’objets DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Tutoriel : Hébergement d’objets visuels dans une Application Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+ [Test de positionnement dans la couche visuelle](hit-testing-in-the-visual-layer.md)  
+ [Utilisation d’objets DrawingVisual](using-drawingvisual-objects.md)  
+ [Tutoriel : Hébergement d’objets visuels dans une Application Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [Rubriques de guide pratique](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Graphiques et multimédia](index.md)

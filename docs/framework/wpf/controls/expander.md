@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551965"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371938"
 ---
 # <a name="expander"></a>Expander
-Un <xref:System.Windows.Controls.Expander> permet à un utilisateur d’afficher un en-tête et de développer pour afficher plus de détails ou de réduire une section à un en-tête.  
+Un <xref:System.Windows.Controls.Expander> permet à un utilisateur afficher un en-tête et de développer pour afficher plus de détails ou de réduire une section à un en-tête.  
   
  L’illustration suivante fournit un exemple de ce contrôle dans sa position développée.  
   
- ![Exemple d’Expander](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")  
+ ![Exemple d’Expander](./media/expanderexample.JPG "ExpanderExample")  
 Expander (contrôle)  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble de l'Expandeur](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+ [Vue d'ensemble de l'Expandeur](expander-overview.md)  
+ [Rubriques de guide pratique](expander-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Expander>  

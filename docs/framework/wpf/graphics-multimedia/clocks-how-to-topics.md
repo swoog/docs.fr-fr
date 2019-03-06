@@ -9,20 +9,20 @@ helpviewer_keywords:
 - clocks [WPF], animation
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
-ms.openlocfilehash: f2888f28ad7723b7390d0e2339c2117e64e84ecd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361445"
 ---
 # <a name="clocks-how-to-topics"></a>Rubriques "Comment" relatives aux objets Clock
-Les rubriques suivantes décrivent comment utiliser un <xref:System.Windows.Media.Animation.Clock> objet à mettre à jour les informations d’état de synchronisation pour un <xref:System.Windows.Media.Animation.Timeline>.  
+Les rubriques suivantes décrivent comment utiliser un <xref:System.Windows.Media.Animation.Clock> objet à mettre à jour les informations d’état de minutage pour un <xref:System.Windows.Media.Animation.Timeline>.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Animer une propriété à l’aide d’un objet AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
- [Contrôler une horloge de façon interactive](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
- [Rechercher une horloge de façon synchrone](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  
+ [Animer une propriété à l’aide d’un objet AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [Contrôler une horloge de façon interactive](how-to-interactively-control-a-clock.md)  
+ [Rechercher une horloge de façon synchrone](how-to-seek-a-clock-synchronously.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Media.Animation.Clock>  
@@ -34,6 +34,6 @@ Les rubriques suivantes décrivent comment utiliser un <xref:System.Windows.Medi
  <xref:System.Windows.Media.Animation.Timeline>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Vue d’ensemble de l’animation](animation-overview.md)  
   
- [Vue d'ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
