@@ -9,22 +9,22 @@ helpviewer_keywords:
 - clocks [WPF], animation
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
-ms.openlocfilehash: f2888f28ad7723b7390d0e2339c2117e64e84ecd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361445"
 ---
-# <a name="clocks-how-to-topics"></a><span data-ttu-id="d8d05-102">Rubriques "Comment" relatives aux objets Clock</span><span class="sxs-lookup"><span data-stu-id="d8d05-102">Clocks How-to Topics</span></span>
-<span data-ttu-id="d8d05-103">Les rubriques suivantes décrivent comment utiliser un <xref:System.Windows.Media.Animation.Clock> objet à mettre à jour les informations d’état de synchronisation pour un <xref:System.Windows.Media.Animation.Timeline>.</span><span class="sxs-lookup"><span data-stu-id="d8d05-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
+# <a name="clocks-how-to-topics"></a><span data-ttu-id="83abd-102">Rubriques "Comment" relatives aux objets Clock</span><span class="sxs-lookup"><span data-stu-id="83abd-102">Clocks How-to Topics</span></span>
+<span data-ttu-id="83abd-103">Les rubriques suivantes décrivent comment utiliser un <xref:System.Windows.Media.Animation.Clock> objet à mettre à jour les informations d’état de minutage pour un <xref:System.Windows.Media.Animation.Timeline>.</span><span class="sxs-lookup"><span data-stu-id="83abd-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d8d05-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="d8d05-104">In This Section</span></span>  
- [<span data-ttu-id="d8d05-105">Animer une propriété à l’aide d’un objet AnimationClock</span><span class="sxs-lookup"><span data-stu-id="d8d05-105">Animate a Property by Using an AnimationClock</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
- [<span data-ttu-id="d8d05-106">Contrôler une horloge de façon interactive</span><span class="sxs-lookup"><span data-stu-id="d8d05-106">Interactively Control a Clock</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
- [<span data-ttu-id="d8d05-107">Rechercher une horloge de façon synchrone</span><span class="sxs-lookup"><span data-stu-id="d8d05-107">Seek a Clock Synchronously</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  
+## <a name="in-this-section"></a><span data-ttu-id="83abd-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="83abd-104">In This Section</span></span>  
+ [<span data-ttu-id="83abd-105">Animer une propriété à l’aide d’un objet AnimationClock</span><span class="sxs-lookup"><span data-stu-id="83abd-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [<span data-ttu-id="83abd-106">Contrôler une horloge de façon interactive</span><span class="sxs-lookup"><span data-stu-id="83abd-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
+ [<span data-ttu-id="83abd-107">Rechercher une horloge de façon synchrone</span><span class="sxs-lookup"><span data-stu-id="83abd-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
   
-## <a name="reference"></a><span data-ttu-id="d8d05-108">Référence</span><span class="sxs-lookup"><span data-stu-id="d8d05-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="83abd-108">Référence</span><span class="sxs-lookup"><span data-stu-id="83abd-108">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Clock>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -33,7 +33,7 @@ ms.locfileid: "33554805"
   
  <xref:System.Windows.Media.Animation.Timeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="d8d05-109">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="d8d05-109">Related Sections</span></span>  
- [<span data-ttu-id="d8d05-110">Vue d’ensemble de l’animation</span><span class="sxs-lookup"><span data-stu-id="d8d05-110">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="83abd-109">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="83abd-109">Related Sections</span></span>  
+ [<span data-ttu-id="83abd-110">Vue d’ensemble de l’animation</span><span class="sxs-lookup"><span data-stu-id="83abd-110">Animation Overview</span></span>](animation-overview.md)  
   
- [<span data-ttu-id="d8d05-111">Vue d'ensemble des plans conceptuels</span><span class="sxs-lookup"><span data-stu-id="d8d05-111">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [<span data-ttu-id="83abd-111">Vue d'ensemble des plans conceptuels</span><span class="sxs-lookup"><span data-stu-id="83abd-111">Storyboards Overview</span></span>](storyboards-overview.md)
