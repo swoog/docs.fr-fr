@@ -10,12 +10,12 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: d6a59d3e80e8eb3810b04e1535b72bc4b133b7df
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 2ebf22775ab9308bc896829be0b4e8cc147a3b4c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747675"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374152"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Procédure pas à pas : Créer votre première Application Touch
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permet aux applications de répondre aux entrées tactiles. Par exemple, vous pouvez interagir avec une application en utilisant l’une ou plusieurs doigts sur un appareil tactile, par exemple un écran tactile que cette procédure pas à pas crée une application qui permet à l’utilisateur à déplacer, redimensionnement ou faire pivoter un objet unique à l’aide de touch.  
@@ -27,7 +27,7 @@ ms.locfileid: "56747675"
   
 -   Un appareil qui accepte une entrée tactile, par exemple un écran tactile, qui prend en charge Touch de Windows.  
   
- En outre, vous devez avoir une compréhension élémentaire de la création d’une application dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], en particulier pour savoir comment s’abonner à et gérer un événement. Pour plus d’informations, consultez [Procédure pas à pas : Ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ En outre, vous devez avoir une compréhension élémentaire de la création d’une application dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], en particulier pour savoir comment s’abonner à et gérer un événement. Pour plus d’informations, consultez [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="creating-the-application"></a>Création de l’application  
   
@@ -39,7 +39,7 @@ ms.locfileid: "56747675"
   
      Ce balisage crée une application simple qui contient une croix rouge <xref:System.Windows.Shapes.Rectangle> sur un <xref:System.Windows.Controls.Canvas>. Le <xref:System.Windows.UIElement.IsManipulationEnabled%2A> propriété de la <xref:System.Windows.Shapes.Rectangle> est définie sur true afin qu’il reçoive les événements de manipulation. L’application s’abonne à la <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, et <xref:System.Windows.UIElement.ManipulationInertiaStarting> événements. Ces événements contiennent la logique pour déplacer le <xref:System.Windows.Shapes.Rectangle> lorsque l’utilisateur le manipule.  
   
-     [!code-xaml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
+     [!code-xaml[BasicManipulation#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
 3.  Si vous utilisez Visual Basic, dans la première ligne de MainWindow.xaml, remplacez `x:Class="BasicManipulation.MainWindow"` avec `x:Class="MainWindow"`.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "56747675"
   
      Le <xref:System.Windows.UIElement.ManipulationStarting> événement se produit lorsque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] détecte cette touche entrée commence à manipuler un objet. Le code spécifie que la position de la manipulation doit être relatif à la <xref:System.Windows.Window> en définissant le <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> propriété.  
   
-     [!code-csharp[BasicManipulation#ManipulationStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
-     [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
+     [!code-csharp[BasicManipulation#ManipulationStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
+     [!code-vb[BasicManipulation#ManipulationStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
 
 5.  Dans le `MainWindow` de classe, ajoutez le code suivant <xref:System.Windows.Input.ManipulationDelta> Gestionnaire d’événements.
 
@@ -56,15 +56,15 @@ ms.locfileid: "56747675"
 
      Le code s’applique le <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> à la <xref:System.Windows.UIElement.RenderTransform%2A> de la <xref:System.Windows.Shapes.Rectangle> pour déplacer tandis que l’utilisateur déplace la pression tactile d’entrée. Il vérifie également si le <xref:System.Windows.Shapes.Rectangle> est en dehors des limites de la <xref:System.Windows.Window> lorsque l’événement se produit pendant l’inertie. Si, par conséquent, l’application appelle la <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType> méthode à la fin de la manipulation.
 
-     [!code-csharp[BasicManipulation#ManipulationDelta](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
-     [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
+     [!code-csharp[BasicManipulation#ManipulationDelta](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
+     [!code-vb[BasicManipulation#ManipulationDelta](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
 
 6.  Dans le `MainWindow` de classe, ajoutez le code suivant <xref:System.Windows.UIElement.ManipulationInertiaStarting> Gestionnaire d’événements.
 
      Le <xref:System.Windows.UIElement.ManipulationInertiaStarting> événement se produit lorsque l’utilisateur déclenche tous les doigts de l’écran. Le code définit la rapidité initiale et la décélération pour le déplacement, l’expansion et rotation du rectangle.
 
-     [!code-csharp[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
-     [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
+     [!code-csharp[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
+     [!code-vb[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
 
 7.  Générez et exécutez le projet.
 

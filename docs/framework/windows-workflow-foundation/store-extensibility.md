@@ -2,12 +2,12 @@
 title: Stocker l'extensibilité
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f317e8e0864dd6c4595ac669611594c843b277c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517918"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375426"
 ---
 # <a name="store-extensibility"></a>Stocker l'extensibilité
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> permet aux utilisateurs de promouvoir des propriétés personnalisées spécifiques à l'application qui peuvent être utilisées pour rechercher des instances dans la base de données de persistance. L'acte de promouvoir une propriété entraîne la disponibilité de la valeur dans une vue spéciale de la base de données. Ces propriétés promues (propriétés qui peuvent être utilisées dans des requêtes utilisateur) peuvent être de types simples tel qu'Int64, Guid, String et DateTime ou d'un type binaire sérialisé (byte[]).  
@@ -35,7 +35,7 @@ ms.locfileid: "33517918"
     application.Extensions.Add(documentStatusExtension);  
     ```  
   
-     Pour plus d’informations sur l’ajout d’un participant de persistance personnalisé, consultez la [Participants de persistance](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) exemple.  
+     Pour plus d’informations sur l’ajout d’un participant de persistance personnalisé, consultez le [Participants de persistance](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) exemple.  
   
 3.  Les activités personnalisées dans l’application de DP remplissent différents champs d’état dans le **Execute** (méthode).  
   
@@ -73,9 +73,9 @@ ms.locfileid: "33517918"
     ```  
   
     > [!NOTE]
-    >  Toutes ces propriétés sont transmises à **SqlWorkflowInstanceStore** par l’infrastructure de persistance via la **SaveWorkflowCommand.InstanceData** collection.  
+    >  Toutes ces propriétés sont passées à **SqlWorkflowInstanceStore** par l’infrastructure de persistance via la **SaveWorkflowCommand.InstanceData** collection.  
   
-5.  L’application de DP initialise le magasin d’instances de Workflow SQL et appelle le **promouvoir** méthode pour promouvoir ces données.  
+5.  L’application de DP initialise le Store d’Instance de Workflow SQL et appelle le **promouvoir** méthode pour promouvoir ces données.  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -108,7 +108,7 @@ ms.locfileid: "33517918"
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> Vue [System.Activities.DurableInstancing.InstancePromotedProperties]  
+## <a name="InstancePromotedProperties"></a> Vue [System.Activities.DurableInstancing.InstancePromotedProperties]  
   
 |Nom de la colonne|Type de colonne|Description|  
 |-----------------|-----------------|-----------------|  

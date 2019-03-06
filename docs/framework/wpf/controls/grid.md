@@ -8,18 +8,18 @@ helpviewer_keywords:
 - content [WPF], Grid control
 - Grid control [WPF]
 ms.assetid: cf2cc94c-bbc2-4e54-a601-605038ab63fe
-ms.openlocfilehash: cffc1d078bffaa14326d279eb82f8ff040187145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0be95d84aa1b4b8b05e623f9012664de1a401a6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551026"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352137"
 ---
 # <a name="grid"></a>Grille
-Le <xref:System.Windows.Controls.Grid> élément est utilisé pour positionner le contenu de lignes et colonnes.  
+Le <xref:System.Windows.Controls.Grid> élément est utilisé pour positionner précisément le contenu de lignes et colonnes.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
+ [Rubriques de guide pratique](grid-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ Le <xref:System.Windows.Controls.Grid> élément est utilisé pour positionner l
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Disposition](../advanced/layout.md)  
   
- [Procédure pas à pas : ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Vue d’ensemble de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Vue d’ensemble de ScrollViewer](scrollviewer-overview.md)

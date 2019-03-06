@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 012590a21ac24b1146c30405c9872355a4b50802
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 623ff5d14db6ae9cc5999aa184b81d6b22f4b201
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627250"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365007"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 Appelé par PresentationHost.exe pour obtenir des messages d’erreur et de progression personnalisée à partir de l’hôte, si implémenté.  
@@ -41,9 +41,9 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
  HRESULT : Ignoré.  
   
 ## <a name="remarks"></a>Notes  
- Une application hôte peut avoir un thème spécifique des interfaces utilisateur de PresentationHost.exe par défaut n’est peut-être pas conforme à. Si c’est le cas, l’application hôte peut implémenter [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md) pour retourner les interfaces utilisateur progression et erreur à PresentationHost.exe. PresentationHost.exe appellera toujours [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md) avant d’utiliser ses interfaces d’utilisateur par défaut.  
+ Une application hôte peut avoir un thème spécifique des interfaces utilisateur de PresentationHost.exe par défaut n’est peut-être pas conforme à. Si c’est le cas, l’application hôte peut implémenter [GetCustomUI](getcustomui.md) pour retourner les interfaces utilisateur progression et erreur à PresentationHost.exe. PresentationHost.exe appellera toujours [GetCustomUI](getcustomui.md) avant d’utiliser ses interfaces d’utilisateur par défaut.  
   
  Cette fonction est appelée une fois pendant l’initialisation de PresentationHost.  
   
 ## <a name="see-also"></a>Voir aussi
-- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+- [IWpfHostSupport](iwpfhostsupport.md)

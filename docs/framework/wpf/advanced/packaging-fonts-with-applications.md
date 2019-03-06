@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: a822167ae5b2758a889c61eed5270e5abb01f961
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: e66841fe72281bf0562b2ce50925a5c3a6bb9b54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583418"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378867"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetage de polices avec des applications
 Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des polices avec votre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.  
@@ -64,7 +64,7 @@ Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des poli
   
  L’exemple de code suivant montre comment référencer la police de l’application comme élément de contenu. L’élément de contenu référencé doit être dans le même répertoire que les fichiers d’assembly de l’application.  
   
- [!code-xaml[FontSnippets#FontPackageSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet8)]  
+ [!code-xaml[FontSnippets#FontPackageSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet8)]  
   
 <a name="adding_fonts_as_resource_items"></a>   
 ## <a name="adding-fonts-as-resource-items"></a>Ajout de polices comme éléments de ressource  
@@ -87,18 +87,18 @@ Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des poli
   
  L’exemple de balisage suivant indique comment référencer les ressources de police de l’application.  
   
- [!code-xaml[FontSnippets#FontPackageSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
+ [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
 ### <a name="referencing-font-resource-items-from-code"></a>Référencement d’éléments de ressource de police à partir du code  
  Pour référencer des éléments de ressource de police à partir du code, vous devez fournir une référence de ressource de police en deux parties : la base de [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; et la référence d’emplacement de police. Ces valeurs sont utilisées comme paramètres pour le <xref:System.Windows.Media.FontFamily.%23ctor%2A> (méthode). L’exemple de code suivant montre comment référencer les ressources de police de l’application dans le sous-répertoire de projet appelé `resources`.  
   
- [!code-csharp[FontSnippets#FontPackageSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
- [!code-vb[FontSnippets#FontPackageSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
+ [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
+ [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
  La base de [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] peut inclure le sous-répertoire d’application où se trouve la ressource de police. Dans ce cas, la référence d’emplacement de police serait inutile de spécifier un répertoire, mais doivent inclure un préfixe «`./`», ce qui indique la ressource de police est dans le même répertoire que celui spécifié par la base de [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]. L’exemple de code suivant montre une autre façon de référencer l’élément de ressource de police. Il est équivalent à l’exemple de code précédent.  
   
- [!code-csharp[FontSnippets#FontPackageSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
- [!code-vb[FontSnippets#FontPackageSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
+ [!code-csharp[FontSnippets#FontPackageSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
+ [!code-vb[FontSnippets#FontPackageSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
   
 ### <a name="referencing-fonts-from-the-same-application-subdirectory"></a>Référencement de polices à partir du même sous-répertoire d’application  
  Vous pouvez placer le contenu de l’application et les fichiers de ressources dans le même sous-répertoire défini par l’utilisateur de votre projet d’application. L’exemple de fichier projet suivant montre une page de contenu et des ressources de police définies dans le même sous-répertoire.  
@@ -115,21 +115,21 @@ Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des poli
   
  Comme le contenu de l’application et la police sont dans le même sous-répertoire, la référence de police est relative au contenu d’application. Les exemples suivants montrent comment référencer les ressources de police de l’application quand la police se trouve dans le même répertoire que l’application.  
   
- [!code-xaml[FontSnippets#FontPackageSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml#fontpackagesnippet3)]  
+ [!code-xaml[FontSnippets#FontPackageSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml#fontpackagesnippet3)]  
   
- [!code-csharp[FontSnippets#FontPackageSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml.cs#fontpackagesnippet4)]
- [!code-vb[FontSnippets#FontPackageSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
+ [!code-csharp[FontSnippets#FontPackageSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml.cs#fontpackagesnippet4)]
+ [!code-vb[FontSnippets#FontPackageSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
 ### <a name="enumerating-fonts-in-an-application"></a>Énumération des polices dans une application  
  Pour énumérer des polices comme éléments de ressource dans votre application, utilisez le <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> ou <xref:System.Windows.Media.Fonts.GetTypefaces%2A> (méthode). L’exemple suivant montre comment utiliser le <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> méthode pour retourner la collection de <xref:System.Windows.Media.FontFamily> objets à partir de l’emplacement de police d’application. Dans cet exemple, l’application contient un sous-répertoire nommé « Resources ».  
   
- [!code-csharp[FontSnippets#FontsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
- [!code-vb[FontSnippets#FontsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
+ [!code-csharp[FontSnippets#FontsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
+ [!code-vb[FontSnippets#FontsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
   
  L’exemple suivant montre comment utiliser le <xref:System.Windows.Media.Fonts.GetTypefaces%2A> méthode pour retourner la collection de <xref:System.Windows.Media.Typeface> objets à partir de l’emplacement de police d’application. Dans cet exemple, l’application contient un sous-répertoire nommé « Resources ».  
   
- [!code-csharp[FontSnippets#FontsSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
- [!code-vb[FontSnippets#FontsSnippet7](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
+ [!code-csharp[FontSnippets#FontsSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
+ [!code-vb[FontSnippets#FontsSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
   
 <a name="creating_a_font_resource_library"></a>   
 ## <a name="creating-a-font-resource-library"></a>Création d’une bibliothèque de ressources de police  
@@ -151,10 +151,10 @@ Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des poli
 ### <a name="referencing-a-font-in-a-resource-library"></a>Référencement d’une police dans une bibliothèque de ressources  
  Pour référencer une police dans une bibliothèque de ressources à partir de votre application, vous devez faire précéder la référence de police du nom de l’assembly de bibliothèque. Dans cet exemple, l’assembly de ressource de police est « FontLibrary ». Pour séparer le nom de l’assembly de la référence dans l’assembly, utilisez un caractère « ; ». L’ajout du mot clé « Component » suivi de la référence au nom de la police complète la référence aux ressources de la bibliothèque de polices. L’exemple de code suivant indique comment référencer une police dans un assembly de bibliothèque de ressources.  
   
- [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
+ [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  Ce SDK contient un jeu d’exemples [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] les polices que vous pouvez utiliser avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications. Les polices sont définies dans une bibliothèque de ressources uniquement. Pour plus d’informations, consultez [Exemple de pack de polices OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).  
+>  Ce SDK contient un jeu d’exemples [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] les polices que vous pouvez utiliser avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications. Les polices sont définies dans une bibliothèque de ressources uniquement. Pour plus d’informations, consultez [Exemple de pack de polices OpenType](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Limitations de l’utilisation des polices  
@@ -177,5 +177,5 @@ Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des poli
 - <xref:System.Windows.Media.FontFamily>
 - [Typographie Microsoft : Des liens, des actualités et des Contacts](https://docs.microsoft.com/typography/)
 - [Spécification OpenType](https://www.microsoft.com/typography/otspec/)
-- [Fonctionnalités des polices OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
-- [Exemple de pack de polices OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+- [Fonctionnalités des polices OpenType](opentype-font-features.md)
+- [Exemple de pack de polices OpenType](sample-opentype-font-pack.md)

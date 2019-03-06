@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036024"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362009"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>Rendre une image plus facile à déboguer dans .NET
 
@@ -34,7 +34,7 @@ Dans certains cas, vous pouvez changer le comportement du compilateur JIT afin q
 
 Par exemple, si l’assembly que vous souhaitez déboguer est appelé *MyApp.exe*, vous pouvez ensuite créer un fichier texte nommé *MyApp.ini*, dans le même dossier que *MyApp.exe*, qui contient Ces trois lignes :
 
-```txt
+```ini
 [.NET Framework Debugging Control]
 GenerateTrackingInfo=1
 AllowOptimize=0
@@ -51,7 +51,7 @@ Pour une version commerciale, les compilateurs ne définissent les **DebuggableA
 **DebuggableAttribute** s’applique à la totalité d’un assembly, et non pas à des modules individuels dans l’assembly. Les outils de développement doivent donc attacher des attributs personnalisés au jeton de métadonnées de l’assembly si un assembly a déjà été créé, ou à la classe appelée **System.Runtime.CompilerServices.AssemblyAttributesGoHere**. L’outil ALink promeut ensuite ces **DebuggableAttribute** attributs à partir de chaque module à l’assembly qu’ils deviennent une partie de. S’il existe un conflit, l’opération ALink échoue.
 
 > [!NOTE]
-> Dans la version 1.0 du .NET Framework, le compilateur Microsoft Visual C++ ajoute **DebuggableAttribute** quand les options du compilateur **/clr** et **/Zi** sont spécifiées. Dans la version 1.1 du .NET Framework, vous devez ajouter **DebugabbleAttribute** manuellement dans votre code ou en utilisant l’option de l’éditeur de liens **/ASSEMBLYDEBUG**.
+> Dans la version 1.0 du .NET Framework, le compilateur Microsoft Visual C++ ajoute **DebuggableAttribute** quand les options du compilateur **/clr** et **/Zi** sont spécifiées. Dans la version 1.1 du .NET Framework, vous devez ajouter le **DebuggableAttribute** manuellement dans votre code ou en utilisant le **/ASSEMBLYDEBUG** option de l’éditeur de liens.
 
 ## <a name="see-also"></a>Voir aussi
 

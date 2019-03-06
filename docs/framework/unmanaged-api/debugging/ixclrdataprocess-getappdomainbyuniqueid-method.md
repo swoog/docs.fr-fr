@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: cf610e3af26c60dd9bf738bff8785890394d0f34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4226bd73c7ae0c1faf510ed63b644116b064fb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710272"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375075"
 ---
 # <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess::GetAppDomainByUniqueId Method
 
@@ -36,10 +36,13 @@ HRESULT GetAppDomainByUniqueID(
 );
 ```
 
-### <a name="parameters"></a>Paramètres
-`id` [in] L’identificateur unique du domaine d’application
+## <a name="parameters"></a>Paramètres
 
-`appDomain` [out] Le domaine d’application
+`id`\
+[in] L’identificateur unique du domaine d’application
+
+`appDomain`\
+[out] Le domaine d’application
 
 ## <a name="remarks"></a>Notes
 
@@ -52,5 +55,5 @@ La méthode fournie fait partie de la `IXCLRDataProcess` interface et correspond
 **Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Voir aussi
-- [Débogage](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interface de IXCLRDataProcess](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Débogage](index.md)
+- [Interface de IXCLRDataProcess](ixclrdataprocess-interface.md)

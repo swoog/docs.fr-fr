@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
-ms.openlocfilehash: df22dcbc64bff95e2263ba11195146622b9d58cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550135"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351656"
 ---
 # <a name="window-management-how-to-topics"></a>Rubriques de procédures de gestion de fenêtre
 Les rubriques suivantes montrent comment gérer [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Redimensionner automatiquement une fenêtre en fonction de son contenu](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [Obtenir toutes les fenêtres dans une application](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [Obtenir et définir la fenêtre principale de l’application](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [Ouvrir une boîte de dialogue](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [Ouvrir une boîte de message](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [Ouvrir une fenêtre](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [Retourner un résultat de boîte de dialogue](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+ [Redimensionner automatiquement une fenêtre en fonction de son contenu](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [Obtenir toutes les fenêtres dans une application](how-to-get-all-windows-in-an-application.md)  
+  [Obtenir et définir la fenêtre principale de l’application](how-to-get-and-set-the-main-application-window.md)  
+  [Ouvrir une boîte de dialogue](how-to-open-a-dialog-box.md)  
+  [Ouvrir une boîte de message](how-to-open-a-message-box.md)  
+  [Ouvrir une fenêtre](how-to-open-a-window.md)  
+  [Retourner un résultat de boîte de dialogue](how-to-return-a-dialog-box-result.md)  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Vue d’ensemble de la gestion d’applications](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [Vue d’ensemble de la gestion d’applications](application-management-overview.md)  
   
- [Vue d’ensemble de la navigation](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [Vue d’ensemble de la navigation](navigation-overview.md)  
   
- [Hébergement](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+ [Hébergement](hosting-wpf-applications.md)  
   
- [Génération et déploiement d’applications WPF](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Génération et déploiement d’applications WPF](building-and-deploying-wpf-applications.md)

@@ -7,30 +7,30 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 1b3e0409c438fc5a6b69fea19cd55cbeb72d74b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d99528dcfbf2229b57e81f9dedc5bc0aa50c5b75
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589916"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375211"
 ---
 # <a name="textbox-how-to-topics"></a>Rubriques "Comment utiliser le TextBox"
 Cette section fournit des exemples qui montrent comment accomplir des tâches courantes à l’aide de la <xref:System.Windows.Controls.TextBox> contrôle.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Créer un contrôle TextBox multiligne](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
- [Détecter la modification du texte figurant dans un TextBox](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [Activer des tabulations dans un contrôle TextBox](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
- [Obtenir une collection de lignes à partir d'un TextBox](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [Mettre un contrôle TextBox en lecture seule](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
- [Positionner le curseur au début ou à la fin du texte dans un contrôle TextBox](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [Récupérer une sélection de texte](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
- [Définir le focus dans un contrôle TextBox](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
- [Définir le texte d’un contrôle TextBox](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
- [Activer la vérification de l'orthographe dans un contrôle d'édition de texte](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [Utiliser un menu contextuel personnalisé avec un TextBox](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [Utiliser la vérification de l'orthographe avec un menu contextuel](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
- [Ajouter un filigrane à un TextBox](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
+ [Créer un contrôle TextBox multiligne](how-to-create-a-multiline-textbox-control.md)  
+ [Détecter la modification du texte figurant dans un TextBox](how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [Activer des tabulations dans un contrôle TextBox](how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [Obtenir une collection de lignes à partir d'un TextBox](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [Mettre un contrôle TextBox en lecture seule](how-to-make-a-textbox-control-read-only.md)  
+ [Positionner le curseur au début ou à la fin du texte dans un contrôle TextBox](position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [Récupérer une sélection de texte](how-to-retrieve-a-text-selection.md)  
+ [Définir le focus dans un contrôle TextBox](how-to-set-focus-in-a-textbox-control.md)  
+ [Définir le texte d’un contrôle TextBox](how-to-set-the-text-content-of-a-textbox-control.md)  
+ [Activer la vérification de l'orthographe dans un contrôle d'édition de texte](how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [Utiliser un menu contextuel personnalisé avec un TextBox](how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [Utiliser la vérification de l'orthographe avec un menu contextuel](how-to-use-spell-checking-with-a-context-menu.md)  
+ [Ajouter un filigrane à un TextBox](how-to-add-a-watermark-to-a-textbox.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.TextBox>  
@@ -43,4 +43,4 @@ Cette section fournit des exemples qui montrent comment accomplir des tâches co
   
 ## <a name="see-also"></a>Voir aussi
 - [Exemple de galerie de contrôles WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [Styles et modèles TextBox](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+- [Styles et modèles TextBox](textbox-styles-and-templates.md)

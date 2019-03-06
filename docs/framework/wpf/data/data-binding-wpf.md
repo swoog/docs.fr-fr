@@ -7,22 +7,22 @@ helpviewer_keywords:
 - data binding [WPF]
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
-ms.openlocfilehash: 441f14b09e3bd3ed745d38645ec23b9d040d419b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555774"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375192"
 ---
 # <a name="data-binding-wpf"></a>Liaison de données (WPF)
-Liaison de données Windows Presentation Foundation (WPF) fournit un moyen simple et cohérent aux applications de présenter et d’interagir avec les données. Éléments peuvent être liés aux données à partir de diverses sources de données sous la forme d’objets common language runtime (CLR) et XML.  
+Liaison de données de Windows Presentation Foundation (WPF) offre un moyen simple et cohérent pour les applications de présenter et d’interagir avec les données. Éléments peuvent être liés aux données à partir de diverses sources de données sous la forme d’objets common language runtime (CLR) et XML.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Vue d'ensemble des sources de liaison](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Vue d’ensemble des modèles de données](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Vue d'ensemble des déclarations de liaison](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Vue d’ensemble de la liaison de données](data-binding-overview.md)  
+ [Vue d'ensemble des sources de liaison](binding-sources-overview.md)  
+ [Vue d’ensemble des modèles de données](data-templating-overview.md)  
+ [Vue d'ensemble des déclarations de liaison](binding-declarations-overview.md)  
+ [Rubriques de guide pratique](data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Data>  
@@ -34,8 +34,8 @@ Liaison de données Windows Presentation Foundation (WPF) fournit un moyen simpl
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Glisser-déposer](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Glisser-déposer](../advanced/drag-and-drop.md)  
   
- [Liaison de données](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Liaison de données](../advanced/optimizing-performance-data-binding.md)  
   
- [Procédure pas à pas : mise en cache de données d’application dans une application WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [Procédure pas à pas : La mise en cache des données d’Application dans une Application WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

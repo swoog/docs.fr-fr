@@ -3,11 +3,11 @@ title: <security> de <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 ms.openlocfilehash: 0de9ade585a2170aa1def9898581aedddc651bd7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258449"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366086"
 ---
 # <a name="security-of-wshttpbinding"></a>\<sécurité > de \<wsHttpBinding >
 Représente les fonctionnalités de sécurité de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -67,7 +67,7 @@ Représente les fonctionnalités de sécurité de la [ \<wsHttpBinding >](../../
 |[\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Liaison sécurisée pour les applications de transport HTTP.|  
   
 ## <a name="remarks"></a>Notes  
- La classe WSHttpBinding est conçue pour interagir avec les services qui implémentent les spécifications WS-*. La sécurité de transport de cette liaison correspond à Secure Sockets Layer (SSL) sur HTTP, c’est-à-dire à HTTPS.  
+ La classe WSHttpBinding est conçue pour interagir avec les services qui implémentent les spécifications WS-*. La sécurité de transport de cette liaison correspond à Secure Sockets Layer (SSL) sur HTTP, c'est-à-dire à HTTPS.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.ServiceModel.WSHttpSecurity>

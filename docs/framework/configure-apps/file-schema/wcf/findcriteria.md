@@ -3,11 +3,11 @@ title: <findCriteria>
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
 ms.openlocfilehash: e82312cb17fbd3f76f781ea37f761e946319a0a0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284858"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351852"
 ---
 # <a name="findcriteria"></a>\<findCriteria>
 Élément de configuration qui fournit un jeu de critères utilisé par une application cliente pour rechercher un service de découverte. Critères peuvent être regroupées en critères de recherche (spécifiant les services que vous recherchez) et recherchez les critères d’arrêt (la durée pendant laquelle la recherche doit durer).  
@@ -58,7 +58,7 @@ ms.locfileid: "55284858"
 |Élément|Description|  
 |-------------|-----------------|  
 |[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Une collection d’éléments de configuration qui contiennent les noms de types de contrat de service de workflow.|  
-|\<extensions > de \<findCriteria >|Collection d’objets d’élément XML qui fournissent des extensions.|  
+|\<extensions > de \<findCriteria >|Collection d'objets d'élément XML qui fournissent des extensions.|  
 |[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Collection d’objets qui contiennent des URI absolus utilisés pendant une opération de recherche afin de localiser des services ou un service particulier.<br /><br /> Si le service particulier est trouvé, une correspondance réussie est établie entre l'URI de service et l'URI de portée, parfois à l'aide de règles de portée qui gèrent les problèmes de correspondance.|  
   
 ### <a name="parent-elements"></a>Éléments parents  

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - layout [WPF], Panel control
 - Panel control [WPF]
 ms.assetid: 792943c5-335d-49dd-aa5b-ec1582a10088
-ms.openlocfilehash: 0d76883621b07a3049895e4577516e9362720896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6471aebf4a510c63084f8da733fb3dfe2300c1aa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554922"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367594"
 ---
 # <a name="panel"></a>Volet
-<xref:System.Windows.Controls.Panel> est la classe de base pour tous les éléments qui prennent en charge la disposition de l’application dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+<xref:System.Windows.Controls.Panel> est la classe de base pour tous les éléments qui prennent en charge de la disposition de l’application dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble de Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+ [Vue d’ensemble de Panel](panels-overview.md)  
+ [Rubriques de guide pratique](panel-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ ms.locfileid: "33554922"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Disposition](../advanced/layout.md)  
   
- [Procédure pas à pas : ma première application de bureau WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Vue d’ensemble de ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Vue d’ensemble de ScrollViewer](scrollviewer-overview.md)

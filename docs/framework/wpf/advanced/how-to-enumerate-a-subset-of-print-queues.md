@@ -9,12 +9,12 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: e1cbd9e7332a5e021e1cf9fba75f6d21ae01582b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cdd0ebeb03d078a952dd9ffe4d2ed7590417054
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558564"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359482"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Procédure : Énumérer un sous-ensemble de files d'attente à l'impression
 Une situation courante rencontrée par les professionnels de l’informatique (IT) gère un ensemble d’échelle de la société des imprimantes consiste à générer une liste des imprimantes présentant certaines caractéristiques. Cette fonctionnalité est fournie par le <xref:System.Printing.PrintServer.GetPrintQueues%2A> méthode d’un <xref:System.Printing.PrintServer> objet et le <xref:System.Printing.EnumeratedPrintQueueTypes> énumération.  
@@ -28,9 +28,9 @@ Une situation courante rencontrée par les professionnels de l’informatique (I
   
  Enfin, les résultats sont présentés à l’utilisateur.  
   
- [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
- [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
- [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
+ [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
+ [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
+ [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
  Vous pouvez étendre cet exemple en ayant la `foreach` boucle qui parcourt chaque file d’attente d’impression faire davantage de filtrage. Par exemple, vous pourriez filtrer les imprimantes qui ne prennent pas en charge impression recto-verso en demandant à l’appel de la boucle chaque file d’attente à l’impression <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> (méthode) et test, la valeur retournée pour la présence de l’impression recto verso.  
   
@@ -41,6 +41,6 @@ Une situation courante rencontrée par les professionnels de l’informatique (I
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
-- [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Vue d’ensemble de l’impression](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documents dans WPF](documents-in-wpf.md)
+- [Vue d’ensemble de l’impression](printing-overview.md)
 - [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

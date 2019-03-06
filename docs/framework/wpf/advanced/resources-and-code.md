@@ -11,15 +11,15 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: ff259dae06ef7347dd9fa3afbab68ae67e9146a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725521"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367976"
 ---
 # <a name="resources-and-code"></a>Ressources et code
-Cette présentation décrit comment accéder aux ressources [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ou les créer à l’aide de code au lieu de la syntaxe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Pour plus d’informations sur l’utilisation générale des ressources et sur les ressources du point de vue de la syntaxe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consultez [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+Cette présentation décrit comment accéder aux ressources [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ou les créer à l’aide de code au lieu de la syntaxe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Pour plus d’informations sur l’utilisation générale des ressources et sur les ressources du point de vue de la syntaxe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consultez [Ressources XAML](xaml-resources.md).  
   
   
   
@@ -29,8 +29,8 @@ Cette présentation décrit comment accéder aux ressources [!INCLUDE[TLA#tla_wi
   
  Voici un bref exemple de code qui recherche une ressource par clé et utilise la valeur retournée pour définir une propriété, implémentée comme un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Gestionnaire d’événements.  
   
- [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
- [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
+ [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
+ [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
   
  Une autre méthode pour l’affectation d’une référence de ressource est <xref:System.Windows.FrameworkElement.SetResourceReference%2A>. Cette méthode accepte deux paramètres : la clé de la ressource et l’identificateur d’une propriété de dépendance particulière présente sur l’instance de l’élément auquel la valeur de ressource doit être assignée. En pratique, cette méthode est la même et a l’avantage de ne pas nécessiter de cast des valeurs de retour.  
   
@@ -44,8 +44,8 @@ Cette présentation décrit comment accéder aux ressources [!INCLUDE[TLA#tla_wi
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>Utilisation d’objets comme clés  
- Dans la plupart des cas d’utilisation de ressources, la clé de la ressource est une chaîne. Toutefois, diverses fonctionnalités [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’utilisent pas délibérément le type chaîne pour spécifier des clés, mais définissent ce paramètre sur un objet. Vous avez la possibilité d’indexer une ressource à l’aide d’un objet grâce à la prise en charge des thèmes et des styles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Les styles des thèmes qui deviennent le style par défaut pour un contrôle sans style sont indexés chacun par le <xref:System.Type> du contrôle auquel ils doivent s’appliquer à. L’indexation par le type est un mécanisme de recherche fiable qui fonctionne sur les instances par défaut de chaque type de contrôle, et le type peut être détecté par réflexion et utilisé pour appliquer un style aux classes dérivées, même si le type dérivé n’a aucun style par défaut. Vous pouvez spécifier un <xref:System.Type> clés pour une ressource définie dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] à l’aide de la [x : Type Markup Extension](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Des extensions similaires dans d’autres cas d’utilisation de clé non-chaîne prennent en charge des fonctionnalités [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], comme l’[extension de balisage ComponentResourceKey](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  
+ Dans la plupart des cas d’utilisation de ressources, la clé de la ressource est une chaîne. Toutefois, diverses fonctionnalités [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’utilisent pas délibérément le type chaîne pour spécifier des clés, mais définissent ce paramètre sur un objet. Vous avez la possibilité d’indexer une ressource à l’aide d’un objet grâce à la prise en charge des thèmes et des styles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Les styles des thèmes qui deviennent le style par défaut pour un contrôle sans style sont indexés chacun par le <xref:System.Type> du contrôle auquel ils doivent s’appliquer à. L’indexation par le type est un mécanisme de recherche fiable qui fonctionne sur les instances par défaut de chaque type de contrôle, et le type peut être détecté par réflexion et utilisé pour appliquer un style aux classes dérivées, même si le type dérivé n’a aucun style par défaut. Vous pouvez spécifier un <xref:System.Type> clés pour une ressource définie dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] à l’aide de la [x : Type Markup Extension](../../xaml-services/x-type-markup-extension.md). Des extensions similaires dans d’autres cas d’utilisation de clé non-chaîne prennent en charge des fonctionnalités [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], comme l’[extension de balisage ComponentResourceKey](componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Ressources XAML](xaml-resources.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 7f619985e909b772d8c7b86d8393341999288cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496911"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373385"
 ---
 # <a name="inline-styles-and-templates"></a>Modèles et styles intralignes
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fournit des <xref:System.Windows.Style> objets et les objets de modèle (<xref:System.Windows.FrameworkTemplate> sous-classes) comme un moyen de définir l’apparence visuelle d’un élément dans les ressources, afin qu’ils peuvent être utilisés plusieurs fois. Pour cette raison, les attributs dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] qui prennent les types <xref:System.Windows.Style> et <xref:System.Windows.FrameworkTemplate> presque toujours font référence aux styles et modèles existant des ressources plutôt que définir de nouveaux inline.  
@@ -34,7 +34,7 @@ ms.locfileid: "54496911"
   
  En général il n’existe aucune raison pour définir un style ou un modèle en ligne, même si vous comptez utiliser uniquement ce style ou modèle à cet emplacement. La plupart des éléments qui peuvent prendre un style ou un modèle prennent également en charge une propriété de contenu et un modèle de contenu. Si vous utilisez uniquement l’arborescence logique vous créez dans un style ou de la création de modèles, il serait encore plus facile de renseigner simplement cette propriété de contenu avec les éléments enfants équivalents dans le balisage direct. Cela permettrait de contourner les mécanismes de style et de modèle complètement.  
   
- Autres syntaxes activées par les extensions de balisage qui retournent un objet sont également possibles pour les styles et modèles. Deux extensions des scénarios possibles incluent [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) et <xref:System.Windows.Data.Binding>.  
+ Autres syntaxes activées par les extensions de balisage qui retournent un objet sont également possibles pour les styles et modèles. Deux extensions des scénarios possibles incluent [TemplateBinding](templatebinding-markup-extension.md) et <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)

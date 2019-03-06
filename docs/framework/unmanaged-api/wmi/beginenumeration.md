@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695723"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369290"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration, fonction
 Réinitialise l’énumérateur au début de l’énumération.  
@@ -40,12 +40,13 @@ HRESULT BeginEnumeration (
 
 ## <a name="parameters"></a>Paramètres
 
-`vFunc`  
+`vFunc`\
 [in] Ce paramètre n’est pas utilisé.
 
-`ptr` [in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
+`ptr`\
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
-`lEnumFlags`  
+`lEnumFlags`\
 [in] Une combinaison au niveau du bit des indicateurs ou des valeurs décrites dans le [notes](#remarks) section qui contrôle les propriétés incluses dans l’énumération.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -105,4 +106,5 @@ Constante  |Value  |Description  |
  **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [WMI et compteurs de performances (référence des API non managées)](index.md)

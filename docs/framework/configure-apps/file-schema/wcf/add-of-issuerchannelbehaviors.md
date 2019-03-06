@@ -2,58 +2,62 @@
 title: <add> de <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 65c76cba696ae388d6184eaaa70a1f2f5a301e1c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5c9937cb6302a194228461f3e2e06ecdf4d43269
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271792"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377753"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<add> of \<issuerChannelBehaviors>
-Ajoute un comportement de point de terminaison à utiliser lors de la communication avec un service STS.  
-  
+
+Ajoute un comportement de point de terminaison à utiliser lors de la communication avec un service STS.
+
 > [!NOTE]
->  Si un comportement de point de terminaison contient un [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) élément, une exception sera levée.  
-  
- \<system.ServiceModel>  
-\<behaviors>  
-section d’endpointBehaviors  
-\<behavior>  
-\<clientCredentials>  
-\<issuedToken>  
-\<issuerChannelBehaviors > élément  
-\<add>  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```xml  
+> Si un comportement de point de terminaison contient un [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) élément, une exception sera levée.
+
+\<system.ServiceModel>\
+\<behaviors>\
+section d’endpointBehaviors \<comportement > \
+\<clientCredentials>\
+\<issuedToken>\
+\<issuerChannelBehaviors > Element\
+\<add>
+
+## <a name="syntax"></a>Syntaxe
+
+```xml
 <add issuerAddress="string"
-     behaviorConfiguraton="string" />
-```  
-  
-## <a name="attributes-and-elements"></a>Attributs et éléments  
- Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
-  
-### <a name="attributes"></a>Attributs  
-  
-|Attribut|Description|  
-|---------------|-----------------|  
-|issuerAddress|URI de l'émetteur de jeton de sécurité avec lequel communiquer.|  
-|behaviorConfiguration|Nom d'un comportement de point de terminaison défini dans le même fichier de configuration.|  
-  
-### <a name="child-elements"></a>Éléments enfants  
- Aucun.  
-  
-### <a name="parent-elements"></a>Éléments parents  
-  
-|Élément|Description|  
-|-------------|-----------------|  
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Contient une collection de comportements de point de terminaison de client Windows Communication Foundation (WCF) à utiliser lors de la communication avec les Services de jeton spécifiés.|  
-  
-## <a name="remarks"></a>Notes  
- `issuerAddress` contient l'URI du service d'émission de jeton de sécurité avec lequel le client souhaite communiquer. `behaviorConfiguration` pointe vers un comportement de point de terminaison que l’application utilise dans les canaux créés par Windows Communication Foundation (WCF) pour obtenir les jetons émis à partir des Services de jeton de sécurité.  
-  
+     behaviorConfiguration="string" />
+```
+
+## <a name="attributes-and-elements"></a>Attributs et éléments
+
+Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.
+
+### <a name="attributes"></a>Attributs
+
+|Attribut|Description|
+|---------------|-----------------|
+|issuerAddress|URI de l'émetteur de jeton de sécurité avec lequel communiquer.|
+|behaviorConfiguration|Nom d'un comportement de point de terminaison défini dans le même fichier de configuration.|
+
+### <a name="child-elements"></a>Éléments enfants
+
+Aucun.
+
+### <a name="parent-elements"></a>Éléments parents
+
+|Élément|Description|
+|-------------|-----------------|
+|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Contient une collection de comportements de point de terminaison de client Windows Communication Foundation (WCF) à utiliser lors de la communication avec les Services de jeton spécifiés.|
+
+## <a name="remarks"></a>Notes
+
+`issuerAddress` contient l'URI du service d'émission de jeton de sécurité avec lequel le client souhaite communiquer. `behaviorConfiguration` pointe vers un comportement de point de terminaison que l’application utilise dans les canaux créés par Windows Communication Foundation (WCF) pour obtenir les jetons émis à partir des Services de jeton de sécurité.
+
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>

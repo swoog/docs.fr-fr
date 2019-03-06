@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 82d2a055f6780c81c601665f8c3403d9d95c85df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492571"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356479"
 ---
 # <a name="drag-and-drop-overview"></a>Vue d'ensemble du glisser-déplacer
 Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplacer dans les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Le glisser-déplacer fait généralement référence à une méthode de transfert de données qui implique l'utilisation d'une souris (ou d'un autre dispositif de pointage) pour sélectionner un ou plusieurs objets, les faire glisser vers une cible de déplacement souhaitée dans l'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] et les y déplacer.  
@@ -50,7 +50,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
  Dans une opération de copier-coller, le presse-papiers du système est utilisé pour stocker temporairement les données transférées ; dans une opération de glisser-déplacer, <xref:System.Windows.DataObject> est utilisé pour stocker les données. Par concept, un objet de données se compose d'une ou plusieurs paires de <xref:System.Object> qui contient les données réelles et un identificateur de format de données correspondant.  
   
- La source de glissement initie l'opération de glisser-déplacer en appelant la méthode statique <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> et en lui passant les données transférées. La méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> inclut automatiquement les données d'un <xref:System.Windows.DataObject> dans un wrapper, si nécessaire. Pour mieux contrôler le format de données, vous pouvez inclure les données d'un <xref:System.Windows.DataObject> dans un wrapper avant de les passer à la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. La cible de déplacement est chargée d'extraire les données du <xref:System.Windows.DataObject>. Pour plus d’informations sur l’utilisation des objets de données, consultez [Données et objets de données](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ La source de glissement initie l'opération de glisser-déplacer en appelant la méthode statique <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> et en lui passant les données transférées. La méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> inclut automatiquement les données d'un <xref:System.Windows.DataObject> dans un wrapper, si nécessaire. Pour mieux contrôler le format de données, vous pouvez inclure les données d'un <xref:System.Windows.DataObject> dans un wrapper avant de les passer à la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. La cible de déplacement est chargée d'extraire les données du <xref:System.Windows.DataObject>. Pour plus d’informations sur l’utilisation des objets de données, consultez [Données et objets de données](data-and-data-objects.md).  
   
  La source et la cible d'une opération de glisser-déplacer sont des éléments d'interface utilisateur ; cependant, les données réellement transférées ne sont généralement pas représentées visuellement. Vous pouvez écrire du code pour fournir une représentation visuelle des données déplacées, à l'instar de ce qui se produit quand vous faites glisser des fichiers dans l'Explorateur Windows. Par défaut, l'utilisateur est tenu au courant de l'effet de son action par la modification du curseur, par la représentation de l'effet que l'opération de glisser-déplacer aura sur les données si ces dernières sont déplacées ou copiées.  
   
@@ -63,7 +63,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
 <a name="Drag_and_Drop_Events"></a>   
 ## <a name="drag-and-drop-events"></a>Événements de glisser-déplacer  
- Les opérations de glisser-déplacer prennent en charge un modèle piloté par les événements.  La source du glissement et la cible du déplacement utilisent toutes deux un ensemble standard d'événements pour gérer les opérations de glisser-déplacer.  Les tableaux suivants résument les événements de glisser-déplacer standard. Il s'agit d'événements attachés de la classe <xref:System.Windows.DragDrop>. Pour plus d’informations sur les événements attachés, consultez [Vue d’ensemble des événements attachés](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Les opérations de glisser-déplacer prennent en charge un modèle piloté par les événements.  La source du glissement et la cible du déplacement utilisent toutes deux un ensemble standard d'événements pour gérer les opérations de glisser-déplacer.  Les tableaux suivants résument les événements de glisser-déplacer standard. Il s'agit d'événements attachés de la classe <xref:System.Windows.DragDrop>. Pour plus d’informations sur les événements attachés, consultez [Vue d’ensemble des événements attachés](attached-events-overview.md).  
   
 ### <a name="drag-source-events"></a>Événements de la source du glissement  
   
@@ -87,7 +87,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
 |<xref:System.Windows.DragDrop.PreviewDragOver>|Version de tunneling de <xref:System.Windows.DragDrop.DragOver>.|  
 |<xref:System.Windows.DragDrop.PreviewDrop>|Version de tunneling de <xref:System.Windows.DragDrop.Drop>.|  
   
- Pour gérer les événements de glisser-déplacer des instances d'un objet, ajoutez des gestionnaires pour les événements répertoriés dans les tableaux précédents. Pour gérer des événements de glisser-déplacer au niveau de la classe, substituez les méthodes virtuelles On*Event et On\*PreviewEvent correspondantes. Pour plus d’informations, consultez [Gestion de classe des événements routés par les classes de base de contrôle](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
+ Pour gérer les événements de glisser-déplacer des instances d'un objet, ajoutez des gestionnaires pour les événements répertoriés dans les tableaux précédents. Pour gérer des événements de glisser-déplacer au niveau de la classe, substituez les méthodes virtuelles On*Event et On\*PreviewEvent correspondantes. Pour plus d’informations, consultez [Gestion de classe des événements routés par les classes de base de contrôle](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
   
 <a name="Implementing_Drag_And_Drop"></a>   
 ## <a name="implementing-drag-and-drop"></a>Implémentation du glisser-déplacer  
@@ -103,7 +103,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
 -   Identifiez l'élément destiné à être la cible de glissement. Une cible de déplacement peut être un <xref:System.Windows.UIElement> ou un <xref:System.Windows.ContentElement>.  
   
--   Sur la cible de déplacement, attribuez la valeur <xref:System.Windows.UIElement.AllowDrop%2A> à la propriété `true`.  
+-   Sur la cible de déplacement, attribuez la valeur `true` à la propriété <xref:System.Windows.UIElement.AllowDrop%2A>.  
   
 -   Dans la cible de déplacement, créez un gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>  pour traiter les données déplacées.  
   
@@ -123,9 +123,9 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Exemple de glisser-déplacer  
- Cette section explique comment implémenter le glisser-déplacer pour un élément <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> est à la fois une source de glissement et une cible de déplacement. Les données transférées sont la représentation sous forme de chaîne de la propriété <xref:System.Windows.Shapes.Shape.Fill%2A> de l'ellipse. Le code XAML suivant illustre l'élément <xref:System.Windows.Shapes.Ellipse> et les événements de glisser-déplacer associés qu'il gère. Pour obtenir des instructions complètes sur la façon d’implémenter le glisser-déplacer, consultez [procédure pas à pas : L’activation de glisser-déplacer sur un contrôle utilisateur](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ Cette section explique comment implémenter le glisser-déplacer pour un élément <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> est à la fois une source de glissement et une cible de déplacement. Les données transférées sont la représentation sous forme de chaîne de la propriété <xref:System.Windows.Shapes.Shape.Fill%2A> de l'ellipse. Le code XAML suivant illustre l'élément <xref:System.Windows.Shapes.Ellipse> et les événements de glisser-déplacer associés qu'il gère. Pour obtenir des instructions complètes sur la façon d’implémenter le glisser-déplacer, consultez [procédure pas à pas : L’activation de glisser-déplacer sur un contrôle utilisateur](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
- [!code-xaml[DragDropSnippets#EllipseXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
+ [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Autoriser un élément à être une source de glissement  
  Un objet qui devient source de glissement est chargé des opérations suivantes :  
@@ -140,10 +140,10 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
  La source de glissement peut aussi fournir une rétroaction visuelle au sujet des actions autorisées (déplacement, copie, aucune) et peut annuler l'opération de glisser-déplacer en fonction d'autres entrées utilisateur, comme par exemple, appuyer sur la touche Échap durant l'opération de glissement.  
   
- Il revient à votre application de déterminer à quel moment une opération de glissement se produit et d'initier l'opération de glisser-déplacer en appelant la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Il s'agit en général d'un événement <xref:System.Windows.UIElement.MouseMove> qui se produit sur l'élément à faire glisser pendant que l'utilisateur appuie sur un bouton de la souris. L'exemple suivant montre comment initier une opération de glisser-déplacer à partir du gestionnaire d'événements<xref:System.Windows.UIElement.MouseMove><xref:System.Windows.Shapes.Ellipse> d'un élément   pour faire de ce dernier la source de glissement. Les données transférées sont la représentation sous forme de chaîne de la propriété <xref:System.Windows.Shapes.Shape.Fill%2A> de l'ellipse.  
+ Il revient à votre application de déterminer à quel moment une opération de glissement se produit et d'initier l'opération de glisser-déplacer en appelant la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Il s'agit en général d'un événement <xref:System.Windows.UIElement.MouseMove> qui se produit sur l'élément à faire glisser pendant que l'utilisateur appuie sur un bouton de la souris. L'exemple suivant montre comment initier une opération de glisser-déplacer à partir du gestionnaire d'événements <xref:System.Windows.UIElement.MouseMove> d'un élément <xref:System.Windows.Shapes.Ellipse>  pour faire de ce dernier la source de glissement. Les données transférées sont la représentation sous forme de chaîne de la propriété <xref:System.Windows.Shapes.Shape.Fill%2A> de l'ellipse.  
   
- [!code-csharp[DragDropSnippets#DoDragDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
- [!code-vb[DragDropSnippets#DoDragDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
+ [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
+ [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
   
  Dans le gestionnaire d'événements <xref:System.Windows.UIElement.MouseMove>, appelez la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> pour initier l'opération de glisser-déplacer. La méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> accepte trois paramètres :  
   
@@ -153,7 +153,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
 -   `allowedEffects` : une des valeurs d'énumération <xref:System.Windows.DragDropEffects> qui spécifie les effets autorisés de l'opération de glisser-déplacer.  
   
- N'importe quel objet sérialisable peut être passé dans le paramètre `data`. Si les données ne sont pas déjà incluses dans un wrapper dans un <xref:System.Windows.DataObject>, elles sont automatiquement incluses dans un wrapper dans un nouveau <xref:System.Windows.DataObject>. Pour passer plusieurs éléments de données, vous devez créer vous-même le <xref:System.Windows.DataObject> et le passer à la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Pour plus d’informations, consultez [Données et objets de données](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ N'importe quel objet sérialisable peut être passé dans le paramètre `data`. Si les données ne sont pas déjà incluses dans un wrapper dans un <xref:System.Windows.DataObject>, elles sont automatiquement incluses dans un wrapper dans un nouveau <xref:System.Windows.DataObject>. Pour passer plusieurs éléments de données, vous devez créer vous-même le <xref:System.Windows.DataObject> et le passer à la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Pour plus d’informations, consultez [Données et objets de données](data-and-data-objects.md).  
   
  Le paramètre `allowedEffects` est utilisé pour spécifier ce que la source du glissement autorise la cible du glissement à faire des données transférées. Les valeurs courantes pour une source de glissement sont <xref:System.Windows.DragDropEffects.Copy>, <xref:System.Windows.DragDropEffects.Move> et <xref:System.Windows.DragDropEffects.All>.  
   
@@ -180,7 +180,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
 -   de traiter les données déplacées.  
   
- Pour spécifier un élément en tant que cible de déplacement, attribuez la valeur <xref:System.Windows.UIElement.AllowDrop%2A> à la propriété `true`. Les événements de cible de déplacement seront ensuite déclenchés sur cet élément pour que vous puissiez les gérer. Pendant une opération de glisser-déplacer, la séquence d'événements suivante se produit sur la cible du déplacement :  
+ Pour spécifier un élément en tant que cible de déplacement, attribuez la valeur `true` à la propriété <xref:System.Windows.UIElement.AllowDrop%2A>. Les événements de cible de déplacement seront ensuite déclenchés sur cet élément pour que vous puissiez les gérer. Pendant une opération de glisser-déplacer, la séquence d'événements suivante se produit sur la cible du déplacement :  
   
 1.  <xref:System.Windows.DragDrop.DragEnter>  
   
@@ -192,32 +192,32 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
  L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter> pour un élément <xref:System.Windows.Shapes.Ellipse>. Ce code permet d'obtenir un aperçu des effets de l'opération de glisser-déplacer en enregistrant le pinceau <xref:System.Windows.Shapes.Shape.Fill%2A> actif. Il utilise ensuite la méthode <xref:System.Windows.DataObject.GetDataPresent%2A> pour vérifier que le <xref:System.Windows.DataObject> déplacé sur l'ellipse contient bien les données de chaîne qui peuvent être converties en <xref:System.Windows.Media.Brush>. Si tel est le cas, les données sont extraites à l'aide de la méthode <xref:System.Windows.DataObject.GetData%2A>. Elles sont ensuite converties en <xref:System.Windows.Media.Brush> avant d'être appliquées à l'ellipse. La modification peut être annulée dans le gestionnaire d'événements <xref:System.Windows.DragDrop.DragLeave>. Si les données ne peuvent pas être converties en <xref:System.Windows.Media.Brush>, aucune action n'est effectuée.  
   
- [!code-csharp[DragDropSnippets#DragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
- [!code-vb[DragDropSnippets#DragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
+ [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
+ [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  L'événement <xref:System.Windows.DragDrop.DragOver> se produit en continu pendant le déplacement des données sur la cible de déplacement. Cet événement est couplé à l'événement <xref:System.Windows.DragDrop.GiveFeedback> sur la source de glissement. Dans le gestionnaire d'événements <xref:System.Windows.DragDrop.DragOver>, les méthodes <xref:System.Windows.DataObject.GetDataPresent%2A> et <xref:System.Windows.DataObject.GetData%2A> sont généralement utilisées pour vérifier que les données transférées sont dans un format que la cible de déplacement peut traiter. Vous pouvez aussi vérifier si des touches de modification sont enfoncées, ce qui indique en général que l'utilisateur a l'intention d'opérer une copie ou un déplacement. Une fois ces vérifications effectuées, définissez la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> pour notifier la source de glissement de l'effet prévu du déplacement des données. La source de glissement reçoit ces informations dans les arguments de l'événement <xref:System.Windows.DragDrop.GiveFeedback> et peut définir un curseur approprié de façon à fournir une rétroaction visuelle.  
   
  L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.DragOver> d'un élément <xref:System.Windows.Shapes.Ellipse>. Ce code vérifie que le <xref:System.Windows.DataObject> déplacé sur l'ellipse contient bien des données de chaîne qui peuvent être converties en <xref:System.Windows.Media.Brush>. Si tel est le cas, il attribue à la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> la valeur <xref:System.Windows.DragDropEffects.Copy>. Cela indique à la source de glissement que les données peuvent être copiées vers l'ellipse. Si les données ne peuvent pas être converties en <xref:System.Windows.Media.Brush>, la propriété <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> prend la valeur <xref:System.Windows.DragDropEffects.None>. Cela indique à la source du glissement que l’ellipse n’est pas une cible de dépôt valide pour les données.  
   
- [!code-csharp[DragDropSnippets#DragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
- [!code-vb[DragDropSnippets#DragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
+ [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
+ [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  L'événement <xref:System.Windows.DragDrop.DragLeave> se produit quand les données sont glissées hors des limites de la cible sans être déplacées. Cet événement permet d'annuler toutes vos actions dans le gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter>.  
   
  L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.DragLeave> d'un élément <xref:System.Windows.Shapes.Ellipse>. Ce code annule l'aperçu fourni par le gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter> en appliquant le <xref:System.Windows.Media.Brush> enregistré à l'ellipse.  
   
- [!code-csharp[DragDropSnippets#DragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
- [!code-vb[DragDropSnippets#DragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
+ [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
+ [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
  L'événement <xref:System.Windows.DragDrop.Drop>  se produit quand les données sont déplacées sur la cible de déplacement ; par défaut, cela se produit quand le bouton de la souris est relâché. Dans le gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>, utilisez la méthode <xref:System.Windows.DataObject.GetData%2A> pour extraire les données transférées à partir du <xref:System.Windows.DataObject> et exécuter tout traitement de données requis par votre application. L'événement <xref:System.Windows.DragDrop.Drop> met fin à l'opération de glisser-déplacer.  
   
  L'exemple suivant illustre le gestionnaire d'événements <xref:System.Windows.DragDrop.Drop> d'un élément <xref:System.Windows.Shapes.Ellipse>. Ce code applique les effets de l'opération de glisser-déplacer et est similaire à celui du gestionnaire d'événements <xref:System.Windows.DragDrop.DragEnter>. Il vérifie que le <xref:System.Windows.DataObject> déplacé sur l'ellipse contient bien des données de chaîne qui peuvent être converties en <xref:System.Windows.Media.Brush>. Dans ce cas, le <xref:System.Windows.Media.Brush> est appliqué à l'ellipse. Si les données ne peuvent pas être converties en <xref:System.Windows.Media.Brush>, aucune action n'est effectuée.  
   
- [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
- [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
+ [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
+ [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Clipboard>
-- [Procédure pas à pas : L’activation de glisser-déplacer sur un contrôle utilisateur](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)
-- [Glisser-déposer](../../../../docs/framework/wpf/advanced/drag-and-drop.md)
+- [Procédure pas à pas : L’activation de glisser-déplacer sur un contrôle utilisateur](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Rubriques de guide pratique](drag-and-drop-how-to-topics.md)
+- [Glisser-déposer](drag-and-drop.md)

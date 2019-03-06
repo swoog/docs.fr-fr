@@ -9,21 +9,21 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: fef5cec4da09f8cd1a29cb9ebaccc83ee7c48311
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555813"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373463"
 ---
 # <a name="bitmap-effects"></a>Effets bitmap
 Les rubriques de cette section décrivent comment appliquer des effets visuels à des images bitmap à l’aide de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 > [!IMPORTANT]
->  Dans le [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ou version ultérieure, la <xref:System.Windows.Media.Effects.BitmapEffect> classe est obsolète. Si vous essayez d’utiliser le <xref:System.Windows.Media.Effects.BitmapEffect> (classe), vous obtiendrez une exception obsolète. L’alternative non obsolète pour le <xref:System.Windows.Media.Effects.BitmapEffect> classe est la <xref:System.Windows.Media.Effects.Effect> classe. Dans la plupart des cas, la <xref:System.Windows.Media.Effects.Effect> classe est considérablement plus rapide.  
+>  Dans le [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ou version ultérieure, la <xref:System.Windows.Media.Effects.BitmapEffect> classe est obsolète. Si vous essayez d’utiliser le <xref:System.Windows.Media.Effects.BitmapEffect> (classe), vous obtiendrez une exception obsolète. L’alternative non obsolète à la <xref:System.Windows.Media.Effects.BitmapEffect> classe est la <xref:System.Windows.Media.Effects.Effect> classe. Dans la plupart des cas, la <xref:System.Windows.Media.Effects.Effect> classe est beaucoup plus rapide.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble des effets bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ [Vue d’ensemble des effets bitmap](bitmap-effects-overview.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
@@ -31,6 +31,6 @@ Les rubriques de cette section décrivent comment appliquer des effets visuels �
  <xref:System.Windows.Media.Effects>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Graphiques et multimédia](index.md)  
   
- [Vue d’ensemble de la création d’images](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Vue d’ensemble de la création d’images](imaging-overview.md)

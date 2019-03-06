@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: dd480f7f9a4fec42aebc57fe0b9e61bd8993ee34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697034"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361354"
 ---
 # <a name="transformations-how-to-topics"></a>Rubriques "Comment" relatives aux transformations
 Les rubriques de cette section décrivent comment appliquer différentes transformations à des objets.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Appliquer une transformation à un élément lorsqu’un événement se produit](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [Apply Multiple Transforms to an Object](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md) (Appliquer plusieurs transformations à un objet)  
- [Mettre un élément en rotation](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
- [Faire pivoter un objet](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
- [Mettre à l'échelle un élément](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
- [Incliner un élément](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
- [Spécifier l'origine d'une transformation à l'aide de valeurs relatives](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [Translater un élément](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
- [Use a MatrixTransform to Create Custom Transforms](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md) (Utiliser la classe MatrixTransform pour créer des transformations personnalisées)  
+ [Appliquer une transformation à un élément lorsqu’un événement se produit](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [Apply Multiple Transforms to an Object](how-to-apply-multiple-transforms-to-an-object.md) (Appliquer plusieurs transformations à un objet)  
+ [Mettre un élément en rotation](how-to-make-an-element-spin-in-place.md)  
+ [Faire pivoter un objet](how-to-rotate-an-object.md)  
+ [Mettre à l'échelle un élément](how-to-scale-an-element.md)  
+ [Incliner un élément](how-to-skew-an-element.md)  
+ [Spécifier l'origine d'une transformation à l'aide de valeurs relatives](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [Translater un élément](how-to-translate-an-element.md)  
+ [Use a MatrixTransform to Create Custom Transforms](how-to-use-a-matrixtransform-to-create-custom-transforms.md) (Utiliser la classe MatrixTransform pour créer des transformations personnalisées)  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Media.Transform>
-- [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Disposition](../../../../docs/framework/wpf/advanced/layout.md)
+- [Graphiques et multimédia](index.md)
+- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Disposition](../advanced/layout.md)

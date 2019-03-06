@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: cd7c9c514c90a94e3329bec9614624ee399481ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523998"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351994"
 ---
 # <a name="property-change-events"></a>Événements de changement de propriété
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] définit plusieurs événements déclenchés en réponse au changement de la valeur d’une propriété. Souvent, la propriété est une propriété de dépendance. L’événement lui-même est parfois un événement routé et parfois un événement [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] standard. La définition de l’événement varie selon le scénario, car certains changements de propriété sont routés de façon plus appropriée à travers une arborescence d’éléments, tandis que d’autres changements de propriété ne concernent en général que l’objet sur lequel la propriété a changé.  
@@ -33,7 +33,7 @@ ms.locfileid: "54523998"
   
  Comme vous avez une ancienne valeur et une nouvelle valeur, vous pouvez également utiliser ce gestionnaire d’événements comme validateur de la valeur de propriété. Toutefois, la plupart des événements de changement de propriété ne sont pas conçus dans cet objectif. En règle générale, les valeurs sont fournies pour pouvoir agir sur ces valeurs dans d’autres zones logiques de votre code, mais nous ne recommandons pas de changer les valeurs dans le gestionnaire d’événements, car cela peut entraîner une récursivité involontaire selon la façon dont votre gestionnaire est implémenté.  
   
- Si la propriété est une propriété de dépendance personnalisée, ou si vous travaillez avec une classe dérivée où vous avez défini le code d’instanciation, il est un mécanisme beaucoup plus efficace pour le suivi des modifications de propriété qui est intégré à la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] système de propriétés : le rappels de système de propriétés <xref:System.Windows.CoerceValueCallback> et <xref:System.Windows.PropertyChangedCallback>. Pour plus d’informations sur l’utilisation du système de propriétés [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pour la validation et le forçage de type, consultez [Validation et rappels de propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) et [Propriétés de dépendance personnalisées](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Si la propriété est une propriété de dépendance personnalisée, ou si vous travaillez avec une classe dérivée où vous avez défini le code d’instanciation, il est un mécanisme beaucoup plus efficace pour le suivi des modifications de propriété qui est intégré à la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] système de propriétés : le rappels de système de propriétés <xref:System.Windows.CoerceValueCallback> et <xref:System.Windows.PropertyChangedCallback>. Pour plus d’informations sur l’utilisation du système de propriétés [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pour la validation et le forçage de type, consultez [Validation et rappels de propriétés de dépendance](dependency-property-callbacks-and-validation.md) et [Propriétés de dépendance personnalisées](custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>Événements DependencyPropertyChanged  
  Une autre paire de types qui font partie d’un scénario d’événement de modification de propriété est <xref:System.Windows.DependencyPropertyChangedEventArgs> et <xref:System.Windows.DependencyPropertyChangedEventHandler>. Les événements pour ces changements de propriété ne sont pas routés, ce sont des événements [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. <xref:System.Windows.DependencyPropertyChangedEventArgs> est un type de rapport, car il ne dérive pas de données événement inhabituel <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> est une structure, et non une classe.  
@@ -59,8 +59,8 @@ ms.locfileid: "54523998"
   
  Les déclencheurs de propriété sont généralement appropriés quand une ou plusieurs propriétés d’apparence doivent changer en fonction de l’état d’une autre propriété sur le même élément.  
   
- Pour plus d’informations sur les déclencheurs de propriété, consultez [Application d’un style et création de modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Pour plus d’informations sur les déclencheurs de propriété, consultez [Application d’un style et création de modèles](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des événements routés](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Vue d’ensemble des événements routés](routed-events-overview.md)
+- [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md)

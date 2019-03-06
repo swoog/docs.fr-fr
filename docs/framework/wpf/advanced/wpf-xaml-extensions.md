@@ -8,22 +8,22 @@ helpviewer_keywords:
 - markup extensions [WPF]
 - WPF Namespace [WPF]
 ms.assetid: 5e1d60e8-9403-47d0-98e4-b49aec871ee7
-ms.openlocfilehash: 72f0ab5e07e963951a477aaf44f08f0aff760df0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91416bba9c94c26cbc107e90c2f528d94600699c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546642"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371812"
 ---
 # <a name="wpf-xaml-extensions"></a>Extensions XAML WPF
 ## <a name="in-this-section"></a>Dans cette section  
- [Binding, extension de balisage](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
-  [ColorConvertedBitmap, extension de balisage](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
-  [ComponentResourceKey, extension de balisage](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
-  [Extension de balisage DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
-  [RelativeSource, extension de balisage](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
-  [StaticResource, extension de balisage](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
-  [TemplateBinding, extension de balisage](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
-  [ThemeDictionary, extension de balisage](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
-  [Syntaxe XAML PropertyPath](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
-  [PresentationOptions:Freeze, attribut](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+ [Binding, extension de balisage](binding-markup-extension.md)  
+  [ColorConvertedBitmap, extension de balisage](colorconvertedbitmap-markup-extension.md)  
+  [ComponentResourceKey, extension de balisage](componentresourcekey-markup-extension.md)  
+  [Extension de balisage DynamicResource](dynamicresource-markup-extension.md)  
+  [RelativeSource, extension de balisage](relativesource-markupextension.md)  
+  [StaticResource, extension de balisage](staticresource-markup-extension.md)  
+  [TemplateBinding, extension de balisage](templatebinding-markup-extension.md)  
+  [ThemeDictionary, extension de balisage](themedictionary-markup-extension.md)  
+  [Syntaxe XAML PropertyPath](propertypath-xaml-syntax.md)  
+  [PresentationOptions:Freeze, attribut](presentationoptions-freeze-attribute.md)

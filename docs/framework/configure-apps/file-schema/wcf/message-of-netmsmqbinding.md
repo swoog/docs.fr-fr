@@ -2,26 +2,27 @@
 title: <message> de <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 060c7dc07e53d0114241ac7528a24363e78715c6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 306bc56820cdbcba17cce9fc50d426260eb0e0d4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257176"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360665"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<message > de \<netMsmqBinding >
-Définit les paramètres de sécurité des messages SOAP sur cette liaison `netMsmqBinding`.  
-  
- \<system.ServiceModel>  
-\<bindings>  
-\<netMsmqBinding>  
-\<binding>  
-\<security>  
-\<message>  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```xml  
+
+Définit les paramètres de sécurité des messages SOAP sur cette liaison `netMsmqBinding`.
+
+\<system.ServiceModel>\
+\<bindings>\
+\<netMsmqBinding>\
+\<liaison > \
+\<sécurité > \
+\<message>
+
+## <a name="syntax"></a>Syntaxe
+
+```xml
 <netMsmqBinding>
   <binding>
     <security>
@@ -30,28 +31,31 @@ Définit les paramètres de sécurité des messages SOAP sur cette liaison `netM
     </security>
   </binding>
 </netMsmqBinding>
-```  
-  
-## <a name="attributes-and-elements"></a>Attributs et éléments  
- Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
-  
-### <a name="attributes"></a>Attributs  
-  
-|Attribut|Description|  
-|---------------|-----------------|  
-|algorithmSuite|Définit le chiffrement des messages et algorithmes de clé de type WRAP utilisés pour obtenir la sécurité basée sur des messages pour les messages envoyés via le transport MSMQ.<br /><br /> La valeur par défaut est `Aes256`. Cet attribut est de type <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
-|clientCredentialType|Spécifie le type d'information d'identification à utiliser lors de l'exécution de l'authentification du client pour les messages envoyés via le transport MSMQ. Les valeurs valides sont les suivantes :<br /><br /> -None : Permet au service d'interagir avec les clients anonymes. Ni le service ni le client n'exigent d'informations d'identification.<br />-Windows : Ainsi, les échanges SOAP d’être sous le contexte authentifié d’informations d’identification Windows. Exécute toujours une authentification basée sur Kerberos.<br />-   UserName: Cela permet au service d’exiger que le client soit authentifié à l’aide des informations d’identification de nom d’utilisateur. Les informations d’identification dans ce cas doivent être spécifiées à l’aide du `clientCredentials` comportement **attention :**  Windows Communication Foundation (WCF) ne prend pas en charge l’envoi d’un mot de passe digest ou de dérivation de clés à l’aide du mot de passe et à l’aide de ces clés pour la sécurité de message. WCF applique donc que l’échange est sécurisé lors de l’utilisation des informations d’identification UserName. Ce mode requiert que le certificat de service soit spécifié côté client à l'aide du comportement `clientCredential` et de `serviceCertificate`. <br /><br /> -Certificat : Cela permet au service d’exiger que le client soit authentifié à l’aide d’un certificat. Les informations d'identification du client dans ce cas doivent être spécifiées à l'aide du comportement `clientCredentials`. Les informations d'identification du service dans ce cas doivent être spécifiées à l'aide du comportement `clientCredentials` en spécifiant le `serviceCertificate`.<br />-   CardSpace: Cela permet au service d’exiger que le client soit authentifié à l’aide d’un CardSpace. Le `serviceCertiifcate` doit être configuré dans le comportement `clientCredential`.<br /><br /> La valeur par défaut est `Windows`. Cet attribut est de type <xref:System.ServiceModel.MessageCredentialType>.|  
-  
-### <a name="child-elements"></a>Éléments enfants  
- Aucun.  
-  
-### <a name="parent-elements"></a>Éléments parents  
-  
-|Élément|Description|  
-|-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Définit les paramètres de sécurité d’une liaison.|  
-  
+```
+
+## <a name="attributes-and-elements"></a>Attributs et éléments
+
+Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.
+
+### <a name="attributes"></a>Attributs
+
+|Attribut|Description|
+|---------------|-----------------|
+|algorithmSuite|Définit le chiffrement des messages et algorithmes de clé de type WRAP utilisés pour obtenir la sécurité basée sur des messages pour les messages envoyés via le transport MSMQ.<br /><br /> La valeur par défaut est `Aes256`. Cet attribut est de type <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|
+|clientCredentialType|Spécifie le type d'information d'identification à utiliser lors de l'exécution de l'authentification du client pour les messages envoyés via le transport MSMQ. Les valeurs valides sont les suivantes :<br /><br /> -None : Permet au service d'interagir avec les clients anonymes. Ni le service ni le client n'exigent d'informations d'identification.<br />-Windows : Ainsi, les échanges SOAP d’être sous le contexte authentifié d’informations d’identification Windows. Exécute toujours une authentification basée sur Kerberos.<br />-   UserName: Cela permet au service d’exiger que le client soit authentifié à l’aide des informations d’identification de nom d’utilisateur. Les informations d’identification dans ce cas doivent être spécifiées à l’aide du `clientCredentials` comportement **attention :**  Windows Communication Foundation (WCF) ne prend pas en charge l’envoi d’un mot de passe digest ou de dérivation de clés à l’aide du mot de passe et à l’aide de ces clés pour la sécurité de message. WCF applique donc que l’échange est sécurisé lors de l’utilisation des informations d’identification UserName. Ce mode requiert que le certificat de service soit spécifié côté client à l'aide du comportement `clientCredential` et de `serviceCertificate`. <br /><br /> -Certificat : Cela permet au service d’exiger que le client soit authentifié à l’aide d’un certificat. Les informations d'identification du client dans ce cas doivent être spécifiées à l'aide du comportement `clientCredentials`. Les informations d'identification du service dans ce cas doivent être spécifiées à l'aide du comportement `clientCredentials` en spécifiant le `serviceCertificate`.<br />-   CardSpace: Cela permet au service d’exiger que le client soit authentifié à l’aide d’un CardSpace. Le `serviceCertificate` doit être configuré dans le comportement `clientCredential`.<br /><br /> La valeur par défaut est `Windows`. Cet attribut est de type <xref:System.ServiceModel.MessageCredentialType>.|
+
+### <a name="child-elements"></a>Éléments enfants
+
+Aucun.
+
+### <a name="parent-elements"></a>Éléments parents
+
+|Élément|Description|
+|-------------|-----------------|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Définit les paramètres de sécurité d’une liaison.|
+
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>
 - <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetMsmqSecurity.Message%2A>

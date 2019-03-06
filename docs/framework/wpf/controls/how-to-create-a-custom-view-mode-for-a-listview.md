@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 336e4ee911d18836eafa6f444c8d900c117acad3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 609781e9ac2db9c9beef049886617e541199e5dd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545275"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374763"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Procédure : Créer un mode d'affichage personnalisé pour un ListView
 Cet exemple montre comment créer un personnalisé <xref:System.Windows.Controls.ListView.View%2A> mode pour un <xref:System.Windows.Controls.ListView> contrôle.  
@@ -20,31 +20,31 @@ Cet exemple montre comment créer un personnalisé <xref:System.Windows.Controls
 ## <a name="example"></a>Exemple  
  Vous devez utiliser le <xref:System.Windows.Controls.ViewBase> classe lorsque vous créez un affichage personnalisé pour le <xref:System.Windows.Controls.ListView> contrôle. L’exemple suivant montre un mode d’affichage qui est appelé `PlainView`, qui est dérivée de la <xref:System.Windows.Controls.ViewBase> classe.  
   
- [!code-csharp[ListViewCustomView#PlainView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/PlainView.cs#plainview)]
- [!code-vb[ListViewCustomView#PlainView](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/plainview.vb#plainview)]  
+ [!code-csharp[ListViewCustomView#PlainView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/PlainView.cs#plainview)]
+ [!code-vb[ListViewCustomView#PlainView](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/plainview.vb#plainview)]  
   
  Pour appliquer un style à la vue personnalisée, utilisez la <xref:System.Windows.Style> classe. L’exemple suivant définit un <xref:System.Windows.Style> pour la `PlainView` mode d’affichage. Dans l’exemple précédent, ce style est défini comme valeur de la <xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A> propriété est définie pour `PlainView`.  
   
- [!code-xaml[ListViewCustomView#PlainViewStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Themes/Generic.xaml#plainviewstyle)]  
+ [!code-xaml[ListViewCustomView#PlainViewStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Themes/Generic.xaml#plainviewstyle)]  
   
  Pour définir la disposition des données dans un mode d’affichage personnalisé, définissez un <xref:System.Windows.DataTemplate> objet. L’exemple suivant définit un <xref:System.Windows.DataTemplate> qui peut être utilisé pour afficher des données dans le `PlainView` mode d’affichage.  
   
- [!code-xaml[ListViewCustomView#PlainViewDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewdatatemplate)]  
+ [!code-xaml[ListViewCustomView#PlainViewDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewdatatemplate)]  
   
  L’exemple suivant montre comment définir un <xref:System.Windows.ResourceKey> pour le `PlainView` mode d’affichage qui utilise le <xref:System.Windows.DataTemplate> qui est définie dans l’exemple précédent.  
   
- [!code-xaml[ListViewCustomView#PlainViewtileView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewtileview)]  
+ [!code-xaml[ListViewCustomView#PlainViewtileView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewtileview)]  
   
  Un <xref:System.Windows.Controls.ListView> contrôle peut utiliser une vue personnalisée si vous définissez le <xref:System.Windows.Controls.ListView.View%2A> propriété à la clé de ressource. L’exemple suivant montre comment spécifier `PlainView` en tant que le mode d’affichage pour un <xref:System.Windows.Controls.ListView>.  
   
- [!code-csharp[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
- [!code-vb[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
+ [!code-csharp[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
+ [!code-vb[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
  Pour obtenir un exemple complet, consultez [ListView avec plusieurs vues (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) ou [ListView avec plusieurs Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [Vue d’ensemble de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Vue d’ensemble de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Rubriques de guide pratique](listview-how-to-topics.md)
+- [Vue d’ensemble de ListView](listview-overview.md)
+- [Vue d’ensemble de GridView](gridview-overview.md)

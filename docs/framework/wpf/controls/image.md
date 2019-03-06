@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: f8a7e9adb8ca7d9e21bbc30a346b12d8b584067a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695797"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357558"
 ---
 # <a name="image"></a>Image
 Le <xref:System.Windows.Controls.Image> élément est utilisé pour afficher des images bitmap dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Rubriques de guide pratique](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+ [Rubriques de guide pratique](image-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Image>  
@@ -28,5 +28,5 @@ Le <xref:System.Windows.Controls.Image> élément est utilisé pour afficher des
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble de la création d’images](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+- [Vue d’ensemble de la création d’images](../graphics-multimedia/imaging-overview.md)
+- [Rubriques de guide pratique](../graphics-multimedia/imaging-how-to-topics.md)

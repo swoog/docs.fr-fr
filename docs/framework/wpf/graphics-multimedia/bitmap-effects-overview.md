@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: c0c5019eb122f30ad25fa86164b4ead6db8c83c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e82a9596778a3c71aca6bdb8efcb9b3aa227cadb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715814"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368218"
 ---
 # <a name="bitmap-effects-overview"></a>Vue d'ensemble des effets bitmap
 Effets bitmap permettent aux concepteurs et aux développeurs d’appliquer des effets visuels pour Windows Presentation Foundation (WPF) contenu rendu. Par exemple, effets bitmap vous permettent d’appliquer facilement un <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> effet ou un effet de flou à une image ou un bouton.  
@@ -47,11 +47,11 @@ Effets bitmap permettent aux concepteurs et aux développeurs d’appliquer des 
   
  L’exemple suivant montre comment appliquer un <xref:System.Windows.Media.Effects.BitmapEffect> dans [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
- [!code-xaml[EffectsGallery_snip#BlurSimpleExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blursimpleexample.xaml#blursimpleexampleinline)]  
+ [!code-xaml[EffectsGallery_snip#BlurSimpleExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blursimpleexample.xaml#blursimpleexampleinline)]  
   
  L’exemple suivant montre comment appliquer un <xref:System.Windows.Media.Effects.BitmapEffect> dans le code.  
   
- [!code-csharp[EffectsGallery_snip#CodeBehindBlurCodeBehindExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blurcodebehindexample.xaml.cs#codebehindblurcodebehindexampleinline)]  
+ [!code-csharp[EffectsGallery_snip#CodeBehindBlurCodeBehindExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blurcodebehindexample.xaml.cs#codebehindblurcodebehindexampleinline)]  
   
 > [!NOTE]
 >  Quand un <xref:System.Windows.Media.Effects.BitmapEffect> est appliquée à un conteneur de disposition, telle que <xref:System.Windows.Controls.DockPanel> ou <xref:System.Windows.Controls.Canvas>, l’effet est appliqué à l’arborescence visuelle de l’élément ou d’un visuel, y compris tous ses éléments enfants.  
@@ -65,7 +65,7 @@ Effets bitmap permettent aux concepteurs et aux développeurs d’appliquer des 
 - <xref:System.Windows.Media.Effects.BitmapEffectInput>
 - <xref:System.Windows.Media.Effects.BitmapEffectCollection>
 - [Effet Bitmap WPF non managé](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
-- [Vue d’ensemble de la création d’images](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [Sécurité](../../../../docs/framework/wpf/security-wpf.md)
-- [Vue d’ensemble du rendu graphique de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Graphiques 2D et acquisition d'images](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Vue d’ensemble de la création d’images](imaging-overview.md)
+- [Sécurité](../security-wpf.md)
+- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Graphiques 2D et acquisition d'images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
