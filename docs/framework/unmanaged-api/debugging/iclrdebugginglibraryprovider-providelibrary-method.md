@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f66d91434fd92ff80bb17e04bf38bb0b631e819
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3dd1038fdc8b22b99e1c8c7b753b46b9ce877355
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825496"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496441"
 ---
-# <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a><span data-ttu-id="ea78b-102">ICLRDebuggingLibraryProvider::ProvideLibrary, méthode</span><span class="sxs-lookup"><span data-stu-id="ea78b-102">ICLRDebuggingLibraryProvider::ProvideLibrary Method</span></span>
-<span data-ttu-id="ea78b-103">Obtient un fournisseur de bibliothèque interface de rappel qui permet de common language runtime (CLR) des bibliothèques de débogage spécifiques à la version être à la demande et le chargement.</span><span class="sxs-lookup"><span data-stu-id="ea78b-103">Gets a library provider callback interface that allows common language runtime (CLR) version-specific debugging libraries to be located and loaded on demand.</span></span>  
+# <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a><span data-ttu-id="65f30-102">ICLRDebuggingLibraryProvider::ProvideLibrary, méthode</span><span class="sxs-lookup"><span data-stu-id="65f30-102">ICLRDebuggingLibraryProvider::ProvideLibrary Method</span></span>
+<span data-ttu-id="65f30-103">Obtient un fournisseur de bibliothèque interface de rappel qui permet de common language runtime (CLR) des bibliothèques de débogage spécifiques à la version être à la demande et le chargement.</span><span class="sxs-lookup"><span data-stu-id="65f30-103">Gets a library provider callback interface that allows common language runtime (CLR) version-specific debugging libraries to be located and loaded on demand.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea78b-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ea78b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65f30-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="65f30-104">Syntax</span></span>  
   
 ```  
 HRESULT ProvideLibrary(  
@@ -37,47 +37,47 @@ HRESULT ProvideLibrary(
      [out] HMODULE* hModule);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ea78b-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="ea78b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="65f30-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="65f30-105">Parameters</span></span>  
  `pwszFilename`  
- <span data-ttu-id="ea78b-106">[in] Nom du module demandé.</span><span class="sxs-lookup"><span data-stu-id="ea78b-106">[in] The name of the module being requested.</span></span>  
+ <span data-ttu-id="65f30-106">[in] Nom du module demandé.</span><span class="sxs-lookup"><span data-stu-id="65f30-106">[in] The name of the module being requested.</span></span>  
   
  `dwTimestamp`  
- <span data-ttu-id="ea78b-107">[in] L’horodatage stockée dans l’en-tête du fichier COFF de fichiers PE.</span><span class="sxs-lookup"><span data-stu-id="ea78b-107">[in] The date time stamp stored in the COFF file header of PE files.</span></span>  
+ <span data-ttu-id="65f30-107">[in] L’horodatage stockée dans l’en-tête du fichier COFF de fichiers PE.</span><span class="sxs-lookup"><span data-stu-id="65f30-107">[in] The date time stamp stored in the COFF file header of PE files.</span></span>  
   
  `pLibraryProvider`  
- <span data-ttu-id="ea78b-108">[in] Le `SizeOfImage` champ stocké dans l’en-tête de fichier facultatif COFF de fichiers PE.</span><span class="sxs-lookup"><span data-stu-id="ea78b-108">[in] The `SizeOfImage` field stored in the COFF optional file header of PE files.</span></span>  
+ <span data-ttu-id="65f30-108">[in] Le `SizeOfImage` champ stocké dans l’en-tête de fichier facultatif COFF de fichiers PE.</span><span class="sxs-lookup"><span data-stu-id="65f30-108">[in] The `SizeOfImage` field stored in the COFF optional file header of PE files.</span></span>  
   
  `hModule`  
- <span data-ttu-id="ea78b-109">[out] Le handle du module demandé.</span><span class="sxs-lookup"><span data-stu-id="ea78b-109">[out] The handle to the requested module.</span></span>  
+ <span data-ttu-id="65f30-109">[out] Le handle du module demandé.</span><span class="sxs-lookup"><span data-stu-id="65f30-109">[out] The handle to the requested module.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ea78b-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="ea78b-110">Return Value</span></span>  
- <span data-ttu-id="ea78b-111">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="ea78b-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="65f30-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="65f30-110">Return Value</span></span>  
+ <span data-ttu-id="65f30-111">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="65f30-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="ea78b-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ea78b-112">HRESULT</span></span>|<span data-ttu-id="ea78b-113">Description</span><span class="sxs-lookup"><span data-stu-id="ea78b-113">Description</span></span>|  
+|<span data-ttu-id="65f30-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="65f30-112">HRESULT</span></span>|<span data-ttu-id="65f30-113">Description</span><span class="sxs-lookup"><span data-stu-id="65f30-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ea78b-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="ea78b-114">S_OK</span></span>|<span data-ttu-id="ea78b-115">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="ea78b-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="65f30-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="65f30-114">S_OK</span></span>|<span data-ttu-id="65f30-115">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="65f30-115">The method completed successfully.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="ea78b-116">Exceptions</span><span class="sxs-lookup"><span data-stu-id="ea78b-116">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="65f30-116">Exceptions</span><span class="sxs-lookup"><span data-stu-id="65f30-116">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ea78b-117">Notes</span><span class="sxs-lookup"><span data-stu-id="ea78b-117">Remarks</span></span>  
- <span data-ttu-id="ea78b-118">`ProvideLibrary` permet au débogueur de fournir des modules qui sont nécessaires pour le débogage de fichiers CLR spécifiques tels que mscordbi.dll et mscordacwks.dll.</span><span class="sxs-lookup"><span data-stu-id="ea78b-118">`ProvideLibrary` allows the debugger to provide modules that are needed for debugging specific CLR files such as mscordbi.dll and mscordacwks.dll.</span></span> <span data-ttu-id="ea78b-119">Les handles de module doivent rester valides tant qu’un appel à la [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) méthode indique qu’ils peuvent être libérés, à quel point il est responsable de l’appelant pour libérer les handles.</span><span class="sxs-lookup"><span data-stu-id="ea78b-119">The module handles have to remain valid until a call to the [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) method indicates that they may be freed, at which point it is the caller’s responsibility to free the handles.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="65f30-117">Notes</span><span class="sxs-lookup"><span data-stu-id="65f30-117">Remarks</span></span>  
+ <span data-ttu-id="65f30-118">`ProvideLibrary` permet au débogueur de fournir des modules qui sont nécessaires pour le débogage de fichiers CLR spécifiques tels que mscordbi.dll et mscordacwks.dll.</span><span class="sxs-lookup"><span data-stu-id="65f30-118">`ProvideLibrary` allows the debugger to provide modules that are needed for debugging specific CLR files such as mscordbi.dll and mscordacwks.dll.</span></span> <span data-ttu-id="65f30-119">Les handles de module doivent rester valides tant qu’un appel à la [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) méthode indique qu’ils peuvent être libérés, à quel point il est responsable de l’appelant pour libérer les handles.</span><span class="sxs-lookup"><span data-stu-id="65f30-119">The module handles have to remain valid until a call to the [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) method indicates that they may be freed, at which point it is the caller’s responsibility to free the handles.</span></span>  
   
- <span data-ttu-id="ea78b-120">Le débogueur peut utiliser tous les moyens pour rechercher ou obtenir le module de débogage.</span><span class="sxs-lookup"><span data-stu-id="ea78b-120">The debugger may use any available means to locate or procure the debugging module.</span></span>  
+ <span data-ttu-id="65f30-120">Le débogueur peut utiliser tous les moyens pour rechercher ou obtenir le module de débogage.</span><span class="sxs-lookup"><span data-stu-id="65f30-120">The debugger may use any available means to locate or procure the debugging module.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ea78b-121">Cette fonctionnalité permet à l’appelant de l’API de fournir des modules qui contiennent du code exécutable et potentiellement malveillant.</span><span class="sxs-lookup"><span data-stu-id="ea78b-121">This feature allows the API caller to provide modules that contain executable, and possibly malicious, code.</span></span> <span data-ttu-id="ea78b-122">Par mesure de sécurité, l’appelant ne doit pas utiliser `ProvideLibrary` distribuer n’importe quel code qu’il n’est pas prêt à s’exécuter.</span><span class="sxs-lookup"><span data-stu-id="ea78b-122">As a security precaution, the caller should not use `ProvideLibrary` to distribute any code that it is not willing to execute itself.</span></span>  
+>  <span data-ttu-id="65f30-121">Cette fonctionnalité permet à l’appelant de l’API de fournir des modules qui contiennent du code exécutable et potentiellement malveillant.</span><span class="sxs-lookup"><span data-stu-id="65f30-121">This feature allows the API caller to provide modules that contain executable, and possibly malicious, code.</span></span> <span data-ttu-id="65f30-122">Par mesure de sécurité, l’appelant ne doit pas utiliser `ProvideLibrary` distribuer n’importe quel code qu’il n’est pas prêt à s’exécuter.</span><span class="sxs-lookup"><span data-stu-id="65f30-122">As a security precaution, the caller should not use `ProvideLibrary` to distribute any code that it is not willing to execute itself.</span></span>  
 >   
->  <span data-ttu-id="ea78b-123">Si un problème de sécurité sérieux est découvert dans une bibliothèque déjà libérée, tels que mscordbi.dll ou mscordacwks.dll, le shim peut être corrigé pour reconnaître les mauvaises versions des fichiers.</span><span class="sxs-lookup"><span data-stu-id="ea78b-123">If a serious security issue is discovered in an already released library, such as mscordbi.dll or mscordacwks.dll, the shim can be patched to recognize the bad versions of the files.</span></span> <span data-ttu-id="ea78b-124">Le shim peut ensuite émettre des demandes pour les versions corrigées des fichiers et rejeter les mauvaises versions si elles sont fournies en réponse à toute demande.</span><span class="sxs-lookup"><span data-stu-id="ea78b-124">The shim can then issue requests for the patched versions of the files and reject the bad versions if they are provided in response to any request.</span></span> <span data-ttu-id="ea78b-125">Cela peut se produire uniquement si l’utilisateur a corrigé vers une nouvelle version du shim.</span><span class="sxs-lookup"><span data-stu-id="ea78b-125">This can occur only if the user has patched to a new version of the shim.</span></span> <span data-ttu-id="ea78b-126">Versions non corrigées restent vulnérables.</span><span class="sxs-lookup"><span data-stu-id="ea78b-126">Unpatched versions will remain vulnerable.</span></span>  
+>  <span data-ttu-id="65f30-123">Si un problème de sécurité sérieux est découvert dans une bibliothèque déjà libérée, tels que mscordbi.dll ou mscordacwks.dll, le shim peut être corrigé pour reconnaître les mauvaises versions des fichiers.</span><span class="sxs-lookup"><span data-stu-id="65f30-123">If a serious security issue is discovered in an already released library, such as mscordbi.dll or mscordacwks.dll, the shim can be patched to recognize the bad versions of the files.</span></span> <span data-ttu-id="65f30-124">Le shim peut ensuite émettre des demandes pour les versions corrigées des fichiers et rejeter les mauvaises versions si elles sont fournies en réponse à toute demande.</span><span class="sxs-lookup"><span data-stu-id="65f30-124">The shim can then issue requests for the patched versions of the files and reject the bad versions if they are provided in response to any request.</span></span> <span data-ttu-id="65f30-125">Cela peut se produire uniquement si l’utilisateur a corrigé vers une nouvelle version du shim.</span><span class="sxs-lookup"><span data-stu-id="65f30-125">This can occur only if the user has patched to a new version of the shim.</span></span> <span data-ttu-id="65f30-126">Versions non corrigées restent vulnérables.</span><span class="sxs-lookup"><span data-stu-id="65f30-126">Unpatched versions will remain vulnerable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea78b-127">Spécifications</span><span class="sxs-lookup"><span data-stu-id="ea78b-127">Requirements</span></span>  
- <span data-ttu-id="ea78b-128">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea78b-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65f30-127">Spécifications</span><span class="sxs-lookup"><span data-stu-id="65f30-127">Requirements</span></span>  
+ <span data-ttu-id="65f30-128">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65f30-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea78b-129">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ea78b-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="65f30-129">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="65f30-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ea78b-130">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ea78b-130">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="65f30-130">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65f30-130">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ea78b-131">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea78b-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="65f30-131">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65f30-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea78b-132">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ea78b-132">See also</span></span>
-- [<span data-ttu-id="ea78b-133">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="ea78b-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="ea78b-134">Débogage</span><span class="sxs-lookup"><span data-stu-id="ea78b-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="65f30-132">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="65f30-132">See also</span></span>
+- [<span data-ttu-id="65f30-133">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="65f30-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="65f30-134">Débogage</span><span class="sxs-lookup"><span data-stu-id="65f30-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

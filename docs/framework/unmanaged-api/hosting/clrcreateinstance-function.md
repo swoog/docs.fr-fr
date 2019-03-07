@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 290b44b2fa506aee8454400d4fb40493f530e3a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9b4e9149fa50a951f2a56c83412e42fe86b9563
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535656"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501199"
 ---
-# <a name="clrcreateinstance-function"></a><span data-ttu-id="78922-102">CLRCreateInstance, fonction</span><span class="sxs-lookup"><span data-stu-id="78922-102">CLRCreateInstance Function</span></span>
-<span data-ttu-id="78922-103">Fournit l’un des trois interfaces : [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), ou [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="78922-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+# <a name="clrcreateinstance-function"></a><span data-ttu-id="4ee96-102">CLRCreateInstance, fonction</span><span class="sxs-lookup"><span data-stu-id="4ee96-102">CLRCreateInstance Function</span></span>
+<span data-ttu-id="4ee96-103">Fournit l’un des trois interfaces : [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), ou [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="4ee96-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78922-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="78922-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ee96-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4ee96-104">Syntax</span></span>  
   
 ```  
 HRESULT CLRCreateInstance(  
@@ -37,34 +37,34 @@ HRESULT CLRCreateInstance(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="78922-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="78922-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ee96-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4ee96-105">Parameters</span></span>  
  `clsid`  
- <span data-ttu-id="78922-106">[in] L’un des trois identificateurs de classe : Arguments CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy ou CLSID_CLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="78922-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
+ <span data-ttu-id="4ee96-106">[in] L’un des trois identificateurs de classe : Arguments CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy ou CLSID_CLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="4ee96-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
   
  `riid`  
- <span data-ttu-id="78922-107">[in] L’un des trois identificateurs d’interface (IID) : IID_ICLRMetaHost, IID_ICLRMetaHostPolicy ou IID_ICLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="78922-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
+ <span data-ttu-id="4ee96-107">[in] L’un des trois identificateurs d’interface (IID) : IID_ICLRMetaHost, IID_ICLRMetaHostPolicy ou IID_ICLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="4ee96-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
   
  `ppInterface`  
- <span data-ttu-id="78922-108">[out] L’une des trois interfaces : [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), ou [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="78922-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+ <span data-ttu-id="4ee96-108">[out] L’une des trois interfaces : [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), ou [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="4ee96-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="78922-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="78922-109">Return Value</span></span>  
- <span data-ttu-id="78922-110">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="78922-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4ee96-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="4ee96-109">Return Value</span></span>  
+ <span data-ttu-id="4ee96-110">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="4ee96-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="78922-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="78922-111">HRESULT</span></span>|<span data-ttu-id="78922-112">Description</span><span class="sxs-lookup"><span data-stu-id="78922-112">Description</span></span>|  
+|<span data-ttu-id="4ee96-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4ee96-111">HRESULT</span></span>|<span data-ttu-id="4ee96-112">Description</span><span class="sxs-lookup"><span data-stu-id="4ee96-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="78922-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="78922-113">S_OK</span></span>|<span data-ttu-id="78922-114">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="78922-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="78922-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="78922-115">E_POINTER</span></span>|<span data-ttu-id="78922-116">`ppInterface` a la valeur null.</span><span class="sxs-lookup"><span data-stu-id="78922-116">`ppInterface` is null.</span></span>|  
+|<span data-ttu-id="4ee96-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="4ee96-113">S_OK</span></span>|<span data-ttu-id="4ee96-114">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="4ee96-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="4ee96-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="4ee96-115">E_POINTER</span></span>|<span data-ttu-id="4ee96-116">`ppInterface` a la valeur null.</span><span class="sxs-lookup"><span data-stu-id="4ee96-116">`ppInterface` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="78922-117">Notes</span><span class="sxs-lookup"><span data-stu-id="78922-117">Remarks</span></span>  
- <span data-ttu-id="78922-118">Le tableau suivant montre les combinaisons prises en charge pour `clsid` et `riid`.</span><span class="sxs-lookup"><span data-stu-id="78922-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4ee96-117">Notes</span><span class="sxs-lookup"><span data-stu-id="4ee96-117">Remarks</span></span>  
+ <span data-ttu-id="4ee96-118">Le tableau suivant montre les combinaisons prises en charge pour `clsid` et `riid`.</span><span class="sxs-lookup"><span data-stu-id="4ee96-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
-|<span data-ttu-id="78922-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="78922-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="78922-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="78922-120">IID_ICLRMetaHost</span></span>|  
-|<span data-ttu-id="78922-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="78922-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="78922-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="78922-122">IID_ICLRMetaHostPolicy</span></span>|  
-|<span data-ttu-id="78922-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="78922-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="78922-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="78922-124">IID_ICLRDebugging</span></span>|  
+|<span data-ttu-id="4ee96-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="4ee96-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="4ee96-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="4ee96-120">IID_ICLRMetaHost</span></span>|  
+|<span data-ttu-id="4ee96-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="4ee96-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="4ee96-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="4ee96-122">IID_ICLRMetaHostPolicy</span></span>|  
+|<span data-ttu-id="4ee96-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="4ee96-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="4ee96-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="4ee96-124">IID_ICLRDebugging</span></span>|  
   
- <span data-ttu-id="78922-125">Le code suivant montre comment utiliser `CLRCreateInstance` pour obtenir ces trois interfaces :</span><span class="sxs-lookup"><span data-stu-id="78922-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
+ <span data-ttu-id="4ee96-125">Le code suivant montre comment utiliser `CLRCreateInstance` pour obtenir ces trois interfaces :</span><span class="sxs-lookup"><span data-stu-id="4ee96-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
   
 ```  
 #include <metahost.h>  
@@ -82,14 +82,14 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
                     (LPVOID*)&pCLRDebugging);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="78922-126">Spécifications</span><span class="sxs-lookup"><span data-stu-id="78922-126">Requirements</span></span>  
- <span data-ttu-id="78922-127">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="78922-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ee96-126">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4ee96-126">Requirements</span></span>  
+ <span data-ttu-id="4ee96-127">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4ee96-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78922-128">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="78922-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="4ee96-128">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="4ee96-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="78922-129">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="78922-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4ee96-129">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4ee96-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="78922-130">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78922-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="4ee96-130">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ee96-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78922-131">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="78922-131">See also</span></span>
-- [<span data-ttu-id="78922-132">Hébergement</span><span class="sxs-lookup"><span data-stu-id="78922-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="4ee96-131">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4ee96-131">See also</span></span>
+- [<span data-ttu-id="4ee96-132">Hébergement</span><span class="sxs-lookup"><span data-stu-id="4ee96-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
