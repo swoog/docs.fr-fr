@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6da390fb7de3c248fa5389f133d65f9914d5260a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffcd6971a3229423f055765b0d64258a2dfa2aa3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477932"
 ---
-# <a name="icordebugstaticfieldsymbolgetname-method"></a><span data-ttu-id="160b7-102">ICorDebugStaticFieldSymbol::GetName, méthode</span><span class="sxs-lookup"><span data-stu-id="160b7-102">ICorDebugStaticFieldSymbol::GetName Method</span></span>
-<span data-ttu-id="160b7-103">Obtient le nom du champ static.</span><span class="sxs-lookup"><span data-stu-id="160b7-103">Gets the name of the static field.</span></span>  
+# <a name="icordebugstaticfieldsymbolgetname-method"></a><span data-ttu-id="7731a-102">ICorDebugStaticFieldSymbol::GetName, méthode</span><span class="sxs-lookup"><span data-stu-id="7731a-102">ICorDebugStaticFieldSymbol::GetName Method</span></span>
+<span data-ttu-id="7731a-103">Obtient le nom du champ static.</span><span class="sxs-lookup"><span data-stu-id="7731a-103">Gets the name of the static field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="160b7-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="160b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7731a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7731a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -24,30 +24,30 @@ HRESULT GetName(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="160b7-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="160b7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7731a-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="7731a-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="160b7-106">[in] Nombre de caractères dans la mémoire tampon `szName`.</span><span class="sxs-lookup"><span data-stu-id="160b7-106">[in] The number of characters in the `szName` buffer.</span></span>  
+ <span data-ttu-id="7731a-106">[in] Nombre de caractères dans la mémoire tampon `szName`.</span><span class="sxs-lookup"><span data-stu-id="7731a-106">[in] The number of characters in the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="160b7-107">[out] Pointeur vers le nombre de caractères réellement écrits dans la mémoire tampon `szName`.</span><span class="sxs-lookup"><span data-stu-id="160b7-107">[out] A pointer to the number of characters actually written to the `szName` buffer.</span></span>  
+ <span data-ttu-id="7731a-107">[out] Pointeur vers le nombre de caractères réellement écrits dans la mémoire tampon `szName`.</span><span class="sxs-lookup"><span data-stu-id="7731a-107">[out] A pointer to the number of characters actually written to the `szName` buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="160b7-108">[out] Tableau de caractères qui stocke le nom retourné.</span><span class="sxs-lookup"><span data-stu-id="160b7-108">[out] A character array that stores the returned name.</span></span>  
+ <span data-ttu-id="7731a-108">[out] Tableau de caractères qui stocke le nom retourné.</span><span class="sxs-lookup"><span data-stu-id="7731a-108">[out] A character array that stores the returned name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="160b7-109">Notes</span><span class="sxs-lookup"><span data-stu-id="160b7-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7731a-109">Notes</span><span class="sxs-lookup"><span data-stu-id="7731a-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="160b7-110">Cette méthode est uniquement disponible avec .NET Native.</span><span class="sxs-lookup"><span data-stu-id="160b7-110">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="7731a-110">Cette méthode est uniquement disponible avec .NET Native.</span><span class="sxs-lookup"><span data-stu-id="7731a-110">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="160b7-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="160b7-111">Requirements</span></span>  
- <span data-ttu-id="160b7-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="160b7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7731a-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="7731a-111">Requirements</span></span>  
+ <span data-ttu-id="7731a-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7731a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="160b7-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="160b7-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7731a-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7731a-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="160b7-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="160b7-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7731a-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7731a-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="160b7-115">**Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="160b7-115">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="7731a-115">**Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7731a-115">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="160b7-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="160b7-116">See also</span></span>
-- [<span data-ttu-id="160b7-117">ICorDebugStaticFieldSymbol, interface</span><span class="sxs-lookup"><span data-stu-id="160b7-117">ICorDebugStaticFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
-- [<span data-ttu-id="160b7-118">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="160b7-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7731a-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7731a-116">See also</span></span>
+- [<span data-ttu-id="7731a-117">ICorDebugStaticFieldSymbol, interface</span><span class="sxs-lookup"><span data-stu-id="7731a-117">ICorDebugStaticFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
+- [<span data-ttu-id="7731a-118">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="7731a-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
