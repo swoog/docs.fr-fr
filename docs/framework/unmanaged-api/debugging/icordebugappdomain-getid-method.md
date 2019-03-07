@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8122f1b5017faac3425d59d12d77f84180134d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401627"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501441"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId, méthode
 Obtient l’identificateur unique du domaine d’application.  
@@ -35,7 +35,7 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pId`  
  [out] Identificateur unique du domaine d’application.  
   
@@ -43,10 +43,10 @@ HRESULT GetID (
  L’identificateur du domaine d’application est unique au sein du processus de conteneur.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

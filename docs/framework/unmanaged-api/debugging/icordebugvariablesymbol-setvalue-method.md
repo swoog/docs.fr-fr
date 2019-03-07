@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 427c885dc1d7cbf535656a7db3f40da28c55a9b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b83efca5a8b175d5dc83c03de473262ca033354c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630765"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491306"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>Méthode ICorDebugVariableSymbol::SetValue
 Affecte la valeur d'un tableau d'octets à une variable.  
@@ -27,7 +27,7 @@ HRESULT SetValue(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `offset`  
  [in] Offset de démarrage dans la variable au niveau duquel définir la valeur. Ce paramètre est utilisé lors de l'écriture dans des champs membres d'un objet.  
   

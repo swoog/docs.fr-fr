@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3ce303e8bcf33d192dbc7e2447ea6737577dcc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00fa0fb7c257500eb0bc24c6c43bd0dd265bc00b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554875"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481636"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc, méthode
 Demande que l’hôte alloue la quantité de mémoire spécifiée à partir du tas et en outre suivre où la mémoire a été allouée.  
@@ -39,7 +39,7 @@ HRESULT DebugAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `cbSize`  
  [in] La taille, en octets, de la demande d’allocation de mémoire actuelle.  
   

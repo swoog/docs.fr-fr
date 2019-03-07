@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09b50af49f8379539773d2000a6c1f8222fee875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c7b70638b963968fb3ed7e294f1767718f9bc34
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563832"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501290"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>Méthode ICorDebugVariableSymbol::GetSlotIndex
 Obtient l'index d'emplacement géré d'une variable locale.  
@@ -22,7 +22,7 @@ HRESULT GetSlotIndex(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pSlotIndex`  
  [out] Pointeur vers l'index d'emplacement de la variable locale.  
   

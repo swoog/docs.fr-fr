@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7187076eb338d5a57388d19f62e79af041ee774
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527370"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501043"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver, fonction
 Charge une bibliothèque de types et utilise fourni [ITypeLibResolver, interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) pour résoudre toutes bibliothèques de types référencées en interne.  
@@ -36,7 +36,7 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `szFile`  
  [in] Le chemin d’accès de fichier de la bibliothèque de types.  
   

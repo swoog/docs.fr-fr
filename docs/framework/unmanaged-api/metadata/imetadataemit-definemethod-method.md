@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdd8f8a1120e3e6e82c87cc02afa5c503493da1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2372aac00473786df9b5deefb969fc02abd8daa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496103"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod, méthode
 Crée une définition pour une méthode ou une fonction globale avec la signature spécifiée et retourne un jeton pour cette définition de méthode.  
@@ -42,7 +42,7 @@ HRESULT DefineMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `td`  
  [in] Le `mdTypedef` jeton de la classe parente ou l’interface parente de la méthode. Définissez `td` à `mdTokenNil`, si vous définissez une fonction globale.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3b7c116410ce3309d970929580f4ec7f65bd657
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5775c249236fdbe488ce11be0c664d2073ccfb67
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558280"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477073"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a>IMetaDataEmit::DeletePinvokeMap, méthode
 Détruit les métadonnées de mappage PInvoke pour l’objet référencé par le jeton spécifié.  
@@ -35,7 +35,7 @@ HRESULT DeletePinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `tk`  
  [in] Un `mdFieldDef` ou `mdMethodDef` jeton qui représente l’objet pour lequel supprimer les métadonnées de mappage PInvoke.  
   
