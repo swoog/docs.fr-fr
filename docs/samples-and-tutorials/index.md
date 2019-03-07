@@ -1,24 +1,14 @@
 ---
-title: Exemples et didacticiels
-description: Informations sur les exemples et les didacticiels pour .NET Core, ASP.NET Core et le langage C# permettant d’en savoir plus sur .NET.
-keywords: .NET, .NET Core, ASP.NET, C#, exemple, didacticiel
+title: Exemples et tutoriels .NET
+description: 'Informations sur les exemples et les didacticiels pour .NET Core, ASP.NET Core et le langage C# permettant d’en savoir plus sur .NET.'
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30957644"
 ---
-# <a name="samples-and-tutorials"></a>Exemples et didacticiels
 
-La documentation .NET contient un ensemble d’exemples et de didacticiels qui vous renseignent sur .NET. Cette rubrique explique comment rechercher, afficher et télécharger des didacticiels et des exemples .NET Core, ASP.NET Core et C#. Vous trouverez des ressources utiles pour apprendre le langage de programmation F# sur le [site de F# Foundation](http://fsharp.org/learn.html). Si vous souhaitez explorer C# à l’aide d’un éditeur de code en ligne, commencez par [ce didacticiel interactif](https://www.microsoft.com/net/learn/in-browser-tutorial/1), puis consultez les [démarrages rapides interactifs C#](../csharp/quick-starts/index.md). Vous trouverez des instructions pour afficher et télécharger des exemples de code dans la section [Afficher et télécharger des exemples](#viewing-and-downloading-samples).
+# <a name="net-samples-and-tutorials"></a>Exemples et tutoriels .NET
+
+La documentation .NET contient un ensemble d’exemples et de didacticiels qui vous renseignent sur .NET. Cette rubrique explique comment rechercher, afficher et télécharger des didacticiels et des exemples .NET Core, ASP.NET Core et C#. Vous trouverez des ressources utiles pour apprendre le langage de programmation F# sur le [site de F# Foundation](https://fsharp.org/learn.html). Si vous souhaitez explorer C# à l’aide d’un éditeur de code en ligne, commencez par [ce tutoriel interactif](https://www.microsoft.com/net/learn/in-browser-tutorial/1), puis suivez le [tutoriel interactif de C#](../csharp/tutorials/intro-to-csharp/index.md). Vous trouverez des instructions pour afficher et télécharger des exemples de code dans la section [Afficher et télécharger des exemples](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>.NET Core
 
@@ -66,6 +56,10 @@ Cet exemple illustre de nombreux problèmes pouvant être résolus à l’aide d
 
 Cette série d’exemples illustre de nombreuses fonctionnalités de Language Integrated Query (LINQ). [L’exemple terminé](https://github.com/dotnet/samples/tree/master/core/linq/csharp) est disponible dans le référentiel dotnet/samples sur GitHub.
 
+**Exemple de PIA Microsoft Office**
+
+L’exemple [ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) illustre la consommation d’[assemblys PIA Microsoft Office](/visualstudio/vsto/office-primary-interop-assemblies) dans .NET Core.
+
 ### <a name="tutorials"></a>Didacticiels
 
 **[Application console](../csharp/tutorials/console-teleprompter.md)**
@@ -80,10 +74,6 @@ Ce didacticiel présente les communications web, la sérialisation JSON et les f
 
 Ce didacticiel illustre plusieurs fonctionnalités de LINQ et les éléments de langage qui le prennent en charge. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) est disponible dans le référentiel dotnet/samples sur GitHub.
 
-**[Microservices hébergés dans Docker](../csharp/tutorials/microservices.md)**
-
-Ce didacticiel montre comment créer un microservice ASP.NET Core et l’héberger dans Docker. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) est disponible dans le référentiel dotnet/samples sur GitHub.
-
 **[Bien démarrer avec .NET Core sur macOS à l’aide de Visual Studio pour Mac](../core/tutorials/using-on-mac-vs.md)**
 
 Ce didacticiel explique comment créer une application console .NET Core simple avec Visual Studio pour Mac.
@@ -91,6 +81,10 @@ Ce didacticiel explique comment créer une application console .NET Core simple 
 **[Génération d’une solution .NET Core complète sur macOS à l’aide de Visual Studio pour Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
 Ce didacticiel vous montre comment créer une solution complète .NET Core qui inclut une bibliothèque réutilisable et un test unitaire.
+
+**[Création d’une application .NET Core prenant en charge les plug-ins](../core/tutorials/creating-app-with-plugin-support.md)**
+
+Ce tutoriel vous montre comment créer une application .NET Core simple qui prend en charge une architecture de plug-ins. [L’exemple terminé](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) est disponible dans le référentiel dotnet/samples sur GitHub.
 
 ## <a name="deploying-to-containers"></a>Déploiement sur des conteneurs
 
@@ -112,7 +106,7 @@ De nombreuses rubriques montrent le code source et les exemples qu’il est poss
    * Clonez le référentiel localement. Si vous clonez un référentiel de documents directement sur votre système local, vous ne pourrez pas effectuer de validations directement sur le référentiel officiel ; par conséquent, vous ne pourrez pas apporter de contributions à la documentation par la suite. Utilisez la procédure de réplication et de clonage décrite précédemment si vous souhaitez conserver la possibilité de contribuer ultérieurement à la documentation.
 1. Naviguez dans les dossiers du référentiel jusqu’à l’emplacement de l’exemple. Le chemin d’accès relatif de l’emplacement de l’exemple s’affiche dans la barre d’adresse de votre navigateur lorsque vous suivez le lien de l’exemple.
 1. Pour exécuter un exemple, vous avez plusieurs possibilités :
-   * Utiliser les [outils CLI DotNET](../core/tools/index.md) : dans une fenêtre de console, accédez au dossier de l’exemple et utilisez les commandes CLI DotNET.
-   * Utiliser [Visual Studio](https://www.visualstudio.com/) ou [Visual Studio pour Mac](https://www.visualstudio.com/vs/visual-studio-mac/) : ouvrez l’exemple en sélectionnant **Fichier > Ouvrir > Projet / solution** dans la barre de menus, accédez au dossier de l’exemple de projet et sélectionnez le fichier projet (*.csproj* ou *.fsproj*).
-   * Utiliser [Visual Studio Code](https://code.visualstudio.com/) : ouvrez l’exemple en sélectionnant **Fichier > Ouvrir le dossier** dans la barre de menus et en sélectionnant le dossier de l’exemple de projet.
+   * Utilisez les [outils de l’interface CLI dotnet](../core/tools/index.md) : dans une fenêtre de console, accédez au dossier de l’exemple et utilisez les commandes de la CLI dotnet.
+   * Utilisez [Visual Studio](https://visualstudio.microsoft.com/) ou [Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) : ouvrez l’exemple en sélectionnant **Fichier > Ouvrir > Projet / solution** dans la barre de menus, accédez au dossier de l’exemple de projet et sélectionnez le fichier projet (*.csproj* ou *.fsproj*).
+   * Utilisez [Visual Studio Code](https://code.visualstudio.com/) : ouvrez l’exemple en sélectionnant **Fichier > Ouvrir le dossier** dans la barre de menus et en sélectionnant le dossier de l’exemple de projet.
    * Utiliser un autre IDE qui prend en charge les projets .NET Core.
