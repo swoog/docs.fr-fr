@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b8e0807cd03c7abfee0856d52cae0454b9f1a29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 040c7dea7f751accb801f8fda190e9387c7aede1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587789"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466165"
 ---
-# <a name="icordebugmanagedcallbacklogswitch-method"></a><span data-ttu-id="62495-102">ICorDebugManagedCallback::LogSwitch, méthode</span><span class="sxs-lookup"><span data-stu-id="62495-102">ICorDebugManagedCallback::LogSwitch Method</span></span>
-<span data-ttu-id="62495-103">Notifie le débogueur qu’un thread du common language runtime (CLR) géré a appelé une méthode la <xref:System.Diagnostics.Switch> classe à créer, modifier ou supprimer un commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="62495-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.Switch> class to create, modify, or delete a debugging/tracing switch.</span></span>  
+# <a name="icordebugmanagedcallbacklogswitch-method"></a><span data-ttu-id="384f2-102">ICorDebugManagedCallback::LogSwitch, méthode</span><span class="sxs-lookup"><span data-stu-id="384f2-102">ICorDebugManagedCallback::LogSwitch Method</span></span>
+<span data-ttu-id="384f2-103">Notifie le débogueur qu’un thread du common language runtime (CLR) géré a appelé une méthode la <xref:System.Diagnostics.Switch> classe à créer, modifier ou supprimer un commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="384f2-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.Switch> class to create, modify, or delete a debugging/tracing switch.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62495-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="62495-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="384f2-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="384f2-104">Syntax</span></span>  
   
 ```  
 HRESULT LogSwitch (  
@@ -39,33 +39,33 @@ HRESULT LogSwitch (
     [in] WCHAR               *pParentName);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="62495-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="62495-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="384f2-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="384f2-105">Parameters</span></span>  
  `PAppDomain`  
- <span data-ttu-id="62495-106">[in] Pointeur vers un objet ICorDebugAppDomain qui représente le domaine d’application contenant le thread managé qui a créé, modifié ou supprimé un commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="62495-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that created, modified, or deleted a debugging/tracing switch.</span></span>  
+ <span data-ttu-id="384f2-106">[in] Pointeur vers un objet ICorDebugAppDomain qui représente le domaine d’application contenant le thread managé qui a créé, modifié ou supprimé un commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="384f2-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that created, modified, or deleted a debugging/tracing switch.</span></span>  
   
  `pThread`  
- <span data-ttu-id="62495-107">[in] Pointeur vers un objet ICorDebugThread qui représente le thread managé.</span><span class="sxs-lookup"><span data-stu-id="62495-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="384f2-107">[in] Pointeur vers un objet ICorDebugThread qui représente le thread managé.</span><span class="sxs-lookup"><span data-stu-id="384f2-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="62495-108">[in] Une valeur qui indique le niveau de gravité du message descriptif qui a été écrite dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="62495-108">[in] A value that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
+ <span data-ttu-id="384f2-108">[in] Une valeur qui indique le niveau de gravité du message descriptif qui a été écrite dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="384f2-108">[in] A value that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
   
  `ulReason`  
- <span data-ttu-id="62495-109">[in] Une valeur de la [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) énumération qui indique l’opération effectuée sur le commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="62495-109">[in] A value of the [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) enumeration that indicates the operation performed on the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="384f2-109">[in] Une valeur de la [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) énumération qui indique l’opération effectuée sur le commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="384f2-109">[in] A value of the [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) enumeration that indicates the operation performed on the debugging/tracing switch.</span></span>  
   
  `pLogSwitchName`  
- <span data-ttu-id="62495-110">[in] Un pointeur vers le nom du commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="62495-110">[in] A pointer to the name of the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="384f2-110">[in] Un pointeur vers le nom du commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="384f2-110">[in] A pointer to the name of the debugging/tracing switch.</span></span>  
   
  `pParentName`  
- <span data-ttu-id="62495-111">[in] Un pointeur vers le nom du parent du commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="62495-111">[in] A pointer to the name of the parent of the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="384f2-111">[in] Un pointeur vers le nom du parent du commutateur de débogage/suivi.</span><span class="sxs-lookup"><span data-stu-id="384f2-111">[in] A pointer to the name of the parent of the debugging/tracing switch.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="62495-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="62495-112">Requirements</span></span>  
- <span data-ttu-id="62495-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62495-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="384f2-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="384f2-112">Requirements</span></span>  
+ <span data-ttu-id="384f2-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="384f2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="62495-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="62495-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="384f2-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="384f2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="62495-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="62495-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="384f2-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="384f2-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="62495-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62495-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="384f2-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="384f2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62495-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="62495-117">See also</span></span>
-- [<span data-ttu-id="62495-118">ICorDebugManagedCallback, interface</span><span class="sxs-lookup"><span data-stu-id="62495-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="384f2-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="384f2-117">See also</span></span>
+- [<span data-ttu-id="384f2-118">ICorDebugManagedCallback, interface</span><span class="sxs-lookup"><span data-stu-id="384f2-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

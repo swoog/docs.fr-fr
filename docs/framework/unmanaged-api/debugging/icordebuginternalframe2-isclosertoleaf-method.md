@@ -17,52 +17,52 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a5dca321470b3fda8490ca5ae809045d724150
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96deee943f6a4c636a52b41c8f4c2fda86c6bd18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552162"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493717"
 ---
-# <a name="icordebuginternalframe2isclosertoleaf-method"></a><span data-ttu-id="cfa8a-102">ICorDebugInternalFrame2::IsCloserToLeaf, méthode</span><span class="sxs-lookup"><span data-stu-id="cfa8a-102">ICorDebugInternalFrame2::IsCloserToLeaf Method</span></span>
-<span data-ttu-id="cfa8a-103">Vérifie si le `this` frame interne est la plus proche de la feuille que l’objet ICorDebugFrame spécifié.</span><span class="sxs-lookup"><span data-stu-id="cfa8a-103">Checks whether the `this` internal frame is closer to the leaf than the specified ICorDebugFrame object.</span></span>  
+# <a name="icordebuginternalframe2isclosertoleaf-method"></a><span data-ttu-id="7ba9b-102">ICorDebugInternalFrame2::IsCloserToLeaf, méthode</span><span class="sxs-lookup"><span data-stu-id="7ba9b-102">ICorDebugInternalFrame2::IsCloserToLeaf Method</span></span>
+<span data-ttu-id="7ba9b-103">Vérifie si le `this` frame interne est la plus proche de la feuille que l’objet ICorDebugFrame spécifié.</span><span class="sxs-lookup"><span data-stu-id="7ba9b-103">Checks whether the `this` internal frame is closer to the leaf than the specified ICorDebugFrame object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cfa8a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="cfa8a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ba9b-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7ba9b-104">Syntax</span></span>  
   
 ```  
 HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,  
                        [out] BOOL * pIsCloser);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cfa8a-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="cfa8a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7ba9b-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="7ba9b-105">Parameters</span></span>  
  `pFrameToCompare`  
- <span data-ttu-id="cfa8a-106">[in] Un pointeur vers la comparaison `ICorDebugFrame` objet.</span><span class="sxs-lookup"><span data-stu-id="cfa8a-106">[in] A pointer to the comparison `ICorDebugFrame` object.</span></span>  
+ <span data-ttu-id="7ba9b-106">[in] Un pointeur vers la comparaison `ICorDebugFrame` objet.</span><span class="sxs-lookup"><span data-stu-id="7ba9b-106">[in] A pointer to the comparison `ICorDebugFrame` object.</span></span>  
   
  `pIsCloser`  
- <span data-ttu-id="cfa8a-107">[out] `true` si le `this` frame interne est la plus proche de la feuille que le frame spécifié par `pFrameToCompare`; sinon, `false`.</span><span class="sxs-lookup"><span data-stu-id="cfa8a-107">[out] `true` if the `this` internal frame is closer to the leaf than the frame specified by `pFrameToCompare`; otherwise, `false`.</span></span>  
+ <span data-ttu-id="7ba9b-107">[out] `true` si le `this` frame interne est la plus proche de la feuille que le frame spécifié par `pFrameToCompare`; sinon, `false`.</span><span class="sxs-lookup"><span data-stu-id="7ba9b-107">[out] `true` if the `this` internal frame is closer to the leaf than the frame specified by `pFrameToCompare`; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cfa8a-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="cfa8a-108">Return Value</span></span>  
- <span data-ttu-id="cfa8a-109">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="cfa8a-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7ba9b-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="7ba9b-108">Return Value</span></span>  
+ <span data-ttu-id="7ba9b-109">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="7ba9b-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="cfa8a-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cfa8a-110">HRESULT</span></span>|<span data-ttu-id="cfa8a-111">Description</span><span class="sxs-lookup"><span data-stu-id="cfa8a-111">Description</span></span>|  
+|<span data-ttu-id="7ba9b-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7ba9b-110">HRESULT</span></span>|<span data-ttu-id="7ba9b-111">Description</span><span class="sxs-lookup"><span data-stu-id="7ba9b-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="cfa8a-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="cfa8a-112">S_OK</span></span>|<span data-ttu-id="cfa8a-113">La comparaison a été effectuée avec succès.</span><span class="sxs-lookup"><span data-stu-id="cfa8a-113">The comparison was successfully performed.</span></span>|  
-|<span data-ttu-id="cfa8a-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="cfa8a-114">E_FAIL</span></span>|<span data-ttu-id="cfa8a-115">La comparaison n’a pas pu être effectuée.</span><span class="sxs-lookup"><span data-stu-id="cfa8a-115">The comparison could not be performed.</span></span>|  
-|<span data-ttu-id="cfa8a-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="cfa8a-116">E_INVALIDARG</span></span>|<span data-ttu-id="cfa8a-117">`pFrameToCompare` ou `pIsCloser` est null.</span><span class="sxs-lookup"><span data-stu-id="cfa8a-117">`pFrameToCompare` or `pIsCloser` is null.</span></span>|  
+|<span data-ttu-id="7ba9b-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="7ba9b-112">S_OK</span></span>|<span data-ttu-id="7ba9b-113">La comparaison a été effectuée avec succès.</span><span class="sxs-lookup"><span data-stu-id="7ba9b-113">The comparison was successfully performed.</span></span>|  
+|<span data-ttu-id="7ba9b-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7ba9b-114">E_FAIL</span></span>|<span data-ttu-id="7ba9b-115">La comparaison n’a pas pu être effectuée.</span><span class="sxs-lookup"><span data-stu-id="7ba9b-115">The comparison could not be performed.</span></span>|  
+|<span data-ttu-id="7ba9b-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="7ba9b-116">E_INVALIDARG</span></span>|<span data-ttu-id="7ba9b-117">`pFrameToCompare` ou `pIsCloser` a la valeur null.</span><span class="sxs-lookup"><span data-stu-id="7ba9b-117">`pFrameToCompare` or `pIsCloser` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cfa8a-118">Notes</span><span class="sxs-lookup"><span data-stu-id="cfa8a-118">Remarks</span></span>  
- <span data-ttu-id="cfa8a-119">`IsCloserToLeaf` peut être utilisé pour implémenter une stratégie pour entrelacer les frames internes avec d’autres images sur la pile.</span><span class="sxs-lookup"><span data-stu-id="cfa8a-119">`IsCloserToLeaf` can be used to implement a policy for interleaving internal frames with other frames on the stack.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7ba9b-118">Notes</span><span class="sxs-lookup"><span data-stu-id="7ba9b-118">Remarks</span></span>  
+ <span data-ttu-id="7ba9b-119">`IsCloserToLeaf` peut être utilisé pour implémenter une stratégie pour entrelacer les frames internes avec d’autres images sur la pile.</span><span class="sxs-lookup"><span data-stu-id="7ba9b-119">`IsCloserToLeaf` can be used to implement a policy for interleaving internal frames with other frames on the stack.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cfa8a-120">Spécifications</span><span class="sxs-lookup"><span data-stu-id="cfa8a-120">Requirements</span></span>  
- <span data-ttu-id="cfa8a-121">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cfa8a-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ba9b-120">Spécifications</span><span class="sxs-lookup"><span data-stu-id="7ba9b-120">Requirements</span></span>  
+ <span data-ttu-id="7ba9b-121">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7ba9b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cfa8a-122">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cfa8a-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7ba9b-122">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7ba9b-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cfa8a-123">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cfa8a-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7ba9b-123">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7ba9b-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cfa8a-124">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cfa8a-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="7ba9b-124">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ba9b-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cfa8a-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="cfa8a-125">See also</span></span>
-- [<span data-ttu-id="cfa8a-126">ICorDebugInternalFrame2, interface</span><span class="sxs-lookup"><span data-stu-id="cfa8a-126">ICorDebugInternalFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [<span data-ttu-id="cfa8a-127">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="cfa8a-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="cfa8a-128">Débogage</span><span class="sxs-lookup"><span data-stu-id="cfa8a-128">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="7ba9b-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7ba9b-125">See also</span></span>
+- [<span data-ttu-id="7ba9b-126">ICorDebugInternalFrame2, interface</span><span class="sxs-lookup"><span data-stu-id="7ba9b-126">ICorDebugInternalFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [<span data-ttu-id="7ba9b-127">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="7ba9b-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="7ba9b-128">Débogage</span><span class="sxs-lookup"><span data-stu-id="7ba9b-128">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

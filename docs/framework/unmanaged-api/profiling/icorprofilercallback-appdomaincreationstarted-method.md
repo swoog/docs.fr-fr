@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98fac8630403107f96f2fa86e5bcc9b0e60d0d08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bffa383734a96a32595b018fd6d9b3dc62d5526
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737161"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484756"
 ---
-# <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="8a548-102">ICorProfilerCallback::AppDomainCreationStarted, méthode</span><span class="sxs-lookup"><span data-stu-id="8a548-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
-<span data-ttu-id="8a548-103">Notifie le profileur qu’un domaine d’application est créé.</span><span class="sxs-lookup"><span data-stu-id="8a548-103">Notifies the profiler that an application domain is being created.</span></span>  
+# <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="4cb55-102">ICorProfilerCallback::AppDomainCreationStarted, méthode</span><span class="sxs-lookup"><span data-stu-id="4cb55-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
+<span data-ttu-id="4cb55-103">Notifie le profileur qu’un domaine d’application est créé.</span><span class="sxs-lookup"><span data-stu-id="4cb55-103">Notifies the profiler that an application domain is being created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a548-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="8a548-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4cb55-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4cb55-104">Syntax</span></span>  
   
 ```  
 HRESULT AppDomainCreationStarted(  
     [in] AppDomainID appDomainId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8a548-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="8a548-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4cb55-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4cb55-105">Parameters</span></span>  
  `appDomainId`  
- <span data-ttu-id="8a548-106">[in] Identifie le domaine qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="8a548-106">[in] Identifies the domain which is being created.</span></span>  
+ <span data-ttu-id="4cb55-106">[in] Identifie le domaine qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="4cb55-106">[in] Identifies the domain which is being created.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8a548-107">Notes</span><span class="sxs-lookup"><span data-stu-id="8a548-107">Remarks</span></span>  
- <span data-ttu-id="8a548-108">L’ID n’est pas valide pour toute demande d’informations jusqu'à ce que le [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) méthode est appelée.</span><span class="sxs-lookup"><span data-stu-id="8a548-108">The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4cb55-107">Notes</span><span class="sxs-lookup"><span data-stu-id="4cb55-107">Remarks</span></span>  
+ <span data-ttu-id="4cb55-108">L’ID n’est pas valide pour toute demande d’informations jusqu'à ce que le [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) méthode est appelée.</span><span class="sxs-lookup"><span data-stu-id="4cb55-108">The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8a548-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="8a548-109">Requirements</span></span>  
- <span data-ttu-id="8a548-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a548-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4cb55-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4cb55-109">Requirements</span></span>  
+ <span data-ttu-id="4cb55-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4cb55-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8a548-111">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8a548-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4cb55-111">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4cb55-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8a548-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a548-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4cb55-112">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4cb55-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8a548-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a548-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4cb55-113">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4cb55-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a548-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8a548-114">See also</span></span>
-- [<span data-ttu-id="8a548-115">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="8a548-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4cb55-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4cb55-114">See also</span></span>
+- [<span data-ttu-id="4cb55-115">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="4cb55-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

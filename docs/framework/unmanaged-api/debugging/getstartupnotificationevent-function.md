@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ed1db49be78d7d16648a9ef9735e79ef1b3ab98
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404308"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487328"
 ---
-# <a name="getstartupnotificationevent-function"></a><span data-ttu-id="a85de-102">Fonction GetStartupNotificationEvent</span><span class="sxs-lookup"><span data-stu-id="a85de-102">GetStartupNotificationEvent Function</span></span>
-<span data-ttu-id="a85de-103">Crée ou ouvre un gestionnaire d'événements qui sera signalé par un Common Language Runtime (CLR) qui est chargé dans le processus cible spécifié.</span><span class="sxs-lookup"><span data-stu-id="a85de-103">Creates or opens an event handle that will be signaled upon by any common language runtime (CLR) that is loading in the specified target process.</span></span>  
+# <a name="getstartupnotificationevent-function"></a><span data-ttu-id="b41e4-102">Fonction GetStartupNotificationEvent</span><span class="sxs-lookup"><span data-stu-id="b41e4-102">GetStartupNotificationEvent Function</span></span>
+<span data-ttu-id="b41e4-103">Crée ou ouvre un gestionnaire d'événements qui sera signalé par un Common Language Runtime (CLR) qui est chargé dans le processus cible spécifié.</span><span class="sxs-lookup"><span data-stu-id="b41e4-103">Creates or opens an event handle that will be signaled upon by any common language runtime (CLR) that is loading in the specified target process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a85de-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a85de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b41e4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b41e4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStartupNotificationEvent  
@@ -38,33 +38,33 @@ HRESULT GetStartupNotificationEvent
     );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a85de-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="a85de-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b41e4-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="b41e4-105">Parameters</span></span>  
  `debuggeePID`  
- <span data-ttu-id="a85de-106">[in] Identificateur du processus cible à partir duquel les notifications de démarrage du CLR sont reçues.</span><span class="sxs-lookup"><span data-stu-id="a85de-106">[in] Process identifier of the target process from which to receive CLR startup notifications.</span></span>  
+ <span data-ttu-id="b41e4-106">[in] Identificateur du processus cible à partir duquel les notifications de démarrage du CLR sont reçues.</span><span class="sxs-lookup"><span data-stu-id="b41e4-106">[in] Process identifier of the target process from which to receive CLR startup notifications.</span></span>  
   
  `phStartupEvent`  
- <span data-ttu-id="a85de-107">[out] Pointeur vers un handle qui sera signalé par un CLR au démarrage.</span><span class="sxs-lookup"><span data-stu-id="a85de-107">[out] A pointer to a handle that will be signaled by a CLR on startup.</span></span>  
+ <span data-ttu-id="b41e4-107">[out] Pointeur vers un handle qui sera signalé par un CLR au démarrage.</span><span class="sxs-lookup"><span data-stu-id="b41e4-107">[out] A pointer to a handle that will be signaled by a CLR on startup.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a85de-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="a85de-108">Return Value</span></span>  
- <span data-ttu-id="a85de-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="a85de-109">S_OK</span></span>  
- <span data-ttu-id="a85de-110">Le handle de l'événement de notification de démarrage a été obtenu.</span><span class="sxs-lookup"><span data-stu-id="a85de-110">Successfully obtained the handle to the startup notification event.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b41e4-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="b41e4-108">Return Value</span></span>  
+ <span data-ttu-id="b41e4-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="b41e4-109">S_OK</span></span>  
+ <span data-ttu-id="b41e4-110">Le handle de l'événement de notification de démarrage a été obtenu.</span><span class="sxs-lookup"><span data-stu-id="b41e4-110">Successfully obtained the handle to the startup notification event.</span></span>  
   
- <span data-ttu-id="a85de-111">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="a85de-111">E_INVALIDARG</span></span>  
- <span data-ttu-id="a85de-112">`phStartupEvent` est null ou `debuggeePID` ne fait pas référence à un processus en cours d'exécution.</span><span class="sxs-lookup"><span data-stu-id="a85de-112">`phStartupEvent` is null or `debuggeePID` does not refer to a process that is currently running.</span></span>  
+ <span data-ttu-id="b41e4-111">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="b41e4-111">E_INVALIDARG</span></span>  
+ <span data-ttu-id="b41e4-112">`phStartupEvent` est null ou `debuggeePID` ne fait pas référence à un processus en cours d'exécution.</span><span class="sxs-lookup"><span data-stu-id="b41e4-112">`phStartupEvent` is null or `debuggeePID` does not refer to a process that is currently running.</span></span>  
   
- <span data-ttu-id="a85de-113">E_FAIL (ou autres codes de retour E_)</span><span class="sxs-lookup"><span data-stu-id="a85de-113">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="a85de-114">Impossible d'obtenir le handle de l'événement de notification de démarrage.</span><span class="sxs-lookup"><span data-stu-id="a85de-114">Unable to obtain the handle to the startup notification event.</span></span>  
+ <span data-ttu-id="b41e4-113">E_FAIL (ou autres codes de retour E_)</span><span class="sxs-lookup"><span data-stu-id="b41e4-113">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="b41e4-114">Impossible d'obtenir le handle de l'événement de notification de démarrage.</span><span class="sxs-lookup"><span data-stu-id="b41e4-114">Unable to obtain the handle to the startup notification event.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a85de-115">Notes</span><span class="sxs-lookup"><span data-stu-id="a85de-115">Remarks</span></span>  
- <span data-ttu-id="a85de-116">Sur le système d'exploitation Windows, `debuggeePID` est mappé à un identificateur de processus du système d'exploitation.</span><span class="sxs-lookup"><span data-stu-id="a85de-116">On the Windows operating system, `debuggeePID` maps to an OS process identifier.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b41e4-115">Notes</span><span class="sxs-lookup"><span data-stu-id="b41e4-115">Remarks</span></span>  
+ <span data-ttu-id="b41e4-116">Sur le système d'exploitation Windows, `debuggeePID` est mappé à un identificateur de processus du système d'exploitation.</span><span class="sxs-lookup"><span data-stu-id="b41e4-116">On the Windows operating system, `debuggeePID` maps to an OS process identifier.</span></span>  
   
- <span data-ttu-id="a85de-117">L'événement est signalé avant l'exécution de code managé par le CLR ayant signalé l'événement.</span><span class="sxs-lookup"><span data-stu-id="a85de-117">The event is signaled before any managed code is executed by the CLR that signaled the event.</span></span>  
+ <span data-ttu-id="b41e4-117">L'événement est signalé avant l'exécution de code managé par le CLR ayant signalé l'événement.</span><span class="sxs-lookup"><span data-stu-id="b41e4-117">The event is signaled before any managed code is executed by the CLR that signaled the event.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a85de-118">Spécifications</span><span class="sxs-lookup"><span data-stu-id="a85de-118">Requirements</span></span>  
- <span data-ttu-id="a85de-119">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a85de-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b41e4-118">Spécifications</span><span class="sxs-lookup"><span data-stu-id="b41e4-118">Requirements</span></span>  
+ <span data-ttu-id="b41e4-119">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b41e4-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a85de-120">**En-tête :** dbgshim.h</span><span class="sxs-lookup"><span data-stu-id="a85de-120">**Header:** dbgshim.h</span></span>  
+ <span data-ttu-id="b41e4-120">**En-tête :** dbgshim.h</span><span class="sxs-lookup"><span data-stu-id="b41e4-120">**Header:** dbgshim.h</span></span>  
   
- <span data-ttu-id="a85de-121">**Bibliothèque :** dbgshim.dll</span><span class="sxs-lookup"><span data-stu-id="a85de-121">**Library:** dbgshim.dll</span></span>  
+ <span data-ttu-id="b41e4-121">**Bibliothèque :** dbgshim.dll</span><span class="sxs-lookup"><span data-stu-id="b41e4-121">**Library:** dbgshim.dll</span></span>  
   
- <span data-ttu-id="a85de-122">**Versions du .NET framework :** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="a85de-122">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="b41e4-122">**Versions du .NET framework :** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="b41e4-122">**.NET Framework Versions:** 3.5 SP1</span></span>

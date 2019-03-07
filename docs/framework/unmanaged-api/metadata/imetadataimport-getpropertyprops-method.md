@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1b065ecb9a715601e617e288c1dfc0de8dd323d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672056"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466568"
 ---
-# <a name="imetadataimportgetpropertyprops-method"></a><span data-ttu-id="b5ebe-102">IMetaDataImport::GetPropertyProps, méthode</span><span class="sxs-lookup"><span data-stu-id="b5ebe-102">IMetaDataImport::GetPropertyProps Method</span></span>
-<span data-ttu-id="b5ebe-103">Obtient les métadonnées pour la propriété représentée par le jeton spécifié.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-103">Gets the metadata for the property represented by the specified token.</span></span>  
+# <a name="imetadataimportgetpropertyprops-method"></a><span data-ttu-id="38fb9-102">IMetaDataImport::GetPropertyProps, méthode</span><span class="sxs-lookup"><span data-stu-id="38fb9-102">IMetaDataImport::GetPropertyProps Method</span></span>
+<span data-ttu-id="38fb9-103">Obtient les métadonnées pour la propriété représentée par le jeton spécifié.</span><span class="sxs-lookup"><span data-stu-id="38fb9-103">Gets the metadata for the property represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5ebe-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b5ebe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38fb9-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="38fb9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPropertyProps (  
@@ -50,64 +50,64 @@ HRESULT GetPropertyProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b5ebe-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="b5ebe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="38fb9-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="38fb9-105">Parameters</span></span>  
  `prop`  
- <span data-ttu-id="b5ebe-106">[in] Un jeton qui représente la propriété à retourner les métadonnées.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-106">[in] A token that represents the property to return metadata for.</span></span>  
+ <span data-ttu-id="38fb9-106">[in] Un jeton qui représente la propriété à retourner les métadonnées.</span><span class="sxs-lookup"><span data-stu-id="38fb9-106">[in] A token that represents the property to return metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="b5ebe-107">[out] Pointeur vers le jeton TypeDef qui représente le type qui implémente la propriété.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-107">[out] A pointer to the TypeDef token that represents the type that implements the property.</span></span>  
+ <span data-ttu-id="38fb9-107">[out] Pointeur vers le jeton TypeDef qui représente le type qui implémente la propriété.</span><span class="sxs-lookup"><span data-stu-id="38fb9-107">[out] A pointer to the TypeDef token that represents the type that implements the property.</span></span>  
   
  `szProperty`  
- <span data-ttu-id="b5ebe-108">[out] Une mémoire tampon pour contenir le nom de propriété.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-108">[out] A buffer to hold the property name.</span></span>  
+ <span data-ttu-id="38fb9-108">[out] Une mémoire tampon pour contenir le nom de propriété.</span><span class="sxs-lookup"><span data-stu-id="38fb9-108">[out] A buffer to hold the property name.</span></span>  
   
  `cchProperty`  
- <span data-ttu-id="b5ebe-109">[in] La taille en caractères larges de `szProperty`.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-109">[in] The size in wide characters of `szProperty`.</span></span>  
+ <span data-ttu-id="38fb9-109">[in] La taille en caractères larges de `szProperty`.</span><span class="sxs-lookup"><span data-stu-id="38fb9-109">[in] The size in wide characters of `szProperty`.</span></span>  
   
  `pchProperty`  
- <span data-ttu-id="b5ebe-110">[out] Le nombre de caractères étendus retournés dans `szProperty`.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-110">[out] The number of wide characters returned in `szProperty`.</span></span>  
+ <span data-ttu-id="38fb9-110">[out] Le nombre de caractères étendus retournés dans `szProperty`.</span><span class="sxs-lookup"><span data-stu-id="38fb9-110">[out] The number of wide characters returned in `szProperty`.</span></span>  
   
  `pdwPropFlags`  
- <span data-ttu-id="b5ebe-111">[out] Pointeur vers les indicateurs d’attribut appliqué à la propriété.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-111">[out] A pointer to any attribute flags applied to the property.</span></span> <span data-ttu-id="b5ebe-112">Cette valeur est un masque de bits à partir de la [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) énumération.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-112">This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="38fb9-111">[out] Pointeur vers les indicateurs d’attribut appliqué à la propriété.</span><span class="sxs-lookup"><span data-stu-id="38fb9-111">[out] A pointer to any attribute flags applied to the property.</span></span> <span data-ttu-id="38fb9-112">Cette valeur est un masque de bits à partir de la [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) énumération.</span><span class="sxs-lookup"><span data-stu-id="38fb9-112">This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="b5ebe-113">[out] Pointeur vers la signature de métadonnées de la propriété.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-113">[out] A pointer to the metadata signature of the property.</span></span>  
+ <span data-ttu-id="38fb9-113">[out] Pointeur vers la signature de métadonnées de la propriété.</span><span class="sxs-lookup"><span data-stu-id="38fb9-113">[out] A pointer to the metadata signature of the property.</span></span>  
   
  `pbSig`  
- <span data-ttu-id="b5ebe-114">[out] Le nombre d’octets retournés dans `ppvSig`.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-114">[out] The number of bytes returned in `ppvSig`.</span></span>  
+ <span data-ttu-id="38fb9-114">[out] Le nombre d’octets retournés dans `ppvSig`.</span><span class="sxs-lookup"><span data-stu-id="38fb9-114">[out] The number of bytes returned in `ppvSig`.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="b5ebe-115">[out] Un indicateur qui spécifie le type de la constante qui est la valeur par défaut de la propriété.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-115">[out] A flag specifying the type of the constant that is the default value of the property.</span></span> <span data-ttu-id="b5ebe-116">Cette valeur provient de l’énumération CorElementType.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-116">This value is from the CorElementType enumeration.</span></span>  
+ <span data-ttu-id="38fb9-115">[out] Un indicateur qui spécifie le type de la constante qui est la valeur par défaut de la propriété.</span><span class="sxs-lookup"><span data-stu-id="38fb9-115">[out] A flag specifying the type of the constant that is the default value of the property.</span></span> <span data-ttu-id="38fb9-116">Cette valeur provient de l’énumération CorElementType.</span><span class="sxs-lookup"><span data-stu-id="38fb9-116">This value is from the CorElementType enumeration.</span></span>  
   
  `ppDefaultValue`  
- <span data-ttu-id="b5ebe-117">[out] Un pointeur vers les octets qui stockent la valeur par défaut pour cette propriété.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-117">[out] A pointer to the bytes that store the default value for this property.</span></span>  
+ <span data-ttu-id="38fb9-117">[out] Un pointeur vers les octets qui stockent la valeur par défaut pour cette propriété.</span><span class="sxs-lookup"><span data-stu-id="38fb9-117">[out] A pointer to the bytes that store the default value for this property.</span></span>  
   
  `pcchDefaultValue`  
- <span data-ttu-id="b5ebe-118">[out] La taille en caractères larges de `ppDefaultValue`si `pdwCPlusTypeFlag` a la valeur ELEMENT_TYPE_STRING ; sinon, cette valeur n’est pas pertinente.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-118">[out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant.</span></span> <span data-ttu-id="b5ebe-119">Dans ce cas, la longueur de `ppDefaultValue` est déduit du type spécifié par `pdwCPlusTypeFlag`.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-119">In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.</span></span>  
+ <span data-ttu-id="38fb9-118">[out] La taille en caractères larges de `ppDefaultValue`si `pdwCPlusTypeFlag` a la valeur ELEMENT_TYPE_STRING ; sinon, cette valeur n’est pas pertinente.</span><span class="sxs-lookup"><span data-stu-id="38fb9-118">[out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant.</span></span> <span data-ttu-id="38fb9-119">Dans ce cas, la longueur de `ppDefaultValue` est déduit du type spécifié par `pdwCPlusTypeFlag`.</span><span class="sxs-lookup"><span data-stu-id="38fb9-119">In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.</span></span>  
   
  `pmdSetter`  
- <span data-ttu-id="b5ebe-120">[out] Pointeur vers le jeton MethodDef qui représente la méthode d’accesseur set pour la propriété.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-120">[out] A pointer to the MethodDef token that represents the set accessor method for the property.</span></span>  
+ <span data-ttu-id="38fb9-120">[out] Pointeur vers le jeton MethodDef qui représente la méthode d’accesseur set pour la propriété.</span><span class="sxs-lookup"><span data-stu-id="38fb9-120">[out] A pointer to the MethodDef token that represents the set accessor method for the property.</span></span>  
   
  `pmdGetter`  
- <span data-ttu-id="b5ebe-121">[out] Pointeur vers le jeton MethodDef qui représente la méthode d’accesseur get pour la propriété.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-121">[out] A pointer to the MethodDef token that represents the get accessor method for the property.</span></span>  
+ <span data-ttu-id="38fb9-121">[out] Pointeur vers le jeton MethodDef qui représente la méthode d’accesseur get pour la propriété.</span><span class="sxs-lookup"><span data-stu-id="38fb9-121">[out] A pointer to the MethodDef token that represents the get accessor method for the property.</span></span>  
   
  `rmdOtherMethod`  
- <span data-ttu-id="b5ebe-122">[out] Un tableau de jetons MethodDef représentant des autres méthodes associées à la propriété.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-122">[out] An array of MethodDef tokens that represent other methods associated with the property.</span></span>  
+ <span data-ttu-id="38fb9-122">[out] Un tableau de jetons MethodDef représentant des autres méthodes associées à la propriété.</span><span class="sxs-lookup"><span data-stu-id="38fb9-122">[out] An array of MethodDef tokens that represent other methods associated with the property.</span></span>  
   
  `cMax`  
- <span data-ttu-id="b5ebe-123">[in] Taille maximale du tableau `rmdOtherMethod`.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-123">[in] The maximum size of the `rmdOtherMethod` array.</span></span> <span data-ttu-id="b5ebe-124">Si vous ne fournissez pas un tableau suffisamment grand pour contenir toutes les méthodes, ils sont ignorés sans avertissement.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-124">If you do not provide an array large enough to hold all the methods, they are skipped without warning.</span></span>  
+ <span data-ttu-id="38fb9-123">[in] Taille maximale du tableau `rmdOtherMethod`.</span><span class="sxs-lookup"><span data-stu-id="38fb9-123">[in] The maximum size of the `rmdOtherMethod` array.</span></span> <span data-ttu-id="38fb9-124">Si vous ne fournissez pas un tableau suffisamment grand pour contenir toutes les méthodes, ils sont ignorés sans avertissement.</span><span class="sxs-lookup"><span data-stu-id="38fb9-124">If you do not provide an array large enough to hold all the methods, they are skipped without warning.</span></span>  
   
  `pcOtherMethod`  
- <span data-ttu-id="b5ebe-125">[out] Le nombre de jetons MethodDef retournés dans `rmdOtherMethod`.</span><span class="sxs-lookup"><span data-stu-id="b5ebe-125">[out] The number of MethodDef tokens returned in `rmdOtherMethod`.</span></span>  
+ <span data-ttu-id="38fb9-125">[out] Le nombre de jetons MethodDef retournés dans `rmdOtherMethod`.</span><span class="sxs-lookup"><span data-stu-id="38fb9-125">[out] The number of MethodDef tokens returned in `rmdOtherMethod`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b5ebe-126">Spécifications</span><span class="sxs-lookup"><span data-stu-id="b5ebe-126">Requirements</span></span>  
- <span data-ttu-id="b5ebe-127">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5ebe-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38fb9-126">Spécifications</span><span class="sxs-lookup"><span data-stu-id="38fb9-126">Requirements</span></span>  
+ <span data-ttu-id="38fb9-127">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38fb9-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5ebe-128">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b5ebe-128">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="38fb9-128">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="38fb9-128">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b5ebe-129">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b5ebe-129">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="38fb9-129">**Bibliothèque :** Inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="38fb9-129">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b5ebe-130">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5ebe-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="38fb9-130">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38fb9-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5ebe-131">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b5ebe-131">See also</span></span>
-- [<span data-ttu-id="b5ebe-132">IMetaDataImport, interface</span><span class="sxs-lookup"><span data-stu-id="b5ebe-132">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="b5ebe-133">IMetaDataImport2, interface</span><span class="sxs-lookup"><span data-stu-id="b5ebe-133">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="38fb9-131">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="38fb9-131">See also</span></span>
+- [<span data-ttu-id="38fb9-132">IMetaDataImport, interface</span><span class="sxs-lookup"><span data-stu-id="38fb9-132">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="38fb9-133">IMetaDataImport2, interface</span><span class="sxs-lookup"><span data-stu-id="38fb9-133">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31c18061ad5f21e26665cd0d6883b0eb26afd1d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ece12247e48a0a005fd542bf76a32a1c6eeaa7cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557473"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478400"
 ---
-# <a name="imaptokenmap-method"></a><span data-ttu-id="82019-102">IMapToken::Map, méthode</span><span class="sxs-lookup"><span data-stu-id="82019-102">IMapToken::Map Method</span></span>
-<span data-ttu-id="82019-103">Mappe une relation entre les assemblys à l’aide de signatures de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="82019-103">Maps a relationship between the assemblies using metadata signatures.</span></span>  
+# <a name="imaptokenmap-method"></a><span data-ttu-id="268f6-102">IMapToken::Map, méthode</span><span class="sxs-lookup"><span data-stu-id="268f6-102">IMapToken::Map Method</span></span>
+<span data-ttu-id="268f6-103">Mappe une relation entre les assemblys à l’aide de signatures de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="268f6-103">Maps a relationship between the assemblies using metadata signatures.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82019-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="82019-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="268f6-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="268f6-104">Syntax</span></span>  
   
 ```  
 HRESULT Map (  
@@ -36,24 +36,24 @@ HRESULT Map (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="82019-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="82019-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="268f6-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="268f6-105">Parameters</span></span>  
  `tkImp`  
- <span data-ttu-id="82019-106">[in] Le jeton de métadonnées qui représente l’objet de code importé.</span><span class="sxs-lookup"><span data-stu-id="82019-106">[in] The metadata token that represents the imported code object.</span></span>  
+ <span data-ttu-id="268f6-106">[in] Le jeton de métadonnées qui représente l’objet de code importé.</span><span class="sxs-lookup"><span data-stu-id="268f6-106">[in] The metadata token that represents the imported code object.</span></span>  
   
  `tkEmit`  
- <span data-ttu-id="82019-107">[in] Le jeton de métadonnées qui représente l’objet de code émis.</span><span class="sxs-lookup"><span data-stu-id="82019-107">[in] The metadata token that represents the emitted code object.</span></span>  
+ <span data-ttu-id="268f6-107">[in] Le jeton de métadonnées qui représente l’objet de code émis.</span><span class="sxs-lookup"><span data-stu-id="268f6-107">[in] The metadata token that represents the emitted code object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="82019-108">Notes</span><span class="sxs-lookup"><span data-stu-id="82019-108">Remarks</span></span>  
- <span data-ttu-id="82019-109">Lorsque le jeton remapper se produit pendant une fusion, le jeton d’origine est étendu dans la portée de métadonnées importées (source) et le nouveau jeton est limité dans la portée de métadonnées émise (cible).</span><span class="sxs-lookup"><span data-stu-id="82019-109">When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="268f6-108">Notes</span><span class="sxs-lookup"><span data-stu-id="268f6-108">Remarks</span></span>  
+ <span data-ttu-id="268f6-109">Lorsque le jeton remapper se produit pendant une fusion, le jeton d’origine est étendu dans la portée de métadonnées importées (source) et le nouveau jeton est limité dans la portée de métadonnées émise (cible).</span><span class="sxs-lookup"><span data-stu-id="268f6-109">When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82019-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="82019-110">Requirements</span></span>  
- <span data-ttu-id="82019-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82019-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="268f6-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="268f6-110">Requirements</span></span>  
+ <span data-ttu-id="268f6-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="268f6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82019-112">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="82019-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="268f6-112">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="268f6-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="82019-113">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="82019-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="268f6-113">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="268f6-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="82019-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82019-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="268f6-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="268f6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82019-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="82019-115">See also</span></span>
-- [<span data-ttu-id="82019-116">IMapToken, interface</span><span class="sxs-lookup"><span data-stu-id="82019-116">IMapToken Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+## <a name="see-also"></a><span data-ttu-id="268f6-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="268f6-115">See also</span></span>
+- [<span data-ttu-id="268f6-116">IMapToken, interface</span><span class="sxs-lookup"><span data-stu-id="268f6-116">IMapToken Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

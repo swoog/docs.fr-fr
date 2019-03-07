@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f688993bfd8e6bef66451b075a49f31efe641cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef54b1ddab9b2ccc0bfcfe8974a65831f70450
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497103"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477996"
 ---
-# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="e0661-102">ICorDebugProcess5::GetTypeFields, méthode</span><span class="sxs-lookup"><span data-stu-id="e0661-102">ICorDebugProcess5::GetTypeFields Method</span></span>
-<span data-ttu-id="e0661-103">Fournit des informations sur les champs qui appartiennent à un type.</span><span class="sxs-lookup"><span data-stu-id="e0661-103">Provides information about the fields that belong to a type.</span></span>  
+# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="67cd1-102">ICorDebugProcess5::GetTypeFields, méthode</span><span class="sxs-lookup"><span data-stu-id="67cd1-102">ICorDebugProcess5::GetTypeFields Method</span></span>
+<span data-ttu-id="67cd1-103">Fournit des informations sur les champs qui appartiennent à un type.</span><span class="sxs-lookup"><span data-stu-id="67cd1-103">Provides information about the fields that belong to a type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0661-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e0661-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="67cd1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="67cd1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeFields(  
@@ -38,31 +38,31 @@ HRESULT GetTypeFields(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e0661-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e0661-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="67cd1-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="67cd1-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="e0661-106">[in] L’identificateur du type dont les informations de champ sont récupérées.</span><span class="sxs-lookup"><span data-stu-id="e0661-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
+ <span data-ttu-id="67cd1-106">[in] L’identificateur du type dont les informations de champ sont récupérées.</span><span class="sxs-lookup"><span data-stu-id="67cd1-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
   
  `celt`  
- <span data-ttu-id="e0661-107">[in] Le nombre de [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objets dont les informations de champ doit être récupéré.</span><span class="sxs-lookup"><span data-stu-id="e0661-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
+ <span data-ttu-id="67cd1-107">[in] Le nombre de [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objets dont les informations de champ doit être récupéré.</span><span class="sxs-lookup"><span data-stu-id="67cd1-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
   
  `fields`  
- <span data-ttu-id="e0661-108">[out] Un tableau de [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objets qui fournissent des informations sur les champs qui appartiennent au type.</span><span class="sxs-lookup"><span data-stu-id="e0661-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
+ <span data-ttu-id="67cd1-108">[out] Un tableau de [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objets qui fournissent des informations sur les champs qui appartiennent au type.</span><span class="sxs-lookup"><span data-stu-id="67cd1-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
   
  `pceltNeeded`  
- <span data-ttu-id="e0661-109">[out] Un pointeur vers le nombre de [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objets inclus dans `fields`.</span><span class="sxs-lookup"><span data-stu-id="e0661-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
+ <span data-ttu-id="67cd1-109">[out] Un pointeur vers le nombre de [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objets inclus dans `fields`.</span><span class="sxs-lookup"><span data-stu-id="67cd1-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e0661-110">Notes</span><span class="sxs-lookup"><span data-stu-id="e0661-110">Remarks</span></span>  
- <span data-ttu-id="e0661-111">Le `celt` paramètre qui spécifie le nombre de champs dont la méthode utilise pour remplir les informations de champ `fields`, doit correspondre à la valeur de la `COR_TYPE_LAYOUT::numFields` champ.</span><span class="sxs-lookup"><span data-stu-id="e0661-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="67cd1-110">Notes</span><span class="sxs-lookup"><span data-stu-id="67cd1-110">Remarks</span></span>  
+ <span data-ttu-id="67cd1-111">Le `celt` paramètre qui spécifie le nombre de champs dont la méthode utilise pour remplir les informations de champ `fields`, doit correspondre à la valeur de la `COR_TYPE_LAYOUT::numFields` champ.</span><span class="sxs-lookup"><span data-stu-id="67cd1-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0661-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="e0661-112">Requirements</span></span>  
- <span data-ttu-id="e0661-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0661-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="67cd1-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="67cd1-112">Requirements</span></span>  
+ <span data-ttu-id="67cd1-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67cd1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0661-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e0661-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="67cd1-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="67cd1-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e0661-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e0661-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="67cd1-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="67cd1-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e0661-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0661-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="67cd1-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67cd1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0661-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e0661-117">See also</span></span>
-- [<span data-ttu-id="e0661-118">ICorDebugProcess5, interface</span><span class="sxs-lookup"><span data-stu-id="e0661-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="e0661-119">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="e0661-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="67cd1-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="67cd1-117">See also</span></span>
+- [<span data-ttu-id="67cd1-118">ICorDebugProcess5, interface</span><span class="sxs-lookup"><span data-stu-id="67cd1-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="67cd1-119">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="67cd1-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

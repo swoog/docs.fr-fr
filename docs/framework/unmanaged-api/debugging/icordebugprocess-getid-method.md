@@ -17,31 +17,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d752eb17b956e2367e8b191080a370506a61ff34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d9239ccfe8ce08e5b50b762a6fede11ab8a439b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416665"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495713"
 ---
-# <a name="icordebugprocessgetid-method"></a><span data-ttu-id="5b716-102">ICorDebugProcess::GetID, méthode</span><span class="sxs-lookup"><span data-stu-id="5b716-102">ICorDebugProcess::GetID Method</span></span>
-<span data-ttu-id="5b716-103">Obtient l’ID de système d’exploitation (OS) du processus.</span><span class="sxs-lookup"><span data-stu-id="5b716-103">Gets the operating system (OS) ID of the process.</span></span>  
+# <a name="icordebugprocessgetid-method"></a><span data-ttu-id="c9b7d-102">ICorDebugProcess::GetID, méthode</span><span class="sxs-lookup"><span data-stu-id="c9b7d-102">ICorDebugProcess::GetID Method</span></span>
+<span data-ttu-id="c9b7d-103">Obtient l’ID de système d’exploitation (se) du processus.</span><span class="sxs-lookup"><span data-stu-id="c9b7d-103">Gets the operating system (OS) ID of the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b716-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5b716-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9b7d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c9b7d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID([out] DWORD *pdwProcessId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5b716-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="5b716-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9b7d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="c9b7d-105">Parameters</span></span>  
  `pdwProcessId`  
- <span data-ttu-id="5b716-106">[out] ID unique du processus.</span><span class="sxs-lookup"><span data-stu-id="5b716-106">[out] The unique ID of the process.</span></span>  
+ <span data-ttu-id="c9b7d-106">[out] ID unique du processus.</span><span class="sxs-lookup"><span data-stu-id="c9b7d-106">[out] The unique ID of the process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5b716-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="5b716-107">Requirements</span></span>  
- <span data-ttu-id="5b716-108">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5b716-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9b7d-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="c9b7d-107">Requirements</span></span>  
+ <span data-ttu-id="c9b7d-108">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9b7d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b716-109">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5b716-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c9b7d-109">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9b7d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5b716-110">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5b716-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9b7d-110">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9b7d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5b716-111">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b716-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c9b7d-111">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9b7d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

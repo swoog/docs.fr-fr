@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8beb5e64b05f50ba61ced72fcdb7700d4b9f30e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e9c9866ee5ee3076d144dc732286ee008cd78c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505040"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487247"
 ---
-# <a name="createhistoryreader-function"></a><span data-ttu-id="81765-102">CreateHistoryReader, fonction</span><span class="sxs-lookup"><span data-stu-id="81765-102">CreateHistoryReader Function</span></span>
-<span data-ttu-id="81765-103">Crée un lecteur de l’historique pour le fichier spécifié.</span><span class="sxs-lookup"><span data-stu-id="81765-103">Creates a history reader for the specified file.</span></span>  
+# <a name="createhistoryreader-function"></a><span data-ttu-id="1fc81-102">CreateHistoryReader, fonction</span><span class="sxs-lookup"><span data-stu-id="1fc81-102">CreateHistoryReader Function</span></span>
+<span data-ttu-id="1fc81-103">Crée un lecteur de l’historique pour le fichier spécifié.</span><span class="sxs-lookup"><span data-stu-id="1fc81-103">Creates a history reader for the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81765-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="81765-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1fc81-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1fc81-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateHistoryReader (  
@@ -35,27 +35,27 @@ HRESULT CreateHistoryReader (
  );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="81765-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="81765-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1fc81-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="1fc81-105">Parameters</span></span>  
  `wzFilePath`  
- <span data-ttu-id="81765-106">[in] Le chemin d’accès du fichier.</span><span class="sxs-lookup"><span data-stu-id="81765-106">[in] The file path.</span></span>  
+ <span data-ttu-id="1fc81-106">[in] Le chemin d’accès du fichier.</span><span class="sxs-lookup"><span data-stu-id="1fc81-106">[in] The file path.</span></span>  
   
  `ppHistoryReader`  
- <span data-ttu-id="81765-107">[out] Opération réussie, contient un pointeur vers le lecteur de l’historique.</span><span class="sxs-lookup"><span data-stu-id="81765-107">[out] On successful completion, contains a pointer to the history reader.</span></span>  
+ <span data-ttu-id="1fc81-107">[out] Opération réussie, contient un pointeur vers le lecteur de l’historique.</span><span class="sxs-lookup"><span data-stu-id="1fc81-107">[out] On successful completion, contains a pointer to the history reader.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="81765-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="81765-108">Return Value</span></span>  
- <span data-ttu-id="81765-109">Cette méthode retourne des codes d’erreur COM standard, tel que défini dans WinError.h, en plus des valeurs décrites dans le tableau suivant.</span><span class="sxs-lookup"><span data-stu-id="81765-109">This method returns standard COM error codes as defined in WinError.h, in addition to the values described in the following table.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1fc81-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="1fc81-108">Return Value</span></span>  
+ <span data-ttu-id="1fc81-109">Cette méthode retourne des codes d’erreur COM standard, tel que défini dans WinError.h, en plus des valeurs décrites dans le tableau suivant.</span><span class="sxs-lookup"><span data-stu-id="1fc81-109">This method returns standard COM error codes as defined in WinError.h, in addition to the values described in the following table.</span></span>  
   
-|<span data-ttu-id="81765-110">Code de retour</span><span class="sxs-lookup"><span data-stu-id="81765-110">Return code</span></span>|<span data-ttu-id="81765-111">Description</span><span class="sxs-lookup"><span data-stu-id="81765-111">Description</span></span>|  
+|<span data-ttu-id="1fc81-110">Code de retour</span><span class="sxs-lookup"><span data-stu-id="1fc81-110">Return code</span></span>|<span data-ttu-id="1fc81-111">Description</span><span class="sxs-lookup"><span data-stu-id="1fc81-111">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="81765-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="81765-112">S_OK</span></span>|<span data-ttu-id="81765-113">Indique que la méthode a réussi.</span><span class="sxs-lookup"><span data-stu-id="81765-113">Indicates that the method completed successfully.</span></span>|  
-|<span data-ttu-id="81765-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="81765-114">E_INVALIDARG</span></span>|<span data-ttu-id="81765-115">Indique que `wzFilePath` ou `ppHistoryReader` sont définies sur une référence null.</span><span class="sxs-lookup"><span data-stu-id="81765-115">Indicates that `wzFilePath` or `ppHistoryReader` are set to a null reference.</span></span>|  
+|<span data-ttu-id="1fc81-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="1fc81-112">S_OK</span></span>|<span data-ttu-id="1fc81-113">Indique que la méthode a réussi.</span><span class="sxs-lookup"><span data-stu-id="1fc81-113">Indicates that the method completed successfully.</span></span>|  
+|<span data-ttu-id="1fc81-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="1fc81-114">E_INVALIDARG</span></span>|<span data-ttu-id="1fc81-115">Indique que `wzFilePath` ou `ppHistoryReader` sont définies sur une référence null.</span><span class="sxs-lookup"><span data-stu-id="1fc81-115">Indicates that `wzFilePath` or `ppHistoryReader` are set to a null reference.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="81765-116">Spécifications</span><span class="sxs-lookup"><span data-stu-id="81765-116">Requirements</span></span>  
- <span data-ttu-id="81765-117">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81765-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1fc81-116">Spécifications</span><span class="sxs-lookup"><span data-stu-id="1fc81-116">Requirements</span></span>  
+ <span data-ttu-id="1fc81-117">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1fc81-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81765-118">**Bibliothèque :** Fusion.dll</span><span class="sxs-lookup"><span data-stu-id="81765-118">**Library:** Fusion.dll</span></span>  
+ <span data-ttu-id="1fc81-118">**Bibliothèque :** Fusion.dll</span><span class="sxs-lookup"><span data-stu-id="1fc81-118">**Library:** Fusion.dll</span></span>  
   
- <span data-ttu-id="81765-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81765-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1fc81-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1fc81-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81765-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="81765-120">See also</span></span>
-- [<span data-ttu-id="81765-121">Fonctions statiques globales de fusion</span><span class="sxs-lookup"><span data-stu-id="81765-121">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="1fc81-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1fc81-120">See also</span></span>
+- [<span data-ttu-id="1fc81-121">Fonctions statiques globales de fusion</span><span class="sxs-lookup"><span data-stu-id="1fc81-121">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
