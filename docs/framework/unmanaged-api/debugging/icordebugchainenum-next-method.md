@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404454"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489824"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next, méthode
 Obtient le nombre spécifié d’instances ICorDebugChain à partir de l’énumération, en commençant à la position actuelle.  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `celt`  
- [in] Le nombre de `ICorDebugChain` instances doit être récupéré.  
+ [in] Le nombre de `ICorDebugChain` instances à récupérer.  
   
  `chains`  
- [out] Un tableau de pointeurs, chacun pointant vers un `ICorDebugChain` objet qui représente une chaîne.  
+ [out] Un tableau de pointeurs, chacun d’eux pointe vers un `ICorDebugChain` objet qui représente une chaîne.  
   
  `pceltFetched`  
- [out] Un pointeur vers le nombre de `ICorDebugChain` instances réellement retournées. Cette valeur peut être null si `celt` fait partie.  
+ [out] Un pointeur vers le nombre de `ICorDebugChain` instances réellement retournés. Cette valeur peut être null si `celt` fait partie.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

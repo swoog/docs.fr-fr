@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0c1edf5eb01c3cb94633b5185ef5b21bd9716e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 255e2ced8cf7ed06234f8eb8e5423c0bd6541e9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557852"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484522"
 ---
 # <a name="imetadatafiltermarktoken-method"></a>IMetaDataFilter::MarkToken, méthode
 Définit une valeur qui indique que le jeton de métadonnées spécifié a été traité.  
@@ -35,7 +35,7 @@ HRESULT MarkToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `tk`  
  [in] Le jeton à marquer comme traité.  
   

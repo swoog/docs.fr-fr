@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 116ed60dab3365cac052d3b13ce7b056caca0452
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16793cfd93ce296ba0e2bc70c59c22d598aacacd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619676"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500666"
 ---
 # <a name="importfile-method"></a>ImportFile, méthode
 Importe des assemblys et modules indépendants.  
@@ -39,7 +39,7 @@ HRESULT ImportFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pszFilename`  
  Nom qualifié complet du fichier à importer.  
   

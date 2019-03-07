@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43d3234a6bd579238068dba9b37ff48a758f6ed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97b00ff01125e000dec7840f122ed0c69ec9878f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693784"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502527"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated, méthode
 Obtient la taille totale, en octets, de toutes les allocations de mémoire qui ont été apportées par le domaine d’application depuis sa création, sans soustraire la mémoire qui a été le garbage collector.  
@@ -34,7 +34,7 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
                             [out] ULONGLONG* pBytesAllocated);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `dwAppDomainId`  
  [in] L’ID du domaine d’application demandée.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ebc86ad9c1f84156e7e228c1ddf3fe7b86b7e60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b59c7393d9d4e9cbdeaa1a2efd9965f969f985
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576263"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497793"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge, méthode
 Ajoute la portée importée spécifiée à la liste des étendues à fusionner.  
@@ -37,7 +37,7 @@ HRESULT Merge (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pImport`  
  [in] Un pointeur vers un [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) objet qui identifie la portée importée à fusionner.  
   

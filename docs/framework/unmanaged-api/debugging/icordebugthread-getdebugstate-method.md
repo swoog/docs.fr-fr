@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95d9696e29bc1b460c94d7f4d8afd3de82653333
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489889"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState, méthode
-Obtient l’état actuel du débogage de cet objet ICorDebugThread.  
+Obtient l’état de débogage actuel de cet objet ICorDebugThread.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,18 +35,18 @@ HRESULT GetDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pState`  
- [out] Pointeur vers une combinaison d’opérations de bits des valeurs d’énumération CorDebugThreadState qui décrit l’état actuel du débogage de ce thread.  
+ [out] Pointeur vers une combinaison au niveau du bit des valeurs d’énumération CorDebugThreadState qui décrit l’état de débogage actuel de ce thread.  
   
 ## <a name="remarks"></a>Notes  
- Si le processus est arrêté, `pState` représente l’état de débogage qui existe pour ce thread si le processus de se poursuivre, pas l’état actuel réel de ce thread.  
+ Si le processus est actuellement arrêté, `pState` représente l’état de débogage qui existerait pour ce thread si le processus de se poursuivre, pas l’état en cours réel de ce thread.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5004de587f715a2f3958c36999e432d7d6e9f2fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e96a84f9dc96b2eb508034d5277902ff3f328c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632658"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490084"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo, méthode
 Obtient l'étendue de code natif associée à l'ID de la fonction spécifiée.  
@@ -38,7 +38,7 @@ HRESULT GetCodeInfo(
     [out] ULONG      *pcSize);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `functionId`  
  [in] ID de la fonction à laquelle le code natif est associé.  
   

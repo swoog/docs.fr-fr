@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da25055917743481f5a8314023ed94d552fe49ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5539d77b93be1f56102970e9febe6f63599d78e7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526416"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502967"
 ---
 # <a name="iobjecthandleunwrap-method"></a>IObjectHandle::Unwrap, méthode
 Désencapsule un objet marshalé par valeur à partir de l’indirection.  
@@ -35,7 +35,7 @@ HRESULT Unwrap (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `ppv`  
  [out] Pointeur vers l’objet à désencapsuler.  
   

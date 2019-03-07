@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d1c3edd15ce1994c43a5c9419f7c0edb9421fca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 943c119ae32a45034a53fae4ee08c4e23c2abd15
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509218"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503006"
 ---
 # <a name="iclrdebugmanagersetdacl-method"></a>ICLRDebugManager::SetDacl, méthode
 Cette méthode n’est pas implémentée.  
@@ -35,7 +35,7 @@ HRESULT SetDacl (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pacl`  
  [in] Pointeur vers la liste de contrôle d’accès (ACL).  
   

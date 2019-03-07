@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3574d7e889481931f40dbfb3158ad523c7e5637e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf61d9b376afce525d18e6d3a7c3d8523872ebaf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534993"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500930"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress, méthode
 Obtient l’adresse du champ statique de thread spécifié qui est dans la portée du thread spécifié.  
@@ -37,7 +37,7 @@ HRESULT GetThreadStaticAddress(
     [out] void       **ppAddress);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `classId`  
  [in] ID de la classe qui contient le champ thread-static demandé.  
   

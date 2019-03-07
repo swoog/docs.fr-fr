@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e7679fd8010ebe06f20a2a894cbc8e9864b81f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 174ac8b66c8127c16398de442a7067b742ab58ab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705493"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465567"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted, méthode
 Notifie le profileur qu’un domaine d’application est en cours de déchargement d’un processus.  
@@ -34,7 +34,7 @@ HRESULT AppDomainShutdownStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `appDomainId`  
  [in] Identifie le domaine dans lequel sont stockés les assemblys de l’application.  
   

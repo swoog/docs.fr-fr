@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5981e9a193f4ebfc88628f56cf865523c9b87c6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ebeaaa88f3c7320f38d33a9c027d5aa76bf9673
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744646"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495869"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted, méthode
 Notifie le profileur qu’un module est déchargé.  
@@ -34,7 +34,7 @@ HRESULT ModuleUnloadStarted(
     [in] ModuleID moduleId);   
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `moduleId`  
  [in] L’ID du module qui est en cours de déchargement.  
   

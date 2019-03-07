@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 191a6e4fcfe340ed43e85a9aa90f8a2ec0931730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e6f76750f82655922f00c9d9fa71e87ab3c05df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671653"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487133"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps, méthode
 Obtient les métadonnées associées à la <xref:System.Type> référencé par le jeton TypeRef spécifié.  
@@ -39,7 +39,7 @@ HRESULT GetTypeRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `tr`  
  [in] Le jeton TypeRef qui représente le type à retourner les métadonnées.  
   

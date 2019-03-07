@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a104d4d3cc74a6c1cb343818c9b0b3e8978b97df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c14b48a29993a65a0a0ab9fcb63bcb1e0d882042
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402797"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494066"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame, méthode
-Obtient l’active (autrement dit, la plus récente) frame sur la chaîne.  
+Obtient l’actif (autrement dit, plus récente) frame sur la chaîne.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,20 +35,20 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `ppFrame`  
- [out] Un pointeur vers l’adresse d’un objet ICorDebugFrame qui représente l’actif (autrement dit, la plus récente) frame sur la chaîne.  
+ [out] Un pointeur vers l’adresse d’un objet ICorDebugFrame qui représente l’actif (autrement dit, plus récente) frame sur la chaîne.  
   
 ## <a name="remarks"></a>Notes  
- Si aucun frame de pile managé n’est disponible, `ppFrame` a la valeur null.  
+ Si aucun frame de pile managée est disponible, `ppFrame` a la valeur null.  
   
- Si le frame actif n’est pas disponible, l’appel réussi et `ppFrame` sera null. Cadres active ne sera pas disponibles pour les chaînes initiées en raison de CHAIN_ENTER_UNMANAGED et pour certaines chaînes initiées en raison de CHAIN_CLASS_INIT. Consultez l’énumération CorDebugChainReason.  
+ Si le frame actif n’est pas disponible, l’appel réussira et `ppFrame` sera null. Cadres active ne sera pas disponibles pour les chaînes lancées en raison de CHAIN_ENTER_UNMANAGED et pour certaines chaînes lancées en raison de CHAIN_CLASS_INIT. Consultez l’énumération CorDebugChainReason.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

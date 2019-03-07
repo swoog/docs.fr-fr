@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 838f2df06f8875037edbe39d2db0411f31abe01f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b18474aeaa79224de5371df3ff0cac5ed9bf4ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475734"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange, méthode
-Provoque un ICorDebugStepper pas à pas son thread conteneur et à retourner lorsqu’il atteint le code situé au-delà de la dernière des plages spécifiées.  
+Provoque ICorDebugStepper pas à pas son thread conteneur et à retourner lorsqu’il atteint le code au-delà de la dernière des plages spécifiées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,28 +37,28 @@ HRESULT StepRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `bStepIn`  
- [in] La valeur `true` à l’étape dans une fonction qui est appelée dans le thread. La valeur `false` à l’étape de la fonction.  
+ [in] La valeur `true` à l’étape dans une fonction qui est appelée dans le thread. La valeur `false` pour ignorer la fonction.  
   
  `ranges`  
- [in] Tableau de structures COR_DEBUG_STEP_RANGE, chacun spécifiant une plage.  
+ [in] Tableau de structures COR_DEBUG_STEP_RANGE, dont chacun spécifie une plage.  
   
  `cRangeCount`  
  [in] Taille du tableau `ranges`.  
   
 ## <a name="remarks"></a>Notes  
- Le `StepRange` méthode fonctionne comme la [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) (méthode), sauf qu’elle ne se termine pas tant que le code en dehors de la plage donnée est atteinte.  
+ Le `StepRange` méthode fonctionne comme le [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) (méthode), sauf qu’elle ne se termine pas tant que le code en dehors de la plage donnée est atteinte.  
   
- Cela peut être plus efficace que l’exécution pas à pas d’une instruction à la fois. Les plages sont spécifiées sous forme de liste de paires d’offsets à partir du début du frame de d’exécution pas à pas.  
+ Cela peut être plus efficace que l’exécution pas à pas d’une instruction à la fois. Les plages sont spécifiées comme une liste de paires d’offsets à partir du début du frame de d’exécution pas à pas.  
   
  Les plages sont relatives au code Microsoft intermediate language (MSIL) d’une méthode. Appelez [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) avec `false` pour que les plages par rapport au code natif d’une méthode.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

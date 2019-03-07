@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ed8b6f047f26235e984fb514381a9b1d85543ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ad1f015f04b3829090417c26e8d58892ee15af4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675130"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487432"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize, fonction
 Obtient la taille de mémoire tampon requise pour un hachage, à l’aide de l’algorithme de hachage spécifié.  
@@ -37,7 +37,7 @@ BOOLEAN StrongNameHashSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `ulHashAlg`  
  [in] L’algorithme de hachage utilisé pour calculer la taille du tampon.  
   

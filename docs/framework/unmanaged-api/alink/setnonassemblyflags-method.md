@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78a7dab69e716e1662a277a69c008474d97f9bc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6c07a6679326548535985e4c938c3fddbb2a0cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619647"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500211"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags, méthode
 Définit les indicateurs qui ne sont pas spécifiques à l’assembly.  
@@ -34,7 +34,7 @@ HRESULT SetNonAssemblyFlags(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `afFlags`  
  Indicateurs de ALink.  
   

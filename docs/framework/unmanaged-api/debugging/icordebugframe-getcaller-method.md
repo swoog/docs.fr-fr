@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2452f4be0acde300676bf56011416e0a9ef16464
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 82902e6a395fe62464065ccea4cca5b52c960f0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411714"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492216"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller, méthode
 Obtient un pointeur vers l’objet ICorDebugFrame dans la chaîne actuelle qui a appelé ce frame.  
@@ -35,15 +35,15 @@ HRESULT GetCaller (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `ppFrame`  
- [out] Un pointeur vers l’adresse d’un `ICorDebugFrame` objet qui représente le frame appelant. Cette valeur est null si le frame appelé correspond au frame extérieur dans la chaîne actuelle.  
+ [out] Un pointeur vers l’adresse d’un `ICorDebugFrame` objet qui représente le frame d’appel. Cette valeur est null si le frame appelé est le frame le plus extérieur dans la chaîne actuelle.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
