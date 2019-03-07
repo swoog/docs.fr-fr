@@ -2,18 +2,13 @@
 title: Tableaux dans Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149898"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Tableaux dans Visual Basic
 
 Un tableau est un ensemble de valeurs appelées *éléments*, qui sont liés logiquement entre eux. Par exemple, un tableau peut contenir le nombre d’étudiants de chaque niveau scolaire dans une école primaire ; chaque élément du tableau est le nombre d’étudiants dans une classe unique. De même, un tableau peut se composer de notes d’un étudiant pour une classe ; chaque élément du tableau est un niveau unique.
@@ -87,7 +82,7 @@ Vous pouvez définir la taille d’un tableau de plusieurs façons :
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-Si vous avez un tableau existant, vous pouvez redéfinir sa taille à l’aide de la [ `Redim` ](../../../language-reference/statements/redim-statement.md) instruction. Vous pouvez spécifier que le `Redim` instruction conserver les valeurs qui se trouvent dans le tableau, ou vous pouvez spécifier qu’elle crée un tableau vide. L’exemple suivant montre les différentes utilisations possibles de l’instruction `Redim` pour modifier la taille d’un tableau existant.
+Si vous avez un tableau existant, vous pouvez redéfinir sa taille à l’aide de la [ `ReDim` ](../../../language-reference/statements/redim-statement.md) instruction. Vous pouvez spécifier que le `ReDim` instruction conserver les valeurs qui se trouvent dans le tableau, ou vous pouvez spécifier qu’elle crée un tableau vide. L’exemple suivant montre les différentes utilisations possibles de l’instruction `ReDim` pour modifier la taille d’un tableau existant.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ L’exemple suivant utilise un tableau de mois, dont chaque élément est un tab
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-L’exemple précédent assigne des valeurs dans le tableau en escalier sur une base de l’élément par élément en utilisant un `For...Next` boucle. Vous pouvez également affecter des valeurs aux éléments d’un tableau en escalier à l’aide de littéraux de tableau imbriqués. Toutefois, la tentative d’utilisation imbriquée littéraux de tableaux (par exemple, ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) génère l’erreur du compilateur [BC30568](../../../,,/../misc/bc30568.md). Pour corriger cette erreur, placez les littéraux de tableau internes entre parenthèses. Les parenthèses forcent l’expression de littéral de tableau doit être évaluée, et les valeurs résultantes sont utilisés avec le littéral de tableau externe, comme le montre l’exemple suivant.
+L’exemple précédent assigne des valeurs dans le tableau en escalier sur une base de l’élément par élément en utilisant un `For...Next` boucle. Vous pouvez également affecter des valeurs aux éléments d’un tableau en escalier à l’aide de littéraux de tableau imbriqués. Toutefois, la tentative d’utilisation imbriquée littéraux de tableaux (par exemple, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) génère l’erreur du compilateur [BC30568](../../../,,/../misc/bc30568.md). Pour corriger cette erreur, placez les littéraux de tableau internes entre parenthèses. Les parenthèses forcent l’expression de littéral de tableau doit être évaluée, et les valeurs résultantes sont utilisés avec le littéral de tableau externe, comme le montre l’exemple suivant.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Vous pouvez également combiner un nombre de groupes dans un seul tableau plus g
 > [!NOTE]
 > Cette section ne traite pas de joindre un tableau de chaînes en une seule chaîne. Pour plus d’informations sur la jonction d’un tableau de chaînes, consultez le <xref:System.String.Join%2A?displayProperty=nameWithType> (méthode).
 
-Avant de copier les éléments de chaque tableau dans le nouveau tableau, vous devez tout d’abord vous assurer que vous avez initialisé le tableau afin qu’il soit suffisamment grand pour accompodate le nouveau tableau. Vous pouvez le faire de deux façons :
+Avant de copier les éléments de chaque tableau dans le nouveau tableau, vous devez d’abord vous assurer que vous avez initialisé le tableau afin qu’il soit suffisamment grand pour contenir le nouveau tableau. Vous pouvez le faire de deux façons :
 
 - Utilisez le [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md) instruction pour développer dynamiquement le tableau avant d’ajouter de nouveaux éléments à ce dernier. C’est la technique la plus simple, mais cela peut entraîner une dégradation des performances et la consommation excessive de la mémoire lorsque vous copiez des grands tableaux.
 - Calculer le nombre total d’éléments requis pour le nouveau groupe de grande taille, puis ajoutez les éléments de chaque tableau source à ce dernier.
@@ -299,9 +294,9 @@ Pour plus d’informations sur les collections, consultez [Collections](../../co
 |Terme|Définition|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Explique le rang et les dimensions des tableaux.|
-|[Comment : Initialiser une Variable tableau en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Explique comment remplir les tableaux de valeurs initiales.|
-|[Comment : Trier un tableau en Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Montre comment trier les éléments d’un tableau par ordre alphabétique.|
-|[Comment : Assigner un tableau à un autre tableau](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Décrit les règles et les étapes à suivre pour assigner un tableau à une autre variable tableau.|
+|[Guide pratique pour Initialiser une Variable tableau en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Explique comment remplir les tableaux de valeurs initiales.|
+|[Guide pratique pour Trier un tableau en Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Montre comment trier les éléments d’un tableau par ordre alphabétique.|
+|[Guide pratique pour Assigner un tableau à un autre tableau](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Décrit les règles et les étapes à suivre pour assigner un tableau à une autre variable tableau.|
 |[Dépannage des tableaux](../../language-features/arrays/troubleshooting-arrays.md)|Décrit des problèmes courants qui surviennent dans le cadre de l’utilisation de tableaux.|
 
 ## <a name="see-also"></a>Voir aussi
