@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 195cea23313d88b636479147faa512889ca94b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 413e56a65f4966467f487787172973834ac4a65a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413970"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496870"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a>ICorDebugModule::GetClassFromToken, méthode
 Obtient la classe spécifiée par le jeton de métadonnées.  
@@ -36,7 +36,7 @@ HRESULT GetClassFromToken(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `typedef`  
  [in] Un `mdTypeDef` jeton de métadonnées qui référence les métadonnées d’une classe.  
   
@@ -44,10 +44,10 @@ HRESULT GetClassFromToken(
  [out] Pointeur vers l’adresse d’un objet ICorDebugClass qui représente la classe.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

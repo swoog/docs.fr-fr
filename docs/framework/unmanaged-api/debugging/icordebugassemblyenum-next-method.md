@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b94ae83f2fb5f71abb8cb3a5c96aac9e268fc5db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25861b2635605042acc1bf81f3f7a4739e678522
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405286"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493109"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>ICorDebugAssemblyEnum::Next, méthode
 Obtient le nombre spécifié d’assemblys à partir de la collection, en commençant à la position actuelle du curseur.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `celt`  
  [in] Le nombre d’assemblys à récupérer.  
   
@@ -46,13 +46,13 @@ HRESULT Next (
  [out] Tableau de pointeurs, chacun pointant vers un objet ICorDebugAssembly qui représente un assembly.  
   
  `pceltFetched`  
- [out] Pointeur vers le nombre d’assemblys réellement retournées. Cette valeur peut être null si `celt` fait partie.  
+ [out] Pointeur vers le nombre d’assemblys réellement retournés. Cette valeur peut être null si `celt` fait partie.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

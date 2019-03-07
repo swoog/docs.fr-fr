@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65d6e929a0a6fb5e1933a6c9216dfc5b56342113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc9ca5d9533a6c4a297155a47ac0061f1232d242
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560644"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481100"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps, méthode
 Assigne des propriétés au niveau de l’assembly.  
@@ -37,7 +37,7 @@ HRESULT SetAssemblyProps(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `AssemblyID`  
  ID de l’assembly.  
   

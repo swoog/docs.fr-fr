@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3faa3762612e4d1fc608291a393e9eb2e79fe67e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03185f3f554c5454b23b0c72c42d68714488e6be
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616847"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501706"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem, méthode
 Files d’attente d’une fonction pour l’exécution et spécifie un objet contenant les données à utiliser par cette fonction. La fonction s’exécute lorsqu’un thread devienne disponible.  
@@ -37,7 +37,7 @@ HRESULT QueueUserWorkItem (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `Function`  
  [in] Un pointeur de fonction qui représente la fonction à exécuter.  
   

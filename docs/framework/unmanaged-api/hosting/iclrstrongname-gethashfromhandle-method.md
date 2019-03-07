@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 645c344e5dd9e509873a65335b5d042e94107fad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9688635532e0ccc35ff8826a53da80738bfc528e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728815"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470014"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>Méthode ICLRStrongName::GetHashFromHandle
 Génère un hachage sur le contenu du fichier qui a le handle de fichier spécifié, à l’aide de l’algorithme de hachage spécifié.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `hFile`  
  [in] Le handle du fichier à hacher.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e42710f6c19bb5b2eca6891c2855e010ad9de1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98a53f488467ed1c66543c9861f056bc9890f617
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612201"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478516"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>Méthode ICLRStrongName::StrongNameKeyGen
 Crée une nouvelle paire de clés publique/privée pour une utilisation de nom fort.  
@@ -38,7 +38,7 @@ HRESULT StrongNameKeyGen (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `wszKeyContainer`  
  [in] Le nom du conteneur de clé demandé. `wszKeyContainer` doit être une chaîne non vide ou une valeur null pour générer un nom temporaire.  
   

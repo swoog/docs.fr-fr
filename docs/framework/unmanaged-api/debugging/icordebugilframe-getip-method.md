@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd421d705a96778159cb80ad92d9ac654e88985f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a7b8985e7580282d0e38205f9b1d6078f86cee6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414064"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479764"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP, méthode
-Obtient la valeur du pointeur d’instruction et une valeur de la combinaison de bits qui décrit la façon dont la valeur du pointeur d’instruction a été obtenue.  
+Obtient la valeur de pointeur d’instruction et une valeur de combinaison de bits qui décrit la façon dont la valeur de pointeur d’instruction a été obtenue.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,23 +36,23 @@ HRESULT GetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pnOffset`  
- [out] La valeur du pointeur d’instruction.  
+ [out] La valeur de pointeur d’instruction.  
   
  `pMappingResult`  
- [out] Pointeur vers une combinaison d’opérations de bits des valeurs d’énumération CorDebugMappingResult qui décrivent comment la valeur du pointeur d’instruction a été obtenue.  
+ [out] Pointeur vers une combinaison au niveau du bit des valeurs d’énumération CorDebugMappingResult qui décrivent comment la valeur du pointeur d’instruction a été obtenue.  
   
 ## <a name="remarks"></a>Notes  
- La valeur du pointeur d’instruction est l’offset du frame de pile dans le code de la fonction Microsoft intermediate language (MSIL). Si le frame de pile est actif, cette adresse est l’instruction suivante à exécuter. Si le frame de pile n’est pas actif, cette adresse est l’instruction suivante à exécuter lorsque le frame de pile est réactivé.  
+ La valeur de pointeur d’instruction est l’offset du frame de pile dans le code de la fonction Microsoft intermediate language (MSIL). Si le frame de pile est actif, cette adresse est l’instruction suivante à exécuter. Si le frame de pile n’est pas actif, cette adresse est la prochaine instruction à exécuter lorsque le frame de pile est réactivé.  
   
- Si cette image est un frame de compilé juste-à-temps (JIT), la valeur du pointeur d’instruction sera déterminée en mappant vers l’arrière à partir du pointeur d’instruction natif réel, donc la valeur peut être uniquement approximative.  
+ Si ce frame est un frame de compilé juste-à-temps (JIT), la valeur de pointeur d’instruction sera déterminée en mappant vers l’arrière à partir du pointeur d’instruction natif réel, donc la valeur peut être uniquement approximative.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

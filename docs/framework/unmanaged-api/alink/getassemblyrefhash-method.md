@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5698e5555e82fd8f64fd029f78cda361a367ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2597cf14f4f1fc9a99740b4a07502246f80087d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585222"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466594"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash, méthode
 Récupère un objet blob de hachage pour un assembly donné.  
@@ -36,7 +36,7 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `FileToken`  
  ID de l’assembly auquel le hachage fera référence.  
   

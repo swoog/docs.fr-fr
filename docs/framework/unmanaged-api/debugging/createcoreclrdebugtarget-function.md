@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a957eb6907b55fe948d696a6a25076c3950f7381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402973"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470061"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>Fonction CreateCoreClrDebugTarget
 Crée une connexion à un proxy de débogueur qui s’exécute sur un ordinateur distant et retourne un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objet qui peut être utilisé pour interroger les processus en cours d’exécution et les runtimes chargés sur l’ordinateur distant.  
@@ -37,12 +37,12 @@ HRESULT CreateCoreClrDebugTarget (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `dwAddress`  
  [in] Adresse IPv4 d'un ordinateur cible distant.  
   
  `ppTarget`  
- [out] Pointeur vers un pointeur vers un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objet qui sera créé.  
+ [out] Pointeur vers un pointeur vers un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objet sera créé.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK  
@@ -55,10 +55,10 @@ HRESULT CreateCoreClrDebugTarget (
  Autres échecs.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CoreClrRemoteDebuggingInterfaces.h  
   
  **Bibliothèque :** mscordbi_macx86.dll  
   
- **Versions du .NET framework :** 3.5 SP1
+ **Versions du .NET framework :** 3.5 SP1

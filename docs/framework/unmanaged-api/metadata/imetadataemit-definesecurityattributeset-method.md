@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 483f59ee3e81861ec1b05a0fee9c5db797aab68f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43009a81298fa5414df94e0664306859f0c9b851
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491145"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478737"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet, méthode
 Crée un jeu d’autorisations de sécurité à joindre à l’objet référencé par le jeton spécifié.  
@@ -38,7 +38,7 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `tkObj`  
  [in] Le jeton à laquelle les informations de sécurité sont attachées.  
   

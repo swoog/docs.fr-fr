@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ed1db49be78d7d16648a9ef9735e79ef1b3ab98
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404308"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487328"
 ---
 # <a name="getstartupnotificationevent-function"></a>Fonction GetStartupNotificationEvent
 Crée ou ouvre un gestionnaire d'événements qui sera signalé par un Common Language Runtime (CLR) qui est chargé dans le processus cible spécifié.  
@@ -38,7 +38,7 @@ HRESULT GetStartupNotificationEvent
     );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `debuggeePID`  
  [in] Identificateur du processus cible à partir duquel les notifications de démarrage du CLR sont reçues.  
   
@@ -61,10 +61,10 @@ HRESULT GetStartupNotificationEvent
  L'événement est signalé avant l'exécution de code managé par le CLR ayant signalé l'événement.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** dbgshim.h  
   
  **Bibliothèque :** dbgshim.dll  
   
- **Versions du .NET framework :** 3.5 SP1
+ **Versions du .NET framework :** 3.5 SP1

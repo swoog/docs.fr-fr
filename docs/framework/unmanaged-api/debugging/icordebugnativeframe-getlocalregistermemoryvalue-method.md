@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa9e168b36c8408583ca23dee070fc36b2cb076c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3a174953877d70a295e659220e71c337e45f392
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572992"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495232"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue, méthode
 Obtient la valeur d’un argument ou une variable locale, dont le mot de poids faible et fort sont stockés dans l’emplacement de mémoire et le Registre spécifié, respectivement, pour ce frame natif.  
@@ -39,7 +39,7 @@ HRESULT GetLocalRegisterMemoryValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `highWordReg`  
  [in] Une valeur de l’énumération « CorDebugRegister » qui spécifie le Registre contenant le mot de poids fort de la valeur.  
   

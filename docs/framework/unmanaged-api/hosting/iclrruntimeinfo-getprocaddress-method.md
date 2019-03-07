@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f956ed33e0a168dca0c0e5de92d38ba32db3fb05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da9ae70056e3ef5d6d9e03fde1dcf8775e5d118e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703456"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498950"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress, méthode
 Obtient l’adresse d’une fonction spécifiée qui a été exportée dans le common language runtime (CLR) associé à cette interface.  
@@ -37,7 +37,7 @@ HRESULT GetProcAddress(
      [out, retval] LPVOID *ppProc);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pszProcName`  
  [in] Le nom de la fonction exportée.  
   
@@ -50,7 +50,7 @@ HRESULT GetProcAddress(
 |HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|La commande s'est correctement terminée.|  
-|E_POINTER|`pszProcName` ou `ppProc` est null.|  
+|E_POINTER|`pszProcName` ou `ppProc` a la valeur null.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|La fonction spécifiée n’est pas une fonction exportée.|  
   
 ## <a name="remarks"></a>Notes  

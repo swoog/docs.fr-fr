@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a5dca321470b3fda8490ca5ae809045d724150
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96deee943f6a4c636a52b41c8f4c2fda86c6bd18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552162"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493717"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf, méthode
 Vérifie si le `this` frame interne est la plus proche de la feuille que l’objet ICorDebugFrame spécifié.  
@@ -34,7 +34,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
                        [out] BOOL * pIsCloser);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pFrameToCompare`  
  [in] Un pointeur vers la comparaison `ICorDebugFrame` objet.  
   
@@ -48,7 +48,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |-------------|-----------------|  
 |S_OK|La comparaison a été effectuée avec succès.|  
 |E_FAIL|La comparaison n’a pas pu être effectuée.|  
-|E_INVALIDARG|`pFrameToCompare` ou `pIsCloser` est null.|  
+|E_INVALIDARG|`pFrameToCompare` ou `pIsCloser` a la valeur null.|  
   
 ## <a name="remarks"></a>Notes  
  `IsCloserToLeaf` peut être utilisé pour implémenter une stratégie pour entrelacer les frames internes avec d’autres images sur la pile.  

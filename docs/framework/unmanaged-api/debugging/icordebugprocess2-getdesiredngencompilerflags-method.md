@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77ffb53e3a2b3802d3fcc1319397c8f51c5b127c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a59067f72005e87152680e4f990fc74e4acdaa9b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416109"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472666"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>ICorDebugProcess2::GetDesiredNGENCompilerFlags, méthode
-Obtient des paramètres de l’indicateur par le common language runtime (CLR) pour sélectionner la bonne précompilé le compilateur actuel (c'est-à-dire native) image doit être chargé dans ce processus.  
+Obtient le compilateur actuel indicateur des paramètres utilisés par le common language runtime (CLR) pour sélectionner le bon précompilé (autrement dit, native) l’image à charger dans ce processus.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,18 +35,18 @@ HRESULT GetDesiredNGENCompilerFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pdwFlags`  
- [out] Un pointeur vers une combinaison d’opérations de le [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) valeurs d’énumération qui sont utilisés pour sélectionner l’image précompilée correcte à charger.  
+ [out] Un pointeur vers une combinaison au niveau du bit de la [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) valeurs d’énumération qui sont utilisés pour sélectionner l’image précompilée correcte à charger.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le [ICorDebugProcess2::SetDesiredNGENCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md) méthode pour définir les indicateurs que le CLR utilise pour sélectionner l’image précompilée correcte à charger.  
+ Utiliser le [ICorDebugProcess2::SetDesiredNGENCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md) méthode pour définir les indicateurs qui utilisera le CLR pour sélectionner l’image précompilée correcte à charger.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

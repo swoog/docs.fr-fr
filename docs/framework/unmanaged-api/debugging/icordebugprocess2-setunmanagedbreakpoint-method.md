@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b374720bd7bdad48222da006b809702de6462a62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420815"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472783"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint, méthode
-Définit un point d’arrêt non managé à l’offset d’image native spécifié.  
+Définit un point d’arrêt non managé à l’offset d’image native spécifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,12 +39,12 @@ HRESULT SetUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `address`  
- [in] A `CORDB_ADDRESS` objet qui spécifie le décalage de l’image native.  
+ [in] Un `CORDB_ADDRESS` objet qui spécifie le décalage de l’image native.  
   
  `bufsize`  
- [in] La taille, en octets, de le `buffer` tableau.  
+ [in] La taille, en octets, de la `buffer` tableau.  
   
  `buffer`  
  [out] Tableau qui contient le code d’opération qui est remplacé par le point d’arrêt.  
@@ -56,10 +56,10 @@ HRESULT SetUnmanagedBreakpoint (
  Si le décalage de l’image native est dans le common language runtime (CLR), le point d’arrêt sera ignoré. Ainsi, le CLR afin d’éviter la distribution d’un point d’arrêt hors-bande, lorsque le point d’arrêt est défini par le débogueur.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

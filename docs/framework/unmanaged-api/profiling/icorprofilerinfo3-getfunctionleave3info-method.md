@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a035c295e9d1ef093fb9f4e426002cc4aef88223
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ee7dd280239217e4e16932667e86de67e738f2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520411"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471171"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>ICorProfilerInfo3::GetFunctionLeave3Info, méthode
 Fournit le frame de pile et la valeur de retour de la fonction signalée au profileur par la [FunctionLeave3WithInfo fonction](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) (fonction). Cette méthode peut être appelée uniquement pendant le rappel de `FunctionLeave3WithInfo`.  
@@ -37,7 +37,7 @@ HRESULT GetFunctionLeave3Info(
             [out] COR_PRF_FUNCTION_ARGUMENT_RANGE *pRetvalRange);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `functionId`  
  [in] Le `FunctionID` de la fonction qui retourne.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527599"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490409"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField, méthode
 Obtient un pointeur vers le FieldDef jeton pour le champ est placé par spécifié <xref:System.Type> et qui a la signature de nom et de métadonnées spécifiée.  
@@ -39,7 +39,7 @@ HRESULT FindField (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `td`  
  [in] Le jeton TypeDef pour la classe ou interface qui encadre le champ à rechercher. Si cette valeur est `mdTokenNil`, la recherche est effectuée pour une variable globale.  
   

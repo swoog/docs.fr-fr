@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18903bd00b0a9d09365d03c155531a25dc013189
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60b6d9c302cd3af9f41e5a8dce62d7eb268c4198
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406086"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491875"
 ---
 # <a name="closeclrenumeration-function"></a>Fonction CloseCLREnumeration
-Ferme tout valide common language runtime (CLR) événements continue-startup situés dans un tableau de handles retourné par le [fonction EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)et libère la mémoire pour les tableaux de chemin d’accès de handles et de chaînes.  
+Ferme tous valide common language runtime (CLR) continue-startup les événements situés dans un tableau de handles retourné par la [fonction EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)et libère la mémoire pour les tableaux de chemin d’accès de handles et de chaînes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,12 +38,12 @@ HRESULT CloseCLREnumeration (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pHandleArray`  
  [in] Pointeur vers le tableau de handles d’événement retourné par la [fonction EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
   
  `pStringArray`  
- [in] Pointeur vers le tableau de chemins d’accès de la chaîne CLR retournée à partir de la [fonction EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
+ [in] Pointeur vers le tableau de chemins d’accès de la chaîne CLR retourné à partir de la [fonction EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
   
  `dwArrayLength`  
  [in] Valeur DWORD contenant la taille (longueur) de `pHandleArray` ou de `pStringArray` (ils sont identiques).  
@@ -59,10 +59,10 @@ HRESULT CloseCLREnumeration (
  La fonction ne peut pas libérer la mémoire pour `pHandleArray` et `pStringArray`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** dbgshim.h  
   
  **Bibliothèque :** dbgshim.dll  
   
- **Versions du .NET framework :** 3.5 SP1
+ **Versions du .NET framework :** 3.5 SP1

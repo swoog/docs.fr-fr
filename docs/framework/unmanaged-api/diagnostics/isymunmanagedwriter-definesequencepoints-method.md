@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76d3be88065d4f29020a794db30c616774db1f4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4210dedd77c6ab041189fa287e192bb7038080b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491405"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints, méthode
 Définit un groupe de points de séquence dans la méthode actuelle. Chaque ligne de début et de la colonne de départ définit le début d’une instruction dans une méthode. Chaque ligne de fin et la colonne de fin définissent la fin d’une instruction dans une méthode. Les tableaux doivent être triés dans l’ordre croissant des offsets. L’offset est toujours mesuré depuis le début de la méthode, en octets.  
@@ -40,7 +40,7 @@ HRESULT DefineSequencePoints(
     [in, size_is(spCount)] ULONG32     endColumns[]);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `document`  
  [in] L’objet de document pour lequel les points de séquence sont définies.  
   

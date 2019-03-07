@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 886e47028ec445b0a96af367afccd09c0759d0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3cd977b7709f48ddf9938b9882a4ecb55cd6f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727597"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484496"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken, méthode
 Ouvre le jeton d’accès discrétionnaire associé au thread en cours d’exécution.  
@@ -37,7 +37,7 @@ HRESULT OpenThreadToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `dwDesiredAccess`  
  [in] Masque des valeurs d’accès qui spécifient les types demandés d’accès au jeton de thread. Ces valeurs sont définies dans Win32 `OpenThreadToken` (fonction). Les types d’accès demandés sont rapprochées par rapport à la liste de contrôle d’accès discrétionnaire (DACL) pour déterminer quels types d’accès à accorder ou refuser du jeton.  
   

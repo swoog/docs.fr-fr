@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e73afa7ef33e12d6bc658c944c79ce1bc4f94f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43e71696282a3c9e6d25793b583ee19f306e167b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572413"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486236"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback (fonction)
 Fournit au profileur des informations sur chaque frame managé et chaque exécution de trames non gérées sur la pile pendant un parcours de pile, ce qui est lancée par le [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) (méthode).  
@@ -39,7 +39,7 @@ HRESULT __stdcall StackSnapshotCallback (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `funcId`  
  [in] Si cette valeur est zéro, ce rappel est pour une exécution de trames non gérées ; Sinon, il est l’identificateur d’une fonction managée et ce rappel est pour une trame gérée.  
   

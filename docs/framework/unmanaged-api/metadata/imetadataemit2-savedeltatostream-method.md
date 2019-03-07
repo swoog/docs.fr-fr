@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0702a7a58e6bd8c13254da5adce17c9adf6fa0cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcb94323c9950b8e1fe56ca3dae5f41a9c801907
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569455"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472120"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream, méthode
 Enregistre les modifications de la session active modifier et continuer dans le flux spécifié.  
@@ -36,7 +36,7 @@ HRESULT SaveDeltaToStream (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pIStream`  
  [in] Un pointeur d’interface vers le flux accessible en écriture dans lequel enregistrer les modifications.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ce0a543b44bad4e3ae615d06e38c04cd0fb1207
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a565c19285b00c807ef6fbfc018a40467139638e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523660"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466347"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString, méthode
 Traduit une valeur HRESULT dans un message d’erreur approprié pour la culture spécifiée.  
@@ -43,7 +43,7 @@ HRESULT LoadErrorString(
      [in, lcid] LONG iLocaleID);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `iResourceID`  
  [in] HRESULT à traduire.  
   

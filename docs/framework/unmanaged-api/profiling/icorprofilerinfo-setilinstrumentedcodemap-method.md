@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc13dc1348a6d397c86b03976c86c3595f749cf6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721160"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480063"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap, méthode
 Définit une carte de code pour la fonction spécifiée à l’aide d’entrées de mappage Microsoft intermediate language (MSIL) spécifiées.  
@@ -40,7 +40,7 @@ HRESULT SetILInstrumentedCodeMap(
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `functionId`  
  [in] L’ID de la fonction pour laquelle définir la carte de code.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd54792e37523ea5bf0c2e7a4082ee00c30d00ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eef04dfb305978c81f465ecb37eda75a52f25e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496294"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502948"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning, méthode
 Obtient une valeur qui indique si les threads dans le processus en cours d’exécution librement.  
@@ -35,7 +35,7 @@ HRESULT IsRunning (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pbRunning`  
  [out] Un pointeur vers une valeur qui est `true` si les threads dans le processus sont en cours d’exécution librement ; sinon, `false`.  
   

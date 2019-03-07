@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80ed86526c99c36254f2b9c71f00483095e771ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b85739f0f9b6771b204f0e0297ab025cd112a12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734349"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476702"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize, méthode
 Obtient la taille, en octets, du type de pointeur qui utilise le processus cible. Cette méthode est appelée par les services d’accès de données common language runtime.  
@@ -35,7 +35,7 @@ HRESULT GetPointerSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pointerSize`  
  [out] Pointeur vers une valeur entière qui spécifie la taille, en octets, d’un pointeur sur le processus cible.  
   

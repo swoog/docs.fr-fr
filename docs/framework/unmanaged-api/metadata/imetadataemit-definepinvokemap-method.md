@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f1d62c55df410d284fe050b805cf465718ab112
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 343f4f3cb88f98d1952e2910255d6cceb0cf0cc6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576149"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483365"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap, méthode
 Définit les fonctionnalités de la signature PInvoke de la méthode référencée par le jeton spécifié.  
@@ -38,7 +38,7 @@ HRESULT DefinePinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `tk`  
  [in] Le jeton pour la méthode cible.  
   

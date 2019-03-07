@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e8baa73594823c6b2f19b2af87e6a681ad71e3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56d2c28529d3f3ee87fe3fdedd91634133ebf864
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713299"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492203"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame, méthode
 Détermine si le frame spécifié est le parent de l’image actuelle.  
@@ -35,7 +35,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
                               [out] BOOL *pIsParent);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pPotentialParentFrame`  
  [in] Pointeur vers l’objet frame que vous souhaitez évaluer l’état de parent.  
   
@@ -49,7 +49,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |-------------|-----------------|  
 |S_OK|L’état parent a été retourné avec succès.|  
 |E_FAIL|L’état de parent n’a pas pu être retourné.|  
-|E_INVALIDARG|`pPotentialParentFrame` ou `pIsParent` est null.|  
+|E_INVALIDARG|`pPotentialParentFrame` ou `pIsParent` a la valeur null.|  
   
 ## <a name="exceptions"></a>Exceptions  
   

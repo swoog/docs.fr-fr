@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402468"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481558"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange, méthode
 Obtient la plage d’adresses du segment de pile pour cette chaîne.  
@@ -36,7 +36,7 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pStart`  
  [out] Un pointeur vers un `CORDB_ADDRESS` valeur qui est l’adresse de départ du segment de pile.  
   
@@ -44,13 +44,13 @@ HRESULT GetStackRange (
  [out] Un pointeur vers un `CORDB_ADDRESS` valeur qui est l’adresse de fin du segment de pile.  
   
 ## <a name="remarks"></a>Notes  
- La plage numérique est utile uniquement pour la comparaison des emplacements de frame de pile. Vous ne pouvez pas faire d’hypothèses sur ce qui est réellement stocké dans la pile.  
+ La plage numérique est significative uniquement pour la comparaison des emplacements de frame de pile. Vous ne pouvez pas faire d’hypothèses concernant ce qui est réellement stocké sur la pile.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

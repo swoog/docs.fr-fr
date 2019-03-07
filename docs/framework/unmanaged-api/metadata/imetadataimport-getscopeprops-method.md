@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7c41e05ecf4e33f7ca711befdd90275452439df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e5d998bd85f1cc872acde74fdf954299a279c40
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718856"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466269"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>IMetaDataImport::GetScopeProps, méthode
 Obtient le nom et éventuellement l'identificateur de version de l'assembly ou du module dans la portée de métadonnées actuelle.  
@@ -38,7 +38,7 @@ HRESULT GetScopeProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `szName`  
  [out] Une mémoire tampon pour le nom de l’assembly ou du module.  
   

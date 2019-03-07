@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18084cb69d2c620fc892cc05e5a561e8fda3bc1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420093"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488186"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub, méthode
 Obtient une valeur qui indique si une adresse est à l’intérieur d’un stub qui provoquera une transition vers du code managé.  
@@ -35,23 +35,23 @@ HRESULT IsTransitionStub(
     [out] BOOL *pbTransitionStub);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `address`  
- [in] A `CORDB_ADDRESS` valeur qui spécifie l’adresse en question.  
+ [in] Un `CORDB_ADDRESS` valeur qui spécifie l’adresse en question.  
   
  `pbTransitionStub`  
  [out] Un pointeur vers une valeur booléenne qui est `true` si l’adresse spécifiée est à l’intérieur d’un stub qui provoquera une transition vers du code managé ; sinon *`pbTransitionStub` est `false`.  
   
 ## <a name="remarks"></a>Notes  
- Le `IsTransitionStub` méthode peut être utilisée par le code pas à pas non managé pour décider du moment retourner le contrôle de pas à pas pour l’exécution pas à pas géré.  
+ Le `IsTransitionStub` méthode peut être utilisée par le code pas à pas non managé pour décider du moment auquel le retourner le pas à pas de contrôle à l’exécution pas à pas géré.  
   
  Vous pouvez également les stubs de transition identité en examinant les informations contenues dans le fichier exécutable portable (PE).  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

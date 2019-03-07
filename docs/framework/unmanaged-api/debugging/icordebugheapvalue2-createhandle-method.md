@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d1f83a4591df4d2dcb7fb9724fa582ea28387
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 078dfd7162c250f0279b8bc372aeb39662aa0119
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413577"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498534"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle, méthode
 Crée un handle du type spécifié pour la valeur de tas représentée par cet objet ICorDebugHeapValue2.  
@@ -36,9 +36,9 @@ HRESULT CreateHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `type`  
- [in] Valeur de l’énumération CorDebugHandleType qui spécifie le type de handle doit être créé.  
+ [in] Une valeur de l’énumération CorDebugHandleType qui spécifie le type de handle doit être créé.  
   
  `ppHandle`  
  [out] Pointeur vers l’adresse d’un objet ICorDebugHandleValue qui représente le nouveau handle pour cette valeur de tas.  
@@ -46,13 +46,13 @@ HRESULT CreateHandle (
 ## <a name="remarks"></a>Notes  
  Le handle sera créé dans le domaine d’application qui est associé à la valeur du segment de mémoire et n’est plus valide si le domaine d’application est déchargé.  
   
- Plusieurs appels à cette fonction pour la même valeur de tas créent plusieurs handles. Étant donné que les handles influent sur les performances du garbage collector, le débogueur doit se limiter à un petit nombre de handles (environ 256) qui sont actifs à la fois.  
+ Plusieurs appels à cette fonction pour la même valeur de tas créent plusieurs handles. Étant donné que les handles affectent les performances du garbage collector, le débogueur doit se limiter à un petit nombre de handles (environ 256) qui sont actifs à la fois.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

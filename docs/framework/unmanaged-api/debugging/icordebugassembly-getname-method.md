@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe587f6356eec861c39c9eb0aa0b6476e0b9a232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3077e0494816a083d97839d66d06b18130e5dac8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407517"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487796"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName, méthode
 Obtient le nom de l’assembly que cela `ICorDebugAssembly` représente l’instance.  
@@ -37,7 +37,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `cchName`  
  [in] Taille du tableau `szName`.  
   
@@ -51,10 +51,10 @@ HRESULT GetName (
  Le `GetName` méthode retourne le chemin d’accès et le nom complet de l’assembly.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

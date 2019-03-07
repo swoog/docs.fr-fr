@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f7f36baa71a3e58dfa3314ebe06a018cfd3468
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7532218728aead72186b5156da87db6d3bc0a8c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408227"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469329"
 ---
 # <a name="enumerateclrs-function"></a>Fonction EnumerateCLRs
 Fournit un mécanisme pour énumérer les CLR dans un processus.  
@@ -39,7 +39,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `debuggeePID`  
  [in] Identificateur du processus à partir duquel les CLR chargés sont énumérés.  
   
@@ -47,7 +47,7 @@ HRESULT EnumerateCLRs (
  [out] Pointeur vers un tableau contenant les handles d'événements utilisés pour poursuivre un démarrage du CLR. Chaque handle du tableau n'est pas garanti comme valide. Si valide, le handle doit être utilisé comme l'événement continue-startup du runtime correspondant situé dans le même index de `ppStringArrayOut`.  
   
  `ppStringArrayOut`  
- [out] Pointeur vers un tableau de chaînes qui spécifient des chemins d’accès complets aux CLR chargés dans le processus.  
+ [out] Pointeur vers un tableau de chaînes qui spécifient des chemins d'accès complets aux CLR chargés dans le processus.  
   
  `pdwArrayLengthOut`  
  [out] Pointeur vers une valeur DWORD qui contient la longueur de `ppHandleArrayOut` et `pdwArrayLengthOut` de taille égale.  
@@ -66,7 +66,7 @@ HRESULT EnumerateCLRs (
  Impossible d'énumérer les CLR chargés.  
   
 ## <a name="remarks"></a>Notes  
- Pour un processus cible qui est identifié par `debuggeePID`, la fonction retourne un tableau de chemins d'accès, `ppStringArrayOut`, vers les CLR chargés dans le processus ; un tableau de handles d'événement, `ppHandleArrayOut`, qui peut contenir un événement continue-startup pour le CLR au même index ; et la taille des tableaux, `pdwArrayLengthOut`, qui spécifie le nombre de CLR chargés.  
+ Pour un processus cible qui est identifié par `debuggeePID`, la fonction retourne un tableau de chemins d’accès, `ppStringArrayOut`, vers les CLR chargés dans le processus ; un tableau de handles d’événement, `ppHandleArrayOut`, qui peut contenir un événement continue-startup pour le CLR au même index ; et la taille des tableaux, `pdwArrayLengthOut`, qui spécifie le nombre de CLR chargés.  
   
  Sur le système d'exploitation Windows, `debuggeePID` est mappé à un identificateur de processus du système d'exploitation.  
   
@@ -75,10 +75,10 @@ HRESULT EnumerateCLRs (
  Cette fonction peut être appelée en affectant la valeur null aux deux paramètres de tableau afin de retourner le nombre de CLR dans le processus cible. Avec ce nombre, un appelant peut déduire la taille de la mémoire tampon qui sera créée : `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** dbgshim.h  
   
  **Bibliothèque :** dbgshim.dll  
   
- **Versions du .NET framework :** 3.5 SP1
+ **Versions du .NET framework :** 3.5 SP1

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35b77e282fd23ee01ea5e7d65bec64f8fb2ecc31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9e94c1904d8675af59e6ed5b49c2229e1214e8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533099"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469220"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo, fonction
 Notifie le profileur que le contrôle est passé à une fonction et fournit un handle qui peut être passé à la [ICorProfilerInfo3::GetFunctionEnter3Info, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) pour récupérer les arguments de fonction et de frame de pile.  
@@ -34,7 +34,7 @@ void __stdcall FunctionEnter3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `functionIDOrClientID`  
  [in] L’identificateur de la fonction à laquelle le contrôle est passé.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ceb199e027b111c8e29166d3b91027a3df2d534e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e4a90e8cd50ef1b3324aed35ae5cc34225bb2f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658609"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471353"
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a>IHostSecurityManager::ImpersonateLoggedOnUser, méthode
 Les demandes qui code être exécutée en utilisant les informations d’identification de l’utilisateur actuel.  
@@ -35,7 +35,7 @@ HRESULT ImpersonateLoggedOnUser (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `hToken`  
  [in] Un jeton représentant les informations d’identification de l’utilisateur doit être empruntée.  
   

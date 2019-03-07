@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d1198a931b79cb469048bf5afd48f5172a45721
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20a34da8f868a34f3d447ac1a5f6a56eb0bdafe1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517706"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481411"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed, méthode
 Notifie le profileur que le thread spécifié a repris après avoir été interrompue.  
@@ -34,7 +34,7 @@ HRESULT RuntimeThreadResumed(
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `threadId`  
  [in] L’ID du thread qui a été repris.  
   

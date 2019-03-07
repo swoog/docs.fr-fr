@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44f343fa6d9f620145c707e5987ecaedf17dcba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738928"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478984"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim, fonction
 Effectue un appel à la fonction qui a le nom spécifié et les paramètres dans la bibliothèque spécifiée.  
@@ -41,7 +41,7 @@ HRESULT CallFunctionShim (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `szDllName`  
  [in] Le nom de la bibliothèque contenant la fonction.  
   

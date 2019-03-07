@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad71e0f19d4019f8fc919008b9a5c46f6586f9f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7479e8d1eee0c44544b5923d4de66153cb2c3a19
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674503"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490331"
 ---
 # <a name="iassemblynamegetversion-method"></a>IAssemblyName::GetVersion, méthode
 Obtient les informations de version pour l’assembly référencé par ce [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objet.  
@@ -36,7 +36,7 @@ HRESULT GetVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pdwVersionHi`  
  [out] 32 bits de poids fort de la version.  
   

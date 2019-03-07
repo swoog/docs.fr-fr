@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae7bbc41d0e2cca1cf25a5ec34535b20fc9163d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41ece0f8ca804acb1614ceaa651ce2ec199c11c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498253"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499080"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain, méthode
 Appelle la méthode spécifiée du type spécifié dans l’assembly managé spécifié.  
@@ -39,7 +39,7 @@ HRESULT ExecuteInDefaultAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pwzAssemblyPath`  
  [in] Le chemin d’accès à la <xref:System.Reflection.Assembly> qui définit le <xref:System.Type> dont la méthode doit être appelée.  
   

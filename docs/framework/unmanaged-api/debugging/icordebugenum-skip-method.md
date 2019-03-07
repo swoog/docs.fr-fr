@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb651aa394022182b6730d57942199f570508436
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8e9e13c8acf4f60a7b43a9b4181bb03da8f0aa45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965897"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497013"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip, méthode
 Déplace le curseur vers l’avant dans l’énumération par le nombre spécifié d’éléments.  
@@ -35,7 +35,7 @@ HRESULT Skip (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `celt`  
  [in] Le nombre d’éléments par lequel déplacer le curseur vers l’avant.  
   

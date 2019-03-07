@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22d112d1414b13033f73723821e5e4b5764e1c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9ba09b80d7118b0ccd9b1647011a7fc7cd74e22
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401977"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485107"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>ICorDebugAssembly::GetAppDomain, méthode
-Obtient un pointeur d’interface vers le domaine d’application qui contient cette `ICorDebugAssembly` instance.  
+Obtient un pointeur d’interface vers le domaine d’application qui contient ce `ICorDebugAssembly` instance.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,7 +35,7 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `ppAppDomain`  
  [out] Pointeur vers l’adresse d’une interface ICorDebugAppDomain qui représente le domaine d’application.  
   
@@ -43,10 +43,10 @@ HRESULT GetAppDomain (
  Si cet assembly est l’assembly système, `GetAppDomain` retourne la valeur null.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

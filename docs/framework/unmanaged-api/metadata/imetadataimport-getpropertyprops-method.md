@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1b065ecb9a715601e617e288c1dfc0de8dd323d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672056"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466568"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps, méthode
 Obtient les métadonnées pour la propriété représentée par le jeton spécifié.  
@@ -50,7 +50,7 @@ HRESULT GetPropertyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `prop`  
  [in] Un jeton qui représente la propriété à retourner les métadonnées.  
   

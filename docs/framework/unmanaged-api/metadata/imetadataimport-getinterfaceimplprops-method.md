@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: cb38c61e8dbd29a0ff87165b5daf49e733b34047
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835718"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466542"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps, méthode
 Obtient un pointeur vers les jetons de métadonnées pour le <xref:System.Type> qui implémente la méthode spécifiée, et pour l’interface qui déclare cette méthode.
@@ -37,7 +37,7 @@ HRESULT GetInterfaceImplProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `iiImpl`  
  [in] Représentant la méthode pour renvoyer les jetons de classe et d’interface pour le jeton de métadonnées.  
   

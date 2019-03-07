@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58c6e6685cc5c268d9313457469369d9df25e13b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e7c10486bfa002172ab3e9683c83c8007abde6a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564144"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499764"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName, méthode
 Énumère les jetons FieldDef du type spécifié avec le nom spécifié.  
@@ -40,7 +40,7 @@ HRESULT EnumFieldsWithName (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `phEnum`  
  [in, out] Pointeur vers l’énumérateur.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30610311d2c48f15ebd85910557892784c0cfe85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0cb64653df7b59703ef87610bcc686a66205e8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542494"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485226"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen, fonction
 Crée une nouvelle paire de clés publique/privée pour une utilisation de nom fort.  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameKeyGen (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `wszKeyContainer`  
  [in] Le nom du conteneur de clé demandé. `wszKeyContainer` doit être une chaîne non vide, ou null pour générer un nom temporaire.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f60c4373410c46c5d1ea284b2cacd4b5c070ed9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fffe8059a3be42a05d564773766023c6bbe4d56d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682821"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466997"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed, méthode
 Notifie le profileur qu’une vtable d’interopérabilité COM est en cours de destruction.  
@@ -39,7 +39,7 @@ HRESULT COMClassicVTableDestroyed(
     [in] void    *pVTable);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `wrappedClasId`  
  [in] L’ID de la classe pour laquelle cette vtable a été créée.  
   

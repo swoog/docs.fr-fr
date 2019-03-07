@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5da87071bc23ac17a3077049cd77f0fb8611439f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 43532888d181adcb7a7e3760f2a5e3d8f664a35c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413018"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492281"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange, méthode
 Obtient la plage d’adresses absolues de ce frame de pile.  
@@ -36,21 +36,21 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pStart`  
- [out] Un pointeur vers un `CORDB_ADDRESS` qui spécifie l’adresse de départ du frame de pile représenté par ce `ICorDebugFrame` objet.  
+ [out] Un pointeur vers un `CORDB_ADDRESS` qui spécifie l’adresse de départ du frame de pile représenté par cet `ICorDebugFrame` objet.  
   
  `pEnd`  
- [out] Un pointeur vers un `CORDB_ADDRESS` qui spécifie l’adresse de fin du frame de pile représenté par ce `ICorDebugFrame` objet.  
+ [out] Un pointeur vers un `CORDB_ADDRESS` qui spécifie l’adresse de fin du frame de pile représenté par cet `ICorDebugFrame` objet.  
   
 ## <a name="remarks"></a>Notes  
- La plage d’adresses de la pile est utile pour regrouper des traces de pile entrelacées issues de plusieurs moteurs de débogage. La plage numérique ne fournit aucune information sur le contenu du frame de pile. Il n’est significative uniquement pour la comparaison des emplacements de frame de pile.  
+ La plage d’adresses de la pile est utile pour rassembler des traces de pile entrelacées à partir de plusieurs moteurs de débogage. La plage numérique ne fournit aucune information sur le contenu du frame de pile. Il est pertinent uniquement pour la comparaison des emplacements de frame de pile.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1200ca14b91c101a8145a3aed8023002ddb9298b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e26e7ac9b89e005d9520ad860cf3acee7d3cc6cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746633"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479751"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass, méthode
 Informe le profileur sur le nombre d’instances de chaque classe spécifiée qui ont été créés depuis le dernier garbage collection.  
@@ -36,7 +36,7 @@ HRESULT ObjectsAllocatedByClass(
     [in, size_is(cClassCount)] ULONG   cObjects[] );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `cClassCount`  
  [in] La taille de la `classIds` et `cObjects` tableaux.  
   

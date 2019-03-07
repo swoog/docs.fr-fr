@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a5e50327e74e0b893bd5f8e6f716827f2168e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e6ee68fe3ffed0ae19c2f528a49a863b99fa7f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557953"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499548"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod, méthode
 Ouvre une méthode dans le symbole qui est émis plus d’informations. La méthode donnée devient la méthode actuelle pour les appels à définir des points de séquence, les paramètres et les portées lexicales. Il existe une portée lexicale implicite autour de la méthode entière. La réouverture d’une méthode qui a été fermée précédemment supprime tous les symboles précédemment définis pour cette méthode. Il peut y avoir qu’une seule méthode ouverte à la fois.  
@@ -34,7 +34,7 @@ HRESULT OpenMethod(
     [in] mdMethodDef method);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `method`  
  [in] Le jeton de métadonnées pour la méthode à ouvrir.  
   

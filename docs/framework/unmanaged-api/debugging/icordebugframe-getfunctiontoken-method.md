@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bb4331b1c55cbda818866c5ff08f9bacd3ebae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 156c16f73916d2b4efa1c1b3541a772fb43dd470
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413983"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497559"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>ICorDebugFrame::GetFunctionToken, méthode
 Obtient le jeton de métadonnées pour la fonction qui contient le code associé à ce frame de pile.  
@@ -35,15 +35,15 @@ HRESULT GetFunctionToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pToken`  
  [out] Un pointeur vers un `mdMethodDef` jeton qui référence les métadonnées pour la fonction.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

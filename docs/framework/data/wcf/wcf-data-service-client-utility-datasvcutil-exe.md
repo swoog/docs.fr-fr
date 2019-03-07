@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 3442142eb249d04dabba455a57f02f3cdc7f4b91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731749"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492645"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilitaire client des services de données WCF (DataSvcUtil.exe)
 
@@ -21,7 +21,7 @@ DataSvcUtil.exe est un outil de ligne de commande fourni par WCF Data Services q
 
 -   Un fichier de modèle de données (.csdl) défini en utilisant le langage de définition de schéma conceptuel (CSDL), tel que défini dans le [ \[MC-CSDL\]: Format de fichier de définition de schéma conceptuel](https://go.microsoft.com/fwlink/?LinkID=159072) spécification.
 
--   Fichier .edmx créé à l’aide des outils Entity Data Model fournis avec l’Entity Framework. Pour plus d’informations, consultez le [ \[MC-EDMX\]: Entity Data Model for Data Services Packaging Format](https://go.microsoft.com/fwlink/?LinkID=178833) spécification.
+-   Fichier .edmx créé à l'aide des outils Entity Data Model fournis avec l'Entity Framework. Pour plus d’informations, consultez le [ \[MC-EDMX\]: Entity Data Model for Data Services Packaging Format](https://go.microsoft.com/fwlink/?LinkID=178833) spécification.
 
 Pour plus d'informations, voir [Procédure : Générer manuellement les Classes de Service de données Client](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
 
@@ -33,7 +33,7 @@ L'outil DataSvcUtil.exe est installé dans le répertoire [!INCLUDE[dnprdnshort
 datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/language:devlang] [/nologo] [/version:ver] [/help]
 ```
 
-### <a name="parameters"></a>Paramètres
+## <a name="parameters"></a>Paramètres
 
 |Option|Description|
 |------------|-----------------|

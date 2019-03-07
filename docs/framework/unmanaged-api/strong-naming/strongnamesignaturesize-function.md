@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5e4e2a817abff7b0cf24223b7f245fc6f86c1d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac6f2ca813f3b8cbed48d540a991e6396edf679
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544989"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495219"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize, fonction
 Retourne la taille de la signature de nom fort. `StrongNameSignatureSize` est généralement utilisé par les compilateurs pour déterminer la quantité d’espace à réserver dans le fichier lors de la création d’un assembly à signature différée.  
@@ -38,7 +38,7 @@ BOOLEAN StrongNameSignatureSize (
 );   
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pbPublicKeyBlob`  
  [in] Une structure de type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) qui contient la partie publique de la paire de clés utilisée pour générer la signature de nom fort.  
   

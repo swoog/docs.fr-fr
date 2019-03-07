@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90c805a5f1f1da990564034fc292562d5f933d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15addd0b35c43945f643386f8983fc14c9312bae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608087"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492333"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification, méthode
 Fournit une notification que l’exécution de code a rencontré un assistant débogage managé (MDA) dans l’application est en cours de débogage.  
@@ -37,7 +37,7 @@ HRESULT MDANotification(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pController`  
  [in] Pointeur vers une interface ICorDebugController qui expose le processus ou d’un domaine d’application dans lequel le MDA s’est produite.  
   

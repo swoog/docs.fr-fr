@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c57ac26fd08f585af7ff92f700c6cdd60815675
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58a010def407751a49cbb1de51c59a3df85cfb18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734299"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487764"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier, méthode
 Indique le common language runtime (CLR) pour associer la valeur d’identificateur spécifiée à la tâche représentée par l’actuel [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance.  
@@ -35,7 +35,7 @@ HRESULT SetTaskIdentifier (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `Asked`  
  [in] L’identificateur unique pour le common language runtime à associer à la tâche représentée par l’actuel `ICLRTask` instance.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 454391eb7a5f1821438837c8fb7e5f8bad6b5723
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39d9b4e69080e759a5a7d930f61abb3ba6160801
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651654"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486145"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName, méthode
 Obtient un tableau d’assemblys avec la valeur `szAssemblyName` paramètre, à l’aide de règles standard employées par le common language runtime (CLR) pour la résolution des références.  
@@ -40,7 +40,7 @@ HRESULT FindAssembliesByName (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `szAppBase`  
  [in] Le répertoire racine dans lequel rechercher l’assembly donné. Si cette valeur est définie sur `null`, `FindAssembliesByName` recherchera uniquement dans le global assembly cache l’assembly.  
   
