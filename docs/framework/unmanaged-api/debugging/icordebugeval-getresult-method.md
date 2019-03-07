@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e160eddf667b542929c8dd3790de666a8e8bb77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8e7fcb4f44d6bdf6f18c93b1046b549331621a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413057"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470794"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult, méthode
 Obtient les résultats de cette évaluation.  
@@ -35,20 +35,20 @@ HRESULT GetResult (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `ppResult`  
- [out] Pointeur vers l’adresse d’un objet ICorDebugValue qui représente les résultats de cette évaluation, si l’évaluation s’exécute normalement.  
+ [out] Pointeur vers l’adresse d’un objet ICorDebugValue qui représente les résultats de cette évaluation, si l’évaluation se termine normalement.  
   
 ## <a name="remarks"></a>Notes  
- Le `GetResult` méthode est valide uniquement lorsque l’évaluation est terminée.  
+ Le `GetResult` méthode est valide uniquement lorsque la version d’évaluation est terminée.  
   
- Si l’évaluation s’exécute normalement, `ppResult` spécifie les résultats. Si elle se termine avec une exception, le résultat est l’exception levée. Si l’évaluation a été d’un nouvel objet, le résultat est la référence au nouvel objet.  
+ Si la version d’évaluation se termine normalement, `ppResult` spécifie les résultats. Si elle se termine par une exception, le résultat est l’exception levée. Si l’évaluation a été d’un nouvel objet, le résultat est la référence au nouvel objet.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

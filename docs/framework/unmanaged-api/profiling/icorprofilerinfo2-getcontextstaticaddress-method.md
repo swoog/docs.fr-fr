@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4ebf93c103b74be458ba51577a5195795029176
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16390317f8a6ea1ee9a3841e35b32e040d12db5d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520398"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485120"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress, méthode
 Obtient l’adresse pour le champ statique de contexte spécifié qui est dans la portée du contexte spécifié.  
@@ -37,7 +37,7 @@ HRESULT GetContextStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `classId`  
  [in] ID de la classe qui contient le champ statique de contexte demandé.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413938"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471509"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray, méthode
-Alloue un nouveau tableau du type d’élément spécifié et de dimensions.  
+Alloue un nouveau tableau du type d’élément spécifié et des dimensions.  
   
  Cette méthode est obsolète dans le .NET Framework version 2.0. Utilisez [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) à la place.  
   
@@ -41,9 +41,9 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `elementType`  
- [in] Valeur de l’énumération CorElementType qui spécifie le type d’élément du tableau.  
+ [in] Une valeur de l’énumération CorElementType qui spécifie le type d’élément du tableau.  
   
  `pElementClass`  
  [in] Pointeur vers un objet ICorDebugClass qui spécifie la classe de l’élément. Cette valeur peut être null si le type d’élément est un type primitif.  
@@ -61,7 +61,7 @@ HRESULT NewArray (
  Le tableau est toujours créé dans le domaine d’application dans lequel le thread est en cours d’exécution.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   

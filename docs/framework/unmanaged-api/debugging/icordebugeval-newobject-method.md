@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ff4f86105fd1dfbd12360c01046492f3a6dbdcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97217421d30ee4065aa1b2500e9486405e438902
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589890"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471366"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject, méthode
 Alloue une nouvelle instance d’objet et appelle la méthode de constructeur spécifié.  
@@ -39,7 +39,7 @@ HRESULT NewObject (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pConstructor`  
  [in] Le constructeur à appeler.  
   

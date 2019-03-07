@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bd62e4c5476aacf736f2ddfea008790861d931c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494595"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next, méthode
 Obtient le nombre spécifié d’instances ICorDebugStepper à partir de l’énumération, en commençant à la position actuelle.  
@@ -38,21 +38,21 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `celt`  
- [in] Le nombre de `ICorDebugStepper` instances doit être récupéré.  
+ [in] Le nombre de `ICorDebugStepper` instances à récupérer.  
   
  `steppers`  
- [out] Un tableau de pointeurs, chacun pointant vers un `ICorDebugStepper` objet.  
+ [out] Un tableau de pointeurs, chacun d’eux pointe vers un `ICorDebugStepper` objet.  
   
  `pceltFetched`  
- [out] Pointeur vers le nombre de `ICorDebugStepper` instances réellement retournées. Cette valeur peut être null si `celt` fait partie.  
+ [out] Pointeur vers le nombre de `ICorDebugStepper` instances réellement retournés. Cette valeur peut être null si `celt` fait partie.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

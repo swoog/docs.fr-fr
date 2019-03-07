@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 501c554f6e2e4ddd8abd21fe81b81d1898ea070b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b00fdaa6dacaf9a7eefa1a1ac1192f7c18fde95
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465905"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps, méthode
 Obtient le nom du module référencé par le jeton de métadonnées spécifié.  
@@ -38,7 +38,7 @@ HRESULT GetModuleRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `mur`  
  [in] Le jeton de métadonnées ModuleRef qui fait référence au module pour obtenir des informations de métadonnées.  
   

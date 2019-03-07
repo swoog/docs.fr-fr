@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cdcee35f92fb79177caf7d00a99027fa179334e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87728ea52bc257920041acc2e2ecfc040cdbbfb0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651522"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471795"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion, fonction
 Obtient le numéro de version du common language runtime (CLR) demandé par l’application spécifiée. Si cette version n’est pas installée, obtient la version la plus récente est installée avant la version demandée.  
@@ -40,7 +40,7 @@ HRESULT GetRequestedRuntimeVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pExe`  
  [in] Le nom de l’application.  
   

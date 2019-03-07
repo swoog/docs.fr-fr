@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00b20134c0134aa30d2056b634c8525f66ed8cf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8db6912700b199c64d2ebf0f7bd2ccd8939af9b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602454"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484704"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo, méthode
 Obtient la classe parente et les métadonnées de jeton pour la fonction spécifiée.  
@@ -37,7 +37,7 @@ HRESULT GetFunctionInfo(
     [out] mdToken    *pToken);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `functionId`  
  [in] L’ID de la fonction pour laquelle obtenir la classe parente et les métadonnées de jeton.  
   

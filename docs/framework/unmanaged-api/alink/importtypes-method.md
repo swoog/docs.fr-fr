@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6591fb4a2b4944dc0d02f70f0f90ffd87e071c47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92dfc2bec33501a5cd9ca6b4ec4c3629b6d89946
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734999"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487952"
 ---
 # <a name="importtypes-method"></a>ImportTypes, méthode
 Lance l’importation de types de chaque portée importée par [ImportFile, méthode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
@@ -39,7 +39,7 @@ HRESULT ImportTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `AssemblyID`  
  ID de l’assembly à importer dans.  
   

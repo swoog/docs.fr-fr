@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b2b7559c203e5d357dd6921ea6862fbb5ec90a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7575659441b2eae37365c10050bca53e0cfdef6f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576185"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473914"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName, méthode
 Obtient un pointeur vers un type exporté, étant donné son nom et le type englobant.  
@@ -37,7 +37,7 @@ HRESULT FindExportedTypeByName (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `szName`  
  [in] Le nom du type exporté.  
   

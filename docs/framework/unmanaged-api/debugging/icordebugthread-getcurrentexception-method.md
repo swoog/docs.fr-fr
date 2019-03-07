@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82686fdd14783257987ec5bf9a24db7d87049d42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4baa4eb4da48b923ab0137ca25d9d819c94e33d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421744"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487341"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException, méthode
 Obtient un pointeur d’interface vers un objet ICorDebugValue qui représente une exception levée par le code managé.  
@@ -35,22 +35,22 @@ HRESULT GetCurrentException (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `ppExceptionObject`  
- [out] Un pointeur vers l’adresse d’un `ICorDebugValue` objet qui représente l’exception levée par le code managé.  
+ [out] Un pointeur vers l’adresse d’un `ICorDebugValue` objet qui représente l’exception levée par code managé.  
   
 ## <a name="remarks"></a>Notes  
- L’objet exception existe à partir de l’heure de l’exception est levée jusqu'à la fin de la `catch` bloc. Une évaluation de fonction, qui est effectuée par les méthodes ICorDebugEval, efface l’objet exception sur le programme d’installation et restaurez-la à la fin.  
+ L’objet exception existe à partir du moment où l’exception est levée jusqu'à la fin de la `catch` bloc. Une évaluation de fonction, qui est effectuée par les méthodes ICorDebugEval, effacera l’objet exception sur le programme d’installation et restaurez-la sur la saisie semi-automatique.  
   
  Les exceptions peuvent être imbriquées (par exemple, si une exception est levée dans un filtre ou dans une évaluation de fonction), afin qu’il peut y avoir plusieurs exceptions en attente sur un thread unique. `GetCurrentException` Retourne l’exception la plus récente.  
   
- L’objet exception et le type peuvent changer pendant toute la vie de l’exception. Par exemple, après qu’une exception de type x est levée, le common language runtime (CLR) peut manquer de mémoire et promouvoir en une exception de mémoire insuffisante.  
+ L’objet exception et le type peuvent changer pendant la durée de vie de l’exception. Par exemple, après la levée d’une exception de type x, le common language runtime (CLR) peut manquer de mémoire et le promouvoir en une exception de mémoire insuffisante.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

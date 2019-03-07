@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7595b4a69dd327e448aade1e2dcba06100e55bf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bd3d411ad6fe7f65d1eeb25754794704752009e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638679"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488355"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint, méthode
 Spécifie la méthode définie par l’utilisateur qui est le point d’entrée pour ce module. Par exemple, ce point d’entrée peut être la méthode de l’utilisateur principal au lieu de stubs générés par le compilateur avant principal.  
@@ -34,7 +34,7 @@ HRESULT SetUserEntryPoint(
     [in] mdMethodDef entryMethod);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `entryMethod`  
  [in] Jeton de métadonnées pour la méthode qui est l’entrée utilisateur point.  
   

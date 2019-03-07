@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430009"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496389"
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName, attribut
 Définit un attribut d’interface personnalisé qui spécifie le nom de l’espace de noms managé pour une bibliothèque de composant object model (COM).  
@@ -34,7 +34,7 @@ Définit un attribut d’interface personnalisé qui spécifie le nom de l’esp
 ]  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `value`  
  Le nom de l’espace de noms managé pour la bibliothèque.  
   
@@ -51,7 +51,7 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
   
  Utilisez <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> ou <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> pour récupérer le nom managé de l’attribut.  
   
- Pour plus d’informations, consultez [des attributs d’Interface](/cpp/windows/interface-attributes) dans Visual C++ documentation de référence.  
+ Pour plus d’informations, consultez [attributs d’Interface](/cpp/windows/interface-attributes) dans Visual C++ documentation de référence.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre une définition de bibliothèque à l’aide de la `GUID_ManagedName` attribut.  

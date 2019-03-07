@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6248bb1e1cc3585a1135d76c31d167958e7b6bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8491f80c1b4340756c00b5540520bd76f0f583a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729796"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486993"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 (fonction)
 Notifie le profileur que la fonction en cours d’exécution est sur le point d’effectuer un appel tail à une autre fonction et fournit des informations sur le frame de pile.  
@@ -36,7 +36,7 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `funcId`  
  [in] L’identificateur de la fonction en cours d’exécution qui doit faire un appel tail.  
   

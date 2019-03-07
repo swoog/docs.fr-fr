@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359547"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482689"
 ---
 # <a name="typography-in-wpf"></a>Typographie dans WPF
 Cette rubrique présente les principales fonctionnalités typographiques de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ces fonctionnalités incluent l’amélioration de la qualité et des performances de rendu de texte, une prise en charge de la typographie [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], un texte international amélioré, une prise en charge de police améliorée et de nouvelles interfaces de programmation d’applications (API, Application Programming Interface) texte.  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Amélioration de la qualité et des performances du texte  
@@ -36,13 +34,11 @@ Diagramme du pipeline de rendu de texte
   
  La police [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Pericles contient des glyphes supplémentaires qui représentent des variantes stylistiques au jeu de glyphes standard. Le texte suivant présente des glyphes de style alternatif.  
   
- ![Texte utilisant des glyphes de substitution OpenType](./media/opentypefont02.gif "opentypefont02")  
-Texte utilisant des glyphes de style alternatifs OpenType  
+ ![Texte utilisant des glyphes de substitution OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "texte utilisant des glyphes de substitution OpenType")  
   
  Les lettres ornées sont des glyphes décoratifs qui utilisent une ornementation élaborée souvent associée à la calligraphie. Le texte suivant présente des glyphes standard et des glyphes à lettres ornées avec la police Pescadero.  
   
- ![Texte utilisant des glyphes standard et ornés OpenType](./media/opentypefont08.gif "opentypefont08")  
-Texte utilisant des glyphes standard et ornés OpenType  
+ ![Texte utilisant des glyphes standard et ornés OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "texte utilisant des glyphes standard et ornés OpenType")  
   
  Pour plus d’informations sur les fonctionnalités [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)], consultez [Fonctionnalités des polices OpenType](opentype-font-features.md).  
   
@@ -175,4 +171,4 @@ Interaction entre l’application et TextFormatter
 - [Dessin du texte mis en forme](drawing-formatted-text.md)
 - [Mise en forme de texte avancée](advanced-text-formatting.md)
 - [Text](optimizing-performance-text.md)
-- [Typographie Microsoft](https://www.microsoft.com/typography/default.mspx)
+- [Typographie Microsoft](https://docs.microsoft.com/typography/)

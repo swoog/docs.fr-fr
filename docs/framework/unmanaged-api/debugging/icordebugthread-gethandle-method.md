@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358597edc9fbc5203e5c00a5fb4d04019281060d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 900fece1dd29f73f77b85ff08e4deff1396f8aaf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418270"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484509"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle, méthode
 Obtient le handle actuel pour la partie active du ICorDebugThread.  
@@ -35,20 +35,20 @@ HRESULT GetHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `phThreadHandle`  
  [out] Pointeur vers un HTHREAD qui est le handle de la partie active de ce thread.  
   
 ## <a name="remarks"></a>Notes  
- Le handle peut changer que le processus s’exécute et peut être différent pour les différentes parties du thread.  
+ Le handle peut changer car le processus s’exécute et peut être différent pour les différentes parties du thread.  
   
- Ce descripteur est détenu par l’API de débogage. Le débogueur doit le dupliquer avant de l’utiliser.  
+ Ce handle est détenu par l’API de débogage. Le débogueur doit dupliquer avant de l’utiliser.  
   
 ## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

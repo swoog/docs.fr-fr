@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d37de6dee14ad2c24c21a2d1a97d112fd0b9f3d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 796a71ac941497801c749295fb2f6bb201547bd7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706402"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478308"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a>ISymUnmanagedVariable::GetAddressField1, méthode
 Obtient le premier champ d’adresse pour cette variable. Sa signification dépend du type d’adresse.  
@@ -34,7 +34,7 @@ HRESULT GetAddressField1(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pRetVal`  
  [out] Un pointeur vers un `ULONG32` qui reçoit le premier champ d’adresse.  
   

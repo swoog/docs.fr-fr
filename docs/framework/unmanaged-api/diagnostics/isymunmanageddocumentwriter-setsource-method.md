@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da19a77637e64fec676fdaac7ba56d47b5b07769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcdda6f8cdd0fc0b333b81d58a8bff7c21aa1fef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549887"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486405"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource, méthode
 Définit la source incorporée d’un document qui est en cours d’écriture.  
@@ -35,7 +35,7 @@ HRESULT SetSource(
     [in, size_is(sourceSize)] BYTE  source[]);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `sourceSize`  
  [in] Un `ULONG32` qui contient la taille de la `source` mémoire tampon.  
   

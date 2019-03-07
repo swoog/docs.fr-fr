@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b85f8ffade19cee8f0703af823d91a6ea7bf50b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34e8bcdda30c890fc40bab206bc6757afc073177
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710220"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475201"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Méthode ICLRStrongName::GetHashFromBlob
 Obtient un hachage de l’assembly à l’adresse mémoire spécifiée, à l’aide de l’algorithme de hachage spécifié.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromBlob (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pbBlob`  
  [in] Pointeur vers l’adresse du bloc de mémoire à hacher.  
   

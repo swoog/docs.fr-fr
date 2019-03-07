@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83e3ba8644af1f630b5c9ad5268ec44750badc88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09fb98c5524446041e0e7a9484322f835b9d9801
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682048"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474460"
 ---
 # <a name="gethashfromassemblyfile-function"></a>GetHashFromAssemblyFile, fonction
 Obtient un hachage du fichier d’assembly spécifié, à l’aide de l’algorithme de hachage spécifié.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `szFilePath`  
  [in] Le chemin d’accès au fichier à hacher.  
   

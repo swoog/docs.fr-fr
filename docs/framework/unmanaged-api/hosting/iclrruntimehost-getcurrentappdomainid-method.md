@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 192492c232970842270f031832d1eb46357ec07f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c82096f790befbab58a1d27978be553aae2190b5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527170"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496363"
 ---
 # <a name="iclrruntimehostgetcurrentappdomainid-method"></a>ICLRRuntimeHost::GetCurrentAppDomainId, méthode
 Obtient l’identificateur numérique de la <xref:System.AppDomain> qui est en cours d’exécution.  
@@ -35,7 +35,7 @@ HRESULT GetCurrentAppDomainId(
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pdwAppDomainId`  
  [out] L’identificateur numérique de la <xref:System.AppDomain> qui est en cours d’exécution.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27d9b891475d0fb45c9ec34f3363b0d76fe394c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a1963221942134d148d5417ebafea97a26aead5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493202"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494283"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta, méthode
 Enregistre les modifications de la session active modifier et continuer dans le fichier spécifié.  
@@ -36,7 +36,7 @@ HRESULT SaveDelta (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `szFile`  
  [in] Le nom de fichier sous lequel enregistrer les modifications.  
   

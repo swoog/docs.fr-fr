@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843236243563ce3dff82726aaab05845fa295b9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fad069a15cb4079dac2b4ee65ca3d9669a53cac0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518135"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479257"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess, fonction
 Obtient le numéro de version du common language runtime (CLR) qui est associé au handle de processus spécifié.  
@@ -40,7 +40,7 @@ HRESULT GetVersionFromProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `hProcess`  
  [in] Un handle à un processus.  
   

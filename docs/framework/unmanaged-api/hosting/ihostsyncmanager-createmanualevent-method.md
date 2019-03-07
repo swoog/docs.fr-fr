@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8e12c6bd67ea5d22bb891057cae37e3c41ca233
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c34acd93deefa5ac9fff8726b4dc3862f46c6fcb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716854"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470938"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>IHostSyncManager::CreateManualEvent, méthode
 Crée un objet d’événement de réinitialisation manuelle.  
@@ -36,7 +36,7 @@ HRESULT CreateManualEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `bInitialState`  
  [in] `true`, si l’objet est signalé ; sinon, `false`.  
   

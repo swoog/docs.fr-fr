@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 914b1710bee3ce6e2aaaf756ae4e32d8041d064f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60e110e019619f9336b240fdc5aee8fa66c5bcdb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601725"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479181"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection, méthode
 Supprime l’association entre une liste de tâches et un identificateur et un nom convivial.  
@@ -35,7 +35,7 @@ HRESULT EndConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `dwConnectionId`  
  [in] L’identificateur spécifique à l’hôte pour la connexion et la liste des tâches de runtime (CLR) de langage courantes associée.  
   

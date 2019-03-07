@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d18a3b7e309eb71cf37e77818a3181e33bf5ab7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24ecc46d1ca3ef24abd6f9bc0308fc460256c6ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493443"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475617"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog, méthode
 Réinitialise le journal modifier et continuer et démarre une nouvelle session.  
@@ -33,7 +33,7 @@ Réinitialise le journal modifier et continuer et démarre une nouvelle session.
 HRESULT ResetENCLog ();  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `ResetENCLog` ne prend aucun paramètre.  
   
 ## <a name="requirements"></a>Spécifications  

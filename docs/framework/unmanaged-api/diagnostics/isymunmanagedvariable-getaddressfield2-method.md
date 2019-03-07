@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a283915f8326a19c7d2c9b45851b9879fe0ec17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ee4e18d34cfc2836bd0017dd01e700662ffe7c2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634985"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484223"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>ISymUnmanagedVariable::GetAddressField2, méthode
 Obtient le deuxième champ d’adresse pour cette variable. Sa signification dépend du type d’adresse.  
@@ -34,7 +34,7 @@ HRESULT GetAddressField2(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pRetVal`  
  [out] Un pointeur vers un `ULONG32` qui reçoit le deuxième champ d’adresse.  
   

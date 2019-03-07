@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6558d27f10e5b93dfe2c8053bb96434d49fd3c4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b87460b9e525f2cf91b8f177c06286b5bbb3c52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537206"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486119"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib, méthode
 Résout le nom simple d’une bibliothèque de types en retournant son chemin d’accès qualifié complet.  
@@ -38,7 +38,7 @@ HRESULT ResolveTypeLib(
     [out] BSTR     *pbstrResolvedTlbName);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `bstrSimpleName`  
  [in] Un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) qui contient le nom simple de la bibliothèque de types.  
   

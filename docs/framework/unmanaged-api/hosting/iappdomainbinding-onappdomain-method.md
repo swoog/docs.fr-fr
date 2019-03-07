@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1c22ee61769fdcbb92a73ca0dd55299ebbcf934
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 798ef6a9b058d9d49019554feba63627360e6a0e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305764"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480037"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a>IAppDomainBinding::OnAppDomain, méthode
 Appelé par le common language runtime (CLR) pour notifier l’hôte qu’un domaine d’application a été créé.  
@@ -35,7 +35,7 @@ HRESULT OnAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pAppdomain`  
  [in] Un pointeur vers un [IUnknown](/cpp/atl/iunknown) objet d’interface qui représente le nouveau domaine d’application.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373195"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488836"
 ---
 # <a name="control-styles-and-templates"></a>Styles et modèles Control
 Les contrôles dans Windows Presentation Foundation (WPF) ont un <xref:System.Windows.Controls.ControlTemplate> qui contient l’arborescence visuelle de ce contrôle. Vous pouvez modifier la structure et l’apparence d’un contrôle en modifiant le <xref:System.Windows.Controls.ControlTemplate> de ce contrôle. Il n’existe aucun moyen de remplacer uniquement une partie de l’arborescence visuelle d’un contrôle ; Pour modifier l’arborescence visuelle d’un contrôle, vous devez définir le <xref:System.Windows.Controls.Control.Template%2A> propriété du contrôle à son nouveau et complète <xref:System.Windows.Controls.ControlTemplate>.  
@@ -50,18 +50,18 @@ Les contrôles dans Windows Presentation Foundation (WPF) ont un <xref:System.Wi
  [Styles et modèles ListView](listview-styles-and-templates.md)  
  [Styles et modèles Menu](menu-styles-and-templates.md)  
  [Styles et modèles NavigationWindow](navigationwindow-styles-and-templates.md)  
- [PasswordBox Styles et modèles](passwordbox-syles-and-templates.md)  
+ [PasswordBox Styles et modèles](passwordbox-styles-and-templates.md)  
  [Styles et modèles ProgressBar](progressbar-styles-and-templates.md)  
  [Styles et modèles RadioButton](radiobutton-styles-and-templates.md)  
- [Styles et modèles RepeatButton](repeatbutton-syles-and-templates.md)  
+ [Styles et modèles RepeatButton](repeatbutton-styles-and-templates.md)  
  [Styles et modèles ScrollBar](scrollbar-styles-and-templates.md)  
  [Styles et modèles ScrollViewer](scrollviewer-styles-and-templates.md)  
  [Styles et modèles Slider](slider-styles-and-templates.md)  
  [Styles et modèles StatusBar](statusbar-styles-and-templates.md)  
  [Styles et modèles TabControl](tabcontrol-styles-and-templates.md)  
  [Styles et modèles TextBox](textbox-styles-and-templates.md)  
- [Thumb Styles et modèles](thumb-syles-and-templates.md)  
- [Styles et modèles ToggleButton](togglebutton-syles-and-templates.md)  
+ [Thumb Styles et modèles](thumb-styles-and-templates.md)  
+ [Styles et modèles ToggleButton](togglebutton-styles-and-templates.md)  
  [Styles et modèles ToolBar](toolbar-styles-and-templates.md)  
  [Styles et modèles ToolTip](tooltip-styles-and-templates.md)  
  [Styles et modèles TreeView](treeview-styles-and-templates.md)  

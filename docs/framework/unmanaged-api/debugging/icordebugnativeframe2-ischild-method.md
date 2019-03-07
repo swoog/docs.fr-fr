@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b330f628256f9d8b21bfb483500c878b7b90d2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abae0e25f506b930fdb257cea7afab87a630ee0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652048"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466708"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild, méthode
 Détermine si le frame actuel est un frame enfant.  
@@ -33,7 +33,7 @@ Détermine si le frame actuel est un frame enfant.
 HRESULT IsChild([out] BOOL * pIsChild);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `pIsChild`  
  [out] Valeur booléenne qui spécifie si le frame actuel est un frame enfant.  
   

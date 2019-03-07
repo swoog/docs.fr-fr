@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24c3c46a1f347093061983b9185234cc9959b68d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b60bad75cb6286bda026e5b67e0a4fa8e2347dd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656139"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487157"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo, méthode
 Fournit des informations sur les fonctions exportées du runtime pour faciliter l'exécution pas à pas du code managé.  
@@ -23,7 +23,7 @@ HRESULT GetExportStepInfo(
     [out] CorDebugCodeInvokePurpose* pInvokePurpose);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  pszExportName  
  [in] Nom d'une fonction exportée du runtime tel qu'écrit dans la table d'exportation PE.  
   
