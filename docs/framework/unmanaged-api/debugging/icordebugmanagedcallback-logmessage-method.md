@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61a8d3e4a343818918e140727d3770ba3e82aac8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f89119c5c02c50dbecb0a17694bfc3eda8c732c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574688"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474330"
 ---
-# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="cc21d-102">ICorDebugManagedCallback::LogMessage, méthode</span><span class="sxs-lookup"><span data-stu-id="cc21d-102">ICorDebugManagedCallback::LogMessage Method</span></span>
-<span data-ttu-id="cc21d-103">Notifie le débogueur qu’un thread du common language runtime (CLR) géré a appelé une méthode la <xref:System.Diagnostics.EventLog> classe journaliser un événement.</span><span class="sxs-lookup"><span data-stu-id="cc21d-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
+# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="923ff-102">ICorDebugManagedCallback::LogMessage, méthode</span><span class="sxs-lookup"><span data-stu-id="923ff-102">ICorDebugManagedCallback::LogMessage Method</span></span>
+<span data-ttu-id="923ff-103">Notifie le débogueur qu’un thread du common language runtime (CLR) géré a appelé une méthode la <xref:System.Diagnostics.EventLog> classe journaliser un événement.</span><span class="sxs-lookup"><span data-stu-id="923ff-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc21d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="cc21d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="923ff-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="923ff-104">Syntax</span></span>  
   
 ```  
 HRESULT LogMessage (  
@@ -39,30 +39,30 @@ HRESULT LogMessage (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cc21d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="cc21d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="923ff-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="923ff-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="cc21d-106">[in] Pointeur vers un objet ICorDebugAppDomain qui représente le domaine d’application contenant le thread managé qui a consigné l’événement.</span><span class="sxs-lookup"><span data-stu-id="cc21d-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
+ <span data-ttu-id="923ff-106">[in] Pointeur vers un objet ICorDebugAppDomain qui représente le domaine d’application contenant le thread managé qui a consigné l’événement.</span><span class="sxs-lookup"><span data-stu-id="923ff-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
   
  `pThread`  
- <span data-ttu-id="cc21d-107">[in] Pointeur vers un objet ICorDebugThread qui représente le thread managé.</span><span class="sxs-lookup"><span data-stu-id="cc21d-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="923ff-107">[in] Pointeur vers un objet ICorDebugThread qui représente le thread managé.</span><span class="sxs-lookup"><span data-stu-id="923ff-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="cc21d-108">[in] Une valeur de la [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) énumération qui indique le niveau de gravité du message descriptif qui a été écrite dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="cc21d-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
+ <span data-ttu-id="923ff-108">[in] Une valeur de la [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) énumération qui indique le niveau de gravité du message descriptif qui a été écrite dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="923ff-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
   
  `pLogSwitchName`  
- <span data-ttu-id="cc21d-109">[in] Un pointeur vers le nom du commutateur de suivi.</span><span class="sxs-lookup"><span data-stu-id="cc21d-109">[in] A pointer to the name of the tracing switch.</span></span>  
+ <span data-ttu-id="923ff-109">[in] Un pointeur vers le nom du commutateur de suivi.</span><span class="sxs-lookup"><span data-stu-id="923ff-109">[in] A pointer to the name of the tracing switch.</span></span>  
   
  `pMessage`  
- <span data-ttu-id="cc21d-110">[in] Pointeur vers le message qui a été écrite dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="cc21d-110">[in] A pointer to the message that was written to the event log.</span></span>  
+ <span data-ttu-id="923ff-110">[in] Pointeur vers le message qui a été écrite dans le journal des événements.</span><span class="sxs-lookup"><span data-stu-id="923ff-110">[in] A pointer to the message that was written to the event log.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cc21d-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="cc21d-111">Requirements</span></span>  
- <span data-ttu-id="cc21d-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cc21d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="923ff-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="923ff-111">Requirements</span></span>  
+ <span data-ttu-id="923ff-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="923ff-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cc21d-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cc21d-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="923ff-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="923ff-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cc21d-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cc21d-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="923ff-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="923ff-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cc21d-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc21d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="923ff-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="923ff-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc21d-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="cc21d-116">See also</span></span>
-- [<span data-ttu-id="cc21d-117">ICorDebugManagedCallback, interface</span><span class="sxs-lookup"><span data-stu-id="cc21d-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="923ff-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="923ff-116">See also</span></span>
+- [<span data-ttu-id="923ff-117">ICorDebugManagedCallback, interface</span><span class="sxs-lookup"><span data-stu-id="923ff-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d18a3b7e309eb71cf37e77818a3181e33bf5ab7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24ecc46d1ca3ef24abd6f9bc0308fc460256c6ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493443"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475617"
 ---
-# <a name="imetadataemit2resetenclog-method"></a><span data-ttu-id="6ccfc-102">IMetaDataEmit2::ResetENCLog, méthode</span><span class="sxs-lookup"><span data-stu-id="6ccfc-102">IMetaDataEmit2::ResetENCLog Method</span></span>
-<span data-ttu-id="6ccfc-103">Réinitialise le journal modifier et continuer et démarre une nouvelle session.</span><span class="sxs-lookup"><span data-stu-id="6ccfc-103">Resets the edit-and-continue log and starts a new session.</span></span>  
+# <a name="imetadataemit2resetenclog-method"></a><span data-ttu-id="7deb6-102">IMetaDataEmit2::ResetENCLog, méthode</span><span class="sxs-lookup"><span data-stu-id="7deb6-102">IMetaDataEmit2::ResetENCLog Method</span></span>
+<span data-ttu-id="7deb6-103">Réinitialise le journal modifier et continuer et démarre une nouvelle session.</span><span class="sxs-lookup"><span data-stu-id="7deb6-103">Resets the edit-and-continue log and starts a new session.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ccfc-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6ccfc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7deb6-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="7deb6-104">Syntax</span></span>  
   
 ```  
 HRESULT ResetENCLog ();  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6ccfc-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="6ccfc-105">Parameters</span></span>  
- <span data-ttu-id="6ccfc-106">`ResetENCLog` ne prend aucun paramètre.</span><span class="sxs-lookup"><span data-stu-id="6ccfc-106">`ResetENCLog` takes no parameters.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7deb6-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="7deb6-105">Parameters</span></span>  
+ <span data-ttu-id="7deb6-106">`ResetENCLog` ne prend aucun paramètre.</span><span class="sxs-lookup"><span data-stu-id="7deb6-106">`ResetENCLog` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ccfc-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="6ccfc-107">Requirements</span></span>  
- <span data-ttu-id="6ccfc-108">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6ccfc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7deb6-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="7deb6-107">Requirements</span></span>  
+ <span data-ttu-id="7deb6-108">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7deb6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ccfc-109">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6ccfc-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7deb6-109">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7deb6-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6ccfc-110">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6ccfc-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7deb6-110">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7deb6-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6ccfc-111">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ccfc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7deb6-111">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7deb6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ccfc-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6ccfc-112">See also</span></span>
-- [<span data-ttu-id="6ccfc-113">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="6ccfc-113">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="6ccfc-114">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="6ccfc-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7deb6-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7deb6-112">See also</span></span>
+- [<span data-ttu-id="7deb6-113">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="7deb6-113">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="7deb6-114">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="7deb6-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

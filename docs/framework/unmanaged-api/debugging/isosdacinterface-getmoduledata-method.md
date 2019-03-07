@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b0edd459deaf68040e05209c6ecf2cb7cae12e8d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ed151f998ed7d28ba7ae170839ce2fa3a1ee6135
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369953"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490448"
 ---
-# <a name="isosdacinterfacegetmoduledata-method"></a><span data-ttu-id="10b25-102">ISOSDacInterface::GetModuleData (méthode)</span><span class="sxs-lookup"><span data-stu-id="10b25-102">ISOSDacInterface::GetModuleData Method</span></span>
+# <a name="isosdacinterfacegetmoduledata-method"></a><span data-ttu-id="f231d-102">ISOSDacInterface::GetModuleData (méthode)</span><span class="sxs-lookup"><span data-stu-id="f231d-102">ISOSDacInterface::GetModuleData Method</span></span>
 
-<span data-ttu-id="10b25-103">Extrait les données correspondant au module chargé à une adresse donnée.</span><span class="sxs-lookup"><span data-stu-id="10b25-103">Fetches the data corresponding to the module loaded at a given address.</span></span>
+<span data-ttu-id="f231d-103">Extrait les données correspondant au module chargé à une adresse donnée.</span><span class="sxs-lookup"><span data-stu-id="f231d-103">Fetches the data corresponding to the module loaded at a given address.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="10b25-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="10b25-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f231d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="f231d-104">Syntax</span></span>
 
 ```
 HRESULT GetModuleData(
@@ -37,27 +37,27 @@ HRESULT GetModuleData(
 );
 ```
 
-### <a name="parameters"></a><span data-ttu-id="10b25-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="10b25-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="f231d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="f231d-105">Parameters</span></span>
 
 `moduleAddr`\
-<span data-ttu-id="10b25-106">[in] L’adresse du module pour récupérer des informations pour.</span><span class="sxs-lookup"><span data-stu-id="10b25-106">[in] The address of the module to retrieve information for.</span></span>
+<span data-ttu-id="f231d-106">[in] L’adresse du module pour récupérer des informations pour.</span><span class="sxs-lookup"><span data-stu-id="f231d-106">[in] The address of the module to retrieve information for.</span></span>
 
 `data`\
-<span data-ttu-id="10b25-107">[out] Le [DacpModuleData structure](dacpmoduledata-structure.md) pour contenir les informations du module chargé.</span><span class="sxs-lookup"><span data-stu-id="10b25-107">[out] The [DacpModuleData structure](dacpmoduledata-structure.md) to hold the information of the loaded module.</span></span>
+<span data-ttu-id="f231d-107">[out] Le [DacpModuleData structure](dacpmoduledata-structure.md) pour contenir les informations du module chargé.</span><span class="sxs-lookup"><span data-stu-id="f231d-107">[out] The [DacpModuleData structure](dacpmoduledata-structure.md) to hold the information of the loaded module.</span></span>
 
 
-## <a name="remarks"></a><span data-ttu-id="10b25-108">Notes</span><span class="sxs-lookup"><span data-stu-id="10b25-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f231d-108">Notes</span><span class="sxs-lookup"><span data-stu-id="f231d-108">Remarks</span></span>
 
-<span data-ttu-id="10b25-109">La méthode fournie fait partie de la `ISOSDacInterface` interface et correspond à l’emplacement de 13 de la table de la méthode virtuelle.</span><span class="sxs-lookup"><span data-stu-id="10b25-109">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 13th slot of the virtual method table.</span></span>
+<span data-ttu-id="f231d-109">La méthode fournie fait partie de la `ISOSDacInterface` interface et correspond à l’emplacement de 13 de la table de la méthode virtuelle.</span><span class="sxs-lookup"><span data-stu-id="f231d-109">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 13th slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="10b25-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="10b25-110">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="f231d-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="f231d-110">Requirements</span></span>
 
-<span data-ttu-id="10b25-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10b25-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="10b25-112">**En-tête :** Aucun.</span><span class="sxs-lookup"><span data-stu-id="10b25-112">**Header:** None</span></span>  
-<span data-ttu-id="10b25-113">**Bibliothèque :** Aucun.</span><span class="sxs-lookup"><span data-stu-id="10b25-113">**Library:** None</span></span>  
-<span data-ttu-id="10b25-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="10b25-114">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="f231d-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f231d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="f231d-112">**En-tête :** Aucun.</span><span class="sxs-lookup"><span data-stu-id="f231d-112">**Header:** None</span></span>  
+<span data-ttu-id="f231d-113">**Bibliothèque :** Aucun.</span><span class="sxs-lookup"><span data-stu-id="f231d-113">**Library:** None</span></span>  
+<span data-ttu-id="f231d-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f231d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="10b25-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="10b25-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f231d-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f231d-115">See also</span></span>
 
-- [<span data-ttu-id="10b25-116">Débogage</span><span class="sxs-lookup"><span data-stu-id="10b25-116">Debugging</span></span>](index.md)
-- [<span data-ttu-id="10b25-117">Interface de ISOSDacInterface</span><span class="sxs-lookup"><span data-stu-id="10b25-117">ISOSDacInterface Interface</span></span>](isosdacinterface-interface.md)
+- [<span data-ttu-id="f231d-116">Débogage</span><span class="sxs-lookup"><span data-stu-id="f231d-116">Debugging</span></span>](index.md)
+- [<span data-ttu-id="f231d-117">Interface de ISOSDacInterface</span><span class="sxs-lookup"><span data-stu-id="f231d-117">ISOSDacInterface Interface</span></span>](isosdacinterface-interface.md)

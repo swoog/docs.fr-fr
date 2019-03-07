@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c33f287cf7ccadeb75ba0bbccf9118aeedc1f942
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8bc4eb1895fe67c25354b42fe3ae1ffe80bca58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607430"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491319"
 ---
-# <a name="icordebugmanagedcallbacknamechange-method"></a><span data-ttu-id="525a4-102">ICorDebugManagedCallback::NameChange, méthode</span><span class="sxs-lookup"><span data-stu-id="525a4-102">ICorDebugManagedCallback::NameChange Method</span></span>
-<span data-ttu-id="525a4-103">Notifie le débogueur que le nom d’un domaine d’application ou d’un thread a changé.</span><span class="sxs-lookup"><span data-stu-id="525a4-103">Notifies the debugger that the name of either an application domain or a thread has changed.</span></span>  
+# <a name="icordebugmanagedcallbacknamechange-method"></a><span data-ttu-id="89495-102">ICorDebugManagedCallback::NameChange, méthode</span><span class="sxs-lookup"><span data-stu-id="89495-102">ICorDebugManagedCallback::NameChange Method</span></span>
+<span data-ttu-id="89495-103">Notifie le débogueur que le nom d’un domaine d’application ou d’un thread a changé.</span><span class="sxs-lookup"><span data-stu-id="89495-103">Notifies the debugger that the name of either an application domain or a thread has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="525a4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="525a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89495-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="89495-104">Syntax</span></span>  
   
 ```  
 HRESULT NameChange (  
@@ -36,21 +36,21 @@ HRESULT NameChange (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="525a4-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="525a4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="89495-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="89495-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="525a4-106">[in] Un pointeur vers un objet ICorDebugAppDomain qui représente le domaine d’application qui avait un changement de nom ou qui contient le thread qui avait un changement de nom.</span><span class="sxs-lookup"><span data-stu-id="525a4-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that either had a name change or that contains the thread that had a name change.</span></span>  
+ <span data-ttu-id="89495-106">[in] Un pointeur vers un objet ICorDebugAppDomain qui représente le domaine d’application qui avait un changement de nom ou qui contient le thread qui avait un changement de nom.</span><span class="sxs-lookup"><span data-stu-id="89495-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that either had a name change or that contains the thread that had a name change.</span></span>  
   
  `pThread`  
- <span data-ttu-id="525a4-107">[in] Pointeur vers un objet ICorDebugThread qui représente le thread qui avait un changement de nom.</span><span class="sxs-lookup"><span data-stu-id="525a4-107">[in] A pointer to an ICorDebugThread object that represents the thread that had a name change.</span></span>  
+ <span data-ttu-id="89495-107">[in] Pointeur vers un objet ICorDebugThread qui représente le thread qui avait un changement de nom.</span><span class="sxs-lookup"><span data-stu-id="89495-107">[in] A pointer to an ICorDebugThread object that represents the thread that had a name change.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="525a4-108">Spécifications</span><span class="sxs-lookup"><span data-stu-id="525a4-108">Requirements</span></span>  
- <span data-ttu-id="525a4-109">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="525a4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89495-108">Spécifications</span><span class="sxs-lookup"><span data-stu-id="89495-108">Requirements</span></span>  
+ <span data-ttu-id="89495-109">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89495-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="525a4-110">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="525a4-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="89495-110">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="89495-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="525a4-111">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="525a4-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="89495-111">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89495-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="525a4-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="525a4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="89495-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89495-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="525a4-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="525a4-113">See also</span></span>
-- [<span data-ttu-id="525a4-114">ICorDebugManagedCallback, interface</span><span class="sxs-lookup"><span data-stu-id="525a4-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="89495-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="89495-113">See also</span></span>
+- [<span data-ttu-id="89495-114">ICorDebugManagedCallback, interface</span><span class="sxs-lookup"><span data-stu-id="89495-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5fe770ffc5a9c187e9069e8a66553976f9a53b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e568050a5cc94da865d656adc8a775024dab836c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709882"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500042"
 ---
-# <a name="setpekind-method"></a><span data-ttu-id="739f9-102">SetPEKind, méthode</span><span class="sxs-lookup"><span data-stu-id="739f9-102">SetPEKind Method</span></span>
-<span data-ttu-id="739f9-103">Détermine le type de fichier exécutable portable, spécifiques à l’ordinateur ou indépendant de l’ordinateur.</span><span class="sxs-lookup"><span data-stu-id="739f9-103">Determines the portable executable type, either machine-specific or machine-agnostic.</span></span>  
+# <a name="setpekind-method"></a><span data-ttu-id="4cf27-102">SetPEKind, méthode</span><span class="sxs-lookup"><span data-stu-id="4cf27-102">SetPEKind Method</span></span>
+<span data-ttu-id="4cf27-103">Détermine le type de fichier exécutable portable, spécifiques à l’ordinateur ou indépendant de l’ordinateur.</span><span class="sxs-lookup"><span data-stu-id="4cf27-103">Determines the portable executable type, either machine-specific or machine-agnostic.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="739f9-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="739f9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4cf27-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4cf27-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPEKind(  
@@ -37,27 +37,27 @@ HRESULT SetPEKind(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="739f9-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="739f9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4cf27-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4cf27-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="739f9-106">ID de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="739f9-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="4cf27-106">ID de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="4cf27-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="739f9-107">Jeton du fichier pour lequel le type PE doit être défini.</span><span class="sxs-lookup"><span data-stu-id="739f9-107">Token of file for which the PE type is to be set.</span></span> <span data-ttu-id="739f9-108">Peut être NULL si `AssemblyID` n’indique pas un netmodule indépendant.</span><span class="sxs-lookup"><span data-stu-id="739f9-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="4cf27-107">Jeton du fichier pour lequel le type PE doit être défini.</span><span class="sxs-lookup"><span data-stu-id="4cf27-107">Token of file for which the PE type is to be set.</span></span> <span data-ttu-id="4cf27-108">Peut être NULL si `AssemblyID` n’indique pas un netmodule indépendant.</span><span class="sxs-lookup"><span data-stu-id="4cf27-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `dwPEKind`  
- <span data-ttu-id="739f9-109">Le type de PE, comme indiqué par le [CorPEKind, énumération](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="739f9-109">The type of PE, as indicated by the [CorPEKind Enumeration](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md).</span></span>  
+ <span data-ttu-id="4cf27-109">Le type de PE, comme indiqué par le [CorPEKind, énumération](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="4cf27-109">The type of PE, as indicated by the [CorPEKind Enumeration](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md).</span></span>  
   
  `dwMachine`  
- <span data-ttu-id="739f9-110">L’architecture d’ordinateur cible, comme indiqué dans l’en-tête NT.</span><span class="sxs-lookup"><span data-stu-id="739f9-110">The target machine architecture, as indicated in the NT header.</span></span>  
+ <span data-ttu-id="4cf27-110">L’architecture d’ordinateur cible, comme indiqué dans l’en-tête NT.</span><span class="sxs-lookup"><span data-stu-id="4cf27-110">The target machine architecture, as indicated in the NT header.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="739f9-111">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="739f9-111">Return Value</span></span>  
- <span data-ttu-id="739f9-112">Retourne S_OK si la méthode réussit.</span><span class="sxs-lookup"><span data-stu-id="739f9-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4cf27-111">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="4cf27-111">Return Value</span></span>  
+ <span data-ttu-id="4cf27-112">Retourne S_OK si la méthode réussit.</span><span class="sxs-lookup"><span data-stu-id="4cf27-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="739f9-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="739f9-113">Requirements</span></span>  
- <span data-ttu-id="739f9-114">Nécessite alink.h.</span><span class="sxs-lookup"><span data-stu-id="739f9-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4cf27-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4cf27-113">Requirements</span></span>  
+ <span data-ttu-id="4cf27-114">Nécessite alink.h.</span><span class="sxs-lookup"><span data-stu-id="4cf27-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="739f9-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="739f9-115">See also</span></span>
-- [<span data-ttu-id="739f9-116">GetPEKind, méthode</span><span class="sxs-lookup"><span data-stu-id="739f9-116">GetPEKind Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
-- [<span data-ttu-id="739f9-117">IALink2, interface</span><span class="sxs-lookup"><span data-stu-id="739f9-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="739f9-118">IALink, interface</span><span class="sxs-lookup"><span data-stu-id="739f9-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="739f9-119">API ALink</span><span class="sxs-lookup"><span data-stu-id="739f9-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="4cf27-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4cf27-115">See also</span></span>
+- [<span data-ttu-id="4cf27-116">GetPEKind, méthode</span><span class="sxs-lookup"><span data-stu-id="4cf27-116">GetPEKind Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
+- [<span data-ttu-id="4cf27-117">IALink2, interface</span><span class="sxs-lookup"><span data-stu-id="4cf27-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="4cf27-118">IALink, interface</span><span class="sxs-lookup"><span data-stu-id="4cf27-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="4cf27-119">API ALink</span><span class="sxs-lookup"><span data-stu-id="4cf27-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

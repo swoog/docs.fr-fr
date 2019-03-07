@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d36ae3ef63c1324f77786ad55674bbdc257d984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24a2c3baec0d958302101c295966f945ae98fa78
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607132"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490708"
 ---
-# <a name="waitortimercallback-function-pointer"></a><span data-ttu-id="25a54-102">WAITORTIMERCALLBACK (pointeur fonction)</span><span class="sxs-lookup"><span data-stu-id="25a54-102">WAITORTIMERCALLBACK Function Pointer</span></span>
-<span data-ttu-id="25a54-103">Pointe vers une fonction qui avertit l’hôte qu’un handle d’attente (<xref:System.Threading.WaitHandle>) a été signalé ou a expiré.</span><span class="sxs-lookup"><span data-stu-id="25a54-103">Points to a function that notifies the host that a wait handle (<xref:System.Threading.WaitHandle>) has either been signaled or timed out.</span></span>  
+# <a name="waitortimercallback-function-pointer"></a><span data-ttu-id="a53f8-102">WAITORTIMERCALLBACK (pointeur fonction)</span><span class="sxs-lookup"><span data-stu-id="a53f8-102">WAITORTIMERCALLBACK Function Pointer</span></span>
+<span data-ttu-id="a53f8-103">Pointe vers une fonction qui avertit l’hôte qu’un handle d’attente (<xref:System.Threading.WaitHandle>) a été signalé ou a expiré.</span><span class="sxs-lookup"><span data-stu-id="a53f8-103">Points to a function that notifies the host that a wait handle (<xref:System.Threading.WaitHandle>) has either been signaled or timed out.</span></span>  
   
- <span data-ttu-id="25a54-104">Ce pointeur de fonction a été déconseillé dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="25a54-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="a53f8-104">Ce pointeur de fonction a été déconseillé dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a53f8-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="25a54-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="25a54-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a53f8-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a53f8-105">Syntax</span></span>  
   
 ```  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  
@@ -37,24 +37,24 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="25a54-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="25a54-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a53f8-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="a53f8-106">Parameters</span></span>  
  `lpParameter`  
- <span data-ttu-id="25a54-107">[in] Pointeur vers un objet qui contient les informations définies par l’hôte.</span><span class="sxs-lookup"><span data-stu-id="25a54-107">[in] A pointer to an object that contains information defined by the host.</span></span>  
+ <span data-ttu-id="a53f8-107">[in] Pointeur vers un objet qui contient les informations définies par l’hôte.</span><span class="sxs-lookup"><span data-stu-id="a53f8-107">[in] A pointer to an object that contains information defined by the host.</span></span>  
   
  `TimerOrWaitFired`  
- <span data-ttu-id="25a54-108">[in] `true` si le handle d’attente a expiré, ou `false` si elle a été signalée.</span><span class="sxs-lookup"><span data-stu-id="25a54-108">[in] `true` if the wait handle timed out, or `false` if it was signaled.</span></span>  
+ <span data-ttu-id="a53f8-108">[in] `true` si le handle d’attente a expiré, ou `false` si elle a été signalée.</span><span class="sxs-lookup"><span data-stu-id="a53f8-108">[in] `true` if the wait handle timed out, or `false` if it was signaled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="25a54-109">Notes</span><span class="sxs-lookup"><span data-stu-id="25a54-109">Remarks</span></span>  
- <span data-ttu-id="25a54-110">La fonction à laquelle `WAITORTIMERCALLBACK` points est une fonction de rappel et doit être implémentée par le writer de l’application d’hébergement.</span><span class="sxs-lookup"><span data-stu-id="25a54-110">The function to which `WAITORTIMERCALLBACK` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a53f8-109">Notes</span><span class="sxs-lookup"><span data-stu-id="a53f8-109">Remarks</span></span>  
+ <span data-ttu-id="a53f8-110">La fonction à laquelle `WAITORTIMERCALLBACK` points est une fonction de rappel et doit être implémentée par le writer de l’application d’hébergement.</span><span class="sxs-lookup"><span data-stu-id="a53f8-110">The function to which `WAITORTIMERCALLBACK` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="25a54-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="25a54-111">Requirements</span></span>  
- <span data-ttu-id="25a54-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25a54-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a53f8-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="a53f8-111">Requirements</span></span>  
+ <span data-ttu-id="a53f8-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a53f8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="25a54-113">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="25a54-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a53f8-113">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a53f8-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="25a54-114">**Bibliothèque :** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="25a54-114">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="a53f8-114">**Bibliothèque :** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="a53f8-114">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="25a54-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25a54-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a53f8-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a53f8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25a54-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="25a54-116">See also</span></span>
-- [<span data-ttu-id="25a54-117">Fonctions d’hébergement CLR dépréciées</span><span class="sxs-lookup"><span data-stu-id="25a54-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="a53f8-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a53f8-116">See also</span></span>
+- [<span data-ttu-id="a53f8-117">Fonctions d’hébergement CLR dépréciées</span><span class="sxs-lookup"><span data-stu-id="a53f8-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

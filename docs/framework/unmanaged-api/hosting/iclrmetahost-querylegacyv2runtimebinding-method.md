@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd58d38e92f492522008745384459045e007c3ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b21b86e9f5866626f72562f5105b214777e3d5bd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486901"
 ---
-# <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a><span data-ttu-id="60425-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding, méthode</span><span class="sxs-lookup"><span data-stu-id="60425-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding Method</span></span>
-<span data-ttu-id="60425-103">Retourne une interface qui représente un runtime auquel stratégie d’activation héritée a été liée, par exemple, à l’aide de la `useLegacyV2RuntimeActivationPolicy` d’attribut sur le [ \<démarrage > élément](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) entrée de fichier de configuration, en utilisant directement des API d’activation hérité ou en appelant le [ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="60425-103">Returns an interface that represents a runtime to which legacy activation policy has been bound, for example, by using the `useLegacyV2RuntimeActivationPolicy` attribute on the [\<startup> element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) configuration file entry, by direct use of the legacy activation APIs, or by calling the [ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) method.</span></span>  
+# <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a><span data-ttu-id="204a8-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding, méthode</span><span class="sxs-lookup"><span data-stu-id="204a8-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding Method</span></span>
+<span data-ttu-id="204a8-103">Retourne une interface qui représente un runtime auquel stratégie d’activation héritée a été liée, par exemple, à l’aide de la `useLegacyV2RuntimeActivationPolicy` d’attribut sur le [ \<démarrage > élément](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) entrée de fichier de configuration, en utilisant directement des API d’activation hérité ou en appelant le [ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="204a8-103">Returns an interface that represents a runtime to which legacy activation policy has been bound, for example, by using the `useLegacyV2RuntimeActivationPolicy` attribute on the [\<startup> element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) configuration file entry, by direct use of the legacy activation APIs, or by calling the [ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="60425-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="60425-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="204a8-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="204a8-104">Syntax</span></span>  
   
 ```  
 HRESULT QueryLegacyV2RuntimeBinding (  
@@ -35,33 +35,33 @@ HRESULT QueryLegacyV2RuntimeBinding (
     [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="60425-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="60425-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="204a8-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="204a8-105">Parameters</span></span>  
  `riid`  
- <span data-ttu-id="60425-106">[in] La seule valeur valide pour ce paramètre est de Required.Currently `IID_ICLRRuntimeInfo`.</span><span class="sxs-lookup"><span data-stu-id="60425-106">[in] Required.Currently the only valid value for this parameter is `IID_ICLRRuntimeInfo`.</span></span>  
+ <span data-ttu-id="204a8-106">[in] La seule valeur valide pour ce paramètre est de Required.Currently `IID_ICLRRuntimeInfo`.</span><span class="sxs-lookup"><span data-stu-id="204a8-106">[in] Required.Currently the only valid value for this parameter is `IID_ICLRRuntimeInfo`.</span></span>  
   
  `ppUnk`  
- <span data-ttu-id="60425-107">[out] Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="60425-107">[out] Required.</span></span> <span data-ttu-id="60425-108">Lorsque cette méthode est retournée, contient un pointeur vers le [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface qui représente un runtime qui a été lié à une stratégie d’activation héritée.</span><span class="sxs-lookup"><span data-stu-id="60425-108">When this method returns, contains a pointer to the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that represents a runtime that has been bound to legacy activation policy.</span></span>  
+ <span data-ttu-id="204a8-107">[out] Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="204a8-107">[out] Required.</span></span> <span data-ttu-id="204a8-108">Lorsque cette méthode est retournée, contient un pointeur vers le [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface qui représente un runtime qui a été lié à une stratégie d’activation héritée.</span><span class="sxs-lookup"><span data-stu-id="204a8-108">When this method returns, contains a pointer to the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that represents a runtime that has been bound to legacy activation policy.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="60425-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="60425-109">Return Value</span></span>  
- <span data-ttu-id="60425-110">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="60425-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="204a8-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="204a8-109">Return Value</span></span>  
+ <span data-ttu-id="204a8-110">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="204a8-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="60425-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="60425-111">HRESULT</span></span>|<span data-ttu-id="60425-112">Description</span><span class="sxs-lookup"><span data-stu-id="60425-112">Description</span></span>|  
+|<span data-ttu-id="204a8-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="204a8-111">HRESULT</span></span>|<span data-ttu-id="204a8-112">Description</span><span class="sxs-lookup"><span data-stu-id="204a8-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="60425-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="60425-113">S_OK</span></span>|<span data-ttu-id="60425-114">La méthode s'est terminée correctement et a retourné un runtime lié à une stratégie d'activation héritée.</span><span class="sxs-lookup"><span data-stu-id="60425-114">The method completed successfully and returned a runtime that was bound to legacy activation policy.</span></span>|  
-|<span data-ttu-id="60425-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="60425-115">S_FALSE</span></span>|<span data-ttu-id="60425-116">La méthode s'est terminée correctement, mais un runtime hérité n'a pas encore été lié.</span><span class="sxs-lookup"><span data-stu-id="60425-116">The method completed successfully, but a legacy runtime has not yet been bound.</span></span>|  
-|<span data-ttu-id="60425-117">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="60425-117">E_NOINTERFACE</span></span>|<span data-ttu-id="60425-118">La méthode a trouvé un runtime lié à une stratégie d'activation héritée, mais `riid` n'est pas pris en charge par ce runtime.</span><span class="sxs-lookup"><span data-stu-id="60425-118">The method found a runtime that was bound to legacy activation policy, but `riid` is not supported by that runtime.</span></span>|  
+|<span data-ttu-id="204a8-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="204a8-113">S_OK</span></span>|<span data-ttu-id="204a8-114">La méthode s'est terminée correctement et a retourné un runtime lié à une stratégie d'activation héritée.</span><span class="sxs-lookup"><span data-stu-id="204a8-114">The method completed successfully and returned a runtime that was bound to legacy activation policy.</span></span>|  
+|<span data-ttu-id="204a8-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="204a8-115">S_FALSE</span></span>|<span data-ttu-id="204a8-116">La méthode s'est terminée correctement, mais un runtime hérité n'a pas encore été lié.</span><span class="sxs-lookup"><span data-stu-id="204a8-116">The method completed successfully, but a legacy runtime has not yet been bound.</span></span>|  
+|<span data-ttu-id="204a8-117">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="204a8-117">E_NOINTERFACE</span></span>|<span data-ttu-id="204a8-118">La méthode a trouvé un runtime lié à une stratégie d'activation héritée, mais `riid` n'est pas pris en charge par ce runtime.</span><span class="sxs-lookup"><span data-stu-id="204a8-118">The method found a runtime that was bound to legacy activation policy, but `riid` is not supported by that runtime.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="60425-119">Notes</span><span class="sxs-lookup"><span data-stu-id="60425-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="204a8-119">Notes</span><span class="sxs-lookup"><span data-stu-id="204a8-119">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="60425-120">Spécifications</span><span class="sxs-lookup"><span data-stu-id="60425-120">Requirements</span></span>  
- <span data-ttu-id="60425-121">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="60425-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="204a8-120">Spécifications</span><span class="sxs-lookup"><span data-stu-id="204a8-120">Requirements</span></span>  
+ <span data-ttu-id="204a8-121">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="204a8-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="60425-122">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="60425-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="204a8-122">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="204a8-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="60425-123">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="60425-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="204a8-123">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="204a8-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="60425-124">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="60425-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="204a8-124">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="204a8-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60425-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="60425-125">See also</span></span>
-- [<span data-ttu-id="60425-126">ICLRMetaHost, interface</span><span class="sxs-lookup"><span data-stu-id="60425-126">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="60425-127">Hébergement</span><span class="sxs-lookup"><span data-stu-id="60425-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="204a8-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="204a8-125">See also</span></span>
+- [<span data-ttu-id="204a8-126">ICLRMetaHost, interface</span><span class="sxs-lookup"><span data-stu-id="204a8-126">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="204a8-127">Hébergement</span><span class="sxs-lookup"><span data-stu-id="204a8-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

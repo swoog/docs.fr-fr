@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60bd7567f541a0bbaa3591d2f2905d13064dec3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423440"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498084"
 ---
-# <a name="icordebugprocessgethandle-method"></a><span data-ttu-id="284ce-102">ICorDebugProcess::GetHandle, méthode</span><span class="sxs-lookup"><span data-stu-id="284ce-102">ICorDebugProcess::GetHandle Method</span></span>
-<span data-ttu-id="284ce-103">Obtient un handle vers le processus.</span><span class="sxs-lookup"><span data-stu-id="284ce-103">Gets a handle to the process.</span></span>  
+# <a name="icordebugprocessgethandle-method"></a><span data-ttu-id="fee1d-102">ICorDebugProcess::GetHandle, méthode</span><span class="sxs-lookup"><span data-stu-id="fee1d-102">ICorDebugProcess::GetHandle Method</span></span>
+<span data-ttu-id="fee1d-103">Obtient un handle vers le processus.</span><span class="sxs-lookup"><span data-stu-id="fee1d-103">Gets a handle to the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="284ce-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="284ce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fee1d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fee1d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="284ce-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="284ce-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fee1d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="fee1d-105">Parameters</span></span>  
  `phProcessHandle`  
- <span data-ttu-id="284ce-106">[out] Un pointeur vers un `HPROCESS` qui est le handle du processus.</span><span class="sxs-lookup"><span data-stu-id="284ce-106">[out] A pointer to an `HPROCESS` that is the handle to the process.</span></span>  
+ <span data-ttu-id="fee1d-106">[out] Un pointeur vers un `HPROCESS` qui est le handle pour le processus.</span><span class="sxs-lookup"><span data-stu-id="fee1d-106">[out] A pointer to an `HPROCESS` that is the handle to the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="284ce-107">Notes</span><span class="sxs-lookup"><span data-stu-id="284ce-107">Remarks</span></span>  
- <span data-ttu-id="284ce-108">Le handle récupéré appartient à l’interface de débogage.</span><span class="sxs-lookup"><span data-stu-id="284ce-108">The retrieved handle is owned by the debugging interface.</span></span> <span data-ttu-id="284ce-109">Le débogueur doit dupliquer le handle avant de l’utiliser.</span><span class="sxs-lookup"><span data-stu-id="284ce-109">The debugger should duplicate the handle before using it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fee1d-107">Notes</span><span class="sxs-lookup"><span data-stu-id="fee1d-107">Remarks</span></span>  
+ <span data-ttu-id="fee1d-108">Le handle récupéré est détenu par l’interface de débogage.</span><span class="sxs-lookup"><span data-stu-id="fee1d-108">The retrieved handle is owned by the debugging interface.</span></span> <span data-ttu-id="fee1d-109">Le débogueur doit dupliquer le handle avant de l’utiliser.</span><span class="sxs-lookup"><span data-stu-id="fee1d-109">The debugger should duplicate the handle before using it.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="284ce-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="284ce-110">Requirements</span></span>  
- <span data-ttu-id="284ce-111">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="284ce-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fee1d-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="fee1d-110">Requirements</span></span>  
+ <span data-ttu-id="fee1d-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fee1d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="284ce-112">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="284ce-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fee1d-112">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fee1d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="284ce-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="284ce-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fee1d-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fee1d-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="284ce-114">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="284ce-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="fee1d-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fee1d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11ab93e9cb4449ab77e5e9c4da81073aaf432382
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a9eb51643271fd27a6d4795fc1729766b44b239
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468791"
 ---
-# <a name="imetadatatablesgetcodedtokeninfo-method"></a><span data-ttu-id="363c2-102">IMetaDataTables::GetCodedTokenInfo, méthode</span><span class="sxs-lookup"><span data-stu-id="363c2-102">IMetaDataTables::GetCodedTokenInfo Method</span></span>
-<span data-ttu-id="363c2-103">Obtient un pointeur vers un tableau de jetons associé à l’index de ligne spécifié.</span><span class="sxs-lookup"><span data-stu-id="363c2-103">Gets a pointer to an array of tokens associated with the specified row index.</span></span>  
+# <a name="imetadatatablesgetcodedtokeninfo-method"></a><span data-ttu-id="d1879-102">IMetaDataTables::GetCodedTokenInfo, méthode</span><span class="sxs-lookup"><span data-stu-id="d1879-102">IMetaDataTables::GetCodedTokenInfo Method</span></span>
+<span data-ttu-id="d1879-103">Obtient un pointeur vers un tableau de jetons associé à l’index de ligne spécifié.</span><span class="sxs-lookup"><span data-stu-id="d1879-103">Gets a pointer to an array of tokens associated with the specified row index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="363c2-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="363c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1879-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d1879-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodedTokenInfo (   
@@ -38,28 +38,28 @@ HRESULT GetCodedTokenInfo (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="363c2-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="363c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d1879-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="d1879-105">Parameters</span></span>  
  `ixCdTkn`  
- <span data-ttu-id="363c2-106">[in] Le type de jeton codé à retourner.</span><span class="sxs-lookup"><span data-stu-id="363c2-106">[in] The kind of coded token to return.</span></span>  
+ <span data-ttu-id="d1879-106">[in] Le type de jeton codé à retourner.</span><span class="sxs-lookup"><span data-stu-id="d1879-106">[in] The kind of coded token to return.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="363c2-107">[out] Un pointeur vers la longueur de `ppTokens`.</span><span class="sxs-lookup"><span data-stu-id="363c2-107">[out] A pointer to the length of `ppTokens`.</span></span>  
+ <span data-ttu-id="d1879-107">[out] Un pointeur vers la longueur de `ppTokens`.</span><span class="sxs-lookup"><span data-stu-id="d1879-107">[out] A pointer to the length of `ppTokens`.</span></span>  
   
  `ppTokens`  
- <span data-ttu-id="363c2-108">[out] Pointeur vers un pointeur vers un tableau qui contient la liste des jetons retournés.</span><span class="sxs-lookup"><span data-stu-id="363c2-108">[out] A pointer to a pointer to an array that contains the list of returned tokens.</span></span>  
+ <span data-ttu-id="d1879-108">[out] Pointeur vers un pointeur vers un tableau qui contient la liste des jetons retournés.</span><span class="sxs-lookup"><span data-stu-id="d1879-108">[out] A pointer to a pointer to an array that contains the list of returned tokens.</span></span>  
   
  `ppName`  
- <span data-ttu-id="363c2-109">[out] Un pointeur vers un pointeur vers le nom du jeton à `ixCdTkn`.</span><span class="sxs-lookup"><span data-stu-id="363c2-109">[out] A pointer to a pointer to the name of the token at `ixCdTkn`.</span></span>  
+ <span data-ttu-id="d1879-109">[out] Un pointeur vers un pointeur vers le nom du jeton à `ixCdTkn`.</span><span class="sxs-lookup"><span data-stu-id="d1879-109">[out] A pointer to a pointer to the name of the token at `ixCdTkn`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="363c2-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="363c2-110">Requirements</span></span>  
- <span data-ttu-id="363c2-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="363c2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1879-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="d1879-110">Requirements</span></span>  
+ <span data-ttu-id="d1879-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1879-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="363c2-112">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="363c2-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d1879-112">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d1879-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="363c2-113">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="363c2-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d1879-113">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d1879-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="363c2-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="363c2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d1879-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1879-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="363c2-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="363c2-115">See also</span></span>
-- [<span data-ttu-id="363c2-116">IMetaDataTables, interface</span><span class="sxs-lookup"><span data-stu-id="363c2-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="363c2-117">IMetaDataTables2, interface</span><span class="sxs-lookup"><span data-stu-id="363c2-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d1879-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d1879-115">See also</span></span>
+- [<span data-ttu-id="d1879-116">IMetaDataTables, interface</span><span class="sxs-lookup"><span data-stu-id="d1879-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="d1879-117">IMetaDataTables2, interface</span><span class="sxs-lookup"><span data-stu-id="d1879-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

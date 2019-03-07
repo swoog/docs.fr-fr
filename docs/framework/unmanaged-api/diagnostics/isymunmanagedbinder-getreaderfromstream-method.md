@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af4e9124140c2b311fb2c10800200f5d4d8dc679
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 630895e131c2b3fd5a175a7a3c45140ad65d03aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545762"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503032"
 ---
-# <a name="isymunmanagedbindergetreaderfromstream-method"></a><span data-ttu-id="d366c-102">ISymUnmanagedBinder::GetReaderFromStream, méthode</span><span class="sxs-lookup"><span data-stu-id="d366c-102">ISymUnmanagedBinder::GetReaderFromStream Method</span></span>
-<span data-ttu-id="d366c-103">Une interface de métadonnées et un flux qui contient le magasin de symboles, retourne le correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure qui lira le débogage des symboles à partir du magasin de symboles donné.</span><span class="sxs-lookup"><span data-stu-id="d366c-103">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>  
+# <a name="isymunmanagedbindergetreaderfromstream-method"></a><span data-ttu-id="006bb-102">ISymUnmanagedBinder::GetReaderFromStream, méthode</span><span class="sxs-lookup"><span data-stu-id="006bb-102">ISymUnmanagedBinder::GetReaderFromStream Method</span></span>
+<span data-ttu-id="006bb-103">Une interface de métadonnées et un flux qui contient le magasin de symboles, retourne le correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure qui lira le débogage des symboles à partir du magasin de symboles donné.</span><span class="sxs-lookup"><span data-stu-id="006bb-103">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d366c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d366c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="006bb-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="006bb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderFromStream(  
@@ -36,21 +36,21 @@ HRESULT GetReaderFromStream(
     [out,retval] ISymUnmanagedReader **pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d366c-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="d366c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="006bb-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="006bb-105">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="d366c-106">[in] Pointeur vers l’interface d’importation de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="d366c-106">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="006bb-106">[in] Pointeur vers l’interface d’importation de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="006bb-106">[in] A pointer to the metadata import interface.</span></span>  
   
  `pstream`  
- <span data-ttu-id="d366c-107">[in] Un pointeur vers le flux qui contient le magasin de symboles.</span><span class="sxs-lookup"><span data-stu-id="d366c-107">[in] A pointer to the stream that contains the symbol store.</span></span>  
+ <span data-ttu-id="006bb-107">[in] Un pointeur vers le flux qui contient le magasin de symboles.</span><span class="sxs-lookup"><span data-stu-id="006bb-107">[in] A pointer to the stream that contains the symbol store.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="d366c-108">[out] Un pointeur qui est défini à retourné [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="d366c-108">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="006bb-108">[out] Un pointeur qui est défini à retourné [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="006bb-108">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d366c-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="d366c-109">Return Value</span></span>  
- <span data-ttu-id="d366c-110">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="d366c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="006bb-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="006bb-109">Return Value</span></span>  
+ <span data-ttu-id="006bb-110">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="006bb-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d366c-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="d366c-111">Requirements</span></span>  
- <span data-ttu-id="d366c-112">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d366c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="006bb-111">Spécifications</span><span class="sxs-lookup"><span data-stu-id="006bb-111">Requirements</span></span>  
+ <span data-ttu-id="006bb-112">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="006bb-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d366c-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d366c-113">See also</span></span>
-- [<span data-ttu-id="d366c-114">ISymUnmanagedBinder, interface</span><span class="sxs-lookup"><span data-stu-id="d366c-114">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+## <a name="see-also"></a><span data-ttu-id="006bb-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="006bb-113">See also</span></span>
+- [<span data-ttu-id="006bb-114">ISymUnmanagedBinder, interface</span><span class="sxs-lookup"><span data-stu-id="006bb-114">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
