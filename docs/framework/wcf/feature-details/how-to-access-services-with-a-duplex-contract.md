@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 2f83b8ac71bfc53791f7de42d127badbda0d3881
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610308"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678681"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Procédure : Access services avec un contrat duplex
 
 L’une des fonctionnalités de Windows Communication Foundation (WCF) sont la possibilité de créer un service qui utilise un modèle de messagerie duplex. Ce modèle permet à un service de communiquer avec un client via un rappel. Cette rubrique montre comment créer un client WCF dans une classe de client qui implémente l’interface de rappel.
 
-Une liaison double expose l’adresse IP du client au service. Ce client doit utiliser un mode de sécurité afin de garantir sa connexion à un service fiable.
+Une liaison double expose l'adresse IP du client au service. Ce client doit utiliser un mode de sécurité afin de garantir sa connexion à un service fiable.
 
 Pour obtenir un didacticiel sur la création d’un service WCF de base et un client, consultez [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).
 
@@ -53,7 +53,7 @@ Pour obtenir un didacticiel sur la création d’un service WCF de base et un cl
           Console.WriteLine("Result ({0})", result)
        End Sub
         Public Sub Equation(ByVal equation As String)
-            Console.Writeline("Equation({0})", equation)
+            Console.WriteLine("Equation({0})", equation)
         End Sub
     End Class
     ```

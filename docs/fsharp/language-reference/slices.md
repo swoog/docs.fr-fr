@@ -2,12 +2,12 @@
 title: Tranches (F#)
 description: En savoir plus sur l’utilisation des tranches pour existant F# types de données et comment définir vos propres sections pour les autres types de données.
 ms.date: 01/22/2019
-ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970105"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675275"
 ---
 # <a name="slices"></a>Tranches
 
@@ -86,7 +86,7 @@ printfn "%A" subA'
 
 // Slice a 2x2 matrix out of the full 3x3 matrix
 let twoByTwo = A.[0..1,0..1]
-printfn "%A" twobyTwo
+printfn "%A" twoByTwo
 ```
 
 Le F# ne définit pas de bibliothèque principale `GetSlice`pour les tableaux 3D. Si vous souhaitez découper ceux ou autres tableaux de plusieurs dimensions, vous devez définir le `GetSlice` membre vous-même.

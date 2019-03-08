@@ -4,22 +4,22 @@ description: Comprendre que Docker, conteneurs et une architecture de Microservi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: be7799fe0ac3c22d0ffda5bc4b7e5e42f956a15e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442423"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674430"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Route pour les applications modernes basées sur les conteneurs
 
-Vous êtes probablement lire ce livre, car vous envisagez le développement de nouvelles applications et/ou que vous évaluez l’impact de l’utilisation de Docker, les conteneurs et les nouvelles approches, telles que les Microservices dans votre entreprise.
+Vous lisez probablement ce livre, car vous avez l’intention du développement de nouvelles applications ou que vous évaluez l’impact de l’utilisation de Docker, les conteneurs et les nouvelles approches, telles que les Microservices dans votre entreprise.
 
 L’adoption de nouveaux paradigmes de développement doit être prise avec précaution avant de commencer un projet, pour évaluer l’impact sur vos équipes de développement, votre budget ou votre infrastructure.
 
 Microsoft a travaillé dans une aide riche, exemples d’applications et un ensemble de livres électroniques, qui peuvent vous aider à prendre une décision éclairée et guider votre équipe grâce à la réussite du développement, de déploiement et d’exploitation de vos nouvelles applications.
 
-Ce livre appartient à une suite de Microsoft, des guides qui couvrent la plupart des besoins et aux problèmes spécifiques pendant le processus de développement des applications modernes basées sur les conteneurs.
+Ce livre appartient à une suite de Microsoft, des guides qui couvrent la plupart des besoins et votre défi pendant le processus de développement des applications modernes basées sur les conteneurs.
 
 Vous pouvez trouver Microsoft e-des livres supplémentaires liés aux conteneurs Docker dans la liste ci-dessous :
 

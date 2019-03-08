@@ -4,16 +4,16 @@ description: Comprendre les concepts fondamentaux pour conteneuriser des applica
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747260"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676835"
 ---
 # <a name="monolithic-applications"></a>Applications monolithiques
 
-Dans ce scénario, vous générez une application web unique et monolithique ou le service et déployez-le en tant que conteneur. Au sein de l’application, la structure ne peut pas être monolithique ; Il peut comprendre plusieurs bibliothèques, composants ou mêmes couches (couche application, couche de domaine, couche d’accès aux données, etc.). En externe, il est un conteneur unique, comme un processus unique, application web unique ou service unique.
+Dans ce scénario, vous créez une application web unique et monolithique ou le service et déployez-le en tant que conteneur. Au sein de l’application, la structure ne peut pas être monolithique ; Il peut comprendre plusieurs bibliothèques, composants ou mêmes couches (couche application, couche de domaine, couche d’accès aux données, etc.). En externe, il est un conteneur unique, comme un processus unique, application web unique ou service unique.
 
 Pour gérer ce modèle, vous déployez un seul conteneur pour représenter l’application. Mettre à l’échelle, ajoutez simplement quelques autres copies avec un équilibreur de charge à l’avant. Cette simplicité provient de la gestion d’un déploiement unique dans un conteneur unique ou de la machine virtuelle (VM).
 

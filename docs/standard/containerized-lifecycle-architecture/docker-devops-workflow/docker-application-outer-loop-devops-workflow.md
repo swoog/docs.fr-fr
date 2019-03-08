@@ -4,12 +4,12 @@ description: Découvrez les étapes pour la boucle « externe » du flux de tr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7043f34557651c3e8e79baf263bd0bcefd5a847a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836407"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676198"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Étapes du flux de travail DevOps boucle externe pour une application Docker
 
@@ -202,7 +202,7 @@ Figure 5-11 montre comment vous pouvez modifier la tâche de déploiement de Doc
 
 ## <a name="step-5-run-and-manage"></a>Étape 5 : Exécuter et gérer
 
-Étant donné qu’en cours d’exécution et la gestion des applications en production de l’entreprise au niveau est un sujet majeur dans et de lui-même, en raison du type d’opérations et personnes travaillent à ce niveau (opérations informatiques), ainsi que l’étendue de grande taille de cette zone, nous avons consacré l’ensemble suivant chapitre à expliquer.
+Étant donné qu’en cours d’exécution et la gestion des applications en production de l’entreprise au niveau est un sujet majeur dans et de lui-même, en raison du type d’opérations et personnes travaillent à ce niveau (opérations informatiques), ainsi que l’étendue de grande taille de cette zone, tout le chapitre suivant est consacré à l’explication.
 
 ## <a name="step-6-monitor-and-diagnose"></a>Étape 6 : Surveiller et diagnostiquer
 
