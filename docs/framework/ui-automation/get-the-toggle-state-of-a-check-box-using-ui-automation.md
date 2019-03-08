@@ -9,23 +9,21 @@ helpviewer_keywords:
 - check boxes, getting toggle states of
 - getting, toggle states of check boxes
 ms.assetid: 84fc31a3-175f-4e93-90a0-dd29d89b77ce
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: ebe51247a93384ab2d269220b08a1b3f3cb22e03
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 42dc9c679f877b0136cac12eae232e4365f79bdf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200618"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676614"
 ---
-# <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a><span data-ttu-id="fe406-102">Obtenir l'état bascule d'une case à cocher à l'aide d'UI Automation</span><span class="sxs-lookup"><span data-stu-id="fe406-102">Get the Toggle State of a Check Box Using UI Automation</span></span>
+# <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a><span data-ttu-id="5a329-102">Obtenir l'état bascule d'une case à cocher à l'aide d'UI Automation</span><span class="sxs-lookup"><span data-stu-id="5a329-102">Get the Toggle State of a Check Box Using UI Automation</span></span>
 > [!NOTE]
->  <span data-ttu-id="fe406-103">Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="fe406-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="fe406-104">Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="fe406-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="5a329-103">Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="5a329-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="5a329-104">Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="5a329-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="fe406-105">Cette rubrique montre comment utiliser [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour obtenir l’état bascule d’un contrôle.</span><span class="sxs-lookup"><span data-stu-id="fe406-105">This topic shows how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] to get the toggle state of a control.</span></span>  
+ <span data-ttu-id="5a329-105">Cette rubrique montre comment utiliser [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour obtenir l’état bascule d’un contrôle.</span><span class="sxs-lookup"><span data-stu-id="5a329-105">This topic shows how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] to get the toggle state of a control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fe406-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="fe406-106">Example</span></span>  
- <span data-ttu-id="fe406-107">Cet exemple utilise le <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> méthode de la <xref:System.Windows.Automation.AutomationElement> classe pour obtenir un <xref:System.Windows.Automation.TogglePattern> de l’objet d’un contrôle et retourner son <xref:System.Windows.Automation.ToggleState> propriété.</span><span class="sxs-lookup"><span data-stu-id="fe406-107">This example uses the <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> method of the <xref:System.Windows.Automation.AutomationElement> class to obtain a <xref:System.Windows.Automation.TogglePattern> object from a control and return its <xref:System.Windows.Automation.ToggleState> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="5a329-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="5a329-106">Example</span></span>  
+ <span data-ttu-id="5a329-107">Cet exemple utilise le <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> méthode de la <xref:System.Windows.Automation.AutomationElement> classe pour obtenir un <xref:System.Windows.Automation.TogglePattern> de l’objet d’un contrôle et retourner son <xref:System.Windows.Automation.ToggleState> propriété.</span><span class="sxs-lookup"><span data-stu-id="5a329-107">This example uses the <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> method of the <xref:System.Windows.Automation.AutomationElement> class to obtain a <xref:System.Windows.Automation.TogglePattern> object from a control and return its <xref:System.Windows.Automation.ToggleState> property.</span></span>  
   
  [!code-csharp[NavigatingWithTreeWalker#1200](../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigatingWithTreeWalker/CSharp/ClientClass.cs#1200)]
  [!code-vb[NavigatingWithTreeWalker#1200](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigatingWithTreeWalker/visualbasic/clientclass.vb#1200)]
