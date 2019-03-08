@@ -2,12 +2,12 @@
 title: Opérations ensemblistes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200752"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679292"
 ---
 # <a name="set-operations-visual-basic"></a>Opérations ensemblistes (Visual Basic)
 Les opérations ensemblistes dans LINQ font référence à des opérations de requête qui génèrent un jeu de résultats basé sur la présence ou l’absence d’éléments équivalents dans la même collection (ou le même ensemble) ou dans une collection distincte (ou un ensemble distinct).  
@@ -33,7 +33,7 @@ Les opérations ensemblistes dans LINQ font référence à des opérations de re
 ### <a name="except"></a>À l'exception  
  L’illustration suivante représente le comportement de <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La séquence retournée contient uniquement les éléments de la première séquence d’entrée qui ne figurent pas dans la seconde séquence d’entrée.  
   
- ![Graphique montrant l’action de Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ ![Graphique montrant l’action de sauf&#40;&#41;. ](./media/set-operations/except-behavior-graphic.png "Montre le comportement d’à l’exception.")  
   
 ### <a name="intersect"></a>Définir une intersection  
  L’illustration suivante représente le comportement de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La séquence retournée contient les éléments qui sont communs aux deux séquences d’entrée.  

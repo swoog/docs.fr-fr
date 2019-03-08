@@ -4,12 +4,12 @@ description: Moderniser des Applications .NET existantes avec le Cloud Azure et 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153759"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677550"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrer vos bases de données relationnelles vers azure
 
@@ -49,7 +49,7 @@ Instance gérée dans la base de données SQL Azure présente les caractéristiq
 
   - Sauvegarde en mode natif et de restauration et de l’envoi de journaux
 
-Avec ces fonctionnalités, lorsque vous migrez des bases de données application existantes vers Azure SQL Database, le modèle de Managed Instance offre presque 100 % des avantages de Paas pour SQL Server. Managed Instance est un environnement de SQL Server où vous continuer à utiliser les fonctionnalités de niveau d’instance sans modifier la conception de votre application.
+Avec ces fonctionnalités, lorsque vous migrez des bases de données application existantes vers Azure SQL Database, le modèle de Managed Instance offre presque 100 % des avantages de PaaS pour SQL Server. Managed Instance est un environnement de SQL Server où vous continuer à utiliser les fonctionnalités de niveau d’instance sans modifier la conception de votre application.
 
 Instance managée est probablement la meilleure solution pour les entreprises qui en sont à l’aide de SQL Server, et pour lesquelles la flexibilité dans la sécurité réseau dans le cloud. Cela revient à avoir un réseau privé virtuel pour vos bases de données SQL.
 
@@ -126,6 +126,6 @@ Pour savoir comment migrer des bases de données à l’aide d’Azure Database 
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
->[!div class="step-by-step"]
->[Précédent](lift-and-shift-existing-apps-azure-iaas.md)
->[Suivant](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [Précédent](lift-and-shift-existing-apps-azure-iaas.md)
+> [Suivant](modernize-existing-apps-to-cloud-optimized/index.md)

@@ -4,12 +4,12 @@ description: Comprendre le rôle de clé de conteneurs pour simplifier les opér
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 752a678be7735f7ae962005e1d373993d1496753
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583730"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679097"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Conteneurs comme fondement de la collaboration DevOps
 
@@ -33,7 +33,7 @@ Les deux équipes collaborent via une plate-forme fondamentale (conteneurs Docke
 
 Il existe plusieurs raisons qui vise à augmenter le nombre d’applications en conteneur dans les années à venir, et une des raisons suivantes est la création d’applications basées sur des microservices.
 
-Au cours des 15 dernières années, l’utilisation des services web a été la base des milliers d’applications, et probablement, après quelques années, nous trouverons la même situation avec les applications basées sur des microservices en cours d’exécution sur des conteneurs Docker.
+Au cours des 15 dernières années, l’utilisation des services web a été la base des milliers d’applications, et probablement, après quelques années, vous trouverez la même situation avec les applications basées sur des microservices en cours d’exécution sur des conteneurs Docker.
 
 Il est également important de mentionner que vous pouvez également utiliser des conteneurs Docker pour les applications monolithiques et vous obtenez encore la plupart des avantages de Docker. Conteneurs ne ciblez pas uniquement des microservices.
 
@@ -53,7 +53,7 @@ Ces défis créer de nouvelles demandes lors de l’utilisation des outils de d�
 
 - Comment pouvons-nous utiliser outils/plateformes Open Source pour les conteneurs dans Microsoft Azure ?
 
-Si vous pouvez répondre à toutes ces questions, vous serez prêt à migrer vos applications (applications existantes ou nouvelle) dans des conteneurs Docker. 
+Si vous pouvez répondre à toutes ces questions, vous serez mieux préparé à migrer vos applications (applications existantes ou nouvelle) dans des conteneurs Docker. 
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Introduction à un workflow de cycle de vie d’application de Docker end-to-end générique
 
@@ -63,11 +63,11 @@ Figure 2-2 présente un flux de travail plus détaillée pour un cycle de vie ap
 
 **Figure 2-2.** Flux de travail général pour le cycle de vie d’application en conteneur Docker
 
-Tout commence par le développeur, qui démarre l’écriture de code dans le workflow de la boucle interne. L’étape de la boucle interne est où les développeurs définissent tout ce qui se produit avant l’envoi de code dans le référentiel de code (par exemple, un système de contrôle source tels que Git). Une fois validée, le référentiel déclenche une intégration continue (CI) et le reste du flux de travail.
+Tout commence par le développeur, qui démarre l’écriture de code dans le workflow de la boucle interne. L’étape de la boucle interne est où les développeurs définissent tout ce qui se produit avant l’envoi de code dans le référentiel de code (par exemple, un système de contrôle source tels que Git). Après qu’il a validé, les déclencheurs de référentiel intégration continue (CI) et le reste du flux de travail.
 
 La boucle interne se compose essentiellement de la procédure standard comme « code », « exécuter », « test » et « debug », ainsi que les étapes supplémentaires nécessaires juste avant l’exécution de l’application localement. Il s’agit de processus du développeur pour exécuter et tester l’application comme un conteneur Docker. Le workflow de la boucle interne est expliqué dans les sections qui suivent.
 
-Reprise en une étape d’examiner le flux de travail à fin fin, le flux de travail DevOps est plus d’une technologie ou d’un jeu d’outils : il s’agit d’un état d’esprit qui nécessite une évolution culturelle. Il est de personnes, processus et les outils appropriés pour rendre votre cycle de vie d’application plus rapide et plus prévisible. Les entreprises qui adoptent un flux de travail en conteneur généralement restructurer leurs organisations pour représenter les personnes et les processus qui correspondent à des flux de travail en conteneur.
+Reprise en une étape d’examiner le flux de travail à fin fin, le flux de travail DevOps est plus d’une technologie ou d’un jeu d’outils : il s’agit d’un état d’esprit qui nécessite une évolution culturelle. Il s’agit de personnes, processus et les outils appropriés pour rendre votre cycle de vie d’application plus rapide et plus prévisible. Les entreprises qui adoptent un flux de travail en conteneur généralement restructurer leurs organisations pour représenter les personnes et les processus qui correspondent à des flux de travail en conteneur.
 
 Pratiquant DevOps peut aider les équipes à répondre plus rapidement conjointement aux pressions concurrentielles en remplaçant les processus manuels susceptibles d’engendrer des erreurs avec automation, ce qui entraîne une traçabilité améliorée et des flux de travail reproductible. Les organisations peuvent également gérer plus efficacement les environnements et réaliser des économies de coût avec une combinaison de locaux et des ressources de cloud, ainsi que des outils étroitement intégrés.
 

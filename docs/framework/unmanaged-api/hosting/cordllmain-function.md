@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3c529e77cad16f0bde12e34491829b58add17aa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c509f475d5bf0105ece9791ee3e51d21c298a31f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500377"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679305"
 ---
-# <a name="cordllmain-function"></a>_CorDllMain, fonction
+# <a name="cordllmain-function"></a>\_CorDllMain (fonction)
+
 Initialise le common language runtime (CLR), recherche le point d’entrée managé dans l’en-tête CLR de l’assembly DLL et commence l’exécution.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -41,7 +42,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  [in] Le handle d’instance du module chargé.  
   
  `dwReason`  
- [in] Indique la raison pour laquelle la fonction de point d’entrée DLL est appelée. Ce paramètre peut être une des valeurs suivantes : DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH ou DLL_PROCESS_DETACH. Pour obtenir une description de ces valeurs, consultez le `DllMain` documentation dans le kit Platform SDK.  
+ [in] Indique la raison pour laquelle la fonction de point d’entrée DLL est appelée. Ce paramètre peut être une des valeurs suivantes : DLL\_PROCESS_ATTACH, DLL\_THREAD\_attacher, DLL\_THREAD\_attacher ou DLL\_processus\_détacher. Pour obtenir une description de ces valeurs, consultez le `DllMain` documentation dans le kit Platform SDK.  
   
  `lpReserved`  
  [in] Inutilisé.  
@@ -50,15 +51,16 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  Cette méthode retourne `true` de réussite et `false` si une erreur se produit.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction est appelée par le chargeur du système d’exploitation pour les assemblys DLL. Pour les assemblys exécutables, le chargeur appelle le [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) fonctionner à la place.  
+ Cette fonction est appelée par le chargeur du système d’exploitation pour les assemblys DLL. Pour les assemblys exécutables, le chargeur appelle le [ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) fonctionner à la place.  
   
  Le chargeur du système d’exploitation appelle cette méthode, quel que soit le point d’entrée spécifié dans le fichier DLL.  
   
 Le `_CorDllMain` fonction est appelée directement par le chargeur du système d’exploitation.
   
- Pour plus d’informations, consultez la section Remarques dans le [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) rubrique.  
+ Pour plus d’informations, consultez la section Remarques dans le [ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) rubrique.  
   
 ## <a name="requirements"></a>Spécifications  
+
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
@@ -68,4 +70,5 @@ Le `_CorDllMain` fonction est appelée directement par le chargeur du système d
  **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Fonctions statiques globales des métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

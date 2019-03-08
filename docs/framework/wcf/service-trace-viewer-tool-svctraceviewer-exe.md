@@ -2,12 +2,12 @@
 title: Service Trace Viewer Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442891"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680384"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d’analyser des traces de diagnostic sont générées par WCF. Service Trace Viewer permet facilement de fusion, afficher et filtrer les messages de trace dans le journal afin que vous pouvez diagnostiquer, réparer et vérifier les problèmes de service WCF.  
@@ -50,7 +50,13 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 |ActivityTracing|Transfert d'événements entre des activités de traitement et des composants.<br /><br /> Ce niveau permet aux administrateurs et aux développeurs de corréler des applications dans le même domaine d'application.<br /><br /> -Les traces des limites d’activité : démarrage/arrêt.<br />-Suivis pour les transferts.|  
   
  Vous pouvez utiliser `add` pour indiquer les nom et type de l'écouteur de suivi à utiliser. Dans l'exemple de configuration, l'écouteur est nommé `sdt` et l'écouteur de suivi standard de .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) est ajouté comme type. Utilisez `initializeData` pour définir le nom du fichier journal de cet écouteur. Vous pouvez également remplacer un chemin qualifié complet par un nom de fichier simple.  
-  
+
+À compter de .NET Framework 4.8, contrôles de zone de liste déroulante dans certains thèmes à contraste élevé sont affichés dans la couleur appropriée. Vous pouvez désactiver cette modification en supprimant le paramètre suivant à partir de la *svcTraceViewer.exe.config* fichier :
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>Utilisation de l'outil Service Trace Viewer  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Ouverture et consultation de fichiers de suivi WCF  

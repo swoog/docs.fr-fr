@@ -4,16 +4,16 @@ description: Applications de production réel doivent être déployée et géré
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836160"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679045"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestration des microservices et des applications à plusieurs conteneurs pour une grande scalabilité et une haute disponibilité
 
-Il est essentiel de l’utilisation d’orchestrateurs pour les applications prêtes pour la production si votre application est basée sur des microservices ou répartie entre plusieurs conteneurs. Comme expliqué précédemment, dans une approche basée sur les microservices, chaque microservice détient son modèle et ses données, ce qui le rend autonome du point de vue du développement et du déploiement. Cependant, même si vous avez une application plus classique composée de plusieurs services (comme SOA), vous aurez également plusieurs conteneurs ou services constituant une même application métier, qui doivent être déployés en tant que système distribué. Ces types de systèmes sont complexes à monter en charge et à gérer : pour cette raison, vous avez absolument besoin d’un orchestrateur si vous voulez disposer d’une application multiconteneur prête pour la production et scalable.
+Il est essentiel de l’utilisation d’orchestrateurs pour les applications prêtes pour la production si votre application est basée sur des microservices ou répartie entre plusieurs conteneurs. Comme expliqué précédemment, dans une approche basée sur les microservices, chaque microservice détient son modèle et ses données, ce qui le rend autonome du point de vue du développement et du déploiement. Toutefois, même si vous avez une application plus classique composée de plusieurs services (par exemple SOA), vous aurez également plusieurs conteneurs ou services constituant une même application métier, qui doivent être déployés en tant que système distribué. Ces types de systèmes sont complexes à monter en charge et à gérer : pour cette raison, vous avez absolument besoin d’un orchestrateur si vous voulez disposer d’une application multiconteneur prête pour la production et scalable.
 
 Figure 4-6 illustre un déploiement dans un cluster d’une application composée de plusieurs microservices (conteneurs).
 
@@ -56,7 +56,7 @@ AKS offre un moyen de simplifier la création, la configuration et la gestion d�
 
 Azure Kubernetes Service optimise la configuration des technologies et outils open source courants de clustering Docker spécifiquement pour Azure. Vous obtenez une solution ouverte qui offre la portabilité à la fois pour vos conteneurs et pour la configuration de votre application. Il vous suffit de sélectionner la taille, le nombre d’hôtes et les outils de l’orchestrateur, AKS gère tout le reste.
 
-![Structure de cluster Kubernetes : Il existe un nœud principal qui gère le DNS, Planificateur, proxy, etc. et plusieurs nœuds de travail qui hébergent les conteneurs.](media/image36.png)
+![Structure de cluster Kubernetes : il existe un nœud principal qui gère le système DNS, le planificateur, le proxy, etc., et plusieurs nœuds de travail, qui hébergent les conteneurs.](media/image36.png)
 
 **Figure 4-7**. Structure et topologie simplifiées du cluster Kubernetes
 
@@ -74,13 +74,13 @@ Dans l’environnement de développement qui [Docker annoncée en juillet 2018](
 
 Pour commencer à utiliser AKS, vous déployez un cluster AKS à partir du portail Azure ou à l’aide de l’interface CLI. Pour plus d’informations sur le déploiement d’un cluster Azure Container Service, consultez [Déployer un cluster AKS (Azure Kubernetes Service)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
-Aucun coût n’est facturé pour les logiciels installés par défaut dans le cadre d’AKS. Toutes les options par défaut sont implémentées avec des logiciels open source. AKS est disponible pour plusieurs machines virtuelles dans Azure. Vous payez seulement pour les instances de calcul que vous choisissez, ainsi que pour les autres ressources de l’infrastructure sous-jacente consommées, comme le stockage et la mise en réseau. Aucun coût supplémentaire n’est facturé pour AKS.
+Aucun coût n’est facturé pour les logiciels installés par défaut dans le cadre d’AKS. Toutes les options par défaut sont implémentées avec des logiciels open source. AKS est disponible pour plusieurs machines virtuelles dans Azure. Vous payez seulement pour les instances de calcul que vous choisissez ainsi que pour les autres ressources de l’infrastructure sous-jacente consommées, comme le stockage et le réseau. Aucun coût supplémentaire n’est facturé pour AKS.
 
 Pour les autres mises en œuvre plus d’informations sur le déploiement vers Kubernetes basés sur `kubectl` d’origine et `.yaml` fichiers, consultez le billet sur [paramétrage eShopOnContainers dans ACS (Azure Kubernetes Service)](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)).
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Déployer avec des graphiques Helm dans Kubernetes clusters
 
-Lorsque vous déployez une application sur un cluster Kubernetes, vous pouvez utiliser la version d’origine `kubectl.exe` outil CLI à l’aide de fichiers de déploiement en fonction du format natif (`.yaml` fichiers), comme déjà mentionné dans la section précédente. Toutefois, pour des applications Kubernetes plus complexes telles que lors du déploiement d’applications de microservice complexes, il est recommandé d’utiliser [Helm](https://helm.sh/).
+Lorsque vous déployez une application sur un cluster Kubernetes, vous pouvez utiliser la version d’origine `kubectl.exe` outil CLI à l’aide de fichiers de déploiement en fonction du format natif (`.yaml` fichiers), comme déjà mentionné dans la section précédente. Toutefois, pour les applications Kubernetes plus complexes, par exemple quand vous déployez des applications de microservices complexes, il est recommandé d’utiliser [Helm](https://helm.sh/).
 
 Graphiques helm vous permet de définir, version, installation, partage, mise à niveau ou même l’application Kubernetes plus complexe de restauration.
 
@@ -137,7 +137,7 @@ Service Fabric fournit deux grands composants principaux pour vous aider à cré
 
 Service Fabric est agnostique quant à la façon dont vous créez votre service, et vous pouvez utiliser n’importe quelle technologie. Il fournit cependant des API de programmation intégrées qui facilitent la création de microservices.
 
-Comme indiqué dans la Figure 4-10, vous pouvez créer et exécuter des microservices dans Service Fabric en tant que processus simples ou en tant que conteneurs Docker. Il est également possible de combiner des microservices basés sur des conteneurs avec des microservices basés sur des processus au sein du même cluster Service Fabric.
+Comme indiqué dans la Figure 4-10, vous pouvez créer et exécuter des microservices dans Service Fabric en tant que processus simples ou en tant que conteneurs Docker. Il est également possible de combiner des microservices basés sur des conteneurs avec des microservices basés sur des processus dans le même cluster Service Fabric.
 
 ![Comparaison d’Azure service Fabric clusters : Microservices en tant que processus où chaque nœud exécute un processus pour chaque microservice ; Microservices en tant que conteneurs où chaque nœud exécute Docker avec plusieurs conteneurs, un conteneur par microservice.](./media/azure-service-fabric-cluster-types.png)
 
@@ -149,7 +149,7 @@ Pour obtenir des informations récentes sur la prise en charge des conteneurs da
 
 Service Fabric est un bon exemple d’une plateforme où vous pouvez définir une architecture logique (microservices métier ou contextes délimités) que l’implémentation physique. Par exemple, si vous implémentez [Reliable Services avec état](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) dans [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), qui sont présentés dans la section suivante, «[sans état et les microservices avec état](#stateless-versus-stateful-microservices), « vous avez un concept de microservice métier avec plusieurs services physiques.
 
-Comme indiqué dans la Figure 4-10, en adoptant une perspective de microservice logique/métier, lors de l’implémentation d’un Service avec état fiable Service Fabric, vous doit généralement implémenter deux niveaux de services. Le premier est le service fiable avec état backend, qui gère plusieurs partitions (chaque partition est un service avec état). Le second est le service frontal, ou service de passerelle, en charge du routage et de l’agrégation des données entre plusieurs partitions ou instances de service avec état. Ce service de passerelle gère également la communication côté client avec des boucles de nouvelles tentatives pour l’accès au service back-end. Il est appelé un service de passerelle si vous implémentez votre service personnalisé, ou vous pouvez également utiliser également l’infrastructure de Service out-of-the-box [proxy inverse](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Comme indiqué dans la Figure 4-10, en adoptant une perspective de microservice logique/métier, lors de l’implémentation d’un Service avec état fiable Service Fabric, vous doit généralement implémenter deux niveaux de services. Le premier est le service fiable avec état backend, qui gère plusieurs partitions (chaque partition est un service avec état). Le second est le service frontal, ou service de passerelle, en charge du routage et de l’agrégation des données entre plusieurs partitions ou instances de service avec état. Ce service de passerelle gère également la communication côté client avec des boucles de nouvelles tentatives pour l’accès au service back-end. Il est appelé service de passerelle si vous implémentez votre service personnalisé. Toutefois, vous pouvez également utiliser le [proxy inverse](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) fourni avec Service Fabric.
 
 ![Service Fabric a prescription pour prendre en charge plusieurs services fiables avec état dans des conteneurs.](./media/service-fabric-stateful-business-microservice.png)
 
@@ -187,9 +187,9 @@ Cependant, les services eux-mêmes peuvent également être avec état dans Serv
 
 **Figure 4-14**. Microservices sans état et avec état
 
-Une approche sans état est parfaitement valide et est plus facile à implémenter que des microservices avec état, car cette approche est similaire aux modèles traditionnels bien connus. Les microservices sans état imposent cependant de la latence entre les processus et les sources de données. Ils impliquent également le déplacement de plus d’éléments quand vous essayez d’améliorer les performances avec des caches et des files d’attente supplémentaires. Le résultat est que vous pouvez vous retrouver avec des architectures complexes qui ont trop de niveaux.
+Une approche sans état est parfaitement valide et est plus facile à implémenter que des microservices avec état, car cette approche est similaire aux modèles traditionnels bien connus. Les microservices sans état imposent cependant de la latence entre les processus et les sources de données. Ils impliquent également le déplacement d’un plus grand nombre d’éléments quand vous essayez d’améliorer le niveau de performance avec des caches et des files d’attente supplémentaires. Le résultat est que vous pouvez vous retrouver avec des architectures complexes qui ont trop de niveaux.
 
-En revanche, les [microservices avec état](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) peuvent exceller dans des scénarios avancés, car il n’y a pas de latence entre la logique et les données du domaine. Les traitements de données lourds, les back-end de jeux, les bases de données en tant que service et tous les autres scénarios avec une latence faible tirent parti des services avec état, qui permettent un état local pour un accès plus rapide.
+En revanche, les [microservices avec état](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) peuvent exceller dans les scénarios avancés, car il n’existe aucune latence entre la logique et les données du domaine. Les traitements de données lourds, les back-end de jeux, les bases de données en tant que service et tous les autres scénarios avec une latence faible tirent parti des services avec état, qui permettent un état local pour un accès plus rapide.
 
 Les services sans état et avec état sont complémentaires. Par exemple, comme vous pouvez le voir dans le diagramme de droite dans la Figure 4-31, un service avec état peut être fractionné en plusieurs partitions. Pour accéder à ces partitions, vous pouvez avoir besoin d’un service sans état agissant comme un service de passerelle, qui sait comment atteindre chaque partition en fonction de clés de partition.
 

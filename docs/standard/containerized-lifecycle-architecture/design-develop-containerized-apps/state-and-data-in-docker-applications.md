@@ -4,12 +4,12 @@ description: Découvrez l’option disponible pour enregistrer l’état dans de
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745996"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678079"
 ---
 # <a name="state-and-data-in-docker-applications"></a>État et données dans les applications Docker
 
@@ -19,7 +19,7 @@ Les solutions suivantes sont utilisées pour gérer les données persistantes da
 
 À partir de l’hôte Docker, sous forme de [volumes Docker](https://docs.docker.com/engine/admin/volumes/) :
 
-- **Volumes** sont stockées dans une zone du système de fichiers hôte géré par Docker.
+- Les **volumes** sont stockés dans une zone du système de fichiers hôte managée par Docker.
 
 - **Lier les montages** peut mapper à n’importe quel dossier dans le système de fichiers hôte, afin que l’accès ne peut pas être contrôlé à partir d’un processus de Docker et peut poser un risque de sécurité comme un conteneur peut accéder à des dossiers du système d’exploitation sensibles.
 
@@ -47,13 +47,13 @@ Les volumes peuvent être nommés ou anonymes (par défaut). Les volumes nommés
 
 **`tmpfs` monte** sont des dossiers virtuels qui se trouvent uniquement dans la mémoire de l’hôte et ne sont jamais écrites dans le système de fichiers. Ils sont rapides et sécurisés, mais ils consomment de la mémoire et sont conçus uniquement pour des données non persistantes.
 
-Comme le montre la figure 4-5, les volumes Docker standard peuvent être stockés en dehors des conteneurs eux-mêmes, mais dans les limites physiques du serveur ou de la machine virtuelle hôte. Les conteneurs Docker ne peuvent cependant pas accéder à un volume depuis un serveur ou une machine virtuelle hôte à un autre. En d’autres termes, avec ces volumes, il n’est pas possible de gérer les données partagées entre les conteneurs qui s’exécutent sur des hôtes Docker différents, bien qu’il peut être obtenu avec un pilote de volume qui prend en charge les hôtes distants.
+Comme le montre la figure 4-5, les volumes Docker standard peuvent être stockés en dehors des conteneurs eux-mêmes, mais dans les limites physiques du serveur ou de la machine virtuelle hôte. Les conteneurs Docker ne peuvent cependant pas accéder à un volume depuis un serveur ou une machine virtuelle hôte à un autre. En d’autres termes, avec ces volumes, il n’est pas possible de gérer les données partagées entre des conteneurs qui s’exécutent sur des hôtes Docker distincts. Toutefois, cela est possible avec un pilote de volume qui prend en charge les hôtes distants.
 
 ![Les volumes peuvent être partagés entre les conteneurs, mais uniquement sur le même hôte, sauf si vous utilisez un pilote distant qui prend en charge les hôtes distants. ](./media/image5.png)
 
 **Figure 4-5**. Volumes et sources de données externes pour applications conteneurisées
 
-De plus, quand des conteneurs Docker sont managés par un orchestrateur, ils peuvent être « déplacés » entre les hôtes, en fonction des optimisations effectuées par le cluster. Par conséquent, il n’est pas recommandé d’utiliser des volumes de données pour les données métier. Mais ils sont un bon mécanisme pour travailler avec des fichiers de trace, des fichiers temporelles, ou similaires, qui n’affectera pas la cohérence des données métier.
+De plus, quand des conteneurs Docker sont managés par un orchestrateur, ils peuvent être « déplacés » entre les hôtes, en fonction des optimisations effectuées par le cluster. Il n’est donc pas recommandé d’utiliser des volumes de données pour les données métier. Mais ils sont un bon mécanisme pour travailler avec des fichiers de trace, des fichiers temporelles, ou similaires, qui n’affectera pas la cohérence des données métier.
 
 Des **sources de données distantes et des outils de mise en cache**, comme Azure SQL Database, Azure Cosmos DB ou un cache à distance comme Redis, peuvent être utilisés dans des applications en conteneur de la même façon qu’ils sont utilisés dans des développements sans conteneurs. Il s’agit d’un moyen éprouvé pour stocker des données d’application métier.
 

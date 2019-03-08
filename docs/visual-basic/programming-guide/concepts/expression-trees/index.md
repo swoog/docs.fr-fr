@@ -2,17 +2,11 @@
 title: Arborescences d’expressions (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: 08a22cc0528385f5e8008b80b62f2e81d89adae4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735582"
 ---
 # <a name="expression-trees-visual-basic"></a>Arborescences d’expressions (Visual Basic)
 Les arborescences d'expressions représentent du code dans une structure de données arborescente, où chaque nœud est une expression, par exemple un appel de méthode ou une opération binaire comme `x < y`.  
   
- Vous pouvez compiler et exécuter du code représenté par des arborescences d'expressions. Ceci permet la modification dynamique du code exécutable, l'exécution de requêtes LINQ dans différentes bases de données et la création de requêtes dynamiques. Pour plus d’informations sur les arborescences d’expression dans LINQ, consultez [Comment : Utiliser des arborescences d’Expression pour générer des requêtes dynamiques (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
+ Vous pouvez compiler et exécuter du code représenté par des arborescences d'expressions. Ceci permet la modification dynamique du code exécutable, l'exécution de requêtes LINQ dans différentes bases de données et la création de requêtes dynamiques. Pour plus d'informations sur les arborescences d'expressions dans LINQ, consultez [Guide pratique pour Utiliser des arborescences d’Expression pour générer des requêtes dynamiques (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
   
  Les arborescences d’expressions sont également utilisées dans l’environnement d’exécution de langage dynamique (DLR, Dynamic Language Runtime) pour fournir une interopérabilité entre les langages dynamiques et .NET Framework, ainsi que pour permettre aux writers de compilateur d’émettre des arborescences d’expressions au lieu d’utiliser le langage intermédiaire MSIL (Microsoft Intermediate Language). Pour plus d’informations sur le DLR, consultez [Vue d’ensemble du Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
@@ -85,7 +79,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-Pour plus d’informations, consultez [Génération de méthodes dynamiques avec des arborescences d’expressions dans Visual Studio 2010](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010) (ou version ultérieure).
+Pour plus d’informations, consultez [Génération de méthodes dynamiques avec des arborescences d’expressions dans Visual Studio 2010](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/) (ou version ultérieure).
   
 ## <a name="parsing-expression-trees"></a>Analyse des arborescences d’expressions  
  L’exemple de code suivant montre comment l’arborescence d’expressions qui représente l’expression lambda `Function(num) num < 5` peut être décomposée selon ses différentes parties.  

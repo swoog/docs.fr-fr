@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967163"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676653"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Créer des applications ASP.NET Core 2.1 déployées comme conteneurs Linux dans un orchestrateur AKS/Kubernetes
 
@@ -27,7 +27,7 @@ Les exemples suivants Explorer la création d’une application ASP.NET Core 2.1
 
 ## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Création du projet ASP.NET Core 2.1 à l’aide de Visual Studio 2017
 
-ASP.NET Core est une plateforme de développement à usage général gérée par Microsoft et la Communauté .NET sur GitHub. Cette multiplateforme prend en charge Windows, macOS et Linux. Elle peut être utilisée dans des scénarios d’appareil, de cloud et d’incorporation/IoT.
+ASP.NET Core est une plateforme de développement à usage général gérée par Microsoft et la Communauté .NET sur GitHub. Il est multiplateforme, prenant en charge Windows, macOS et Linux et peut être utilisé dans l’appareil, de cloud et de systèmes embarqués/IOT.
 
 Cet exemple utilise un projet simple qui repose sur un modèle API Web de Visual Studio, vous n’avez pas besoin d’autres bases de connaissances pour créer l’exemple. Vous devez uniquement créer le projet à l’aide d’un modèle standard qui inclut tous les éléments pour exécuter un petit projet avec une API REST, à l’aide de la technologie ASP.NET Core 2.1.
 

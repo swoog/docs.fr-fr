@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966227"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678822"
 ---
 # <a name="overload-resolution-visual-basic"></a>Résolution de surcharge (Visual Basic)
 Lorsque le compilateur Visual Basic rencontre un appel à une procédure qui est défini dans plusieurs versions surchargées, le compilateur doit décider de la surcharge à appeler. Il effectue cela en effectuant les étapes suivantes :  
@@ -36,8 +36,7 @@ Lorsque le compilateur Visual Basic rencontre un appel à une procédure qui est
   
  L’illustration suivante montre le processus qui détermine un ensemble de versions surchargées à appeler.  
   
- ![Diagramme de flux de processus de résolution de surcharge](./media/overloadres.gif "OverloadRes")  
-Résolution parmi des versions surchargées  
+ ![Diagramme de flux de processus de résolution de surcharge](./media/overload-resolution/determine-overloaded-version.gif "résolution parmi des versions surchargées")    
   
  L’exemple suivant illustre ce processus de résolution de surcharge.  
   

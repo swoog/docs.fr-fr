@@ -4,18 +4,18 @@ description: N’oubliez pas que les conteneurs peuvent être également une opt
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 353ba738143b7dcd92c7c75ac27ea6a7370f9da6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ee71873ac15246f979fd2b08d92280ba797ff6ee
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745831"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675795"
 ---
 # <a name="service-oriented-applications"></a>Applications orientées service
 
 Architecture orientée services (SOA) a été un terme surutilisé qui signifiait différentes choses pour différentes personnes. Mais comme un dénominateur commun, SOA signifie que vous structurez l’architecture de votre application en la décomposant en plusieurs services (généralement en tant que services HTTP) qui peuvent être classés dans les différents types, comme des sous-systèmes ou, dans d’autres cas, sous forme de niveaux.
 
-Aujourd'hui, vous pouvez déployer ces services en tant que conteneurs Docker, capables de résoudre les problèmes liés au déploiement, car toutes les dépendances sont inclus dans l’image de conteneur. Toutefois, lorsque vous avez besoin faire évoluer les SOA, vous pouvez rencontrer des défis si vous déployez des instances uniques en fonction. Ce défi peut être géré à l’aide du clustering des logiciels ou un orchestrateur Docker. Nous allons examiner orchestrateurs plus en détail dans la section suivante, lorsque nous explorons les approches de microservices.
+Aujourd'hui, vous pouvez déployer ces services en tant que conteneurs Docker, capables de résoudre les problèmes liés au déploiement, car toutes les dépendances sont inclus dans l’image de conteneur. Toutefois, lorsque vous avez besoin faire évoluer les SOA, vous pouvez rencontrer défis si vous effectuez un déploiement en fonction des instances uniques. Ce défi peut être géré à l’aide du clustering des logiciels ou un orchestrateur Docker. Nous allons examiner orchestrateurs plus en détail dans la section suivante, lorsque nous explorons les approches de microservices.
 
 Les conteneurs Docker sont pratiques (mais pas obligatoires) pour les architectures orientées services traditionnelles et pour les architectures de microservices plus avancées.
 

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 651358dd85c5bc5d41bd7a7c1277c185b769b423
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19e416271e0c6e717a46821569983a250ef0ae0b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546476"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675574"
 ---
 # <a name="ui-automation-tree-overview"></a>Vue d’ensemble de l’arborescence UI Automation
 > [!NOTE]
@@ -52,7 +50,7 @@ ms.locfileid: "54546476"
   
 <a name="uiautomation_content_view"></a>   
 ### <a name="content-view"></a>Affichage de contenu  
- L’affichage du contenu de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] est un sous-ensemble de l’affichage de contrôle. Il contient des éléments d’[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] qui communiquent les véritables informations d’une interface utilisateur, notamment les éléments d’[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] qui peuvent recevoir le focus clavier et du texte autre qu’une étiquette d’élément d’[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Par exemple, les valeurs contenues dans une zone de liste déroulante s’affichent dans l’affichage de contenu, car elles représentent les informations utilisées par un utilisateur final. Dans l’affichage de contenu, une zone de liste déroulante et une zone de liste sont toutes deux représentées sous forme de collection d’éléments d’[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] dans laquelle un ou éventuellement plusieurs éléments peuvent être sélectionnés. Le fait qu’il y en a un toujours d’ouvert et un qui peut être développé et réduit est sans importance dans l’affichage de contenu, car il est conçu pour afficher les données (ou le contenu) présentées à l’utilisateur.  
+ L’affichage du contenu de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] est un sous-ensemble de l’affichage de contrôle. Il contient des éléments d’[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] qui communiquent les véritables informations d’une interface utilisateur, notamment les éléments d’[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] qui peuvent recevoir le focus clavier et du texte autre qu’une étiquette d’élément d’[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Par exemple, les valeurs contenues dans une zone de liste déroulante s’affichent dans l’affichage de contenu, car elles représentent les informations utilisées par un utilisateur final. Dans l’affichage de contenu, une zone de liste déroulante et une zone de liste sont toutes deux représentées sous forme de collection d’éléments [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] dans laquelle un ou éventuellement plusieurs éléments peuvent être sélectionnés. Le fait qu’il y en a un toujours d’ouvert et un qui peut être développé et réduit est sans importance dans l’affichage de contenu, car il est conçu pour afficher les données (ou le contenu) présentées à l’utilisateur.  
   
  L’affichage de contenu s’obtient en recherchant des éléments dont la propriété <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> a la valeur `true` ou en utilisant <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> pour parcourir l’arborescence.  
   
