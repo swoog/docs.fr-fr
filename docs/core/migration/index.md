@@ -1,15 +1,8 @@
 ---
-title: Migration .NET Core à partir de project.json
+title: "Migration .NET\_Core à partir de project.json"
 description: Apprenez à migrer un ancien projet .NET Core à l’aide de project.json
-author: blackdwarf
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170689"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migration de projets .NET Core à partir de project.json
 
@@ -89,7 +82,7 @@ Le format csproj .NET Core est modifié et évolue avec chaque nouvelle version 
 
 Une fois ces étapes effectuées, votre projet doit être entièrement compatible avec le format csproj .NET Core final.
 
-Pour obtenir des exemples antérieurs et postérieurs à la migration de l’ancien format csproj vers le nouveau, consultez l’article [Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/) sur le blog .NET.
+Pour obtenir des exemples antérieurs et postérieurs à la migration de l’ancien format csproj vers le nouveau, consultez l’article [Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) sur le blog .NET.
 
 ## <a name="see-also"></a>Voir aussi
 

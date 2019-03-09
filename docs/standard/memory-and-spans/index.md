@@ -3,34 +3,29 @@ title: Mémoire et étendues
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- Memory<T>
-- Span<T>
-- buffers"
-- pipeline processing
+  - Memory<T>
+  - Span<T>
+  - buffers"
+  - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116c08872385406224972e34feaddfe44122355e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130885"
 ---
+
 # <a name="memory--and-span-related-types"></a>Types liés à la mémoire et l’étendue
 
 À partir de .NET Core 2.1, .NET inclut plusieurs types reliés entre eux qui représentent une région contiguë et fortement typée de mémoire arbitraire. Elles incluent notamment :
 
 - <xref:System.Span%601?displayProperty=nameWithType>, un type utilisé pour accéder à une zone contiguë de mémoire. Une instance <xref:System.Span%601> peut être sauvegardée par un tableau de type `T`, un objet <xref:System.String>, une mémoire tampon allouée avec [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md), ou un pointeur vers une mémoire non managée. Comme elle doit être allouée sur la pile, elle comporte plusieurs restrictions. Par exemple, un champ dans une classe ne peut pas être de type <xref:System.Span%601>, et l’étendue ne peut pas être utilisée dans des opérations asynchrones.
 
-- <xref:System.ReadOnlySpan%601?displayProperty=nameWithtype>, une version immuable de la structure <xref:System.Span%601>.
+- <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, une version immuable de la structure <xref:System.Span%601>.
 
 - <xref:System.Memory%601?displayProperty=nameWithType>, une zone contiguë de mémoire qui est allouée sur le segment managé plutôt que sur la pile. Une instance <xref:System.Memory%601> peut être sauvegardée par un tableau de type `T` ou un <xref:System.String>. Comme elle peut être stockée sur le tas managé, <xref:System.Memory%601> ne présente aucune limite pour <xref:System.Span%601>.
 
-- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithtype>, une version immuable de la structure <xref:System.Memory%601>.
+- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, une version immuable de la structure <xref:System.Memory%601>.
 
 - <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>, qui alloue des blocs de mémoire très typés d’un pool de mémoire à un propriétaire. Les instances <xref:System.Buffers.IMemoryOwner%601> peuvent être louées à partir du pool en appelant <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> puis replacées dans le pool en appelant <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType>.
 
-- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, qui représente le propriétaire d’un bloc de mémoire et gère la durée de vie. 
+- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, qui représente le propriétaire d’un bloc de mémoire et gère la durée de vie.
 
 - <xref:System.Buffers.MemoryManager%601>, une classe de base abstraite qui peut être utilisée pour remplacer l’implémentation de <xref:System.Memory%601> afin de sauvegarder <xref:System.Memory%601> par des types supplémentaires, par exemple des descripteurs sécurisés. <xref:System.Buffers.MemoryManager%601> s’applique à des scénarios avancés.
 

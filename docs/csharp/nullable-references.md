@@ -1,15 +1,15 @@
 ---
-title: Types référence Nullables
+title: Types références Nullables
 description: Cet article fournit une vue d’ensemble des types référence nullables, ajoutés dans C# 8. Vous allez découvrir comment la fonctionnalité offre une protection contre les exceptions de référence null pour les projets nouveaux ou existants.
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411544"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725023"
 ---
-# <a name="nullable-reference-types"></a>Types référence Nullables
+# <a name="nullable-reference-types"></a>Types références Nullables
 
 C# 8.0 introduit des **types référence nullables** et des **types référence non nullables** qui vous permettent d’établir des instructions importantes sur les propriétés de variables de type référence :
 
@@ -41,7 +41,7 @@ Le compilateur utilise l’analyse statique pour déterminer si une référence 
 name!.Length;
 ```
 
-Vous trouverez plus d’informations sur cet opérateur dans la proposition de spécification [Nullable reference types](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) sur GitHub.
+Vous trouverez plus d’informations sur cet opérateur dans la proposition de spécification [Nullable reference types](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) sur GitHub.
 
 ## <a name="nullability-of-types"></a>Nullabilité des types
 
