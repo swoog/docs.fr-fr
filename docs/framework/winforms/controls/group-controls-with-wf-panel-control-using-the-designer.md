@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: 706a020bfb007250b9a1b708da25704aacd755e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1aa3b54eb842bb92e4ae2cbb562a11464acac63
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601533"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717443"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Procédure : Contrôles de groupe avec le contrôle de panneau Windows Forms à l’aide du Concepteur
 Windows Forms <xref:System.Windows.Forms.Panel> contrôles sont utilisés pour regrouper d’autres contrôles. Il existe trois raisons pour regrouper des contrôles. Regroupement d’éléments connexes pour une interface utilisateur claire ; visuel regroupement de programmation, des cases d’option, par exemple ; la dernière est pour déplacer les contrôles en tant qu’unité au moment du design.  
@@ -30,6 +30,6 @@ Windows Forms <xref:System.Windows.Forms.Panel> contrôles sont utilisés pour r
 3.  (Facultatif) Si vous souhaitez ajouter une bordure à un panneau, définissez son <xref:System.Windows.Forms.BorderStyle> propriété. Il existe trois possibilités : <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, et <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Panel, contrôle](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
-- [Vue d’ensemble du contrôle Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
-- [Guide pratique pour Définir l’arrière-plan d’un panneau](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Panel, contrôle](panel-control-windows-forms.md)
+- [Vue d’ensemble du contrôle Panel](panel-control-overview-windows-forms.md)
+- [Guide pratique pour Définir l’arrière-plan d’un panneau](how-to-set-the-background-of-a-windows-forms-panel.md)

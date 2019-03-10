@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 86e61afd0882fea9015cdfe3b40e6d3cd329391b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734955"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703918"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilisation de la ligne pour les nouveaux enregistrements dans le contrôle DataGridView Windows Forms
 Lorsque vous utilisez un <xref:System.Windows.Forms.DataGridView> pour la modification des données dans votre application, vous souhaiterez souvent donner aux utilisateurs la possibilité d’ajouter de nouvelles lignes de données au magasin de données. Le <xref:System.Windows.Forms.DataGridView> contrôle prend en charge cette fonctionnalité en fournissant une ligne pour les nouveaux enregistrements, qui est toujours affichée en tant que la dernière ligne. Elle est marquée avec un astérisque (*) dans son en-tête de ligne. Les sections suivantes décrivent certains éléments que vous devez envisager lorsque vous programmez avec la ligne pour les nouveaux enregistrements est activé.  
@@ -24,7 +24,7 @@ Lorsque vous utilisez un <xref:System.Windows.Forms.DataGridView> pour la modifi
 ## <a name="populating-the-row-for-new-records-with-default-data"></a>Remplissage de la ligne pour les nouveaux enregistrements avec les données par défaut  
  Lorsque l’utilisateur sélectionne la ligne pour les nouveaux enregistrements que la ligne actuelle, le <xref:System.Windows.Forms.DataGridView> incrémente le <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> événement.  
   
- Cet événement permet d’accéder au nouveau <xref:System.Windows.Forms.DataGridViewRow> et vous permet de remplir la nouvelle ligne avec les données par défaut. Pour plus d'informations, voir [Procédure : Spécifiez les valeurs par défaut pour les nouvelles lignes dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ Cet événement permet d’accéder au nouveau <xref:System.Windows.Forms.DataGridViewRow> et vous permet de remplir la nouvelle ligne avec les données par défaut. Pour plus d'informations, voir [Procédure : Spécifiez les valeurs par défaut pour les nouvelles lignes dans le contrôle de DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
 ## <a name="the-rows-collection"></a>La Collection de lignes  
  La ligne des nouveaux enregistrements est contenue dans le <xref:System.Windows.Forms.DataGridView> du contrôle <xref:System.Windows.Forms.DataGridView.Rows%2A> collection mais se comporte différemment à deux égards :  
@@ -34,7 +34,7 @@ Lorsque vous utilisez un <xref:System.Windows.Forms.DataGridView> pour la modifi
 -   Aucune ligne ne peut être ajoutée après la ligne pour les nouveaux enregistrements. Un <xref:System.InvalidOperationException> est levée si cette opération est tentée. Par conséquent, la ligne des nouveaux enregistrements est toujours la dernière ligne dans le <xref:System.Windows.Forms.DataGridView> contrôle. Les méthodes sur <xref:System.Windows.Forms.DataGridViewRowCollection> qui ajoutent des lignes :<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, et <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— appellent toutes les méthodes d’insertion en interne lorsque la ligne pour les nouveaux enregistrements est présente.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Personnalisation visuelle de la ligne pour les nouveaux enregistrements  
- Lorsque la ligne pour les nouveaux enregistrements est créée, elle est basée sur la ligne spécifiée par le <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> propriété. Les styles de cellules qui ne sont pas spécifiés pour cette ligne sont hérités d’autres propriétés. Pour plus d’informations sur l’héritage de style de cellule, consultez [Styles de cellules dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+ Lorsque la ligne pour les nouveaux enregistrements est créée, elle est basée sur la ligne spécifiée par le <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> propriété. Les styles de cellules qui ne sont pas spécifiés pour cette ligne sont hérités d’autres propriétés. Pour plus d’informations sur l’héritage de style de cellule, consultez [Styles de cellules dans le contrôle DataGridView Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
  Les valeurs initiales affichées par les cellules dans la ligne pour les nouveaux enregistrements sont extraites à partir de chaque cellule <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> propriété. Pour les cellules de type <xref:System.Windows.Forms.DataGridViewImageCell>, cette propriété retourne un espace réservé d’image. Sinon, cette propriété retourne `null`. Vous pouvez remplacer cette propriété pour retourner une valeur personnalisée. Toutefois, ces valeurs initiales peuvent être remplacées par un <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> Gestionnaire d’événements lorsque le focus entre dans la ligne pour les nouveaux enregistrements.  
   
@@ -55,10 +55,10 @@ Lorsque vous utilisez un <xref:System.Windows.Forms.DataGridView> pour la modifi
  La ligne pour les nouveaux enregistrements est toujours créée dans un état désélectionné.  
   
 ## <a name="virtual-mode"></a>Mode virtuel  
- Si vous implémentez le mode virtuel, vous devez suivre à quel moment une ligne pour les nouveaux enregistrements est nécessaire dans le modèle de données et quand annuler l’ajout de la ligne. L’implémentation exacte de cette fonctionnalité dépend de l’implémentation du modèle de données et sa sémantique de transaction, par exemple, si la validation étendue est au niveau de la cellule ou la ligne. Pour plus d’informations, consultez [Mode virtuel dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md).  
+ Si vous implémentez le mode virtuel, vous devez suivre à quel moment une ligne pour les nouveaux enregistrements est nécessaire dans le modèle de données et quand annuler l’ajout de la ligne. L’implémentation exacte de cette fonctionnalité dépend de l’implémentation du modèle de données et sa sémantique de transaction, par exemple, si la validation étendue est au niveau de la cellule ou la ligne. Pour plus d’informations, consultez [Mode virtuel dans le contrôle DataGridView Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Saisie de données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
-- [Guide pratique pour Spécifiez les valeurs par défaut pour les nouvelles lignes dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Saisie de données dans le contrôle DataGridView Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Guide pratique pour Spécifiez les valeurs par défaut pour les nouvelles lignes dans le contrôle de DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

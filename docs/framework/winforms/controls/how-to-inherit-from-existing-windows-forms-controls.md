@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: dea9b1f870230daff92ac86d00dfda5774309a97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b3b5b2420a1121be81bc299dea645051f941cd8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727779"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707974"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Procédure : Windows existant hériter de contrôles de formulaires
 Si vous souhaitez étendre les fonctionnalités d’un contrôle existant, vous pouvez créer un contrôle dérivé d’un contrôle existant par héritage. Lorsque vous héritez d’un contrôle existant, vous héritez de toutes les fonctionnalités et propriétés visuelles de ce contrôle. Par exemple, si vous avez créé un contrôle hérité de <xref:System.Windows.Forms.Button>, votre aura l’aspect et le comportement standard <xref:System.Windows.Forms.Button> contrôle. Vous pourrez ensuite étendre ou modifier les fonctionnalités de votre nouveau contrôle en implémentant des méthodes et des propriétés personnalisées. Dans certains cas, vous pouvez également modifier l’apparence visuelle du contrôle hérité en substituant ses <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode).  
@@ -59,7 +59,7 @@ Si vous souhaitez étendre les fonctionnalités d’un contrôle existant, vous 
 10. Si vous souhaitez modifier l’aspect graphique de votre contrôle, substituez le <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode).  
   
     > [!NOTE]
-    >  Substitution de <xref:System.Windows.Forms.Control.OnPaint%2A> vous autorisera pas à modifier l’apparence de tous les contrôles. Les contrôles dont tout la peinture effectuée par Windows (par exemple, <xref:System.Windows.Forms.TextBox>) appellent jamais leur <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode) et n’utiliseront donc jamais le code personnalisé. Reportez-vous à la documentation d’aide pour le contrôle particulier que vous souhaitez modifier pour vérifier si le <xref:System.Windows.Forms.Control.OnPaint%2A> méthode n’est disponible. Pour obtenir la liste de tous les contrôles Windows Forms, consultez [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md). Si un contrôle n’a pas <xref:System.Windows.Forms.Control.OnPaint%2A> répertorié comme une méthode membre, vous ne pouvez pas modifier son apparence en substituant cette méthode. Pour plus d’informations sur la peinture personnalisée, consultez [Peinture et rendu personnalisés des contrôles](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).  
+    >  Substitution de <xref:System.Windows.Forms.Control.OnPaint%2A> vous autorisera pas à modifier l’apparence de tous les contrôles. Les contrôles dont tout la peinture effectuée par Windows (par exemple, <xref:System.Windows.Forms.TextBox>) appellent jamais leur <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode) et n’utiliseront donc jamais le code personnalisé. Reportez-vous à la documentation d’aide pour le contrôle particulier que vous souhaitez modifier pour vérifier si le <xref:System.Windows.Forms.Control.OnPaint%2A> méthode n’est disponible. Pour obtenir la liste de tous les contrôles Windows Forms, consultez [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md). Si un contrôle n’a pas <xref:System.Windows.Forms.Control.OnPaint%2A> répertorié comme une méthode membre, vous ne pouvez pas modifier son apparence en substituant cette méthode. Pour plus d’informations sur la peinture personnalisée, consultez [Peinture et rendu personnalisés des contrôles](custom-control-painting-and-rendering.md).  
   
     ```vb  
     Protected Overrides Sub OnPaint(ByVal e As _  
@@ -84,10 +84,10 @@ Si vous souhaitez étendre les fonctionnalités d’un contrôle existant, vous 
 11. Enregistrez et testez votre contrôle.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Variétés de contrôles personnalisés](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
-- [Guide pratique pour Héritez de la classe de contrôle](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)
-- [Guide pratique pour Hériter de la classe UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)
-- [Guide pratique pour Créer des contrôles pour les Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
+- [Variétés de contrôles personnalisés](varieties-of-custom-controls.md)
+- [Guide pratique pour Héritez de la classe de contrôle](how-to-inherit-from-the-control-class.md)
+- [Guide pratique pour Hériter de la classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Guide pratique pour Créer des contrôles pour les Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Dépannage des gestionnaires d’événements hérités en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec VisualC#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

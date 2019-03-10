@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496281"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705829"
 ---
 # <a name="how-to-validate-application-settings"></a>Procédure : Valider les paramètres d’Application
 Cette rubrique illustre la validation des paramètres d’application avant qu’ils ne soient rendus persistants.  
@@ -40,9 +40,9 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
   
 -   Pour les événements déclenchés avant leurs actions associées, telles que <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> et <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, utilise le <xref:System.ComponentModel.CancelEventArgs> argument pour annuler l’opération.  
   
- Pour plus d’informations sur la gestion des événements, consultez [Vue d’ensemble des gestionnaires d’événements](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Pour plus d’informations sur la gestion des événements, consultez [Vue d’ensemble des gestionnaires d’événements](../event-handlers-overview-windows-forms.md).  
   
- Les procédures suivantes montrent comment tester une date de naissance valide à l’aide du <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ou <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> événement. Ces procédures ont été écrites en supposant que vous avez déjà créé vos paramètres d’application. Dans cet exemple, nous vérifions les limites d’un paramètre nommé `DateOfBirth`. Pour plus d’informations sur la création de paramètres, consultez [Comment : Créer des paramètres de l’Application](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Les procédures suivantes montrent comment tester une date de naissance valide à l’aide du <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ou <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> événement. Ces procédures ont été écrites en supposant que vous avez déjà créé vos paramètres d’application. Dans cet exemple, nous vérifions les limites d’un paramètre nommé `DateOfBirth`. Pour plus d’informations sur la création de paramètres, consultez [Comment : Créer des paramètres de l’Application](how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Pour obtenir l’objet des paramètres de l’application  
   
@@ -161,5 +161,5 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création de gestionnaires d’événements dans les Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Guide pratique pour Créer des paramètres d’Application](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [Création de gestionnaires d’événements dans les Windows Forms](../creating-event-handlers-in-windows-forms.md)
+- [Guide pratique pour Créer des paramètres d’Application](how-to-create-application-settings.md)

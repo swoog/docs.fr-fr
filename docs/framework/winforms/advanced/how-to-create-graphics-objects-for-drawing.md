@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497030"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709047"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Procédure : Créer des objets graphiques pour le dessin
 Avant de pouvoir dessiner des lignes et des formes, rendre du texte ou afficher et manipuler des images avec [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vous devez créer un <xref:System.Drawing.Graphics> objet. Le <xref:System.Drawing.Graphics> objet représente un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] surface de dessin, et est l’objet qui est utilisé pour créer des images graphiques.  
@@ -165,13 +165,13 @@ Avant de pouvoir dessiner des lignes et des formes, rendre du texte ou afficher 
   
     |Pour effectuer le rendu|Voir|  
     |---------------|---------|  
-    |Lignes|[Guide pratique pour Dessiner une ligne dans un formulaire Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formes|[Guide pratique pour Dessiner une forme avec contour](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |Texte|[Guide pratique pour Dessiner du texte dans un formulaire Windows](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |Images|[Guide pratique pour Rendre des Images avec GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |Lignes|[Guide pratique pour Dessiner une ligne dans un formulaire Windows](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formes|[Guide pratique pour Dessiner une forme avec contour](how-to-draw-an-outlined-shape.md)|  
+    |Texte|[Guide pratique pour Dessiner du texte dans un formulaire Windows](how-to-draw-text-on-a-windows-form.md)|  
+    |Images|[Guide pratique pour Rendre des Images avec GDI +](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Mise en route de la programmation graphique](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Lignes, courbes et formes](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Guide pratique pour Rendre des Images avec GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+- [Mise en route de la programmation graphique](getting-started-with-graphics-programming.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Lignes, courbes et formes](lines-curves-and-shapes.md)
+- [Guide pratique pour Rendre des Images avec GDI +](how-to-render-images-with-gdi.md)

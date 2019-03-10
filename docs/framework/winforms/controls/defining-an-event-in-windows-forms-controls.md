@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4235c8b3c513509023388112071e78cfd079ec6f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199573"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705375"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Définition d'un événement dans les contrôles Windows Forms
-Pour plus d’informations sur la définition des événements personnalisés, consultez [événements](../../../../docs/standard/events/index.md). Si vous définissez un événement qui ne comporte pas de données associées, utilisez le type de base des données d'événement <xref:System.EventArgs>, puis utilisez <xref:System.EventHandler> en tant que délégué d'événement. Il reste plus qu’à définir un membre d’événement et un document protégé `On` *EventName* méthode qui déclenche l’événement.  
+Pour plus d’informations sur la définition des événements personnalisés, consultez [événements](../../../standard/events/index.md). Si vous définissez un événement qui ne comporte pas de données associées, utilisez le type de base des données d'événement <xref:System.EventArgs>, puis utilisez <xref:System.EventHandler> en tant que délégué d'événement. Il reste plus qu’à définir un membre d’événement et un document protégé `On` *EventName* méthode qui déclenche l’événement.  
   
- Le fragment de code suivant montre comment le contrôle personnalisé `FlashTrackBar` définit l'événement personnalisé `ValueChanged`. Pour obtenir le code complet pour le `FlashTrackBar` exemples, consultez le [Comment : créer un Windows Forms contrôle qu’affiche la progression](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Le fragment de code suivant montre comment le contrôle personnalisé `FlashTrackBar` définit l'événement personnalisé `ValueChanged`. Pour obtenir le code complet pour le `FlashTrackBar` exemples, consultez le [Comment : Créer un contrôle Windows Forms affiche la progression](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ```vb  
 Option Explicit  
@@ -78,5 +78,5 @@ public class FlashTrackBar : Control {
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Événements dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
-- [Événements](../../../../docs/standard/events/index.md)
+- [Événements dans les contrôles Windows Forms](events-in-windows-forms-controls.md)
+- [Événements](../../../standard/events/index.md)

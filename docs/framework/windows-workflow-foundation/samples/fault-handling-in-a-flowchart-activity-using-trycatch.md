@@ -2,12 +2,12 @@
 title: Gestion des erreurs dans une activité Flowchart à l'aide de TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 56215ecf1b5f2b54333271f2086b831f564ff7c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507497"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708832"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Gestion des erreurs dans une activité Flowchart à l'aide de TryCatch
 Cet exemple montre comment l'activité <xref:System.Activities.Statements.TryCatch> peut être utilisée dans une activité de flux de contrôle complexe.
@@ -47,5 +47,5 @@ Cet exemple montre comment l'activité <xref:System.Activities.Statements.TryCat
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>Voir aussi
-- [Workflows d’organigramme](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
-- [Exceptions](../../../../docs/framework/windows-workflow-foundation/exceptions.md)
+- [Workflows d’organigramme](../flowchart-workflows.md)
+- [Exceptions](../exceptions.md)

@@ -1,19 +1,19 @@
 ---
-title: "Procédure pas à pas : création d'une application Windows accessible"
+title: 'Procédure pas à pas : Création d’une Application Windows Accessible'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6c798d0f6a454c7ee819d5556970bca12f1812e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529621"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708273"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procédure pas à pas : création d'une application Windows accessible
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procédure pas à pas : Création d’une Application Windows Accessible
 La création d'une application accessible implique de nombreuses contraintes pour l'entreprise. De nombreux gouvernements ont mis en place une réglementation relative à l'accessibilité pour l'achat des logiciels. Le logo Certifié pour Windows inclut des normes d’accessibilité. Rien qu’aux États-Unis, on estime à 30 millions le nombre de personnes affectées par l’accessibilité des logiciels, dont beaucoup sont des clients potentiels.  
   
  Cette procédure pas à pas traite des cinq critères d’accessibilité pour le logo Certifié pour Windows. Selon ces critères, une application accessible doit :  
@@ -30,7 +30,7 @@ La création d'une application accessible implique de nombreuses contraintes pou
   
  Pour plus d’informations, consultez [Ressources pour la conception d’applications accessibles](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
- Pour plus d’informations sur la prise en charge des différentes dispositions du clavier, consultez [Bonnes pratiques pour développer des applications mondialisables](../../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
+ Pour plus d’informations sur la prise en charge des différentes dispositions du clavier, consultez [Bonnes pratiques pour développer des applications mondialisables](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
   
 ## <a name="creating-the-project"></a>Création du projet  
  Cette procédure pas à pas crée l'interface utilisateur pour une application de commande de pizza. Elle se compose d'un <xref:System.Windows.Forms.TextBox> pour le nom du client, d'un groupe <xref:System.Windows.Forms.RadioButton> pour sélectionner la taille de la pizza, d'un <xref:System.Windows.Forms.CheckedListBox> pour sélectionner les ingrédients, de deux contrôles bouton étiquetés Commande et Annuler et d'un menu avec une commande Quitter.  
@@ -41,12 +41,12 @@ La création d'une application accessible implique de nombreuses contraintes pou
   
 #### <a name="to-begin-making-the-application"></a>Pour commencer à créer l'application  
   
--   Créez une Application Windows en Visual Basic ou Visual c#. Nommez le projet **PizzaOrder**. (Pour plus d’informations, consultez [Création de projets et de solutions](/visualstudio/ide/creating-solutions-and-projects).)  
+-   Créez une Application Windows en Visual Basic ou Visual C#. Nommez le projet **PizzaOrder**. (Pour plus d’informations, consultez [Création de projets et de solutions](/visualstudio/ide/creating-solutions-and-projects).)  
   
 ## <a name="adding-the-controls-to-the-form"></a>Ajout des contrôles au formulaire  
  Lors de l'ajout des contrôles à un formulaire, veillez à respecter les consignes d'accessibilité suivantes :  
   
--   Définissez les propriétés <xref:System.Windows.Forms.Control.AccessibleDescription%2A> et <xref:System.Windows.Forms.Control.AccessibleName%2A>. Dans cet exemple, le paramètre Default pour <xref:System.Windows.Forms.Control.AccessibleRole%2A> est suffisant. Pour plus d’informations sur les propriétés d’accessibilité, consultez [Informations d’accessibilité sur les contrôles d’un Windows Form](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+-   Définissez les propriétés <xref:System.Windows.Forms.Control.AccessibleDescription%2A> et <xref:System.Windows.Forms.Control.AccessibleName%2A>. Dans cet exemple, le paramètre Default pour <xref:System.Windows.Forms.Control.AccessibleRole%2A> est suffisant. Pour plus d’informations sur les propriétés d’accessibilité, consultez [Informations d’accessibilité sur les contrôles d’un Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
 -   Définissez la taille de police sur 10 points ou plus.  
   
@@ -137,11 +137,11 @@ La création d'une application accessible implique de nombreuses contraintes pou
     |MenuItem|Nom|exitApp|  
     ||Texte|&Quitter|  
   
-     ![Formulaire de commande de pizza](../../../../docs/framework/winforms/advanced/media/vbpizzaorderform.gif "vbPizzaOrderForm")  
+     ![Formulaire de commande de pizza](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
 Votre écran ressemblera à ce qui suit :  
   
 ## <a name="supporting-high-contrast-mode"></a>Prise en charge du mode de contraste élevé  
- Le mode de contraste élevé est un paramètre système Windows qui améliore la lisibilité en utilisant des couleurs contrastées et des tailles de polices adaptées aux personnes malvoyantes. Le <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> propriété est fournie pour déterminer si le mode de contraste élevé est défini.  
+ Le mode de contraste élevé est un paramètre système Windows qui améliore la lisibilité en utilisant des couleurs contrastées et des tailles de polices adaptées aux personnes malvoyantes. Le <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> propriété est fournie pour déterminer si le mode de contraste élevé est activé.  
   
  Si SystemInformation.HighContrast a la valeur `true`, l'application doit :  
   
@@ -153,7 +153,7 @@ Votre écran ressemblera à ce qui suit :
   
  L'application doit vérifier le paramètre de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> quand elle démarre et répond à l'événement système <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. L'événement <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> est déclenché chaque fois que la valeur de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> change.  
   
- Dans notre application, le seul élément qui n’utilise pas les paramètres système pour la couleur est `lblCompanyName`. La <xref:System.Drawing.SystemColors> classe est utilisée pour modifier les paramètres de couleur de l’étiquette pour les couleurs système sélectionnées par l’utilisateur.  
+ Dans notre application, le seul élément qui n’utilise pas les paramètres système pour la couleur est `lblCompanyName`. Le <xref:System.Drawing.SystemColors> classe est utilisée pour modifier les paramètres de couleur de l’étiquette pour les couleurs système sélectionnées par l’utilisateur.  
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Pour activer le mode de contraste élevé de manière efficace  
   
@@ -245,7 +245,7 @@ Votre écran ressemblera à ce qui suit :
     }  
     ```  
   
-5.  Ajoutez du code à la méthode <xref:System.Windows.Forms.Control.Dispose%2A> du formulaire, avant l'appel à la méthode <xref:System.Windows.Forms.Control.Dispose%2A> de la classe de base, pour libérer l'événement quand l'application se ferme. Pour accéder à la méthode <xref:System.Windows.Forms.Control.Dispose%2A> en Visual Basic, vous devez développer la région étiquetée Code généré par le Concepteur Windows Form.  
+5.  Ajoutez du code à la méthode <xref:System.Windows.Forms.Control.Dispose%2A> du formulaire, avant l’appel à la méthode <xref:System.Windows.Forms.Control.Dispose%2A> de la classe de base, pour libérer l’événement quand l’application se ferme. Pour accéder à la méthode <xref:System.Windows.Forms.Control.Dispose%2A> en Visual Basic, vous devez développer la région étiquetée Code généré par le Concepteur Windows Form.  
   
     > [!NOTE]
     >  Le code d'événement système exécute un thread distinct de l'application principale. Si vous ne libérez pas l'événement, le code que vous raccordez à l'événement s'exécute même après la fermeture du programme.  
@@ -287,7 +287,7 @@ Votre écran ressemblera à ce qui suit :
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Pour fournir des informations par d'autres moyens que le son  
   
-1.  Faites clignoter la barre de titre à l'aide de la fonction d'API Windows FlashWindow. Pour obtenir un exemple d’appel de fonctions API Windows, consultez [Procédure pas à pas : appel des API Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1.  Faites clignoter la barre de titre à l'aide de la fonction d'API Windows FlashWindow. Pour obtenir un exemple montrant comment appeler des fonctions API de Windows, consultez [procédure pas à pas : Appel d’API de Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  L'utilisateur a peut-être activé le service SoundSentry Windows, qui provoque aussi le clignotement de la fenêtre quand des sons système sont lus par le haut-parleur intégré de l'ordinateur.  
@@ -296,7 +296,7 @@ Votre écran ressemblera à ce qui suit :
   
 3.  Affichez une boîte de message qui acquiert le focus clavier. Évitez cette méthode quand l'utilisateur est susceptible de taper du texte au clavier.  
   
-4.  Affichez un indicateur d’état dans la zone de notification d’état de la barre des tâches. Pour plus d’informations, consultez [Ajout d’icônes d’application à la barre des tâches à l’aide du composant NotifyIcon Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4.  Affichez un indicateur d’état dans la zone de notification d’état de la barre des tâches. Pour plus d’informations, consultez [Ajout d’icônes d’application à la barre des tâches à l’aide du composant NotifyIcon Windows Forms](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Test de l'application  
  Avant de déployer l'application, vous devez tester les fonctionnalités d'accessibilité que vous avez implémentées.  

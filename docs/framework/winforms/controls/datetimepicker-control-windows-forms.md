@@ -7,28 +7,28 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms]
 - date and time picker controls
 ms.assetid: 1dac1fbd-8f67-4910-9ccb-2c5462d0d855
-ms.openlocfilehash: 02d8fd3bd09dfd97d9d3fc64cd624b9eb9402954
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 236017834f3a965ee0ddfc1a74121679f086050b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526541"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704360"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker, contrôle (Windows Forms)
-Windows Forms `DateTimePicker` contrôle permet à l’utilisateur à sélectionner un seul élément dans une liste de dates ou d’heures. Lorsqu’il est utilisé pour représenter une date, il s’affiche en deux parties : une liste déroulante contenant une date sous forme de texte et une grille qui s’affiche lorsque vous cliquez sur la flèche bas en regard de la liste.  
+Les formulaires Windows `DateTimePicker` contrôle permet à l’utilisateur de sélectionner un élément unique dans une liste de dates ou heures. Lorsqu’il est utilisé pour représenter une date, il apparaît dans les deux parties : une liste déroulante, avec une date sous forme de texte et une grille qui s’affiche lorsque vous cliquez sur la flèche vers le bas en regard de la liste.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble du contrôle DateTimePicker](../../../../docs/framework/winforms/controls/datetimepicker-control-overview-windows-forms.md)  
- Présente les concepts généraux de le `DateTimePicker` contrôle, ce qui permet aux utilisateurs de sélectionner un seul élément dans une liste de dates ou d’heures.  
+ [Vue d'ensemble du contrôle DateTimePicker](datetimepicker-control-overview-windows-forms.md)  
+ Présente les concepts généraux de le `DateTimePicker` contrôle, ce qui permet aux utilisateurs de sélectionner un élément unique dans une liste de dates ou heures.  
   
- [Guide pratique pour afficher une date dans un format personnalisé à l'aide du contrôle DateTimePicker Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
+ [Guide pratique pour Afficher une Date dans un Format personnalisé à l’aide du contrôle DateTimePicker Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
  Explique comment utiliser des chaînes de format pour afficher des dates dans un format préféré.  
   
- [Guide pratique pour définir et retourner des dates à l'aide du contrôle DateTimePicker Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)  
+ [Guide pratique pour Dates définies et de retour à l’aide du contrôle DateTimePicker Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)  
  Fournit la procédure pour définir la date dans le contrôle et accéder à la date sélectionnée par l’utilisateur.  
   
- [Guide pratique pour afficher l'heure avec le contrôle DateTimePicker](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md)  
- Montre les étapes à suivre pour un `DateTimePicker` pour afficher uniquement les temps.  
+ [Guide pratique pour Afficher l’heure avec le contrôle DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md)  
+ Montre les étapes à suivre pour un `DateTimePicker` affiche uniquement les temps.  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Forms.DateTimePicker>  
@@ -38,8 +38,8 @@ Windows Forms `DateTimePicker` contrôle permet à l’utilisateur à sélection
  Décrit cette classe et fournit des liens vers tous ses membres.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)  
  Fournit une liste complète de contrôles Windows Forms, avec des liens vers des informations sur leur utilisation.  
   
- [MonthCalendar, contrôle](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [MonthCalendar, contrôle](monthcalendar-control-windows-forms.md)  
  Présente une interface graphique intuitive permettant aux utilisateurs d’afficher et de définir des informations de date.

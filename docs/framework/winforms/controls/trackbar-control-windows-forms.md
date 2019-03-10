@@ -6,17 +6,18 @@ helpviewer_keywords:
 - slider controls [Windows Forms]
 - TrackBar control [Windows Forms]
 ms.assetid: 37d6aee3-7e8a-4a10-a99c-3a6e09199553
-ms.openlocfilehash: 95a2459a75d0f14d0671ce2f38d771258b070053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adeb796b0411473d8e17f164f2f87bdf6ed7ae0e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711952"
 ---
 # <a name="trackbar-control-windows-forms"></a>TrackBar, contrôle (Windows Forms)
-Windows Forms `TrackBar` contrôle (parfois également appelé contrôle « slider ») est utilisé pour naviguer dans une grande quantité d’informations ou d’ajuster visuellement un paramètre numérique. Le `TrackBar` contrôle comporte deux parties : le curseur de défilement, également appelé un curseur et les marques de graduation. Le curseur est la partie qui peut être ajustée. Sa position correspond à la <xref:System.Windows.Forms.TrackBar.Value%2A> propriété. Les graduations sont des indicateurs visuels qui sont exécutées à intervalles réguliers. La barre de suivi se déplace dans les incréments que vous spécifiez. Pour définir la vitesse ou la souris clignotement du curseur est un exemple d’utilisation d’une barre de suivi.  
+Les formulaires Windows `TrackBar` contrôle (parfois appelé un contrôle « curseur ») est utilisé pour naviguer dans une grande quantité d’informations ou d’ajuster visuellement un paramètre numérique. Le `TrackBar` contrôle comporte deux parties : le curseur de défilement, également appelé un curseur et les graduations. Le curseur est la partie qui peut être ajustée. Sa position correspond à la <xref:System.Windows.Forms.TrackBar.Value%2A> propriété. Les graduations sont des indicateurs visuels sont espacés à intervalles réguliers. La barre de suivi se déplace dans les incréments que vous spécifiez. Un exemple d’utilisation d’une barre de suivi serait permettant de définir des taux ou la souris clignotement du curseur.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble du contrôle TrackBar](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
+ [Vue d’ensemble du contrôle TrackBar](trackbar-control-overview-windows-forms.md)  
  Présente les concepts généraux de le `TrackBar` contrôle, ce qui permet aux utilisateurs de naviguer dans les informations en ajustant visuellement un paramètre numérique.  
   
 ## <a name="reference"></a>Référence  
@@ -24,5 +25,5 @@ Windows Forms `TrackBar` contrôle (parfois également appelé contrôle « sli
  Fournit des informations de référence sur la classe et ses membres.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)  
  Fournit une liste complète de contrôles Windows Forms, avec des liens vers des informations sur leur utilisation.

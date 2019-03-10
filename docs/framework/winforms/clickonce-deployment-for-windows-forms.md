@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: b30bb28e816f27cc8661d478758a05e52fb45037
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442124"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702566"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Déploiement ClickOnce pour les Windows Forms
 Les rubriques suivantes décrivent [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], une technologie destinée à faciliter le déploiement des applications Windows Forms sur les ordinateurs clients.  
@@ -63,7 +63,7 @@ Les rubriques suivantes décrivent [!INCLUDE[ndptecclick](../../../includes/ndpt
  Illustre comment marquer un fichier pour qu'il soit disponible dans le répertoire de données [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d'ensemble des paramètres d'application](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Vue d'ensemble des paramètres d'application](./advanced/application-settings-overview.md)
 - [Publication d’applications ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
 - [Génération d’applications ClickOnce à partir de la ligne de commande](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
 - [Débogage des applications ClickOnce qui utilisent System.Deployment.Application](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)

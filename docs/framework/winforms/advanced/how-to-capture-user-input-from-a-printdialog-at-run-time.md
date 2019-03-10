@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: a15563560615f5b857220c0b548fc57f31ee4e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69a3632ddb4d68f5a916f5ffca020630abe1bd68
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527664"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707325"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Procédure : Capturer des entrées utilisateur à partir d’un composant PrintDialog au moment de l’exécution
 Pendant que vous pouvez définir les options relatives à l’impression au moment du design, il est parfois utile de modifier ces options en cours d’exécution, probablement en raison des choix effectués par l’utilisateur. Vous pouvez capturer des entrées d’utilisateur pour l’impression d’un document à l’aide de la <xref:System.Windows.Forms.PrintDialog> et <xref:System.Drawing.Printing.PrintDocument> composants.  
@@ -56,5 +56,5 @@ Pendant que vous pouvez définir les options relatives à l’impression au mome
 4.  Choix de l’impression de l’utilisateur à partir de la boîte de dialogue seront copiés vers le <xref:System.Drawing.Printing.PrinterSettings> propriété de la <xref:System.Drawing.Printing.PrintDocument> composant.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Imprimer un fichier texte de plusieurs pages dans les Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Prise en charge de l’impression dans les Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Guide pratique pour Imprimer un fichier texte de plusieurs pages dans les Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Prise en charge de l’impression dans les Windows Forms](windows-forms-print-support.md)

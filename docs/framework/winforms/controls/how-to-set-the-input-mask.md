@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 68a3e72f23e881bc68441e8aee9674f1a822882a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658911"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702358"
 ---
 # <a name="how-to-set-the-input-mask"></a>Procédure : Définir le masque d’entrée
 Le contrôle de zone de texte masquée est un contrôle de zone de texte amélioré qui prend en charge une syntaxe déclarative pour accepter ou rejeter l’entrée d’utilisateur. En définissant la propriété Mask, vous pouvez spécifier l’entrée d’utilisateur autorisée sans écrire la logique de validation personnalisée dans votre application. Pour plus d’informations, consultez la section Notes de la <xref:System.Windows.Forms.MaskedTextBox> classe.  
@@ -64,4 +64,4 @@ Le contrôle de zone de texte masquée est un contrôle de zone de texte amélio
      Le masque est entré dans le **masque** propriété dans le **propriétés** fenêtre.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Procédure pas à pas : Utilisation du contrôle MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+- [Procédure pas à pas : Utilisation du contrôle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

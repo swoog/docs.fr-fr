@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362563"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714006"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Procédure : Effectuer des appels thread-safe aux contrôles Windows Forms
 
-Le traitement multithread peut améliorer les performances des applications Windows Forms, mais l’accès à des contrôles Windows Forms n’est pas thread-safe. Le traitement multithread peut exposer votre code à des bogues très sérieux et complexes. Deux ou plusieurs threads manipuler un contrôle peuvent forcer le contrôle dans un état incohérent et conduire à des conditions de concurrence, blocages et se fige ou se bloque. Si vous implémentez le multithreading dans votre application, veillez à appeler les contrôles inter-threads de manière thread-safe. Pour plus d’informations, consultez [meilleures pratiques pour le threading managé](../../../../docs/standard/threading/managed-threading-best-practices.md). 
+Le traitement multithread peut améliorer les performances des applications Windows Forms, mais l’accès à des contrôles Windows Forms n’est pas thread-safe. Le traitement multithread peut exposer votre code à des bogues très sérieux et complexes. Deux ou plusieurs threads manipuler un contrôle peuvent forcer le contrôle dans un état incohérent et conduire à des conditions de concurrence, blocages et se fige ou se bloque. Si vous implémentez le multithreading dans votre application, veillez à appeler les contrôles inter-threads de manière thread-safe. Pour plus d’informations, consultez [meilleures pratiques pour le threading managé](../../../standard/threading/managed-threading-best-practices.md). 
 
 Il existe deux façons d’appeler en toute sécurité un contrôle Windows Forms à partir d’un thread qui n’a pas de créer ce contrôle. Vous pouvez utiliser la <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> méthode à appeler un délégué créé dans le thread principal, qui à son tour appelle le contrôle. Ou, vous pouvez implémenter un <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>, qui utilise un modèle événementiel de séparer le travail effectué dans le thread d’arrière-plan à partir de la création de rapports sur les résultats. 
 
@@ -75,8 +75,8 @@ L’exemple suivant illustre un modèle pour garantir des appels thread-safe à 
 
 Le `SafeCallDelegate` Active paramètre la <xref:System.Windows.Forms.TextBox> du contrôle <xref:System.Windows.Forms.TextBox.Text%2A> propriété. Le `WriteTextSafe` requêtes de la méthode <xref:System.Windows.Forms.Control.InvokeRequired%2A>. Si <xref:System.Windows.Forms.Control.InvokeRequired%2A> retourne `true`, `WriteTextSafe` transmet le `SafeCallDelegate` à la <xref:System.Windows.Forms.Control.Invoke%2A> méthode pour effectuer l’appel réel au contrôle. Si <xref:System.Windows.Forms.Control.InvokeRequired%2A> retourne `false`, `WriteTextSafe` définit le <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> directement. Le `Button1_Click` Gestionnaire d’événements crée le nouveau thread et exécute le `WriteTextSafe` (méthode). 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>Exemple : Utiliser un gestionnaire d’événements de BackgroundWorker
 
@@ -86,12 +86,12 @@ Pour effectuer un appel thread-safe à l’aide de <xref:System.ComponentModel.B
 
 L’exemple utilise le <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> Gestionnaire d’événements pour définir le <xref:System.Windows.Forms.TextBox> du contrôle <xref:System.Windows.Forms.TextBox.Text%2A> propriété. Pour obtenir un exemple utilisant le <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> événement, consultez <xref:System.ComponentModel.BackgroundWorker>. 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Guide pratique pour Exécuter une opération en arrière-plan](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Guide pratique pour Implémenter un formulaire qui utilise une opération d’arrière-plan](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Développer des contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Guide pratique pour Exécuter une opération en arrière-plan](how-to-run-an-operation-in-the-background.md)
+- [Guide pratique pour Implémenter un formulaire qui utilise une opération d’arrière-plan](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Développer des contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)

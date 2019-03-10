@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: 1071b2ded2761d64e57484a9aea9bddb254a9a7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2a0f4084529b1dd2618c1cd6171ee45b8f569d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554411"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704997"
 ---
 # <a name="how-to-disable-tab-pages"></a>Procédure : Désactiver les Pages d’onglets
 Dans certains cas, vous souhaitez restreindre l’accès aux données qui sont disponibles dans votre application Windows Forms. Un exemple de ce pourrait être lorsque vous avez des données affichées dans les pages d’onglets d’un contrôle onglet. les administrateurs peut avoir plus d’informations sur une page d’onglets que vous souhaitez restreindre l’invité ou des utilisateurs de niveau inférieur.  
@@ -102,7 +102,7 @@ Dans certains cas, vous souhaitez restreindre l’accès aux données qui sont d
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble du contrôle TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [Guide pratique pour Ajouter un contrôle à une Page d’onglets](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [Guide pratique pour Ajouter et supprimer des onglets avec le contrôle TabControl de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Guide pratique pour Modifier l’apparence du contrôle TabControl Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Vue d’ensemble du contrôle TabControl](tabcontrol-control-overview-windows-forms.md)
+- [Guide pratique pour Ajouter un contrôle à une Page d’onglets](how-to-add-a-control-to-a-tab-page.md)
+- [Guide pratique pour Ajouter et supprimer des onglets avec le contrôle TabControl de Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Guide pratique pour Modifier l’apparence du contrôle TabControl Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

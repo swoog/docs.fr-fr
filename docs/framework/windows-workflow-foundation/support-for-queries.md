@@ -2,21 +2,21 @@
 title: Prise en charge des requêtes
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 5c46ed5ae2fc2cc2275bfa7251fe5f8fa346c1f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517989"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712001"
 ---
 # <a name="support-for-queries"></a>Prise en charge des requêtes
 Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues dans le magasin. Les utilisateurs peuvent demander des instances à partir de ces propriétés. La liste suivante comprend quelques-unes de ces propriétés connues :  
   
--   **Nom du site.** Nom du site web qui contient le service.  
+-   **Nom du site.** Nom du site Web qui contient le service.  
   
--   **Chemin d’accès de l’Application relatif.** Chemin d’accès à l’application relatif au site web.  
+-   **Chemin d’accès de l’Application relatif.** Chemin d’accès à l’application relatif au site Web.  
   
--   **Chemin d’accès de Service relatif.** Chemin d’accès au service relatif à l’application.  
+-   **Chemin d’accès relatif de Service.** Chemin d’accès au service relatif à l’application.  
   
 -   **Nom du service.** Nom du service.  
   
@@ -29,12 +29,12 @@ Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues
 > [!NOTE]
 >  Pour les scénarios auto-hébergés à l'aide de l'hôte du service de workflow, seules les quatre dernières propriétés sont remplies. Pour les scénarios d'application de workflow, seule la dernière propriété est remplie.  
   
- Le runtime du workflow fournit des valeurs pour les trois premières propriétés. L’hôte de service de workflow fournit la valeur pour le **raison de l’interruption** propriété. Le magasin d’instances de Workflow SQL lui-même fournit des valeurs pour le **dernier ordinateur mis à jour** propriété.  
+ Le runtime du workflow fournit des valeurs pour les trois premières propriétés. L’hôte de service de workflow fournit la valeur pour le **raison de l’interruption** propriété. Le Store d’Instance de Workflow SQL lui-même fournit des valeurs pour le **dernier ordinateur mis à jour** propriété.  
   
- La fonctionnalité de magasin d’instances de workflow SQL vous permet également de spécifier les propriétés personnalisées pour lesquelles vous souhaitez stocker les valeurs dans la base de données de persistance et que vous souhaitez utiliser dans les requêtes. Pour plus d’informations sur les promotions personnalisées, consultez [extensibilité de magasin](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).  
+ La fonctionnalité de magasin d'instances de workflow SQL vous permet également de spécifier les propriétés personnalisées pour lesquelles vous souhaitez stocker les valeurs dans la base de données de persistance et que vous souhaitez utiliser dans les requêtes. Pour plus d’informations sur les promotions personnalisées, consultez [Store extensibilité](store-extensibility.md).  
   
 ## <a name="views"></a>Affichages  
- Le magasin d'instances contient les vues suivantes. Consultez [schéma de base de données de persistance](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) pour plus d’informations.  
+ Le magasin d'instances contient les vues suivantes. Consultez [schéma de base de données de persistance](persistence-database-schema.md) pour plus d’informations.  
   
 ### <a name="the-instances-view"></a>Vue Instances  
  La vue Instances contient les champs suivants :  
@@ -45,7 +45,7 @@ Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues
   
 3.  **CreationTime**  
   
-4.  **lastUpdatedTime**  
+4.  **LastUpdatedTime**  
   
 5.  **ServiceDeploymentId**  
   
@@ -80,7 +80,7 @@ Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues
 ### <a name="the-servicedeployments-view"></a>Vue ServiceDeployments  
  La vue ServiceDeployments contient les champs suivants :  
   
-1.  **Nom du site**  
+1.  **SiteName**  
   
 2.  **RelativeServicePath**  
   
@@ -91,9 +91,9 @@ Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues
 5.  **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Vue InstancePromotedProperties  
- La vue InstancePromotedProperties contient les champs suivants. Pour plus d’informations sur les propriétés promues, consultez le [extensibilité de magasin](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) rubrique.  
+ La vue InstancePromotedProperties contient les champs suivants. Pour plus d’informations sur les propriétés promues, consultez le [Store extensibilité](store-extensibility.md) rubrique.  
   
-1.  **ID d’instance**  
+1.  **InstanceId**  
   
 2.  **EncodingOption**  
   

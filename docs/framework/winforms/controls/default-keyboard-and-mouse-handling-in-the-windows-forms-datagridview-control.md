@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-ms.openlocfilehash: 4d0a3cb7a56b388ee9bd3f932f9fec604b39fa62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56585bf91a559844f15aede4519706674357a924
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521762"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708312"
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Par défaut du clavier et gestion dans le contrôle Windows Forms DataGridView de la souris
 
@@ -36,8 +36,8 @@ Les tableaux suivants décrivent comment les utilisateurs peuvent interagir avec
 |HAUT|Déplace le focus vers la cellule juste au-dessus de la cellule active. Si le focus est dans la première ligne, ne fait rien.|  
 |ORIGINE|Déplace le focus vers la première cellule dans la ligne actuelle.|  
 |FIN|Déplace le focus vers la dernière cellule dans la ligne actuelle.|  
-|Page suivante|Fait défiler le contrôle vers le bas par le nombre de lignes qui sont entièrement affichés. Déplace le focus vers la dernière ligne entièrement affichée sans modifier les colonnes.|  
-|Page précédente|Fait défiler le contrôle vers le haut par le nombre de lignes qui sont entièrement affichés. Déplace le focus sur la première ligne affichée sans modifier les colonnes.|  
+|PG.SUIV|Fait défiler le contrôle vers le bas par le nombre de lignes qui sont entièrement affichés. Déplace le focus vers la dernière ligne entièrement affichée sans modifier les colonnes.|  
+|PG.PRÉC|Fait défiler le contrôle vers le haut par le nombre de lignes qui sont entièrement affichés. Déplace le focus sur la première ligne affichée sans modifier les colonnes.|  
 |TAB|Si le <xref:System.Windows.Forms.DataGridView.StandardTab%2A> valeur de propriété est `false`, déplace le focus vers la cellule suivante dans la ligne actuelle. Si le focus se trouve déjà dans la dernière cellule de la ligne, déplace le focus vers la première cellule dans la ligne suivante. Si le focus est dans la dernière cellule dans le contrôle, déplace le focus au contrôle suivant dans l’ordre de tabulation du conteneur parent.<br /><br /> Si le <xref:System.Windows.Forms.DataGridView.StandardTab%2A> valeur de propriété est `true`, déplace le focus au contrôle suivant dans l’ordre de tabulation du conteneur parent.|  
 |MAJ+TAB|Si le <xref:System.Windows.Forms.DataGridView.StandardTab%2A> valeur de propriété est `false`, déplace le focus vers la cellule précédente dans la ligne actuelle. Si le focus se trouve déjà dans la première cellule de la ligne, déplace le focus vers la dernière cellule de la ligne précédente. Si le focus est dans la première cellule dans le contrôle, déplace le focus au contrôle précédent dans l’ordre de tabulation du conteneur parent.<br /><br /> Si le <xref:System.Windows.Forms.DataGridView.StandardTab%2A> valeur de propriété est `true`, déplace le focus au contrôle précédent dans l’ordre de tabulation du conteneur parent.|  
 |CTRL+TAB|Si le <xref:System.Windows.Forms.DataGridView.StandardTab%2A> valeur de propriété est `false`, déplace le focus au contrôle suivant dans l’ordre de tabulation du conteneur parent.<br /><br /> Si le <xref:System.Windows.Forms.DataGridView.StandardTab%2A> valeur de propriété est `true`, déplace le focus vers la cellule suivante dans la ligne actuelle. Si le focus se trouve déjà dans la dernière cellule de la ligne, déplace le focus vers la première cellule dans la ligne suivante. Si le focus est dans la dernière cellule dans le contrôle, déplace le focus au contrôle suivant dans l’ordre de tabulation du conteneur parent.|  
@@ -52,7 +52,7 @@ Les tableaux suivants décrivent comment les utilisateurs peuvent interagir avec
 |ALT + FLÈCHE HAUT/BAS|Si la cellule active est une <xref:System.Windows.Forms.DataGridViewComboBoxCell>, place la cellule en mode édition et affiche la liste déroulante.|  
 |Espace|Si la cellule active est une <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>, ou <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, déclenche le <xref:System.Windows.Forms.DataGridView.CellClick> et <xref:System.Windows.Forms.DataGridView.CellContentClick> événements. Si la cellule active est une <xref:System.Windows.Forms.DataGridViewButtonCell>, appuie également sur le bouton. Si la cellule active est une <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, modifie également l’état d’activation.|  
 |ENTRÉE|Valide toutes les modifications à la cellule active et la ligne et déplace le focus vers la cellule directement sous la cellule active. Si le focus est dans la dernière ligne, valide toutes les modifications sans déplacer le focus.|  
-|ÉCHAP|Si le contrôle est en mode édition, annule la modification. Si le contrôle n’est pas en mode édition, rétablit les modifications qui ont été apportées à la ligne actuelle si le contrôle est lié à une source de données qui prend en charge la modification ou le mode virtuel a été implémenté avec une portée de validation au niveau de la ligne.|  
+|Échap|Si le contrôle est en mode édition, annule la modification. Si le contrôle n’est pas en mode édition, rétablit les modifications qui ont été apportées à la ligne actuelle si le contrôle est lié à une source de données qui prend en charge la modification ou le mode virtuel a été implémenté avec une portée de validation au niveau de la ligne.|  
 |RETOUR ARRIÈRE|Supprime le caractère avant le point d’insertion lors de la modification d’une cellule.|  
 |SUPPR|Supprime le caractère après le point d’insertion lors de la modification d’une cellule.|  
 |CTRL+ENTRÉE|Valide toutes les modifications à la cellule active sans déplacer le focus. Également toute modification apportée à la ligne actuelle si le contrôle est lié à une source de données qui prend en charge le mode édition ou virtuel a été implémenté avec des validations au niveau des lignes validation étendue.|  
@@ -117,4 +117,4 @@ Les tableaux suivants décrivent comment les utilisateurs peuvent interagir avec
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView, contrôle](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [DataGridView, contrôle](datagridview-control-windows-forms.md)

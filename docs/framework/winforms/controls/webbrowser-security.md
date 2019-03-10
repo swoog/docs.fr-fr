@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], security
 - security [Windows Forms], WebBrowser control
 ms.assetid: 0968846e-48ee-485a-9797-65b5b9a622f8
-ms.openlocfilehash: 4c69f1c39d3a22db361fef1ffb65f21aa9d75128
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 957c11a085c971a81e5baa81a5b797dd53f2451a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736271"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703424"
 ---
 # <a name="webbrowser-security"></a>Sécurité WebBrowser
 Le <xref:System.Windows.Forms.WebBrowser> contrôle est conçu pour fonctionner avec une confiance totale. Le contenu HTML affiché dans le contrôle peut provenir de serveurs Web externes et peut contenir du code non managé sous la forme de scripts ou de contrôles Web. Si vous utilisez le <xref:System.Windows.Forms.WebBrowser> contrôle dans ce cas, le contrôle n’est pas moins sécurisé qu’Internet Explorer serait, mais managé <xref:System.Windows.Forms.WebBrowser> contrôle n’empêche pas ce code non managé en cours d’exécution.  
@@ -19,5 +19,5 @@ Le <xref:System.Windows.Forms.WebBrowser> contrôle est conçu pour fonctionner 
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.WebBrowser>
-- [Vue d’ensemble du contrôle WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)
+- [Vue d’ensemble du contrôle WebBrowser](webbrowser-control-overview.md)
 - [WebBrowser, contrôle](https://go.microsoft.com/fwlink/?LinkId=198812)

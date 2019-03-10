@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 43641b89ae405caf9807b00b4b3c84f25c4e5e67
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332193"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713759"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Procédure : Simuler des événements de souris et clavier dans le Code
 Windows Forms fournit plusieurs options pour simuler par programmation l'entrée de souris et de clavier. Cette rubrique offre une vue d'ensemble de ces options.  
@@ -31,7 +31,7 @@ Windows Forms fournit plusieurs options pour simuler par programmation l'entrée
   
 2.  Appelez la méthode <xref:System.Windows.Forms.Control.OnMouseClick%2A> avec ce <xref:System.Windows.Forms.MouseEventArgs> comme argument.  
   
- Pour plus d’informations sur les contrôles personnalisés, consultez [Développement de contrôles Windows Forms au moment du design](../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).  
+ Pour plus d’informations sur les contrôles personnalisés, consultez [Développement de contrôles Windows Forms au moment du design](./controls/developing-windows-forms-controls-at-design-time.md).  
   
  Il existe d'autres manières de simuler l'entrée de souris. Par exemple, vous pouvez définir par programmation une propriété de contrôle qui représente un état qui est généralement défini par une entrée de souris (telle que la propriété <xref:System.Windows.Forms.CheckBox.Checked%2A> du contrôle <xref:System.Windows.Forms.CheckBox> ) ou vous pouvez appeler directement le délégué qui est attaché à l'événement que vous souhaitez simuler.  
   
@@ -60,9 +60,9 @@ Windows Forms fournit plusieurs options pour simuler par programmation l'entrée
   
 1.  Appelez la méthode <xref:System.Windows.Forms.SendKeys.Send%2A> ou <xref:System.Windows.Forms.SendKeys.SendWait%2A> de la classe <xref:System.Windows.Forms.SendKeys> . Les séquences de touches spécifiées seront reçues par le contrôle actif de l'application. L'exemple de code suivant utilise <xref:System.Windows.Forms.SendKeys.Send%2A> pour simuler une pression sur la touche Entrée quand l'utilisateur double-clique sur la surface du formulaire. Cet exemple suppose que l'on a un <xref:System.Windows.Forms.Form> avec un seul contrôle <xref:System.Windows.Forms.Button> ayant un index de tabulation de 0.  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>Pour envoyer une séquence de touches vers une autre application  
   
@@ -71,16 +71,16 @@ Windows Forms fournit plusieurs options pour simuler par programmation l'entrée
     > [!NOTE]
     >  Les paramètres corrects de l'appel `FindWindow` qui recherche l'application Calculatrice varient en fonction de votre version de Windows.  Le code suivant recherche l'application Calculatrice sur [!INCLUDE[win7](../../../includes/win7-md.md)]. Sur [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], remplacez le premier paramètre par « SciCalc ». Vous pouvez utiliser l'outil Spy++, fourni avec Visual Studio, pour déterminer les paramètres corrects.  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant est l'application complète pour les exemples de code précédents.  
   
- [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
- [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
+ [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
@@ -90,4 +90,4 @@ Windows Forms fournit plusieurs options pour simuler par programmation l'entrée
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Entrées d’utilisateur dans les Windows Forms](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+- [Entrées d’utilisateur dans les Windows Forms](user-input-in-windows-forms.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547129"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703528"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfaces participant à la liaison de données
 Avec [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], vous pouvez créer de nombreuses structures de données différentes pour répondre aux besoins de liaison de votre application et des données que vous utilisez. Vous souhaiterez peut-être créer vos propres classes qui fourniront ou utiliseront des données dans les Windows Forms. Ces objets peuvent offrir différents niveaux de fonctionnalités et de complexité, de la liaison de données basique à la fourniture d’une prise en charge au moment du design, en passant par la vérification des erreurs, la notification des modifications ou même la prise en charge de la restauration structurée des modifications apportées aux données elles-mêmes.  
@@ -150,6 +150,6 @@ Avec [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], vous pouvez créer 
     >  Une classe qui hérite de <xref:System.Windows.Forms.Control> gère les liaisons automatiquement via son <xref:System.Windows.Forms.Control.BindingContext%2A> propriété, dans ce cas dans lequel vous devez implémenter le <xref:System.Windows.Forms.ICurrencyManagerProvider> sont relativement rares.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Guide pratique pour Créer un contrôle de liaison Simple dans un formulaire Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Liaison de données Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)
+- [Guide pratique pour Créer un contrôle de liaison Simple dans un formulaire Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)

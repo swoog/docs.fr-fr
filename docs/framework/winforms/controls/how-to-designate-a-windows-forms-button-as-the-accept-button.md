@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: e35dbc2b66f743f5af3c405228439268590e1a5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00d9f4acffb88b5047b40df91799cea1caaf2cf2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660201"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714695"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>Procédure : Désigner un contrôle Button Windows Forms comme bouton Accepter
 Sur n’importe quel formulaire Windows, vous pouvez désigner un <xref:System.Windows.Forms.Button> contrôle de bouton Accepter, également connu sous le bouton par défaut. Chaque fois que l’utilisateur appuie sur la touche entrée, le bouton par défaut un clic sur quel autre contrôle sur le formulaire a le focus.  
@@ -51,8 +51,8 @@ Sur n’importe quel formulaire Windows, vous pouvez désigner un <xref:System.W
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
-- [Vue d'ensemble du contrôle Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
-- [Méthodes de sélection du contrôle Button Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
-- [Guide pratique pour Répondre aux clics de bouton Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
-- [Guide pratique pour Désigner un contrôle Button Windows Forms comme bouton Annuler](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
-- [Button, contrôle](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Vue d'ensemble du contrôle Button](button-control-overview-windows-forms.md)
+- [Méthodes de sélection du contrôle Button Windows Forms](ways-to-select-a-windows-forms-button-control.md)
+- [Guide pratique pour Répondre aux clics de bouton Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Guide pratique pour Désigner un contrôle Button Windows Forms comme bouton Annuler](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [Button, contrôle](button-control-windows-forms.md)

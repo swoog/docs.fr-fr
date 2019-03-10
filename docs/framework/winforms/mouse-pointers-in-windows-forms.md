@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491777"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712732"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Pointeurs de souris dans les Windows Forms
 La souris *pointeur*, qui est parfois appelé curseur, est une bitmap qui spécifie un point de focus sur l’écran de l’utilisateur avec la souris. Cette rubrique fournit une vue d’ensemble du pointeur de la souris dans les Windows Forms et décrit quelques-unes des façons de modifier et de contrôler le pointeur de la souris.  
@@ -32,5 +32,5 @@ La souris *pointeur*, qui est parfois appelé curseur, est une bitmap qui spéci
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.Cursor>
-- [Entrée de la souris dans une application Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Fonctionnalité de glisser-déposer dans les Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+- [Entrée de la souris dans une application Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Fonctionnalité de glisser-déposer dans les Windows Forms](drag-and-drop-functionality-in-windows-forms.md)

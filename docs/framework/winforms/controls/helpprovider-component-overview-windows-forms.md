@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 5fc447e00ca46f251a895f0de82118a11310a8d9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f9cf0c165c6c64186eff53676c8b1b06f74361fc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972649"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708377"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Vue d'ensemble du composant HelpProvider (Windows Forms)
-Les formulaires Windows [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) composant est utilisé pour associer un fichier d’aide HTML Help 1.x (fichier .chm généré par HTML Help Workshop ou fichier .htm) à votre application Windows. Vous pouvez fournir une aide de plusieurs façons :  
+Les formulaires Windows [HelpProvider](helpprovider-component-windows-forms.md) composant est utilisé pour associer un fichier d’aide HTML Help 1.x (fichier .chm généré par HTML Help Workshop ou fichier .htm) à votre application Windows. Vous pouvez fournir une aide de plusieurs façons :  
   
 -   Fournir une aide contextuelle pour les contrôles Windows Forms.  
   
@@ -37,4 +37,4 @@ Les formulaires Windows [HelpProvider](../../../../docs/framework/winforms/contr
 >  Vous pouvez rencontrer des problèmes à l’aide du chemin d’accès relatif lorsque vous spécifiez le chemin d’accès au fichier d’aide dans le <xref:System.Windows.Forms.Help.ShowHelp%2A> méthode ou <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propriété de la <xref:System.Windows.Forms.HelpProvider> contrôle. Par conséquent, veillez à utiliser le chemin d’accès absolu pour spécifier le fichier d’aide.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Systèmes d’aide dans les applications Windows Forms](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)
+- [Systèmes d’aide dans les applications Windows Forms](../advanced/help-systems-in-windows-forms-applications.md)

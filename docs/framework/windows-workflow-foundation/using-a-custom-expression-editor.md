@@ -2,17 +2,17 @@
 title: Utilisation d'un éditeur d'expressions personnalisé
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 3959fdb5b75ae6e48c19130cf6e825455d8f7103
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bbad843c5e4d409627c255be7341d364a3d36d6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526910"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716528"
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilisation d'un éditeur d'expressions personnalisé
 Un éditeur d'expressions personnalisé peut être implémenté pour fournir une expérience d'édition d'expressions plus riche ou plus simple. Il existe plusieurs scénarios dans lesquels vous souhaiterez peut-être utiliser un éditeur d'expressions personnalisé :  
   
--   Pour assurer la prise en charge d’IntelliSense et d’autres fonctionnalités d’édition riches dans un concepteur de workflow réhébergé. Cette fonctionnalité doit être fournie, car l’éditeur d’expressions de Visual Studio par défaut ne peut pas être utilisé dans les applications réhébergées.  
+-   Pour assurer la prise en charge d'IntelliSense et d'autres fonctionnalités d'édition riches dans un concepteur de workflow réhébergé. Cette fonctionnalité doit être fournie, car l’éditeur d’expressions de Visual Studio par défaut ne peut pas être utilisé dans les applications réhébergées.  
   
 -   Pour simplifier l’expérience pour les utilisateurs analystes d’entreprise, d’édition d’expressions afin qu’ils ne sont pas, par exemple, nécessaire pour découvrir Visual Basic ou de traiter des expressions Visual Basic.  
   
@@ -281,4 +281,4 @@ namespace WpfApplication1
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
-- [Utilisation d’ExpressionTextBox dans un concepteur d’activités personnalisées](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Utilisation d’ExpressionTextBox dans un concepteur d’activités personnalisées](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

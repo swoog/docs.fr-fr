@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 576042d9d8e7a7f77d5375b7dfafafdc63b3e824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601959"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704431"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Procédure : Remplir une forme avec une couleur unie
 Pour remplir une forme avec une couleur unie, créez un <xref:System.Drawing.SolidBrush> de l’objet et la transmettre puis <xref:System.Drawing.SolidBrush> objet en tant qu’argument à une des méthodes de remplissage de la <xref:System.Drawing.Graphics> classe. L’exemple suivant montre comment remplir une ellipse avec la couleur rouge.  
@@ -23,11 +23,11 @@ Pour remplir une forme avec une couleur unie, créez un <xref:System.Drawing.Sol
   
  Les quatre nombres (0, 0, 100, 60) passé à la <xref:System.Drawing.Graphics.FillEllipse%2A> méthode spécifier l’emplacement et la taille du rectangle englobant de l’ellipse. Le rectangle a un coin supérieur gauche de (0, 0), une largeur de 100 et une hauteur de 60.  
   
- [!code-csharp[System.Drawing.UsingABrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.UsingABrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.UsingABrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.UsingABrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation d'un pinceau pour remplir des formes](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+- [Utilisation d'un pinceau pour remplir des formes](using-a-brush-to-fill-shapes.md)

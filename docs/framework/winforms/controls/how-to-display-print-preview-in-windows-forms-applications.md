@@ -10,17 +10,17 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: d348c89e3334543cf935e5faec29e546d848a984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526728"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715358"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Procédure : Afficher l’aperçu avant impression dans Windows Forms Applications
 Vous pouvez utiliser la <xref:System.Windows.Forms.PrintPreviewDialog> contrôle pour permettre aux utilisateurs d’afficher un document, souvent avant qu’il soit à imprimer.  
   
- Pour ce faire, vous devez spécifier une instance de la <xref:System.Drawing.Printing.PrintDocument> classe ; il s’agit du document à imprimer. Pour plus d’informations sur l’utilisation de l’aperçu avant impression avec le <xref:System.Drawing.Printing.PrintDocument> composant, consultez [Comment : Impression dans les formulaires de Windows à l’aide de l’aperçu avant impression](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).  
+ Pour ce faire, vous devez spécifier une instance de la <xref:System.Drawing.Printing.PrintDocument> classe ; il s’agit du document à imprimer. Pour plus d’informations sur l’utilisation de l’aperçu avant impression avec le <xref:System.Drawing.Printing.PrintDocument> composant, consultez [Comment : Impression dans les formulaires de Windows à l’aide de l’aperçu avant impression](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
   
 > [!NOTE]
 >  Pour utiliser le <xref:System.Windows.Forms.PrintPreviewDialog> contrôle en cours d’exécution, les utilisateurs doivent avoir une imprimante installée sur leur ordinateur, localement ou via un réseau, car il s’agit en partie comment la <xref:System.Windows.Forms.PrintPreviewDialog> composant détermine l’aspect d’un document imprimé.  
@@ -82,7 +82,7 @@ Vous pouvez utiliser la <xref:System.Windows.Forms.PrintPreviewDialog> contrôle
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Composant PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
-- [PrintPreviewDialog, contrôle](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Prise en charge de l’impression dans les Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Composant PrintDocument](printdocument-component-windows-forms.md)
+- [PrintPreviewDialog, contrôle](printpreviewdialog-control-windows-forms.md)
+- [Prise en charge de l’impression dans les Windows Forms](../advanced/windows-forms-print-support.md)
+- [Windows Forms](../index.md)

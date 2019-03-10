@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 4ae48a824f69c417daa38fb4b5f88fc5d980c47b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724380"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715436"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Procédure : Prennent en charge COM Interop en affichant un formulaire Windows avec la méthode ShowDialog
 Vous pouvez résoudre les problèmes d’interopérabilité COM en affichant votre formulaire Windows sur une boucle de message [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , qui est créée en utilisant la méthode <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
@@ -22,7 +22,7 @@ Vous pouvez résoudre les problèmes d’interopérabilité COM en affichant vot
   
 -   Utilisez la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> pour afficher le formulaire Windows.  
   
--   Affichez chaque Windows Form sur un thread séparé. Pour plus d'informations, voir [Procédure : Prise en charge COM Interop en affichant chaque formulaire Windows sur son propre Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+-   Affichez chaque Windows Form sur un thread séparé. Pour plus d'informations, voir [Procédure : Prise en charge COM Interop en affichant chaque formulaire Windows sur son propre Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="procedure"></a>Procédure  
  L’utilisation de la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> peut être le moyen le plus simple pour afficher un formulaire sur une boucle de messages [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] car, de toutes les approches, c’est elle qui nécessite le moins de code à implémenter.  
@@ -38,6 +38,6 @@ Vous pouvez résoudre les problèmes d’interopérabilité COM en affichant vot
 -   Remplacez tous les appels à la méthode <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> par des appels à la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> dans votre composant [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exposition de composants .NET Framework à COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Guide pratique pour Prennent en charge COM Interop en affichant chaque formulaire Windows sur son propre Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [Exposition de composants .NET Framework à COM](../../interop/exposing-dotnet-components-to-com.md)
+- [Guide pratique pour Prennent en charge COM Interop en affichant chaque formulaire Windows sur son propre Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)

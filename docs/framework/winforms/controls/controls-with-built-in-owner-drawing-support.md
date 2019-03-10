@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 5206289eaab1195e5314e21b0d49e4b8a5455b72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50f180f2f3fe825f617ae441906a7414a6b8bced
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696306"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707352"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Contrôles avec prise en charge intégrée des dessins owner-drawn
 Le dessin owner-drawn dans Windows Forms, qui est également appelé dessin personnalisé, est une technique permettant de changer l’apparence visuelle de certains contrôles.  
@@ -86,7 +86,7 @@ Le dessin owner-drawn dans Windows Forms, qui est également appelé dessin pers
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Guide pratique pour Créer du texte de taille Variable dans un contrôle ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [Guide pratique pour Créer du texte de taille Variable dans un contrôle ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem, composant  
  Le <xref:System.Windows.Forms.MenuItem> composant représente un élément de menu unique dans un <xref:System.Windows.Forms.MainMenu> ou <xref:System.Windows.Forms.ContextMenu> composant.  
@@ -172,9 +172,9 @@ Le dessin owner-drawn dans Windows Forms, qui est également appelé dessin pers
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Guide pratique pour Personnaliser l’apparence des cellules dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Guide pratique pour Personnaliser l’apparence des cellules dans le contrôle de DataGridView Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Guide pratique pour Personnaliser l’apparence des lignes dans le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Guide pratique pour Personnaliser l’apparence des lignes dans le contrôle de DataGridView Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip, contrôle  
  <xref:System.Windows.Forms.ToolStrip> et les contrôles dérivés vous permettent de personnaliser n’importe quel aspect de leur apparence.  
@@ -185,9 +185,9 @@ Le dessin owner-drawn dans Windows Forms, qui est également appelé dessin pers
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Guide pratique pour Créer et définir un convertisseur personnalisé pour le contrôle ToolStrip dans les Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Guide pratique pour Créer et définir un convertisseur personnalisé pour le contrôle ToolStrip dans les Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Guide pratique pour Personnaliser le dessin d’un contrôle ToolStrip](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [Guide pratique pour Personnaliser le dessin d’un contrôle ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)
