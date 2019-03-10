@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536325"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723164"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procédure : Utiliser un Thread d’arrière-plan pour rechercher des fichiers
-Le <xref:System.ComponentModel.BackgroundWorker> composant remplace et ajoute des fonctionnalités à la <xref:System.Threading> espace de noms ; Toutefois, le <xref:System.Threading> espace de noms est conservé pour compatibilité descendante et une utilisation ultérieure, si vous choisissez. Pour plus d’informations, consultez [vue d’ensemble du composant BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+Le <xref:System.ComponentModel.BackgroundWorker> composant remplace et ajoute des fonctionnalités à la <xref:System.Threading> espace de noms ; Toutefois, le <xref:System.Threading> espace de noms est conservé pour compatibilité descendante et une utilisation ultérieure, si vous choisissez. Pour plus d’informations, consultez [vue d’ensemble du composant BackgroundWorker](backgroundworker-component-overview.md).  
   
- Windows Forms utilise le modèle de thread unique cloisonné (STA), car Windows Forms repose sur des fenêtres Win32 natives qui sont par nature avec thread cloisonné. Le modèle STA implique une fenêtre peut être créée sur n’importe quel thread, mais elle ne peut pas basculer les threads créés une fois que tous les appels de fonction à ce dernier doivent se produire sur son thread de création. En dehors de Windows Forms, les classes dans le .NET Framework utilisent le modèle de thread libre. Pour plus d’informations à propos du threading dans le .NET Framework, consultez [Threading](../../../../docs/standard/threading/index.md).  
+ Windows Forms utilise le modèle de thread unique cloisonné (STA), car Windows Forms repose sur des fenêtres Win32 natives qui sont par nature avec thread cloisonné. Le modèle STA implique une fenêtre peut être créée sur n’importe quel thread, mais elle ne peut pas basculer les threads créés une fois que tous les appels de fonction à ce dernier doivent se produire sur son thread de création. En dehors de Windows Forms, les classes dans le .NET Framework utilisent le modèle de thread libre. Pour plus d’informations à propos du threading dans le .NET Framework, consultez [Threading](../../../standard/threading/index.md).  
   
  Le modèle STA requiert que toutes les méthodes sur un contrôle qui doivent être appelés à partir en dehors du thread de création du contrôle doivent être marshalées (exécutées sur) le thread du contrôle la création. La classe de base <xref:System.Windows.Forms.Control> fournit plusieurs méthodes (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, et <xref:System.Windows.Forms.Control.EndInvoke%2A>) à cet effet. <xref:System.Windows.Forms.Control.Invoke%2A> effectue des appels de méthode synchrones ; <xref:System.Windows.Forms.Control.BeginInvoke%2A> effectue des appels de méthode asynchrone.  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)
+- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

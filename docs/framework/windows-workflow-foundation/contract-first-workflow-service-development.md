@@ -2,48 +2,48 @@
 title: Développement de services de workflow « contrat en premier »
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373060"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721786"
 ---
 # <a name="contract-first-workflow-service-development"></a>Développement de services de workflow « contrat en premier »
-En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les fonctionnalités de Windows Workflow Foundation (WF) une meilleure intégration entre les services web et les workflows sous la forme du développement de workflow contrat en premier. L'outil de développement de workflow Contrat en premier vous permet de concevoir le contrat dans le code en premier. L'outil génère automatiquement un modèle d'activité dans la boîte à outils pour les opérations du contrat. Cette rubrique fournit une vue d'ensemble de la façon dont les activités et les propriétés d'un service de workflow sont mappées aux attributs d'un contrat de service. Pour obtenir un exemple pas à pas de création d’un service de workflow contrat en premier, consultez [Comment : Créer un service de flux de travail qui utilise un contrat de service existant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les fonctionnalités de Windows Workflow Foundation (WF) une meilleure intégration entre les services web et les workflows sous la forme du développement de workflow contrat en premier. L'outil de développement de workflow Contrat en premier vous permet de concevoir le contrat dans le code en premier. L'outil génère automatiquement un modèle d'activité dans la boîte à outils pour les opérations du contrat. Cette rubrique fournit une vue d'ensemble de la façon dont les activités et les propriétés d'un service de workflow sont mappées aux attributs d'un contrat de service. Pour obtenir un exemple pas à pas de création d’un service de workflow contrat en premier, consultez [Comment : Créer un service de flux de travail qui utilise un contrat de service existant](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Dans cette rubrique  
   
--   [Mappage des attributs de contrat de service aux attributs de flux de travail](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [Mappage des attributs de contrat de service aux attributs de flux de travail](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [Attributs de contrat de service](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [Attributs de contrat de service](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [Attributs de contrat d’opération](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [Attributs de contrat d’opération](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [Attributs de contrat de message](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [Attributs de contrat de message](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [Attributs de contrat de données](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [Attributs de contrat de données](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [Attributs de contrat d’erreur](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [Attributs de contrat d’erreur](contract-first-workflow-service-development.md#FaultContract)  
   
--   [Prise en charge supplémentaire et des informations d’implémentation](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [Prise en charge supplémentaire et des informations d’implémentation](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [Fonctionnalités de contrat de service non pris en charge](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [Fonctionnalités de contrat de service non pris en charge](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Génération d’activités de messagerie configurées](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [Génération d’activités de messagerie configurées](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> Mappage des attributs de contrat de service aux attributs de flux de travail  
  Les tableaux des sections suivantes spécifient différents attributs et propriétés WCF et comment ils sont mappés aux activités de messagerie et aux propriétés dans un workflow contrat en premier.  
   
--   [Attributs de contrat de service](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [Attributs de contrat de service](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [Attributs de contrat d’opération](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [Attributs de contrat d’opération](contract-first-workflow-service-development.md#OperationContract)  
   
--   [Attributs de contrat de message](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [Attributs de contrat de message](contract-first-workflow-service-development.md#MessageContract)  
   
--   [Attributs de contrat de données](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [Attributs de contrat de données](contract-first-workflow-service-development.md#DataContract)  
   
--   [Attributs de contrat d’erreur](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [Attributs de contrat d’erreur](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> Attributs de contrat de service  
   
@@ -109,9 +109,9 @@ En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les fon
   
 ## <a name="AdditionalSupport"></a> Prise en charge supplémentaire et des informations d’implémentation  
   
--   [Fonctionnalités de contrat de service non pris en charge](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [Fonctionnalités de contrat de service non pris en charge](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Génération d’activités de messagerie configurées](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [Génération d’activités de messagerie configurées](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> Fonctionnalités de contrat de service non pris en charge  
   

@@ -13,21 +13,21 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-ms.openlocfilehash: f87d76d4215d7d944b465b47113cf7cb24473df3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525586"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724425"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox, contrôle (Windows Forms)
-Windows Forms `CheckedListBox` contrôle affiche une liste d’éléments, comme le <xref:System.Windows.Forms.ListBox> contrôler et pouvez également afficher une case à cocher en regard des éléments dans la liste.  
+Les formulaires Windows `CheckedListBox` contrôle affiche une liste d’éléments, comme le <xref:System.Windows.Forms.ListBox> contrôler et peut afficher également une case à cocher en regard des éléments dans la liste.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble du contrôle CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- Décrit ce contrôle et ses principales fonctionnalités et propriétés.  
+ [Vue d'ensemble du contrôle CheckedListBox](checkedlistbox-control-overview-windows-forms.md)  
+ Décrit un contrôle et ses principales fonctionnalités et propriétés.  
   
- [Guide pratique pour déterminer des éléments cochés dans le contrôle CheckedListBox Windows Forms](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ [Guide pratique pour Déterminer les éléments cochés dans le contrôle CheckedListBox Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
  Décrit comment parcourir une liste afin de déterminer quels éléments sont activés.  
   
 ## <a name="reference"></a>Référence  
@@ -35,8 +35,8 @@ Windows Forms `CheckedListBox` contrôle affiche une liste d’éléments, comme
  Décrit cette classe et fournit des liens vers tous ses membres.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Fournit une liste d’éléments que vous pouvez faire avec les zones de liste, zones de liste déroulante et des zones de liste de cases.  
+ [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](windows-forms-controls-used-to-list-options.md)  
+ Fournit une liste de choses à que faire avec les zones de liste, des zones de liste déroulante et des zones de liste vérifiés.  
   
- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)  
  Fournit une liste complète de contrôles Windows Forms, avec des liens vers des informations sur leur utilisation.

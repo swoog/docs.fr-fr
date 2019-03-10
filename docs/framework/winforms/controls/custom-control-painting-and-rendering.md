@@ -6,33 +6,33 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: 18a05a739f42d41a650e66723f44aae69c1707c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526049"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722137"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Peinture et rendu personnalisés des contrôles
-La peinture personnalisée des contrôles est une des nombreuses tâches compliquées facilitées par le .NET Framework. Lorsque vous créez un contrôle personnalisé, vous disposez de nombreuses options d’apparence de graphique de votre contrôle. Si vous êtes en train de créer un contrôle qui hérite de la `Control`, vous devez fournir le code qui permet à votre contrôle afficher sa représentation sous forme graphique. Si vous créez un contrôle utilisateur en héritant de la `UserControl`, ou sur l’un des contrôles Windows Forms, vous pouvez substituer la représentation graphique standard et fournir votre propre code graphique. Si vous souhaitez fournir un rendu personnalisé pour les contrôles constitutifs d’un `UserControl` vous êtes en train de créer, vos options sont plus limitées, mais toujours autorisant un large éventail de possibilités de graphiques pour vos applications et de contrôles.  
+La peinture personnalisée des contrôles est une des nombreuses tâches complexes facilitées par le .NET Framework. Lorsque vous créez un contrôle personnalisé, vous disposez de nombreuses options concernant l’aspect graphique de votre contrôle. Si vous créez un contrôle qui hérite de la `Control`, vous devez fournir du code qui permet à votre contrôle afficher sa représentation sous forme graphique. Si vous créez un contrôle utilisateur en héritant de la `UserControl`, ou à partir d’un des contrôles Windows Forms, vous pouvez substituer la représentation graphique standard et fournir votre propre code graphique. Si vous souhaitez fournir un rendu personnalisé pour les contrôles constitutifs d’un `UserControl` vous créez, vos options sont plus limitées, tout en autorisant un large éventail de possibilités de graphiques pour vos applications et de contrôles.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Rendu d'un contrôle Windows Forms](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
+ [Rendu d'un contrôle Windows Forms](rendering-a-windows-forms-control.md)  
  Montre comment programmer la logique qui affiche un contrôle.  
   
- [Contrôles dessinés par l’utilisateur](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
- Donne une vue d’ensemble des étapes impliquées dans l’écriture et la substitution de code de rendu de votre contrôle.  
+ [Contrôles dessinés par l’utilisateur](user-drawn-controls.md)  
+ Donne une vue d’ensemble des étapes impliquées dans l’écriture et en remplaçant le code de rendu de votre contrôle.  
   
- [Contrôles constitutifs](../../../../docs/framework/winforms/controls/constituent-controls.md)  
- Décrit comment implémenter le code de rendu personnalisé pour les contrôles constitutifs dans vos contrôles utilisateur et les formulaires.  
+ [Contrôles constitutifs](constituent-controls.md)  
+ Décrit comment implémenter le code de rendu personnalisées pour des contrôles constitutifs dans vos formulaires et contrôles utilisateur.  
   
- [Guide pratique pour rendre votre contrôle invisible au moment de l'exécution](../../../../docs/framework/winforms/controls/how-to-make-your-control-invisible-at-run-time.md)  
+ [Guide pratique pour Rendre votre contrôle Invisible au moment de l’exécution](how-to-make-your-control-invisible-at-run-time.md)  
  Montre comment utiliser le <xref:System.Windows.Forms.Control.Visible%2A> propriété à masquer et afficher un contrôle.  
   
- [Guide pratique pour affecter un arrière-plan transparent à votre contrôle](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- Montre comment utiliser la <xref:System.Windows.Forms.Control.SetStyle%2A> méthode pour créer une couleur d’arrière-plan qui est opaque, transparente ou partiellement transparente.  
+ [Guide pratique pour Affecter un arrière-plan Transparent à votre contrôle](how-to-give-your-control-a-transparent-background.md)  
+ Montre comment utiliser le <xref:System.Windows.Forms.Control.SetStyle%2A> méthode pour créer une couleur d’arrière-plan qui est opaque, transparente ou partiellement transparents.  
   
- [Rendu des contrôles avec les styles visuels](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
+ [Rendu des contrôles avec les styles visuels](rendering-controls-with-visual-styles.md)  
  Montre comment restituer les contrôles à l’aide de styles visuels dans les systèmes d’exploitation qui les prennent en charge.  
   
 ## <a name="reference"></a>Référence  
@@ -46,8 +46,8 @@ La peinture personnalisée des contrôles est une des nombreuses tâches compliq
  Décrit cette méthode.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Guide pratique pour créer des objets graphiques pour le dessin](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Guide pratique pour Créer des objets graphiques pour le dessin](../advanced/how-to-create-graphics-objects-for-drawing.md)  
  Introduit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fonctionnalités graphiques à partir d’un point de vue et donne de liens Visual Studio pour plus d’informations.  
   
- [Variétés de contrôles personnalisés](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- Décrit les types de contrôles personnalisés, que vous pouvez créer.
+ [Variétés de contrôles personnalisés](varieties-of-custom-controls.md)  
+ Décrit les types de contrôles personnalisés que vous pouvez créer.

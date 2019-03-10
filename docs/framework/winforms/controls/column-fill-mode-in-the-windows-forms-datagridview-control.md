@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 823d3c06648ed37003176eab9df538d95f1ced69
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: bd6c27203284b392742b766b22f664b08a7b3a40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304308"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722410"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Mode Remplissage des colonnes dans le contrôle DataGridView Windows Forms
 En mode de remplissage de colonne, le contrôle <xref:System.Windows.Forms.DataGridView> redimensionne automatiquement ses colonnes pour qu'elles remplissent la largeur de la zone d'affichage disponible. Le contrôle n'affiche pas de barre de défilement horizontale, sauf quand cela est nécessaire pour faire en sorte que la largeur de chaque colonne soit supérieure ou égale à la valeur de sa propriété <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -39,8 +39,8 @@ En mode de remplissage de colonne, le contrôle <xref:System.Windows.Forms.DataG
  Le code de démonstration suivant vous permet d'expérimenter avec différentes valeurs pour les propriétés <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> et <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> de différentes colonnes. Dans cet exemple, un contrôle <xref:System.Windows.Forms.DataGridView> est lié à sa propre collection <xref:System.Windows.Forms.DataGridView.Columns%2A>  et une colonne est liée à chacune des propriétés <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> et <xref:System.Windows.Forms.DataGridViewColumn.Width%2A>. Chacune des colonnes est également représentée par une ligne dans le contrôle et la modification des valeurs sur une ligne met à jour les propriétés de la colonne correspondante pour que vous puissiez voir comment les valeurs interagissent.  
   
 ### <a name="code"></a>Code  
- [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
   
 ### <a name="comments"></a>Commentaires  
  Pour utiliser cette application de démonstration  
@@ -76,4 +76,4 @@ En mode de remplissage de colonne, le contrôle <xref:System.Windows.Forms.DataG
 - <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>
-- [Redimensionnement des colonnes et des lignes dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Redimensionnement des colonnes et des lignes dans le contrôle DataGridView Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)

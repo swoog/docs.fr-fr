@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738600"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724932"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Procédure : Fournir une aide dans une Application Windows
 Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant pour attacher des rubriques d’aide d’un fichier d’aide à des contrôles spécifiques sur les Windows Forms. Le fichier d’aide peut être au format HTML, ou HTMLHelp 1.x ou ultérieur.  
@@ -53,10 +53,10 @@ Vous pouvez utiliser de la <xref:System.Windows.Forms.HelpProvider> composant po
 > [!IMPORTANT]
 >  Prenez soin de vérifier toutes les informations envoyées par un client avant de les utiliser dans votre application. Des utilisateurs malveillants peuvent tenter d’envoyer ou d’injecter un script exécutable, des instructions SQL ou un autre code. Avant d’afficher une entrée utilisateur, de la stocker dans une base de données ou de l’utiliser, vérifiez qu’elle ne contient pas d’informations potentiellement dangereuses. Une façon habituelle de le vérifier est d’utiliser une expression régulière pour rechercher des mots clés comme « SCRIPT » quand vous recevez une entrée d’un utilisateur.  
   
- Vous pouvez également utiliser le <xref:System.Windows.Forms.HelpProvider> composant pour afficher l’aide contextuelle, même si vous avez configuré pour afficher les fichiers d’aide pour les contrôles sur vos formulaires Windows. Pour plus d'informations, voir [Procédure : Afficher l’aide contextuelle](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ Vous pouvez également utiliser le <xref:System.Windows.Forms.HelpProvider> composant pour afficher l’aide contextuelle, même si vous avez configuré pour afficher les fichiers d’aide pour les contrôles sur vos formulaires Windows. Pour plus d'informations, voir [Procédure : Afficher l’aide contextuelle](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Afficher l’aide contextuelle](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
-- [Affichage sous forme d’info-bulles de l’aide relative aux contrôles](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [Intégration de l’aide d’utilisateur dans les Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Guide pratique pour Afficher l’aide contextuelle](how-to-display-pop-up-help.md)
+- [Affichage sous forme d’info-bulles de l’aide relative aux contrôles](control-help-using-tooltips.md)
+- [Intégration de l’aide d’utilisateur dans les Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../index.md)

@@ -2,12 +2,12 @@
 title: Modèles de suivi
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482299"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721370"
 ---
 # <a name="tracking-profiles"></a>Modèles de suivi
 
@@ -344,7 +344,7 @@ Les éléments de requête de suivi servent à créer un modèle de suivi à l'a
 > [!WARNING]
 > Pour un WF utilisant l'hôte du service de flux de travail, le modèle de suivi est généralement créé à l'aide d'un fichier de configuration. Mais il peut également être créé avec le code, à l'aide de l'API de modèle de suivi et de requête de suivi.
 
-Un profil configuré en tant que fichier de configuration XML est appliqué à un participant au suivi à l’aide d’une extension de comportement. Il est ajouté à un objet WorkflowServiceHost comme décrit dans la section ultérieure [configuration du suivi d’un flux de travail](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).
+Un profil configuré en tant que fichier de configuration XML est appliqué à un participant au suivi à l’aide d’une extension de comportement. Il est ajouté à un objet WorkflowServiceHost comme décrit dans la section ultérieure [configuration du suivi d’un flux de travail](configuring-tracking-for-a-workflow.md).
 
 Les paramètres de configuration du modèle de suivi déterminent les commentaires des enregistrements de suivi émis par l'hôte. Un participant au suivi s'abonne à des enregistrements de suivi en ajoutant des requêtes à un modèle de suivi. Pour vous abonner à tous les enregistrements de suivi, le modèle de suivi doit spécifier toutes les requêtes de suivi à l’aide de «\*» dans les champs de nom de chacune des requêtes.
 
@@ -387,6 +387,6 @@ Voici quelques exemples communs de profils de suivi :
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Suivi SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Suivi SQL](./samples/sql-tracking.md)
 - [Surveillance de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Surveillance des Applications avec App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
