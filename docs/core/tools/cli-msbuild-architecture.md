@@ -1,21 +1,20 @@
 ---
 title: Architecture des outils en ligne de commande .NET Core
 description: Découvrez les différentes couches des outils .NET Core et les changements apportés aux versions récentes.
-author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46696328"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675691"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Vue d’ensemble générale des modifications des outils .NET Core
 
-Ce document décrit les modifications associées de passage de *project.json* à MSBuild et au système de projet *csproj*, avec des informations sur les modifications apportées aux couches d’outils .NET Core et à l’implémentation des commandes de l’interface CLI. Ces modifications ont été apportées lors du lancement du Kit de développement logiciel (SDK) .NET Core 1.0 et de Visual Studio 2017 le 7 mars 2017 (consultez [l’annonce](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)), mais ont été à l’origine implémentées avec le lancement de la préversion 3 du Kit SDK .NET Core.
+Ce document décrit les modifications associées de passage de *project.json* à MSBuild et au système de projet *csproj*, avec des informations sur les modifications apportées aux couches d’outils .NET Core et à l’implémentation des commandes de l’interface CLI. Ces modifications ont été apportées lors du lancement du Kit de développement logiciel (SDK) .NET Core 1.0 et de Visual Studio 2017 le 7 mars 2017 (consultez [l’annonce](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)), mais ont été à l’origine implémentées avec le lancement de la préversion 3 du Kit SDK .NET Core.
 
 ## <a name="moving-away-from-projectjson"></a>Abandon de project.json
-Le plus grand changement apporté aux outils pour .NET Core est certainement le [passage du système de projet project.json à csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/). Les dernières versions des outils en ligne de commande ne prennent pas en charge les fichiers *project.json*. Cela signifie qu’elle ne peut pas servir à générer, exécuter ou publier des bibliothèques et des applications basées sur project.json. Pour utiliser cette version des outils, vous devez migrer vos projets existants ou en démarrer de nouveaux. 
+Le plus grand changement apporté aux outils pour .NET Core est certainement le [passage du système de projet project.json à csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/). Les dernières versions des outils en ligne de commande ne prennent pas en charge les fichiers *project.json*. Cela signifie qu’elle ne peut pas servir à générer, exécuter ou publier des bibliothèques et des applications basées sur project.json. Pour utiliser cette version des outils, vous devez migrer vos projets existants ou en démarrer de nouveaux. 
 
 Dans le cadre de ce passage, le moteur de génération personnalisé qui a été développé pour générer des projets project.json a été remplacé par un moteur de génération mature et entièrement compatible appelé [MSBuild](https://github.com/Microsoft/msbuild). MSBuild est un moteur connu dans la communauté .NET, car c’est une technologie clé depuis la première version Release de la plateforme. Bien sûr, comme il doit générer des applications .NET Core, MSBuild a été porté vers .NET Core et peut être utilisé sur n’importe quelle plateforme sur laquelle s’exécute .NET Core. Une des principales promesses de .NET Core réside dans une pile de développement multiplateforme, et nous avons veillé à ce que cette évolution n’entrave pas cette promesse.
 

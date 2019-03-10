@@ -3,12 +3,12 @@ title: Modèles personnalisés pour dotnet new
 description: Découvrez les modèles personnalisés pour tout type de projet ou de fichier .NET.
 author: guardrex
 ms.date: 08/11/2017
-ms.openlocfilehash: 23dac9f4efd64ff93b00e41b1f4195e964871a3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503924"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679058"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modèles personnalisés pour dotnet new
 
@@ -16,7 +16,7 @@ Le [SDK .NET Core](https://www.microsoft.com/net/download/core) est fourni avec 
 
 Vous pouvez installer des modèles personnalisés à partir d’un package NuGet sur tout flux NuGet, en référençant un fichier *nupkg* NuGet directement ou en spécifiant un répertoire de système de fichiers qui contient le modèle. Le moteur de modèle offre des fonctionnalités qui vous permettent de remplacer des valeurs, d’inclure et d’exclure des fichiers et des régions de fichiers, ainsi que d’exécuter des opérations de traitement personnalisées quand votre modèle est utilisé.
 
-Le moteur de modèle est open source et le dépôt de code en ligne se trouve à l’adresse [dotnet/templating](https://github.com/dotnet/templating/) sur GitHub. Visitez le dépôt [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) pour obtenir des exemples de modèles. Vous trouverez d’autres modèles, y compris des modèles tiers, à partir de la page [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (modèles disponibles pour dotnet new) sur GitHub. Pour plus d’informations sur la création et l’utilisation de modèles personnalisés, consultez [Guide pratique pour créer vos propres modèles pour dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) et le [Wiki du dépôt GitHub dotnet/templating GitHub](https://github.com/dotnet/templating/wiki).
+Le moteur de modèle est open source et le dépôt de code en ligne se trouve à l’adresse [dotnet/templating](https://github.com/dotnet/templating/) sur GitHub. Visitez le dépôt [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) pour obtenir des exemples de modèles. Vous trouverez d’autres modèles, y compris des modèles tiers, à partir de la page [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (modèles disponibles pour dotnet new) sur GitHub. Pour plus d’informations sur la création et l’utilisation de modèles personnalisés, consultez [Guide pratique pour créer vos propres modèles pour dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) et le [Wiki du dépôt GitHub dotnet/templating GitHub](https://github.com/dotnet/templating/wiki).
 
 Pour suivre une procédure pas à pas et créer un modèle, consultez le didacticiel [Créer un modèle personnalisé pour dotnet new](~/docs/core/tutorials/create-custom-template.md).
 
@@ -45,11 +45,11 @@ Le fichier *template.json* est placé dans un dossier *.template.config* dans le
 | Membre            | Type          | Description |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Schéma JSON pour le fichier *template.json*. Les éditeurs qui prennent en charge les schémas JSON activent les fonctionnalités d’édition JSON quand le schéma est spécifié. Par exemple, [Visual Studio Code](https://code.visualstudio.com/) exige ce membre pour activer IntelliSense. Utilisez la valeur de `http://json.schemastore.org/template`. |
-| `author`          | chaîne        | Auteur du modèle. |
+| `author`          | string        | Auteur du modèle. |
 | `classifications` | tableau(chaîne) | Zéro ou plusieurs caractéristiques du modèle qu’un utilisateur peut utiliser pour rechercher le modèle. Les classifications apparaissent également dans la colonne *Balises* quand il apparaît dans une liste de modèles produite à l’aide de la commande <code>dotnet new -l&#124;--list</code>. |
-| `identity`        | chaîne        | Nom unique pour ce modèle. |
-| `name`            | chaîne        | Nom de modèle que les utilisateurs doivent voir. |
-| `shortName`       | chaîne        | Raccourci par défaut pour sélectionner le modèle qui s’applique aux environnements où le nom du modèle est spécifié par l’utilisateur (non sélectionné par le biais d’une interface graphique utilisateur). Par exemple, le nom court est utile si les modèles sont utilisés à partir d’une invite de commandes avec des commandes CLI. |
+| `identity`        | string        | Nom unique pour ce modèle. |
+| `name`            | string        | Nom de modèle que les utilisateurs doivent voir. |
+| `shortName`       | string        | Raccourci par défaut pour sélectionner le modèle qui s’applique aux environnements où le nom du modèle est spécifié par l’utilisateur (non sélectionné par le biais d’une interface graphique utilisateur). Par exemple, le nom court est utile si les modèles sont utilisés à partir d’une invite de commandes avec des commandes CLI. |
 
 #### <a name="example"></a>Exemple :
 
@@ -82,11 +82,11 @@ Le contenu du dossier de projet, avec son fichier *.template.config/template.jso
 
 | Élément            | Type   | Description |
 | ------------------ | ------ | ----------- |
-| **\<authors>**     | chaîne | Liste séparée par des virgules des auteurs de packages, qui correspondent aux noms de profil sur nuget.org. Les auteurs sont affichés dans la galerie NuGet sur nuget.org et servent à croiser les références des packages de mêmes auteurs. |
-| **\<description>** | chaîne | Description longue du package pour l’affichage de l’interface utilisateur. |
-| **\<id>**          | chaîne | Identificateur de package respectant la casse, qui doit être unique dans nuget.org ou dans toute autre galerie susceptible de l’héberger. Les ID ne peuvent pas contenir d’espaces ou de caractères qui ne sont pas valides pour une URL et suivent généralement les règles d’espace de noms .NET. Pour obtenir des conseils, consultez [Choix d’un identificateur de package unique et définition du numéro de version](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
-| **\<packageType>** | chaîne | Placez cet élément à l’intérieur d’un élément **\<packageTypes>** parmi les éléments **\<metadata>**. Affectez à l’attribut `name` de l’élément **\<packageType>** la valeur `Template`. |
-| **\<version>**     | chaîne | Version du package, selon le format version_principale.version_secondaire.version_corrective. Les numéros de version peuvent inclure un suffixe de préversion comme décrit dans la rubrique [Préversions](/nuget/create-packages/prerelease-packages#semantic-versioning). |
+| **\<authors>**     | string | Liste séparée par des virgules des auteurs de packages, qui correspondent aux noms de profil sur nuget.org. Les auteurs sont affichés dans la galerie NuGet sur nuget.org et servent à croiser les références des packages de mêmes auteurs. |
+| **\<description>** | string | Description longue du package pour l’affichage de l’interface utilisateur. |
+| **\<id>**          | string | Identificateur de package respectant la casse, qui doit être unique dans nuget.org ou dans toute autre galerie susceptible de l’héberger. Les ID ne peuvent pas contenir d’espaces ou de caractères qui ne sont pas valides pour une URL et suivent généralement les règles d’espace de noms .NET. Pour obtenir des conseils, consultez [Choix d’un identificateur de package unique et définition du numéro de version](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
+| **\<packageType>** | string | Placez cet élément à l’intérieur d’un élément **\<packageTypes>** parmi les éléments **\<metadata>**. Affectez à l’attribut `name` de l’élément **\<packageType>** la valeur `Template`. |
+| **\<version>**     | string | Version du package, selon le format version_principale.version_secondaire.version_corrective. Les numéros de version peuvent inclure un suffixe de préversion comme décrit dans la rubrique [Préversions](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
 Consultez les [informations de référence sur .nuspec](/nuget/schema/nuspec) pour connaître le schéma du fichier *nuspec*. Un exemple de fichier *nuspec* pour un modèle est disponible dans le didacticiel [Créer un modèle personnalisé pour dotnet new](~/docs/core/tutorials/create-custom-template.md).
 
@@ -155,5 +155,5 @@ dotnet new <TEMPLATE>
 - [Créer un modèle personnalisé pour dotnet new (didacticiel)](../tutorials/create-custom-template.md)
 - [Wiki du dépôt GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)
 - [Dépôt GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
-- [Guide pratique pour créer vos propres modèles pour dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [Guide pratique pour créer vos propres modèles pour dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
 - [Schéma *template.json* dans le magasin de schémas JSON](http://json.schemastore.org/template)

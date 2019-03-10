@@ -4,12 +4,12 @@ description: Découvrez le pack de compatibilité Windows et comment l’utilise
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 09c5533dbc46d16585b7f3cbfd2a3a70819ceb75
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903745"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717893"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Utiliser le pack de compatibilité Windows pour porter du code vers .NET Core
 
@@ -53,7 +53,7 @@ Pour plus d’informations, consultez la [spécification du pack de compatibilit
 
 3. Si vous souhaitez rester sur Windows, vous êtes prêt.
 
-4. Si vous souhaitez exécuter l’application .NET Core ou la bibliothèque .NET Standard sur Linux ou macOS, utilisez [l’analyseur d’API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) pour trouver l’usage des API qui ne fonctionnent pas sur toutes les plateformes.
+4. Si vous souhaitez exécuter l’application .NET Core ou la bibliothèque .NET Standard sur Linux ou macOS, utilisez [l’analyseur d’API](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) pour trouver l’usage des API qui ne fonctionnent pas sur toutes les plateformes.
 
 5. Supprimez les usages de ces API, remplacez-les par des alternatives multiplateformes ou protégez-les à l’aide d’une vérification de la plateforme, par exemple :
 
