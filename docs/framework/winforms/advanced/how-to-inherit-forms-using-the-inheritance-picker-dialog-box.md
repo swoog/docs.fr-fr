@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601829"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719353"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procédure : Hériter de formulaires à l’aide de la boîte de dialogue de sélecteur de l’héritage
 Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet consiste à utiliser la boîte de dialogue **Sélecteur d’héritage**. Avec elle, vous pouvez tirer parti du code ou des interfaces utilisateur que vous avez déjà créés dans d'autres solutions.  
@@ -41,7 +41,7 @@ Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet con
   
 6.  Sélectionnez le composant.  
   
-     Dans l’**Explorateur de solutions**, le composant est ajouté à votre projet. S’il possède une interface utilisateur, les contrôles qui font partie du formulaire hérité sont marqués d’un glyphe (![capture d’écran VisualBasicInheritanceSymbol](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) et, quand ils sont sélectionnés, ils sont encadrés d’une bordure indiquant le niveau de sécurité dont dispose le contrôle sur le formulaire de superclasse. Les comportements qui correspondent aux différents niveaux de sécurité sont répertoriés dans le tableau ci-dessous.  
+     Dans l’**Explorateur de solutions**, le composant est ajouté à votre projet. S’il possède une interface utilisateur, les contrôles qui font partie du formulaire hérité sont marqués d’un glyphe (![capture d’écran VisualBasicInheritanceSymbol](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) et, quand ils sont sélectionnés, ils sont encadrés d’une bordure indiquant le niveau de sécurité dont dispose le contrôle sur le formulaire de superclasse. Les comportements qui correspondent aux différents niveaux de sécurité sont répertoriés dans le tableau ci-dessous.  
   
     |Niveau de sécurité du contrôle|Interaction disponible via le Concepteur et l'Éditeur de code avec le formulaire hérité|  
     |-------------------------------|--------------------------------------------------------------------------------|  
@@ -51,13 +51,13 @@ Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet con
     |Internal (Friend en Visual Basic)|Bordure standard sans poignée de redimensionnement, affichée sur le formulaire, propriétés visibles dans la fenêtre **Propriétés**. Toutefois, tous les aspects du contrôle sont considérés en lecture seule. Vous ne pouvez pas déplacer ou dimensionner le contrôle, ni modifier ses propriétés. Si le contrôle est un conteneur d'autres contrôles, comme une zone de groupe, vous ne pouvez pas ajouter de nouveaux contrôles ou supprimer des contrôles existants, même s'ils sont publics. Le contrôle est accessible uniquement par les autres membres de l'assembly qui le contient.|  
     |Private|Bordure standard sans poignée de redimensionnement, affichée sur le formulaire, propriétés visibles dans la fenêtre **Propriétés**. Toutefois, tous les aspects du contrôle sont considérés en lecture seule. Vous ne pouvez pas déplacer ou dimensionner le contrôle, ni modifier ses propriétés. Si le contrôle est un conteneur d'autres contrôles, comme une zone de groupe, vous ne pouvez pas ajouter de nouveaux contrôles ou supprimer des contrôles existants, même s'ils sont publics. Le contrôle est accessible uniquement par la classe qui le déclare.|  
   
-     Pour plus d’informations sur la façon de modifier l’apparence d’un formulaire de base, consultez [Conséquences de la modification de l’aspect d’un formulaire de base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
+     Pour plus d’informations sur la façon de modifier l’apparence d’un formulaire de base, consultez [Conséquences de la modification de l’aspect d’un formulaire de base](effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Quand vous combinez des contrôles et des composants hérités avec des contrôles et des composants standard sur des Windows Forms, vous pouvez rencontrer des conflits avec l'ordre de plan. Vous pouvez corriger ce problème en modifiant l’ordre de plan. Pour cela, cliquez dans le menu **Format**, pointez sur **Ordre**, puis cliquez sur **Mettre au premier plan** ou **Mettre à l’arrière-plan**. Pour plus d’informations sur l’ordre de plan des contrôles, consultez [Comment : Superposer des objets dans les Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Quand vous combinez des contrôles et des composants hérités avec des contrôles et des composants standard sur des Windows Forms, vous pouvez rencontrer des conflits avec l'ordre de plan. Vous pouvez corriger ce problème en modifiant l’ordre de plan. Pour cela, cliquez dans le menu **Format**, pointez sur **Ordre**, puis cliquez sur **Mettre au premier plan** ou **Mettre à l’arrière-plan**. Pour plus d’informations sur l’ordre de plan des contrôles, consultez [Comment : Superposer des objets dans les Windows Forms](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - [Inherits (instruction)](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Conséquences de la modification de l’aspect d’un formulaire de base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Héritage visuel des Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Conséquences de la modification de l’aspect d’un formulaire de base](effects-of-modifying-base-form-appearance.md)
+- [Héritage visuel des Windows Forms](windows-forms-visual-inheritance.md)

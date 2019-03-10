@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9c8580f61bcb311ca6b2e1cc2a11b4d4a4dbe79c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664765"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719414"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Fonctionnalité de glisser-déplacer dans les Windows Forms
 Windows Forms comprend un ensemble de méthodes, événements et classes qui implémentent le comportement de glisser-déposer. Cette rubrique offre une vue d’ensemble de la prise en charge du glisser-déposer dans Windows Forms.  Consultez également [les opérations de glisser-déplacer et prise en charge du Presse-papiers](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
@@ -44,4 +44,4 @@ Windows Forms comprend un ensemble de méthodes, événements et classes qui imp
  La classe <xref:System.Windows.Forms.QueryContinueDragEventArgs> fournit l'état actuel des boutons de la souris et des touches de modification du clavier, une valeur indiquant si la touche Échappement a été enfoncée et une valeur <xref:System.Windows.Forms.DragAction> qui peut être définie pour spécifier si l'opération de glisser-déplacer doit continuer.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Entrée de la souris dans une application Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Entrée de la souris dans une application Windows Forms](mouse-input-in-a-windows-forms-application.md)

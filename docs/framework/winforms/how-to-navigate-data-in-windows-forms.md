@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 0d3703019f081f07ecb29bf9229f0a2044764ae6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586902"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725334"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Procédure : Naviguer parmi les données dans les Windows Forms
 Dans une application Windows, pour parcourir les enregistrements dans une source de données le plus simple consiste à lier un <xref:System.Windows.Forms.BindingSource> composant à la source de données, puis lier les contrôles à le <xref:System.Windows.Forms.BindingSource>. Vous pouvez ensuite utiliser la méthode de navigation intégrée sur le <xref:System.Windows.Forms.BindingSource> tel un <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> et <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. À l’aide de ces méthodes ajustera la <xref:System.Windows.Forms.BindingSource.Position%2A> et <xref:System.Windows.Forms.BindingSource.Current%2A> propriétés de la <xref:System.Windows.Forms.BindingSource> en conséquence. Vous pouvez également rechercher un élément et définissez-le comme l’élément actuel en définissant le <xref:System.Windows.Forms.BindingSource.Position%2A> propriété.  
@@ -28,8 +28,8 @@ Dans une application Windows, pour parcourir les enregistrements dans une source
     > [!NOTE]
     >  Définition de la <xref:System.Windows.Forms.BindingSource.Position%2A> propriété avec une valeur au-delà du premier ou dernier enregistrement n’entraîne pas une erreur, comme le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] vous autorisera pas à définir la position sur une valeur en dehors des limites de la liste. S’il est important dans votre application pour savoir si vous avez dépassé le premier ou dernier enregistrement, inclure une logique pour déterminer si vous dépassez le nombre d’éléments de données.  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Pour vérifier si vous avez dépassé la fin ou au début  
   
@@ -40,18 +40,18 @@ Dans une application Windows, pour parcourir les enregistrements dans une source
     > [!NOTE]
     >  N’oubliez pas que, vous modifiez la liste que vous naviguez dans le code, vous devrez réactiver la **suivant** bouton, afin que les utilisateurs puissent parcourir toute la durée de la nouvelle liste. En outre, n’oubliez pas que la méthode ci-dessus <xref:System.Windows.Forms.BindingSource.PositionChanged> événement spécifique <xref:System.Windows.Forms.BindingSource> vous travaillez doit être associé à sa méthode de gestion des événements. Voici un exemple d’une méthode pour la gestion de la <xref:System.Windows.Forms.BindingSource.PositionChanged> événement :  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.NavigatingData#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
   
 ### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Pour rechercher un élément et le définir comme élément actuel  
   
 1.  Recherchez l’enregistrement que vous souhaitez définir comme élément actuel. Vous pouvez le faire à l’aide de la <xref:System.Windows.Forms.BindingSource.Find%2A> méthode de la <xref:System.Windows.Forms.BindingSource>, si votre source de données implémente <xref:System.ComponentModel.IBindingList>. Quelques exemples de données sources qui implémentent <xref:System.ComponentModel.IBindingList> sont <xref:System.ComponentModel.BindingList%601> et <xref:System.Data.DataView>.  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Sources de données prises en charge par les Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)
-- [Notification de modifications dans la liaison de données Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Liaison de données Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Sources de données prises en charge par les Windows Forms](data-sources-supported-by-windows-forms.md)
+- [Notification de modifications dans la liaison de données Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)

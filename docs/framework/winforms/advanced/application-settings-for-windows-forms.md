@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 6179837a072c9e4de8e0e8c71a2723942d010899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636967"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719310"
 ---
 # <a name="application-settings-for-windows-forms"></a>Paramètres d'application pour les Windows Forms
 La fonctionnalité Paramètres d’application de Windows Forms simplifie la création, le stockage et la gestion des applications personnalisées et des préférences utilisateur sur le client. Avec les paramètres d'application, vous pouvez stocker non seulement des données d'application telles que des chaînes de connexion de base de données, mais également des données spécifiques à l'utilisateur, telles que les positions des barres d'outils et les listes des derniers éléments utilisés.  
@@ -38,7 +38,7 @@ La fonctionnalité Paramètres d’application de Windows Forms simplifie la cr�
   
 ## <a name="related-topics"></a>Rubriques connexes
 
-[Section de Configuration de Windows Forms](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
+[Section de Configuration de Windows Forms](../../configure-apps/file-schema/winforms/index.md)    
 Documents prennent en charge les paramètres pour activer la haute résolution dans Windows Forms Application en commençant par le .NET Framework 4.7.
 
 ## <a name="see-also"></a>Voir aussi

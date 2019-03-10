@@ -2,12 +2,12 @@
 title: Portée et visibilité de la définition de l'activité
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: f3a8936c1bc3275468e1e4dbd23d0d001edad021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518500"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723840"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Portée et visibilité de la définition de l'activité
 La portée et la visibilité de la définition d'une activité, tout comme la portée et la visibilité d'un objet représentent la capacité d'autres objets d'accéder aux membres de l'activité. La définition de l'activité est assurée par les implémentations suivantes :  
@@ -22,7 +22,7 @@ La portée et la visibilité de la définition d'une activité, tout comme la po
  Outre la portée des données, la visibilité du modèle d'activité peut limiter l'accès à d'autres aspects de l'activité, tels que la validation, le débogage, le suivi ou le traçage. Les propriétés d'exécution utilisent la visibilité et la portée pour contraindre les caractéristiques d'exécution à une portée spécifique de définition. Les racines secondaires utilisent la visibilité et la portée pour contraindre l'état capturé par un <xref:System.Activities.Statements.CompensableActivity> à la portée de la définition dans laquelle les activités compensables sont utilisées.  
   
 ## <a name="definition-and-usage"></a>Définition et utilisation  
- Un flux de travail est écrit en créant de nouvelles activités en héritant de classes de l’activité de base et à l’aide des activités à partir de la [bibliothèque d’activités intégrée](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md). Pour utiliser une activité, l'auteur de l'activité doit configurer la visibilité de chaque composant de sa définition.  
+ Un flux de travail est écrit en créant de nouvelles activités en héritant de classes de l’activité de base et à l’aide des activités à partir de la [bibliothèque d’activités intégrée](net-framework-4-5-built-in-activity-library.md). Pour utiliser une activité, l'auteur de l'activité doit configurer la visibilité de chaque composant de sa définition.  
   
 ### <a name="activity-members"></a>Membres d'activité  
  Le modèle d'activité définit les arguments, les variables, les délégués et les activités enfants que l'activité rend disponible aux consommateurs. Chacun de ces membres peut être déclaré `public` ou `private`. Les membres publics sont configurés par le consommateur de l'activité, alors que les membres `private` utilisent une implémentation corrigée par l'auteur de l'activité. Les règles de visibilité applicables à la portée des données sont les suivantes :  

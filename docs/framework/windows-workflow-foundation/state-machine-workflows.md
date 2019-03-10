@@ -2,12 +2,12 @@
 title: Workflows d'ordinateur d'état
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 89819f6b37fdaf601cf4e8b99fd5156c8e40af99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521294"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724958"
 ---
 # <a name="state-machine-workflows"></a>Workflows d'ordinateur d'état
 Une machine à états représente un paradigme connu pour développer des programmes. L'activité <xref:System.Activities.Statements.StateMachine>, avec <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, et d'autres activités peut être utilisée pour générer des programmes de workflow de machine à états. Cette rubrique fournit une vue d'ensemble de la création des workflows de machine à états.  
@@ -21,16 +21,16 @@ Une machine à états représente un paradigme connu pour développer des progra
   
 -   <xref:System.Activities.Statements.Transition>  
   
- Pour créer un workflow de machine à états, les états sont ajoutés à une activité <xref:System.Activities.Statements.StateMachine>, et les transitions sont utilisées pour contrôler le flux entre les états. La capture d’écran suivante, à partir de la [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) étape [Comment : Créer un Workflow de Machine d’état](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), affiche un workflow d’ordinateur d’état avec trois états et transitions de trois. **Initialize Target** est l’état initial et représente le premier état dans le flux de travail. Cela est indiqué par la ligne de début à partir du **Démarrer** nœud. L’état final dans le flux de travail est nommé **FinalState**et représente le point auquel le flux de travail est terminé.  
+ Pour créer un workflow de machine à états, les états sont ajoutés à une activité <xref:System.Activities.Statements.StateMachine>, et les transitions sont utilisées pour contrôler le flux entre les états. La capture d’écran suivante, à partir de la [Getting Started Tutorial](getting-started-tutorial.md) étape [Comment : Créer un Workflow de Machine d’état](how-to-create-a-state-machine-workflow.md), affiche un workflow d’ordinateur d’état avec trois états et transitions de trois. **Initialize Target** est l’état initial et représente le premier état dans le flux de travail. Cela est indiqué par la ligne de début à partir du **Démarrer** nœud. L’état final dans le flux de travail est nommé **FinalState**et représente le point auquel le flux de travail est terminé.  
   
- ![Flux de travail de Machine à états terminé](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Flux de travail de Machine à états terminé](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
  Un workflow de machine à états ne doit avoir qu'un seul état initial, et au moins un état final. Chaque état qui n'est pas un état final doit avoir au moins une transition. Les sections suivantes décrivent la création et la configuration des états et des transitions.  
   
 ## <a name="creating-and-configuring-states"></a>Création et configuration d'états  
  Un <xref:System.Activities.Statements.State> représente un état dans lequel une machine à états peut être. Pour ajouter un <xref:System.Activities.Statements.State> à un workflow, faites glisser le **état** Concepteur d’activités à partir de la **Machine à états** section de la **boîte à outils** et déposez-le sur une <xref:System.Activities.Statements.StateMachine> activité sur le [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] surface.  
   
- ![WF4 Activités de l’ordinateur d’état](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![WF4 Activités de l’ordinateur d’état](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
   
  Pour configurer un état en tant que le **état Initial des**, cliquez sur l’état et sélectionnez **définir comme état Initial**. En outre, s’il n’existe aucun état initial actuel, l’état initial peut être désigné en faisant glisser une ligne à partir de la **Démarrer** nœud en haut du flux de travail à l’état souhaité. Quand un <xref:System.Activities.Statements.StateMachine> activité est déposée sur le Concepteur de flux de travail, il est préconfiguré avec un premier état nommé **State1**. Un workflow de machine à états ne doit avoir qu'un seul état initial.  
   
@@ -59,7 +59,7 @@ Une machine à états représente un paradigme connu pour développer des progra
 > [!NOTE]
 >  Notez que si la condition <xref:System.Activities.Statements.Transition.Condition%2A> d'une transition a pour valeur `False` (ou si toutes les conditions d'une transition de déclencheur partagée ont la valeur `False`), la transition n'a pas lieu et tous les déclencheurs de toutes les transitions de l'état sont replanifiés.  
   
- Pour plus d’informations sur la création de workflows machine à états, consultez [Comment : Créer un Workflow de Machine à états](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), [Concepteur d’activités StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), [Concepteur d’activités d’état](/visualstudio/workflow-designer/state-activity-designer), [Concepteur d’activités FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)et [Concepteur d’activités de transition](/visualstudio/workflow-designer/transition-activity-designer).  
+ Pour plus d’informations sur la création de workflows machine à états, consultez [Comment : Créer un Workflow de Machine à états](how-to-create-a-state-machine-workflow.md), [Concepteur d’activités StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), [Concepteur d’activités d’état](/visualstudio/workflow-designer/state-activity-designer), [Concepteur d’activités FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)et [Concepteur d’activités de transition](/visualstudio/workflow-designer/transition-activity-designer).  
   
 ## <a name="state-machine-terminology"></a>Terminologie de machine à états  
  Cette section explique la terminologie de machine à états utilisée dans cette rubrique.  
@@ -101,7 +101,7 @@ Une machine à états représente un paradigme connu pour développer des progra
  État qui représente l'achèvement de la machine à états.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Créer un Workflow d’ordinateur d’état](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)
+- [Guide pratique pour Créer un Workflow d’ordinateur d’état](how-to-create-a-state-machine-workflow.md)
 - [Concepteur d’activités StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [Concepteur d’activités State](/visualstudio/workflow-designer/state-activity-designer)
 - [Concepteur d’activités FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)

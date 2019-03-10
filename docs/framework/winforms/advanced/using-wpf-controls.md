@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 24b88e456628c5a0bdc3cded60b0e52a92057851
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841602"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713798"
 ---
 # <a name="using-wpf-controls"></a>Utilisation de contrôles WPF
 Vous pouvez utiliser des contrôles Windows Presentation Foundation (WPF) dans vos applications Windows Forms. Bien qu’il s’agit de deux technologies d’affichage différent, ils interagissent sans heurts.  
@@ -20,19 +20,19 @@ Vous pouvez utiliser des contrôles Windows Presentation Foundation (WPF) dans v
  Vous pouvez également utiliser des contrôles Windows Forms dans vos applications WPF. Pour plus d’informations, consultez [XAML de conception dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour copier et coller un contrôle ElementHost au moment du design](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
+ [Guide pratique pour Copiez et collez un contrôle ElementHost au moment du Design](how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
  Montre comment copier un contrôle Windows Presentation Foundation sur un formulaire Windows.  
   
- [Procédure pas à pas : réorganisation du contenu WPF sur les Windows Forms au moment du design](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
+ [Procédure pas à pas : Réorganisation du contenu WPF dans les Windows Forms au moment du Design](walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
  Montre comment utiliser les fonctionnalités de disposition Windows Forms, telles que l’ancrage et les lignes d’alignement, pour organiser les contrôles de Windows Presentation Foundation.
   
- [Procédure pas à pas : création de contenu WPF sur les Windows Forms au moment du design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
+ [Procédure pas à pas : Création de contenu WPF dans les Windows Forms au moment du Design](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
  Montre comment créer un contrôle Windows Presentation Foundation pour une utilisation dans vos applications Windows Forms.
   
- [Procédure pas à pas : assignation du contenu WPF sur les Windows Forms au moment du design](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
+ [Procédure pas à pas : Assignation du contenu WPF dans les Windows Forms au moment du Design](walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  Montre comment sélectionner les types de contrôle Windows Presentation Foundation que vous souhaitez afficher sur votre formulaire.  
   
- [Procédure pas à pas : application de styles au contenu WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
+ [Procédure pas à pas : Contenu WPF de style](walkthrough-styling-wpf-content.md)  
  Affiche le workflow entre le Concepteur de formulaires Windows et le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] pour appliquer des styles à des contrôles Windows Presentation Foundation.  
   
 ## <a name="reference"></a>Référence  
@@ -43,7 +43,7 @@ Vous pouvez utiliser des contrôles Windows Presentation Foundation (WPF) dans v
  Décrit une classe que vous pouvez utiliser pour héberger des contrôles Windows Forms dans votre application Windows Presentation Foundation.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Migration et interopérabilité](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [Migration et interopérabilité](../../wpf/advanced/migration-and-interoperability.md)  
  Décrit l’interopérabilité entre les technologies Windows Presentation Foundation et Windows Forms.  
   
  [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  

@@ -16,21 +16,21 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: ec1feda5547a96a0deac6f9d2e6ba1139e3fa73f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f98dac8b9d14cac01e109627d40fe01c37c6954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732087"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720824"
 ---
 # <a name="matrix-representation-of-transformations"></a>Représentation matricielle des transformations
 Une matrice m × n est un ensemble de nombres organisés dans des millions de lignes et colonnes n. L’illustration suivante montre plusieurs matrices.  
   
- ![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.gif "AboutGdip05_art04")  
+ ![Transformations](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
   
  Vous pouvez ajouter deux matrices de même taille en ajoutant des éléments individuels. L’illustration suivante montre deux exemples d’ajout de la matrice.  
   
- ![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.gif "AboutGdip05_art05")  
+ ![Transformations](./media/aboutgdip05-art05.gif "AboutGdip05_art05")  
   
  Une matrice m × n peut être multipliée par une matrice de p × n, et le résultat est une matrice de p × m. Le nombre de colonnes dans la première matrice doit être le même que le nombre de lignes dans la deuxième matrice. Par exemple, une matrice 4 × 2 peut être multipliée par une matrice 2 × 3 pour produire une matrice 4 × 3.  
   
@@ -48,23 +48,23 @@ Une matrice m × n est un ensemble de nombres organisés dans des millions de li
   
  L’illustration suivante montre plusieurs exemples de multiplication de matrice.  
   
- ![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.gif "AboutGdip05_art06")  
+ ![Transformations](./media/aboutgdip05-art06.gif "AboutGdip05_art06")  
   
  Si vous pensez que d’un point dans un plan est une 1 matrice × 2, vous pouvez transformer ce point en la multipliant par une matrice 2 × 2. L’illustration suivante montre plusieurs transformations appliquées au point (2, 1).  
   
- ![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05_art07")  
+ ![Transformations](./media/aboutgdip05-art07.gif "AboutGdip05_art07")  
   
  Toutes les transformations indiquées dans la figure précédente sont des transformations linéaires. Certaines transformations, telles que la traduction, ne sont pas linéaires et ne peuvent pas être exprimées en tant que la multiplication par une matrice 2 × 2. Supposons que vous vouliez pour commencer le point (2, 1), faire pivoter de 90 degrés, translation de 3 unités sur l’axe x et la traduire 4 unités sur l’axe y. Vous pouvez y parvenir à l’aide d’une multiplication de matrice suivie d’une addition de matrice.  
   
- ![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05_art08")  
+ ![Transformations](./media/aboutgdip05-art08.gif "AboutGdip05_art08")  
   
  Une transformation linéaire (multiplication par une matrice 2 × 2) suivie d’une traduction (ajout d’une 1 matrice × 2) est appelée une transformation affine. Une alternative au stockage d’une transformation affine dans une paire de matrices (une pour la partie linéaire) et une pour la traduction consiste à stocker la transformation ensemble dans une matrice 3 x 3. Pour que cela fonctionne, un point dans le plan doit être stocké dans une matrice 1 × 3 avec une coordonnée 3e factice. La technique habituelle consiste à rendre toutes les coordonnées 3e égal à 1. Par exemple, le point (2, 1) est représenté par la matrice [2 1 1]. L’illustration suivante montre une transformation affine (rotation de 90 degrés, translation de 3 unités sur l’axe x et 4 unités dans la direction y) exprimée sous la forme multiplication par une seule matrice 3 × 3.  
   
- ![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.gif "AboutGdip05_art09")  
+ ![Transformations](./media/aboutgdip05-art09.gif "AboutGdip05_art09")  
   
  Dans l’exemple précédent, le point (2, 1) est mappé au point (2, 6). Notez que la troisième colonne de la matrice 3 x 3 contient les nombres 0, 0, 1. Cela sera toujours le cas pour la matrice 3 x 3 d’une transformation affine. Les nombres importants sont les six nombres des colonnes 1 et 2. La partie supérieure gauche 2 × 2 de la matrice représente la partie linéaire de la transformation, et les deux premières entrées de la 3e ligne représentent la translation.  
   
- ![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")  
+ ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
  Dans [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vous pouvez stocker une transformation affine dans un <xref:System.Drawing.Drawing2D.Matrix> objet. Étant donné que la troisième colonne d’une matrice qui représente une transformation affine est toujours (0, 0, 1), vous spécifiez uniquement les six nombres dans les deux premières colonnes lorsque vous construisez un <xref:System.Drawing.Drawing2D.Matrix> objet. L’instruction `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` construit la matrice affichée dans la figure précédente.  
   
@@ -87,7 +87,7 @@ Une matrice m × n est un ensemble de nombres organisés dans des millions de li
   
  L’illustration suivante montre les matrices A, B, C et D.  
   
- ![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")  
+ ![Transformations](./media/aboutgdip05-art12.gif "AboutGdip05_art12")  
   
  Le fait que la matrice d’une transformation composite peut être formée en multipliant les matrices de transformation individuelles signifie que n’importe quelle séquence de transformations affines peut être stockée dans un seul <xref:System.Drawing.Drawing2D.Matrix> objet.  
   
@@ -96,13 +96,13 @@ Une matrice m × n est un ensemble de nombres organisés dans des millions de li
   
  Le <xref:System.Drawing.Drawing2D.Matrix> classe fournit plusieurs méthodes pour créer une transformation composite : <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, et <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>. L’exemple suivant crée la matrice d’une transformation composite qui pivote tout d’abord de 30 degrés, puis met à l’échelle par un facteur de 2 sur l’axe y et traduit alors 5 unités dans la direction x :  
   
- [!code-csharp[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.CoordinateSystems#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.CoordinateSystems#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
   
  L’illustration suivante montre la matrice.  
   
- ![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")  
+ ![Transformations](./media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
 ## <a name="see-also"></a>Voir aussi
-- [Systèmes de coordonnées et transformations](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
-- [Utilisation des transformations dans GDI+ managé](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+- [Systèmes de coordonnées et transformations](coordinate-systems-and-transformations.md)
+- [Utilisation des transformations dans GDI+ managé](using-transformations-in-managed-gdi.md)

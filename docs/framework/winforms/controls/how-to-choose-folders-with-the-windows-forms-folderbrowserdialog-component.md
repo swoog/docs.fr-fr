@@ -12,12 +12,12 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 7055875f25aa0f39feb2d944f4b6684c6ae5d9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea5fdc9708d8e896eb66fa42f64cac672baff08b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614691"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724555"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Procédure : Choisir des dossiers avec le composant de FolderBrowserDialog Windows Forms
 Souvent, dans les applications Windows que vous créez, vous devez demander aux utilisateurs de sélectionner un dossier, le plus souvent pour enregistrer un ensemble de fichiers. Les formulaires Windows <xref:System.Windows.Forms.FolderBrowserDialog> composant vous permet d’effectuer rapidement cette tâche.  
@@ -62,11 +62,11 @@ Souvent, dans les applications Windows que vous créez, vous devez demander aux 
     ```  
   
     > [!IMPORTANT]
-    >  Pour utiliser cette classe, votre assembly nécessite un niveau de privilège accordé par la <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> propriété, qui fait partie de la <xref:System.Security.Permissions.FileIOPermissionAccess> énumération. Si vous l’exécutez dans un contexte de confiance partielle, le processus peut lever une exception en raison de privilèges insuffisants. Pour plus d’informations, consultez [Notions fondamentales de la sécurité d’accès du code](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Pour utiliser cette classe, votre assembly nécessite un niveau de privilège accordé par la <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> propriété, qui fait partie de la <xref:System.Security.Permissions.FileIOPermissionAccess> énumération. Si vous l’exécutez dans un contexte de confiance partielle, le processus peut lever une exception en raison de privilèges insuffisants. Pour plus d’informations, consultez [Notions fondamentales de la sécurité d’accès du code](../../misc/code-access-security-basics.md).  
   
- Pour plus d’informations sur la façon d’enregistrer des fichiers, consultez [Comment : Enregistrer des fichiers à l’aide du composant SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
+ Pour plus d’informations sur la façon d’enregistrer des fichiers, consultez [Comment : Enregistrer des fichiers à l’aide du composant SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md).  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Vue d’ensemble du composant FolderBrowserDialog (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)
-- [FolderBrowserDialog, composant](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+- [Vue d’ensemble du composant FolderBrowserDialog (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
+- [FolderBrowserDialog, composant](folderbrowserdialog-component-windows-forms.md)
