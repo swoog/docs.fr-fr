@@ -9,23 +9,23 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: db83d03d38acebfe42d383efdb2caa550bc2013a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636103"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721306"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="7ba7a-102">Procédure : Imprimer des graphiques dans les Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7ba7a-102">How to: Print Graphics in Windows Forms</span></span>
-<span data-ttu-id="7ba7a-103">Souvent, vous devez imprimer des graphiques dans votre application basée sur Windows.</span><span class="sxs-lookup"><span data-stu-id="7ba7a-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="7ba7a-104">Le <xref:System.Drawing.Graphics> classe fournit des méthodes pour dessiner des objets sur un appareil, tel qu’un écran ou une imprimante.</span><span class="sxs-lookup"><span data-stu-id="7ba7a-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  
+# <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="abf92-102">Procédure : Imprimer des graphiques dans les Windows Forms</span><span class="sxs-lookup"><span data-stu-id="abf92-102">How to: Print Graphics in Windows Forms</span></span>
+<span data-ttu-id="abf92-103">Souvent, vous devez imprimer des graphiques dans votre application basée sur Windows.</span><span class="sxs-lookup"><span data-stu-id="abf92-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="abf92-104">Le <xref:System.Drawing.Graphics> classe fournit des méthodes pour dessiner des objets sur un appareil, tel qu’un écran ou une imprimante.</span><span class="sxs-lookup"><span data-stu-id="abf92-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  
   
-### <a name="to-print-graphics"></a><span data-ttu-id="7ba7a-105">Pour imprimer des graphiques</span><span class="sxs-lookup"><span data-stu-id="7ba7a-105">To print graphics</span></span>  
+### <a name="to-print-graphics"></a><span data-ttu-id="abf92-105">Pour imprimer des graphiques</span><span class="sxs-lookup"><span data-stu-id="abf92-105">To print graphics</span></span>  
   
-1.  <span data-ttu-id="7ba7a-106">Ajouter un <xref:System.Drawing.Printing.PrintDocument> à votre formulaire.</span><span class="sxs-lookup"><span data-stu-id="7ba7a-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
+1.  <span data-ttu-id="abf92-106">Ajouter un <xref:System.Drawing.Printing.PrintDocument> à votre formulaire.</span><span class="sxs-lookup"><span data-stu-id="abf92-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2.  <span data-ttu-id="7ba7a-107">Dans le <xref:System.Drawing.Printing.PrintDocument.PrintPage> Gestionnaire d’événements, utilisez le <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> propriété de la <xref:System.Drawing.Printing.PrintPageEventArgs> classe pour indiquer à l’imprimante sur les types de graphismes à imprimer.</span><span class="sxs-lookup"><span data-stu-id="7ba7a-107">In the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler, use the <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> property of the <xref:System.Drawing.Printing.PrintPageEventArgs> class to instruct the printer on what kind of graphics to print.</span></span>  
+2.  <span data-ttu-id="abf92-107">Dans le <xref:System.Drawing.Printing.PrintDocument.PrintPage> Gestionnaire d’événements, utilisez le <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> propriété de la <xref:System.Drawing.Printing.PrintPageEventArgs> classe pour indiquer à l’imprimante sur les types de graphismes à imprimer.</span><span class="sxs-lookup"><span data-stu-id="abf92-107">In the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler, use the <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> property of the <xref:System.Drawing.Printing.PrintPageEventArgs> class to instruct the printer on what kind of graphics to print.</span></span>  
   
-     <span data-ttu-id="7ba7a-108">L’exemple de code suivant montre un gestionnaire d’événements utilisé pour créer une ellipse bleue dans un rectangle englobant.</span><span class="sxs-lookup"><span data-stu-id="7ba7a-108">The following code example shows an event handler used to create a blue ellipse within a bounding rectangle.</span></span> <span data-ttu-id="7ba7a-109">Le rectangle a l’emplacement et les dimensions suivantes : début à 100, 150 avec une largeur de 250 et une hauteur de 250.</span><span class="sxs-lookup"><span data-stu-id="7ba7a-109">The rectangle has the following location and dimensions: beginning at 100, 150 with a width of 250 and a height of 250.</span></span>  
+     <span data-ttu-id="abf92-108">L’exemple de code suivant montre un gestionnaire d’événements utilisé pour créer une ellipse bleue dans un rectangle englobant.</span><span class="sxs-lookup"><span data-stu-id="abf92-108">The following code example shows an event handler used to create a blue ellipse within a bounding rectangle.</span></span> <span data-ttu-id="abf92-109">Le rectangle a l’emplacement et les dimensions suivantes : début à 100, 150 avec une largeur de 250 et une hauteur de 250.</span><span class="sxs-lookup"><span data-stu-id="abf92-109">The rectangle has the following location and dimensions: beginning at 100, 150 with a width of 250 and a height of 250.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -52,7 +52,7 @@ ms.locfileid: "54636103"
        }  
     ```  
   
-     <span data-ttu-id="7ba7a-110">(Visual c# et [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) placez le code suivant dans le constructeur du formulaire pour inscrire le Gestionnaire d’événements.</span><span class="sxs-lookup"><span data-stu-id="7ba7a-110">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="abf92-110">(Visual c# et [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) placez le code suivant dans le constructeur du formulaire pour inscrire le Gestionnaire d’événements.</span><span class="sxs-lookup"><span data-stu-id="abf92-110">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -66,7 +66,7 @@ ms.locfileid: "54636103"
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="7ba7a-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7ba7a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="abf92-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="abf92-111">See also</span></span>
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [<span data-ttu-id="7ba7a-112">Prise en charge de l’impression dans les Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7ba7a-112">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [<span data-ttu-id="abf92-112">Prise en charge de l’impression dans les Windows Forms</span><span class="sxs-lookup"><span data-stu-id="abf92-112">Windows Forms Print Support</span></span>](windows-forms-print-support.md)

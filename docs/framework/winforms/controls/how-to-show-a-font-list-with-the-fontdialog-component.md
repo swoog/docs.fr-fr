@@ -13,27 +13,27 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: 18a9a4bca42117233c4b01a4aeb6cffcb79119d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4036b6e12d8c4df2c4edfd5df293160d9197b61a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726401"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717061"
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="3d5f9-102">Procédure : Afficher une liste de polices avec le composant FontDialog</span><span class="sxs-lookup"><span data-stu-id="3d5f9-102">How to: Show a Font List with the FontDialog Component</span></span>
-<span data-ttu-id="3d5f9-103">Le [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) composant permet aux utilisateurs de sélectionner une police, mais aussi modifier ses aspects de l’affichage, telles que son poids et la taille.</span><span class="sxs-lookup"><span data-stu-id="3d5f9-103">The [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="09d71-102">Procédure : Afficher une liste de polices avec le composant FontDialog</span><span class="sxs-lookup"><span data-stu-id="09d71-102">How to: Show a Font List with the FontDialog Component</span></span>
+<span data-ttu-id="09d71-103">Le [FontDialog](fontdialog-component-windows-forms.md) composant permet aux utilisateurs de sélectionner une police, mais aussi modifier ses aspects de l’affichage, telles que son poids et la taille.</span><span class="sxs-lookup"><span data-stu-id="09d71-103">The [FontDialog](fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
   
- <span data-ttu-id="3d5f9-104">La police sélectionnée dans la boîte de dialogue est retournée dans le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété.</span><span class="sxs-lookup"><span data-stu-id="3d5f9-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="3d5f9-105">Par conséquent, en tirant parti de la police sélectionnée par l’utilisateur est aussi simple que la lecture d’une propriété.</span><span class="sxs-lookup"><span data-stu-id="3d5f9-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
+ <span data-ttu-id="09d71-104">La police sélectionnée dans la boîte de dialogue est retournée dans le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété.</span><span class="sxs-lookup"><span data-stu-id="09d71-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="09d71-105">Par conséquent, en tirant parti de la police sélectionnée par l’utilisateur est aussi simple que la lecture d’une propriété.</span><span class="sxs-lookup"><span data-stu-id="09d71-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
   
-### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="3d5f9-106">Pour sélectionner les propriétés de police à l’aide du composant FontDialog</span><span class="sxs-lookup"><span data-stu-id="3d5f9-106">To select font properties using the FontDialog Component</span></span>  
+### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="09d71-106">Pour sélectionner les propriétés de police à l’aide du composant FontDialog</span><span class="sxs-lookup"><span data-stu-id="09d71-106">To select font properties using the FontDialog Component</span></span>  
   
-1.  <span data-ttu-id="3d5f9-107">Afficher la boîte de dialogue à l’aide de la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (méthode).</span><span class="sxs-lookup"><span data-stu-id="3d5f9-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
+1.  <span data-ttu-id="09d71-107">Afficher la boîte de dialogue à l’aide de la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (méthode).</span><span class="sxs-lookup"><span data-stu-id="09d71-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
   
-2.  <span data-ttu-id="3d5f9-108">Utilisez le <xref:System.Windows.Forms.DialogResult> propriété afin de déterminer comment la boîte de dialogue a été fermée.</span><span class="sxs-lookup"><span data-stu-id="3d5f9-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
+2.  <span data-ttu-id="09d71-108">Utilisez le <xref:System.Windows.Forms.DialogResult> propriété afin de déterminer comment la boîte de dialogue a été fermée.</span><span class="sxs-lookup"><span data-stu-id="09d71-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
   
-3.  <span data-ttu-id="3d5f9-109">Utilisez le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété à définir la police souhaitée.</span><span class="sxs-lookup"><span data-stu-id="3d5f9-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
+3.  <span data-ttu-id="09d71-109">Utilisez le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété à définir la police souhaitée.</span><span class="sxs-lookup"><span data-stu-id="09d71-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
   
-     <span data-ttu-id="3d5f9-110">Dans l’exemple ci-dessous, le <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements ouvre un <xref:System.Windows.Forms.FontDialog> composant.</span><span class="sxs-lookup"><span data-stu-id="3d5f9-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="3d5f9-111">Quand une police est sélectionné et l’utilisateur clique sur **OK**, le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété d’un <xref:System.Windows.Forms.TextBox> contrôle qui se trouve sur le formulaire est défini sur la police choisie.</span><span class="sxs-lookup"><span data-stu-id="3d5f9-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="3d5f9-112">L’exemple suppose que votre formulaire contient un <xref:System.Windows.Forms.Button> contrôle, un <xref:System.Windows.Forms.TextBox> contrôle et un <xref:System.Windows.Forms.FontDialog> composant.</span><span class="sxs-lookup"><span data-stu-id="3d5f9-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
+     <span data-ttu-id="09d71-110">Dans l’exemple ci-dessous, le <xref:System.Windows.Forms.Button> du contrôle <xref:System.Windows.Forms.Control.Click> Gestionnaire d’événements ouvre un <xref:System.Windows.Forms.FontDialog> composant.</span><span class="sxs-lookup"><span data-stu-id="09d71-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="09d71-111">Quand une police est sélectionné et l’utilisateur clique sur **OK**, le <xref:System.Windows.Forms.FontDialog.Font%2A> propriété d’un <xref:System.Windows.Forms.TextBox> contrôle qui se trouve sur le formulaire est défini sur la police choisie.</span><span class="sxs-lookup"><span data-stu-id="09d71-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="09d71-112">L’exemple suppose que votre formulaire contient un <xref:System.Windows.Forms.Button> contrôle, un <xref:System.Windows.Forms.TextBox> contrôle et un <xref:System.Windows.Forms.FontDialog> composant.</span><span class="sxs-lookup"><span data-stu-id="09d71-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -66,7 +66,7 @@ ms.locfileid: "54726401"
        }  
     ```  
   
-     <span data-ttu-id="3d5f9-113">(Visual c# et [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) placez le code suivant dans le constructeur du formulaire pour inscrire le Gestionnaire d’événements.</span><span class="sxs-lookup"><span data-stu-id="3d5f9-113">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="09d71-113">(Visual c# et [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) placez le code suivant dans le constructeur du formulaire pour inscrire le Gestionnaire d’événements.</span><span class="sxs-lookup"><span data-stu-id="09d71-113">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -76,6 +76,6 @@ ms.locfileid: "54726401"
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="3d5f9-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3d5f9-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09d71-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="09d71-114">See also</span></span>
 - <xref:System.Windows.Forms.FontDialog>
-- [<span data-ttu-id="3d5f9-115">FontDialog, composant</span><span class="sxs-lookup"><span data-stu-id="3d5f9-115">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+- [<span data-ttu-id="09d71-115">FontDialog, composant</span><span class="sxs-lookup"><span data-stu-id="09d71-115">FontDialog Component</span></span>](fontdialog-component-windows-forms.md)
