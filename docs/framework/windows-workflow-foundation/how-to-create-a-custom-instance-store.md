@@ -2,16 +2,16 @@
 title: 'Procédure : Créer un Store d’Instance personnalisé'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503188"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707766"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Procédure : Créer un Store d’Instance personnalisé
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contient <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un magasin d'instance qui utilise SQL Server pour rendre les données de workflow persistantes. Si votre application est requise pour la persistance des données de workflow sur un autre support, tel qu'une autre base de données ou un système de fichiers, vous pouvez implémenter un magasin d'instances personnalisé. Un magasin d'instances personnalisé est créé en étendant la classe abstraite <xref:System.Runtime.DurableInstancing.InstanceStore> et en implémentant les méthodes nécessaires pour l'implémentation. Pour une implémentation complète d’un magasin d’instances personnalisé, consultez le [processus d’achat d’entreprise](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemple.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contient <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un magasin d'instance qui utilise SQL Server pour rendre les données de workflow persistantes. Si votre application est requise pour la persistance des données de workflow sur un autre support, tel qu'une autre base de données ou un système de fichiers, vous pouvez implémenter un magasin d'instances personnalisé. Un magasin d'instances personnalisé est créé en étendant la classe abstraite <xref:System.Runtime.DurableInstancing.InstanceStore> et en implémentant les méthodes nécessaires pour l'implémentation. Pour une implémentation complète d’un magasin d’instances personnalisé, consultez le [processus d’achat d’entreprise](./samples/corporate-purchase-process.md) exemple.
 
 ## <a name="implementing-the-begintrycommand-method"></a>Implémentation de la méthode BeginTryCommand
 
@@ -226,11 +226,11 @@ ms.locfileid: "57503188"
 
 ## <a name="using-a-custom-instance-store"></a>Utilisation d'un magasin d'instances personnalisé
 
-Pour implémenter un magasin d'instances personnalisé, assignez une instance du magasin d'instances à <xref:System.Activities.WorkflowApplication.InstanceStore%2A>, et implémentez la méthode <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>. Consultez le [Comment : Créer et exécuter un Workflow de longue durée](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) didacticiel pour plus de détails.
+Pour implémenter un magasin d'instances personnalisé, assignez une instance du magasin d'instances à <xref:System.Activities.WorkflowApplication.InstanceStore%2A>, et implémentez la méthode <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>. Consultez le [Comment : Créer et exécuter un Workflow de longue durée](how-to-create-and-run-a-long-running-workflow.md) didacticiel pour plus de détails.
 
 ## <a name="a-sample-instance-store"></a>Exemple de magasin d'instances
 
-L’exemple de code suivant est une implémentation de magasin instance terminée, extraite de la [processus d’achat d’entreprise](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemple. Ce magasin d'instances rend des données de workflow persistantes dans un fichier à l'aide du XML.
+L’exemple de code suivant est une implémentation de magasin instance terminée, extraite de la [processus d’achat d’entreprise](./samples/corporate-purchase-process.md) exemple. Ce magasin d'instances rend des données de workflow persistantes dans un fichier à l'aide du XML.
 
 ```csharp
 using System;

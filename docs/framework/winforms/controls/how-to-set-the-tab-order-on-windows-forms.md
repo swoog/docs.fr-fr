@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675204"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705876"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Procédure : Définir l’ordre de tabulation dans les Windows Forms
 L’ordre de tabulation est l’ordre dans lequel un utilisateur déplace le focus d’un contrôle à un autre en appuyant sur la touche TAB. Chaque écran a son propre ordre de tabulation. Par défaut, l’ordre de tabulation est identique à l’ordre dans lequel vous avez créé les contrôles. Ordre de tabulation la numérotation commence à zéro.  
@@ -32,7 +32,7 @@ L’ordre de tabulation est l’ordre dans lequel un utilisateur déplace le foc
 2.  Cliquez sur les contrôles de manière séquentielle pour établir l’ordre de tabulation.  
   
     > [!NOTE]
-    >  Place d’un contrôle dans l’ordre de tabulation peut être définie à n’importe quelle valeur supérieure ou égale à 0. En cas de doublons, l’ordre de plan des contrôles est évaluée et le contrôle supérieur est avec onglets en premier. (L’ordre de plan est la superposition visuelle des contrôles sur un formulaire sur l’axe z [profondeur]. L’ordre de plan détermine quels contrôles sont devant les autres contrôles.) Pour plus d’informations sur l’ordre de plan, consultez [superposition d’objets dans les Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Place d’un contrôle dans l’ordre de tabulation peut être définie à n’importe quelle valeur supérieure ou égale à 0. En cas de doublons, l’ordre de plan des contrôles est évaluée et le contrôle supérieur est avec onglets en premier. (L’ordre de plan est la superposition visuelle des contrôles sur un formulaire sur l’axe z [profondeur]. L’ordre de plan détermine quels contrôles sont devant les autres contrôles.) Pour plus d’informations sur l’ordre de plan, consultez [superposition d’objets dans les Windows Forms](how-to-layer-objects-on-windows-forms.md).  
   
 3.  Lorsque vous avez terminé, cliquez sur **l’ordre de tabulation** sur le **vue** menu pour quitter le mode d’ordre de tabulation.  
   
@@ -52,10 +52,10 @@ L’ordre de tabulation est l’ordre dans lequel un utilisateur déplace le foc
      Un contrôle dont <xref:System.Windows.Forms.Control.TabStop%2A> propriété a été définie sur `false` conserve sa position dans l’ordre de tabulation, même si le contrôle est ignoré lorsque vous faites défiler les contrôles avec la touche TAB.  
   
     > [!NOTE]
-    >  Un groupe de cases d’option a un seul onglet arrêter au moment de l’exécution. Le bouton sélectionné (autrement dit, le bouton avec son <xref:System.Windows.Forms.RadioButton.Checked%2A> propriété définie sur `true`) a sa <xref:System.Windows.Forms.Control.TabStop%2A> propriété est automatiquement définie sur `true`, tandis que les autres boutons ont leur <xref:System.Windows.Forms.Control.TabStop%2A> propriété définie sur `false`. Pour plus d’informations sur le regroupement <xref:System.Windows.Forms.RadioButton> contrôles, consultez [regroupement Windows Forms contrôles RadioButton en tant qu’ensemble](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+    >  Un groupe de cases d’option a un seul onglet arrêter au moment de l’exécution. Le bouton sélectionné (autrement dit, le bouton avec son <xref:System.Windows.Forms.RadioButton.Checked%2A> propriété définie sur `true`) a sa <xref:System.Windows.Forms.Control.TabStop%2A> propriété est automatiquement définie sur `true`, tandis que les autres boutons ont leur <xref:System.Windows.Forms.Control.TabStop%2A> propriété définie sur `false`. Pour plus d’informations sur le regroupement <xref:System.Windows.Forms.RadioButton> contrôles, consultez [regroupement Windows Forms contrôles RadioButton en tant qu’ensemble](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)
-- [Disposition des contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Classement par fonction des contrôles Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Contrôles Windows Forms](index.md)
+- [Disposition des contrôles dans les Windows Forms](arranging-controls-on-windows-forms.md)
+- [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)
+- [Classement par fonction des contrôles Windows Forms](windows-forms-controls-by-function.md)

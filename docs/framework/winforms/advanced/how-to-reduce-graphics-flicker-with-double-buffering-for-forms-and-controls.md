@@ -8,34 +8,34 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-ms.openlocfilehash: 96bdaa8882b5f33c68d2a87dd28163c1acd606bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95f8bdd9c30533b35782971459bad887e145adfe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663581"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713357"
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Procédure : Réduire le scintillement des graphiques avec Double mise en tampon pour les formulaires et contrôles
 La double mise en mémoire tampon utilise une mémoire tampon pour résoudre les problèmes de scintillement associés aux opérations de dessin multiples. Quand la double mise en mémoire tampon est activée, toutes les opérations de dessin sont d’abord rendues dans une mémoire tampon au lieu de l’être sur la surface de dessin à l’écran. Une fois que toutes les opérations de dessin sont terminées, la mémoire tampon est copiée directement sur la surface de dessin qui y est associée. Étant donné que les graphiques qu’une seule opération sur l’écran, le scintillement de l’image associé aux opérations de dessin complexes est éliminé. Pour la plupart des applications, le double tampon par défaut fourni par le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournira les meilleurs résultats. Contrôles Windows Forms standard sont double mise en mémoire tampon par défaut. Vous pouvez activer la double mise en mémoire tampon dans vos formulaires et contrôles de deux manières créés. Vous pouvez soit définir le <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propriété `true`, ou vous pouvez appeler la <xref:System.Windows.Forms.Control.SetStyle%2A> méthode pour définir le <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> indicateur `true`. Les deux méthodes seront activer double tampon par défaut pour votre formulaire ou contrôle et fournir un rendu graphique sans scintillement. Appel de la <xref:System.Windows.Forms.Control.SetStyle%2A> méthode est recommandée uniquement pour les contrôles personnalisés pour lequel vous avez écrit tout le code de rendu.  
   
- Pour les scénarios double mise en mémoire tampon plus avancés, tels que l’animation ou la gestion avancée de la mémoire, vous pouvez implémenter votre propre logique de mise en mémoire tampon double. Pour plus d'informations, voir [Procédure : Gérer manuellement des graphiques mis en mémoire tampon](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+ Pour les scénarios double mise en mémoire tampon plus avancés, tels que l’animation ou la gestion avancée de la mémoire, vous pouvez implémenter votre propre logique de mise en mémoire tampon double. Pour plus d'informations, voir [Procédure : Gérer manuellement des graphiques mis en mémoire tampon](how-to-manually-manage-buffered-graphics.md).  
   
 ### <a name="to-reduce-flicker"></a>Pour réduire le scintillement  
   
 -   Affectez à la propriété <xref:System.Windows.Forms.Control.DoubleBuffered%2A> la valeur `true`.  
   
-     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#31)]
-     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#31)]  
+     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#31)]
+     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#31)]  
   
  \- ou -  
   
 -   Appelez le <xref:System.Windows.Forms.Control.SetStyle%2A> méthode pour définir le <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> indicateur `true`.  
   
-     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#32)]
-     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
+     [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#32)]
+     [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.Control.DoubleBuffered%2A>
 - <xref:System.Windows.Forms.Control.SetStyle%2A>
-- [Graphiques mis deux fois en mémoire tampon](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)
-- [Graphiques et dessins dans Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Graphiques mis deux fois en mémoire tampon](double-buffered-graphics.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)

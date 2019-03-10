@@ -8,12 +8,12 @@ helpviewer_keywords:
 - regions [Windows Forms], clipping
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
-ms.openlocfilehash: 5482218a8d6310ce49a1f9f5f02b3b8e36c1fd90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ae9a99ef25c7ee5e52f5995a2d057e42e7d3127
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590654"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715878"
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>Procédure : Utiliser le découpage avec une région
 Une des propriétés de la <xref:System.Drawing.Graphics> classe est la zone de découpage. Tout le dessin effectué une donnée <xref:System.Drawing.Graphics> objet est limité à la zone de découpage de ce <xref:System.Drawing.Graphics> objet. Vous pouvez définir la zone de découpage en appelant le <xref:System.Drawing.Graphics.SetClip%2A> (méthode).  
@@ -23,14 +23,14 @@ Une des propriétés de la <xref:System.Drawing.Graphics> classe est la zone de 
   
  L’illustration suivante montre les chaînes tronquées.  
   
- ![Clip](../../../../docs/framework/winforms/advanced/media/clip1.png "clip1")  
+ ![Clip](./media/clip1.png "clip1")  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.MiscLegacyTopics#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Régions dans GDI+](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)
-- [Utilisation de régions](../../../../docs/framework/winforms/advanced/using-regions.md)
+- [Régions dans GDI+](regions-in-gdi.md)
+- [Utilisation de régions](using-regions.md)

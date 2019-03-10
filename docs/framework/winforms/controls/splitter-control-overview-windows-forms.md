@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 583596ec44dd5318c199d6cfc33901dbd952b115
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522607"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703190"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Vue d'ensemble du contrôle Splitter (Windows Forms)
 > [!IMPORTANT]
@@ -24,5 +24,5 @@ ms.locfileid: "54522607"
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.SplitContainer>
-- [Guide pratique pour Ancrer des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Guide pratique pour Ancrer des contrôles aux Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

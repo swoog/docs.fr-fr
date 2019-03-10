@@ -5,12 +5,12 @@ helpviewer_keywords:
 - GDI+, using managed interface
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-ms.openlocfilehash: 4d000adfa02555a766410833fabe4039dd06c268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33be9d4d4e5a1aca933bb84e948b2200cd96b152
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592044"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708109"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Structure de l'interface graphique
 L’interface de classe managée à [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] contient environ 60 classes, 50 énumérations et structures de 8. Le <xref:System.Drawing.Graphics> classe est au cœur de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fonctionnalité ; c’est la classe qui permet de dessiner des lignes, des courbes, des chiffres, des images et texte.  
@@ -23,6 +23,6 @@ L’interface de classe managée à [!INCLUDE[ndptecgdiplus](../../../../include
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] définit plusieurs énumérations qui sont des collections de constantes connexes. Par exemple, le <xref:System.Drawing.Drawing2D.LineJoin> énumération contient les éléments <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, et <xref:System.Drawing.Drawing2D.LineJoin.Round>, qui spécifient les styles qui peuvent être utilisés pour joindre deux lignes.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Vue d’ensemble des graphismes](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
-- [À propos du code managé GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)
-- [Utilisation de classes graphiques managées](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+- [Vue d’ensemble des graphismes](graphics-overview-windows-forms.md)
+- [À propos du code managé GDI+](about-gdi-managed-code.md)
+- [Utilisation de classes graphiques managées](using-managed-graphics-classes.md)

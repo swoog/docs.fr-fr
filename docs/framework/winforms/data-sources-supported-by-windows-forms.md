@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664742"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711298"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Sources de données prises en charge par les Windows Forms
 En règle générale, la liaison de données a été utilisée au sein d’applications pour tirer parti des données stockées dans les bases de données. Avec la liaison de données Windows Forms, vous pouvez accéder aux données à partir de bases de données, ainsi que des données dans d’autres structures, telles que des tableaux et collections, tant que certaines exigences minimales sont respectées.  
   
 ## <a name="structures-to-bind-to"></a>Structures à lier aux  
- Dans les Windows Forms, vous pouvez lier à une vaste gamme de structures, simple objets (liaison simple) à des listes complexes telles que les tables de données ADO.NET (liaison complexe). Pour la liaison simple, Windows Forms prend en charge la liaison aux propriétés publiques sur l’objet simple. Liaison de liste Windows Forms nécessite généralement que l’objet prend en charge la <xref:System.Collections.IList> interface ou le <xref:System.ComponentModel.IListSource> interface. En outre, si vous créez une liaison avec via un <xref:System.Windows.Forms.BindingSource> composant, vous pouvez lier à un objet qui prend en charge la <xref:System.Collections.IEnumerable> interface. Pour plus d’informations sur les interfaces participant à la liaison de données, consultez [Interfaces associées à la liaison de données](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).  
+ Dans les Windows Forms, vous pouvez lier à une vaste gamme de structures, simple objets (liaison simple) à des listes complexes telles que les tables de données ADO.NET (liaison complexe). Pour la liaison simple, Windows Forms prend en charge la liaison aux propriétés publiques sur l’objet simple. Liaison de liste Windows Forms nécessite généralement que l’objet prend en charge la <xref:System.Collections.IList> interface ou le <xref:System.ComponentModel.IListSource> interface. En outre, si vous créez une liaison avec via un <xref:System.Windows.Forms.BindingSource> composant, vous pouvez lier à un objet qui prend en charge la <xref:System.Collections.IEnumerable> interface. Pour plus d’informations sur les interfaces participant à la liaison de données, consultez [Interfaces associées à la liaison de données](interfaces-related-to-data-binding.md).  
   
  La liste suivante présente les structures que vous pouvez lier à dans les Windows Forms.  
   
@@ -58,6 +58,6 @@ En règle générale, la liaison de données a été utilisée au sein d’appli
 -   <xref:System.Data.DataViewManager>. Un <xref:System.Data.DataViewManager> est une vue personnalisée de l’ensemble du <xref:System.Data.DataSet>, analogue à un <xref:System.Data.DataView>, mais avec les relations incluses. Avec un <xref:System.Data.DataViewManager.DataViewSettings%2A> collection, vous pouvez définir des filtres par défaut et les options de tri pour toutes les vues qui le <xref:System.Data.DataViewManager> a pour une table donnée.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Notification de modifications dans la liaison de données Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Liaison de données et Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Liaison de données Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Notification de modifications dans la liaison de données Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)

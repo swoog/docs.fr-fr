@@ -9,24 +9,24 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-ms.openlocfilehash: 363fb4d79cf3fab1cdd814e6cf22d399a27864da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534194"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708213"
 ---
 # <a name="listbox-control-windows-forms"></a>ListBox, contrôle (Windows Forms)
-Windows Forms `ListBox` contrôle affiche une liste d’éléments à partir de laquelle l’utilisateur peut sélectionner un ou plusieurs.  
+Un formulaire Windows `ListBox` contrôle affiche une liste d’éléments à partir de laquelle l’utilisateur peut sélectionner un ou plusieurs.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble du contrôle ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- Décrit ce contrôle et ses principales fonctionnalités et propriétés.  
+ [Vue d'ensemble du contrôle ListBox](listbox-control-overview-windows-forms.md)  
+ Décrit un contrôle et ses principales fonctionnalités et propriétés.  
   
 ## <a name="reference"></a>Référence  
  Classe <xref:System.Windows.Forms.ListBox>  
  Décrit cette classe et fournit des liens vers tous ses membres.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Fournit une liste d’éléments que vous pouvez faire avec les zones de liste, zones de liste déroulante et des zones de liste de cases.
+ [Contrôles Windows Forms utilisés pour l’affichage de listes d’options](windows-forms-controls-used-to-list-options.md)  
+ Fournit une liste de choses à que faire avec les zones de liste, des zones de liste déroulante et des zones de liste vérifiés.

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: 2e361b5af5c360869ef51650bb6926a24d1f560d
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ca5f968364cd768b708616a867baee49775ca611
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304022"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708429"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Procédure pas à pas : Disposition des Windows Forms contrôles avec la propriété AutoSize, des marges et remplissage
 Le positionnement précis des contrôles sur votre formulaire constitue une haute priorité pour de nombreuses applications. Le **Windows Forms Designer** vous offre de nombreux outils de disposition pour effectuer cette opération. Trois des plus importants sont la <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, et <xref:System.Windows.Forms.Control.AutoSize%2A> propriétés, qui sont présentes sur tous les contrôles Windows Forms.  
@@ -31,7 +31,7 @@ Le positionnement précis des contrôles sur votre formulaire constitue une haut
   
  L'illustration suivante montre les propriétés <xref:System.Windows.Forms.Control.Padding%2A> et <xref:System.Windows.Forms.Control.Margin%2A> d'un contrôle.  
   
- ![Remplissage et marge pour les Windows Forms contrôles](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![Remplissage et marge pour les Windows Forms contrôles](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
  Le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété indique à un contrôle d’ajuster automatiquement sa taille à son contenu. Il ne se redimensionnera pas pour être plus petite que la valeur de son état d’origine <xref:System.Windows.Forms.Control.Size%2A> propriété et il représentera la valeur de son <xref:System.Windows.Forms.Control.Padding%2A> propriété.  
   
@@ -73,7 +73,7 @@ Le positionnement précis des contrôles sur votre formulaire constitue une haut
   
 2.  Sélectionnez une de la <xref:System.Windows.Forms.Button> contrôle et déplacez-le proche de l’autre, jusqu'à ce qu’ils se touchent presque.  
   
-     Observez la ligne d’alignement qui apparaît entre eux. Cette distance est la somme des deux contrôles <xref:System.Windows.Forms.Control.Margin%2A> valeurs. Le contrôle que vous déplacez s’aligne sur cette distance. Pour plus d’informations, consultez [procédure pas à pas : Organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     Observez la ligne d’alignement qui apparaît entre eux. Cette distance est la somme des deux contrôles <xref:System.Windows.Forms.Control.Margin%2A> valeurs. Le contrôle que vous déplacez s’aligne sur cette distance. Pour plus d’informations, consultez [procédure pas à pas : Organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 3.  Modification la <xref:System.Windows.Forms.Control.Margin%2A> propriété de l’un des contrôles en développant le <xref:System.Windows.Forms.Control.Margin%2A> entrée dans le **propriétés** fenêtre et en définissant le <xref:System.Windows.Forms.Padding.All%2A> propriété à 20.  
   
@@ -113,7 +113,7 @@ Le positionnement précis des contrôles sur votre formulaire constitue une haut
 ## <a name="automatically-sizing-your-controls"></a>Dimensionnement automatique de vos contrôles  
  Dans certaines applications, la taille d’un contrôle aura le même en cours d’exécution tel qu’il était au moment du design. Le texte d’un <xref:System.Windows.Forms.Button> contrôle, par exemple, peut-être être prise à partir d’une base de données, et sa longueur ne sera pas connue à l’avance.  
   
- Lorsque le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété est définie sur `true`, le contrôle ajuste sa taille à son contenu. Pour plus d’informations, consultez [vue d’ensemble de la propriété AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
+ Lorsque le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété est définie sur `true`, le contrôle ajuste sa taille à son contenu. Pour plus d’informations, consultez [vue d’ensemble de la propriété AutoSize](autosize-property-overview.md).  
   
 #### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>Pour réorganiser des contrôles sur votre formulaire à l’aide de la propriété AutoSize  
   
@@ -178,9 +178,9 @@ Le positionnement précis des contrôles sur votre formulaire constitue une haut
 ## <a name="next-steps"></a>Étapes suivantes  
  Il existe de nombreuses autres fonctionnalités de disposition pour organiser les contrôles dans vos applications Windows Forms. Voici certaines combinaisons, que vous pouvez essayer :  
   
--   Créez un formulaire avec un <xref:System.Windows.Forms.TableLayoutPanel> contrôle. Pour plus d’informations, consultez [procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Essayez de modifier les valeurs de la <xref:System.Windows.Forms.TableLayoutPanel> du contrôle <xref:System.Windows.Forms.Control.Padding%2A> propriété, ainsi que le <xref:System.Windows.Forms.Control.Margin%2A> propriété sur ses contrôles enfants.  
+-   Créez un formulaire avec un <xref:System.Windows.Forms.TableLayoutPanel> contrôle. Pour plus d’informations, consultez [procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Essayez de modifier les valeurs de la <xref:System.Windows.Forms.TableLayoutPanel> du contrôle <xref:System.Windows.Forms.Control.Padding%2A> propriété, ainsi que le <xref:System.Windows.Forms.Control.Margin%2A> propriété sur ses contrôles enfants.  
   
--   Essayez la même expérience à l’aide un <xref:System.Windows.Forms.FlowLayoutPanel> contrôle. Pour plus d’informations, consultez [procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+-   Essayez la même expérience à l’aide un <xref:System.Windows.Forms.FlowLayoutPanel> contrôle. Pour plus d’informations, consultez [procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
 -   Expérience avec l’ancrage des contrôles enfants dans un <xref:System.Windows.Forms.Panel> contrôle. Le <xref:System.Windows.Forms.Control.Padding%2A> propriété est une réalisation plus générale de la <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> propriété et vous pouvez satisfaire à vous-même que c’est le cas en plaçant un contrôle enfant dans un <xref:System.Windows.Forms.Panel> contrôle et en définissant le contrôle enfant <xref:System.Windows.Forms.Control.Dock%2A> propriété <xref:System.Windows.Forms.DockStyle.Fill>. Définir le <xref:System.Windows.Forms.Panel> du contrôle <xref:System.Windows.Forms.Control.Padding%2A> propriété différentes valeurs et notez l’effet.  
   
@@ -189,7 +189,7 @@ Le positionnement précis des contrôles sur votre formulaire constitue une haut
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
-- [Vue d’ensemble de la propriété AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide des lignes d’alignement](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Vue d’ensemble de la propriété AutoSize](autosize-property-overview.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide d’un FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

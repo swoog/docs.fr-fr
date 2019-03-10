@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664352"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708052"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Rendu des contrôles avec les styles visuels
 Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournit la prise en charge pour le rendu des contrôles et d’autres éléments de l’interface utilisateur de Windows en utilisant des styles visuels dans les systèmes d’exploitation qui les prennent en charge. Cette rubrique aborde les différents niveaux de prise en charge dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour le rendu des contrôles et d’autres éléments d’interface utilisateur avec le style visuel actuel du système d’exploitation.  
@@ -49,7 +49,7 @@ Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournit la pr
   
 -   <xref:System.Windows.Forms.TrackBarRenderer>  
   
- Pour plus d’informations sur l’utilisation de ces classes pour dessiner un contrôle, consultez [Comment : Utiliser une classe de rendu des contrôles](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md).  
+ Pour plus d’informations sur l’utilisation de ces classes pour dessiner un contrôle, consultez [Comment : Utiliser une classe de rendu des contrôles](how-to-use-a-control-rendering-class.md).  
   
 ## <a name="visual-style-element-and-rendering-classes"></a>Élément de style visuel et classes de rendu  
  L’espace de noms <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> inclut des classes qui peuvent être utilisées pour dessiner et obtenir des informations sur un contrôle ou un élément d’interface utilisateur qui est pris en charge par les styles visuels. Les contrôles pris en charge incluent des contrôles courants qui ont une classe de rendu dans l’espace de noms <xref:System.Windows.Forms?displayProperty=nameWithType> (voir la section précédente), ainsi que d’autres contrôles, comme des contrôles d’onglet et des contrôles rebar. Les autres éléments d’interface utilisateur pris en charge incluent les parties du menu **Démarrer** , la barre des tâches et la zone non cliente des fenêtres.  
@@ -58,7 +58,7 @@ Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournit la pr
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> fournit les méthodes qui dessinent et obtiennent des informations sur chaque <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> défini par le style visuel actuel du système d’exploitation. Les informations qui peuvent être récupérées sur un élément sont sa taille par défaut, son type d’arrière-plan et ses définitions de couleur. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> encapsule les fonctionnalités de l’API des styles visuels (UxTheme) de la partie Windows Shell du Kit de développement Windows Platform SDK. Pour plus d’informations, consultez [activation des Styles visuels](/windows/desktop/controls/cookbook-overview).  
   
- Pour plus d’informations sur l’utilisation de <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> et <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, consultez [Comment : Restituer un élément de Style visuel](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
+ Pour plus d’informations sur l’utilisation de <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> et <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, consultez [Comment : Restituer un élément de Style visuel](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Activation des styles visuels  
  Pour activer des styles visuels dans une application écrite pour le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.0, les programmeurs doivent inclure un manifeste d’application qui spécifie que ComCtl32.dll version 6 ou ultérieure doit être utilisé pour dessiner les contrôles. Les applications créées avec le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.1 ou ultérieure peuvent utiliser la méthode <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> de la classe <xref:System.Windows.Forms.Application> .  
@@ -79,4 +79,4 @@ Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournit la pr
 >  Si vous voulez utiliser <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> pour restituer un contrôle ou un élément d’interface utilisateur quand l’utilisateur active ou change les styles visuels, faites cela lors du traitement de l’événement <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> et non pas de l’événement <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> . Une exception est générée si vous utilisez la classe <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> lors du traitement de <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Dessin et rendu personnalisés des contrôles](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+- [Dessin et rendu personnalisés des contrôles](custom-control-painting-and-rendering.md)

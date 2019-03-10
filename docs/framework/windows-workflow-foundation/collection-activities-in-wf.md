@@ -2,18 +2,18 @@
 title: Activités de collection dans le WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: c29b81dcff943b350a0696d0d9996f8e2ce986c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ce7dd348a19608d35bf448bda2e1380e5af1130
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590076"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705248"
 ---
 # <a name="collection-activities-in-wf"></a>Activités de collection dans le WF
 Les activités de collection sont utilisées pour utiliser les objets de collection dans un workflow. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] comprend des activités fournies par le système permettant d'ajouter des éléments à une collection et de les supprimer, de vérifier l'existence d'un élément dans une collection et d'effacer une collection. `ExistsInCollection` et `RemoveFromCollection` ont un <xref:System.Activities.OutArgument%601> de type <xref:System.Boolean>, qui indique le résultat.  
   
 > [!IMPORTANT]
->  Si une activité de collection est exécutée avant de définir l'objet de collection sous-jacent, un objet <xref:System.InvalidOperationException> est levé et l'activité émet une erreur.  
+>  Si une activité de collection est exécutée avant de définir l’objet de collection sous-jacent, un objet <xref:System.InvalidOperationException> est levé et l’activité émet une erreur.  
   
 ## <a name="collection-activities"></a>Activités de collection  
   
@@ -426,4 +426,4 @@ Activity wf = new Sequence
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création de workflows, d’activités et d’expressions à l’aide du code impératif](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [Création de workflows, d’activités et d’expressions à l’aide du code impératif](authoring-workflows-activities-and-expressions-using-imperative-code.md)

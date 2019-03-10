@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 42c3d9c681da9ca87125a274fa12af623269bd70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745246"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708845"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>Vue d'ensemble du contrôle ToolBar (Windows Forms)
 > [!NOTE]
@@ -28,11 +28,11 @@ ms.locfileid: "54745246"
   
  Lorsque le <xref:System.Windows.Forms.ToolBar.Appearance%2A> propriété est définie sur <xref:System.Windows.Forms.ToolBarAppearance>, les boutons de barre d’outils apparaissent en relief et en trois dimensions. Vous pouvez définir le <xref:System.Windows.Forms.ToolBar.Appearance%2A> propriété de la barre d’outils pour <xref:System.Windows.Forms.ToolBarAppearance> pour donner à la barre d’outils et de ses boutons un aspect plat. Quand le pointeur de la souris est placé sur un bouton à deux dimensions, l’apparence du bouton passe à trois dimensions. Les boutons de barre d’outils peut être divisés en groupes logiques à l’aide de séparateurs. Un séparateur est un bouton de barre d’outils avec le <xref:System.Windows.Forms.ToolBarButton.Style%2A> propriété définie sur <xref:System.Windows.Forms.ToolBarButtonStyle>. Il apparaît comme un espace vide dans la barre d’outils. Quand la barre d’outils a une apparence à deux dimensions, les séparateurs de boutons apparaissent comme des lignes (et non pas des espaces) entre les boutons.  
   
- Le <xref:System.Windows.Forms.ToolBar> contrôle vous permet de créer des barres d’outils en ajoutant <xref:System.Windows.Forms.Button> des objets sur un <xref:System.Windows.Forms.ToolBar.Buttons%2A> collection. Vous pouvez utiliser l’éditeur de collections pour ajouter des boutons à un <xref:System.Windows.Forms.ToolBar> contrôle ; chaque <xref:System.Windows.Forms.Button> objet doit être texte ou une image, vous pouvez affecter à la fois. L’image est fournie par un composant [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) associé. Au moment de l’exécution, vous pouvez ajouter ou supprimer des boutons à partir de la <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> à l’aide de la <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> et <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> méthodes. Pour programmer les boutons d’une <xref:System.Windows.Forms.ToolBar>, ajouter du code pour le <xref:System.Windows.Forms.ToolBar.ButtonClick> événements de la <xref:System.Windows.Forms.ToolBar>, à l’aide la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> propriété de la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe pour déterminer quel bouton l’utilisateur a cliqué.  
+ Le <xref:System.Windows.Forms.ToolBar> contrôle vous permet de créer des barres d’outils en ajoutant <xref:System.Windows.Forms.Button> des objets sur un <xref:System.Windows.Forms.ToolBar.Buttons%2A> collection. Vous pouvez utiliser l’éditeur de collections pour ajouter des boutons à un <xref:System.Windows.Forms.ToolBar> contrôle ; chaque <xref:System.Windows.Forms.Button> objet doit être texte ou une image, vous pouvez affecter à la fois. L’image est fournie par un composant [ImageList](imagelist-component-windows-forms.md) associé. Au moment de l’exécution, vous pouvez ajouter ou supprimer des boutons à partir de la <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> à l’aide de la <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> et <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> méthodes. Pour programmer les boutons d’une <xref:System.Windows.Forms.ToolBar>, ajouter du code pour le <xref:System.Windows.Forms.ToolBar.ButtonClick> événements de la <xref:System.Windows.Forms.ToolBar>, à l’aide la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> propriété de la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe pour déterminer quel bouton l’utilisateur a cliqué.  
   
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Windows.Forms.ToolBar>
-- [ToolBar, contrôle](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
-- [Guide pratique pour Ajouter des boutons à un contrôle de barre d’outils](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
-- [Guide pratique pour Définir une icône pour un bouton de barre d’outils](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [Guide pratique pour Déclencher des événements de Menu pour les boutons de barre d’outils](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar, contrôle](toolbar-control-windows-forms.md)
+- [Guide pratique pour Ajouter des boutons à un contrôle de barre d’outils](how-to-add-buttons-to-a-toolbar-control.md)
+- [Guide pratique pour Définir une icône pour un bouton de barre d’outils](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Guide pratique pour Déclencher des événements de Menu pour les boutons de barre d’outils](how-to-trigger-menu-events-for-toolbar-buttons.md)

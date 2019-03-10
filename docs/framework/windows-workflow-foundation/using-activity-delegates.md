@@ -2,12 +2,12 @@
 title: Utilisation de délégués d'activité
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 38b99446e38551a9954228eaa3682e2e81753ddb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184882"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707532"
 ---
 # <a name="using-activity-delegates"></a>Utilisation de délégués d'activité
 Les délégués d'activité permettent aux auteurs d'activités d'exposer des rappels avec des signatures spécifiques pour lesquelles les utilisateurs de l'activité peuvent fournir des gestionnaires basés sur l'activité. Deux types de délégués d'activité sont disponibles : <xref:System.Activities.ActivityAction%601> est utilisé pour définir des délégués d'activité qui n'ont pas de valeur de retour et <xref:System.Activities.ActivityFunc%601> est utilisé pour définir des délégués d'activité qui ont une valeur de retour.  
@@ -17,7 +17,7 @@ Les délégués d'activité permettent aux auteurs d'activités d'exposer des ra
 ## <a name="using-activityaction"></a>Utilisation d'ActivityAction  
  Plusieurs activités [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] utilisent des actions de l'activité, telles que l'activité <xref:System.Activities.Statements.Catch> et l'activité <xref:System.Activities.Statements.ForEach%601>. Dans chaque cas, l'action de l'activité représente un emplacement où l'auteur de workflow spécifie une activité pour fournir le comportement voulu lors de la composition d'un workflow à l'aide de l'une de ces activités. Dans l'exemple suivant, une activité <xref:System.Activities.Statements.ForEach%601> est utilisée pour afficher un texte dans la fenêtre de console. Le corps du <xref:System.Activities.Statements.ForEach%601> est spécifié à l'aide d'un <xref:System.Activities.ActivityAction%601> qui correspond au type du <xref:System.Activities.Statements.ForEach%601> qui est le type chaîne. L'activité <xref:System.Activities.Statements.WriteLine> spécifiée dans le <xref:System.Activities.ActivityDelegate.Handler%2A> a son argument <xref:System.Activities.Statements.WriteLine.Text%2A> lié aux valeurs de chaîne dans la collection au sein de laquelle l'activité <xref:System.Activities.Statements.ForEach%601> itère.  
   
- [!code-csharp[CFX_ActivityExample#6](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#6)]  
+ [!code-csharp[CFX_ActivityExample#6](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#6)]  
   
  L'actionArgument est utilisé pour transférer les éléments individuels dans la collection au WriteLine. Lorsque le workflow est appelé, la sortie suivante s'affiche sur la console.  
  ``` 
@@ -25,33 +25,33 @@ Les délégués d'activité permettent aux auteurs d'activités d'exposer des ra
  ```  
 Les exemples de cette rubrique utilisent la syntaxe d'initialisation d'objet. La syntaxe d'initialisation d'objet peut être une méthode utile pour créer des définitions de workflow dans le code, car elle fournit une vue hiérarchique des activités dans le workflow et affiche la relation entre les activités. Il n'est pas impératif d'utiliser la syntaxe d'initialisation d'objet lorsque vous créez des workflows par programmation. L'exemple suivant est d'un point de vue fonctionnel équivalent à l'exemple précédent :  
   
- [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
+ [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- Pour plus d’informations sur les initialiseurs d’objets, consultez [Comment : initialiser des objets sans appeler de constructeur (Guide de programmation c#)](https://go.microsoft.com/fwlink/?LinkId=161015) et [Comment : déclarer un objet à l’aide d’un initialiseur d’objet](https://go.microsoft.com/fwlink/?LinkId=161016).  
+ Pour plus d’informations sur les initialiseurs d’objets, consultez [Comment : Initialiser des objets sans appeler de constructeur (C# Guide de programmation)](https://go.microsoft.com/fwlink/?LinkId=161015) et [Comment : Déclarez un objet à l’aide d’un initialiseur d’objet](https://go.microsoft.com/fwlink/?LinkId=161016).  
   
  Dans l'exemple suivant, une activité <xref:System.Activities.Statements.TryCatch> est utilisée dans un workflow. Un <xref:System.ApplicationException> est levé par le workflow et géré par une activité <xref:System.Activities.Statements.Catch%601>. Le gestionnaire pour le <xref:System.Activities.Statements.Catch%601> action de l’activité de l’activité est un <xref:System.Activities.Statements.WriteLine> l’activité et le détail de l’exception lui est transféré à l’aide de la `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#33](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   
  Lorsque vous créez une activité personnalisée qui définit un <xref:System.Activities.ActivityAction%601>, utilisez un <xref:System.Activities.Statements.InvokeAction%601> pour modéliser l'appel de ce <xref:System.Activities.ActivityAction%601>. Dans cet exemple, une activité `WriteLineWithNotification` personnalisée est définie. Cette activité est composée d'un <xref:System.Activities.Statements.Sequence> qui contient une activité <xref:System.Activities.Statements.WriteLine> suivie d'un <xref:System.Activities.Statements.InvokeAction%601> qui appelle un <xref:System.Activities.ActivityAction%601> qui prend un argument de chaîne.  
   
- [!code-csharp[CFX_ActivityExample#1](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#1)]  
+ [!code-csharp[CFX_ActivityExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#1)]  
   
  Lorsqu'un workflow est créé à l'aide de l'activité `WriteLineWithNotification`, l'auteur de workflow spécifie la logique personnalisée voulue dans le <xref:System.Activities.ActivityDelegate.Handler%2A> de l'action de l'activité. Dans cet exemple, un workflow qui utilise l'activité `WriteLineWithNotification` est créé et une activité <xref:System.Activities.Statements.WriteLine> est utilisée comme <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
- [!code-csharp[CFX_ActivityExample#2](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#2)]  
+ [!code-csharp[CFX_ActivityExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#2)]  
   
  Il existe plusieurs versions génériques de <xref:System.Activities.Statements.InvokeAction%601> et <xref:System.Activities.ActivityAction%601> fournies pour le passage d'un ou de plusieurs arguments.  
   
 ## <a name="using-activityfunc"></a>Utilisation d'ActivityFunc  
  <xref:System.Activities.ActivityAction%601> est utile en l'absence de valeur de résultat de l'activité et <xref:System.Activities.ActivityFunc%601> est utilisé lorsqu'une valeur de résultat est retournée. Lorsque vous créez une activité personnalisée qui définit un <xref:System.Activities.ActivityFunc%601>, utilisez un <xref:System.Activities.Expressions.InvokeFunc%601> pour modéliser l'appel de ce <xref:System.Activities.ActivityFunc%601>. Dans l'exemple suivant, une activité `WriteFillerText` est définie. Pour fournir le texte de remplissage, un <xref:System.Activities.Expressions.InvokeFunc%601> qui prend un argument entier et a un résultat de chaîne est spécifié. Une fois le texte de remplissage récupéré, il est affiché sur la console à l'aide d'une activité <xref:System.Activities.Statements.WriteLine>.  
   
- [!code-csharp[CFX_ActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
+ [!code-csharp[CFX_ActivityExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   
  Pour fournir le texte, une activité qui prend un argument `int` et a un résultat de chaîne doit être utilisée. Cet exemple montre une activité `TextGenerator` qui répond à ces critères.  
   
- [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
+ [!code-csharp[CFX_ActivityExample#4](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
   
  Pour utiliser l'activité `TextGenerator` avec l'activité `WriteFillerText`, spécifiez-la en tant que <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
- [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]
+ [!code-csharp[CFX_ActivityExample#5](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]

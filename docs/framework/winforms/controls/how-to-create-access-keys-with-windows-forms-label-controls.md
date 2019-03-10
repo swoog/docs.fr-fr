@@ -17,12 +17,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: a1317f34b39c5689e285f8822fff9bfcc42db1d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680320"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708299"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Procédure : Créer des clés d’accès avec les contrôles Label Windows Forms
 Windows Forms <xref:System.Windows.Forms.Label> contrôles peuvent être utilisés pour définir des clés d’accès pour d’autres contrôles. Lorsque vous définissez une clé d’accès dans un contrôle label, l’utilisateur peut appuyer sur la touche ALT et le caractère que vous désignez pour déplacer le focus au contrôle qui suit dans l’ordre de tabulation. Étant donné que les étiquettes ne peuvent pas recevoir le focus, le focus se déplace automatiquement vers le contrôle suivant dans l’ordre de tabulation. Utilisez cette technique pour affecter des clés d’accès aux zones de texte, zones de liste modifiable, zones de liste et des grilles de données.  
@@ -37,7 +37,7 @@ Windows Forms <xref:System.Windows.Forms.Label> contrôles peuvent être utilis�
   
 2.  Définir l’étiquette <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriété `true`.  
   
-3.  Utilisez une esperluette (&) dans l’étiquette <xref:System.Windows.Forms.Label.Text%2A> propriété à attribuer la clé d’accès pour l’étiquette. Pour plus d’informations, consultez [création de clés d’accès rapide pour les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  
+3.  Utilisez une esperluette (&) dans l’étiquette <xref:System.Windows.Forms.Label.Text%2A> propriété à attribuer la clé d’accès pour l’étiquette. Pour plus d’informations, consultez [création de clés d’accès rapide pour les contrôles Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md).  
   
     > [!NOTE]
     >  Voulez-vous afficher ce symbole dans un contrôle label, plutôt que de les utiliser pour créer des clés d’accès. Cela peut se produire si vous liez un contrôle étiquette à un champ dans un jeu d’enregistrements dans lequel les données incluent les et commerciaux. Pour afficher ce symbole dans un contrôle label, définissez le <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriété `false`. Si vous souhaitez afficher le symbole & et ont également une clé d’accès, définissez le <xref:System.Windows.Forms.Label.UseMnemonic%2A> propriété `true` et indiquer la clé d’accès avec une esperluette (&) et l’esperluette par deux signes &.  
@@ -64,6 +64,6 @@ Windows Forms <xref:System.Windows.Forms.Label> contrôles peuvent être utilis�
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour Taille d’un contrôle d’étiquette Windows Forms pour s’ajuster à son contenu](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Vue d'ensemble du contrôle Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [Label, contrôle](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+- [Guide pratique pour Taille d’un contrôle d’étiquette Windows Forms pour s’ajuster à son contenu](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Vue d'ensemble du contrôle Label](label-control-overview-windows-forms.md)
+- [Label, contrôle](label-control-windows-forms.md)

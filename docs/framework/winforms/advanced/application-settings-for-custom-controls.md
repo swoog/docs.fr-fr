@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526741"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714344"
 ---
 # <a name="application-settings-for-custom-controls"></a>Paramètres d'application pour les contrôles personnalisés
 Vous devez effectuer certaines tâches pour permettre à vos contrôles personnalisés pour conserver les paramètres de l’application lorsque les contrôles sont hébergés dans des applications tierces.  
@@ -26,7 +26,7 @@ Vous devez effectuer certaines tâches pour permettre à vos contrôles personna
   
 2.  Créez cette classe de paramètres personnalisés une fois que le contrôle a été créé et placé dans un formulaire, comme dans le formulaire <xref:System.Windows.Forms.Form.Load> Gestionnaire d’événements.  
   
- Pour obtenir des instructions sur la création d’une classe de paramètres personnalisés, consultez [Comment : Créer des paramètres de l’Application](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Pour obtenir des instructions sur la création d’une classe de paramètres personnalisés, consultez [Comment : Créer des paramètres de l’Application](how-to-create-application-settings.md).  
   
 ## <a name="settings-keys-and-shared-settings"></a>Les clés des paramètres et paramètres partagés  
  Certains contrôles peuvent être utilisés plusieurs fois dans le même formulaire. La plupart du temps, vous pouvez ces contrôles pour conserver leurs propres paramètres individuels. Avec le <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> propriété sur <xref:System.Configuration.IPersistComponentSettings>, vous pouvez fournir une chaîne unique qui agit pour lever l’ambiguïté de plusieurs versions d’un contrôle sur un formulaire.  
@@ -48,4 +48,4 @@ Vous devez effectuer certaines tâches pour permettre à vos contrôles personna
 ## <a name="see-also"></a>Voir aussi
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Architecture des paramètres d'application](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Architecture des paramètres d'application](application-settings-architecture.md)

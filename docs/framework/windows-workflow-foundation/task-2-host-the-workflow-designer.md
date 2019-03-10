@@ -2,12 +2,12 @@
 title: 'Tâche 2 : Héberger le Concepteur de flux de travail'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572771"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708637"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tâche 2 : Héberger le Concepteur de flux de travail
 Cette rubrique décrit la procédure pour l’hébergement d’une instance de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] dans une application Windows Presentation Foundation (WPF).  
@@ -16,7 +16,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
   
 ### <a name="to-host-the-workflow-designer"></a>Pour héberger le concepteur de workflow  
   
-1.  Ouvrez le projet hostingapplication que vous avez créé dans [tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Ouvrez le projet hostingapplication que vous avez créé dans [tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
 2.  Pour faciliter l'utilisation du [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], ajustez la taille de la fenêtre. Pour ce faire, sélectionnez **MainWindow** dans le concepteur, appuyez sur F4 pour afficher la **propriétés** fenêtre, puis, dans le **disposition** section il, définissez le **delalargeur** à une valeur de 600 et la **hauteur** à une valeur de 350.  
   
@@ -97,7 +97,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
         }  
         ```  
   
-         Pour plus d’informations sur l’inscription des concepteurs d’activités, consultez [Comment : Créer un concepteur d’activités personnalisées](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Pour plus d’informations sur l’inscription des concepteurs d’activités, consultez [Comment : Créer un concepteur d’activités personnalisées](how-to-create-a-custom-activity-designer.md).  
   
     5.  Dans le constructeur de classes `MainWindow`, ajoutez des appels aux méthodes précédemment déclarées pour enregistrer les métadonnées dans le but de la prise en charge du concepteur et pour créer l'objet <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -119,9 +119,9 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
   
 9. Pour générer et exécuter la solution, appuyez sur F5.  
   
-10. Consultez [tâche 3 : Créer les volets Toolbox et PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) pour savoir comment ajouter **boîte à outils** et **PropertyGrid** prennent en charge à votre Concepteur de workflow réhébergé.  
+10. Consultez [tâche 3 : Créer les volets Toolbox et PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md) pour savoir comment ajouter **boîte à outils** et **PropertyGrid** prennent en charge à votre Concepteur de workflow réhébergé.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Réhébergement du concepteur de flux de travail](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Tâche 3 : Créer les volets Toolbox et PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Réhébergement du concepteur de flux de travail](rehosting-the-workflow-designer.md)
+- [Tâche 1 : Créer une nouvelle Application Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tâche 3 : Créer les volets Toolbox et PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md)

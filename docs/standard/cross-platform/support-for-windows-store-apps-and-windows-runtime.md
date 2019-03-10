@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835484"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708403"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Prise en charge .NET Framework pour les applications Windows Store et Windows Runtime
 Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] prend en charge plusieurs scénarios de développement de logiciel avec le [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Ces scénarios se répartissent en trois catégories :
@@ -40,7 +40,7 @@ Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] prend en charge plusieur
 
     -   Les fonctionnalités qui ne font qu’envelopper l’API du système d’exploitation sont également supprimées, car le [!INCLUDE[wrt](../../../includes/wrt-md.md)] est facile à appeler à partir du code managé.
 
-     Pour en savoir plus sur la [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], consultez le [vue d’ensemble des applications .NET pour Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Pour en savoir plus sur le processus de sélection d’API, consultez le [.NET pour les applications de style Metro](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) entrée dans le blog .NET.
+     Pour en savoir plus sur la [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], consultez le [vue d’ensemble des applications .NET pour Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Pour en savoir plus sur le processus de sélection d’API, consultez le [.NET pour les applications de style Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) entrée dans le blog .NET.
 
 -   Le [Windows Runtime](/uwp/api/) fournit des éléments d’interface de l’utilisateur pour la création de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] applications et donne accès aux fonctionnalités du système d’exploitation. Comme le .NET Framework, le [!INCLUDE[wrt](../../../includes/wrt-md.md)] a des métadonnées qui permettent aux compilateurs C# et Visual Basic d’utiliser les bibliothèques de classes [!INCLUDE[wrt](../../../includes/wrt-md.md)] de la même façon que les bibliothèques de classes .NET Framework. Le .NET Framework simplifie l’utilisation du [!INCLUDE[wrt](../../../includes/wrt-md.md)] en masquant certaines différences :
 
